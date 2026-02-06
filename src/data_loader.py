@@ -35,7 +35,7 @@ from torch.utils.data import Dataset, DataLoader
 
 # MNE and EEG processing
 import mne
-from mne_bids import BIDSPath, read_raw_bids
+import h5py
 
 # PAC computation
 from pac_computation import PACComputer
@@ -187,7 +187,11 @@ class BIDSDataProcessor:
     def load_raw_data(self, subject: str, session: Optional[str] = None,
                       task: str = '40HzAuditoryEntrainment') -> Tuple[mne.io.Raw, dict]:
         """
-        Load raw EEG data for a subject using mne-bids.
+        Load raw EEG data for a subject.
+
+        Handles MATLAB v7.3 (HDF5) .set files from EEGLAB by reading
+        directly with h5py, since MNE's read_raw_eeglab does not support
+        this format.
 
         Args:
             subject: Subject ID (e.g., 'sub-01')
@@ -199,30 +203,30 @@ class BIDSDataProcessor:
             events_dict: Dictionary mapping event names to event codes
 
         Raises:
-            FileNotFoundError: If BIDS file not found
+            FileNotFoundError: If .set file not found
         """
         try:
-            # Construct BIDS path
-            subj_id = subject.replace('sub-', '')
-            sess_id = session.replace('ses-', '') if session else None
+            # Build file path directly (no session folders in this dataset)
+            eeg_dir = self.bids_root / subject / 'eeg'
+            set_file = eeg_dir / f'{subject}_task-{task}_eeg.set'
 
-            bids_path = BIDSPath(
-                subject=subj_id,
-                session=sess_id,
-                task=task,
-                datatype='eeg',
-                root=str(self.bids_root)
-            )
+            if not set_file.exists():
+                raise FileNotFoundError(f"EEG file not found: {set_file}")
 
-            # Read raw data
-            raw = read_raw_bids(bids_path=bids_path, verbose=False)
-            raw.load_data()
+            # Try standard MNE EEGLAB reader first
+            try:
+                raw = mne.io.read_raw_eeglab(str(set_file), preload=True,
+                                              verbose=False)
+                logger.info(f"  Loaded {subject} via MNE EEGLAB reader")
+            except Exception:
+                # Fall back to HDF5 reader for MATLAB v7.3 files
+                logger.debug(f"  Standard reader failed, using HDF5 for {subject}")
+                raw = self._load_hdf5_set(set_file, subject)
 
             # Try to load events from sidecar TSV
             events_dict = {}
             try:
-                events_tsv = (self.bids_root / subject / 'eeg' /
-                             f'{subject}_task-{task}_events.tsv')
+                events_tsv = eeg_dir / f'{subject}_task-{task}_events.tsv'
                 if events_tsv.exists():
                     events_data = pd.read_csv(events_tsv, sep='\t')
                     events_dict['events_df'] = events_data
@@ -238,6 +242,81 @@ class BIDSDataProcessor:
         except Exception as e:
             logger.error(f"Failed to load {subject}: {e}")
             raise
+
+    def _load_hdf5_set(self, set_file: Path, subject: str) -> mne.io.Raw:
+        """
+        Load EEGLAB .set file saved in MATLAB v7.3 (HDF5) format.
+
+        Reads EEG data and channel info from HDF5, constructs an MNE
+        RawArray. Also reads the companion .fdt file if data is stored
+        externally.
+
+        Args:
+            set_file: Path to .set file
+            subject: Subject ID for logging
+
+        Returns:
+            raw: MNE RawArray with EEG data
+        """
+        with h5py.File(str(set_file), 'r') as f:
+            eeg_group = f['EEG']
+
+            # Get sampling rate
+            sfreq = float(np.array(eeg_group['srate']).flat[0])
+            n_channels = int(np.array(eeg_group['nbchan']).flat[0])
+            n_points = int(np.array(eeg_group['pnts']).flat[0])
+
+            # Get channel names
+            chanlocs = eeg_group['chanlocs']
+            ch_names = []
+            if 'labels' in chanlocs:
+                labels_ref = chanlocs['labels']
+                for i in range(labels_ref.shape[0]):
+                    ref = labels_ref[i, 0]
+                    name_data = f[ref][()]
+                    # HDF5 stores strings as uint16 arrays
+                    name = ''.join(chr(c) for c in name_data.flat)
+                    ch_names.append(name.strip())
+            else:
+                ch_names = [f'EEG{i+1:03d}' for i in range(n_channels)]
+
+            # Load EEG data — check if stored in .set or external .fdt
+            data_field = eeg_group['data']
+
+            if isinstance(data_field, h5py.Dataset):
+                # Data stored directly in .set file
+                data = np.array(data_field, dtype=np.float64)
+            else:
+                # Data is a reference to external .fdt file
+                fdt_file = set_file.with_suffix('.fdt')
+                if fdt_file.exists():
+                    data = np.fromfile(str(fdt_file), dtype=np.float32)
+                    data = data.reshape(n_channels, n_points).astype(np.float64)
+                else:
+                    raise FileNotFoundError(
+                        f"External data file not found: {fdt_file}")
+
+            # Ensure shape is (n_channels, n_points)
+            if data.shape[0] != n_channels and data.shape[1] == n_channels:
+                data = data.T
+
+            # Scale to volts (EEGLAB stores in microvolts)
+            data = data * 1e-6
+
+        # Create MNE Info and RawArray
+        ch_types = ['eeg'] * len(ch_names)
+        info = mne.create_info(ch_names=ch_names, sfreq=sfreq,
+                               ch_types=ch_types)
+        raw = mne.io.RawArray(data, info, verbose=False)
+
+        # Set standard 10-20 montage
+        try:
+            montage = mne.channels.make_standard_montage('standard_1020')
+            raw.set_montage(montage, on_missing='warn')
+        except Exception:
+            logger.debug(f"  Could not set montage for {subject}")
+
+        return raw
 
     def select_frontal_channels(self, raw: mne.io.Raw) -> mne.io.Raw:
         """
