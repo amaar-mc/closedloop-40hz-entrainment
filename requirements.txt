@@ -1,0 +1,68 @@
+# Personalized Deep Learning for Closed-Loop 40Hz Entrainment
+# Requirements for NVIDIA RTX 3080 GPU (CUDA 11.8)
+# Python 3.10+
+
+# Deep Learning Framework
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# EEG Processing
+mne>=1.5.0
+mne-bids>=0.14.0
+
+# Signal Processing
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Phase-Amplitude Coupling
+tensorpac>=0.6.5
+
+# Data Handling
+pandas>=2.0.0
+h5py>=3.8.0
+
+# Machine Learning
+scikit-learn>=1.3.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Progress Bars
+tqdm>=4.65.0
+
+# Configuration
+pyyaml>=6.0
+
+# Jupyter (for notebooks)
+jupyter>=1.0.0
+ipykernel>=6.22.0
+
+# Optional: Mixed Precision Training
+# (Automatically included with torch>=2.0)
+
+# Optional: Hyperparameter Optimization
+optuna>=3.1.0
+
+# Optional: Model Interpretability
+captum>=0.6.0
+
+# Installation Commands:
+# -----------------------
+# 1. Create virtual environment:
+#    python3.10 -m venv venv
+#    source venv/bin/activate  # Linux/Mac
+#    venv\Scripts\activate     # Windows
+#
+# 2. Install PyTorch with CUDA 11.8:
+#    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+#
+# 3. Install remaining packages:
+#    pip install -r requirements.txt
+#
+# 4. Verify CUDA availability:
+#    python -c "import torch; print(f'CUDA available: {torch.cuda.is_available()}')"
+#
+# 5. Test GPU:
+#    python -c "import torch; print(f'GPU: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else None}')"

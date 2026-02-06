@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data (large files — download separately)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Model checkpoints (generated during training)
+models/*.pth
+models/*.pt
+
+# Results (generated during validation)
+results/figures/*.png
+results/figures/*.pdf
+results/metrics/*.csv
+results/metrics/*.json
+
+# Logs
+logs/*.log
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/*.ipynb
+
+# Misc
+*.bak
+*.tmp
