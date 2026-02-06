@@ -184,15 +184,15 @@ class BIDSDataProcessor:
         logger.info(f"Found {len(subjects)} subjects: {subjects[:5]}...")
         return subjects
 
-    def load_raw_data(self, subject: str, session: str = 'ses-01',
-                      task: str = 'entrainment') -> Tuple[mne.io.Raw, dict]:
+    def load_raw_data(self, subject: str, session: Optional[str] = None,
+                      task: str = '40HzAuditoryEntrainment') -> Tuple[mne.io.Raw, dict]:
         """
         Load raw EEG data for a subject using mne-bids.
 
         Args:
-            subject: Subject ID (e.g., 'sub-001')
-            session: Session ID (default 'ses-01')
-            task: Task name (default 'entrainment')
+            subject: Subject ID (e.g., 'sub-01')
+            session: Session ID or None if no session folders
+            task: Task name (default '40HzAuditoryEntrainment')
 
         Returns:
             raw: MNE Raw object with EEG data
@@ -203,32 +203,34 @@ class BIDSDataProcessor:
         """
         try:
             # Construct BIDS path
+            subj_id = subject.replace('sub-', '')
+            sess_id = session.replace('ses-', '') if session else None
+
             bids_path = BIDSPath(
-                subject=subject.replace('sub-', ''),
-                session=session.replace('ses-', '') if session else None,
+                subject=subj_id,
+                session=sess_id,
                 task=task,
+                datatype='eeg',
                 root=str(self.bids_root)
             )
 
             # Read raw data
             raw = read_raw_bids(bids_path=bids_path, verbose=False)
+            raw.load_data()
 
-            # Events are typically embedded in .set files
-            # Try to load events if available
+            # Try to load events from sidecar TSV
             events_dict = {}
             try:
-                # This depends on BIDS event naming conventions
-                events_path = bids_path.fpath.with_name(
-                    bids_path.fpath.stem + '_events.tsv'
-                )
-                if events_path.exists():
-                    events_data = pd.read_csv(events_path, sep='\t')
-                    # Populate events dict if available
-                    logger.info(f"Loaded events for {subject} {session}")
-            except:
-                logger.debug(f"No separate events file for {subject} {session}")
+                events_tsv = (self.bids_root / subject / 'eeg' /
+                             f'{subject}_task-{task}_events.tsv')
+                if events_tsv.exists():
+                    events_data = pd.read_csv(events_tsv, sep='\t')
+                    events_dict['events_df'] = events_data
+                    logger.info(f"  Loaded events for {subject}")
+            except Exception:
+                logger.debug(f"  No events file for {subject}")
 
-            logger.info(f"Loaded {subject} {session}: {raw.info['nchan']} channels, "
+            logger.info(f"  Loaded {subject}: {raw.info['nchan']} channels, "
                        f"{raw.n_times} samples ({raw.n_times/raw.info['sfreq']:.1f}s)")
 
             return raw, events_dict
@@ -370,7 +372,7 @@ class BIDSDataProcessor:
                 windows_all.append(windows_array)
                 pac_all.append(pac_labels)
                 subject_ids_all.extend([subject] * len(windows))
-                session_ids_all.extend(['ses-01'] * len(windows))
+                session_ids_all.extend(['default'] * len(windows))
 
                 logger.info(f"  → Extracted {len(windows)} windows from {subject}")
 
