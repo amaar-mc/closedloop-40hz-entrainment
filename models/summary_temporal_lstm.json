@@ -1,0 +1,30 @@
+{
+  "model": "temporal_lstm",
+  "task": "Predict PAC 5 seconds ahead",
+  "lookback": 10,
+  "horizon": 5,
+  "n_params": 187137,
+  "param_breakdown": {
+    "spatial_encoder": 4480,
+    "input_proj": 6208,
+    "rnn": 165888,
+    "regression_head": 10561,
+    "total": 187137
+  },
+  "best_epoch": 6,
+  "best_val_r2": -0.008164409976171294,
+  "test_metrics": {
+    "r2": -0.05012817386386903,
+    "correlation": 0.0894845718915989,
+    "mae": 0.00032349571119993925,
+    "rmse": 0.0004150839813519269,
+    "mape": 40.070074796676636,
+    "loss": 0.3807720649381017
+  },
+  "training_time_minutes": 1.5955747803052267,
+  "n_train": 11400,
+  "n_val": 2655,
+  "n_test": 2738,
+  "pac_mean": 0.0010470744320584292,
+  "pac_std": 0.0004330132909089413
+}
