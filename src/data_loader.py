@@ -40,6 +40,9 @@ import h5py
 # PAC computation
 from pac_computation import PACComputer
 
+# Preprocessing
+from preprocessing import EEGPreprocessor
+
 
 logger = logging.getLogger(__name__)
 
@@ -247,9 +250,10 @@ class BIDSDataProcessor:
         """
         Load EEGLAB .set file saved in MATLAB v7.3 (HDF5) format.
 
-        Reads EEG data and channel info from HDF5, constructs an MNE
-        RawArray. Also reads the companion .fdt file if data is stored
-        externally.
+        In ds005048, the HDF5 structure has fields at the TOP level (no 'EEG'
+        wrapper group). The 'data' field contains a filename string pointing
+        to the companion .fdt file where actual EEG data is stored as
+        interleaved float32 samples (Fortran/column-major order).
 
         Args:
             set_file: Path to .set file
@@ -259,15 +263,16 @@ class BIDSDataProcessor:
             raw: MNE RawArray with EEG data
         """
         with h5py.File(str(set_file), 'r') as f:
-            eeg_group = f['EEG']
+            # ds005048 HDF5 files have fields at the top level (no 'EEG' group)
+            root = f['EEG'] if 'EEG' in f else f
 
-            # Get sampling rate
-            sfreq = float(np.array(eeg_group['srate']).flat[0])
-            n_channels = int(np.array(eeg_group['nbchan']).flat[0])
-            n_points = int(np.array(eeg_group['pnts']).flat[0])
+            # Get sampling rate and dimensions
+            sfreq = float(np.array(root['srate']).flat[0])
+            n_channels = int(np.array(root['nbchan']).flat[0])
+            n_points = int(np.array(root['pnts']).flat[0])
 
-            # Get channel names
-            chanlocs = eeg_group['chanlocs']
+            # Get channel names from chanlocs/labels (object references)
+            chanlocs = root['chanlocs']
             ch_names = []
             if 'labels' in chanlocs:
                 labels_ref = chanlocs['labels']
@@ -280,27 +285,34 @@ class BIDSDataProcessor:
             else:
                 ch_names = [f'EEG{i+1:03d}' for i in range(n_channels)]
 
-            # Load EEG data — check if stored in .set or external .fdt
-            data_field = eeg_group['data']
+            # Determine if data is inline or in external .fdt file.
+            # In ds005048, root['data'] is a small uint16 dataset containing the
+            # .fdt filename as character codes, NOT the actual EEG data.
+            data_field = root['data']
+            data_is_filename = (
+                data_field.dtype == np.uint16
+                or data_field.size < n_channels * n_points
+            )
 
-            if isinstance(data_field, h5py.Dataset):
-                # Data stored directly in .set file
-                data = np.array(data_field, dtype=np.float64)
-            else:
-                # Data is a reference to external .fdt file
+            if data_is_filename:
+                # Data stored in external .fdt file
                 fdt_file = set_file.with_suffix('.fdt')
-                if fdt_file.exists():
-                    data = np.fromfile(str(fdt_file), dtype=np.float32)
-                    data = data.reshape(n_channels, n_points).astype(np.float64)
-                else:
+                if not fdt_file.exists():
                     raise FileNotFoundError(
                         f"External data file not found: {fdt_file}")
+                # EEGLAB .fdt stores float32 samples interleaved by channel
+                # (Fortran/column-major order): [ch1_t1, ch2_t1, ..., chN_t1, ch1_t2, ...]
+                raw_data = np.fromfile(str(fdt_file), dtype=np.float32)
+                data = raw_data.reshape(
+                    n_channels, n_points, order='F'
+                ).astype(np.float64)
+            else:
+                # Data stored directly in .set file as numeric array
+                data = np.array(data_field, dtype=np.float64)
+                if data.shape[0] != n_channels and data.shape[1] == n_channels:
+                    data = data.T
 
-            # Ensure shape is (n_channels, n_points)
-            if data.shape[0] != n_channels and data.shape[1] == n_channels:
-                data = data.T
-
-            # Scale to volts (EEGLAB stores in microvolts)
+            # Scale to volts (EEGLAB stores in microvolts, MNE expects volts)
             data = data * 1e-6
 
         # Create MNE Info and RawArray
@@ -309,7 +321,7 @@ class BIDSDataProcessor:
                                ch_types=ch_types)
         raw = mne.io.RawArray(data, info, verbose=False)
 
-        # Set standard 10-20 montage
+        # Set standard 10-20 montage for electrode positions
         try:
             montage = mne.channels.make_standard_montage('standard_1020')
             raw.set_montage(montage, on_missing='warn')
@@ -336,79 +348,114 @@ class BIDSDataProcessor:
             logger.warning(f"Only {len(frontal_present)}/7 frontal channels available: "
                           f"{frontal_present}")
 
-        # Select channels
-        raw_frontal = raw.pick(frontal_present).copy()
+        # Copy first, then pick channels (pick mutates in-place)
+        raw_frontal = raw.copy().pick(frontal_present)
 
         logger.debug(f"Selected {len(frontal_present)} frontal channels: {frontal_present}")
         return raw_frontal
 
-    def extract_stimulus_windows(self, raw: mne.io.Raw) -> Tuple[List[np.ndarray], List[str]]:
+    def extract_stimulus_windows(self, raw: mne.io.Raw,
+                                  events_dict: dict) -> Tuple[List[np.ndarray], List[str], List[float]]:
         """
-        Extract 2-second sliding windows from stimulus periods.
+        Extract 2-second sliding windows segmented by stimulus/rest events,
+        with epoch-level PAC labels.
 
-        In the dataset, stimulus periods are typically marked as events.
-        This method extracts windows during marked stimulus times.
+        PAC is computed from the FULL event epoch (20-40 seconds), not from
+        each 2-second window. Short-window MI estimates are too noisy (the
+        Tort method needs many theta cycles for stable phase binning). By
+        computing PAC from the full epoch and assigning it to all constituent
+        windows, we get reliable regression targets that the model can learn.
 
         Args:
-            raw: Raw EEG data (should be 7 frontal channels)
+            raw: Raw EEG data (should be 7 frontal channels, preprocessed)
+            events_dict: Dictionary containing 'events_df' with onset/duration/trial_type
 
         Returns:
-            windows: List of windows (each window_samples, n_channels)
-            event_labels: List of event labels (e.g., 'stimulus_on', 'rest')
+            windows: List of windows, each shape (n_channels, window_samples)
+            event_labels: List of event labels ('Stimulus' or 'Rest')
+            pac_labels: List of epoch-level PAC values (one per window)
         """
-        # Get raw data
         data = raw.get_data()  # (n_channels, n_samples)
         n_samples = data.shape[1]
+        sfreq = raw.info['sfreq']
 
         windows = []
         event_labels = []
-
-        # Extract sliding windows
-        # Note: In actual implementation, would segment based on stimulus events
-        # For now, use continuous sliding window approach
-        for start_idx in range(0, n_samples - self.window_samples, self.hop_samples):
-            end_idx = start_idx + self.window_samples
-            window = data[:, start_idx:end_idx]  # (n_channels, window_samples)
-
-            # Check for bad values
-            if not np.any(np.isnan(window)) and not np.any(np.isinf(window)):
-                windows.append(window)
-                event_labels.append('stimulus')  # Placeholder
-
-        logger.debug(f"Extracted {len(windows)} windows from {n_samples/raw.info['sfreq']:.1f}s recording")
-        return windows, event_labels
-
-    def compute_pac_labels(self, windows: List[np.ndarray]) -> np.ndarray:
-        """
-        Compute PAC label for each window.
-
-        Args:
-            windows: List of EEG windows (n_channels, window_samples)
-
-        Returns:
-            pac_labels: Array of PAC values (n_windows,)
-        """
         pac_labels = []
 
-        for i, window in enumerate(windows):
-            # Average PAC across 7 frontal channels
-            pac_values = self.pac_computer.compute_pac_multichannel(window)
-            pac_avg = np.mean(pac_values)
-            pac_labels.append(pac_avg)
+        # Parse events from BIDS events TSV
+        if 'events_df' in events_dict and events_dict['events_df'] is not None:
+            events_df = events_dict['events_df']
+            logger.debug(f"Using {len(events_df)} events for segmentation")
 
-            if (i + 1) % max(1, len(windows) // 10) == 0:
-                logger.debug(f"  Computed PAC for {i+1}/{len(windows)} windows")
+            for _, event in events_df.iterrows():
+                onset_sec = float(event['onset'])
+                duration_sec = float(event['duration'])
+                trial_type = str(event.get('trial_type', 'unknown'))
 
-        pac_labels = np.array(pac_labels)
-        logger.info(f"PAC labels: mean={pac_labels.mean():.4f}, "
-                   f"std={pac_labels.std():.4f}, "
-                   f"min={pac_labels.min():.4f}, max={pac_labels.max():.4f}")
+                onset_samp = int(onset_sec * sfreq)
+                end_samp = min(int((onset_sec + duration_sec) * sfreq), n_samples)
 
-        return pac_labels
+                # Compute PAC from the FULL epoch (20-40s) for a stable label.
+                # This gives ~50-200 theta cycles vs ~12 in a 2s window.
+                epoch_data = data[:, onset_samp:end_samp]
+                if epoch_data.shape[1] < self.window_samples:
+                    continue
+                epoch_pac_values = self.pac_computer.compute_pac_multichannel(epoch_data)
+                epoch_pac = float(np.mean(epoch_pac_values))
+
+                # Extract sliding windows within this event period
+                epoch_window_count = 0
+                for start_idx in range(onset_samp,
+                                       end_samp - self.window_samples,
+                                       self.hop_samples):
+                    end_idx = start_idx + self.window_samples
+                    window = data[:, start_idx:end_idx]
+
+                    # Reject windows with NaN/Inf or excessive amplitude
+                    if np.any(np.isnan(window)) or np.any(np.isinf(window)):
+                        continue
+
+                    windows.append(window)
+                    event_labels.append(trial_type)
+                    pac_labels.append(epoch_pac)
+                    epoch_window_count += 1
+
+                logger.debug(f"  Epoch {trial_type} @ {onset_sec:.1f}s: "
+                            f"PAC={epoch_pac:.4f}, {epoch_window_count} windows")
+        else:
+            # Fallback: continuous sliding windows over entire recording
+            logger.warning("No events found, using continuous windowing")
+            # Compute PAC from full recording as single label
+            full_pac = float(np.mean(
+                self.pac_computer.compute_pac_multichannel(data)))
+            for start_idx in range(0, n_samples - self.window_samples,
+                                   self.hop_samples):
+                end_idx = start_idx + self.window_samples
+                window = data[:, start_idx:end_idx]
+
+                if not np.any(np.isnan(window)) and not np.any(np.isinf(window)):
+                    windows.append(window)
+                    event_labels.append('unknown')
+                    pac_labels.append(full_pac)
+
+        n_stim = sum(1 for l in event_labels if l == 'Stimulus')
+        n_rest = sum(1 for l in event_labels if l == 'Rest')
+        logger.debug(f"Extracted {len(windows)} windows "
+                     f"({n_stim} stimulus, {n_rest} rest) from "
+                     f"{n_samples/sfreq:.1f}s recording")
+        return windows, event_labels, pac_labels
 
     def process_dataset(self) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
         """
         Process entire BIDS dataset.
+
+        Pipeline per subject:
+            1. Load raw EEG from HDF5 .set + .fdt files
+            2. Select 7 frontal channels
+            3. Apply preprocessing (bandpass, notch, CAR, artifact rejection)
+            4. Extract event-segmented 2-second sliding windows
+            5. Compute PAC label for each window
 
         Returns:
             windows_all: All windows (n_total, 1, n_channels, window_samples)
@@ -421,43 +468,80 @@ class BIDSDataProcessor:
         subject_ids_all = []
         session_ids_all = []
 
+        # Initialize preprocessor
+        # Note: ds005048 data was already preprocessed with Makoto's pipeline
+        # (1Hz HP, 50Hz notch, ICA, CAR). We apply light additional filtering
+        # focused on our bands of interest and artifact rejection.
+        preprocessor = EEGPreprocessor(
+            fs=self.fs,
+            hp_freq=0.5,
+            lp_freq=80.0,
+            notch_freq=50.0,
+            notch_q=30.0,
+            artifact_threshold=100.0  # µV
+        )
+
         subjects = self.get_subject_list()
 
         for subj_idx, subject in enumerate(subjects):
             logger.info(f"\nProcessing {subject} ({subj_idx+1}/{len(subjects)})")
 
             try:
-                # Load raw data
+                # 1. Load raw data
                 raw, events = self.load_raw_data(subject)
 
-                # Select frontal channels
+                # 2. Select frontal channels
                 raw = self.select_frontal_channels(raw)
 
-                # Extract windows
-                windows, event_labels = self.extract_stimulus_windows(raw)
+                # 3. Apply preprocessing
+                # Get data in microvolts for preprocessing
+                data_uv = raw.get_data() * 1e6  # Convert V -> µV for preprocessor
+                data_clean, qc_report = preprocessor.preprocess(data_uv)
+                logger.info(f"  QC: {qc_report['pct_artifacts']:.1f}% artifacts, "
+                           f"SNR={qc_report['snr_db']:.1f}dB")
+
+                # Put cleaned data back (convert µV -> V for MNE)
+                raw_clean = raw.copy()
+                raw_clean._data = data_clean * 1e-6
+
+                # 4. Extract event-segmented windows with epoch-level PAC labels
+                windows, event_labels, pac_labels_list = self.extract_stimulus_windows(
+                    raw_clean, events)
 
                 if len(windows) == 0:
                     logger.warning(f"No windows extracted from {subject}")
                     continue
 
-                # Compute PAC labels
-                pac_labels = self.compute_pac_labels(windows)
+                pac_labels = np.array(pac_labels_list)
+                unique_pac = np.unique(pac_labels)
+                logger.info(f"  PAC labels: {len(unique_pac)} epoch values, "
+                           f"mean={pac_labels.mean():.4f}, "
+                           f"range=[{pac_labels.min():.4f}, {pac_labels.max():.4f}]")
 
-                # Convert to required shape: (1, n_channels, window_samples)
-                windows_array = np.array(windows)  # (n_windows, n_channels, window_samples)
-                windows_array = windows_array[:, np.newaxis, :, :]  # Add feature channel
+                # Convert to required shape: (n_windows, 1, n_channels, window_samples)
+                # Scale from V (MNE) to µV for neural network input.
+                # V-scale (~1e-6) causes vanishing activations in early layers;
+                # µV-scale (~[-13, 13]) is the natural EEG unit and NN-friendly.
+                windows_array = np.array(windows) * 1e6  # V -> µV
+                windows_array = windows_array[:, np.newaxis, :, :]
 
                 # Append to lists
                 windows_all.append(windows_array)
                 pac_all.append(pac_labels)
                 subject_ids_all.extend([subject] * len(windows))
-                session_ids_all.extend(['default'] * len(windows))
+                session_ids_all.extend([el for el in event_labels])
 
-                logger.info(f"  → Extracted {len(windows)} windows from {subject}")
+                logger.info(f"  -> Extracted {len(windows)} windows from {subject}")
 
             except Exception as e:
                 logger.error(f"Error processing {subject}: {e}")
+                import traceback
+                traceback.print_exc()
                 continue
+
+        if len(windows_all) == 0:
+            raise RuntimeError("No windows extracted from any subject. "
+                             "Check data paths and file formats.")
 
         # Concatenate all data
         windows_combined = np.concatenate(windows_all, axis=0)
@@ -469,7 +553,10 @@ class BIDSDataProcessor:
         logger.info(f"Dataset Summary:")
         logger.info(f"  Total windows: {len(windows_combined)}")
         logger.info(f"  Shape: {windows_combined.shape}")
-        logger.info(f"  PAC - mean: {pac_combined.mean():.4f}, std: {pac_combined.std():.4f}")
+        logger.info(f"  PAC - mean: {pac_combined.mean():.6f}, "
+                    f"std: {pac_combined.std():.6f}, "
+                    f"min: {pac_combined.min():.6f}, "
+                    f"max: {pac_combined.max():.6f}")
         logger.info(f"  Subjects: {len(set(subject_ids_array))}")
         logger.info("="*60)
 

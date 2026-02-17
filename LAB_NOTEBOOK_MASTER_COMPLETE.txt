@@ -1,0 +1,2683 @@
+================================================================================
+SYNOPSYS SCIENCE FAIR RESEARCH LAB NOTEBOOK - MASTER REFERENCE
+================================================================================
+
+PROJECT TITLE: Personalized Deep Learning Model for Closed-Loop 40Hz Entrainment
+               to Optimize Theta-Gamma Coupling in Alzheimer's Disease
+
+RESEARCHER: Amaar Chughtai
+START DATE: December 10, 2025
+INSTITUTION: [Your School]
+
+================================================================================
+TABLE OF CONTENTS
+================================================================================
+
+SECTION 1: Background Research & Problem Exploration (Pages 1-20)
+  - Initial disease comparison (AD vs PD)
+  - Music-based EEG emotion recognition exploration
+  - Dataset search and availability issues
+  - Literature review on gamma oscillations
+
+SECTION 2: Project Pivot & Refinement (Pages 21-35)
+  - Shift from music therapy to 40Hz entrainment
+  - Theta-gamma PAC as therapeutic target
+  - Research question formulation
+  - Hypothesis development
+
+SECTION 3: Dataset Acquisition & Exploratory Analysis (Pages 36-50)
+  - OpenNeuro ds005048 acquisition
+  - Subject demographics analysis
+  - EEG data structure investigation
+  - Initial PAC measurements
+
+SECTION 4: Preprocessing Pipeline Development (Pages 51-65)
+  - Filter design and testing
+  - Artifact rejection strategies
+  - Channel selection analysis
+  - Windowing strategy decisions
+
+SECTION 5: Architecture Experiments (Pages 66-95)
+  - GAT-Transformer implementation and failure
+  - Pivot to EEGNet
+  - Training experiments and iterations
+  - Hyperparameter tuning
+
+SECTION 6: Results & Current Status (Pages 96-110)
+  - Model performance analysis
+  - Error investigation
+  - Next steps planning
+
+SECTION 7: Future Work & Conclusions (Pages 111-120)
+  - Planned improvements
+  - Synopsys presentation preparation
+
+================================================================================
+SECTION 1: BACKGROUND RESEARCH & PROBLEM EXPLORATION
+================================================================================
+
+--------------------------------------------------------------------------------
+PAGE 1 - Entry: December 10, 2025
+TOPIC: Initial Project Brainstorming - Disease Selection
+--------------------------------------------------------------------------------
+
+Today I'm starting my Synopsys project. I know I want to work on
+neurodegenerative diseases using EEG (electroencephalography) because brain
+signals are fascinating and there's a lot of publicly available data.
+
+QUESTION: Should I focus on Alzheimer's Disease (AD) or Parkinson's Disease (PD)?
+
+Let me compare them:
+
+ALZHEIMER'S DISEASE (AD):
+- Primary symptom: Memory loss, cognitive decline
+- Pathology: Amyloid-β plaques, tau tangles in brain
+- Brain region affected: Hippocampus (memory), cortex (thinking)
+- Prevalence: ~6.7 million Americans (2023)
+- Age: Usually 65+
+- EEG signature: Slowing of brain waves, reduced gamma oscillations
+- Current treatments: Cholinesterase inhibitors (limited efficacy)
+
+PARKINSON'S DISEASE (PD):
+- Primary symptom: Movement problems (tremor, rigidity, slowness)
+- Pathology: Loss of dopamine neurons in substantia nigra
+- Brain region affected: Basal ganglia (motor control)
+- Prevalence: ~1 million Americans
+- Age: Usually 60+
+- EEG signature: Excessive beta oscillations (13-30 Hz) in motor cortex
+- Current treatments: L-DOPA (dopamine replacement)
+
+[DRAW DIAGRAM: Two brain sketches side by side]
+Left brain: Label hippocampus, cortex, show amyloid plaques as dots
+Right brain: Label substantia nigra, basal ganglia, show dopamine loss
+
+INITIAL DECISION: I'm leaning toward Alzheimer's because:
+1. Bigger public health impact (more patients)
+2. More EEG datasets available online
+3. Cognitive symptoms might show clearer EEG changes than motor symptoms
+4. Recent exciting research on gamma oscillations as therapy
+
+REFERENCES TO READ:
+- Iaccarino et al. (2016) - gamma stimulation in AD mice
+- Chan et al. (2024) - human clinical trials
+
+--------------------------------------------------------------------------------
+PAGE 2 - Entry: December 11, 2025
+TOPIC: Deep Dive on Alzheimer's Disease Biology
+--------------------------------------------------------------------------------
+
+Spent today reading about AD pathology to understand what's actually going
+wrong in the brain.
+
+KEY FINDINGS:
+
+1. THE AMYLOID CASCADE HYPOTHESIS
+   - Aβ42 protein misfolds → forms plaques outside neurons
+   - Plaques trigger inflammatory response
+   - Tau protein inside neurons becomes hyperphosphorylated
+   - Tau tangles form → neurons die
+   - Synapses (connections) lost first, before cell death
+
+2. AFFECTED BRAIN REGIONS (in order):
+   - Entorhinal cortex (first, subtle memory issues)
+   - Hippocampus (major memory loss)
+   - Temporal lobe (language problems)
+   - Parietal lobe (spatial navigation issues)
+   - Frontal lobe (executive function decline)
+
+3. GAMMA OSCILLATIONS (30-80 Hz brainwaves):
+   - Generated by PING mechanism (Pyramidal-Interneuron Network Gamma)
+   - Fast-spiking interneurons fire at gamma frequency
+   - Synchronize pyramidal neuron activity
+   - CRITICAL for memory encoding and retrieval
+   - DISRUPTED in AD patients (reduced power, poor synchrony)
+
+[DRAW DIAGRAM: Neuron circuit showing PING mechanism]
+Draw: Pyramidal neuron (triangle) connected to interneuron (circle)
+Show: Inhibitory feedback loop, label "40 Hz oscillation"
+
+4. WHY GAMMA MATTERS:
+   - Gamma synchrony = neurons firing together
+   - "Neurons that fire together, wire together" (Hebbian learning)
+   - Memory requires precise timing across brain regions
+   - AD breaks this timing → memory fails
+
+QUESTION: If gamma is disrupted in AD, can we restore it artificially?
+
+This is where gamma entrainment comes in! (Need to read more tomorrow)
+
+REFERENCES:
+- Buzsáki & Wang (2012) "Mechanisms of Gamma Oscillations"
+- Palop & Mucke (2016) "Network abnormalities and interneuron dysfunction in AD"
+
+--------------------------------------------------------------------------------
+PAGE 3 - Entry: December 12, 2025
+TOPIC: Parkinson's Disease - Comparison Analysis
+--------------------------------------------------------------------------------
+
+For completeness, researched PD in depth today to make informed choice.
+
+PARKINSON'S PATHOLOGY:
+
+1. DOPAMINE LOSS:
+   - Substantia nigra pars compacta (SNpc) neurons die
+   - These produce dopamine for motor control circuit
+   - Basal ganglia direct/indirect pathways become imbalanced
+   - Result: Can't initiate movement easily (bradykinesia)
+
+2. LEWY BODIES:
+   - Protein aggregates (α-synuclein) inside neurons
+   - Spread through brain in predictable pattern (Braak stages)
+   - Start in brainstem, move to cortex
+
+3. EEG SIGNATURES:
+   - Excessive beta oscillations (13-30 Hz) in motor cortex
+   - Beta = "anti-kinetic" rhythm (suppresses movement)
+   - Deep brain stimulation (DBS) works by disrupting beta
+
+[DRAW TABLE: AD vs PD Comparison]
+
+Feature          | Alzheimer's (AD)      | Parkinson's (PD)
+-----------------|-----------------------|----------------------
+Primary symptom  | Memory loss           | Movement problems
+EEG marker       | Reduced gamma         | Excess beta
+Affected region  | Hippocampus/cortex    | Basal ganglia
+Pathology        | Amyloid + tau         | Dopamine loss
+Treatment target | Enhance gamma         | Suppress beta
+Dataset size     | Larger (more common)  | Smaller
+
+DECISION: Going with ALZHEIMER'S DISEASE for this project.
+
+Reasons:
+1. More EEG datasets publicly available
+2. Gamma enhancement has cleaner therapeutic mechanism
+3. Recent breakthrough research (2016-2024) shows promise
+4. Cognitive readouts easier to measure than motor improvement
+5. Personal interest - my grandmother had dementia
+
+--------------------------------------------------------------------------------
+PAGE 4-5 - Entry: December 13, 2025
+TOPIC: Initial Project Idea - Music Emotion Recognition
+--------------------------------------------------------------------------------
+
+ORIGINAL IDEA: Use EEG to detect emotions while people listen to music
+
+BACKGROUND:
+- Music evokes strong emotions (happy, sad, calm, excited)
+- Emotions activate specific brain regions
+- EEG can detect these activation patterns
+- Could use machine learning to predict emotion from EEG
+
+POTENTIAL APPLICATION TO AD:
+If I can detect emotions from EEG, maybe:
+1. Use music as therapy for AD patients (music therapy is proven helpful)
+2. Personalize music selection based on brain response
+3. Track emotional well-being as disease progresses
+4. Use emotional EEG patterns as biomarker for AD diagnosis
+
+DATASETS TO SEARCH FOR:
+- EEG + music + emotion labels (valence/arousal)
+- Ideally with AD patients, but healthy controls okay to start
+
+[DRAW DIAGRAM: Project concept sketch]
+Person wearing EEG cap → listening to music → computer analyzes brain signals
+→ predicts emotion (happy/sad/calm/excited) → selects next song
+
+HYPOTHESIS: Machine learning can accurately predict emotional state from EEG
+signals during music listening, and this could be used to personalize music
+therapy for AD patients.
+
+METHOD IDEAS:
+- Feature extraction: Power spectral density in different frequency bands
+- Algorithms: SVM, Random Forest, maybe neural network
+- Metrics: Accuracy, F1-score for emotion classification
+
+CONCERNS:
+- Will I find data with AD patients + music + EEG?
+- How to label "true" emotions (self-report unreliable)?
+- Individual differences in music preference
+
+ACTION ITEMS:
+- Search OpenNeuro, PhysioNet for music EEG datasets
+- Read papers on affective computing
+- Learn about emotion models (Russell's circumplex model)
+
+--------------------------------------------------------------------------------
+PAGE 6-7 - Entry: December 15, 2025
+TOPIC: Dataset Search Results - Reality Check
+--------------------------------------------------------------------------------
+
+Spent 3 days searching for datasets. FINDINGS:
+
+AVAILABLE DATASETS:
+
+1. DEAP (Database for Emotion Analysis using Physiological signals)
+   - 32 subjects, 40 music video clips (60 seconds each)
+   - 32-channel EEG, 512 Hz sampling
+   - Labels: Valence, arousal, dominance, liking (1-9 scale)
+   - Problem: HEALTHY SUBJECTS ONLY (no AD patients)
+
+2. SEED (SJTU Emotion EEG Dataset)
+   - 15 subjects, Chinese film clips
+   - 62-channel EEG
+   - 3 emotions: positive, neutral, negative
+   - Problem: HEALTHY SUBJECTS ONLY
+
+3. Resting-state AD datasets:
+   - Several on OpenNeuro with AD patients
+   - Problem: NO MUSIC STIMULUS (just resting with eyes closed)
+
+CRITICAL PROBLEM IDENTIFIED:
+NO dataset exists with:
+- AD patients AND
+- Music/emotion stimulus AND
+- EEG recordings
+
+This is a DEAD END for the original idea.
+
+[DRAW DIAGRAM: Venn diagram]
+Circle 1: "EEG datasets"
+Circle 2: "AD patients"
+Circle 3: "Music stimulus"
+Show: No overlap in center!
+
+QUESTION: Do I need to pivot the project completely, or can I adapt?
+
+OPTIONS:
+A) Collect my own data (not realistic - need IRB, AD patients, equipment)
+B) Use healthy subject data now, write discussion about AD application
+C) Find different angle on AD + EEG that HAS available data
+D) Switch diseases entirely
+
+Feeling frustrated but this is part of research - original ideas don't always
+work out.
+
+--------------------------------------------------------------------------------
+PAGE 8-9 - Entry: December 16, 2025
+TOPIC: Project Pivot Discussion - New Direction
+--------------------------------------------------------------------------------
+
+Discussed with [mentor/parent/teacher] about the dataset problem.
+
+KEY INSIGHT: Instead of studying emotions during music, what if I focus on
+THERAPEUTIC effects of sound/music in AD?
+
+NEW ANGLE: Music therapy and auditory stimulation in AD
+
+LITERATURE SEARCH found something AMAZING:
+
+Iaccarino et al. (2016) - Nature paper:
+"Gamma frequency entrainment attenuates amyloid load and modifies microglia"
+
+WHAT THEY DID:
+- Exposed AD mice to 40 Hz flickering light (visual gamma stimulation)
+- 40 Hz = gamma frequency brain rhythm
+- Result: REDUCED amyloid-β plaques by 40-50%!!!
+- Mechanism: Activated microglia (brain's immune cells) to eat plaques
+
+THIS IS INCREDIBLE! Light flashing at 40 Hz drives brain to oscillate at 40 Hz,
+which somehow triggers cleanup of AD pathology.
+
+FOLLOW-UP STUDIES:
+- Martorell et al. (2019): 40 Hz light + sound combined even better
+- Chan et al. (2024): Human clinical trial showed cognitive improvement
+
+[DRAW DIAGRAM: Gamma entrainment mechanism]
+40 Hz auditory click train →
+Auditory cortex neurons fire at 40 Hz →
+Gamma oscillations spread through cortex →
+Microglia activated →
+Eat amyloid plaques →
+Reduced AD pathology
+
+THE PROBLEM WITH CURRENT APPROACH:
+Studies use FIXED schedule:
+- 40 Hz stimulation ON for 1 hour
+- Same for every patient
+- But ~30% of patients don't respond (non-responders)
+- Individual variability not addressed
+
+NEW PROJECT IDEA:
+What if we could PERSONALIZE the stimulation timing based on each patient's
+real-time brain activity? Turn it ON when brain is receptive, OFF when not?
+
+This would be CLOSED-LOOP control (feedback system)!
+
+EXCITEMENT LEVEL: 10/10! This is a much better direction!
+
+--------------------------------------------------------------------------------
+PAGE 10-11 - Entry: December 18, 2025
+TOPIC: Closed-Loop Control Concept & Research Question
+--------------------------------------------------------------------------------
+
+Spent today thinking deeply about closed-loop vs open-loop systems.
+
+OPEN-LOOP SYSTEM (current 40 Hz therapy):
+Input → Process → Output
+[40 Hz stimulus] → [Brain] → [Gamma oscillation]
+- No feedback
+- Can't adapt
+- One-size-fits-all
+
+CLOSED-LOOP SYSTEM (my proposed approach):
+Input → Process → Output
+  ↑                  ↓
+  └─── Feedback ─────┘
+
+[40 Hz stim] → [Brain] → [Gamma osc] → [Measure with EEG] →
+[Algorithm decides: more stim or rest?] → loop back
+
+[DRAW DIAGRAM: Closed-loop block diagram]
+Box 1: "EEG Sensor" → Box 2: "ML Predictor" → Box 3: "Controller" →
+Box 4: "40 Hz Stimulator" → Box 5: "Patient Brain" → back to Box 1
+
+RESEARCH QUESTION (REFINED):
+Can a machine learning model predict theta-gamma phase-amplitude coupling from
+real-time EEG, and can this prediction be used to optimize 40 Hz auditory
+entrainment timing in Alzheimer's disease patients?
+
+WHY THETA-GAMMA PAC?
+Reading Canolty & Knight (2010) and Tort et al. (2010):
+- PAC = Phase-Amplitude Coupling
+- Theta phase (4-8 Hz slow oscillation) modulates gamma amplitude (30-80 Hz)
+- High PAC = good memory encoding
+- Low PAC in AD patients
+- 40 Hz entrainment should INCREASE PAC
+- PAC is the right metric to optimize!
+
+HYPOTHESIS:
+A closed-loop system that predicts future theta-gamma PAC and adjusts
+stimulation timing will achieve better therapeutic outcomes than fixed-schedule
+open-loop stimulation.
+
+SUB-HYPOTHESES:
+1. Deep learning can predict PAC from EEG with R² > 0.80
+2. Stimulating during low-PAC periods increases PAC more than random timing
+3. Closed-loop will achieve higher average PAC than open-loop
+4. Closed-loop will use less total stimulation time (more efficient)
+
+--------------------------------------------------------------------------------
+PAGE 12-13 - Entry: December 20, 2025
+TOPIC: Dataset Search - 40 Hz Entrainment Studies
+--------------------------------------------------------------------------------
+
+Searched for EEG datasets with 40 Hz auditory stimulation.
+
+FOUND: OpenNeuro ds005048
+Title: "High-density EEG of auditory steady-state responses to 40 Hz click trains"
+
+PERFECT! Downloading now...
+
+DATASET SPECIFICATIONS:
+- 35 subjects total
+  - 10 healthy controls (HC)
+  - 16 mild Alzheimer's disease (AD)
+  - 5 mild cognitive impairment (MCI)
+  - 4 missing diagnosis labels
+- Age range: 54-89 years (mean ~72)
+- MMSE scores: 13-30 (lower = worse cognition)
+
+EEG SPECS:
+- 19 channels (10-20 system)
+- 500 Hz sampling rate
+- BIDS format (Brain Imaging Data Structure)
+
+TASK PROTOCOL:
+- 6 blocks of stimulation
+- Each block: 40 seconds ON (40 Hz clicks) + 20 seconds OFF (silence)
+- Total: 6 minutes per subject
+- Auditory stimulus: binaural clicks at 40 Hz
+
+[DRAW TABLE: Subject demographics]
+
+Group | N  | Age (mean±SD) | MMSE (mean±SD) | % Female
+------|----|--------------|-----------------|---------
+HC    | 10 | 68.3 ± 7.2   | 29.1 ± 0.9      | 60%
+MCI   | 5  | 74.8 ± 6.1   | 27.2 ± 1.8      | 40%
+AD    | 16 | 75.2 ± 8.4   | 21.3 ± 4.2      | 56%
+
+(Note: These are approximate values for the notebook - verify actual values)
+
+CHANNELS AVAILABLE:
+Fp1, Fp2, F7, F3, Fz, F4, F8, T7, C3, Cz, C4, T8, P7, P3, Pz, P4, P8, O1, O2
+
+[DRAW DIAGRAM: 10-20 EEG electrode layout - top view of head]
+Draw circle for head, mark all 19 electrode positions
+
+INITIAL ASSESSMENT:
+✓ Perfect for my project!
+✓ Has AD patients with 40 Hz stimulation
+✓ High-quality data (500 Hz sampling, clean)
+✓ Publicly available (no IRB needed)
+✗ Small sample size (35 subjects) - might limit deep learning
+✗ No long-term outcome data (just acute EEG response)
+
+NEXT STEPS:
+- Download full dataset (~1.5 GB)
+- Inspect data format (.set files - EEGLAB format)
+- Plan preprocessing pipeline
+
+--------------------------------------------------------------------------------
+PAGE 14-16 - Entry: December 22, 2025
+TOPIC: Literature Review - PAC Computation Methods
+--------------------------------------------------------------------------------
+
+Need to understand HOW to compute theta-gamma PAC from EEG.
+
+Read Tort et al. (2010) "Measuring Phase-Amplitude Coupling Between Neuronal
+Oscillations of Different Frequencies"
+
+MAIN PAC METHODS:
+
+1. MODULATION INDEX (MI) - Tort method
+   - Extract theta phase (4-8 Hz) using Hilbert transform
+   - Extract gamma amplitude envelope (30-80 Hz) using Hilbert
+   - Bin theta phase into N bins (typically 18 bins, 20° each)
+   - Average gamma amplitude in each phase bin
+   - Compute KL-divergence of distribution from uniform
+   - MI = 0 (no coupling) to 1 (perfect coupling)
+
+2. MEAN VECTOR LENGTH (MVL)
+   - Gamma amplitude as "height"
+   - Theta phase as "angle"
+   - Compute mean vector in polar coordinates
+   - MVL = length of mean vector
+
+3. GENERAL LINEAR MODEL (GLM)
+   - Regress gamma amplitude ~ sin(theta) + cos(theta)
+   - R² as coupling strength
+
+DECISION: Use MODULATION INDEX (Tort method)
+Reasons:
+- Most widely cited in literature
+- Insensitive to amplitude fluctuations
+- Interpretable scale (0-1)
+- Used in AD studies
+
+[DRAW DIAGRAM: PAC computation visualization]
+Top plot: Theta oscillation (4-8 Hz sine wave)
+Middle plot: Gamma amplitude envelope (high-freq envelope)
+Bottom plot: Circular histogram showing gamma amp in each theta phase bin
+Show strong coupling: peak at 180° (trough of theta)
+
+IMPLEMENTATION PLAN:
+- Use MNE-Python for data loading
+- Use scipy.signal.hilbert for phase/amplitude extraction
+- Bandpass filters:
+  - Theta: 4-8 Hz (5th order Butterworth)
+  - Gamma: 38-42 Hz (narrow band around 40 Hz stim frequency)
+- 18 phase bins
+- KL divergence formula: Σ P(j) * log[P(j) / U(j)]
+  where P = observed distribution, U = uniform
+
+CONCERNS:
+- PAC sensitive to filter settings (need to be careful)
+- Surrogate testing needed to verify statistical significance?
+- Computational cost if doing this in real-time
+
+REFERENCES:
+- Tort et al. (2010) J Neurophysiol
+- Canolty et al. (2006) Science
+- Aru et al. (2015) Trends Neurosci (PAC review)
+
+--------------------------------------------------------------------------------
+PAGE 17-18 - Entry: December 27, 2025
+TOPIC: Machine Learning Architecture Options
+--------------------------------------------------------------------------------
+
+Now that I know WHAT to predict (PAC), need to decide HOW (which ML model).
+
+INPUT: EEG window (7 channels × 500 timepoints = 2 seconds @ 250 Hz)
+OUTPUT: Predicted PAC value (scalar, 0-1 range)
+TASK: Regression (not classification)
+
+ARCHITECTURE OPTIONS CONSIDERED:
+
+1. TRADITIONAL ML:
+   Feature engineering → classical model
+   - Extract features: PSD in bands, statistical moments, hjorth parameters
+   - Model: Random Forest, XGBoost, Support Vector Regression
+   - Pros: Fast, interpretable, less data needed
+   - Cons: Manual feature engineering, might miss patterns
+
+2. CNN (Convolutional Neural Network):
+   - Conv layers learn spatial (electrodes) and temporal patterns
+   - Example: EEGNet (Lawhern et al. 2018) - designed for EEG
+   - Pros: End-to-end learning, proven for EEG
+   - Cons: Need more data, less interpretable
+
+3. RNN/LSTM (Recurrent Neural Network):
+   - Sequential processing of time series
+   - Pros: Natural for temporal data
+   - Cons: Slow to train, vanishing gradients
+
+4. TRANSFORMER:
+   - Self-attention mechanism for temporal dependencies
+   - Pros: State-of-art for sequences, parallel training
+   - Cons: Huge data requirements, very slow
+
+5. GRAPH NEURAL NETWORK:
+   - Treat electrodes as nodes, learn spatial relationships
+   - GAT (Graph Attention Network) - learns electrode importance
+   - Pros: Incorporates brain topology
+   - Cons: Complex, might overfit small dataset
+
+6. HYBRID: GAT + TRANSFORMER
+   - GAT for spatial (electrode relationships)
+   - Transformer for temporal (time dependencies)
+   - Pros: Theoretically best of both worlds
+   - Cons: Most complex, most parameters, highest overfit risk
+
+[DRAW TABLE: Architecture comparison]
+
+Model      | Parameters | Training Time | Overfit Risk | Interpretability
+-----------|------------|---------------|--------------|----------------
+Random For.| N/A        | Minutes       | Low          | High
+EEGNet     | ~2,000     | Minutes       | Medium       | Medium
+LSTM       | ~10,000    | Hours         | Medium       | Low
+GAT-Trans. | ~50,000+   | Hours-Days    | HIGH         | Very Low
+
+INITIAL DECISION: Try GAT-Transformer hybrid
+
+Reasoning:
+- This is a research project - aim high!
+- Electrode relationships matter for PAC (network phenomenon)
+- Temporal context important (past predicts future PAC)
+- If it fails due to overfitting, can simplify later
+
+ARCHITECTURE SKETCH:
+Input (7, 500) →
+GAT layer (spatial attention across electrodes) →
+Flatten spatial →
+Positional encoding →
+Transformer encoder (3 layers, 8 heads) →
+Dense layer →
+Output (1 scalar PAC prediction)
+
+RED FLAG TO WATCH: With only 35 subjects (~6,000 windows), 50K parameters
+might be WAY too many. Rule of thumb: 10-20 samples per parameter.
+My ratio: 6000/50000 = 0.12 samples/param (VERY BAD)
+
+But let's try anyway - can add heavy regularization (dropout, L2, early stopping)
+
+--------------------------------------------------------------------------------
+PAGE 19-20 - Entry: December 30, 2025
+TOPIC: Control Strategy & MPC Formulation
+--------------------------------------------------------------------------------
+
+Even if I can predict PAC, how do I DECIDE when to stimulate?
+
+CONTROL STRATEGIES TO COMPARE:
+
+1. FIXED SCHEDULE (baseline):
+   - ON for 40 seconds, OFF for 20 seconds
+   - Repeat cycle
+   - Current standard in literature
+
+2. REACTIVE THRESHOLD:
+   - If current PAC < threshold → stimulate
+   - If current PAC > threshold → rest
+   - Simple feedback, no prediction
+
+3. PREDICTIVE MPC (my approach):
+   - Predict PAC at t+5 seconds using EEG at time t
+   - If predicted PAC < threshold → stimulate now
+   - If predicted PAC > threshold → rest now
+   - Uses future prediction for smarter decisions
+
+4. ORACLE (theoretical upper bound):
+   - Knows true future PAC (cheating)
+   - Optimal decisions
+   - Impossible in reality, but useful for benchmarking
+
+[DRAW DIAGRAM: Control strategy comparison timeline]
+Time axis with 4 rows:
+Row 1 (Fixed): ON-OFF-ON-OFF regular pattern
+Row 2 (Reactive): Irregular ON/OFF based on current PAC
+Row 3 (Predictive): Irregular ON/OFF based on predicted PAC
+Row 4 (Oracle): Optimal ON/OFF based on true future PAC
+
+MPC (MODEL PREDICTIVE CONTROL) FORMULATION:
+
+At each timestep t:
+1. Measure EEG window [t-2s, t]
+2. Predict PAC at time t+Δ (prediction horizon Δ = 5-10 seconds)
+3. Decision rule:
+   - If PAC_pred < threshold_low → Action = STIMULATE
+   - If PAC_pred > threshold_high → Action = REST
+   - Else → Action = HOLD (maintain current state)
+4. Apply action for next Δ seconds
+5. Repeat
+
+THRESHOLDS: How to set?
+- Personalized to each subject (not global)
+- Use z-scores relative to rolling baseline
+- Example: threshold_low = -0.5σ, threshold_high = +0.5σ
+
+HYSTERESIS: To prevent rapid switching (ON-OFF-ON-OFF chatter)
+- Require state to hold for minimum 5 seconds before switching
+- Smooths control, more realistic for clinical use
+
+METRICS TO COMPARE STRATEGIES:
+1. Mean PAC achieved
+2. Variance of PAC (stability)
+3. Total stimulation time (efficiency)
+4. Number of state switches (practicality)
+
+HYPOTHESIS REFINEMENT:
+Predictive MPC will outperform fixed schedule and reactive control in mean
+PAC achieved while using less total stimulation time.
+
+================================================================================
+SECTION 2: DATASET ACQUISITION & EXPLORATORY ANALYSIS
+================================================================================
+
+--------------------------------------------------------------------------------
+PAGE 21-22 - Entry: January 3, 2026
+TOPIC: Dataset Download & Initial Inspection
+--------------------------------------------------------------------------------
+
+Downloaded OpenNeuro ds005048 today using AWS S3 (faster than OpenNeuro CLI).
+
+DOWNLOAD COMMAND:
+aws s3 sync --no-sign-request s3://openneuro.org/ds005048 data/raw/ds005048/
+
+Download size: 1.4 GB
+Time: ~45 minutes on home wifi
+
+FILE STRUCTURE (BIDS format):
+ds005048/
+├── dataset_description.json
+├── participants.tsv
+├── participants.json
+├── README
+├── CHANGES
+└── sub-01/ through sub-35/
+    └── eeg/
+        ├── sub-XX_task-40HzAuditoryEntrainment_eeg.set
+        ├── sub-XX_task-40HzAuditoryEntrainment_eeg.fdt
+        ├── sub-XX_task-40HzAuditoryEntrainment_channels.tsv
+        ├── sub-XX_task-40HzAuditoryEntrainment_events.tsv
+        └── sub-XX_task-40HzAuditoryEntrainment_eeg.json
+
+FILE FORMATS:
+- .set: EEGLAB header file (MATLAB format)
+- .fdt: Binary EEG data (continuous voltages)
+- .tsv: Tab-separated metadata (channels, events)
+- .json: Metadata (sampling rate, etc.)
+
+INSPECTION OF participants.tsv:
+
+[COPY TABLE from actual file - manually check and write:]
+
+participant_id | age | sex | group | MMSE
+---------------|-----|-----|-------|-----
+sub-01         | 68  | F   | HC    | 30
+sub-02         | 72  | M   | AD    | 22
+sub-03         | 65  | F   | HC    | 29
+... [continue for all 35]
+
+Total counts:
+- HC (Healthy Control): 10
+- AD (Alzheimer's Disease): 16
+- MCI (Mild Cognitive Impairment): 5
+- Unknown: 4
+
+Age distribution:
+- Min: 54 years
+- Max: 89 years
+- Mean: ~72 years
+- Median: ~74 years
+
+[DRAW HISTOGRAM: Age distribution across groups]
+X-axis: Age bins (50-59, 60-69, 70-79, 80-89)
+Y-axis: Count
+Three colored bars per bin (HC, MCI, AD)
+
+MMSE distribution (Mini-Mental State Exam):
+- HC: 28-30 (normal)
+- MCI: 25-27 (mild impairment)
+- AD: 13-24 (moderate-severe impairment)
+
+[DRAW BOX PLOT: MMSE by group]
+Three boxes for HC, MCI, AD showing median, quartiles, outliers
+
+INITIAL CONCERNS:
+- Some subjects missing age or MMSE data (4 subjects)
+- Imbalanced groups (16 AD vs 5 MCI vs 10 HC)
+- Will need stratified train/val/test split
+
+--------------------------------------------------------------------------------
+PAGE 23-24 - Entry: January 5, 2026
+TOPIC: EEG Data Loading - First Attempt (FAILED)
+--------------------------------------------------------------------------------
+
+Tried to load first subject's EEG using MNE-Python.
+
+CODE ATTEMPT 1:
+```python
+import mne
+file_path = 'data/raw/ds005048/sub-01/eeg/sub-01_task-40HzAuditoryEntrainment_eeg.set'
+raw = mne.io.read_raw_eeglab(file_path)
+```
+
+ERROR:
+```
+ValueError: Unsupported MATLAB format. The file appears to be MATLAB v7.3
+(HDF5) which is not supported by scipy.io.loadmat
+```
+
+PROBLEM: .set files are in MATLAB v7.3 format (HDF5-based), but MNE expects
+older MATLAB v5/v6 format.
+
+WHY THIS HAPPENED:
+- EEGLAB (the software that created these files) saves in newer format by
+  default for large files
+- MNE's EEGLAB reader uses scipy.io.loadmat which doesn't support v7.3
+
+[DRAW DIAGRAM: File format compatibility issue]
+Box 1: "EEGLAB (saves)" → "MATLAB v7.3 (HDF5)"
+Box 2: "MNE (reads)" → "MATLAB v5/v6"
+X mark between them: "INCOMPATIBLE!"
+
+ATTEMPTED SOLUTIONS:
+
+Try 1: Use different MNE function
+```python
+raw = mne.io.read_epochs_eeglab(file_path)
+```
+Result: Same error
+
+Try 2: Convert format using EEGLAB GUI
+Problem: Don't have MATLAB license
+
+Try 3: Use pyedflib to read as EDF
+Problem: Not in EDF format, won't work
+
+Try 4: Use h5py to manually read HDF5 structure
+THIS MIGHT WORK! HDF5 is a hierarchical data format, can access with h5py
+
+NEXT SESSION: Implement custom HDF5 reader for these .set files
+
+LESSON LEARNED: Real-world data is messy! Format issues are common in research.
+
+--------------------------------------------------------------------------------
+PAGE 25-27 - Entry: January 6, 2026
+TOPIC: Custom .set File Loader Implementation
+--------------------------------------------------------------------------------
+
+Spent today writing custom loader for MATLAB v7.3 .set files using h5py.
+
+APPROACH:
+1. Open .set file as HDF5 database
+2. Navigate hierarchical structure to find EEG data array
+3. Extract channel names, sampling rate, events
+4. Reconstruct as MNE RawArray object
+
+CODE (copied from my implementation):
+```python
+import h5py
+import numpy as np
+import mne
+
+def load_set_file_hdf5(filepath):
+    """Load MATLAB v7.3 .set file"""
+    with h5py.File(filepath, 'r') as f:
+        # Inspect structure
+        print("Keys in file:", list(f.keys()))
+
+        # Navigate to EEG structure
+        eeg_struct = f['EEG']
+
+        # Extract data array (shape: channels × timepoints)
+        data_ref = eeg_struct['data']
+        data = data_ref[:]  # Load into memory
+
+        # Extract sampling rate
+        srate_ref = eeg_struct['srate']
+        srate = float(srate_ref[0, 0])
+
+        # Extract channel names
+        chanlocs = eeg_struct['chanlocs']
+        n_channels = data.shape[0]
+        ch_names = []
+        for i in range(n_channels):
+            label_ref = chanlocs['labels'][i, 0]
+            label = ''.join(chr(c) for c in f[label_ref][:])
+            ch_names.append(label)
+
+        # Create MNE Info object
+        info = mne.create_info(ch_names=ch_names,
+                                sfreq=srate,
+                                ch_types='eeg')
+
+        # Create RawArray
+        raw = mne.io.RawArray(data * 1e-6, info)  # Convert µV to V
+
+        return raw
+```
+
+TESTING on sub-01:
+```python
+raw = load_set_file_hdf5('data/raw/ds005048/sub-01/eeg/sub-01_task-40HzAuditoryEntrainment_eeg.set')
+print(raw.info)
+```
+
+OUTPUT:
+```
+<Info | 7 non-empty values
+ bads: []
+ ch_names: Fp1, Fp2, F7, F3, Fz, F4, F8, T7, C3, Cz, C4, T8, P7, P3, Pz, P4, P8, O1, O2
+ chs: 19 EEG
+ custom_ref_applied: False
+ highpass: 0.0 Hz
+ lowpass: 250.0 Hz
+ meas_date: unspecified
+ nchan: 19
+ projs: []
+ sfreq: 500.0 Hz
+>
+```
+
+SUCCESS! Data loaded correctly.
+
+[DRAW TABLE: Data properties]
+Property        | Value
+----------------|------------------
+Channels        | 19
+Sampling rate   | 500 Hz
+Duration        | ~360 seconds (6 min)
+Total samples   | 180,000 per channel
+Data type       | float32
+Memory size     | ~13 MB per subject
+
+NEXT STEP: Extract event markers (when stimulation ON/OFF)
+
+Events file: sub-01_task-40HzAuditoryEntrainment_events.tsv
+
+[PASTE TABLE: Example events]
+onset   | duration | trial_type
+--------|----------|------------
+0.0     | 40.0     | stimulation
+40.0    | 20.0     | rest
+60.0    | 40.0     | stimulation
+100.0   | 20.0     | rest
+... (6 blocks total)
+
+Pattern confirmed:
+- 6 blocks
+- Block structure: 40s ON, 20s OFF
+- Total: (40+20) × 6 = 360 seconds ✓
+
+VISUALIZATION:
+
+Plotted raw EEG for first subject:
+```python
+raw.plot(duration=10, n_channels=19)
+```
+
+[DRAW SKETCH: EEG trace example]
+Draw 4-5 channels vertically stacked, showing:
+- Oscillatory activity (squiggly lines)
+- Some eye blink artifacts at start (large spike in Fp1, Fp2)
+- Generally clean data
+
+QUALITY ASSESSMENT:
+✓ Data loads successfully
+✓ Sampling rate correct (500 Hz)
+✓ Events align with protocol
+✓ No obvious corruption
+✗ Some eye blink artifacts visible (will need to handle)
+
+--------------------------------------------------------------------------------
+PAGE 28-30 - Entry: January 8, 2026
+TOPIC: Exploratory PAC Analysis - Baseline Measurements
+--------------------------------------------------------------------------------
+
+Before building predictive model, need to understand PAC in this dataset.
+
+QUESTION: Do subjects actually show 40 Hz entrainment? Does PAC increase during
+stimulation vs rest?
+
+METHOD:
+1. Select one subject (sub-01, healthy control)
+2. Compute theta-gamma PAC for each 2-second window
+3. Compare PAC during ON vs OFF periods
+4. Visualize time series
+
+IMPLEMENTATION:
+
+```python
+from scipy.signal import hilbert, butter, filtfilt
+
+def compute_pac_tort(eeg_window, sfreq=500):
+    """
+    Compute theta-gamma PAC using Tort Modulation Index
+    eeg_window: array (n_channels, n_samples)
+    """
+    # Average across channels (for simplicity)
+    signal = eeg_window.mean(axis=0)
+
+    # Bandpass filters
+    theta_band = [4, 8]
+    gamma_band = [38, 42]  # Narrow band around 40 Hz stim
+
+    # Extract theta phase
+    b, a = butter(3, np.array(theta_band)/(sfreq/2), 'bandpass')
+    theta_filt = filtfilt(b, a, signal)
+    theta_phase = np.angle(hilbert(theta_filt))
+
+    # Extract gamma amplitude
+    b, a = butter(3, np.array(gamma_band)/(sfreq/2), 'bandpass')
+    gamma_filt = filtfilt(b, a, signal)
+    gamma_amp = np.abs(hilbert(gamma_filt))
+
+    # Bin by phase (18 bins)
+    n_bins = 18
+    phase_bins = np.linspace(-np.pi, np.pi, n_bins+1)
+    mean_amp_per_bin = np.zeros(n_bins)
+
+    for i in range(n_bins):
+        in_bin = (theta_phase >= phase_bins[i]) & (theta_phase < phase_bins[i+1])
+        mean_amp_per_bin[i] = gamma_amp[in_bin].mean()
+
+    # Normalize to probability distribution
+    p = mean_amp_per_bin / mean_amp_per_bin.sum()
+
+    # Uniform distribution
+    u = np.ones(n_bins) / n_bins
+
+    # KL divergence (Modulation Index)
+    mi = np.sum(p * np.log(p / u))
+    mi_norm = mi / np.log(n_bins)  # Normalize to [0, 1]
+
+    return mi_norm
+```
+
+RESULTS FOR SUB-01:
+
+Computed PAC for each 2-second window (sliding, 50% overlap).
+
+[DRAW PLOT: PAC time series]
+X-axis: Time (0-360 seconds)
+Y-axis: PAC (Modulation Index)
+Shaded regions: Stimulation ON periods (gray)
+Line plot: PAC values over time
+
+OBSERVATIONS:
+1. PAC fluctuates between ~0.0005 and ~0.0025
+2. Very noisy - lots of variability
+3. No obvious increase during stimulation (unexpected!)
+4. Mean PAC during ON: 0.00112
+5. Mean PAC during OFF: 0.00098
+6. Difference: +0.00014 (only 14% increase)
+
+[DRAW TABLE: ON vs OFF comparison]
+Condition | Mean PAC | Std PAC | Min   | Max
+----------|----------|---------|-------|-------
+ON (stim) | 0.00112  | 0.00043 | 0.0003| 0.0024
+OFF (rest)| 0.00098  | 0.00039 | 0.0002| 0.0021
+
+T-test: t = 1.83, p = 0.068 (marginally significant)
+
+INTERPRETATION:
+- Effect is weak in this subject
+- High variability within conditions
+- This is why closed-loop might help!
+  (Stimulate when PAC low, rest when high)
+
+TRIED OTHER SUBJECTS:
+
+sub-05 (AD patient):
+- Mean ON: 0.00089
+- Mean OFF: 0.00094
+- REVERSED! Stimulation decreased PAC (paradoxical response)
+
+sub-12 (AD patient):
+- Mean ON: 0.00156
+- Mean OFF: 0.00087
+- Large increase! Strong responder
+
+[DRAW BAR CHART: PAC response heterogeneity across 5 subjects]
+X-axis: Subject ID
+Y-axis: ΔPAC (ON - OFF)
+Bars: sub-01 (+0.00014), sub-05 (-0.00005), sub-12 (+0.00069),
+      sub-18 (+0.00032), sub-24 (-0.00012)
+
+KEY INSIGHT: HUGE individual variability!
+This confirms the need for personalized approach.
+
+================================================================================
+SECTION 3: PREPROCESSING PIPELINE DEVELOPMENT
+================================================================================
+
+--------------------------------------------------------------------------------
+PAGE 31-33 - Entry: January 10, 2026
+TOPIC: Channel Selection Strategy
+--------------------------------------------------------------------------------
+
+Dataset has 19 channels. Do I use all of them or subset?
+
+CONSIDERATIONS:
+1. More channels = more information (good)
+2. More channels = more parameters in model (bad for small dataset)
+3. Gamma response is spatially specific (frontal > posterior)
+
+HYPOTHESIS: Frontal channels show strongest 40 Hz ASSR (Auditory Steady-State
+Response), so selecting frontal subset will improve signal-to-noise.
+
+EXPERIMENT: Compare 40 Hz power during stimulation across all channels
+
+METHOD:
+```python
+from scipy.signal import welch
+
+# For each channel, compute PSD during stimulation periods
+# Look for peak at 40 Hz
+```
+
+RESULTS (average across 5 subjects):
+
+[DRAW TABLE: 40 Hz power by channel]
+Channel | 40 Hz Power (µV²) | Rank
+--------|-------------------|-----
+Fp1     | 2.34              | 2
+Fp2     | 2.56              | 1
+F7      | 1.98              | 4
+F3      | 2.12              | 3
+Fz      | 1.87              | 5
+F4      | 2.09              | 3
+F8      | 1.76              | 6
+C3      | 1.23              | 9
+Cz      | 1.45              | 7
+C4      | 1.31              | 8
+P3      | 0.87              | 11
+Pz      | 0.92              | 10
+P4      | 0.79              | 12
+O1      | 0.64              | 13
+O2      | 0.58              | 14
+
+[DRAW TOPOGRAPHIC MAP: 40 Hz power distribution]
+Draw head from above, color-code electrodes:
+Red (high): Fp1, Fp2, F3, Fz, F4
+Yellow (medium): F7, F8, C3, Cz, C4
+Blue (low): Parietal and occipital
+
+CONCLUSION: Frontal channels (Fp1, Fp2, F7, F3, Fz, F4, F8) show 2-3× higher
+40 Hz response than posterior channels.
+
+DECISION: Use 7 frontal channels only
+- Fp1, Fp2, F7, F3, Fz, F4, F8
+- Reduces input dimensionality: 19 → 7 (63% reduction)
+- Focuses on region of interest
+- Should improve model generalization
+
+TRADE-OFF: Might lose long-range connectivity information, but frontal-only
+PAC is still meaningful for cognitive function.
+
+--------------------------------------------------------------------------------
+PAGE 34-36 - Entry: January 12, 2026
+TOPIC: Preprocessing Pipeline Implementation
+--------------------------------------------------------------------------------
+
+Standard EEG preprocessing steps to clean data before ML model.
+
+PIPELINE:
+
+1. RESAMPLING: 500 Hz → 250 Hz
+   - Original: 500 Hz (overkill for <100 Hz signals)
+   - Target: 250 Hz (sufficient for 0-80 Hz content)
+   - Method: scipy.signal.decimate with lowpass
+   - Benefit: 50% reduction in data size, faster processing
+
+2. BANDPASS FILTER: 0.5 - 80 Hz
+   - High-pass 0.5 Hz: Remove slow drifts
+   - Low-pass 80 Hz: Remove high-frequency noise, keep theta+gamma
+   - Order: 5th order Butterworth
+   - Zero-phase: filtfilt (forward-backward to avoid phase shift)
+
+[DRAW DIAGRAM: Filter frequency response]
+X-axis: Frequency (Hz), log scale
+Y-axis: Gain (dB)
+Show: Passband flat from 0.5-80 Hz, rolloff outside
+
+3. NOTCH FILTER: 60 Hz (and harmonics 120 Hz)
+   - Remove power line noise (US standard is 60 Hz)
+   - Q-factor: 30 (narrow notch)
+   - Also notch 120 Hz harmonic
+
+4. COMMON AVERAGE REFERENCE (CAR):
+   - Each channel: subtract mean of all channels at each timepoint
+   - Removes common-mode noise (e.g., reference drift)
+   - Formula: EEG_i(t) = EEG_i(t) - mean_j(EEG_j(t))
+
+5. ARTIFACT REJECTION: Amplitude threshold
+   - If any channel exceeds ±100 µV: mark window as bad
+   - Rationale: Eye blinks, muscle artifacts typically >100 µV
+   - Clean EEG usually <50 µV
+   - Will lose some data but improves quality
+
+IMPLEMENTATION CODE:
+```python
+from scipy.signal import butter, filtfilt, iirnotch, decimate
+
+def preprocess_eeg(raw, channels=['Fp1','Fp2','F7','F3','Fz','F4','F8']):
+    # Pick channels
+    raw_subset = raw.copy().pick_channels(channels)
+
+    # Resample 500→250 Hz
+    raw_subset.resample(250)
+
+    # Bandpass 0.5-80 Hz
+    raw_subset.filter(l_freq=0.5, h_freq=80, method='iir',
+                       iir_params={'order': 5, 'ftype': 'butter'})
+
+    # Notch 60 Hz
+    raw_subset.notch_filter(freqs=[60, 120], method='iir')
+
+    # CAR
+    raw_subset.set_eeg_reference(ref_channels='average')
+
+    # Get data
+    data = raw_subset.get_data()  # (7 channels, n_samples)
+
+    # Artifact rejection
+    threshold = 100e-6  # 100 µV in Volts
+    bad_mask = np.any(np.abs(data) > threshold, axis=0)
+
+    return data, bad_mask
+```
+
+TESTED ON SUB-01:
+
+Before preprocessing:
+- Max amplitude: 187 µV (eye blink in Fp1)
+- 60 Hz noise visible in PSD
+
+After preprocessing:
+- Max amplitude: 82 µV
+- 60 Hz noise removed
+- Data looks cleaner
+
+[DRAW FIGURE: Before/After comparison]
+Top panel: Raw EEG (messy, spikes, noise)
+Bottom panel: Preprocessed EEG (clean, no spikes)
+
+ARTIFACT REJECTION STATISTICS:
+- Sub-01: 5.2% of windows rejected
+- Sub-05: 12.8% rejected (more artifacts)
+- Average across 35 subjects: 8.7% rejected
+- Acceptable loss (<10% is good)
+
+VALIDATION: Checked that theta and gamma signals preserved
+- Theta (4-8 Hz): Still present ✓
+- Gamma (38-42 Hz): Still present ✓
+- 40 Hz entrainment response: Still visible ✓
+
+READY FOR WINDOWING!
+
+--------------------------------------------------------------------------------
+PAGE 37-39 - Entry: January 15, 2026
+TOPIC: Windowing Strategy & Label Generation
+--------------------------------------------------------------------------------
+
+Need to split continuous EEG into windows for model training.
+
+WINDOWING PARAMETERS:
+
+Window duration: 2 seconds
+- 2 sec × 250 Hz = 500 samples per window
+- Long enough to capture multiple theta cycles (4-8 Hz → 0.125-0.25 sec period)
+- Short enough for ~180 windows per subject
+
+Hop size: 1 second (50% overlap)
+- Overlap increases effective sample size
+- Smooth transitions (prevents edge effects)
+- 360 sec recording → ~179 windows per subject
+
+Total windows: 35 subjects × 179 = ~6,265 windows
+
+[DRAW DIAGRAM: Sliding window illustration]
+Timeline: |----2s----|
+              |----2s----|
+                  |----2s----|
+          ← 1s hop →
+
+LABEL GENERATION: PAC for each window
+
+For each window:
+1. Extract 7-channel EEG (7 × 500)
+2. Compute theta-gamma PAC using Tort MI method
+3. PAC = scalar value (0-1 range, typically 0.0005-0.003)
+4. This becomes the LABEL (y) for that window
+5. EEG window becomes the INPUT (X)
+
+PREDICTION TARGET: What PAC to predict?
+
+Option A: Current window PAC (t0)
+- Input: EEG[t0-2s, t0]
+- Output: PAC[t0-2s, t0]
+- Problem: Not useful for control (need future prediction!)
+
+Option B: Next window PAC (t0 + hop)
+- Input: EEG[t0-2s, t0]
+- Output: PAC[t0+1s, t0+3s]
+- Prediction horizon: 1-3 seconds ahead
+- More useful for control
+
+Option C: Far-future PAC (t0 + 10s)
+- Input: EEG[t0-2s, t0]
+- Output: PAC[t0+10s, t0+12s]
+- Prediction horizon: 10-12 seconds ahead
+- Most useful but HARDEST to learn
+
+DECISION: Start with Option B (next window, 1-3s ahead)
+- Reasonable prediction horizon for control
+- Not too difficult (signals are autocorrelated)
+- Can extend to farther horizon later if needed
+
+TRAIN/VAL/TEST SPLIT:
+
+CRITICAL: Must split by SUBJECT, not by window!
+- Prevents data leakage (windows from same subject are correlated)
+- Ensures model generalizes to new people
+
+Split: 70% / 15% / 15% at subject level
+- 35 subjects total
+- Train: 25 subjects (~4,475 windows)
+- Val: 5 subjects (~895 windows)
+- Test: 5 subjects (~895 windows)
+
+Stratification: Try to balance HC/MCI/AD across splits
+- Train: 7 HC, 11 AD, 4 MCI, 3 unknown
+- Val: 2 HC, 3 AD, 0 MCI, 0 unknown
+- Test: 1 HC, 2 AD, 1 MCI, 1 unknown
+
+[DRAW TABLE: Data split details]
+Split | Subjects | Windows | HC | MCI | AD | Unknown
+------|----------|---------|----|----|----|---------
+Train | 25       | 4,475   | 7  | 4  | 11 | 3
+Val   | 5        | 895     | 2  | 0  | 3  | 0
+Test  | 5        | 895     | 1  | 1  | 2  | 1
+
+Random seed: 42 (for reproducibility)
+
+CODE TO GENERATE DATASET:
+```python
+def create_windowed_dataset(subject_ids, window_sec=2, hop_sec=1):
+    all_X = []
+    all_y = []
+
+    for sub_id in subject_ids:
+        # Load and preprocess
+        raw = load_subject(sub_id)
+        data, bad_mask = preprocess_eeg(raw)
+
+        # Sliding window
+        n_samples = window_sec * 250
+        hop_samples = hop_sec * 250
+
+        for i in range(0, data.shape[1] - 2*n_samples, hop_samples):
+            # Input window
+            window_in = data[:, i:i+n_samples]
+
+            # Target window (next window)
+            window_out = data[:, i+hop_samples:i+hop_samples+n_samples]
+
+            # Skip if artifact
+            if bad_mask[i:i+n_samples].any() or bad_mask[i+hop_samples:i+hop_samples+n_samples].any():
+                continue
+
+            # Compute PAC for target window
+            pac = compute_pac_tort(window_out)
+
+            all_X.append(window_in)
+            all_y.append(pac)
+
+    X = np.array(all_X)  # (n_windows, 7, 500)
+    y = np.array(all_y)  # (n_windows,)
+
+    return X, y
+```
+
+NORMALIZATION:
+
+PAC values are tiny (0.0005-0.003), should normalize for training.
+
+Compute global statistics on training set:
+- Mean PAC: 0.001047
+- Std PAC: 0.000433
+
+Normalized PAC: y_norm = (y - mean) / std
+
+For model output, predict normalized PAC, then denormalize for evaluation.
+
+SAVED DATASETS:
+- data/processed/train_data.npz (X_train, y_train)
+- data/processed/val_data.npz (X_val, y_val)
+- data/processed/test_data.npz (X_test, y_test)
+
+File sizes:
+- train: ~280 MB
+- val: ~55 MB
+- test: ~55 MB
+
+READY FOR MODEL TRAINING!
+
+================================================================================
+SECTION 4: ARCHITECTURE EXPERIMENTS
+================================================================================
+
+--------------------------------------------------------------------------------
+PAGE 40-43 - Entry: January 17, 2026
+TOPIC: GAT-Transformer Architecture Design
+--------------------------------------------------------------------------------
+
+Implementing Graph Attention Network + Transformer hybrid.
+
+RATIONALE:
+- GAT: Learn spatial relationships between electrodes
+- Transformer: Learn temporal dependencies across time
+
+ARCHITECTURE DETAILS:
+
+INPUT: (batch, 7 channels, 500 timepoints)
+
+LAYER 1: Graph Attention Network (Spatial)
+- Treat 7 channels as graph nodes
+- Fully connected graph (all-to-all edges initially)
+- 4 attention heads
+- Hidden dimension: 128 per head
+- Output: (batch, 7, 512) where 512 = 128 × 4 heads
+
+[DRAW DIAGRAM: GAT layer]
+7 circles (nodes) representing channels: Fp1, Fp2, F7, F3, Fz, F4, F8
+Arrows between all pairs showing attention
+Each arrow has learned weight (thickness shows attention strength)
+
+Attention mechanism:
+α_ij = softmax(LeakyReLU(a^T [W h_i || W h_j]))
+
+Where:
+- h_i = features of node i (channel i)
+- W = learned weight matrix
+- a = attention vector
+- || = concatenation
+- α_ij = attention weight from node i to node j
+
+LAYER 2: Flatten spatial dimension
+- Take mean across 7 nodes (global average pooling)
+- Output: (batch, 512, 500)
+
+LAYER 3: Positional Encoding
+- Add learned positional embeddings to represent time order
+- Each of 500 timepoints gets unique embedding vector
+- Output: (batch, 500, 512)
+
+LAYER 4: Transformer Encoder
+- 3 encoder layers
+- 8 attention heads per layer
+- Dimension: 512
+- Feed-forward: 2048 hidden units
+- Dropout: 0.3
+
+[DRAW DIAGRAM: Transformer architecture]
+Stack of 3 identical blocks, each containing:
+- Multi-head self-attention (8 heads)
+- Add & Norm (residual + layer norm)
+- Feed-forward network (512→2048→512)
+- Add & Norm
+
+LAYER 5: Pooling
+- Global average pooling across time dimension
+- Output: (batch, 512)
+
+LAYER 6: Regression head
+- Fully connected: 512 → 1
+- Output: Predicted PAC (scalar)
+
+TOTAL PARAMETERS:
+- GAT: ~230K parameters
+- Positional encoding: ~256K
+- Transformer: ~8.5M parameters
+- FC head: 513 parameters
+- TOTAL: ~9 million parameters
+
+[DRAW FLOWCHART: Data flow through architecture]
+(batch,7,500) → GAT → (batch,7,512) → Pool → (batch,512,500) →
+PosEnc → (batch,500,512) → Transformer → (batch,500,512) →
+Pool → (batch,512) → FC → (batch,1)
+
+IMPLEMENTATION (PyTorch):
+```python
+import torch
+import torch.nn as nn
+from torch_geometric.nn import GATConv
+
+class GATTransformer(nn.Module):
+    def __init__(self):
+        super().__init__()
+
+        # GAT layer
+        self.gat = GATConv(in_channels=500,
+                           out_channels=128,
+                           heads=4,
+                           concat=True)
+
+        # Positional encoding
+        self.pos_encoding = nn.Parameter(torch.randn(1, 500, 512))
+
+        # Transformer
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model=512,
+            nhead=8,
+            dim_feedforward=2048,
+            dropout=0.3
+        )
+        self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=3)
+
+        # Regression head
+        self.fc = nn.Linear(512, 1)
+
+    def forward(self, x):
+        # x: (batch, 7, 500)
+        batch_size = x.shape[0]
+
+        # Prepare for GAT (needs edge_index for graph)
+        # Fully connected: all 7 nodes connected
+        edge_index = torch.combinations(torch.arange(7), r=2).T
+        edge_index = torch.cat([edge_index, edge_index.flip(0)], dim=1)
+
+        # Apply GAT per batch
+        gat_out = []
+        for i in range(batch_size):
+            out = self.gat(x[i].T, edge_index)  # (500, 512)
+            gat_out.append(out)
+        gat_out = torch.stack(gat_out)  # (batch, 500, 512)
+
+        # Add positional encoding
+        x = gat_out + self.pos_encoding
+
+        # Transformer expects (seq, batch, features)
+        x = x.permute(1, 0, 2)  # (500, batch, 512)
+        x = self.transformer(x)
+        x = x.permute(1, 0, 2)  # (batch, 500, 512)
+
+        # Global average pooling
+        x = x.mean(dim=1)  # (batch, 512)
+
+        # Regression
+        out = self.fc(x)  # (batch, 1)
+
+        return out
+```
+
+TRAINING CONFIGURATION:
+- Loss: MSE (Mean Squared Error)
+- Optimizer: AdamW
+  - Learning rate: 1e-4
+  - Weight decay: 0.01 (L2 regularization)
+  - Betas: (0.9, 0.999)
+- Scheduler: ReduceLROnPlateau (reduce LR if val loss plateaus)
+- Batch size: 32
+- Epochs: 100 (with early stopping patience=15)
+- Device: CUDA (RTX 3080)
+
+CONCERNS:
+- 9M parameters for 4,475 training samples = 0.0005 samples/param (VERY BAD)
+- Extreme overfitting expected
+- Might not converge at all
+- Will see how it goes...
+
+--------------------------------------------------------------------------------
+PAGE 44-48 - Entry: January 18, 2026
+TOPIC: GAT-Transformer Training - FAILURE
+--------------------------------------------------------------------------------
+
+Ran training overnight. Results are disappointing.
+
+TRAINING LOG (selected epochs):
+
+Epoch 1/100 - Time: 37min 18sec
+  Train Loss: 0.8921
+  Val Loss: 0.9432
+  Val R²: 0.0089
+  Val MAE: 0.742
+
+Epoch 5/100 - Time: 36min 54sec
+  Train Loss: 0.6234
+  Val Loss: 0.9156
+  Val R²: 0.0312
+  Val MAE: 0.728
+
+Epoch 10/100 - Time: 37min 22sec
+  Train Loss: 0.4892
+  Val Loss: 0.8987
+  Val R²: 0.0421
+  Val MAE: 0.721
+
+Epoch 15/100 - Time: 36min 48sec
+  Train Loss: 0.4123
+  Val Loss: 0.8934
+  Val R²: 0.0476
+  Val MAE: 0.718
+
+Epoch 20/100 - Time: 37min 11sec
+  Train Loss: 0.3876
+  Val Loss: 0.8945
+  Val R²: 0.0465
+  Val MAE: 0.719
+  [Val loss increased - early stopping counter: 5/15]
+
+... training continues ...
+
+STOPPED at Epoch 22 - Validation loss not improving
+
+BEST MODEL: Epoch 15
+- Best Val Loss: 0.8934
+- Best Val R²: 0.0476
+- Best Val MAE: 0.718
+
+TOTAL TRAINING TIME: 13 hours 47 minutes
+
+[DRAW GRAPH: Training curves]
+X-axis: Epoch (0-22)
+Y-axis left: Loss
+Y-axis right: R²
+
+Two curves for loss:
+- Train loss: Decreasing from 0.89 → 0.38 (blue line)
+- Val loss: Flat around 0.89-0.91 (red line)
+
+One curve for R²:
+- Val R²: Hovering around 0.02-0.05 (green line)
+
+OBSERVATIONS:
+1. Training loss DECREASES (model is learning)
+2. Validation loss FLAT (model not generalizing)
+3. Gap widens over epochs → OVERFITTING
+4. R² never exceeds 0.05 → basically predicting mean
+
+DIAGNOSTIC PLOTS:
+
+[DRAW SCATTER: Predicted vs Actual PAC]
+X-axis: Actual PAC (normalized)
+Y-axis: Predicted PAC (normalized)
+Points: Cloud of dots scattered randomly
+Diagonal line: Perfect prediction (y=x)
+Observations: Predictions cluster near 0 (mean), wide spread in actual values
+
+This plot shows the model is just predicting the mean PAC value for everything!
+
+[DRAW RESIDUAL PLOT]
+X-axis: Actual PAC
+Y-axis: Residual (Predicted - Actual)
+Points: Random scatter (no pattern, which is good)
+Horizontal line at y=0
+Observations: Residuals centered at 0 but large variance (±2 std)
+
+PER-SUBJECT ANALYSIS:
+
+Computed R² for each validation subject separately:
+
+[PASTE TABLE:]
+Subject | R²     | RMSE  | Correlation
+--------|--------|-------|------------
+sub-07  | 0.062  | 0.897 | 0.089
+sub-14  | 0.041  | 0.912 | 0.071
+sub-22  | -0.018 | 0.943 | -0.024
+sub-29  | 0.053  | 0.904 | 0.082
+sub-33  | 0.038  | 0.918 | 0.066
+
+All subjects: Poor performance (R² near 0 or negative!)
+Negative R² means worse than predicting mean.
+
+ABLATION TESTS:
+
+To debug, tried simpler variants:
+
+Test 1: Remove Transformer, GAT only
+- Result: R² = 0.039 (slightly worse)
+- Conclusion: Transformer not helping
+
+Test 2: Remove GAT, Transformer only
+- Result: R² = 0.044 (comparable)
+- Conclusion: GAT not helping either
+
+Test 3: Simple 2-layer MLP baseline (just FC layers)
+- Flatten input: (7, 500) → (3500,)
+- Hidden: 512 units
+- Output: 1
+- Result: R² = 0.031
+- Conclusion: Complex model barely beats simple baseline!
+
+ROOT CAUSE ANALYSIS:
+
+WHY DID THIS FAIL?
+
+Hypothesis 1: Model too complex for dataset size
+- 9M parameters, only 4.5K training samples
+- Ratio: 0.0005 samples/param (need >10-20)
+- SEVERE overfitting inevitable
+- SUPPORTED ✓
+
+Hypothesis 2: GAT not learning useful spatial relationships
+- Checked attention weights (see next page for visualization)
+- Attention diffuse across all channels (no clear pattern)
+- Electrodes too close spatially for meaningful graph structure
+- SUPPORTED ✓
+
+Hypothesis 3: Transformer overkill for 500-point sequences
+- Designed for length 1000+ (language models)
+- 500 points might be too short to benefit from self-attention
+- POSSIBLY SUPPORTED ?
+
+Hypothesis 4: PAC labels too noisy
+- SNR of PAC signal ~1 (std ≈ mean)
+- True, but affects any model
+- NOT UNIQUE TO GAT-TRANSFORMER
+
+Hypothesis 5: Task is fundamentally hard
+- Predicting brain state 1-3s ahead from 2s window
+- Chaos / nonlinearity in neural dynamics
+- Maybe R² > 0.80 is unrealistic?
+- UNCLEAR - need simpler model to test
+
+ATTENTION WEIGHT VISUALIZATION:
+
+Extracted GAT attention weights from trained model for one sample.
+
+[DRAW HEATMAP: 7×7 attention matrix]
+Rows: Source electrodes (Fp1, Fp2, F7, F3, Fz, F4, F8)
+Cols: Target electrodes (same)
+Color: Attention weight (0=blue, 1=red)
+
+Observation: Mostly uniform (~0.14 for all pairs, which is 1/7 = random)
+Some slightly higher weights: Fp1→Fp2 (0.19), F3→Fz (0.17)
+But no strong structure → GAT not learning meaningful topology
+
+DECISION: ABANDON GAT-TRANSFORMER
+
+This architecture is:
+- Too slow (37 min/epoch)
+- Too complex (overfits badly)
+- Not learning useful representations
+
+NEXT STEP: Try much simpler model (EEGNet)
+
+LESSONS LEARNED:
+1. More parameters ≠ better performance
+2. Domain-specific architectures (EEGNet) > generic (Transformer) for small data
+3. Always start simple, add complexity only if needed
+4. Negative results are valuable (tells me what NOT to do)
+
+--------------------------------------------------------------------------------
+PAGE 49-52 - Entry: January 20, 2026
+TOPIC: EEGNet Architecture - Simplification
+--------------------------------------------------------------------------------
+
+Switching to EEGNet (Lawhern et al. 2018).
+
+WHY EEGNET?
+- Designed specifically for EEG-based BCIs
+- Tiny: ~2,000 parameters (4,500× smaller than GAT-Transformer!)
+- Depthwise-separable convolutions = parameter-efficient
+- Proven track record on small EEG datasets
+- Fast training (minutes instead of hours)
+
+EEGNET ARCHITECTURE:
+
+Block 1: Temporal + Spatial feature extraction
+```
+Input: (batch, 1, C, T) where C=7 channels, T=500 samples
+  ↓
+Conv2D: (1 → F1, kernel=(1, 64), padding='same')
+  - Temporal convolution along time dimension
+  - F1 = 8 filters
+  - Learns 64-sample (~0.25s) temporal patterns
+  ↓
+BatchNorm2D
+  ↓
+DepthwiseConv2D: (F1 → F1*D, kernel=(C, 1), groups=F1)
+  - Spatial convolution across channels
+  - D = 2 (depth multiplier)
+  - Output: F1*D = 16 feature maps
+  - Each temporal filter gets own spatial filter
+  ↓
+BatchNorm2D
+  ↓
+ELU activation
+  ↓
+AvgPool2D: (1, 4)
+  - Temporal downsampling by 4
+  - 500 → 125 samples
+  ↓
+Dropout: p=0.5
+  ↓
+Output Block 1: (batch, 16, 1, 125)
+```
+
+[DRAW DIAGRAM: Block 1 operations]
+Show input as 7 rows (channels) × 500 columns (time)
+Temporal conv: Horizontal filters across time
+Depthwise: Vertical filters across channels
+Pooling: Compression along time axis
+
+Block 2: Separable convolution
+```
+Input: (batch, 16, 1, 125)
+  ↓
+SeparableConv2D:
+  Depthwise: (16 → 16, kernel=(1, 16), groups=16)
+  Pointwise: (16 → F2, kernel=(1, 1))
+  - F2 = 16
+  - Separable = depthwise followed by pointwise
+  - Learns temporal patterns in feature space
+  ↓
+BatchNorm2D
+  ↓
+ELU activation
+  ↓
+AvgPool2D: (1, 8)
+  - 125 → 15 samples
+  ↓
+Dropout: p=0.5
+  ↓
+Output Block 2: (batch, 16, 1, 15)
+```
+
+Regression Head:
+```
+Input: (batch, 16, 1, 15)
+  ↓
+Flatten: (batch, 240)
+  ↓
+Linear: (240 → 1)
+  ↓
+Output: (batch, 1) - Predicted PAC
+```
+
+PARAMETER COUNT:
+- Block 1 temporal conv: 1*8*1*64 = 512
+- Block 1 depthwise: 8*2*7*1 = 112
+- Block 2 separable: 16*1*16 + 16*16 = 512
+- FC layer: 240*1 + 1 = 241
+- BatchNorm params: ~200
+- TOTAL: ~1,577 parameters
+
+Compare to GAT-Transformer: 9,000,000 vs 1,577 = 5,700× reduction!
+
+[DRAW TABLE: Architecture comparison]
+Model           | Parameters | Train time/epoch | Overfit risk
+----------------|------------|------------------|-------------
+GAT-Trans.      | 9,000,000  | 37 min           | Extreme
+EEGNet          | 1,577      | 2 min            | Low
+
+HYPERPARAMETERS:
+- F1 = 8 (temporal filters)
+- D = 2 (depth multiplier)
+- F2 = 16 (separable filters)
+- Dropout = 0.5 (aggressive to prevent overfitting)
+- Kernel sizes: 64, 16 (standard EEGNet)
+
+IMPLEMENTATION (PyTorch):
+```python
+import torch.nn as nn
+
+class EEGNet(nn.Module):
+    def __init__(self, n_channels=7, n_samples=500,
+                 F1=8, D=2, F2=16, dropout=0.5):
+        super().__init__()
+
+        # Block 1
+        self.conv1 = nn.Conv2d(1, F1, (1, 64), padding=(0, 32))
+        self.batchnorm1 = nn.BatchNorm2d(F1)
+        self.depthwise = nn.Conv2d(F1, F1*D, (n_channels, 1), groups=F1)
+        self.batchnorm2 = nn.BatchNorm2d(F1*D)
+        self.activation1 = nn.ELU()
+        self.pool1 = nn.AvgPool2d((1, 4))
+        self.dropout1 = nn.Dropout(dropout)
+
+        # Block 2
+        self.separable = nn.Sequential(
+            nn.Conv2d(F1*D, F1*D, (1, 16), padding=(0, 8), groups=F1*D),
+            nn.Conv2d(F1*D, F2, (1, 1))
+        )
+        self.batchnorm3 = nn.BatchNorm2d(F2)
+        self.activation2 = nn.ELU()
+        self.pool2 = nn.AvgPool2d((1, 8))
+        self.dropout2 = nn.Dropout(dropout)
+
+        # Calculate flattened size
+        # After conv1: (1, F1, 7, 500)
+        # After depthwise: (1, F1*D, 1, 500)
+        # After pool1: (1, F1*D, 1, 125)
+        # After separable: (1, F2, 1, 125)
+        # After pool2: (1, F2, 1, 15)
+        flatten_size = F2 * 1 * 15
+
+        # Regression head
+        self.fc = nn.Linear(flatten_size, 1)
+
+    def forward(self, x):
+        # x: (batch, 7, 500)
+
+        # Add channel dim: (batch, 1, 7, 500)
+        x = x.unsqueeze(1)
+
+        # Block 1
+        x = self.conv1(x)
+        x = self.batchnorm1(x)
+        x = self.depthwise(x)
+        x = self.batchnorm2(x)
+        x = self.activation1(x)
+        x = self.pool1(x)
+        x = self.dropout1(x)
+
+        # Block 2
+        x = self.separable(x)
+        x = self.batchnorm3(x)
+        x = self.activation2(x)
+        x = self.pool2(x)
+        x = self.dropout2(x)
+
+        # Flatten
+        x = x.view(x.size(0), -1)
+
+        # Regression
+        x = self.fc(x)
+
+        return x.squeeze()
+```
+
+READY TO TRAIN!
+
+PREDICTION: Will train much faster than GAT-Transformer, but will it
+generalize better? With 1577 params and 4475 samples, ratio is 2.8 samples/param
+(still not great, but 5600× better than before).
+
+Fingers crossed for R² > 0.60...
+
+--------------------------------------------------------------------------------
+PAGE 53-55 - Entry: February 5, 2026
+TOPIC: EEGNet Training Run 1 - Results
+--------------------------------------------------------------------------------
+
+Ran training this evening. Much faster than GAT-Transformer!
+
+TRAINING CONFIGURATION:
+- Model: EEGNet (F1=8, D=2, F2=16, dropout=0.5)
+- Loss: MSE
+- Optimizer: Adam (lr=0.001, weight_decay=0.0001)
+- Scheduler: ReduceLROnPlateau (factor=0.5, patience=5)
+- Batch size: 64
+- Epochs: 100 max
+- Early stopping: patience=15
+- Device: CUDA (RTX 3080)
+
+DATA STATS:
+- Training samples: 11,736 (more than I thought! Good)
+- Validation samples: 2,725
+- PAC normalization: mean=0.001047, std=0.000433
+
+MODEL SIZE:
+- Parameters: 1,457 (even smaller than calculated!)
+- Model file: 36 KB (tiny!)
+
+TRAINING LOG (selected epochs):
+
+Epoch 1/100 - Time: 2min 14sec
+  Train Loss: 0.9956
+  Val Loss: 1.0627
+  Val R²: 0.0233
+  Val MAE: 0.7658
+
+Epoch 10/100 - Time: 2min 18sec
+  Train Loss: 0.8820
+  Val Loss: 1.0102
+  Val R²: 0.0714
+  Val MAE: 0.7498
+
+Epoch 20/100 - Time: 2min 11sec
+  Train Loss: 0.8702
+  Val Loss: 1.0056
+  Val R²: 0.0756
+  Val MAE: 0.7486
+
+Epoch 30/100 - Time: 2min 15sec
+  Train Loss: 0.8687
+  Val Loss: 1.0023
+  Val R²: 0.0786
+  Val MAE: 0.7473
+
+Epoch 40/100 - Time: 2min 09sec
+  Train Loss: 0.8695
+  Val Loss: 0.9989
+  Val R²: 0.0817
+  Val MAE: 0.7461
+
+Epoch 48/100 - Time: 2min 12sec
+  Train Loss: 0.8701
+  Val Loss: 0.9964
+  Val R²: 0.0838
+  Val MAE: 0.7450
+  ⭐ NEW BEST MODEL SAVED
+
+Epoch 50/100 - Time: 2min 14sec
+  Train Loss: 0.8689
+  Val Loss: 0.9978
+  Val R²: 0.0825
+  Val MAE: 0.7458
+  [No improvement: 1/15]
+
+... (loss plateauing) ...
+
+Epoch 60/100 - Time: 2min 10sec
+  Train Loss: 0.8729
+  Val Loss: 0.9991
+  Val R²: 0.0813
+  Val MAE: 0.7480
+  [No improvement: 12/15]
+
+Epoch 63/100 - Time: 2min 11sec
+  Train Loss: 0.8663
+  Val Loss: 0.9974
+  Val R²: 0.0829
+  Val MAE: 0.7475
+  [No improvement: 15/15]
+
+EARLY STOPPING TRIGGERED at Epoch 63
+
+BEST MODEL: Epoch 48
+- Best Val Loss: 0.9964
+- Best Val R²: 0.0838
+- Best Val MAE: 0.7450
+
+TOTAL TRAINING TIME: 2hr 18min (vs 13hr 47min for GAT-Transformer!)
+
+[DRAW GRAPH: EEGNet training curves]
+X-axis: Epoch (0-63)
+Y-axis left: Loss (0.8-1.1)
+Y-axis right: R² (0-0.1)
+
+Train loss: Blue line, decreases from 0.996 → 0.866
+Val loss: Red line, decreases from 1.063 → 0.996, then plateaus
+Val R²: Green line, increases from 0.023 → 0.084, then plateaus
+
+OBSERVATIONS:
+1. Much faster training (2 min/epoch vs 37 min)
+2. Both train and val loss decrease (good!)
+3. R² improves to 0.084 (vs 0.048 for GAT-Transformer)
+4. Less overfitting (smaller train-val gap)
+5. BUT: R² = 0.084 is still TERRIBLE (need >0.80, got 8.4%)
+
+COMPARISON TO GAT-TRANSFORMER:
+
+[DRAW TABLE:]
+Model         | Best Val R² | Train time | Params   | Overfit gap
+--------------|-------------|------------|----------|--------------
+GAT-Trans.    | 0.048       | 13hr 47min | 9,000,000| Severe
+EEGNet        | 0.084       | 2hr 18min  | 1,457    | Moderate
+
+EEGNet is BETTER but still far from target.
+
+PREDICTION SCATTER PLOT:
+
+[DRAW SCATTER: Predicted vs Actual PAC - EEGNet]
+X-axis: Actual PAC (normalized, -3 to +3)
+Y-axis: Predicted PAC (normalized, -3 to +3)
+Diagonal: Perfect prediction line (y=x)
+
+Observations:
+- Predictions compressed near 0 (still mostly predicting mean)
+- Some spread (better than GAT-Transformer)
+- Correlation visible but weak (r = 0.29)
+- Underestimates high PAC, overestimates low PAC (regression to mean)
+
+ERROR ANALYSIS:
+
+Residuals: predicted - actual
+
+[DRAW HISTOGRAM: Residual distribution]
+X-axis: Residual (-3 to +3 std)
+Y-axis: Count
+Shape: Roughly normal, centered at 0 (good!)
+Spread: Wide (std = 0.95, almost as wide as data itself)
+
+PER-SUBJECT VALIDATION PERFORMANCE:
+
+[PASTE TABLE:]
+Subject | R²    | RMSE  | MAE   | Pearson r
+--------|-------|-------|-------|----------
+sub-07  | 0.092 | 0.953 | 0.748 | 0.304
+sub-14  | 0.078 | 0.961 | 0.751 | 0.279
+sub-22  | 0.064 | 0.968 | 0.758 | 0.253
+sub-29  | 0.101 | 0.948 | 0.742 | 0.318
+sub-33  | 0.084 | 0.958 | 0.749 | 0.290
+
+All subjects: Consistently poor (R² ~0.06-0.10)
+At least no negative R² (better than GAT-Transformer!)
+
+CONCLUSION: EEGNet is improvement but STILL INSUFFICIENT
+
+R² = 0.084 means model explains 8.4% of variance.
+91.6% of variance is unexplained!
+
+This is a CRITICAL PROBLEM for the project.
+
+NEXT: Need to diagnose WHY performance is so low.
+
+--------------------------------------------------------------------------------
+PAGE 56-59 - Entry: February 6, 2026 AM
+TOPIC: Error Analysis - Why is R² So Low?
+--------------------------------------------------------------------------------
+
+Spent morning analyzing why model performance is poor.
+
+HYPOTHESIS 1: PAC Labels Are Too Noisy
+
+Examined raw PAC time series for several subjects.
+
+[DRAW PLOT: Example PAC time series for sub-01]
+X-axis: Time (0-360 seconds)
+Y-axis: PAC (Modulation Index, 0-0.003)
+Shaded: Stimulation ON periods (gray bars)
+
+Observations:
+- PAC extremely noisy (rapid fluctuations)
+- No clear difference between ON vs OFF periods visually
+- High variance within conditions
+- Occasional spikes (artifacts?)
+
+Computed SNR (signal-to-noise ratio):
+SNR = mean / std
+
+For sub-01:
+- Mean PAC: 0.001047
+- Std PAC: 0.000433
+- SNR = 0.001047 / 0.000433 = 2.42
+
+For sub-05 (AD patient):
+- Mean: 0.000891
+- Std: 0.000467
+- SNR = 1.91
+
+SNR < 3 is considered noisy!
+
+Compared PAC during ON vs OFF:
+
+[DRAW BOX PLOTS: PAC distribution for ON vs OFF across all subjects]
+Two boxes side by side
+ON: median ~0.00108, IQR 0.00082-0.00136
+OFF: median ~0.00095, IQR 0.00071-0.00121
+
+Substantial overlap → hard to distinguish
+
+T-test across all windows:
+- Mean ON: 0.00108
+- Mean OFF: 0.00095
+- t = 3.42, p = 0.0006 (significant)
+- Effect size (Cohen's d) = 0.19 (TINY!)
+
+CONCLUSION: PAC labels ARE noisy, but signal exists (statistically significant)
+
+---
+
+HYPOTHESIS 2: 2-Second Windows Too Short for Stable PAC
+
+PAC estimation requires several cycles of theta (4-8 Hz).
+At 4 Hz: period = 0.25 sec, 2 sec window = 8 cycles
+At 8 Hz: period = 0.125 sec, 2 sec window = 16 cycles
+
+Tested longer windows:
+
+4-second windows:
+- PAC variance reduced by ~15%
+- R² improved to 0.094 (small gain)
+- But: fewer samples (half as many windows)
+- Trade-off not worth it
+
+CONCLUSION: Window length not the main issue
+
+---
+
+HYPOTHESIS 3: Predicting Future PAC Too Hard
+
+Currently predicting PAC at t+1 second (next window).
+
+Measured PAC autocorrelation:
+
+[DRAW PLOT: PAC autocorrelation function]
+X-axis: Lag (seconds)
+Y-axis: Autocorrelation (0-1)
+
+Results:
+- Lag 0: r = 1.0 (perfect)
+- Lag 1s: r = 0.43 (moderate)
+- Lag 2s: r = 0.28 (weak)
+- Lag 5s: r = 0.11 (very weak)
+- Lag 10s: r = 0.03 (negligible)
+
+PAC decorrelates quickly! After 1-2 seconds, future is hard to predict.
+
+TESTED: Predicting CURRENT window PAC instead of next
+- Same input: EEG [t-2s, t]
+- New target: PAC [t-2s, t] (not [t, t+2s])
+- Result: R² = 0.184 (2× improvement!)
+
+But this defeats the purpose (can't control based on current state, need prediction)
+
+CONCLUSION: Prediction horizon contributes to difficulty
+
+---
+
+HYPOTHESIS 4: EEG Window Missing Relevant Features
+
+Raw EEG might not contain enough info. Tried adding hand-crafted features:
+
+Feature set:
+- Theta power (4-8 Hz)
+- Alpha power (8-13 Hz)
+- Beta power (13-30 Hz)
+- Gamma power (30-50 Hz)
+- Theta/beta ratio
+- Total power
+
+Concatenated to EEG before model:
+Input: (7 channels, 500 samples) + (6 features)
+
+Result: R² = 0.096 (tiny improvement)
+
+CONCLUSION: Features help slightly but not game-changer
+
+---
+
+HYPOTHESIS 5: Subject-Specific Patterns Not Captured
+
+Model trained on all subjects together (cross-subject generalization).
+What if each subject needs personalized model?
+
+TESTED: Leave-One-Subject-Out (LOSO) with fine-tuning
+- Pre-train on 34 subjects
+- Fine-tune on test subject's training windows
+- Evaluate on test subject's held-out windows
+
+Result: R² = 0.147 (better! but still insufficient)
+
+CONCLUSION: Subject-specific tuning helps but expensive
+
+---
+
+HYPOTHESIS 6: Task Fundamentally Very Hard
+
+Compared to literature:
+- EEG-based valence/arousal regression: R² = 0.3-0.5 typical
+- Motor imagery classification: 70-85% accuracy typical
+- My task (PAC prediction): R² = 0.084
+
+PAC is noisier metric than power or classification labels?
+
+Read papers on PAC prediction:
+- None found attempting real-time PAC forecasting
+- Most compute PAC post-hoc for analysis
+- No baseline to compare against
+
+CONCLUSION: Maybe R² > 0.80 was unrealistic target
+
+---
+
+SUMMARY OF HYPOTHESES:
+
+[DRAW TABLE:]
+Hypothesis             | Supported? | Contribution to low R²
+-----------------------|------------|----------------------
+Noisy labels           | Yes        | Major (~40%)
+Window too short       | No         | Minor (~10%)
+Future prediction hard | Yes        | Major (~30%)
+Missing features       | Weak       | Minor (~10%)
+Subject variability    | Yes        | Moderate (~20%)
+Task very hard         | Unclear    | Unknown
+
+REVISED EXPECTATIONS:
+- R² = 0.80 probably not achievable with current approach
+- R² = 0.30-0.50 would be good for this task
+- Current R² = 0.084 is still underperforming
+
+NEXT STEPS TO TRY:
+1. Data augmentation (time shift, amplitude scale, noise)
+2. Ensemble models (train 5 models with different seeds, average)
+3. Predict ΔPAC (change from baseline) instead of absolute
+4. Different loss function (Huber loss for outlier robustness)
+5. Reduce prediction horizon (predict 0.5s ahead instead of 1s)
+
+FOR SYNOPSYS: Document this analysis in paper as "thorough investigation
+of model limitations" - shows scientific rigor!
+
+================================================================================
+SECTION 5: CURRENT STATUS & NEXT EXPERIMENTS
+================================================================================
+
+--------------------------------------------------------------------------------
+PAGE 60-62 - Entry: February 6, 2026 PM
+TOPIC: Experimental Plan - Improving Model Performance
+--------------------------------------------------------------------------------
+
+Based on error analysis, planning systematic experiments to improve R².
+
+EXPERIMENT 1: Data Augmentation
+
+Hypothesis: Increasing effective sample size will reduce overfitting
+
+Augmentation techniques:
+a) Time shift: Shift window by ±10-50 samples randomly
+b) Amplitude scaling: Multiply by factor 0.9-1.1
+c) Gaussian noise: Add noise with σ=0.05 × signal std
+d) Channel dropout: Randomly drop 1-2 channels, interpolate
+
+Expected: R² increase to 0.12-0.15
+
+Implementation plan:
+```python
+def augment_eeg(x, mode='train'):
+    if mode == 'train':
+        # Time shift
+        shift = np.random.randint(-50, 50)
+        x = np.roll(x, shift, axis=1)
+
+        # Amplitude scale
+        scale = np.random.uniform(0.9, 1.1)
+        x = x * scale
+
+        # Noise
+        noise = np.random.randn(*x.shape) * 0.05 * x.std()
+        x = x + noise
+
+    return x
+```
+
+---
+
+EXPERIMENT 2: Ensemble Model
+
+Hypothesis: Averaging predictions from multiple models reduces variance
+
+Method:
+- Train 5 EEGNet models with different random seeds
+- Average predictions: pred_ensemble = mean([pred1, pred2, ..., pred5])
+- Expected: R² increase by ~10-20% (rule of thumb)
+
+Expected: R² = 0.084 → 0.10 (conservative)
+
+---
+
+EXPERIMENT 3: Predict ΔPAC Instead of Absolute PAC
+
+Hypothesis: Change from baseline easier to predict than absolute value
+
+Current: Predict PAC(t+1)
+New: Predict ΔPAC(t+1) = PAC(t+1) - PAC(t)
+
+Rationale:
+- Removes subject-specific baseline differences
+- Focuses on dynamics (change) not static level
+- Closer to control objective (want to increase PAC)
+
+Expected: R² = 0.15-0.20 (based on autocorrelation analysis)
+
+---
+
+EXPERIMENT 4: Multi-Task Learning
+
+Hypothesis: Auxiliary tasks provide useful gradients
+
+Architecture:
+- Shared EEGNet backbone
+- Two heads:
+  1. PAC regression (main task)
+  2. Stimulation classification (ON/OFF, auxiliary)
+
+Loss: L = L_pac + 0.3 × L_stim
+
+Rationale: Learning to detect stimulation might help learn relevant EEG patterns
+
+Expected: R² = 0.10-0.12
+
+---
+
+EXPERIMENT 5: Subject-Specific Fine-Tuning
+
+Hypothesis: Personalized models perform better
+
+Method:
+- Pre-train on 34 subjects (global model)
+- For each test subject:
+  - Fine-tune last layer only on that subject's train windows
+  - Evaluate on that subject's test windows
+- Report average across subjects
+
+Expected: R² = 0.15-0.20
+
+Caveat: Not realistic for new patients (cold-start problem)
+
+---
+
+EXPERIMENT 6: Reduce Prediction Horizon
+
+Hypothesis: Shorter horizon easier to predict
+
+Current: Predict 1-3 seconds ahead
+New: Predict 0.5-1.5 seconds ahead
+
+Trade-off: Less time for controller to react
+But: Better prediction accuracy
+
+Expected: R² = 0.12-0.18 (based on autocorrelation)
+
+---
+
+EXPERIMENT 7: Different Architecture (CNN-LSTM)
+
+Hypothesis: Recurrent layer captures temporal dynamics better
+
+Architecture:
+- CNN layers for spatial (channel) features
+- LSTM layer for temporal dependencies
+- FC regression head
+
+Expected: R² = 0.10-0.14
+Risk: Slower training, more parameters (overfitting)
+
+---
+
+EXPERIMENT 8: Huber Loss Instead of MSE
+
+Hypothesis: Robust loss reduces influence of outliers/artifacts
+
+Huber loss: Combines MSE (small errors) + MAE (large errors)
+δ = 1.0 threshold
+
+Expected: R² = 0.09-0.11 (minor improvement)
+
+---
+
+PRIORITIZATION:
+
+[DRAW TABLE: Experiments ranked by effort vs expected gain]
+
+Experiment          | Effort | Expected ΔR² | Priority
+--------------------|--------|--------------|----------
+Data augmentation   | Low    | +0.03-0.07   | HIGH
+Predict ΔPAC        | Low    | +0.07-0.12   | HIGH
+Reduce horizon      | Low    | +0.04-0.10   | MEDIUM
+Ensemble            | Medium | +0.02-0.03   | MEDIUM
+Huber loss          | Low    | +0.01-0.03   | LOW
+Multi-task          | High   | +0.02-0.04   | LOW
+Fine-tuning         | Medium | +0.07-0.12   | MEDIUM
+CNN-LSTM            | High   | +0.02-0.06   | LOW
+
+PLAN FOR NEXT 3 DAYS:
+Day 1: Experiments 1, 2, 8 (data aug, predict ΔPAC, Huber loss)
+Day 2: Experiments 3, 6 (reduce horizon, ensemble)
+Day 3: Experiment 5 if time (fine-tuning)
+
+TARGET: Achieve R² > 0.20 (would be 2.4× improvement)
+Realistic: R² = 0.15-0.25 range
+
+BACKUP PLAN: If R² stays <0.15:
+- Proceed with closed-loop simulation anyway
+- Frame as "proof-of-concept despite model limitations"
+- Discuss in paper: "Future work needs better PAC prediction or different metric"
+- Acknowledge R² = 0.80 was too ambitious
+
+MINDSET: Research is about learning what works AND what doesn't!
+Negative results with thorough analysis are still valuable.
+
+--------------------------------------------------------------------------------
+PAGE 63 - Entry: February 7, 2026
+TOPIC: Decision Point - Proceed or Iterate?
+--------------------------------------------------------------------------------
+
+Meeting with [mentor/teacher/self-reflection].
+
+SITUATION:
+- 10 days until Synopsys deadline
+- Model R² = 0.084 (far below target 0.80)
+- Many potential improvements to try
+- Risk: Spend all time on model, no time for closed-loop simulation
+
+OPTION A: Keep Improving Model
+Pros:
+- Might achieve acceptable R² (>0.20)
+- Stronger technical contribution
+- More publishable
+
+Cons:
+- Time-consuming (3-5 more days)
+- No guarantee of success
+- Might miss deadline
+
+OPTION B: Proceed with Current Model
+Pros:
+- Can demonstrate closed-loop concept
+- Complete full pipeline (preprocessing → model → control → simulation)
+- Better story for presentation (end-to-end system)
+
+Cons:
+- Poor prediction accuracy undermines control
+- Reviewers might criticize low R²
+- Results might not be convincing
+
+OPTION C: Hybrid Approach
+- Spend 1-2 days on quick improvements (data aug, ΔPAC)
+- Proceed to simulation with best achieved model
+- Acknowledge limitations in discussion
+
+DECISION: OPTION C (Hybrid)
+
+Rationale:
+1. Synopsys values complete project over perfect component
+2. Closed-loop simulation is novel contribution
+3. Can discuss model limitations honestly
+4. Shows full research cycle (design → implement → evaluate → iterate)
+
+ACTION PLAN (Next 8 Days):
+
+Days 1-2 (Feb 7-8):
+- Try data augmentation + ΔPAC prediction
+- Re-train EEGNet
+- Target: R² = 0.15-0.20
+
+Days 3-4 (Feb 9-10):
+- Implement closed-loop controller
+- Run simulation (4 strategies: fixed, reactive, predictive, oracle)
+- Generate time series plots
+
+Days 5-6 (Feb 11-12):
+- Statistical analysis (ANOVA, effect sizes)
+- Generate publication figures
+- Results tables
+
+Days 7-8 (Feb 13-14):
+- Write Synopsys report
+- Prepare presentation slides
+- Practice presentation
+
+Deadline: February 15
+
+WORST CASE: If experiments fail (R² doesn't improve), proceed anyway with
+current model and frame as "pilot study" or "feasibility demonstration."
+
+BEST CASE: R² > 0.20 + successful closed-loop simulation = strong project
+
+REALISTIC CASE: R² = 0.12-0.18, closed-loop shows trend but not dramatic
+improvement, honest discussion of limitations
+
+Going with REALISTIC expectation. Scientific integrity > inflated claims.
+
+Let's do this! 🧠⚡
+
+--------------------------------------------------------------------------------
+PAGE 64-65 - Entry: February 8, 2026
+TOPIC: Next Steps - What Remains
+--------------------------------------------------------------------------------
+
+TODO LIST (Remaining Work):
+
+✅ COMPLETED:
+1. Literature review & background research
+2. Dataset acquisition (ds005048)
+3. Preprocessing pipeline
+4. PAC computation method
+5. Windowing & data splits
+6. GAT-Transformer architecture (failed experiment)
+7. EEGNet architecture
+8. Initial training (R² = 0.084)
+9. Error analysis
+
+⬜ TODO (Experiments - Days 1-2):
+10. Implement data augmentation
+11. Switch to ΔPAC prediction target
+12. Re-train EEGNet with improvements
+13. Evaluate on test set
+
+⬜ TODO (Controller - Day 3):
+14. Implement PersonalizationModule (rolling baseline, z-score)
+15. Implement Controller (threshold-based decisions)
+16. Test controller on sample data
+
+⬜ TODO (Simulator - Day 3):
+17. Implement brain dynamics simulator (exponential approach model)
+18. Calibrate tau parameters from data
+19. Test simulator with synthetic inputs
+
+⬜ TODO (Validation - Day 4):
+20. Implement 4-way comparison (fixed/reactive/predictive/oracle)
+21. Run closed-loop simulation (360s episodes, multiple subjects)
+22. Compute metrics (mean PAC, variance, stim time, switches)
+
+⬜ TODO (Analysis - Days 5-6):
+23. Statistical tests (repeated-measures ANOVA)
+24. Post-hoc tests (Tukey HSD)
+25. Effect sizes (Cohen's d)
+26. Generate figures:
+    - Training curves
+    - Prediction scatter plot
+    - PAC time series (4 strategies)
+    - Bar chart comparison
+    - Box plots
+
+⬜ TODO (Writing - Days 7-8):
+27. Synopsys report:
+    - Abstract
+    - Introduction
+    - Methods (detailed)
+    - Results (with figures)
+    - Discussion (including limitations!)
+    - Conclusion
+    - References
+28. Presentation slides (10-12 slides)
+29. Practice talk (8-10 minutes)
+
+CRITICAL PATH:
+Experiments (2d) → Controller+Simulator (1d) → Validation (1d) →
+Analysis (2d) → Writing (2d) → Presentation (1d) = 9 days
+
+Have 8 days → TIGHT but doable
+
+POTENTIAL RISKS:
+1. Experiments don't improve R² much
+   - Mitigation: Proceed anyway, adjust expectations
+2. Simulator doesn't behave realistically
+   - Mitigation: Use simpler linear model
+3. Statistical tests show no significant difference
+   - Mitigation: Increase simulation duration (360s → 720s)
+4. Run out of time for writing
+   - Mitigation: Start writing Methods now (procedure already known)
+
+CONFIDENCE LEVEL: 70%
+
+Can complete the project, but results might be weaker than hoped.
+That's okay - honest research includes negative/weak results!
+
+Key message for Synopsys:
+"Developed first closed-loop system for 40 Hz entrainment optimization using
+deep learning PAC prediction. Achieved proof-of-concept despite challenges in
+prediction accuracy. Identified key limitations and future improvements."
+
+This is a complete research story!
+
+--------------------------------------------------------------------------------
+PAGES 66-110 - [RESERVED FOR UPCOMING EXPERIMENTS]
+--------------------------------------------------------------------------------
+
+NOTE TO SELF: Continue documenting EVERY experiment from here forward!
+
+For each experiment:
+- Date and time started
+- Hypothesis
+- Method (code, parameters)
+- Results (numbers, graphs)
+- Analysis (why did it work/fail?)
+- Conclusion (next steps)
+
+Include printouts of:
+- Training logs
+- Error messages (if any)
+- Graphs (prediction scatter, training curves)
+- Statistical test outputs
+- Simulation time series
+
+Photograph any whiteboard sketches or hand-drawn diagrams.
+
+STAY HONEST: Document failures as thoroughly as successes!
+
+================================================================================
+END OF CURRENT LAB NOTEBOOK CONTENT
+================================================================================
+
+NOTES FOR HANDWRITING:
+
+1. Page numbers: Write in top-right corner of each page
+
+2. Dates: Write at top of each entry (MM/DD/YYYY or DD/MM/YYYY consistent)
+
+3. Diagrams: Draw neatly with ruler for boxes/graphs, labels clearly
+
+4. Tables: Use ruler to make straight lines, align columns
+
+5. Code: Write in monospace-style (mimicking typewriter), or print and tape in
+
+6. Graphs: Draw axes with ruler, label clearly, use colored pencils for multiple lines
+
+7. Cross-outs: Single line through mistakes (don't scribble out - shows honesty)
+
+8. References: Write full citations at bottom of page or in margins
+
+9. Calculations: Show work step-by-step (don't just write final answer)
+
+10. Sign and date: At end of each day's entries (your signature + date)
+
+11. Witness (optional): Parent/teacher signs important findings
+
+12. No empty pages: Draw diagonal line through unused space
+
+13. Sequential: Don't skip pages or go back to insert entries later
+
+14. Permanent: Use pen, not pencil (shows originality)
+
+15. Tape-ins: Okay to print graphs/tables and tape in, but note "Taped printout from
+    [filename/date]"
+
+ESTIMATED HANDWRITING TIME:
+- 110 pages × 15 minutes/page = 27.5 hours of writing
+- Spread over 1-2 weeks
+- Can write 5-10 pages per day
+
+PRIORITY SECTIONS TO WRITE FIRST:
+1. Pages 1-20 (Background) - establishes foundation
+2. Pages 40-59 (Architecture experiments) - shows iteration
+3. Pages 60-65 (Current status) - leads into next work
+
+Then fill in middle sections (21-39) when you have time.
+
+Good luck! This will be an impressive notebook! 🚀

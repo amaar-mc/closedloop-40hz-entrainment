@@ -1,0 +1,507 @@
+2026-02-05 23:46:02 - closed_loop_entrainment - INFO - Using device: cuda
+2026-02-05 23:46:02 - closed_loop_entrainment - INFO - 
+Loading data from data/processed...
+2026-02-05 23:46:02 - closed_loop_entrainment - INFO - PAC normalization: mean=0.001047, std=0.000433
+2026-02-05 23:46:03 - closed_loop_entrainment - INFO - Training set: 11736 samples
+2026-02-05 23:46:03 - closed_loop_entrainment - INFO - Validation set: 2725 samples
+2026-02-05 23:46:03 - closed_loop_entrainment - INFO - 
+Creating EEGNet model...
+2026-02-05 23:46:03 - closed_loop_entrainment - INFO - EEGNet parameters: 1,457
+2026-02-05 23:46:07 - closed_loop_entrainment - INFO - ModelTrainer initialized:
+2026-02-05 23:46:07 - closed_loop_entrainment - INFO -   Device: cuda
+2026-02-05 23:46:07 - closed_loop_entrainment - INFO -   LR: 0.001, Weight Decay: 0.0001
+2026-02-05 23:46:07 - closed_loop_entrainment - INFO -   Early stopping patience: 15
+2026-02-05 23:46:07 - closed_loop_entrainment - INFO - 
+============================================================
+2026-02-05 23:46:07 - closed_loop_entrainment - INFO - Starting training for 100 epochs
+2026-02-05 23:46:07 - closed_loop_entrainment - INFO - ============================================================
+2026-02-05 23:46:09 - closed_loop_entrainment - INFO - Epoch 1/100
+2026-02-05 23:46:09 - closed_loop_entrainment - INFO -   Train Loss: 0.995580
+2026-02-05 23:46:09 - closed_loop_entrainment - INFO -   Val Loss:   1.062707
+2026-02-05 23:46:09 - closed_loop_entrainment - INFO -   Val R²:     0.0233
+2026-02-05 23:46:09 - closed_loop_entrainment - INFO -   Val MAE:    0.765792
+2026-02-05 23:46:11 - closed_loop_entrainment - INFO - Epoch 2/100
+2026-02-05 23:46:11 - closed_loop_entrainment - INFO -   Train Loss: 0.942051
+2026-02-05 23:46:11 - closed_loop_entrainment - INFO -   Val Loss:   1.052090
+2026-02-05 23:46:11 - closed_loop_entrainment - INFO -   Val R²:     0.0330
+2026-02-05 23:46:11 - closed_loop_entrainment - INFO -   Val MAE:    0.761320
+2026-02-05 23:46:12 - closed_loop_entrainment - INFO - Epoch 3/100
+2026-02-05 23:46:12 - closed_loop_entrainment - INFO -   Train Loss: 0.933276
+2026-02-05 23:46:12 - closed_loop_entrainment - INFO -   Val Loss:   1.041681
+2026-02-05 23:46:12 - closed_loop_entrainment - INFO -   Val R²:     0.0426
+2026-02-05 23:46:12 - closed_loop_entrainment - INFO -   Val MAE:    0.758763
+2026-02-05 23:46:14 - closed_loop_entrainment - INFO - Epoch 4/100
+2026-02-05 23:46:14 - closed_loop_entrainment - INFO -   Train Loss: 0.920965
+2026-02-05 23:46:14 - closed_loop_entrainment - INFO -   Val Loss:   1.034803
+2026-02-05 23:46:14 - closed_loop_entrainment - INFO -   Val R²:     0.0488
+2026-02-05 23:46:14 - closed_loop_entrainment - INFO -   Val MAE:    0.759567
+2026-02-05 23:46:15 - closed_loop_entrainment - INFO - Epoch 5/100
+2026-02-05 23:46:15 - closed_loop_entrainment - INFO -   Train Loss: 0.915949
+2026-02-05 23:46:15 - closed_loop_entrainment - INFO -   Val Loss:   1.038622
+2026-02-05 23:46:15 - closed_loop_entrainment - INFO -   Val R²:     0.0452
+2026-02-05 23:46:15 - closed_loop_entrainment - INFO -   Val MAE:    0.757297
+2026-02-05 23:46:15 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:46:17 - closed_loop_entrainment - INFO - Epoch 6/100
+2026-02-05 23:46:17 - closed_loop_entrainment - INFO -   Train Loss: 0.911038
+2026-02-05 23:46:17 - closed_loop_entrainment - INFO -   Val Loss:   1.040323
+2026-02-05 23:46:17 - closed_loop_entrainment - INFO -   Val R²:     0.0435
+2026-02-05 23:46:17 - closed_loop_entrainment - INFO -   Val MAE:    0.756401
+2026-02-05 23:46:17 - closed_loop_entrainment - INFO -   No improvement (2/15)
+2026-02-05 23:46:18 - closed_loop_entrainment - INFO - Epoch 7/100
+2026-02-05 23:46:18 - closed_loop_entrainment - INFO -   Train Loss: 0.905162
+2026-02-05 23:46:18 - closed_loop_entrainment - INFO -   Val Loss:   1.042792
+2026-02-05 23:46:18 - closed_loop_entrainment - INFO -   Val R²:     0.0414
+2026-02-05 23:46:18 - closed_loop_entrainment - INFO -   Val MAE:    0.757607
+2026-02-05 23:46:18 - closed_loop_entrainment - INFO -   No improvement (3/15)
+2026-02-05 23:46:19 - closed_loop_entrainment - INFO - Epoch 8/100
+2026-02-05 23:46:19 - closed_loop_entrainment - INFO -   Train Loss: 0.899046
+2026-02-05 23:46:19 - closed_loop_entrainment - INFO -   Val Loss:   1.034186
+2026-02-05 23:46:19 - closed_loop_entrainment - INFO -   Val R²:     0.0493
+2026-02-05 23:46:19 - closed_loop_entrainment - INFO -   Val MAE:    0.757524
+2026-02-05 23:46:21 - closed_loop_entrainment - INFO - Epoch 9/100
+2026-02-05 23:46:21 - closed_loop_entrainment - INFO -   Train Loss: 0.900050
+2026-02-05 23:46:21 - closed_loop_entrainment - INFO -   Val Loss:   1.031263
+2026-02-05 23:46:21 - closed_loop_entrainment - INFO -   Val R²:     0.0520
+2026-02-05 23:46:21 - closed_loop_entrainment - INFO -   Val MAE:    0.755681
+2026-02-05 23:46:22 - closed_loop_entrainment - INFO - Epoch 10/100
+2026-02-05 23:46:22 - closed_loop_entrainment - INFO -   Train Loss: 0.892852
+2026-02-05 23:46:22 - closed_loop_entrainment - INFO -   Val Loss:   1.028106
+2026-02-05 23:46:22 - closed_loop_entrainment - INFO -   Val R²:     0.0547
+2026-02-05 23:46:22 - closed_loop_entrainment - INFO -   Val MAE:    0.751499
+2026-02-05 23:46:24 - closed_loop_entrainment - INFO - Epoch 11/100
+2026-02-05 23:46:24 - closed_loop_entrainment - INFO -   Train Loss: 0.894788
+2026-02-05 23:46:24 - closed_loop_entrainment - INFO -   Val Loss:   1.028339
+2026-02-05 23:46:24 - closed_loop_entrainment - INFO -   Val R²:     0.0545
+2026-02-05 23:46:24 - closed_loop_entrainment - INFO -   Val MAE:    0.750673
+2026-02-05 23:46:24 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:46:25 - closed_loop_entrainment - INFO - Epoch 12/100
+2026-02-05 23:46:25 - closed_loop_entrainment - INFO -   Train Loss: 0.891180
+2026-02-05 23:46:25 - closed_loop_entrainment - INFO -   Val Loss:   1.020754
+2026-02-05 23:46:25 - closed_loop_entrainment - INFO -   Val R²:     0.0614
+2026-02-05 23:46:25 - closed_loop_entrainment - INFO -   Val MAE:    0.754264
+2026-02-05 23:46:27 - closed_loop_entrainment - INFO - Epoch 13/100
+2026-02-05 23:46:27 - closed_loop_entrainment - INFO -   Train Loss: 0.891084
+2026-02-05 23:46:27 - closed_loop_entrainment - INFO -   Val Loss:   1.019300
+2026-02-05 23:46:27 - closed_loop_entrainment - INFO -   Val R²:     0.0629
+2026-02-05 23:46:27 - closed_loop_entrainment - INFO -   Val MAE:    0.753599
+2026-02-05 23:46:29 - closed_loop_entrainment - INFO - Epoch 14/100
+2026-02-05 23:46:29 - closed_loop_entrainment - INFO -   Train Loss: 0.888217
+2026-02-05 23:46:29 - closed_loop_entrainment - INFO -   Val Loss:   1.018335
+2026-02-05 23:46:29 - closed_loop_entrainment - INFO -   Val R²:     0.0636
+2026-02-05 23:46:29 - closed_loop_entrainment - INFO -   Val MAE:    0.756698
+2026-02-05 23:46:30 - closed_loop_entrainment - INFO - Epoch 15/100
+2026-02-05 23:46:30 - closed_loop_entrainment - INFO -   Train Loss: 0.890146
+2026-02-05 23:46:30 - closed_loop_entrainment - INFO -   Val Loss:   1.022375
+2026-02-05 23:46:30 - closed_loop_entrainment - INFO -   Val R²:     0.0598
+2026-02-05 23:46:30 - closed_loop_entrainment - INFO -   Val MAE:    0.755716
+2026-02-05 23:46:30 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:46:31 - closed_loop_entrainment - INFO - Epoch 16/100
+2026-02-05 23:46:31 - closed_loop_entrainment - INFO -   Train Loss: 0.887657
+2026-02-05 23:46:31 - closed_loop_entrainment - INFO -   Val Loss:   1.013964
+2026-02-05 23:46:31 - closed_loop_entrainment - INFO -   Val R²:     0.0676
+2026-02-05 23:46:31 - closed_loop_entrainment - INFO -   Val MAE:    0.753010
+2026-02-05 23:54:53 - closed_loop_entrainment - INFO - Using device: cuda
+2026-02-05 23:54:53 - closed_loop_entrainment - INFO - 
+Loading data from data/processed...
+2026-02-05 23:54:53 - closed_loop_entrainment - INFO - PAC normalization: mean=0.001047, std=0.000433
+2026-02-05 23:54:54 - closed_loop_entrainment - INFO - Training set: 11736 samples
+2026-02-05 23:54:54 - closed_loop_entrainment - INFO - Validation set: 2725 samples
+2026-02-05 23:54:54 - closed_loop_entrainment - INFO - 
+Creating EEGNet model...
+2026-02-05 23:54:54 - closed_loop_entrainment - INFO - EEGNet parameters: 1,457
+2026-02-05 23:54:56 - closed_loop_entrainment - INFO - ModelTrainer initialized:
+2026-02-05 23:54:56 - closed_loop_entrainment - INFO -   Device: cuda
+2026-02-05 23:54:56 - closed_loop_entrainment - INFO -   LR: 0.001, Weight Decay: 0.0001
+2026-02-05 23:54:56 - closed_loop_entrainment - INFO -   Early stopping patience: 15
+2026-02-05 23:54:56 - closed_loop_entrainment - INFO - 
+============================================================
+2026-02-05 23:54:56 - closed_loop_entrainment - INFO - Starting training for 100 epochs
+2026-02-05 23:54:56 - closed_loop_entrainment - INFO - ============================================================
+2026-02-05 23:54:58 - closed_loop_entrainment - INFO - Epoch 1/100
+2026-02-05 23:54:58 - closed_loop_entrainment - INFO -   Train Loss: 1.016413
+2026-02-05 23:54:58 - closed_loop_entrainment - INFO -   Val Loss:   1.095967
+2026-02-05 23:54:58 - closed_loop_entrainment - INFO -   Val R2:     -0.0074
+2026-02-05 23:54:58 - closed_loop_entrainment - INFO -   Val MAE:    0.768046
+2026-02-05 23:54:58 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.095967)
+2026-02-05 23:54:59 - closed_loop_entrainment - INFO - Epoch 2/100
+2026-02-05 23:54:59 - closed_loop_entrainment - INFO -   Train Loss: 0.966295
+2026-02-05 23:54:59 - closed_loop_entrainment - INFO -   Val Loss:   1.081768
+2026-02-05 23:54:59 - closed_loop_entrainment - INFO -   Val R2:     0.0057
+2026-02-05 23:54:59 - closed_loop_entrainment - INFO -   Val MAE:    0.767506
+2026-02-05 23:54:59 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.081768)
+2026-02-05 23:55:01 - closed_loop_entrainment - INFO - Epoch 3/100
+2026-02-05 23:55:01 - closed_loop_entrainment - INFO -   Train Loss: 0.938681
+2026-02-05 23:55:01 - closed_loop_entrainment - INFO -   Val Loss:   1.087009
+2026-02-05 23:55:01 - closed_loop_entrainment - INFO -   Val R2:     0.0004
+2026-02-05 23:55:01 - closed_loop_entrainment - INFO -   Val MAE:    0.763777
+2026-02-05 23:55:01 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:55:02 - closed_loop_entrainment - INFO - Epoch 4/100
+2026-02-05 23:55:02 - closed_loop_entrainment - INFO -   Train Loss: 0.929977
+2026-02-05 23:55:02 - closed_loop_entrainment - INFO -   Val Loss:   1.072868
+2026-02-05 23:55:02 - closed_loop_entrainment - INFO -   Val R2:     0.0135
+2026-02-05 23:55:02 - closed_loop_entrainment - INFO -   Val MAE:    0.761475
+2026-02-05 23:55:02 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.072868)
+2026-02-05 23:55:04 - closed_loop_entrainment - INFO - Epoch 5/100
+2026-02-05 23:55:04 - closed_loop_entrainment - INFO -   Train Loss: 0.920294
+2026-02-05 23:55:04 - closed_loop_entrainment - INFO -   Val Loss:   1.076251
+2026-02-05 23:55:04 - closed_loop_entrainment - INFO -   Val R2:     0.0104
+2026-02-05 23:55:04 - closed_loop_entrainment - INFO -   Val MAE:    0.762299
+2026-02-05 23:55:04 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:55:05 - closed_loop_entrainment - INFO - Epoch 6/100
+2026-02-05 23:55:05 - closed_loop_entrainment - INFO -   Train Loss: 0.912759
+2026-02-05 23:55:05 - closed_loop_entrainment - INFO -   Val Loss:   1.057884
+2026-02-05 23:55:05 - closed_loop_entrainment - INFO -   Val R2:     0.0273
+2026-02-05 23:55:05 - closed_loop_entrainment - INFO -   Val MAE:    0.760293
+2026-02-05 23:55:05 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.057884)
+2026-02-05 23:55:07 - closed_loop_entrainment - INFO - Epoch 7/100
+2026-02-05 23:55:07 - closed_loop_entrainment - INFO -   Train Loss: 0.910092
+2026-02-05 23:55:07 - closed_loop_entrainment - INFO -   Val Loss:   1.052423
+2026-02-05 23:55:07 - closed_loop_entrainment - INFO -   Val R2:     0.0323
+2026-02-05 23:55:07 - closed_loop_entrainment - INFO -   Val MAE:    0.762477
+2026-02-05 23:55:07 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.052423)
+2026-02-05 23:55:08 - closed_loop_entrainment - INFO - Epoch 8/100
+2026-02-05 23:55:08 - closed_loop_entrainment - INFO -   Train Loss: 0.907758
+2026-02-05 23:55:08 - closed_loop_entrainment - INFO -   Val Loss:   1.050991
+2026-02-05 23:55:08 - closed_loop_entrainment - INFO -   Val R2:     0.0336
+2026-02-05 23:55:08 - closed_loop_entrainment - INFO -   Val MAE:    0.757198
+2026-02-05 23:55:08 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.050991)
+2026-02-05 23:55:10 - closed_loop_entrainment - INFO - Epoch 9/100
+2026-02-05 23:55:10 - closed_loop_entrainment - INFO -   Train Loss: 0.903233
+2026-02-05 23:55:10 - closed_loop_entrainment - INFO -   Val Loss:   1.054184
+2026-02-05 23:55:10 - closed_loop_entrainment - INFO -   Val R2:     0.0308
+2026-02-05 23:55:10 - closed_loop_entrainment - INFO -   Val MAE:    0.756952
+2026-02-05 23:55:10 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:55:11 - closed_loop_entrainment - INFO - Epoch 10/100
+2026-02-05 23:55:11 - closed_loop_entrainment - INFO -   Train Loss: 0.902889
+2026-02-05 23:55:11 - closed_loop_entrainment - INFO -   Val Loss:   1.037745
+2026-02-05 23:55:11 - closed_loop_entrainment - INFO -   Val R2:     0.0459
+2026-02-05 23:55:11 - closed_loop_entrainment - INFO -   Val MAE:    0.764591
+2026-02-05 23:55:11 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.037745)
+2026-02-05 23:55:13 - closed_loop_entrainment - INFO - Epoch 11/100
+2026-02-05 23:55:13 - closed_loop_entrainment - INFO -   Train Loss: 0.894102
+2026-02-05 23:55:13 - closed_loop_entrainment - INFO -   Val Loss:   1.039984
+2026-02-05 23:55:13 - closed_loop_entrainment - INFO -   Val R2:     0.0438
+2026-02-05 23:55:13 - closed_loop_entrainment - INFO -   Val MAE:    0.752682
+2026-02-05 23:55:13 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:55:14 - closed_loop_entrainment - INFO - Epoch 12/100
+2026-02-05 23:55:14 - closed_loop_entrainment - INFO -   Train Loss: 0.900183
+2026-02-05 23:55:14 - closed_loop_entrainment - INFO -   Val Loss:   1.031419
+2026-02-05 23:55:14 - closed_loop_entrainment - INFO -   Val R2:     0.0518
+2026-02-05 23:55:14 - closed_loop_entrainment - INFO -   Val MAE:    0.761583
+2026-02-05 23:55:14 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.031419)
+2026-02-05 23:55:16 - closed_loop_entrainment - INFO - Epoch 13/100
+2026-02-05 23:55:16 - closed_loop_entrainment - INFO -   Train Loss: 0.895779
+2026-02-05 23:55:16 - closed_loop_entrainment - INFO -   Val Loss:   1.029519
+2026-02-05 23:55:16 - closed_loop_entrainment - INFO -   Val R2:     0.0535
+2026-02-05 23:55:16 - closed_loop_entrainment - INFO -   Val MAE:    0.756515
+2026-02-05 23:55:16 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.029519)
+2026-02-05 23:55:18 - closed_loop_entrainment - INFO - Epoch 14/100
+2026-02-05 23:55:18 - closed_loop_entrainment - INFO -   Train Loss: 0.897215
+2026-02-05 23:55:18 - closed_loop_entrainment - INFO -   Val Loss:   1.024666
+2026-02-05 23:55:18 - closed_loop_entrainment - INFO -   Val R2:     0.0580
+2026-02-05 23:55:18 - closed_loop_entrainment - INFO -   Val MAE:    0.757103
+2026-02-05 23:55:18 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.024666)
+2026-02-05 23:55:19 - closed_loop_entrainment - INFO - Epoch 15/100
+2026-02-05 23:55:19 - closed_loop_entrainment - INFO -   Train Loss: 0.893330
+2026-02-05 23:55:19 - closed_loop_entrainment - INFO -   Val Loss:   1.025552
+2026-02-05 23:55:19 - closed_loop_entrainment - INFO -   Val R2:     0.0572
+2026-02-05 23:55:19 - closed_loop_entrainment - INFO -   Val MAE:    0.756009
+2026-02-05 23:55:19 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:55:21 - closed_loop_entrainment - INFO - Epoch 16/100
+2026-02-05 23:55:21 - closed_loop_entrainment - INFO -   Train Loss: 0.888535
+2026-02-05 23:55:21 - closed_loop_entrainment - INFO -   Val Loss:   1.015629
+2026-02-05 23:55:21 - closed_loop_entrainment - INFO -   Val R2:     0.0663
+2026-02-05 23:55:21 - closed_loop_entrainment - INFO -   Val MAE:    0.762274
+2026-02-05 23:55:21 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.015629)
+2026-02-05 23:55:22 - closed_loop_entrainment - INFO - Epoch 17/100
+2026-02-05 23:55:22 - closed_loop_entrainment - INFO -   Train Loss: 0.896941
+2026-02-05 23:55:22 - closed_loop_entrainment - INFO -   Val Loss:   1.033585
+2026-02-05 23:55:22 - closed_loop_entrainment - INFO -   Val R2:     0.0497
+2026-02-05 23:55:22 - closed_loop_entrainment - INFO -   Val MAE:    0.751563
+2026-02-05 23:55:22 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:55:23 - closed_loop_entrainment - INFO - Epoch 18/100
+2026-02-05 23:55:23 - closed_loop_entrainment - INFO -   Train Loss: 0.885957
+2026-02-05 23:55:23 - closed_loop_entrainment - INFO -   Val Loss:   1.017241
+2026-02-05 23:55:23 - closed_loop_entrainment - INFO -   Val R2:     0.0646
+2026-02-05 23:55:23 - closed_loop_entrainment - INFO -   Val MAE:    0.755697
+2026-02-05 23:55:23 - closed_loop_entrainment - INFO -   No improvement (2/15)
+2026-02-05 23:55:25 - closed_loop_entrainment - INFO - Epoch 19/100
+2026-02-05 23:55:25 - closed_loop_entrainment - INFO -   Train Loss: 0.884736
+2026-02-05 23:55:25 - closed_loop_entrainment - INFO -   Val Loss:   1.010153
+2026-02-05 23:55:25 - closed_loop_entrainment - INFO -   Val R2:     0.0712
+2026-02-05 23:55:25 - closed_loop_entrainment - INFO -   Val MAE:    0.756123
+2026-02-05 23:55:25 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.010153)
+2026-02-05 23:55:27 - closed_loop_entrainment - INFO - Epoch 20/100
+2026-02-05 23:55:27 - closed_loop_entrainment - INFO -   Train Loss: 0.885017
+2026-02-05 23:55:27 - closed_loop_entrainment - INFO -   Val Loss:   1.009165
+2026-02-05 23:55:27 - closed_loop_entrainment - INFO -   Val R2:     0.0721
+2026-02-05 23:55:27 - closed_loop_entrainment - INFO -   Val MAE:    0.750429
+2026-02-05 23:55:27 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.009165)
+2026-02-05 23:55:28 - closed_loop_entrainment - INFO - Epoch 21/100
+2026-02-05 23:55:28 - closed_loop_entrainment - INFO -   Train Loss: 0.888708
+2026-02-05 23:55:28 - closed_loop_entrainment - INFO -   Val Loss:   1.011769
+2026-02-05 23:55:28 - closed_loop_entrainment - INFO -   Val R2:     0.0699
+2026-02-05 23:55:28 - closed_loop_entrainment - INFO -   Val MAE:    0.756675
+2026-02-05 23:55:28 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:55:30 - closed_loop_entrainment - INFO - Epoch 22/100
+2026-02-05 23:55:30 - closed_loop_entrainment - INFO -   Train Loss: 0.883206
+2026-02-05 23:55:30 - closed_loop_entrainment - INFO -   Val Loss:   1.017852
+2026-02-05 23:55:30 - closed_loop_entrainment - INFO -   Val R2:     0.0642
+2026-02-05 23:55:30 - closed_loop_entrainment - INFO -   Val MAE:    0.751207
+2026-02-05 23:55:30 - closed_loop_entrainment - INFO -   No improvement (2/15)
+2026-02-05 23:55:31 - closed_loop_entrainment - INFO - Epoch 23/100
+2026-02-05 23:55:31 - closed_loop_entrainment - INFO -   Train Loss: 0.881148
+2026-02-05 23:55:31 - closed_loop_entrainment - INFO -   Val Loss:   1.005265
+2026-02-05 23:55:31 - closed_loop_entrainment - INFO -   Val R2:     0.0758
+2026-02-05 23:55:31 - closed_loop_entrainment - INFO -   Val MAE:    0.755336
+2026-02-05 23:55:31 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.005265)
+2026-02-05 23:55:33 - closed_loop_entrainment - INFO - Epoch 24/100
+2026-02-05 23:55:33 - closed_loop_entrainment - INFO -   Train Loss: 0.884840
+2026-02-05 23:55:33 - closed_loop_entrainment - INFO -   Val Loss:   1.017281
+2026-02-05 23:55:33 - closed_loop_entrainment - INFO -   Val R2:     0.0647
+2026-02-05 23:55:33 - closed_loop_entrainment - INFO -   Val MAE:    0.751303
+2026-02-05 23:55:33 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:55:34 - closed_loop_entrainment - INFO - Epoch 25/100
+2026-02-05 23:55:34 - closed_loop_entrainment - INFO -   Train Loss: 0.887169
+2026-02-05 23:55:34 - closed_loop_entrainment - INFO -   Val Loss:   1.018353
+2026-02-05 23:55:34 - closed_loop_entrainment - INFO -   Val R2:     0.0638
+2026-02-05 23:55:34 - closed_loop_entrainment - INFO -   Val MAE:    0.756472
+2026-02-05 23:55:34 - closed_loop_entrainment - INFO -   No improvement (2/15)
+2026-02-05 23:55:36 - closed_loop_entrainment - INFO - Epoch 26/100
+2026-02-05 23:55:36 - closed_loop_entrainment - INFO -   Train Loss: 0.876228
+2026-02-05 23:55:36 - closed_loop_entrainment - INFO -   Val Loss:   1.011602
+2026-02-05 23:55:36 - closed_loop_entrainment - INFO -   Val R2:     0.0700
+2026-02-05 23:55:36 - closed_loop_entrainment - INFO -   Val MAE:    0.756007
+2026-02-05 23:55:36 - closed_loop_entrainment - INFO -   No improvement (3/15)
+2026-02-05 23:55:37 - closed_loop_entrainment - INFO - Epoch 27/100
+2026-02-05 23:55:37 - closed_loop_entrainment - INFO -   Train Loss: 0.882760
+2026-02-05 23:55:37 - closed_loop_entrainment - INFO -   Val Loss:   1.015179
+2026-02-05 23:55:37 - closed_loop_entrainment - INFO -   Val R2:     0.0665
+2026-02-05 23:55:37 - closed_loop_entrainment - INFO -   Val MAE:    0.748895
+2026-02-05 23:55:37 - closed_loop_entrainment - INFO -   No improvement (4/15)
+2026-02-05 23:55:39 - closed_loop_entrainment - INFO - Epoch 28/100
+2026-02-05 23:55:39 - closed_loop_entrainment - INFO -   Train Loss: 0.883425
+2026-02-05 23:55:39 - closed_loop_entrainment - INFO -   Val Loss:   1.006863
+2026-02-05 23:55:39 - closed_loop_entrainment - INFO -   Val R2:     0.0742
+2026-02-05 23:55:39 - closed_loop_entrainment - INFO -   Val MAE:    0.750649
+2026-02-05 23:55:39 - closed_loop_entrainment - INFO -   No improvement (5/15)
+2026-02-05 23:55:40 - closed_loop_entrainment - INFO - Epoch 29/100
+2026-02-05 23:55:40 - closed_loop_entrainment - INFO -   Train Loss: 0.881368
+2026-02-05 23:55:40 - closed_loop_entrainment - INFO -   Val Loss:   1.011659
+2026-02-05 23:55:40 - closed_loop_entrainment - INFO -   Val R2:     0.0698
+2026-02-05 23:55:40 - closed_loop_entrainment - INFO -   Val MAE:    0.748992
+2026-02-05 23:55:40 - closed_loop_entrainment - INFO -   No improvement (6/15)
+2026-02-05 23:55:42 - closed_loop_entrainment - INFO - Epoch 30/100
+2026-02-05 23:55:42 - closed_loop_entrainment - INFO -   Train Loss: 0.873216
+2026-02-05 23:55:42 - closed_loop_entrainment - INFO -   Val Loss:   1.013748
+2026-02-05 23:55:42 - closed_loop_entrainment - INFO -   Val R2:     0.0679
+2026-02-05 23:55:42 - closed_loop_entrainment - INFO -   Val MAE:    0.748569
+2026-02-05 23:55:42 - closed_loop_entrainment - INFO -   No improvement (7/15)
+2026-02-05 23:55:43 - closed_loop_entrainment - INFO - Epoch 31/100
+2026-02-05 23:55:43 - closed_loop_entrainment - INFO -   Train Loss: 0.872343
+2026-02-05 23:55:43 - closed_loop_entrainment - INFO -   Val Loss:   1.010096
+2026-02-05 23:55:43 - closed_loop_entrainment - INFO -   Val R2:     0.0712
+2026-02-05 23:55:43 - closed_loop_entrainment - INFO -   Val MAE:    0.747559
+2026-02-05 23:55:43 - closed_loop_entrainment - INFO -   No improvement (8/15)
+2026-02-05 23:55:45 - closed_loop_entrainment - INFO - Epoch 32/100
+2026-02-05 23:55:45 - closed_loop_entrainment - INFO -   Train Loss: 0.872899
+2026-02-05 23:55:45 - closed_loop_entrainment - INFO -   Val Loss:   1.006021
+2026-02-05 23:55:45 - closed_loop_entrainment - INFO -   Val R2:     0.0750
+2026-02-05 23:55:45 - closed_loop_entrainment - INFO -   Val MAE:    0.749539
+2026-02-05 23:55:45 - closed_loop_entrainment - INFO -   No improvement (9/15)
+2026-02-05 23:55:46 - closed_loop_entrainment - INFO - Epoch 33/100
+2026-02-05 23:55:46 - closed_loop_entrainment - INFO -   Train Loss: 0.879782
+2026-02-05 23:55:46 - closed_loop_entrainment - INFO -   Val Loss:   1.010180
+2026-02-05 23:55:46 - closed_loop_entrainment - INFO -   Val R2:     0.0711
+2026-02-05 23:55:46 - closed_loop_entrainment - INFO -   Val MAE:    0.747235
+2026-02-05 23:55:46 - closed_loop_entrainment - INFO -   No improvement (10/15)
+2026-02-05 23:55:48 - closed_loop_entrainment - INFO - Epoch 34/100
+2026-02-05 23:55:48 - closed_loop_entrainment - INFO -   Train Loss: 0.875583
+2026-02-05 23:55:48 - closed_loop_entrainment - INFO -   Val Loss:   1.008899
+2026-02-05 23:55:48 - closed_loop_entrainment - INFO -   Val R2:     0.0724
+2026-02-05 23:55:48 - closed_loop_entrainment - INFO -   Val MAE:    0.752271
+2026-02-05 23:55:48 - closed_loop_entrainment - INFO -   No improvement (11/15)
+2026-02-05 23:55:49 - closed_loop_entrainment - INFO - Epoch 35/100
+2026-02-05 23:55:49 - closed_loop_entrainment - INFO -   Train Loss: 0.872093
+2026-02-05 23:55:49 - closed_loop_entrainment - INFO -   Val Loss:   1.004379
+2026-02-05 23:55:49 - closed_loop_entrainment - INFO -   Val R2:     0.0765
+2026-02-05 23:55:49 - closed_loop_entrainment - INFO -   Val MAE:    0.748727
+2026-02-05 23:55:49 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.004379)
+2026-02-05 23:55:51 - closed_loop_entrainment - INFO - Epoch 36/100
+2026-02-05 23:55:51 - closed_loop_entrainment - INFO -   Train Loss: 0.875128
+2026-02-05 23:55:51 - closed_loop_entrainment - INFO -   Val Loss:   1.007470
+2026-02-05 23:55:51 - closed_loop_entrainment - INFO -   Val R2:     0.0737
+2026-02-05 23:55:51 - closed_loop_entrainment - INFO -   Val MAE:    0.749982
+2026-02-05 23:55:51 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:55:52 - closed_loop_entrainment - INFO - Epoch 37/100
+2026-02-05 23:55:52 - closed_loop_entrainment - INFO -   Train Loss: 0.874872
+2026-02-05 23:55:52 - closed_loop_entrainment - INFO -   Val Loss:   1.002410
+2026-02-05 23:55:52 - closed_loop_entrainment - INFO -   Val R2:     0.0783
+2026-02-05 23:55:52 - closed_loop_entrainment - INFO -   Val MAE:    0.752808
+2026-02-05 23:55:52 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.002410)
+2026-02-05 23:55:54 - closed_loop_entrainment - INFO - Epoch 38/100
+2026-02-05 23:55:54 - closed_loop_entrainment - INFO -   Train Loss: 0.873174
+2026-02-05 23:55:54 - closed_loop_entrainment - INFO -   Val Loss:   1.006608
+2026-02-05 23:55:54 - closed_loop_entrainment - INFO -   Val R2:     0.0745
+2026-02-05 23:55:54 - closed_loop_entrainment - INFO -   Val MAE:    0.748802
+2026-02-05 23:55:54 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:55:55 - closed_loop_entrainment - INFO - Epoch 39/100
+2026-02-05 23:55:55 - closed_loop_entrainment - INFO -   Train Loss: 0.874744
+2026-02-05 23:55:55 - closed_loop_entrainment - INFO -   Val Loss:   1.001405
+2026-02-05 23:55:55 - closed_loop_entrainment - INFO -   Val R2:     0.0792
+2026-02-05 23:55:55 - closed_loop_entrainment - INFO -   Val MAE:    0.750456
+2026-02-05 23:55:55 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 1.001405)
+2026-02-05 23:55:57 - closed_loop_entrainment - INFO - Epoch 40/100
+2026-02-05 23:55:57 - closed_loop_entrainment - INFO -   Train Loss: 0.873805
+2026-02-05 23:55:57 - closed_loop_entrainment - INFO -   Val Loss:   1.006135
+2026-02-05 23:55:57 - closed_loop_entrainment - INFO -   Val R2:     0.0748
+2026-02-05 23:55:57 - closed_loop_entrainment - INFO -   Val MAE:    0.746357
+2026-02-05 23:55:57 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:55:58 - closed_loop_entrainment - INFO - Epoch 41/100
+2026-02-05 23:55:58 - closed_loop_entrainment - INFO -   Train Loss: 0.873813
+2026-02-05 23:55:58 - closed_loop_entrainment - INFO -   Val Loss:   0.999893
+2026-02-05 23:55:58 - closed_loop_entrainment - INFO -   Val R2:     0.0806
+2026-02-05 23:55:58 - closed_loop_entrainment - INFO -   Val MAE:    0.749554
+2026-02-05 23:55:58 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 0.999893)
+2026-02-05 23:56:00 - closed_loop_entrainment - INFO - Epoch 42/100
+2026-02-05 23:56:00 - closed_loop_entrainment - INFO -   Train Loss: 0.868019
+2026-02-05 23:56:00 - closed_loop_entrainment - INFO -   Val Loss:   1.002404
+2026-02-05 23:56:00 - closed_loop_entrainment - INFO -   Val R2:     0.0784
+2026-02-05 23:56:00 - closed_loop_entrainment - INFO -   Val MAE:    0.749987
+2026-02-05 23:56:00 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:56:01 - closed_loop_entrainment - INFO - Epoch 43/100
+2026-02-05 23:56:01 - closed_loop_entrainment - INFO -   Train Loss: 0.873456
+2026-02-05 23:56:01 - closed_loop_entrainment - INFO -   Val Loss:   1.012552
+2026-02-05 23:56:01 - closed_loop_entrainment - INFO -   Val R2:     0.0691
+2026-02-05 23:56:01 - closed_loop_entrainment - INFO -   Val MAE:    0.748549
+2026-02-05 23:56:01 - closed_loop_entrainment - INFO -   No improvement (2/15)
+2026-02-05 23:56:03 - closed_loop_entrainment - INFO - Epoch 44/100
+2026-02-05 23:56:03 - closed_loop_entrainment - INFO -   Train Loss: 0.876308
+2026-02-05 23:56:03 - closed_loop_entrainment - INFO -   Val Loss:   1.007526
+2026-02-05 23:56:03 - closed_loop_entrainment - INFO -   Val R2:     0.0738
+2026-02-05 23:56:03 - closed_loop_entrainment - INFO -   Val MAE:    0.751821
+2026-02-05 23:56:03 - closed_loop_entrainment - INFO -   No improvement (3/15)
+2026-02-05 23:56:04 - closed_loop_entrainment - INFO - Epoch 45/100
+2026-02-05 23:56:04 - closed_loop_entrainment - INFO -   Train Loss: 0.868734
+2026-02-05 23:56:04 - closed_loop_entrainment - INFO -   Val Loss:   1.011087
+2026-02-05 23:56:04 - closed_loop_entrainment - INFO -   Val R2:     0.0703
+2026-02-05 23:56:04 - closed_loop_entrainment - INFO -   Val MAE:    0.744399
+2026-02-05 23:56:04 - closed_loop_entrainment - INFO -   No improvement (4/15)
+2026-02-05 23:56:06 - closed_loop_entrainment - INFO - Epoch 46/100
+2026-02-05 23:56:06 - closed_loop_entrainment - INFO -   Train Loss: 0.871811
+2026-02-05 23:56:06 - closed_loop_entrainment - INFO -   Val Loss:   1.005325
+2026-02-05 23:56:06 - closed_loop_entrainment - INFO -   Val R2:     0.0756
+2026-02-05 23:56:06 - closed_loop_entrainment - INFO -   Val MAE:    0.746623
+2026-02-05 23:56:06 - closed_loop_entrainment - INFO -   No improvement (5/15)
+2026-02-05 23:56:07 - closed_loop_entrainment - INFO - Epoch 47/100
+2026-02-05 23:56:07 - closed_loop_entrainment - INFO -   Train Loss: 0.869140
+2026-02-05 23:56:07 - closed_loop_entrainment - INFO -   Val Loss:   0.997745
+2026-02-05 23:56:07 - closed_loop_entrainment - INFO -   Val R2:     0.0826
+2026-02-05 23:56:07 - closed_loop_entrainment - INFO -   Val MAE:    0.751080
+2026-02-05 23:56:07 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 0.997745)
+2026-02-05 23:56:09 - closed_loop_entrainment - INFO - Epoch 48/100
+2026-02-05 23:56:09 - closed_loop_entrainment - INFO -   Train Loss: 0.868929
+2026-02-05 23:56:09 - closed_loop_entrainment - INFO -   Val Loss:   0.996415
+2026-02-05 23:56:09 - closed_loop_entrainment - INFO -   Val R2:     0.0838
+2026-02-05 23:56:09 - closed_loop_entrainment - INFO -   Val MAE:    0.749966
+2026-02-05 23:56:09 - closed_loop_entrainment - INFO -   [BEST] New best model saved (Val Loss: 0.996415)
+2026-02-05 23:56:10 - closed_loop_entrainment - INFO - Epoch 49/100
+2026-02-05 23:56:10 - closed_loop_entrainment - INFO -   Train Loss: 0.874598
+2026-02-05 23:56:10 - closed_loop_entrainment - INFO -   Val Loss:   1.000474
+2026-02-05 23:56:10 - closed_loop_entrainment - INFO -   Val R2:     0.0800
+2026-02-05 23:56:10 - closed_loop_entrainment - INFO -   Val MAE:    0.745294
+2026-02-05 23:56:10 - closed_loop_entrainment - INFO -   No improvement (1/15)
+2026-02-05 23:56:12 - closed_loop_entrainment - INFO - Epoch 50/100
+2026-02-05 23:56:12 - closed_loop_entrainment - INFO -   Train Loss: 0.869120
+2026-02-05 23:56:12 - closed_loop_entrainment - INFO -   Val Loss:   1.000496
+2026-02-05 23:56:12 - closed_loop_entrainment - INFO -   Val R2:     0.0800
+2026-02-05 23:56:12 - closed_loop_entrainment - INFO -   Val MAE:    0.749021
+2026-02-05 23:56:12 - closed_loop_entrainment - INFO -   No improvement (2/15)
+2026-02-05 23:56:13 - closed_loop_entrainment - INFO - Epoch 51/100
+2026-02-05 23:56:13 - closed_loop_entrainment - INFO -   Train Loss: 0.869457
+2026-02-05 23:56:13 - closed_loop_entrainment - INFO -   Val Loss:   1.003664
+2026-02-05 23:56:13 - closed_loop_entrainment - INFO -   Val R2:     0.0771
+2026-02-05 23:56:13 - closed_loop_entrainment - INFO -   Val MAE:    0.748358
+2026-02-05 23:56:13 - closed_loop_entrainment - INFO -   No improvement (3/15)
+2026-02-05 23:56:15 - closed_loop_entrainment - INFO - Epoch 52/100
+2026-02-05 23:56:15 - closed_loop_entrainment - INFO -   Train Loss: 0.869318
+2026-02-05 23:56:15 - closed_loop_entrainment - INFO -   Val Loss:   1.000127
+2026-02-05 23:56:15 - closed_loop_entrainment - INFO -   Val R2:     0.0804
+2026-02-05 23:56:15 - closed_loop_entrainment - INFO -   Val MAE:    0.750216
+2026-02-05 23:56:15 - closed_loop_entrainment - INFO -   No improvement (4/15)
+2026-02-05 23:56:16 - closed_loop_entrainment - INFO - Epoch 53/100
+2026-02-05 23:56:16 - closed_loop_entrainment - INFO -   Train Loss: 0.873722
+2026-02-05 23:56:16 - closed_loop_entrainment - INFO -   Val Loss:   1.010004
+2026-02-05 23:56:16 - closed_loop_entrainment - INFO -   Val R2:     0.0713
+2026-02-05 23:56:16 - closed_loop_entrainment - INFO -   Val MAE:    0.746150
+2026-02-05 23:56:16 - closed_loop_entrainment - INFO -   No improvement (5/15)
+2026-02-05 23:56:18 - closed_loop_entrainment - INFO - Epoch 54/100
+2026-02-05 23:56:18 - closed_loop_entrainment - INFO -   Train Loss: 0.871788
+2026-02-05 23:56:18 - closed_loop_entrainment - INFO -   Val Loss:   1.005529
+2026-02-05 23:56:18 - closed_loop_entrainment - INFO -   Val R2:     0.0753
+2026-02-05 23:56:18 - closed_loop_entrainment - INFO -   Val MAE:    0.746613
+2026-02-05 23:56:18 - closed_loop_entrainment - INFO -   No improvement (6/15)
+2026-02-05 23:56:19 - closed_loop_entrainment - INFO - Epoch 55/100
+2026-02-05 23:56:19 - closed_loop_entrainment - INFO -   Train Loss: 0.868869
+2026-02-05 23:56:19 - closed_loop_entrainment - INFO -   Val Loss:   1.001086
+2026-02-05 23:56:19 - closed_loop_entrainment - INFO -   Val R2:     0.0795
+2026-02-05 23:56:19 - closed_loop_entrainment - INFO -   Val MAE:    0.748057
+2026-02-05 23:56:19 - closed_loop_entrainment - INFO -   No improvement (7/15)
+2026-02-05 23:56:21 - closed_loop_entrainment - INFO - Epoch 56/100
+2026-02-05 23:56:21 - closed_loop_entrainment - INFO -   Train Loss: 0.863965
+2026-02-05 23:56:21 - closed_loop_entrainment - INFO -   Val Loss:   1.003174
+2026-02-05 23:56:21 - closed_loop_entrainment - INFO -   Val R2:     0.0775
+2026-02-05 23:56:21 - closed_loop_entrainment - INFO -   Val MAE:    0.746853
+2026-02-05 23:56:21 - closed_loop_entrainment - INFO -   No improvement (8/15)
+2026-02-05 23:56:22 - closed_loop_entrainment - INFO - Epoch 57/100
+2026-02-05 23:56:22 - closed_loop_entrainment - INFO -   Train Loss: 0.864994
+2026-02-05 23:56:22 - closed_loop_entrainment - INFO -   Val Loss:   0.998466
+2026-02-05 23:56:22 - closed_loop_entrainment - INFO -   Val R2:     0.0819
+2026-02-05 23:56:22 - closed_loop_entrainment - INFO -   Val MAE:    0.746411
+2026-02-05 23:56:22 - closed_loop_entrainment - INFO -   No improvement (9/15)
+2026-02-05 23:56:24 - closed_loop_entrainment - INFO - Epoch 58/100
+2026-02-05 23:56:24 - closed_loop_entrainment - INFO -   Train Loss: 0.859392
+2026-02-05 23:56:24 - closed_loop_entrainment - INFO -   Val Loss:   1.000179
+2026-02-05 23:56:24 - closed_loop_entrainment - INFO -   Val R2:     0.0803
+2026-02-05 23:56:24 - closed_loop_entrainment - INFO -   Val MAE:    0.747959
+2026-02-05 23:56:24 - closed_loop_entrainment - INFO -   No improvement (10/15)
+2026-02-05 23:56:25 - closed_loop_entrainment - INFO - Epoch 59/100
+2026-02-05 23:56:25 - closed_loop_entrainment - INFO -   Train Loss: 0.871034
+2026-02-05 23:56:25 - closed_loop_entrainment - INFO -   Val Loss:   1.003246
+2026-02-05 23:56:25 - closed_loop_entrainment - INFO -   Val R2:     0.0775
+2026-02-05 23:56:25 - closed_loop_entrainment - INFO -   Val MAE:    0.746784
+2026-02-05 23:56:25 - closed_loop_entrainment - INFO -   No improvement (11/15)
+2026-02-05 23:56:27 - closed_loop_entrainment - INFO - Epoch 60/100
+2026-02-05 23:56:27 - closed_loop_entrainment - INFO -   Train Loss: 0.872869
+2026-02-05 23:56:27 - closed_loop_entrainment - INFO -   Val Loss:   0.999109
+2026-02-05 23:56:27 - closed_loop_entrainment - INFO -   Val R2:     0.0813
+2026-02-05 23:56:27 - closed_loop_entrainment - INFO -   Val MAE:    0.748032
+2026-02-05 23:56:27 - closed_loop_entrainment - INFO -   No improvement (12/15)
+2026-02-05 23:56:28 - closed_loop_entrainment - INFO - Epoch 61/100
+2026-02-05 23:56:28 - closed_loop_entrainment - INFO -   Train Loss: 0.869501
+2026-02-05 23:56:28 - closed_loop_entrainment - INFO -   Val Loss:   0.999044
+2026-02-05 23:56:28 - closed_loop_entrainment - INFO -   Val R2:     0.0813
+2026-02-05 23:56:28 - closed_loop_entrainment - INFO -   Val MAE:    0.747446
+2026-02-05 23:56:28 - closed_loop_entrainment - INFO -   No improvement (13/15)
+2026-02-05 23:56:30 - closed_loop_entrainment - INFO - Epoch 62/100
+2026-02-05 23:56:30 - closed_loop_entrainment - INFO -   Train Loss: 0.867071
+2026-02-05 23:56:30 - closed_loop_entrainment - INFO -   Val Loss:   0.998496
+2026-02-05 23:56:30 - closed_loop_entrainment - INFO -   Val R2:     0.0818
+2026-02-05 23:56:30 - closed_loop_entrainment - INFO -   Val MAE:    0.747754
+2026-02-05 23:56:30 - closed_loop_entrainment - INFO -   No improvement (14/15)
+2026-02-05 23:56:31 - closed_loop_entrainment - INFO - Epoch 63/100
+2026-02-05 23:56:31 - closed_loop_entrainment - INFO -   Train Loss: 0.866349
+2026-02-05 23:56:31 - closed_loop_entrainment - INFO -   Val Loss:   0.997377
+2026-02-05 23:56:31 - closed_loop_entrainment - INFO -   Val R2:     0.0829
+2026-02-05 23:56:31 - closed_loop_entrainment - INFO -   Val MAE:    0.747508
+2026-02-05 23:56:31 - closed_loop_entrainment - INFO -   No improvement (15/15)
+2026-02-05 23:56:31 - closed_loop_entrainment - INFO - 
+Early stopping at epoch 63
+2026-02-05 23:56:31 - closed_loop_entrainment - INFO - 
+============================================================
+2026-02-05 23:56:31 - closed_loop_entrainment - INFO - Training completed!
+2026-02-05 23:56:31 - closed_loop_entrainment - INFO -   Best epoch: 48
+2026-02-05 23:56:31 - closed_loop_entrainment - INFO -   Best val loss: 0.996415
+2026-02-05 23:56:31 - closed_loop_entrainment - INFO - ============================================================
+2026-02-05 23:56:31 - closed_loop_entrainment - INFO - 
+Training complete! Best model saved to checkpoint.

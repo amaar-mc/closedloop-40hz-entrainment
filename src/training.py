@@ -23,6 +23,9 @@ from pathlib import Path
 from typing import Dict, Tuple, Optional, List
 import numpy as np
 
+# Ensure src/ is on the import path when run as script
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -36,7 +39,7 @@ from eegnet import EEGNet
 from utils import setup_logging, ensure_dir, count_parameters, compute_regression_metrics
 
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('closed_loop_entrainment')
 
 
 class DataAugmentor:
@@ -44,12 +47,12 @@ class DataAugmentor:
     Applies data augmentation to EEG windows.
 
     Augmentation strategies:
-        1. Time shifting: ±100-500 ms shift
+        1. Time shifting: +/-100-500 ms shift
         2. Amplitude scaling: 0.8-1.2x scaling
         3. Gaussian noise: SNR 20-30 dB
     """
 
-    def __init__(self, fs: float = 250.0, max_shift_ms: float = 500.0):
+    def __init__(self, fs: float = 250.0, max_shift_ms: float = 100.0):
         """
         Initialize augmentor.
 
@@ -62,24 +65,19 @@ class DataAugmentor:
 
     def time_shift(self, window: np.ndarray) -> np.ndarray:
         """
-        Randomly shift window in time.
+        Randomly shift window in time along the last axis.
 
         Args:
-            window: EEG window (n_channels, n_samples) or (1, n_channels, n_samples)
+            window: EEG window, any shape with time as last dim
+                    e.g. (1, n_channels, n_samples) or (n_channels, n_samples)
 
         Returns:
-            shifted: Time-shifted window
+            shifted: Time-shifted window (same shape)
         """
-        shift_samples = np.random.randint(-self.max_shift_samples, self.max_shift_samples + 1)
-
-        if shift_samples > 0:
-            shifted = np.pad(window, ((0, 0), (shift_samples, 0)), mode='edge')[:, :window.shape[1]]
-        elif shift_samples < 0:
-            shifted = np.pad(window, ((0, 0), (0, -shift_samples)), mode='edge')[:, -window.shape[1]:]
-        else:
-            shifted = window.copy()
-
-        return shifted
+        shift = np.random.randint(-self.max_shift_samples, self.max_shift_samples + 1)
+        if shift == 0:
+            return window.copy()
+        return np.roll(window, shift, axis=-1)
 
     def amplitude_scaling(self, window: np.ndarray,
                          scale_range: Tuple[float, float] = (0.8, 1.2)) -> np.ndarray:
@@ -202,8 +200,7 @@ class ModelTrainer:
             self.optimizer,
             mode='min',
             factor=0.5,
-            patience=patience_lr,
-            verbose=True
+            patience=patience_lr
         )
 
         # Tracking
@@ -236,15 +233,15 @@ class ModelTrainer:
         pbar = tqdm(train_loader, desc="Training", leave=False)
 
         for batch_x, batch_y in pbar:
-            batch_x = batch_x.to(self.device)  # (batch, 1, n_channels, n_samples)
-            batch_y = batch_y.to(self.device)  # (batch,)
-
-            # Data augmentation (on CPU before GPU transfer is more efficient)
+            # Data augmentation on CPU before GPU transfer
             if augmentor is not None:
-                batch_x_np = batch_x.cpu().numpy()
+                batch_x_np = batch_x.numpy()
                 for i in range(len(batch_x_np)):
                     batch_x_np[i] = augmentor.augment(batch_x_np[i])
-                batch_x = torch.from_numpy(batch_x_np).float().to(self.device)
+                batch_x = torch.from_numpy(batch_x_np).float()
+
+            batch_x = batch_x.to(self.device)  # (batch, 1, n_channels, n_samples)
+            batch_y = batch_y.to(self.device)  # (batch,)
 
             # Forward pass
             self.optimizer.zero_grad()
@@ -256,6 +253,7 @@ class ModelTrainer:
 
             # Backward pass
             loss.backward()
+            torch.nn.utils.clip_grad_norm_(self.model.parameters(), max_norm=1.0)
             self.optimizer.step()
 
             # Track loss
@@ -313,7 +311,8 @@ class ModelTrainer:
               val_loader: DataLoader,
               epochs: int = 100,
               checkpoint_dir: str = 'models',
-              augment: bool = True) -> Dict:
+              augment: bool = True,
+              checkpoint_extra: Optional[Dict] = None) -> Dict:
         """
         Full training loop with early stopping and checkpointing.
 
@@ -323,6 +322,7 @@ class ModelTrainer:
             epochs: Maximum number of epochs
             checkpoint_dir: Directory to save checkpoints
             augment: Whether to use data augmentation
+            checkpoint_extra: Extra data to include in checkpoints (e.g. normalization params)
 
         Returns:
             history: Dictionary with training history
@@ -347,7 +347,7 @@ class ModelTrainer:
             logger.info(f"Epoch {epoch}/{epochs}")
             logger.info(f"  Train Loss: {train_loss:.6f}")
             logger.info(f"  Val Loss:   {val_loss:.6f}")
-            logger.info(f"  Val R²:     {metrics['r2']:.4f}")
+            logger.info(f"  Val R2:     {metrics['r2']:.4f}")
             logger.info(f"  Val MAE:    {metrics['mae']:.6f}")
 
             # Learning rate scheduling
@@ -361,8 +361,9 @@ class ModelTrainer:
 
                 # Save checkpoint
                 checkpoint_path = Path(checkpoint_dir) / 'best_eegnet.pth'
-                self._save_checkpoint(checkpoint_path, epoch, val_loss)
-                logger.info(f"  ✓ New best model saved (Val Loss: {val_loss:.6f})")
+                self._save_checkpoint(checkpoint_path, epoch, val_loss,
+                                      extra=checkpoint_extra)
+                logger.info(f"  [BEST] New best model saved (Val Loss: {val_loss:.6f})")
 
             else:
                 self.patience_counter += 1
@@ -385,7 +386,8 @@ class ModelTrainer:
             'best_val_loss': self.best_val_loss
         }
 
-    def _save_checkpoint(self, path: str, epoch: int, val_loss: float):
+    def _save_checkpoint(self, path: str, epoch: int, val_loss: float,
+                         extra: Optional[Dict] = None):
         """Save model checkpoint."""
         checkpoint = {
             'epoch': epoch,
@@ -395,6 +397,8 @@ class ModelTrainer:
             'train_losses': self.train_losses,
             'val_losses': self.val_losses
         }
+        if extra:
+            checkpoint.update(extra)
         torch.save(checkpoint, path)
 
     def load_checkpoint(self, path: str):
@@ -426,35 +430,49 @@ def main():
                        help='L2 regularization')
     parser.add_argument('--device', type=str, default='cuda',
                        help='Device: cuda or cpu')
-    parser.add_argument('--augment', type=bool, default=True,
-                       help='Use data augmentation')
-    parser.add_argument('--num_workers', type=int, default=4,
-                       help='Number of DataLoader workers')
+    parser.add_argument('--no-augment', dest='augment', action='store_false',
+                       help='Disable data augmentation')
+    parser.set_defaults(augment=True)
+    parser.add_argument('--num_workers', type=int, default=0,
+                       help='Number of DataLoader workers (0 for Windows compatibility)')
 
     args = parser.parse_args()
 
-    # Setup logging
+    # Ensure output directory exists and setup logging
+    ensure_dir(args.output_dir)
     setup_logging(log_file=f"{args.output_dir}/training.log")
 
     # Device
     device = args.device if torch.cuda.is_available() else 'cpu'
     logger.info(f"Using device: {device}")
+    pin_memory = (device != 'cpu')
 
     # Load data
     logger.info(f"\nLoading data from {args.data_dir}...")
     train_data = np.load(Path(args.data_dir) / 'train_data.npz')
     val_data = np.load(Path(args.data_dir) / 'val_data.npz')
 
+    # Z-score normalize PAC targets using training set statistics.
+    # Raw PAC values (~0.001 range) produce vanishingly small MSE gradients;
+    # normalizing them lets the model learn meaningful signal structure.
+    pac_train_raw = train_data['pac']
+    pac_mean = float(pac_train_raw.mean())
+    pac_std = float(pac_train_raw.std())
+    logger.info(f"PAC normalization: mean={pac_mean:.6f}, std={pac_std:.6f}")
+
+    pac_train_norm = (pac_train_raw - pac_mean) / pac_std
+    pac_val_norm = (val_data['pac'] - pac_mean) / pac_std
+
     # Create datasets
     from data_loader import EEGWindowDataset
 
     train_dataset = EEGWindowDataset(
         windows=train_data['windows'],
-        pac_labels=train_data['pac']
+        pac_labels=pac_train_norm
     )
     val_dataset = EEGWindowDataset(
         windows=val_data['windows'],
-        pac_labels=val_data['pac']
+        pac_labels=pac_val_norm
     )
 
     logger.info(f"Training set: {len(train_dataset)} samples")
@@ -466,14 +484,14 @@ def main():
         batch_size=args.batch_size,
         shuffle=True,
         num_workers=args.num_workers,
-        pin_memory=True
+        pin_memory=pin_memory
     )
     val_loader = DataLoader(
         val_dataset,
         batch_size=args.batch_size,
         shuffle=False,
         num_workers=args.num_workers,
-        pin_memory=True
+        pin_memory=pin_memory
     )
 
     # Create model
@@ -491,13 +509,14 @@ def main():
         patience_early_stop=15
     )
 
-    # Train
+    # Train (store normalization params in checkpoint for inference denormalization)
     history = trainer.train(
         train_loader=train_loader,
         val_loader=val_loader,
         epochs=args.epochs,
         checkpoint_dir=args.output_dir,
-        augment=args.augment
+        augment=args.augment,
+        checkpoint_extra={'pac_mean': pac_mean, 'pac_std': pac_std}
     )
 
     logger.info("\nTraining complete! Best model saved to checkpoint.")
