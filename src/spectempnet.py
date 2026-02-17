@@ -62,11 +62,17 @@ class MultiScaleTemporalCNN(nn.Module):
             nn.BatchNorm2d(total_filters * 2),
             nn.ELU(),
             nn.AvgPool2d((1, 4)),
-            nn.Dropout(0.4)
+            nn.Dropout(0.3)
         )
 
-        # Calculate output size after pooling
-        self.out_size = (n_samples // 4) * (total_filters * 2)
+        # Additional pooling to reduce spatial dimension
+        self.pool2 = nn.Sequential(
+            nn.AvgPool2d((1, 8)),  # Further reduce: 500/4/8 = 15.625 ≈ 15
+            nn.Dropout(0.3)
+        )
+
+        # Calculate output size after both pooling layers
+        self.out_size = (n_samples // 4 // 8) * (total_filters * 2)  # ~15 * 128 = 1920
 
         # Feature projection
         self.projection = nn.Sequential(
@@ -96,6 +102,9 @@ class MultiScaleTemporalCNN(nn.Module):
 
         # Spatial convolution
         x = self.spatial_conv(x)  # (batch, n_filters*2, 1, n_samples//4)
+
+        # Additional pooling
+        x = self.pool2(x)  # (batch, n_filters*2, 1, n_samples//4//8)
 
         # Project to feature vector
         features = self.projection(x)  # (batch, 128)

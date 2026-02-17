@@ -263,7 +263,7 @@ def main():
     criterion = nn.SmoothL1Loss()  # Robust to outliers
     optimizer = optim.AdamW(model.parameters(), lr=0.0003, weight_decay=0.0005)
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(
-        optimizer, mode='min', factor=0.5, patience=7, verbose=True
+        optimizer, mode='min', factor=0.5, patience=7
     )
 
     # Training loop
