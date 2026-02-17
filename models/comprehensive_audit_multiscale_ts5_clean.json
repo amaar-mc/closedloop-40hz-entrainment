@@ -1,0 +1,106 @@
+{
+  "dataset_dir": "data\\processed\\multiscale_temporal_lb20_hz1_ts5_clean",
+  "metadata": {
+    "lookback": 20,
+    "horizon": 1,
+    "window_sec": 2.0,
+    "hop_sec": 1.0,
+    "stim_history_sec": 20,
+    "target_smooth_window": 5,
+    "n_features": 73,
+    "n_train": 11256,
+    "n_val": 2625,
+    "n_test": 2702,
+    "train_subjects": [
+      "sub-01",
+      "sub-02",
+      "sub-03",
+      "sub-04",
+      "sub-05",
+      "sub-06",
+      "sub-09",
+      "sub-10",
+      "sub-12",
+      "sub-13",
+      "sub-14",
+      "sub-16",
+      "sub-17",
+      "sub-18",
+      "sub-20",
+      "sub-22",
+      "sub-24",
+      "sub-25",
+      "sub-27",
+      "sub-28",
+      "sub-30",
+      "sub-31",
+      "sub-33",
+      "sub-34"
+    ],
+    "val_subjects": [
+      "sub-11",
+      "sub-19",
+      "sub-23",
+      "sub-26",
+      "sub-32"
+    ],
+    "test_subjects": [
+      "sub-07",
+      "sub-08",
+      "sub-15",
+      "sub-21",
+      "sub-29",
+      "sub-35"
+    ]
+  },
+  "integrity": {
+    "subject_overlap": {
+      "train_val": [],
+      "train_test": [],
+      "val_test": []
+    },
+    "no_subject_overlap": true,
+    "temporal_causality_ok": true,
+    "temporal_causality_by_split": {
+      "train": true,
+      "val": true,
+      "test": true
+    }
+  },
+  "persistence_baseline": {
+    "r2": 0.760016679763794,
+    "corr": 0.8798824422453255
+  },
+  "ablation": {
+    "full_features": {
+      "r2": 0.8120175004005432,
+      "corr": 0.905628477029456
+    },
+    "no_pac_features": {
+      "r2": 0.044555068016052246,
+      "corr": 0.5195930291513238
+    },
+    "pac_only_features": {
+      "r2": 0.8588563203811646,
+      "corr": 0.9269578717077088
+    },
+    "spectral_only_features": {
+      "r2": 0.05508917570114136,
+      "corr": 0.5200580004826717
+    }
+  },
+  "shuffle_label_sanity": {
+    "r2": -0.3321712017059326,
+    "corr": 0.005840641063673115
+  },
+  "verdict": {
+    "integrity_ok": true,
+    "shuffle_sanity_ok": true,
+    "passes_submission_gate": true,
+    "notes": [
+      "PAC-derived input features are causal but can behave like oracle features if realtime PAC estimator is ideal.",
+      "For strict deployment realism, evaluate end-to-end with PAC estimated from EEG online.",
+      "High R\u00b2 with target smoothing reflects latent-state predictability, not raw instantaneous PAC predictability."
+    ]
+  }
+}
