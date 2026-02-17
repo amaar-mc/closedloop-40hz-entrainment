@@ -232,7 +232,7 @@ class SpecTempNet(nn.Module):
     def __init__(self,
                  n_channels: int = 7,
                  n_samples: int = 500,
-                 n_spectral_features: int = 68,
+                 n_spectral_features: int = 61,  # Was 68 with MI, now 61 without
                  kernel_sizes: Tuple[int, ...] = (16, 32, 64, 128),
                  dropout: float = 0.4):
         super().__init__()

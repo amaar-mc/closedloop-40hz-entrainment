@@ -121,11 +121,13 @@ def compute_pac_features(phase: np.ndarray,
             else:
                 amp_per_bin.append(0.0)
 
-        # 2. Modulation index (KL divergence from uniform)
-        amp_per_bin = np.array(amp_per_bin)
-        amp_per_bin_norm = amp_per_bin / (amp_per_bin.sum() + 1e-10)
-        uniform = np.ones(n_bins) / n_bins
-        mi = np.sum(amp_per_bin_norm * np.log((amp_per_bin_norm + 1e-10) / (uniform + 1e-10)))
+        # 2. Modulation index (KL divergence from uniform) - REMOVED for clean prediction
+        # amp_per_bin = np.array(amp_per_bin)
+        # amp_per_bin_norm = amp_per_bin / (amp_per_bin.sum() + 1e-10)
+        # uniform = np.ones(n_bins) / n_bins
+        # mi = np.sum(amp_per_bin_norm * np.log((amp_per_bin_norm + 1e-10) / (uniform + 1e-10)))
+
+        amp_per_bin = np.array(amp_per_bin)  # Still need this for max_bin_idx
 
         # 3. Circular mean resultant length (phase consistency)
         mean_phase = np.angle(np.mean(np.exp(1j * phase[ch, :])))
@@ -134,12 +136,12 @@ def compute_pac_features(phase: np.ndarray,
         # 4. Amplitude variance
         amp_var = amplitude[ch, :].var()
 
-        # Features: [MI, resultant_length, amp_var, max_amp_bin_idx]
+        # Features: [resultant_length, amp_var, max_amp_bin_idx] - MI REMOVED!
         max_bin_idx = np.argmax(amp_per_bin) / n_bins  # Normalized to [0, 1]
 
-        features.append([mi, resultant_length, amp_var, max_bin_idx])
+        features.append([resultant_length, amp_var, max_bin_idx])
 
-    return np.array(features)  # (n_channels, 4)
+    return np.array(features)  # (n_channels, 3) - MI removed for clean prediction
 
 
 def extract_spectral_features(eeg: np.ndarray, fs: float = 250.0) -> np.ndarray:
@@ -164,9 +166,9 @@ def extract_spectral_features(eeg: np.ndarray, fs: float = 250.0) -> np.ndarray:
     # 2. Theta-gamma ratios (per channel)
     theta_gamma_ratio = theta_power / (gamma_power + 1e-10)     # 7 features
 
-    # 3. Phase-amplitude features
+    # 3. Phase-amplitude features (MI REMOVED for clean prediction)
     phase, amplitude = extract_phase_amplitude(eeg, fs)
-    pac_features = compute_pac_features(phase, amplitude)       # (7, 4) = 28 features
+    pac_features = compute_pac_features(phase, amplitude)       # (7, 3) = 21 features (was 28)
     pac_features_flat = pac_features.flatten()
 
     # 4. Cross-channel features (global statistics)
@@ -183,13 +185,13 @@ def extract_spectral_features(eeg: np.ndarray, fs: float = 250.0) -> np.ndarray:
         alpha_power,                    # 7
         beta_power,                     # 7
         theta_gamma_ratio,              # 7
-        pac_features_flat,              # 28
+        pac_features_flat,              # 21 (was 28 with MI)
         [theta_power_mean, theta_power_std,
          gamma_power_mean, gamma_power_std,
          theta_gamma_ratio_mean]        # 5
     ])
 
-    return features  # Total: 7+7+7+7+7+28+5 = 68 features
+    return features  # Total: 7+7+7+7+7+21+5 = 61 features (was 68 with MI)
 
 
 class SpectralFeatureExtractor:
