@@ -250,9 +250,9 @@ def main():
     # Load data
     train_loader, val_loader, test_loader, stats = load_and_preprocess_data()
 
-    # Create model
+    # Create model (61 features: MI removed for clean prediction)
     print("Creating SpecTempNet model...")
-    model = SpecTempNet(n_channels=7, n_samples=500, n_spectral_features=68)
+    model = SpecTempNet(n_channels=7, n_samples=500, n_spectral_features=61)
     model = model.to(device)
 
     n_params = count_parameters(model)
