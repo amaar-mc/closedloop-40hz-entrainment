@@ -1,0 +1,23 @@
+[
+  {
+    "run_name": "multiscale_tcn_lb20_hz1",
+    "best_val_future_r2": 0.00871102546438074,
+    "test_future_r2": 0.06986650479434398,
+    "test_future_corr": 0.2729729155225723,
+    "test_delta_r2": -0.0018423789211259312
+  },
+  {
+    "run_name": "multiscale_tcn_lb20_hz2",
+    "best_val_future_r2": -0.006296333330922499,
+    "test_future_r2": 0.06448934572549525,
+    "test_future_corr": 0.2671258068920422,
+    "test_delta_r2": 3.6149676352792426e-05
+  },
+  {
+    "run_name": "multiscale_tcn_lb20_hz5",
+    "best_val_future_r2": 0.015678516362161554,
+    "test_future_r2": 0.05332958790262898,
+    "test_future_corr": 0.24997593865065595,
+    "test_delta_r2": -0.001450967837616668
+  }
+]
