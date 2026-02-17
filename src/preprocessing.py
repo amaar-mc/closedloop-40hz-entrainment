@@ -79,7 +79,7 @@ class EEGPreprocessor:
         logger.info(f"  Sampling rate: {fs} Hz")
         logger.info(f"  Bandpass: {hp_freq}-{lp_freq} Hz (4th-order Butterworth)")
         logger.info(f"  Notch: {notch_freq} Hz (Q={notch_q})")
-        logger.info(f"  Artifact threshold: ±{artifact_threshold} µV")
+        logger.info(f"  Artifact threshold: +/-{artifact_threshold} uV")
 
     def _compute_filter_coefficients(self):
         """Precompute filter coefficients for efficiency."""
@@ -226,7 +226,7 @@ class EEGPreprocessor:
         snr_values = []
 
         for ch in range(signal_2d.shape[0]):
-            freqs, pxx = welch(signal_2d[ch, :], fs=self.fs, nperseg=self.fs*4)
+            freqs, pxx = welch(signal_2d[ch, :], fs=self.fs, nperseg=int(self.fs * 4))
 
             # Power in noise band
             noise_mask = (freqs >= noise_band[0]) & (freqs <= noise_band[1])
