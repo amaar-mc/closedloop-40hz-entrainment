@@ -1,0 +1,400 @@
+================================================================================
+REPROCESSING OPENNEURO DS005048 WITH 8-SECOND PAC WINDOWS
+================================================================================
+
+Parameters:
+  Window length: 8 seconds (2000 samples at 250Hz)
+  Hop size: 4 seconds (50% overlap)
+  Expected: ~20 theta cycles per window → stable MI
+  Expected: Autocorrelation > 0.3 → temporal predictability
+
+Found 35 subjects in /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048
+
+
+Processing subject 01...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-01/eeg/sub-01_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 350.0 seconds
+  Creating 86 windows (length=8.0s, hop=4.0s)
+  ✓ Created 86 windows
+  PAC range: [0.0000, 0.0002]
+  PAC mean: 0.0001 ± 0.0000
+
+Processing subject 02...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-02/eeg/sub-02_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 350.0 seconds
+  Creating 86 windows (length=8.0s, hop=4.0s)
+  ✓ Created 86 windows
+  PAC range: [0.0001, 0.0004]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 03...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-03/eeg/sub-03_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 350.0 seconds
+  Creating 86 windows (length=8.0s, hop=4.0s)
+  ✓ Created 86 windows
+  PAC range: [0.0001, 0.0002]
+  PAC mean: 0.0001 ± 0.0000
+
+Processing subject 04...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-04/eeg/sub-04_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 350.0 seconds
+  Creating 86 windows (length=8.0s, hop=4.0s)
+  ✓ Created 86 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 05...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-05/eeg/sub-05_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 350.0 seconds
+  Creating 86 windows (length=8.0s, hop=4.0s)
+  ✓ Created 86 windows
+  PAC range: [0.0001, 0.0002]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 06...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-06/eeg/sub-06_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 350.0 seconds
+  Creating 86 windows (length=8.0s, hop=4.0s)
+  ✓ Created 86 windows
+  PAC range: [0.0001, 0.0002]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 07...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-07/eeg/sub-07_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 350.0 seconds
+  Creating 86 windows (length=8.0s, hop=4.0s)
+  ✓ Created 86 windows
+  PAC range: [0.0001, 0.0002]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 08...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-08/eeg/sub-08_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 350.0 seconds
+  Creating 86 windows (length=8.0s, hop=4.0s)
+  ✓ Created 86 windows
+  PAC range: [0.0001, 0.0002]
+  PAC mean: 0.0001 ± 0.0000
+
+Processing subject 09...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-09/eeg/sub-09_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 10...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-10/eeg/sub-10_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0004]
+  PAC mean: 0.0002 ± 0.0001
+
+Processing subject 11...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-11/eeg/sub-11_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 12...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-12/eeg/sub-12_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0001
+
+Processing subject 13...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-13/eeg/sub-13_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 14...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-14/eeg/sub-14_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 15...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-15/eeg/sub-15_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 16...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-16/eeg/sub-16_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0005]
+  PAC mean: 0.0002 ± 0.0001
+
+Processing subject 17...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-17/eeg/sub-17_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0004]
+  PAC mean: 0.0002 ± 0.0001
+
+Processing subject 18...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-18/eeg/sub-18_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 19...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-19/eeg/sub-19_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0001
+
+Processing subject 20...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-20/eeg/sub-20_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 21...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-21/eeg/sub-21_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0004]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 22...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-22/eeg/sub-22_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 23...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-23/eeg/sub-23_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 24...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-24/eeg/sub-24_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 25...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-25/eeg/sub-25_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 26...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-26/eeg/sub-26_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 27...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-27/eeg/sub-27_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 28...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-28/eeg/sub-28_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 29...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-29/eeg/sub-29_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0008]
+  PAC mean: 0.0002 ± 0.0001
+
+Processing subject 30...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-30/eeg/sub-30_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 31...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-31/eeg/sub-31_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 32...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-32/eeg/sub-32_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 33...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-33/eeg/sub-33_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0002 ± 0.0000
+
+Processing subject 34...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-34/eeg/sub-34_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0002]
+  PAC mean: 0.0001 ± 0.0000
+
+Processing subject 35...
+Loading: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/raw/ds005048/sub-35/eeg/sub-35_task-40HzAuditoryEntrainment_eeg.set
+  Sampling rate: 250 Hz
+  Channels: 19
+  Duration: 590.0 seconds
+  Creating 146 windows (length=8.0s, hop=4.0s)
+  ✓ Created 146 windows
+  PAC range: [0.0001, 0.0003]
+  PAC mean: 0.0001 ± 0.0000
+
+================================================================================
+CONCATENATING ALL SUBJECTS
+================================================================================
+
+Total dataset:
+  Windows: (4630, 19, 2000)
+  PAC values: (4630,)
+  Subjects: 35
+  PAC mean: 0.0002 ± 0.0001
+
+============================================================
+TEMPORAL AUTOCORRELATION ANALYSIS
+============================================================
+PAC autocorrelation at lag=1 (4s ahead): r = 0.453
+PAC autocorrelation at lag=2 (8s ahead): r = 0.277
+PAC autocorrelation at lag=3 (12s ahead): r = 0.288
+PAC autocorrelation at lag=5 (20s ahead): r = 0.275
+PAC autocorrelation at lag=10 (40s ahead): r = 0.279
+============================================================
+
+================================================================================
+SAVING PROCESSED DATA
+================================================================================
+
+✓ Saved to: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/data/processed/long_windows
+  - windows.npy: (4630, 19, 2000)
+  - pac_values.npy: (4630,)
+  - subjects.npy: (4630,)
+  - spectral features: ['delta_power', 'theta_power', 'alpha_power', 'beta_power', 'gamma_power', 'spectral_entropy']
+  - metadata.json
+
+================================================================================
+REPROCESSING COMPLETE
+================================================================================
+
+Next step: Run temporal training with this new dataset
+Expected performance: R² > 0.6 (vs previous R² = -0.05)

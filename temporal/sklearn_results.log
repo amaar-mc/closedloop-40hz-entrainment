@@ -1,0 +1,106 @@
+================================================================================
+TEMPORAL PAC PREDICTION WITH 8-SECOND WINDOWS (SKLEARN BASELINE)
+================================================================================
+
+Configuration:
+  Lookback: 5 windows (20 seconds)
+  Horizon: 2 windows (8 seconds ahead)
+  PAC autocorrelation @ 8s: r = 0.277
+  Expected: R² > 0.6 (vs 2-sec baseline: R² = -0.05)
+Loading 8-second window data...
+Loaded: 4630 windows from 35 subjects
+
+Dataset sizes:
+  Train: 3059 samples, 556 features
+  Val:   663 samples
+  Test:  663 samples
+
+================================================================================
+TRAINING MODELS
+================================================================================
+
+[1/2] Training Ridge Regression...
+  Val R²:  -0.0295
+  Test R²: -0.2135
+  Test MAE: 0.000041
+  Test Corr: 0.3210
+
+[2/2] Training MLP Regressor...
+Iteration 1, loss = 0.47563740
+Validation score: 0.141231
+Iteration 2, loss = 0.36246346
+Validation score: 0.188135
+Iteration 3, loss = 0.33610442
+Validation score: 0.132170
+Iteration 4, loss = 0.31991809
+Validation score: 0.201615
+Iteration 5, loss = 0.31243320
+Validation score: 0.138007
+Iteration 6, loss = 0.26961774
+Validation score: 0.099032
+Iteration 7, loss = 0.27149760
+Validation score: 0.174941
+Iteration 8, loss = 0.23904902
+Validation score: 0.201146
+Iteration 9, loss = 0.23002077
+Validation score: 0.113371
+Iteration 10, loss = 0.21000085
+Validation score: 0.093072
+Iteration 11, loss = 0.20134245
+Validation score: 0.114945
+Iteration 12, loss = 0.21635836
+Validation score: 0.144389
+Iteration 13, loss = 0.18806577
+Validation score: 0.165594
+Iteration 14, loss = 0.17749223
+Validation score: 0.191426
+Iteration 15, loss = 0.16349267
+Validation score: 0.064847
+Iteration 16, loss = 0.18395200
+Validation score: 0.160245
+Iteration 17, loss = 0.14841805
+Validation score: 0.039671
+Iteration 18, loss = 0.22717475
+Validation score: 0.068191
+Iteration 19, loss = 0.16026656
+Validation score: 0.028627
+Iteration 20, loss = 0.15961766
+Validation score: 0.136206
+Iteration 21, loss = 0.12129014
+Validation score: 0.145878
+Iteration 22, loss = 0.11321911
+Validation score: 0.110372
+Iteration 23, loss = 0.10345987
+Validation score: 0.098593
+Iteration 24, loss = 0.09730060
+Validation score: 0.097935
+Iteration 25, loss = 0.12240565
+Validation score: 0.100142
+Validation score did not improve more than tol=0.000100 for 20 consecutive epochs. Stopping.
+
+  Val R²:  0.1384
+  Test R²: 0.1247
+  Test MAE: 0.000035
+  Test Corr: 0.3741
+
+================================================================================
+SAVING RESULTS
+================================================================================
+✓ Saved to: /sessions/serene-gifted-feynman/mnt/closedloop-40hz-entrainment/temporal/results_sklearn_baseline/results.json
+
+================================================================================
+FINAL VERDICT
+================================================================================
+
+Best model: MLP
+  Test R²: 0.1247
+
+Comparison to baselines:
+  2-second windows (LSTM): R² = -0.05 ✗
+  Current-window (Ridge):  R² = 0.287
+  8-second windows (MLP):  R² = 0.125 ✗ FAILED
+
+  ✗ Even 8-second windows insufficient
+  → May need 15-30 second windows like methodology papers
+
+================================================================================
