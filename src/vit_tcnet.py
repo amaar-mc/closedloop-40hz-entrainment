@@ -20,7 +20,7 @@ Date: February 2026
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from typing import Tuple
+from typing import Tuple, List
 
 
 class TemporalBlock(nn.Module):
