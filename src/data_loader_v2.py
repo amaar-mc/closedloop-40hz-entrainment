@@ -122,14 +122,16 @@ def load_processed_data_v2(data_dir: str = 'data/processed',
     val_data = np.load(os.path.join(data_dir, 'val_data.npz'))
     test_data = np.load(os.path.join(data_dir, 'test_data.npz'))
 
-    X_train = train_data['X']  # (n_samples, 7, 500)
-    y_train = train_data['y']  # (n_samples,) - PAC values
+    # Original data has keys: 'windows', 'pac', 'subjects'
+    # Shape: windows (n_samples, 1, 7, 500) -> squeeze to (n_samples, 7, 500)
+    X_train = train_data['windows'].squeeze(1)  # (n_samples, 7, 500)
+    y_train = train_data['pac']  # (n_samples,) - PAC values
 
-    X_val = val_data['X']
-    y_val = val_data['y']
+    X_val = val_data['windows'].squeeze(1)
+    y_val = val_data['pac']
 
-    X_test = test_data['X']
-    y_test = test_data['y']
+    X_test = test_data['windows'].squeeze(1)
+    y_test = test_data['pac']
 
     print(f"\n{'='*70}")
     print(f"Loading Data (Version 2 - ΔPAC Prediction)")
