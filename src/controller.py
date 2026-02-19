@@ -284,6 +284,213 @@ class ClosedLoopController:
         }
 
 
+class PredictiveLookAheadController:
+    """
+    Predictive closed-loop controller using a trained TCN to forecast
+    future PAC at multiple horizons and make proactive stimulation decisions.
+
+    Decision logic:
+        - If predicted PAC trajectory is declining -> start stimulation early
+        - If predicted PAC trajectory is rising -> delay stimulation
+        - Falls back to reactive z-score logic when baseline is not yet ready
+
+    Integrates with the realtime TCN inference wrapper for low-latency
+    predictions.
+    """
+
+    def __init__(
+        self,
+        forecaster,
+        z_low: float = -0.5,
+        z_high: float = 0.5,
+        hold_time_sec: float = 5.0,
+        decision_rate_hz: float = 1.0,
+        decline_threshold: float = -0.3,
+    ):
+        """
+        Initialize predictive look-ahead controller.
+
+        Args:
+            forecaster: RealtimePACForecaster instance (from realtime_inference.py)
+            z_low: Z-score threshold for weak coupling
+            z_high: Z-score threshold for strong coupling
+            hold_time_sec: Minimum hold time before state change
+            decision_rate_hz: Decision update rate in Hz
+            decline_threshold: If predicted delta_pac < this, preemptively stimulate
+        """
+        self.forecaster = forecaster
+        self.z_low = z_low
+        self.z_high = z_high
+        self.hold_time_sec = hold_time_sec
+        self.decision_rate_hz = decision_rate_hz
+        self.hold_samples = int(hold_time_sec * decision_rate_hz)
+        self.decline_threshold = decline_threshold
+
+        # Personalization baseline
+        self.personalization = PersonalizationModule(
+            window_size=30,
+            min_samples=10,
+        )
+
+        # State
+        self.current_state = StimState.REST
+        self.time_in_state = 0
+        self.state_history = []
+        self.pac_history = []
+        self.zscore_history = []
+        self.predicted_future_history = []
+        self.predicted_delta_history = []
+
+        logger.info("PredictiveLookAheadController initialized")
+        logger.info(f"  Z thresholds: [{z_low}, {z_high}]")
+        logger.info(f"  Hold time: {hold_time_sec}s")
+        logger.info(f"  Decline threshold: {decline_threshold}")
+
+    def step(
+        self,
+        spectral_features: np.ndarray,
+        pac_current: float,
+        stim_state: float,
+        time_since_switch_sec: float,
+        stim_frac_recent: float,
+        cycle_phase_sin: float = 0.0,
+        cycle_phase_cos: float = 1.0,
+    ):
+        """
+        Execute one control step with look-ahead prediction.
+
+        Args:
+            spectral_features: (61,) from current EEG window
+            pac_current: Current PAC estimate
+            stim_state: Current stimulation state (0 or 1)
+            time_since_switch_sec: Seconds since last state switch
+            stim_frac_recent: Fraction of stim in recent window
+            cycle_phase_sin: Protocol phase sin component
+            cycle_phase_cos: Protocol phase cos component
+
+        Returns:
+            action: StimState decision
+            pac_current: Current PAC value (passthrough)
+            prediction: Dict with future_pac, delta_pac, or None if not ready
+        """
+        # Update personalization baseline
+        self.personalization.update(pac_current)
+        z_score = self.personalization.compute_zscore(pac_current)
+
+        # Get TCN prediction
+        prediction = self.forecaster.step(
+            spectral_features=spectral_features,
+            pac_current=pac_current,
+            stim_state=stim_state,
+            time_since_switch_sec=time_since_switch_sec,
+            stim_frac_recent=stim_frac_recent,
+            cycle_phase_sin=cycle_phase_sin,
+            cycle_phase_cos=cycle_phase_cos,
+        )
+
+        # Make decision
+        action = self._make_decision(z_score, prediction)
+
+        # Track history
+        self.state_history.append(int(action))
+        self.pac_history.append(pac_current)
+        self.zscore_history.append(z_score if z_score is not None else np.nan)
+        if prediction is not None:
+            self.predicted_future_history.append(prediction["future_pac"])
+            self.predicted_delta_history.append(prediction["delta_pac"])
+        else:
+            self.predicted_future_history.append(np.nan)
+            self.predicted_delta_history.append(np.nan)
+
+        # Update time in state
+        if action == self.current_state:
+            self.time_in_state += 1
+        else:
+            self.time_in_state = 1
+
+        return action, pac_current, prediction
+
+    def _make_decision(self, z_score, prediction):
+        """
+        Make proactive stimulation decision using predicted PAC trajectory.
+
+        Priority:
+          1. If prediction available → use look-ahead logic
+          2. Else → fall back to reactive z-score logic
+          3. Always respect hysteresis hold time
+        """
+        desired_state = None
+
+        if prediction is not None:
+            delta_pac = prediction["delta_pac"]
+            future_pac = prediction["future_pac"]
+            current_pac = prediction["current_pac"]
+
+            # Proactive: predicted decline → stimulate early
+            if delta_pac < self.decline_threshold:
+                desired_state = StimState.STIMULATE
+
+            # Proactive: predicted rise → can rest (save energy)
+            elif delta_pac > abs(self.decline_threshold):
+                desired_state = StimState.REST
+
+            # Within dead zone → use z-score if available
+            elif z_score is not None:
+                if z_score < self.z_low:
+                    desired_state = StimState.STIMULATE
+                elif z_score > self.z_high:
+                    desired_state = StimState.REST
+
+        elif z_score is not None:
+            # No prediction yet → reactive fallback
+            if z_score < self.z_low:
+                desired_state = StimState.STIMULATE
+            elif z_score > self.z_high:
+                desired_state = StimState.REST
+
+        # No signal → maintain
+        if desired_state is None:
+            return self.current_state
+
+        # Apply hysteresis
+        if desired_state != self.current_state:
+            if self.time_in_state >= self.hold_samples:
+                self.current_state = desired_state
+                self.time_in_state = 0
+
+        return self.current_state
+
+    def reset(self):
+        """Reset controller and forecaster for a new session."""
+        self.forecaster.reset()
+        self.personalization.reset()
+        self.current_state = StimState.REST
+        self.time_in_state = 0
+        self.state_history = []
+        self.pac_history = []
+        self.zscore_history = []
+        self.predicted_future_history = []
+        self.predicted_delta_history = []
+        logger.info("PredictiveLookAheadController reset")
+
+    def get_history(self) -> dict:
+        """Get full history of decisions, measurements, and predictions."""
+        return {
+            "pac": np.array(self.pac_history),
+            "zscore": np.array(self.zscore_history),
+            "action": np.array(self.state_history),
+            "predicted_future": np.array(self.predicted_future_history),
+            "predicted_delta": np.array(self.predicted_delta_history),
+            "n_stimulate": int(np.sum(self.state_history)) if self.state_history else 0,
+            "n_rest": int(len(self.state_history) - np.sum(self.state_history))
+            if self.state_history
+            else 0,
+            "pct_stimulate": 100.0 * np.mean(self.state_history)
+            if self.state_history
+            else 0.0,
+        }
+
+
 def test_controller():
     """Test controller with synthetic EEG and simulated PAC."""
     logger.info("="*60)

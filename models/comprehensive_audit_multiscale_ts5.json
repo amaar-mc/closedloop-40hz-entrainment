@@ -1,12 +1,12 @@
 {
-  "dataset_dir": "data\\processed\\multiscale_temporal_lb20_hz1_ts5",
+  "dataset_dir": "data\\processed\\multiscale_temporal_lb20_hz1_ts5_clean",
   "metadata": {
     "lookback": 20,
     "horizon": 1,
     "window_sec": 2.0,
     "hop_sec": 1.0,
     "stim_history_sec": 20,
-    "target_smooth_window": 15,
+    "target_smooth_window": 5,
     "n_features": 73,
     "n_train": 11256,
     "n_val": 2625,
@@ -68,30 +68,30 @@
     }
   },
   "persistence_baseline": {
-    "r2": 0.9502321481704712,
-    "corr": 0.9750834872901788
+    "r2": 0.760016679763794,
+    "corr": 0.8798824422453255
   },
   "ablation": {
     "full_features": {
-      "r2": 0.9564911127090454,
-      "corr": 0.978491482057195
+      "r2": 0.8120175004005432,
+      "corr": 0.905628477029456
     },
     "no_pac_features": {
-      "r2": 0.3901224136352539,
-      "corr": 0.6978107396664193
+      "r2": 0.044555068016052246,
+      "corr": 0.5195930291513238
     },
     "pac_only_features": {
-      "r2": 0.9669269323348999,
-      "corr": 0.9833755343499685
+      "r2": 0.8588563203811646,
+      "corr": 0.9269578717077088
     },
     "spectral_only_features": {
-      "r2": 0.3906739354133606,
-      "corr": 0.6971517587497598
+      "r2": 0.05508917570114136,
+      "corr": 0.5200580004826717
     }
   },
   "shuffle_label_sanity": {
-    "r2": -0.3208019733428955,
-    "corr": 0.0526229588729592
+    "r2": -0.3321712017059326,
+    "corr": 0.005840641063673115
   },
   "verdict": {
     "integrity_ok": true,

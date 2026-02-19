@@ -1,25 +1,25 @@
 {
   "model": "MultiscaleCausalTCN",
-  "run_name": "multiscale_tcn_lb20_hz1_ts5",
+  "run_name": "multiscale_tcn_lb20_hz10_ts5",
   "n_params": 31043,
-  "best_epoch": 16,
-  "best_val_future_r2": 0.7658827728345399,
+  "best_epoch": 1,
+  "best_val_future_r2": 0.09435502015391461,
   "test_future_metrics": {
-    "r2": 0.7352226340011485,
-    "corr": 0.8650627469141978,
-    "mae": 8.738414908293635e-05,
-    "rmse": 0.00011287786037428305
+    "r2": 0.2782535154474153,
+    "corr": 0.5301946118890799,
+    "mae": 0.00014809257118031383,
+    "rmse": 0.00018730036390479654
   },
   "test_delta_metrics": {
-    "r2": 0.01088842101565135,
-    "corr": 0.12388544947755749,
-    "mae": 8.093525684671476e-05,
-    "rmse": 0.00010687614121707156
+    "r2": -0.01992039419733671,
+    "corr": 0.010094239372361483,
+    "mae": 0.00019535989849828184,
+    "rmse": 0.00024950812803581357
   },
-  "train_seconds": 14.856967210769653,
+  "train_seconds": 8.976535558700562,
   "config": {
     "lookback": 20,
-    "horizon": 1,
+    "horizon": 10,
     "stim_history_sec": 20,
     "target_smooth_window": 5,
     "hidden": 64,

@@ -1,0 +1,74 @@
+[
+  {
+    "horizon": 1,
+    "lookback": 20,
+    "target_smooth_window": 5,
+    "persistence_r2": 0.7600166580911756,
+    "persistence_rmse": 0.00010746297818445517,
+    "ridge_r2": 0.8120217013295594,
+    "ridge_rmse": 9.510912389329608e-05,
+    "tcn_r2": 0.7352226340011485,
+    "tcn_rmse": 0.00011287786037428305,
+    "tcn_margin_over_persistence": -0.024794024090027067
+  },
+  {
+    "horizon": 2,
+    "lookback": 20,
+    "target_smooth_window": 5,
+    "persistence_r2": 0.4875084292702012,
+    "persistence_rmse": 0.00015717987988702432,
+    "ridge_r2": 0.5421843091172488,
+    "ridge_rmse": 0.00014855898581285688,
+    "tcn_r2": 0.46962706176892877,
+    "tcn_rmse": 0.00015989845269359648,
+    "tcn_margin_over_persistence": -0.01788136750127245
+  },
+  {
+    "horizon": 3,
+    "lookback": 20,
+    "target_smooth_window": 5,
+    "persistence_r2": 0.23401134609878516,
+    "persistence_rmse": 0.00019231375582124305,
+    "ridge_r2": 0.2534641248624505,
+    "ridge_rmse": 0.00018985608565386328,
+    "tcn_r2": 0.27706010456159846,
+    "tcn_rmse": 0.0001868315739557147,
+    "tcn_margin_over_persistence": 0.04304875846281331
+  },
+  {
+    "horizon": 5,
+    "lookback": 20,
+    "target_smooth_window": 5,
+    "persistence_r2": -0.26710155374446853,
+    "persistence_rmse": 0.00024775287415489654,
+    "ridge_r2": -0.3926176517531159,
+    "ridge_rmse": 0.0002597340799144443,
+    "tcn_r2": 0.25405260399626717,
+    "tcn_rmse": 0.0001900934148579836,
+    "tcn_margin_over_persistence": 0.5211541577407357
+  },
+  {
+    "horizon": 8,
+    "lookback": 20,
+    "target_smooth_window": 5,
+    "persistence_r2": -0.27571396490744027,
+    "persistence_rmse": 0.0002488065236047551,
+    "ridge_r2": -0.21085726610726363,
+    "ridge_rmse": 0.00024239942454095417,
+    "tcn_r2": 0.2395401678230601,
+    "tcn_rmse": 0.00019209818856325,
+    "tcn_margin_over_persistence": 0.5152541327305004
+  },
+  {
+    "horizon": 10,
+    "lookback": 20,
+    "target_smooth_window": 5,
+    "persistence_r2": -0.25577717597961036,
+    "persistence_rmse": 0.0002470600643203655,
+    "ridge_r2": -0.21168290926498523,
+    "ridge_rmse": 0.00024268377873969406,
+    "tcn_r2": 0.2782535154474153,
+    "tcn_rmse": 0.00018730036390479654,
+    "tcn_margin_over_persistence": 0.5340306914270256
+  }
+]

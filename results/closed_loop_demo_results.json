@@ -1,0 +1,203 @@
+{
+  "config": {
+    "duration_sec": 360,
+    "n_trials": 5,
+    "seed": 42
+  },
+  "summary": {
+    "Fixed Schedule": {
+      "pac_mean": "0.2299",
+      "pac_mean_std": "0.0018",
+      "improvement_pct": "359.9",
+      "improvement_std": "3.5",
+      "stim_pct": "66.7",
+      "stim_std": "0.0",
+      "efficiency": "5.398",
+      "efficiency_std": "0.053"
+    },
+    "Reactive Threshold": {
+      "pac_mean": "0.1361",
+      "pac_mean_std": "0.0024",
+      "improvement_pct": "172.2",
+      "improvement_std": "4.8",
+      "stim_pct": "25.4",
+      "stim_std": "0.3",
+      "efficiency": "6.779",
+      "efficiency_std": "0.115"
+    },
+    "Predictive Look-Ahead": {
+      "pac_mean": "0.1878",
+      "pac_mean_std": "0.0055",
+      "improvement_pct": "275.6",
+      "improvement_std": "11.1",
+      "stim_pct": "52.1",
+      "stim_std": "3.3",
+      "efficiency": "5.302",
+      "efficiency_std": "0.152"
+    },
+    "Oracle": {
+      "pac_mean": "0.2000",
+      "pac_mean_std": "0.0008",
+      "improvement_pct": "299.9",
+      "improvement_std": "1.5",
+      "stim_pct": "49.1",
+      "stim_std": "0.5",
+      "efficiency": "6.108",
+      "efficiency_std": "0.080"
+    },
+    "wilcoxon_pred_vs_reactive": {
+      "statistic": 0.0,
+      "p_value": 0.0625
+    }
+  },
+  "raw_trials": {
+    "Fixed Schedule": [
+      {
+        "pac_mean": 0.2282020379873132,
+        "pac_std": 0.08328087088201058,
+        "pac_improvement_pct": 356.4040046938254,
+        "stimulation_pct": 66.66666666666666,
+        "efficiency_ratio": 5.346060069605474
+      },
+      {
+        "pac_mean": 0.23010324604305757,
+        "pac_std": 0.08565972853808475,
+        "pac_improvement_pct": 360.2064200448311,
+        "stimulation_pct": 66.66666666666666,
+        "efficiency_ratio": 5.403096299862003
+      },
+      {
+        "pac_mean": 0.22777246180163233,
+        "pac_std": 0.07456632580432401,
+        "pac_improvement_pct": 355.5448524942941,
+        "stimulation_pct": 66.66666666666666,
+        "efficiency_ratio": 5.333172786614437
+      },
+      {
+        "pac_mean": 0.23232306245295298,
+        "pac_std": 0.08116478869084116,
+        "pac_improvement_pct": 364.64605197669556,
+        "stimulation_pct": 66.66666666666666,
+        "efficiency_ratio": 5.469690778829981
+      },
+      {
+        "pac_mean": 0.2313164992127804,
+        "pac_std": 0.08140406800534412,
+        "pac_improvement_pct": 362.63292589897566,
+        "stimulation_pct": 66.66666666666666,
+        "efficiency_ratio": 5.4394938876687124
+      }
+    ],
+    "Reactive Threshold": [
+      {
+        "pac_mean": 0.1358140561036199,
+        "pac_std": 0.03600031032554381,
+        "pac_improvement_pct": 171.62807788162422,
+        "stimulation_pct": 25.555555555555554,
+        "efficiency_ratio": 6.715881305783429
+      },
+      {
+        "pac_mean": 0.1369958965341273,
+        "pac_std": 0.035323496574884004,
+        "pac_improvement_pct": 173.99175826990293,
+        "stimulation_pct": 25.555555555555554,
+        "efficiency_ratio": 6.808373147027708
+      },
+      {
+        "pac_mean": 0.13270137783937375,
+        "pac_std": 0.039357463060818935,
+        "pac_improvement_pct": 165.40272259820293,
+        "stimulation_pct": 25.0,
+        "efficiency_ratio": 6.616108901281673
+      },
+      {
+        "pac_mean": 0.1348891810313316,
+        "pac_std": 0.04880814545365739,
+        "pac_improvement_pct": 169.77832810699758,
+        "stimulation_pct": 25.0,
+        "efficiency_ratio": 6.791133121563449
+      },
+      {
+        "pac_mean": 0.13997693768606526,
+        "pac_std": 0.03853668205790294,
+        "pac_improvement_pct": 179.95383938136263,
+        "stimulation_pct": 25.833333333333336,
+        "efficiency_ratio": 6.965955070130441
+      }
+    ],
+    "Predictive Look-Ahead": [
+      {
+        "pac_mean": 0.19047749507892153,
+        "pac_std": 0.10311124967767396,
+        "pac_improvement_pct": 280.9549339668563,
+        "stimulation_pct": 52.22222222222223,
+        "efficiency_ratio": 5.379988096207462
+      },
+      {
+        "pac_mean": 0.18189540288372644,
+        "pac_std": 0.09758630215173589,
+        "pac_improvement_pct": 263.7907530093022,
+        "stimulation_pct": 49.44444444444444,
+        "efficiency_ratio": 5.335093880008003
+      },
+      {
+        "pac_mean": 0.19729899744779925,
+        "pac_std": 0.10881703076507918,
+        "pac_improvement_pct": 294.59793597601123,
+        "stimulation_pct": 58.333333333333336,
+        "efficiency_ratio": 5.050250330151578
+      },
+      {
+        "pac_mean": 0.18529756027703262,
+        "pac_std": 0.10958015777393465,
+        "pac_improvement_pct": 270.59506643505193,
+        "stimulation_pct": 49.166666666666664,
+        "efficiency_ratio": 5.503628468746081
+      },
+      {
+        "pac_mean": 0.18393952324854526,
+        "pac_std": 0.11911301616894913,
+        "pac_improvement_pct": 267.87899292129185,
+        "stimulation_pct": 51.11111111111111,
+        "efficiency_ratio": 5.241110730043319
+      }
+    ],
+    "Oracle": [
+      {
+        "pac_mean": 0.20006019566746738,
+        "pac_std": 0.024968175654759478,
+        "pac_improvement_pct": 300.12033131086844,
+        "stimulation_pct": 49.72222222222222,
+        "efficiency_ratio": 6.035939622915266
+      },
+      {
+        "pac_mean": 0.1998540980937477,
+        "pac_std": 0.026238386564668197,
+        "pac_improvement_pct": 299.70813624586816,
+        "stimulation_pct": 48.888888888888886,
+        "efficiency_ratio": 6.130393694684268
+      },
+      {
+        "pac_mean": 0.1985778340729177,
+        "pac_std": 0.026199572324891094,
+        "pac_improvement_pct": 297.15560871471365,
+        "stimulation_pct": 49.44444444444444,
+        "efficiency_ratio": 6.0098887143629955
+      },
+      {
+        "pac_mean": 0.20073129611455104,
+        "pac_std": 0.02781620114023967,
+        "pac_improvement_pct": 301.46253193659567,
+        "stimulation_pct": 49.166666666666664,
+        "efficiency_ratio": 6.131441326276907
+      },
+      {
+        "pac_mean": 0.20065068211289538,
+        "pac_std": 0.02497387879063872,
+        "pac_improvement_pct": 301.30130396552994,
+        "stimulation_pct": 48.333333333333336,
+        "efficiency_ratio": 6.233820080755691
+      }
+    ]
+  }
+}
