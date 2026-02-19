@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import random
 import time
 from pathlib import Path
 from typing import Dict, Tuple
@@ -188,23 +189,35 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--target-smooth-window", default=1, type=int)
 
     p.add_argument("--hidden", default=64, type=int)
-    p.add_argument("--dropout", default=0.1, type=float)
+    p.add_argument("--dropout", default=0.2, type=float)
     p.add_argument("--kernel-size", default=3, type=int)
     p.add_argument("--dilations", default="1,2,4,8", type=str)
+    p.add_argument("--pool-type", default="attention", type=str,
+                   choices=["attention", "last_step"])
 
     p.add_argument("--epochs", default=80, type=int)
     p.add_argument("--batch-size", default=128, type=int)
     p.add_argument("--lr", default=1e-3, type=float)
-    p.add_argument("--weight-decay", default=1e-4, type=float)
+    p.add_argument("--weight-decay", default=1e-3, type=float)
     p.add_argument("--patience", default=20, type=int)
     p.add_argument("--grad-clip", default=1.0, type=float)
-    p.add_argument("--lambda-delta", default=0.5, type=float)
-    p.add_argument("--lambda-consistency", default=0.1, type=float)
+    p.add_argument("--lambda-delta", default=0.0, type=float)
+    p.add_argument("--lambda-consistency", default=0.0, type=float)
+    p.add_argument("--seed", default=42, type=int)
     return p.parse_args()
 
 
 def main() -> None:
     args = parse_args()
+
+    # Deterministic seeding for reproducibility
+    random.seed(args.seed)
+    np.random.seed(args.seed)
+    torch.manual_seed(args.seed)
+    torch.cuda.manual_seed_all(args.seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
+
     dataset_dir = Path(args.dataset_dir)
     models_dir = Path(args.models_dir)
     models_dir.mkdir(parents=True, exist_ok=True)
@@ -224,7 +237,10 @@ def main() -> None:
     val_ds = SequenceDataset(dataset_dir / "val_multiscale.npz")
     test_ds = SequenceDataset(dataset_dir / "test_multiscale.npz")
 
-    train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True, num_workers=0)
+    g = torch.Generator()
+    g.manual_seed(args.seed)
+    train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True,
+                              num_workers=0, generator=g)
     val_loader = DataLoader(val_ds, batch_size=args.batch_size, shuffle=False, num_workers=0)
     test_loader = DataLoader(test_ds, batch_size=args.batch_size, shuffle=False, num_workers=0)
 
@@ -262,6 +278,7 @@ def main() -> None:
         kernel_size=args.kernel_size,
         dilations=dilations,
         dropout=args.dropout,
+        pool_type=args.pool_type,
     )
     model = MultiscaleCausalTCN(cfg)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -389,11 +406,13 @@ def main() -> None:
             "kernel_size": args.kernel_size,
             "dilations": dilations,
             "dropout": args.dropout,
+            "pool_type": args.pool_type,
             "batch_size": args.batch_size,
             "lr": args.lr,
             "weight_decay": args.weight_decay,
             "lambda_delta": args.lambda_delta,
             "lambda_consistency": args.lambda_consistency,
+            "seed": args.seed,
         },
     }
 

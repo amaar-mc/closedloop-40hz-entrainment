@@ -9,7 +9,7 @@ Design constraints:
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import Dict, List
 
 import torch
@@ -38,7 +38,9 @@ class CausalDSConvBlock(nn.Module):
             bias=False,
         )
         self.pointwise = nn.Conv1d(channels, channels, kernel_size=1, bias=False)
-        self.norm = nn.BatchNorm1d(channels)
+        # GroupNorm(1, C) == LayerNorm over channels — more stable with
+        # small batches and cross-subject distribution shifts than BatchNorm.
+        self.norm = nn.GroupNorm(1, channels)
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
@@ -67,6 +69,19 @@ class AttentionPool1D(nn.Module):
         return pooled
 
 
+class LastStepPool(nn.Module):
+    """Take last timestep from causal TCN output.
+
+    For a causal architecture the last position already sees the full
+    receptive field, so this preserves strict temporal ordering without
+    weighting future-adjacent steps.
+    """
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        # x: (B, C, T)
+        return x[:, :, -1]  # (B, C)
+
+
 @dataclass
 class ModelConfig:
     n_features: int
@@ -74,6 +89,7 @@ class ModelConfig:
     kernel_size: int = 3
     dilations: List[int] | None = None
     dropout: float = 0.1
+    pool_type: str = "attention"  # "attention" or "last_step"
 
     def __post_init__(self) -> None:
         if self.dilations is None:
@@ -113,7 +129,11 @@ class MultiscaleCausalTCN(nn.Module):
                 )
             )
         self.tcn = nn.Sequential(*blocks)
-        self.pool = AttentionPool1D(cfg.hidden)
+
+        if cfg.pool_type == "last_step":
+            self.pool = LastStepPool()
+        else:
+            self.pool = AttentionPool1D(cfg.hidden)
 
         self.future_head = nn.Sequential(
             nn.Linear(cfg.hidden, cfg.hidden),
@@ -137,6 +157,21 @@ class MultiscaleCausalTCN(nn.Module):
         future = self.future_head(z).squeeze(-1)
         delta = self.delta_head(z).squeeze(-1)
         return {"future": future, "delta": delta}
+
+    def freeze_backbone(self) -> None:
+        """Freeze all layers except the future and delta regression heads.
+
+        Useful for per-subject fine-tuning: keeps learned temporal
+        representations fixed while adapting the output mapping.
+        """
+        for name, param in self.named_parameters():
+            if "future_head" not in name and "delta_head" not in name:
+                param.requires_grad = False
+
+    def unfreeze_all(self) -> None:
+        """Unfreeze all parameters (reverses ``freeze_backbone``)."""
+        for param in self.parameters():
+            param.requires_grad = True
 
     def count_parameters(self) -> int:
         return sum(p.numel() for p in self.parameters() if p.requires_grad)

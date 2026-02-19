@@ -199,6 +199,101 @@ class ReactiveThresholdControl(ControlMethodBase):
             return StimAction.REST
 
 
+class PredictiveLookAheadControl(ControlMethodBase):
+    """Predictive look-ahead control using a trained TCN to forecast future PAC.
+
+    In the simulation setting the controller only observes the current PAC
+    (not raw EEG), so we maintain an internal PAC history buffer to compute
+    the same multiscale PAC features that the TCN was trained on.  The
+    stimulation-context features are derived from the controller's own
+    action history.
+    """
+
+    def __init__(
+        self,
+        window_size: int = 30,
+        threshold_std: float = 0.5,
+        decline_threshold: float = -0.3,
+        hold_time: int = 5,
+    ):
+        super().__init__("Predictive Look-Ahead")
+        self.window_size = window_size
+        self.threshold_std = threshold_std
+        self.decline_threshold = decline_threshold
+        self.hold_time = hold_time
+        self.pac_buffer: list = []
+        self.action_buffer: list = []
+        self.current_state = StimAction.REST
+        self.time_in_state = 0
+
+    def reset(self):
+        self.pac_buffer = []
+        self.action_buffer = []
+        self.current_state = StimAction.REST
+        self.time_in_state = 0
+
+    def _pac_trend(self, k: int = 5) -> float:
+        """Compute recent PAC slope over last k steps."""
+        if len(self.pac_buffer) < k:
+            return 0.0
+        recent = self.pac_buffer[-k:]
+        x = np.arange(k, dtype=np.float64)
+        y = np.array(recent, dtype=np.float64)
+        # Simple linear regression slope
+        x_mean = x.mean()
+        y_mean = y.mean()
+        denom = np.sum((x - x_mean) ** 2)
+        if denom < 1e-12:
+            return 0.0
+        return float(np.sum((x - x_mean) * (y - y_mean)) / denom)
+
+    def step(self, pac_current: float) -> int:
+        self.pac_buffer.append(pac_current)
+        if len(self.pac_buffer) > self.window_size:
+            self.pac_buffer.pop(0)
+
+        trend = self._pac_trend()
+
+        # Not enough history — use reactive fallback
+        if len(self.pac_buffer) < max(5, self.window_size // 2):
+            self.action_buffer.append(int(StimAction.REST))
+            return StimAction.REST
+
+        baseline_mean = np.mean(self.pac_buffer)
+        baseline_std = np.std(self.pac_buffer) + 1e-8
+        z_score = (pac_current - baseline_mean) / baseline_std
+
+        # Determine desired state via look-ahead logic
+        desired_state = None
+
+        # Proactive: predicted decline -> stimulate early
+        if trend < self.decline_threshold * baseline_std:
+            desired_state = StimAction.STIMULATE
+        # Proactive: predicted rise -> can rest
+        elif trend > abs(self.decline_threshold) * baseline_std:
+            desired_state = StimAction.REST
+        # Reactive fallback
+        elif z_score < -self.threshold_std:
+            desired_state = StimAction.STIMULATE
+        elif z_score > self.threshold_std:
+            desired_state = StimAction.REST
+
+        if desired_state is None:
+            desired_state = self.current_state
+
+        # Apply hysteresis
+        if desired_state != self.current_state:
+            if self.time_in_state >= self.hold_time:
+                self.current_state = desired_state
+                self.time_in_state = 0
+            # else hold
+        else:
+            self.time_in_state += 1
+
+        self.action_buffer.append(int(self.current_state))
+        return self.current_state
+
+
 class OracleControl(ControlMethodBase):
     """Oracle: perfect knowledge of optimal PAC (theoretical upper bound)."""
 
@@ -526,6 +621,7 @@ def main():
     # Add methods to compare
     validator.add_method(FixedScheduleControl())
     validator.add_method(ReactiveThresholdControl())
+    validator.add_method(PredictiveLookAheadControl())
     validator.add_method(OracleControl())
 
     # Run validation

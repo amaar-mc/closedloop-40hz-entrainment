@@ -2,25 +2,26 @@
   "model": "MultiscaleCausalTCN",
   "run_name": "multiscale_tcn_lb20_hz1",
   "n_params": 31043,
-  "best_epoch": 1,
-  "best_val_future_r2": 0.00871102546438074,
+  "best_epoch": 12,
+  "best_val_future_r2": 0.7638894894550988,
   "test_future_metrics": {
-    "r2": 0.06986650479434398,
-    "corr": 0.2729729155225723,
-    "mae": 0.00029888501740060747,
-    "rmse": 0.00039123729220591486
+    "r2": 0.7642157676371375,
+    "corr": 0.8796154821305358,
+    "mae": 8.249892562162131e-05,
+    "rmse": 0.00010651866614352912
   },
   "test_delta_metrics": {
-    "r2": -0.0018423789211259312,
-    "corr": 0.030827694800780688,
-    "mae": 0.00039126016781665385,
-    "rmse": 0.0005224051419645548
+    "r2": 0.009490165842334308,
+    "corr": 0.13406325933462873,
+    "mae": 8.100156992441043e-05,
+    "rmse": 0.00010695165110519156
   },
-  "train_seconds": 5.070895671844482,
+  "train_seconds": 20.32365894317627,
   "config": {
     "lookback": 20,
     "horizon": 1,
     "stim_history_sec": 20,
+    "target_smooth_window": 5,
     "hidden": 64,
     "kernel_size": 3,
     "dilations": [
@@ -29,11 +30,13 @@
       4,
       8
     ],
-    "dropout": 0.1,
+    "dropout": 0.2,
+    "pool_type": "attention",
     "batch_size": 128,
     "lr": 0.001,
-    "weight_decay": 0.0001,
-    "lambda_delta": 0.5,
-    "lambda_consistency": 0.1
+    "weight_decay": 0.001,
+    "lambda_delta": 0.0,
+    "lambda_consistency": 0.0,
+    "seed": 42
   }
 }
