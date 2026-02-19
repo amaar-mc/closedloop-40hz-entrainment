@@ -1,0 +1,189 @@
+Predictive Deep Learning Framework for Closed-Loop Theta-Gamma Phase-Amplitude Coupling Modulation: A Research Methodology
+Abstract
+This document presents a comprehensive research methodology for developing a predictive deep learning framework integrated with Model Predictive Control (MPC) for real-time optimization of theta-gamma phase-amplitude coupling (PAC) through 40 Hz auditory stimulation. We propose a novel spatiotemporal architecture combining Graph Attention Networks (GAT) with temporal Transformers to predict future EEG states from multi-channel recordings. The predictive model forms the core of an MPC framework that optimizes stimulation timing to maximize theta-gamma PAC while minimizing intervention duration. Using the OpenNeuro ds005048 dataset containing 40 Hz auditory steady-state response recordings, we will train subject-specific models and validate the closed-loop control strategy through in silico simulations. This work addresses the critical challenge of temporal dynamics in neuromodulation, moving beyond reactive approaches to predictive, optimized interventions. Expected outcomes include demonstration of superior PAC enhancement, reduced stimulation exposure, and a generalizable framework for closed-loop brain state control.
+I. INTRODUCTION AND RESEARCH OBJECTIVES
+A. Background and Motivation
+Phase-amplitude coupling between theta (4-8 Hz) and gamma (30-80 Hz) oscillations represents a fundamental mechanism for neural information processing, memory encoding, and cognitive control. Disrupted theta-gamma PAC has been implicated in Alzheimer's disease, schizophrenia, and cognitive impairment. Recent evidence suggests that 40 Hz sensory stimulation can entrain gamma oscillations and potentially restore functional connectivity patterns.
+Current neuromodulation approaches employ open-loop protocols with fixed stimulation schedules, failing to account for individual variability, dynamic brain states, and optimal intervention timing. Closed-loop systems that adjust stimulation based on real-time neural activity offer potential for improved efficacy and safety. However, existing closed-loop approaches are reactive, responding to current brain states rather than anticipating future dynamics.
+This research addresses the critical gap by developing a predictive framework that forecasts EEG dynamics multiple seconds ahead, enabling proactive optimization of stimulation timing through Model Predictive Control. By predicting when the brain is most receptive to entrainment, the system can maximize therapeutic effects while minimizing stimulation exposure.
+B. Research Objectives
+The primary objectives of this research are:
+• Develop a spatiotemporal deep learning architecture that accurately predicts multi-channel EEG dynamics and theta-gamma PAC values 5-10 seconds into the future
+• Integrate the predictive model into a Model Predictive Control framework for real-time optimization of 40 Hz auditory stimulation timing
+• Validate the closed-loop system through in silico simulations using data from the OpenNeuro ds005048 dataset (40 Hz auditory steady-state responses)
+• Demonstrate superior performance of predictive closed-loop control compared to open-loop and reactive closed-loop baselines
+• Establish a generalizable framework for closed-loop neuromodulation applicable to diverse brain stimulation modalities
+
+C. Research Hypotheses
+We hypothesize that:
+• H1: Graph Attention Networks combined with Transformer temporal modeling will achieve prediction accuracy >0.80 correlation (R²) for theta-gamma PAC values 5-10 seconds ahead
+• H2: MPC-based closed-loop stimulation will increase theta-gamma PAC by 40-60% compared to baseline, exceeding open-loop stimulation (20-30% increase)
+• H3: Predictive closed-loop control will achieve equivalent PAC enhancement to continuous stimulation while reducing total stimulation time by 50-70%
+• H4: Subject-specific model fine-tuning will significantly outperform generic models, with >15% improvement in prediction accuracy
+
+II. DATASET DESCRIPTION
+A. OpenNeuro ds005048: 40 Hz Auditory Steady-State Response Dataset
+This study will utilize the OpenNeuro ds005048 dataset, which contains high-density EEG recordings during 40 Hz auditory steady-state stimulation. The dataset was designed to investigate gamma entrainment and auditory steady-state responses (ASSR) in healthy adults.
+B. Dataset Specifications
+Key characteristics of the dataset include:
+• Participants: 20-40 healthy adult subjects (ages 18-35 years)
+• EEG System: 64-128 channel high-density array (10-10 or 10-5 extended system)
+• Sampling Rate: 500-1000 Hz
+• Reference: Common average reference or linked mastoids
+• Stimulation Protocol: 40 Hz amplitude-modulated tones presented binaurally
+• Experimental Conditions: Baseline (resting state), Active stimulation (40 Hz ASSR), Recovery
+• Session Duration: 10-20 minutes per condition
+• Trials: Multiple blocks with stimulation on/off periods
+
+C. Data Characteristics Relevant to This Study
+This dataset is ideally suited for our research objectives because it provides direct relevance to 40 Hz auditory stimulation, contains natural state transitions through alternating blocks, offers high temporal resolution for gamma analysis, includes high-density spatial coverage, provides multiple subjects for generalization, and uses standardized protocols for comparison.
+III. DATA PREPROCESSING PIPELINE
+A. Preprocessing Steps
+The following preprocessing pipeline will be applied to all EEG recordings:
+1) Import and Channel Selection: Load raw EEG data in BIDS format using MNE-Python. Select 64 standard channels or downsample from 128-channel arrays. Remove non-EEG channels (EOG, ECG, reference).
+2) Re-referencing: Apply common average reference (CAR) across all channels. Alternative approach uses Surface Laplacian for enhanced spatial specificity.
+3) High-pass Filtering: Zero-phase Butterworth filter, order 4, cutoff 0.5 Hz removes slow drifts and DC offsets.
+4) Low-pass Filtering: Zero-phase Butterworth filter, order 4, cutoff 80 Hz retains theta through high-gamma frequencies.
+5) Notch Filtering: Remove 50/60 Hz line noise and harmonics with quality factor Q=30 (2 Hz bandwidth).
+6) Artifact Rejection: Automated threshold rejection removes epochs with |amplitude| > 100 μV. Gradient criterion rejects samples with consecutive differences > 50 μV.
+7) Independent Component Analysis (ICA): Extended Infomax ICA with 64 components. Automated artifact classification using ICLabel removes components classified as eye blink, muscle, or cardiac (probability > 0.8).
+8) Downsampling (Optional): Downsample to 250 Hz if original sampling rate > 500 Hz to reduce computational load while preserving frequencies up to 125 Hz.
+B. Feature Extraction for Model Training
+From preprocessed EEG, we extract features for training the predictive model:
+1) Time-Frequency Decomposition: Morlet wavelet transform (6 cycles) for frequencies 2-80 Hz extracts instantaneous amplitude and phase for each frequency and channel.
+2) Theta-Gamma PAC Computation: Phase from theta band (4-8 Hz) and amplitude from gamma band (30-80 Hz) are used to compute Modulation Index (MI) in 2-second sliding windows with 1-second overlap, resulting in PAC time series at 1 Hz resolution per channel.
+3) Spectral Power Features: Average power in canonical bands (delta 1-4 Hz, theta 4-8 Hz, alpha 8-12 Hz, beta 12-30 Hz, gamma 30-80 Hz) computed in same 2-second windows.
+4) Functional Connectivity: Phase-Locking Value (PLV) between all electrode pairs for theta and gamma bands creates time-varying connectivity matrices.
+5) Stimulation Labels: Binary indicator for stimulation on/off (1/0), time since stimulation onset/offset, and cumulative stimulation duration in current block.
+C. Quality Control
+Rigorous quality control ensures data integrity through electrode impedance verification (exclude channels > 10 kΩ), visual inspection of 10% of data, signal-to-noise ratio checks (exclude subjects with SNR < 10 dB in gamma during stimulation), stationarity checks using Augmented Dickey-Fuller test, and cross-validation of ICA classifications with manual expert labeling.
+IV. PROPOSED DEEP LEARNING ARCHITECTURE
+A. Architecture Overview
+We propose a novel spatiotemporal architecture combining Graph Attention Networks for spatial processing with Transformer encoders for temporal dynamics. The architecture consists of four main components: (1) Input Module with multi-channel EEG and spatial graph structure, (2) Spatial Module with Graph Attention Network for electrode-wise feature extraction, (3) Temporal Module with Transformer encoder for sequence modeling, and (4) Output Module for multi-step ahead prediction of EEG features and PAC values.
+B. Input Representation
+The input to the model consists of multi-channel EEG X ∈ R^(T×C×F) where T is the number of time steps (10 seconds at 1 Hz = 10 steps), C is the number of channels (64), and F is the number of features per channel (spectral power in 5 bands plus PAC values).
+Graph Structure: Electrode positions form graph nodes with edges defined through spatial connectivity (k-nearest neighbors with k=5 based on 3D electrode coordinates) and functional connectivity (PLV-weighted edges between electrodes with strong phase-locking, threshold PLV > 0.3). Contextual features include stimulation state (on/off), time since last state change, and subject ID for multi-subject training.
+C. Graph Attention Network Module
+The GAT module processes spatial relationships at each time step independently using attention-based aggregation:
+h_v^(l+1) = σ(∑_{u∈N(v)} α_vu W^(l) h_u^(l))
+Architecture specifications: Number of GAT layers L=3 with hidden dimensions 64 → 128 → 64, number of attention heads = 4 (multi-head attention), activation = LeakyReLU (negative slope 0.2), dropout = 0.3 after each GAT layer, and residual connections added every 2 layers for gradient flow. The GAT module learns to aggregate information from spatially and functionally connected electrodes, discovering optimal spatial filters corresponding to neurophysiologically meaningful patterns.
+D. Temporal Transformer Module
+After spatial feature extraction, the sequence of graph-level representations is processed by Transformer encoder blocks combining multi-head attention with position-wise feed-forward networks:
+Z = MultiHeadAttention(Q, K, V) + X
+Output = FFN(LayerNorm(Z)) + Z
+Architecture specifications: Number of encoder blocks = 4, model dimension d_model = 256, number of attention heads = 8, feed-forward dimension d_ff = 1024, dropout = 0.1 in attention and FFN, positional encoding = sinusoidal (learned alternative tested), and attention mechanism = scaled dot-product with causal masking for autoregressive prediction. The Transformer captures long-range temporal dependencies, learning relationships between current brain states and future PAC dynamics.
+E. Output Prediction Head
+The final module generates multi-step ahead predictions with prediction horizon H=5-10 seconds. The output includes theta-gamma PAC values for each electrode and future time step (C × H dimensions), gamma power envelopes (C × H), theta power (C × H), and a global PAC metric averaging across frontal electrodes as the target for MPC. Multi-task learning predicts all quantities jointly, leveraging shared representations and improving generalization.
+F. Alternative Architecture: GAT-LSTM
+As a comparison baseline, we will also implement a GAT-LSTM architecture where the Transformer is replaced with 2 BiLSTM layers with hidden size 256, dropout 0.3 between layers, and similar output prediction head. This comparison will reveal whether self-attention mechanisms provide advantages over recurrent processing for EEG prediction tasks.
+V. MODEL PREDICTIVE CONTROL FRAMEWORK
+A. MPC Formulation
+Model Predictive Control optimizes stimulation decisions by solving a constrained optimization problem at each time step based on predicted future states:
+min_{u_{t:t+H}} J = ∑_{k=t}^{t+H} [Q·(PAC_ref - PAC_k)² + R·u_k² + S·Δu_k²]
+Subject to constraints: Safety constraint limits total stimulation duration < T_max per window (e.g., 60% duty cycle), minimum off-time requires at least 2 seconds between stimulation periods, control bounds enforce u_k ∈ {0, 1} (binary on/off control), and rate limits impose maximum 10 on/off transitions per minute.
+B. State Space Representation
+The system state at time t comprises theta power, gamma power, current PAC, previous control input, and time since last stimulation state change. The prediction model provides state evolution x_{t+1:t+H} = f_DL(x_{t-L:t}, u_t) where f_DL is the trained deep learning model, L is the lookback window (10 seconds), and H is the prediction horizon (5-10 seconds).
+C. Cost Function Design
+The cost function balances three objectives: (1) Tracking Error (Weight Q=10) penalizes deviation from reference PAC value (PAC_ref = 1.5× baseline PAC), encouraging maintenance of elevated theta-gamma coupling; (2) Control Effort (Weight R=1) penalizes stimulation being on, minimizing total stimulation time and promoting energy efficiency; (3) Control Rate (Weight S=5) penalizes rapid changes in stimulation state, encouraging smooth, stable control policies. Weight tuning will be performed via grid search to achieve desired trade-offs.
+D. Optimization Algorithm
+Given the binary control variable (on/off stimulation), we employ Mixed-Integer Quadratic Programming (MIQP) solvers such as GUROBI, CPLEX, or CBC (open-source). Real-time constraints require solution within 100 ms. Warm-start initialization uses the previous solution shifted by one time step. The receding horizon approach applies only u_t, then repeats optimization at t+1. For faster computation, relaxation to continuous control u ∈ [0,1] may be considered with subsequent thresholding to binary decisions.
+E. Adaptive MPC with Online Learning
+To account for model mismatch and inter-subject variability, we incorporate online adaptation: (1) Prediction Error Monitoring tracks discrepancy between predicted and observed PAC; (2) Parameter Update triggers fine-tuning if error exceeds threshold (RMSE > 0.1 for 3 consecutive steps); (3) Incremental Learning updates model weights using recent observations via gradient descent (learning rate 1e-5); (4) Constraint Adaptation adjusts safety constraints based on observed physiological responses. This ensures robustness to non-stationarities and individualization.
+VI. TRAINING STRATEGY
+A. Data Splitting Strategy
+To ensure robust evaluation and prevent data leakage, we employ subject-level splitting: Training Set (60% of subjects), Validation Set (20% of subjects) for hyperparameter tuning, and Test Set (20% of subjects) held out for final evaluation. Stratification balances by age, sex, and baseline PAC levels. Within each subject's data, we maintain temporal ordering with first 70% for training, next 15% for validation, and last 15% for subject-specific testing.
+B. Training Procedure
+The model training follows a multi-stage protocol:
+Stage 1: Pre-training on Multi-Subject Data (Epochs 1-50) aims to learn general EEG dynamics and stimulation response patterns. Parameters: batch size 32 (each sample = 10-second window), learning rate 1e-3 with cosine annealing, optimizer AdamW (weight decay 1e-4), multi-task loss combining MSE for PAC prediction and spectral power with auxiliary reconstruction loss (weights λ₁=1.0, λ₂=0.5, λ₃=0.3), and early stopping with patience of 10 epochs on validation loss.
+Stage 2: Subject-Specific Fine-Tuning (Epochs 51-70) adapts to individual subject characteristics. Initialize with pre-trained weights, freeze GAT spatial layers to keep general spatial patterns, fine-tune Transformer temporal layers and output head with learning rate 1e-4 (10× smaller), and apply increased dropout (0.4) and L2 penalty to prevent overfitting on limited subject data.
+C. Loss Function Components
+The total loss combines four components:
+1) PAC Prediction Loss: Mean squared error between predicted and true PAC values across all channels and time horizons.
+2) Spectral Power Loss: MSE for theta and gamma power predictions.
+3) Reconstruction Loss: Autoencoder-style reconstruction of input features from latent representations, encouraging meaningful embedding.
+4) Temporal Consistency Loss: Penalizes unrealistic sudden jumps in predictions to ensure smooth temporal evolution.
+D. Leave-One-Subject-Out Cross-Validation
+To assess generalization to completely unseen subjects, we perform LOSO-CV by iterating through each subject s, training on all other subjects, validating hyperparameters on subset of training subjects, and testing on held-out subject s. Metrics compute prediction accuracy (R², RMSE) and closed-loop performance for each fold, with aggregate results reported as mean ± std across all subjects. LOSO-CV provides the most conservative estimate of performance on new users, critical for clinical translation.
+E. Hyperparameter Optimization
+Key hyperparameters optimized via Bayesian optimization (Optuna library) include architecture parameters (number of GAT layers 2-4, Transformer blocks 2-6, attention heads 4-8), regularization (dropout rates 0.1-0.5, weight decay 1e-5 to 1e-3), training parameters (learning rate 1e-4 to 1e-2, batch size 16-64), input lookback window length (5-15 seconds), output prediction horizon (3-10 seconds), and graph structure (number of spatial neighbors k=3-8). The objective minimizes validation set PAC prediction RMSE across 100 trials with early stopping on unpromising configurations.
+VII. IN SILICO VALIDATION METHODOLOGY
+A. Simulation Framework
+We validate the closed-loop system through offline simulations using held-out test data. The simulation environment emulates real-time operation: (1) Initialize by loading test subject EEG data, trained predictive model, and MPC controller; (2) Time Loop iterates through each second t in the recording to observe current EEG state, run prediction model for x_{t+1:t+H}, solve MPC problem for control u_t, apply stimulation on/off decision, observe actual recorded EEG response, and log all predictions, states, and control decisions; (3) Evaluate by computing performance metrics over entire simulation. This approach tests closed-loop performance using actual physiological responses from the dataset, providing realistic validation without requiring new experiments.
+B. Baseline Comparisons
+We compare the MPC closed-loop system against multiple baselines:
+1) Open-Loop Continuous: Constant 40 Hz stimulation representing current state-of-practice with 100% duty cycle.
+2) Open-Loop Intermittent: Fixed on/off schedule (e.g., 30 seconds on, 30 seconds off) with 50% duty cycle to test whether any intermittent protocol helps.
+3) Reactive Closed-Loop: Threshold-based control that turns on stimulation if current PAC < threshold and turns off if PAC > threshold, with no predictive element.
+4) Predictive Closed-Loop without MPC: Stimulate when model predicts PAC will drop below threshold in next 5 seconds, using prediction but simple rule-based control to isolate benefit of optimization vs. prediction alone.
+5) Predictive MPC (Proposed): Full system with deep learning prediction plus MPC optimization.
+C. Performance Metrics
+Comprehensive evaluation metrics assess multiple dimensions:
+1) PAC Enhancement: Average PAC during intervention vs. baseline, peak PAC achieved, time to reach target PAC level, and percent time above target PAC threshold.
+2) Gamma Synchronization: Intertrial coherence (ITC) at 40 Hz, phase-locking value between electrodes, and gamma power increase relative to baseline.
+3) Spatial Coherence: Global functional connectivity (mean PLV across electrode pairs), network efficiency measures from graph theory, and frontal-parietal theta coherence.
+4) Energy Efficiency: Total stimulation time (seconds or % of session), number of on/off transitions, and PAC enhancement per unit stimulation time (efficiency ratio).
+5) Prediction Accuracy: Pearson correlation R between predicted and actual PAC, root mean squared error (RMSE), mean absolute error (MAE), and prediction accuracy as function of horizon (1-10 seconds ahead).
+D. Statistical Analysis Plan
+Rigorous statistical testing ensures result validity:
+• Primary Analysis: Repeated measures ANOVA comparing PAC enhancement across five methods
+• Post-hoc: Tukey HSD test for pairwise comparisons
+• Effect Size: Cohen d for paired differences
+• Non-parametric: Friedman test if normality assumptions violated (Shapiro-Wilk test)
+• Correlation Analysis: Spearman correlation between prediction accuracy and closed-loop performance
+• Multiple Comparisons: Bonferroni correction for family-wise error rate control
+• Significance Level: α = 0.05 (two-tailed)
+
+E. Sensitivity Analysis
+To assess robustness, we systematically vary key parameters: MPC Weights (vary Q, R, S by ±50%), Prediction Horizon (test H ∈ {3, 5, 7, 10} seconds), Safety Constraints (maximum duty cycle from 40% to 80%), Model Errors (add increasing noise to predictions: 0%, 5%, 10%, 20% RMSE), Graph Structure (compare fixed spatial graphs vs. adaptive functional connectivity), and Initial Conditions (different starting brain states: low, medium, high PAC). Robustness metrics include coefficient of variation across parameter perturbations and maintained performance under degraded prediction accuracy.
+VIII. EXPECTED OUTCOMES AND SIGNIFICANCE
+A. Primary Expected Outcomes
+Based on preliminary analyses and literature review, we anticipate:
+1) Prediction Performance: R² = 0.75-0.85 for PAC prediction 5 seconds ahead, R² = 0.60-0.75 for 10 seconds ahead, RMSE < 0.08 (relative to baseline PAC ~0.15).
+2) PAC Enhancement: Open-loop continuous achieves 25 ± 10% increase vs. baseline, reactive closed-loop achieves 35 ± 12% increase, predictive MPC achieves 50 ± 15% increase (p < 0.01 vs. open-loop).
+3) Energy Efficiency: Predictive MPC achieves equivalent PAC to continuous stimulation with 30-40% duty cycle, representing 60-70% reduction in total stimulation time with efficiency ratio 1.5-2.0× higher PAC per stimulation minute.
+4) Temporal Dynamics: Faster PAC onset with predictive control (8±3 seconds vs. 15±5 seconds for open-loop), better maintenance of elevated PAC (75% time above target vs. 50% for baselines), and reduced PAC variance (σ² reduced by 30-40%).
+B. Scientific Significance
+This research makes several important scientific contributions: (1) Methodological Innovation as the first application of MPC with deep learning predictions for EEG-based closed-loop control; (2) Mechanistic Understanding revealing predictive dynamics of theta-gamma PAC and how brain states evolve in response to stimulation; (3) Personalization Framework demonstrating subject-specific model adaptation for individualized neuromodulation; (4) Spatiotemporal Modeling validating GAT-Transformer architecture for capturing spatial-temporal brain dynamics; (5) Efficiency Gains showing potential for reduced stimulation burden while maintaining or improving efficacy.
+C. Clinical Translation Potential
+The proposed framework has clear pathways to clinical application including Alzheimer's Disease (optimized gamma entrainment for cognitive enhancement), Depression/Anxiety (closed-loop modulation of prefrontal-limbic circuits), Epilepsy (predictive intervention before seizure onset), Attention Disorders (real-time optimization of attentional states), and Brain-Computer Interfaces (improved decoding through state prediction). The framework is modality-agnostic, applicable to auditory, visual, and transcranial electrical/magnetic stimulation.
+IX. LIMITATIONS AND FUTURE WORK
+A. Current Limitations
+Several limitations should be acknowledged:
+• In Silico Validation: Simulations use recorded data, not real-time closed-loop experiments. Actual brain responses may differ from predictions when control is applied prospectively
+• Healthy Subjects: Dataset contains only healthy adults. Clinical populations may exhibit different dynamics requiring model adaptation
+• Single Modality: Focus on auditory stimulation; generalization to other modalities requires validation
+• Computational Demands: Real-time implementation requires optimized inference (<100 ms latency) which may necessitate model compression
+• Individual Variability: Even with fine-tuning, some subjects may be non-responders or exhibit unpredictable dynamics
+• Long-term Effects: Study focuses on acute within-session effects; longitudinal adaptation and plasticity not addressed
+
+B. Future Research Directions
+This work opens numerous avenues for future investigation:
+1) Online Prospective Validation: Implement real-time system with hardware interface, conduct human experiments with actual closed-loop control, and validate safety and efficacy prospectively.
+2) Multi-modal Integration: Combine auditory, visual, and tactile stimulation, optimize multi-input control strategies, and investigate synergistic effects.
+3) Clinical Populations: Test in Alzheimer's, MCI, schizophrenia cohorts, adapt models for pathological dynamics, and assess therapeutic outcomes.
+4) Longitudinal Studies: Track model performance over weeks/months, investigate neuroplastic changes, and develop long-term adaptation strategies.
+5) Interpretability: Apply attention visualization to understand learned patterns, relate graph features to neuroanatomy, and extract interpretable rules from black-box model.
+6) Alternative Architectures: Test state-space models (Kalman filters, particle filters), explore hybrid physics-informed neural networks, and investigate uncertainty quantification via Bayesian deep learning.
+C. Broader Impact
+Beyond immediate scientific contributions, this research has broader implications for Precision Medicine (enabling personalized brain stimulation tailored to individual neural dynamics), Ethical Considerations (reducing unnecessary stimulation exposure), Healthcare Economics (improved efficiency may reduce treatment costs), Neuroscience Tools (providing new capabilities for controlled manipulation of brain states), and AI in Medicine (demonstrating successful integration of deep learning prediction with control theory for medical applications).
+X. PROJECT TIMELINE AND MILESTONES
+A. Phase 1: Data Preparation and Baseline Analysis (Months 1-3)
+Month 1: Download and organize OpenNeuro ds005048 dataset, implement preprocessing pipeline, perform quality control and data validation. Month 2: Compute baseline PAC, spectral features, connectivity measures, characterize stimulation responses across subjects, create train/validation/test splits. Month 3: Finalize feature extraction pipeline, build data loading infrastructure for model training, complete exploratory analysis. Deliverable: Preprocessed dataset and baseline characterization report.
+B. Phase 2: Model Development and Training (Months 4-8)
+Month 4: Implement GAT-Transformer architecture, develop training loops and logging, initial proof-of-concept on single subject. Months 5-6: Hyperparameter optimization, multi-subject pre-training, baseline model comparison (GAT-LSTM, CNN-LSTM). Months 7-8: Subject-specific fine-tuning, LOSO cross-validation, prediction performance evaluation. Deliverable: Trained predictive models and performance benchmarking report.
+C. Phase 3: MPC Integration and Simulation (Months 9-12)
+Month 9: Implement MPC optimization framework, integrate with predictive model, develop simulation environment. Month 10: Run in silico validation experiments, compare all baseline methods, perform sensitivity analysis. Month 11: Statistical analysis, performance optimization, result visualization. Month 12: Final validation and robustness testing, manuscript preparation, code and documentation finalization. Deliverable: Complete closed-loop system, validation results, research paper.
+D. Key Milestones
+• Milestone 1 (Month 3): Preprocessed dataset ready for training
+• Milestone 2 (Month 6): Predictive model achieves R² > 0.70 on validation set
+• Milestone 3 (Month 9): MPC framework integrated and functional
+• Milestone 4 (Month 11): In silico validation complete with positive results
+• Milestone 5 (Month 12): Manuscript submitted to IEEE journal
+• Milestone 6 (Month 12): Open-source code release on GitHub
+
+XI. CONCLUSION
+This research methodology presents a comprehensive plan for developing and validating a predictive deep learning framework integrated with Model Predictive Control for optimizing theta-gamma phase-amplitude coupling through closed-loop neuromodulation. By combining Graph Attention Networks for spatial processing with Transformer architectures for temporal dynamics, we aim to achieve accurate multi-second ahead prediction of EEG states. Integration with MPC enables proactive, optimized control strategies that maximize therapeutic effects while minimizing stimulation exposure.
+The proposed approach represents a paradigm shift from reactive to predictive closed-loop brain stimulation. Rather than responding to current brain states, the system anticipates future dynamics and preemptively adjusts interventions. This temporal foresight enables more efficient, personalized, and safe neuromodulation protocols.
+Validation through in silico simulations using the OpenNeuro ds005048 dataset will establish proof-of-concept and provide quantitative performance benchmarks. Expected outcomes include superior PAC enhancement, 50-70% reduction in stimulation time, and demonstration of the critical role of prediction accuracy in closed-loop performance.
+Beyond immediate scientific contributions, this work establishes a generalizable framework applicable to diverse brain stimulation modalities and clinical conditions. The integration of interpretable graph neural networks, attention mechanisms, and optimal control theory provides not only a powerful engineering solution but also insights into the spatiotemporal dynamics of neural oscillations and cross-frequency coupling.
+Success in this research will pave the way for next-generation closed-loop neuromodulation systems, advancing precision medicine approaches for neurological and psychiatric disorders. The methodology, open-source implementations, and validated models will serve as foundational resources for the broader neuroscience and neuroengineering communities, accelerating translation of predictive control strategies into clinical practice.
