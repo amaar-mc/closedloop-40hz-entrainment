@@ -26,7 +26,7 @@ from typing import Dict, Tuple, Optional, List
 
 # Add parent directory to path for imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
-from src.spectral_features import SpectralFeatureExtractor
+from archive.experimental_models.spectral_features import SpectralFeatureExtractor
 
 
 class TemporalPACDataset(Dataset):
