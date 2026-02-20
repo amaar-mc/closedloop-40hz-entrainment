@@ -1,203 +1,867 @@
 {
   "config": {
-    "duration_sec": 360,
-    "n_trials": 5,
+    "duration_sec": 600,
+    "n_trials": 10,
     "seed": 42
   },
-  "summary": {
-    "Fixed Schedule": {
-      "pac_mean": "0.2299",
-      "pac_mean_std": "0.0018",
-      "improvement_pct": "359.9",
-      "improvement_std": "3.5",
-      "stim_pct": "66.7",
-      "stim_std": "0.0",
-      "efficiency": "5.398",
-      "efficiency_std": "0.053"
+  "no_fatigue": {
+    "summary": {
+      "Fixed Schedule": {
+        "pac_mean": "0.2294",
+        "pac_mean_std": "0.0050",
+        "late_session_pac": "0.2304",
+        "late_session_pac_std": "0.0129",
+        "improvement_pct": "358.7",
+        "improvement_std": "10.0",
+        "stim_pct": "66.7",
+        "stim_std": "0.0",
+        "efficiency": "5.381",
+        "efficiency_std": "0.151"
+      },
+      "Reactive Threshold": {
+        "pac_mean": "0.1449",
+        "pac_mean_std": "0.0061",
+        "late_session_pac": "0.1614",
+        "late_session_pac_std": "0.0108",
+        "improvement_pct": "189.8",
+        "improvement_std": "12.2",
+        "stim_pct": "28.4",
+        "stim_std": "1.2",
+        "efficiency": "6.678",
+        "efficiency_std": "0.383"
+      },
+      "Predictive Look-Ahead": {
+        "pac_mean": "0.1838",
+        "pac_mean_std": "0.0082",
+        "late_session_pac": "0.1830",
+        "late_session_pac_std": "0.0202",
+        "improvement_pct": "267.5",
+        "improvement_std": "16.3",
+        "stim_pct": "49.5",
+        "stim_std": "2.1",
+        "efficiency": "5.401",
+        "efficiency_std": "0.213"
+      },
+      "Oracle": {
+        "pac_mean": "0.1999",
+        "pac_mean_std": "0.0011",
+        "late_session_pac": "0.2015",
+        "late_session_pac_std": "0.0030",
+        "improvement_pct": "299.8",
+        "improvement_std": "2.2",
+        "stim_pct": "49.0",
+        "stim_std": "1.8",
+        "efficiency": "6.123",
+        "efficiency_std": "0.250"
+      },
+      "wilcoxon_pred_vs_fixed_efficiency": {
+        "statistic": 20.0,
+        "p_value": 0.4921875
+      },
+      "wilcoxon_pred_vs_fixed_late_pac": {
+        "statistic": 0.0,
+        "p_value": 0.001953125
+      }
     },
-    "Reactive Threshold": {
-      "pac_mean": "0.1361",
-      "pac_mean_std": "0.0024",
-      "improvement_pct": "172.2",
-      "improvement_std": "4.8",
-      "stim_pct": "25.4",
-      "stim_std": "0.3",
-      "efficiency": "6.779",
-      "efficiency_std": "0.115"
-    },
-    "Predictive Look-Ahead": {
-      "pac_mean": "0.1878",
-      "pac_mean_std": "0.0055",
-      "improvement_pct": "275.6",
-      "improvement_std": "11.1",
-      "stim_pct": "52.1",
-      "stim_std": "3.3",
-      "efficiency": "5.302",
-      "efficiency_std": "0.152"
-    },
-    "Oracle": {
-      "pac_mean": "0.2000",
-      "pac_mean_std": "0.0008",
-      "improvement_pct": "299.9",
-      "improvement_std": "1.5",
-      "stim_pct": "49.1",
-      "stim_std": "0.5",
-      "efficiency": "6.108",
-      "efficiency_std": "0.080"
-    },
-    "wilcoxon_pred_vs_reactive": {
-      "statistic": 0.0,
-      "p_value": 0.0625
+    "raw_trials": {
+      "Fixed Schedule": [
+        {
+          "pac_mean": 0.2254377645858455,
+          "pac_std": 0.08525676785523009,
+          "pac_improvement_pct": 350.87545899659915,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.2631318841595185,
+          "late_session_pac": 0.2059968083394941
+        },
+        {
+          "pac_mean": 0.23373038094723417,
+          "pac_std": 0.08296603566844188,
+          "pac_improvement_pct": 367.4606884023306,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.511910325208174,
+          "late_session_pac": 0.24396737392264137
+        },
+        {
+          "pac_mean": 0.2361412207749594,
+          "pac_std": 0.07558019065723355,
+          "pac_improvement_pct": 372.2823670934453,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.584235505564045,
+          "late_session_pac": 0.23915913266844313
+        },
+        {
+          "pac_mean": 0.22683390315765906,
+          "pac_std": 0.0769274862890986,
+          "pac_improvement_pct": 353.66773558177096,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.305016032930813,
+          "late_session_pac": 0.222636669731777
+        },
+        {
+          "pac_mean": 0.22935198887682437,
+          "pac_std": 0.0807592547703066,
+          "pac_improvement_pct": 358.7039060128675,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.38055858938593,
+          "late_session_pac": 0.22352903148931352
+        },
+        {
+          "pac_mean": 0.234397570316342,
+          "pac_std": 0.08406015932589375,
+          "pac_improvement_pct": 368.79506687367063,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.531926002275272,
+          "late_session_pac": 0.22284416179516678
+        },
+        {
+          "pac_mean": 0.23329218519755207,
+          "pac_std": 0.08088417972029363,
+          "pac_improvement_pct": 366.58429707824473,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.498764455348858,
+          "late_session_pac": 0.24469420071067358
+        },
+        {
+          "pac_mean": 0.230392352452715,
+          "pac_std": 0.08478455782930368,
+          "pac_improvement_pct": 360.78463274850344,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.411769490415788,
+          "late_session_pac": 0.2411405170931088
+        },
+        {
+          "pac_mean": 0.21934671282214357,
+          "pac_std": 0.09397331439451038,
+          "pac_improvement_pct": 338.6933579056156,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.0804003678221745,
+          "late_session_pac": 0.21728498132210944
+        },
+        {
+          "pac_mean": 0.22459342161290727,
+          "pac_std": 0.09382530273286982,
+          "pac_improvement_pct": 349.18677338845976,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.2378016000412275,
+          "late_session_pac": 0.24313451458020935
+        }
+      ],
+      "Reactive Threshold": [
+        {
+          "pac_mean": 0.14368166150544553,
+          "pac_std": 0.03384595322267312,
+          "pac_improvement_pct": 187.36328553823395,
+          "stimulation_pct": 28.833333333333332,
+          "efficiency_ratio": 6.498148629130143,
+          "late_session_pac": 0.14836104302043202
+        },
+        {
+          "pac_mean": 0.14805409628041546,
+          "pac_std": 0.034880598328517386,
+          "pac_improvement_pct": 196.10815333920024,
+          "stimulation_pct": 27.666666666666668,
+          "efficiency_ratio": 7.088246503674136,
+          "late_session_pac": 0.17508280866112189
+        },
+        {
+          "pac_mean": 0.14984562127839504,
+          "pac_std": 0.04013634764363202,
+          "pac_improvement_pct": 199.69120261854954,
+          "stimulation_pct": 28.166666666666668,
+          "efficiency_ratio": 7.089628492816091,
+          "late_session_pac": 0.17368195749733292
+        },
+        {
+          "pac_mean": 0.13892898547449722,
+          "pac_std": 0.04065605713910711,
+          "pac_improvement_pct": 177.85793537740733,
+          "stimulation_pct": 28.000000000000004,
+          "efficiency_ratio": 6.352069118353093,
+          "late_session_pac": 0.14910161194493293
+        },
+        {
+          "pac_mean": 0.14996057819008896,
+          "pac_std": 0.03635312873176982,
+          "pac_improvement_pct": 199.9211163959546,
+          "stimulation_pct": 30.166666666666668,
+          "efficiency_ratio": 6.627219325845825,
+          "late_session_pac": 0.16472765358339056
+        },
+        {
+          "pac_mean": 0.1559889439770769,
+          "pac_std": 0.037014333975230955,
+          "pac_improvement_pct": 211.97784555858468,
+          "stimulation_pct": 30.166666666666668,
+          "efficiency_ratio": 7.026889905690025,
+          "late_session_pac": 0.1677523882262008
+        },
+        {
+          "pac_mean": 0.14203773270512474,
+          "pac_std": 0.035253674056125256,
+          "pac_improvement_pct": 184.07542859516371,
+          "stimulation_pct": 26.0,
+          "efficiency_ratio": 7.079824174014057,
+          "late_session_pac": 0.15975862430444804
+        },
+        {
+          "pac_mean": 0.1471246129220717,
+          "pac_std": 0.032483639022968795,
+          "pac_improvement_pct": 194.24918699430603,
+          "stimulation_pct": 28.666666666666668,
+          "efficiency_ratio": 6.776134427670163,
+          "late_session_pac": 0.16322678064808763
+        },
+        {
+          "pac_mean": 0.13597783270536734,
+          "pac_std": 0.031887327691548735,
+          "pac_improvement_pct": 171.95563101960846,
+          "stimulation_pct": 28.999999999999996,
+          "efficiency_ratio": 5.9295045158728765,
+          "late_session_pac": 0.14209424262584225
+        },
+        {
+          "pac_mean": 0.1373358693806898,
+          "pac_std": 0.03550930989980306,
+          "pac_improvement_pct": 174.67170382703884,
+          "stimulation_pct": 27.666666666666668,
+          "efficiency_ratio": 6.313435075803776,
+          "late_session_pac": 0.1698947864138459
+        }
+      ],
+      "Predictive Look-Ahead": [
+        {
+          "pac_mean": 0.18441401847502414,
+          "pac_std": 0.10375219986418849,
+          "pac_improvement_pct": 268.8279831844517,
+          "stimulation_pct": 51.33333333333333,
+          "efficiency_ratio": 5.2369087623132975,
+          "late_session_pac": 0.18109188581033167
+        },
+        {
+          "pac_mean": 0.1932845932242727,
+          "pac_std": 0.10519810062102526,
+          "pac_improvement_pct": 286.5691291347195,
+          "stimulation_pct": 51.33333333333333,
+          "efficiency_ratio": 5.5825155015369035,
+          "late_session_pac": 0.22389013887221054
+        },
+        {
+          "pac_mean": 0.19412443343589988,
+          "pac_std": 0.10622779553836646,
+          "pac_improvement_pct": 288.24880922203783,
+          "stimulation_pct": 51.33333333333333,
+          "efficiency_ratio": 5.615236542192575,
+          "late_session_pac": 0.18451908021307314
+        },
+        {
+          "pac_mean": 0.18780557205159235,
+          "pac_std": 0.10415138982539775,
+          "pac_improvement_pct": 275.6110889809668,
+          "stimulation_pct": 51.83333333333333,
+          "efficiency_ratio": 5.3172557349413685,
+          "late_session_pac": 0.18791073999338598
+        },
+        {
+          "pac_mean": 0.18148968890862857,
+          "pac_std": 0.12034142505298515,
+          "pac_improvement_pct": 262.97932522139206,
+          "stimulation_pct": 49.166666666666664,
+          "efficiency_ratio": 5.348732037313317,
+          "late_session_pac": 0.17946009305821106
+        },
+        {
+          "pac_mean": 0.18481040782295177,
+          "pac_std": 0.10023308337464684,
+          "pac_improvement_pct": 269.6207617217512,
+          "stimulation_pct": 48.0,
+          "efficiency_ratio": 5.617099201366254,
+          "late_session_pac": 0.14834802404521555
+        },
+        {
+          "pac_mean": 0.18872701538630954,
+          "pac_std": 0.11061674917830214,
+          "pac_improvement_pct": 277.453975281824,
+          "stimulation_pct": 49.333333333333336,
+          "efficiency_ratio": 5.6240670653834455,
+          "late_session_pac": 0.17627294176297692
+        },
+        {
+          "pac_mean": 0.17576837816580707,
+          "pac_std": 0.11230804088893118,
+          "pac_improvement_pct": 251.53670602427286,
+          "stimulation_pct": 45.666666666666664,
+          "efficiency_ratio": 5.508103050420259,
+          "late_session_pac": 0.16710399980590704
+        },
+        {
+          "pac_mean": 0.1649953888525801,
+          "pac_std": 0.10811805609911797,
+          "pac_improvement_pct": 229.99073170701385,
+          "stimulation_pct": 46.33333333333333,
+          "efficiency_ratio": 4.963828740806667,
+          "late_session_pac": 0.1710446004866679
+        },
+        {
+          "pac_mean": 0.1821759168271058,
+          "pac_std": 0.10377195493627227,
+          "pac_improvement_pct": 264.35178078385536,
+          "stimulation_pct": 50.83333333333333,
+          "efficiency_ratio": 5.200362899642985,
+          "late_session_pac": 0.21027234775543516
+        }
+      ],
+      "Oracle": [
+        {
+          "pac_mean": 0.1993529088761566,
+          "pac_std": 0.024337128881179747,
+          "pac_improvement_pct": 298.70575801116155,
+          "stimulation_pct": 50.0,
+          "efficiency_ratio": 5.974115159028408,
+          "late_session_pac": 0.19644119995847678
+        },
+        {
+          "pac_mean": 0.20106761850095284,
+          "pac_std": 0.025112573000394045,
+          "pac_improvement_pct": 302.13517657487034,
+          "stimulation_pct": 47.333333333333336,
+          "efficiency_ratio": 6.383137531923358,
+          "late_session_pac": 0.20414663351435325
+        },
+        {
+          "pac_mean": 0.19973165875917293,
+          "pac_std": 0.02577028230683398,
+          "pac_improvement_pct": 299.4632576256943,
+          "stimulation_pct": 46.666666666666664,
+          "efficiency_ratio": 6.417069804889792,
+          "late_session_pac": 0.20004416364497093
+        },
+        {
+          "pac_mean": 0.20000953994843645,
+          "pac_std": 0.025501931522954067,
+          "pac_improvement_pct": 300.0190198930689,
+          "stimulation_pct": 50.83333333333333,
+          "efficiency_ratio": 5.902013504932107,
+          "late_session_pac": 0.20094103476606898
+        },
+        {
+          "pac_mean": 0.2006056298554257,
+          "pac_std": 0.02528749381968615,
+          "pac_improvement_pct": 301.2111994686115,
+          "stimulation_pct": 49.333333333333336,
+          "efficiency_ratio": 6.105632420423415,
+          "late_session_pac": 0.20019693802982153
+        },
+        {
+          "pac_mean": 0.20087948439697403,
+          "pac_std": 0.024363440556158945,
+          "pac_improvement_pct": 301.75890844216633,
+          "stimulation_pct": 47.16666666666667,
+          "efficiency_ratio": 6.397715371975742,
+          "late_session_pac": 0.2021830566207524
+        },
+        {
+          "pac_mean": 0.200770530343532,
+          "pac_std": 0.026234107337073157,
+          "pac_improvement_pct": 301.5410003788639,
+          "stimulation_pct": 47.833333333333336,
+          "efficiency_ratio": 6.303993037961476,
+          "late_session_pac": 0.20448765608652408
+        },
+        {
+          "pac_mean": 0.19999959164425693,
+          "pac_std": 0.024629484524382534,
+          "pac_improvement_pct": 299.99912328868913,
+          "stimulation_pct": 48.333333333333336,
+          "efficiency_ratio": 6.206878411585248,
+          "late_session_pac": 0.20435538316957497
+        },
+        {
+          "pac_mean": 0.1971013417090908,
+          "pac_std": 0.026599799829739618,
+          "pac_improvement_pct": 294.20262457765665,
+          "stimulation_pct": 52.166666666666664,
+          "efficiency_ratio": 5.639666923730223,
+          "late_session_pac": 0.19696444257331006
+        },
+        {
+          "pac_mean": 0.19941036441511859,
+          "pac_std": 0.02528456162175236,
+          "pac_improvement_pct": 298.8206690661033,
+          "stimulation_pct": 50.66666666666667,
+          "efficiency_ratio": 5.89777636198274,
+          "late_session_pac": 0.20537237469544173
+        }
+      ]
     }
   },
-  "raw_trials": {
-    "Fixed Schedule": [
-      {
-        "pac_mean": 0.2282020379873132,
-        "pac_std": 0.08328087088201058,
-        "pac_improvement_pct": 356.4040046938254,
-        "stimulation_pct": 66.66666666666666,
-        "efficiency_ratio": 5.346060069605474
+  "with_fatigue": {
+    "summary": {
+      "Fixed Schedule": {
+        "pac_mean": "0.2239",
+        "pac_mean_std": "0.0055",
+        "late_session_pac": "0.2248",
+        "late_session_pac_std": "0.0152",
+        "improvement_pct": "347.8",
+        "improvement_std": "11.0",
+        "stim_pct": "66.7",
+        "stim_std": "0.0",
+        "efficiency": "5.217",
+        "efficiency_std": "0.164"
       },
-      {
-        "pac_mean": 0.23010324604305757,
-        "pac_std": 0.08565972853808475,
-        "pac_improvement_pct": 360.2064200448311,
-        "stimulation_pct": 66.66666666666666,
-        "efficiency_ratio": 5.403096299862003
+      "Reactive Threshold": {
+        "pac_mean": "0.1404",
+        "pac_mean_std": "0.0057",
+        "late_session_pac": "0.1543",
+        "late_session_pac_std": "0.0103",
+        "improvement_pct": "180.8",
+        "improvement_std": "11.4",
+        "stim_pct": "28.4",
+        "stim_std": "1.1",
+        "efficiency": "6.358",
+        "efficiency_std": "0.401"
       },
-      {
-        "pac_mean": 0.22777246180163233,
-        "pac_std": 0.07456632580432401,
-        "pac_improvement_pct": 355.5448524942941,
-        "stimulation_pct": 66.66666666666666,
-        "efficiency_ratio": 5.333172786614437
+      "Predictive Look-Ahead": {
+        "pac_mean": "0.1808",
+        "pac_mean_std": "0.0069",
+        "late_session_pac": "0.1846",
+        "late_session_pac_std": "0.0185",
+        "improvement_pct": "261.6",
+        "improvement_std": "13.9",
+        "stim_pct": "49.1",
+        "stim_std": "1.9",
+        "efficiency": "5.329",
+        "efficiency_std": "0.238"
       },
-      {
-        "pac_mean": 0.23232306245295298,
-        "pac_std": 0.08116478869084116,
-        "pac_improvement_pct": 364.64605197669556,
-        "stimulation_pct": 66.66666666666666,
-        "efficiency_ratio": 5.469690778829981
+      "Oracle": {
+        "pac_mean": "0.1976",
+        "pac_mean_std": "0.0012",
+        "late_session_pac": "0.1993",
+        "late_session_pac_std": "0.0035",
+        "improvement_pct": "295.2",
+        "improvement_std": "2.4",
+        "stim_pct": "52.8",
+        "stim_std": "2.2",
+        "efficiency": "5.601",
+        "efficiency_std": "0.270"
       },
-      {
-        "pac_mean": 0.2313164992127804,
-        "pac_std": 0.08140406800534412,
-        "pac_improvement_pct": 362.63292589897566,
-        "stimulation_pct": 66.66666666666666,
-        "efficiency_ratio": 5.4394938876687124
+      "wilcoxon_pred_vs_fixed_efficiency": {
+        "statistic": 3.0,
+        "p_value": 0.009765625
+      },
+      "wilcoxon_pred_vs_fixed_late_pac": {
+        "statistic": 0.0,
+        "p_value": 0.001953125
       }
-    ],
-    "Reactive Threshold": [
-      {
-        "pac_mean": 0.1358140561036199,
-        "pac_std": 0.03600031032554381,
-        "pac_improvement_pct": 171.62807788162422,
-        "stimulation_pct": 25.555555555555554,
-        "efficiency_ratio": 6.715881305783429
-      },
-      {
-        "pac_mean": 0.1369958965341273,
-        "pac_std": 0.035323496574884004,
-        "pac_improvement_pct": 173.99175826990293,
-        "stimulation_pct": 25.555555555555554,
-        "efficiency_ratio": 6.808373147027708
-      },
-      {
-        "pac_mean": 0.13270137783937375,
-        "pac_std": 0.039357463060818935,
-        "pac_improvement_pct": 165.40272259820293,
-        "stimulation_pct": 25.0,
-        "efficiency_ratio": 6.616108901281673
-      },
-      {
-        "pac_mean": 0.1348891810313316,
-        "pac_std": 0.04880814545365739,
-        "pac_improvement_pct": 169.77832810699758,
-        "stimulation_pct": 25.0,
-        "efficiency_ratio": 6.791133121563449
-      },
-      {
-        "pac_mean": 0.13997693768606526,
-        "pac_std": 0.03853668205790294,
-        "pac_improvement_pct": 179.95383938136263,
-        "stimulation_pct": 25.833333333333336,
-        "efficiency_ratio": 6.965955070130441
-      }
-    ],
-    "Predictive Look-Ahead": [
-      {
-        "pac_mean": 0.19047749507892153,
-        "pac_std": 0.10311124967767396,
-        "pac_improvement_pct": 280.9549339668563,
-        "stimulation_pct": 52.22222222222223,
-        "efficiency_ratio": 5.379988096207462
-      },
-      {
-        "pac_mean": 0.18189540288372644,
-        "pac_std": 0.09758630215173589,
-        "pac_improvement_pct": 263.7907530093022,
-        "stimulation_pct": 49.44444444444444,
-        "efficiency_ratio": 5.335093880008003
-      },
-      {
-        "pac_mean": 0.19729899744779925,
-        "pac_std": 0.10881703076507918,
-        "pac_improvement_pct": 294.59793597601123,
-        "stimulation_pct": 58.333333333333336,
-        "efficiency_ratio": 5.050250330151578
-      },
-      {
-        "pac_mean": 0.18529756027703262,
-        "pac_std": 0.10958015777393465,
-        "pac_improvement_pct": 270.59506643505193,
-        "stimulation_pct": 49.166666666666664,
-        "efficiency_ratio": 5.503628468746081
-      },
-      {
-        "pac_mean": 0.18393952324854526,
-        "pac_std": 0.11911301616894913,
-        "pac_improvement_pct": 267.87899292129185,
-        "stimulation_pct": 51.11111111111111,
-        "efficiency_ratio": 5.241110730043319
-      }
-    ],
-    "Oracle": [
-      {
-        "pac_mean": 0.20006019566746738,
-        "pac_std": 0.024968175654759478,
-        "pac_improvement_pct": 300.12033131086844,
-        "stimulation_pct": 49.72222222222222,
-        "efficiency_ratio": 6.035939622915266
-      },
-      {
-        "pac_mean": 0.1998540980937477,
-        "pac_std": 0.026238386564668197,
-        "pac_improvement_pct": 299.70813624586816,
-        "stimulation_pct": 48.888888888888886,
-        "efficiency_ratio": 6.130393694684268
-      },
-      {
-        "pac_mean": 0.1985778340729177,
-        "pac_std": 0.026199572324891094,
-        "pac_improvement_pct": 297.15560871471365,
-        "stimulation_pct": 49.44444444444444,
-        "efficiency_ratio": 6.0098887143629955
-      },
-      {
-        "pac_mean": 0.20073129611455104,
-        "pac_std": 0.02781620114023967,
-        "pac_improvement_pct": 301.46253193659567,
-        "stimulation_pct": 49.166666666666664,
-        "efficiency_ratio": 6.131441326276907
-      },
-      {
-        "pac_mean": 0.20065068211289538,
-        "pac_std": 0.02497387879063872,
-        "pac_improvement_pct": 301.30130396552994,
-        "stimulation_pct": 48.333333333333336,
-        "efficiency_ratio": 6.233820080755691
-      }
-    ]
+    },
+    "raw_trials": {
+      "Fixed Schedule": [
+        {
+          "pac_mean": 0.2202425001780911,
+          "pac_std": 0.08476915788380926,
+          "pac_improvement_pct": 340.4849322591958,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.107273983121846,
+          "late_session_pac": 0.19677392550914674,
+          "final_fatigue": 0.17269392690903781,
+          "mean_fatigue": 0.22365504173942274
+        },
+        {
+          "pac_mean": 0.22841350965754414,
+          "pac_std": 0.08315974264679371,
+          "pac_improvement_pct": 356.8269479496987,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.352404218442621,
+          "late_session_pac": 0.24050708521837313,
+          "final_fatigue": 0.17269392690903781,
+          "mean_fatigue": 0.22365504173942274
+        },
+        {
+          "pac_mean": 0.23070700963192511,
+          "pac_std": 0.07536918267530966,
+          "pac_improvement_pct": 361.4139469810608,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.421209203902732,
+          "late_session_pac": 0.2344527391971205,
+          "final_fatigue": 0.17269392690903781,
+          "mean_fatigue": 0.22365504173942274
+        },
+        {
+          "pac_mean": 0.2196772076947337,
+          "pac_std": 0.07643406173995519,
+          "pac_improvement_pct": 339.3543475185979,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.0903152120154225,
+          "late_session_pac": 0.21337070440419506,
+          "final_fatigue": 0.17269392690903781,
+          "mean_fatigue": 0.22365504173942274
+        },
+        {
+          "pac_mean": 0.2234242343245656,
+          "pac_std": 0.08084433760346894,
+          "pac_improvement_pct": 346.8483992794513,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.202725988411362,
+          "late_session_pac": 0.21441656979386267,
+          "final_fatigue": 0.17269392690903781,
+          "mean_fatigue": 0.22365504173942274
+        },
+        {
+          "pac_mean": 0.2301671966581884,
+          "pac_std": 0.08515106298612814,
+          "pac_improvement_pct": 360.3343212495126,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.405014817931938,
+          "late_session_pac": 0.21850538125386304,
+          "final_fatigue": 0.17269392690903781,
+          "mean_fatigue": 0.22365504173942274
+        },
+        {
+          "pac_mean": 0.22862528310253177,
+          "pac_std": 0.08038748347481352,
+          "pac_improvement_pct": 357.2504947549646,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.358757420520657,
+          "late_session_pac": 0.24056337110553072,
+          "final_fatigue": 0.17269392690903781,
+          "mean_fatigue": 0.22365504173942274
+        },
+        {
+          "pac_mean": 0.22530101692580579,
+          "pac_std": 0.08623874233056554,
+          "pac_improvement_pct": 350.6019637312188,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.259029455179429,
+          "late_session_pac": 0.23803228873382304,
+          "final_fatigue": 0.17269392690903781,
+          "mean_fatigue": 0.22365504173942274
+        },
+        {
+          "pac_mean": 0.21305461372246692,
+          "pac_std": 0.09344365040873531,
+          "pac_improvement_pct": 326.1091622231014,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 4.891637432612777,
+          "late_session_pac": 0.20980370201078347,
+          "final_fatigue": 0.17269392690903781,
+          "mean_fatigue": 0.22365504173942274
+        },
+        {
+          "pac_mean": 0.21935436436631212,
+          "pac_std": 0.09393786741941047,
+          "pac_improvement_pct": 338.70866099089204,
+          "stimulation_pct": 66.66666666666666,
+          "efficiency_ratio": 5.080629914101287,
+          "late_session_pac": 0.24114692596154905,
+          "final_fatigue": 0.17269392690903781,
+          "mean_fatigue": 0.22365504173942274
+        }
+      ],
+      "Reactive Threshold": [
+        {
+          "pac_mean": 0.14062308528451817,
+          "pac_std": 0.03373214560171895,
+          "pac_improvement_pct": 181.24613431980947,
+          "stimulation_pct": 29.5,
+          "efficiency_ratio": 6.14393675452102,
+          "late_session_pac": 0.1407508364663544,
+          "final_fatigue": 0.07189904840410216,
+          "mean_fatigue": 0.06594642231990852
+        },
+        {
+          "pac_mean": 0.14132440066932608,
+          "pac_std": 0.03264422691784133,
+          "pac_improvement_pct": 182.6487648088992,
+          "stimulation_pct": 26.666666666666668,
+          "efficiency_ratio": 6.849328677765221,
+          "late_session_pac": 0.16281128310484738,
+          "final_fatigue": 0.0621242201010883,
+          "mean_fatigue": 0.05838874625878097
+        },
+        {
+          "pac_mean": 0.1452540765284581,
+          "pac_std": 0.03962026814426054,
+          "pac_improvement_pct": 190.50811495529317,
+          "stimulation_pct": 28.000000000000004,
+          "efficiency_ratio": 6.803861245973376,
+          "late_session_pac": 0.16846873926055103,
+          "final_fatigue": 0.10290495307534178,
+          "mean_fatigue": 0.05945645864386504
+        },
+        {
+          "pac_mean": 0.13552555746290673,
+          "pac_std": 0.041183052281885554,
+          "pac_improvement_pct": 171.05108071559732,
+          "stimulation_pct": 28.499999999999996,
+          "efficiency_ratio": 6.001792303704541,
+          "late_session_pac": 0.14312626552706356,
+          "final_fatigue": 0.0851573150000195,
+          "mean_fatigue": 0.06296113490616174
+        },
+        {
+          "pac_mean": 0.1430725024475486,
+          "pac_std": 0.03477132350505191,
+          "pac_improvement_pct": 186.14496766610364,
+          "stimulation_pct": 29.333333333333332,
+          "efficiency_ratio": 6.345851168271993,
+          "late_session_pac": 0.1537332321802693,
+          "final_fatigue": 0.0782379433757165,
+          "mean_fatigue": 0.0654112633014199
+        },
+        {
+          "pac_mean": 0.15078416910251682,
+          "pac_std": 0.03573676176903764,
+          "pac_improvement_pct": 201.56829789137407,
+          "stimulation_pct": 30.0,
+          "efficiency_ratio": 6.718943260806155,
+          "late_session_pac": 0.1587862659109347,
+          "final_fatigue": 0.07923728224797895,
+          "mean_fatigue": 0.06717778684874447
+        },
+        {
+          "pac_mean": 0.13929112161411186,
+          "pac_std": 0.03474952182140813,
+          "pac_improvement_pct": 178.5822075117822,
+          "stimulation_pct": 26.666666666666668,
+          "efficiency_ratio": 6.69683277918052,
+          "late_session_pac": 0.1556814656849798,
+          "final_fatigue": 0.07130316576873337,
+          "mean_fatigue": 0.058108996881332454
+        },
+        {
+          "pac_mean": 0.14358876018496824,
+          "pac_std": 0.03201560645106581,
+          "pac_improvement_pct": 187.17748293443987,
+          "stimulation_pct": 28.999999999999996,
+          "efficiency_ratio": 6.454395961030894,
+          "late_session_pac": 0.15912730221903995,
+          "final_fatigue": 0.0701508329566263,
+          "mean_fatigue": 0.06517769562258623
+        },
+        {
+          "pac_mean": 0.12963963904186687,
+          "pac_std": 0.030733204087987524,
+          "pac_improvement_pct": 159.27924622788447,
+          "stimulation_pct": 28.499999999999996,
+          "efficiency_ratio": 5.588745479719194,
+          "late_session_pac": 0.13613113801174284,
+          "final_fatigue": 0.07594702975933199,
+          "mean_fatigue": 0.06290223318606043
+        },
+        {
+          "pac_mean": 0.13465704934040745,
+          "pac_std": 0.03341889770678285,
+          "pac_improvement_pct": 169.31406481800192,
+          "stimulation_pct": 28.333333333333332,
+          "efficiency_ratio": 5.975790520879201,
+          "late_session_pac": 0.16408944944893297,
+          "final_fatigue": 0.07147868168006005,
+          "mean_fatigue": 0.06264051656811748
+        }
+      ],
+      "Predictive Look-Ahead": [
+        {
+          "pac_mean": 0.18439529685048645,
+          "pac_std": 0.10132910650383888,
+          "pac_improvement_pct": 268.7905399428649,
+          "stimulation_pct": 52.5,
+          "efficiency_ratio": 5.119819807460318,
+          "late_session_pac": 0.1783043438213964,
+          "final_fatigue": 0.21428501803029945,
+          "mean_fatigue": 0.15227999140048806
+        },
+        {
+          "pac_mean": 0.1911424277175179,
+          "pac_std": 0.10542270302182451,
+          "pac_improvement_pct": 282.28479897807597,
+          "stimulation_pct": 51.16666666666667,
+          "efficiency_ratio": 5.516966754193608,
+          "late_session_pac": 0.22181390222684327,
+          "final_fatigue": 0.14474993026945554,
+          "mean_fatigue": 0.14783576041536678
+        },
+        {
+          "pac_mean": 0.18901383602718447,
+          "pac_std": 0.10800917544944665,
+          "pac_improvement_pct": 278.02761644884566,
+          "stimulation_pct": 49.833333333333336,
+          "efficiency_ratio": 5.579149492837207,
+          "late_session_pac": 0.18578910970873552,
+          "final_fatigue": 0.14094489843559527,
+          "mean_fatigue": 0.14401571715384326
+        },
+        {
+          "pac_mean": 0.18253009140085047,
+          "pac_std": 0.10325400138547049,
+          "pac_improvement_pct": 265.060129789675,
+          "stimulation_pct": 50.66666666666667,
+          "efficiency_ratio": 5.2314499290268515,
+          "late_session_pac": 0.18371672257287538,
+          "final_fatigue": 0.09308695500138185,
+          "mean_fatigue": 0.15228877264771812
+        },
+        {
+          "pac_mean": 0.17986510475784545,
+          "pac_std": 0.12102653560264413,
+          "pac_improvement_pct": 259.7301575696594,
+          "stimulation_pct": 48.66666666666667,
+          "efficiency_ratio": 5.336921044855277,
+          "late_session_pac": 0.17787728474710643,
+          "final_fatigue": 0.14684275153183599,
+          "mean_fatigue": 0.1361393690032532
+        },
+        {
+          "pac_mean": 0.18352002696472453,
+          "pac_std": 0.09975254837844268,
+          "pac_improvement_pct": 267.0400005214489,
+          "stimulation_pct": 48.333333333333336,
+          "efficiency_ratio": 5.524965526886881,
+          "late_session_pac": 0.16432867274517382,
+          "final_fatigue": 0.12232291100548769,
+          "mean_fatigue": 0.1366832924511528
+        },
+        {
+          "pac_mean": 0.18260954110362246,
+          "pac_std": 0.11070467019888686,
+          "pac_improvement_pct": 265.219029163439,
+          "stimulation_pct": 47.5,
+          "efficiency_ratio": 5.583558507528493,
+          "late_session_pac": 0.17634837803756456,
+          "final_fatigue": 0.06972732460701758,
+          "mean_fatigue": 0.13946627698063369
+        },
+        {
+          "pac_mean": 0.17628806532301827,
+          "pac_std": 0.11298536290027522,
+          "pac_improvement_pct": 252.57608013082051,
+          "stimulation_pct": 46.33333333333333,
+          "efficiency_ratio": 5.451282303805202,
+          "late_session_pac": 0.16936564897332113,
+          "final_fatigue": 0.026544952841692823,
+          "mean_fatigue": 0.138169302625474
+        },
+        {
+          "pac_mean": 0.1698698991074646,
+          "pac_std": 0.10357124659407739,
+          "pac_improvement_pct": 239.73975026697914,
+          "stimulation_pct": 49.666666666666664,
+          "efficiency_ratio": 4.8269748366183105,
+          "late_session_pac": 0.17137308355346909,
+          "final_fatigue": 0.19255345236217225,
+          "mean_fatigue": 0.13935536640689555
+        },
+        {
+          "pac_mean": 0.16895597140718116,
+          "pac_std": 0.10602881999746115,
+          "pac_improvement_pct": 237.91189523198324,
+          "stimulation_pct": 46.5,
+          "efficiency_ratio": 5.116384842598267,
+          "late_session_pac": 0.21696140030452835,
+          "final_fatigue": 0.27747955164530275,
+          "mean_fatigue": 0.11721024317820872
+        }
+      ],
+      "Oracle": [
+        {
+          "pac_mean": 0.1975660996842863,
+          "pac_std": 0.02496666247915033,
+          "pac_improvement_pct": 295.1321403421445,
+          "stimulation_pct": 54.0,
+          "efficiency_ratio": 5.465410005323896,
+          "late_session_pac": 0.1947943046814556,
+          "final_fatigue": 0.18240142336644202,
+          "mean_fatigue": 0.1490779361207842
+        },
+        {
+          "pac_mean": 0.19865961177431254,
+          "pac_std": 0.026826242670227523,
+          "pac_improvement_pct": 297.3191640847922,
+          "stimulation_pct": 50.66666666666667,
+          "efficiency_ratio": 5.868141395252186,
+          "late_session_pac": 0.2020800918589721,
+          "final_fatigue": 0.12406728816357844,
+          "mean_fatigue": 0.13920361094781306
+        },
+        {
+          "pac_mean": 0.19899716209858628,
+          "pac_std": 0.02578069514449712,
+          "pac_improvement_pct": 297.9942645983196,
+          "stimulation_pct": 50.5,
+          "efficiency_ratio": 5.900876525530908,
+          "late_session_pac": 0.2006572238054665,
+          "final_fatigue": 0.15800914554663675,
+          "mean_fatigue": 0.13530708963027913
+        },
+        {
+          "pac_mean": 0.19718218407161145,
+          "pac_std": 0.026037511694639227,
+          "pac_improvement_pct": 294.364309270361,
+          "stimulation_pct": 54.833333333333336,
+          "efficiency_ratio": 5.368346064741839,
+          "late_session_pac": 0.19711034710594816,
+          "final_fatigue": 0.18294915321244362,
+          "mean_fatigue": 0.15377879814849815
+        },
+        {
+          "pac_mean": 0.19828814371768871,
+          "pac_std": 0.02510002399019609,
+          "pac_improvement_pct": 296.5762281201318,
+          "stimulation_pct": 53.0,
+          "efficiency_ratio": 5.595777888003283,
+          "late_session_pac": 0.19429514772992137,
+          "final_fatigue": 0.1742738357280569,
+          "mean_fatigue": 0.14485808310387532
+        },
+        {
+          "pac_mean": 0.19844497183498216,
+          "pac_std": 0.0250176282644642,
+          "pac_improvement_pct": 296.88988429198747,
+          "stimulation_pct": 50.16666666666667,
+          "efficiency_ratio": 5.918070782049304,
+          "late_session_pac": 0.19828059502096604,
+          "final_fatigue": 0.15835390504340738,
+          "mean_fatigue": 0.133690464817605
+        },
+        {
+          "pac_mean": 0.19786339013354257,
+          "pac_std": 0.026624806789598915,
+          "pac_improvement_pct": 295.72672112174087,
+          "stimulation_pct": 50.83333333333333,
+          "efficiency_ratio": 5.817574840594724,
+          "late_session_pac": 0.20323328462805584,
+          "final_fatigue": 0.13096127453512665,
+          "mean_fatigue": 0.13905460329907518
+        },
+        {
+          "pac_mean": 0.1973867146911961,
+          "pac_std": 0.024745789623366123,
+          "pac_improvement_pct": 294.773370427718,
+          "stimulation_pct": 52.0,
+          "efficiency_ratio": 5.668718660981362,
+          "late_session_pac": 0.20270753804761057,
+          "final_fatigue": 0.13195469305908278,
+          "mean_fatigue": 0.1462381956677875
+        },
+        {
+          "pac_mean": 0.19445632510425293,
+          "pac_std": 0.02654626994423709,
+          "pac_improvement_pct": 288.9125924259873,
+          "stimulation_pct": 56.833333333333336,
+          "efficiency_ratio": 5.083506024196227,
+          "late_session_pac": 0.19560253338648478,
+          "final_fatigue": 0.17614408176052945,
+          "mean_fatigue": 0.16589965285734556
+        },
+        {
+          "pac_mean": 0.19737541474889067,
+          "pac_std": 0.02459589394664452,
+          "pac_improvement_pct": 294.75077054762716,
+          "stimulation_pct": 55.333333333333336,
+          "efficiency_ratio": 5.326821153512511,
+          "late_session_pac": 0.20378196505615126,
+          "final_fatigue": 0.126019162478917,
+          "mean_fatigue": 0.16221378031451228
+        }
+      ]
+    }
   }
 }

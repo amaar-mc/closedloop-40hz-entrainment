@@ -1,0 +1,15 @@
+{
+  "n_subjects": 35,
+  "first_block_mean_pac": 0.0009959939191799651,
+  "last_block_mean_pac": 0.0010404806157578164,
+  "mean_decline": 4.4486696577851316e-05,
+  "pct_decline": 4.466563065948542,
+  "paired_ttest_t": -0.6159068896021066,
+  "paired_ttest_p": 0.5420575706794283,
+  "n_subjects_declining": 17,
+  "pct_subjects_declining": 48.57142857142857,
+  "mean_slope": 2.3050293034744334e-06,
+  "slope_ttest_p_onetail": 0.2966014030101802,
+  "within_block_mean_decline": 1.0527330097101403e-05,
+  "within_block_pct_declining": 46.735395189003434
+}
