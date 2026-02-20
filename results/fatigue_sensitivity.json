@@ -1,0 +1,62 @@
+[
+  {
+    "fatigue_rate": 0.0,
+    "fixed_pac_mean": 0.22935175007441821,
+    "fixed_efficiency": 5.38055142531518,
+    "pred_pac_mean": 0.1837595413150172,
+    "pred_efficiency": 5.401410953591706,
+    "efficiency_gain_pct": 0.3876838373779873,
+    "stim_saving_pp": 17.14999999999999,
+    "wilcoxon_p": 0.4921875
+  },
+  {
+    "fatigue_rate": 0.004,
+    "fixed_pac_mean": 0.22646943231709823,
+    "fixed_efficiency": 5.294081909902452,
+    "pred_pac_mean": 0.18242112728388873,
+    "pred_efficiency": 5.361257359484222,
+    "efficiency_gain_pct": 1.2688781661883985,
+    "stim_saving_pp": 17.249999999999986,
+    "wilcoxon_p": 0.01953125
+  },
+  {
+    "fatigue_rate": 0.008,
+    "fixed_pac_mean": 0.2238966936262165,
+    "fixed_efficiency": 5.216899764624007,
+    "pred_pac_mean": 0.18081902606598957,
+    "pred_efficiency": 5.328747304581041,
+    "efficiency_gain_pct": 2.1439464967504547,
+    "stim_saving_pp": 17.54999999999999,
+    "wilcoxon_p": 0.009765625
+  },
+  {
+    "fatigue_rate": 0.015,
+    "fixed_pac_mean": 0.22002917184200999,
+    "fixed_efficiency": 5.100874134320341,
+    "pred_pac_mean": 0.18104249933099012,
+    "pred_efficiency": 5.230975523700682,
+    "efficiency_gain_pct": 2.5505704649702996,
+    "stim_saving_pp": 16.566666666666656,
+    "wilcoxon_p": 0.009765625
+  },
+  {
+    "fatigue_rate": 0.025,
+    "fixed_pac_mean": 0.21560395091073245,
+    "fixed_efficiency": 4.968117532953249,
+    "pred_pac_mean": 0.1806948470307585,
+    "pred_efficiency": 5.1842218361868495,
+    "efficiency_gain_pct": 4.34982267156947,
+    "stim_saving_pp": 16.283333333333317,
+    "wilcoxon_p": 0.001953125
+  },
+  {
+    "fatigue_rate": 0.04,
+    "fixed_pac_mean": 0.21063552605556798,
+    "fixed_efficiency": 4.819064817131216,
+    "pred_pac_mean": 0.18273202291112464,
+    "pred_efficiency": 5.09150338840793,
+    "efficiency_gain_pct": 5.653349374818361,
+    "stim_saving_pp": 14.499999999999993,
+    "wilcoxon_p": 0.009765625
+  }
+]

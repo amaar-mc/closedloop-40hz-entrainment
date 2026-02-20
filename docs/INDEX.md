@@ -1,40 +1,102 @@
-# docs/ — Document Index
+# Documentation Index
 
-**Last reorganized:** 2026-02-18
+**Last updated:** 2026-02-20
 
-## Current (Active Documents)
+## Quick Navigation
 
-These reflect the actual implemented pipeline and verified results:
+| What you're looking for | Where to go |
+|------------------------|-------------|
+| Project overview & how to run | [`../README.md`](../README.md) |
+| Complete findings & results | [`../FINDINGS.md`](../FINDINGS.md) |
+| Current methodology | [`CURRENT_METHODOLOGY.md`](CURRENT_METHODOLOGY.md) |
+| Code architecture map | [`CODE_MAP.md`](CODE_MAP.md) |
+| Pipeline audit results | [`audits/`](audits/) |
+| Research background papers | [`research/`](research/) |
+| Historical analysis reports | [`reports/`](reports/) |
+
+---
+
+## Directory Structure
+
+```
+docs/
+  INDEX.md                  <-- You are here
+  CURRENT_METHODOLOGY.md    Current pipeline methodology
+  CODE_MAP.md               Code architecture & file reference
+  STATUS_REPORT_Synopsys_Readiness.md   Progress report
+  LAB_NOTEBOOK.txt          Chronological development log
+
+  research/                 Background literature & research papers
+    01_Foundational_Concepts_40Hz_Entrainment_AD.*
+    02_Literature_Review_40Hz_Entrainment_AD.*
+    03_Technical_Methods_Signal_Processing.*
+    04_Research_Methodology_Proposed_Approach.*
+    05_Annotated_Bibliography_Sources.*
+    AD_40Hz_Entrainment_Research_Paper_IEEE.*
+    Comprehensive_Methodology_Closed_Loop_40Hz_Entrainment.*
+
+  reports/                  Technical analysis & results reports
+    SUMMARY_FOR_USER.md
+    COMPREHENSIVE_ANALYSIS_ALL_ATTEMPTS.md
+    TEMPORAL_PREDICTION_REPORT.md
+    TEMPORAL_PREDICTION_FINAL_REPORT.md
+    TEMPORAL_PREDICTION_DEEP_DIVE.md
+
+  audits/                   Pipeline integrity & leakage audits
+    PIPELINE_AUDIT_REPORT.md
+    COMPREHENSIVE_SUBMISSION_AUDIT_REPORT.md
+    TEMPORAL_MULTISCALE_AUDIT_REPORT.md
+
+  archive/                  Outdated docs (pre-multiscale era)
+    04_Research_Methodology_Proposed_Approach.*  (original proposal)
+    AD_40Hz_Entrainment_Research_Paper_IEEE.*    (draft with placeholders)
+    Comprehensive_Methodology_Closed_Loop_40Hz_Entrainment.*
+    STATUS_REPORT_Synopsys_Readiness.md
+```
+
+---
+
+## Current (Active) Documents
 
 | Document | Description |
 |----------|-------------|
-| `CURRENT_METHODOLOGY.md` | **Start here.** Complete description of the implemented pipeline, model, training, results, and audit findings. |
-| `PIPELINE_AUDIT_REPORT.md` | Independent audit of the multiscale TCN pipeline (Feb 2026). Covers leakage, results integrity, suspicious patterns, code integrity, deployment realism. |
-| `COMPREHENSIVE_SUBMISSION_AUDIT_REPORT.md` | Leakage/causality audit from the submission gate scripts. |
-| `TEMPORAL_MULTISCALE_AUDIT_REPORT.md` | File-by-file technical audit of `temporal_multiscale/` module. |
-| `TEMPORAL_PREDICTION_DEEP_DIVE.md` | Analysis of why temporal PAC prediction is hard: raw R^2 ~0.07, smoothed R^2 ~0.75, autocorrelation ceiling. |
+| [`CURRENT_METHODOLOGY.md`](CURRENT_METHODOLOGY.md) | **Start here.** Complete description of the implemented pipeline, model, training, results. |
+| [`CODE_MAP.md`](CODE_MAP.md) | File-by-file map of the codebase architecture. |
+| [`../FINDINGS.md`](../FINDINGS.md) | Consolidated findings: model results, comparisons, conclusions, limitations. |
 
-## Reference (Background Literature — Still Relevant)
-
-These cover the scientific foundations and are still accurate as background:
+## Audit Reports
 
 | Document | Description |
 |----------|-------------|
-| `01_Foundational_Concepts_40Hz_Entrainment_AD.txt/.docx` | Neuroscience primer: gamma oscillations, PAC, 40 Hz entrainment, AD. Note: dataset description (13 subjects) is outdated — actual count is 35. |
-| `02_Literature_Review_40Hz_Entrainment_AD.txt/.docx` | Literature synthesis: PAC as biomarker, entrainment mechanisms, clinical trials. Aspirational performance claims (87% accuracy) are not achieved. |
-| `03_Technical_Methods_Signal_Processing.txt/.docx` | EEG signal processing reference: filtering, PAC computation (MI), DL architectures. Surveys architectures beyond what was actually built (GATs, Transformers, etc.). |
-| `05_Annotated_Bibliography_Sources.txt/.docx` | 39 annotated references. Bibliographic data is accurate. |
+| [`audits/PIPELINE_AUDIT_REPORT.md`](audits/PIPELINE_AUDIT_REPORT.md) | Independent audit of the multiscale TCN pipeline. Covers leakage, results integrity, code quality. |
+| [`audits/COMPREHENSIVE_SUBMISSION_AUDIT_REPORT.md`](audits/COMPREHENSIVE_SUBMISSION_AUDIT_REPORT.md) | Leakage/causality audit from submission gate scripts. |
+| [`audits/TEMPORAL_MULTISCALE_AUDIT_REPORT.md`](audits/TEMPORAL_MULTISCALE_AUDIT_REPORT.md) | File-by-file technical audit of `temporal_multiscale/` module. |
 
-## Archived (Outdated — Preserved for History)
+## Technical Reports
 
-Moved to `archive_pre_multiscale/`. These describe the **originally proposed** methodology, which differs significantly from what was implemented:
-
-| Document | Why Archived |
+| Document | Description |
 |----------|-------------|
-| `04_Research_Methodology_Proposed_Approach.txt/.docx` | Proposes GAT-Transformer + MIQP MPC (never built). Wrong dataset description (healthy adults, 64-128 channels, 500 Hz). Performance targets (R^2 > 0.80) not met on raw targets. |
-| `AD_40Hz_Entrainment_Research_Paper_IEEE.txt/.docx` | Draft IEEE paper with placeholder results. Wrong subject count (13 vs. 35), fabricated preprocessing steps (ICA they didn't do), unimplemented methods. |
-| `Comprehensive_Methodology_Closed_Loop_40Hz_Entrainment.txt/.docx` | Jan 2026 methodology. Wrong data loading (uses `read_raw_bids`), wrong PAC range assumptions, no temporal pipeline. |
-| `STATUS_REPORT_Synopsys_Readiness.md` | Feb 5, 2026 progress report. Pre-pipeline-execution. 45% completion, old directory structure, wrong dataset assumptions. |
+| [`reports/TEMPORAL_PREDICTION_DEEP_DIVE.md`](reports/TEMPORAL_PREDICTION_DEEP_DIVE.md) | Why temporal PAC prediction is hard: raw R^2 ~0.07, smoothed R^2 ~0.75, autocorrelation ceiling. |
+| [`reports/TEMPORAL_PREDICTION_REPORT.md`](reports/TEMPORAL_PREDICTION_REPORT.md) | Temporal prediction approach and initial results. |
+| [`reports/TEMPORAL_PREDICTION_FINAL_REPORT.md`](reports/TEMPORAL_PREDICTION_FINAL_REPORT.md) | Final temporal prediction report with all horizon results. |
+| [`reports/COMPREHENSIVE_ANALYSIS_ALL_ATTEMPTS.md`](reports/COMPREHENSIVE_ANALYSIS_ALL_ATTEMPTS.md) | Analysis of all model architecture attempts (v1-v8). |
+| [`reports/SUMMARY_FOR_USER.md`](reports/SUMMARY_FOR_USER.md) | Plain-English project summary. |
+
+## Research Background
+
+| Document | Description |
+|----------|-------------|
+| `research/01_Foundational_Concepts_*` | Neuroscience primer: gamma oscillations, PAC, 40 Hz entrainment, AD. |
+| `research/02_Literature_Review_*` | Literature synthesis: PAC as biomarker, entrainment mechanisms, clinical trials. |
+| `research/03_Technical_Methods_*` | EEG signal processing reference: filtering, PAC computation, DL architectures. |
+| `research/04_Research_Methodology_*` | Research methodology and proposed approach. |
+| `research/05_Annotated_Bibliography_*` | 39 annotated references. |
+| `research/AD_40Hz_Entrainment_Research_Paper_IEEE.*` | IEEE-format research paper. |
+| `research/Comprehensive_Methodology_*` | Full methodology document. |
+
+## Archive (Outdated)
+
+Pre-multiscale versions preserved for history. See [`archive/`](archive/) -- these contain outdated assumptions (wrong subject counts, unimplemented architectures, placeholder results).
 
 ## Key Discrepancies: Proposal vs. Reality
 
@@ -46,5 +108,5 @@ Moved to `archive_pre_multiscale/`. These describe the **originally proposed** m
 | Sampling rate | 500-1000 Hz | 250 Hz |
 | Control system | MIQP MPC with GUROBI | Threshold z-score with hysteresis |
 | Static R^2 target | > 0.80 | 0.287 (achieved) |
-| Temporal R^2 | > 0.80 for 5-10s ahead | 0.07 raw, 0.74 smoothed (ts=5, 1s ahead) |
+| Temporal R^2 | > 0.80 for 5-10s ahead | 0.25 at 5-10s horizon (TCN), -0.27 persistence |
 | PAC range assumed | 0.001-0.3 | 0.0002-0.0046 (actual) |

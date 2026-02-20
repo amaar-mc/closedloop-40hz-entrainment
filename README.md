@@ -1,370 +1,189 @@
-# Personalized Deep Learning Model for Closed-Loop 40Hz Entrainment
+# Closed-Loop 40 Hz Gamma Entrainment System
 
-**Optimizing Theta-Gamma Coupling in Alzheimer's Disease via Model Predictive Control**
+**Adaptive scheduling of 40 Hz auditory stimulation using EEG-based PAC prediction**
 
-## Project Overview
+## What This Is
 
-This project implements a novel closed-loop neuromodulation system that uses deep learning to predict theta-gamma phase-amplitude coupling (PAC) in real-time and optimizes 40 Hz auditory stimulation timing through Model Predictive Control (MPC). The system moves beyond reactive closed-loop approaches to predictive control, anticipating brain state changes 5-10 seconds ahead.
+A machine learning system that predicts when a person's brain will lose gamma entrainment during 40 Hz auditory stimulation, enabling adaptive scheduling that achieves comparable neural effects with significantly less stimulation than fixed-schedule protocols.
 
-### Key Innovation
+Built on the OpenNeuro ds005048 dataset (35 dementia patients, 19-channel EEG, 250 Hz).
 
-- **Predictive vs. Reactive**: Forecasts EEG dynamics using EEGNet deep learning architecture
-- **Personalized Control**: Adapts to individual patient baseline via z-score normalization
-- **Energy Efficient**: Targets 60-70% reduction in stimulation time while maintaining efficacy
-- **Clinically Validated**: Uses OpenNeuro ds005048 dataset with dementia patients
+**Key result:** The temporal prediction model (causal TCN) maintains R^2 ~ 0.25 at 5-10 second prediction horizons where all baselines fail (persistence R^2 < -0.25). The adaptive controller is statistically more efficient than fixed scheduling (Wilcoxon p < 0.01) and the advantage grows with habituation severity.
 
-## Dataset
+See [`FINDINGS.md`](FINDINGS.md) for the complete results and analysis.
 
-**OpenNeuro ds005048 v1.0.1**: 40Hz Auditory Entrainment
-- URL: https://openneuro.org/datasets/ds005048/versions/1.0.1
-- Participants: ~13-20 dementia patients (mild AD, memory complaints)
-- EEG: 19-channel monopolar, 250 Hz sampling rate
-- Protocol: 40s stimulation + 20s rest (6-10 trials)
-- Format: BIDS-compliant (.set files)
+## Repository Structure
 
-### Download Instructions
-
-```bash
-# Option 1: OpenNeuro CLI
-pip install openneuro-cli
-openneuro download --snapshot 1.0.1 ds005048
-
-# Option 2: AWS S3
-aws s3 sync --no-sign-request \
-  s3://openneuro.org/ds005048 \
-  data/raw/ds005048/
-
-# Option 3: Direct download from website
-# Visit: https://openneuro.org/datasets/ds005048/versions/1.0.1
+```
+closedloop-40hz-entrainment/
+|
+|-- FINDINGS.md                    Consolidated results & analysis (start here)
+|-- CLAUDE.md                      Development instructions for Claude Code
+|-- config.yaml                    Runtime configuration (all hyperparameters)
+|-- requirements.txt               Python dependencies
+|
+|-- src/                           Core pipeline: data loading, models, control
+|   |-- data_loader.py               BIDS data loading (.set/.fdt HDF5 pairs)
+|   |-- preprocessing.py             Bandpass, notch, artifact rejection, CAR
+|   |-- pac_computation.py           Modulation Index (Tort 2010)
+|   |-- eegnet.py                    EEGNet regression (~1,457 params)
+|   |-- training.py                  Training loop (z-score targets, Huber loss)
+|   |-- controller.py                Closed-loop controllers (reactive + predictive)
+|   |-- personalization.py           Rolling baseline z-score module
+|   |-- simulator.py                 Brain dynamics simulator (+ fatigue model)
+|   |-- validation.py                Multi-strategy comparison framework
+|   +-- [supporting: utils, features, augmentation, v2 variants]
+|
+|-- temporal_multiscale/           Temporal PAC prediction (main contribution)
+|   |-- multiscale_tcn.py            MultiscaleCausalTCN architecture
+|   |-- build_multiscale_dataset.py  Causal sequence construction (no leakage)
+|   |-- train_multiscale_tcn.py      Training with deterministic seeding
+|   |-- sweep_horizons.py            Horizon sweep: 1-10 second predictions
+|   |-- per_subject_adaptation.py    Per-subject fine-tuning evaluation
+|   |-- transition_analysis.py       Stim/rest transition accuracy
+|   |-- direction_classifier.py      3-class PAC direction prediction
+|   |-- fatigue_analysis.py          Real-data habituation analysis
+|   |-- realtime_inference.py        Streaming inference module
+|   +-- [audits: audit_multiscale_pipeline, comprehensive_submission_audit]
+|
+|-- temporal/                      Earlier temporal models (v1, superseded)
+|   |-- temporal_model.py            LSTM-based temporal model
+|   |-- validate_code.py             Pre-training leakage validation
+|   +-- [training scripts, dataset builders]
+|
+|-- run_closed_loop_demo.py        End-to-end demo: all strategies +/- fatigue
+|-- run_fatigue_sensitivity.py     Fatigue severity sweep
+|
+|-- docs/                          Documentation
+|   |-- INDEX.md                     Documentation navigation
+|   |-- CURRENT_METHODOLOGY.md       Pipeline methodology
+|   |-- CODE_MAP.md                  Architecture reference
+|   |-- research/                    Background literature (.docx/.txt)
+|   |-- reports/                     Technical analysis reports
+|   |-- audits/                      Pipeline integrity audit reports
+|   +-- archive/                     Outdated pre-multiscale docs
+|
+|-- results/                       Output data
+|   |-- closed_loop_demo_results.json
+|   |-- fatigue_analysis.json
+|   +-- fatigue_sensitivity.json
+|
+|-- models/                        Checkpoints (.pth) + training histories (.json)
+|-- logs/                          Training logs and output captures
+|-- archive/                       Old code: v1-v8 attempts, diagnostics
+|-- data/                          Raw BIDS dataset + processed windows (not in git)
++-- venv/                          Python virtual environment (not in git)
 ```
 
-## Hardware Requirements
+## Quick Start
 
-**Tested Configuration**:
-- GPU: NVIDIA RTX 3080 (10GB VRAM)
-- RAM: 16GB minimum
-- Storage: 50GB for dataset and checkpoints
-- CUDA: 11.8 or higher
+### Prerequisites
 
-**Performance**:
-- Training time: ~2-3 hours for full dataset
-- Inference latency: <50ms per window
-- Batch size: 32-64 (optimal for RTX 3080)
+- Python 3.10+ with venv
+- NVIDIA GPU with CUDA 11.8+ (optional but recommended)
+- OpenNeuro ds005048 dataset downloaded to `data/raw/ds005048/`
 
-## Installation
-
-### 1. Clone or Download Code
+### Setup
 
 ```bash
-cd code_drafts
-```
+python -m venv venv
+venv/Scripts/activate               # Windows
+# source venv/bin/activate          # Linux/Mac
 
-### 2. Create Virtual Environment
-
-```bash
-python3.10 -m venv venv
-source venv/bin/activate  # Linux/Mac
-# venv\Scripts\activate   # Windows
-```
-
-### 3. Install PyTorch with CUDA
-
-```bash
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-```
-
-### 4. Install Dependencies
-
-```bash
 pip install -r requirements.txt
 ```
 
-### 5. Verify Installation
+### Run the Full Pipeline
 
 ```bash
-python -c "import torch; print(f'CUDA: {torch.cuda.is_available()}')"
-python -c "import mne; import tensorpac; print('MNE and Tensorpac OK')"
-```
-
-## Project Structure
-
-```
-code_drafts/
-├── src/
-│   ├── data_loader.py           # BIDS data loading and windowing
-│   ├── preprocessing.py         # EEG signal preprocessing pipeline
-│   ├── pac_computation.py       # Phase-amplitude coupling (MI method)
-│   ├── eegnet.py                # EEGNet deep learning architecture
-│   ├── personalization.py       # Rolling baseline z-score module
-│   ├── controller.py            # Closed-loop MPC decision engine
-│   ├── simulator.py             # Brain response simulation
-│   ├── training.py              # Model training pipeline
-│   ├── validation.py            # Performance evaluation
-│   └── utils.py                 # Helper functions and plotting
-│
-├── data/
-│   ├── raw/                     # Downloaded OpenNeuro dataset
-│   └── processed/               # Preprocessed windows and labels
-│
-├── models/                      # Trained model checkpoints
-├── results/
-│   ├── figures/                 # Plots and visualizations
-│   └── metrics/                 # Performance metrics (CSV)
-│
-├── logs/                        # Development logs
-├── notebooks/                   # Jupyter analysis notebooks
-│
-├── requirements.txt
-├── README.md
-└── config.yaml                  # Configuration parameters
-```
-
-## Usage
-
-### Step 1: Download and Preprocess Data
-
-```bash
-# Download dataset (see above)
-# Place in data/raw/ds005048/
-
-# Run preprocessing
+# 1. Preprocess raw BIDS data -> windows + PAC labels
 python src/data_loader.py --bids_root data/raw/ds005048 --output data/processed
+
+# 2. Train static PAC predictor (EEGNet)
+python src/training.py --data_dir data/processed --output_dir models --epochs 100
+
+# 3. Build temporal sequences (causal, no leakage)
+python temporal_multiscale/build_multiscale_dataset.py \
+  --data-dir data/processed \
+  --output-dir data/processed/multiscale_temporal_lb20_hz1_ts5_clean
+
+# 4. Train temporal TCN
+python temporal_multiscale/train_multiscale_tcn.py \
+  --data-dir data/processed/multiscale_temporal_lb20_hz1_ts5_clean \
+  --output-dir models
+
+# 5. Sweep prediction horizons (1-10 seconds)
+python temporal_multiscale/sweep_horizons.py \
+  --data-dir data/processed --output-dir models
+
+# 6. Run closed-loop simulation with fatigue comparison
+python run_closed_loop_demo.py --duration 600 --n-trials 10
+
+# 7. Run fatigue sensitivity analysis
+python run_fatigue_sensitivity.py
 ```
 
-### Step 2: Train EEGNet Model
+### Run Audits
 
 ```bash
-python src/training.py \
-  --data_dir data/processed \
-  --output_dir models \
-  --epochs 100 \
-  --batch_size 64 \
-  --lr 0.001 \
-  --device cuda
+python temporal/validate_code.py                          # Pre-training leakage check
+python temporal_multiscale/audit_multiscale_pipeline.py    # Pipeline audit
+python temporal_multiscale/comprehensive_submission_audit.py  # Submission audit
 ```
 
-### Step 3: Run Closed-Loop Simulation
+## Models
 
-```bash
-python src/validation.py \
-  --model_path models/best_eegnet.pth \
-  --data_dir data/processed \
-  --output_dir results \
-  --duration 360
-```
+### EEGNet (Static PAC Prediction)
 
-### Step 4: Analyze Results
+Predicts PAC from a single 2-second EEG window.
 
-```bash
-jupyter notebook notebooks/04_simulation_results.ipynb
-```
+- Input: `(batch, 1, 7, 500)` -- 7 frontal channels, 2s @ 250 Hz
+- Output: `(batch, 1)` -- predicted PAC
+- Parameters: ~1,457
+- Test R^2: 0.287
 
-## Key Modules
+### Multiscale Causal TCN (Temporal PAC Prediction)
 
-### 1. EEGNet Architecture
+Predicts future PAC from a sequence of past observations. Main contribution.
 
-Compact convolutional neural network optimized for EEG:
-- **Input**: (batch, 1, 7 channels, 500 samples) - 2 seconds @ 250 Hz
-- **Output**: (batch, 1) - Predicted PAC value
-- **Parameters**: ~2000 (prevents overfitting)
-- **Layers**: Temporal conv → Depthwise spatial → Separable conv → Regression head
+- Input: `(batch, seq_len, n_features)` -- PAC + stimulation context
+- Causal depthwise-separable convolutions, dilations [1, 2, 4, 8]
+- GroupNorm (cross-subject stable), attention pooling, dual regression heads
+- R^2 at horizon=1: 0.764 | R^2 at horizon=5-10: ~0.25 (baselines: negative)
 
-### 2. PAC Computation (Modulation Index)
+## Results Summary
 
-Implementation of Tort et al. (2010) method:
-1. Bandpass filter: Theta (4-8 Hz), Gamma (38-42 Hz)
-2. Hilbert transform: Extract phase (theta) and amplitude (gamma)
-3. Phase binning: 18 bins × 20°
-4. KL divergence: From uniform distribution
-5. Normalization: MI ∈ [0, 1]
+| Metric | Value |
+|--------|-------|
+| TCN test R^2 (1s ahead) | 0.764 |
+| TCN R^2 (5-10s ahead) | 0.24 - 0.28 |
+| Persistence R^2 (5-10s) | -0.26 to -0.27 |
+| Adaptive vs Fixed efficiency | +2.1% to +5.7% (p < 0.01) |
+| Stimulation time saved | 14-18 percentage points |
 
-### 3. Personalization Module
+Full results: [`FINDINGS.md`](FINDINGS.md)
 
-Adaptive baseline using rolling window:
-- Window size: 30 seconds (30 predictions @ 1 Hz)
-- Z-score normalization: z = (PAC - μ) / σ
-- Circular buffer: Efficient O(1) updates
-- Minimum samples: 10 (before z-scores computed)
+## Dataset
 
-### 4. Closed-Loop Controller
+**OpenNeuro ds005048 v1.0.1** -- 40 Hz Auditory Entrainment in Dementia
 
-MPC-inspired threshold-based decision engine:
-
-| Z-Score Range | Coupling Status | Action | Rationale |
-|---------------|-----------------|--------|-----------|
-| z < -0.5 | Weak | STIMULATE | Boost gamma |
-| z > +0.5 | Strong | REST | Prevent habituation |
-| -0.5 ≤ z ≤ +0.5 | Normal | MAINTAIN | Stability |
-
-**Hysteresis**: 5-second minimum hold time prevents oscillation
-
-### 5. Simulation Framework
-
-Exponential approach to target PAC:
-- **Stimulation**: PAC(t+1) = PAC(t) + τ_rise × (PAC_max - PAC(t))
-- **Rest**: PAC(t+1) = PAC(t) + τ_decay × (PAC_min - PAC(t))
-- **Noise**: Gaussian (σ = 0.02)
-- **Parameters**: Extracted empirically from dataset
-
-## Expected Results
-
-### Performance Targets
-
-| Metric | Target | Baseline (Open-Loop) |
-|--------|--------|----------------------|
-| PAC Improvement | ≥15% | 0% (reference) |
-| Prediction R² | >0.80 | N/A |
-| Stimulation Time | 30-40% | 67% (40s/60s) |
-| PAC Stability | Lower variance | Higher variance |
-
-### Hypotheses
-
-1. **H1**: EEGNet achieves R² > 0.80 for 5-second PAC prediction
-2. **H2**: Closed-loop increases PAC by 15-30% vs. fixed schedule
-3. **H3**: Equivalent efficacy with 60-70% less stimulation time
-4. **H4**: Subject-specific fine-tuning improves accuracy by >10%
-
-## Configuration
-
-Edit `config.yaml` to customize parameters:
-
-```yaml
-# Data Processing
-sampling_rate: 250  # Hz
-window_size: 2.0    # seconds
-hop_size: 1.0       # seconds (50% overlap)
-channels: ['Fp1', 'Fp2', 'F7', 'F3', 'Fz', 'F4', 'F8']
-
-# PAC Computation
-theta_band: [4, 8]     # Hz
-gamma_band: [38, 42]   # Hz
-n_phase_bins: 18
-
-# EEGNet Model
-F1: 8                  # Temporal filters
-D: 2                   # Depth multiplier
-F2: 16                 # Separable filters
-dropout: 0.5
-
-# Training
-epochs: 100
-batch_size: 64
-learning_rate: 0.001
-weight_decay: 0.0001
-patience: 15           # Early stopping
-
-# Controller
-z_low: -0.5            # Weak coupling threshold
-z_high: 0.5            # Strong coupling threshold
-hold_time: 5.0         # Hysteresis (seconds)
-baseline_window: 30    # Personalization window (seconds)
-
-# Simulation
-tau_rise: 0.15         # PAC increase rate
-tau_decay: 0.10        # PAC decrease rate
-pac_max: 0.3           # Maximum PAC
-pac_min: 0.05          # Minimum PAC
-noise_std: 0.02
-```
-
-## Validation Protocol
-
-### Comparison Methods
-
-1. **Fixed Schedule (Control)**: 40s ON + 20s OFF
-2. **Closed-Loop (Treatment)**: Adaptive stimulation
-3. **Reactive Threshold**: Current PAC-based (no prediction)
-4. **Predictive MPC**: Full system (proposed)
-
-### Metrics
-
-- **PAC Enhancement**: Mean, peak, time above threshold
-- **Efficiency**: PAC per unit stimulation time
-- **Stability**: Variance, oscillation frequency
-- **Accuracy**: R², RMSE, MAE for predictions
-- **Clinical**: Equivalent to Phase II trial outcomes
-
-### Statistical Analysis
-
-- **Primary**: Repeated measures ANOVA (5 methods)
-- **Post-hoc**: Tukey HSD for pairwise comparisons
-- **Effect Size**: Cohen's d
-- **Significance**: α = 0.05 (two-tailed)
-
-## Troubleshooting
-
-### CUDA Out of Memory
-- Reduce batch size: `--batch_size 32` or `--batch_size 16`
-- Enable gradient accumulation in training.py
-- Use mixed precision training (automatic with PyTorch 2.0+)
-
-### Poor Model Performance
-- Check data preprocessing: Are artifacts removed?
-- Verify PAC computation: Compare to published values
-- Increase training epochs: `--epochs 150`
-- Try data augmentation: Enable in config.yaml
-
-### Slow Training
-- Verify GPU usage: `nvidia-smi` during training
-- Check data loading: Increase num_workers in DataLoader
-- Enable mixed precision: Should be automatic with RTX 3080
-- Profile bottlenecks: Use PyTorch profiler
-
-### Dataset Download Issues
-- Check disk space: Need ~10GB
-- Use AWS CLI: May be faster than openneuro-cli
-- Download subsets: Start with 1-2 subjects for testing
+- 35 subjects, 19-channel EEG (10/20), 250 Hz
+- Alternating 40s stimulation / 20s rest blocks
+- BIDS-compliant, HDF5 .set files + float32 .fdt companion files
+- Download: https://openneuro.org/datasets/ds005048/versions/1.0.1
 
 ## Citations
 
-### Key Papers
-
-1. **EEGNet Architecture**
-   Lawhern et al. (2018). "EEGNet: A Compact Convolutional Neural Network for EEG-based Brain-Computer Interfaces." *Journal of Neural Engineering*, 15(5).
-
-2. **Modulation Index (PAC)**
-   Tort et al. (2010). "Measuring Phase-Amplitude Coupling Between Neuronal Oscillations of Different Frequencies." *Journal of Neurophysiology*, 104(2).
-
-3. **40 Hz Gamma Entrainment**
-   Iaccarino et al. (2016). "Gamma Frequency Entrainment Attenuates Amyloid Load and Modifies Microglia." *Nature*, 540, 230-235.
-
-4. **Clinical Evidence**
-   Chan et al. (2025). "Gamma Sensory Stimulation in Mild Alzheimer's Dementia: An Open-Label Extension Study." *Alzheimer's & Dementia*, 21.
-
-5. **Dataset**
-   Lahijanian et al. (2024). "Auditory Gamma-band Entrainment Enhances Default Mode Network Connectivity in Dementia Patients." *Scientific Reports*, 14.
-
-### Dataset
-
-OpenNeuro ds005048 v1.0.1:
-https://openneuro.org/datasets/ds005048/versions/1.0.1
-
-DOI: 10.18112/openneuro.ds005048.v1.0.1
-
-## License
-
-This research code is provided for academic and educational purposes.
-Dataset: OpenNeuro ds005048 (CC0 license)
+1. Iaccarino et al. (2016). Gamma frequency entrainment attenuates amyloid load. *Nature*, 540, 230-235.
+2. Tort et al. (2010). Measuring phase-amplitude coupling. *J Neurophysiology*, 104(2), 1195-1210.
+3. Lawhern et al. (2018). EEGNet: compact CNN for EEG-based BCIs. *J Neural Engineering*, 15(5), 056013.
+4. Lahijanian et al. (2024). Auditory gamma-band entrainment in dementia. *Scientific Reports*, 14.
 
 ## Author
 
-**Amaar Chughtai**
-Valley Christian High School
-Research Project: January-February 2026
+Amaar Chughtai | February 2026
 
-## Acknowledgments
+## License
 
-- OpenNeuro platform for dataset hosting
-- MNE-Python developers for EEG processing tools
-- Tensorpac developers for PAC computation library
-- PyTorch team for deep learning framework
-
-## Contact
-
-For questions or issues, please refer to the development log:
-`logs/DEVELOPMENT_LOG.md`
-
----
-
-**Status**: Implementation Complete
-**Last Updated**: February 5, 2026
+Research code for academic and educational purposes. Dataset: OpenNeuro ds005048 (CC0).
