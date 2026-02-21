@@ -1,0 +1,3635 @@
+{
+  "meta": {
+    "experiment": "fatigue_model_sensitivity",
+    "n_trials": 50,
+    "duration_sec": 600,
+    "base_seed": 42,
+    "elapsed_seconds": 3.01,
+    "methods_compared": [
+      "Fixed Schedule",
+      "Predictive Look-Ahead"
+    ],
+    "fatigue_models": [
+      {
+        "name": "ExponentialDecay",
+        "description": "Current model: responsiveness decays exponentially with cumulative stim time, recovers during rest",
+        "kwargs": {
+          "fatigue_rate": 0.008,
+          "recovery_rate": 0.03,
+          "max_fatigue": 0.7
+        }
+      },
+      {
+        "name": "StepFunction",
+        "description": "Responsiveness drops suddenly after 30s continuous stimulation, recovers to 80% during rest",
+        "kwargs": {
+          "threshold_sec": 30.0,
+          "drop_effectiveness": 0.3,
+          "rest_recovery_target": 0.8,
+          "recovery_rate_per_sec": 0.02
+        }
+      },
+      {
+        "name": "HeterogeneousPopulation",
+        "description": "50% of subjects have NO fatigue, 50% have HIGH fatigue (rate=0.025), matching real data's 49/51% habituation split",
+        "kwargs": {
+          "high_fatigue_rate": 0.025,
+          "recovery_rate": 0.03,
+          "max_fatigue": 0.7
+        }
+      },
+      {
+        "name": "SaturationModel",
+        "description": "PAC ceiling decays over session time (synaptic adaptation), partial recovery during rest",
+        "kwargs": {
+          "depletion_rate": 0.003,
+          "restoration_rate": 0.001,
+          "floor": 0.12
+        }
+      }
+    ]
+  },
+  "results": {
+    "ExponentialDecay": {
+      "model_name": "ExponentialDecay",
+      "model_kwargs": {
+        "fatigue_rate": 0.008,
+        "recovery_rate": 0.03,
+        "max_fatigue": 0.7
+      },
+      "summary_stats": {
+        "Fixed Schedule": {
+          "n_trials": 50,
+          "pac_mean": {
+            "mean": 0.2230036018504475,
+            "std": 0.006665343793810075,
+            "ci_lower": 0.22126232712383453,
+            "ci_upper": 0.22476556117893107
+          },
+          "pac_std": {
+            "mean": 0.08513174749221974,
+            "std": 0.004423162752277823,
+            "ci_lower": 0.08391846108839128,
+            "ci_upper": 0.08640329514776139
+          },
+          "stimulation_pct": {
+            "mean": 66.66666666666664,
+            "std": 1.4355131050823087e-14,
+            "ci_lower": 66.66666666666664,
+            "ci_upper": 66.66666666666664
+          },
+          "efficiency_ratio": {
+            "mean": 0.33450540277567137,
+            "std": 0.009998015690715113,
+            "ci_lower": 0.3318026205253254,
+            "ci_upper": 0.33739953984926857
+          },
+          "late_session_pac": {
+            "mean": 0.2203447667191416,
+            "std": 0.022670269035655482,
+            "ci_lower": 0.21404554720094485,
+            "ci_upper": 0.22653323784569676
+          }
+        },
+        "Predictive Look-Ahead": {
+          "n_trials": 50,
+          "pac_mean": {
+            "mean": 0.1812804357917752,
+            "std": 0.009977050978575633,
+            "ci_lower": 0.1786399287361769,
+            "ci_upper": 0.1842135652260398
+          },
+          "pac_std": {
+            "mean": 0.10770466230458212,
+            "std": 0.005620213028953803,
+            "ci_lower": 0.10614535244281288,
+            "ci_upper": 0.10920672500268068
+          },
+          "stimulation_pct": {
+            "mean": 49.77666666666667,
+            "std": 3.2951228303540043,
+            "ci_lower": 48.869916666666654,
+            "ci_upper": 50.690083333333334
+          },
+          "efficiency_ratio": {
+            "mean": 0.3647485000422554,
+            "std": 0.015385536559091221,
+            "ci_lower": 0.36041855034075937,
+            "ci_upper": 0.3688353313472389
+          },
+          "late_session_pac": {
+            "mean": 0.17515384318632293,
+            "std": 0.05959806222718447,
+            "ci_lower": 0.15873950041022528,
+            "ci_upper": 0.19148384268079538
+          }
+        }
+      },
+      "pairwise_comparisons": [
+        {
+          "fatigue_model": "ExponentialDecay",
+          "metric": "pac_mean",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.1812804357917752,
+          "mean_b": 0.2230036018504475,
+          "ci_a": [
+            0.17866075386572158,
+            0.18409205268014145
+          ],
+          "ci_b": [
+            0.22127448565485833,
+            0.22469664502958892
+          ],
+          "difference": -0.04172316605867232,
+          "relative_gain_pct": -18.709637742377385,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_p_value": 1.7763568394002505e-15,
+          "hedges_g": -4.879931238341376,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "ExponentialDecay",
+          "metric": "pac_std",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.10770466230458212,
+          "mean_b": 0.08513174749221974,
+          "ci_a": [
+            0.10620242971161674,
+            0.1092748858755754
+          ],
+          "ci_b": [
+            0.08400626935609166,
+            0.08639130432780223
+          ],
+          "difference": 0.02257291481236237,
+          "relative_gain_pct": 26.515272477433083,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_p_value": 1.7763568394002505e-15,
+          "hedges_g": 4.429246507794474,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "ExponentialDecay",
+          "metric": "stimulation_pct",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 49.77666666666667,
+          "mean_b": 66.66666666666664,
+          "ci_a": [
+            48.853249999999996,
+            50.677
+          ],
+          "ci_b": [
+            66.66666666666664,
+            66.66666666666664
+          ],
+          "difference": -16.889999999999972,
+          "relative_gain_pct": -25.33499999999997,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_p_value": 7.517719802882833e-10,
+          "hedges_g": -7.1932972553692816,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "ExponentialDecay",
+          "metric": "efficiency_ratio",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.3647485000422554,
+          "mean_b": 0.33450540277567137,
+          "ci_a": [
+            0.36055866491477695,
+            0.36853575436442343
+          ],
+          "ci_b": [
+            0.3319044006867154,
+            0.33730670058166595
+          ],
+          "difference": 0.03024309726658403,
+          "relative_gain_pct": 9.041138652957988,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_p_value": 1.7763568394002505e-15,
+          "hedges_g": 2.313080586897275,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "ExponentialDecay",
+          "metric": "late_session_pac",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.17515384318632293,
+          "mean_b": 0.2203447667191416,
+          "ci_a": [
+            0.15949160857472328,
+            0.19146407079747024
+          ],
+          "ci_b": [
+            0.2134782323017681,
+            0.22631700596392532
+          ],
+          "difference": -0.04519092353281867,
+          "relative_gain_pct": -20.50918848933701,
+          "wilcoxon_statistic": 150.0,
+          "wilcoxon_p_value": 3.9920236538648624e-07,
+          "hedges_g": -0.9945907872662864,
+          "n_trials": 50
+        }
+      ],
+      "trial_data": {
+        "Fixed Schedule": [
+          {
+            "pac_mean": 0.2202425001780911,
+            "pac_std": 0.08476915788380926,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3303637502671367,
+            "late_session_pac": 0.21479614801589117
+          },
+          {
+            "pac_mean": 0.2284135096575442,
+            "pac_std": 0.08315974264679371,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3426202644863164,
+            "late_session_pac": 0.229321753464517
+          },
+          {
+            "pac_mean": 0.23070700963192511,
+            "pac_std": 0.07536918267530966,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34606051444788777,
+            "late_session_pac": 0.22320816725303785
+          },
+          {
+            "pac_mean": 0.2196772076947337,
+            "pac_std": 0.07643406173995519,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32951581154210063,
+            "late_session_pac": 0.20989583110174578
+          },
+          {
+            "pac_mean": 0.2234242343245656,
+            "pac_std": 0.08084433760346894,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33513635148684845,
+            "late_session_pac": 0.2038015726202444
+          },
+          {
+            "pac_mean": 0.2301671966581884,
+            "pac_std": 0.08515106298612814,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34525079498728267,
+            "late_session_pac": 0.22683745720643825
+          },
+          {
+            "pac_mean": 0.22862528310253177,
+            "pac_std": 0.08038748347481352,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34293792465379774,
+            "late_session_pac": 0.24899210524008378
+          },
+          {
+            "pac_mean": 0.22530101692580579,
+            "pac_std": 0.08623874233056554,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33795152538870876,
+            "late_session_pac": 0.23084827787984913
+          },
+          {
+            "pac_mean": 0.21305461372246692,
+            "pac_std": 0.09344365040873531,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.31958192058370044,
+            "late_session_pac": 0.22534670575842028
+          },
+          {
+            "pac_mean": 0.21935436436631206,
+            "pac_std": 0.09393786741941049,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32903154654946815,
+            "late_session_pac": 0.25975877825010074
+          },
+          {
+            "pac_mean": 0.2342641169223066,
+            "pac_std": 0.08603801539446228,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.35139617538345996,
+            "late_session_pac": 0.22065603309755602
+          },
+          {
+            "pac_mean": 0.21913249300272403,
+            "pac_std": 0.07842967377731404,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3286987395040861,
+            "late_session_pac": 0.20828707215174116
+          },
+          {
+            "pac_mean": 0.21521235152869073,
+            "pac_std": 0.075133227084768,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3228185272930362,
+            "late_session_pac": 0.2227286632634095
+          },
+          {
+            "pac_mean": 0.2171177318288386,
+            "pac_std": 0.08962066833235341,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32567659774325797,
+            "late_session_pac": 0.20400406954709382
+          },
+          {
+            "pac_mean": 0.22300930031986696,
+            "pac_std": 0.08611948424390127,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33451395047980054,
+            "late_session_pac": 0.17664675604044106
+          },
+          {
+            "pac_mean": 0.21682894929953933,
+            "pac_std": 0.08827422041546076,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32524342394930905,
+            "late_session_pac": 0.2333453948735086
+          },
+          {
+            "pac_mean": 0.21723077310754324,
+            "pac_std": 0.08967124214172427,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3258461596613149,
+            "late_session_pac": 0.250884721386769
+          },
+          {
+            "pac_mean": 0.22469516709365295,
+            "pac_std": 0.08777015026639562,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3370427506404795,
+            "late_session_pac": 0.25754980411111805
+          },
+          {
+            "pac_mean": 0.22006906485101377,
+            "pac_std": 0.08949131438101952,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3301035972765207,
+            "late_session_pac": 0.17430146169957214
+          },
+          {
+            "pac_mean": 0.21166547625899731,
+            "pac_std": 0.08945076197827048,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.31749821438849607,
+            "late_session_pac": 0.2133031138311736
+          },
+          {
+            "pac_mean": 0.22654041550503726,
+            "pac_std": 0.0785109233622023,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33981062325755595,
+            "late_session_pac": 0.2184023157065965
+          },
+          {
+            "pac_mean": 0.23872477989266552,
+            "pac_std": 0.08083633360108615,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.35808716983899835,
+            "late_session_pac": 0.21113243359160108
+          },
+          {
+            "pac_mean": 0.21251072426255949,
+            "pac_std": 0.08325765362873899,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3187660863938393,
+            "late_session_pac": 0.21841950296293114
+          },
+          {
+            "pac_mean": 0.2156575030750675,
+            "pac_std": 0.07919612978312555,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32348625461260133,
+            "late_session_pac": 0.22309246338848465
+          },
+          {
+            "pac_mean": 0.2311781415910681,
+            "pac_std": 0.08237800674158013,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3467672123866022,
+            "late_session_pac": 0.2316124395677502
+          },
+          {
+            "pac_mean": 0.22111122740869657,
+            "pac_std": 0.08445964750060476,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33166684111304495,
+            "late_session_pac": 0.24951631914181224
+          },
+          {
+            "pac_mean": 0.2320993585684218,
+            "pac_std": 0.09074987841627011,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34814903785263274,
+            "late_session_pac": 0.2461530121330583
+          },
+          {
+            "pac_mean": 0.212548537922064,
+            "pac_std": 0.08579851562036361,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.31882280688309605,
+            "late_session_pac": 0.22501635748908042
+          },
+          {
+            "pac_mean": 0.22275453751139832,
+            "pac_std": 0.08703731828447306,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33413180626709754,
+            "late_session_pac": 0.26379551151607955
+          },
+          {
+            "pac_mean": 0.23175321512651303,
+            "pac_std": 0.092794618908383,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3476298226897696,
+            "late_session_pac": 0.21329155902475902
+          },
+          {
+            "pac_mean": 0.22339278172857444,
+            "pac_std": 0.0866045323601576,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33508917259286175,
+            "late_session_pac": 0.22558118089196028
+          },
+          {
+            "pac_mean": 0.21252416017215894,
+            "pac_std": 0.0845760391925213,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3187862402582385,
+            "late_session_pac": 0.1694309718256794
+          },
+          {
+            "pac_mean": 0.2326959777868097,
+            "pac_std": 0.08323476976414079,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34904396668021465,
+            "late_session_pac": 0.21761175492006563
+          },
+          {
+            "pac_mean": 0.22906906627026435,
+            "pac_std": 0.08824082333698251,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3436035994053966,
+            "late_session_pac": 0.1925070789472432
+          },
+          {
+            "pac_mean": 0.21207808064802677,
+            "pac_std": 0.08686523777722799,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.31811712097204026,
+            "late_session_pac": 0.20341123250396703
+          },
+          {
+            "pac_mean": 0.21740021217200423,
+            "pac_std": 0.08472163365168321,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3261003182580064,
+            "late_session_pac": 0.22027192473238072
+          },
+          {
+            "pac_mean": 0.22312423648916777,
+            "pac_std": 0.08697257471484961,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33468635473375175,
+            "late_session_pac": 0.19241778985532038
+          },
+          {
+            "pac_mean": 0.23057377991434871,
+            "pac_std": 0.09021396900385793,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34586066987152314,
+            "late_session_pac": 0.23913667082845352
+          },
+          {
+            "pac_mean": 0.22915166058420378,
+            "pac_std": 0.08135540846788739,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3437274908763057,
+            "late_session_pac": 0.1838695478151129
+          },
+          {
+            "pac_mean": 0.21637689563270152,
+            "pac_std": 0.09033246119697298,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32456534344905236,
+            "late_session_pac": 0.18488838496261506
+          },
+          {
+            "pac_mean": 0.22143036831946386,
+            "pac_std": 0.0868339313082948,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33214555247919586,
+            "late_session_pac": 0.2268127792277759
+          },
+          {
+            "pac_mean": 0.22383033176151,
+            "pac_std": 0.083736294093285,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3357454976422651,
+            "late_session_pac": 0.23623418678528185
+          },
+          {
+            "pac_mean": 0.22438176292677373,
+            "pac_std": 0.08630006724818304,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33657264439016066,
+            "late_session_pac": 0.23112417220981057
+          },
+          {
+            "pac_mean": 0.21772869381907048,
+            "pac_std": 0.08309592921791845,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3265930407286058,
+            "late_session_pac": 0.23669210276447053
+          },
+          {
+            "pac_mean": 0.22067936959114112,
+            "pac_std": 0.08784815389029511,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33101905438671175,
+            "late_session_pac": 0.18542721375839566
+          },
+          {
+            "pac_mean": 0.22916175750346782,
+            "pac_std": 0.08500578159834053,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3437426362552018,
+            "late_session_pac": 0.21170372402138696
+          },
+          {
+            "pac_mean": 0.22888448789553228,
+            "pac_std": 0.08395377981632873,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3433267318432985,
+            "late_session_pac": 0.2195534455690687
+          },
+          {
+            "pac_mean": 0.22536900942892696,
+            "pac_std": 0.07915749819417806,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3380535141433905,
+            "late_session_pac": 0.22536819203719397
+          },
+          {
+            "pac_mean": 0.22626688225597405,
+            "pac_std": 0.08742064250211906,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33940032338396114,
+            "late_session_pac": 0.2651545927533292
+          },
+          {
+            "pac_mean": 0.2229897762834249,
+            "pac_std": 0.0853647742442758,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3344846644251374,
+            "late_session_pac": 0.21509558823270541
+          }
+        ],
+        "Predictive Look-Ahead": [
+          {
+            "pac_mean": 0.18439529685048645,
+            "pac_std": 0.10132910650383888,
+            "stimulation_pct": 52.5,
+            "efficiency_ratio": 0.3512291368580694,
+            "late_session_pac": 0.15415851645786988
+          },
+          {
+            "pac_mean": 0.1795735145393537,
+            "pac_std": 0.11530351935207887,
+            "stimulation_pct": 46.5,
+            "efficiency_ratio": 0.3861796011599004,
+            "late_session_pac": 0.23600097740746465
+          },
+          {
+            "pac_mean": 0.18655702912544644,
+            "pac_std": 0.10881852958349687,
+            "stimulation_pct": 48.833333333333336,
+            "efficiency_ratio": 0.3820280459906753,
+            "late_session_pac": 0.24840758599287172
+          },
+          {
+            "pac_mean": 0.17918911488466088,
+            "pac_std": 0.10357795526110784,
+            "stimulation_pct": 49.333333333333336,
+            "efficiency_ratio": 0.36322117882025856,
+            "late_session_pac": 0.18404932367083676
+          },
+          {
+            "pac_mean": 0.17986510475784545,
+            "pac_std": 0.12102653560264413,
+            "stimulation_pct": 48.66666666666667,
+            "efficiency_ratio": 0.36958583169420295,
+            "late_session_pac": 0.14054580184957963
+          },
+          {
+            "pac_mean": 0.18352002696472453,
+            "pac_std": 0.09975254837844268,
+            "stimulation_pct": 48.333333333333336,
+            "efficiency_ratio": 0.37969660751322315,
+            "late_session_pac": 0.11804629283899497
+          },
+          {
+            "pac_mean": 0.17803169060756177,
+            "pac_std": 0.10823258220036022,
+            "stimulation_pct": 45.83333333333333,
+            "efficiency_ratio": 0.38843277950740757,
+            "late_session_pac": 0.201389576534028
+          },
+          {
+            "pac_mean": 0.17341996115056632,
+            "pac_std": 0.11280949002770115,
+            "stimulation_pct": 45.166666666666664,
+            "efficiency_ratio": 0.3839556335436893,
+            "late_session_pac": 0.0771765084248349
+          },
+          {
+            "pac_mean": 0.1698698991074646,
+            "pac_std": 0.10357124659407739,
+            "stimulation_pct": 49.666666666666664,
+            "efficiency_ratio": 0.3420199310888549,
+            "late_session_pac": 0.15957515423426963
+          },
+          {
+            "pac_mean": 0.16895597140718116,
+            "pac_std": 0.10602881999746115,
+            "stimulation_pct": 46.5,
+            "efficiency_ratio": 0.3633461750692068,
+            "late_session_pac": 0.28237568636466764
+          },
+          {
+            "pac_mean": 0.19467298654322124,
+            "pac_std": 0.10758537522965086,
+            "stimulation_pct": 50.33333333333333,
+            "efficiency_ratio": 0.38676752293355215,
+            "late_session_pac": 0.1564156753138834
+          },
+          {
+            "pac_mean": 0.18824901879859668,
+            "pac_std": 0.10841584404026533,
+            "stimulation_pct": 55.333333333333336,
+            "efficiency_ratio": 0.3402090701179458,
+            "late_session_pac": 0.10427168358735713
+          },
+          {
+            "pac_mean": 0.15809167217204517,
+            "pac_std": 0.11075551306908002,
+            "stimulation_pct": 43.5,
+            "efficiency_ratio": 0.3634291314299889,
+            "late_session_pac": 0.16631544607747722
+          },
+          {
+            "pac_mean": 0.16601315466264915,
+            "pac_std": 0.10387512072308726,
+            "stimulation_pct": 45.5,
+            "efficiency_ratio": 0.36486407618164646,
+            "late_session_pac": 0.11407576689994996
+          },
+          {
+            "pac_mean": 0.18311024404567927,
+            "pac_std": 0.10077825926551019,
+            "stimulation_pct": 51.33333333333333,
+            "efficiency_ratio": 0.35670826762145313,
+            "late_session_pac": 0.0913656602606615
+          },
+          {
+            "pac_mean": 0.16789918871734713,
+            "pac_std": 0.11253044354142655,
+            "stimulation_pct": 46.0,
+            "efficiency_ratio": 0.36499823634205897,
+            "late_session_pac": 0.2579347111581314
+          },
+          {
+            "pac_mean": 0.1805516013502268,
+            "pac_std": 0.11181530287734041,
+            "stimulation_pct": 50.0,
+            "efficiency_ratio": 0.3611032027004536,
+            "late_session_pac": 0.19806402628568426
+          },
+          {
+            "pac_mean": 0.18147859618698683,
+            "pac_std": 0.10166846779058998,
+            "stimulation_pct": 49.5,
+            "efficiency_ratio": 0.36662342664037745,
+            "late_session_pac": 0.1966963420480946
+          },
+          {
+            "pac_mean": 0.17587306849368214,
+            "pac_std": 0.1132648406025455,
+            "stimulation_pct": 49.0,
+            "efficiency_ratio": 0.35892462957894317,
+            "late_session_pac": 0.15301628533515052
+          },
+          {
+            "pac_mean": 0.18365852611012007,
+            "pac_std": 0.09516754181085121,
+            "stimulation_pct": 55.50000000000001,
+            "efficiency_ratio": 0.33091626326147755,
+            "late_session_pac": 0.16651020204192632
+          },
+          {
+            "pac_mean": 0.1701704625414454,
+            "pac_std": 0.11308312073124474,
+            "stimulation_pct": 44.333333333333336,
+            "efficiency_ratio": 0.38384314858972646,
+            "late_session_pac": 0.21671290545593486
+          },
+          {
+            "pac_mean": 0.20775738716628245,
+            "pac_std": 0.11728911242065472,
+            "stimulation_pct": 54.666666666666664,
+            "efficiency_ratio": 0.3800440009139313,
+            "late_session_pac": 0.26125214157820026
+          },
+          {
+            "pac_mean": 0.1723906736010705,
+            "pac_std": 0.10542349288374453,
+            "stimulation_pct": 50.0,
+            "efficiency_ratio": 0.344781347202141,
+            "late_session_pac": 0.09053376014150423
+          },
+          {
+            "pac_mean": 0.1711255413714778,
+            "pac_std": 0.10774131758914807,
+            "stimulation_pct": 49.0,
+            "efficiency_ratio": 0.34923579871730165,
+            "late_session_pac": 0.09666258618392645
+          },
+          {
+            "pac_mean": 0.19918644647684056,
+            "pac_std": 0.10252677366020004,
+            "stimulation_pct": 54.166666666666664,
+            "efficiency_ratio": 0.3677288242649364,
+            "late_session_pac": 0.1975733777112783
+          },
+          {
+            "pac_mean": 0.18165862107119962,
+            "pac_std": 0.11506791774213225,
+            "stimulation_pct": 49.666666666666664,
+            "efficiency_ratio": 0.36575561289503283,
+            "late_session_pac": 0.21823202476705764
+          },
+          {
+            "pac_mean": 0.19175101615916854,
+            "pac_std": 0.11628333335739585,
+            "stimulation_pct": 50.0,
+            "efficiency_ratio": 0.38350203231833707,
+            "late_session_pac": 0.21352402951068877
+          },
+          {
+            "pac_mean": 0.17242260029964077,
+            "pac_std": 0.10343308822757684,
+            "stimulation_pct": 50.16666666666667,
+            "efficiency_ratio": 0.34369953548101145,
+            "late_session_pac": 0.13156101766425995
+          },
+          {
+            "pac_mean": 0.18089339965909718,
+            "pac_std": 0.1110627141453387,
+            "stimulation_pct": 49.0,
+            "efficiency_ratio": 0.3691702033859126,
+            "late_session_pac": 0.2689117556244986
+          },
+          {
+            "pac_mean": 0.18473967163053626,
+            "pac_std": 0.11004499014285374,
+            "stimulation_pct": 49.333333333333336,
+            "efficiency_ratio": 0.3744723073591951,
+            "late_session_pac": 0.17843563679265598
+          },
+          {
+            "pac_mean": 0.17957001642136533,
+            "pac_std": 0.10170041954467315,
+            "stimulation_pct": 49.666666666666664,
+            "efficiency_ratio": 0.3615503686336215,
+            "late_session_pac": 0.18614173141183601
+          },
+          {
+            "pac_mean": 0.17127424229166743,
+            "pac_std": 0.11074021639756411,
+            "stimulation_pct": 49.5,
+            "efficiency_ratio": 0.34600857028619686,
+            "late_session_pac": 0.09134052961496446
+          },
+          {
+            "pac_mean": 0.1770050813431654,
+            "pac_std": 0.111585499648623,
+            "stimulation_pct": 43.5,
+            "efficiency_ratio": 0.406908232972794,
+            "late_session_pac": 0.0790153002278446
+          },
+          {
+            "pac_mean": 0.18246605755843798,
+            "pac_std": 0.10324535727596819,
+            "stimulation_pct": 48.0,
+            "efficiency_ratio": 0.3801376199134125,
+            "late_session_pac": 0.16278165680503737
+          },
+          {
+            "pac_mean": 0.1699183544303761,
+            "pac_std": 0.10595416877012755,
+            "stimulation_pct": 48.0,
+            "efficiency_ratio": 0.3539965717299502,
+            "late_session_pac": 0.16123621200544233
+          },
+          {
+            "pac_mean": 0.18554281505655112,
+            "pac_std": 0.11282671997894869,
+            "stimulation_pct": 54.666666666666664,
+            "efficiency_ratio": 0.33940758851808134,
+            "late_session_pac": 0.14302569588683334
+          },
+          {
+            "pac_mean": 0.1940470111496206,
+            "pac_std": 0.09842972601542303,
+            "stimulation_pct": 55.666666666666664,
+            "efficiency_ratio": 0.3485874451789592,
+            "late_session_pac": 0.237971823473875
+          },
+          {
+            "pac_mean": 0.1979577878033998,
+            "pac_std": 0.10837292016176577,
+            "stimulation_pct": 55.00000000000001,
+            "efficiency_ratio": 0.35992325055163593,
+            "late_session_pac": 0.2839032218529853
+          },
+          {
+            "pac_mean": 0.18234430549753014,
+            "pac_std": 0.1100122403612399,
+            "stimulation_pct": 47.66666666666667,
+            "efficiency_ratio": 0.38254050104376947,
+            "late_session_pac": 0.1862349396913288
+          },
+          {
+            "pac_mean": 0.1810739961146516,
+            "pac_std": 0.1083503288468151,
+            "stimulation_pct": 51.5,
+            "efficiency_ratio": 0.35159999245563417,
+            "late_session_pac": 0.06622318962584554
+          },
+          {
+            "pac_mean": 0.1785621838137495,
+            "pac_std": 0.10503959136054464,
+            "stimulation_pct": 49.166666666666664,
+            "efficiency_ratio": 0.36317732301101596,
+            "late_session_pac": 0.08371187536442233
+          },
+          {
+            "pac_mean": 0.188979698800791,
+            "pac_std": 0.1057428001004549,
+            "stimulation_pct": 53.666666666666664,
+            "efficiency_ratio": 0.35213608472197083,
+            "late_session_pac": 0.13959608308867258
+          },
+          {
+            "pac_mean": 0.19674981482398887,
+            "pac_std": 0.11461349721700748,
+            "stimulation_pct": 56.00000000000001,
+            "efficiency_ratio": 0.35133895504283724,
+            "late_session_pac": 0.19339804690902415
+          },
+          {
+            "pac_mean": 0.17289832582748887,
+            "pac_std": 0.10725007352904571,
+            "stimulation_pct": 48.0,
+            "efficiency_ratio": 0.36020484547393516,
+            "late_session_pac": 0.1706466263311336
+          },
+          {
+            "pac_mean": 0.16872645757108476,
+            "pac_std": 0.09964945159160124,
+            "stimulation_pct": 45.0,
+            "efficiency_ratio": 0.3749476834912995,
+            "late_session_pac": 0.15207287053859514
+          },
+          {
+            "pac_mean": 0.19354497349336444,
+            "pac_std": 0.10065845903727148,
+            "stimulation_pct": 52.166666666666664,
+            "efficiency_ratio": 0.3710127287412737,
+            "late_session_pac": 0.18777869690079466
+          },
+          {
+            "pac_mean": 0.19342015617894728,
+            "pac_std": 0.1155473137516119,
+            "stimulation_pct": 52.5,
+            "efficiency_ratio": 0.3684193451027567,
+            "late_session_pac": 0.28998274141473857
+          },
+          {
+            "pac_mean": 0.17642657118166413,
+            "pac_std": 0.10391172014698084,
+            "stimulation_pct": 47.66666666666667,
+            "efficiency_ratio": 0.37012567380768696,
+            "late_session_pac": 0.1995661919065734
+          },
+          {
+            "pac_mean": 0.19331221138291238,
+            "pac_std": 0.11103829507691566,
+            "stimulation_pct": 53.0,
+            "efficiency_ratio": 0.36474002147719314,
+            "late_session_pac": 0.23295168380027523
+          },
+          {
+            "pac_mean": 0.18513024239539955,
+            "pac_std": 0.10230141306467744,
+            "stimulation_pct": 50.83333333333333,
+            "efficiency_ratio": 0.3641906407778352,
+            "late_session_pac": 0.2303225842521848
+          }
+        ]
+      },
+      "description": "Current model: responsiveness decays exponentially with cumulative stim time, recovers during rest"
+    },
+    "StepFunction": {
+      "model_name": "StepFunction",
+      "model_kwargs": {
+        "threshold_sec": 30.0,
+        "drop_effectiveness": 0.3,
+        "rest_recovery_target": 0.8,
+        "recovery_rate_per_sec": 0.02
+      },
+      "summary_stats": {
+        "Fixed Schedule": {
+          "n_trials": 50,
+          "pac_mean": {
+            "mean": 0.2193003361041994,
+            "std": 0.008408892568713052,
+            "ci_lower": 0.2171016219552629,
+            "ci_upper": 0.22154732767774452
+          },
+          "pac_std": {
+            "mean": 0.085591214399456,
+            "std": 0.005018722169541828,
+            "ci_lower": 0.08416561126929935,
+            "ci_upper": 0.08704559653378595
+          },
+          "stimulation_pct": {
+            "mean": 66.66666666666664,
+            "std": 1.4355131050823087e-14,
+            "ci_lower": 66.66666666666664,
+            "ci_upper": 66.66666666666664
+          },
+          "efficiency_ratio": {
+            "mean": 0.3289505041562992,
+            "std": 0.012613338853069585,
+            "ci_lower": 0.32587142944920877,
+            "ci_upper": 0.3324762598132616
+          },
+          "late_session_pac": {
+            "mean": 0.22028489997264786,
+            "std": 0.019199223077852465,
+            "ci_lower": 0.21506835215285683,
+            "ci_upper": 0.2255101887821614
+          }
+        },
+        "Predictive Look-Ahead": {
+          "n_trials": 50,
+          "pac_mean": {
+            "mean": 0.1795864325844046,
+            "std": 0.010655937762405754,
+            "ci_lower": 0.17657623317684687,
+            "ci_upper": 0.18248500337669338
+          },
+          "pac_std": {
+            "mean": 0.10482624545637308,
+            "std": 0.006479614192096881,
+            "ci_lower": 0.10313117328500644,
+            "ci_upper": 0.10655727499954967
+          },
+          "stimulation_pct": {
+            "mean": 51.21333333333333,
+            "std": 3.818447880708479,
+            "ci_lower": 50.18966666666667,
+            "ci_upper": 52.2735
+          },
+          "efficiency_ratio": {
+            "mean": 0.35172375384114235,
+            "std": 0.023102512656569915,
+            "ci_lower": 0.3453670240551055,
+            "ci_upper": 0.35798813372986205
+          },
+          "late_session_pac": {
+            "mean": 0.18770590698559272,
+            "std": 0.0530416359925772,
+            "ci_lower": 0.17320694174509133,
+            "ci_upper": 0.20226260129830875
+          }
+        }
+      },
+      "pairwise_comparisons": [
+        {
+          "fatigue_model": "StepFunction",
+          "metric": "pac_mean",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.1795864325844046,
+          "mean_b": 0.2193003361041994,
+          "ci_a": [
+            0.176707587230646,
+            0.18255219414944918
+          ],
+          "ci_b": [
+            0.21694296155872753,
+            0.221713707208898
+          ],
+          "difference": -0.03971390351979481,
+          "relative_gain_pct": -18.109367375034466,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_p_value": 1.7763568394002505e-15,
+          "hedges_g": -4.105809505326673,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "StepFunction",
+          "metric": "pac_std",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.10482624545637308,
+          "mean_b": 0.085591214399456,
+          "ci_a": [
+            0.10306392108154762,
+            0.1065537581173628
+          ],
+          "ci_b": [
+            0.08423074766540195,
+            0.08697991068058111
+          ],
+          "difference": 0.019235031056917082,
+          "relative_gain_pct": 22.47313721610116,
+          "wilcoxon_statistic": 1.0,
+          "wilcoxon_p_value": 3.552713678800501e-15,
+          "hedges_g": 3.2935599663566224,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "StepFunction",
+          "metric": "stimulation_pct",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 51.21333333333333,
+          "mean_b": 66.66666666666664,
+          "ci_a": [
+            50.12974999999999,
+            52.29666666666666
+          ],
+          "ci_b": [
+            66.66666666666664,
+            66.66666666666664
+          ],
+          "difference": -15.453333333333312,
+          "relative_gain_pct": -23.179999999999975,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_p_value": 7.482079377523655e-10,
+          "hedges_g": -5.679436804169095,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "StepFunction",
+          "metric": "efficiency_ratio",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.35172375384114235,
+          "mean_b": 0.3289505041562992,
+          "ci_a": [
+            0.3450935954229718,
+            0.35817681823039615
+          ],
+          "ci_b": [
+            0.3251654822564879,
+            0.3325250019217623
+          ],
+          "difference": 0.022773249684843178,
+          "relative_gain_pct": 6.923001909740981,
+          "wilcoxon_statistic": 8.0,
+          "wilcoxon_p_value": 4.440892098500626e-14,
+          "hedges_g": 1.2141826169714391,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "StepFunction",
+          "metric": "late_session_pac",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.18770590698559272,
+          "mean_b": 0.22028489997264786,
+          "ci_a": [
+            0.1735249022946112,
+            0.2019693220712988
+          ],
+          "ci_b": [
+            0.21493588919173853,
+            0.22544911100767326
+          ],
+          "difference": -0.03257899298705513,
+          "relative_gain_pct": -14.78948080013672,
+          "wilcoxon_statistic": 242.0,
+          "wilcoxon_p_value": 7.155652345502972e-05,
+          "hedges_g": -0.8105052027173654,
+          "n_trials": 50
+        }
+      ],
+      "trial_data": {
+        "Fixed Schedule": [
+          {
+            "pac_mean": 0.22836935074528186,
+            "pac_std": 0.09269719804199097,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34255402611792285,
+            "late_session_pac": 0.2222315822631246
+          },
+          {
+            "pac_mean": 0.22755471128783375,
+            "pac_std": 0.08247960710251254,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3413320669317507,
+            "late_session_pac": 0.2532004719317364
+          },
+          {
+            "pac_mean": 0.22085748508974035,
+            "pac_std": 0.08373189951774941,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3312862276346106,
+            "late_session_pac": 0.21308940740957913
+          },
+          {
+            "pac_mean": 0.21518652551120535,
+            "pac_std": 0.08966139427142336,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3227797882668081,
+            "late_session_pac": 0.19882754523885768
+          },
+          {
+            "pac_mean": 0.2191501744668542,
+            "pac_std": 0.09365131086712562,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3287252617002814,
+            "late_session_pac": 0.2520635496453632
+          },
+          {
+            "pac_mean": 0.2135562800471292,
+            "pac_std": 0.08459596369808846,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3203344200706939,
+            "late_session_pac": 0.20384102420802136
+          },
+          {
+            "pac_mean": 0.20666503035670003,
+            "pac_std": 0.0855651706272029,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3099975455350501,
+            "late_session_pac": 0.1844047996046024
+          },
+          {
+            "pac_mean": 0.2281664901638689,
+            "pac_std": 0.08878088275635206,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34224973524580343,
+            "late_session_pac": 0.2162244727990911
+          },
+          {
+            "pac_mean": 0.21063850337444295,
+            "pac_std": 0.07966388061186971,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3159577550616645,
+            "late_session_pac": 0.20221933645391785
+          },
+          {
+            "pac_mean": 0.21506901582823712,
+            "pac_std": 0.08236261301276997,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32260352374235574,
+            "late_session_pac": 0.20960450929494165
+          },
+          {
+            "pac_mean": 0.20505297388570812,
+            "pac_std": 0.09744363111396298,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.30757946082856225,
+            "late_session_pac": 0.21790560765251113
+          },
+          {
+            "pac_mean": 0.20985432297933107,
+            "pac_std": 0.08888104191334645,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3147814844689967,
+            "late_session_pac": 0.21316865455441766
+          },
+          {
+            "pac_mean": 0.20788778835981733,
+            "pac_std": 0.09066939247862932,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.31183168253972604,
+            "late_session_pac": 0.21106256962964487
+          },
+          {
+            "pac_mean": 0.22647975003408172,
+            "pac_std": 0.08235861723874811,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33971962505112263,
+            "late_session_pac": 0.19671520799036218
+          },
+          {
+            "pac_mean": 0.2022517649503427,
+            "pac_std": 0.09260271270233099,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3033776474255141,
+            "late_session_pac": 0.23290519594811318
+          },
+          {
+            "pac_mean": 0.21869253668275423,
+            "pac_std": 0.0838142984536905,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3280388050241314,
+            "late_session_pac": 0.233969988878325
+          },
+          {
+            "pac_mean": 0.21783529844335553,
+            "pac_std": 0.08531557349846453,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3267529476650334,
+            "late_session_pac": 0.22786789390713008
+          },
+          {
+            "pac_mean": 0.20558337012847497,
+            "pac_std": 0.0864436769589138,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3083750551927125,
+            "late_session_pac": 0.23316433537395367
+          },
+          {
+            "pac_mean": 0.22230613092147308,
+            "pac_std": 0.08160291387173647,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3334591963822097,
+            "late_session_pac": 0.22582280780481467
+          },
+          {
+            "pac_mean": 0.2235054850452452,
+            "pac_std": 0.08494127144268217,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3352582275678679,
+            "late_session_pac": 0.23419904600897404
+          },
+          {
+            "pac_mean": 0.22199776724251924,
+            "pac_std": 0.08864026212879457,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33299665086377894,
+            "late_session_pac": 0.22975090699046027
+          },
+          {
+            "pac_mean": 0.21833336264209977,
+            "pac_std": 0.0895821139790632,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32750004396314975,
+            "late_session_pac": 0.2136602961866392
+          },
+          {
+            "pac_mean": 0.22455100147758353,
+            "pac_std": 0.08862869105840279,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3368265022163754,
+            "late_session_pac": 0.23379366729765563
+          },
+          {
+            "pac_mean": 0.2181028300966992,
+            "pac_std": 0.09435082361533606,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32715424514504887,
+            "late_session_pac": 0.22579072435238806
+          },
+          {
+            "pac_mean": 0.2209933511176108,
+            "pac_std": 0.08579020042158879,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33149002667641625,
+            "late_session_pac": 0.21058605013371587
+          },
+          {
+            "pac_mean": 0.20737064358626126,
+            "pac_std": 0.08280782815745895,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.31105596537939195,
+            "late_session_pac": 0.20343700646029492
+          },
+          {
+            "pac_mean": 0.2312774468718221,
+            "pac_std": 0.08815666665325292,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34691617030773325,
+            "late_session_pac": 0.23420097085942643
+          },
+          {
+            "pac_mean": 0.20786951111606938,
+            "pac_std": 0.08980241140041209,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.31180426667410416,
+            "late_session_pac": 0.24122784175563186
+          },
+          {
+            "pac_mean": 0.2258069339976527,
+            "pac_std": 0.08764964554278153,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33871040099647914,
+            "late_session_pac": 0.2454658925454443
+          },
+          {
+            "pac_mean": 0.2244067812130905,
+            "pac_std": 0.07922677822960496,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3366101718196358,
+            "late_session_pac": 0.2320231393859201
+          },
+          {
+            "pac_mean": 0.21452171953323926,
+            "pac_std": 0.08297771521847119,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.321782579299859,
+            "late_session_pac": 0.2205403404212938
+          },
+          {
+            "pac_mean": 0.21346616609681418,
+            "pac_std": 0.0782255209744253,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32019924914522135,
+            "late_session_pac": 0.23121081749298594
+          },
+          {
+            "pac_mean": 0.2162866732421012,
+            "pac_std": 0.0716772647429475,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3244300098631519,
+            "late_session_pac": 0.18887936845071482
+          },
+          {
+            "pac_mean": 0.21385536174693143,
+            "pac_std": 0.08463547483639186,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3207830426203972,
+            "late_session_pac": 0.23998446703131043
+          },
+          {
+            "pac_mean": 0.22183560786094422,
+            "pac_std": 0.08423607583938901,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33275341179141643,
+            "late_session_pac": 0.2357660196780031
+          },
+          {
+            "pac_mean": 0.21703610129330314,
+            "pac_std": 0.08414489040530844,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3255541519399548,
+            "late_session_pac": 0.24633058815942607
+          },
+          {
+            "pac_mean": 0.2341743781174643,
+            "pac_std": 0.08534615165598085,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.35126156717619655,
+            "late_session_pac": 0.22308825057298529
+          },
+          {
+            "pac_mean": 0.2171464482516756,
+            "pac_std": 0.08412728137848723,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3257196723775135,
+            "late_session_pac": 0.19299361499813697
+          },
+          {
+            "pac_mean": 0.21344508313385296,
+            "pac_std": 0.08553347582898845,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32016762470077953,
+            "late_session_pac": 0.16656345753797105
+          },
+          {
+            "pac_mean": 0.2182080270687057,
+            "pac_std": 0.09166243101308208,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32731204060305863,
+            "late_session_pac": 0.2273152132906034
+          },
+          {
+            "pac_mean": 0.2336112738279664,
+            "pac_std": 0.07811841519709121,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3504169107419497,
+            "late_session_pac": 0.21264374421385784
+          },
+          {
+            "pac_mean": 0.2302452165255327,
+            "pac_std": 0.08209009226655627,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34536782478829914,
+            "late_session_pac": 0.25609093209933603
+          },
+          {
+            "pac_mean": 0.21543498637223862,
+            "pac_std": 0.07725997056750873,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.323152479558358,
+            "late_session_pac": 0.24616156199138783
+          },
+          {
+            "pac_mean": 0.22323587519537683,
+            "pac_std": 0.08682490515308576,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3348538127930653,
+            "late_session_pac": 0.22970868686465334
+          },
+          {
+            "pac_mean": 0.218449696026015,
+            "pac_std": 0.0896387180793012,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3276745440390226,
+            "late_session_pac": 0.2026018448221545
+          },
+          {
+            "pac_mean": 0.23398829259955187,
+            "pac_std": 0.08911375737133703,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3509824388993279,
+            "late_session_pac": 0.21675775699634606
+          },
+          {
+            "pac_mean": 0.23035356604224333,
+            "pac_std": 0.08441910658232252,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34553034906336505,
+            "late_session_pac": 0.2183302336773857
+          },
+          {
+            "pac_mean": 0.21611754319617232,
+            "pac_std": 0.07806283743245138,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32417631479425857,
+            "late_session_pac": 0.19423568559588594
+          },
+          {
+            "pac_mean": 0.22020375787615587,
+            "pac_std": 0.09033025666822249,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33030563681423386,
+            "late_session_pac": 0.1957859606320973
+          },
+          {
+            "pac_mean": 0.2380284135403978,
+            "pac_std": 0.07923790739516477,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3570426203105968,
+            "late_session_pac": 0.21683195154079854
+          }
+        ],
+        "Predictive Look-Ahead": [
+          {
+            "pac_mean": 0.20490121664765493,
+            "pac_std": 0.11340949881237956,
+            "stimulation_pct": 59.5,
+            "efficiency_ratio": 0.34437179268513435,
+            "late_session_pac": 0.1961497059035702
+          },
+          {
+            "pac_mean": 0.180707281137939,
+            "pac_std": 0.10360140615811322,
+            "stimulation_pct": 49.333333333333336,
+            "efficiency_ratio": 0.3662985428471736,
+            "late_session_pac": 0.278259468218648
+          },
+          {
+            "pac_mean": 0.18714454067285893,
+            "pac_std": 0.10043716864559246,
+            "stimulation_pct": 54.50000000000001,
+            "efficiency_ratio": 0.3433844782988237,
+            "late_session_pac": 0.13318712437650046
+          },
+          {
+            "pac_mean": 0.16358497387417098,
+            "pac_std": 0.11181271699012395,
+            "stimulation_pct": 46.666666666666664,
+            "efficiency_ratio": 0.35053922973036644,
+            "late_session_pac": 0.17719923843126836
+          },
+          {
+            "pac_mean": 0.2016776053738751,
+            "pac_std": 0.09182361334382741,
+            "stimulation_pct": 62.66666666666667,
+            "efficiency_ratio": 0.3218259660221411,
+            "late_session_pac": 0.2272848084502347
+          },
+          {
+            "pac_mean": 0.17658773156346058,
+            "pac_std": 0.10235995552523093,
+            "stimulation_pct": 53.166666666666664,
+            "efficiency_ratio": 0.332139933975161,
+            "late_session_pac": 0.23902344227112649
+          },
+          {
+            "pac_mean": 0.1632003749229039,
+            "pac_std": 0.0957997268412398,
+            "stimulation_pct": 51.5,
+            "efficiency_ratio": 0.3168939318891338,
+            "late_session_pac": 0.24912638365619358
+          },
+          {
+            "pac_mean": 0.19118967354623748,
+            "pac_std": 0.11427378888694019,
+            "stimulation_pct": 49.666666666666664,
+            "efficiency_ratio": 0.3849456514353775,
+            "late_session_pac": 0.1685656293566492
+          },
+          {
+            "pac_mean": 0.17717205317601642,
+            "pac_std": 0.10564069580706476,
+            "stimulation_pct": 51.5,
+            "efficiency_ratio": 0.3440234042252746,
+            "late_session_pac": 0.18110163238565458
+          },
+          {
+            "pac_mean": 0.1742929456304244,
+            "pac_std": 0.11311109897634672,
+            "stimulation_pct": 49.833333333333336,
+            "efficiency_ratio": 0.34975173036205565,
+            "late_session_pac": 0.11981543092268723
+          },
+          {
+            "pac_mean": 0.1655938597424363,
+            "pac_std": 0.10345172570745381,
+            "stimulation_pct": 51.33333333333333,
+            "efficiency_ratio": 0.32258544105669407,
+            "late_session_pac": 0.19568278804549033
+          },
+          {
+            "pac_mean": 0.18339815658873043,
+            "pac_std": 0.09973351691970488,
+            "stimulation_pct": 58.833333333333336,
+            "efficiency_ratio": 0.31172491204883357,
+            "late_session_pac": 0.1953049028635456
+          },
+          {
+            "pac_mean": 0.1688070120295321,
+            "pac_std": 0.10677613356674491,
+            "stimulation_pct": 51.5,
+            "efficiency_ratio": 0.3277806058825866,
+            "late_session_pac": 0.13275856377716388
+          },
+          {
+            "pac_mean": 0.1916324278411227,
+            "pac_std": 0.10489202008439555,
+            "stimulation_pct": 52.83333333333333,
+            "efficiency_ratio": 0.3627112198885603,
+            "late_session_pac": 0.2001794018313244
+          },
+          {
+            "pac_mean": 0.16797991430712558,
+            "pac_std": 0.10023708015062663,
+            "stimulation_pct": 53.833333333333336,
+            "efficiency_ratio": 0.31203699252097633,
+            "late_session_pac": 0.18803791471909767
+          },
+          {
+            "pac_mean": 0.18437289428083242,
+            "pac_std": 0.10920935054466853,
+            "stimulation_pct": 52.5,
+            "efficiency_ratio": 0.3511864652968236,
+            "late_session_pac": 0.20152907110334517
+          },
+          {
+            "pac_mean": 0.17627925781077103,
+            "pac_std": 0.10101896428708938,
+            "stimulation_pct": 49.166666666666664,
+            "efficiency_ratio": 0.35853408368292417,
+            "late_session_pac": 0.21713768254385163
+          },
+          {
+            "pac_mean": 0.16569465683717982,
+            "pac_std": 0.1039098250791484,
+            "stimulation_pct": 50.0,
+            "efficiency_ratio": 0.33138931367435964,
+            "late_session_pac": 0.2434280545449735
+          },
+          {
+            "pac_mean": 0.18359094696783032,
+            "pac_std": 0.1122540654622613,
+            "stimulation_pct": 50.0,
+            "efficiency_ratio": 0.36718189393566064,
+            "late_session_pac": 0.20572899219516647
+          },
+          {
+            "pac_mean": 0.1796334707793521,
+            "pac_std": 0.10929719621313903,
+            "stimulation_pct": 51.5,
+            "efficiency_ratio": 0.3488028558822371,
+            "late_session_pac": 0.20104749294012134
+          },
+          {
+            "pac_mean": 0.17019204510104166,
+            "pac_std": 0.10816395228644073,
+            "stimulation_pct": 46.0,
+            "efficiency_ratio": 0.3699827067413949,
+            "late_session_pac": 0.2263960186490442
+          },
+          {
+            "pac_mean": 0.17155164568012843,
+            "pac_std": 0.09968448557921757,
+            "stimulation_pct": 49.666666666666664,
+            "efficiency_ratio": 0.34540599801368144,
+            "late_session_pac": 0.2180602091288149
+          },
+          {
+            "pac_mean": 0.18576537842296095,
+            "pac_std": 0.09735755709933938,
+            "stimulation_pct": 51.33333333333333,
+            "efficiency_ratio": 0.3618806073174564,
+            "late_session_pac": 0.1852524120663577
+          },
+          {
+            "pac_mean": 0.1858439967105905,
+            "pac_std": 0.10913260326514528,
+            "stimulation_pct": 55.666666666666664,
+            "efficiency_ratio": 0.3338514910968692,
+            "late_session_pac": 0.1795934343924483
+          },
+          {
+            "pac_mean": 0.17715153229614017,
+            "pac_std": 0.10452384640728632,
+            "stimulation_pct": 47.833333333333336,
+            "efficiency_ratio": 0.3703516354623139,
+            "late_session_pac": 0.1737414719289086
+          },
+          {
+            "pac_mean": 0.17016505357100992,
+            "pac_std": 0.09896674171104795,
+            "stimulation_pct": 52.33333333333333,
+            "efficiency_ratio": 0.3251561533204011,
+            "late_session_pac": 0.17318581727513546
+          },
+          {
+            "pac_mean": 0.18311751882220614,
+            "pac_std": 0.11864958620162673,
+            "stimulation_pct": 45.33333333333333,
+            "efficiency_ratio": 0.4039357032842783,
+            "late_session_pac": 0.19206075978288334
+          },
+          {
+            "pac_mean": 0.1673168934116191,
+            "pac_std": 0.10254377044253384,
+            "stimulation_pct": 51.33333333333333,
+            "efficiency_ratio": 0.32594200015250474,
+            "late_session_pac": 0.24525015345742923
+          },
+          {
+            "pac_mean": 0.173007527296895,
+            "pac_std": 0.09972427912485644,
+            "stimulation_pct": 46.0,
+            "efficiency_ratio": 0.3761033202106413,
+            "late_session_pac": 0.20469444199305292
+          },
+          {
+            "pac_mean": 0.17862848754908756,
+            "pac_std": 0.10322186049503412,
+            "stimulation_pct": 46.666666666666664,
+            "efficiency_ratio": 0.38277533046233053,
+            "late_session_pac": 0.1238754798547415
+          },
+          {
+            "pac_mean": 0.17125222476342344,
+            "pac_std": 0.11748084593358632,
+            "stimulation_pct": 48.0,
+            "efficiency_ratio": 0.3567754682571322,
+            "late_session_pac": 0.08679122869077435
+          },
+          {
+            "pac_mean": 0.1731720801511349,
+            "pac_std": 0.1045380371694033,
+            "stimulation_pct": 52.666666666666664,
+            "efficiency_ratio": 0.32880774712240807,
+            "late_session_pac": 0.24546455743127044
+          },
+          {
+            "pac_mean": 0.1779299597166195,
+            "pac_std": 0.0927295087267425,
+            "stimulation_pct": 53.666666666666664,
+            "efficiency_ratio": 0.33154650878873204,
+            "late_session_pac": 0.23496605658596448
+          },
+          {
+            "pac_mean": 0.16838035976063367,
+            "pac_std": 0.10236291347582281,
+            "stimulation_pct": 50.16666666666667,
+            "efficiency_ratio": 0.33564191314412023,
+            "late_session_pac": 0.14450782402807788
+          },
+          {
+            "pac_mean": 0.1728604102637616,
+            "pac_std": 0.09765945852150722,
+            "stimulation_pct": 46.666666666666664,
+            "efficiency_ratio": 0.37041516485091774,
+            "late_session_pac": 0.13906946073920967
+          },
+          {
+            "pac_mean": 0.20286840684147597,
+            "pac_std": 0.11096501978397125,
+            "stimulation_pct": 61.33333333333333,
+            "efficiency_ratio": 0.3307637068067543,
+            "late_session_pac": 0.295699485462422
+          },
+          {
+            "pac_mean": 0.18591410084019216,
+            "pac_std": 0.09999435288880965,
+            "stimulation_pct": 48.66666666666667,
+            "efficiency_ratio": 0.382015275699025,
+            "late_session_pac": 0.1683714029511044
+          },
+          {
+            "pac_mean": 0.16720986161012938,
+            "pac_std": 0.10294158356868384,
+            "stimulation_pct": 47.833333333333336,
+            "efficiency_ratio": 0.3495676549340684,
+            "late_session_pac": 0.14191211991693825
+          },
+          {
+            "pac_mean": 0.1713383224844643,
+            "pac_std": 0.0947501500637775,
+            "stimulation_pct": 51.33333333333333,
+            "efficiency_ratio": 0.33377595289181355,
+            "late_session_pac": 0.07747301421855549
+          },
+          {
+            "pac_mean": 0.17689779437429506,
+            "pac_std": 0.09773181869884227,
+            "stimulation_pct": 49.833333333333336,
+            "efficiency_ratio": 0.35497885158721415,
+            "late_session_pac": 0.23052369063019673
+          },
+          {
+            "pac_mean": 0.20522771496602482,
+            "pac_std": 0.11298076068548539,
+            "stimulation_pct": 54.666666666666664,
+            "efficiency_ratio": 0.3754165517671186,
+            "late_session_pac": 0.25758105096699957
+          },
+          {
+            "pac_mean": 0.18362450041895673,
+            "pac_std": 0.0946126696532836,
+            "stimulation_pct": 47.66666666666667,
+            "efficiency_ratio": 0.38522622465515394,
+            "late_session_pac": 0.13106465521165814
+          },
+          {
+            "pac_mean": 0.17759211906436803,
+            "pac_std": 0.11275499839365569,
+            "stimulation_pct": 50.16666666666667,
+            "efficiency_ratio": 0.3540042240485741,
+            "late_session_pac": 0.17931383048535088
+          },
+          {
+            "pac_mean": 0.19024121480552936,
+            "pac_std": 0.10801820517628212,
+            "stimulation_pct": 54.833333333333336,
+            "efficiency_ratio": 0.346944464690935,
+            "late_session_pac": 0.2563757705278744
+          },
+          {
+            "pac_mean": 0.17492772683291777,
+            "pac_std": 0.10748100881879606,
+            "stimulation_pct": 50.0,
+            "efficiency_ratio": 0.34985545366583554,
+            "late_session_pac": 0.13142893337227393
+          },
+          {
+            "pac_mean": 0.195312092954722,
+            "pac_std": 0.10846223340023052,
+            "stimulation_pct": 53.166666666666664,
+            "efficiency_ratio": 0.36735816856687525,
+            "late_session_pac": 0.29212429110371224
+          },
+          {
+            "pac_mean": 0.18037233250948143,
+            "pac_std": 0.10627907642345977,
+            "stimulation_pct": 47.333333333333336,
+            "efficiency_ratio": 0.3810683081186227,
+            "late_session_pac": 0.16121935329671946
+          },
+          {
+            "pac_mean": 0.18038431485763393,
+            "pac_std": 0.11105952439422768,
+            "stimulation_pct": 51.5,
+            "efficiency_ratio": 0.35026080554880373,
+            "late_session_pac": 0.0943471017635273
+          },
+          {
+            "pac_mean": 0.18278158696524063,
+            "pac_std": 0.10073239805777358,
+            "stimulation_pct": 53.0,
+            "efficiency_ratio": 0.3448709188023408,
+            "late_session_pac": 0.15312232410464574
+          },
+          {
+            "pac_mean": 0.1908534324470923,
+            "pac_std": 0.11275947836969358,
+            "stimulation_pct": 46.166666666666664,
+            "efficiency_ratio": 0.41340093670850314,
+            "late_session_pac": 0.09128127072693255
+          }
+        ]
+      },
+      "description": "Responsiveness drops suddenly after 30s continuous stimulation, recovers to 80% during rest"
+    },
+    "HeterogeneousPopulation": {
+      "model_name": "HeterogeneousPopulation",
+      "model_kwargs": {
+        "high_fatigue_rate": 0.025,
+        "recovery_rate": 0.03,
+        "max_fatigue": 0.7
+      },
+      "summary_stats": {
+        "Fixed Schedule": {
+          "n_trials": 50,
+          "pac_mean": {
+            "mean": 0.22196244144789318,
+            "std": 0.010404731021006051,
+            "ci_lower": 0.21901349253225452,
+            "ci_upper": 0.22481647781013547
+          },
+          "pac_std": {
+            "mean": 0.08520378367249444,
+            "std": 0.00464208116526086,
+            "ci_lower": 0.08393229435571865,
+            "ci_upper": 0.08637660533499798
+          },
+          "stimulation_pct": {
+            "mean": 66.66666666666664,
+            "std": 1.4355131050823087e-14,
+            "ci_lower": 66.66666666666664,
+            "ci_upper": 66.66666666666664
+          },
+          "efficiency_ratio": {
+            "mean": 0.33294366217183985,
+            "std": 0.01560709653150908,
+            "ci_lower": 0.3284779236530222,
+            "ci_upper": 0.33732175178708285
+          },
+          "late_session_pac": {
+            "mean": 0.222550159191443,
+            "std": 0.026729302600876123,
+            "ci_lower": 0.2152826692954367,
+            "ci_upper": 0.2301295509230127
+          }
+        },
+        "Predictive Look-Ahead": {
+          "n_trials": 50,
+          "pac_mean": {
+            "mean": 0.1816938432524247,
+            "std": 0.011004236974774742,
+            "ci_lower": 0.1788568096186804,
+            "ci_upper": 0.18501210593125822
+          },
+          "pac_std": {
+            "mean": 0.10643189895064277,
+            "std": 0.005923200808708112,
+            "ci_lower": 0.10484749690656757,
+            "ci_upper": 0.10798913978385667
+          },
+          "stimulation_pct": {
+            "mean": 50.20333333333332,
+            "std": 3.6142339540807167,
+            "ci_lower": 49.13325,
+            "ci_upper": 51.21666666666666
+          },
+          "efficiency_ratio": {
+            "mean": 0.36265434755919357,
+            "std": 0.018780108484654452,
+            "ci_lower": 0.3575183471408087,
+            "ci_upper": 0.3680850925241082
+          },
+          "late_session_pac": {
+            "mean": 0.1871167343770823,
+            "std": 0.05384511375365286,
+            "ci_lower": 0.17195165868975484,
+            "ci_upper": 0.20189396315062005
+          }
+        }
+      },
+      "pairwise_comparisons": [
+        {
+          "fatigue_model": "HeterogeneousPopulation",
+          "metric": "pac_mean",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.1816938432524247,
+          "mean_b": 0.22196244144789318,
+          "ci_a": [
+            0.17875527292808135,
+            0.1845398889470879
+          ],
+          "ci_b": [
+            0.21921712532768337,
+            0.2247612161031384
+          ],
+          "difference": -0.040268598195468464,
+          "relative_gain_pct": -18.14207752121961,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_p_value": 1.7763568394002505e-15,
+          "hedges_g": -3.731517945400639,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "HeterogeneousPopulation",
+          "metric": "pac_std",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.10643189895064277,
+          "mean_b": 0.08520378367249444,
+          "ci_a": [
+            0.10477196524016888,
+            0.10796722640437653
+          ],
+          "ci_b": [
+            0.08392816214843618,
+            0.08657794024794968
+          ],
+          "difference": 0.02122811527814833,
+          "relative_gain_pct": 24.914521824224117,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_p_value": 1.7763568394002505e-15,
+          "hedges_g": 3.958637690634081,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "HeterogeneousPopulation",
+          "metric": "stimulation_pct",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 50.20333333333332,
+          "mean_b": 66.66666666666664,
+          "ci_a": [
+            49.24666666666666,
+            51.180166666666665
+          ],
+          "ci_b": [
+            66.66666666666664,
+            66.66666666666664
+          ],
+          "difference": -16.463333333333324,
+          "relative_gain_pct": -24.694999999999993,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_p_value": 7.516019188167872e-10,
+          "hedges_g": -6.392510880356339,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "HeterogeneousPopulation",
+          "metric": "efficiency_ratio",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.36265434755919357,
+          "mean_b": 0.33294366217183985,
+          "ci_a": [
+            0.3577426087748559,
+            0.36782220509052505
+          ],
+          "ci_b": [
+            0.32904080006439235,
+            0.3373303414683439
+          ],
+          "difference": 0.02971068538735372,
+          "relative_gain_pct": 8.923637468737684,
+          "wilcoxon_statistic": 6.0,
+          "wilcoxon_p_value": 2.4868995751603507e-14,
+          "hedges_g": 1.7074961109884663,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "HeterogeneousPopulation",
+          "metric": "late_session_pac",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.1871167343770823,
+          "mean_b": 0.222550159191443,
+          "ci_a": [
+            0.17188562055104642,
+            0.20247646511921866
+          ],
+          "ci_b": [
+            0.2152867207100892,
+            0.22961109830896667
+          ],
+          "difference": -0.03543342481436071,
+          "relative_gain_pct": -15.92154548129531,
+          "wilcoxon_statistic": 191.0,
+          "wilcoxon_p_value": 5.070202146129077e-06,
+          "hedges_g": -0.8271874391169806,
+          "n_trials": 50
+        }
+      ],
+      "trial_data": {
+        "Fixed Schedule": [
+          {
+            "pac_mean": 0.2270903399110631,
+            "pac_std": 0.08953067019345712,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3406355098665947,
+            "late_session_pac": 0.23721608489306498
+          },
+          {
+            "pac_mean": 0.24919289221698623,
+            "pac_std": 0.08368768401148756,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.37378933832547945,
+            "late_session_pac": 0.23534891519838957
+          },
+          {
+            "pac_mean": 0.217484057650674,
+            "pac_std": 0.08506217408470296,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3262260864760111,
+            "late_session_pac": 0.20938713400772788
+          },
+          {
+            "pac_mean": 0.21246071796759888,
+            "pac_std": 0.0879377853661401,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3186910769513984,
+            "late_session_pac": 0.20398796817142922
+          },
+          {
+            "pac_mean": 0.2097796071790654,
+            "pac_std": 0.08424952713966141,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.31466941076859817,
+            "late_session_pac": 0.19294529203362865
+          },
+          {
+            "pac_mean": 0.22271833897366974,
+            "pac_std": 0.08561828306487303,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3340775084605047,
+            "late_session_pac": 0.24049319697507
+          },
+          {
+            "pac_mean": 0.2127532733391636,
+            "pac_std": 0.08432253579319285,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.31912991000874547,
+            "late_session_pac": 0.20670573905933173
+          },
+          {
+            "pac_mean": 0.21504182852224857,
+            "pac_std": 0.07812356885794584,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32256274278337294,
+            "late_session_pac": 0.23129078357322277
+          },
+          {
+            "pac_mean": 0.2213022434481286,
+            "pac_std": 0.09397032616083965,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.331953365172193,
+            "late_session_pac": 0.21080430075175538
+          },
+          {
+            "pac_mean": 0.20653005610605,
+            "pac_std": 0.08730448589949551,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.30979508415907503,
+            "late_session_pac": 0.27470829575780115
+          },
+          {
+            "pac_mean": 0.2266351053440125,
+            "pac_std": 0.09298256769640896,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3399526580160188,
+            "late_session_pac": 0.21270661916351535
+          },
+          {
+            "pac_mean": 0.22869490393565328,
+            "pac_std": 0.07913461785006753,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34304235590348,
+            "late_session_pac": 0.21209018520550557
+          },
+          {
+            "pac_mean": 0.22927159440593206,
+            "pac_std": 0.07979195939309326,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34390739160889816,
+            "late_session_pac": 0.2773806798542371
+          },
+          {
+            "pac_mean": 0.20907367424444862,
+            "pac_std": 0.08474512868035995,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.313610511366673,
+            "late_session_pac": 0.21567619669847599
+          },
+          {
+            "pac_mean": 0.21147299258899022,
+            "pac_std": 0.0854386300434767,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3172094888834854,
+            "late_session_pac": 0.19899697683088682
+          },
+          {
+            "pac_mean": 0.2391207218714384,
+            "pac_std": 0.08825167379381682,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.35868108280715766,
+            "late_session_pac": 0.25240408462291913
+          },
+          {
+            "pac_mean": 0.20741908772045117,
+            "pac_std": 0.08620179237757135,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.31112863158067683,
+            "late_session_pac": 0.20859788663806175
+          },
+          {
+            "pac_mean": 0.21715743971391457,
+            "pac_std": 0.0819698394221186,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32573615957087193,
+            "late_session_pac": 0.22866547169370152
+          },
+          {
+            "pac_mean": 0.22850599972774943,
+            "pac_std": 0.09045503694621781,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3427589995916242,
+            "late_session_pac": 0.24655385156488546
+          },
+          {
+            "pac_mean": 0.2336242680029908,
+            "pac_std": 0.0880358334852712,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3504364020044863,
+            "late_session_pac": 0.21357717607830165
+          },
+          {
+            "pac_mean": 0.20632117497887928,
+            "pac_std": 0.0833913700353128,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.309481762468319,
+            "late_session_pac": 0.14048475788261408
+          },
+          {
+            "pac_mean": 0.23563651572278319,
+            "pac_std": 0.09227046943046034,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3534547735841749,
+            "late_session_pac": 0.2208522723280054
+          },
+          {
+            "pac_mean": 0.21980665514910286,
+            "pac_std": 0.07645583104057688,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.32970998272365437,
+            "late_session_pac": 0.2171714407233306
+          },
+          {
+            "pac_mean": 0.23007678509244792,
+            "pac_std": 0.08707214272797904,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34511517763867194,
+            "late_session_pac": 0.2236229682070773
+          },
+          {
+            "pac_mean": 0.22139301190001562,
+            "pac_std": 0.0861565713209692,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3320895178500235,
+            "late_session_pac": 0.22827997761319752
+          },
+          {
+            "pac_mean": 0.21653061462499607,
+            "pac_std": 0.08333297575693752,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3247959219374942,
+            "late_session_pac": 0.2018659867237228
+          },
+          {
+            "pac_mean": 0.201470176401238,
+            "pac_std": 0.0874109656315148,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.30220526460185704,
+            "late_session_pac": 0.20918811562487974
+          },
+          {
+            "pac_mean": 0.2219604114717026,
+            "pac_std": 0.08456721892421117,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33294061720755397,
+            "late_session_pac": 0.20514467934527084
+          },
+          {
+            "pac_mean": 0.2248823096040508,
+            "pac_std": 0.08650529270288891,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3373234644060763,
+            "late_session_pac": 0.24150291439725613
+          },
+          {
+            "pac_mean": 0.2292708437581443,
+            "pac_std": 0.08236732298765756,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34390626563721655,
+            "late_session_pac": 0.22849335182166639
+          },
+          {
+            "pac_mean": 0.22670084464259038,
+            "pac_std": 0.08894994175798358,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34005126696388566,
+            "late_session_pac": 0.2591639407069902
+          },
+          {
+            "pac_mean": 0.2173948159192642,
+            "pac_std": 0.08149109430456807,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3260922238788964,
+            "late_session_pac": 0.21470847732854773
+          },
+          {
+            "pac_mean": 0.20576021502793213,
+            "pac_std": 0.07675401711359085,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.30864032254189827,
+            "late_session_pac": 0.1820574394040951
+          },
+          {
+            "pac_mean": 0.22799964029704248,
+            "pac_std": 0.08859507113935776,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3419994604455638,
+            "late_session_pac": 0.24336265791796877
+          },
+          {
+            "pac_mean": 0.21808497309821548,
+            "pac_std": 0.08127897552541462,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3271274596473233,
+            "late_session_pac": 0.22729960843345917
+          },
+          {
+            "pac_mean": 0.22666499497861306,
+            "pac_std": 0.0833679188632845,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.33999749246791966,
+            "late_session_pac": 0.2029233356223315
+          },
+          {
+            "pac_mean": 0.2305889920104423,
+            "pac_std": 0.0813023837209947,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34588348801566354,
+            "late_session_pac": 0.27233467015927915
+          },
+          {
+            "pac_mean": 0.22959991383845108,
+            "pac_std": 0.08103821032587259,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3443998707576767,
+            "late_session_pac": 0.24080905279228507
+          },
+          {
+            "pac_mean": 0.23401402843760374,
+            "pac_std": 0.08001502037800247,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3510210426564057,
+            "late_session_pac": 0.22631889682359338
+          },
+          {
+            "pac_mean": 0.23127829207696873,
+            "pac_std": 0.0885161371150094,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34691743811545317,
+            "late_session_pac": 0.20885302211571674
+          },
+          {
+            "pac_mean": 0.22311475489545263,
+            "pac_std": 0.08131660807934704,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.334672132343179,
+            "late_session_pac": 0.22488404243237675
+          },
+          {
+            "pac_mean": 0.21015083197271245,
+            "pac_std": 0.07950677301108862,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.31522624795906873,
+            "late_session_pac": 0.2007704813753653
+          },
+          {
+            "pac_mean": 0.22908992491268823,
+            "pac_std": 0.08209918231644696,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3436348873690324,
+            "late_session_pac": 0.22262278128129065
+          },
+          {
+            "pac_mean": 0.22520825362191402,
+            "pac_std": 0.09150902238661246,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3378123804328711,
+            "late_session_pac": 0.22943674807044537
+          },
+          {
+            "pac_mean": 0.22979595374271028,
+            "pac_std": 0.08987330161005222,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3446939306140655,
+            "late_session_pac": 0.24090807570142603
+          },
+          {
+            "pac_mean": 0.2350098991431119,
+            "pac_std": 0.09590036668450606,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3525148487146679,
+            "late_session_pac": 0.21749789576683015
+          },
+          {
+            "pac_mean": 0.2129181946426731,
+            "pac_std": 0.07987529379427605,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3193772919640097,
+            "late_session_pac": 0.15904802961935602
+          },
+          {
+            "pac_mean": 0.21748506397862982,
+            "pac_std": 0.08903836021789736,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.3262275959679448,
+            "late_session_pac": 0.22438568849104995
+          },
+          {
+            "pac_mean": 0.2325309903197108,
+            "pac_std": 0.08048532943778529,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.34879648547956627,
+            "late_session_pac": 0.21682723286467456
+          },
+          {
+            "pac_mean": 0.202053853264342,
+            "pac_std": 0.09293189502392538,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.30308077989651305,
+            "late_session_pac": 0.28715257922613513
+          }
+        ],
+        "Predictive Look-Ahead": [
+          {
+            "pac_mean": 0.1907598593187183,
+            "pac_std": 0.10549445139410431,
+            "stimulation_pct": 55.166666666666664,
+            "efficiency_ratio": 0.3457882646260755,
+            "late_session_pac": 0.19638080127489177
+          },
+          {
+            "pac_mean": 0.213302894633255,
+            "pac_std": 0.10499402356499572,
+            "stimulation_pct": 54.666666666666664,
+            "efficiency_ratio": 0.3901882218901006,
+            "late_session_pac": 0.2114172845699649
+          },
+          {
+            "pac_mean": 0.17123858063747127,
+            "pac_std": 0.10661561842516803,
+            "stimulation_pct": 49.166666666666664,
+            "efficiency_ratio": 0.3482818589236704,
+            "late_session_pac": 0.2125725513722461
+          },
+          {
+            "pac_mean": 0.17445534285315556,
+            "pac_std": 0.11241626136079443,
+            "stimulation_pct": 48.16666666666667,
+            "efficiency_ratio": 0.3621910232245444,
+            "late_session_pac": 0.13539281236987563
+          },
+          {
+            "pac_mean": 0.18431829602576474,
+            "pac_std": 0.10585023303993278,
+            "stimulation_pct": 54.166666666666664,
+            "efficiency_ratio": 0.3402799311244888,
+            "late_session_pac": 0.20409052338058806
+          },
+          {
+            "pac_mean": 0.18226152512078767,
+            "pac_std": 0.1130425350329174,
+            "stimulation_pct": 49.166666666666664,
+            "efficiency_ratio": 0.3707014070253309,
+            "late_session_pac": 0.20398832282629434
+          },
+          {
+            "pac_mean": 0.18316585995338627,
+            "pac_std": 0.107316307078794,
+            "stimulation_pct": 50.5,
+            "efficiency_ratio": 0.3627046731750223,
+            "late_session_pac": 0.16947311013364416
+          },
+          {
+            "pac_mean": 0.18868821128041102,
+            "pac_std": 0.09960947491522124,
+            "stimulation_pct": 51.83333333333333,
+            "efficiency_ratio": 0.3640287034348766,
+            "late_session_pac": 0.1588520077245006
+          },
+          {
+            "pac_mean": 0.17082647269536175,
+            "pac_std": 0.10493109556692727,
+            "stimulation_pct": 49.333333333333336,
+            "efficiency_ratio": 0.34626987708519275,
+            "late_session_pac": 0.12231392796292825
+          },
+          {
+            "pac_mean": 0.17556409539883547,
+            "pac_std": 0.10740143394588977,
+            "stimulation_pct": 52.166666666666664,
+            "efficiency_ratio": 0.336544591818854,
+            "late_session_pac": 0.21840540831074792
+          },
+          {
+            "pac_mean": 0.17238894655626086,
+            "pac_std": 0.10084323756788187,
+            "stimulation_pct": 45.0,
+            "efficiency_ratio": 0.3830865479028019,
+            "late_session_pac": 0.06989966132179541
+          },
+          {
+            "pac_mean": 0.1878295481104787,
+            "pac_std": 0.10561171436022787,
+            "stimulation_pct": 54.333333333333336,
+            "efficiency_ratio": 0.345698554804562,
+            "late_session_pac": 0.1622624750941207
+          },
+          {
+            "pac_mean": 0.19272148796954217,
+            "pac_std": 0.1224759703269208,
+            "stimulation_pct": 54.833333333333336,
+            "efficiency_ratio": 0.35146775921497053,
+            "late_session_pac": 0.28198488436687746
+          },
+          {
+            "pac_mean": 0.16325035329510282,
+            "pac_std": 0.09817071234171733,
+            "stimulation_pct": 45.83333333333333,
+            "efficiency_ratio": 0.3561825890074971,
+            "late_session_pac": 0.2078924123852578
+          },
+          {
+            "pac_mean": 0.1806458539329418,
+            "pac_std": 0.10502431304232249,
+            "stimulation_pct": 49.5,
+            "efficiency_ratio": 0.3649411190564481,
+            "late_session_pac": 0.21328186385664735
+          },
+          {
+            "pac_mean": 0.1925715264698604,
+            "pac_std": 0.10591303595555202,
+            "stimulation_pct": 49.0,
+            "efficiency_ratio": 0.39300311524461307,
+            "late_session_pac": 0.24981653105563983
+          },
+          {
+            "pac_mean": 0.16308899082417241,
+            "pac_std": 0.11360935775393283,
+            "stimulation_pct": 44.333333333333336,
+            "efficiency_ratio": 0.3678699041146746,
+            "late_session_pac": 0.15397684761239558
+          },
+          {
+            "pac_mean": 0.19638128408579883,
+            "pac_std": 0.10772990032576354,
+            "stimulation_pct": 56.166666666666664,
+            "efficiency_ratio": 0.34964026840201573,
+            "late_session_pac": 0.23810953743408975
+          },
+          {
+            "pac_mean": 0.18061210202217773,
+            "pac_std": 0.09462784452878471,
+            "stimulation_pct": 48.16666666666667,
+            "efficiency_ratio": 0.3749732221913724,
+            "late_session_pac": 0.1468128715908521
+          },
+          {
+            "pac_mean": 0.1924350496569921,
+            "pac_std": 0.10982223525916508,
+            "stimulation_pct": 50.33333333333333,
+            "efficiency_ratio": 0.38232129070925586,
+            "late_session_pac": 0.1480983756784438
+          },
+          {
+            "pac_mean": 0.16982666209427028,
+            "pac_std": 0.11096151611618348,
+            "stimulation_pct": 48.5,
+            "efficiency_ratio": 0.35015806617375317,
+            "late_session_pac": 0.07962673370220044
+          },
+          {
+            "pac_mean": 0.18423694918191796,
+            "pac_std": 0.10737801990324887,
+            "stimulation_pct": 46.833333333333336,
+            "efficiency_ratio": 0.39338850359128386,
+            "late_session_pac": 0.09427897458676732
+          },
+          {
+            "pac_mean": 0.19768317334035992,
+            "pac_std": 0.09505845315842215,
+            "stimulation_pct": 55.666666666666664,
+            "efficiency_ratio": 0.35511947306651487,
+            "late_session_pac": 0.26396619703986296
+          },
+          {
+            "pac_mean": 0.18445230864697462,
+            "pac_std": 0.10269676928451062,
+            "stimulation_pct": 48.5,
+            "efficiency_ratio": 0.3803140384473704,
+            "late_session_pac": 0.20897949826787415
+          },
+          {
+            "pac_mean": 0.1713400643060756,
+            "pac_std": 0.10724908703780207,
+            "stimulation_pct": 48.5,
+            "efficiency_ratio": 0.3532784831053105,
+            "late_session_pac": 0.23934130031926104
+          },
+          {
+            "pac_mean": 0.18312454235714334,
+            "pac_std": 0.1056798018041057,
+            "stimulation_pct": 51.0,
+            "efficiency_ratio": 0.3590677301120458,
+            "late_session_pac": 0.24569297325555747
+          },
+          {
+            "pac_mean": 0.16144427594060026,
+            "pac_std": 0.1116900843679317,
+            "stimulation_pct": 45.83333333333333,
+            "efficiency_ratio": 0.3522420565976734,
+            "late_session_pac": 0.2032773423275032
+          },
+          {
+            "pac_mean": 0.1860947135358122,
+            "pac_std": 0.10362723703441401,
+            "stimulation_pct": 47.833333333333336,
+            "efficiency_ratio": 0.3890481816079697,
+            "late_session_pac": 0.16774184946094603
+          },
+          {
+            "pac_mean": 0.19055900185287528,
+            "pac_std": 0.11437220831812749,
+            "stimulation_pct": 54.833333333333336,
+            "efficiency_ratio": 0.34752401553715856,
+            "late_session_pac": 0.2594691715993392
+          },
+          {
+            "pac_mean": 0.1801213663364114,
+            "pac_std": 0.10316884103622247,
+            "stimulation_pct": 48.16666666666667,
+            "efficiency_ratio": 0.37395439377801676,
+            "late_session_pac": 0.12528391912845876
+          },
+          {
+            "pac_mean": 0.1835086009419899,
+            "pac_std": 0.1038402822015065,
+            "stimulation_pct": 53.0,
+            "efficiency_ratio": 0.3462426432867734,
+            "late_session_pac": 0.21780104845333342
+          },
+          {
+            "pac_mean": 0.19777425651953326,
+            "pac_std": 0.10307726725956631,
+            "stimulation_pct": 54.666666666666664,
+            "efficiency_ratio": 0.36178217656012185,
+            "late_session_pac": 0.2436680512769941
+          },
+          {
+            "pac_mean": 0.16671196723191134,
+            "pac_std": 0.10189943136805475,
+            "stimulation_pct": 48.16666666666667,
+            "efficiency_ratio": 0.34611481086209966,
+            "late_session_pac": 0.1490627989656933
+          },
+          {
+            "pac_mean": 0.1697962261978469,
+            "pac_std": 0.10488637266935705,
+            "stimulation_pct": 45.33333333333333,
+            "efficiency_ratio": 0.37455049896583875,
+            "late_session_pac": 0.18128202470614
+          },
+          {
+            "pac_mean": 0.1691426888079591,
+            "pac_std": 0.10782304447001356,
+            "stimulation_pct": 52.166666666666664,
+            "efficiency_ratio": 0.3242351862133402,
+            "late_session_pac": 0.1585908226709653
+          },
+          {
+            "pac_mean": 0.19290961570823237,
+            "pac_std": 0.11258166167142102,
+            "stimulation_pct": 49.833333333333336,
+            "efficiency_ratio": 0.3871095967389278,
+            "late_session_pac": 0.1545349703050051
+          },
+          {
+            "pac_mean": 0.1739252360350193,
+            "pac_std": 0.10382271897713972,
+            "stimulation_pct": 44.5,
+            "efficiency_ratio": 0.3908432270449872,
+            "late_session_pac": 0.2738048886711299
+          },
+          {
+            "pac_mean": 0.190412583987582,
+            "pac_std": 0.10609615665580759,
+            "stimulation_pct": 52.666666666666664,
+            "efficiency_ratio": 0.36154288098907983,
+            "late_session_pac": 0.20087564536897007
+          },
+          {
+            "pac_mean": 0.17761116521791914,
+            "pac_std": 0.11592797911032708,
+            "stimulation_pct": 46.666666666666664,
+            "efficiency_ratio": 0.3805953540383982,
+            "late_session_pac": 0.2850369012538244
+          },
+          {
+            "pac_mean": 0.18271981195975984,
+            "pac_std": 0.11279142474990392,
+            "stimulation_pct": 48.66666666666667,
+            "efficiency_ratio": 0.3754516684104654,
+            "late_session_pac": 0.11386331195831538
+          },
+          {
+            "pac_mean": 0.18280619888836047,
+            "pac_std": 0.10553971308909399,
+            "stimulation_pct": 52.33333333333333,
+            "efficiency_ratio": 0.34931120806693083,
+            "late_session_pac": 0.17047427986854338
+          },
+          {
+            "pac_mean": 0.18015892848766488,
+            "pac_std": 0.0954053198959008,
+            "stimulation_pct": 53.5,
+            "efficiency_ratio": 0.3367456607246072,
+            "late_session_pac": 0.24231471802467527
+          },
+          {
+            "pac_mean": 0.17672517985751696,
+            "pac_std": 0.11773204231449767,
+            "stimulation_pct": 47.333333333333336,
+            "efficiency_ratio": 0.3733630560370076,
+            "late_session_pac": 0.14637799518635738
+          },
+          {
+            "pac_mean": 0.17834519196579643,
+            "pac_std": 0.1094007973625867,
+            "stimulation_pct": 46.666666666666664,
+            "efficiency_ratio": 0.38216826849813523,
+            "late_session_pac": 0.0884800104229828
+          },
+          {
+            "pac_mean": 0.20321252174179083,
+            "pac_std": 0.09822682309429587,
+            "stimulation_pct": 59.333333333333336,
+            "efficiency_ratio": 0.34249301417155753,
+            "late_session_pac": 0.17152074501310102
+          },
+          {
+            "pac_mean": 0.1905626291644669,
+            "pac_std": 0.09610731053516233,
+            "stimulation_pct": 54.0,
+            "efficiency_ratio": 0.35289375771197573,
+            "late_session_pac": 0.16253597571285938
+          },
+          {
+            "pac_mean": 0.17461613100732434,
+            "pac_std": 0.10845200238871831,
+            "stimulation_pct": 47.66666666666667,
+            "efficiency_ratio": 0.36632754756781327,
+            "late_session_pac": 0.1373349566713545
+          },
+          {
+            "pac_mean": 0.1644006420996754,
+            "pac_std": 0.10390806314899949,
+            "stimulation_pct": 45.83333333333333,
+            "efficiency_ratio": 0.35869231003565544,
+            "late_session_pac": 0.2029715016813961
+          },
+          {
+            "pac_mean": 0.18775368997376685,
+            "pac_std": 0.11557477542929956,
+            "stimulation_pct": 46.166666666666664,
+            "efficiency_ratio": 0.4066866930839715,
+            "late_session_pac": 0.20689865272762514
+          },
+          {
+            "pac_mean": 0.17620955839420302,
+            "pac_std": 0.10511998729250431,
+            "stimulation_pct": 54.166666666666664,
+            "efficiency_ratio": 0.3253099539585287,
+            "late_session_pac": 0.25572724990527523
+          }
+        ]
+      },
+      "description": "50% of subjects have NO fatigue, 50% have HIGH fatigue (rate=0.025), matching real data's 49/51% habituation split"
+    },
+    "SaturationModel": {
+      "model_name": "SaturationModel",
+      "model_kwargs": {
+        "depletion_rate": 0.003,
+        "restoration_rate": 0.001,
+        "floor": 0.12
+      },
+      "summary_stats": {
+        "Fixed Schedule": {
+          "n_trials": 50,
+          "pac_mean": {
+            "mean": 0.17767547792088562,
+            "std": 0.0058604772918133315,
+            "ci_lower": 0.17602136567676976,
+            "ci_upper": 0.17925820313805105
+          },
+          "pac_std": {
+            "mean": 0.07178058427546968,
+            "std": 0.004879799044689565,
+            "ci_lower": 0.0704739896613556,
+            "ci_upper": 0.07314509798449222
+          },
+          "stimulation_pct": {
+            "mean": 66.66666666666664,
+            "std": 1.4355131050823087e-14,
+            "ci_lower": 66.66666666666664,
+            "ci_upper": 66.66666666666664
+          },
+          "efficiency_ratio": {
+            "mean": 0.26651321688132845,
+            "std": 0.00879071593772,
+            "ci_lower": 0.26433938324751116,
+            "ci_upper": 0.2688201413581629
+          },
+          "late_session_pac": {
+            "mean": 0.1467680121733629,
+            "std": 0.020738503979996378,
+            "ci_lower": 0.14121410630723694,
+            "ci_upper": 0.1525107524489684
+          }
+        },
+        "Predictive Look-Ahead": {
+          "n_trials": 50,
+          "pac_mean": {
+            "mean": 0.1528171550955924,
+            "std": 0.008298692180188874,
+            "ci_lower": 0.15053647444748205,
+            "ci_upper": 0.1550883045719761
+          },
+          "pac_std": {
+            "mean": 0.08491627552387719,
+            "std": 0.0060983077292293885,
+            "ci_lower": 0.08324285102762528,
+            "ci_upper": 0.0865425678296073
+          },
+          "stimulation_pct": {
+            "mean": 48.32333333333333,
+            "std": 3.5116279148345,
+            "ci_lower": 47.353249999999996,
+            "ci_upper": 49.2905
+          },
+          "efficiency_ratio": {
+            "mean": 0.3170694656718256,
+            "std": 0.01724948683261072,
+            "ci_lower": 0.31260592524739367,
+            "ci_upper": 0.3220636665272544
+          },
+          "late_session_pac": {
+            "mean": 0.1348707785571616,
+            "std": 0.03116768786947101,
+            "ci_lower": 0.12672817024419764,
+            "ci_upper": 0.14293846867220644
+          }
+        }
+      },
+      "pairwise_comparisons": [
+        {
+          "fatigue_model": "SaturationModel",
+          "metric": "pac_mean",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.1528171550955924,
+          "mean_b": 0.17767547792088562,
+          "ci_a": [
+            0.1504014905619758,
+            0.1549238223215072
+          ],
+          "ci_b": [
+            0.17602123610557052,
+            0.179334483740824
+          ],
+          "difference": -0.02485832282529321,
+          "relative_gain_pct": -13.990857441994326,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_p_value": 1.7763568394002505e-15,
+          "hedges_g": -3.4337886956802834,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "SaturationModel",
+          "metric": "pac_std",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.08491627552387719,
+          "mean_b": 0.07178058427546968,
+          "ci_a": [
+            0.08313858231137636,
+            0.08658440445277654
+          ],
+          "ci_b": [
+            0.07044051168210004,
+            0.07314890993747682
+          ],
+          "difference": 0.013135691248407508,
+          "relative_gain_pct": 18.299783125193233,
+          "wilcoxon_statistic": 6.0,
+          "wilcoxon_p_value": 2.4868995751603507e-14,
+          "hedges_g": 2.360215116509729,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "SaturationModel",
+          "metric": "stimulation_pct",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 48.32333333333333,
+          "mean_b": 66.66666666666664,
+          "ci_a": [
+            47.329916666666676,
+            49.31041666666667
+          ],
+          "ci_b": [
+            66.66666666666664,
+            66.66666666666664
+          ],
+          "difference": -18.343333333333312,
+          "relative_gain_pct": -27.51499999999998,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_p_value": 7.526228061894623e-10,
+          "hedges_g": -7.33060352620295,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "SaturationModel",
+          "metric": "efficiency_ratio",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.3170694656718256,
+          "mean_b": 0.26651321688132845,
+          "ci_a": [
+            0.3125051334470762,
+            0.3219472423383269
+          ],
+          "ci_b": [
+            0.2643013425418901,
+            0.2689730640503066
+          ],
+          "difference": 0.05055624879049714,
+          "relative_gain_pct": 18.969509048029146,
+          "wilcoxon_statistic": 0.0,
+          "wilcoxon_p_value": 1.7763568394002505e-15,
+          "hedges_g": 3.664650578011728,
+          "n_trials": 50
+        },
+        {
+          "fatigue_model": "SaturationModel",
+          "metric": "late_session_pac",
+          "method_a": "Predictive Look-Ahead",
+          "method_b": "Fixed Schedule",
+          "mean_a": 0.1348707785571616,
+          "mean_b": 0.1467680121733629,
+          "ci_a": [
+            0.1262243970485951,
+            0.14362917390008975
+          ],
+          "ci_b": [
+            0.14091951213073947,
+            0.15221621735765034
+          ],
+          "difference": -0.01189723361620132,
+          "relative_gain_pct": -8.106148908079687,
+          "wilcoxon_statistic": 284.0,
+          "wilcoxon_p_value": 0.0004506016805585489,
+          "hedges_g": -0.4459824884501922,
+          "n_trials": 50
+        }
+      ],
+      "trial_data": {
+        "Fixed Schedule": [
+          {
+            "pac_mean": 0.1689470629889191,
+            "pac_std": 0.0696483778930074,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2534205944833787,
+            "late_session_pac": 0.1377647790855275
+          },
+          {
+            "pac_mean": 0.1783341385032461,
+            "pac_std": 0.06842435084092514,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2675012077548692,
+            "late_session_pac": 0.1606820770384081
+          },
+          {
+            "pac_mean": 0.17630907895568526,
+            "pac_std": 0.07113525997937509,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.26446361843352795,
+            "late_session_pac": 0.16570024233520686
+          },
+          {
+            "pac_mean": 0.18105450264710246,
+            "pac_std": 0.06669872857705705,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.27158175397065376,
+            "late_session_pac": 0.1246840215655589
+          },
+          {
+            "pac_mean": 0.17279113150119324,
+            "pac_std": 0.07704691535478737,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.25918669725178994,
+            "late_session_pac": 0.1222378549877189
+          },
+          {
+            "pac_mean": 0.18011174628656273,
+            "pac_std": 0.07361432813586222,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2701676194298442,
+            "late_session_pac": 0.17753405968904964
+          },
+          {
+            "pac_mean": 0.17850692875598878,
+            "pac_std": 0.073216182273665,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.26776039313398325,
+            "late_session_pac": 0.14413321915278296
+          },
+          {
+            "pac_mean": 0.17631468936818243,
+            "pac_std": 0.07585441033694597,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2644720340522737,
+            "late_session_pac": 0.10788387426590006
+          },
+          {
+            "pac_mean": 0.17483866114130917,
+            "pac_std": 0.07416340948699504,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2622579917119638,
+            "late_session_pac": 0.15098871698853775
+          },
+          {
+            "pac_mean": 0.18338456117376623,
+            "pac_std": 0.07518198424931745,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2750768417606494,
+            "late_session_pac": 0.11281482514614583
+          },
+          {
+            "pac_mean": 0.1756237389725251,
+            "pac_std": 0.06399151506679737,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2634356084587877,
+            "late_session_pac": 0.18284934849531403
+          },
+          {
+            "pac_mean": 0.17535241789567715,
+            "pac_std": 0.07011131534932337,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2630286268435158,
+            "late_session_pac": 0.14588061557337692
+          },
+          {
+            "pac_mean": 0.1735444801960964,
+            "pac_std": 0.07099841536574049,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.26031672029414465,
+            "late_session_pac": 0.16006680465112327
+          },
+          {
+            "pac_mean": 0.17557247239501952,
+            "pac_std": 0.07703685063398234,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.26335870859252936,
+            "late_session_pac": 0.11189657811797322
+          },
+          {
+            "pac_mean": 0.17936729545818758,
+            "pac_std": 0.07045586405401666,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.26905094318728145,
+            "late_session_pac": 0.11392797684393544
+          },
+          {
+            "pac_mean": 0.18779878889201085,
+            "pac_std": 0.068856796542159,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.28169818333801633,
+            "late_session_pac": 0.1446111933195565
+          },
+          {
+            "pac_mean": 0.18007556839565445,
+            "pac_std": 0.07828062447838785,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.27011335259348174,
+            "late_session_pac": 0.13105467910952678
+          },
+          {
+            "pac_mean": 0.17870857299708287,
+            "pac_std": 0.07215273893860939,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.26806285949562436,
+            "late_session_pac": 0.14407500623642805
+          },
+          {
+            "pac_mean": 0.16273355436948145,
+            "pac_std": 0.07331058084996252,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.24410033155422223,
+            "late_session_pac": 0.14441015059201032
+          },
+          {
+            "pac_mean": 0.1794505951864973,
+            "pac_std": 0.06375603076896266,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.269175892779746,
+            "late_session_pac": 0.1569533228076983
+          },
+          {
+            "pac_mean": 0.18239521248351062,
+            "pac_std": 0.06696895955633454,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.273592818725266,
+            "late_session_pac": 0.17979855794628066
+          },
+          {
+            "pac_mean": 0.186596603771305,
+            "pac_std": 0.0715181011610701,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.27989490565695757,
+            "late_session_pac": 0.1477531782688493
+          },
+          {
+            "pac_mean": 0.17691280569805937,
+            "pac_std": 0.0730078265439531,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2653692085470891,
+            "late_session_pac": 0.16223407625085168
+          },
+          {
+            "pac_mean": 0.17697356230901878,
+            "pac_std": 0.07350664093518035,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.26546034346352826,
+            "late_session_pac": 0.11936507204326714
+          },
+          {
+            "pac_mean": 0.1779439666596536,
+            "pac_std": 0.07469020088694664,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2669159499894804,
+            "late_session_pac": 0.15722600516300372
+          },
+          {
+            "pac_mean": 0.17301762871622547,
+            "pac_std": 0.07324733468921774,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.25952644307433825,
+            "late_session_pac": 0.1542993300307392
+          },
+          {
+            "pac_mean": 0.17954371444785858,
+            "pac_std": 0.06418071927250123,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.26931557167178793,
+            "late_session_pac": 0.169455201516226
+          },
+          {
+            "pac_mean": 0.16698004634225097,
+            "pac_std": 0.06865213931566186,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2504700695133765,
+            "late_session_pac": 0.15647260178830227
+          },
+          {
+            "pac_mean": 0.16930406350446223,
+            "pac_std": 0.07342741188433634,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2539560952566934,
+            "late_session_pac": 0.12726052795422527
+          },
+          {
+            "pac_mean": 0.17975391087334386,
+            "pac_std": 0.06942009998059856,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.26963086631001587,
+            "late_session_pac": 0.13958948415545483
+          },
+          {
+            "pac_mean": 0.19273924015577865,
+            "pac_std": 0.06779641201497898,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.28910886023366805,
+            "late_session_pac": 0.15878373826340458
+          },
+          {
+            "pac_mean": 0.18345445206111952,
+            "pac_std": 0.08256628243625648,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2751816780916793,
+            "late_session_pac": 0.15721739846044094
+          },
+          {
+            "pac_mean": 0.17176750105893623,
+            "pac_std": 0.06675903585359073,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2576512515884044,
+            "late_session_pac": 0.17344685456949854
+          },
+          {
+            "pac_mean": 0.1712054776835873,
+            "pac_std": 0.07958366655300313,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.256808216525381,
+            "late_session_pac": 0.1253649344152327
+          },
+          {
+            "pac_mean": 0.17658149921242422,
+            "pac_std": 0.06899088284283394,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2648722488186364,
+            "late_session_pac": 0.1365241778239129
+          },
+          {
+            "pac_mean": 0.18659812919710053,
+            "pac_std": 0.07303819595665276,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.27989719379565087,
+            "late_session_pac": 0.14749986200406662
+          },
+          {
+            "pac_mean": 0.1886248559000714,
+            "pac_std": 0.07846203109571515,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.28293728385010714,
+            "late_session_pac": 0.15234984723821005
+          },
+          {
+            "pac_mean": 0.17836312512690022,
+            "pac_std": 0.06601469745591197,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2675446876903504,
+            "late_session_pac": 0.17723314725257927
+          },
+          {
+            "pac_mean": 0.17093600439350387,
+            "pac_std": 0.07875706019252052,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.25640400659025586,
+            "late_session_pac": 0.13330229261740348
+          },
+          {
+            "pac_mean": 0.1767824451200089,
+            "pac_std": 0.0726224187034067,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.26517366768001344,
+            "late_session_pac": 0.12005111546614582
+          },
+          {
+            "pac_mean": 0.17599073675667534,
+            "pac_std": 0.07814623976839372,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2639861051350131,
+            "late_session_pac": 0.16821347597242284
+          },
+          {
+            "pac_mean": 0.18303410150470423,
+            "pac_std": 0.06396444376622952,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2745511522570564,
+            "late_session_pac": 0.1886144209693999
+          },
+          {
+            "pac_mean": 0.17544376199151987,
+            "pac_std": 0.07438068347800228,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.26316564298727985,
+            "late_session_pac": 0.14898075846060396
+          },
+          {
+            "pac_mean": 0.1795885325453512,
+            "pac_std": 0.07155112053815817,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.26938279881802685,
+            "late_session_pac": 0.14509090857151646
+          },
+          {
+            "pac_mean": 0.17033996736166437,
+            "pac_std": 0.07132173572478259,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.25550995104249663,
+            "late_session_pac": 0.12423723727758713
+          },
+          {
+            "pac_mean": 0.18597902052344856,
+            "pac_std": 0.059750570783329716,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2789685307851729,
+            "late_session_pac": 0.13556165556265284
+          },
+          {
+            "pac_mean": 0.18493109712849315,
+            "pac_std": 0.0676905562620932,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2773966456927398,
+            "late_session_pac": 0.1693106669909362
+          },
+          {
+            "pac_mean": 0.17366656222688853,
+            "pac_std": 0.08126284235305498,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2604998433403329,
+            "late_session_pac": 0.1420005620217255
+          },
+          {
+            "pac_mean": 0.17502724102976122,
+            "pac_std": 0.0748668277652236,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.2625408615446419,
+            "late_session_pac": 0.16733765992900745
+          },
+          {
+            "pac_mean": 0.1744786441804667,
+            "pac_std": 0.06894939682766643,
+            "stimulation_pct": 66.66666666666666,
+            "efficiency_ratio": 0.26171796627070015,
+            "late_session_pac": 0.11367651368241946
+          }
+        ],
+        "Predictive Look-Ahead": [
+          {
+            "pac_mean": 0.13382969600955993,
+            "pac_std": 0.08932228836592356,
+            "stimulation_pct": 42.5,
+            "efficiency_ratio": 0.31489340237543517,
+            "late_session_pac": 0.08231376847132431
+          },
+          {
+            "pac_mean": 0.16176487853620428,
+            "pac_std": 0.0711039009819283,
+            "stimulation_pct": 54.50000000000001,
+            "efficiency_ratio": 0.2968162908921179,
+            "late_session_pac": 0.12203349044551978
+          },
+          {
+            "pac_mean": 0.14506840764259324,
+            "pac_std": 0.08012648241504505,
+            "stimulation_pct": 44.333333333333336,
+            "efficiency_ratio": 0.3272219721261501,
+            "late_session_pac": 0.15851527681534766
+          },
+          {
+            "pac_mean": 0.1473454356860902,
+            "pac_std": 0.08527747501268662,
+            "stimulation_pct": 42.5,
+            "efficiency_ratio": 0.3466951427908005,
+            "late_session_pac": 0.12016991062068874
+          },
+          {
+            "pac_mean": 0.1535016058463022,
+            "pac_std": 0.07926635908049354,
+            "stimulation_pct": 52.0,
+            "efficiency_ratio": 0.2951953958582735,
+            "late_session_pac": 0.10505871502802482
+          },
+          {
+            "pac_mean": 0.16340676615248745,
+            "pac_std": 0.07590077231754953,
+            "stimulation_pct": 55.833333333333336,
+            "efficiency_ratio": 0.2926688348999775,
+            "late_session_pac": 0.14411560683478974
+          },
+          {
+            "pac_mean": 0.15874331702299838,
+            "pac_std": 0.07671891286440465,
+            "stimulation_pct": 51.83333333333333,
+            "efficiency_ratio": 0.30625720325980393,
+            "late_session_pac": 0.16537656356529587
+          },
+          {
+            "pac_mean": 0.15776216402285975,
+            "pac_std": 0.09476622257759003,
+            "stimulation_pct": 53.0,
+            "efficiency_ratio": 0.2976644604204901,
+            "late_session_pac": 0.0920563588540946
+          },
+          {
+            "pac_mean": 0.15451789283444967,
+            "pac_std": 0.07328588656630783,
+            "stimulation_pct": 50.16666666666667,
+            "efficiency_ratio": 0.30800908870654414,
+            "late_session_pac": 0.14336376345810972
+          },
+          {
+            "pac_mean": 0.1592346399648016,
+            "pac_std": 0.09535632364207454,
+            "stimulation_pct": 49.666666666666664,
+            "efficiency_ratio": 0.3206066576472516,
+            "late_session_pac": 0.05427940975155664
+          },
+          {
+            "pac_mean": 0.1487306406288091,
+            "pac_std": 0.08359315932150069,
+            "stimulation_pct": 46.5,
+            "efficiency_ratio": 0.3198508400619551,
+            "late_session_pac": 0.1675137963243195
+          },
+          {
+            "pac_mean": 0.14803626178068274,
+            "pac_std": 0.08395400899906016,
+            "stimulation_pct": 46.33333333333333,
+            "efficiency_ratio": 0.31950272326766066,
+            "late_session_pac": 0.1006159809387704
+          },
+          {
+            "pac_mean": 0.14033909362142194,
+            "pac_std": 0.085291144727122,
+            "stimulation_pct": 43.0,
+            "efficiency_ratio": 0.32636998516609755,
+            "late_session_pac": 0.16984084540889935
+          },
+          {
+            "pac_mean": 0.15165580512671173,
+            "pac_std": 0.08583486105673482,
+            "stimulation_pct": 49.833333333333336,
+            "efficiency_ratio": 0.3043260303546055,
+            "late_session_pac": 0.11650236800160498
+          },
+          {
+            "pac_mean": 0.15317188745918106,
+            "pac_std": 0.09130335805170686,
+            "stimulation_pct": 47.833333333333336,
+            "efficiency_ratio": 0.3202199737822601,
+            "late_session_pac": 0.12115693989830424
+          },
+          {
+            "pac_mean": 0.1583742800952955,
+            "pac_std": 0.08737274733932,
+            "stimulation_pct": 44.333333333333336,
+            "efficiency_ratio": 0.357235218260065,
+            "late_session_pac": 0.11643829350763439
+          },
+          {
+            "pac_mean": 0.15676658736874935,
+            "pac_std": 0.07664476450298999,
+            "stimulation_pct": 47.833333333333336,
+            "efficiency_ratio": 0.32773502585801256,
+            "late_session_pac": 0.1159651617949717
+          },
+          {
+            "pac_mean": 0.1500067826717183,
+            "pac_std": 0.08607499236882667,
+            "stimulation_pct": 44.333333333333336,
+            "efficiency_ratio": 0.33836116392116905,
+            "late_session_pac": 0.10080703392248
+          },
+          {
+            "pac_mean": 0.13909862106472948,
+            "pac_std": 0.09009883256646616,
+            "stimulation_pct": 50.66666666666667,
+            "efficiency_ratio": 0.27453675210143974,
+            "late_session_pac": 0.10925706169761701
+          },
+          {
+            "pac_mean": 0.15596265315911068,
+            "pac_std": 0.07884443498931072,
+            "stimulation_pct": 48.0,
+            "efficiency_ratio": 0.3249221940814806,
+            "late_session_pac": 0.15635704319220198
+          },
+          {
+            "pac_mean": 0.15668607072921806,
+            "pac_std": 0.08433823154543381,
+            "stimulation_pct": 47.0,
+            "efficiency_ratio": 0.33337461857280437,
+            "late_session_pac": 0.19383537564326883
+          },
+          {
+            "pac_mean": 0.16343972368720497,
+            "pac_std": 0.08949784550624659,
+            "stimulation_pct": 50.33333333333333,
+            "efficiency_ratio": 0.32471468282226157,
+            "late_session_pac": 0.1251188008676582
+          },
+          {
+            "pac_mean": 0.1550203941522255,
+            "pac_std": 0.08448327596081663,
+            "stimulation_pct": 49.666666666666664,
+            "efficiency_ratio": 0.31212159896421243,
+            "late_session_pac": 0.15229105936523865
+          },
+          {
+            "pac_mean": 0.15284506442112097,
+            "pac_std": 0.08497341281601803,
+            "stimulation_pct": 48.66666666666667,
+            "efficiency_ratio": 0.31406520086531703,
+            "late_session_pac": 0.1603940292865941
+          },
+          {
+            "pac_mean": 0.15066660010487218,
+            "pac_std": 0.08564774655250136,
+            "stimulation_pct": 47.5,
+            "efficiency_ratio": 0.3171928423260467,
+            "late_session_pac": 0.17320031318735876
+          },
+          {
+            "pac_mean": 0.14718171222792276,
+            "pac_std": 0.08874454022738737,
+            "stimulation_pct": 48.5,
+            "efficiency_ratio": 0.30346744789262425,
+            "late_session_pac": 0.12482535995203532
+          },
+          {
+            "pac_mean": 0.14990949032572837,
+            "pac_std": 0.09102239291858497,
+            "stimulation_pct": 46.833333333333336,
+            "efficiency_ratio": 0.3200914384179253,
+            "late_session_pac": 0.17467292723330383
+          },
+          {
+            "pac_mean": 0.13662900763319763,
+            "pac_std": 0.09469958922778228,
+            "stimulation_pct": 42.833333333333336,
+            "efficiency_ratio": 0.31897822793742636,
+            "late_session_pac": 0.11513393282731968
+          },
+          {
+            "pac_mean": 0.14429611404392623,
+            "pac_std": 0.0916245299076647,
+            "stimulation_pct": 48.333333333333336,
+            "efficiency_ratio": 0.2985436842288129,
+            "late_session_pac": 0.11142550627293663
+          },
+          {
+            "pac_mean": 0.1500800465983526,
+            "pac_std": 0.07744735137507398,
+            "stimulation_pct": 45.5,
+            "efficiency_ratio": 0.3298462562601156,
+            "late_session_pac": 0.1342491056151174
+          },
+          {
+            "pac_mean": 0.17391073842160434,
+            "pac_std": 0.07543808149001513,
+            "stimulation_pct": 51.0,
+            "efficiency_ratio": 0.3410014478854987,
+            "late_session_pac": 0.1429475620523021
+          },
+          {
+            "pac_mean": 0.164924191166318,
+            "pac_std": 0.08235999951508886,
+            "stimulation_pct": 54.166666666666664,
+            "efficiency_ratio": 0.3044754298455102,
+            "late_session_pac": 0.1472285227373145
+          },
+          {
+            "pac_mean": 0.14812240675685737,
+            "pac_std": 0.0859726989615094,
+            "stimulation_pct": 50.83333333333333,
+            "efficiency_ratio": 0.2913883411610309,
+            "late_session_pac": 0.1564378465327865
+          },
+          {
+            "pac_mean": 0.14609548558773927,
+            "pac_std": 0.09015802965769859,
+            "stimulation_pct": 48.16666666666667,
+            "efficiency_ratio": 0.30331242682575627,
+            "late_session_pac": 0.10932686086952786
+          },
+          {
+            "pac_mean": 0.14244747282914014,
+            "pac_std": 0.08577336597327068,
+            "stimulation_pct": 43.666666666666664,
+            "efficiency_ratio": 0.32621558663161865,
+            "late_session_pac": 0.11865676603756253
+          },
+          {
+            "pac_mean": 0.15734513454228924,
+            "pac_std": 0.08847154446374848,
+            "stimulation_pct": 46.166666666666664,
+            "efficiency_ratio": 0.3408197860121788,
+            "late_session_pac": 0.1715137287937319
+          },
+          {
+            "pac_mean": 0.1675322223174884,
+            "pac_std": 0.08175671884460786,
+            "stimulation_pct": 50.33333333333333,
+            "efficiency_ratio": 0.3328454748029571,
+            "late_session_pac": 0.14723651839812602
+          },
+          {
+            "pac_mean": 0.1502274707646487,
+            "pac_std": 0.08492878117270851,
+            "stimulation_pct": 46.666666666666664,
+            "efficiency_ratio": 0.3219160087813901,
+            "late_session_pac": 0.18076015227319278
+          },
+          {
+            "pac_mean": 0.15038516472006966,
+            "pac_std": 0.08358046608248754,
+            "stimulation_pct": 50.83333333333333,
+            "efficiency_ratio": 0.2958396683017764,
+            "late_session_pac": 0.07267129609127455
+          },
+          {
+            "pac_mean": 0.14536763536628355,
+            "pac_std": 0.08041697827256328,
+            "stimulation_pct": 43.333333333333336,
+            "efficiency_ratio": 0.3354637739221928,
+            "late_session_pac": 0.12753429814995576
+          },
+          {
+            "pac_mean": 0.1572817231542029,
+            "pac_std": 0.08849223731096172,
+            "stimulation_pct": 50.83333333333333,
+            "efficiency_ratio": 0.3094066685000713,
+            "late_session_pac": 0.15535785750362752
+          },
+          {
+            "pac_mean": 0.1676161181459363,
+            "pac_std": 0.08133463758864969,
+            "stimulation_pct": 54.50000000000001,
+            "efficiency_ratio": 0.30755251035951614,
+            "late_session_pac": 0.1718215350046037
+          },
+          {
+            "pac_mean": 0.14117863121395088,
+            "pac_std": 0.08920871609364323,
+            "stimulation_pct": 40.166666666666664,
+            "efficiency_ratio": 0.3514820694123259,
+            "late_session_pac": 0.18136904083663125
+          },
+          {
+            "pac_mean": 0.1518140131663519,
+            "pac_std": 0.09030051081185968,
+            "stimulation_pct": 47.0,
+            "efficiency_ratio": 0.32300853865181256,
+            "late_session_pac": 0.12467244729739442
+          },
+          {
+            "pac_mean": 0.14675912054076087,
+            "pac_std": 0.0852679249998506,
+            "stimulation_pct": 49.0,
+            "efficiency_ratio": 0.29950840926685895,
+            "late_session_pac": 0.12070334237719985
+          },
+          {
+            "pac_mean": 0.1596230562148189,
+            "pac_std": 0.08343258795553798,
+            "stimulation_pct": 49.5,
+            "efficiency_ratio": 0.3224708206359978,
+            "late_session_pac": 0.08976754599890877
+          },
+          {
+            "pac_mean": 0.16314011627066824,
+            "pac_std": 0.07125082708930523,
+            "stimulation_pct": 47.66666666666667,
+            "efficiency_ratio": 0.34225199217622704,
+            "late_session_pac": 0.1761940219626285
+          },
+          {
+            "pac_mean": 0.15737025460699272,
+            "pac_std": 0.08635762003294008,
+            "stimulation_pct": 52.33333333333333,
+            "efficiency_ratio": 0.3007074928796039,
+            "late_session_pac": 0.14480349994779237
+          },
+          {
+            "pac_mean": 0.15374995656256915,
+            "pac_std": 0.09480670462082388,
+            "stimulation_pct": 50.33333333333333,
+            "efficiency_ratio": 0.3054634898594089,
+            "late_session_pac": 0.1583586804325069
+          },
+          {
+            "pac_mean": 0.1518952018124028,
+            "pac_std": 0.09388950147203685,
+            "stimulation_pct": 49.5,
+            "efficiency_ratio": 0.3068589935604097,
+            "late_session_pac": 0.11929360577862666
+          }
+        ]
+      },
+      "description": "PAC ceiling decays over session time (synaptic adaptation), partial recovery during rest"
+    }
+  }
+}

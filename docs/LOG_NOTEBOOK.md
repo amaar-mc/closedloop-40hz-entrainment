@@ -981,6 +981,68 @@ Real data experiments with these variants require the processed EEG dataset and 
 
 ---
 
+<a id="section-10b"></a>
+### February 21, 2026 (continued) - Fatigue Model Robustness and ML Compliance
+
+#### Fatigue Model Sensitivity Analysis
+
+**Problem I needed to address:** A judge could reasonably ask: "Did you construct the fatigue model to favor your adaptive scheduling approach?" The exponential decay model used in the main results is just one possible way neural habituation might work. If the adaptive advantage only holds for that specific model, the result is fragile.
+
+**Approach:** I built four fundamentally different fatigue model implementations and ran the full comparison (Fixed Schedule vs Predictive Look-Ahead, n=50 trials, 600 seconds each) under each one:
+
+1. **Exponential Decay** (the original model): Responsiveness decays exponentially with cumulative stimulation time, recovers gradually during rest. Parameters: fatigue_rate=0.008, recovery_rate=0.03, max_fatigue=0.7.
+2. **Step Function**: Responsiveness drops suddenly after 30 seconds of continuous stimulation (like a neural refractory period), then slowly recovers to 80% during rest. This tests whether the advantage holds under a threshold-based mechanism instead of a gradual one.
+3. **Heterogeneous Population**: 50% of simulated subjects have zero fatigue, 50% have high fatigue (rate=0.025). This directly models the 49/51% habituation split I found in the real data. Tests whether the adaptive advantage holds when half the population does not need it.
+4. **Saturation Model**: PAC ceiling depletes over total session time (modeling synaptic adaptation), with partial recovery during rest. Parameters: depletion_rate=0.003, restoration_rate=0.001, floor=0.12. This is the most conservative model because even rest does not fully reverse the decline.
+
+**Results:**
+
+| Fatigue Model | Fixed Eff. | Adaptive Eff. | Gain | p-value | Hedges' g |
+|---------------|-----------|---------------|------|---------|-----------|
+| Exponential Decay | 0.335 | 0.365 | +9.0% | 1.78e-15 | 2.31 |
+| Step Function | 0.329 | 0.352 | +6.9% | 4.44e-14 | 1.21 |
+| Heterogeneous Pop. | 0.333 | 0.363 | +8.9% | 2.49e-14 | 1.71 |
+| Saturation Model | 0.267 | 0.317 | +19.0% | 1.78e-15 | 3.66 |
+
+**Key observation:** The adaptive advantage is robust across all four fatigue model types. The Saturation Model shows the largest gain (+19.0%) because fixed scheduling wastes the most stimulation when the PAC ceiling itself depletes. The Step Function shows the smallest gain (+6.9%) because the threshold mechanism creates less gradual deterioration for the controller to exploit. But even in the worst case, the effect is large (g = 1.21) and highly significant.
+
+**What this means:** The adaptive scheduling advantage is not an artifact of one particular fatigue model. It holds under exponential decay, step-function, heterogeneous populations, and synaptic saturation. Four different mechanistic assumptions, same qualitative conclusion.
+
+#### Synopsys 2026 ML/AI Compliance Audit
+
+I researched the Synopsys 2026 rules for ML/AI projects. Starting in 2026, there are 6 mandatory requirements plus a requirement to test at least 2 of 5 quality criteria. I audited the project against each one:
+
+**6 Mandatory Requirements:**
+1. Data Source Traceability: OpenNeuro ds005048 (Lahijanian et al. 2024), publicly available, de-identified. PASS.
+2. AI Rationale: TCN chosen for causal temporal prediction (dilations prevent future leakage). EEGNet chosen for compact EEG processing. Both justified by dataset size (17K samples). PASS.
+3. Data Curation Plan: Artifact rejection at +/-100 uV, 7 frontal channels selected, subject-level splits, NaN exclusion. PASS.
+4. Unique Insights: Horizon sweep (TCN predicts at 5-10s where baselines fail), habituation variability (49/51% split), adaptive efficiency gains. PASS.
+5. Model Development Plan: Parameter counts sized for dataset. Dilations [1,2,4,8] chosen for 44-second receptive field. 4+ architectural variants tested. PASS.
+6. Validation Strategy: Subject-level train/val/test splits (24/5/6). Shuffle-label sanity check. No subject in multiple splits. PASS.
+
+**Quality Criteria (must test at least 2 of 5):**
+- Accuracy: TESTED. R-squared, RMSE, correlation at 6 horizons with 3 baselines.
+- Generalizability: TESTED. 6 held-out test subjects never seen during training or model selection.
+- Interpretability: TESTED. Ridge feature ablation (PAC features R-squared=0.859 vs spectral-only R-squared=0.045). Shuffle-label test. Attention weight analysis script ready.
+- Fairness: N/A (not a decision system affecting people).
+- Scalability: PARTIAL (1,457 and 31,000 params enable embedded deployment, but no formal latency benchmark).
+
+**We test 3 of 5 criteria.** This exceeds the minimum of 2.
+
+I updated the poster board's Data Integrity section to explicitly signal these compliance points.
+
+#### Interpretability Analysis Scripts
+
+I wrote `rigor/experiments/tcn_interpretability.py` to perform three analyses when the model checkpoint is available:
+
+1. **Attention Weight Analysis**: Captures the AttentionPool1D weights across the test set to reveal which past timesteps the model weights most heavily. If the model focuses on the most recent 2-3 timesteps, it is functionally similar to persistence. If it attends to broader temporal patterns, it has learned something nontrivial.
+2. **Feature Group Ablation**: Zeros out feature groups (PAC, Spectral, Stimulation Context) and measures R-squared drop. This extends the Ridge ablation to the TCN itself.
+3. **Stimulation-Conditional Performance**: Splits test data by stimulation state (stim_on vs stim_off) and computes R-squared for each condition. This reveals whether the model performs better when the brain is being stimulated vs resting.
+
+These scripts are ready to run when the checkpoint file is available. The feature ablation and attention analysis directly address the Synopsys interpretability criterion.
+
+---
+
 <a id="section-11"></a>
 ## Section 11: Reflection and Summary
 
@@ -1093,5 +1155,5 @@ That is the most important thing I learned from this project: in research, integ
 *Notebook completed: February 21, 2026*
 *Total project duration: December 10, 2025 to February 21, 2026 (74 days)*
 *Active development days: approximately 20*
-*Total lines of code: approximately 5,400 (production) + several thousand more in archived experiments*
-*Commits on main branch: 24*
+*Total lines of code: approximately 6,000 (production) + several thousand more in archived experiments*
+*Commits on main branch: 24, plus 8+ on rigor branch*

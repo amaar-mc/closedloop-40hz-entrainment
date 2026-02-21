@@ -15,7 +15,7 @@ Using EEG recordings from 35 dementia patients (OpenNeuro ds005048), I computed 
 
 The central finding is a horizon sweep across prediction distances. At 1-2 second horizons, simple baselines perform well. At 5-10 second horizons, all baselines collapse to negative R-squared, while the TCN maintains R-squared of 0.24-0.28, a margin of +0.5 R-squared units.
 
-In closed-loop simulation with fatigue modeling (n = 50 trials, 600 seconds each), adaptive scheduling was significantly more efficient than fixed scheduling (Wilcoxon p < 0.001, Hedges' g = 2.28), achieving 80% of fixed-schedule entrainment using only 49% stimulation time. The efficiency advantage increased with fatigue severity (+9.0% to +11.2%, all p < 0.001). Real patient data confirmed that 49% of subjects habituate while 51% do not, validating the need for personalized adaptive control.
+In closed-loop simulation with fatigue modeling (n = 50 trials, 600 seconds each), adaptive scheduling was significantly more efficient than fixed scheduling (Wilcoxon p < 0.001, Hedges' g = 2.28), achieving 80% of fixed-schedule entrainment using only 49% stimulation time. The efficiency advantage increased with fatigue severity (+9.0% to +11.2%, all p < 0.001). The advantage held across four different fatigue model assumptions (gains +6.9% to +19.0%, all p < 10^-13). Real patient data confirmed that 49% of subjects habituate while 51% do not, validating the need for personalized adaptive control.
 
 ---
 
@@ -146,10 +146,22 @@ Suggested visual: Grouped bar chart. X-axis: fatigue severity (None, Mild, Moder
 **[FIGURE 5: Histogram or dot plot]**
 Suggested visual: Horizontal dot plot or lollipop chart showing PAC change (%) for each of the 35 subjects, sorted from most negative to most positive. Color dots red for subjects showing decline and blue for subjects showing increase. Label extreme cases: sub-35 at -66.8%, sub-19 at -57.0%, sub-20 at +93.0%, sub-27 at +149.1%. Draw a vertical dashed line at 0%. Note that population-level p = 0.542 (not significant), but 49% decline and 51% increase. This variability is the core argument for adaptive scheduling.
 
-**Data Integrity:**
-- Subject-level splits: 6 held-out test subjects never seen during training or model selection
+**Result 4 -- Fatigue Model Robustness:**
+Adaptive advantage tested under 4 different fatigue model assumptions (n = 50 trials each):
+
+- Exponential Decay: +9.0%, p = 1.8e-15, Hedges' g = 2.31
+- Step Function (threshold-based): +6.9%, p = 4.4e-14, Hedges' g = 1.21
+- Heterogeneous Population (50/50 split): +8.9%, p = 2.5e-14, Hedges' g = 1.71
+- Saturation Model (synaptic depletion): +19.0%, p = 1.8e-15, Hedges' g = 3.66
+
+**Interpretation:** The adaptive scheduling advantage is robust across all fatigue model types, not an artifact of one particular simulation assumption. Gains range from +6.9% to +19.0% with large effect sizes.
+
+**Data Integrity and Model Validation:**
+- Subject-level splits: 6 held-out test subjects never seen during training or model selection (generalizability)
 - Shuffle-label test: R-squared = -0.332 (model learns real signal, not artifacts)
 - Causal dataset construction verified (no future information leakage)
+- Feature ablation: PAC features account for R-squared = 0.859; spectral-only features give R-squared = 0.045 (interpretability)
+- 8 architectures tested (1.5K to 1.1M parameters); all converge near R-squared = 0.287, confirming data ceiling not model limitation
 
 ---
 
@@ -157,6 +169,7 @@ Suggested visual: Horizontal dot plot or lollipop chart showing PAC change (%) f
 
 - The causal TCN predicts future entrainment at 5-10 second horizons (R-squared = 0.24-0.28) where all baselines fail (R-squared < 0), providing +0.5 R-squared margin at the operationally relevant range
 - Adaptive scheduling achieves 80% of fixed-schedule entrainment using only 49% stimulation time, with +9-11% efficiency gains (all p < 0.001, n = 50 trials)
+- The adaptive advantage is robust across 4 different fatigue model assumptions (+6.9% to +19.0%, all p < 10^-13)
 - Half of patients habituate to stimulation; the other half do not, validating the need for personalized scheduling
 - Lightweight models (1,457 and 31,000 parameters) enable real-time embedded deployment
 
@@ -196,14 +209,14 @@ Suggested visual: Horizontal dot plot or lollipop chart showing PAC change (%) f
 - Research Question: ~25 words
 - Hypothesis / Engineering Goal: ~45 words
 - Methods: ~115 words
-- Results text: ~85 words
-- Conclusions: ~80 words
+- Results text: ~120 words
+- Conclusions: ~95 words
 - Broader Impact: ~35 words
 - Further Research: ~30 words
-- Data Integrity: ~25 words
-- **Total: ~515 words**
+- Data Integrity: ~50 words
+- **Total: ~590 words**
 
-Within acceptable range. If further trimming needed, reduce Methods data pipeline to 2 bullets.
+Within acceptable range. If further trimming needed, reduce Methods data pipeline to 2 bullets or compress Result 4 into a single bullet.
 
 ---
 
@@ -216,5 +229,6 @@ Within acceptable range. If further trimming needed, reduce Methods data pipelin
 | Fig 3: Horizon Sweep | Line graph (3 lines) | 6 horizons x 3 methods R-squared values | Center panel, below Results header |
 | Fig 4: Fatigue Sensitivity | Grouped bar chart | 6 fatigue levels x 2 strategies efficiency | Right panel, Result 2 |
 | Fig 5: Individual Habituation | Dot/lollipop chart | 35 subjects, PAC % change | Right panel, Result 3 |
+| Fig 6: Fatigue Model Robustness | Grouped bar chart (4 groups) | 4 fatigue models x 2 strategies | Right panel, Result 4 (optional, space permitting) |
 
 All figures should use a clean white background, large axis labels (minimum 18pt), and a colorblind-safe palette (blue/orange/green).
