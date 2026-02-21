@@ -178,7 +178,7 @@ Full results: [`FINDINGS.md`](FINDINGS.md)
 1. Iaccarino et al. (2016). Gamma frequency entrainment attenuates amyloid load. *Nature*, 540, 230-235.
 2. Tort et al. (2010). Measuring phase-amplitude coupling. *J Neurophysiology*, 104(2), 1195-1210.
 3. Lawhern et al. (2018). EEGNet: compact CNN for EEG-based BCIs. *J Neural Engineering*, 15(5), 056013.
-4. Lahijanian et al. (2024). Auditory gamma-band entrainment in dementia. *Scientific Reports*, 14.
+4. Lahijanian et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. *Scientific Reports*, 14, 13153.
 
 ## Author
 

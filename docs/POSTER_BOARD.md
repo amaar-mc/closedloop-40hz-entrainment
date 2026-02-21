@@ -56,7 +56,7 @@ Amaar Chughtai
 
 ### INTRODUCTION / BACKGROUND (48-72pt header, 24pt+ body)
 
-- 40 Hz sound stimulation synchronizes brain gamma waves, triggering amyloid plaque clearance in Alzheimer's disease (Iaccarino et al., 2016)
+- 40 Hz sensory stimulation synchronizes brain gamma waves, reducing amyloid pathology in Alzheimer's models (Iaccarino et al., 2016; Martorell et al., 2019)
 - Clinical trials use fixed schedules: 40 seconds stimulation, 20 seconds rest, repeated for one hour
 - Fixed timing ignores individual brain responses and neural habituation to repetitive stimulation
 - Phase-amplitude coupling (PAC) between theta (4-8 Hz) and gamma (38-42 Hz) rhythms quantifies entrainment strength (Tort et al., 2010)
@@ -98,7 +98,7 @@ Suggested visual: Two-panel schematic. Left side shows a fixed schedule waveform
 - Larger models (120K-1.1M params) tested; all overfit or converged at same R-squared, confirming data ceiling
 
 **Closed-Loop Simulation:**
-- Compared four control strategies: Fixed Schedule, Reactive, Predictive, and Oracle (perfect knowledge)
+- Compared four control strategies: Fixed Schedule, Reactive, Predictive (trend-based), and Oracle (perfect knowledge)
 - Modeled neural fatigue at six severity levels to test robustness
 - 50 trials per condition, 600 seconds each, Wilcoxon signed-rank tests, bootstrap 95% CIs, Hedges' g effect sizes
 
@@ -198,10 +198,13 @@ Adaptive advantage tested under 4 different fatigue model assumptions (n = 50 tr
 ### REFERENCES (48-72pt header, 24pt body)
 
 1. Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. *Nature*, 540(7632), 230-235.
-2. Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. *Journal of Neurophysiology*, 104(2), 1195-1210.
-3. Lawhern, V. J., et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. *Journal of Neural Engineering*, 15(5), 056013.
-4. Lahijanian, B., et al. (2024). 40 Hz auditory entrainment in dementia patients. *Scientific Reports*, 14.
-5. Thompson, R. F., & Spencer, W. A. (1966). Habituation: A model phenomenon for the study of neuronal substrates of behavior. *Psychological Review*, 73(1), 16-43.
+2. Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. *Cell*, 177(2), 256-271.
+3. Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. *Journal of Neurophysiology*, 104(2), 1195-1210.
+4. Lawhern, V. J., et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. *Journal of Neural Engineering*, 15(5), 056013.
+5. Lahijanian, M., et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. *Scientific Reports*, 14, 13153.
+6. Thompson, R. F., & Spencer, W. A. (1966). Habituation: A model phenomenon for the study of neuronal substrates of behavior. *Psychological Review*, 73(1), 16-43.
+
+**AI Disclosure:** AI coding assistant (Claude Code) used for code development. All experimental design, data analysis, and scientific interpretation are the student's own work.
 
 ---
 
