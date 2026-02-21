@@ -281,6 +281,23 @@ The larger sample size reveals that the adaptive advantage is significant even w
 
 Full results: `rigor/rigorous_validation_results.json`
 
+#### 4.4.5 Fatigue Model Sensitivity Analysis
+
+A critical robustness question: does the adaptive scheduling advantage depend on the specific fatigue model used? To test this, we implemented four fundamentally different fatigue mechanisms and ran the full comparison (n=50 trials, 600s each) under each:
+
+| Fatigue Model | Fixed Eff. | Adaptive Eff. | Gain | p-value | Hedges' g |
+|---------------|-----------|---------------|------|---------|-----------|
+| Exponential Decay (original) | 0.335 | 0.365 | +9.0% | 1.8e-15 | 2.31 |
+| Step Function (threshold) | 0.329 | 0.352 | +6.9% | 4.4e-14 | 1.21 |
+| Heterogeneous Population (50/50 split) | 0.333 | 0.363 | +8.9% | 2.5e-14 | 1.71 |
+| Saturation Model (synaptic depletion) | 0.267 | 0.317 | +19.0% | 1.8e-15 | 3.66 |
+
+The adaptive advantage is robust across all four fatigue model types (all p < 10^-13, all Hedges' g > 1.0). The Saturation Model produces the largest gain (+19.0%, g=3.66) because fixed scheduling wastes the most stimulation when the PAC ceiling itself depletes. The Step Function produces the smallest gain (+6.9%, g=1.21) because the threshold mechanism creates less opportunity for gradual optimization.
+
+This addresses the concern that simulation results might be artifacts of one particular fatigue model assumption.
+
+Full results: `rigor/experiments/fatigue_model_sensitivity_results.json`
+
 ---
 
 ## 5. Key Findings
@@ -289,7 +306,7 @@ Full results: `rigor/rigorous_validation_results.json`
 
 1. **The TCN predicts future PAC where nothing else can.** At 5-10 second horizons, persistence and Ridge regression produce negative R^2 (useless), while the TCN maintains R^2 ~ 0.25. This is the critical horizon range for a proactive controller.
 
-2. **Adaptive scheduling is more efficient than fixed scheduling when habituation is present.** This is statistically significant (p < 0.01) and the advantage grows with fatigue severity.
+2. **Adaptive scheduling is more efficient than fixed scheduling when habituation is present.** This is statistically significant (p < 0.001) and the advantage grows with fatigue severity. The result is robust across four fundamentally different fatigue model assumptions (exponential decay, step function, heterogeneous population, synaptic saturation), with gains ranging from +6.9% to +19.0%.
 
 3. **The system generalizes across subjects without per-subject fine-tuning.** Z-score normalization of PAC targets handles the main source of inter-subject variability (magnitude). The temporal dynamics of entrainment are consistent enough across individuals.
 
