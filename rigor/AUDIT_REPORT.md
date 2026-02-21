@@ -59,7 +59,7 @@ Nowhere are confidence intervals computed for any metric.
 
 `np.var(values[0])` where `values[0]` is a single float returns 0.0, making Cohen's d astronomically large.
 
-**Resolution:** Fixed in rigor/rigorous_validation.py with proper Hedge's g computation.
+**Resolution:** Fixed in rigor/rigorous_validation.py with proper Hedges' g computation.
 
 ### 3.4 EEGNet Under-Parameterized
 **File:** src/eegnet.py

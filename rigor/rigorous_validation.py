@@ -6,12 +6,12 @@ Fixes all statistical issues present in the original src/validation.py:
   2. Both EntrainmentSimulator and FatigueAwareSimulator
   3. Correct accumulation of per-trial metrics (no overwrite)
   4. ANOVA on arrays of trial metrics, not single scalars
-  5. Cohen's d / Hedge's g from within-group variance with real trial data
+  5. Cohen's d / Hedges' g from within-group variance with real trial data
   6. Wilcoxon signed-rank tests for pairwise nonparametric comparisons
   7. Bootstrap 95% confidence intervals (1000 resamples)
   8. Reproducible random seeds per trial batch
   9. Population-diverse simulator (randomized tau/pac parameters per subject)
-  10. Effect sizes (Hedge's g) for all pairwise comparisons
+  10. Effect sizes (Hedges' g) for all pairwise comparisons
   11. Detailed JSON output with trial-level data and all statistics
   12. Fatigue severity sweep across multiple fatigue_rate values
 
@@ -282,7 +282,7 @@ def bootstrap_ci(
 
 
 def hedges_g(group_a: np.ndarray, group_b: np.ndarray) -> float:
-    """Compute Hedge's g (bias-corrected Cohen's d).
+    """Compute Hedges' g (bias-corrected Cohen's d).
 
     Uses pooled standard deviation with Bessel correction and
     the standard Hedge's correction factor J.
@@ -292,7 +292,7 @@ def hedges_g(group_a: np.ndarray, group_b: np.ndarray) -> float:
         group_b: Observations for group B.
 
     Returns:
-        Effect size (Hedge's g). Positive means group_a > group_b.
+        Effect size (Hedges' g). Positive means group_a > group_b.
     """
     n_a = len(group_a)
     n_b = len(group_b)
@@ -758,7 +758,7 @@ def compute_all_statistics(
         wilcoxon_results[metric] = pairwise_wilcoxon(data_by_method, metric)
     output["wilcoxon"] = wilcoxon_results
 
-    # Hedge's g for all pairwise comparisons
+    # Hedges' g for all pairwise comparisons
     effect_sizes: Dict[str, Any] = {}
     for metric in METRIC_FIELDS:
         metric_effects: List[Dict[str, Any]] = []
@@ -848,8 +848,8 @@ def print_wilcoxon_table(
 def print_effect_sizes_predictive_vs_fixed(
     effect_sizes: Dict[str, Any],
 ) -> None:
-    """Print Hedge's g for Predictive vs Fixed across all metrics."""
-    print("\nEffect sizes (Hedge's g): Predictive Look-Ahead vs Fixed Schedule")
+    """Print Hedges' g for Predictive vs Fixed across all metrics."""
+    print("\nEffect sizes (Hedges' g): Predictive Look-Ahead vs Fixed Schedule")
     print(f"  {'Metric':<25s} | {'Hedge g':>10s} | {'Interpretation':<20s}")
     print("  " + "-" * 60)
 
