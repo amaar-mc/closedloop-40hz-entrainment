@@ -267,9 +267,9 @@ How does the adaptive advantage scale with habituation severity?
 
 #### 4.4.4 Rigorous Re-Evaluation (rigor/ branch, Feb 21 2026)
 
-The results above (Sections 4.4.1-4.4.3) were generated with n=10 trials. A statistically rigorous reanalysis using `rigor/rigorous_validation.py` with n=50 trials per condition, 600s each, bootstrap 95% CIs, and proper Hedge's g effect sizes produces stronger results:
+The results above (Sections 4.4.1-4.4.3) were generated with n=10 trials. A statistically rigorous reanalysis using `rigor/rigorous_validation.py` with n=50 trials per condition, 600s each, bootstrap 95% CIs, and proper Hedges' g effect sizes produces stronger results:
 
-| Condition | Fixed Efficiency | Predictive Efficiency | Gain | Wilcoxon p | Hedge's g |
+| Condition | Fixed Efficiency | Predictive Efficiency | Gain | Wilcoxon p | Hedges' g |
 |-----------|-----------------|----------------------|------|-----------|-----------|
 | Standard (no fatigue) | 0.343 [0.340, 0.345] | 0.371 [0.367, 0.375] | +8.2% | < 0.001 | 2.28 |
 | Fatigue (default) | 0.333 [0.330, 0.336] | 0.363 [0.359, 0.367] | +8.9% | < 0.001 | 2.37 |
@@ -277,7 +277,7 @@ The results above (Sections 4.4.1-4.4.3) were generated with n=10 trials. A stat
 
 Fatigue sweep (n=50 per level): gains range from +9.0% to +11.2%, all p < 0.001.
 
-The larger sample size reveals that the adaptive advantage is significant even without fatigue (the n=10 analysis lacked power to detect this). The effect size is large (Hedge's g > 2) under standard conditions and remains moderate (g = 0.44) with population-diverse simulator parameters (randomized tau/pac per simulated subject).
+The larger sample size reveals that the adaptive advantage is significant even without fatigue (the n=10 analysis lacked power to detect this). The effect size is large (Hedges' g > 2) under standard conditions and remains moderate (g = 0.44) with population-diverse simulator parameters (randomized tau/pac per simulated subject).
 
 Full results: `rigor/rigorous_validation_results.json`
 
