@@ -139,6 +139,12 @@ I chose the Modulation Index over other methods (Mean Vector Length, GLM-based) 
 
 ---
 
+### December 23-26, 2025 - Holiday Break
+
+No project work during this period (Christmas break with family).
+
+---
+
 ### December 27, 2025 - Architecture Planning
 
 **What I did:** Evaluated machine learning architecture options for predicting PAC from EEG.
@@ -161,6 +167,12 @@ I considered traditional ML (Random Forest, XGBoost), CNNs (including EEGNet fro
 4. **Oracle:** Perfect knowledge of future PAC (theoretical upper bound, impossible in practice)
 
 I formalized the predictive approach: at each timestep, measure the EEG window, predict PAC several seconds ahead, apply a decision rule based on personalized z-score thresholds, and hold the action for a minimum of 5 seconds to prevent rapid switching (hysteresis). The 5-second hold time was a design decision. I chose it because the brain's response to stimulation onset is not instantaneous; you need a few seconds to observe the effect. Shorter hold times would cause the controller to oscillate; longer hold times would make it sluggish.
+
+---
+
+### December 31, 2025 - January 2, 2026 - New Year's Break
+
+No project work during this period (New Year's break).
 
 ---
 
@@ -198,6 +210,27 @@ That last point was the trickiest. When I first read the .fdt data and reshaped 
 **What I learned:** This was my first experience with the reality that data is never as clean as the documentation suggests. I had to write a completely custom HDF5 reader using the h5py library instead of relying on standard tools. It was tedious and I got stuck multiple times, but it taught me a lot about low-level data formats. The Fortran-order issue scared me because I could have easily continued with wrong data and never noticed.
 
 I also explored the BIDS events.tsv files during this period. These contain the onset time, duration, and type (Stimulus or Rest) for each block. This information would be critical later for segmenting the data into stimulation and rest periods and for computing stimulation context features.
+
+---
+
+### January 16 - February 4, 2026 - School Commitments and Continued Reading
+
+**What happened:** For most of this period, I was balancing school semester workload (midterms and finals prep) with continued reading for the project. I did not write any code during these three weeks, but I continued studying the literature and planning the pipeline architecture in my physical notebook.
+
+**Reading I did during this period:**
+- Re-read the Iaccarino et al. (2016) paper more carefully, paying attention to the 40 Hz specificity and microglia activation mechanism
+- Read Martorell et al. (2019) on multi-sensory (audio + visual) gamma stimulation, which showed broader effects than auditory alone
+- Studied the Tort et al. (2010) Modulation Index method in detail, working through the math by hand
+- Read Lawhern et al. (2018) on EEGNet architecture to understand depthwise separable convolutions for EEG
+- Read Thompson and Spencer (1966) on habituation to understand the neuroscience behind why the brain might stop responding to repetitive stimulation
+
+**Planning notes from my paper notebook:**
+- Decided on the modular architecture (data loader, preprocessor, PAC computation, model, controller, simulator as separate files) after reading about software engineering best practices for research code
+- Sketched out the data flow: raw .set/.fdt files, through preprocessing, into PAC computation, producing labeled windows
+- Noted that I would need subject-level train/val/test splits to prevent data leakage between subjects
+- Started thinking about what a closed-loop controller would look like: sense PAC, decide, act
+
+I did not commit any code during this period because there was no code to commit yet. The transition from reading to coding happened in early February when I had a clearer picture of the full system.
 
 ---
 
@@ -948,7 +981,7 @@ Fatigue sensitivity sweep (n=50 trials per level, using FatigueAwareSimulator; t
 | High (0.025) | 0.319 | 0.354 | +10.8% | < 0.001 |
 | Severe (0.040) | 0.316 | 0.352 | +11.2% | < 0.001 |
 
-Every single condition was significant at p < 0.001 with Hedges' g > 2.0. The general increase from +9.0% to +11.2% confirmed the dose-response relationship with fatigue severity (with a small non-monotonic dip at moderate fatigue, +9.0% vs +9.5% at none). The numbers were much larger than the original n=10 run because the rigorous validation used a different efficiency metric (PAC mean / stimulation fraction) and bootstrapped confidence intervals.
+Every single condition was significant at p < 0.001 with large effect sizes (Hedges' g = 1.7 to 2.4). The general increase from +9.0% to +11.2% confirmed the dose-response relationship with fatigue severity (with a small non-monotonic dip at moderate fatigue, +9.0% vs +9.5% at none). The numbers were much larger than the original n=10 run because the rigorous validation used a different efficiency metric (PAC mean / stimulation fraction) and bootstrapped confidence intervals.
 
 The population-diverse condition (randomized simulator parameters across subjects) also showed significant adaptive advantage (Hedges' g = 0.44, p < 0.001), though the effect size was smaller because inter-subject variability adds noise.
 
