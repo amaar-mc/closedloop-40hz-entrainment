@@ -93,8 +93,9 @@ Suggested visual: Two-panel schematic. Left side shows a fixed schedule waveform
 - Computed PAC using the Modulation Index method (theta phase crossed with gamma amplitude)
 
 **Two Neural Networks (sized for 17,283-sample dataset to avoid overfitting):**
-- EEGNet: 1,457 parameters (12 samples/param), estimates PAC from a single 2-second EEG window in real time (Lawhern et al., 2018)
-- Causal TCN: 31,000 parameters, predicts future PAC from 20-step history using dilated causal convolutions (left-padded only, no future leakage) with 44-second receptive field. Larger models (120K-1.1M params) were tested and overfit.
+- EEGNet: 1,457 parameters (12 samples/param), estimates PAC from raw EEG in real time (Lawhern et al., 2018)
+- Causal TCN: 31,000 parameters, predicts future PAC from 20-step history with dilated causal convolutions and 44-second receptive field
+- Larger models (120K-1.1M params) tested; all overfit or converged at same R-squared, confirming data ceiling
 
 **Closed-Loop Simulation:**
 - Compared four control strategies: Fixed Schedule, Reactive, Predictive, and Oracle (perfect knowledge)
@@ -139,7 +140,7 @@ Suggested visual: Grouped bar chart. X-axis: fatigue severity (None, Mild, Moder
 - High (rate=0.025): Fixed 0.319, Adaptive 0.354 (+10.8%, p < 0.001**)
 - Severe (rate=0.040): Fixed 0.316, Adaptive 0.352 (+11.2%, p < 0.001**)
 
-**Interpretation:** At all fatigue levels (6/6), adaptive scheduling is significantly more efficient (all p < 0.001, Wilcoxon signed-rank, Hedges' g > 2.0). The advantage generally increases from +9.0% to +11.2% with fatigue severity.
+**Interpretation:** At all fatigue levels (6/6), adaptive scheduling is significantly more efficient (all p < 0.001, Wilcoxon signed-rank, large effect sizes with Hedges' g = 1.7-2.4). The advantage generally increases from +9.0% to +11.2% with fatigue severity.
 
 **Result 3 -- Individual Habituation Variability:**
 
@@ -167,8 +168,9 @@ Adaptive advantage tested under 4 different fatigue model assumptions (n = 50 tr
 
 ### CONCLUSIONS / DISCUSSION (48-72pt header)
 
-- The causal TCN predicts future entrainment at 5-10 second horizons (R-squared = 0.24-0.28) where all baselines fail (R-squared < 0), providing +0.5 R-squared margin at the operationally relevant range
-- Adaptive scheduling achieves 80% of fixed-schedule entrainment using only 49% stimulation time, with +9-11% efficiency gains (all p < 0.001, n = 50 trials)
+- At 5-10 second horizons, the causal TCN maintains R-squared = 0.24-0.28 while all baselines collapse below zero
+- This +0.5 R-squared margin exists at the operationally relevant range for proactive control
+- Adaptive scheduling achieves 80% entrainment using 49% stimulation time (+9-11% efficiency, all p < 0.001)
 - The adaptive advantage is robust across 4 different fatigue model assumptions (+6.9% to +19.0%, all p < 10^-13)
 - Half of patients habituate to stimulation; the other half do not, validating the need for personalized scheduling
 - Lightweight models (1,457 and 31,000 parameters) enable real-time embedded deployment
@@ -210,11 +212,11 @@ Adaptive advantage tested under 4 different fatigue model assumptions (n = 50 tr
 - Hypothesis / Engineering Goal: ~45 words
 - Methods: ~115 words
 - Results text: ~120 words
-- Conclusions: ~95 words
+- Conclusions: ~105 words
 - Broader Impact: ~35 words
 - Further Research: ~30 words
 - Data Integrity: ~50 words
-- **Total: ~590 words**
+- **Total: ~600 words**
 
 Within acceptable range. If further trimming needed, reduce Methods data pipeline to 2 bullets or compress Result 4 into a single bullet.
 
