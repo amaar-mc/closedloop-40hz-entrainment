@@ -134,3 +134,19 @@ Our project falls under:
 5. "What did the model learn?" -- Ridge ablation shows PAC features dominate (R²=0.859 vs 0.045). Attention weights available for analysis
 6. "Why not use a larger model?" -- 4 variants tested (up to 213K params). Synthetic benchmark shows all converge. Data is the bottleneck, not architecture
 7. "How does this help patients?" -- Adaptive scheduling achieves 80% entrainment using 49% stimulation time, reducing patient burden
+8. "Does the TCN drive the closed-loop simulation?" -- No, the simulation uses a trend-based predictor. The TCN's value is demonstrated by the horizon sweep. End-to-end TCN integration is future work. This is stated clearly in the audit report and on the poster.
+9. "Did you use AI tools?" -- Yes, Claude Code was used for code development assistance. All experimental design, data analysis decisions, research direction, and scientific interpretation are my own work. This is disclosed on the poster board.
+
+---
+
+## Pre-Submission Checklist
+
+| Task | Deadline | Status |
+|------|----------|--------|
+| Title/category submitted | Feb 20 (passed) | Confirm done |
+| Abstract PDF upload (250 words max) | Feb 27, 8 PM | Text ready, needs PDF formatting |
+| Notebook 4-page PDF upload | Before fair day | Select first page, 2 middle pages, last page |
+| Physical poster board construction | Before Mar 10 | Text ready in POSTER_BOARD.md |
+| Software demo video (60-90 sec) | Before Mar 10 | NOT YET DONE - record screen showing simulation or horizon sweep |
+| Practice 1-2 min verbal summary | Before Mar 10 | Use questions above to prepare |
+| Print abstract for table | Before Mar 10 | From POSTER_BOARD.md abstract section |
