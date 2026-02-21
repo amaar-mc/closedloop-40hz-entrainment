@@ -170,6 +170,20 @@ python rigor/experiments/synthetic_benchmark.py
 
 This produces `rigor/experiments/synthetic_benchmark_results.json` and confirms all architectures work correctly.
 
+**Synthetic benchmark results (seed=42, 30 epochs, CPU):**
+
+| Variant | Params | Train Loss | Val Loss | Test R^2 | NaN | Time (s) |
+|---------|--------|-----------|----------|----------|-----|----------|
+| Baseline | 31,043 | 8.85e-5 | 8.30e-5 | -0.388 | No | 241 |
+| Deep Dilation | 39,875 | 6.81e-5 | 6.65e-5 | -0.354 | No | 383 |
+| Multi-task | 31,043 | 9.26e-5 | 9.61e-5 | -0.648 | No | 246 |
+| Wider | 111,235 | 6.28e-5 | 8.39e-5 | -0.471 | No | 385 |
+| Transformer | 213,315 | 1.34e-4 | 7.50e-5 | -0.505 | No | 14 |
+
+All variants: PASS on convergence, no NaN/Inf, expected parameter counts.
+
+Negative test R^2 is expected here. The synthetic benchmark uses independent random seeds per split, so train/val/test data come from different AR process realizations. Models learn the training distribution but this does not transfer across independent random processes. This does not affect the benchmark's primary purpose: confirming that architectures run correctly and optimize without gradient pathology. Real data experiments are needed for meaningful performance comparison.
+
 ### Step 2: Real data experiments (requires processed data)
 
 ```bash

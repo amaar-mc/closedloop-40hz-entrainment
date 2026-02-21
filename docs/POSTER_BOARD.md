@@ -13,9 +13,9 @@
 
 Using EEG recordings from 35 dementia patients (OpenNeuro ds005048), I computed theta-gamma phase-amplitude coupling (PAC) as a real-time entrainment biomarker. I built two neural networks: an EEGNet (1,457 parameters) for instantaneous PAC estimation from raw EEG, and a causal Temporal Convolutional Network (31,000 parameters) for predicting future PAC. The TCN uses dilated causal convolutions preventing future information leakage.
 
-The central finding is a horizon sweep across prediction distances. At 1-2 second horizons, simple baselines perform well. At 5-10 second horizons, all baselines collapse to negative R-squared, while the TCN maintains R-squared of 0.25-0.28, a margin of +0.5 R-squared units. This is the range where a controller needs predictions to act proactively.
+The central finding is a horizon sweep across prediction distances. At 1-2 second horizons, simple baselines perform well. At 5-10 second horizons, all baselines collapse to negative R-squared, while the TCN maintains R-squared of 0.24-0.28, a margin of +0.5 R-squared units.
 
-In closed-loop simulation with fatigue modeling (n = 50 trials, 600 seconds each), adaptive scheduling was significantly more efficient than fixed scheduling (Wilcoxon p < 0.001, Hedge's g = 2.28), achieving 80% of fixed-schedule entrainment using only 49% stimulation time. The efficiency advantage grew monotonically with fatigue severity (+9.5% to +11.2%, all p < 0.001). Real patient data confirmed that 49% of subjects habituate while 51% do not, validating the need for personalized adaptive control.
+In closed-loop simulation with fatigue modeling (n = 50 trials, 600 seconds each), adaptive scheduling was significantly more efficient than fixed scheduling (Wilcoxon p < 0.001, Hedges' g = 2.28), achieving 80% of fixed-schedule entrainment using only 49% stimulation time. The efficiency advantage increased with fatigue severity (+9.0% to +11.2%, all p < 0.001). Real patient data confirmed that 49% of subjects habituate while 51% do not, validating the need for personalized adaptive control.
 
 ---
 
@@ -92,14 +92,14 @@ Suggested visual: Two-panel schematic. Left side shows a fixed schedule waveform
 - Subject-level train/validation/test splits (24/5/6 subjects) to prevent data leakage
 - Computed PAC using the Modulation Index method (theta phase crossed with gamma amplitude)
 
-**Two Neural Networks:**
-- EEGNet: 1,457 parameters, estimates PAC from a single 2-second EEG window in real time (Lawhern et al., 2018)
-- Causal TCN: 31,000 parameters, predicts future PAC from 20-step history using dilated causal convolutions (left-padded only, no future leakage) with 44-second receptive field
+**Two Neural Networks (sized for 17,283-sample dataset to avoid overfitting):**
+- EEGNet: 1,457 parameters (12 samples/param), estimates PAC from a single 2-second EEG window in real time (Lawhern et al., 2018)
+- Causal TCN: 31,000 parameters, predicts future PAC from 20-step history using dilated causal convolutions (left-padded only, no future leakage) with 44-second receptive field. Larger models (120K-1.1M params) were tested and overfit.
 
 **Closed-Loop Simulation:**
 - Compared four control strategies: Fixed Schedule, Reactive, Predictive, and Oracle (perfect knowledge)
 - Modeled neural fatigue at six severity levels to test robustness
-- 50 trials per condition, 600 seconds each, Wilcoxon signed-rank tests, bootstrap 95% CIs, Hedge's g effect sizes
+- 50 trials per condition, 600 seconds each, Wilcoxon signed-rank tests, bootstrap 95% CIs, Hedges' g effect sizes
 
 **[FIGURE 2: System architecture diagram]**
 Suggested visual: Flowchart showing the closed-loop pipeline. Raw EEG (7 channels) feeds into EEGNet, which outputs current PAC. PAC history feeds into the causal TCN, which outputs predicted future PAC. The prediction feeds into the controller, which decides STIMULATE / REST / MAINTAIN. An arrow loops back to the patient, closing the loop. Label each component with its parameter count and inference time.
@@ -139,7 +139,7 @@ Suggested visual: Grouped bar chart. X-axis: fatigue severity (None, Mild, Moder
 - High (rate=0.025): Fixed 0.319, Adaptive 0.354 (+10.8%, p < 0.001**)
 - Severe (rate=0.040): Fixed 0.316, Adaptive 0.352 (+11.2%, p < 0.001**)
 
-**Interpretation:** At all fatigue levels (6/6), adaptive scheduling is significantly more efficient (all p < 0.001, Wilcoxon signed-rank, Hedge's g > 2.0). The advantage grows monotonically from +9.5% to +11.2% as fatigue increases.
+**Interpretation:** At all fatigue levels (6/6), adaptive scheduling is significantly more efficient (all p < 0.001, Wilcoxon signed-rank, Hedges' g > 2.0). The advantage generally increases from +9.0% to +11.2% with fatigue severity.
 
 **Result 3 -- Individual Habituation Variability:**
 
@@ -147,16 +147,16 @@ Suggested visual: Grouped bar chart. X-axis: fatigue severity (None, Mild, Moder
 Suggested visual: Horizontal dot plot or lollipop chart showing PAC change (%) for each of the 35 subjects, sorted from most negative to most positive. Color dots red for subjects showing decline and blue for subjects showing increase. Label extreme cases: sub-35 at -66.8%, sub-19 at -57.0%, sub-20 at +93.0%, sub-27 at +149.1%. Draw a vertical dashed line at 0%. Note that population-level p = 0.542 (not significant), but 49% decline and 51% increase. This variability is the core argument for adaptive scheduling.
 
 **Data Integrity:**
-- Subject-level splits prevent leakage between train/val/test
-- Shuffle-label test: R-squared = -0.332 (model learns real patterns, not artifacts)
-- Causal dataset construction verified (no future information)
+- Subject-level splits: 6 held-out test subjects never seen during training or model selection
+- Shuffle-label test: R-squared = -0.332 (model learns real signal, not artifacts)
+- Causal dataset construction verified (no future information leakage)
 
 ---
 
 ### CONCLUSIONS / DISCUSSION (48-72pt header)
 
-- The causal TCN predicts future entrainment at 5-10 second horizons (R-squared = 0.25) where all baselines fail (R-squared < 0), providing +0.5 R-squared margin at the operationally relevant range
-- Adaptive scheduling achieves 80% of fixed-schedule entrainment using only 49% stimulation time, with +9-11% efficiency gains (all p < 0.001, Hedge's g > 2.0, n = 50 trials)
+- The causal TCN predicts future entrainment at 5-10 second horizons (R-squared = 0.24-0.28) where all baselines fail (R-squared < 0), providing +0.5 R-squared margin at the operationally relevant range
+- Adaptive scheduling achieves 80% of fixed-schedule entrainment using only 49% stimulation time, with +9-11% efficiency gains (all p < 0.001, n = 50 trials)
 - Half of patients habituate to stimulation; the other half do not, validating the need for personalized scheduling
 - Lightweight models (1,457 and 31,000 parameters) enable real-time embedded deployment
 

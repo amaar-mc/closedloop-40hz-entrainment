@@ -260,7 +260,7 @@ def _target_function(
 def generate_synthetic_dataset(
     n_samples: int, seed: int
 ) -> Dict[str, np.ndarray]:
-    """Generate a complete synthetic dataset split.
+    """Generate a complete synthetic dataset split (unnormalized).
 
     Args:
         n_samples: Number of sequences.
@@ -289,6 +289,45 @@ def generate_synthetic_dataset(
         "y_delta": y_delta,
         "last_pac": last_pac,
     }
+
+
+def normalize_datasets(
+    train_data: Dict[str, np.ndarray],
+    val_data: Dict[str, np.ndarray],
+    test_data: Dict[str, np.ndarray],
+) -> Tuple[Dict[str, np.ndarray], Dict[str, np.ndarray], Dict[str, np.ndarray]]:
+    """Z-score normalize features and targets using train statistics.
+
+    Mirrors the normalization in build_multiscale_dataset.py: fit scalers
+    on train split only, apply to all splits. This is critical for the
+    models to converge since raw PAC values are ~0.003 (very small scale).
+
+    Args:
+        train_data: Training split dictionary.
+        val_data: Validation split dictionary.
+        test_data: Test split dictionary.
+
+    Returns:
+        Tuple of normalized (train, val, test) dictionaries.
+    """
+    x_train = train_data["x_seq"]
+    feat_mean = x_train.reshape(-1, x_train.shape[-1]).mean(axis=0)
+    feat_std = x_train.reshape(-1, x_train.shape[-1]).std(axis=0) + 1e-8
+
+    yf_mean = train_data["y_future"].mean()
+    yf_std = train_data["y_future"].std() + 1e-8
+    yd_mean = train_data["y_delta"].mean()
+    yd_std = train_data["y_delta"].std() + 1e-8
+
+    def _apply(data: Dict[str, np.ndarray]) -> Dict[str, np.ndarray]:
+        return {
+            "x_seq": ((data["x_seq"] - feat_mean) / feat_std).astype(np.float32),
+            "y_future": ((data["y_future"] - yf_mean) / yf_std).astype(np.float32),
+            "y_delta": ((data["y_delta"] - yd_mean) / yd_std).astype(np.float32),
+            "last_pac": data["last_pac"],
+        }
+
+    return _apply(train_data), _apply(val_data), _apply(test_data)
 
 
 # ---------------------------------------------------------------------------
@@ -532,9 +571,12 @@ def run_benchmark() -> Dict[str, object]:
 
     # Generate data
     print("Generating synthetic data...")
-    train_data = generate_synthetic_dataset(N_TRAIN, seed=SEED)
-    val_data = generate_synthetic_dataset(N_VAL, seed=SEED + 1)
-    test_data = generate_synthetic_dataset(N_TEST, seed=SEED + 2)
+    train_raw = generate_synthetic_dataset(N_TRAIN, seed=SEED)
+    val_raw = generate_synthetic_dataset(N_VAL, seed=SEED + 1)
+    test_raw = generate_synthetic_dataset(N_TEST, seed=SEED + 2)
+
+    # Normalize using train statistics (matches real pipeline)
+    train_data, val_data, test_data = normalize_datasets(train_raw, val_raw, test_raw)
 
     train_ds = SyntheticDataset(train_data)
     val_ds = SyntheticDataset(val_data)
