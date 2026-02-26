@@ -157,6 +157,21 @@ Adaptive advantage tested under 4 different fatigue model assumptions (n = 50 tr
 
 **Interpretation:** The adaptive scheduling advantage is robust across all fatigue model types, not an artifact of one particular simulation assumption. Gains range from +6.9% to +19.0% with large effect sizes.
 
+**Result 5 -- TCN-Based Predictive Control on Real EEG (Primary Result):**
+
+**[FIGURE 6: Controller comparison bar chart -- see results/figures/controller_comparison.png]**
+
+TCN predictive controller replayed on all 35 subjects' real EEG data (no simulation):
+
+| Controller | Alignment | Low-PAC Targeting | PAC Gap (µV²) |
+|-----------|-----------|-------------------|---------------|
+| Fixed Schedule | 45.0% | 61.4% | −6.6 (wrong direction) |
+| Reactive | 64.5% | 51.7% | +21.1 |
+| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** |
+| Oracle | 100.0% | 100.0% | +33.3 |
+
+TCN vs Reactive (n=35): Alignment g=+1.31, Low-PAC targeting g=+4.47, PAC gap g=+1.57 (all p<0.001). TCN reaches 91% of oracle bound. 35/35 subjects benefit (binomial p<0.001). Robust across thresholds 0.2-1.0.
+
 **Data Integrity and Model Validation:**
 - Subject-level splits: 6 held-out test subjects never seen during training or model selection (generalizability)
 - Shuffle-label test: R-squared = -0.332 (model learns real signal, not artifacts)
