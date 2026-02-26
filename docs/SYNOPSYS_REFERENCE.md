@@ -127,14 +127,14 @@ Our project falls under:
 
 ## Questions to Prepare For
 
-1. "Why is static R² only 0.287?" -- PAC has SNR=-4.73 dB, 8 architectures converge at this ceiling
-2. "Did the TCN beat persistence?" -- Only at 3+ second horizons, but those are the horizons that matter for control
-3. "How do you know there is no leakage?" -- Shuffle-label test, subject-level splits, causal construction, train-only normalization
-4. "Is the simulation realistic?" -- First-order approximation validated by replay analysis on real data. Fatigue model tested with 4 different functional forms
-5. "What did the model learn?" -- Ridge ablation shows PAC features dominate (R²=0.859 vs 0.045). Attention weights available for analysis
-6. "Why not use a larger model?" -- 4 variants tested (up to 213K params). Synthetic benchmark shows all converge. Data is the bottleneck, not architecture
-7. "How does this help patients?" -- Adaptive scheduling achieves 80% entrainment using 49% stimulation time, reducing patient burden
-8. "Does the TCN drive the closed-loop simulation?" -- No, the simulation uses a trend-based predictor. The TCN's value is demonstrated by the horizon sweep. End-to-end TCN integration is future work. This is stated clearly in the audit report and on the poster.
+1. "Why is static R² only 0.287?" -- PAC has SNR=-4.73 dB, 8 architectures converge at this ceiling. This is not a failure — it's the dataset's information limit
+2. "Did the TCN beat persistence?" -- Only at 3+ second horizons, but those are the horizons that matter for control. At 5-10s, baselines give negative R² (worse than guessing the mean). The TCN is the only method with useful signal there (+0.5 R² margin)
+3. "How do you know there is no leakage?" -- Shuffle-label test (R²=-0.332), subject-level splits (6 test subjects never seen), causal construction (left-only padding), train-only normalization
+4. "Is the simulation realistic?" -- The simulation is one validation layer. The primary results come from real-data replay on all 35 subjects' actual EEG. No simulation involved in the main controller comparison
+5. "What did the model learn?" -- Ridge ablation shows PAC features dominate (R²=0.859 vs 0.045 spectral-only). The model learns temporal PAC dynamics — how coupling evolves over time. This is the relevant signal for predicting future entrainment state
+6. "Why not use a larger model?" -- 8 architectures tested (1.5K to 1.1M params). All converge near R²=0.287 for static prediction. Data is the bottleneck, not architecture
+7. "How does this help patients?" -- TCN controller targets 82.6% of low-PAC windows (vs 51.7% reactive, 61.4% fixed). In adaptive music therapy, this means therapeutic sound is delivered almost exclusively when the brain needs it, reducing unnecessary stimulation and session fatigue
+8. "Does the TCN drive the closed-loop controller?" -- Yes. The trained TCN is integrated into a predictive controller (`run_tcn_validation.py`) that was replayed on all 35 subjects' real EEG data. The TCN predictive controller achieves 72.1% epoch alignment vs 64.5% reactive (Hedges' g = 1.31, p < 0.001), targets 82.6% of low-PAC windows (vs 51.7%), and reaches 91% of the oracle bound. All 35/35 subjects benefit.
 9. "Did you use AI tools?" -- Yes, Claude Code was used for code development assistance. All experimental design, data analysis decisions, research direction, and scientific interpretation are my own work. This is disclosed on the poster board.
 
 ---
@@ -147,6 +147,6 @@ Our project falls under:
 | Abstract PDF upload (250 words max) | Feb 27, 8 PM | Text ready, needs PDF formatting |
 | Notebook 4-page PDF upload | Before fair day | Select first page, 2 middle pages, last page |
 | Physical poster board construction | Before Mar 10 | Text ready in POSTER_BOARD.md |
-| Software demo video (60-90 sec) | Before Mar 10 | NOT YET DONE - record screen showing simulation or horizon sweep |
+| Software demo video (60-90 sec) | Before Mar 10 | Record: run_tcn_validation.py output + timeline_example.png figure |
 | Practice 1-2 min verbal summary | Before Mar 10 | Use questions above to prepare |
 | Print abstract for table | Before Mar 10 | From POSTER_BOARD.md abstract section |

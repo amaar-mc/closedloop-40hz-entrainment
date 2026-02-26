@@ -9,13 +9,15 @@
 
 ## ABSTRACT (Printed separately, placed on table. Max 250 words.)
 
-40 Hz auditory stimulation drives gamma-band neural entrainment, reducing amyloid plaques and improving cognition in Alzheimer's disease models. Current clinical protocols use fixed schedules (40 seconds on, 20 seconds off), ignoring individual brain responses and neural habituation. This project developed a deep learning system that predicts when a patient's brain will lose entrainment and times stimulation accordingly.
+40 Hz auditory stimulation synchronizes brain gamma oscillations, reducing amyloid pathology in Alzheimer's disease models. Current clinical protocols use fixed schedules (40 seconds on, 20 seconds off), ignoring individual brain responses. This project developed a deep learning system that predicts when a patient's brain will lose entrainment and times stimulation accordingly.
 
-Using EEG recordings from 35 dementia patients (OpenNeuro ds005048), I computed theta-gamma phase-amplitude coupling (PAC) as a real-time entrainment biomarker. I built two neural networks: an EEGNet (1,457 parameters) for instantaneous PAC estimation from raw EEG, and a causal Temporal Convolutional Network (31,000 parameters) for predicting future PAC. The TCN uses dilated causal convolutions preventing future information leakage.
+Using EEG recordings from 35 dementia patients (OpenNeuro ds005048), I computed theta-gamma phase-amplitude coupling (PAC) as a real-time entrainment biomarker. I built a causal Temporal Convolutional Network (31,000 parameters) with dilated convolutions to predict future PAC, integrated into a closed-loop controller validated on real patient data.
 
-The central finding is a horizon sweep across prediction distances. At 1-2 second horizons, simple baselines perform well. At 5-10 second horizons, all baselines collapse to negative R-squared, while the TCN maintains R-squared of 0.24-0.28, a margin of +0.5 R-squared units.
+The central prediction finding is a horizon sweep: at 1-2 second horizons, simple baselines suffice. At 5-10 seconds — the operationally relevant range for proactive control — all baselines collapse to negative R-squared while the TCN maintains R-squared of 0.24-0.28 (+0.5 margin).
 
-In closed-loop simulation with fatigue modeling (n = 50 trials, 600 seconds each), adaptive scheduling was significantly more efficient than fixed scheduling (Wilcoxon p < 0.001, Hedges' g = 2.28), achieving 80% of fixed-schedule entrainment using only 49% stimulation time. The efficiency advantage increased with fatigue severity (+9.0% to +11.2%, all p < 0.001). The advantage held across four different fatigue model assumptions (gains +6.9% to +19.0%, all p < 10^-13). Real patient data confirmed that 49% of subjects habituate while 51% do not, validating the need for personalized adaptive control.
+When integrated into a closed-loop controller and replayed on all 35 subjects' real EEG, the TCN achieved 72.1% epoch alignment versus 64.5% for reactive control (Hedges' g = 1.31, p < 0.001, Wilcoxon signed-rank). It targeted 82.6% of low-PAC windows for stimulation versus 51.7% reactive (g = 4.47, p < 0.001), reaching 91% of the theoretical oracle bound. All 35 subjects benefited (binomial p < 0.001). In simulation, adaptive scheduling efficiency increased with fatigue severity (+9.0% to +11.2%, all p < 0.001), and the advantage held across four different fatigue model assumptions (+6.9% to +19.0%, all p < 10^-13). Half of subjects habituate while half do not, validating the need for personalized control.
+
+*Word count: 247*
 
 ---
 
@@ -190,7 +192,7 @@ TCN vs Reactive (n=35): Alignment g=+1.31, Low-PAC targeting g=+4.47, PAC gap g=
 - Half of patients habituate to stimulation; the other half do not, validating the need for personalized scheduling
 - Lightweight models (1,457 and 31,000 parameters) enable real-time embedded deployment
 
-**Limitation:** Results are from simulation and offline analysis. Validation on live closed-loop EEG is future work.
+**Limitation:** Real-data validation uses offline replay (counterfactual decisions on recorded EEG), not live streaming. Live closed-loop EEG validation is future work.
 
 ---
 
@@ -242,13 +244,23 @@ Within acceptable range. If further trimming needed, reduce Methods data pipelin
 
 ## FIGURE PRODUCTION CHECKLIST
 
-| Figure | Type | Key Data | Placement |
-|--------|------|----------|-----------|
-| Fig 1: Fixed vs Adaptive Concept | Schematic diagram | Conceptual (no raw data) | Left panel, below Introduction |
-| Fig 2: System Architecture | Flowchart | Component specs (params, latency) | Center panel, below Methods |
-| Fig 3: Horizon Sweep | Line graph (3 lines) | 6 horizons x 3 methods R-squared values | Center panel, below Results header |
-| Fig 4: Fatigue Sensitivity | Grouped bar chart | 6 fatigue levels x 2 strategies efficiency | Right panel, Result 2 |
-| Fig 5: Individual Habituation | Dot/lollipop chart | 35 subjects, PAC % change | Right panel, Result 3 |
-| Fig 6: Fatigue Model Robustness | Grouped bar chart (4 groups) | 4 fatigue models x 2 strategies | Right panel, Result 4 (optional, space permitting) |
+| Figure | Type | Status | Placement |
+|--------|------|--------|-----------|
+| Fig 1: Fixed vs Adaptive Concept | Schematic diagram | TO CREATE (manual/design tool) | Left panel, below Introduction |
+| Fig 2: System Architecture | Flowchart | TO CREATE (manual/design tool) | Center panel, below Methods |
+| Fig 3: Horizon Sweep | Line graph (3 lines) | DATA READY (see data points in Results text) | Center panel, below Results header |
+| Fig 4: Fatigue Sensitivity | Grouped bar chart | DATA READY | Right panel, Result 2 |
+| Fig 5: Individual Habituation | Dot/lollipop chart | DATA READY | Right panel, Result 3 |
+| Fig 6: Controller Comparison | Grouped bar chart | GENERATED: `results/figures/controller_comparison.png` | Right panel, Result 5 |
+| Fig 7: Timeline Example | 3-panel timeline | GENERATED: `results/figures/timeline_example.png` | Center panel or Right panel |
+| Fig 8: Threshold Sensitivity | Line+bar dual axis | GENERATED: `results/figures/threshold_sensitivity.png` | Right panel, robustness |
 
-All figures should use a clean white background, large axis labels (minimum 18pt), and a colorblind-safe palette (blue/orange/green).
+**Generated figures** (in `results/figures/`, 300 DPI PNG + vector PDF):
+- `controller_comparison.png` — 6 controllers, 3 metrics
+- `pac_targeting_gap.png` — PAC during stim vs rest by controller
+- `per_subject_utility.png` — 35-subject scatter (TCN vs Reactive)
+- `stim_vs_alignment.png` — Stimulation rate vs alignment trade-off
+- `timeline_example.png` — Real PAC trajectory with TCN vs Reactive decisions
+- `threshold_sensitivity.png` — TCN robustness across delta-z thresholds
+
+All figures use clean white background, large axis labels (minimum 18pt), colorblind-safe palette.
