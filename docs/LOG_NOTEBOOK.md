@@ -808,7 +808,7 @@ I also implemented a fatigue model where continuous stimulation progressively re
 3. **Predictive Look-Ahead:** Uses a trend-based forecasting method (linear regression on the last 5 PAC values) to predict PAC trajectory, with hysteresis. Stimulates proactively when it detects declining PAC.
 4. **Oracle:** Perfect future knowledge. Stimulate whenever PAC < 0.2. This is the theoretical upper bound that no real system can achieve.
 
-**Important note on the Predictive controller:** The "Predictive Look-Ahead" strategy in the simulation uses a simple linear trend, not the full TCN model. This was a deliberate simplification for the simulation. Integrating the actual TCN into the real-time simulation loop is future work. The trend-based approach serves as a proof of concept that predictive control is beneficial.
+**Note on the Predictive controller:** The "Predictive Look-Ahead" strategy in the simulation uses a simple linear trend. The full TCN model was subsequently integrated into a closed-loop controller (`run_tcn_validation.py`) and validated on all 35 subjects' real EEG data — see Section 10 (Real-Data TCN Validation) for results. The TCN controller achieves 72.1% alignment vs 64.5% reactive (g=1.31, p<0.001).
 
 **Results without fatigue (10 trials, 600 seconds each):**
 
@@ -1144,7 +1144,7 @@ After about 20 days of active development, extensive reading, and continuous ite
 3. **Short sessions.** 6-10 minutes, vs 30-60 minute clinical sessions. Habituation effects may differ.
 4. **PAC as the sole biomarker.** Other entrainment measures might add complementary information.
 5. **Modest absolute R-squared (0.25) at 5-10 second horizons.** Impressive relative to negative baselines, but 75% of variance is unexplained.
-6. **Predictive controller uses a linear trend, not the TCN.** End-to-end TCN integration is future work.
+6. **~~Predictive controller uses a linear trend, not the TCN.~~** RESOLVED: TCN integrated into closed-loop controller and validated on real EEG (see `run_tcn_validation.py`). TCN achieves 72.1% alignment vs 64.5% reactive (g=1.31, p<0.001), 35/35 subjects benefit.
 7. **Temporal model is primarily autoregressive on PAC.** Ridge feature ablation: without PAC features, R-squared drops from 0.812 to 0.045.
 
 ---
