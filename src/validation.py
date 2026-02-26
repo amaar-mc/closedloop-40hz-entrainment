@@ -1,11 +1,14 @@
 """
-Validation and Comparison Framework for Closed-Loop Control Strategies
+Validation and Comparison Framework for Closed-Loop Control Strategies.
 
-Compares four neuromodulation approaches:
-1. Fixed Schedule (control): 40s ON + 20s OFF
-2. Reactive Threshold: Current PAC-based decisions
-3. Predictive MPC: Trained EEGNet + personalization (proposed system)
-4. Oracle: Perfect PAC knowledge (upper bound)
+Compares four neuromodulation approaches using simulated brain dynamics:
+
+1. Fixed Schedule (control): 40s ON + 20s OFF — standard clinical protocol.
+2. Reactive Threshold: Current PAC-based z-score decisions — no prediction.
+3. Predictive Look-Ahead: Uses a trained TCN (RealtimePACForecaster) to
+   forecast future PAC 5-10s ahead and make proactive stimulation decisions.
+   Falls back to a trend-based heuristic when no TCN model is provided.
+4. Oracle: Perfect PAC knowledge — theoretical upper bound.
 
 Metrics:
 - PAC improvement (%): Change from baseline
@@ -14,6 +17,15 @@ Metrics:
 - Efficiency ratio: PAC gain per unit stimulation
 - R² score: Model prediction accuracy
 - Statistical significance: ANOVA, Tukey HSD, Cohen's d
+
+Typical usage:
+    validator = SimulationValidator(output_dir='results')
+    validator.add_method(FixedScheduleControl())
+    validator.add_method(ReactiveThresholdControl())
+    validator.add_method(PredictiveLookAheadControl())      # trend fallback
+    validator.add_method(OracleControl())
+    validator.run_all(duration_sec=360, n_trials=5)
+    validator.plot_comparison()
 
 Author: Amaar Chughtai
 Date: February 2026
@@ -33,6 +45,12 @@ from scipy import stats
 from controller import ClosedLoopController, StimState
 from simulator import EntrainmentSimulator, StimAction, extract_tau_parameters_from_data
 from utils import compute_regression_metrics, ensure_dir
+
+# Optional: TCN forecaster for PredictiveLookAheadControl
+try:
+    from temporal_multiscale.realtime_inference import RealtimePACForecaster
+except ImportError:
+    RealtimePACForecaster = None
 
 logger = logging.getLogger(__name__)
 
@@ -64,25 +82,34 @@ class ValidationMetrics:
 
 
 class ControlMethodBase:
-    """Base class for control strategies."""
+    """Abstract base class for all control strategies.
+
+    Subclasses must implement :meth:`step` which receives the current PAC
+    value and returns a binary stimulation decision (0 = REST, 1 = STIMULATE).
+    The :meth:`reset` method is called before each trial to clear internal
+    state.
+    """
 
     def __init__(self, name: str):
-        """Initialize control method."""
+        """Initialize control method.
+
+        Args:
+            name: Human-readable name for logging and plot labels.
+        """
         self.name = name
 
     def reset(self):
-        """Reset method state for new trial."""
+        """Reset method state for a new trial."""
         pass
 
     def step(self, pac_current: float) -> int:
-        """
-        Make stimulation decision.
+        """Make a stimulation decision.
 
         Args:
-            pac_current: Current PAC value
+            pac_current: Current PAC value.
 
         Returns:
-            action: 0=REST, 1=STIMULATE
+            action: 0 = REST, 1 = STIMULATE.
         """
         raise NotImplementedError
 
@@ -178,45 +205,46 @@ class ReactiveThresholdControl(ControlMethodBase):
         else:
             return StimAction.REST
 
-    def step(self, pac_current: float) -> int:
-        """Make reactive decision based on current PAC."""
-        self.pac_buffer.append(pac_current)
-        if len(self.pac_buffer) > self.window_size:
-            self.pac_buffer.pop(0)
-
-        if len(self.pac_buffer) < max(5, self.window_size // 2):
-            return StimAction.REST
-
-        baseline_mean = np.mean(self.pac_buffer)
-        baseline_std = np.std(self.pac_buffer)
-        z_score = (pac_current - baseline_mean) / (baseline_std + 1e-8)
-
-        if z_score < -self.threshold_std:
-            return StimAction.STIMULATE
-        elif z_score > self.threshold_std:
-            return StimAction.REST
-        else:
-            return StimAction.REST
-
 
 class PredictiveLookAheadControl(ControlMethodBase):
-    """Predictive look-ahead control using a trained TCN to forecast future PAC.
+    """Predictive look-ahead control for proactive stimulation scheduling.
 
-    In the simulation setting the controller only observes the current PAC
-    (not raw EEG), so we maintain an internal PAC history buffer to compute
-    the same multiscale PAC features that the TCN was trained on.  The
-    stimulation-context features are derived from the controller's own
-    action history.
+    When a trained RealtimePACForecaster is provided, this controller uses
+    the TCN to predict future PAC 5-10 seconds ahead and makes proactive
+    stimulation decisions based on predicted trajectory (delta_pac).
+
+    When no forecaster is available (the default in simulation), it falls
+    back to a trend-based heuristic that estimates PAC trajectory from the
+    recent slope of observed PAC values.
+
+    Decision logic (both modes):
+        - Predicted/estimated decline -> stimulate early (proactive)
+        - Predicted/estimated rise -> rest (save energy)
+        - Neither -> fall back to reactive z-score thresholding
+        - Hysteresis: minimum hold_time before state transitions
+
+    Args:
+        forecaster: Optional RealtimePACForecaster instance. When provided,
+            the step() method accepts spectral_features as a keyword argument
+            and uses the TCN for look-ahead predictions.
+        window_size: Baseline window for z-score computation (samples).
+        threshold_std: Z-score threshold for reactive fallback decisions.
+        decline_threshold: Threshold for predicted PAC decline (negative
+            value). Used as a fraction of baseline_std in trend mode, or
+            directly as a delta_pac threshold in TCN mode.
+        hold_time: Minimum samples in current state before switching.
     """
 
     def __init__(
         self,
+        forecaster=None,
         window_size: int = 30,
         threshold_std: float = 0.5,
         decline_threshold: float = -0.3,
         hold_time: int = 5,
     ):
         super().__init__("Predictive Look-Ahead")
+        self.forecaster = forecaster
         self.window_size = window_size
         self.threshold_std = threshold_std
         self.decline_threshold = decline_threshold
@@ -226,20 +254,35 @@ class PredictiveLookAheadControl(ControlMethodBase):
         self.current_state = StimAction.REST
         self.time_in_state = 0
 
+    @property
+    def has_forecaster(self) -> bool:
+        """Whether a trained TCN forecaster is available."""
+        return self.forecaster is not None
+
     def reset(self):
+        """Reset state for a new trial."""
         self.pac_buffer = []
         self.action_buffer = []
         self.current_state = StimAction.REST
         self.time_in_state = 0
+        if self.forecaster is not None:
+            self.forecaster.reset()
 
     def _pac_trend(self, k: int = 5) -> float:
-        """Compute recent PAC slope over last k steps."""
+        """Compute recent PAC slope over last *k* steps (trend fallback).
+
+        Uses ordinary least-squares linear regression on the most recent
+        *k* PAC values to estimate the instantaneous rate of change.
+
+        Returns:
+            slope: PAC units per step. Positive means rising, negative
+                means declining.
+        """
         if len(self.pac_buffer) < k:
             return 0.0
         recent = self.pac_buffer[-k:]
         x = np.arange(k, dtype=np.float64)
         y = np.array(recent, dtype=np.float64)
-        # Simple linear regression slope
         x_mean = x.mean()
         y_mean = y.mean()
         denom = np.sum((x - x_mean) ** 2)
@@ -247,14 +290,27 @@ class PredictiveLookAheadControl(ControlMethodBase):
             return 0.0
         return float(np.sum((x - x_mean) * (y - y_mean)) / denom)
 
-    def step(self, pac_current: float) -> int:
+    def step(self, pac_current: float, spectral_features: Optional[np.ndarray] = None) -> int:
+        """Make a stimulation decision using look-ahead prediction.
+
+        When a TCN forecaster is available *and* spectral_features are
+        provided, the controller delegates prediction to the trained model.
+        Otherwise it falls back to the trend-based heuristic.
+
+        Args:
+            pac_current: Current PAC value.
+            spectral_features: Optional (61,) spectral feature vector from
+                the current EEG window.  Required for TCN-based prediction;
+                ignored when using the trend fallback.
+
+        Returns:
+            action: 0 = REST, 1 = STIMULATE.
+        """
         self.pac_buffer.append(pac_current)
         if len(self.pac_buffer) > self.window_size:
             self.pac_buffer.pop(0)
 
-        trend = self._pac_trend()
-
-        # Not enough history — use reactive fallback
+        # Not enough history -- use reactive fallback
         if len(self.pac_buffer) < max(5, self.window_size // 2):
             self.action_buffer.append(int(StimAction.REST))
             return StimAction.REST
@@ -263,30 +319,68 @@ class PredictiveLookAheadControl(ControlMethodBase):
         baseline_std = np.std(self.pac_buffer) + 1e-8
         z_score = (pac_current - baseline_mean) / baseline_std
 
+        # -----------------------------------------------------------------
         # Determine desired state via look-ahead logic
+        # -----------------------------------------------------------------
         desired_state = None
 
-        # Proactive: predicted decline -> stimulate early
-        if trend < self.decline_threshold * baseline_std:
-            desired_state = StimAction.STIMULATE
-        # Proactive: predicted rise -> can rest
-        elif trend > abs(self.decline_threshold) * baseline_std:
-            desired_state = StimAction.REST
-        # Reactive fallback
-        elif z_score < -self.threshold_std:
-            desired_state = StimAction.STIMULATE
-        elif z_score > self.threshold_std:
-            desired_state = StimAction.REST
+        # Try TCN-based prediction first
+        if self.forecaster is not None and spectral_features is not None:
+            # Derive stimulation-context features from action history
+            stim_state = float(self.current_state)
+            time_since_switch = float(self.time_in_state)
+            n_recent = min(len(self.action_buffer), 30)
+            stim_frac = (
+                float(np.mean(self.action_buffer[-n_recent:]))
+                if n_recent > 0
+                else 0.0
+            )
+
+            prediction = self.forecaster.step(
+                spectral_features=spectral_features,
+                pac_current=pac_current,
+                stim_state=stim_state,
+                time_since_switch_sec=time_since_switch,
+                stim_frac_recent=stim_frac,
+            )
+
+            if prediction is not None:
+                delta_pac = prediction["delta_pac"]
+
+                # Proactive: predicted decline -> stimulate early
+                if delta_pac < self.decline_threshold:
+                    desired_state = StimAction.STIMULATE
+                # Proactive: predicted rise -> can rest
+                elif delta_pac > abs(self.decline_threshold):
+                    desired_state = StimAction.REST
+
+        # Fall back to trend-based heuristic when TCN unavailable or
+        # when TCN prediction is not yet ready (lookback not filled)
+        if desired_state is None and self.forecaster is None:
+            trend = self._pac_trend()
+            if trend < self.decline_threshold * baseline_std:
+                desired_state = StimAction.STIMULATE
+            elif trend > abs(self.decline_threshold) * baseline_std:
+                desired_state = StimAction.REST
+
+        # Reactive z-score fallback when neither look-ahead method fired
+        if desired_state is None:
+            if z_score < -self.threshold_std:
+                desired_state = StimAction.STIMULATE
+            elif z_score > self.threshold_std:
+                desired_state = StimAction.REST
 
         if desired_state is None:
             desired_state = self.current_state
 
+        # -----------------------------------------------------------------
         # Apply hysteresis
+        # -----------------------------------------------------------------
         if desired_state != self.current_state:
             if self.time_in_state >= self.hold_time:
                 self.current_state = desired_state
                 self.time_in_state = 0
-            # else hold
+            # else hold current state
         else:
             self.time_in_state += 1
 
@@ -359,19 +453,32 @@ class SimulationValidator:
                       duration_sec: int = 360,
                       fs: float = 1.0,
                       tau_rise: float = 0.15,
-                      tau_decay: float = 0.10) -> ValidationMetrics:
+                      tau_decay: float = 0.10,
+                      spectral_features: Optional[np.ndarray] = None) -> ValidationMetrics:
         """
-        Run simulation for single method.
+        Run simulation for a single control method.
+
+        Instantiates an ``EntrainmentSimulator``, steps through *duration_sec*
+        seconds at rate *fs*, and collects PAC values and actions.
+
+        If the control method is a ``PredictiveLookAheadControl`` with a
+        TCN forecaster, *spectral_features* (shape ``(n_steps, 61)``) can
+        be passed so that each step receives the spectral context needed for
+        TCN inference.  When *spectral_features* is ``None`` the method
+        receives only ``pac_current`` (which is sufficient for all methods
+        that do not use a TCN).
 
         Args:
-            method: Control method to test
-            duration_sec: Simulation duration in seconds
-            fs: Sampling frequency (decisions per second)
-            tau_rise: PAC rise time constant
-            tau_decay: PAC decay time constant
+            method: Control method to test.
+            duration_sec: Simulation duration in seconds.
+            fs: Sampling frequency (decisions per second).
+            tau_rise: PAC rise time constant.
+            tau_decay: PAC decay time constant.
+            spectral_features: Optional array of shape ``(n_steps, 61)``
+                with per-step spectral features for TCN-based controllers.
 
         Returns:
-            metrics: Validation metrics
+            metrics: Validation metrics for this run.
         """
         logger.info(f"\nRunning simulation: {method.name}")
         logger.info(f"  Duration: {duration_sec}s")
@@ -393,12 +500,22 @@ class SimulationValidator:
         pac_values = []
         actions = []
 
+        # Determine whether to pass spectral features
+        _pass_spectral = (
+            isinstance(method, PredictiveLookAheadControl)
+            and spectral_features is not None
+        )
+
         for step in range(n_steps):
             # Current PAC
             pac = sim.pac
 
-            # Make decision
-            action = method.step(pac)
+            # Make decision -- pass spectral features when available
+            if _pass_spectral:
+                feat_idx = min(step, spectral_features.shape[0] - 1)
+                action = method.step(pac, spectral_features=spectral_features[feat_idx])
+            else:
+                action = method.step(pac)
 
             # Execute action in simulator
             sim.step(action)
