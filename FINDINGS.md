@@ -428,7 +428,56 @@ Results are saved to `results/` and `models/`. All random seeds are fixed for de
 
 ---
 
-## 10. References
+## 10. Real-Data Closed-Loop Validation (February 26, 2026)
+
+**Update:** The following results replace the simulation-only validation reported in earlier sections. All results below use real EEG data from OpenNeuro ds005048 (N=35 subjects) with raw PAC targets (no smoothing, ts=1).
+
+### 10.1 TCN Model (Retrained on Raw Targets)
+
+| Metric | Value |
+|--------|-------|
+| Architecture | MultiscaleCausalTCN (31,043 params) |
+| Best val R² | 0.411 (raw PAC, ts=1) |
+| Test R² | 0.170 (6 held-out subjects) |
+| Test Pearson r | 0.433 |
+| Prediction horizon | 5 seconds |
+
+### 10.2 Closed-Loop Controller Comparison (Real EEG Replay)
+
+| Controller | Alignment | Low-PAC Stim | High-PAC Rest | Stim % | PAC Gap (µV²) |
+|-----------|-----------|-------------|--------------|--------|---------------|
+| Fixed Schedule | 45.0% | 61.4% | 28.6% | 66.6% | −6.6 |
+| Reactive Threshold | 64.5% | 51.7% | 77.3% | 36.7% | +21.1 |
+| **TCN Predictive** | **72.1%** | **82.6%** | 61.6% | 59.7% | **+30.5** |
+| Hybrid TCN+Reactive | 73.8% | 85.3% | 62.2% | 60.8% | +34.0 |
+| Alignment Oracle | 100.0% | 100.0% | 100.0% | 48.3% | +33.3 |
+
+### 10.3 Statistical Significance (TCN vs Reactive, n=35)
+
+| Metric | Hedges' g [95% CI] | p-value |
+|--------|-------------------|---------|
+| Epoch Alignment | +1.31 [+0.75, +1.87] | < 0.001 |
+| Low-PAC Stim Rate | +4.47 [+3.33, +5.62] | < 0.001 |
+| PAC Target Gap | +1.57 [+0.98, +2.17] | < 0.001 |
+| Clinical Utility | +0.95 [+0.43, +1.47] | < 0.001 |
+
+All 35/35 subjects (100%) show improved clinical utility with TCN-based control (binomial p < 0.001). Results are robust across delta-z thresholds 0.2–1.0.
+
+### 10.4 Figures
+
+See `results/figures/` for publication-quality visualizations:
+- `controller_comparison.png` — Grouped bar chart with significance brackets
+- `pac_targeting_gap.png` — PAC targeting quality (Fixed Schedule goes WRONG direction)
+- `per_subject_utility.png` — Per-subject scatter (35/35 above diagonal)
+- `stim_vs_alignment.png` — Stimulation efficiency trade-off
+- `timeline_example.png` — Real PAC trajectory with TCN vs Reactive decisions
+- `threshold_sensitivity.png` — Robustness analysis
+
+Full statistical details: `results/RESULTS_REPORT.md` and `results/tcn_validation_results.json`.
+
+---
+
+## 11. References
 
 - Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. *Nature*, 540(7632), 230-235.
 - Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. *Cell*, 177(2), 256-271.

@@ -151,6 +151,29 @@ All four new controllers significantly outperform Fixed Schedule (Wilcoxon p < 0
 
 ---
 
+## SLIDE 8b: TCN-Based Predictive Control on Real EEG Data
+
+I then integrated the trained TCN directly into the closed-loop controller and replayed all 35 subjects' real EEG data through six control strategies.
+
+| Controller | Epoch Alignment | Low-PAC Targeting | PAC Gap (µV²) | Stim % |
+|-----------|----------------|-------------------|---------------|--------|
+| Fixed Schedule | 45.0% | 61.4% | −6.6 (WRONG) | 66.6% |
+| Reactive Threshold | 64.5% | 51.7% | +21.1 | 36.7% |
+| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** | 59.7% |
+| Hybrid TCN+Reactive | 73.8% | 85.3% | +34.0 | 60.8% |
+| Alignment Oracle | 100.0% | 100.0% | +33.3 | 48.3% |
+
+**Key findings (all N=35, Wilcoxon p < 0.001):**
+- TCN alignment 72.1% vs Reactive 64.5% — **Hedges' g = +1.31** (large effect)
+- TCN targets 82.6% of low-PAC windows vs Reactive's 51.7% — **g = +4.47** (very large)
+- TCN PAC targeting gap +30.5 µV² vs Reactive +21.1 — **g = +1.57** (large), reaching 91% of oracle bound
+- **35/35 subjects** (100%) show improved clinical utility with TCN (binomial p < 0.001)
+- Results robust across all delta-z thresholds 0.2–1.0
+
+The Fixed Schedule actually targets stimulation in the **wrong direction** (negative PAC gap — more stim during high-PAC periods). The TCN achieves near-oracle targeting with no future knowledge.
+
+---
+
 ## SLIDE 9: Individual Variability — Why One Size Doesn't Fit All
 
 When I measured habituation across subjects — does PAC decline over the course of a session? — the population-level answer was **no** (p = 0.54). But the individual answers told a different story:
