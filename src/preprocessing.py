@@ -306,13 +306,14 @@ class EEGPreprocessor:
         logger.debug("Applying notch filter...")
         signal = self.notch_filter(signal)
 
-        # 3. Common average reference
-        logger.debug("Applying common average reference...")
-        signal = self.common_average_reference(signal)
-
-        # 4. Artifact rejection
+        # 3. Artifact rejection (before CAR so that high-amplitude artifacts
+        #    don't propagate to clean channels via the common average)
         logger.debug("Applying artifact rejection...")
         signal, artifact_mask = self.artifact_rejection(signal)
+
+        # 4. Common average reference
+        logger.debug("Applying common average reference...")
+        signal = self.common_average_reference(signal)
         qc_report['n_artifacts'] = int(np.sum(artifact_mask))
         qc_report['pct_artifacts'] = float(100.0 * np.sum(artifact_mask) / artifact_mask.size)
 
