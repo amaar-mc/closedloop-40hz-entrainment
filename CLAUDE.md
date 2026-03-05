@@ -33,11 +33,11 @@ python temporal/validate_code.py
 # 4. Build leakage-safe multiscale temporal dataset (requires step 1)
 python temporal_multiscale/build_multiscale_dataset.py \
   --data-dir data/processed \
-  --output-dir data/processed/multiscale_temporal_lb20_hz1_ts5_clean
+  --output-dir data/processed/multiscale_temporal_lb20_hz5_ts1
 
 # 5. Train multiscale causal TCN (requires step 4)
 python temporal_multiscale/train_multiscale_tcn.py \
-  --data-dir data/processed/multiscale_temporal_lb20_hz1_ts5_clean \
+  --data-dir data/processed/multiscale_temporal_lb20_hz5_ts1 \
   --output-dir models
 
 # 6. Sweep prediction horizons 1–10s (trains separate model per horizon)
@@ -91,7 +91,7 @@ src/pac_computation.py      Modulation Index (Tort 2010): theta (4–8 Hz) phase
         ↓
 data/processed/             train/val/test_data.npz — subject-level split
                             Windows: (n, 1, 7, 500) — 7 frontal channels, 2s @ 250Hz
-                            PAC labels: µV range [0.0002, 0.0046]
+                            PAC labels: range [0.000006, 0.000701], mean ~0.000044
 ```
 
 **PAC label assignment:** PAC is computed at the epoch level (full 20–40s blocks), then assigned to all constituent 2s windows within that epoch. This means windows from the same epoch share the same PAC label.
@@ -102,7 +102,7 @@ data/processed/             train/val/test_data.npz — subject-level split
 - Input: `(batch, 1, 7, 500)` → Output: `(batch, 1)` predicted PAC
 - Block 1: temporal conv + depthwise spatial; Block 2: separable conv; FC head
 
-`training.py` — Training loop with z-score normalization of PAC targets (mean/std saved in checkpoint), Huber/MSE loss, Adam, ReduceLROnPlateau, gradient clipping (max_norm=1.0), early stopping.
+`training.py` — Training loop with z-score normalization of PAC targets (mean/std saved in checkpoint), MSE loss, Adam, ReduceLROnPlateau, gradient clipping (max_norm=1.0), early stopping.
 
 Current performance: **R² ≈ 0.287** on held-out test subjects (this is the ceiling for static prediction from 7 frontal channels — see docs/CODE_MAP.md for the full history of 8 model architectures that all converge here).
 
@@ -126,7 +126,7 @@ The latest pipeline for predicting *future* PAC (5–10 s ahead):
 2. `PersonalizationModule` maintains a 30-second rolling baseline; outputs z-score.
 3. Decision: z < −0.5 → STIMULATE, z > +0.5 → REST, else MAINTAIN. 5-second hysteresis.
 4. `EntrainmentSimulator` models brain response (exponential PAC dynamics, optional fatigue model).
-5. `ValidationFramework` compares Fixed Schedule / Reactive / Predictive MPC / Oracle.
+5. `ValidationFramework` compares Fixed Schedule / Reactive / Predictive Look-Ahead / Oracle.
 
 Top-level demo scripts: `run_closed_loop_demo.py` (all strategies ± fatigue), `run_fatigue_sensitivity.py` (fatigue severity sweep), `run_replay_analysis.py` (replay on real data).
 
@@ -147,7 +147,7 @@ All runtime parameters live in `config.yaml` — channel selection, filter bands
 
 ## Critical Gotchas
 
-- **MI feature leakage:** PAC features (from `pac_features.py`) are circular — they directly encode the target. Using them as model inputs inflates R² to 0.999. Only spectral features are safe for PAC prediction. See `archive/diagnostics/audit_leakage.py` for the original detection.
+- **MI feature leakage:** PAC features (from `archive/experimental_models/pac_features.py`) are circular — they directly encode the target. Using them as model inputs inflates R² to 0.999. Only spectral features are safe for PAC prediction. See `archive/diagnostics/audit_leakage.py` for the original detection.
 - **Target smoothing changes evaluation:** `target_smooth_window=5` predicts a causal denoised PAC state (R² ≈ 0.74); `target_smooth_window=1` predicts raw PAC (R² ≈ 0.07). Never compare models across different target definitions.
 - **Persistence is a strong baseline at short horizons.** Always report persistence and Ridge alongside any TCN result. The TCN's value is exclusively at 3+ second horizons.
 - **Dataset rebuild required if args change.** `build_multiscale_dataset.py` enforces metadata consistency. If reusing a dataset dir with different lookback/horizon/smoothing args, rebuild or pass `--allow-metadata-mismatch`.
