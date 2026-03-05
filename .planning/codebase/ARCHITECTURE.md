@@ -1,233 +1,249 @@
 # Architecture
 
-**Analysis Date:** 2026-02-26
+**Analysis Date:** 2026-03-05
 
 ## Pattern Overview
 
-**Overall:** Layered pipeline with feature extraction → prediction → control decision flow, organized as three independent subsystems: Static PAC Prediction (Phase 1), Temporal PAC Forecasting (Phase 2), and Closed-Loop Control (Phase 3). Each subsystem follows a clear separation of concerns: data processing, model training, and inference.
+**Overall:** Multi-pipeline research system with three distinct processing stages (data ingestion, model training, closed-loop control) connected through file-based intermediate artifacts (`.npz` data splits, `.pth` checkpoints, `.json` scalers/metadata).
 
 **Key Characteristics:**
-- Data flows unidirectionally from raw BIDS dataset → preprocessing → feature extraction → model prediction → controller decision
-- Modular design allows independent training and validation of each stage
-- Interfaces defined through NumPy arrays and checkpoint files (no tight coupling)
-- Real-time inference path separate from training path to ensure causal ordering (no future leakage)
-- Configuration-driven hyperparameters (all parameters in `config.yaml`)
+- File-based pipeline coupling: each stage writes outputs consumed by the next stage via disk (no in-memory service layer)
+- Two parallel model pipelines: static EEGNet for real-time PAC estimation, temporal TCN for future PAC forecasting
+- Subject-level data isolation enforced at every stage (no within-subject leakage between train/val/test)
+- All runtime parameters centralized in `config.yaml` (signal processing, model hyperparameters, controller thresholds, simulator dynamics)
+- Top-level `run_*.py` scripts serve as experiment entry points that compose modules from `src/` and `temporal_multiscale/`
+- Configuration is documentation-first: `config.yaml` documents all parameters but each module also has matching defaults; CLI args override at runtime
 
 ## Layers
 
 **Data Ingestion Layer:**
-- Purpose: Load BIDS-compliant EEG dataset and create aligned labels
-- Location: `src/data_loader.py`
-- Contains: BIDS dataset reader, event-based segmentation, window generation, PyTorch DataLoader factory
-- Depends on: OpenNeuro ds005048 (MATLAB v7.3 HDF5 .set files + .fdt float32 arrays), events.tsv stimulus markers
-- Used by: Preprocessing layer, feature extraction layer
+- Purpose: Load raw BIDS EEG data, preprocess signals, compute PAC labels, create train/val/test splits
+- Location: `src/data_loader.py`, `src/preprocessing.py`, `src/pac_computation.py`
+- Contains: `BIDSDataProcessor` (BIDS loading, HDF5 `.set` + `.fdt` parsing, event-based windowing), `EEGPreprocessor` (bandpass 0.5-80 Hz, notch 50 Hz, artifact rejection +-100 uV, CAR), `PACComputer` (Tort Modulation Index: theta 4-8 Hz phase x gamma 38-42 Hz amplitude, 18 phase bins)
+- Depends on: Raw data at `data/raw/ds005048/` (OpenNeuro BIDS format with `.set`/`.fdt` pairs + `events.tsv`), MNE, h5py, scipy
+- Used by: Training pipeline, temporal dataset builder
+- Outputs: `data/processed/{train,val,test}_data.npz` containing windows `(n, 1, 7, 500)` + PAC labels `(n,)` + subject IDs
 
-**Preprocessing Layer:**
-- Purpose: Signal conditioning and artifact rejection
-- Location: `src/preprocessing.py`
-- Contains: Bandpass filter (0.5–80 Hz, Butterworth 4th-order), notch filter (50 Hz, Q=30), amplitude thresholding (±100 µV), common average reference (CAR)
-- Depends on: Data ingestion layer
-- Used by: Feature extraction layer
-- Note: Input data already preprocessed by Makoto's pipeline; this applies light additional filtering only
-
-**Feature Extraction Layer:**
-- Purpose: Compute PAC labels and spectral features from preprocessed EEG
-- Location: `src/pac_computation.py` (PAC), `temporal_multiscale/build_multiscale_dataset.py` (spectral features + context)
-- Contains:
-  - PAC computation via Modulation Index (theta 4–8 Hz phase × gamma 38–42 Hz amplitude)
-  - Spectral binning (61 frequency bins for 1–40 Hz)
-  - Multiscale PAC history features (moving averages at 2, 4, 8, 16 timestep windows)
-  - Stimulation context features (current state, time since last switch, 5-minute rolling stim fraction)
-- Depends on: Preprocessing layer
-- Used by: Model training layer (static and temporal paths)
-
-**Static PAC Prediction Model:**
-- Purpose: Predict PAC from a single 2-second EEG window
+**Static Model Layer (EEGNet):**
+- Purpose: Train and serve a compact CNN that predicts current PAC from raw 2-second EEG windows
 - Location: `src/eegnet.py`, `src/training.py`
-- Contains: EEGNet CNN (1,457 parameters): Block 1 (temporal conv 8×1×64 + depthwise spatial) → Block 2 (separable conv) → FC head
-- Depends on: Feature extraction (raw EEG windows + PAC labels)
-- Used by: Controller for real-time inference
-- Performance: R² ≈ 0.287 on held-out test subjects (ceiling for 7 frontal channels)
+- Contains: `EEGNet` (~1,457 params): Block 1 (temporal conv 8x1x64 + depthwise spatial 7x1) -> Block 2 (separable conv 16x1x16) -> FC head. `ModelTrainer` (MSE loss, Adam lr=0.001 wd=1e-4, ReduceLROnPlateau factor=0.5 patience=5, early stopping patience=15, gradient clipping max_norm=1.0). `DataAugmentor` (time shift, amplitude scaling, Gaussian noise).
+- Depends on: Processed `.npz` splits from data ingestion layer
+- Used by: `ClosedLoopController` for real-time PAC inference
+- Outputs: `models/best_eegnet.pth` checkpoint (includes `pac_mean`/`pac_std` for z-score denormalization)
+- Performance: R^2 ~ 0.287 on held-out test subjects (ceiling for 7 frontal channels after 8 architecture attempts)
 
-**Temporal PAC Forecasting Model:**
-- Purpose: Predict future PAC at horizons 1–10 seconds ahead
-- Location: `temporal_multiscale/multiscale_tcn.py`, `temporal_multiscale/train_multiscale_tcn.py`
-- Contains: MultiscaleCausalTCN (31K parameters): 4 causal depthwise-separable conv blocks (dilations [1,2,4,8]) with GroupNorm + attention pooling, dual-head regression (future PAC + delta-PAC)
-- Depends on: Multiscale temporal dataset from `build_multiscale_dataset.py`
-- Used by: Closed-loop controller for proactive decisions at 5–10s horizons
-- Performance: R² ≈ 0.25 at 5–10s horizons (maintains prediction where baselines collapse)
+**Temporal Model Layer (Multiscale TCN):**
+- Purpose: Predict future PAC 5-10 seconds ahead using causal temporal features
+- Location: `temporal_multiscale/build_multiscale_dataset.py`, `temporal_multiscale/multiscale_tcn.py`, `temporal_multiscale/train_multiscale_tcn.py`
+- Contains:
+  - `build_multiscale_dataset()`: Constructs causal sequences from processed windows. Feature vector = 73 dimensions: 61 spectral (from FFT cache) + 7 PAC-derived (current, MA2/4/8/16, diff1/4) + 5 stim context (state, time_since_switch, stim_frac, cycle_phase_sin/cos). Sequence format: `X[t-lookback+1:t]` -> `y[t+horizon]`.
+  - `MultiscaleCausalTCN` (~31K params): Input projection (Linear + LayerNorm + SiLU) -> 4 `CausalDSConvBlock` layers (depthwise-separable conv, dilations [1,2,4,8], GroupNorm, SiLU, residual connections) -> `AttentionPool1D` (or `LastStepPool`) -> dual regression heads (future PAC + delta PAC, each: Linear->SiLU->Dropout->Linear)
+  - Training: HuberLoss (delta=1.0) + optional multi-task delta loss + consistency penalty in raw PAC space. AdamW (lr=1e-3, wd=1e-3). ReduceLROnPlateau (mode="max" on val R^2, factor=0.5, patience=5). Early stopping patience=20.
+- Depends on: Processed `.npz` splits + `{split}_spectral_cache.npy` + BIDS `events.tsv` for stim context
+- Used by: `RealtimePACForecaster`, `PredictiveLookAheadController`
+- Outputs: `models/best_multiscale_tcn_lb20_hz5_ts1.pth` (dict with `model_state_dict`, `cfg`, `metadata`, `scalers`), `data/processed/multiscale_temporal/scalers.npz`, `metadata.json`
+- Performance: R^2 ~ 0.25 at 5-10s horizons where persistence/Ridge baselines collapse to negative R^2
+
+**Realtime Inference Layer:**
+- Purpose: Wrap trained TCN for online causal prediction with rolling buffer
+- Location: `temporal_multiscale/realtime_inference.py`
+- Contains: `RealtimePACForecaster` -- maintains `deque(maxlen=lookback)` for feature sequences and `deque(maxlen=32)` for PAC history. Per-step: assembles 73-feature vector from spectral_features(61) + PAC history features(7) + stim context(5), z-score normalizes using saved scalers, runs TCN forward pass, denormalizes predictions back to raw PAC scale.
+- Depends on: Trained TCN checkpoint + `scalers.npz`
+- Used by: `PredictiveLookAheadController` in `src/controller.py`, `PredictiveLookAheadControl` in `src/validation.py`
 
 **Closed-Loop Control Layer:**
-- Purpose: Real-time stimulation decisions based on personalized PAC thresholds
+- Purpose: Make real-time stimulation decisions (STIMULATE/REST) based on brain state
 - Location: `src/controller.py`, `src/personalization.py`
 - Contains:
-  - `ClosedLoopController`: Integrates EEGNet inference + personalization module + decision logic
-  - `PersonalizationModule`: Rolling 30-second baseline with z-score normalization
-  - State machine: STIMULATE / REST states with 5-second hysteresis
-  - Thresholds: z < −0.5 → stimulate; z > +0.5 → rest
-- Depends on: Trained EEGNet checkpoint + real-time EEG stream
-- Used by: Simulation/validation framework
+  - `ClosedLoopController`: Reactive controller. Loads EEGNet checkpoint. Per step: EEG window -> EEGNet PAC prediction -> z-score via `PersonalizationModule` -> threshold decision -> hysteresis enforcement.
+  - `PredictiveLookAheadController`: Proactive controller. Takes `RealtimePACForecaster` instance. Per step: spectral features + PAC + stim context -> TCN prediction -> proactive decision based on predicted delta_pac -> reactive z-score fallback -> hysteresis.
+  - `PersonalizationModule`: `deque(maxlen=30)` circular buffer. Compute-before-update pattern (z-score computed on current value before it enters buffer). Lazy-cached mean/std with cache invalidation on update.
+  - `MultiChannelPersonalization`: Independent per-channel baselines (not used in current pipeline).
+  - `StimState` enum: STIMULATE=1, REST=0.
+- Depends on: EEGNet checkpoint (reactive) or TCN forecaster (predictive)
+- Used by: Validation framework, demo scripts
 
-**Simulator & Validation Layer:**
-- Purpose: Test control strategies without live subjects
+**Simulation & Validation Layer:**
+- Purpose: Simulate brain dynamics and compare control strategies
 - Location: `src/simulator.py`, `src/validation.py`
 - Contains:
-  - `EntrainmentSimulator`: Exponential PAC dynamics (τ_rise=0.15, τ_decay=0.10) with optional fatigue model
-  - `ValidationFramework`: Compares Fixed Schedule / Reactive / Predictive / Oracle strategies
-  - Fatigue model: Recovery curves modeled as exponential with duty-cycle threshold
-- Depends on: Trained models, controller
-- Used by: Analysis scripts (`run_closed_loop_demo.py`, `run_fatigue_sensitivity.py`)
+  - `EntrainmentSimulator`: Exponential approach model: `PAC(t+1) = PAC(t) + tau * (target - PAC(t)) + noise`. Params: tau_rise=0.15, tau_decay=0.10, pac_max=0.3, pac_min=0.05, noise_std=0.02.
+  - `FatigueAwareSimulator`: Extends above with habituation dynamics: effectiveness(t) = 1 - fatigue(t), fatigue accumulates during stim (rate=0.008), recovers during rest (rate=0.03), max_fatigue=0.7.
+  - `extract_tau_parameters_from_data()`: Empirical tau estimation from observed PAC transitions.
+  - `SimulationValidator`: Multi-method comparison framework. Runs each `ControlMethodBase` through identical simulation, collects `ValidationMetrics` (PAC mean/std/improvement, stim time, efficiency, R^2), ANOVA + Cohen's d.
+  - Control strategies: `FixedScheduleControl` (40s ON / 20s OFF), `ReactiveThresholdControl` (z-score on rolling baseline), `PredictiveLookAheadControl` (TCN or trend-based heuristic), `OracleControl` (perfect information).
+- Depends on: Controller layer, simulator
+- Used by: Top-level demo/validation scripts
+
+**Experiment Entry Layer:**
+- Purpose: Compose modules into runnable experiments
+- Location: Top-level `run_*.py` scripts
+- Key scripts:
+  - `run_tcn_validation.py`: Primary validation. Runs 6 controller variants (Fixed, Reactive, TCN Predictive, Hybrid TCN+Reactive, PI Controller, Alignment Oracle) on real EEG data with epoch-level evaluation. Computes alignment, transition anticipation, efficiency, clinical utility. Wilcoxon signed-rank + Hedges' g statistics. **This is the definitive evaluation script.**
+  - `run_closed_loop_demo.py`: Simulation-based comparison (all strategies with/without fatigue, N trials)
+  - `run_fatigue_sensitivity.py`: Fatigue severity sweep
+  - `run_replay_analysis.py`: Replay controller decisions on real recorded EEG
+  - `run_threshold_sweep.py`: Threshold sensitivity analysis (z-score thresholds 0.2-1.0)
+  - `run_full_pipeline.py`: End-to-end pipeline runner
+- Depends on: All layers above
+- Outputs: `results/*.json`, `results/figures/*.png`
 
 ## Data Flow
 
-**Static Prediction Path (Phase 1):**
+**Raw BIDS to Processed Windows:**
 
-1. Load raw BIDS EEG from `data/raw/ds005048`
-2. `data_loader.py`: Parse MATLAB v7.3 .set files, read float32 .fdt arrays, segment by events.tsv
-3. `preprocessing.py`: Apply bandpass (0.5–80 Hz) + notch (50 Hz) + artifact thresholding (±100 µV) + CAR
-4. `pac_computation.py`: Compute Modulation Index PAC per epoch (20–40s blocks)
-5. Create 2-second sliding windows (50% overlap) with epoch-level PAC labels
-6. Export to `data/processed/{train,val,test}_data.npz` (Windows: (n, 1, 7, 500), PAC: (n,))
-7. Train EEGNet via `training.py`: Adam (lr=0.001) + Huber loss + ReduceLROnPlateau + early stopping (patience=15)
-8. Save checkpoint to `models/best_eegnet.pth` (includes z-score normalization stats)
+1. `src/data_loader.py` (`BIDSDataProcessor.process_dataset()`) scans `data/raw/ds005048/sub-*/eeg/` for `.set` + `.fdt` file pairs
+2. `.set` files are MATLAB v7.3 HDF5; actual EEG is in `.fdt` (float32, Fortran order) -- loaded via `_load_hdf5_set()` which reads `root['data']` as filename reference, then `np.fromfile(fdt, dtype=float32).reshape(n_channels, n_points, order='F')`
+3. 7 frontal channels selected: Fp1, Fp2, F7, F3, Fz, F4, F8
+4. `src/preprocessing.py` (`EEGPreprocessor.preprocess()`) applies bandpass (0.5-80 Hz Butterworth 4th-order), notch (50 Hz Q=30), artifact rejection (+-100 uV), CAR. Note: raw data already preprocessed by Makoto's pipeline (1Hz HP, 50Hz notch, ICA, CAR).
+5. `extract_stimulus_windows()` segments by BIDS `events.tsv` into Stimulus/Rest blocks
+6. PAC computed at epoch level (full 20-40s blocks) via `PACComputer.compute_pac_multichannel()`, then assigned to ALL constituent 2s windows within that epoch (windows from same epoch share same PAC label)
+7. 2s sliding windows extracted with 50% overlap (hop=1s, 500 samples @ 250 Hz)
+8. Subject-level splits (seed=42): 70/15/15 -> 24 train / 5 val / 6 test subjects. Written to `data/processed/{train,val,test}_data.npz`
+9. Total: 17,283 windows (Train 11,736, Val 2,725, Test 2,822)
 
-**Temporal Prediction Path (Phase 2):**
+**Processed Windows to Temporal Sequences:**
 
-1. Load preprocessed windows from `data/processed/{train,val,test}_data.npz` (output of Phase 1)
-2. Extract spectral features via FFT (61 bins) and compute moving averages (2, 4, 8, 16 timesteps)
-3. Read events.tsv for stimulation context (current state, time-since-switch, stim fraction)
-4. Build causal sequences (no future leakage): X[t-lookback+1:t] → y[t+horizon]
-5. Normalize features with z-score (saved in scalers.npz)
-6. Export to `data/processed/multiscale_temporal/{train,val,test}_multiscale.npz`
-7. Train MultiscaleCausalTCN via `train_multiscale_tcn.py`: Huber loss + multi-task (future + delta) + ReduceLROnPlateau
-8. Save checkpoint to `models/best_multiscale_tcn.pth` (includes config, metadata, scalers)
+1. `temporal_multiscale/build_multiscale_dataset.py` loads existing `.npz` splits via `_load_split()`
+2. Loads pre-computed spectral cache (`{split}_spectral_cache.npy`, 61 features from FFT)
+3. For each subject within each split:
+   - Reads `events.tsv` via `_subject_events()` to get stim/rest state per window
+   - Computes 5 stim context features via `_stim_context_from_events()`: state, time_since_switch (normalized /60), stim_frac (causal MA over 20s), cycle_phase_sin/cos
+   - Computes 7 PAC-derived features via `_pac_multiscale_features()`: current, MA2/4/8/16, diff1, diff4 (all causal)
+   - Concatenates: [61 spectral | 7 PAC | 5 context] = 73 features per timestep
+4. Builds causal sequences: for each valid t, sequence = features[t-lookback+1 : t+1], target = PAC[t+horizon]
+5. Z-score normalizes ALL features using train-only statistics; saves `scalers.npz`
+6. Optional causal target smoothing (`_causal_target_smooth()`) with configurable window (ts=1 means raw targets)
+7. Outputs: `data/processed/multiscale_temporal_{config}/{train,val,test}_multiscale.npz` + `scalers.npz` + `metadata.json`
 
-**Closed-Loop Inference Path:**
+**Closed-Loop Decision Flow (Reactive -- ClosedLoopController):**
 
-1. Receive 2-second EEG window (1, 7, 500) at 1 Hz decision rate
-2. `controller.py`: EEGNet inference → PAC estimate
-3. `personalization.py`: Update 30-second rolling baseline → compute z-score
-4. Decision logic: threshold-based + hysteresis (5-second hold)
-5. Optional: Use `realtime_inference.py` (causal rolling buffer) for temporal TCN prediction at 5–10s horizon
-6. Output: STIMULATE / REST action + diagnostics (PAC, z-score, confidence)
+1. `step(eeg_window)` receives raw EEG `(7, 500)` or `(1, 7, 500)`
+2. Reshape to `(1, 1, 7, 500)` tensor, move to device
+3. EEGNet forward pass -> PAC scalar prediction, clipped to [0, 1]
+4. `PersonalizationModule.compute_zscore(pac)` -- computes BEFORE update to prevent self-contamination
+5. `PersonalizationModule.update(pac)` -- adds to rolling buffer
+6. `_make_decision(z_score)`: z < -0.5 -> STIMULATE, z > +0.5 -> REST, else MAINTAIN
+7. Hysteresis: desired != current AND time_in_state >= hold_samples (5s) -> transition; else stay
+
+**Closed-Loop Decision Flow (Predictive -- PredictiveLookAheadController):**
+
+1. `step()` receives spectral_features(61), pac_current, stim_state, time_since_switch, stim_frac, cycle_phase
+2. Updates personalization baseline, computes z-score
+3. `RealtimePACForecaster.step()`:
+   - Assembles 73-feature vector via `_build_step_feature()`
+   - Appends to `seq_buffer` deque
+   - If `len(seq_buffer) < lookback` -> returns None (not ready)
+   - Stacks buffer into `(1, T, 73)` tensor, runs TCN forward
+   - Denormalizes outputs: `future_raw = future_norm * yf_std + yf_mean`
+   - Returns `{future_pac, delta_pac, current_pac, implied_future_from_delta}`
+4. Decision priority: (a) delta_pac < -0.3 -> preemptive STIMULATE, (b) delta_pac > +0.3 -> REST, (c) reactive z-score fallback, (d) maintain
+5. Same 5s hysteresis as reactive controller
 
 **State Management:**
-- Static predictions: Stateless (single window → single PAC estimate)
-- Temporal predictions: Stateful (maintains causal rolling buffer of 20–80 timesteps)
-- Controller: Stateful (maintains current state, time-in-state, personalization buffer, hysteresis counter)
-- Simulator: Stateful (maintains PAC, fatigue level, action history)
+- No global state store. Each controller/simulator maintains its own history arrays (lists/numpy arrays).
+- `PersonalizationModule`: `deque(maxlen=30)` with lazy-cached mean/std (invalidated on every `update()`)
+- `RealtimePACForecaster`: `deque(maxlen=lookback)` for feature sequences, `deque(maxlen=32)` for PAC history used in MA features
+- `EntrainmentSimulator`: Append-only lists for pac_history and action_history
+- All stateful components have `reset()` methods for trial-by-trial isolation
+- Results serialized to JSON (metrics/config) and NPZ (arrays) in `results/` and `models/`
 
 ## Key Abstractions
 
-**EEGWindowDataset:**
-- Purpose: Abstracts batch loading of windowed EEG and labels
-- Examples: `src/data_loader.py` (defines EEGWindowDataset), used by training scripts
-- Pattern: PyTorch Dataset subclass with `__len__` and `__getitem__`
+**EEGWindowDataset (`src/data_loader.py` line 50):**
+- Purpose: PyTorch Dataset wrapping pre-computed EEG windows + PAC labels
+- Pattern: Standard `__getitem__()` returning `(window_tensor, pac_scalar)`. Windows stored as float tensors `(1, 7, 500)`.
 
-**PACComputer:**
-- Purpose: Encapsulates Modulation Index computation with configurable band selection
-- Examples: `src/pac_computation.py`, instantiated in `data_loader.py`
-- Pattern: Stateless class with precomputed Butterworth filter coefficients
+**SequenceDataset (`temporal_multiscale/train_multiscale_tcn.py` line 32):**
+- Purpose: PyTorch Dataset for temporal TCN training
+- Pattern: `__getitem__()` returns dict `{x_seq, y_future, y_delta, last_pac}`. Loaded from pre-built `.npz` files.
 
-**EEGNet:**
-- Purpose: Trainable CNN for static PAC regression
-- Examples: `src/eegnet.py`, instantiated by `src/training.py` and `src/controller.py`
-- Pattern: PyTorch nn.Module with fixed architecture (Block 1 → Block 2 → FC head)
+**ControlMethodBase (`src/validation.py` line 84):**
+- Purpose: Abstract interface for control strategies
+- Pattern: Strategy pattern. Defines `step(pac_current) -> action` and `reset()`. `SimulationValidator` runs any `ControlMethodBase` through identical simulation.
+- Subclasses: `FixedScheduleControl`, `ReactiveThresholdControl`, `PredictiveLookAheadControl`, `OracleControl`
 
-**MultiscaleCausalTCN:**
-- Purpose: Trainable temporal model for multi-step PAC forecasting
-- Examples: `temporal_multiscale/multiscale_tcn.py`, instantiated by `temporal_multiscale/train_multiscale_tcn.py`
-- Pattern: PyTorch nn.Module with dataclass config; causal (left-padded) convolutions
+**ModelConfig (`temporal_multiscale/multiscale_tcn.py` line 89):**
+- Purpose: Immutable dataclass configuration for `MultiscaleCausalTCN` architecture
+- Pattern: Serialized as `cfg.__dict__` into checkpoint so model can be reconstructed from saved `.pth` file without knowing original CLI args.
 
-**PersonalizationModule:**
-- Purpose: Maintains subject-specific rolling baseline for z-score adaptation
-- Examples: `src/personalization.py`, instantiated by `src/controller.py`
-- Pattern: Stateful circular buffer (deque) with on-demand statistics caching
+**PersonalizationModule (`src/personalization.py` line 22):**
+- Purpose: Subject-specific adaptive baseline via rolling window z-scores
+- Pattern: Compute-before-update (z-score computed on current value before it enters the buffer, preventing self-contamination). Lazy-cached statistics invalidated on each `update()`.
 
-**EntrainmentSimulator:**
-- Purpose: Simulates brain PAC dynamics in response to stimulation actions
-- Examples: `src/simulator.py`, instantiated by validation/analysis scripts
-- Pattern: Stateful simulator with exponential approach model, optional fatigue layer
-
-**ClosedLoopController:**
-- Purpose: Integrates inference, personalization, and decision logic for real-time control
-- Examples: `src/controller.py`, instantiated by `validation.py` and demo scripts
-- Pattern: Stateful controller with state machine (STIMULATE/REST) and hysteresis
-
-**RealtimePACForecaster:**
-- Purpose: Wraps MultiscaleCausalTCN for low-latency causal rolling inference
-- Examples: `temporal_multiscale/realtime_inference.py`
-- Pattern: Stateful wrapper maintaining rolling buffer of (lookback) timesteps
+**RealtimePACForecaster (`temporal_multiscale/realtime_inference.py` line 20):**
+- Purpose: Wrap trained TCN for online causal inference with rolling buffer
+- Pattern: Feature assembly + buffer management + model inference + denormalization in a single `step()` call. Returns None until lookback buffer is full.
 
 ## Entry Points
 
-**Data Preparation (Phase 1):**
-- Location: `src/data_loader.py` (direct script execution or import)
-- Triggers: Manual invocation with `--bids_root` and `--output` arguments
-- Responsibilities: Load BIDS dataset, create windows, compute PAC, export train/val/test splits
+**Data Processing:**
+- Location: `src/data_loader.py` -- `python src/data_loader.py --bids_root data/raw/ds005048 --output data/processed`
+- Triggers: Manual; first pipeline step
+- Responsibilities: Full BIDS -> preprocessed windows + PAC labels pipeline
 
-**Training Static Model (Phase 1):**
-- Location: `src/training.py` (direct script execution)
-- Triggers: Manual invocation with `--data_dir`, `--output_dir`, `--epochs` arguments
-- Responsibilities: Load train/val splits, train EEGNet, checkpoint best model
+**Static Model Training:**
+- Location: `src/training.py` -- `python src/training.py --data_dir data/processed --output_dir models --epochs 100 --batch_size 64`
+- Triggers: After data processing
+- Responsibilities: Z-score normalize PAC targets, train EEGNet, save checkpoint with normalization params
 
-**Building Temporal Dataset (Phase 2):**
-- Location: `temporal_multiscale/build_multiscale_dataset.py` (direct script execution)
-- Triggers: Manual invocation with `--data-dir`, `--output-dir`, optional `--lookback`, `--horizon`, `--smooth` arguments
-- Responsibilities: Load static splits, compute multiscale features, build causal sequences, export normalized dataset
+**Temporal Dataset Build:**
+- Location: `temporal_multiscale/build_multiscale_dataset.py` -- `python temporal_multiscale/build_multiscale_dataset.py --data-dir data/processed --output-dir data/processed/multiscale_temporal_lb20_hz5_ts1`
+- Triggers: After data processing + spectral cache creation
+- Responsibilities: Build causal sequences with 73 features, z-score normalize, save splits + scalers + metadata
 
-**Training Temporal Model (Phase 2):**
-- Location: `temporal_multiscale/train_multiscale_tcn.py` (direct script execution)
-- Triggers: Manual invocation with `--data-dir`, `--output-dir` arguments
-- Responsibilities: Load multiscale dataset, train MultiscaleCausalTCN, checkpoint best model
+**TCN Training:**
+- Location: `temporal_multiscale/train_multiscale_tcn.py` -- can auto-rebuild dataset with `--rebuild-dataset`
+- Triggers: After temporal dataset build
+- Responsibilities: Train MultiscaleCausalTCN, save checkpoint + summary/history JSON
 
-**Closed-Loop Simulation (Phase 3):**
-- Location: `run_closed_loop_demo.py` (direct script execution)
-- Triggers: Manual invocation with optional `--duration`, `--n-trials`, `--enable-fatigue` arguments
-- Responsibilities: Compare control strategies (Fixed / Reactive / Predictive / Oracle) with/without fatigue
+**Pre-Training Audit Gate:**
+- Location: `temporal/validate_code.py` -- **REQUIRED** before any temporal training
+- Triggers: Manual; integrity check
+- Responsibilities: Verify no future information leaks into training sequences
 
-**Fatigue Sensitivity Analysis (Phase 3):**
-- Location: `run_fatigue_sensitivity.py` (direct script execution)
-- Triggers: Manual invocation with optional `--severity-range` argument
-- Responsibilities: Sweep fatigue parameters and measure performance degradation
+**Real-Data TCN Validation (primary evaluation):**
+- Location: `run_tcn_validation.py`
+- Triggers: After both models trained
+- Responsibilities: 6 controller variants on real EEG, epoch-level alignment/transition/efficiency metrics, Wilcoxon + Hedges' g
 
-**Real-Time Replay Analysis:**
-- Location: `run_replay_analysis.py` (direct script execution)
-- Triggers: Manual invocation with optional `--subject-id`, `--session-id` arguments
-- Responsibilities: Replay controller on real EEG data (from test split) and evaluate performance
+**Simulation Demos:**
+- `run_closed_loop_demo.py`: All strategies with/without fatigue
+- `run_fatigue_sensitivity.py`: Fatigue severity sweep
+- `run_replay_analysis.py`: Replay on recorded real EEG
 
-**Audit Scripts:**
-- `temporal_multiscale/validate_code.py`: Pre-training gate; checks for temporal leakage
-- `temporal_multiscale/audit_multiscale_pipeline.py`: Dataset integrity check
-- `temporal_multiscale/comprehensive_submission_audit.py`: Ablation study + baseline comparison
+**Audits:**
+- `temporal_multiscale/audit_multiscale_pipeline.py`: Dataset integrity
+- `temporal_multiscale/comprehensive_submission_audit.py`: Ablation + baselines
 - `temporal_multiscale/checkpoint_deployment_audit.py`: Robustness to noise
 
 ## Error Handling
 
-**Strategy:** Exceptions bubble up with descriptive logging; validation gates enforce data contracts.
+**Strategy:** Defensive with graceful degradation. Errors in individual subjects are caught and logged; processing continues with remaining subjects. Validation gates enforce data contracts before training.
 
 **Patterns:**
-- Data validation in `data_loader.py`: Check file existence, shape consistency, subject-level split integrity
-- Temporal leakage detection in `temporal/validate_code.py`: Assert no future information in sequences
-- Metadata consistency in `build_multiscale_dataset.py`: Enforce args match on reuse (or require `--allow-metadata-mismatch`)
-- Model checkpoint validation: Load config, verify architecture matches saved metadata
-- Graceful fallback: If temporal model unavailable, controller falls back to static EEGNet only
+- `BIDSDataProcessor.process_dataset()` (`src/data_loader.py`): try/except per subject with `traceback.print_exc()` and `continue` -- logs error, skips subject, processes rest. Final check: raises `RuntimeError` if zero windows extracted from all subjects.
+- `ClosedLoopController.step()` (`src/controller.py`): validates input ndim, raises `ValueError` for unexpected shapes (must be 2D or 3D)
+- `PersonalizationModule.compute_zscore()` (`src/personalization.py`): returns `None` when `len(buffer) < min_samples` (caller must handle None)
+- `PredictiveLookAheadControl.step()` (`src/validation.py`): cascading fallback chain: TCN prediction -> trend heuristic -> reactive z-score -> maintain current state. Never crashes on missing prediction.
+- `RealtimePACForecaster.step()` (`temporal_multiscale/realtime_inference.py`): returns `None` until lookback buffer is full (safe for controller to receive)
+- `build_multiscale_dataset.py`: validates metadata consistency between saved dataset and CLI args. Raises `ValueError` on mismatch unless `--allow-metadata-mismatch` passed. Validates contiguous subject indices.
+- `EntrainmentSimulator.__init__()` (`src/simulator.py`): `assert` statements validate tau in [0,1], pac_min < pac_max <= 1
+- Training loops: gradient clipping (max_norm=1.0) in both EEGNet and TCN training prevents exploding gradients
 
 ## Cross-Cutting Concerns
 
-**Logging:** Via Python `logging` module, configured in `src/utils.py`. Logger named `'closed_loop_entrainment'` used throughout. Levels: DEBUG (detailed debug output), INFO (progress), WARNING (data quality issues), ERROR (exceptions).
+**Logging:** Python `logging` module throughout `src/` with named loggers per module (`logging.getLogger(__name__)`). Root logger `'closed_loop_entrainment'` configured in `src/utils.py`. `temporal_multiscale/` uses `print()` statements instead (no structured logging). Log file configured at `logs/experiment.log`.
 
-**Validation:**
-- Input shapes checked in EEGNet `forward()` and MultiscaleCausalTCN `forward()`
-- PAC labels range-checked in training loss computation
-- Z-scores computed only if personalization buffer has ≥ min_samples
+**Validation:** Input shape validation at model boundaries. PAC label range not explicitly checked but z-score normalization handles scale. Z-scores computed only when personalization buffer has >= min_samples. Metadata consistency enforced in dataset builder. Pre-training leakage audit (`temporal/validate_code.py`) is a documented required gate.
 
-**Authentication:** Not applicable (offline research pipeline).
+**Configuration:** Single `config.yaml` at project root (341 lines). Not auto-loaded by modules -- each module has its own defaults that match config values. Config serves as documentation and reference truth. CLI args override at runtime. Key sections: dataset, channels, preprocessing, windowing, pac, model, training, controller, stimulation, simulator, validation, plotting, logging, resources, paths.
 
-**Personalization:** Via PersonalizationModule: rolling baseline + z-score normalization, subject-specific thresholds in ClosedLoopController.
+**Reproducibility:** Deterministic seeding in TCN training: `random.seed(42)`, `np.random.seed(42)`, `torch.manual_seed(42)`, `torch.cuda.manual_seed_all(42)`, `cudnn.deterministic=True`, `cudnn.benchmark=False`. Data splits use fixed seed=42. All experiment results serialized to JSON with full config snapshot.
 
-**State Reset:** All stateful components (controller, simulator, forecaster, personalization) have `reset()` method for trial-by-trial isolation.
+**State Reset:** All stateful components (`ClosedLoopController`, `PredictiveLookAheadController`, `PersonalizationModule`, `EntrainmentSimulator`, `FatigueAwareSimulator`, `RealtimePACForecaster`) implement `reset()` for trial-by-trial isolation.
 
 ---
 
-*Architecture analysis: 2026-02-26*
+*Architecture analysis: 2026-03-05*

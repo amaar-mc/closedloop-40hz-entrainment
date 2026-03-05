@@ -1,71 +1,91 @@
 # Testing Patterns
 
-**Analysis Date:** 2026-02-26
+**Analysis Date:** 2026-03-05
 
 ## Test Framework
 
 **Runner:**
-- No dedicated test framework installed (pytest, unittest not in requirements.txt)
+- No dedicated test framework (no pytest, unittest, or tox in `requirements.txt`)
 - Uses manual test functions with `if __name__ == "__main__":` blocks
+- Audit scripts serve as structured validation suites
 
 **Assertion Library:**
 - Python standard `assert` statements
-- Also uses scipy.stats, numpy comparisons for scientific validation
+- `scipy.stats` for statistical validation (t-tests, ANOVA)
+- numpy comparisons for numerical checks (`np.all`, `np.isfinite`)
 
 **Run Commands:**
 ```bash
-# Test individual modules
-python src/eegnet.py                    # Runs test_eegnet()
-python src/training.py --data_dir ... --epochs 5  # Smoke test with reduced epochs
-python src/controller.py                # Runs test_controller()
+# Module-level smoke tests (run individual files)
+python src/eegnet.py                    # test_eegnet(): forward pass, shape, params
+python src/controller.py                # test_controller(): 60-step synthetic simulation
+python src/preprocessing.py             # test_preprocessing(): synthetic signal pipeline
+python src/personalization.py           # test_personalization(): z-score computation
+python src/simulator.py                 # validate_simulator_dynamics(): step response
 
-# Pre-training audit (REQUIRED gate)
-python temporal/validate_code.py        # Validates leakage, causality, subject splits
+# End-to-end smoke test (reduced epochs)
+python src/training.py --data_dir data/processed --output_dir models --epochs 5 --batch_size 64
 
-# Post-training audits
-python temporal_multiscale/audit_multiscale_pipeline.py         # Dataset integrity
-python temporal_multiscale/comprehensive_submission_audit.py     # Ablations + baselines
-python temporal_multiscale/checkpoint_deployment_audit.py        # Robustness to noise
+# Pre-training audit gate (REQUIRED before temporal training)
+python temporal/validate_code.py
 
-# No automated test runner (no pytest, no tox config)
+# Post-training dataset audits
+python temporal_multiscale/audit_multiscale_pipeline.py --dataset-dir data/processed/multiscale_temporal_lb20_hz5_ts1
+python temporal_multiscale/comprehensive_submission_audit.py --dataset-dir data/processed/multiscale_temporal_lb20_hz1_ts5
+python temporal_multiscale/checkpoint_deployment_audit.py --checkpoint models/best_multiscale_tcn_lb20_hz1_ts5.pth
+
+# Rigorous statistical validation (50+ trials)
+python rigor/rigorous_validation.py --n-trials 50 --duration 600 --seed 42
+
+# Full closed-loop demo (integration test)
+python run_closed_loop_demo.py --duration 600 --n-trials 10
+python run_tcn_validation.py
 ```
 
 ## Test File Organization
 
 **Location:**
-- Co-located with source (NOT separated in `tests/` directory)
-- Each module `foo.py` contains internal `test_foo()` function
+- Co-located with source (no separate `tests/` directory)
+- Each core module in `src/` contains an internal `test_*()` function
+- Dedicated audit scripts live in `temporal/` and `temporal_multiscale/`
+- Rigorous validation in `rigor/`
 
 **Naming:**
-- Functions: `test_*()` pattern: `test_eegnet()`, `test_controller()`, `test_temporal_sequence_logic()`
-- No `*_test.py` or `test_*.py` files at module level
-- Audit/validation scripts: standalone scripts in `temporal/` and `temporal_multiscale/`
+- Inline tests: `test_eegnet()`, `test_controller()`, `test_preprocessing()`, `test_personalization()`
+- Audit functions: `run_audit()`, `audit_code()`
+- Validation scripts: `validate_code.py`, `rigorous_validation.py`
+- No `test_*.py` or `*_test.py` file naming convention
 
 **Structure:**
 ```
 src/
-├── eegnet.py           # Contains test_eegnet()
-├── training.py         # Contains main() entry point (smoke test)
-├── controller.py       # Contains test_controller()
-├── simulator.py        # Contains test_simulator()
-└── utils.py            # Contains main() for utility tests
+  eegnet.py                 # test_eegnet() at bottom
+  controller.py             # test_controller() at bottom
+  preprocessing.py          # test_preprocessing() at bottom
+  personalization.py        # test_personalization() at bottom
+  simulator.py              # validate_simulator_dynamics() at bottom
+  utils.py                  # __main__ block with utility tests
+  training.py               # main() serves as smoke test with --epochs flag
 
 temporal/
-├── validate_code.py    # test_temporal_sequence_logic(), test_leakage(), etc.
-└── ...
+  validate_code.py          # 6-test validation suite (REQUIRED pre-training gate)
 
 temporal_multiscale/
-├── audit_multiscale_pipeline.py      # run_audit()
-├── comprehensive_submission_audit.py # main()
-├── checkpoint_deployment_audit.py    # main()
-└── ...
+  audit_multiscale_pipeline.py       # Dataset integrity audit
+  comprehensive_submission_audit.py  # Ablation + baselines + shuffle sanity
+  checkpoint_deployment_audit.py     # Robustness to PAC feature corruption
+
+rigor/
+  rigorous_validation.py    # 50+ trial statistical validation with bootstrap CI
 ```
 
-## Test Structure
+## Test Categories
 
-**Suite Organization:**
+### 1. Module Smoke Tests (Unit-Level)
 
-Example from `src/eegnet.py`:
+Each `src/` module has a `test_*()` function that verifies basic correctness when run directly.
+
+**Pattern from `src/eegnet.py`:**
 ```python
 def test_eegnet():
     """Test EEGNet with example input."""
@@ -73,328 +93,320 @@ def test_eegnet():
     print("EEGNet Architecture Test")
     print("=" * 60)
 
-    # Create model
-    model = EEGNet(...)
-
-    # Count parameters
+    model = EEGNet(n_channels=7, n_samples=500, F1=8, D=2, F2=16, dropout=0.5)
     n_params = count_parameters(model)
     print(f"Total trainable parameters: {n_params:,}")
 
-    # Test forward pass
     batch_size = 16
     dummy_input = torch.randn(batch_size, 1, 7, 500)
     model.eval()
     with torch.no_grad():
         output = model(dummy_input)
 
-    # Validate output
     print(f"Output shape: {output.shape}")
-    assert output.shape == (batch_size, 1), f"Wrong shape: {output.shape}"
+    # Implicit assertion: would crash if shapes wrong
 
-    # Test feature extraction
     block1_feat, block2_feat = model.get_feature_maps(dummy_input)
     print(f"Feature map shapes: Block1={block1_feat.shape}, Block2={block2_feat.shape}")
-
     return model
 
 if __name__ == "__main__":
     model = test_eegnet()
 ```
 
-Example from `temporal/validate_code.py`:
+**Pattern from `src/controller.py`:**
 ```python
-def test_temporal_sequence_logic(splits, lookback=10, horizon=5):
-    """Test 1: Verify temporal sequence building logic."""
-    print("=" * 60)
-    print("TEST 1: Temporal Sequence Logic")
-    print("=" * 60)
+def test_controller():
+    """Test controller with synthetic EEG and simulated PAC."""
+    import tempfile
+    with tempfile.TemporaryDirectory() as tmpdir:
+        model_path = Path(tmpdir) / 'test_model.pth'
+        model = EEGNet()
+        torch.save({'model_state_dict': model.state_dict(), ...}, model_path)
 
-    errors = 0
-    total_sequences = 0
+        controller = ClosedLoopController(model_path=str(model_path), device='cpu')
 
-    for split_name, data in splits.items():
-        # ... validation logic
-        if condition_failure:
-            errors += 1
-            print(f"  ERROR: {details}")
-        else:
-            print(f"  ✓ {split_name} passed")
+        np.random.seed(42)
+        for step in range(60):
+            eeg_window = np.random.randn(7, 500) * 0.1
+            eeg_window += 0.5 * np.sin(2*np.pi*6*np.arange(500)/250)
+            action, pac_pred, z_score = controller.step(eeg_window)
 
-    if errors > 0:
-        raise RuntimeError(f"{errors} validation errors found")
-    return True
+        history = controller.get_history()
+        # Print summary stats
+```
 
+**What these tests verify:**
+- Forward pass does not crash
+- Output shapes are correct
+- Parameter counts match expectations
+- State management works (reset, history tracking)
+- No NaN/Inf in outputs
+
+### 2. Pre-Training Validation Gate
+
+**File:** `temporal/validate_code.py`
+
+This is a **REQUIRED** gate before any temporal model training. Run it before training any LSTM or TCN.
+
+**Tests included:**
+
+| Test | Function | What it checks |
+|------|----------|---------------|
+| 1 | `test_temporal_sequence_logic()` | Sequences don't cross subject boundaries; contiguity within subjects |
+| 2 | `test_no_subject_leakage()` | No subject appears in multiple splits (train/val/test disjoint) |
+| 3 | `test_pac_autocorrelation()` | PAC temporal structure characterization (informational, not pass/fail) |
+| 4 | `run_sklearn_temporal_baseline()` | Ridge regression baseline with PAC history + EEG stats |
+| 5 | `run_multi_horizon_baseline()` | Ridge baseline at horizons 1-20s (establishes comparison floor) |
+| 6 | `audit_code()` | Static analysis: checks file existence, key patterns in source code |
+
+**Validation pattern:**
+```python
 def main():
-    splits = load_data()
-    test_temporal_sequence_logic(splits)
-    test_leakage(splits)
-    test_pac_autocorrelation(splits)
-    print("\nAll validation tests passed!")
+    splits = load_data(data_dir)
+    results = {}
+    results['sequences'] = test_temporal_sequence_logic(splits)
+    results['no_leakage'] = test_no_subject_leakage(splits)
+    autocorrs = test_pac_autocorrelation(splits)
+    results['baseline_r2'], _ = run_sklearn_temporal_baseline(splits)
+    horizon_results = run_multi_horizon_baseline(splits)
+    results['code_audit'] = audit_code()
 
-if __name__ == "__main__":
-    main()
+    all_pass = all(v for k, v in results.items() if isinstance(v, bool))
+    if not all_pass:
+        print("Some validations failed")
 ```
 
-**Patterns:**
-- Setup: Create fixtures (dummy data, models, configs)
-- Execute: Run operation under test
-- Verify: Assert expected outputs, shapes, ranges
-- Cleanup: (implicit via garbage collection; no manual teardown)
-- Report: Print section headers, results, error summaries
+**Key detail:** Test 6 (`audit_code()`) does **static analysis** of source files -- checks for required patterns like `squeeze(1)`, `assert np.all(np.diff`, `normalize_pac`, `HuberLoss`, `clip_grad_norm`, etc.
 
-## Mocking
+### 3. Dataset Integrity Audits
 
-**Framework:**
-- Not used (no unittest.mock, no pytest fixtures)
-- Instead: **Synthetic data and temporary directories**
+**File:** `temporal_multiscale/audit_multiscale_pipeline.py`
 
-**Patterns:**
+Validates the built multiscale temporal dataset.
 
-Synthetic data generation (from `src/controller.py::test_controller()`):
+**Checks:**
+1. **Subject-level split integrity** -- no overlap between train/val/test subjects
+2. **Temporal causality** -- `target_idx > end_idx` for all sequences (no future leakage)
+3. **Shape and finite-value checks** -- consistent sample counts, no NaN/Inf in features/targets
+4. **Normalization sanity** -- train features approximately N(0,1), val/test means allowed to drift
+5. **Metadata consistency** -- lookback in metadata matches data dimensions
+
+**Output format:**
+```
+[PASS] No subject overlap across train/val/test.
+[PASS] train: temporal causality indices valid.
+[PASS] train: sample counts consistent (8234).
+[PASS] train.x_seq: finite check passed
+[PASS] Train normalization sanity OK: mean_abs=0.0012, avg|std-1|=0.0034
+[PASS] Lookback matches metadata (20).
+
+AUDIT RESULT
+PASS
+```
+
+**Exit behavior:** Returns `bool`; `main()` raises `SystemExit(1)` on failure.
+
+### 4. Submission-Grade Audit
+
+**File:** `temporal_multiscale/comprehensive_submission_audit.py`
+
+Production-quality audit covering:
+
+1. **Basic integrity** (subject overlap + temporal causality) -- same as audit_multiscale_pipeline
+2. **Persistence baseline** -- predicts future PAC = last observed PAC (R^2 floor)
+3. **Feature ablations** (Ridge regression on test set):
+   - Full features
+   - No PAC-derived features (spectral + context only)
+   - PAC-only features
+   - Spectral-only features
+4. **Label-shuffle sanity** -- shuffle training labels, verify R^2 collapses to ~0
+
+**Verdict logic:**
 ```python
-np.random.seed(42)
-baseline_pac = 0.15
-
-for step in range(60):
-    # Generate synthetic EEG window
-    eeg_window = np.random.randn(7, 500) * 0.1  # Gaussian noise
-    eeg_window += 0.5 * np.sin(2*np.pi*6*np.arange(500)/250)  # Theta
-
-    # Make decision
-    action, pac_pred, z_score = controller.step(eeg_window)
-
-    # Validate
-    assert action in [StimState.STIMULATE, StimState.REST]
+integrity_ok = no_subject_overlap and temporal_causality_ok
+shuffle_ok = shuffle_label_sanity_r2 < 0.05
+passes_submission_gate = integrity_ok and shuffle_ok
 ```
 
-Temporary file handling (from `src/controller.py::test_controller()`):
+**Output:** JSON report saved to `models/comprehensive_audit_multiscale_ts5.json`
+
+### 5. Deployment Robustness Audit
+
+**File:** `temporal_multiscale/checkpoint_deployment_audit.py`
+
+Tests trained checkpoint under degraded inference conditions:
+
+1. **Baseline** -- standard inference (as trained)
+2. **PAC features zeroed** -- sets all PAC-derived features to 0 (simulates no PAC oracle)
+3. **PAC features corrupted** -- adds Gaussian noise at sigma = [0.1, 0.25, 0.5, 1.0]
+
+**Purpose:** Quantifies how much performance depends on PAC-history oracle quality. If R^2 drops sharply with PAC zeroed, the model is overly dependent on PAC features (deployment risk).
+
+**Output:** JSON report with R^2/correlation for each scenario.
+
+### 6. Rigorous Statistical Validation
+
+**File:** `rigor/rigorous_validation.py`
+
+Full statistical validation of closed-loop control strategies with proper trial counts.
+
+**Fixes over `src/validation.py`:**
+- 50+ trials per method (vs. 1-3)
+- Both `EntrainmentSimulator` and `FatigueAwareSimulator`
+- ANOVA on arrays of trial metrics (not single scalars)
+- Hedges' g effect sizes for pairwise comparisons
+- Wilcoxon signed-rank tests (nonparametric)
+- Bootstrap 95% confidence intervals (1000 resamples)
+- Reproducible per-trial seeds
+- Population-diverse simulator (randomized parameters per subject)
+- Fatigue severity sweep across multiple `fatigue_rate` values
+
+**Output:** `rigor/rigorous_validation_results.json` with trial-level data and all statistics.
+
+### 7. Real-Data TCN Validation
+
+**File:** `run_tcn_validation.py`
+
+Integration test that runs all controller variants on real EEG data (N=35 subjects).
+
+**Controllers tested:**
+1. Fixed Schedule (replays original protocol)
+2. Reactive (z-score threshold)
+3. TCN Predictive (pure TCN delta prediction)
+4. Hybrid TCN+Reactive
+5. PI Controller
+6. Alignment Oracle
+
+**Metrics:**
+- Epoch alignment (stim during low-PAC, rest during high-PAC)
+- Transition anticipation (lead time)
+- Stimulation efficiency
+- Clinical utility composite
+- Wilcoxon signed-rank tests and Hedges' g for pairwise comparisons
+
+## Test Data Patterns
+
+**Synthetic Data (for module tests):**
+```python
+# Synthetic EEG window
+eeg_window = np.random.randn(7, 500) * 0.1
+eeg_window += 0.5 * np.sin(2*np.pi*6*np.arange(500)/250)  # Add theta
+
+# Synthetic PAC time series
+np.random.seed(42)
+pac_values = 0.15 + np.random.randn(100) * 0.02
+
+# Dummy model checkpoint
+model = EEGNet()
+torch.save({'model_state_dict': model.state_dict(), ...}, tmpdir / 'test_model.pth')
+```
+
+**Real Data (for audits and validation):**
+```python
+# Load preprocessed splits
+train = np.load('data/processed/train_data.npz')  # keys: windows, pac, subjects
+val = np.load('data/processed/val_data.npz')
+test = np.load('data/processed/test_data.npz')
+
+# Load temporal dataset
+d = np.load('data/processed/multiscale_temporal/train_multiscale.npz', allow_pickle=True)
+# keys: x_seq, y_future, y_delta, y_future_norm, y_delta_norm, subjects,
+#        start_idx, end_idx, target_idx, last_pac, feature_names
+```
+
+**Temporary Files:**
 ```python
 import tempfile
-from pathlib import Path
-
 with tempfile.TemporaryDirectory() as tmpdir:
     model_path = Path(tmpdir) / 'test_model.pth'
-
-    # Create and save dummy checkpoint
-    model = EEGNet()
-    checkpoint = {'model_state_dict': model.state_dict(), ...}
-    torch.save(checkpoint, model_path)
-
-    # Use in test
-    controller = ClosedLoopController(model_path=str(model_path), device='cpu')
-    # ... test operations
-    # Cleanup automatic on exit
+    # ... create, use, auto-cleanup
 ```
 
-Data fixtures (from `temporal_multiscale/audit_multiscale_pipeline.py`):
-```python
-def _load_npz(path: Path) -> Dict[str, np.ndarray]:
-    if not path.exists():
-        raise FileNotFoundError(path)
-    return dict(np.load(path, allow_pickle=True))
+## Mocking Approach
 
-def run_audit(dataset_dir: Path) -> bool:
-    train = _load_npz(dataset_dir / "train_multiscale.npz")
-    val = _load_npz(dataset_dir / "val_multiscale.npz")
-    test = _load_npz(dataset_dir / "test_multiscale.npz")
-    # ... validation against real data
-```
+**Not used:** No `unittest.mock`, no pytest fixtures, no dependency injection.
 
-**What to Mock:**
-- Optional dependencies (e.g., tensorpac):
-  ```python
-  try:
-      from tensorpac import Pac
-      TENSORPAC_AVAILABLE = True
-  except ImportError:
-      TENSORPAC_AVAILABLE = False
-  ```
+**Instead:**
+- Synthetic data generation for isolated tests
+- Temporary directories for file I/O tests
+- Try/except wrappers for optional dependencies
+- Real data for integration audits
 
-**What NOT to Mock:**
+**What NOT to mock:**
 - Core computation (PAC, filtering, model inference)
 - Data loading/validation (use real or synthetic data)
 - Model state (use actual checkpoints or dummy tensors)
 
-## Fixtures and Factories
-
-**Test Data:**
-
-Example data factory from `src/training.py`:
-```python
-# Create example training data
-train_data = np.load(Path(args.data_dir) / 'train_data.npz')
-train_dataset = EEGWindowDataset(
-    windows=train_data['windows'],
-    pac_labels=pac_train_norm
-)
-train_loader = DataLoader(
-    train_dataset,
-    batch_size=args.batch_size,
-    shuffle=True,
-    num_workers=args.num_workers,
-    pin_memory=pin_memory
-)
-```
-
-Example synthetic data factory from `src/simulator.py::test_simulator()`:
-```python
-def test_simulator():
-    """Test simulator dynamics."""
-    sim = EntrainmentSimulator(tau_rise=0.15, tau_decay=0.10)
-
-    # Simulate 100 steps with alternating actions
-    for step in range(100):
-        action = 1 if step % 2 == 0 else 0  # Alternate stim/rest
-        pac = sim.step(action)
-
-        # Verify PAC stays within bounds
-        assert 0 <= pac <= 1, f"PAC out of bounds: {pac}"
-
-    return sim
-```
-
-**Location:**
-- No separate fixture files
-- Defined inline in test functions or at module level
-- Shared fixtures in `utils.py` (e.g., `get_device()`, `ensure_dir()`)
-
 ## Coverage
 
-**Requirements:**
-- Not enforced (no coverage config, no CI gates)
+**Requirements:** Not enforced (no coverage config, no CI gates, no CI pipeline).
 
-**View Coverage:**
-- No automated coverage reports
-- Manual inspection: test functions verify critical paths (forward pass, training loop, decision logic)
+**Implicit Coverage:**
+- Module smoke tests cover: forward pass, shape correctness, state management
+- Audit scripts cover: data integrity, normalization, causality, leakage
+- Validation scripts cover: end-to-end closed-loop control performance
+- No coverage reporting tool configured
 
-## Test Types
+## Test Output Conventions
 
-**Unit Tests:**
-- Scope: Single function/class in isolation
-- Approach: Create minimal input, verify output shape/type/range
-- Example: `test_eegnet()` verifies forward pass shape, parameter count, feature extraction
+**Console Output:**
+```
+================================================================
+TEST 1: Temporal Sequence Logic
+================================================================
+  train: 8234 valid sequences across 24 subjects
+  val:   1725 valid sequences across 5 subjects
+  test:  1822 valid sequences across 6 subjects
 
-**Integration Tests:**
-- Scope: Multi-component pipelines (data loading → training → validation)
-- Approach: End-to-end smoke test with reduced epochs
-- Example from CLAUDE.md:
-  ```bash
-  python src/training.py --data_dir data/processed --epochs 5 --batch_size 64
-  ```
-- Validates: Data I/O, model initialization, optimizer, checkpointing
-
-**Data Validation Tests:**
-- Scope: Dataset integrity, causality, leakage detection
-- Approach: Load splits, check subject boundaries, temporal causality, normalization
-- Example: `temporal/validate_code.py::test_temporal_sequence_logic()`
-  - Verifies: No subject-level leakage, sequences stay within subjects, valid indices
-  - Returns: bool, raises SystemExit(1) on failure
-
-**Pipeline Audits (Pre-training Gate):**
-- Run `temporal/validate_code.py` BEFORE temporal training (required gate per CLAUDE.md)
-- Validates: Subject splits, temporal sequence logic, PAC autocorrelation, baseline comparison
-- Entry point: `if not ok: raise SystemExit(1)`
-
-**Audit/Validation Scripts:**
-- Location: `temporal_multiscale/{audit, comprehensive_submission, checkpoint_deployment}_*.py`
-- Checks: Dataset metadata consistency, shape validation, finite-value checks, normalization sanity
-- Output: Human-readable pass/fail log with diagnostics
-
-**E2E Tests:**
-- Not formally structured
-- Implemented as standalone demo scripts: `run_closed_loop_demo.py`, `run_fatigue_sensitivity.py`
-- Validates: Full closed-loop control workflow, simulation, baseline comparison
-
-## Common Patterns
-
-**Async Testing:**
-- Not used (single-threaded Python, no async/await)
-
-**Error Testing:**
-
-Assertion-based error cases (from `src/simulator.py::__init__()`):
-```python
-assert 0 <= tau_rise <= 1, f"tau_rise must be in [0, 1], got {tau_rise}"
-assert 0 <= tau_decay <= 1, f"tau_decay must be in [0, 1], got {tau_decay}"
-assert 0 <= pac_min < pac_max <= 1, f"Invalid PAC bounds: [{pac_min}, {pac_max}]"
+  ALL 11781 sequences validated - no boundary violations
 ```
 
-Exception testing (from `temporal_multiscale/build_multiscale_dataset.py`):
-```python
-def _load_spectral_cache(base_dir: Path, split: str, n_rows: int) -> np.ndarray:
-    cache_path = base_dir / f"{split}_spectral_cache.npy"
-    if not cache_path.exists():
-        raise FileNotFoundError(
-            f"Missing spectral cache: {cache_path}. "
-            "Generate it first with existing temporal pipeline."
-        )
-    spectral = np.load(cache_path).astype(np.float64)
-    if spectral.shape[0] != n_rows:
-        raise ValueError(
-            f"Spectral rows ({spectral.shape[0]}) do not match split rows ({n_rows}) "
-            f"for {split}."
-        )
-    return spectral
-```
+**Pass/Fail Format:**
+- Audit scripts: `[PASS]` / `[FAIL]` prefix
+- Validate scripts: checkmark/cross with description
+- Final verdict: `"PASS"` or `"FAIL"` printed at end
+- Exit code: `SystemExit(1)` on failure
 
-Range/shape validation (from `temporal_multiscale/audit_multiscale_pipeline.py`):
-```python
-def _finite_check(name: str, arr: np.ndarray) -> Tuple[bool, str]:
-    if not np.all(np.isfinite(arr)):
-        n_bad = int(np.size(arr) - np.sum(np.isfinite(arr)))
-        return False, f"{name}: {n_bad} non-finite values found"
-    return True, f"{name}: finite check passed"
-```
+**JSON Reports:**
+- Audit scripts write structured JSON with all metrics
+- Files: `models/comprehensive_audit_*.json`, `models/deployment_audit_*.json`, `rigor/rigorous_validation_results.json`
 
-**Logging-Based Validation:**
+## When to Run What
 
-From `temporal_multiscale/audit_multiscale_pipeline.py::run_audit()`:
-```python
-print("=" * 80)
-print("MULTISCALE PIPELINE AUDIT")
-print("=" * 80)
+| Scenario | Required Tests |
+|----------|---------------|
+| Changed `src/eegnet.py` | `python src/eegnet.py` + reduced-epoch training smoke test |
+| Changed `src/controller.py` | `python src/controller.py` + `python run_closed_loop_demo.py` |
+| Changed `src/preprocessing.py` | `python src/preprocessing.py` + rebuild data + retrain |
+| Changed `temporal_multiscale/` | `python temporal/validate_code.py` + `python temporal_multiscale/audit_multiscale_pipeline.py` |
+| Before temporal training | `python temporal/validate_code.py` (REQUIRED gate) |
+| After temporal training | `audit_multiscale_pipeline.py` + `comprehensive_submission_audit.py` |
+| Before submission/release | `comprehensive_submission_audit.py` + `checkpoint_deployment_audit.py` + `rigor/rigorous_validation.py` |
+| Changed data pipeline | Rebuild dataset + all audits |
 
-ok_all = True
+## Adding New Tests
 
-# Subject leakage check
-tr_sub = set(train["subjects"].tolist())
-va_sub = set(val["subjects"].tolist())
-overlap_tv = tr_sub & va_sub
-if overlap_tv:
-    ok_all = False
-    print(f"[FAIL] Subject leakage detected: {sorted(overlap_tv)}")
-else:
-    print("[PASS] No subject overlap across train/val/test.")
+**For a new `src/` module:**
+1. Add a `test_{module_name}()` function at the bottom of the file
+2. Wire it into `if __name__ == "__main__":` block
+3. Test with synthetic data; verify shapes, ranges, no crashes
+4. Print section headers with `"=" * 60` for visual separation
 
-# Temporal causality
-for split_name, split in [("train", train), ("val", val), ("test", test)]:
-    if not np.all(split["target_idx"] > split["end_idx"]):
-        ok_all = False
-        print(f"[FAIL] {split_name}: found target_idx <= end_idx")
-    else:
-        print(f"[PASS] {split_name}: temporal causality indices valid.")
+**For a new audit:**
+1. Create standalone script in `temporal_multiscale/` or `rigor/`
+2. Use `argparse` for CLI arguments with sensible defaults
+3. Return `bool` from `run_audit()` function
+4. Write JSON report for machine-readable results
+5. Call `raise SystemExit(1)` in `main()` on failure
+6. Use `[PASS]`/`[FAIL]` prefix format for console output
 
-print("\n" + "=" * 80)
-print("AUDIT RESULT")
-print("=" * 80)
-print("PASS" if ok_all else "FAIL")
-return ok_all
-```
-
-**Smoke Testing (Integration):**
-
-From CLAUDE.md:
-```bash
-# Full pipeline with reduced epochs for smoke test
-python src/training.py \
-  --data_dir data/processed \
-  --output_dir models \
-  --epochs 5 \           # Reduced from 100
-  --batch_size 64
-```
-
-Validates: Data loading, model forward/backward, optimizer, checkpointing all work end-to-end without hanging.
+**For new validation scripts:**
+1. Create top-level `run_*.py` script
+2. Load data, run all controller variants, compute metrics
+3. Report per-subject and aggregate statistics
+4. Include baseline comparisons (persistence, Ridge, fixed schedule)
 
 ---
 
-*Testing analysis: 2026-02-26*
+*Testing analysis: 2026-03-05*
