@@ -376,12 +376,11 @@ class PredictiveLookAheadControl(ControlMethodBase):
         # -----------------------------------------------------------------
         # Apply hysteresis
         # -----------------------------------------------------------------
-        if desired_state != self.current_state:
-            if self.time_in_state >= self.hold_time:
-                self.current_state = desired_state
-                self.time_in_state = 0
-            # else hold current state
+        if desired_state != self.current_state and self.time_in_state >= self.hold_time:
+            self.current_state = desired_state
+            self.time_in_state = 0
         else:
+            # Still in current state (either desired==current or hold time not met)
             self.time_in_state += 1
 
         self.action_buffer.append(int(self.current_state))
@@ -614,7 +613,13 @@ class SimulationValidator:
 
         # ANOVA
         values = list(data_by_method.values())
-        f_stat, p_value = stats.f_oneway(*[[v] for v in values])
+        # stats.f_oneway requires arrays with >1 element; with single-trial
+        # runs each group is a scalar, so wrap in a list and guard against
+        # degenerate inputs that produce NaN.
+        try:
+            f_stat, p_value = stats.f_oneway(*[[v] for v in values])
+        except Exception:
+            f_stat, p_value = float('nan'), float('nan')
 
         logger.info(f"One-way ANOVA:")
         logger.info(f"  F-statistic: {f_stat:.4f}")
