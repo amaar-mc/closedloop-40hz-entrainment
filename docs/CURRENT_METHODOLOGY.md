@@ -1,9 +1,9 @@
 # Current Methodology: Closed-Loop 40Hz Entrainment via Temporal PAC Forecasting
 
-**Last Updated:** 2026-02-26
+**Last Updated:** 2026-03-04
 **Status:** Implemented, audited, and validated on real EEG data (N=35 subjects). TCN integrated into closed-loop controller.
 
-This document describes the methodology **as actually implemented and tested**, not the originally proposed approach. For the original proposal, see `archive_pre_multiscale/`.
+This document describes the methodology **as actually implemented and tested**, not the originally proposed approach. For the original proposal, see `archive/`.
 
 ---
 
@@ -41,7 +41,7 @@ Develop a personalized closed-loop system that predicts theta-gamma phase-amplit
 
 1. Load .set/.fdt pairs via custom HDF5 reader (MNE's `read_raw_eeglab` fails on v7.3 format).
 2. Select 7 frontal channels: Fp1, Fp2, F7, F3, Fz, F4, F8.
-3. Apply light preprocessing: bandpass 0.5-80 Hz, 50 Hz notch, artifact rejection (+-100 uV threshold), CAR.
+3. Apply light preprocessing: bandpass 0.5-80 Hz, 50 Hz notch, artifact rejection (+-100 uV threshold), then CAR (artifact rejection before common average reference to prevent corrupted channels from propagating).
 4. Segment by BIDS events.tsv: extract Stimulus and Rest epochs.
 5. Compute epoch-level PAC (Modulation Index, Tort 2010) from full 20-40s epochs for stable labels.
 6. Extract 2-second sliding windows (500 samples) with 1-second hop (50% overlap).
@@ -49,7 +49,7 @@ Develop a personalized closed-loop system that predicts theta-gamma phase-amplit
 
 **Output:** `data/processed/{train,val,test}_data.npz`
 - Windows: `(n, 1, 7, 500)` in microvolts
-- PAC labels: scalar per window, range [0.0002, 0.0046], mean ~0.001
+- PAC labels: scalar per window, range [0.000006, 0.000701], mean ~0.000044
 - Subject-level splits: 24 train / 5 val / 6 test (seed=42, no subject leakage)
 - Total: 17,283 windows (train 11,736, val 2,725, test 2,822)
 
@@ -67,11 +67,11 @@ Constructs causal temporal sequences for forecasting:
 **Features per timestep (73 total):**
 - 61 spectral features (per-window, from cache)
 - 7 PAC-derived features: `pac_current`, `pac_ma2`, `pac_ma4`, `pac_ma8`, `pac_ma16`, `pac_diff1`, `pac_diff4`
-- 5 stimulation context features: `stim_state`, `time_since_switch`, `stim_frac_20s`, `cycle_phase_sin`, `cycle_phase_cos`
+- 5 stimulation context features: `stim_state`, `time_since_switch_60s`, `stim_frac_20s`, `cycle_phase_sin`, `cycle_phase_cos`
 
 **Sequence construction:**
 - Lookback = 20 steps (20 seconds of history)
-- Horizon = 1 step (1 second ahead)
+- Horizon = 5 steps (5 seconds ahead)
 - Target smoothing: None (raw PAC, ts=1). Earlier versions used ts=5 which inflated R^2; see Section 6.3
 - Per-subject sequence building (no cross-subject sequences)
 - y_delta = y_future - y_current (change prediction)
@@ -89,7 +89,7 @@ Constructs causal temporal sequences for forecasting:
 
 - Input: `(batch, 1, 7, 500)` → Output: `(batch, 1)`
 - Block 1: Temporal conv (1→8 filters, kernel=64) + depthwise spatial (D=2) + BN + ELU + AvgPool
-- Block 2: Separable pointwise (8→16 filters) + BN + ELU + AvgPool
+- Block 2: Separable pointwise (16→16 filters) + BN + ELU + AvgPool
 - FC head: regression to scalar PAC
 - Parameters: ~1,457
 - **Performance: R^2 = 0.287** on held-out test subjects
@@ -98,9 +98,10 @@ Constructs causal temporal sequences for forecasting:
 
 - Input: `(batch, T=20, F=73)` → Output: future PAC + delta PAC
 - Input projection: Linear(73→64) + LayerNorm + SiLU
-- 4x CausalDSConvBlock: depthwise separable conv (kernel=3, dilation=[1,2,4,8]), BatchNorm, SiLU, residual connections
+- 4x CausalDSConvBlock: depthwise separable conv (kernel=3, dilation=[1,2,4,8]), GroupNorm, SiLU, residual connections. Receptive field = (1+2+4+8)*(3-1)+1 = 31 steps, covering the full 20-step lookback window with margin.
 - Causal padding: `F.pad(x, (pad, 0))` ensures no future information
 - AttentionPool1D: learned attention weights over time axis
+- Note: The CausalDSConvBlock applies SiLU activation twice (once after normalization, once after residual addition). This is an architectural quirk — standard practice uses a single activation. The model was trained and validated with this pattern; all reported results include this double activation.
 - Two regression heads: future_head and delta_head (each: Linear→SiLU→Dropout→Linear)
 - Parameters: 31,043
 - **Performance: Test R^2 = 0.170 (raw PAC, ts=1)**. At 5-10s horizons: R^2 = 0.24-0.28 while baselines collapse to negative R^2 (+0.5 margin)
@@ -109,13 +110,13 @@ Constructs causal temporal sequences for forecasting:
 
 | Parameter | Value |
 |-----------|-------|
-| Loss | Huber (delta=1.0) + 0.5 * Huber(delta) + 0.1 * consistency |
-| Optimizer | AdamW (lr=1e-3, weight_decay=1e-4) |
+| Loss | Huber (delta=1.0) — single-task loss on future PAC prediction. Multi-task delta and consistency penalties are architecturally supported (lambda_delta, lambda_consistency) but disabled (set to 0.0) for the best checkpoint. |
+| Optimizer | AdamW (lr=1e-3, weight_decay=1e-3) |
 | Scheduler | ReduceLROnPlateau (mode=max, factor=0.5, patience=5) |
 | Gradient clipping | max_norm=1.0 |
-| Early stopping | patience=10 on val_future_r^2 |
+| Early stopping | patience=20 on val_future_r^2 |
 | Batch size | 128 |
-| Best epoch | 14 of 24 (early stopped) |
+| Best epoch | 53 (val R²=0.411) |
 
 ---
 
@@ -207,10 +208,13 @@ At short horizons (1-2s), persistence (R^2 = 0.76) beats TCN (R^2 = 0.74). But a
 Original ts=5 smoothing inflated R^2 to 0.74 by sharing 4/5 data points. All final results use raw targets (ts=1). The model was retrained, producing honest R^2 = 0.170 at 5s horizon.
 
 **Finding 3: PAC features dominate.**
-Zeroing PAC features collapses R^2 from 0.74 to 0.045. The model primarily learns temporal PAC dynamics. This is expected — PAC is the signal being predicted.
+Zeroing PAC features collapses R^2 from 0.812 to 0.045. The model primarily learns temporal PAC dynamics. This is expected — PAC is the signal being predicted.
 
 **Finding 4 (RESOLVED): Linear model outperformed TCN at 1s horizon.**
 Ridge regression beat TCN at 1s (R^2 = 0.81 vs 0.74). However, the horizon sweep shows Ridge collapses to R^2 = -0.21 at 10s while TCN maintains R^2 = 0.28. The nonlinear TCN's value is exclusively at longer horizons.
+
+**Finding 5 (RESOLVED): Code quality issues from PyTorch audit.**
+Audit identified: (a) torch.load() calls without explicit weights_only parameter — fixed by adding weights_only=False for trusted local checkpoints; (b) double progress bar in EEGNet training — fixed by removing redundant pbar.update(); (c) broken hysteresis counter in simulation validation — fixed to increment time_in_state when blocked; (d) preprocessing order (CAR before artifact rejection) — reordered to reject artifacts first; (e) np.roll wrap-around in time-shift augmentation — replaced with zero-padding; (f) MPS device detection missing — added Apple Silicon support; (g) magic number in realtime inference — replaced with computed constant. None of these affect the trained model checkpoint or the reported real-data validation results, which use run_tcn_validation.py with its own self-contained controller implementations.
 
 ---
 
