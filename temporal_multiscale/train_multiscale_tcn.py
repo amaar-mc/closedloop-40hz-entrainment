@@ -281,7 +281,12 @@ def main() -> None:
         pool_type=args.pool_type,
     )
     model = MultiscaleCausalTCN(cfg)
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if torch.cuda.is_available():
+        device = torch.device("cuda")
+    elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+        device = torch.device("mps")
+    else:
+        device = torch.device("cpu")
     model.to(device)
 
     print("=" * 80)
@@ -384,7 +389,7 @@ def main() -> None:
             break
 
     # Final test evaluation with best checkpoint
-    ckpt = torch.load(best_ckpt, map_location=device)
+    ckpt = torch.load(best_ckpt, map_location=device, weights_only=False)
     model.load_state_dict(ckpt["model_state_dict"])
     test = evaluate(model, test_loader, device, yf_mean, yf_std, yd_mean, yd_std)
 
