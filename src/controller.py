@@ -99,7 +99,7 @@ class ClosedLoopController:
         logger.info(f"Loading EEGNet model from {model_path}")
         self.model = EEGNet(n_channels=7, n_samples=500).to(device)
 
-        checkpoint = torch.load(model_path, map_location=device)
+        checkpoint = torch.load(model_path, map_location=device, weights_only=False)
         self.model.load_state_dict(checkpoint['model_state_dict'])
         self.model.eval()
         logger.info("Model loaded and set to eval mode")
@@ -158,11 +158,12 @@ class ClosedLoopController:
         # Clip to valid range [0, 1]
         pac_pred = np.clip(pac_pred, 0.0, 1.0)
 
-        # Update personalization baseline
-        self.personalization.update(pac_pred)
-
-        # Compute z-score
+        # Compute z-score BEFORE updating baseline so the current value
+        # doesn't contaminate its own z-score computation.
         z_score = self.personalization.compute_zscore(pac_pred)
+
+        # Update personalization baseline for future z-scores
+        self.personalization.update(pac_pred)
 
         # Make decision
         action = self._make_decision(z_score)
