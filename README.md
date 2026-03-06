@@ -8,9 +8,12 @@ A machine learning system that predicts when a person's brain will lose gamma en
 
 Built on the OpenNeuro ds005048 dataset (35 dementia patients, 19-channel EEG, 250 Hz).
 
-**Key result:** The temporal prediction model (causal TCN) maintains R^2 ~ 0.25 at 5-10 second prediction horizons where all baselines fail (persistence R^2 < -0.25). The adaptive controller is statistically more efficient than fixed scheduling (Wilcoxon p < 0.01) and the advantage grows with habituation severity.
+**Key results:**
+- **Horizon sweep:** The causal TCN maintains R^2 = 0.24-0.28 at 5-10 second prediction horizons where all baselines collapse to negative R^2 — a +0.5 R^2 margin over persistence and Ridge regression.
+- **Real-data closed-loop validation (N=35 subjects):** The TCN predictive controller achieves 72.1% epoch alignment vs 64.5% for reactive control (Hedges' g = 1.31, p < 0.001). It targets 82.6% of low-PAC windows for stimulation vs 51.7% reactive (g = 4.47, p < 0.001). PAC targeting gap reaches 91% of the theoretical oracle bound. All 35/35 subjects benefit (binomial p < 0.001).
+- **Fatigue robustness:** Adaptive scheduling advantage grows with habituation severity (+9.0% to +11.2%, all p < 0.001) and holds across 4 different fatigue model assumptions (+6.9% to +19.0%, all p < 10^-13).
 
-See [`FINDINGS.md`](FINDINGS.md) for the complete results and analysis.
+See [`FINDINGS.md`](FINDINGS.md) for the complete results and [`results/RESULTS_REPORT.md`](results/RESULTS_REPORT.md) for all statistics.
 
 ## Repository Structure
 
@@ -51,8 +54,14 @@ closedloop-40hz-entrainment/
 |   |-- validate_code.py             Pre-training leakage validation
 |   +-- [training scripts, dataset builders]
 |
-|-- run_closed_loop_demo.py        End-to-end demo: all strategies +/- fatigue
-|-- run_fatigue_sensitivity.py     Fatigue severity sweep
+|-- run_full_pipeline.py            End-to-end pipeline (preprocess → train → validate)
+|-- run_tcn_validation.py           Real-data TCN closed-loop validation (6 controllers)
+|-- run_threshold_sweep.py          TCN threshold sensitivity analysis
+|-- run_replay_analysis.py          Replay analysis on real EEG data
+|-- run_closed_loop_demo.py         Simulation demo: all strategies +/- fatigue
+|-- run_fatigue_sensitivity.py      Fatigue severity sweep (6 levels x 4 models)
+|-- generate_figures.py             Publication figures (controller comparison, etc.)
+|-- generate_timeline_figure.py     Timeline visualization (TCN vs reactive decisions)
 |
 |-- docs/                          Documentation
 |   |-- INDEX.md                     Documentation navigation
@@ -63,10 +72,20 @@ closedloop-40hz-entrainment/
 |   |-- audits/                      Pipeline integrity audit reports
 |   +-- archive/                     Outdated pre-multiscale docs
 |
-|-- results/                       Output data
+|-- results/                       Output data and reports
+|   |-- RESULTS_REPORT.md            Comprehensive results with all statistics
+|   |-- tcn_validation_results.json  TCN closed-loop validation output
+|   |-- threshold_sweep.json         Threshold sensitivity data
 |   |-- closed_loop_demo_results.json
 |   |-- fatigue_analysis.json
-|   +-- fatigue_sensitivity.json
+|   |-- fatigue_sensitivity.json
+|   +-- figures/                     Publication-quality figures (PNG + PDF)
+|       |-- controller_comparison.png
+|       |-- pac_targeting_gap.png
+|       |-- per_subject_utility.png
+|       |-- stim_vs_alignment.png
+|       |-- timeline_example.png
+|       +-- threshold_sensitivity.png
 |
 |-- models/                        Checkpoints (.pth) + training histories (.json)
 |-- logs/                          Training logs and output captures
@@ -97,31 +116,46 @@ pip install -r requirements.txt
 ### Run the Full Pipeline
 
 ```bash
+# Option A: Automated end-to-end pipeline
+python run_full_pipeline.py
+
+# Option B: Step-by-step
+
 # 1. Preprocess raw BIDS data -> windows + PAC labels
 python src/data_loader.py --bids_root data/raw/ds005048 --output data/processed
 
 # 2. Train static PAC predictor (EEGNet)
 python src/training.py --data_dir data/processed --output_dir models --epochs 100
 
-# 3. Build temporal sequences (causal, no leakage)
+# 3. Build temporal sequences (causal, no leakage, raw targets)
 python temporal_multiscale/build_multiscale_dataset.py \
   --data-dir data/processed \
-  --output-dir data/processed/multiscale_temporal_lb20_hz1_ts5_clean
+  --output-dir data/processed/multiscale_temporal_lb20_hz5_ts1
 
 # 4. Train temporal TCN
 python temporal_multiscale/train_multiscale_tcn.py \
-  --data-dir data/processed/multiscale_temporal_lb20_hz1_ts5_clean \
+  --data-dir data/processed/multiscale_temporal_lb20_hz5_ts1 \
   --output-dir models
 
 # 5. Sweep prediction horizons (1-10 seconds)
 python temporal_multiscale/sweep_horizons.py \
   --data-dir data/processed --output-dir models
 
-# 6. Run closed-loop simulation with fatigue comparison
-python run_closed_loop_demo.py --duration 600 --n-trials 10
+# 6. Real-data TCN closed-loop validation (primary result)
+python run_tcn_validation.py
 
-# 7. Run fatigue sensitivity analysis
+# 7. Threshold sensitivity analysis
+python run_threshold_sweep.py
+
+# 8. Closed-loop simulation with fatigue comparison
+python run_closed_loop_demo.py --duration 600 --n-trials 50
+
+# 9. Fatigue sensitivity analysis
 python run_fatigue_sensitivity.py
+
+# 10. Generate publication figures
+python generate_figures.py
+python generate_timeline_figure.py
 ```
 
 ### Run Audits
@@ -150,19 +184,41 @@ Predicts future PAC from a sequence of past observations. Main contribution.
 - Input: `(batch, seq_len, n_features)` -- PAC + stimulation context
 - Causal depthwise-separable convolutions, dilations [1, 2, 4, 8]
 - GroupNorm (cross-subject stable), attention pooling, dual regression heads
-- R^2 at horizon=1: 0.764 | R^2 at horizon=5-10: ~0.25 (baselines: negative)
+- R^2 at horizon=1: 0.74 | R^2 at horizon=5-10: 0.24-0.28 (baselines: negative)
 
 ## Results Summary
 
-| Metric | Value |
-|--------|-------|
-| TCN test R^2 (1s ahead) | 0.764 |
-| TCN R^2 (5-10s ahead) | 0.24 - 0.28 |
-| Persistence R^2 (5-10s) | -0.26 to -0.27 |
-| Adaptive vs Fixed efficiency | +2.1% to +5.7% (p < 0.01) |
-| Stimulation time saved | 14-18 percentage points |
+### Horizon Sweep (TCN Prediction)
 
-Full results: [`FINDINGS.md`](FINDINGS.md)
+| Horizon | Persistence R^2 | Ridge R^2 | TCN R^2 |
+|---------|-----------------|-----------|---------|
+| 1 sec | 0.76 | **0.81** | 0.74 |
+| 5 sec | -0.27 | -0.39 | **0.25** |
+| 10 sec | -0.26 | -0.21 | **0.28** |
+
+At 5-10 seconds — the operationally relevant range for proactive control — only the TCN provides useful predictions (+0.5 R^2 margin over all baselines).
+
+### Real-Data Closed-Loop Validation (N=35 subjects)
+
+| Controller | Alignment | Low-PAC Targeting | PAC Gap (uV^2) |
+|-----------|-----------|-------------------|----------------|
+| Fixed Schedule | 45.0% | 61.4% | -6.6 (wrong direction) |
+| Reactive | 64.5% | 51.7% | +21.1 |
+| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** |
+| Oracle | 100.0% | 100.0% | +33.3 |
+
+TCN vs Reactive (Wilcoxon signed-rank, all p < 0.001): Alignment g = +1.31, Low-PAC targeting g = +4.47, PAC gap g = +1.57. TCN reaches 91% of oracle bound. 35/35 subjects benefit.
+
+### Adaptive Scheduling Efficiency
+
+| Fatigue Level | Fixed Efficiency | Adaptive Efficiency | Gain | p-value |
+|---------------|-----------------|--------------------|----- |---------|
+| None | 0.343 | 0.375 | +9.5% | < 0.001 |
+| Severe | 0.316 | 0.352 | +11.2% | < 0.001 |
+
+Advantage holds across all 6 fatigue levels and 4 different fatigue model assumptions (+6.9% to +19.0%, all p < 10^-13).
+
+Full results: [`FINDINGS.md`](FINDINGS.md) | [`results/RESULTS_REPORT.md`](results/RESULTS_REPORT.md)
 
 ## Dataset
 
@@ -178,7 +234,7 @@ Full results: [`FINDINGS.md`](FINDINGS.md)
 1. Iaccarino et al. (2016). Gamma frequency entrainment attenuates amyloid load. *Nature*, 540, 230-235.
 2. Tort et al. (2010). Measuring phase-amplitude coupling. *J Neurophysiology*, 104(2), 1195-1210.
 3. Lawhern et al. (2018). EEGNet: compact CNN for EEG-based BCIs. *J Neural Engineering*, 15(5), 056013.
-4. Lahijanian et al. (2024). Auditory gamma-band entrainment in dementia. *Scientific Reports*, 14.
+4. Lahijanian et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. *Scientific Reports*, 14, 13153.
 
 ## Author
 

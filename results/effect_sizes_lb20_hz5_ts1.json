@@ -1,0 +1,209 @@
+{
+  "TCN_vs_Fixed_Schedule": {
+    "n_subjects": 35,
+    "metrics": {
+      "stim_hit_rate": {
+        "label": "Stimulation Hit Rate",
+        "tcn_mean": 0.027480663526612104,
+        "tcn_std": 0.01648474999077594,
+        "baseline_mean": 0.07357005173618014,
+        "baseline_std": 0.006777914224170971,
+        "mean_diff": -0.04608938820956803,
+        "wilcoxon_W": 1.0,
+        "wilcoxon_p": 2.696923281725127e-07,
+        "hedges_g": -3.616443227916549,
+        "hedges_g_ci_95": [
+          -4.584573874960842,
+          -2.648312580872256
+        ],
+        "effect_interpretation": "large"
+      },
+      "wasted_stim_pct": {
+        "label": "Wasted Stimulation %",
+        "tcn_mean": 97.25193364733879,
+        "tcn_std": 1.6484749990775933,
+        "baseline_mean": 92.642994826382,
+        "baseline_std": 0.6777914224170959,
+        "mean_diff": 4.608938820956801,
+        "wilcoxon_W": 1.0,
+        "wilcoxon_p": 2.696923281725127e-07,
+        "hedges_g": 3.6164432282006174,
+        "hedges_g_ci_95": [
+          2.6483125810980894,
+          4.584573875303145
+        ],
+        "effect_interpretation": "large"
+      },
+      "stim_pct": {
+        "label": "Stimulation Time %",
+        "tcn_mean": 40.65803538254881,
+        "tcn_std": 10.227437642081407,
+        "baseline_mean": 66.55000959485227,
+        "baseline_std": 0.5805747064570693,
+        "mean_diff": -25.891974212303452,
+        "wilcoxon_W": 0.0,
+        "wilcoxon_p": 2.474739598535175e-07,
+        "hedges_g": -3.534925060623269,
+        "hedges_g_ci_95": [
+          -4.486389065044943,
+          -2.583461056201595
+        ],
+        "effect_interpretation": "large"
+      },
+      "stim_mean_delta": {
+        "label": "Mean PAC Change After Stim",
+        "tcn_mean": 2.7725706804745624e-06,
+        "tcn_std": 4.981451793245128e-06,
+        "baseline_mean": 2.001453673256968e-06,
+        "baseline_std": 2.094590893560652e-06,
+        "mean_diff": 7.711170072175948e-07,
+        "wilcoxon_W": 273.0,
+        "wilcoxon_p": 0.5013608777662739,
+        "hedges_g": 0.1995690015140542,
+        "hedges_g_ci_95": [
+          -0.2712873979494431,
+          0.6704254009775515
+        ],
+        "effect_interpretation": "negligible"
+      }
+    }
+  },
+  "TCN_vs_Reactive_Threshold": {
+    "n_subjects": 35,
+    "metrics": {
+      "stim_hit_rate": {
+        "label": "Stimulation Hit Rate",
+        "tcn_mean": 0.027480663526612104,
+        "tcn_std": 0.01648474999077594,
+        "baseline_mean": 0.00043731778425655976,
+        "baseline_std": 0.0025872069022301524,
+        "mean_diff": 0.027043345742355545,
+        "wilcoxon_W": 0.0,
+        "wilcoxon_p": 9.313225746154785e-10,
+        "hedges_g": 2.266598640843675,
+        "hedges_g_ci_95": [
+          1.5584571856249805,
+          2.9747400960623698
+        ],
+        "effect_interpretation": "large"
+      },
+      "wasted_stim_pct": {
+        "label": "Wasted Stimulation %",
+        "tcn_mean": 97.25193364733879,
+        "tcn_std": 1.6484749990775933,
+        "baseline_mean": 99.95626822157435,
+        "baseline_std": 0.25872069022301414,
+        "mean_diff": -2.7043345742355536,
+        "wilcoxon_W": 0.0,
+        "wilcoxon_p": 9.313225746154785e-10,
+        "hedges_g": -2.2665986410338577,
+        "hedges_g_ci_95": [
+          -2.9747400962859594,
+          -1.5584571857817557
+        ],
+        "effect_interpretation": "large"
+      },
+      "stim_pct": {
+        "label": "Stimulation Time %",
+        "tcn_mean": 40.65803538254881,
+        "tcn_std": 10.227437642081407,
+        "baseline_mean": 36.70110197898932,
+        "baseline_std": 2.41032326627155,
+        "mean_diff": 3.9569334035594856,
+        "wilcoxon_W": 166.5,
+        "wilcoxon_p": 0.014999782821050965,
+        "hedges_g": 0.5266653709128838,
+        "hedges_g_ci_95": [
+          0.042163134033647076,
+          1.0111676077921206
+        ],
+        "effect_interpretation": "medium"
+      },
+      "stim_mean_delta": {
+        "label": "Mean PAC Change After Stim",
+        "tcn_mean": 2.7725706804745624e-06,
+        "tcn_std": 4.981451793245128e-06,
+        "baseline_mean": -2.9011732956685514e-08,
+        "baseline_std": 7.784474674082216e-08,
+        "mean_diff": 2.801582413431248e-06,
+        "wilcoxon_W": 99.0,
+        "wilcoxon_p": 0.0007593201007694006,
+        "hedges_g": 0.7864567193340783,
+        "hedges_g_ci_95": [
+          0.28300457888212993,
+          1.2899088597860269
+        ],
+        "effect_interpretation": "medium"
+      }
+    }
+  },
+  "TCN_vs_PI_Controller": {
+    "n_subjects": 35,
+    "metrics": {
+      "stim_hit_rate": {
+        "label": "Stimulation Hit Rate",
+        "tcn_mean": 0.027480663526612104,
+        "tcn_std": 0.01648474999077594,
+        "baseline_mean": 0.09567987964908589,
+        "baseline_std": 0.04492091836063446,
+        "mean_diff": -0.06819921612247379,
+        "wilcoxon_W": 13.0,
+        "wilcoxon_p": 1.0244548320770264e-08,
+        "hedges_g": -1.9933183832160055,
+        "hedges_g_ci_95": [
+          -2.65481343349715,
+          -1.331823332934861
+        ],
+        "effect_interpretation": "large"
+      },
+      "wasted_stim_pct": {
+        "label": "Wasted Stimulation %",
+        "tcn_mean": 97.25193364733879,
+        "tcn_std": 1.6484749990775933,
+        "baseline_mean": 81.86058346366285,
+        "baseline_std": 25.652577486476773,
+        "mean_diff": 15.391350183675952,
+        "wilcoxon_W": 4.0,
+        "wilcoxon_p": 4.0745362639427185e-10,
+        "hedges_g": 0.837396879719404,
+        "hedges_g_ci_95": [
+          0.3294562371686145,
+          1.3453375222701935
+        ],
+        "effect_interpretation": "large"
+      },
+      "stim_pct": {
+        "label": "Stimulation Time %",
+        "tcn_mean": 40.65803538254881,
+        "tcn_std": 10.227437642081407,
+        "baseline_mean": 21.9948800235176,
+        "baseline_std": 20.865085414127147,
+        "mean_diff": 18.663155359031208,
+        "wilcoxon_W": 72.0,
+        "wilcoxon_p": 3.8463855162262917e-05,
+        "hedges_g": 1.1232796385905328,
+        "hedges_g_ci_95": [
+          0.5859108339522401,
+          1.6606484432288255
+        ],
+        "effect_interpretation": "large"
+      },
+      "stim_mean_delta": {
+        "label": "Mean PAC Change After Stim",
+        "tcn_mean": 2.7725706804745624e-06,
+        "tcn_std": 4.981451793245128e-06,
+        "baseline_mean": 7.107157820031643e-06,
+        "baseline_std": 7.488279015106854e-06,
+        "mean_diff": -4.334587139557081e-06,
+        "wilcoxon_W": 124.0,
+        "wilcoxon_p": 0.0012532108230516315,
+        "hedges_g": -0.6740357663631076,
+        "hedges_g_ci_95": [
+          -1.1684579674046853,
+          -0.17961356532152994
+        ],
+        "effect_interpretation": "medium"
+      }
+    }
+  }
+}

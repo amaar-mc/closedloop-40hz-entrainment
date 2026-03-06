@@ -1,0 +1,15 @@
+{
+  "model": "MultiscaleCausalTCN",
+  "run_name": "multiscale_tcn_lb20_hz5_ts1",
+  "n_params": 31043,
+  "best_epoch": 53,
+  "best_val_future_r2": 0.4112379550933838,
+  "test_future_r2": 0.17031419277191162,
+  "test_future_rmse": 3.305676727904938e-05,
+  "test_future_corr": 0.432746831732607,
+  "config": {
+    "lookback": 20,
+    "horizon": 5,
+    "target_smooth_window": 1
+  }
+}

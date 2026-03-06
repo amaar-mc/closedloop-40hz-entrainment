@@ -11,7 +11,7 @@ dataset:
   name: "OpenNeuro ds005048"
   version: "1.0.1"
   url: "https://openneuro.org/datasets/ds005048/versions/1.0.1"
-  n_subjects: 20
+  n_subjects: 35
   n_channels: 19
   sampling_rate: 250  # Hz
 

@@ -1,6 +1,6 @@
 # Documentation Index
 
-**Last updated:** 2026-02-20
+**Last updated:** 2026-02-26
 
 ## Quick Navigation
 
@@ -8,6 +8,11 @@
 |------------------------|-------------|
 | Project overview & how to run | [`../README.md`](../README.md) |
 | Complete findings & results | [`../FINDINGS.md`](../FINDINGS.md) |
+| Comprehensive results report | [`../results/RESULTS_REPORT.md`](../results/RESULTS_REPORT.md) |
+| Synopsys abstract (250 words) | [`ABSTRACT.md`](ABSTRACT.md) |
+| Poster board content | [`POSTER_BOARD.md`](POSTER_BOARD.md) |
+| Synopsys reference guide | [`SYNOPSYS_REFERENCE.md`](SYNOPSYS_REFERENCE.md) |
+| Presentation script | [`../PRESENTATION.md`](../PRESENTATION.md) |
 | Current methodology | [`CURRENT_METHODOLOGY.md`](CURRENT_METHODOLOGY.md) |
 | Code architecture map | [`CODE_MAP.md`](CODE_MAP.md) |
 | Pipeline audit results | [`audits/`](audits/) |

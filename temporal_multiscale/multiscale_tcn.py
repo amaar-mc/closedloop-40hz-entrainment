@@ -51,6 +51,10 @@ class CausalDSConvBlock(nn.Module):
         x = self.norm(x)
         x = F.silu(x)
         x = self.dropout(x)
+        # NOTE: This applies SiLU twice (once on x, once on x+residual).
+        # Standard residual blocks typically use a single activation.  The
+        # model was trained and validated with this double-SiLU pattern;
+        # changing it would require retraining and re-validation.
         return F.silu(x + residual)
 
 
