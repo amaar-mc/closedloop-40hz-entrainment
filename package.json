@@ -1,0 +1,27 @@
+{
+  "name": "closedloop-40hz-entrainment",
+  "version": "1.0.0",
+  "description": "**Adaptive scheduling of 40 Hz auditory stimulation using EEG-based PAC prediction**",
+  "main": "create_research_notebook.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amaar-mc/closedloop-40hz-entrainment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/amaar-mc/closedloop-40hz-entrainment/issues"
+  },
+  "homepage": "https://github.com/amaar-mc/closedloop-40hz-entrainment#readme",
+  "dependencies": {
+    "docx": "^9.6.0"
+  }
+}
