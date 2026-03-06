@@ -1,0 +1,1804 @@
+{
+  "n_subjects": 35,
+  "n_controllers": 5,
+  "tcn_checkpoint": "models/best_multiscale_tcn_lb20_hz5_ts1.pth",
+  "summary": {
+    "Fixed Schedule": {
+      "stim_pct": 66.6,
+      "stim_hit_rate_pct": 7.4,
+      "wasted_stim_pct": 92.6,
+      "stim_mean_delta_pac": 2.001453673256968e-06,
+      "rest_above_median_pct": 34.5
+    },
+    "Reactive Threshold": {
+      "stim_pct": 36.7,
+      "stim_hit_rate_pct": 0.0,
+      "wasted_stim_pct": 100.0,
+      "stim_mean_delta_pac": -2.9011732956685514e-08,
+      "rest_above_median_pct": 57.9
+    },
+    "TCN Predictive": {
+      "stim_pct": 40.7,
+      "stim_hit_rate_pct": 2.7,
+      "wasted_stim_pct": 97.3,
+      "stim_mean_delta_pac": 2.7725706804745624e-06,
+      "rest_above_median_pct": 52.9
+    },
+    "Oracle": {
+      "stim_pct": 8.2,
+      "stim_hit_rate_pct": 0.0,
+      "wasted_stim_pct": 100.0,
+      "stim_mean_delta_pac": -2.2221332091210237e-05,
+      "rest_above_median_pct": 39.1
+    },
+    "PI Controller": {
+      "stim_pct": 22.0,
+      "stim_hit_rate_pct": 9.6,
+      "wasted_stim_pct": 81.9,
+      "stim_mean_delta_pac": 7.107157820031643e-06,
+      "rest_above_median_pct": 56.9
+    }
+  },
+  "per_subject": {
+    "Fixed Schedule": [
+      {
+        "subject": "sub-01",
+        "stim_pct": 67.601246105919,
+        "stim_hit_rate": 0.08294930875576037,
+        "stim_mean_delta": 4.96576685638016e-06,
+        "wasted_stim_pct": 91.70506912442397,
+        "rest_above_median_pct": 42.30769230769231,
+        "mean_pac_during_stim": 2.6188459213332e-05,
+        "mean_pac_during_rest": 1.933865241539842e-05
+      },
+      {
+        "subject": "sub-02",
+        "stim_pct": 67.601246105919,
+        "stim_hit_rate": 0.08294930875576037,
+        "stim_mean_delta": 5.0664458793963415e-06,
+        "wasted_stim_pct": 91.70506912442397,
+        "rest_above_median_pct": 42.30769230769231,
+        "mean_pac_during_stim": 2.6223048144462747e-05,
+        "mean_pac_during_rest": 2.450476839810396e-05
+      },
+      {
+        "subject": "sub-03",
+        "stim_pct": 67.601246105919,
+        "stim_hit_rate": 0.08294930875576037,
+        "stim_mean_delta": 6.565856650308804e-06,
+        "wasted_stim_pct": 91.70506912442397,
+        "rest_above_median_pct": 42.30769230769231,
+        "mean_pac_during_stim": 3.613431030708483e-05,
+        "mean_pac_during_rest": 2.783738128059124e-05
+      },
+      {
+        "subject": "sub-04",
+        "stim_pct": 67.601246105919,
+        "stim_hit_rate": 0.08294930875576037,
+        "stim_mean_delta": 5.905841422208911e-06,
+        "wasted_stim_pct": 91.70506912442397,
+        "rest_above_median_pct": 42.30769230769231,
+        "mean_pac_during_stim": 4.576384565463614e-05,
+        "mean_pac_during_rest": 4.2484555240793666e-05
+      },
+      {
+        "subject": "sub-05",
+        "stim_pct": 67.601246105919,
+        "stim_hit_rate": 0.08294930875576037,
+        "stim_mean_delta": 6.9959156021047e-06,
+        "wasted_stim_pct": 91.70506912442397,
+        "rest_above_median_pct": 34.61538461538461,
+        "mean_pac_during_stim": 3.842898831082232e-05,
+        "mean_pac_during_rest": 3.1440077855217645e-05
+      },
+      {
+        "subject": "sub-06",
+        "stim_pct": 67.601246105919,
+        "stim_hit_rate": 0.08294930875576037,
+        "stim_mean_delta": 6.246077426048765e-06,
+        "wasted_stim_pct": 91.70506912442397,
+        "rest_above_median_pct": 42.30769230769231,
+        "mean_pac_during_stim": 5.0595966518460256e-05,
+        "mean_pac_during_rest": 4.96945358915481e-05
+      },
+      {
+        "subject": "sub-09",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 5.217096866682623e-07,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 35.869565217391305,
+        "mean_pac_during_stim": 4.158159305522031e-05,
+        "mean_pac_during_rest": 3.7089722867342356e-05
+      },
+      {
+        "subject": "sub-10",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 1.9150448472330387e-06,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 34.78260869565217,
+        "mean_pac_during_stim": 6.724729962203985e-05,
+        "mean_pac_during_rest": 6.175044778188202e-05
+      },
+      {
+        "subject": "sub-12",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 1.0941486569265148e-06,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 39.130434782608695,
+        "mean_pac_during_stim": 4.2489364404575545e-05,
+        "mean_pac_during_rest": 3.5699054684040565e-05
+      },
+      {
+        "subject": "sub-13",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 6.012101778768566e-07,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 25.0,
+        "mean_pac_during_stim": 4.002608681619343e-05,
+        "mean_pac_during_rest": 3.5602590369953765e-05
+      },
+      {
+        "subject": "sub-14",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.06371191135734072,
+        "stim_mean_delta": 7.531324974783211e-07,
+        "wasted_stim_pct": 93.62880886426593,
+        "rest_above_median_pct": 35.869565217391305,
+        "mean_pac_during_stim": 4.8402813668563734e-05,
+        "mean_pac_during_rest": 4.567703114422137e-05
+      },
+      {
+        "subject": "sub-16",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.06371191135734072,
+        "stim_mean_delta": 5.5272118462479e-07,
+        "wasted_stim_pct": 93.62880886426593,
+        "rest_above_median_pct": 38.04347826086957,
+        "mean_pac_during_stim": 7.105737310445398e-05,
+        "mean_pac_during_rest": 6.234400620863548e-05
+      },
+      {
+        "subject": "sub-17",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 1.4230444317575023e-06,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 34.78260869565217,
+        "mean_pac_during_stim": 5.282100652636344e-05,
+        "mean_pac_during_rest": 4.7515090597608234e-05
+      },
+      {
+        "subject": "sub-18",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 9.791758612919228e-07,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 27.173913043478258,
+        "mean_pac_during_stim": 5.212617591354789e-05,
+        "mean_pac_during_rest": 3.9072919923175106e-05
+      },
+      {
+        "subject": "sub-20",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.08033240997229917,
+        "stim_mean_delta": 1.5191047179693827e-06,
+        "wasted_stim_pct": 91.96675900277008,
+        "rest_above_median_pct": 28.26086956521739,
+        "mean_pac_during_stim": 5.147550082727271e-05,
+        "mean_pac_during_rest": 4.649222283357224e-05
+      },
+      {
+        "subject": "sub-22",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 1.2712515549791208e-06,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 35.869565217391305,
+        "mean_pac_during_stim": 5.3888994859931005e-05,
+        "mean_pac_during_rest": 3.62366275503268e-05
+      },
+      {
+        "subject": "sub-24",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 1.1709068978821022e-06,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 35.869565217391305,
+        "mean_pac_during_stim": 3.672685280460245e-05,
+        "mean_pac_during_rest": 2.9190547861030783e-05
+      },
+      {
+        "subject": "sub-25",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 6.978948039386862e-07,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 25.0,
+        "mean_pac_during_stim": 5.878803000058165e-05,
+        "mean_pac_during_rest": 4.680877806524785e-05
+      },
+      {
+        "subject": "sub-27",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 1.1803880726512363e-06,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 35.869565217391305,
+        "mean_pac_during_stim": 6.038346553619423e-05,
+        "mean_pac_during_rest": 5.295814917595162e-05
+      },
+      {
+        "subject": "sub-28",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 5.602723449620581e-07,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 27.173913043478258,
+        "mean_pac_during_stim": 3.504176143431259e-05,
+        "mean_pac_during_rest": 2.9886105478879017e-05
+      },
+      {
+        "subject": "sub-30",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 5.351251088294988e-07,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 35.869565217391305,
+        "mean_pac_during_stim": 2.7146061812417425e-05,
+        "mean_pac_during_rest": 2.2947896161867525e-05
+      },
+      {
+        "subject": "sub-31",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 7.761839447890385e-07,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 31.521739130434785,
+        "mean_pac_during_stim": 3.8198219432899113e-05,
+        "mean_pac_during_rest": 2.8495263673318152e-05
+      },
+      {
+        "subject": "sub-33",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.06371191135734072,
+        "stim_mean_delta": 1.0288350046998363e-06,
+        "wasted_stim_pct": 93.62880886426593,
+        "rest_above_median_pct": 43.47826086956522,
+        "mean_pac_during_stim": 4.733542665207376e-05,
+        "mean_pac_during_rest": 4.075985845717372e-05
+      },
+      {
+        "subject": "sub-34",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.055401662049861494,
+        "stim_mean_delta": 7.593162791731477e-07,
+        "wasted_stim_pct": 94.45983379501385,
+        "rest_above_median_pct": 38.04347826086957,
+        "mean_pac_during_stim": 3.725203703188077e-05,
+        "mean_pac_during_rest": 3.113985105743112e-05
+      },
+      {
+        "subject": "sub-11",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 7.877482009608924e-07,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 35.869565217391305,
+        "mean_pac_during_stim": 4.040951705838562e-05,
+        "mean_pac_during_rest": 3.802996389387573e-05
+      },
+      {
+        "subject": "sub-19",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.08033240997229917,
+        "stim_mean_delta": 1.2943579260747006e-06,
+        "wasted_stim_pct": 91.96675900277008,
+        "rest_above_median_pct": 35.869565217391305,
+        "mean_pac_during_stim": 5.190228130357112e-05,
+        "mean_pac_during_rest": 4.905324795955088e-05
+      },
+      {
+        "subject": "sub-23",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 1.0219752352248476e-06,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 34.78260869565217,
+        "mean_pac_during_stim": 4.080677955736549e-05,
+        "mean_pac_during_rest": 3.083567559928795e-05
+      },
+      {
+        "subject": "sub-26",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.06371191135734072,
+        "stim_mean_delta": 6.756610354797233e-07,
+        "wasted_stim_pct": 93.62880886426593,
+        "rest_above_median_pct": 29.347826086956523,
+        "mean_pac_during_stim": 5.289440399479467e-05,
+        "mean_pac_during_rest": 4.1294740354275154e-05
+      },
+      {
+        "subject": "sub-32",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 3.531894561844494e-07,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 29.347826086956523,
+        "mean_pac_during_stim": 4.0097191840635946e-05,
+        "mean_pac_during_rest": 3.520969571760778e-05
+      },
+      {
+        "subject": "sub-07",
+        "stim_pct": 67.601246105919,
+        "stim_hit_rate": 0.08294930875576037,
+        "stim_mean_delta": 4.3507776553372875e-06,
+        "wasted_stim_pct": 91.70506912442397,
+        "rest_above_median_pct": 34.61538461538461,
+        "mean_pac_during_stim": 3.3148246014189274e-05,
+        "mean_pac_during_rest": 2.6617810921120268e-05
+      },
+      {
+        "subject": "sub-08",
+        "stim_pct": 67.601246105919,
+        "stim_hit_rate": 0.08294930875576037,
+        "stim_mean_delta": 5.288935489384618e-06,
+        "wasted_stim_pct": 91.70506912442397,
+        "rest_above_median_pct": 38.46153846153847,
+        "mean_pac_during_stim": 3.533462668460707e-05,
+        "mean_pac_during_rest": 2.5307544942235624e-05
+      },
+      {
+        "subject": "sub-15",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 4.907975951103912e-07,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 26.08695652173913,
+        "mean_pac_during_stim": 3.9518514505119177e-05,
+        "mean_pac_during_rest": 3.24368961316518e-05
+      },
+      {
+        "subject": "sub-21",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 9.808956427814996e-07,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 29.347826086956523,
+        "mean_pac_during_stim": 5.1399277581692394e-05,
+        "mean_pac_during_rest": 4.834310919837081e-05
+      },
+      {
+        "subject": "sub-29",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 1.1945357209601651e-06,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 35.869565217391305,
+        "mean_pac_during_stim": 4.972004861692442e-05,
+        "mean_pac_during_rest": 4.812674409849816e-05
+      },
+      {
+        "subject": "sub-35",
+        "stim_pct": 66.23853211009174,
+        "stim_hit_rate": 0.07202216066481995,
+        "stim_mean_delta": 5.26634696316294e-07,
+        "wasted_stim_pct": 92.797783933518,
+        "rest_above_median_pct": 22.82608695652174,
+        "mean_pac_during_stim": 3.265862636330089e-05,
+        "mean_pac_during_rest": 2.3741615914218246e-05
+      }
+    ],
+    "Reactive Threshold": [
+      {
+        "subject": "sub-01",
+        "stim_pct": 34.57943925233645,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 51.42857142857142,
+        "mean_pac_during_stim": 1.5173771833541746e-05,
+        "mean_pac_during_rest": 2.8618222985577837e-05
+      },
+      {
+        "subject": "sub-02",
+        "stim_pct": 32.398753894081,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 54.83870967741935,
+        "mean_pac_during_stim": 1.4448343097902119e-05,
+        "mean_pac_during_rest": 3.1042717412762245e-05
+      },
+      {
+        "subject": "sub-03",
+        "stim_pct": 34.57943925233645,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 51.42857142857142,
+        "mean_pac_during_stim": 2.1866011674149315e-05,
+        "mean_pac_during_rest": 3.9567169971372964e-05
+      },
+      {
+        "subject": "sub-04",
+        "stim_pct": 35.82554517133956,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 52.42718446601942,
+        "mean_pac_during_stim": 3.322021707952504e-05,
+        "mean_pac_during_rest": 5.111079265996702e-05
+      },
+      {
+        "subject": "sub-05",
+        "stim_pct": 35.82554517133956,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 52.42718446601942,
+        "mean_pac_during_stim": 2.4944083804541537e-05,
+        "mean_pac_during_rest": 4.242858700421749e-05
+      },
+      {
+        "subject": "sub-06",
+        "stim_pct": 35.82554517133956,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 52.42718446601942,
+        "mean_pac_during_stim": 3.599262858186318e-05,
+        "mean_pac_during_rest": 5.829322417627481e-05
+      },
+      {
+        "subject": "sub-09",
+        "stim_pct": 37.79816513761468,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 57.817109144542776,
+        "mean_pac_during_stim": 2.8734677457431336e-05,
+        "mean_pac_during_rest": 4.695020809526451e-05
+      },
+      {
+        "subject": "sub-10",
+        "stim_pct": 35.77981651376147,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 58.285714285714285,
+        "mean_pac_during_stim": 4.5391605490087606e-05,
+        "mean_pac_during_rest": 7.653426995673027e-05
+      },
+      {
+        "subject": "sub-12",
+        "stim_pct": 35.96330275229358,
+        "stim_hit_rate": 0.015306122448979591,
+        "stim_mean_delta": 7.509164604575815e-09,
+        "wasted_stim_pct": 98.46938775510205,
+        "rest_above_median_pct": 57.879656160458445,
+        "mean_pac_during_stim": 2.850704007296664e-05,
+        "mean_pac_during_rest": 4.67619104802687e-05
+      },
+      {
+        "subject": "sub-13",
+        "stim_pct": 37.98165137614679,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 64.49704142011834,
+        "mean_pac_during_stim": 2.7220358110091636e-05,
+        "mean_pac_during_rest": 4.5460591242391575e-05
+      },
+      {
+        "subject": "sub-14",
+        "stim_pct": 41.284403669724774,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.4118442915243763e-08,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 55.3125,
+        "mean_pac_during_stim": 3.516894585178847e-05,
+        "mean_pac_during_rest": 5.614055202573698e-05
+      },
+      {
+        "subject": "sub-16",
+        "stim_pct": 33.39449541284404,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -6.325776552983529e-08,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 61.98347107438017,
+        "mean_pac_during_stim": 4.735769396705179e-05,
+        "mean_pac_during_rest": 7.852316399750246e-05
+      },
+      {
+        "subject": "sub-17",
+        "stim_pct": 36.3302752293578,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 58.789625360230545,
+        "mean_pac_during_stim": 3.5137515249604334e-05,
+        "mean_pac_during_rest": 6.009778676240766e-05
+      },
+      {
+        "subject": "sub-18",
+        "stim_pct": 37.98165137614679,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 64.49704142011834,
+        "mean_pac_during_stim": 3.0520794869449326e-05,
+        "mean_pac_during_rest": 5.825195926828107e-05
+      },
+      {
+        "subject": "sub-20",
+        "stim_pct": 33.76146788990826,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 60.387811634349035,
+        "mean_pac_during_stim": 3.134172676187929e-05,
+        "mean_pac_during_rest": 5.9197637329188233e-05
+      },
+      {
+        "subject": "sub-22",
+        "stim_pct": 37.98165137614679,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 57.692307692307686,
+        "mean_pac_during_stim": 2.5568509773543897e-05,
+        "mean_pac_during_rest": 6.162362452831845e-05
+      },
+      {
+        "subject": "sub-24",
+        "stim_pct": 37.98165137614679,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 57.692307692307686,
+        "mean_pac_during_stim": 1.955050305584214e-05,
+        "mean_pac_during_rest": 4.3143492711040895e-05
+      },
+      {
+        "subject": "sub-25",
+        "stim_pct": 35.77981651376147,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 58.57142857142858,
+        "mean_pac_during_stim": 4.0994018146441565e-05,
+        "mean_pac_during_rest": 6.240417273045564e-05
+      },
+      {
+        "subject": "sub-27",
+        "stim_pct": 36.69724770642202,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 56.52173913043478,
+        "mean_pac_during_stim": 4.111474577613117e-05,
+        "mean_pac_during_rest": 6.759356913540574e-05
+      },
+      {
+        "subject": "sub-28",
+        "stim_pct": 36.69724770642202,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 56.52173913043478,
+        "mean_pac_during_stim": 2.424318884802348e-05,
+        "mean_pac_during_rest": 3.855212033708952e-05
+      },
+      {
+        "subject": "sub-30",
+        "stim_pct": 37.98165137614679,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 57.692307692307686,
+        "mean_pac_during_stim": 1.6528511142242317e-05,
+        "mean_pac_during_rest": 3.136313432432591e-05
+      },
+      {
+        "subject": "sub-31",
+        "stim_pct": 36.14678899082569,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 58.90804597701149,
+        "mean_pac_during_stim": 2.2168857598935086e-05,
+        "mean_pac_during_rest": 4.2142013747634796e-05
+      },
+      {
+        "subject": "sub-33",
+        "stim_pct": 39.633027522935784,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.4450264882221025e-07,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 61.09422492401215,
+        "mean_pac_during_stim": 3.347266161718391e-05,
+        "mean_pac_during_rest": 5.275929504014245e-05
+      },
+      {
+        "subject": "sub-34",
+        "stim_pct": 43.30275229357798,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.870219207720848e-07,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 65.0485436893204,
+        "mean_pac_during_stim": 2.3320517730300787e-05,
+        "mean_pac_during_rest": 4.4252672423059226e-05
+      },
+      {
+        "subject": "sub-11",
+        "stim_pct": 37.61467889908257,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 57.94117647058824,
+        "mean_pac_during_stim": 2.8515261536703607e-05,
+        "mean_pac_during_rest": 4.629329529272384e-05
+      },
+      {
+        "subject": "sub-19",
+        "stim_pct": 30.642201834862387,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 65.34391534391534,
+        "mean_pac_during_stim": 3.4300830094320545e-05,
+        "mean_pac_during_rest": 5.829175277617728e-05
+      },
+      {
+        "subject": "sub-23",
+        "stim_pct": 37.98165137614679,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 57.692307692307686,
+        "mean_pac_during_stim": 2.2192054101834903e-05,
+        "mean_pac_during_rest": 4.677886547750918e-05
+      },
+      {
+        "subject": "sub-26",
+        "stim_pct": 40.73394495412844,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.3509277791545514e-07,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 54.79876160990712,
+        "mean_pac_during_stim": 3.475085812826539e-05,
+        "mean_pac_during_rest": 5.8756723104744856e-05
+      },
+      {
+        "subject": "sub-32",
+        "stim_pct": 37.43119266055046,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 58.06451612903226,
+        "mean_pac_during_stim": 2.853841669443605e-05,
+        "mean_pac_during_rest": 4.437487759778432e-05
+      },
+      {
+        "subject": "sub-07",
+        "stim_pct": 35.82554517133956,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 52.42718446601942,
+        "mean_pac_during_stim": 2.2300598599834163e-05,
+        "mean_pac_during_rest": 3.590705282473132e-05
+      },
+      {
+        "subject": "sub-08",
+        "stim_pct": 35.82554517133956,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 52.42718446601942,
+        "mean_pac_during_stim": 1.991278057440016e-05,
+        "mean_pac_during_rest": 3.888169368202049e-05
+      },
+      {
+        "subject": "sub-15",
+        "stim_pct": 37.79816513761468,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 64.60176991150442,
+        "mean_pac_during_stim": 2.5345364401524013e-05,
+        "mean_pac_during_rest": 4.428739692583483e-05
+      },
+      {
+        "subject": "sub-21",
+        "stim_pct": 35.77981651376147,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.689262621337396e-07,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 59.14285714285714,
+        "mean_pac_during_stim": 3.6361456489777165e-05,
+        "mean_pac_during_rest": 5.817082081138466e-05
+      },
+      {
+        "subject": "sub-29",
+        "stim_pct": 35.41284403669725,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 57.10227272727273,
+        "mean_pac_during_stim": 3.622302434305491e-05,
+        "mean_pac_during_rest": 5.628754195063574e-05
+      },
+      {
+        "subject": "sub-35",
+        "stim_pct": 37.98165137614679,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 64.49704142011834,
+        "mean_pac_during_stim": 1.8653412448210936e-05,
+        "mean_pac_during_rest": 3.638155345736129e-05
+      }
+    ],
+    "TCN Predictive": [
+      {
+        "subject": "sub-01",
+        "stim_pct": 10.903426791277258,
+        "stim_hit_rate": 0.08571428571428572,
+        "stim_mean_delta": 2.453208746879407e-05,
+        "wasted_stim_pct": 91.42857142857143,
+        "rest_above_median_pct": 40.55944055944056,
+        "mean_pac_during_stim": 4.0885032521020184e-05,
+        "mean_pac_during_rest": 2.1899088679226483e-05
+      },
+      {
+        "subject": "sub-02",
+        "stim_pct": 30.529595015576323,
+        "stim_hit_rate": 0.030612244897959183,
+        "stim_mean_delta": 6.8712038348215285e-06,
+        "wasted_stim_pct": 96.93877551020408,
+        "rest_above_median_pct": 57.399103139013455,
+        "mean_pac_during_stim": 2.0843408821233438e-05,
+        "mean_pac_during_rest": 2.778584437789395e-05
+      },
+      {
+        "subject": "sub-03",
+        "stim_pct": 33.95638629283489,
+        "stim_hit_rate": 0.027522935779816515,
+        "stim_mean_delta": 1.0497879244364236e-05,
+        "wasted_stim_pct": 97.24770642201835,
+        "rest_above_median_pct": 48.58490566037736,
+        "mean_pac_during_stim": 3.224007787172893e-05,
+        "mean_pac_during_rest": 3.406634198962473e-05
+      },
+      {
+        "subject": "sub-04",
+        "stim_pct": 46.10591900311526,
+        "stim_hit_rate": 0.04054054054054054,
+        "stim_mean_delta": 1.0115542369224322e-06,
+        "wasted_stim_pct": 95.94594594594594,
+        "rest_above_median_pct": 46.82080924855491,
+        "mean_pac_during_stim": 3.959757581459121e-05,
+        "mean_pac_during_rest": 4.906767070253807e-05
+      },
+      {
+        "subject": "sub-05",
+        "stim_pct": 37.38317757009346,
+        "stim_hit_rate": 0.03333333333333333,
+        "stim_mean_delta": 1.0347781533463192e-05,
+        "wasted_stim_pct": 96.66666666666667,
+        "rest_above_median_pct": 44.776119402985074,
+        "mean_pac_during_stim": 4.067060465776288e-05,
+        "mean_pac_during_rest": 3.347455722119172e-05
+      },
+      {
+        "subject": "sub-06",
+        "stim_pct": 41.74454828660436,
+        "stim_hit_rate": 0.007462686567164179,
+        "stim_mean_delta": 2.0247635657296743e-07,
+        "wasted_stim_pct": 99.25373134328358,
+        "rest_above_median_pct": 54.54545454545454,
+        "mean_pac_during_stim": 3.58172066805962e-05,
+        "mean_pac_during_rest": 6.068476348677534e-05
+      },
+      {
+        "subject": "sub-09",
+        "stim_pct": 53.21100917431193,
+        "stim_hit_rate": 0.03793103448275862,
+        "stim_mean_delta": 5.03814702115868e-06,
+        "wasted_stim_pct": 96.20689655172414,
+        "rest_above_median_pct": 49.80392156862745,
+        "mean_pac_during_stim": 4.218377836477973e-05,
+        "mean_pac_during_rest": 3.7655562253880015e-05
+      },
+      {
+        "subject": "sub-10",
+        "stim_pct": 51.74311926605505,
+        "stim_hit_rate": 0.028368794326241134,
+        "stim_mean_delta": 3.627846259020001e-06,
+        "wasted_stim_pct": 97.16312056737588,
+        "rest_above_median_pct": 45.627376425855516,
+        "mean_pac_during_stim": 5.608965677064946e-05,
+        "mean_pac_during_rest": 7.536530169619592e-05
+      },
+      {
+        "subject": "sub-12",
+        "stim_pct": 36.69724770642202,
+        "stim_hit_rate": 0.03,
+        "stim_mean_delta": 1.5955427514489886e-06,
+        "wasted_stim_pct": 97.0,
+        "rest_above_median_pct": 55.362318840579704,
+        "mean_pac_during_stim": 3.232053769647175e-05,
+        "mean_pac_during_rest": 4.4762837891654744e-05
+      },
+      {
+        "subject": "sub-13",
+        "stim_pct": 46.23853211009175,
+        "stim_hit_rate": 0.03571428571428571,
+        "stim_mean_delta": 3.884769728057535e-06,
+        "wasted_stim_pct": 96.42857142857143,
+        "rest_above_median_pct": 60.40955631399317,
+        "mean_pac_during_stim": 3.496917462857008e-05,
+        "mean_pac_during_rest": 4.159748110006027e-05
+      },
+      {
+        "subject": "sub-14",
+        "stim_pct": 45.68807339449542,
+        "stim_hit_rate": 0.024096385542168676,
+        "stim_mean_delta": -5.235772265619665e-07,
+        "wasted_stim_pct": 97.59036144578313,
+        "rest_above_median_pct": 58.108108108108105,
+        "mean_pac_during_stim": 4.2015635069776894e-05,
+        "mean_pac_during_rest": 5.2081406528762806e-05
+      },
+      {
+        "subject": "sub-16",
+        "stim_pct": 40.91743119266055,
+        "stim_hit_rate": 0.04035874439461883,
+        "stim_mean_delta": 8.6482903088987e-06,
+        "wasted_stim_pct": 95.96412556053812,
+        "rest_above_median_pct": 54.96894409937888,
+        "mean_pac_during_stim": 6.275217289271972e-05,
+        "mean_pac_during_rest": 7.1830044341678e-05
+      },
+      {
+        "subject": "sub-17",
+        "stim_pct": 41.467889908256886,
+        "stim_hit_rate": 0.01327433628318584,
+        "stim_mean_delta": -1.572234014127154e-06,
+        "wasted_stim_pct": 98.67256637168141,
+        "rest_above_median_pct": 57.68025078369906,
+        "mean_pac_during_stim": 4.0044782388648265e-05,
+        "mean_pac_during_rest": 5.8812035128973696e-05
+      },
+      {
+        "subject": "sub-18",
+        "stim_pct": 55.596330275229356,
+        "stim_hit_rate": 0.026402640264026403,
+        "stim_mean_delta": -1.2097333303850038e-06,
+        "wasted_stim_pct": 97.35973597359737,
+        "rest_above_median_pct": 54.54545454545454,
+        "mean_pac_during_stim": 4.390179875996913e-05,
+        "mean_pac_during_rest": 5.249885019167091e-05
+      },
+      {
+        "subject": "sub-20",
+        "stim_pct": 28.440366972477065,
+        "stim_hit_rate": 0.01935483870967742,
+        "stim_mean_delta": 6.258773176307437e-06,
+        "wasted_stim_pct": 98.06451612903226,
+        "rest_above_median_pct": 48.97435897435897,
+        "mean_pac_during_stim": 4.3965892175050306e-05,
+        "mean_pac_during_rest": 5.2109003879204994e-05
+      },
+      {
+        "subject": "sub-22",
+        "stim_pct": 47.522935779816514,
+        "stim_hit_rate": 0.023166023166023165,
+        "stim_mean_delta": 2.800396878606605e-06,
+        "wasted_stim_pct": 97.68339768339769,
+        "rest_above_median_pct": 53.14685314685315,
+        "mean_pac_during_stim": 3.9467940193275705e-05,
+        "mean_pac_during_rest": 5.559185350921963e-05
+      },
+      {
+        "subject": "sub-24",
+        "stim_pct": 31.55963302752294,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 55.49597855227882,
+        "mean_pac_during_stim": 1.9374521245621218e-05,
+        "mean_pac_during_rest": 4.101082309556111e-05
+      },
+      {
+        "subject": "sub-25",
+        "stim_pct": 57.98165137614679,
+        "stim_hit_rate": 0.0379746835443038,
+        "stim_mean_delta": 1.978947532501089e-06,
+        "wasted_stim_pct": 96.20253164556962,
+        "rest_above_median_pct": 64.19213973799127,
+        "mean_pac_during_stim": 4.63205887899921e-05,
+        "mean_pac_during_rest": 6.636675954837588e-05
+      },
+      {
+        "subject": "sub-27",
+        "stim_pct": 39.633027522935784,
+        "stim_hit_rate": 0.027777777777777776,
+        "stim_mean_delta": 2.4250922496904682e-06,
+        "wasted_stim_pct": 97.22222222222221,
+        "rest_above_median_pct": 59.57446808510638,
+        "mean_pac_during_stim": 4.939296119856925e-05,
+        "mean_pac_during_rest": 6.344635528282752e-05
+      },
+      {
+        "subject": "sub-28",
+        "stim_pct": 47.522935779816514,
+        "stim_hit_rate": 0.04633204633204633,
+        "stim_mean_delta": 2.554776875995455e-06,
+        "wasted_stim_pct": 95.36679536679536,
+        "rest_above_median_pct": 42.65734265734265,
+        "mean_pac_during_stim": 3.542131185849315e-05,
+        "mean_pac_during_rest": 3.1381117183744245e-05
+      },
+      {
+        "subject": "sub-30",
+        "stim_pct": 28.073394495412845,
+        "stim_hit_rate": 0.0392156862745098,
+        "stim_mean_delta": 5.420887156134248e-06,
+        "wasted_stim_pct": 96.07843137254902,
+        "rest_above_median_pct": 44.38775510204081,
+        "mean_pac_during_stim": 2.5329750751937076e-05,
+        "mean_pac_during_rest": 2.588441158933659e-05
+      },
+      {
+        "subject": "sub-31",
+        "stim_pct": 36.69724770642202,
+        "stim_hit_rate": 0.03,
+        "stim_mean_delta": 2.011392273326644e-06,
+        "wasted_stim_pct": 97.0,
+        "rest_above_median_pct": 58.84057971014492,
+        "mean_pac_during_stim": 2.9075228879010005e-05,
+        "mean_pac_during_rest": 3.831199987062353e-05
+      },
+      {
+        "subject": "sub-33",
+        "stim_pct": 42.38532110091743,
+        "stim_hit_rate": 0.03896103896103896,
+        "stim_mean_delta": -2.0028235988790123e-07,
+        "wasted_stim_pct": 96.1038961038961,
+        "rest_above_median_pct": 48.40764331210191,
+        "mean_pac_during_stim": 4.3488891281863046e-05,
+        "mean_pac_during_rest": 4.6312003475822386e-05
+      },
+      {
+        "subject": "sub-34",
+        "stim_pct": 53.76146788990825,
+        "stim_hit_rate": 0.020477815699658702,
+        "stim_mean_delta": 3.2867789113678294e-06,
+        "wasted_stim_pct": 97.95221843003414,
+        "rest_above_median_pct": 67.06349206349206,
+        "mean_pac_during_stim": 2.5130197669951125e-05,
+        "mean_pac_during_rest": 4.688321446738335e-05
+      },
+      {
+        "subject": "sub-11",
+        "stim_pct": 57.247706422018354,
+        "stim_hit_rate": 0.038461538461538464,
+        "stim_mean_delta": -2.5574138543992083e-08,
+        "wasted_stim_pct": 96.15384615384616,
+        "rest_above_median_pct": 48.497854077253216,
+        "mean_pac_during_stim": 3.377308164566566e-05,
+        "mean_pac_during_rest": 4.74169422364921e-05
+      },
+      {
+        "subject": "sub-19",
+        "stim_pct": 38.1651376146789,
+        "stim_hit_rate": 0.04326923076923077,
+        "stim_mean_delta": 7.531787901122035e-07,
+        "wasted_stim_pct": 95.67307692307693,
+        "rest_above_median_pct": 55.19287833827893,
+        "mean_pac_during_stim": 4.283292239329882e-05,
+        "mean_pac_during_rest": 5.594443120872517e-05
+      },
+      {
+        "subject": "sub-23",
+        "stim_pct": 39.44954128440367,
+        "stim_hit_rate": 0.013953488372093023,
+        "stim_mean_delta": -6.197653118798786e-07,
+        "wasted_stim_pct": 98.6046511627907,
+        "rest_above_median_pct": 53.03030303030303,
+        "mean_pac_during_stim": 2.9513054181745462e-05,
+        "mean_pac_during_rest": 4.260516691334136e-05
+      },
+      {
+        "subject": "sub-26",
+        "stim_pct": 34.31192660550459,
+        "stim_hit_rate": 0.016042780748663103,
+        "stim_mean_delta": -1.6502949639531582e-07,
+        "wasted_stim_pct": 98.3957219251337,
+        "rest_above_median_pct": 48.882681564245814,
+        "mean_pac_during_stim": 4.283593689092055e-05,
+        "mean_pac_during_rest": 5.2186569465657435e-05
+      },
+      {
+        "subject": "sub-32",
+        "stim_pct": 48.80733944954129,
+        "stim_hit_rate": 0.03383458646616541,
+        "stim_mean_delta": -1.3395866033508142e-07,
+        "wasted_stim_pct": 96.61654135338345,
+        "rest_above_median_pct": 51.61290322580645,
+        "mean_pac_during_stim": 3.235367620939632e-05,
+        "mean_pac_during_rest": 4.4256603565627197e-05
+      },
+      {
+        "subject": "sub-07",
+        "stim_pct": 24.299065420560748,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -9.888852150332528e-07,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.50617283950617,
+        "mean_pac_during_stim": 2.6953259748128867e-05,
+        "mean_pac_during_rest": 3.234184140132316e-05
+      },
+      {
+        "subject": "sub-08",
+        "stim_pct": 43.613707165109034,
+        "stim_hit_rate": 0.02142857142857143,
+        "stim_mean_delta": -2.0465745106890983e-08,
+        "wasted_stim_pct": 97.85714285714285,
+        "rest_above_median_pct": 46.408839779005525,
+        "mean_pac_during_stim": 2.2520669536057653e-05,
+        "mean_pac_during_rest": 3.948455762156999e-05
+      },
+      {
+        "subject": "sub-15",
+        "stim_pct": 42.75229357798165,
+        "stim_hit_rate": 0.02575107296137339,
+        "stim_mean_delta": -2.00798483137842e-07,
+        "wasted_stim_pct": 97.42489270386267,
+        "rest_above_median_pct": 54.807692307692314,
+        "mean_pac_during_stim": 3.0358546983044267e-05,
+        "mean_pac_during_rest": 4.2182792235649496e-05
+      },
+      {
+        "subject": "sub-21",
+        "stim_pct": 25.321100917431195,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -5.969681798751257e-07,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 51.842751842751845,
+        "mean_pac_during_stim": 3.752179915578295e-05,
+        "mean_pac_during_rest": 5.472300495330009e-05
+      },
+      {
+        "subject": "sub-29",
+        "stim_pct": 44.95412844036697,
+        "stim_hit_rate": 0.024489795918367346,
+        "stim_mean_delta": -4.505566096852247e-07,
+        "wasted_stim_pct": 97.55102040816327,
+        "rest_above_median_pct": 58.666666666666664,
+        "mean_pac_during_stim": 4.185574436073053e-05,
+        "mean_pac_during_rest": 5.516533698818132e-05
+      },
+      {
+        "subject": "sub-35",
+        "stim_pct": 38.34862385321101,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 69.64285714285714,
+        "mean_pac_during_stim": 1.7900948415517624e-05,
+        "mean_pac_during_rest": 3.695512865037083e-05
+      }
+    ],
+    "Oracle": [
+      {
+        "subject": "sub-01",
+        "stim_pct": 7.78816199376947,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.3024856805055517e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 35.810810810810814,
+        "mean_pac_during_stim": 3.6982110011784885e-05,
+        "mean_pac_during_rest": 2.287014442635087e-05
+      },
+      {
+        "subject": "sub-02",
+        "stim_pct": 7.78816199376947,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.8753138675710216e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 35.810810810810814,
+        "mean_pac_during_stim": 4.6486364688307624e-05,
+        "mean_pac_during_rest": 2.3907899471430867e-05
+      },
+      {
+        "subject": "sub-03",
+        "stim_pct": 7.78816199376947,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.7669393272356778e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 35.810810810810814,
+        "mean_pac_during_stim": 5.1474663927852815e-05,
+        "mean_pac_during_rest": 3.1923535106833036e-05
+      },
+      {
+        "subject": "sub-04",
+        "stim_pct": 7.78816199376947,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.0200044924411714e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 35.810810810810814,
+        "mean_pac_during_stim": 6.688695862021123e-05,
+        "mean_pac_during_rest": 4.282761583308549e-05
+      },
+      {
+        "subject": "sub-05",
+        "stim_pct": 7.78816199376947,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.6352389973472943e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 35.810810810810814,
+        "mean_pac_during_stim": 5.21980670936631e-05,
+        "mean_pac_during_rest": 3.481049622651858e-05
+      },
+      {
+        "subject": "sub-06",
+        "stim_pct": 7.78816199376947,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.6213899829859643e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 35.810810810810814,
+        "mean_pac_during_stim": 7.968246163162924e-05,
+        "mean_pac_during_rest": 4.782261799471672e-05
+      },
+      {
+        "subject": "sub-09",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.7344323994507335e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 5.766120559249363e-05,
+        "mean_pac_during_rest": 3.8481419697726625e-05
+      },
+      {
+        "subject": "sub-10",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -3.425042261183397e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 0.00010323997685629635,
+        "mean_pac_during_rest": 6.198511719377869e-05
+      },
+      {
+        "subject": "sub-12",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.2105023756304774e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 43.2,
+        "mean_pac_during_stim": 6.614309476976871e-05,
+        "mean_pac_during_rest": 3.786169469455128e-05
+      },
+      {
+        "subject": "sub-13",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.79191740763397e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 5.7085648237324475e-05,
+        "mean_pac_during_rest": 3.686287959607544e-05
+      },
+      {
+        "subject": "sub-14",
+        "stim_pct": 9.174311926605505,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.9600182373138074e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 38.58585858585858,
+        "mean_pac_during_stim": 6.802217588990481e-05,
+        "mean_pac_during_rest": 4.5407839738167674e-05
+      },
+      {
+        "subject": "sub-16",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.6999656921072495e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 44.2,
+        "mean_pac_during_stim": 9.379433030123264e-05,
+        "mean_pac_during_rest": 6.58045279390827e-05
+      },
+      {
+        "subject": "sub-17",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.6200407108346447e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 7.920031851638814e-05,
+        "mean_pac_during_rest": 4.8494291385479297e-05
+      },
+      {
+        "subject": "sub-18",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -3.0435772663212704e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 8.12470826414705e-05,
+        "mean_pac_during_rest": 4.470169610357767e-05
+      },
+      {
+        "subject": "sub-20",
+        "stim_pct": 7.339449541284404,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.5823307713310422e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.801980198019805,
+        "mean_pac_during_stim": 7.438057295073001e-05,
+        "mean_pac_during_rest": 4.7845548281175324e-05
+      },
+      {
+        "subject": "sub-22",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -4.198148492909334e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 9.553765132203274e-05,
+        "mean_pac_during_rest": 4.364454460840749e-05
+      },
+      {
+        "subject": "sub-24",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.5788947703701273e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 6.253208256201094e-05,
+        "mean_pac_during_rest": 3.163102190720131e-05
+      },
+      {
+        "subject": "sub-25",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.5217756510586155e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 8.3654573198588e-05,
+        "mean_pac_during_rest": 5.214167640055824e-05
+      },
+      {
+        "subject": "sub-27",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -3.0361045391707943e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 9.201940942488691e-05,
+        "mean_pac_during_rest": 5.48037141656426e-05
+      },
+      {
+        "subject": "sub-28",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.5336067270831067e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 4.994310849080354e-05,
+        "mean_pac_during_rest": 3.1803358807628845e-05
+      },
+      {
+        "subject": "sub-30",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.6711322254952127e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 4.438071490049586e-05,
+        "mean_pac_during_rest": 2.4050018075088e-05
+      },
+      {
+        "subject": "sub-31",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.4901217414158174e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 6.392716510136414e-05,
+        "mean_pac_during_rest": 3.2311926603211473e-05
+      },
+      {
+        "subject": "sub-33",
+        "stim_pct": 9.174311926605505,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.936341314274374e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 43.63636363636363,
+        "mean_pac_during_stim": 6.641248755873731e-05,
+        "mean_pac_during_rest": 4.2964199191074195e-05
+      },
+      {
+        "subject": "sub-34",
+        "stim_pct": 10.091743119266056,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.6564553057878102e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 43.06122448979592,
+        "mean_pac_during_stim": 5.1646544169715046e-05,
+        "mean_pac_during_rest": 3.3341138844371335e-05
+      },
+      {
+        "subject": "sub-11",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.884355176285659e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 6.0049978713953855e-05,
+        "mean_pac_during_rest": 3.7766199944844844e-05
+      },
+      {
+        "subject": "sub-19",
+        "stim_pct": 7.339449541284404,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.376697685741314e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 44.75247524752476,
+        "mean_pac_during_stim": 7.546288105979122e-05,
+        "mean_pac_during_rest": 4.899803155000968e-05
+      },
+      {
+        "subject": "sub-23",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.8099626091841654e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 6.902476425490431e-05,
+        "mean_pac_during_rest": 3.4597794678014454e-05
+      },
+      {
+        "subject": "sub-26",
+        "stim_pct": 9.174311926605505,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.5085834310590237e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 38.58585858585858,
+        "mean_pac_during_stim": 7.683069277037031e-05,
+        "mean_pac_during_rest": 4.616480288644241e-05
+      },
+      {
+        "subject": "sub-32",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.637640444770648e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 5.593940484515563e-05,
+        "mean_pac_during_rest": 3.687279409695481e-05
+      },
+      {
+        "subject": "sub-07",
+        "stim_pct": 7.78816199376947,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.3806313390305397e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 35.810810810810814,
+        "mean_pac_during_stim": 4.531112091700983e-05,
+        "mean_pac_during_rest": 2.982649897956194e-05
+      },
+      {
+        "subject": "sub-08",
+        "stim_pct": 7.78816199376947,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.0632155290139775e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 35.810810810810814,
+        "mean_pac_during_stim": 5.429970605796645e-05,
+        "mean_pac_during_rest": 3.0209817611834717e-05
+      },
+      {
+        "subject": "sub-15",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.7828653227430446e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 5.509113258871978e-05,
+        "mean_pac_during_rest": 3.5510943316159124e-05
+      },
+      {
+        "subject": "sub-21",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.128830017668536e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 7.239783940014187e-05,
+        "mean_pac_during_rest": 4.83847370529696e-05
+      },
+      {
+        "subject": "sub-29",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -2.375622804227983e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 7.665441684315975e-05,
+        "mean_pac_during_rest": 4.670961941378238e-05
+      },
+      {
+        "subject": "sub-35",
+        "stim_pct": 8.256880733944955,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": -1.914477722052485e-05,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 39.2,
+        "mean_pac_during_stim": 5.0561374482419025e-05,
+        "mean_pac_during_rest": 2.776591918731785e-05
+      }
+    ],
+    "PI Controller": [
+      {
+        "subject": "sub-01",
+        "stim_pct": 26.791277258566975,
+        "stim_hit_rate": 0.10465116279069768,
+        "stim_mean_delta": 2.9180323802049426e-06,
+        "wasted_stim_pct": 89.53488372093024,
+        "rest_above_median_pct": 55.74468085106383,
+        "mean_pac_during_stim": 1.0966397275659887e-05,
+        "mean_pac_during_rest": 2.8727682275692467e-05
+      },
+      {
+        "subject": "sub-02",
+        "stim_pct": 11.214953271028037,
+        "stim_hit_rate": 0.08333333333333333,
+        "stim_mean_delta": 1.7210084317169284e-06,
+        "wasted_stim_pct": 91.66666666666666,
+        "rest_above_median_pct": 45.96491228070175,
+        "mean_pac_during_stim": 7.973960604543067e-06,
+        "mean_pac_during_rest": 2.790117466311466e-05
+      },
+      {
+        "subject": "sub-03",
+        "stim_pct": 14.953271028037381,
+        "stim_hit_rate": 0.125,
+        "stim_mean_delta": 4.392257572374691e-06,
+        "wasted_stim_pct": 87.5,
+        "rest_above_median_pct": 47.985347985347985,
+        "mean_pac_during_stim": 1.620172914710552e-05,
+        "mean_pac_during_rest": 3.647820509435104e-05
+      },
+      {
+        "subject": "sub-04",
+        "stim_pct": 6.5420560747663545,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 100.0,
+        "rest_above_median_pct": 43.666666666666664,
+        "mean_pac_during_stim": 2.5868276573265534e-05,
+        "mean_pac_during_rest": 4.6019714813533364e-05
+      },
+      {
+        "subject": "sub-05",
+        "stim_pct": 10.59190031152648,
+        "stim_hit_rate": 0.08823529411764706,
+        "stim_mean_delta": 3.8031437659742956e-05,
+        "wasted_stim_pct": 91.17647058823529,
+        "rest_above_median_pct": 45.64459930313589,
+        "mean_pac_during_stim": 1.9585010114731843e-05,
+        "mean_pac_during_rest": 3.812880911669058e-05
+      },
+      {
+        "subject": "sub-06",
+        "stim_pct": 19.626168224299064,
+        "stim_hit_rate": 0.09523809523809523,
+        "stim_mean_delta": 3.3022826391925877e-06,
+        "wasted_stim_pct": 90.47619047619048,
+        "rest_above_median_pct": 50.775193798449614,
+        "mean_pac_during_stim": 3.1208962647305406e-05,
+        "mean_pac_during_rest": 5.4966634962971466e-05
+      },
+      {
+        "subject": "sub-09",
+        "stim_pct": 23.119266055045873,
+        "stim_hit_rate": 0.09523809523809523,
+        "stim_mean_delta": 1.4405185006356756e-05,
+        "wasted_stim_pct": 90.47619047619048,
+        "rest_above_median_pct": 57.51789976133651,
+        "mean_pac_during_stim": 2.4026312093542016e-05,
+        "mean_pac_during_rest": 4.488818323804113e-05
+      },
+      {
+        "subject": "sub-10",
+        "stim_pct": 22.385321100917434,
+        "stim_hit_rate": 0.09836065573770492,
+        "stim_mean_delta": 5.939927413161635e-06,
+        "wasted_stim_pct": 90.1639344262295,
+        "rest_above_median_pct": 56.73758865248227,
+        "mean_pac_during_stim": 3.782407507866892e-05,
+        "mean_pac_during_rest": 7.334236500195052e-05
+      },
+      {
+        "subject": "sub-12",
+        "stim_pct": 9.724770642201836,
+        "stim_hit_rate": 0.11320754716981132,
+        "stim_mean_delta": 5.767938950730674e-06,
+        "wasted_stim_pct": 88.67924528301887,
+        "rest_above_median_pct": 53.04878048780488,
+        "mean_pac_during_stim": 1.8386626191031756e-05,
+        "mean_pac_during_rest": 4.254633216217592e-05
+      },
+      {
+        "subject": "sub-13",
+        "stim_pct": 49.357798165137616,
+        "stim_hit_rate": 0.10037174721189591,
+        "stim_mean_delta": 6.524883537583473e-06,
+        "wasted_stim_pct": 89.96282527881041,
+        "rest_above_median_pct": 75.36231884057972,
+        "mean_pac_during_stim": 2.6512975619272296e-05,
+        "mean_pac_during_rest": 5.02474765475836e-05
+      },
+      {
+        "subject": "sub-14",
+        "stim_pct": 4.587155963302752,
+        "stim_hit_rate": 0.12,
+        "stim_mean_delta": 6.0379224116277026e-06,
+        "wasted_stim_pct": 88.0,
+        "rest_above_median_pct": 46.34615384615385,
+        "mean_pac_during_stim": 1.9048664643289446e-05,
+        "mean_pac_during_rest": 4.8849563170780774e-05
+      },
+      {
+        "subject": "sub-16",
+        "stim_pct": 10.275229357798166,
+        "stim_hit_rate": 0.10714285714285714,
+        "stim_mean_delta": 4.32521199999043e-06,
+        "wasted_stim_pct": 89.28571428571429,
+        "rest_above_median_pct": 53.37423312883436,
+        "mean_pac_during_stim": 3.2865674151962564e-05,
+        "mean_pac_during_rest": 7.215241529772375e-05
+      },
+      {
+        "subject": "sub-17",
+        "stim_pct": 32.477064220183486,
+        "stim_hit_rate": 0.1016949152542373,
+        "stim_mean_delta": 4.596245600363329e-06,
+        "wasted_stim_pct": 89.83050847457628,
+        "rest_above_median_pct": 64.40217391304348,
+        "mean_pac_during_stim": 2.9300248720517496e-05,
+        "mean_pac_during_rest": 6.148102174577588e-05
+      },
+      {
+        "subject": "sub-18",
+        "stim_pct": 48.07339449541285,
+        "stim_hit_rate": 0.11450381679389313,
+        "stim_mean_delta": 8.18006746023137e-06,
+        "wasted_stim_pct": 88.54961832061069,
+        "rest_above_median_pct": 72.43816254416961,
+        "mean_pac_during_stim": 3.034916898169134e-05,
+        "mean_pac_during_rest": 6.380029857756848e-05
+      },
+      {
+        "subject": "sub-20",
+        "stim_pct": 20.36697247706422,
+        "stim_hit_rate": 0.10810810810810811,
+        "stim_mean_delta": 5.2523342222581176e-06,
+        "wasted_stim_pct": 89.1891891891892,
+        "rest_above_median_pct": 55.52995391705069,
+        "mean_pac_during_stim": 2.284297837632531e-05,
+        "mean_pac_during_rest": 5.6685839171084404e-05
+      },
+      {
+        "subject": "sub-22",
+        "stim_pct": 12.477064220183486,
+        "stim_hit_rate": 0.1323529411764706,
+        "stim_mean_delta": 2.287277454013752e-05,
+        "wasted_stim_pct": 86.76470588235294,
+        "rest_above_median_pct": 50.524109014675055,
+        "mean_pac_during_stim": 1.9141339799036038e-05,
+        "mean_pac_during_rest": 5.2033240057360114e-05
+      },
+      {
+        "subject": "sub-24",
+        "stim_pct": 31.55963302752294,
+        "stim_hit_rate": 0.12209302325581395,
+        "stim_mean_delta": 1.0387382488740508e-05,
+        "wasted_stim_pct": 87.79069767441861,
+        "rest_above_median_pct": 64.6112600536193,
+        "mean_pac_during_stim": 1.8600964577579077e-05,
+        "mean_pac_during_rest": 4.136753019181648e-05
+      },
+      {
+        "subject": "sub-25",
+        "stim_pct": 6.7889908256880735,
+        "stim_hit_rate": 0.08108108108108109,
+        "stim_mean_delta": 4.721566718751855e-06,
+        "wasted_stim_pct": 91.8918918918919,
+        "rest_above_median_pct": 47.44094488188976,
+        "mean_pac_during_stim": 2.6494116202309023e-05,
+        "mean_pac_during_rest": 5.680120412348453e-05
+      },
+      {
+        "subject": "sub-27",
+        "stim_pct": 25.504587155963304,
+        "stim_hit_rate": 0.1079136690647482,
+        "stim_mean_delta": 1.0811548553048483e-05,
+        "wasted_stim_pct": 89.20863309352518,
+        "rest_above_median_pct": 59.35960591133005,
+        "mean_pac_during_stim": 3.427883645148488e-05,
+        "mean_pac_during_rest": 6.595559665070152e-05
+      },
+      {
+        "subject": "sub-28",
+        "stim_pct": 26.422018348623855,
+        "stim_hit_rate": 0.10416666666666667,
+        "stim_mean_delta": 2.8659773004813133e-06,
+        "wasted_stim_pct": 89.58333333333334,
+        "rest_above_median_pct": 60.099750623441395,
+        "mean_pac_during_stim": 2.0075620501882867e-05,
+        "mean_pac_during_rest": 3.805044871229289e-05
+      },
+      {
+        "subject": "sub-30",
+        "stim_pct": 0.0,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 0.0,
+        "rest_above_median_pct": 44.22018348623853,
+        "mean_pac_during_stim": 0,
+        "mean_pac_during_rest": 2.5728699464341863e-05
+      },
+      {
+        "subject": "sub-31",
+        "stim_pct": 5.688073394495413,
+        "stim_hit_rate": 0.0967741935483871,
+        "stim_mean_delta": 1.9417048460034842e-06,
+        "wasted_stim_pct": 90.32258064516128,
+        "rest_above_median_pct": 46.88715953307393,
+        "mean_pac_during_stim": 1.3620223254607311e-05,
+        "mean_pac_during_rest": 3.620711830792665e-05
+      },
+      {
+        "subject": "sub-33",
+        "stim_pct": 6.605504587155964,
+        "stim_hit_rate": 0.08333333333333333,
+        "stim_mean_delta": 4.808063912636714e-06,
+        "wasted_stim_pct": 91.66666666666666,
+        "rest_above_median_pct": 51.277013752455794,
+        "mean_pac_during_stim": 2.1418879027084534e-05,
+        "mean_pac_during_rest": 4.679140143918182e-05
+      },
+      {
+        "subject": "sub-34",
+        "stim_pct": 78.71559633027523,
+        "stim_hit_rate": 0.055944055944055944,
+        "stim_mean_delta": 3.7932429457416034e-06,
+        "wasted_stim_pct": 94.4055944055944,
+        "rest_above_median_pct": 94.82758620689656,
+        "mean_pac_during_stim": 2.650886696890624e-05,
+        "mean_pac_during_rest": 6.728805201220265e-05
+      },
+      {
+        "subject": "sub-11",
+        "stim_pct": 2.5688073394495414,
+        "stim_hit_rate": 0.21428571428571427,
+        "stim_mean_delta": 1.3364640672223284e-05,
+        "wasted_stim_pct": 78.57142857142857,
+        "rest_above_median_pct": 45.38606403013183,
+        "mean_pac_during_stim": 1.4591699539609918e-05,
+        "mean_pac_during_rest": 4.0265659549897934e-05
+      },
+      {
+        "subject": "sub-19",
+        "stim_pct": 59.63302752293578,
+        "stim_hit_rate": 0.07384615384615385,
+        "stim_mean_delta": 3.7075408285305725e-06,
+        "wasted_stim_pct": 92.61538461538461,
+        "rest_above_median_pct": 92.27272727272727,
+        "mean_pac_during_stim": 3.8308809874683605e-05,
+        "mean_pac_during_rest": 6.960071802670168e-05
+      },
+      {
+        "subject": "sub-23",
+        "stim_pct": 13.211009174311927,
+        "stim_hit_rate": 0.125,
+        "stim_mean_delta": 6.336537560419566e-06,
+        "wasted_stim_pct": 87.5,
+        "rest_above_median_pct": 50.95137420718816,
+        "mean_pac_during_stim": 1.533968584033817e-05,
+        "mean_pac_during_rest": 4.080455465110692e-05
+      },
+      {
+        "subject": "sub-26",
+        "stim_pct": 17.24770642201835,
+        "stim_hit_rate": 0.1276595744680851,
+        "stim_mean_delta": 1.6133538262875772e-05,
+        "wasted_stim_pct": 87.2340425531915,
+        "rest_above_median_pct": 53.43680709534369,
+        "mean_pac_during_stim": 2.5618141087274894e-05,
+        "mean_pac_during_rest": 5.384702174080636e-05
+      },
+      {
+        "subject": "sub-32",
+        "stim_pct": 6.055045871559633,
+        "stim_hit_rate": 0.18181818181818182,
+        "stim_mean_delta": 8.249663192564276e-06,
+        "wasted_stim_pct": 81.81818181818183,
+        "rest_above_median_pct": 47.0703125,
+        "mean_pac_during_stim": 2.090289767824492e-05,
+        "mean_pac_during_rest": 3.9577880162358054e-05
+      },
+      {
+        "subject": "sub-07",
+        "stim_pct": 16.822429906542055,
+        "stim_hit_rate": 0.1111111111111111,
+        "stim_mean_delta": 3.1237148656379643e-06,
+        "wasted_stim_pct": 88.88888888888889,
+        "rest_above_median_pct": 49.063670411985015,
+        "mean_pac_during_stim": 2.022578304477365e-05,
+        "mean_pac_during_rest": 3.321808777699551e-05
+      },
+      {
+        "subject": "sub-08",
+        "stim_pct": 18.69158878504673,
+        "stim_hit_rate": 0.1,
+        "stim_mean_delta": 1.6586007729426864e-05,
+        "wasted_stim_pct": 90.0,
+        "rest_above_median_pct": 50.191570881226056,
+        "mean_pac_during_stim": 1.7286494459558744e-05,
+        "mean_pac_during_rest": 3.54881570765468e-05
+      },
+      {
+        "subject": "sub-15",
+        "stim_pct": 80.91743119266054,
+        "stim_hit_rate": 0.06802721088435375,
+        "stim_mean_delta": 2.7713627331970326e-06,
+        "wasted_stim_pct": 93.19727891156462,
+        "rest_above_median_pct": 93.26923076923077,
+        "mean_pac_during_stim": 3.08709173866797e-05,
+        "mean_pac_during_rest": 6.365863516390587e-05
+      },
+      {
+        "subject": "sub-21",
+        "stim_pct": 0.0,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 0.0,
+        "rest_above_median_pct": 44.22018348623853,
+        "mean_pac_during_stim": 0,
+        "mean_pac_during_rest": 5.036747027429574e-05
+      },
+      {
+        "subject": "sub-29",
+        "stim_pct": 0.0,
+        "stim_hit_rate": 0.0,
+        "stim_mean_delta": 0.0,
+        "wasted_stim_pct": 0.0,
+        "rest_above_median_pct": 44.22018348623853,
+        "mean_pac_during_stim": 0,
+        "mean_pac_during_rest": 4.9182125623547485e-05
+      },
+      {
+        "subject": "sub-35",
+        "stim_pct": 50.825688073394495,
+        "stim_hit_rate": 0.10830324909747292,
+        "stim_mean_delta": 4.8805212651550905e-06,
+        "wasted_stim_pct": 89.16967509025271,
+        "rest_above_median_pct": 76.86567164179104,
+        "mean_pac_during_stim": 1.8818379807807216e-05,
+        "mean_pac_during_rest": 4.0841530741064105e-05
+      }
+    ]
+  }
+}

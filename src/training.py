@@ -77,7 +77,14 @@ class DataAugmentor:
         shift = np.random.randint(-self.max_shift_samples, self.max_shift_samples + 1)
         if shift == 0:
             return window.copy()
-        return np.roll(window, shift, axis=-1)
+        # Use zero-padding instead of np.roll to avoid wrap-around artifacts
+        # where the end of the signal wraps to the beginning.
+        shifted = np.zeros_like(window)
+        if shift > 0:
+            shifted[..., shift:] = window[..., :-shift]
+        else:
+            shifted[..., :shift] = window[..., -shift:]
+        return shifted
 
     def amplitude_scaling(self, window: np.ndarray,
                          scale_range: Tuple[float, float] = (0.8, 1.2)) -> np.ndarray:
@@ -260,7 +267,6 @@ class ModelTrainer:
             total_loss += loss.item()
             n_batches += 1
 
-            pbar.update(1)
             pbar.set_postfix({'loss': total_loss / n_batches})
 
         epoch_loss = total_loss / n_batches
@@ -403,7 +409,7 @@ class ModelTrainer:
 
     def load_checkpoint(self, path: str):
         """Load model checkpoint."""
-        checkpoint = torch.load(path, map_location=self.device)
+        checkpoint = torch.load(path, map_location=self.device, weights_only=False)
         self.model.load_state_dict(checkpoint['model_state_dict'])
         self.optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
         self.train_losses = checkpoint['train_losses']
@@ -443,7 +449,12 @@ def main():
     setup_logging(log_file=f"{args.output_dir}/training.log")
 
     # Device
-    device = args.device if torch.cuda.is_available() else 'cpu'
+    if torch.cuda.is_available():
+        device = args.device
+    elif hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
+        device = 'mps'
+    else:
+        device = 'cpu'
     logger.info(f"Using device: {device}")
     pin_memory = (device != 'cpu')
 

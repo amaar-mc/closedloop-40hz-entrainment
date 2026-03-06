@@ -47,3 +47,5 @@ notebooks/*.ipynb
 # Misc
 *.bak
 *.tmp
+
+node_modules/

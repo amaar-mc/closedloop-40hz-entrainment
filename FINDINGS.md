@@ -265,6 +265,39 @@ How does the adaptive advantage scale with habituation severity?
 
 **At every non-zero fatigue level (5/5), adaptive scheduling is significantly more efficient than fixed scheduling (all p < 0.05).** The advantage grows monotonically with fatigue severity: from +1.3% at mild fatigue to +5.7% at severe fatigue.
 
+#### 4.4.4 Rigorous Re-Evaluation (rigor/ branch, Feb 21 2026)
+
+The results above (Sections 4.4.1-4.4.3) were generated with n=10 trials. A statistically rigorous reanalysis using `rigor/rigorous_validation.py` with n=50 trials per condition, 600s each, bootstrap 95% CIs, and proper Hedges' g effect sizes produces stronger results:
+
+| Condition | Fixed Efficiency | Predictive Efficiency | Gain | Wilcoxon p | Hedges' g |
+|-----------|-----------------|----------------------|------|-----------|-----------|
+| Standard (no fatigue) | 0.343 [0.340, 0.345] | 0.371 [0.367, 0.375] | +8.2% | < 0.001 | 2.28 |
+| Fatigue (default) | 0.333 [0.330, 0.336] | 0.363 [0.359, 0.367] | +8.9% | < 0.001 | 2.37 |
+| Population-diverse | 0.350 [0.331, 0.368] | 0.381 [0.361, 0.399] | +8.8% | < 0.001 | 0.44 |
+
+Fatigue sweep (n=50 per level): gains range from +9.0% to +11.2%, all p < 0.001.
+
+The larger sample size reveals that the adaptive advantage is significant even without fatigue (the n=10 analysis lacked power to detect this). The effect size is large (Hedges' g > 2) under standard conditions and remains moderate (g = 0.44) with population-diverse simulator parameters (randomized tau/pac per simulated subject).
+
+Full results: `rigor/rigorous_validation_results.json`
+
+#### 4.4.5 Fatigue Model Sensitivity Analysis
+
+A critical robustness question: does the adaptive scheduling advantage depend on the specific fatigue model used? To test this, we implemented four fundamentally different fatigue mechanisms and ran the full comparison (n=50 trials, 600s each) under each:
+
+| Fatigue Model | Fixed Eff. | Adaptive Eff. | Gain | p-value | Hedges' g |
+|---------------|-----------|---------------|------|---------|-----------|
+| Exponential Decay (original) | 0.335 | 0.365 | +9.0% | 1.8e-15 | 2.31 |
+| Step Function (threshold) | 0.329 | 0.352 | +6.9% | 4.4e-14 | 1.21 |
+| Heterogeneous Population (50/50 split) | 0.333 | 0.363 | +8.9% | 2.5e-14 | 1.71 |
+| Saturation Model (synaptic depletion) | 0.267 | 0.317 | +19.0% | 1.8e-15 | 3.66 |
+
+The adaptive advantage is robust across all four fatigue model types (all p < 10^-13, all Hedges' g > 1.0). The Saturation Model produces the largest gain (+19.0%, g=3.66) because fixed scheduling wastes the most stimulation when the PAC ceiling itself depletes. The Step Function produces the smallest gain (+6.9%, g=1.21) because the threshold mechanism creates less opportunity for gradual optimization.
+
+This addresses the concern that simulation results might be artifacts of one particular fatigue model assumption.
+
+Full results: `rigor/experiments/fatigue_model_sensitivity_results.json`
+
 ---
 
 ## 5. Key Findings
@@ -273,7 +306,7 @@ How does the adaptive advantage scale with habituation severity?
 
 1. **The TCN predicts future PAC where nothing else can.** At 5-10 second horizons, persistence and Ridge regression produce negative R^2 (useless), while the TCN maintains R^2 ~ 0.25. This is the critical horizon range for a proactive controller.
 
-2. **Adaptive scheduling is more efficient than fixed scheduling when habituation is present.** This is statistically significant (p < 0.01) and the advantage grows with fatigue severity.
+2. **Adaptive scheduling is more efficient than fixed scheduling when habituation is present.** This is statistically significant (p < 0.001) and the advantage grows with fatigue severity. The result is robust across four fundamentally different fatigue model assumptions (exponential decay, step function, heterogeneous population, synaptic saturation), with gains ranging from +6.9% to +19.0%.
 
 3. **The system generalizes across subjects without per-subject fine-tuning.** Z-score normalization of PAC targets handles the main source of inter-subject variability (magnitude). The temporal dynamics of entrainment are consistent enough across individuals.
 
@@ -395,7 +428,56 @@ Results are saved to `results/` and `models/`. All random seeds are fixed for de
 
 ---
 
-## 10. References
+## 10. Real-Data Closed-Loop Validation (February 26, 2026)
+
+**Update:** The following results replace the simulation-only validation reported in earlier sections. All results below use real EEG data from OpenNeuro ds005048 (N=35 subjects) with raw PAC targets (no smoothing, ts=1).
+
+### 10.1 TCN Model (Retrained on Raw Targets)
+
+| Metric | Value |
+|--------|-------|
+| Architecture | MultiscaleCausalTCN (31,043 params) |
+| Best val R² | 0.411 (raw PAC, ts=1) |
+| Test R² | 0.170 (6 held-out subjects) |
+| Test Pearson r | 0.433 |
+| Prediction horizon | 5 seconds |
+
+### 10.2 Closed-Loop Controller Comparison (Real EEG Replay)
+
+| Controller | Alignment | Low-PAC Stim | High-PAC Rest | Stim % | PAC Gap (µV²) |
+|-----------|-----------|-------------|--------------|--------|---------------|
+| Fixed Schedule | 45.0% | 61.4% | 28.6% | 66.6% | −6.6 |
+| Reactive Threshold | 64.5% | 51.7% | 77.3% | 36.7% | +21.1 |
+| **TCN Predictive** | **72.1%** | **82.6%** | 61.6% | 59.7% | **+30.5** |
+| Hybrid TCN+Reactive | 73.8% | 85.3% | 62.2% | 60.8% | +34.0 |
+| Alignment Oracle | 100.0% | 100.0% | 100.0% | 48.3% | +33.3 |
+
+### 10.3 Statistical Significance (TCN vs Reactive, n=35)
+
+| Metric | Hedges' g [95% CI] | p-value |
+|--------|-------------------|---------|
+| Epoch Alignment | +1.31 [+0.75, +1.87] | < 0.001 |
+| Low-PAC Stim Rate | +4.47 [+3.33, +5.62] | < 0.001 |
+| PAC Target Gap | +1.57 [+0.98, +2.17] | < 0.001 |
+| Clinical Utility | +0.95 [+0.43, +1.47] | < 0.001 |
+
+All 35/35 subjects (100%) show improved clinical utility with TCN-based control (binomial p < 0.001). Results are robust across delta-z thresholds 0.2–1.0.
+
+### 10.4 Figures
+
+See `results/figures/` for publication-quality visualizations:
+- `controller_comparison.png` — Grouped bar chart with significance brackets
+- `pac_targeting_gap.png` — PAC targeting quality (Fixed Schedule goes WRONG direction)
+- `per_subject_utility.png` — Per-subject scatter (35/35 above diagonal)
+- `stim_vs_alignment.png` — Stimulation efficiency trade-off
+- `timeline_example.png` — Real PAC trajectory with TCN vs Reactive decisions
+- `threshold_sensitivity.png` — Robustness analysis
+
+Full statistical details: `results/RESULTS_REPORT.md` and `results/tcn_validation_results.json`.
+
+---
+
+## 11. References
 
 - Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. *Nature*, 540(7632), 230-235.
 - Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. *Cell*, 177(2), 256-271.

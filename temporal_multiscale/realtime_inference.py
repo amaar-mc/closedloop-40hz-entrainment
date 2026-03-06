@@ -36,7 +36,7 @@ class RealtimePACForecaster:
         scalers_path: str = "data/processed/multiscale_temporal/scalers.npz",
         device: Optional[str] = None,
     ) -> None:
-        ckpt = torch.load(checkpoint_path, map_location="cpu")
+        ckpt = torch.load(checkpoint_path, map_location="cpu", weights_only=False)
         cfg_dict = ckpt["cfg"]
         cfg = ModelConfig(**cfg_dict)
 
@@ -93,10 +93,11 @@ class RealtimePACForecaster:
         cycle_phase_cos: float = 1.0,
     ) -> np.ndarray:
         spectral_features = np.asarray(spectral_features, dtype=np.float32).reshape(-1)
-        if spectral_features.shape[0] != (self.feature_dim - 12):
-            # 61 spectral + 7 pac + 5 context = 73 features by default.
+        # 7 PAC-derived features + 5 stimulation context features = 12 non-spectral
+        n_non_spectral = 7 + 5
+        if spectral_features.shape[0] != (self.feature_dim - n_non_spectral):
             raise ValueError(
-                f"Expected spectral length {self.feature_dim - 12}, "
+                f"Expected spectral length {self.feature_dim - n_non_spectral}, "
                 f"got {spectral_features.shape[0]}"
             )
 
