@@ -1,6 +1,6 @@
 # Documentation Index
 
-**Last updated:** 2026-02-26
+**Last updated:** 2026-03-05
 
 ## Quick Navigation
 
@@ -9,12 +9,14 @@
 | Project overview & how to run | [`../README.md`](../README.md) |
 | Complete findings & results | [`../FINDINGS.md`](../FINDINGS.md) |
 | Comprehensive results report | [`../results/RESULTS_REPORT.md`](../results/RESULTS_REPORT.md) |
-| Synopsys abstract (250 words) | [`ABSTRACT.md`](ABSTRACT.md) |
-| Poster board content | [`POSTER_BOARD.md`](POSTER_BOARD.md) |
-| Synopsys reference guide | [`SYNOPSYS_REFERENCE.md`](SYNOPSYS_REFERENCE.md) |
-| Presentation script | [`../PRESENTATION.md`](../PRESENTATION.md) |
-| Current methodology | [`CURRENT_METHODOLOGY.md`](CURRENT_METHODOLOGY.md) |
-| Code architecture map | [`CODE_MAP.md`](CODE_MAP.md) |
+| Synopsys abstract (250 words) | [`abstract/ABSTRACT.md`](abstract/ABSTRACT.md) |
+| Poster board content (V5, latest) | [`poster/POSTER_BOARD_V5.md`](poster/POSTER_BOARD_V5.md) |
+| Lab notebook (formal) | [`notebook/LAB_NOTEBOOK.md`](notebook/LAB_NOTEBOOK.md) |
+| Synopsys reference guide | [`reference/SYNOPSYS_REFERENCE.md`](reference/SYNOPSYS_REFERENCE.md) |
+| Presentation script | [`reference/PRESENTATION.md`](reference/PRESENTATION.md) |
+| Current methodology | [`methodology/CURRENT_METHODOLOGY.md`](methodology/CURRENT_METHODOLOGY.md) |
+| Code architecture map | [`methodology/CODE_MAP.md`](methodology/CODE_MAP.md) |
+| Judge interview prep | [`submission/reports/JUDGE_INTERVIEW_PREP.md`](submission/reports/JUDGE_INTERVIEW_PREP.md) |
 | Pipeline audit results | [`audits/`](audits/) |
 | Research background papers | [`research/`](research/) |
 | Historical analysis reports | [`reports/`](reports/) |
@@ -26,37 +28,60 @@
 ```
 docs/
   INDEX.md                  <-- You are here
-  CURRENT_METHODOLOGY.md    Current pipeline methodology
-  CODE_MAP.md               Code architecture & file reference
-  STATUS_REPORT_Synopsys_Readiness.md   Progress report
-  LAB_NOTEBOOK.txt          Chronological development log
 
-  research/                 Background literature & research papers
-    01_Foundational_Concepts_40Hz_Entrainment_AD.*
-    02_Literature_Review_40Hz_Entrainment_AD.*
-    03_Technical_Methods_Signal_Processing.*
-    04_Research_Methodology_Proposed_Approach.*
-    05_Annotated_Bibliography_Sources.*
-    AD_40Hz_Entrainment_Research_Paper_IEEE.*
-    Comprehensive_Methodology_Closed_Loop_40Hz_Entrainment.*
+  abstract/                 Synopsys abstract materials
+    ABSTRACT.md               Latest 247-word abstract
+    P10.Abstract.pdf          Generated PDF for submission
+    archive/                  Earlier PDF + 3 rounds of drafts
 
-  reports/                  Technical analysis & results reports
-    SUMMARY_FOR_USER.md
-    COMPREHENSIVE_ANALYSIS_ALL_ATTEMPTS.md
-    TEMPORAL_PREDICTION_REPORT.md
-    TEMPORAL_PREDICTION_FINAL_REPORT.md
-    TEMPORAL_PREDICTION_DEEP_DIVE.md
+  poster/                   Poster board materials
+    POSTER_BOARD_V5.md        Latest poster content (visual-forward)
+    POSTER_BOARD_V5.pdf       Rendered PDF
+    Synopsys Poster Final.pptx  PowerPoint source
+    Synopsys Poster Final.pdf   Print-ready PDF
+    exports/                  Slide image exports (PNG)
+    archive/                  V1-V4 poster drafts
+    reference/                Example posters from other projects
 
-  audits/                   Pipeline integrity & leakage audits
+  notebook/                 Lab notebook materials
+    LAB_NOTEBOOK.md           Formal lab notebook (for judges)
+    LOG_NOTEBOOK.md           Digital companion (easier to read)
+    LAB_NOTEBOOK_ERRATA.md    Corrections to notebook
+    SYNOPSYS_RESEARCH_NOTEBOOK.md  Journal-style P10 notebook
+    P10_Research_Notebook_Amaar_Chughtai.docx  Generated Word doc
+    RESEARCH_NOTEBOOK_ENHANCEMENT_PROMPT.md    Enhancement instructions
+    archive/                  Legacy .txt version
+
+  methodology/              Technical methodology
+    CURRENT_METHODOLOGY.md    Pipeline implementation details
+    CODE_MAP.md               File-by-file architecture reference
+
+  reference/                Reference & preparation materials
+    SYNOPSYS_REFERENCE.md     Fair rules, deadlines, judging criteria
+    PROJECT_DEEP_DIVE.md      Comprehensive glossary & judge prep
+    PRESENTATION.md           Presentation script
+    feedback-kushal.md        Mentor feedback notes
+    Lab Notebook Requirements.md/pdf  Format requirements
+    Project S-19-05 Research Notebook (1).pdf  Example notebook
+
+  submission/               Championship submission package
+    INDEX.md                  Submission navigation
+    reports/                  Achievement report, winning analysis, Q&A prep
+    audit/                    Comprehensive code audit
+
+  audits/                   Pipeline integrity audits
     PIPELINE_AUDIT_REPORT.md
     COMPREHENSIVE_SUBMISSION_AUDIT_REPORT.md
     TEMPORAL_MULTISCALE_AUDIT_REPORT.md
 
+  reports/                  Historical analysis reports
+    SUMMARY_FOR_USER.md
+    COMPREHENSIVE_ANALYSIS_ALL_ATTEMPTS.md
+    TEMPORAL_PREDICTION_*.md  (3 reports)
+
+  research/                 Background literature (7 papers, .docx/.txt)
+
   archive/                  Outdated docs (pre-multiscale era)
-    04_Research_Methodology_Proposed_Approach.*  (original proposal)
-    AD_40Hz_Entrainment_Research_Paper_IEEE.*    (draft with placeholders)
-    Comprehensive_Methodology_Closed_Loop_40Hz_Entrainment.*
-    STATUS_REPORT_Synopsys_Readiness.md
 ```
 
 ---
@@ -65,9 +90,17 @@ docs/
 
 | Document | Description |
 |----------|-------------|
-| [`CURRENT_METHODOLOGY.md`](CURRENT_METHODOLOGY.md) | **Start here.** Complete description of the implemented pipeline, model, training, results. |
-| [`CODE_MAP.md`](CODE_MAP.md) | File-by-file map of the codebase architecture. |
+| [`methodology/CURRENT_METHODOLOGY.md`](methodology/CURRENT_METHODOLOGY.md) | **Start here.** Complete description of the implemented pipeline, model, training, results. |
+| [`methodology/CODE_MAP.md`](methodology/CODE_MAP.md) | File-by-file map of the codebase architecture. |
 | [`../FINDINGS.md`](../FINDINGS.md) | Consolidated findings: model results, comparisons, conclusions, limitations. |
+
+## Submission Documents
+
+| Document | Description |
+|----------|-------------|
+| [`abstract/ABSTRACT.md`](abstract/ABSTRACT.md) | 247-word abstract for PDF upload. |
+| [`notebook/LAB_NOTEBOOK.md`](notebook/LAB_NOTEBOOK.md) | Formal lab notebook for judges. |
+| [`poster/POSTER_BOARD_V5.md`](poster/POSTER_BOARD_V5.md) | Final poster content (V5, visual-forward). |
 
 ## Audit Reports
 
