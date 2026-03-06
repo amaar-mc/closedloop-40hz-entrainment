@@ -42,51 +42,46 @@ closedloop-40hz-entrainment/
 |   |-- build_multiscale_dataset.py  Causal sequence construction (no leakage)
 |   |-- train_multiscale_tcn.py      Training with deterministic seeding
 |   |-- sweep_horizons.py            Horizon sweep: 1-10 second predictions
-|   |-- per_subject_adaptation.py    Per-subject fine-tuning evaluation
-|   |-- transition_analysis.py       Stim/rest transition accuracy
-|   |-- direction_classifier.py      3-class PAC direction prediction
-|   |-- fatigue_analysis.py          Real-data habituation analysis
 |   |-- realtime_inference.py        Streaming inference module
-|   +-- [audits: audit_multiscale_pipeline, comprehensive_submission_audit]
+|   +-- [analysis, audits, per-subject adaptation, fatigue, transitions]
 |
 |-- temporal/                      Earlier temporal models (v1, superseded)
-|   |-- temporal_model.py            LSTM-based temporal model
-|   |-- validate_code.py             Pre-training leakage validation
-|   +-- [training scripts, dataset builders]
+|   |-- validate_code.py             Pre-training leakage validation (still used)
+|   +-- [superseded: LSTM model, training scripts, dataset builders]
 |
-|-- run_full_pipeline.py            End-to-end pipeline (preprocess → train → validate)
-|-- run_tcn_validation.py           Real-data TCN closed-loop validation (6 controllers)
-|-- run_threshold_sweep.py          TCN threshold sensitivity analysis
-|-- run_replay_analysis.py          Replay analysis on real EEG data
-|-- run_closed_loop_demo.py         Simulation demo: all strategies +/- fatigue
-|-- run_fatigue_sensitivity.py      Fatigue severity sweep (6 levels x 4 models)
-|-- generate_figures.py             Publication figures (controller comparison, etc.)
-|-- generate_timeline_figure.py     Timeline visualization (TCN vs reactive decisions)
+|-- scripts/                       Runnable scripts (moved from root)
+|   |-- pipeline/                    End-to-end pipeline orchestrators
+|   |   |-- run_full_pipeline.py       Preprocess → train → validate
+|   |   |-- run_tcn_validation.py      Real-data TCN closed-loop (6 controllers)
+|   |   |-- run_threshold_sweep.py     Threshold sensitivity analysis
+|   |   |-- run_replay_analysis.py     Replay analysis on real EEG
+|   |   |-- run_closed_loop_demo.py    Simulation demo: all strategies +/- fatigue
+|   |   +-- run_fatigue_sensitivity.py Fatigue severity sweep
+|   |-- figures/                     Publication figure generators
+|   |   |-- generate_figures.py        Controller comparison, PAC targeting, etc.
+|   |   |-- generate_timeline_figure.py  TCN vs reactive decision timeline
+|   |   +-- generate_controller_comparison.py  Bar chart comparison
+|   +-- notebook/                    Research notebook generator (Node.js/docx)
 |
-|-- docs/                          Documentation
+|-- docs/                          Documentation (organized by category)
 |   |-- INDEX.md                     Documentation navigation
-|   |-- CURRENT_METHODOLOGY.md       Pipeline methodology
-|   |-- CODE_MAP.md                  Architecture reference
-|   |-- research/                    Background literature (.docx/.txt)
-|   |-- reports/                     Technical analysis reports
+|   |-- abstract/                    Synopsys abstract (latest + archive of drafts)
+|   |-- poster/                      Poster board (V5 latest + V1-V4 archive)
+|   |-- notebook/                    Lab notebooks (formal + digital + DOCX)
+|   |-- methodology/                 CURRENT_METHODOLOGY.md, CODE_MAP.md
+|   |-- reference/                   Fair guide, judge prep, mentor feedback
+|   |-- submission/                  Championship reports and code audit
 |   |-- audits/                      Pipeline integrity audit reports
+|   |-- reports/                     Historical technical analysis reports
+|   |-- research/                    Background literature (.docx/.txt)
 |   +-- archive/                     Outdated pre-multiscale docs
 |
 |-- results/                       Output data and reports
 |   |-- RESULTS_REPORT.md            Comprehensive results with all statistics
-|   |-- tcn_validation_results.json  TCN closed-loop validation output
-|   |-- threshold_sweep.json         Threshold sensitivity data
-|   |-- closed_loop_demo_results.json
-|   |-- fatigue_analysis.json
-|   |-- fatigue_sensitivity.json
-|   +-- figures/                     Publication-quality figures (PNG + PDF)
-|       |-- controller_comparison.png
-|       |-- pac_targeting_gap.png
-|       |-- per_subject_utility.png
-|       |-- stim_vs_alignment.png
-|       |-- timeline_example.png
-|       +-- threshold_sensitivity.png
+|   |-- figures/                     Publication-quality figures (PNG + PDF)
+|   +-- [JSON: validation, threshold sweep, fatigue, effect sizes]
 |
+|-- rigor/                         Robustness validation & extended experiments
 |-- models/                        Checkpoints (.pth) + training histories (.json)
 |-- logs/                          Training logs and output captures
 |-- archive/                       Old code: v1-v8 attempts, diagnostics
@@ -117,7 +112,7 @@ pip install -r requirements.txt
 
 ```bash
 # Option A: Automated end-to-end pipeline
-python run_full_pipeline.py
+python scripts/pipeline/run_full_pipeline.py
 
 # Option B: Step-by-step
 
@@ -142,20 +137,20 @@ python temporal_multiscale/sweep_horizons.py \
   --data-dir data/processed --output-dir models
 
 # 6. Real-data TCN closed-loop validation (primary result)
-python run_tcn_validation.py
+python scripts/pipeline/run_tcn_validation.py
 
 # 7. Threshold sensitivity analysis
-python run_threshold_sweep.py
+python scripts/pipeline/run_threshold_sweep.py
 
 # 8. Closed-loop simulation with fatigue comparison
-python run_closed_loop_demo.py --duration 600 --n-trials 50
+python scripts/pipeline/run_closed_loop_demo.py --duration 600 --n-trials 50
 
 # 9. Fatigue sensitivity analysis
-python run_fatigue_sensitivity.py
+python scripts/pipeline/run_fatigue_sensitivity.py
 
 # 10. Generate publication figures
-python generate_figures.py
-python generate_timeline_figure.py
+python scripts/figures/generate_figures.py
+python scripts/figures/generate_timeline_figure.py
 ```
 
 ### Run Audits
