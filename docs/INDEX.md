@@ -11,7 +11,7 @@
 | Comprehensive results report | [`../results/RESULTS_REPORT.md`](../results/RESULTS_REPORT.md) |
 | Synopsys abstract (250 words) | [`abstract/ABSTRACT.md`](abstract/ABSTRACT.md) |
 | Poster board content (V5, latest) | [`poster/POSTER_BOARD_V5.md`](poster/POSTER_BOARD_V5.md) |
-| Lab notebook (formal) | [`notebook/LAB_NOTEBOOK.md`](notebook/LAB_NOTEBOOK.md) |
+| Lab notebook review bundle | [`notebook/README.md`](notebook/README.md) |
 | Synopsys reference guide | [`reference/SYNOPSYS_REFERENCE.md`](reference/SYNOPSYS_REFERENCE.md) |
 | Presentation script | [`reference/PRESENTATION.md`](reference/PRESENTATION.md) |
 | Current methodology | [`methodology/CURRENT_METHODOLOGY.md`](methodology/CURRENT_METHODOLOGY.md) |
@@ -43,14 +43,8 @@ docs/
     archive/                  V1-V4 poster drafts
     reference/                Example posters from other projects
 
-  notebook/                 Lab notebook materials
-    LAB_NOTEBOOK.md           Formal lab notebook (for judges)
-    LOG_NOTEBOOK.md           Digital companion (easier to read)
-    LAB_NOTEBOOK_ERRATA.md    Corrections to notebook
-    SYNOPSYS_RESEARCH_NOTEBOOK.md  Journal-style P10 notebook
-    P10_Research_Notebook_Amaar_Chughtai.docx  Generated Word doc
-    RESEARCH_NOTEBOOK_ENHANCEMENT_PROMPT.md    Enhancement instructions
-    archive/                  Legacy .txt version
+  notebook/                 Notebook review-bundle pointer
+    README.md                 Points to the preserved original, corrected candidate, evidence map, and manual PDF export utility
 
   methodology/              Technical methodology
     CURRENT_METHODOLOGY.md    Pipeline implementation details
@@ -99,7 +93,7 @@ docs/
 | Document | Description |
 |----------|-------------|
 | [`abstract/ABSTRACT.md`](abstract/ABSTRACT.md) | 247-word abstract for PDF upload. |
-| [`notebook/LAB_NOTEBOOK.md`](notebook/LAB_NOTEBOOK.md) | Formal lab notebook for judges. |
+| [`notebook/README.md`](notebook/README.md) | Notebook review bundle pointer for the preserved original, corrected candidate, and manual PDF export path. |
 | [`poster/POSTER_BOARD_V5.md`](poster/POSTER_BOARD_V5.md) | Final poster content (V5, visual-forward). |
 
 ## Audit Reports
