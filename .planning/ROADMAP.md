@@ -1,6 +1,6 @@
 # Roadmap: Research Documentation Project
 
-**Created:** 2026-03-07
+**Created:** 2005-03-07
 **Project:** Research Documentation Project
 **Core Value:** Create an authentic chronological record that showcases scientific rigor through daily documentation of the complete research timeline.
 
@@ -80,6 +80,3 @@ Plans:
 - [x] 04-01-PLAN.md — Create the Wave 0 verifier and non-destructive review bundle skeleton.
 - [x] 04-02-PLAN.md — Populate evidence mapping and rewrite the corrected notebook to the approval-era chronology.
 - [x] 04-03-PLAN.md — Package the review bundle, reorganize to V1/V2 naming, and gate final signoff with human review.
-
----
-*Roadmap created: 2026-03-07*
