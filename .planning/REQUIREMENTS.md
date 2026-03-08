@@ -37,6 +37,15 @@ Requirements for the lab notebook conversion project.
 - [ ] **QUAL-03**: Keep document length to 8-10 pages (concise format)
 - [ ] **QUAL-04**: Use only validated data - no fabrication
 
+### Phase 4 Finalization
+
+- [ ] **FNL-01**: Re-anchor the notebook to the approval-era start date and preserve chronological order after the anchor
+- [ ] **FNL-02**: Produce a new review-ready notebook source without modifying or deleting existing notebook artifacts
+- [ ] **FNL-03**: Ensure every retained metric, date-sensitive claim, and pivotal figure is traceable to existing repository evidence or explicitly downgraded/removed
+- [ ] **FNL-04**: Use active-day headers plus explicit gap notes, with no hindsight narration and no fabricated content
+- [ ] **FNL-05**: Package the final notebook in a review-safe way that supports manual PDF generation and resolves or documents path/tool mismatches
+- [ ] **FNL-06**: Provide a validation checklist separating automated sanity checks from human review of chronology, fairness, and judge readability
+
 ## v2 Requirements
 
 Deferred to future iterations.
@@ -78,10 +87,16 @@ Deferred to future iterations.
 | QUAL-02 | Phase 3 | Pending |
 | QUAL-03 | Phase 3 | Pending |
 | QUAL-04 | Phase 3 | Pending |
+| FNL-01 | Phase 4 | Pending |
+| FNL-02 | Phase 4 | Pending |
+| FNL-03 | Phase 4 | Pending |
+| FNL-04 | Phase 4 | Pending |
+| FNL-05 | Phase 4 | Pending |
+| FNL-06 | Phase 4 | Pending |
 
 **Coverage:**
-- v1 requirements: 16 total
-- Mapped to phases: 16
+- v1 requirements: 22 total
+- Mapped to phases: 22
 - Unmapped: 0 ✓
 
 ---

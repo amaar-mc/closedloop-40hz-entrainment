@@ -6,13 +6,14 @@
 
 ## Phases Overview
 
-**3 phases** | **16 requirements mapped** | All v1 requirements covered ✓
+**4 phases** | **22 requirements mapped** | Phase 4 finalization requirements added ✓
 
 | # | Phase | Goal | Requirements | Success Criteria |
 |---|-------|------|--------------|------------------|
 | 1 | Content Foundation | Extract and organize research content | 4 | 2 |
 | 2 | Daily Entries | Create chronological lab notebook structure | 8 | 4 |
 | 3 | Visual Polish | Add visuals and ensure quality standards | 4 | 3 |
+| 4 | Finalize Lab Notebook | Finalize a judge-ready review bundle without touching original notebook files | 6 | 3 |
 
 ## Phase Details
 
@@ -61,6 +62,24 @@
 - **Phase 1:** Content extraction and organization (moderate scope)
 - **Phase 2:** Daily entry creation (largest scope - 16 requirements total across timeline)
 - **Phase 3:** Visual elements and polishing (focused scope)
+
+### Phase 4: Finalize Lab Notebook
+
+**Goal:** Finalize a judge-ready, approval-anchored lab notebook review bundle that preserves originals, documents evidence, and supports manual PDF generation.
+
+**Requirements:** FNL-01, FNL-02, FNL-03, FNL-04, FNL-05, FNL-06
+**Depends on:** Phase 3
+**Plans:** 3 plans
+
+**Success Criteria:**
+1. A new corrected notebook source exists at the generator contract path without overwriting the original notebook files.
+2. The corrected notebook is re-anchored to the approval-era start date, uses active-day entries plus gap notes, and keeps claims traceable to repository evidence.
+3. The review bundle includes automated sanity checks, a human review checklist, and minimal docs packaging for manual PDF export.
+
+Plans:
+- [ ] 04-01-PLAN.md — Create the Wave 0 verifier and non-destructive review bundle skeleton.
+- [ ] 04-02-PLAN.md — Populate evidence mapping and rewrite the corrected notebook to the approval-era chronology.
+- [ ] 04-03-PLAN.md — Package the review bundle, add the checklist, and gate final signoff with human review.
 
 ---
 *Roadmap created: 2026-03-07*
