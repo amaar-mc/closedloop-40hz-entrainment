@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic checks for the Phase 4 lab notebook finalization bundle."""
+"""Deterministic checks for the Phase 4/5 lab notebook finalization bundle."""
 
 from __future__ import annotations
 
@@ -16,6 +16,7 @@ ORIGINAL_MD = NOTEBOOKS_DIR / "P10_Lab_Notebook_V1.md"
 ORIGINAL_PDF = NOTEBOOKS_DIR / "P10_Lab_Notebook_V1.pdf"
 CORRECTED_MD = NOTEBOOKS_DIR / "P10_Lab_Notebook_V2.md"
 CORRECTED_PDF = NOTEBOOKS_DIR / "P10_Lab_Notebook_V2.pdf"
+FINAL_MD = NOTEBOOKS_DIR / "P10_Lab_Notebook_V3.md"
 GENERATOR_PY = NOTEBOOKS_DIR / "generate_notebook_pdf.py"
 
 CHECK_NAMES = (
@@ -42,6 +43,11 @@ MONTH_NAMES = (
 )
 DATE_HEADER_RE = re.compile(
     rf"^## ((?:{'|'.join(MONTH_NAMES)}) \d{{1,2}}, \d{{4}}):",
+    re.MULTILINE,
+)
+# V3 uses "## Section N: Month Day, Year -- Title" format
+SECTION_DATE_RE = re.compile(
+    rf"^## Section \d+:\s+((?:{'|'.join(MONTH_NAMES)}) \d{{1,2}}, \d{{4}})",
     re.MULTILINE,
 )
 REPO_PATH_RE = re.compile(
@@ -82,6 +88,10 @@ def check_preservation() -> bool:
         f"Corrected PDF exists at {CORRECTED_PDF.relative_to(ROOT)}",
     )
     ok_all &= report(
+        FINAL_MD.exists(),
+        f"Final V3 markdown exists at {FINAL_MD.relative_to(ROOT)}",
+    )
+    ok_all &= report(
         CORRECTED_MD.resolve() != ORIGINAL_MD.resolve(),
         "Corrected markdown does not overwrite the original markdown path",
     )
@@ -111,32 +121,32 @@ def check_packaging() -> bool:
         f"PDF generator exists at {GENERATOR_PY.relative_to(ROOT)}",
     )
     ok_all &= report(
-        CORRECTED_MD.exists(),
-        f"Corrected markdown exists at generator contract path {CORRECTED_MD.relative_to(ROOT)}",
+        FINAL_MD.exists(),
+        f"Final V3 markdown exists at generator contract path {FINAL_MD.relative_to(ROOT)}",
     )
 
     if GENERATOR_PY.exists():
         generator_text = read_text(GENERATOR_PY)
         ok_all &= report(
-            "P10_Lab_Notebook_V2.md" in generator_text,
-            "Generator contract references P10_Lab_Notebook_V2.md",
-        )
-        ok_all &= report(
-            "P10_Lab_Notebook_V2.pdf" in generator_text,
-            "Generator contract references P10_Lab_Notebook_V2.pdf",
+            "P10_Lab_Notebook_V3.md" in generator_text,
+            "Generator contract references P10_Lab_Notebook_V3.md",
         )
 
     return ok_all
 
 
 def check_chronology() -> bool:
-    if not CORRECTED_MD.exists():
-        return report(
-            False, f"Missing corrected notebook: {CORRECTED_MD.relative_to(ROOT)}"
-        )
+    # Check V3 if it exists, otherwise fall back to V2
+    target = FINAL_MD if FINAL_MD.exists() else CORRECTED_MD
+    if not target.exists():
+        return report(False, f"Missing notebook: {target.relative_to(ROOT)}")
 
-    text = strip_fenced_code_blocks(read_text(CORRECTED_MD))
-    matches = DATE_HEADER_RE.findall(text)
+    text = strip_fenced_code_blocks(read_text(target))
+
+    # Try V3 section-based date headers first, then V2-style headers
+    matches = SECTION_DATE_RE.findall(text)
+    if not matches:
+        matches = DATE_HEADER_RE.findall(text)
     if not matches:
         return report(
             True,
@@ -146,7 +156,7 @@ def check_chronology() -> bool:
     parsed_dates = [datetime.strptime(date_text, "%B %d, %Y") for date_text in matches]
     ok_all = report(
         True,
-        f"Found {len(parsed_dates)} active-day date header(s) in the corrected notebook",
+        f"Found {len(parsed_dates)} active-day date header(s) in {target.name}",
     )
     for previous, current in zip(parsed_dates, parsed_dates[1:]):
         ok_all &= report(
