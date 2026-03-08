@@ -2,17 +2,17 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_plan: COMPLETE
-status: completed
-stopped_at: Phase 4 complete
-last_updated: "2026-03-08T06:22:51.536Z"
+current_plan: 05-01
+status: planned
+stopped_at: Phase 5 planning complete — ready for execution
+last_updated: "2026-03-08T12:00:00.000Z"
 last_activity: 2026-03-08
 progress:
-  total_phases: 4
+  total_phases: 5
   completed_phases: 1
-  total_plans: 3
+  total_plans: 4
   completed_plans: 3
-  percent: 100
+  percent: 75
 ---
 
 # Project State: Research Documentation Project
@@ -22,15 +22,15 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-07)
 
 **Core value:** Create an authentic chronological record that showcases scientific rigor through daily documentation of the complete research timeline.
-**Current focus:** Phase 4 complete. All plans executed and approved.
+**Current focus:** Phase 5 planned. 1 plan (05-01) ready for execution.
 
 ## Current Status
 
-**Phase:** 04-finalize-lab-notebook
-**Current Plan:** COMPLETE
-**Total Plans in Phase:** 3
-**Status:** Complete (human-approved)
-**Progress:** [██████████] 100%
+**Phase:** 05-real-time-eeg-visualization-and-audio-stimulation-demo
+**Current Plan:** 05-01-PLAN.md (planned, not yet executed)
+**Total Plans in Phase:** 1
+**Status:** Planned — ready for `/gsd-execute-phase 05`
+**Progress:** [██████████] 100% planning | [░░░░░░░░░░] 0% execution
 
 | Phase | Status | Plans | Progress |
 |-------|--------|-------|----------|
@@ -38,9 +38,20 @@ See: .planning/PROJECT.md (updated 2026-03-07)
 | 2     | ○      | 0/0   | 0%       |
 | 3     | ○      | 0/0   | 0%       |
 | 4     | ●      | 3/3   | 100%     |
+| 5     | ◐      | 0/1   | 0%       |
 
 ## Recent Activity
 
+- **2026-03-08:** Phase 5 planning complete
+  - Discussed all 4 gray areas (demo format, data source, audio, visualization)
+  - Captured decisions in 05-CONTEXT.md
+  - Defined DEMO-01 through DEMO-06 requirements
+  - Researched Streamlit patterns, sounddevice audio, architecture pitfalls
+  - Created 05-VALIDATION.md validation strategy
+  - Created 05-01-PLAN.md (1 plan, 2 tasks: 1 auto + 1 human checkpoint)
+  - Ran plan checker — fixed 2 blockers, 3 warnings
+  - Revised plan: merged Tasks 1+2 into single complete task, added sounddevice fallback, matplotlib fallback note
+  - Fixed DEMO-03 requirement wording (TCN → Predictive Look-Ahead)
 - **2026-03-08:** Completed `04-03-PLAN.md` — human-approved
   - Packaged review bundle and reorganized notebook files to V1/V2 naming
   - Updated verifier, docs pointer, and generator contract
@@ -59,7 +70,11 @@ See: .planning/PROJECT.md (updated 2026-03-07)
 
 ## Next Steps
 
-Phase 4 is complete. No remaining phases have plans to execute.
+Execute Phase 5: `/gsd-execute-phase 05`
+
+Plan 05-01 has 2 tasks:
+1. **Task 1 (auto):** Create complete Streamlit dashboard with simulation, visualization, and audio (~350-450 lines in `demo.py`)
+2. **Task 2 (checkpoint:human-verify):** Launch dashboard and verify all 6 DEMO requirements interactively
 
 ## Decisions
 
@@ -70,6 +85,12 @@ Phase 4 is complete. No remaining phases have plans to execute.
 - [Phase 04]: Move the final TCN replay result to February 26, 2026 and keep February 21 focused on replay-framework setup.
 - [Phase 04]: Use PAC-gap values in dimensionless x10^-6 units and keep the achievement report's 91% oracle wording for the review candidate.
 - [Phase 04]: Adopt V1/V2 naming scheme for notebook artifacts (V1 = preserved original, V2 = corrected review candidate).
+- [Phase 05]: Streamlit single-page dashboard with matplotlib fallback.
+- [Phase 05]: Simulated brain dynamics only (EntrainmentSimulator/FatigueAwareSimulator).
+- [Phase 05]: Controllers copied from run_closed_loop_demo.py for import isolation (not from src/validation.py).
+- [Phase 05]: Predictive controller is PredictiveLookAheadControl (heuristic), not TCN (requires real EEG features).
+- [Phase 05]: 40 Hz click trains via sounddevice with graceful fallback if unavailable.
+- [Phase 05]: Reactive Threshold controller drives audio output.
 
 ## Performance Metrics
 
@@ -82,8 +103,8 @@ Phase 4 is complete. No remaining phases have plans to execute.
 ## Session Info
 
 **Last activity:** 2026-03-08
-**Stopped At:** Phase 4 complete
-**Resume File:** None
+**Stopped At:** Phase 5 planning complete — ready for execution
+**Resume File:** .planning/phases/05-real-time-eeg-visualization-and-audio-stimulation-demo/05-01-PLAN.md
 
 ## Blockers/Concerns
 
@@ -94,10 +115,13 @@ None identified.
 - Phase 4 delivered a V1/V2 notebook pair: V1 is the preserved original, V2 is the approval-era corrected review candidate.
 - `scripts/verify_notebook_finalization.py` validates chronology, preservation, and packaging (19 checks, all PASS).
 - `notebooks/generate_notebook_pdf.py` is configured for V2 paths and ready for manual PDF export.
+- Phase 5 uses simulated dynamics only — real TCN needs 73-feature vectors from real EEG, not available in simulation mode.
+- Controllers are self-contained (~100 lines, no base class deps) from `scripts/pipeline/run_closed_loop_demo.py`.
 
 ### Roadmap Evolution
 
 - Phase 5 added: Fix Lab Notebook
+- Phase 5 replaced: Real-Time EEG Visualization and Audio Stimulation Demo
 
 ---
-Last activity: 2026-03-08 - Phase 4 complete (human-approved)
+Last activity: 2026-03-08 - Phase 5 planning complete

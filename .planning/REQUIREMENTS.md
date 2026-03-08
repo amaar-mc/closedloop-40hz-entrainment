@@ -50,7 +50,7 @@ Requirements for the lab notebook conversion project.
 
 - [ ] **DEMO-01**: Streamlit single-page dashboard with configure-then-run workflow and matplotlib fallback
 - [ ] **DEMO-02**: Simulated brain dynamics using EntrainmentSimulator/FatigueAwareSimulator with fatigue on/off toggle
-- [ ] **DEMO-03**: All four controller strategies (Fixed Schedule, Reactive, Predictive TCN, Oracle) shown simultaneously
+- [ ] **DEMO-03**: All four controller strategies (Fixed Schedule, Reactive, Predictive Look-Ahead, Oracle) shown simultaneously
 - [ ] **DEMO-04**: Real 40 Hz click train audio output through speakers with mute button, binary on/off matching controller decisions
 - [ ] **DEMO-05**: Four stacked PAC trace panels with live animation and background stim/rest color bands
 - [ ] **DEMO-06**: Adjustable simulation speed (1x/5x/10x/Max) with progressive plot rendering
