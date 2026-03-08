@@ -22,7 +22,7 @@ Build an interactive Streamlit dashboard that demonstrates the closed-loop 40 Hz
 ### Data Source
 - Simulated brain dynamics only — use `EntrainmentSimulator` / `FatigueAwareSimulator`
 - Fatigue on/off toggle — user can compare both to see why adaptive control matters
-- All four controller strategies shown: Fixed Schedule, Reactive Threshold, Predictive (TCN), Oracle
+- All four controller strategies shown: Fixed Schedule, Reactive Threshold, Predictive Look-Ahead, Oracle
 - Adjustable simulation speed: 1x / 5x / 10x / Max via slider
 
 ### Audio Stimulation
