@@ -56,6 +56,10 @@ def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
+def strip_fenced_code_blocks(text: str) -> str:
+    return re.sub(r"```.*?```", "", text, flags=re.DOTALL)
+
+
 def report(ok: bool, message: str) -> bool:
     print(f"[{'PASS' if ok else 'FAIL'}] {message}")
     return ok
@@ -217,7 +221,7 @@ def check_chronology() -> bool:
             False, f"Missing corrected notebook: {CORRECTED_MD.relative_to(ROOT)}"
         )
 
-    text = read_text(CORRECTED_MD)
+    text = strip_fenced_code_blocks(read_text(CORRECTED_MD))
     matches = DATE_HEADER_RE.findall(text)
     if not matches:
         return report(
@@ -226,7 +230,10 @@ def check_chronology() -> bool:
         )
 
     parsed_dates = [datetime.strptime(date_text, "%B %d, %Y") for date_text in matches]
-    ok_all = True
+    ok_all = report(
+        True,
+        f"Found {len(parsed_dates)} active-day date header(s) in the corrected notebook",
+    )
     for previous, current in zip(parsed_dates, parsed_dates[1:]):
         ok_all &= report(
             current >= previous,
