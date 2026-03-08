@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Generate a professional research notebook PDF from markdown content."""
 
+import argparse
 import re
+from pathlib import Path
 from reportlab.lib.pagesizes import letter
 from reportlab.lib.units import inch
 from reportlab.lib.styles import ParagraphStyle
@@ -15,9 +17,11 @@ from reportlab.platypus import (
     TableStyle,
     PageBreak,
     KeepTogether,
+    Image as RLImage,
 )
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.lib.utils import ImageReader
 
 # --- Register Times New Roman from .ttc ---
 from reportlab.pdfbase.ttfonts import TTFont
@@ -165,7 +169,7 @@ def make_styles():
 STYLES = make_styles()
 
 # --- Header/Footer ---
-HEADER_TEXT = "Project P10 Research Notebook \u2014 Amaar Chughtai"
+HEADER_TEXT = "Project P10 Research Notebook - Amaar Chughtai"
 
 
 def header_footer(canvas, doc):
@@ -205,11 +209,6 @@ def md_inline(text):
     text = re.sub(r"`(.+?)`", r'<font face="Courier" size="9">\1</font>', text)
     # Superscript for common patterns
     text = text.replace("R^2", "R\u00b2")
-    text = text.replace("x 10^-6", "\u00d710\u207b\u2076")
-    text = text.replace("x 10^-5", "\u00d710\u207b\u2075")
-    text = text.replace("10^-6", "10\u207b\u2076")
-    text = text.replace("10^-5", "10\u207b\u2075")
-    text = text.replace("10^-8", "10\u207b\u2078")
     # Greek - only whole words or specific technical patterns
     text = re.sub(r"\btheta\b", "\u03b8", text)
     text = re.sub(r"\bgamma\b", "\u03b3", text)
@@ -300,7 +299,7 @@ def build_table_flowable(rows):
     return t
 
 
-def parse_markdown_to_flowables(md_text):
+def parse_markdown_to_flowables(md_text, base_dir=None):
     """Convert markdown text to a list of reportlab flowables."""
     lines = md_text.split("\n")
     flowables = []
@@ -367,6 +366,36 @@ def parse_markdown_to_flowables(md_text):
 
         # Empty line
         if not stripped:
+            i += 1
+            continue
+
+        # Image
+        image_match = re.match(r"!\[([^\]]*)\]\(([^)]+)\)", stripped)
+        if image_match:
+            image_path = image_match.group(2).strip()
+            resolved_path = Path(image_path)
+            if base_dir is not None and not resolved_path.is_absolute():
+                resolved_path = (Path(base_dir) / resolved_path).resolve()
+
+            if resolved_path.exists():
+                try:
+                    img_reader = ImageReader(str(resolved_path))
+                    img_width, img_height = img_reader.getSize()
+                    max_width = PAGE_W - 2 * MARGIN
+                    width = min(max_width, img_width)
+                    scale = width / img_width
+                    height = img_height * scale
+                    flowables.append(Spacer(1, 8))
+                    flowables.append(
+                        RLImage(str(resolved_path), width=width, height=height)
+                    )
+                    flowables.append(Spacer(1, 6))
+                except Exception as exc:
+                    fallback = f"[Image failed to load: {resolved_path.name} - {exc}]"
+                    flowables.append(Paragraph(md_inline(fallback), STYLES["body"]))
+            else:
+                fallback = f"[Image not found: {image_path}]"
+                flowables.append(Paragraph(md_inline(fallback), STYLES["body"]))
             i += 1
             continue
 
@@ -447,18 +476,57 @@ def parse_markdown_to_flowables(md_text):
     return flowables
 
 
-def build_title_page():
+def extract_metadata(md_text):
+    """Extract simple title-page metadata from the markdown source."""
+    metadata = {
+        "title": "Project P10 Research Notebook",
+        "subtitle": "",
+        "researcher": "Amaar Chughtai",
+        "school": "Valley Christian High School",
+        "timeline": "",
+    }
+
+    title_match = re.search(r"^#\s+(.+)$", md_text, re.MULTILINE)
+    if title_match:
+        metadata["title"] = title_match.group(1).strip()
+
+    subtitle_match = re.search(r"^##\s+(.+)$", md_text, re.MULTILINE)
+    if subtitle_match:
+        metadata["subtitle"] = subtitle_match.group(1).strip()
+
+    label_map = {
+        "Researcher": "researcher",
+        "School": "school",
+        "Official Notebook Timeline": "timeline",
+        "Research Period": "timeline",
+    }
+    for label, key in label_map.items():
+        match = re.search(rf"\*\*{re.escape(label)}:\*\*\s*(.+)", md_text)
+        if match:
+            metadata[key] = match.group(1).strip()
+
+    return metadata
+
+
+def extract_toc_headings(md_text):
+    """Extract level-2 headings from the notebook body for a simple TOC."""
+    headings = []
+    for line in md_text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("## "):
+            headings.append(stripped[3:].strip())
+    return headings
+
+
+def build_title_page(metadata):
     """Create title page flowables."""
     elements = []
     elements.append(Spacer(1, 2 * inch))
-    elements.append(Paragraph("Project P10 Research Notebook", STYLES["title"]))
+    elements.append(Paragraph(metadata["title"], STYLES["title"]))
     elements.append(Spacer(1, 24))
 
-    long_title = (
-        "Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment "
-        "to Optimize Theta-Gamma Phase-Amplitude Coupling in Alzheimer's Disease"
-    )
-    elements.append(Paragraph(long_title, STYLES["subtitle"]))
+    if metadata["subtitle"]:
+        elements.append(Paragraph(metadata["subtitle"], STYLES["subtitle"]))
     elements.append(Spacer(1, 36))
 
     info_style = ParagraphStyle(
@@ -469,14 +537,15 @@ def build_title_page():
         spaceAfter=6,
         leading=16,
     )
-    for line in [
-        "Amaar Chughtai",
-        "Valley Christian High School",
+    info_lines = [
+        metadata["researcher"],
+        metadata["school"],
         "Synopsys Science and Engineering Fair 2026",
-        "",
-        "Research Period: December 10, 2025 \u2013 March 3, 2026",
-        "Total Pages: 22",
-    ]:
+    ]
+    if metadata["timeline"]:
+        info_lines.extend(["", f"Notebook Timeline: {metadata['timeline']}"])
+
+    for line in info_lines:
         if line:
             elements.append(Paragraph(line, info_style))
         else:
@@ -486,27 +555,17 @@ def build_title_page():
     return elements
 
 
-def build_toc():
+def build_toc(headings):
     """Create table of contents page."""
     elements = []
     elements.append(Paragraph("<u>Table of Contents</u>", STYLES["toc_header"]))
     elements.append(Spacer(1, 12))
 
-    toc_entries = [
-        ("Section 1:", "Background Research and Project Selection"),
-        ("Section 2:", "Dataset Analysis and Technical Implementation"),
-        ("Section 3:", "Model Architecture Evolution"),
-        ("Section 4:", "Temporal Prediction Innovation"),
-        ("Section 5:", "Horizon Sweep Analysis"),
-        ("Section 6:", "Closed-Loop Controller Integration"),
-        ("Section 7:", "Advanced Analysis and Validation"),
-        ("Section 8:", "Statistical Rigor and Reproducibility"),
-        ("Section 9:", "Conclusions and Future Work"),
-        ("", "References"),
-    ]
-
-    for prefix, title in toc_entries:
-        text = f"<b>{prefix}</b> {title}" if prefix else f"<b>{title}</b>"
+    for idx, heading in enumerate(headings, start=1):
+        if re.match(r"^[A-Z][a-z]+\s+\d{1,2},\s+\d{4}:", heading):
+            text = f"<b>Entry {idx}:</b> {heading}"
+        else:
+            text = f"<b>{heading}</b>"
         elements.append(Paragraph(text, STYLES["toc"]))
 
     elements.append(PageBreak())
@@ -514,24 +573,40 @@ def build_toc():
 
 
 def main():
-    md_path = "/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/notebooks/P10_Lab_Notebook_V2.md"
-    pdf_path = "/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/notebooks/P10_Lab_Notebook_V2.pdf"
+    parser = argparse.ArgumentParser(description=__doc__)
+    default_input = Path(__file__).resolve().parent / "P10_Lab_Notebook_V3.md"
+    default_output = default_input.with_suffix(".pdf")
+    parser.add_argument(
+        "--input", default=str(default_input), help="Markdown notebook path"
+    )
+    parser.add_argument("--output", default=str(default_output), help="Output PDF path")
+    args = parser.parse_args()
+
+    md_path = Path(args.input).resolve()
+    pdf_path = Path(args.output).resolve()
 
     # Read markdown
     with open(md_path, "r") as f:
         md_text = f.read()
+
+    metadata = extract_metadata(md_text)
+    global HEADER_TEXT
+    HEADER_TEXT = f"{metadata['title']} - {metadata['researcher']}"
 
     # Skip the title block in markdown (we build our own title page)
     # Find where "Section 1" starts
     sections_start = md_text.find("## Section 1:")
     if sections_start == -1:
         sections_start = md_text.find("## Background")
+    if sections_start == -1:
+        sections_start = md_text.find("## Background Framing")
 
     body_md = md_text[sections_start:] if sections_start > 0 else md_text
+    toc_headings = extract_toc_headings(body_md)
 
     # Build document
     doc = SimpleDocTemplate(
-        pdf_path,
+        str(pdf_path),
         pagesize=letter,
         leftMargin=MARGIN,
         rightMargin=MARGIN,
@@ -542,13 +617,13 @@ def main():
     story = []
 
     # Title page
-    story.extend(build_title_page())
+    story.extend(build_title_page(metadata))
 
     # Table of contents
-    story.extend(build_toc())
+    story.extend(build_toc(toc_headings))
 
     # Main body
-    body_flowables = parse_markdown_to_flowables(body_md)
+    body_flowables = parse_markdown_to_flowables(body_md, base_dir=md_path.parent)
     story.extend(body_flowables)
 
     # Build PDF
