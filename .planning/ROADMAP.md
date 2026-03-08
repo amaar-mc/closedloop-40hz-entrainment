@@ -57,7 +57,7 @@
 
 **Requirements:** DEMO-01, DEMO-02, DEMO-03, DEMO-04, DEMO-05, DEMO-06
 **Depends on:** Phase 4
-**Plans:** 0 plans
+**Plans:** 1 plan
 
 **Success Criteria:**
 1. `streamlit run` launches a single-page dashboard with configuration controls and four live PAC trace panels
@@ -65,7 +65,7 @@
 3. 40 Hz click trains play through speakers during STIMULATE periods with mute control
 
 Plans:
-- [ ] TBD (run /gsd-plan-phase 5 to break down)
+- [ ] 05-01-PLAN.md — Complete demo dashboard: Streamlit app with simulation engine, four-panel live PAC visualization, and 40 Hz audio stimulation
 
 ---
 
