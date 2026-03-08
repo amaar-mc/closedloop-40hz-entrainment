@@ -2,15 +2,17 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in_progress
-last_updated: "2026-03-08T01:43:18Z"
-last_activity: 2026-03-08 - Completed 04-01-PLAN.md
+current_plan: 3
+status: executing
+stopped_at: Completed 04-02-PLAN.md
+last_updated: "2026-03-08T01:51:46.312Z"
+last_activity: 2026-03-08
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
-  percent: 33
+  completed_plans: 2
+  percent: 67
 ---
 
 # Project State: Research Documentation Project
@@ -25,20 +27,24 @@ See: .planning/PROJECT.md (updated 2026-03-07)
 ## Current Status
 
 **Phase:** 04-finalize-lab-notebook
-**Current Plan:** 2
+**Current Plan:** 3
 **Total Plans in Phase:** 3
-**Status:** In progress
-**Progress:** [███░░░░░░░] 33%
+**Status:** Ready to execute
+**Progress:** [███████░░░] 67%
 
 | Phase | Status | Plans | Progress |
 |-------|--------|-------|----------|
 | 1     | ○      | 0/0   | 0%       |
 | 2     | ○      | 0/0   | 0%       |
 | 3     | ○      | 0/0   | 0%       |
-| 4     | ◐      | 1/3   | 33%      |
+| 4     | ◐      | 2/3   | 67%      |
 
 ## Recent Activity
 
+- **2026-03-08:** Completed `04-02-PLAN.md`
+  - Replaced the evidence-map scaffold with a repository-backed claim whitelist
+  - Rewrote the corrected notebook to the Jan 15 approval-era chronology with gap notes
+  - Marked `FNL-01`, `FNL-03`, and `FNL-04` complete
 - **2026-03-08:** Completed `04-01-PLAN.md`
   - Added `scripts/verify_notebook_finalization.py` with quick/full/named checks
   - Created the corrected notebook scaffold plus review/evidence sidecars in `notebooks/`
@@ -49,25 +55,28 @@ See: .planning/PROJECT.md (updated 2026-03-07)
 
 ## Next Steps
 
-1. Execute `04-02-PLAN.md` to populate the approval-era chronology and expand evidence mapping.
-2. Execute `04-03-PLAN.md` to package the review bundle and gate final signoff.
+1. Execute `04-03-PLAN.md` to package the review bundle and gate final signoff.
 
 ## Decisions
 
 - Keep the corrected notebook in `notebooks/` so the existing PDF generator contract stays unchanged.
 - Treat chronology validation as placeholder-safe until real dated entries are populated.
 - Separate review concerns into sidecars instead of editing the legacy notebook in place.
+- [Phase 04]: Use January 15, 2026 as the visible fallback anchor and compress earlier work into background framing instead of daily entries.
+- [Phase 04]: Move the final TCN replay result to February 26, 2026 and keep February 21 focused on replay-framework setup.
+- [Phase 04]: Use PAC-gap values in dimensionless x10^-6 units and keep the achievement report's 91% oracle wording for the review candidate.
 
 ## Performance Metrics
 
 | Phase | Plan | Duration | Tasks | Files |
 |-------|------|----------|-------|-------|
 | 04    | 01   | 2 min    | 2     | 4     |
+| Phase 04 P02 | 1 min | 2 tasks | 2 files |
 
 ## Session Info
 
-**Last activity:** 2026-03-08 - Completed 04-01-PLAN.md
-**Stopped At:** Completed 04-01-PLAN.md
+**Last activity:** 2026-03-08
+**Stopped At:** Completed 04-02-PLAN.md
 **Resume File:** None
 
 ## Blockers/Concerns
@@ -80,4 +89,4 @@ None identified.
 - `scripts/verify_notebook_finalization.py` is the validation entry point for later notebook finalization plans.
 
 ---
-Last activity: 2026-03-08 - Completed 04-01-PLAN.md
+Last activity: 2026-03-08 - Completed 04-02-PLAN.md

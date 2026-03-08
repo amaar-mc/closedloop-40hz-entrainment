@@ -78,7 +78,7 @@
 
 Plans:
 - [x] 04-01-PLAN.md — Create the Wave 0 verifier and non-destructive review bundle skeleton.
-- [ ] 04-02-PLAN.md — Populate evidence mapping and rewrite the corrected notebook to the approval-era chronology.
+- [x] 04-02-PLAN.md — Populate evidence mapping and rewrite the corrected notebook to the approval-era chronology.
 - [ ] 04-03-PLAN.md — Package the review bundle, add the checklist, and gate final signoff with human review.
 
 ---
