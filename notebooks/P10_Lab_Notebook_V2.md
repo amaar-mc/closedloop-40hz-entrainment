@@ -3,7 +3,7 @@
 **Researcher:** Amaar Chughtai  
 **School:** Valley Christian High School  
 **Status:** Approval-anchored review candidate for Phase 4 finalization  
-**Original notebook preserved at:** `notebooks/P10_Lab_Notebook_FINAL.md`
+**Original notebook preserved at:** `notebooks/P10_Lab_Notebook_V1.md`
 
 This corrected source keeps the existing PDF-generator contract while rewriting the visible notebook timeline to the approval-era chronology required for final review. The preserved legacy notebook still captures earlier private preparation. This candidate starts at the locked Phase 4 anchor and uses gap notes whenever repository evidence is too thin for a fair day-level entry.
 
@@ -17,7 +17,7 @@ This entry marks the visible start of the corrected notebook. The repository doe
 
 I used this point to formalize the project around a closed-loop question instead of a broad exploratory neuroscience idea: can EEG be used not just to measure current entrainment, but to help decide when stimulation should be delivered? The immediate planning focus was practical. I needed a pipeline that could load the OpenNeuro data safely, compute theta-gamma PAC in a reproducible way, separate subjects across train/validation/test splits, and leave room for a later controller instead of stopping at descriptive analysis.
 
-**Repository basis:** `archive/notebooks/LOG_NOTEBOOK.md`, `notebooks/P10_Lab_Notebook_FINAL.md`, `.planning/phases/04-finalize-lab-notebook/04-CONTEXT.md`
+**Repository basis:** `archive/notebooks/LOG_NOTEBOOK.md`, `notebooks/P10_Lab_Notebook_V1.md`, `.planning/phases/04-finalize-lab-notebook/04-CONTEXT.md`
 
 **Working decisions at this stage:**
 - Keep the notebook anchored to the approval-era timeline rather than the earlier private-prep chronology.
@@ -51,7 +51,7 @@ This was the most instructive day in the project because the biggest gains were 
 
 After removing the circular features, the flattering result disappeared. That was discouraging in the moment, but it established the most durable conclusion of the static phase: the honest single-window ceiling was about `R^2 = 0.287`. Ridge regression matched the stronger deep models, and scaling parameter count upward did not move the ceiling. That changed the interpretation of the problem. The bottleneck was not a missing giant architecture. It was the combination of noisy labels, limited subjects, and the difficulty of inferring PAC from a single short EEG window.
 
-**Repository basis:** `archive/notebooks/LOG_NOTEBOOK.md`; `notebooks/P10_Lab_Notebook_FINAL.md`; `docs/submission/reports/PROJECT_ACHIEVEMENT_REPORT.md`; 2026-02-16 commit cluster in `git log`
+**Repository basis:** `archive/notebooks/LOG_NOTEBOOK.md`; `notebooks/P10_Lab_Notebook_V1.md`; `docs/submission/reports/PROJECT_ACHIEVEMENT_REPORT.md`; 2026-02-16 commit cluster in `git log`
 
 **Key takeaways:**
 - Leaked intermediate results were dropped from the notebook as achievements and kept only as debugging lessons.
@@ -155,7 +155,7 @@ By early March the main scientific work was finished, so the emphasis shifted to
 
 The most important packaging choice was narrative discipline. The final materials could now legitimately say that the TCN controller achieved `72.1%` alignment, targeted `82.6%` of low-PAC windows, and was summarized in the project report as reaching `91%` of oracle performance. What I did *not* want to do was turn the notebook back into a polished retrospective paper. The point of this final stage was to preserve the build-debug-validate arc while tightening wording, tables, and figures for external review.
 
-**Repository basis:** `notebooks/P10_Lab_Notebook_FINAL.md`; `docs/submission/reports/PROJECT_ACHIEVEMENT_REPORT.md`
+**Repository basis:** `notebooks/P10_Lab_Notebook_V1.md`; `docs/submission/reports/PROJECT_ACHIEVEMENT_REPORT.md`
 
 **Next step:** Keep the corrected source stable, resolve review notes in the sidecars, and only then run the manual PDF export path.
 

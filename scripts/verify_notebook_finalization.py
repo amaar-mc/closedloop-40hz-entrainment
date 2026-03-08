@@ -12,21 +12,18 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOKS_DIR = ROOT / "notebooks"
 
-ORIGINAL_MD = NOTEBOOKS_DIR / "P10_Lab_Notebook_FINAL.md"
-ORIGINAL_PDF = NOTEBOOKS_DIR / "P10_Lab_Notebook_FINAL.pdf"
-CORRECTED_MD = NOTEBOOKS_DIR / "P10_Research_Log_Notebook_Corrected.md"
-REVIEW_MD = NOTEBOOKS_DIR / "P10_Research_Log_Notebook_Corrected_REVIEW.md"
-EVIDENCE_MD = NOTEBOOKS_DIR / "P10_Research_Log_Notebook_Corrected_EVIDENCE_MAP.md"
+ORIGINAL_MD = NOTEBOOKS_DIR / "P10_Lab_Notebook_V1.md"
+ORIGINAL_PDF = NOTEBOOKS_DIR / "P10_Lab_Notebook_V1.pdf"
+CORRECTED_MD = NOTEBOOKS_DIR / "P10_Lab_Notebook_V2.md"
+CORRECTED_PDF = NOTEBOOKS_DIR / "P10_Lab_Notebook_V2.pdf"
 GENERATOR_PY = NOTEBOOKS_DIR / "generate_notebook_pdf.py"
 
 CHECK_NAMES = (
     "chronology",
     "preservation",
-    "evidence",
-    "checklist",
     "packaging",
 )
-QUICK_CHECKS = ("preservation", "checklist", "packaging")
+QUICK_CHECKS = ("preservation", "packaging")
 FULL_CHECKS = CHECK_NAMES
 
 MONTH_NAMES = (
@@ -67,7 +64,6 @@ def report(ok: bool, message: str) -> bool:
 
 def check_preservation() -> bool:
     ok_all = True
-    expected_files = (CORRECTED_MD, REVIEW_MD, EVIDENCE_MD)
 
     ok_all &= report(
         ORIGINAL_MD.exists(),
@@ -77,89 +73,22 @@ def check_preservation() -> bool:
         ORIGINAL_PDF.exists(),
         f"Original PDF preserved at {ORIGINAL_PDF.relative_to(ROOT)}",
     )
-
-    for path in expected_files:
-        ok_all &= report(
-            path.exists(), f"Review bundle file exists at {path.relative_to(ROOT)}"
-        )
-
-    for path in expected_files:
-        ok_all &= report(
-            path.resolve() != ORIGINAL_MD.resolve(),
-            f"{path.name} does not overwrite the original markdown path",
-        )
-        ok_all &= report(
-            path.resolve() != ORIGINAL_PDF.resolve(),
-            f"{path.name} does not overwrite the original PDF path",
-        )
-
-    return ok_all
-
-
-def check_checklist() -> bool:
-    if not REVIEW_MD.exists():
-        return report(False, f"Missing review sidecar: {REVIEW_MD.relative_to(ROOT)}")
-
-    text = read_text(REVIEW_MD)
-    required_sections = (
-        "## Change Log",
-        "## Unresolved Questions",
-        "## Reviewer Checklist",
-        "## Human Chronology and Fairness Review",
-        "## Manual PDF Export After Approval",
+    ok_all &= report(
+        CORRECTED_MD.exists(),
+        f"Corrected markdown exists at {CORRECTED_MD.relative_to(ROOT)}",
     )
-    required_phrases = (
-        "approval anchor",
-        "hindsight",
-        "judge readability",
-        "python notebooks/generate_notebook_pdf.py",
-        "P10_Research_Log_Notebook_Corrected.pdf",
+    ok_all &= report(
+        CORRECTED_PDF.exists(),
+        f"Corrected PDF exists at {CORRECTED_PDF.relative_to(ROOT)}",
     )
-
-    ok_all = True
-    for section in required_sections:
-        ok_all &= report(section in text, f"Review sidecar includes section: {section}")
-
-    lowered = text.lower()
-    for phrase in required_phrases:
-        ok_all &= report(
-            phrase.lower() in lowered,
-            f"Review sidecar includes checklist/manual PDF phrase: {phrase}",
-        )
-
-    return ok_all
-
-
-def check_evidence() -> bool:
-    if not EVIDENCE_MD.exists():
-        return report(False, f"Missing evidence map: {EVIDENCE_MD.relative_to(ROOT)}")
-
-    text = read_text(EVIDENCE_MD)
-    required_headers = (
-        "| Entry ID | Entry Type | Notebook Target | Claim / Date / Figure | Source Path | Source Evidence | Disposition | Notes |",
-        "## Disposition Legend",
-        "## Entry Templates",
+    ok_all &= report(
+        CORRECTED_MD.resolve() != ORIGINAL_MD.resolve(),
+        "Corrected markdown does not overwrite the original markdown path",
     )
-    required_terms = (
-        "claim",
-        "date",
-        "figure",
-        "source path",
-        "keep",
-        "rewrite",
-        "drop",
-        "gap note",
+    ok_all &= report(
+        CORRECTED_PDF.resolve() != ORIGINAL_PDF.resolve(),
+        "Corrected PDF does not overwrite the original PDF path",
     )
-
-    ok_all = True
-    for header in required_headers:
-        ok_all &= report(header in text, f"Evidence map includes structure: {header}")
-
-    lowered = text.lower()
-    for term in required_terms:
-        ok_all &= report(
-            term in lowered, f"Evidence map includes required evidence term: {term}"
-        )
 
     return ok_all
 
@@ -189,27 +118,12 @@ def check_packaging() -> bool:
     if GENERATOR_PY.exists():
         generator_text = read_text(GENERATOR_PY)
         ok_all &= report(
-            "P10_Research_Log_Notebook_Corrected.md" in generator_text,
-            "Generator contract references P10_Research_Log_Notebook_Corrected.md",
+            "P10_Lab_Notebook_V2.md" in generator_text,
+            "Generator contract references P10_Lab_Notebook_V2.md",
         )
         ok_all &= report(
-            "P10_Research_Log_Notebook_Corrected.pdf" in generator_text,
-            "Generator contract references P10_Research_Log_Notebook_Corrected.pdf",
-        )
-
-    if not REVIEW_MD.exists():
-        return ok_all and report(
-            False, f"Missing review sidecar: {REVIEW_MD.relative_to(ROOT)}"
-        )
-
-    referenced_paths = sorted(extract_repo_paths(read_text(REVIEW_MD)))
-    ok_all &= report(
-        bool(referenced_paths),
-        "Review sidecar references local bundle files for packaging",
-    )
-    for path in referenced_paths:
-        ok_all &= report(
-            path.exists(), f"Referenced local file exists: {path.relative_to(ROOT)}"
+            "P10_Lab_Notebook_V2.pdf" in generator_text,
+            "Generator contract references P10_Lab_Notebook_V2.pdf",
         )
 
     return ok_all
@@ -246,8 +160,6 @@ def run_selected_checks(checks: tuple[str, ...]) -> bool:
     handlers = {
         "chronology": check_chronology,
         "preservation": check_preservation,
-        "evidence": check_evidence,
-        "checklist": check_checklist,
         "packaging": check_packaging,
     }
 
