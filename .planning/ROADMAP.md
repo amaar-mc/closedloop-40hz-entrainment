@@ -13,7 +13,7 @@
 | 1 | Content Foundation | Extract and organize research content | 4 | 2 |
 | 2 | Daily Entries | Create chronological lab notebook structure | 8 | 4 |
 | 3 | Visual Polish | Add visuals and ensure quality standards | 4 | 3 |
-| 4 | Finalize Lab Notebook | Finalize a judge-ready review bundle without touching original notebook files | 6 | 3 |
+| 4 | Finalize Lab Notebook | ~~Finalize a judge-ready review bundle without touching original notebook files~~ DONE | 6 | 3 |
 
 ## Phase Details
 
@@ -79,7 +79,7 @@
 Plans:
 - [x] 04-01-PLAN.md — Create the Wave 0 verifier and non-destructive review bundle skeleton.
 - [x] 04-02-PLAN.md — Populate evidence mapping and rewrite the corrected notebook to the approval-era chronology.
-- [ ] 04-03-PLAN.md — Package the review bundle, add the checklist, and gate final signoff with human review.
+- [x] 04-03-PLAN.md — Package the review bundle, reorganize to V1/V2 naming, and gate final signoff with human review.
 
 ---
 *Roadmap created: 2026-03-07*
