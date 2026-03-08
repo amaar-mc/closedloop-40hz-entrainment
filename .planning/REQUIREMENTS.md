@@ -48,12 +48,12 @@ Requirements for the lab notebook conversion project.
 
 ### Phase 5 Demo
 
-- [ ] **DEMO-01**: Streamlit single-page dashboard with configure-then-run workflow and matplotlib fallback
-- [ ] **DEMO-02**: Simulated brain dynamics using EntrainmentSimulator/FatigueAwareSimulator with fatigue on/off toggle
-- [ ] **DEMO-03**: All four controller strategies (Fixed Schedule, Reactive, Predictive Look-Ahead, Oracle) shown simultaneously
-- [ ] **DEMO-04**: Real 40 Hz click train audio output through speakers with mute button, binary on/off matching controller decisions
-- [ ] **DEMO-05**: Four stacked PAC trace panels with live animation and background stim/rest color bands
-- [ ] **DEMO-06**: Adjustable simulation speed (1x/5x/10x/Max) with progressive plot rendering
+- [x] **DEMO-01**: Streamlit single-page dashboard with configure-then-run workflow and matplotlib fallback
+- [x] **DEMO-02**: Simulated brain dynamics using EntrainmentSimulator/FatigueAwareSimulator with fatigue on/off toggle
+- [x] **DEMO-03**: All four controller strategies (Fixed Schedule, Reactive, Predictive Look-Ahead, Oracle) shown simultaneously
+- [x] **DEMO-04**: Real 40 Hz click train audio output through speakers with mute button, binary on/off matching controller decisions
+- [x] **DEMO-05**: Four stacked PAC trace panels with live animation and background stim/rest color bands
+- [x] **DEMO-06**: Adjustable simulation speed (1x/5x/10x/Max) with progressive plot rendering
 
 ## v2 Requirements
 
@@ -102,12 +102,12 @@ Deferred to future iterations.
 | FNL-04 | Phase 4 | Complete |
 | FNL-05 | Phase 4 | Pending |
 | FNL-06 | Phase 4 | Complete |
-| DEMO-01 | Phase 5 | Pending |
-| DEMO-02 | Phase 5 | Pending |
-| DEMO-03 | Phase 5 | Pending |
-| DEMO-04 | Phase 5 | Pending |
-| DEMO-05 | Phase 5 | Pending |
-| DEMO-06 | Phase 5 | Pending |
+| DEMO-01 | Phase 5 | Complete |
+| DEMO-02 | Phase 5 | Complete |
+| DEMO-03 | Phase 5 | Complete |
+| DEMO-04 | Phase 5 | Complete |
+| DEMO-05 | Phase 5 | Complete |
+| DEMO-06 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 28 total

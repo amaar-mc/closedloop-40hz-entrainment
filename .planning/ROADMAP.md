@@ -65,7 +65,7 @@
 3. 40 Hz click trains play through speakers during STIMULATE periods with mute control
 
 Plans:
-- [ ] 05-01-PLAN.md — Complete demo dashboard: Streamlit app with simulation engine, four-panel live PAC visualization, and 40 Hz audio stimulation
+- [x] 05-01-PLAN.md — Complete demo dashboard: Streamlit app with simulation engine, four-panel live PAC visualization, and 40 Hz audio stimulation
 
 ---
 
