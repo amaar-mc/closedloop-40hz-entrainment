@@ -6,7 +6,7 @@
 
 ## Phases Overview
 
-**4 phases** | **22 requirements mapped** | Phase 4 finalization requirements added ✓
+**5 phases** | **28 requirements mapped** | Phase 5 demo requirements added ✓
 
 | # | Phase | Goal | Requirements | Success Criteria |
 |---|-------|------|--------------|------------------|
@@ -14,6 +14,7 @@
 | 2 | Daily Entries | Create chronological lab notebook structure | 8 | 4 |
 | 3 | Visual Polish | Add visuals and ensure quality standards | 4 | 3 |
 | 4 | Finalize Lab Notebook | ~~Finalize a judge-ready review bundle without touching original notebook files~~ DONE | 6 | 3 |
+| 5 | Real-Time Demo | Interactive Streamlit dashboard with live PAC visualization and 40 Hz audio | 6 | 3 |
 
 ## Phase Details
 
@@ -49,6 +50,22 @@
 1. All performance graphs and tables validated against repository data
 2. Architecture diagrams show model development progression
 3. Final document is 8-10 pages following Synopsys guidelines
+
+### Phase 5: Real-Time EEG Visualization and Audio Stimulation Demo
+
+**Goal:** Build an interactive Streamlit dashboard that demonstrates the closed-loop 40 Hz entrainment system in real time — visualizing simulated PAC dynamics across all four controller strategies with live 40 Hz audio click train stimulation output.
+
+**Requirements:** DEMO-01, DEMO-02, DEMO-03, DEMO-04, DEMO-05, DEMO-06
+**Depends on:** Phase 4
+**Plans:** 0 plans
+
+**Success Criteria:**
+1. `streamlit run` launches a single-page dashboard with configuration controls and four live PAC trace panels
+2. All four controller strategies run simultaneously on simulated brain dynamics with fatigue toggle, producing visible performance differences
+3. 40 Hz click trains play through speakers during STIMULATE periods with mute control
+
+Plans:
+- [ ] TBD (run /gsd-plan-phase 5 to break down)
 
 ---
 
