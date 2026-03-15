@@ -4,15 +4,15 @@ milestone: v1.0
 milestone_name: milestone
 current_plan: Not started
 status: completed
-stopped_at: Completed 06-02-PLAN.md (Abstract, Introduction, Literature Review)
-last_updated: "2026-03-15T21:38:00Z"
-last_activity: 2026-03-08
+stopped_at: Completed 06-04-PLAN.md (Results, Discussion, Future Directions, Conclusion)
+last_updated: "2026-03-15T21:59:09.975Z"
+last_activity: 2026-03-15
 progress:
   total_phases: 6
   completed_phases: 2
   total_plans: 9
-  completed_plans: 6
-  percent: 67
+  completed_plans: 8
+  percent: 89
 ---
 
 # Project State: Research Documentation Project
@@ -30,7 +30,7 @@ See: .planning/PROJECT.md (updated 2026-03-07)
 **Current Plan:** Not started
 **Total Plans in Phase:** 1
 **Status:** Milestone complete
-**Progress:** [███████░░░] 67%
+**Progress:** [█████████░] 89%
 
 | Phase | Status | Plans | Progress |
 |-------|--------|-------|----------|
@@ -96,6 +96,8 @@ Remaining phases 1-3 have no plans defined yet.
 - [Phase 06 P02]: Abstract is verbatim from docs/abstract/ABSTRACT.md with science-fair metadata stripped — consistency with submitted version is mandatory
 - [Phase 06 P02]: Literature review is a standalone section (not embedded in Introduction) with 5 required topic subsections covering PAC/AD, 40 Hz mechanisms, variability, closed-loop paradigms, and DL for EEG
 - [Phase 06 P02]: PAC gap reported as 91% of oracle in paper text (consistent with abstract wording) not 92% (poster V5 arithmetic correction)
+- [Phase 06]: Results section adds Section 6.6 to clarify ts=5 horizon sweep vs ts=1 deployed checkpoint R² difference
+- [Phase 06]: Conclusion uses 'computational validation on real EEG data' (not 'clinical validation') as precise scope boundary
 
 ## Performance Metrics
 
@@ -108,12 +110,13 @@ Remaining phases 1-3 have no plans defined yet.
 | Phase 06 P01 | 3min | 2 tasks | 6 files |
 | Phase 06 P02 | 8 min | 2 tasks | 3 files |
 | Phase 06 P03 | 5 minutes | 2 tasks | 2 files |
+| Phase 06 P04 | 15 | 2 tasks | 4 files |
 
 ## Session Info
 
 **Last activity:** 2026-03-15
-**Stopped At:** Completed 06-02-PLAN.md (Abstract, Introduction, Literature Review)
-**Resume File:** .planning/phases/06-write-research-paper/06-02-SUMMARY.md
+**Stopped At:** Completed 06-04-PLAN.md (Results, Discussion, Future Directions, Conclusion)
+**Resume File:** None
 
 ## Blockers/Concerns
 
