@@ -4,8 +4,8 @@ milestone: v1.0
 milestone_name: milestone
 current_plan: Not started
 status: completed
-stopped_at: Completed 06-03-PLAN.md (Methods + Architecture Search sections)
-last_updated: "2026-03-15T21:36:56.097Z"
+stopped_at: Completed 06-02-PLAN.md (Abstract, Introduction, Literature Review)
+last_updated: "2026-03-15T21:38:00Z"
 last_activity: 2026-03-08
 progress:
   total_phases: 6
@@ -93,6 +93,9 @@ Remaining phases 1-3 have no plans defined yet.
 - [Phase 06]: Use system python3 (matplotlib 3.10.0) for figure generation — no venv exists in the repository
 - [Phase 06]: Methods written with reproducibility-grade detail across all 8 subsections; all numbers sourced from CURRENT_METHODOLOGY.md
 - [Phase 06]: Architecture search uses table-first format; Section 5.5 synthesis added to distill 3 lessons from V1-V8 exploration connecting to TCN design
+- [Phase 06 P02]: Abstract is verbatim from docs/abstract/ABSTRACT.md with science-fair metadata stripped — consistency with submitted version is mandatory
+- [Phase 06 P02]: Literature review is a standalone section (not embedded in Introduction) with 5 required topic subsections covering PAC/AD, 40 Hz mechanisms, variability, closed-loop paradigms, and DL for EEG
+- [Phase 06 P02]: PAC gap reported as 91% of oracle in paper text (consistent with abstract wording) not 92% (poster V5 arithmetic correction)
 
 ## Performance Metrics
 
@@ -103,13 +106,14 @@ Remaining phases 1-3 have no plans defined yet.
 | 04    | 03   | 2 sessions | 2  | 7     |
 | Phase 05 P01 | 5h 18m | 2 tasks | 2 files |
 | Phase 06 P01 | 3min | 2 tasks | 6 files |
+| Phase 06 P02 | 8 min | 2 tasks | 3 files |
 | Phase 06 P03 | 5 minutes | 2 tasks | 2 files |
 
 ## Session Info
 
-**Last activity:** 2026-03-08
-**Stopped At:** Completed 06-03-PLAN.md (Methods + Architecture Search sections)
-**Resume File:** None
+**Last activity:** 2026-03-15
+**Stopped At:** Completed 06-02-PLAN.md (Abstract, Introduction, Literature Review)
+**Resume File:** .planning/phases/06-write-research-paper/06-02-SUMMARY.md
 
 ## Blockers/Concerns
 
