@@ -6,7 +6,7 @@
 
 ## Phases Overview
 
-**5 phases** | **28 requirements mapped** | Phase 5 demo requirements added ✓
+**6 phases** | **28 requirements mapped** | Phase 5 demo requirements added | Phase 6 paper requirements added
 
 | # | Phase | Goal | Requirements | Success Criteria |
 |---|-------|------|--------------|------------------|
@@ -15,6 +15,7 @@
 | 3 | Visual Polish | Add visuals and ensure quality standards | 4 | 3 |
 | 4 | Finalize Lab Notebook | ~~Finalize a judge-ready review bundle without touching original notebook files~~ DONE | 6 | 3 |
 | 5 | Real-Time Demo | Interactive Streamlit dashboard with live PAC visualization and 40 Hz audio | 6 | 3 |
+| 6 | Write Research Paper | Comprehensive venue-agnostic research paper with full IMRAD structure | 10 | 4 |
 
 ## Phase Details
 
@@ -66,6 +67,27 @@
 
 Plans:
 - [x] 05-01-PLAN.md — Complete demo dashboard: Streamlit app with simulation engine, four-panel live PAC visualization, and 40 Hz audio stimulation
+
+### Phase 6: Write Research Paper
+
+**Goal:** Write a comprehensive, venue-agnostic research paper documenting the full closed-loop 40 Hz entrainment system — from clinical motivation through architecture exploration to TCN-based predictive control and validated results. Full IMRAD structure with dedicated Literature Review, Architecture Search, and Future Directions sections.
+
+**Requirements:** PAPER-FIG, PAPER-STRUCTURE, PAPER-LITREV, PAPER-TONE, PAPER-CLINICAL, PAPER-ARCHSEARCH, PAPER-METHODS, PAPER-RESULTS, PAPER-FUTURE, PAPER-REFS, PAPER-SUPPLEMENT, PAPER-CONSISTENCY
+**Depends on:** Phase 5
+**Plans:** 5 plans
+
+**Success Criteria:**
+1. Complete assembled research paper (docs/paper/RESEARCH_PAPER.md) with all sections from Abstract through References
+2. Two new publication-quality figures generated (system block diagram, horizon sweep)
+3. Supplementary materials with additional figures, tables, and ts=1/ts=5 comparison
+4. All metrics cross-checked for consistency with submitted abstract and validated result files
+
+Plans:
+- [ ] 06-01-PLAN.md — Generate two new publication figures (horizon sweep + system block diagram) and create paper directory structure
+- [ ] 06-02-PLAN.md — Write front matter: Abstract, Introduction, and Literature Review
+- [ ] 06-03-PLAN.md — Write Methods and Architecture Search sections
+- [ ] 06-04-PLAN.md — Write Results, Discussion, Future Directions, and Conclusion
+- [ ] 06-05-PLAN.md — Assemble complete paper, write references and supplementary materials, cross-check consistency, human review
 
 ---
 
