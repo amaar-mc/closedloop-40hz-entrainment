@@ -154,7 +154,7 @@ This project asks: **can we predict when a patient's brain will lose entrainment
 
 ### MATERIALS (48-72pt header, 28-30pt body)
 
-**Dataset:** 35 dementia patients, OpenNeuro ds005048 (Lahijanian 2024)
+**Dataset:** 35 elderly subjects, OpenNeuro ds005048 (Lahijanian 2024)
 - 7 frontal EEG channels (Fp1, Fp2, F3, F4, F7, F8, Fz), 250 Hz
 - Alternating Stimulus (40 Hz AM auditory) and Rest epochs, 20-40s each
 - 17,283 two-second windows; subject-level splits (24 train / 5 val / 6 test)
@@ -223,7 +223,7 @@ Since no single-window architecture could exceed R² = 0.287, I shifted the appr
 - z < −0.5 → STIMULATE (coupling predicted to decline)
 - z > +0.5 → REST (coupling predicted to remain strong)
 - Otherwise → MAINTAIN current state
-- 5-second hysteresis prevents rapid switching
+- 3-second hysteresis prevents rapid switching
 
 ---
 
@@ -240,7 +240,7 @@ Since no single-window architecture could exceed R² = 0.287, I shifted the appr
 
 **Statistical rigor:**
 - Wilcoxon signed-rank tests (non-parametric, paired)
-- Bootstrap 95% confidence intervals
+- 95% confidence intervals (large-sample normal approximation)
 - Hedges' g effect sizes
 - Compared against: Fixed Schedule, Reactive Threshold, PI Controller, Alignment Oracle (theoretical upper bound)
 
