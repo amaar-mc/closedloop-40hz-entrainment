@@ -16,7 +16,7 @@
 | 6 | Write Research Paper | Comprehensive venue-agnostic research paper with full IMRAD structure | 10 | 4 |
 | 7 | 1/1 | Complete   | 2026-03-18 | 3 |
 | 8 | Fix Internal Consistency | Resolve all internal consistency issues in RESEARCH_PAPER.md (population labels, references, formatting, voice, terminology) | 7 | 4 |
-| 9 | Propagate & Recompile | Propagate all corrections to CSEF presentation and RESULTS_REPORT.md, then recompile the paper PDF | 3 | 3 |
+| 9 | 1/2 | In Progress|  | 3 |
 
 ## Phase Details
 
@@ -131,7 +131,7 @@ Plans:
 
 **Depends on:** Phase 8
 **Requirements:** PROP-01, PROP-02, PROP-03
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 
 **Success Criteria (what must be TRUE):**
 1. Every factual claim corrected in RESEARCH_PAPER.md (hysteresis, CI method, population label, spectral features, artifact handling) matches the corresponding slide or section in the CSEF presentation

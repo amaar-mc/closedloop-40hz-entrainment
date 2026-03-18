@@ -84,7 +84,7 @@ Requirements for the lab notebook conversion project.
 
 - [ ] **PROP-01**: All corrections propagated to CSEF presentation PDF
 - [ ] **PROP-02**: All corrections propagated to RESULTS_REPORT.md
-- [ ] **PROP-03**: Research paper PDF recompiled after all fixes
+- [x] **PROP-03**: Research paper PDF recompiled after all fixes
 
 ## Out of Scope
 
@@ -150,7 +150,7 @@ Requirements for the lab notebook conversion project.
 | CONS-07 | Phase 8 | Complete |
 | PROP-01 | Phase 9 | Pending |
 | PROP-02 | Phase 9 | Pending |
-| PROP-03 | Phase 9 | Pending |
+| PROP-03 | Phase 9 | Complete |
 
 **Coverage:**
 - v2.0 requirements: 17 total

@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
 status: planning
-last_updated: "2026-03-18T04:30:43.387Z"
-last_activity: 2026-03-18 — Completed 08-02 reference cleanup (2 commits)
+last_updated: "2026-03-18T05:20:00.000Z"
+last_activity: 2026-03-18 — Completed 09-02 TeX corrections and PDF recompile (2 commits)
 progress:
   total_phases: 9
   completed_phases: 5
-  total_plans: 12
-  completed_plans: 12
+  total_plans: 14
+  completed_plans: 13
 ---
 
 # Project State: Research Documentation Project
@@ -24,12 +24,12 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 ## Current Status
 
 **Milestone:** v2.0 Paper Audit & Corrections
-**Phase:** Phase 8 (Plan 02 complete) — Fix Internal Consistency COMPLETE
-**Plan:** 08-02 complete
+**Phase:** Phase 9 (Plan 02 complete) — Propagate & Recompile PDF COMPLETE
+**Plan:** 09-02 complete
 **Status:** Ready to plan
-**Last activity:** 2026-03-18 — Completed 08-02 reference cleanup (2 commits)
+**Last activity:** 2026-03-18 — Completed 09-02 TeX corrections and PDF recompile (2 commits)
 
-**Progress bar:** [██████████] 100% (12/12 plans complete)
+**Progress bar:** [█████████░] 93% (13/14 plans complete)
 
 ## v2.0 Phase Summary
 
@@ -37,7 +37,7 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 |-------|------|--------|
 | 7. Fix Data & Methodology Errors | Correct hysteresis, CI method, population labels, spectral features, artifact handling in RESEARCH_PAPER.md | Plan 01 complete |
 | 8. Fix Internal Consistency | Fix population label, references, section heading, voice, and terminology throughout RESEARCH_PAPER.md | COMPLETE (Plans 01-02) |
-| 9. Propagate & Recompile | Propagate all corrections to CSEF presentation and RESULTS_REPORT.md; recompile paper PDF | Not started |
+| 9. Propagate & Recompile | Propagate all corrections to CSEF presentation and RESULTS_REPORT.md; recompile paper PDF | Plan 02 complete (PDF recompiled) |
 
 ## Accumulated Context
 
@@ -84,9 +84,15 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 - **Reference list pruned to 23:** 16 orphan references deleted; surviving 23 renumbered [1]-[23]; EEGNet=[18], Tort PAC=[22]
 - **Single-pass citation replacement:** Used re.sub callback to avoid cascading replacement bugs when renumbering
 
+## Accumulated Decisions (Phase 9)
+
+- **TeX correction approach:** Applied all corrections directly to RESEARCH_PAPER_v3.tex (pandoc unavailable); rebuilt stale 17-entry reference list to correct 23 entries with full body renumbering
+- **TCN dilation factors:** Fixed [1,2,4,6] -> [1,2,4,8] in TeX (was a pre-existing bug in the TeX file not caught in Phases 7-8)
+- **Remaining dementia patients in TeX:** 4 occurrences remain in reference titles and external-study citations — all acceptable, only Contribution 3 language was required to change
+
 ## Blockers/Concerns
 
 None identified.
 
 ---
-Last activity: 2026-03-18 - Completed Phase 8 Plan 02: Reference cleanup — TCFormer removed, 16 orphans pruned, citations renumbered [1]-[23] (CONS-02, CONS-03)
+Last activity: 2026-03-18 - Completed Phase 9 Plan 02: TeX corrections + PDF recompile — all Phase 7+8 fixes propagated to RESEARCH_PAPER_v3.tex; clean 2.7 MB PDF compiled (PROP-03)
