@@ -6,7 +6,7 @@
 
 ## Phases Overview
 
-**6 phases** | **28 requirements mapped** | Phase 5 demo requirements added | Phase 6 paper requirements added
+**9 phases** | **28 v1 requirements + 17 v2.0 requirements mapped** | v2.0 Paper Audit & Corrections added 2026-03-17
 
 | # | Phase | Goal | Requirements | Success Criteria |
 |---|-------|------|--------------|------------------|
@@ -15,6 +15,9 @@
 | 3 | Visual Polish | Add visuals and ensure quality standards | 4 | 3 |
 | 4 | Finalize Lab Notebook | ~~Finalize a judge-ready review bundle without touching original notebook files~~ DONE | 6 | 5/5 | Complete   | 2026-03-15 | Real-Time Demo | Interactive Streamlit dashboard with live PAC visualization and 40 Hz audio | 6 | 3 |
 | 6 | Write Research Paper | Comprehensive venue-agnostic research paper with full IMRAD structure | 10 | 4 |
+| 7 | Fix Data & Methodology Errors | Correct all factual errors in RESEARCH_PAPER.md (hysteresis, CI method, population labels, spectral features) | 7 | 3 |
+| 8 | Fix Internal Consistency | Resolve all internal consistency issues in RESEARCH_PAPER.md (population labels, references, formatting, voice, terminology) | 7 | 4 |
+| 9 | Propagate & Recompile | Propagate all corrections to CSEF presentation and RESULTS_REPORT.md, then recompile the paper PDF | 3 | 3 |
 
 ## Phase Details
 
@@ -88,18 +91,70 @@ Plans:
 - [ ] 06-04-PLAN.md — Write Results, Discussion, Future Directions, and Conclusion
 - [ ] 06-05-PLAN.md — Assemble complete paper, write references and supplementary materials, cross-check consistency, human review
 
+### Phase 7: Fix Data Accuracy & Methodology Errors
+
+**Goal:** The paper's factual claims about system implementation match the actual code and results — hysteresis duration, CI method, population composition, spectral feature set, and best-epoch claims are all accurate.
+
+**Depends on:** Phase 6
+**Requirements:** DATA-01, DATA-02, DATA-03, DATA-04, DATA-05, METH-01, METH-02
+**Plans:** TBD
+
+**Success Criteria (what must be TRUE):**
+1. A reader of RESEARCH_PAPER.md can find "3-second" hysteresis in every location that previously said "5-second" (Sections 1.4, 3.6.2, Figure 3 caption)
+2. Section 3.8 describes the CI method as large-sample normal approximation and RESULTS_REPORT.md shows the corrected Hedges' g of 0.75 for lead time with PAC gap units changed to "x10^-6 MI units"
+3. Section 3.4.1 describes 4 spectral bands (not 5), PAC-structure features (not coherence), and global stats — matching what `temporal_multiscale/build_multiscale_dataset.py` actually computes
+4. Section 3.1.2 says artifacts are "zeroed" (not "rejected") and Section 3.3.2 contains no unqualified "best epoch 53" claim
+
+### Phase 8: Fix Internal Consistency
+
+**Goal:** RESEARCH_PAPER.md is internally consistent — population label, references, formatting, grammatical voice, and terminology are uniform throughout.
+
+**Depends on:** Phase 7
+**Requirements:** CONS-01, CONS-02, CONS-03, CONS-04, CONS-05, CONS-06, CONS-07
+**Plans:** TBD
+
+**Success Criteria (what must be TRUE):**
+1. Every mention of the subject population uses "35 elderly subjects" (not "35 dementia patients"), and the reference list contains only references that are cited somewhere in the text body
+2. Reference [25] correctly attributes the EEGNet paper (not TCFormer), and Section 2.2 heading renders as "2.2 40 Hz Entrainment" (not "2.240 Hz")
+3. Every first-person pronoun in the paper is "I" — no "we" or "our" — matching the single-author declaration
+4. The terms "Reactive Threshold" (not "Reactive thresholding") and a single consistent orders-of-magnitude phrase are used wherever that controller and PAC scale are mentioned
+
+### Phase 9: Propagate Corrections & Recompile PDF
+
+**Goal:** All corrections made in Phases 7 and 8 are reflected in the CSEF presentation and RESULTS_REPORT.md, and a clean PDF of the corrected paper exists.
+
+**Depends on:** Phase 8
+**Requirements:** PROP-01, PROP-02, PROP-03
+**Plans:** TBD
+
+**Success Criteria (what must be TRUE):**
+1. Every factual claim corrected in RESEARCH_PAPER.md (hysteresis, CI method, population label, spectral features, artifact handling) matches the corresponding slide or section in the CSEF presentation
+2. RESULTS_REPORT.md reflects the corrected Hedges' g (0.75) and corrected PAC gap units (x10^-6 MI units) with no contradicting values anywhere in the file
+3. A PDF of RESEARCH_PAPER.md exists that compiles cleanly from the corrected source, contains no placeholder text, and shows all section headings correctly formatted
+
 ---
 
 ## Dependencies
 
 - Phase 2 requires Phase 1 completion (need organized content before structuring entries)
 - Phase 3 requires Phase 2 completion (need entries before adding visuals)
+- Phase 7 requires Phase 6 completion (paper must exist before corrections)
+- Phase 8 requires Phase 7 completion (factual errors fixed before consistency pass)
+- Phase 9 requires Phase 8 completion (all paper corrections done before propagation)
 
-## Timeline Estimate
+## Progress
 
-- **Phase 1:** Content extraction and organization (moderate scope)
-- **Phase 2:** Daily entry creation (largest scope - 16 requirements total across timeline)
-- **Phase 3:** Visual elements and polishing (focused scope)
+| Phase | Plans Complete | Status | Completed |
+|-------|----------------|--------|-----------|
+| 1. Content Foundation | - | Not started | - |
+| 2. Daily Entries | - | Not started | - |
+| 3. Visual Polish | - | Not started | - |
+| 4. Finalize Lab Notebook | 3/3 | Complete | 2026-03-15 |
+| 5. Real-Time Demo | 1/1 | Complete | - |
+| 6. Write Research Paper | 5/5 | Complete | - |
+| 7. Fix Data & Methodology Errors | 0/TBD | Not started | - |
+| 8. Fix Internal Consistency | 0/TBD | Not started | - |
+| 9. Propagate & Recompile | 0/TBD | Not started | - |
 
 ### Phase 4: Finalize Lab Notebook
 
