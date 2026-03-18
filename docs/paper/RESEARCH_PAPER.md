@@ -62,7 +62,7 @@ The convergence of inter-individual variability and intra-session habituation cr
 
 The central research question motivating this work is: **Can deep learning models trained on EEG-derived features forecast theta-gamma phase-amplitude coupling dynamics 5–10 seconds into the future, and does integrating such forecasts into a closed-loop controller produce measurable improvements in personalized 40 Hz entrainment therapy validated on real patient EEG?**
 
-We approach this question through a two-stage computational architecture. Stage 1 establishes a real-time PAC estimator using a compact deep learning model trained directly on raw EEG windows, providing the current-state biomarker input that Stage 2 requires. Stage 2 constructs a causal temporal predictor that ingests a 20-second history of PAC estimates and spectral features to forecast future PAC at clinically relevant horizons of 5–10 seconds, enabling proactive rather than reactive control decisions. The closed-loop controller integrates these predictions with a personalized rolling baseline and 5-second hysteresis logic to determine stimulation actions: stimulate when predicted PAC is forecast to fall below a personalized threshold, rest when forecast PAC is strong, and maintain the current state otherwise.
+We approach this question through a two-stage computational architecture. Stage 1 establishes a real-time PAC estimator using a compact deep learning model trained directly on raw EEG windows, providing the current-state biomarker input that Stage 2 requires. Stage 2 constructs a causal temporal predictor that ingests a 20-second history of PAC estimates and spectral features to forecast future PAC at clinically relevant horizons of 5–10 seconds, enabling proactive rather than reactive control decisions. The closed-loop controller integrates these predictions with a personalized rolling baseline and 3-second hysteresis logic to determine stimulation actions: stimulate when predicted PAC is forecast to fall below a personalized threshold, rest when forecast PAC is strong, and maintain the current state otherwise.
 
 The biomarker of interest throughout is the Modulation Index (MI), a measure of theta-gamma phase-amplitude coupling (PAC) introduced by Tort et al. [31] that quantifies the degree to which gamma-band (38–42 Hz) amplitude is modulated by the phase of theta-band (4–8 Hz) oscillations. Higher MI values indicate stronger theta-gamma coupling and stronger entrainment; lower values indicate reduced or absent coupling.
 
@@ -180,8 +180,8 @@ The raw data had already been processed by Makoto's preprocessing pipeline (1 Hz
 
 1. **Bandpass filtering:** 4th-order Butterworth filter from 0.5 to 80 Hz (zero-phase, forward-backward pass).
 2. **Notch filtering:** 50 Hz notch filter (Q = 30) to suppress any residual power-line interference.
-3. **Artifact rejection:** Channels and windows containing samples exceeding ±100 µV were rejected. Critically, artifact rejection was applied *before* common average reference (CAR) to prevent corrupted channel voltages from propagating to all electrodes during rereferencing.
-4. **Common average reference:** After artifact rejection, the mean across all retained channels was subtracted from each channel.
+3. **Artifact zeroing:** Samples exceeding ±100 µV were zeroed (set to 0.0) to suppress artifact transients without removing entire windows. Critically, artifact zeroing was applied *before* common average reference (CAR) to prevent corrupted channel voltages from propagating to all electrodes during rereferencing.
+4. **Common average reference:** After artifact zeroing, the mean across all retained channels was subtracted from each channel.
 
 #### 3.1.3 Channel Selection
 
@@ -239,7 +239,7 @@ As the primary static PAC estimator, we adapted EEGNet (Lawhern et al., 2018) as
 - **Scheduler:** ReduceLROnPlateau (mode = min, factor = 0.5, patience = 5 epochs).
 - **Gradient clipping:** max_norm = 1.0.
 - **Early stopping:** Patience = 15 epochs on validation loss.
-- **Best checkpoint:** Epoch 53.
+- **Best checkpoint:** The checkpoint with lowest validation loss (epoch not recorded for EEGNet; epoch 53 refers to the TCN checkpoint).
 
 #### 3.3.3 Performance
 
@@ -318,7 +318,7 @@ On held-out test subjects, the MultiscaleCausalTCN achieved Test R² = 0.170 (ra
 
 ![System Architecture](../../results/figures/ai_generated/system_architecture_v3.png)
 
-*Figure 3. Architecture of the closed-loop 40 Hz entrainment system. Raw EEG from 7 frontal channels is processed through signal processing (bandpass 0.5–80 Hz, notch, CAR), the EEGNet static PAC estimator (1,457 parameters), a 73-dimensional causal feature engineering pipeline, and the MultiscaleCausalTCN temporal forecaster (31,043 parameters, 5-second prediction horizon). The adaptive controller applies z-score thresholding against a personalized rolling baseline to determine stimulation decisions (STIMULATE / REST / MAINTAIN) with 5-second hysteresis, driving a 40 Hz auditory click train. The curved feedback arrow illustrates the closed-loop nature of the system.*
+*Figure 3. Architecture of the closed-loop 40 Hz entrainment system. Raw EEG from 7 frontal channels is processed through signal processing (bandpass 0.5–80 Hz, notch, CAR), the EEGNet static PAC estimator (1,457 parameters), a 73-dimensional causal feature engineering pipeline, and the MultiscaleCausalTCN temporal forecaster (31,043 parameters, 5-second prediction horizon). The adaptive controller applies z-score thresholding against a personalized rolling baseline to determine stimulation decisions (STIMULATE / REST / MAINTAIN) with 3-second hysteresis, driving a 40 Hz auditory click train. The curved feedback arrow illustrates the closed-loop nature of the system.*
 
 #### 3.6.1 Personalization Module
 
@@ -336,7 +336,7 @@ A minimum of 10 samples must accumulate in the buffer before z-scores are comput
 | z > +0.5 | REST | PAC above baseline; avoid habituation |
 | −0.5 ≤ z ≤ +0.5 | MAINTAIN | PAC near baseline; continue current state |
 
-A 5-second hysteresis hold time prevents rapid oscillation between states.
+A 3-second hysteresis hold time prevents rapid oscillation between states.
 
 #### 3.6.3 Controller Variants
 
@@ -368,7 +368,7 @@ The counterfactual nature of this evaluation means that the decisions reflect wh
 
 ### 3.8 Statistical Analysis
 
-All comparisons between controllers were conducted as paired, within-subject Wilcoxon signed-rank tests (two-sided, N=35). Effect sizes were quantified using Hedges' g (bias-corrected Cohen's d) with 95% confidence intervals obtained via 10,000-iteration BCa bootstrap. Clinical breadth of benefit was assessed with a binomial sign test. Threshold sensitivity was evaluated across z-score thresholds 0.2 to 1.0 in steps of 0.1. All analyses were conducted in Python using SciPy (scipy.stats).
+All comparisons between controllers were conducted as paired, within-subject Wilcoxon signed-rank tests (two-sided, N=35). Effect sizes were quantified using Hedges' g (bias-corrected Cohen's d) with 95% confidence intervals obtained via large-sample normal approximation (g ± 1.96 × SE). Clinical breadth of benefit was assessed with a binomial sign test. Threshold sensitivity was evaluated across z-score thresholds 0.2 to 1.0 in steps of 0.1. All analyses were conducted in Python using SciPy (scipy.stats).
 
 ---
 
@@ -468,7 +468,7 @@ The eight-model search produced three actionable lessons that shaped the subsequ
 
 This section presents experimental findings across five primary analyses: (1) temporal forecasting performance across prediction horizons; (2) closed-loop controller comparison across all 35 subjects' real EEG recordings; (3) per-subject analysis confirming that the advantage is universal; (4) fatigue model robustness; and (5) threshold sensitivity.
 
-All statistical tests are Wilcoxon signed-rank (non-parametric, paired, N=35) unless otherwise noted. Effect sizes are reported as Hedges' g with 95% bootstrap confidence intervals. All PAC values are in dimensionless Modulation Index units (Tort 2010), specifically ×10⁻⁶ for the PAC targeting gap metric.
+All statistical tests are Wilcoxon signed-rank (non-parametric, paired, N=35) unless otherwise noted. Effect sizes are reported as Hedges' g with 95% confidence intervals (large-sample normal approximation). All PAC values are in dimensionless Modulation Index units (Tort 2010), specifically ×10⁻⁶ for the PAC targeting gap metric.
 
 ---
 
