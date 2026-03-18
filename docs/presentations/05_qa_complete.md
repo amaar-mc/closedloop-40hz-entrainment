@@ -114,7 +114,7 @@ Four key results. First, the TCN predictive controller achieves 72.1% alignment 
 
 **How did you validate? What makes this trustworthy?**
 
-Two independent protocols. Primary: I replayed the TCN controller on all 35 subjects' actual EEG recordings -- real brain data, not simulation. The controller only sees data available in real time. Secondary: closed-loop simulation with neural fatigue modeling across 6 severity levels, 50 trials each, 600 seconds per trial. Statistics: Wilcoxon signed-rank tests (non-parametric, paired), bootstrap 95% confidence intervals, and Hedges' g effect sizes. Compared against fixed schedule, reactive threshold, PI controller, and a theoretical oracle.
+Two independent protocols. Primary: I replayed the TCN controller on all 35 subjects' actual EEG recordings -- real brain data, not simulation. The controller only sees data available in real time. Secondary: closed-loop simulation with neural fatigue modeling across 6 severity levels, 50 trials each, 600 seconds per trial. Statistics: Wilcoxon signed-rank tests (non-parametric, paired), 95% confidence intervals (large-sample normal approximation), and Hedges' g effect sizes. Compared against fixed schedule, reactive threshold, PI controller, and a theoretical oracle.
 
 ---
 
