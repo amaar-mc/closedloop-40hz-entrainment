@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
 status: planning
-last_updated: "2026-03-18T03:48:14.554Z"
-last_activity: 2026-03-17 — Completed 07-01 paper accuracy corrections (3 commits)
+last_updated: "2026-03-17T10:00:00.000Z"
+last_activity: 2026-03-17 — Completed 08-01 text consistency fixes (2 commits)
 progress:
   total_phases: 9
   completed_phases: 4
-  total_plans: 10
-  completed_plans: 10
+  total_plans: 12
+  completed_plans: 11
 ---
 
 # Project State: Research Documentation Project
@@ -24,19 +24,19 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 ## Current Status
 
 **Milestone:** v2.0 Paper Audit & Corrections
-**Phase:** Phase 7 (Plan 01 complete) — Fix Data Accuracy & Methodology Errors
-**Plan:** 07-01 complete
+**Phase:** Phase 8 (Plan 01 complete) — Fix Internal Consistency
+**Plan:** 08-01 complete
 **Status:** Ready to plan
-**Last activity:** 2026-03-17 — Completed 07-01 paper accuracy corrections (3 commits)
+**Last activity:** 2026-03-17 — Completed 08-01 text consistency fixes (2 commits)
 
-**Progress bar:** [██████████] 100% (10/10 plans complete)
+**Progress bar:** [█████████░] 92% (11/12 plans complete)
 
 ## v2.0 Phase Summary
 
 | Phase | Goal | Status |
 |-------|------|--------|
 | 7. Fix Data & Methodology Errors | Correct hysteresis, CI method, population labels, spectral features, artifact handling in RESEARCH_PAPER.md | Plan 01 complete |
-| 8. Fix Internal Consistency | Fix population label, references, section heading, voice, and terminology throughout RESEARCH_PAPER.md | Not started |
+| 8. Fix Internal Consistency | Fix population label, references, section heading, voice, and terminology throughout RESEARCH_PAPER.md | Plan 01 complete |
 | 9. Propagate & Recompile | Propagate all corrections to CSEF presentation and RESULTS_REPORT.md; recompile paper PDF | Not started |
 
 ## Accumulated Context
@@ -74,9 +74,16 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 - **Hedges' g Lead Time:** exact value 0.7549 rounds to 0.75 (not 0.76); RESULTS_REPORT.md corrected
 - **PAC Gap units:** MI is dimensionless (Tort 2010); correct unit is ×10⁻⁶ MI units, not µV²; 6 locations in RESULTS_REPORT.md corrected
 
+## Accumulated Decisions (Phase 8)
+
+- **Population label:** "35 elderly subjects" is the consistent phrasing (never "dementia patients" — 10/35 are healthy controls); corrected at Contribution 3 and Conclusion
+- **Single-author voice:** All 13 self-referential "we/our" replaced with "I/my"; Abstract already used I correctly and was left unchanged
+- **Reactive Threshold capitalized:** Matches named controller variant in Section 3.6.3; "reactive thresholding" at Contribution 3 corrected
+- **Orders of magnitude:** "nearly three orders of magnitude" is correct (1,457 to 1.1M = log10 ~2.88); Section 4.3 now consistent with L74
+
 ## Blockers/Concerns
 
 None identified.
 
 ---
-Last activity: 2026-03-17 - Completed Phase 7 Plan 01: 7 paper accuracy corrections (DATA-01 to DATA-05, METH-01, METH-02)
+Last activity: 2026-03-17 - Completed Phase 8 Plan 01: 5 text consistency fixes (CONS-01, CONS-04, CONS-05, CONS-06, CONS-07)

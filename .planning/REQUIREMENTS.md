@@ -72,13 +72,13 @@ Requirements for the lab notebook conversion project.
 
 ### Internal Consistency
 
-- [ ] **CONS-01**: Population description fixed from "35 dementia patients" to "35 elderly subjects" in Contribution 3 and Conclusion
+- [x] **CONS-01**: Population description fixed from "35 dementia patients" to "35 elderly subjects" in Contribution 3 and Conclusion
 - [ ] **CONS-02**: Reference [25] misattribution fixed (TCFormer citation corrected or removed)
 - [ ] **CONS-03**: Orphan references pruned — keep only references actually cited in text
-- [ ] **CONS-04**: Section 2.2 heading formatting fixed ("2.240 Hz" to "2.2 40 Hz")
-- [ ] **CONS-05**: Mixed first person resolved — "we" changed to "I" throughout (single-author paper)
-- [ ] **CONS-06**: "Reactive thresholding" standardized to "Reactive Threshold" at L80
-- [ ] **CONS-07**: Orders of magnitude inconsistency resolved ("nearly three" vs "four")
+- [x] **CONS-04**: Section 2.2 heading formatting fixed ("2.240 Hz" to "2.2 40 Hz")
+- [x] **CONS-05**: Mixed first person resolved — "we" changed to "I" throughout (single-author paper)
+- [x] **CONS-06**: "Reactive thresholding" standardized to "Reactive Threshold" at L80
+- [x] **CONS-07**: Orders of magnitude inconsistency resolved ("nearly three" vs "four")
 
 ### Propagation
 
@@ -141,13 +141,13 @@ Requirements for the lab notebook conversion project.
 | DATA-05 | Phase 7 | Complete |
 | METH-01 | Phase 7 | Complete |
 | METH-02 | Phase 7 | Complete |
-| CONS-01 | Phase 8 | Pending |
+| CONS-01 | Phase 8 | Complete |
 | CONS-02 | Phase 8 | Pending |
 | CONS-03 | Phase 8 | Pending |
-| CONS-04 | Phase 8 | Pending |
-| CONS-05 | Phase 8 | Pending |
-| CONS-06 | Phase 8 | Pending |
-| CONS-07 | Phase 8 | Pending |
+| CONS-04 | Phase 8 | Complete |
+| CONS-05 | Phase 8 | Complete |
+| CONS-06 | Phase 8 | Complete |
+| CONS-07 | Phase 8 | Complete |
 | PROP-01 | Phase 9 | Pending |
 | PROP-02 | Phase 9 | Pending |
 | PROP-03 | Phase 9 | Pending |
