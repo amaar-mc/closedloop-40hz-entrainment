@@ -253,7 +253,7 @@ To enable temporal PAC forecasting, we constructed a 73-dimensional causal featu
 
 #### 3.4.1 Spectral Features (61 dimensions)
 
-Spectral power was estimated in five canonical frequency bands (delta 0.5–4 Hz, theta 4–8 Hz, alpha 8–13 Hz, beta 13–30 Hz, gamma 30–45 Hz) across all 7 frontal channels, yielding 35 band-power features. An additional 26 features captured cross-channel spectral coherence. All 61 spectral features were computed per-window causally using a Welch periodogram estimate.
+Spectral power was estimated in four frequency bands — theta (4–8 Hz), alpha (8–13 Hz), beta (13–30 Hz), and gamma (38–42 Hz) — across all 7 frontal channels, yielding 28 band-power features. Per-channel theta-to-gamma power ratios added 7 PAC-structure features, and per-channel phase-amplitude structure statistics (instantaneous coupling shape, 3 values per channel) contributed 21 additional features. Five global statistics (cross-channel mean and standard deviation of theta and gamma power, and mean theta-gamma ratio) completed the feature set. All 61 spectral features were computed per-window causally using a Welch periodogram estimate with no future information.
 
 #### 3.4.2 PAC-Derived Features (7 dimensions)
 
@@ -458,7 +458,7 @@ The eight-model search produced three actionable lessons that shaped the subsequ
 
 **Lesson 1: Feature quality dominates architectural complexity.** The removal of PAC-circular features in V3 caused R² to drop from 0.69 to 0.236 — a larger effect than any architectural innovation. This lesson directly informed the strict feature audit applied to the temporal dataset's 73-dimensional input space.
 
-**Lesson 2: The spectral feature set is near-optimal for instantaneous prediction.** Ridge regression on 61 band-power and coherence features achieved the same accuracy as the best deep learning model, indicating that the 61-dimensional spectral representation captures essentially all the instantaneous mutual information between EEG and epoch-level PAC.
+**Lesson 2: The spectral feature set is near-optimal for instantaneous prediction.** Ridge regression on 61 spectral and PAC-structure features achieved the same accuracy as the best deep learning model, indicating that the 61-dimensional spectral representation captures essentially all the instantaneous mutual information between EEG and epoch-level PAC.
 
 **Lesson 3: The relevant signal is temporal, not instantaneous.** The fact that all instantaneous models converge to the same ceiling indicates that the explanatory variance for PAC lies in temporal dynamics. This insight shaped both the architecture of the MultiscaleCausalTCN (dilated causal convolutions over a 20-step history) and its feature space (PAC moving averages and differences as explicit temporal inputs).
 
