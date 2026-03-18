@@ -76,8 +76,8 @@ A systematic architecture search across eight neural network configurations span
 **Contribution 2: Causal TCN for 5–10 second ahead PAC forecasting.**
 A multiscale causal Temporal Convolutional Network (31,043 parameters) trained on 73 engineered features achieves R² ≈ 0.25–0.28 at prediction horizons of 5–10 seconds, while all baseline methods including persistence and Ridge regression collapse to negative R² at these horizons — a +0.5 R² margin for the TCN.
 
-**Contribution 3: Closed-loop controller validated on 35 real dementia patient EEGs.**
-The TCN-based predictive controller achieves 72.1% alignment with patient therapeutic need versus 64.5% for reactive thresholding (p < 0.001, Hedges' g = 1.31), and targets 82.6% of low-PAC windows versus 51.7% for reactive control (p < 0.001, g = 4.47), reaching 91% of the theoretical oracle upper bound. Every individual patient (35/35) benefits from the predictive controller.
+**Contribution 3: Closed-loop controller validated on 35 elderly subjects' EEG recordings.**
+The TCN-based predictive controller achieves 72.1% alignment with patient therapeutic need versus 64.5% for Reactive Threshold (p < 0.001, Hedges' g = 1.31), and targets 82.6% of low-PAC windows versus 51.7% for reactive control (p < 0.001, g = 4.47), reaching 91% of the theoretical oracle upper bound. Every individual patient (35/35) benefits from the predictive controller.
 
 **Contribution 4: Characterization of the prediction horizon inflection point.**
 Analysis across prediction horizons 1–10 seconds reveals a clear transition near 3 seconds where persistence and linear baselines cease to provide useful predictions, while the TCN maintains R² ≈ 0.25. This inflection defines the operationally critical horizon range for proactive neuromodulation.
@@ -110,7 +110,7 @@ The quantitative measure used throughout the present work, the Modulation Index 
 
 ---
 
-### 2.240 Hz Sensory Entrainment: Mechanisms and Clinical Evidence
+### 2.2 40 Hz Sensory Entrainment: Mechanisms and Clinical Evidence
 
 #### 2.2.1 Landmark Animal Studies
 
@@ -433,7 +433,7 @@ ATCNet achieved R² = 0.22 — the lowest result among non-leakage-contaminated 
 
 ### 4.3 The R² = 0.287 Data Ceiling: Interpretation and Implications
 
-The convergence of eight architectures — spanning four orders of magnitude in parameter count, three feature representations, and multiple distinct design philosophies — to the same R² ≈ 0.287 is a scientific result in itself, not an engineering failure.
+The convergence of eight architectures — spanning nearly three orders of magnitude in parameter count, three feature representations, and multiple distinct design philosophies — to the same R² ≈ 0.287 is a scientific result in itself, not an engineering failure.
 
 **Why does the ceiling exist?** The fundamental cause is the epoch-level label assignment described in Section 3.2. PAC is computed over full 20–40 second epochs; these epoch-level values are assigned to all constituent 2-second windows. A 2-second window provides at most 500 samples — only 5 complete theta cycles at 4 Hz. The per-window EEG signal cannot contain enough information to recover the MI computed over a signal 10–20 times longer.
 
@@ -729,7 +729,7 @@ This work establishes a computational foundation for personalized closed-loop 40
 
 ## 8. Conclusion
 
-This paper presents a computational framework for personalized closed-loop 40 Hz gamma entrainment in Alzheimer's disease, combining static PAC estimation with temporal PAC forecasting to enable proactive rather than reactive stimulation control. The system was trained and evaluated on real EEG recordings from 35 elderly dementia patients, with all model development performed on held-out subject splits and primary results reported on a test set of 6 subjects never seen during training or hyperparameter selection.
+This paper presents a computational framework for personalized closed-loop 40 Hz gamma entrainment in Alzheimer's disease, combining static PAC estimation with temporal PAC forecasting to enable proactive rather than reactive stimulation control. The system was trained and evaluated on real EEG recordings from 35 elderly subjects, with all model development performed on held-out subject splits and primary results reported on a test set of 6 subjects never seen during training or hyperparameter selection.
 
 The central empirical finding is the **prediction horizon inflection point** at approximately 3 seconds. Below this threshold, auto-regressive baselines (persistence: R²=0.760 at 1s; Ridge: R²=0.812 at 1s) outperform the TCN, and temporal modeling offers no advantage over simpler methods. Above it — at the 5–10 second horizons operationally required for proactive stimulation preparation — both baselines collapse to negative R² while the MultiscaleCausalTCN maintains R² ≈ 0.25. This +0.5 R² margin over baselines at 5–10 second horizons is the mechanistic foundation for the controller advantage.
 
