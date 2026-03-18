@@ -112,6 +112,21 @@ None — no external service configuration required.
 - Figure captions for the paper should reference the ts=5 smoothing caveat per the embedded script comment
 - `scripts/generate_paper_figures.py` can be re-run at any time to regenerate figures if data changes
 
+## Self-Check: PASSED
+
+All created files confirmed present:
+- [OK] scripts/generate_paper_figures.py
+- [OK] results/figures/horizon_sweep.png
+- [OK] results/figures/horizon_sweep.pdf
+- [OK] results/figures/system_block_diagram.png
+- [OK] results/figures/system_block_diagram.pdf
+- [OK] docs/paper/sections/.gitkeep
+
+All task commits confirmed present:
+- [OK] 1dde516 (Task 1: figures)
+- [OK] 3a201ab (Task 2: directory)
+- [OK] 71d218d (metadata)
+
 ---
 *Phase: 06-write-research-paper*
 *Completed: 2026-03-15*
