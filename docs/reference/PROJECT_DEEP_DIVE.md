@@ -221,9 +221,9 @@ This was the most important coding session of the project. Four innovations addr
 - *Why:* Weight decay is a regularization technique that penalizes large weights. Standard Adam implementation couples weight decay with the adaptive learning rate, which reduces the effective regularization for parameters with large gradients. AdamW applies weight decay separately (decoupled), providing consistent regularization regardless of gradient magnitude. With a small dataset (11,160 training sequences), proper regularization is critical.
 - *Note:* The EEGNet uses standard Adam, not AdamW. The TCN uses AdamW.
 
-**5-second hysteresis in the controller.**
-- *Why:* Without hysteresis, the controller can oscillate between STIMULATE and REST every second if PAC hovers near the threshold. This produces a "chattering" signal that is clinically useless -- you cannot meaningfully stimulate for 1 second, rest for 1 second, stimulate again. The 5-second hold time ensures each decision persists long enough for the brain to respond and for the controller to observe the effect.
-- *Implementation detail:* The TCN validation script (`run_tcn_validation.py`) actually uses a 3-second hysteresis for the TCN controller, slightly shorter than the 5-second default in `src/controller.py`. Both are reasonable values.
+**3-second hysteresis in the controller.**
+- *Why:* Without hysteresis, the controller can oscillate between STIMULATE and REST every second if PAC hovers near the threshold. This produces a "chattering" signal that is clinically useless -- you cannot meaningfully stimulate for 1 second, rest for 1 second, stimulate again. The 3-second hold time ensures each decision persists long enough for the brain to respond and for the controller to observe the effect.
+- *Implementation detail:* The TCN validation script (`run_tcn_validation.py`) uses a 3-second hysteresis for the TCN controller. `src/controller.py` defaults to 5-second, but the reported results use the 3-second value from `run_tcn_validation.py`.
 
 ---
 
@@ -260,8 +260,8 @@ This is the single most important experiment. It compares three methods across p
 
 ### Controller Comparison Table
 
-| Controller | Alignment | Low-PAC Targeting | PAC Gap (uV2) | Stim % |
-|-----------|-----------|-------------------|---------------|--------|
+| Controller | Alignment | Low-PAC Targeting | PAC Gap (×10⁻⁶ MI) | Stim % |
+|-----------|-----------|-------------------|--------------------|--------|
 | Fixed Schedule | 45.0% | 61.4% | -6.6 (wrong) | 66.6% |
 | Reactive Threshold | 64.5% | 51.7% | +21.1 | 36.7% |
 | **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** | 59.7% |
@@ -290,7 +290,7 @@ This is the single most important experiment. It compares three methods across p
 | Alignment | 72.1% vs 64.5% | +1.31 | Large |
 | Low-PAC Targeting | 82.6% vs 51.7% | +4.47 | Very large |
 | PAC Gap | 30.5 vs 21.1 | +1.57 | Large |
-| Lead Time | 0.8s vs 0.2s | +0.76 | Medium |
+| Lead Time | 0.8s vs 0.2s | +0.75 | Medium |
 | Clinical Utility | 0.681 vs 0.591 | +0.95 | Large |
 
 **What Hedges' g means practically:**
@@ -308,7 +308,7 @@ This is astronomically unlikely. The TCN advantage is not driven by a few outlie
 
 ### 91% of Oracle: What This Means
 
-The Alignment Oracle has perfect knowledge of future PAC and achieves a PAC gap of +33.3 uV2. The TCN achieves +30.5 uV2, which is 91.5% of the oracle. This means the TCN's predictions, despite being noisy (R2 = 0.170), are good enough to nearly saturate the achievable performance bound. There is only ~8.5% room for improvement, which would require substantially better PAC prediction.
+The Alignment Oracle has perfect knowledge of future PAC and achieves a PAC gap of +33.3 ×10⁻⁶ MI. The TCN achieves +30.5 ×10⁻⁶ MI, which is 91.5% of the oracle. This means the TCN's predictions, despite being noisy (R2 = 0.170), are good enough to nearly saturate the achievable performance bound. There is only ~8.5% room for improvement, which would require substantially better PAC prediction.
 
 ### The Stimulation Budget Trade-off
 
@@ -403,7 +403,7 @@ This is the primary validation and the source of all reported results. It:
 
 3. **Parameter-efficient.** The entire system is 32,500 parameters (1,457 EEGNet + 31,043 TCN). For comparison, GPT-2 has 117 million parameters. The small size prevents overfitting on limited data and enables deployment on embedded hardware.
 
-4. **Statistically robust results.** Large effect sizes (g = 1.31 - 4.47), p < 0.001, 35/35 subjects benefit, robust across threshold parameters 0.2-1.0, validated with proper non-parametric tests (Wilcoxon) and bias-corrected effect sizes (Hedges' g with bootstrapped CIs).
+4. **Statistically robust results.** Large effect sizes (g = 1.31 - 4.47), p < 0.001, 35/35 subjects benefit, robust across threshold parameters 0.2-1.0, validated with proper non-parametric tests (Wilcoxon) and bias-corrected effect sizes (Hedges' g with CIs via large-sample normal approximation).
 
 5. **Thoroughly audited for data integrity.** Subject-level splits verified, shuffle-label sanity check (R2 = -0.332), temporal causality verified, normalization fit on training data only, two leakage incidents caught and corrected.
 
@@ -456,7 +456,7 @@ This is the primary validation and the source of all reported results. It:
 | Architectures tested | 8+ | All converge to R2 = 0.287 |
 | TCN alignment | 72.1% | vs Reactive 64.5% |
 | Low-PAC targeting | 82.6% | vs Reactive 51.7% |
-| PAC gap | 30.5 uV2 | vs Reactive 21.1 |
+| PAC gap | 30.5 ×10⁻⁶ MI | vs Reactive 21.1 ×10⁻⁶ MI |
 | Hedges' g (alignment) | 1.31 | Large effect |
 | Hedges' g (targeting) | 4.47 | Very large effect |
 | Hedges' g (PAC gap) | 1.57 | Large effect |
@@ -509,7 +509,7 @@ A: "In adaptive music therapy, the TCN provides three concrete benefits: (1) 82.
 
 I built an adaptive system using a Temporal Convolutional Network with 31,000 parameters that predicts brain entrainment state 5-10 seconds into the future. The key finding is the horizon sweep: at 1-2 second horizons, simple baselines work fine. But at 5-10 seconds -- the minimum lead time for proactive control -- all baselines collapse below zero R-squared while the TCN maintains R-squared around 0.25, a +0.5 margin.
 
-I validated this on real EEG data from 35 dementia patients. The TCN controller achieved 72% alignment between stimulation and therapeutic need versus 65% for reactive control, with a Hedges' g of 1.31 and p less than 0.001. Low-PAC targeting -- delivering stimulation when the brain actually needs it -- improved from 52% to 83%, a very large effect (g = 4.47). All 35 patients benefited, and the controller reached 91% of the theoretical optimum.
+I validated this on real EEG data from 35 elderly subjects. The TCN controller achieved 72% alignment between stimulation and therapeutic need versus 65% for reactive control, with a Hedges' g of 1.31 and p less than 0.001. Low-PAC targeting -- delivering stimulation when the brain actually needs it -- improved from 52% to 83%, a very large effect (g = 4.47). All 35 patients benefited, and the controller reached 91% of the theoretical optimum.
 
 The system is small enough for a wearable device and could enable personalized adaptive music therapy where therapeutic content blends seamlessly with ambient music, adapting to each patient's brain state in real time."
 

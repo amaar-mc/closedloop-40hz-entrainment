@@ -136,7 +136,7 @@ Pre-multiscale versions preserved for history. See [`archive/`](archive/) -- the
 |--------|------------------|----------------------|
 | Architecture | GAT-Transformer (hundreds of K params) | EEGNet (1.5K) + causal TCN (31K) |
 | Channels | 64-128 high-density | 7 frontal (10/20) |
-| Subjects | "20-40 healthy adults, 18-35yo" | 35 elderly dementia patients |
+| Subjects | "20-40 healthy adults, 18-35yo" | 35 elderly subjects |
 | Sampling rate | 500-1000 Hz | 250 Hz |
 | Control system | MIQP MPC with GUROBI | Threshold z-score with hysteresis |
 | Static R^2 target | > 0.80 | 0.287 (achieved) |

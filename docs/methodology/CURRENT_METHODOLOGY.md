@@ -21,7 +21,7 @@ Develop a personalized closed-loop system that predicts theta-gamma phase-amplit
 
 | Property | Value |
 |----------|-------|
-| Subjects | 35 (dementia patients from memory clinic in Tehran) |
+| Subjects | 35 (elderly subjects from memory clinic in Tehran) |
 | EEG channels | 19 monopolar (10/20 system) |
 | Sampling rate | 250 Hz |
 | File format | BIDS-compliant; .set files are MATLAB v7.3 (HDF5); actual data in companion .fdt files (float32, Fortran/column-major order) |
@@ -41,7 +41,7 @@ Develop a personalized closed-loop system that predicts theta-gamma phase-amplit
 
 1. Load .set/.fdt pairs via custom HDF5 reader (MNE's `read_raw_eeglab` fails on v7.3 format).
 2. Select 7 frontal channels: Fp1, Fp2, F7, F3, Fz, F4, F8.
-3. Apply light preprocessing: bandpass 0.5-80 Hz, 50 Hz notch, artifact rejection (+-100 uV threshold), then CAR (artifact rejection before common average reference to prevent corrupted channels from propagating).
+3. Apply light preprocessing: bandpass 0.5-80 Hz, 50 Hz notch, artifact zeroing (samples exceeding ±100 µV set to 0.0), then CAR (artifact zeroing before common average reference to prevent corrupted channels from propagating).
 4. Segment by BIDS events.tsv: extract Stimulus and Rest epochs.
 5. Compute epoch-level PAC (Modulation Index, Tort 2010) from full 20-40s epochs for stable labels.
 6. Extract 2-second sliding windows (500 samples) with 1-second hop (50% overlap).
@@ -56,8 +56,10 @@ Develop a personalized closed-loop system that predicts theta-gamma phase-amplit
 ### 3.2 Spectral Feature Extraction (`temporal/temporal_dataset.py`)
 
 Per-window spectral features (61 dimensions) computed independently per split:
-- Band power in 5 frequency bands (delta, theta, alpha, beta, gamma) across 7 channels
-- Cross-channel spectral coherence
+- Band power in 4 frequency bands (theta, alpha, beta, gamma) across 7 channels = 28 features (no delta band)
+- 7 theta/gamma power ratio features (one per channel)
+- PAC-structure features (inter-channel PAC-derived) = 21 features
+- 5 global statistics (spectral entropy, peak frequency, bandwidth, asymmetry, concentration)
 - Saved as `{split}_spectral_cache.npy`
 
 ### 3.3 Multiscale Temporal Dataset (`temporal_multiscale/build_multiscale_dataset.py`)
@@ -132,7 +134,7 @@ Threshold-based decision engine with hysteresis:
 | z > +0.5 | REST | PAC above baseline, prevent habituation |
 | else | MAINTAIN | Stable coupling |
 
-Hysteresis: 5-second minimum hold time prevents oscillation.
+Hysteresis: 3-second minimum hold time prevents oscillation.
 
 ### 5.2 Personalization (`src/personalization.py`)
 
@@ -150,7 +152,7 @@ Brain response model (exponential approach):
 ### 5.4 Validation (`src/validation.py`)
 
 Compares 6 strategies: Fixed Schedule, Reactive Threshold, TCN Predictive, Hybrid TCN+Reactive, PI Controller, Alignment Oracle.
-Statistical analysis: Wilcoxon signed-rank tests (non-parametric, paired), Hedges' g with bootstrap 95% CIs, binomial tests for per-subject consistency.
+Statistical analysis: Wilcoxon signed-rank tests (non-parametric, paired), Hedges' g with 95% CIs (large-sample normal approximation), binomial tests for per-subject consistency.
 
 ---
 
@@ -173,8 +175,8 @@ Statistical analysis: Wilcoxon signed-rank tests (non-parametric, paired), Hedge
 
 The trained TCN was integrated into a predictive controller and replayed on all 35 subjects' real EEG data (`run_tcn_validation.py`). No simulation — only real measurements and counterfactual decision-making.
 
-| Controller | Alignment | Low-PAC Targeting | PAC Gap (uV^2) |
-|-----------|-----------|-------------------|----------------|
+| Controller | Alignment | Low-PAC Targeting | PAC Gap (×10⁻⁶ MI) |
+|-----------|-----------|-------------------|--------------------|
 | Fixed Schedule | 45.0% | 61.4% | -6.6 (wrong direction) |
 | Reactive Threshold | 64.5% | 51.7% | +21.1 |
 | **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** |
