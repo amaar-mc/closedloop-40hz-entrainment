@@ -124,7 +124,7 @@ The latest pipeline for predicting *future* PAC (5–10 s ahead):
 
 1. `ClosedLoopController` runs EEGNet inference on each 2-second window.
 2. `PersonalizationModule` maintains a 30-second rolling baseline; outputs z-score.
-3. Decision: z < −0.5 → STIMULATE, z > +0.5 → REST, else MAINTAIN. 5-second hysteresis.
+3. Decision: z < −0.5 → STIMULATE, z > +0.5 → REST, else MAINTAIN. 3-second hysteresis.
 4. `EntrainmentSimulator` models brain response (exponential PAC dynamics, optional fatigue model).
 5. `ValidationFramework` compares Fixed Schedule / Reactive / Predictive Look-Ahead / Oracle.
 
