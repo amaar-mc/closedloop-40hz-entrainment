@@ -85,7 +85,7 @@
 #### `validation.py` — VERIFIED, CORRECT
 - Compares 4 strategies: Fixed, Reactive, Predictive, Oracle
 - Proper statistical tests (Wilcoxon signed-rank)
-- Effect sizes (Hedges' g with bootstrap CI)
+- Effect sizes (Hedges' g with CI via normal approximation)
 - **No issues found**
 
 ### 2.2 Temporal Prediction (`temporal_multiscale/`)
@@ -135,7 +135,7 @@
 - Replays on all 35 subjects' real EEG PAC time series
 - Computes alignment, low-PAC targeting, PAC gap, clinical utility
 - Runs 6 controller variants
-- Statistical tests: Wilcoxon, Hedges' g with bootstrap CI
+- Statistical tests: Wilcoxon, Hedges' g with CI via normal approximation
 - Saves results to JSON
 - **This is the most important script — thoroughly verified**
 
@@ -163,7 +163,7 @@
 | +0.5 R² margin over baselines at 5-10s | Same source | HIGH |
 | TCN alignment 72.1% vs 64.5% reactive | tcn_validation_results.json | HIGH |
 | Low-PAC targeting 82.6% vs 51.7% | Same source | HIGH |
-| PAC gap 30.5 vs 21.1 µV² | Same source | HIGH |
+| PAC gap 30.5 vs 21.1 ×10⁻⁶ MI | Same source | HIGH |
 | g=1.31, g=4.47, g=1.57, all p<0.001 | Same source (proper stats) | HIGH |
 | 35/35 subjects benefit | Same source | HIGH |
 | 91% of oracle performance | Calculated: 30.5/33.3 = 91.5% | HIGH |

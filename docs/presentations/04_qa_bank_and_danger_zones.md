@@ -299,7 +299,7 @@ Answers are written in first person, as you would naturally say them. Practice s
 
 **Q: Why only 35 subjects? Is that enough?**
 
-> The dataset is from OpenNeuro ds005048, which is one of the only publicly available EEG datasets from dementia patients during 40 Hz auditory stimulation. 35 subjects is small for a machine learning study, but three things give me confidence. First, the results are consistent across all 35 -- not driven by outliers. Second, the statistical tests I used (Wilcoxon signed-rank) are appropriate for small samples. Third, the effect sizes are very large (Hedges' g above 1.3), meaning the differences aren't subtle -- they're clear enough to detect reliably even with 35 subjects.
+> The dataset is from OpenNeuro ds005048, which is one of the only publicly available EEG datasets of 40 Hz auditory stimulation in elderly subjects with cognitive impairment. 35 subjects is small for a machine learning study, but three things give me confidence. First, the results are consistent across all 35 -- not driven by outliers. Second, the statistical tests I used (Wilcoxon signed-rank) are appropriate for small samples. Third, the effect sizes are very large (Hedges' g above 1.3), meaning the differences aren't subtle -- they're clear enough to detect reliably even with 35 subjects.
 
 ### Category: Technical Deep Dives (If Judges Are Domain Experts)
 
