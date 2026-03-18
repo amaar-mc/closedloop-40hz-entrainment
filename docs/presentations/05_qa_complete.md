@@ -38,7 +38,7 @@ I used a publicly available dataset from OpenNeuro -- ds005048 by Lahijanian et 
 
 **How long did this take?**
 
-About four months of focused work. The first phase was data loading, preprocessing, and PAC computation. The second was the architecture marathon -- testing six models for static PAC estimation. The third was building the temporal prediction pipeline and the causal TCN. The fourth was the controller, validation, and statistical analysis.
+About four months of focused work. The first phase was data loading, preprocessing, and PAC computation. The second was the architecture marathon -- testing eight configurations for static PAC estimation. The third was building the temporal prediction pipeline and the causal TCN. The fourth was the controller, validation, and statistical analysis.
 
 ---
 
@@ -108,7 +108,7 @@ Dropout (0.5 for EEGNet, 0.1 for TCN), weight decay of 1e-3 in the TCN optimizer
 
 **Walk me through your results.**
 
-Four key results. First, the TCN predictive controller achieves 72.1% alignment and catches 82.6% of low-PAC windows on all 35 subjects' real EEG, versus 64.5% and 51.7% for reactive -- that's Hedges' g of 1.31 and 4.47, both p less than 0.001. Second, all 35 out of 35 patients individually benefit -- binomial p less than 0.001. Third, the advantage grows with neural fatigue, from +9% to +11.2%. Fourth, results hold across four different mathematical fatigue models.
+Four key results. First, the TCN predictive controller achieves 72.1% alignment and catches 82.6% of low-PAC windows on all 35 subjects' real EEG, versus 64.5% and 51.7% for reactive -- that's Hedges' g of 1.31 and 4.47, both p less than 0.001. Second, all 35 out of 35 subjects individually show improved alignment -- binomial p less than 0.001. Third, the advantage grows with neural fatigue, from +0.4% to +5.7% across six fatigue severity levels in simulation. Fourth, results are robust across prediction confidence thresholds (delta_z=0.2-1.0 all outperform reactive).
 
 ---
 
@@ -120,7 +120,7 @@ Two independent protocols. Primary: I replayed the TCN controller on all 35 subj
 
 **What controllers did you compare against?**
 
-Four. Fixed schedule (40s on, 20s off -- the clinical standard). Reactive threshold (stimulate when current PAC drops below a cutoff). PI controller (proportional-integral feedback). Alignment oracle (perfect future knowledge -- the theoretical ceiling). The TCN reaches 92% of the oracle's targeting performance.
+Four. Fixed schedule (40s on, 20s off -- the clinical standard). Reactive threshold (stimulate when current PAC drops below a cutoff). PI controller (proportional-integral feedback). Alignment oracle (perfect future knowledge -- the theoretical ceiling). The TCN reaches 91% of the oracle's targeting performance.
 
 ---
 
@@ -146,7 +146,7 @@ Wilcoxon signed-rank is a non-parametric paired test. With 35 subjects I can't c
 
 **How did you progress from hypothesis to results?**
 
-Step by step. First I loaded and preprocessed the EEG data, computing PAC for each epoch. Then I tried to predict PAC from single windows -- that's the architecture marathon, six models, all hitting R-squared 0.287. That ceiling told me single-snapshot prediction was maxed out. So I pivoted to temporal prediction -- using sequences of past observations to forecast future PAC. Built the causal TCN, ran the horizon sweep to prove it adds value at 5+ seconds, then plugged it into a closed-loop controller and validated on all 35 patients' real EEG.
+Step by step. First I loaded and preprocessed the EEG data, computing PAC for each epoch. Then I tried to predict PAC from single windows -- that's the architecture marathon, eight configurations, all hitting R-squared 0.287. That ceiling told me single-snapshot prediction was maxed out. So I pivoted to temporal prediction -- using sequences of past observations to forecast future PAC. Built the causal TCN, ran the horizon sweep to prove it adds value at 5+ seconds, then plugged it into a closed-loop controller and validated on all 35 patients' real EEG.
 
 ---
 
@@ -184,7 +184,7 @@ Yes, and here's why. The controller doesn't need the exact PAC value -- it needs
 
 **This is just a simulation, not a real system.**
 
-The primary results are NOT simulation. I replayed the controller on all 35 patients' actual EEG recordings. Real brain data, real timing. The model only sees data that would be available in real time. The simulation is secondary evidence about fatigue dynamics, tested across four different fatigue model assumptions for robustness. Offline replay is the standard validation approach in brain-computer interface research before moving to live systems. And I'm transparent about this as a limitation on my poster.
+The primary results are NOT simulation. I replayed the controller on all 35 patients' actual EEG recordings. Real brain data, real timing. The model only sees data that would be available in real time. The simulation is secondary evidence about fatigue dynamics, tested across six fatigue severity levels for robustness. Offline replay is the standard validation approach in brain-computer interface research before moving to live systems. And I'm transparent about this as a limitation on my poster.
 
 ---
 
@@ -202,13 +202,13 @@ Reactive responds after the brain has already lost entrainment. By the time PAC 
 
 **Why not use a larger model, a Transformer, or GPT?**
 
-I tested six architectures from 1,457 to 2 million parameters. They all converge near the same performance for static PAC estimation. The 2-million-parameter model scored lower than the 1,457-parameter one due to overfitting. With 17,000 training samples from 35 subjects, the dataset is the bottleneck. A Transformer's self-attention is O(n-squared) in sequence length -- overkill for 20-step sequences and prone to overfitting with this data size. The TCN's inductive bias of local temporal patterns with exponentially growing receptive field matches EEG signal structure.
+I tested eight configurations from 1,457 to 1.1 million parameters. They all converge near the same performance for static PAC estimation. The 1.1-million-parameter model scored lower than the 1,457-parameter one due to overfitting. With 17,000 training samples from 35 subjects, the dataset is the bottleneck. A Transformer's self-attention is O(n-squared) in sequence length -- overkill for 20-step sequences and prone to overfitting with this data size. The TCN's inductive bias of local temporal patterns with exponentially growing receptive field matches EEG signal structure.
 
 ---
 
 **What's actually novel about your approach?**
 
-Three things. First, no one has built a predictive closed-loop controller for 40 Hz entrainment -- existing approaches are reactive at best. I searched the literature extensively. Second, the horizon sweep methodology -- evaluating where a forecasting model adds value relative to baselines across the full prediction horizon, rather than reporting a single accuracy number. Third, systematically testing six architectures to prove the performance ceiling is a data limitation and using that finding to justify the pivot to temporal modeling.
+Three things. First, no one has built a predictive closed-loop controller for 40 Hz entrainment -- existing approaches are reactive at best. I searched the literature extensively. Second, the horizon sweep methodology -- evaluating where a forecasting model adds value relative to baselines across the full prediction horizon, rather than reporting a single accuracy number. Third, systematically testing eight configurations to prove the performance ceiling is a data limitation and using that finding to justify the pivot to temporal modeling.
 
 ---
 
@@ -250,13 +250,13 @@ Primary is real data: I replayed the controller on all 35 subjects' recorded EEG
 
 **What about the architecture marathon? Why was that important?**
 
-Before building the temporal system, I tested six architectures for static PAC estimation. EEGNet (1,457 params), SpecTempNet (180K), ViT-TCNet (2M), Ridge regression (135 coefficients), ATCNet (25K), and EEGNetLarge (141K). All three simplest models -- EEGNet, Ridge, EEGNetLarge -- converge at R-squared 0.287. The complex ones performed worse due to overfitting. That convergence proves 0.287 is a data ceiling, not a model limitation. Recognizing that was what justified the entire pivot from static to temporal prediction. Without the marathon, I might have kept trying bigger models and never moved forward.
+Before building the temporal system, I tested eight configurations for static PAC estimation. EEGNet (V1, 1,457 params), EEGNetV2 (V2, 3,200), SpecTempNet (V3, 180K), ViT-TCNet (V4, 1.1M), Ridge regression (V5, 135 coefficients), Optimized Ensemble (V6, ~200), 1D CNN+Attention (V7, 28K), and ATCNet (V8, 25K). The simplest models -- EEGNet, Ridge, Ensemble -- converge at R-squared 0.287. The complex ones performed worse due to overfitting. That convergence proves 0.287 is a data ceiling, not a model limitation. Recognizing that was what justified the entire pivot from static to temporal prediction. Without the marathon, I might have kept trying bigger models and never moved forward.
 
 ---
 
 **Do the conclusions follow from the data?**
 
-Every conclusion maps to a specific finding. "TCN outperforms reactive" maps to Hedges' g = 1.31 for alignment and 4.47 for targeting, both p less than 0.001 on 35 subjects. "Every patient benefits" maps to 35/35 above-diagonal scatter, binomial p less than 10 to the negative 10. "Advantage grows with fatigue" maps to a monotonic trend from +9% to +11.2% across 6 severity levels, confirmed across 4 fatigue model assumptions. The limitation -- offline replay -- is stated explicitly on the poster.
+Every conclusion maps to a specific finding. "TCN outperforms reactive" maps to Hedges' g = 1.31 for alignment and 4.47 for targeting, both p less than 0.001 on 35 subjects. "Every patient benefits" maps to 35/35 above-diagonal scatter, binomial p less than 10 to the negative 10. "Advantage grows with fatigue" maps to a monotonic trend from +0.4% to +5.7% across six fatigue severity levels in simulation. The limitation -- offline replay -- is stated explicitly on the poster.
 
 ---
 
