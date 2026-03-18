@@ -24,7 +24,7 @@ These results demonstrate that forecasting PAC enables personalized 40 Hz therap
 
 Alzheimer's disease (AD) is a progressive neurodegenerative disorder and the leading cause of dementia worldwide. Over 55 million individuals currently live with dementia globally, a figure projected to nearly triple to 153 million by 2050 as populations age [1]. AD accounts for 60–70% of all dementia cases and imposes an enormous societal burden: in the United States alone, the annual economic cost exceeds $300 billion, and family caregivers contribute an estimated 18 billion hours of unpaid care each year [1]. Despite decades of pharmaceutical research, approved disease-modifying treatments remain narrow in their benefits and limited in accessibility, underscoring the urgent need for novel therapeutic strategies that can complement or amplify pharmacological interventions.
 
-A rapidly emerging non-pharmacological approach is sensory-evoked gamma entrainment — the use of 40 Hz auditory or visual stimulation to synchronize gamma-frequency (30–100 Hz) brain oscillations. Iaccarino et al. [7] demonstrated in a landmark Nature study that optogenetically and sensory-driving gamma oscillations at 40 Hz in transgenic mouse models of AD reduced amyloid-beta (Aβ) by up to 50% through microglial activation and enhanced phagocytic clearance. Subsequent work expanded these effects to auditory modalities and multi-sensory stimulation, showing reductions in both Aβ and tau pathology alongside improvements in spatial memory. Most recently, Chan et al. [11] reported results from a Phase II open-label extension study at MIT and Cognito Therapeutics showing that sustained 40 Hz multisensory stimulation slowed brain atrophy in mild AD patients and reduced plasma phosphorylated tau (pTau217) by 19–47% — representing the first human clinical evidence of target engagement at this scale.
+A rapidly emerging non-pharmacological approach is sensory-evoked gamma entrainment — the use of 40 Hz auditory or visual stimulation to synchronize gamma-frequency (30–100 Hz) brain oscillations. Iaccarino et al. [6] demonstrated in a landmark Nature study that optogenetically and sensory-driving gamma oscillations at 40 Hz in transgenic mouse models of AD reduced amyloid-beta (Aβ) by up to 50% through microglial activation and enhanced phagocytic clearance. Subsequent work expanded these effects to auditory modalities and multi-sensory stimulation, showing reductions in both Aβ and tau pathology alongside improvements in spatial memory. Most recently, Chan et al. [9] reported results from a Phase II open-label extension study at MIT and Cognito Therapeutics showing that sustained 40 Hz multisensory stimulation slowed brain atrophy in mild AD patients and reduced plasma phosphorylated tau (pTau217) by 19–47% — representing the first human clinical evidence of target engagement at this scale.
 
 These findings position 40 Hz gamma entrainment as a promising, low-cost, and mechanistically grounded therapeutic avenue. However, all existing clinical implementations share a fundamental limitation: stimulation is delivered on a rigid fixed schedule, entirely independent of the patient's real-time neural state. This one-size-fits-all approach ignores two critical realities — substantial inter-individual variability in entrainment response and progressive intra-session habituation — that together render fixed protocols systematically suboptimal. The present work addresses this gap by developing and validating a predictive, closed-loop control system that forecasts future entrainment state to enable proactive, personalized stimulation timing.
 
@@ -36,17 +36,17 @@ These findings position 40 Hz gamma entrainment as a promising, low-cost, and me
 
 ### 1.2 40 Hz Gamma Entrainment as Therapy
 
-The therapeutic hypothesis underlying gamma entrainment is grounded in the disruption of normal oscillatory dynamics in AD. Gamma oscillations (30–100 Hz) are fundamental to sensory binding, attention, working memory consolidation, and inter-regional neural communication; in AD, gamma activity is reduced early in disease progression, often preceding amyloid plaque formation and clinically detectable cognitive decline [3]. This dysregulation reflects a loss of fast-spiking parvalbumin-positive (PV) interneurons that normally pace cortical gamma rhythms, disrupting the network dynamics on which higher cognitive function depends [7].
+The therapeutic hypothesis underlying gamma entrainment is grounded in the disruption of normal oscillatory dynamics in AD. Gamma oscillations (30–100 Hz) are fundamental to sensory binding, attention, working memory consolidation, and inter-regional neural communication; in AD, gamma activity is reduced early in disease progression, often preceding amyloid plaque formation and clinically detectable cognitive decline [2]. This dysregulation reflects a loss of fast-spiking parvalbumin-positive (PV) interneurons that normally pace cortical gamma rhythms, disrupting the network dynamics on which higher cognitive function depends [6].
 
-The mechanistic pathway from 40 Hz stimulation to amyloid clearance involves multiple interconnected processes. First, optogenetic or sensory 40 Hz drive re-engages PV interneurons, restoring impaired gamma rhythms across cortical networks [7]. Second, this interneuronal activation triggers an immunological cascade: upregulation of cytokines including IL-6 and IL-4 promotes microglial morphological transformation and dramatically enhanced phagocytosis of Aβ plaques [13]. This cytokine profile is distinct from general neuroinflammation, representing a targeted neuroprotective response rather than a non-specific inflammatory reaction. Third, a recently identified glymphatic pathway contributes substantially to clearance: Murdock et al. [8] demonstrated in a 2024 Nature study using the 5XFAD mouse model that multisensory 40 Hz stimulation promotes cerebrospinal fluid (CSF) influx and interstitial fluid efflux in the cortex. Combined audiovisual stimulation produced stronger gamma oscillations than either modality alone, leading to marked microglial clustering within 25 µm of Aβ plaques and a whole-brain 37% reduction in neocortical plaque volume. Critically, pharmacological inhibition of glymphatic flow abolished the clearance effect, confirming this pathway as necessary — not merely contributory — to the therapeutic mechanism.
+The mechanistic pathway from 40 Hz stimulation to amyloid clearance involves multiple interconnected processes. First, optogenetic or sensory 40 Hz drive re-engages PV interneurons, restoring impaired gamma rhythms across cortical networks [6]. Second, this interneuronal activation triggers an immunological cascade: upregulation of cytokines including IL-6 and IL-4 promotes microglial morphological transformation and dramatically enhanced phagocytosis of Aβ plaques [11]. This cytokine profile is distinct from general neuroinflammation, representing a targeted neuroprotective response rather than a non-specific inflammatory reaction. Third, a recently identified glymphatic pathway contributes substantially to clearance: Murdock et al. [7] demonstrated in a 2024 Nature study using the 5XFAD mouse model that multisensory 40 Hz stimulation promotes cerebrospinal fluid (CSF) influx and interstitial fluid efflux in the cortex. Combined audiovisual stimulation produced stronger gamma oscillations than either modality alone, leading to marked microglial clustering within 25 µm of Aβ plaques and a whole-brain 37% reduction in neocortical plaque volume. Critically, pharmacological inhibition of glymphatic flow abolished the clearance effect, confirming this pathway as necessary — not merely contributory — to the therapeutic mechanism.
 
-Translation to human subjects has progressed substantially in recent years. A 2025 study in aged rhesus monkeys found that long-term 40 Hz auditory stimulation elevated CSF Aβ levels, consistent with mobilization and clearance from brain tissue, with effects lasting up to five weeks post-treatment [10]. In humans, Chan et al. [11] reported an open-label extension study in which patients with mild AD who received sustained 40 Hz multisensory stimulation retained strong EEG entrainment responses over time and showed less hippocampal atrophy compared to matched controls — a finding corroborated by auditory gamma entrainment's demonstrated ability to enhance default mode network (DMN) connectivity in dementia patients [12]. These results collectively establish 40 Hz entrainment as a clinically relevant therapeutic modality and make the optimization of stimulation delivery an immediate practical priority.
+Translation to human subjects has progressed substantially in recent years. A 2025 study in aged rhesus monkeys found that long-term 40 Hz auditory stimulation elevated CSF Aβ levels, consistent with mobilization and clearance from brain tissue, with effects lasting up to five weeks post-treatment [8]. In humans, Chan et al. [9] reported an open-label extension study in which patients with mild AD who received sustained 40 Hz multisensory stimulation retained strong EEG entrainment responses over time and showed less hippocampal atrophy compared to matched controls — a finding corroborated by auditory gamma entrainment's demonstrated ability to enhance default mode network (DMN) connectivity in dementia patients [10]. These results collectively establish 40 Hz entrainment as a clinically relevant therapeutic modality and make the optimization of stimulation delivery an immediate practical priority.
 
 ### 1.3 Limitations of Fixed-Schedule Protocols
 
 Despite the therapeutic promise of 40 Hz entrainment, current clinical protocols are uniformly open-loop: they deliver stimulation according to a predetermined schedule without reference to the patient's instantaneous neural state. The standard protocol in human trials consists of alternating 40-second stimulation blocks and 20-second rest periods, repeated continuously for one hour regardless of the patient's entrainment response [12, 39]. This approach is administratively simple but is systematically misaligned with the highly variable neural dynamics of the dementia population.
 
-The first dimension of variability is inter-individual. Fortunato et al. [15] analyzed a cohort of participants receiving gamma entrainment therapy and found that 23 achieved measurable entrainment at 40 Hz as assessed by power spectral density, while 10 showed minimal or no measurable response — a non-responder fraction of approximately 30% that fixed protocols cannot detect, accommodate, or dynamically address. Cabral et al. [16] similarly identified baseline neural state, sensory processing abilities, prior cognitive reserve, and individual neural architecture as major determinants of entrainment efficacy, noting that these factors vary across individuals in ways that defy prediction from clinical characteristics alone. Personalized whole-brain neural mass modeling has further demonstrated that subject-specific computational approaches uncover synergistic Aβ and tau pathomechanistic interactions that population-level models obscure [17]. High-performing patients and non-responders thus receive identical stimulation despite profoundly different neural responses, yielding population-average outcomes that underperform what individualized targeting could achieve.
+The first dimension of variability is inter-individual. Fortunato et al. [12] analyzed a cohort of participants receiving gamma entrainment therapy and found that 23 achieved measurable entrainment at 40 Hz as assessed by power spectral density, while 10 showed minimal or no measurable response — a non-responder fraction of approximately 30% that fixed protocols cannot detect, accommodate, or dynamically address. Cabral et al. [13] similarly identified baseline neural state, sensory processing abilities, prior cognitive reserve, and individual neural architecture as major determinants of entrainment efficacy, noting that these factors vary across individuals in ways that defy prediction from clinical characteristics alone. Personalized whole-brain neural mass modeling has further demonstrated that subject-specific computational approaches uncover synergistic Aβ and tau pathomechanistic interactions that population-level models obscure [14]. High-performing patients and non-responders thus receive identical stimulation despite profoundly different neural responses, yielding population-average outcomes that underperform what individualized targeting could achieve.
 
 The second dimension of variability is intra-session habituation. Repeated identical stimuli cause progressive weakening of neural responses — a canonical phenomenon in sensory neuroscience described formally as neural adaptation — and this effect is well-documented in the context of gamma entrainment. In the OpenNeuro ds005048 dataset used in this work, individual subjects exhibit PAC trajectories that rise, plateau, and decline within single sessions, reflecting the time course of habituation. Stimulation delivered during periods of already-strong coupling wastes therapeutic resources and may accelerate habituation; stimulation withheld during periods of declining coupling misses the windows of genuine therapeutic need where intervention would be most beneficial.
 
@@ -64,7 +64,7 @@ The central research question motivating this work is: **Can deep learning model
 
 I approach this question through a two-stage computational architecture. Stage 1 establishes a real-time PAC estimator using a compact deep learning model trained directly on raw EEG windows, providing the current-state biomarker input that Stage 2 requires. Stage 2 constructs a causal temporal predictor that ingests a 20-second history of PAC estimates and spectral features to forecast future PAC at clinically relevant horizons of 5–10 seconds, enabling proactive rather than reactive control decisions. The closed-loop controller integrates these predictions with a personalized rolling baseline and 3-second hysteresis logic to determine stimulation actions: stimulate when predicted PAC is forecast to fall below a personalized threshold, rest when forecast PAC is strong, and maintain the current state otherwise.
 
-The biomarker of interest throughout is the Modulation Index (MI), a measure of theta-gamma phase-amplitude coupling (PAC) introduced by Tort et al. [31] that quantifies the degree to which gamma-band (38–42 Hz) amplitude is modulated by the phase of theta-band (4–8 Hz) oscillations. Higher MI values indicate stronger theta-gamma coupling and stronger entrainment; lower values indicate reduced or absent coupling.
+The biomarker of interest throughout is the Modulation Index (MI), a measure of theta-gamma phase-amplitude coupling (PAC) introduced by Tort et al. [22] that quantifies the degree to which gamma-band (38–42 Hz) amplitude is modulated by the phase of theta-band (4–8 Hz) oscillations. Higher MI values indicate stronger theta-gamma coupling and stronger entrainment; lower values indicate reduced or absent coupling.
 
 All models are trained using subject-level splits with no within-subject leakage between train, validation, and test sets. Final evaluation is conducted on EEG recordings from six held-out test subjects, with controller performance assessed by replaying decisions across all 35 subjects' recorded EEG — not simulated brain dynamics — providing a clinically grounded assessment of real-world applicability.
 
@@ -96,17 +96,17 @@ The present work sits at the intersection of four active research areas: (1) the
 
 Gamma-band oscillations (30–100 Hz) emerge from the coordinated activity of inhibitory fast-spiking parvalbumin-positive (PV) interneuron networks that generate rhythmic inhibitory postsynaptic potentials at gamma frequencies. These rhythms play a fundamental role in cognitive processing, serving as temporal scaffolds for sensory feature binding, attention allocation, working memory maintenance, and long-range cortical communication. The disruption of these rhythms in Alzheimer's disease has been recognized as an early and sensitive marker of the underlying neurodegeneration.
 
-Gamma oscillations are disrupted in AD across multiple scales of measurement. At the cellular level, PV interneuron populations are among the earliest neuronal subtypes to be affected by Aβ accumulation, with interneuron-specific synaptic dysfunction documented in preclinical models before plaque formation [3]. A comprehensive review by Wang et al. [1] surveyed gamma oscillation disruptions across AD, Parkinson's disease, stroke, and schizophrenia, concluding that gamma entrainment-inducing stimulation methods offer notable neuroprotection and emphasizing gamma restoration as a transdiagnostic therapeutic target.
+Gamma oscillations are disrupted in AD across multiple scales of measurement. At the cellular level, PV interneuron populations are among the earliest neuronal subtypes to be affected by Aβ accumulation, with interneuron-specific synaptic dysfunction documented in preclinical models before plaque formation [2]. A comprehensive review by Wang et al. [1] surveyed gamma oscillation disruptions across AD, Parkinson's disease, stroke, and schizophrenia, concluding that gamma entrainment-inducing stimulation methods offer notable neuroprotection and emphasizing gamma restoration as a transdiagnostic therapeutic target.
 
-Particularly relevant to the 40 Hz entrainment paradigm, Iaccarino et al. [7] demonstrated that Aβ overproduction in 5XFAD transgenic mice was associated with a selective reduction of gamma activity that preceded plaque formation, and that driving gamma at 40 Hz by optogenetically activating PV interneurons was sufficient to reduce soluble Aβ by approximately 50%.
+Particularly relevant to the 40 Hz entrainment paradigm, Iaccarino et al. [6] demonstrated that Aβ overproduction in 5XFAD transgenic mice was associated with a selective reduction of gamma activity that preceded plaque formation, and that driving gamma at 40 Hz by optogenetically activating PV interneurons was sufficient to reduce soluble Aβ by approximately 50%.
 
 #### 2.1.2 Theta-Gamma Phase-Amplitude Coupling as a Biomarker
 
 While raw gamma power provides a useful readout of oscillatory activity, phase-amplitude coupling (PAC) between theta and gamma bands offers a more sensitive and specific biomarker of the coordinated multi-frequency dynamics that characterize successful neural entrainment. PAC describes the degree to which the amplitude of gamma-band oscillations is modulated by the phase of theta-band oscillations (4–8 Hz). Strong theta-gamma PAC reflects the coordination of fast inhibitory interneurons by slower excitatory theta cycles — a mechanism critical for organizing information processing across hippocampal-cortical circuits.
 
-The disruption of theta-gamma PAC in AD is well-documented and closely linked to cognitive impairment. Dimitriadis et al. [4] demonstrated that gamma PAC in parahippocampal cortices is significantly reduced in AD patients, and that these reductions are most pronounced in patients with co-occurring epileptiform activity. Theta-gamma coupling has also been characterized as a powerful predictor of cognitive function: Backus et al. [5] reported that theta-gamma coupling (TGC) was the single strongest predictor of working memory performance across AD, MCI, and healthy control participants, with a standardized beta of 0.693 (p < 0.001). A 2024 replication [6] confirmed these relationships in an independent sample.
+The disruption of theta-gamma PAC in AD is well-documented and closely linked to cognitive impairment. Dimitriadis et al. [3] demonstrated that gamma PAC in parahippocampal cortices is significantly reduced in AD patients, and that these reductions are most pronounced in patients with co-occurring epileptiform activity. Theta-gamma coupling has also been characterized as a powerful predictor of cognitive function: Backus et al. [4] reported that theta-gamma coupling (TGC) was the single strongest predictor of working memory performance across AD, MCI, and healthy control participants, with a standardized beta of 0.693 (p < 0.001). A 2024 replication [5] confirmed these relationships in an independent sample.
 
-The quantitative measure used throughout the present work, the Modulation Index (MI) introduced by Tort et al. [31], operationalizes PAC as the Kullback-Leibler divergence between the observed distribution of gamma amplitude over theta phase bins and a uniform (no coupling) reference distribution. The MI has become the standard measure for PAC computation in the neuroscience literature and provides the scalar entrainment biomarker that the proposed closed-loop system estimates and forecasts.
+The quantitative measure used throughout the present work, the Modulation Index (MI) introduced by Tort et al. [22], operationalizes PAC as the Kullback-Leibler divergence between the observed distribution of gamma amplitude over theta phase bins and a uniform (no coupling) reference distribution. The MI has become the standard measure for PAC computation in the neuroscience literature and provides the scalar entrainment biomarker that the proposed closed-loop system estimates and forecasts.
 
 ---
 
@@ -114,15 +114,15 @@ The quantitative measure used throughout the present work, the Modulation Index 
 
 #### 2.2.1 Landmark Animal Studies
 
-The modern investigation of 40 Hz sensory entrainment as a therapeutic modality for AD originates with Iaccarino et al. [7], whose 2016 Nature paper demonstrated that visual flicker at 40 Hz — but not at other tested frequencies — drove gamma oscillations in visual cortex of 5XFAD transgenic mice and produced a rapid, robust reduction in Aβ1-40 and Aβ1-42 levels in the visual cortex. Subsequent research extended these findings to auditory stimulation and multi-sensory paradigms. A landmark 2024 Nature study by Murdock et al. [8] identified the glymphatic system as a previously unrecognized clearance pathway activated by multisensory gamma entrainment, with 40 Hz combined audiovisual stimulation producing a 37% reduction in neocortical plaque volume in 5XFAD mice.
+The modern investigation of 40 Hz sensory entrainment as a therapeutic modality for AD originates with Iaccarino et al. [6], whose 2016 Nature paper demonstrated that visual flicker at 40 Hz — but not at other tested frequencies — drove gamma oscillations in visual cortex of 5XFAD transgenic mice and produced a rapid, robust reduction in Aβ1-40 and Aβ1-42 levels in the visual cortex. Subsequent research extended these findings to auditory stimulation and multi-sensory paradigms. A landmark 2024 Nature study by Murdock et al. [7] identified the glymphatic system as a previously unrecognized clearance pathway activated by multisensory gamma entrainment, with 40 Hz combined audiovisual stimulation producing a 37% reduction in neocortical plaque volume in 5XFAD mice.
 
-At the immunological level, Bhatt et al. [13] characterized the cytokine and chemokine signaling profile induced by 40 Hz visual stimulation, finding upregulation of IL-6, IL-4, and macrophage-colony-stimulating factor (M-CSF). This immunological characterization is important for understanding the dose-response relationships that motivate personalized delivery.
+At the immunological level, Bhatt et al. [11] characterized the cytokine and chemokine signaling profile induced by 40 Hz visual stimulation, finding upregulation of IL-6, IL-4, and macrophage-colony-stimulating factor (M-CSF). This immunological characterization is important for understanding the dose-response relationships that motivate personalized delivery.
 
 #### 2.2.2 Translation to Human Trials
 
-The most significant human clinical evidence to date comes from Chan et al. [11], who reported results from an open-label extension study of 40 Hz multisensory stimulation in patients with mild Alzheimer's dementia. Three female participants retained strong EEG entrainment responses across the extension period and showed markedly less hippocampal and cortical atrophy compared to matched controls. Plasma pTau217 showed reductions of 47% and 19% in two patients for whom serial samples were available.
+The most significant human clinical evidence to date comes from Chan et al. [9], who reported results from an open-label extension study of 40 Hz multisensory stimulation in patients with mild Alzheimer's dementia. Three female participants retained strong EEG entrainment responses across the extension period and showed markedly less hippocampal and cortical atrophy compared to matched controls. Plasma pTau217 showed reductions of 47% and 19% in two patients for whom serial samples were available.
 
-The OpenNeuro ds005048 dataset [39], produced by Lahijanian et al. [12], provides the EEG recording resource underlying the present work. Originally described with a subset of 13 participants, the full dataset contains recordings from 35 elderly subjects — including patients with mild-to-moderate Alzheimer's disease, mild cognitive impairment, and healthy age-matched controls — undergoing 40 Hz auditory entrainment using a 5 kHz carrier amplitude-modulated at 40 Hz (4% duty cycle), with alternating 40-second stimulation and 20-second rest trials in BIDS format. Lahijanian et al. [12] subsequently showed that this entrainment paradigm enhances frontoparietal DMN connectivity, mimicking connectivity patterns observed in healthy brains.
+The OpenNeuro ds005048 dataset [23], produced by Lahijanian et al. [10], provides the EEG recording resource underlying the present work. Originally described with a subset of 13 participants, the full dataset contains recordings from 35 elderly subjects — including patients with mild-to-moderate Alzheimer's disease, mild cognitive impairment, and healthy age-matched controls — undergoing 40 Hz auditory entrainment using a 5 kHz carrier amplitude-modulated at 40 Hz (4% duty cycle), with alternating 40-second stimulation and 20-second rest trials in BIDS format. Lahijanian et al. [10] subsequently showed that this entrainment paradigm enhances frontoparietal DMN connectivity, mimicking connectivity patterns observed in healthy brains.
 
 ---
 
@@ -130,7 +130,7 @@ The OpenNeuro ds005048 dataset [39], produced by Lahijanian et al. [12], provide
 
 #### 2.3.1 Responder and Non-Responder Populations
 
-A consistent finding across both animal and human studies of gamma entrainment is the substantial inter-individual variability in response magnitude. Fortunato et al. [15] conducted a systematic analysis of 40 Hz entrainment, finding that 23 of 33 total participants showed measurable entrainment while 10 did not — a non-responder rate of approximately 30%. Cabral et al. [16] extended this analysis to highlight the multidimensional nature of individual differences, advocating explicitly for AI-driven biofeedback as the most promising path toward personalized digital therapeutics. Personalized computational modeling approaches have further illuminated the mechanistic basis of individual differences [17].
+A consistent finding across both animal and human studies of gamma entrainment is the substantial inter-individual variability in response magnitude. Fortunato et al. [12] conducted a systematic analysis of 40 Hz entrainment, finding that 23 of 33 total participants showed measurable entrainment while 10 did not — a non-responder rate of approximately 30%. Cabral et al. [13] extended this analysis to highlight the multidimensional nature of individual differences, advocating explicitly for AI-driven biofeedback as the most promising path toward personalized digital therapeutics. Personalized computational modeling approaches have further illuminated the mechanistic basis of individual differences [14].
 
 #### 2.3.2 Intra-Session Habituation
 
@@ -142,7 +142,7 @@ Intra-session habituation — the progressive reduction in neural responsiveness
 
 #### 2.4.1 Deep Brain Stimulation and the Closed-Loop Rationale
 
-The concept of closed-loop neuromodulation is well-established in deep brain stimulation (DBS) for movement disorders. Closed-loop DBS reduces side effects, slows habituation, and extends battery life compared to conventional open-loop protocols [27]. Data-driven control design using autoregressive models fitted from patient-specific recordings has further demonstrated feasibility for personalized model predictive control in parkinsonian tremor [28], providing a direct methodological antecedent for the temporal prediction approach used in the present work.
+The concept of closed-loop neuromodulation is well-established in deep brain stimulation (DBS) for movement disorders. Closed-loop DBS reduces side effects, slows habituation, and extends battery life compared to conventional open-loop protocols [20]. Data-driven control design using autoregressive models fitted from patient-specific recordings has further demonstrated feasibility for personalized model predictive control in parkinsonian tremor [21], providing a direct methodological antecedent for the temporal prediction approach used in the present work.
 
 #### 2.4.2 Deep Learning-Based Closed-Loop Systems
 
@@ -154,7 +154,7 @@ The emergence of embedded deep learning has expanded the design space for closed
 
 #### 2.5.1 EEGNet and Compact BCI Architectures
 
-Systematic comparisons of deep learning architectures for EEG time-series analysis [19] have established that LSTMs, CNNs, and related architectures each offer complementary strengths. EEGNet [25], a compact and generalizable convolutional neural network for BCI applications, combines the spatial filtering strength of CNNs with aggressive parameter reduction and has become a widely-used benchmark architecture. In the context of the present work, EEGNet is used in a regression formulation to predict current theta-gamma PAC from 2-second raw EEG windows across 7 frontal channels. The observed R² ≈ 0.287 ceiling represents the upper bound of information available in instantaneous 2-second windows for predicting epoch-level PAC labels.
+Systematic comparisons of deep learning architectures for EEG time-series analysis [15] have established that LSTMs, CNNs, and related architectures each offer complementary strengths. EEGNet [18], a compact and generalizable convolutional neural network for BCI applications, combines the spatial filtering strength of CNNs with aggressive parameter reduction and has become a widely-used benchmark architecture. In the context of the present work, EEGNet is used in a regression formulation to predict current theta-gamma PAC from 2-second raw EEG windows across 7 frontal channels. The observed R² ≈ 0.287 ceiling represents the upper bound of information available in instantaneous 2-second windows for predicting epoch-level PAC labels.
 
 #### 2.5.2 Temporal Convolutional Networks for Sequence Prediction
 
@@ -162,7 +162,7 @@ Temporal Convolutional Networks (TCNs) use dilated, causal convolutions to captu
 
 #### 2.5.3 Positioning Against Related Work
 
-Two recent systems provide the closest published analogues to the approach developed here. Brian Intensify [24] is an adaptive machine learning framework for auditory EEG stimulation that predicts EEG responses with R² ≥ 0.80, but targets which stimulation frequency to deliver rather than when to deliver 40 Hz stimulation. The PRIME framework [23] uses end-to-end deep learning to predict momentary cortical excitability — analogous to EEGNet Stage 1 — but does not address multi-step forecasting or gamma entrainment. The deep learning MPC approach for Parkinson's DBS [26] provides the closest methodological parallel for temporal prediction and control, outperforming linear MPC by 10% and PI controllers by 20%. The present work adopts a similar predictive control philosophy but targets theta-gamma PAC dynamics in the gamma entrainment context, and the specific problem of forecasting theta-gamma PAC at 5–10 second horizons for proactive gamma entrainment control has not been addressed in the prior literature.
+Two recent systems provide the closest published analogues to the approach developed here. Brian Intensify [17] is an adaptive machine learning framework for auditory EEG stimulation that predicts EEG responses with R² ≥ 0.80, but targets which stimulation frequency to deliver rather than when to deliver 40 Hz stimulation. The PRIME framework [16] uses end-to-end deep learning to predict momentary cortical excitability — analogous to EEGNet Stage 1 — but does not address multi-step forecasting or gamma entrainment. The deep learning MPC approach for Parkinson's DBS [19] provides the closest methodological parallel for temporal prediction and control, outperforming linear MPC by 10% and PI controllers by 20%. The present work adopts a similar predictive control philosophy but targets theta-gamma PAC dynamics in the gamma entrainment context, and the specific problem of forecasting theta-gamma PAC at 5–10 second horizons for proactive gamma entrainment control has not been addressed in the prior literature.
 
 ---
 
@@ -199,7 +199,7 @@ Data were partitioned at the subject level (random seed = 42) to prevent any for
 
 ### 3.2 Phase-Amplitude Coupling Computation
 
-Phase-amplitude coupling (PAC) was quantified using the Modulation Index (MI) introduced by Tort et al. [31]. The MI measures the degree to which the amplitude of a high-frequency oscillation is modulated by the phase of a lower-frequency oscillation. I computed coupling between:
+Phase-amplitude coupling (PAC) was quantified using the Modulation Index (MI) introduced by Tort et al. [22]. The MI measures the degree to which the amplitude of a high-frequency oscillation is modulated by the phase of a lower-frequency oscillation. I computed coupling between:
 
 - **Phase-providing band:** Theta oscillations (4–8 Hz)
 - **Amplitude-providing band:** Narrow-band gamma at the entrainment frequency (38–42 Hz)
@@ -665,7 +665,7 @@ Three comparison points are particularly relevant.
 
 **Portiloop (Lacroix et al., PLOS ONE 2022).** Portiloop is the closest architectural precedent: a convolutional LSTM that detects sleep spindles in EEG and triggers targeted memory reactivation (TMR) auditory cues within the spindle trough. Like the present work, it uses causal real-time inference on frontal EEG. However, Portiloop addresses a binary classification problem with stereotyped waveform morphology, while PAC forecasting addresses a continuous regression problem with gradual, non-stationary transitions. The present work complements Portiloop by demonstrating that *forecasting* rather than *detection* is necessary for certain closed-loop applications.
 
-**DBS literature (Rosin et al., Science 2011; Herron et al., J Neural Eng 2017).** DBS work has demonstrated that adaptive, closed-loop stimulation triggered by local field potential biomarkers outperforms open-loop stimulation in Parkinson's disease [27]. The structural analogy is clear: adaptive stimulation concentrates therapeutic energy on periods of genuine need. The present work provides a non-invasive analog for gamma entrainment in Alzheimer's disease, extending the adaptive stimulation paradigm to a population where invasive approaches are not appropriate.
+**DBS literature (Rosin et al., Science 2011; Herron et al., J Neural Eng 2017).** DBS work has demonstrated that adaptive, closed-loop stimulation triggered by local field potential biomarkers outperforms open-loop stimulation in Parkinson's disease [20]. The structural analogy is clear: adaptive stimulation concentrates therapeutic energy on periods of genuine need. The present work provides a non-invasive analog for gamma entrainment in Alzheimer's disease, extending the adaptive stimulation paradigm to a population where invasive approaches are not appropriate.
 
 **What is novel about this work.** Three contributions distinguish this work from the prior literature: (1) PAC-specific temporal forecasting at 5–10 second horizons; (2) horizon-dependent evaluation methodology applicable to any EEG biomarker forecasting problem; (3) universal per-subject validation on 35 real patient EEGs, compared to prior papers that typically validate on simulation or small N (5–10 subjects).
 
@@ -719,7 +719,7 @@ This work establishes a computational foundation for personalized closed-loop 40
 
 **Multi-site dataset validation.** Validation on at least one additional dataset — ideally from a demographically distinct population or different EEG recording system — would substantially strengthen the generalizability claim.
 
-**Exploration of combined stimulation modalities.** A controller coordinating auditory and visual 40 Hz stimulation would align with the stronger effects demonstrated for multi-sensory approaches in animal studies [8].
+**Exploration of combined stimulation modalities.** A controller coordinating auditory and visual 40 Hz stimulation would align with the stronger effects demonstrated for multi-sensory approaches in animal studies [7].
 
 **Extension to other brain-state biomarkers.** Additional EEG biomarkers — frontal theta power, gamma power spectral density, and inter-regional connectivity — could be integrated as additional control targets or weighting factors.
 
@@ -753,86 +753,54 @@ The EEG dataset used in this study is publicly available on OpenNeuro (ds005048,
 
 [1] Wang Y, et al. Mystery of gamma wave stimulation in brain disorders. *Molecular Neurodegeneration*, 19(1), 2024. https://doi.org/10.1186/s13024-024-00785-x
 
-[2] Naeini Z, et al. Cross-frequency neuromodulation: leveraging theta-gamma coupling for cognitive rehabilitation in MCI patients. *Frontiers in Aging Neuroscience*, 17, 2025. https://doi.org/10.3389/fnagi.2025.1541126
+[2] Zhurakovskaya E, et al. Theta and gamma oscillatory dynamics in mouse models of Alzheimer's disease: A path to prospective therapeutic intervention. *Neuroscience and Biobehavioral Reviews*, 136, 104628, 2022. https://doi.org/10.1016/j.neubiorev.2022.104628
 
-[3] Zhurakovskaya E, et al. Theta and gamma oscillatory dynamics in mouse models of Alzheimer's disease: A path to prospective therapeutic intervention. *Neuroscience and Biobehavioral Reviews*, 136, 104628, 2022. https://doi.org/10.1016/j.neubiorev.2022.104628
+[3] Dimitriadis SI, et al. Abnormal gamma phase-amplitude coupling in the parahippocampal cortex is associated with network hyperexcitability in Alzheimer's disease. *Brain Communications*, 6(2), fcae121, 2024. https://doi.org/10.1093/braincomms/fcae121
 
-[4] Dimitriadis SI, et al. Abnormal gamma phase-amplitude coupling in the parahippocampal cortex is associated with network hyperexcitability in Alzheimer's disease. *Brain Communications*, 6(2), fcae121, 2024. https://doi.org/10.1093/braincomms/fcae121
+[4] Backus AR, et al. Theta-Gamma Coupling and Working Memory in Alzheimer's Dementia and Mild Cognitive Impairment. *Frontiers in Aging Neuroscience*, 10, 101, 2018. https://doi.org/10.3389/fnagi.2018.00101
 
-[5] Backus AR, et al. Theta-Gamma Coupling and Working Memory in Alzheimer's Dementia and Mild Cognitive Impairment. *Frontiers in Aging Neuroscience*, 10, 101, 2018. https://doi.org/10.3389/fnagi.2018.00101
+[5] Klimesch W, et al. Theta-gamma-coupling as predictor of working memory performance in young and elderly healthy people. *Molecular Brain*, 17(1), 2024. https://doi.org/10.1186/s13041-024-01149-8
 
-[6] Klimesch W, et al. Theta-gamma-coupling as predictor of working memory performance in young and elderly healthy people. *Molecular Brain*, 17(1), 2024. https://doi.org/10.1186/s13041-024-01149-8
+[6] Iaccarino HG, Singer AC, Martorell AJ, et al. Gamma frequency entrainment attenuates amyloid load and modifies microglia. *Nature*, 540(7632), 230–235, 2016. https://doi.org/10.1038/nature20587
 
-[7] Iaccarino HG, Singer AC, Martorell AJ, et al. Gamma frequency entrainment attenuates amyloid load and modifies microglia. *Nature*, 540(7632), 230–235, 2016. https://doi.org/10.1038/nature20587
+[7] Murdock MH, et al. Multisensory gamma stimulation promotes glymphatic clearance of amyloid. *Nature*, 627(8002), 149–156, 2024. https://doi.org/10.1038/s41586-024-07132-6
 
-[8] Murdock MH, et al. Multisensory gamma stimulation promotes glymphatic clearance of amyloid. *Nature*, 627(8002), 149–156, 2024. https://doi.org/10.1038/s41586-024-07132-6
+[8] Goutier L, et al. Long-term effects of forty-hertz auditory stimulation as a treatment of Alzheimer's disease: Insights from an aged monkey model study. *Proceedings of the National Academy of Sciences*, 122(20), 2025. https://doi.org/10.1073/pnas.2529565123
 
-[9] Chen X, et al. Unleashing the potential: 40 Hz multisensory stimulation therapy for cognitive impairment. *SAGE Open Medicine*, 13, 2025. https://doi.org/10.1177/11795735251328029
+[9] Chan D, Bhatt MB, et al. Gamma sensory stimulation in mild Alzheimer's dementia: An open-label extension study. *Alzheimer's and Dementia*, 2025. https://doi.org/10.1002/alz.70792
 
-[10] Goutier L, et al. Long-term effects of forty-hertz auditory stimulation as a treatment of Alzheimer's disease: Insights from an aged monkey model study. *Proceedings of the National Academy of Sciences*, 122(20), 2025. https://doi.org/10.1073/pnas.2529565123
+[10] Lahijanian B, et al. Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. *Scientific Reports*, 14(1), 2024. https://doi.org/10.1038/s41598-024-63727-z
 
-[11] Chan D, Bhatt MB, et al. Gamma sensory stimulation in mild Alzheimer's dementia: An open-label extension study. *Alzheimer's and Dementia*, 2025. https://doi.org/10.1002/alz.70792
+[11] Bhatt DL, et al. Gamma Visual Stimulation Induces a Neuroimmune Signaling Profile Distinct from Acute Neuroinflammation. *Journal of Neuroscience*, 40(6), 1211–1225, 2020. https://doi.org/10.1523/JNEUROSCI.2287-19.2019
 
-[12] Lahijanian B, et al. Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. *Scientific Reports*, 14(1), 2024. https://doi.org/10.1038/s41598-024-63727-z
+[12] Fortunato C, et al. Gamma sensory entrainment for cognitive improvement in neurodegenerative diseases: opportunities and challenges ahead. *Frontiers in Neuroscience*, 17, 2023. https://pmc.ncbi.nlm.nih.gov/articles/PMC10149720/
 
-[13] Bhatt DL, et al. Gamma Visual Stimulation Induces a Neuroimmune Signaling Profile Distinct from Acute Neuroinflammation. *Journal of Neuroscience*, 40(6), 1211–1225, 2020. https://doi.org/10.1523/JNEUROSCI.2287-19.2019
+[13] Cabral J, et al. Advancing personalized digital therapeutics: integrating music therapy, brainwave entrainment methods, and AI-driven biofeedback. *Frontiers in Digital Health*, 7, 2025. https://doi.org/10.3389/fdgth.2025.1552396
 
-[14] Modi MN, et al. 40 Hz sensory stimulation enhances CA3-CA1 coordination and prospective coding during navigation in a mouse model of Alzheimer's disease. *Proceedings of the National Academy of Sciences*, 122(9), 2025. https://doi.org/10.1073/pnas.2419364122
+[14] Rathour RK, et al. Personalized whole-brain neural mass models reveal combined Aβ and tau hyperexcitable influences in Alzheimer's disease. *Communications Biology*, 7(1), 2024. https://doi.org/10.1038/s42003-024-06217-2
 
-[15] Fortunato C, et al. Gamma sensory entrainment for cognitive improvement in neurodegenerative diseases: opportunities and challenges ahead. *Frontiers in Neuroscience*, 17, 2023. https://pmc.ncbi.nlm.nih.gov/articles/PMC10149720/
+[15] Schirrmeister RT, et al. A systematic comparison of deep learning methods for EEG time series analysis. *Frontiers in Neuroinformatics*, 17, 2023. https://doi.org/10.3389/fninf.2023.1067095
 
-[16] Cabral J, et al. Advancing personalized digital therapeutics: integrating music therapy, brainwave entrainment methods, and AI-driven biofeedback. *Frontiers in Digital Health*, 7, 2025. https://doi.org/10.3389/fdgth.2025.1552396
+[16] Barham MP, et al. Personalized real-time inference of momentary excitability from human EEG. *bioRxiv*, 2025. https://doi.org/10.1101/2025.08.31.673404
 
-[17] Rathour RK, et al. Personalized whole-brain neural mass models reveal combined Aβ and tau hyperexcitable influences in Alzheimer's disease. *Communications Biology*, 7(1), 2024. https://doi.org/10.1038/s42003-024-06217-2
+[17] Patel V, et al. Brian Intensify: An Adaptive Machine Learning Framework for Auditory EEG Stimulation and Cognitive Enhancement. *arXiv*, 2024. https://arxiv.org/html/2511.09765
 
-[18] Cavedo E, et al. Characterizing Treatment Non-responders and Responders in Completed Alzheimer's Disease Clinical Trials. *PMC*, 2024. https://pmc.ncbi.nlm.nih.gov/articles/PMC12099406/
+[18] Lawhern VJ, Solon AJ, Waytowich NR, et al. EEGNet: a compact convolutional neural network for EEG-based brain–computer interfaces. *Journal of Neural Engineering*, 15(5), 056013, 2018. https://doi.org/10.1088/1741-2552/aace8c
 
-[19] Schirrmeister RT, et al. A systematic comparison of deep learning methods for EEG time series analysis. *Frontiers in Neuroinformatics*, 17, 2023. https://doi.org/10.3389/fninf.2023.1067095
+[19] Zamora-Pardo A, et al. Deep Learning Model Predictive Control for Deep Brain Stimulation in Parkinson's Disease. *arXiv*, 2025. https://arxiv.org/html/2504.00618
 
-[20] Altaheri H, et al. Transformers in EEG Analysis: A Review of Architectures and Applications in Motor Imagery, Seizure, and Emotion Classification. *PMC*, 2024. https://pmc.ncbi.nlm.nih.gov/articles/PMC11902326/
+[20] Bergey GK, et al. Closed-Loop Neuromodulation in Physiological and Translational Research. *Frontiers in Neuroscience (PMC)*, 2019. https://pmc.ncbi.nlm.nih.gov/articles/PMC6824403/
 
-[21] Demir A, et al. Revealing brain connectivity: graph embeddings for EEG representation learning and comparative analysis of structural and functional connectivity. *Frontiers in Neuroscience*, 17, 2023. https://doi.org/10.3389/fnins.2023.1288433
+[21] Tafazoli S, et al. Closing the loop between brain and electrical stimulation: towards precision neuromodulation treatments. *Translational Psychiatry*, 13(1), 2023. https://doi.org/10.1038/s41398-023-02565-5
 
-[22] Li Y, et al. Graph-generative neural network for EEG-based epileptic seizure detection via discovery of dynamic brain functional connectivity. *Scientific Reports*, 12(1), 2022. https://doi.org/10.1038/s41598-022-23656-1
+[22] Tort ABL, Komorowski R, Eichenbaum H, Kopell N. Measuring Phase-Amplitude Coupling Between Neuronal Oscillations of Different Frequencies. *Journal of Neurophysiology*, 104(2), 1195–1210, 2010. https://doi.org/10.1152/jn.00106.2010
 
-[23] Barham MP, et al. Personalized real-time inference of momentary excitability from human EEG. *bioRxiv*, 2025. https://doi.org/10.1101/2025.08.31.673404
-
-[24] Patel V, et al. Brian Intensify: An Adaptive Machine Learning Framework for Auditory EEG Stimulation and Cognitive Enhancement. *arXiv*, 2024. https://arxiv.org/html/2511.09765
-
-[25] Lawhern VJ, Solon AJ, Waytowich NR, et al. EEGNet: a compact convolutional neural network for EEG-based brain–computer interfaces. *Journal of Neural Engineering*, 15(5), 056013, 2018. https://doi.org/10.1088/1741-2552/aace8c
-
-[26] Zamora-Pardo A, et al. Deep Learning Model Predictive Control for Deep Brain Stimulation in Parkinson's Disease. *arXiv*, 2025. https://arxiv.org/html/2504.00618
-
-[27] Bergey GK, et al. Closed-Loop Neuromodulation in Physiological and Translational Research. *Frontiers in Neuroscience (PMC)*, 2019. https://pmc.ncbi.nlm.nih.gov/articles/PMC6824403/
-
-[28] Tafazoli S, et al. Closing the loop between brain and electrical stimulation: towards precision neuromodulation treatments. *Translational Psychiatry*, 13(1), 2023. https://doi.org/10.1038/s41398-023-02565-5
-
-[29] Indiveri G, et al. Neuromorphic neuromodulation: Towards the next generation of closed-loop neurostimulation. *PNAS Nexus*, 3(11), pgae488, 2024. https://doi.org/10.1093/pnasnexus/pgae488
-
-[30] Dupré da Silva N, et al. Addressing Pitfalls in Phase-Amplitude Coupling Analysis with an Extended Modulation Index Toolbox. *Neuroinformatics*, 19(1), 2020. https://doi.org/10.1007/s12021-020-09487-3
-
-[31] Tort ABL, Komorowski R, Eichenbaum H, Kopell N. Measuring Phase-Amplitude Coupling Between Neuronal Oscillations of Different Frequencies. *Journal of Neurophysiology*, 104(2), 1195–1210, 2010. https://doi.org/10.1152/jn.00106.2010
-
-[32] Miyakoshi M. Protocol for semi-automatic EEG preprocessing incorporating independent component analysis and principal component analysis. *STAR Protocols (PMC)*, 2024. https://pmc.ncbi.nlm.nih.gov/articles/PMC11930125/
-
-[33] Winkler I, et al. On the influence of high-pass filtering on ICA-based artifact reduction in EEG-ERP. *Journal of Neuroscience Methods*, 250, 2015. https://pubmed.ncbi.nlm.nih.gov/26737196/
-
-[34] Sanda P, et al. Time-Frequency Based Phase-Amplitude Coupling Measure For Neuronal Oscillations. *Scientific Reports*, 9(1), 2019. https://doi.org/10.1038/s41598-019-48870-2
-
-[35] Nunez PL, Srinivasan R. Computational Models in Electroencephalography. *Brain Topography*, 35(1), 2022. https://doi.org/10.1007/s10548-021-00828-2
-
-[36] Haufe S, Ewald A. EEGSourceSim: A framework for realistic simulation of EEG scalp data using MRI-based forward models and biologically plausible signals and noise. *Journal of Neuroscience Methods (PMC)*, 2019. https://pmc.ncbi.nlm.nih.gov/articles/PMC6815881/
-
-[37] Raj A, et al. Simulation-based inference of developmental EEG maturation with the spectral graph model. *Communications Physics*, 7(1), 2024. https://doi.org/10.1038/s42005-024-01748-w
-
-[38] OpenNeuro Dataset ds005048 v1.0.1: EEG recordings during 40 Hz auditory entrainment in dementia patients. *OpenNeuro*, 2022. https://openneuro.org/datasets/ds005048/versions/1.0.1
-
-[39] Naeini AH, et al. Non-invasive auditory brain stimulation for gamma-band entrainment in dementia patients: An EEG dataset. *Data in Brief (PMC)*, 2022. https://pmc.ncbi.nlm.nih.gov/articles/PMC8800012/
+[23] Naeini AH, et al. Non-invasive auditory brain stimulation for gamma-band entrainment in dementia patients: An EEG dataset. *Data in Brief (PMC)*, 2022. https://pmc.ncbi.nlm.nih.gov/articles/PMC8800012/
 
 ---
 
 Word count: ~10,000
 Figures: 7 main text, 3 supplementary
 Tables: 6 main text, 3 supplementary
-References: 39
+References: 23
 Last verified: 2026-03-15
