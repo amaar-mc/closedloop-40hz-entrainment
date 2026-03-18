@@ -114,13 +114,17 @@ Plans:
 
 **Depends on:** Phase 7
 **Requirements:** CONS-01, CONS-02, CONS-03, CONS-04, CONS-05, CONS-06, CONS-07
-**Plans:** TBD
+**Plans:** 2 plans
 
 **Success Criteria (what must be TRUE):**
 1. Every mention of the subject population uses "35 elderly subjects" (not "35 dementia patients"), and the reference list contains only references that are cited somewhere in the text body
 2. Reference [25] correctly attributes the EEGNet paper (not TCFormer), and Section 2.2 heading renders as "2.2 40 Hz Entrainment" (not "2.240 Hz")
 3. Every first-person pronoun in the paper is "I" — no "we" or "our" — matching the single-author declaration
 4. The terms "Reactive Threshold" (not "Reactive thresholding") and a single consistent orders-of-magnitude phrase are used wherever that controller and PAC scale are mentioned
+
+Plans:
+- [ ] 08-01-PLAN.md — Fix population label, section heading, first-person voice, terminology, and magnitude phrase (CONS-01, CONS-04, CONS-05, CONS-06, CONS-07)
+- [ ] 08-02-PLAN.md — Remove TCFormer sentence and prune/renumber orphan references (CONS-02, CONS-03)
 
 ### Phase 9: Propagate Corrections & Recompile PDF
 
@@ -156,7 +160,7 @@ Plans:
 | 5. Real-Time Demo | 1/1 | Complete | - |
 | 6. Write Research Paper | 5/5 | Complete | - |
 | 7. Fix Data & Methodology Errors | 0/1 | Not started | - |
-| 8. Fix Internal Consistency | 0/TBD | Not started | - |
+| 8. Fix Internal Consistency | 0/2 | Not started | - |
 | 9. Propagate & Recompile | 0/TBD | Not started | - |
 
 ### Phase 4: Finalize Lab Notebook
