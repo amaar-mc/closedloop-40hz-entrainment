@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
 status: planning
-last_updated: "2026-03-18T05:20:00.000Z"
+last_updated: "2026-03-18T05:02:31.494Z"
 last_activity: 2026-03-18 — Completed 09-02 TeX corrections and PDF recompile (2 commits)
 progress:
   total_phases: 9
-  completed_phases: 5
+  completed_phases: 6
   total_plans: 14
-  completed_plans: 13
+  completed_plans: 14
 ---
 
 # Project State: Research Documentation Project
@@ -84,7 +84,15 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 - **Reference list pruned to 23:** 16 orphan references deleted; surviving 23 renumbered [1]-[23]; EEGNet=[18], Tort PAC=[22]
 - **Single-pass citation replacement:** Used re.sub callback to avoid cascading replacement bugs when renumbering
 
-## Accumulated Decisions (Phase 9)
+## Accumulated Decisions (Phase 9 Plan 01)
+
+- **CSEF propagation scope:** 13 active presentation/reference files corrected; docs/paper/sections/ and RESEARCH_PAPER_v3.md excluded from Phase 9-01 scope
+- **Citation text exception:** Lahijanian 2024 paper title and dataset description phrases with "dementia patients" left unchanged per plan rule
+- **Hysteresis in CSEF docs:** Updated to 3-second (from run_tcn_validation.py) across all active CSEF files
+- **PROP-02 verified:** RESULTS_REPORT.md clean — zero stale values (µV², BCa bootstrap, 0.76 Lead Time, 5-second hysteresis)
+- **Spectral features:** 73-feature breakdown corrected in 05_qa_complete.md and JUDGE_INTERVIEW_PREP.md (4 bands, not 5; PAC-structure, not coherence)
+
+## Accumulated Decisions (Phase 9 Plan 02)
 
 - **TeX correction approach:** Applied all corrections directly to RESEARCH_PAPER_v3.tex (pandoc unavailable); rebuilt stale 17-entry reference list to correct 23 entries with full body renumbering
 - **TCN dilation factors:** Fixed [1,2,4,6] -> [1,2,4,8] in TeX (was a pre-existing bug in the TeX file not caught in Phases 7-8)
