@@ -55,26 +55,47 @@ Requirements for the lab notebook conversion project.
 - [x] **DEMO-05**: Four stacked PAC trace panels with live animation and background stim/rest color bands
 - [x] **DEMO-06**: Adjustable simulation speed (1x/5x/10x/Max) with progressive plot rendering
 
-## v2 Requirements
+## v2.0 Requirements — Paper Audit & Corrections
 
-Deferred to future iterations.
+### Data Accuracy
 
-### Enhancement Features
+- [ ] **DATA-01**: Hysteresis duration corrected from "5-second" to "3-second" in all paper locations (Sections 1.4, 3.6.2, Figure 3 caption) and CSEF presentation
+- [ ] **DATA-02**: CI method corrected from "10,000-iteration BCa bootstrap" to "large-sample normal approximation" in Section 3.8
+- [ ] **DATA-03**: Lead time Hedges' g corrected from 0.76 to 0.75 in RESULTS_REPORT.md
+- [ ] **DATA-04**: EEGNet "best epoch 53" removed or qualified as unverifiable in Section 3.3.2
+- [ ] **DATA-05**: RESULTS_REPORT.md PAC Gap units corrected from "uV^2" to "x10^-6 MI units"
 
-- **ENH-01**: Interactive timeline visualization
-- **ENH-02**: Detailed methodology appendix
-- **ENH-03**: Cross-references to source code files
+### Methodology
+
+- [ ] **METH-01**: Spectral features description corrected to match actual code (4 bands not 5, PAC-structure features not coherence, global stats) in Section 3.4.1
+- [ ] **METH-02**: Artifact rejection description corrected from "rejected" to "zeroed" in Section 3.1.2
+
+### Internal Consistency
+
+- [ ] **CONS-01**: Population description fixed from "35 dementia patients" to "35 elderly subjects" in Contribution 3 and Conclusion
+- [ ] **CONS-02**: Reference [25] misattribution fixed (TCFormer citation corrected or removed)
+- [ ] **CONS-03**: Orphan references pruned — keep only references actually cited in text
+- [ ] **CONS-04**: Section 2.2 heading formatting fixed ("2.240 Hz" to "2.2 40 Hz")
+- [ ] **CONS-05**: Mixed first person resolved — "we" changed to "I" throughout (single-author paper)
+- [ ] **CONS-06**: "Reactive thresholding" standardized to "Reactive Threshold" at L80
+- [ ] **CONS-07**: Orders of magnitude inconsistency resolved ("nearly three" vs "four")
+
+### Propagation
+
+- [ ] **PROP-01**: All corrections propagated to CSEF presentation PDF
+- [ ] **PROP-02**: All corrections propagated to RESULTS_REPORT.md
+- [ ] **PROP-03**: Research paper PDF recompiled after all fixes
 
 ## Out of Scope
 
 | Feature | Reason |
 |---------|--------|
-| Rewriting research content | Use existing content, just reformat chronologically |
-| Adding new research | Document existing work only |
-| Academic paper format | Converting away from this format |
-| Fabricated data | Only validated repository data allowed |
+| Rewriting paper narrative | Only fix factual errors, not restructure |
+| Retraining models | Code produced actual results; fix descriptions |
+| Re-running validation with 5s hysteresis | Document what was actually used (3s) |
+| Adding new analyses | Paper scope is frozen |
 
-## Traceability
+## v1.0 Traceability
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
@@ -109,10 +130,33 @@ Deferred to future iterations.
 | DEMO-05 | Phase 5 | Complete |
 | DEMO-06 | Phase 5 | Complete |
 
+## v2.0 Traceability
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| DATA-01 | Phase 7 | Pending |
+| DATA-02 | Phase 7 | Pending |
+| DATA-03 | Phase 7 | Pending |
+| DATA-04 | Phase 7 | Pending |
+| DATA-05 | Phase 7 | Pending |
+| METH-01 | Phase 7 | Pending |
+| METH-02 | Phase 7 | Pending |
+| CONS-01 | Phase 8 | Pending |
+| CONS-02 | Phase 8 | Pending |
+| CONS-03 | Phase 8 | Pending |
+| CONS-04 | Phase 8 | Pending |
+| CONS-05 | Phase 8 | Pending |
+| CONS-06 | Phase 8 | Pending |
+| CONS-07 | Phase 8 | Pending |
+| PROP-01 | Phase 9 | Pending |
+| PROP-02 | Phase 9 | Pending |
+| PROP-03 | Phase 9 | Pending |
+
 **Coverage:**
-- v1 requirements: 28 total
-- Mapped to phases: 28
+- v2.0 requirements: 17 total
+- Mapped to phases: 17
 - Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-03-07*
+*Last updated: 2026-03-17 after v2.0 audit requirements added*
