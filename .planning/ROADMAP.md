@@ -97,13 +97,16 @@ Plans:
 
 **Depends on:** Phase 6
 **Requirements:** DATA-01, DATA-02, DATA-03, DATA-04, DATA-05, METH-01, METH-02
-**Plans:** TBD
+**Plans:** 1 plan
 
 **Success Criteria (what must be TRUE):**
 1. A reader of RESEARCH_PAPER.md can find "3-second" hysteresis in every location that previously said "5-second" (Sections 1.4, 3.6.2, Figure 3 caption)
 2. Section 3.8 describes the CI method as large-sample normal approximation and RESULTS_REPORT.md shows the corrected Hedges' g of 0.75 for lead time with PAC gap units changed to "x10^-6 MI units"
 3. Section 3.4.1 describes 4 spectral bands (not 5), PAC-structure features (not coherence), and global stats — matching what `temporal_multiscale/build_multiscale_dataset.py` actually computes
 4. Section 3.1.2 says artifacts are "zeroed" (not "rejected") and Section 3.3.2 contains no unqualified "best epoch 53" claim
+
+Plans:
+- [ ] 07-01-PLAN.md — Correct all 7 data accuracy and methodology errors in RESEARCH_PAPER.md and RESULTS_REPORT.md
 
 ### Phase 8: Fix Internal Consistency
 
@@ -152,7 +155,7 @@ Plans:
 | 4. Finalize Lab Notebook | 3/3 | Complete | 2026-03-15 |
 | 5. Real-Time Demo | 1/1 | Complete | - |
 | 6. Write Research Paper | 5/5 | Complete | - |
-| 7. Fix Data & Methodology Errors | 0/TBD | Not started | - |
+| 7. Fix Data & Methodology Errors | 0/1 | Not started | - |
 | 8. Fix Internal Consistency | 0/TBD | Not started | - |
 | 9. Propagate & Recompile | 0/TBD | Not started | - |
 
