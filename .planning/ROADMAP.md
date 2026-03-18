@@ -131,12 +131,16 @@ Plans:
 
 **Depends on:** Phase 8
 **Requirements:** PROP-01, PROP-02, PROP-03
-**Plans:** TBD
+**Plans:** 2 plans
 
 **Success Criteria (what must be TRUE):**
 1. Every factual claim corrected in RESEARCH_PAPER.md (hysteresis, CI method, population label, spectral features, artifact handling) matches the corresponding slide or section in the CSEF presentation
 2. RESULTS_REPORT.md reflects the corrected Hedges' g (0.75) and corrected PAC gap units (x10^-6 MI units) with no contradicting values anywhere in the file
 3. A PDF of RESEARCH_PAPER.md exists that compiles cleanly from the corrected source, contains no placeholder text, and shows all section headings correctly formatted
+
+Plans:
+- [ ] 09-01-PLAN.md — Propagate all Phase 7/8 corrections to CSEF presentation files and verify RESULTS_REPORT.md consistency (PROP-01, PROP-02)
+- [ ] 09-02-PLAN.md — Update RESEARCH_PAPER_v3.tex with all corrections and compile clean PDF (PROP-03)
 
 ---
 
@@ -160,7 +164,7 @@ Plans:
 | 6. Write Research Paper | 5/5 | Complete | - |
 | 7. Fix Data & Methodology Errors | 1/1 | Complete | 2026-03-17 |
 | 8. Fix Internal Consistency | 2/2 | Complete | 2026-03-18 |
-| 9. Propagate & Recompile | 0/TBD | Not started | - |
+| 9. Propagate & Recompile | 0/2 | Not started | - |
 
 ### Phase 4: Finalize Lab Notebook
 
