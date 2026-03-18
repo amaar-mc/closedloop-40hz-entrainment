@@ -34,7 +34,7 @@
 
 ## 2. Controller Comparison (N = 35 Subjects, Real EEG Data)
 
-| Controller | Alignment | Low-PAC Stim | High-PAC Rest | Stim % | PAC Gap (µV²) |
+| Controller | Alignment | Low-PAC Stim | High-PAC Rest | Stim % | PAC Gap (×10⁻⁶ MI) |
 |-----------|-----------|-------------|--------------|--------|---------------|
 | Fixed Schedule | 45.0% | 61.4% | 28.6% | 66.6% | −6.6 |
 | Reactive Threshold | 64.5% | 51.7% | 77.3% | 36.7% | +21.1 |
@@ -58,8 +58,8 @@
 | Epoch Alignment | 72.1% | 64.5% | +1.31 [+0.75, +1.87] | < 0.001 | Large |
 | Low-PAC Stim Rate | 82.6% | 51.7% | +4.47 [+3.33, +5.62] | < 0.001 | Very large |
 | High-PAC Rest Rate | 61.6% | 77.3% | −2.41 [−3.14, −1.68] | < 0.001 | Large (Reactive wins) |
-| PAC Target Gap | 30.5 µV² | 21.1 µV² | +1.57 [+0.98, +2.17] | < 0.001 | Large |
-| Lead Time | 0.8s | 0.2s | +0.76 [+0.25, +1.26] | < 0.001 | Medium |
+| PAC Target Gap | 30.5 ×10⁻⁶ MI | 21.1 ×10⁻⁶ MI | +1.57 [+0.98, +2.17] | < 0.001 | Large |
+| Lead Time | 0.8s | 0.2s | +0.75 [+0.25, +1.26] | < 0.001 | Medium |
 | Clinical Utility | 0.681 | 0.591 | +0.95 [+0.43, +1.47] | < 0.001 | Large |
 
 **Key finding**: The TCN predictive controller achieves significantly better alignment between stimulation decisions and PAC state (g = +1.31, p < 0.001), with dramatically improved targeting of low-PAC windows (82.6% vs 51.7%, g = +4.47). The TCN directs stimulation to periods of genuine therapeutic need — a 60% increase in low-PAC targeting recall compared to reactive control.
@@ -80,7 +80,7 @@ The PAC targeting gap (mean PAC during rest − mean PAC during stim) is the mos
 | Hybrid TCN+Reactive | 2.9 × 10⁻⁵ | 6.3 × 10⁻⁵ | +3.4 × 10⁻⁵ | Correct |
 | Alignment Oracle | 2.5 × 10⁻⁵ | 5.8 × 10⁻⁵ | +3.3 × 10⁻⁵ | Correct |
 
-The TCN Predictive controller achieves a PAC targeting gap of +30.5 µV², comparable to the theoretical Alignment Oracle (+33.3 µV²) and 45% larger than the reactive controller (+21.1 µV²). This gap is statistically significant (g = +1.57, p < 0.001).
+The TCN Predictive controller achieves a PAC targeting gap of +30.5 ×10⁻⁶ MI units, comparable to the theoretical Alignment Oracle (+33.3 ×10⁻⁶ MI units) and 45% larger than the reactive controller (+21.1 ×10⁻⁶ MI units). This gap is statistically significant (g = +1.57, p < 0.001).
 
 ---
 
@@ -88,7 +88,7 @@ The TCN Predictive controller achieves a PAC targeting gap of +30.5 µV², compa
 
 The TCN controller's advantage is robust across a range of prediction confidence thresholds (δz):
 
-| δz Threshold | Alignment | Low-PAC Stim | Stim % | PAC Gap (µV²) |
+| δz Threshold | Alignment | Low-PAC Stim | Stim % | PAC Gap (×10⁻⁶ MI) |
 |-------------|-----------|-------------|--------|---------------|
 | 0.1 | 59.6% | 51.2% | 41.3% | 12.4 |
 | 0.2 | 68.5% | 72.9% | 53.7% | 26.3 |
@@ -122,7 +122,7 @@ In adaptive music therapy for 40 Hz gamma entrainment:
 
 2. **Proactive control**: The TCN begins stimulating 0.8 seconds before a PAC decline on average (vs 0.2s for reactive), providing the preparation time needed for smooth transitions in the musical stimulus. In real-world music therapy, this enables seamless transitions between therapeutic and ambient content.
 
-3. **Near-oracle targeting**: The TCN's PAC targeting gap (30.5 µV²) is 91% of the theoretical oracle maximum (33.3 µV²), demonstrating that learned temporal prediction nearly saturates the achievable performance bound.
+3. **Near-oracle targeting**: The TCN's PAC targeting gap (30.5 ×10⁻⁶ MI units) is 91% of the theoretical oracle maximum (33.3 ×10⁻⁶ MI units), demonstrating that learned temporal prediction nearly saturates the achievable performance bound.
 
 4. **Consistent across patients**: Every subject in the cohort (N=35) benefits from TCN-based control, indicating the approach generalizes across individual EEG patterns without per-patient calibration.
 
