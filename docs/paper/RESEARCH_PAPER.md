@@ -62,7 +62,7 @@ The convergence of inter-individual variability and intra-session habituation cr
 
 The central research question motivating this work is: **Can deep learning models trained on EEG-derived features forecast theta-gamma phase-amplitude coupling dynamics 5–10 seconds into the future, and does integrating such forecasts into a closed-loop controller produce measurable improvements in personalized 40 Hz entrainment therapy validated on real patient EEG?**
 
-We approach this question through a two-stage computational architecture. Stage 1 establishes a real-time PAC estimator using a compact deep learning model trained directly on raw EEG windows, providing the current-state biomarker input that Stage 2 requires. Stage 2 constructs a causal temporal predictor that ingests a 20-second history of PAC estimates and spectral features to forecast future PAC at clinically relevant horizons of 5–10 seconds, enabling proactive rather than reactive control decisions. The closed-loop controller integrates these predictions with a personalized rolling baseline and 3-second hysteresis logic to determine stimulation actions: stimulate when predicted PAC is forecast to fall below a personalized threshold, rest when forecast PAC is strong, and maintain the current state otherwise.
+I approach this question through a two-stage computational architecture. Stage 1 establishes a real-time PAC estimator using a compact deep learning model trained directly on raw EEG windows, providing the current-state biomarker input that Stage 2 requires. Stage 2 constructs a causal temporal predictor that ingests a 20-second history of PAC estimates and spectral features to forecast future PAC at clinically relevant horizons of 5–10 seconds, enabling proactive rather than reactive control decisions. The closed-loop controller integrates these predictions with a personalized rolling baseline and 3-second hysteresis logic to determine stimulation actions: stimulate when predicted PAC is forecast to fall below a personalized threshold, rest when forecast PAC is strong, and maintain the current state otherwise.
 
 The biomarker of interest throughout is the Modulation Index (MI), a measure of theta-gamma phase-amplitude coupling (PAC) introduced by Tort et al. [31] that quantifies the degree to which gamma-band (38–42 Hz) amplitude is modulated by the phase of theta-band (4–8 Hz) oscillations. Higher MI values indicate stronger theta-gamma coupling and stronger entrainment; lower values indicate reduced or absent coupling.
 
@@ -172,11 +172,11 @@ Two recent systems provide the closest published analogues to the approach devel
 
 #### 3.1.1 Dataset
 
-We used the publicly available OpenNeuro dataset ds005048 v1.0.1 (Lahijanian et al., 2024), originally described in Naeini et al. (2022). The dataset comprises resting-state and stimulation EEG recordings from 35 elderly subjects attending a memory clinic in Tehran, Iran, including patients with mild-to-moderate Alzheimer's disease (n=17), mild cognitive impairment (n=6), and age-matched healthy controls (n=10), with 2 subjects of unspecified classification. EEG was recorded using a 19-channel monopolar montage following the international 10/20 system at a sampling rate of 250 Hz. The stimulation protocol consisted of repeated cycles of 40 Hz auditory pulse train stimulation (40 seconds) followed by silent rest (20 seconds), enabling paired within-subject comparisons of neural coupling state across stimulation and rest conditions.
+I used the publicly available OpenNeuro dataset ds005048 v1.0.1 (Lahijanian et al., 2024), originally described in Naeini et al. (2022). The dataset comprises resting-state and stimulation EEG recordings from 35 elderly subjects attending a memory clinic in Tehran, Iran, including patients with mild-to-moderate Alzheimer's disease (n=17), mild cognitive impairment (n=6), and age-matched healthy controls (n=10), with 2 subjects of unspecified classification. EEG was recorded using a 19-channel monopolar montage following the international 10/20 system at a sampling rate of 250 Hz. The stimulation protocol consisted of repeated cycles of 40 Hz auditory pulse train stimulation (40 seconds) followed by silent rest (20 seconds), enabling paired within-subject comparisons of neural coupling state across stimulation and rest conditions.
 
 #### 3.1.2 Preprocessing
 
-The raw data had already been processed by Makoto's preprocessing pipeline (1 Hz high-pass filter, 50 Hz notch filter, independent component analysis, and common average reference). We applied a light additional preprocessing pass:
+The raw data had already been processed by Makoto's preprocessing pipeline (1 Hz high-pass filter, 50 Hz notch filter, independent component analysis, and common average reference). I applied a light additional preprocessing pass:
 
 1. **Bandpass filtering:** 4th-order Butterworth filter from 0.5 to 80 Hz (zero-phase, forward-backward pass).
 2. **Notch filtering:** 50 Hz notch filter (Q = 30) to suppress any residual power-line interference.
@@ -185,7 +185,7 @@ The raw data had already been processed by Makoto's preprocessing pipeline (1 Hz
 
 #### 3.1.3 Channel Selection
 
-We selected 7 frontal channels — Fp1, Fp2, F7, F3, Fz, F4, F8 — which span the prefrontal and frontal regions most relevant to theta-gamma phase-amplitude coupling associated with memory and cognitive function.
+I selected 7 frontal channels — Fp1, Fp2, F7, F3, Fz, F4, F8 — which span the prefrontal and frontal regions most relevant to theta-gamma phase-amplitude coupling associated with memory and cognitive function.
 
 #### 3.1.4 Epoch Segmentation and Windowing
 
@@ -199,7 +199,7 @@ Data were partitioned at the subject level (random seed = 42) to prevent any for
 
 ### 3.2 Phase-Amplitude Coupling Computation
 
-Phase-amplitude coupling (PAC) was quantified using the Modulation Index (MI) introduced by Tort et al. [31]. The MI measures the degree to which the amplitude of a high-frequency oscillation is modulated by the phase of a lower-frequency oscillation. We computed coupling between:
+Phase-amplitude coupling (PAC) was quantified using the Modulation Index (MI) introduced by Tort et al. [31]. The MI measures the degree to which the amplitude of a high-frequency oscillation is modulated by the phase of a lower-frequency oscillation. I computed coupling between:
 
 - **Phase-providing band:** Theta oscillations (4–8 Hz)
 - **Amplitude-providing band:** Narrow-band gamma at the entrainment frequency (38–42 Hz)
@@ -210,7 +210,7 @@ MI = D_KL(P, U) / log(N)
 
 where U is the uniform distribution over N bins. The MI is dimensionless, with values near zero indicating no coupling and higher values indicating stronger theta-gamma coordination.
 
-**Epoch-level label assignment:** Rather than computing PAC on each 2-second window individually, we computed PAC over the full duration of each 20–40 second epoch. The resulting epoch-level MI value was then assigned as the label for all 2-second windows extracted from that epoch. Across the full dataset, PAC values ranged from 6×10⁻⁶ to 7×10⁻⁴ (dimensionless MI units) with a mean of approximately 4.4×10⁻⁵.
+**Epoch-level label assignment:** Rather than computing PAC on each 2-second window individually, I computed PAC over the full duration of each 20–40 second epoch. The resulting epoch-level MI value was then assigned as the label for all 2-second windows extracted from that epoch. Across the full dataset, PAC values ranged from 6×10⁻⁶ to 7×10⁻⁴ (dimensionless MI units) with a mean of approximately 4.4×10⁻⁵.
 
 ---
 
@@ -218,7 +218,7 @@ where U is the uniform distribution over N bins. The MI is dimensionless, with v
 
 #### 3.3.1 Architecture
 
-As the primary static PAC estimator, we adapted EEGNet (Lawhern et al., 2018) as a regression model predicting scalar PAC from a 2-second EEG window.
+As the primary static PAC estimator, I adapted EEGNet (Lawhern et al., 2018) as a regression model predicting scalar PAC from a 2-second EEG window.
 
 **Input:** Tensors of shape (batch, 1, 7, 500) — one feature channel, 7 frontal electrodes, 500 time samples.
 
@@ -249,7 +249,7 @@ On held-out test subjects, EEGNet achieved R² = 0.287. As discussed in Section 
 
 ### 3.4 Feature Engineering for Temporal Prediction
 
-To enable temporal PAC forecasting, we constructed a 73-dimensional causal feature vector for each 2-second window:
+To enable temporal PAC forecasting, I constructed a 73-dimensional causal feature vector for each 2-second window:
 
 #### 3.4.1 Spectral Features (61 dimensions)
 
@@ -376,7 +376,7 @@ All comparisons between controllers were conducted as paired, within-subject Wil
 
 ### 4.1 Problem Framing: Why Static Prediction Mattered
 
-The initial research question was: can instantaneous EEG predict the current level of theta-gamma phase-amplitude coupling? From February 5–16, 2026, we conducted a systematic exploration across eight distinct model families, ranging from compact convolutional networks to transformer-based architectures with over a million parameters. What emerged was not a successful predictor, but a scientific finding about the limits of instantaneous EEG data.
+The initial research question was: can instantaneous EEG predict the current level of theta-gamma phase-amplitude coupling? From February 5–16, 2026, I conducted a systematic exploration across eight distinct model families, ranging from compact convolutional networks to transformer-based architectures with over a million parameters. What emerged was not a successful predictor, but a scientific finding about the limits of instantaneous EEG data.
 
 ---
 
@@ -407,7 +407,7 @@ Targeting the change in PAC between consecutive windows yielded R² = 0.06. At t
 
 ### V3 — SpecTempNet (Multi-Scale Spectral-Temporal Network)
 
-An initial evaluation appeared to yield R² = 0.69. However, our leakage audit revealed that the spectral feature branch was computing features directly derived from the Modulation Index, which is the same quantity as the prediction target. After removing PAC-circular features, SpecTempNet's true R² fell to 0.236 — lower than the 135-parameter Ridge baseline.
+An initial evaluation appeared to yield R² = 0.69. However, my leakage audit revealed that the spectral feature branch was computing features directly derived from the Modulation Index, which is the same quantity as the prediction target. After removing PAC-circular features, SpecTempNet's true R² fell to 0.236 — lower than the 135-parameter Ridge baseline.
 
 ### V4 — ViT-TCNet (Vision Transformer + TCN Decoder)
 
@@ -443,7 +443,7 @@ When a 135-parameter linear model performs identically to a 1.1-million-paramete
 
 ### 4.4 Motivation for the Temporal Prediction Pivot
 
-The ceiling finding has a direct constructive implication: rather than attempting to improve instantaneous PAC prediction (bounded at R² = 0.287), we should ask whether the *dynamics* of PAC over time are predictable. Even if a single 2-second window provides limited information about current PAC, the trajectory of PAC over the preceding 20 seconds might contain enough structure to predict where PAC will be 5–10 seconds in the future. This framing changes the task entirely:
+The ceiling finding has a direct constructive implication: rather than attempting to improve instantaneous PAC prediction (bounded at R² = 0.287), I should ask whether the *dynamics* of PAC over time are predictable. Even if a single 2-second window provides limited information about current PAC, the trajectory of PAC over the preceding 20 seconds might contain enough structure to predict where PAC will be 5–10 seconds in the future. This framing changes the task entirely:
 
 - **Static prediction** asks: "What is the current PAC?" — bounded at R² = 0.287.
 - **Temporal forecasting** asks: "Given how PAC has been evolving, where will it be in 5 seconds?" — an open question not constrained by the instantaneous ceiling.
@@ -474,7 +474,7 @@ All statistical tests are Wilcoxon signed-rank (non-parametric, paired, N=35) un
 
 ### 5.1 Temporal Forecasting Performance (Horizon Sweep)
 
-To characterize the relationship between prediction horizon and model performance, we trained separate MultiscaleCausalTCN models for each of six horizons (1, 2, 3, 5, 8, and 10 seconds) and evaluated each against persistence and Ridge regression baselines.
+To characterize the relationship between prediction horizon and model performance, I trained separate MultiscaleCausalTCN models for each of six horizons (1, 2, 3, 5, 8, and 10 seconds) and evaluated each against persistence and Ridge regression baselines.
 
 **Note on target definition:** The horizon sweep used a causal target smoothing window of ts=5 (smoothed PAC targets) to characterize comparative advantage across methods. The deployed controller checkpoint uses ts=1 (raw PAC targets) and achieves test R²=0.170 at the 5-second horizon. These measure different things and should not be combined.
 
@@ -560,7 +560,7 @@ The advantage was consistent across data splits: subjects in the training set (N
 
 ### 5.4 Fatigue Model Robustness
 
-To assess whether the TCN advantage holds under assumptions of neural habituation, we evaluated the predictive controller across a fatigue sensitivity sweep using the closed-loop simulation framework. Six fatigue rate levels were tested, spanning from no fatigue (rate=0.0) through increasing habituation severity (rate=0.040).
+To assess whether the TCN advantage holds under assumptions of neural habituation, I evaluated the predictive controller across a fatigue sensitivity sweep using the closed-loop simulation framework. Six fatigue rate levels were tested, spanning from no fatigue (rate=0.0) through increasing habituation severity (rate=0.040).
 
 | Fatigue Rate | Fixed Eff. | Adaptive Eff. | Improvement | p-value |
 |-------------|-----------|--------------|-------------|---------|
