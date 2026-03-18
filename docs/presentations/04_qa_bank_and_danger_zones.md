@@ -74,7 +74,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 >
 > Right now, every clinical protocol delivers 40 hertz stimulation the same way: 40 seconds of sound on, 20 seconds off, repeated for an hour. Every patient, same schedule, same timing.
 >
-> But brains are different. When I analyzed the EEG data from 35 dementia patients, I found that about half of them -- 48.6 percent -- habituate. Their brain's response to the stimulus fades over time. But the other half -- 51.4 percent -- actually facilitate. Their response gets stronger. And at the population level, there's no net trend. The p-value is 0.542 -- not significant.
+> But brains are different. When I analyzed the EEG data from 35 elderly subjects, I found that about half of them -- 48.6 percent -- habituate. Their brain's response to the stimulus fades over time. But the other half -- 51.4 percent -- actually facilitate. Their response gets stronger. And at the population level, there's no net trend. The p-value is 0.542 -- not significant.
 >
 > *(gesture toward habituation figure if on poster)*
 >
@@ -90,7 +90,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 >
 > So I built a system that adapts. The core idea is: instead of using a timer, use the brain itself to decide when to stimulate.
 >
-> I used EEG recordings from 35 dementia patients -- this is a publicly available dataset from OpenNeuro of patients undergoing 40 hertz auditory stimulation. 19 channels, 250 hertz sampling rate.
+> I used EEG recordings from 35 elderly subjects -- this is a publicly available dataset from OpenNeuro of subjects undergoing 40 hertz auditory stimulation. 19 channels, 250 hertz sampling rate.
 >
 > First, I needed a biomarker -- a way to measure, in real time, how well the brain is synchronizing to the stimulus. I used something called phase-amplitude coupling, or PAC. It measures how the power of gamma oscillations at 40 hertz is locked to the phase of slower theta oscillations. High PAC means the brain is entraining well. Low PAC means it's losing sync. I compute this using the Hilbert transform and Tort's Modulation Index, over sliding 2-second windows.
 >
@@ -351,7 +351,7 @@ These are the moments that could cost you points. Have answers ready.
 ### Danger Zone 4: "35 patients isn't enough data"
 
 **Your answer:**
-> It's a real limitation, and I acknowledge it. But three things give me confidence. First, the effect sizes are very large -- Hedges' g of 1.31 for alignment -- so the differences are detectable even with 35 subjects. Second, all 35 of 35 subjects showed improvement, not just the average. Third, I used non-parametric statistics that are appropriate for small samples. This is also the largest publicly available dataset of dementia patients during 40 Hz stimulation, so it's the best data currently accessible.
+> It's a real limitation, and I acknowledge it. But three things give me confidence. First, the effect sizes are very large -- Hedges' g of 1.31 for alignment -- so the differences are detectable even with 35 subjects. Second, all 35 of 35 subjects showed improvement, not just the average. Third, I used non-parametric statistics that are appropriate for small samples. This is also the largest publicly available EEG dataset with this protocol during 40 Hz stimulation, so it's the best data currently accessible.
 
 ### Danger Zone 5: "How is this different from just a reactive controller?"
 
@@ -401,7 +401,7 @@ These are the moments that could cost you points. Have answers ready.
 ```
 KEY NUMBERS:
 - 55 million patients, $300B/year
-- 35 dementia patients, 19 EEG channels, 250 Hz
+- 35 elderly subjects, 19 EEG channels, 250 Hz
 - TCN: 31K parameters, 4 residual blocks, dilation 1/2/4/8
 - 5 input features, 20-second lookback at 5 Hz
 - Horizon sweep: R² = 0.25 at 5s (baselines: negative)

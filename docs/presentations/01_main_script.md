@@ -18,7 +18,7 @@ But here's what bothered me as I read deeper.
 
 *[Point to Figure 1: Fixed vs. Adaptive]*
 
-Every clinical protocol delivers this stimulation the exact same way. Forty seconds on, twenty off, repeating for an hour. Same schedule, every patient, every session, regardless of how the brain is actually responding. And when I analyzed EEG data from 35 dementia patients, I found that about half of them habituate -- their brains tune out the stimulus over time -- while the other half actually get stronger. A fixed schedule can't handle that. It stimulates when the brain doesn't need it and rests when coupling is fading. And nobody was trying to predict this ahead of time. That gap is what this project is about.
+Every clinical protocol delivers this stimulation the exact same way. Forty seconds on, twenty off, repeating for an hour. Same schedule, every patient, every session, regardless of how the brain is actually responding. And when I analyzed EEG data from 35 elderly subjects, I found that about half of them habituate -- their brains tune out the stimulus over time -- while the other half actually get stronger. A fixed schedule can't handle that. It stimulates when the brain doesn't need it and rests when coupling is fading. And nobody was trying to predict this ahead of time. That gap is what this project is about.
 
 *[Move to Model Approach. Point to Stage 1 table.]*
 

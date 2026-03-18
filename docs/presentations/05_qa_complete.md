@@ -32,7 +32,7 @@ I read the foundational papers: Iaccarino 2016 showing 40-50% plaque reduction i
 
 **What data did you use? How much data did you collect?**
 
-I used a publicly available dataset from OpenNeuro -- ds005048 by Lahijanian et al. 2024. 35 dementia patients, 7 frontal EEG channels at 250 Hz, alternating 40 Hz auditory stimulation and rest epochs. I extracted 17,283 two-second windows. Subject-level splits: 24 train, 5 validation, 6 test -- no patient appears in more than one split.
+I used a publicly available dataset from OpenNeuro -- ds005048 by Lahijanian et al. 2024. 35 elderly subjects, 7 frontal EEG channels at 250 Hz, alternating 40 Hz auditory stimulation and rest epochs. I extracted 17,283 two-second windows. Subject-level splits: 24 train, 5 validation, 6 test -- no patient appears in more than one split.
 
 ---
 
@@ -82,7 +82,7 @@ The network can only see past and present, never future. This is enforced by pad
 
 **What are the 73 input features?**
 
-35 band power features (power in delta, theta, alpha, beta, gamma across 7 channels), 21 spectral coherence features (pairwise coherence between all channel pairs), 5 other spectral features (entropy, peak frequency, bandwidth, asymmetry, concentration), 7 PAC-derived features (current PAC, moving averages at 2/4/8/16 steps, first differences at 1/4 steps), and 5 stimulation context features (stim on/off, time since last switch, recent stim fraction, cycle phase encoded as sine and cosine).
+28 band power features (power in theta, alpha, beta, gamma across 7 channels — no delta band), 7 theta/gamma power ratio features (one per channel), 21 PAC-structure features (inter-channel PAC-derived), 5 global statistics (spectral entropy, peak frequency, bandwidth, asymmetry, concentration) = 61 spectral features total; plus 7 PAC-derived features (current PAC, moving averages at 2/4/8/16 steps, first differences at 1/4 steps), and 5 stimulation context features (stim on/off, time since last switch, recent stim fraction, cycle phase encoded as sine and cosine).
 
 ---
 
@@ -190,7 +190,7 @@ The primary results are NOT simulation. I replayed the controller on all 35 pati
 
 **35 patients isn't enough data.**
 
-Three things give me confidence despite the small sample. First, the effect sizes are very large -- Hedges' g of 1.31 to 4.47 -- so the differences are clear, not subtle. Second, all 35 out of 35 patients benefited individually, not just on average. Third, I used Wilcoxon signed-rank, a non-parametric test appropriate for small samples. This is also the largest publicly available EEG dataset of dementia patients during 40 Hz stimulation. It's the best data currently accessible for this question.
+Three things give me confidence despite the small sample. First, the effect sizes are very large -- Hedges' g of 1.31 to 4.47 -- so the differences are clear, not subtle. Second, all 35 out of 35 patients benefited individually, not just on average. Third, I used Wilcoxon signed-rank, a non-parametric test appropriate for small samples. This is also the largest publicly available EEG dataset with this protocol during 40 Hz stimulation. It's the best data currently accessible for this question.
 
 ---
 

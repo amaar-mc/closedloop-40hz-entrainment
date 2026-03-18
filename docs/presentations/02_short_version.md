@@ -15,7 +15,7 @@ That's how I found out about 40 hertz entrainment. The idea is that when you pla
 
 *[Gesture toward Figure 1]*
 
-The problem is that right now, every patient receives this therapy on the exact same fixed schedule -- 40 seconds of sound, 20 seconds of silence, over and over for an hour. Regardless of whether their brain is actually responding. And when I analyzed real EEG data from 35 dementia patients, I found something that really stuck with me: about half of them habituate -- their brains gradually tune out the sound, like how you stop noticing a ticking clock -- while the other half actually get *more* responsive. A one-size-fits-all schedule can't serve both groups.
+The problem is that right now, every patient receives this therapy on the exact same fixed schedule -- 40 seconds of sound, 20 seconds of silence, over and over for an hour. Regardless of whether their brain is actually responding. And when I analyzed real EEG data from 35 elderly subjects, I found something that really stuck with me: about half of them habituate -- their brains gradually tune out the sound, like how you stop noticing a ticking clock -- while the other half actually get *more* responsive. A one-size-fits-all schedule can't serve both groups.
 
 *[Gesture toward Figure 3: System Architecture]*
 
