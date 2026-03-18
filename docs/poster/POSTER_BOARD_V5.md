@@ -171,7 +171,7 @@ This project asks: **can we predict when a patient's brain will lose entrainment
 
 **Stage 1 — Static PAC Estimation: Architecture Exploration**
 
-I tested 6 neural network architectures to estimate current PAC from a single 2-second EEG window, spanning three orders of magnitude in model size:
+I tested 8 neural network configurations to estimate current PAC from a single 2-second EEG window, spanning nearly three orders of magnitude in model size (the poster table shows the 6 most informative; see paper Table 1 for all 8 including EEGNetV2 and Optimized Ensemble):
 
 | Architecture | Parameters | Test R² |
 |---|---|---|
@@ -297,7 +297,7 @@ Controller performance on all 35 subjects' real EEG:
 | Oracle (upper bound) | 100.0% | 100.0% | 100.0% | +33.3 | 48.3% |
 
 - TCN vs Reactive: Alignment g = +1.31, Low-PAC targeting g = +4.47, PAC gap g = +1.57 (all p < 0.001)
-- TCN PAC targeting gap reaches **92% of the theoretical oracle** (30.5 vs 33.3)
+- TCN PAC targeting gap reaches **91% of the theoretical oracle** (30.5 vs 33.3; precise value 91.6%, rounded to 91% consistent with paper)
 - TCN uses less stimulation than Fixed Schedule (59.7% vs 66.6%) with far superior targeting
 - **Trade-off:** Reactive achieves higher High-PAC Rest (77.3% vs 61.6%) by being conservative, but misses 48% of low-PAC windows that need treatment
 
@@ -328,7 +328,9 @@ Controller performance on all 35 subjects' real EEG:
 
 ***p < 0.001, Hedges' g = 1.7–2.4 (large to very large effects). Advantage grows as fatigue worsens — exactly when personalization matters most.
 
-**Result 4: Robust Across Fatigue Models**
+*Note: Result 3 uses the simulation-based fatigue analysis with five discrete severity levels (None/Mild/Moderate/High/Severe). The paper's Section 4.4 reports a separate analysis across six habituation rate levels (0.0-0.040) showing efficiency advantage from +0.4% to +5.7%. Both analyses confirm the same qualitative finding: adaptive advantage increases with fatigue severity.*
+
+**Result 4: Robust Across Fatigue Models (Supplementary Simulation)**
 
 | Fatigue Model | Advantage | Hedges' g |
 |---|---|---|
@@ -338,6 +340,8 @@ Controller performance on all 35 subjects' real EEG:
 | Saturation (synaptic) | +19.0% | 3.66 |
 
 All p < 0.001. Advantage holds under all four mathematical models of neural fatigue.
+
+*Note: Result 4 is a supplementary simulation analysis not reported in the paper. The paper's robustness analysis (Section 4.4) instead reports threshold sensitivity across delta_z=0.1-1.0 and fatigue severity sweep across six levels. This simulation-based fatigue model comparison is additional supporting evidence.*
 
 **Data Integrity:** Subject-level splits (no leakage) · Shuffle-label R² = −0.332 (real signal, not artifacts) · Causal dataset verified · Feature ablation confirms interpretability
 
@@ -351,7 +355,7 @@ All p < 0.001. Advantage holds under all four mathematical models of neural fati
 
 3. **All 35 patients benefited**, including 6 held-out test subjects — generalizes across individual EEG patterns
 
-4. Adaptive advantage **increases with fatigue** (+9.0% to +11.2%) and holds across four fatigue model assumptions
+4. Adaptive advantage **increases with fatigue** — confirmed across six fatigue severity levels in simulation and four fatigue model assumptions
 
 5. Half of patients habituate while half do not — validating the need for **personalized, not fixed** scheduling
 
@@ -475,7 +479,7 @@ The ~700 word reduction frees space for larger figures and increased font size (
 
 5. **Two-stage pipeline explicitly framed** — Section now clearly explains: (a) why two models are needed, (b) that Architecture Exploration was about selecting the Stage 1 model, (c) why EEGNet won (best R² at minimal parameters, real-time capable), (d) that the R²=0.287 ceiling motivated the shift to temporal prediction
 
-6. **"8 architectures" corrected to "6 architectures"** — table shows 6 rows, text now matches
+6. **"8 configurations" noted with "6 shown in table"** — paper Table 1 lists 8 (V1-V8); poster table shows 6 most informative rows with note referencing paper for full list
 
 7. **Architecture Exploration conclusion made explicit** — "Conclusion: R²=0.287 is a data ceiling, not a model capacity limitation. More complex architectures cannot break through it."
 
@@ -489,7 +493,7 @@ The ~700 word reduction frees space for larger figures and increased font size (
 
 11. **PAC Gap units verified as "(×10⁻⁶)"** — Modulation Index (Tort 2010) is dimensionless KL-divergence, not voltage-squared. Confirmed correct from V4 fix.
 
-12. **"91% of oracle" corrected to "92%"** — 30.5 ÷ 33.3 = 0.9159 = 91.6%, which rounds to 92%. RESULTS_REPORT.md says 91% (truncation error); poster now uses arithmetically correct value.
+12. **"92% of oracle" corrected back to "91%"** — 30.5 ÷ 33.3 = 0.9159 = 91.6%. The paper uses 91% (consistent rounding convention). Poster now matches paper.
 
 13. **Ridge R² at horizon=3 corrected from 0.254 to 0.253** — Source JSON: 0.2534641, which rounds to 0.253 at 3 d.p., not 0.254.
 
