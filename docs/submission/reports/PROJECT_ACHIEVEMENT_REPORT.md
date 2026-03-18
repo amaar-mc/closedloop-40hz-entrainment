@@ -163,7 +163,7 @@ The closed-loop controller uses hand-tuned z-score thresholds (-0.5 for stimulat
 
 | Dimension | Assessment |
 |-----------|-----------|
-| Scientific Rigor | Strong — proper statistics (Wilcoxon, Hedges' g, bootstrap CI), data integrity audits, shuffle-label validation |
+| Scientific Rigor | Strong — proper statistics (Wilcoxon, Hedges' g, 95% CIs via large-sample normal approximation), data integrity audits, shuffle-label validation |
 | Innovation | Strong — novel application of causal TCN to entrainment prediction; horizon sweep demonstrates unique value |
 | Completeness | Strong — end-to-end pipeline from raw BIDS data to controller validation |
 | Reproducibility | Strong — all code open-source, deterministic seeds, OpenNeuro public dataset |
