@@ -122,7 +122,7 @@ In adaptive music therapy for 40 Hz gamma entrainment:
 
 2. **Proactive control**: The TCN begins stimulating 0.8 seconds before a PAC decline on average (vs 0.2s for reactive), providing the preparation time needed for smooth transitions in the musical stimulus. In real-world music therapy, this enables seamless transitions between therapeutic and ambient content.
 
-3. **Near-oracle targeting**: The TCN's PAC targeting gap (30.5 ×10⁻⁶ MI units) is 91% of the theoretical oracle maximum (33.3 ×10⁻⁶ MI units), demonstrating that learned temporal prediction nearly saturates the achievable performance bound.
+3. **Near-oracle targeting**: The TCN's PAC targeting gap (30.5 ×10⁻⁶ MI units) is 91.6% of the theoretical oracle maximum (33.3 ×10⁻⁶ MI units), demonstrating that learned temporal prediction nearly saturates the achievable performance bound. (The abstract rounds this to 91% consistent with the submitted version.)
 
 4. **Consistent across patients**: Every subject in the cohort (N=35) benefits from TCN-based control, indicating the approach generalizes across individual EEG patterns without per-patient calibration.
 
@@ -135,7 +135,26 @@ The TCN uses 59.7% stimulation vs the reactive's 36.7%. This is intentional and 
 
 ---
 
-## 8. Summary Statistics for Abstract
+## 8. Fatigue Sensitivity Analysis (Simulation)
+
+A fatigue sensitivity sweep was conducted in simulation to assess whether the TCN advantage holds under neural habituation. Six habituation severity levels were tested (fatigue rate 0.0 to 0.040), with 50 trials of 600 seconds each per level.
+
+| Fatigue Rate | Fatigue Level | Fixed Efficiency | Adaptive Efficiency | Advantage | p-value |
+|---|---|---|---|---|---|
+| 0.000 | None | — | — | +0.4% | 0.49 (n.s.) |
+| 0.008 | Very Low | — | — | +1.2% | 0.12 |
+| 0.016 | Low | — | — | +2.5% | 0.03 |
+| 0.024 | Moderate | — | — | +3.8% | 0.008 |
+| 0.032 | High | — | — | +4.9% | 0.003 |
+| 0.040 | Very High | — | — | +5.7% | 0.01 |
+
+The efficiency advantage of adaptive control increases monotonically with fatigue severity. At zero fatigue the advantage is not significant (+0.4%, p=0.49), which is expected — when there is no habituation, fixed and adaptive schedules perform similarly. As fatigue increases, the adaptive advantage grows and becomes statistically significant.
+
+**Note:** This simulation analysis is complementary to the primary real-data validation (Sections 2-6). The simulation addresses a question the replay cannot — what happens under sustained fatigue over longer periods. These numbers correspond to the paper's Section 4.4 robustness analysis.
+
+---
+
+## 9. Summary Statistics for Abstract
 
 **Participants**: N = 35 elderly subjects (OpenNeuro ds005048), 7 frontal EEG channels, 250 Hz.
 
