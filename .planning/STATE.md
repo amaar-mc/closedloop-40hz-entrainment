@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
 status: planning
-last_updated: "2026-03-17T10:00:00.000Z"
-last_activity: 2026-03-17 — Completed 08-01 text consistency fixes (2 commits)
+last_updated: "2026-03-18T04:18:57Z"
+last_activity: 2026-03-18 — Completed 08-02 reference cleanup (2 commits)
 progress:
   total_phases: 9
   completed_phases: 4
   total_plans: 12
-  completed_plans: 11
+  completed_plans: 12
 ---
 
 # Project State: Research Documentation Project
@@ -24,19 +24,19 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 ## Current Status
 
 **Milestone:** v2.0 Paper Audit & Corrections
-**Phase:** Phase 8 (Plan 01 complete) — Fix Internal Consistency
-**Plan:** 08-01 complete
-**Status:** Ready to plan
-**Last activity:** 2026-03-17 — Completed 08-01 text consistency fixes (2 commits)
+**Phase:** Phase 8 (Plan 02 complete) — Fix Internal Consistency COMPLETE
+**Plan:** 08-02 complete
+**Status:** Phase 8 complete — ready for Phase 9
+**Last activity:** 2026-03-18 — Completed 08-02 reference cleanup (2 commits)
 
-**Progress bar:** [█████████░] 92% (11/12 plans complete)
+**Progress bar:** [██████████] 100% (12/12 plans complete)
 
 ## v2.0 Phase Summary
 
 | Phase | Goal | Status |
 |-------|------|--------|
 | 7. Fix Data & Methodology Errors | Correct hysteresis, CI method, population labels, spectral features, artifact handling in RESEARCH_PAPER.md | Plan 01 complete |
-| 8. Fix Internal Consistency | Fix population label, references, section heading, voice, and terminology throughout RESEARCH_PAPER.md | Plan 01 complete |
+| 8. Fix Internal Consistency | Fix population label, references, section heading, voice, and terminology throughout RESEARCH_PAPER.md | COMPLETE (Plans 01-02) |
 | 9. Propagate & Recompile | Propagate all corrections to CSEF presentation and RESULTS_REPORT.md; recompile paper PDF | Not started |
 
 ## Accumulated Context
@@ -80,10 +80,13 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 - **Single-author voice:** All 13 self-referential "we/our" replaced with "I/my"; Abstract already used I correctly and was left unchanged
 - **Reactive Threshold capitalized:** Matches named controller variant in Section 3.6.3; "reactive thresholding" at Contribution 3 corrected
 - **Orders of magnitude:** "nearly three orders of magnitude" is correct (1,457 to 1.1M = log10 ~2.88); Section 4.3 now consistent with L74
+- **TCFormer sentence removed:** Sentence misattributing [25] as TCFormer deleted from Section 2.5.2; EEGNet [25] (now [18]) citation in 2.5.1 intact
+- **Reference list pruned to 23:** 16 orphan references deleted; surviving 23 renumbered [1]-[23]; EEGNet=[18], Tort PAC=[22]
+- **Single-pass citation replacement:** Used re.sub callback to avoid cascading replacement bugs when renumbering
 
 ## Blockers/Concerns
 
 None identified.
 
 ---
-Last activity: 2026-03-17 - Completed Phase 8 Plan 01: 5 text consistency fixes (CONS-01, CONS-04, CONS-05, CONS-06, CONS-07)
+Last activity: 2026-03-18 - Completed Phase 8 Plan 02: Reference cleanup — TCFormer removed, 16 orphans pruned, citations renumbered [1]-[23] (CONS-02, CONS-03)

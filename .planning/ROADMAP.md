@@ -113,7 +113,7 @@ Plans:
 
 **Depends on:** Phase 7
 **Requirements:** CONS-01, CONS-02, CONS-03, CONS-04, CONS-05, CONS-06, CONS-07
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 
 **Success Criteria (what must be TRUE):**
 1. Every mention of the subject population uses "35 elderly subjects" (not "35 dementia patients"), and the reference list contains only references that are cited somewhere in the text body
@@ -122,8 +122,8 @@ Plans:
 4. The terms "Reactive Threshold" (not "Reactive thresholding") and a single consistent orders-of-magnitude phrase are used wherever that controller and PAC scale are mentioned
 
 Plans:
-- [ ] 08-01-PLAN.md — Fix population label, section heading, first-person voice, terminology, and magnitude phrase (CONS-01, CONS-04, CONS-05, CONS-06, CONS-07)
-- [ ] 08-02-PLAN.md — Remove TCFormer sentence and prune/renumber orphan references (CONS-02, CONS-03)
+- [x] 08-01-PLAN.md — Fix population label, section heading, first-person voice, terminology, and magnitude phrase (CONS-01, CONS-04, CONS-05, CONS-06, CONS-07)
+- [x] 08-02-PLAN.md — Remove TCFormer sentence and prune/renumber orphan references (CONS-02, CONS-03)
 
 ### Phase 9: Propagate Corrections & Recompile PDF
 
@@ -158,8 +158,8 @@ Plans:
 | 4. Finalize Lab Notebook | 3/3 | Complete | 2026-03-15 |
 | 5. Real-Time Demo | 1/1 | Complete | - |
 | 6. Write Research Paper | 5/5 | Complete | - |
-| 7. Fix Data & Methodology Errors | 0/1 | Not started | - |
-| 8. Fix Internal Consistency | 0/2 | Not started | - |
+| 7. Fix Data & Methodology Errors | 1/1 | Complete | 2026-03-17 |
+| 8. Fix Internal Consistency | 2/2 | Complete | 2026-03-18 |
 | 9. Propagate & Recompile | 0/TBD | Not started | - |
 
 ### Phase 4: Finalize Lab Notebook
