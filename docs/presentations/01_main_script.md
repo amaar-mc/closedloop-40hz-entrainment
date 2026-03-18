@@ -24,11 +24,11 @@ Every clinical protocol delivers this stimulation the exact same way. Forty seco
 
 So my first question was: can I measure how well the brain is synchronizing in real time? I use a biomarker called phase-amplitude coupling -- PAC -- which measures how tightly 40 hertz gamma power locks to slower theta rhythms. High PAC means the therapy is working. Low PAC means the brain is losing sync.
 
-To estimate PAC from raw EEG, I tested six different architectures -- from a 1,457-parameter EEGNet all the way up to a 2-million-parameter Vision Transformer. And every single one converged to the same R-squared: 0.287. The 2-million-parameter model actually scored *lower* than the 1,457-parameter one because of overfitting.
+To estimate PAC from raw EEG, I tested eight neural network configurations -- from a 1,457-parameter EEGNet all the way up to a 1.1-million-parameter Vision Transformer. And every single one converged to the same R-squared: 0.287. The 1.1-million-parameter model actually scored *lower* than the 1,457-parameter one because of overfitting.
 
 *[Point to R-squared vs. params chart]*
 
-When six completely different architectures hit the same ceiling, that's not a model problem -- it's a data problem. A 2-second snapshot simply contains a finite amount of information about PAC. That realization was actually one of the most valuable moments in the project, because it told me exactly where to go next.
+When eight completely different configurations hit the same ceiling, that's not a model problem -- it's a data problem. A 2-second snapshot simply contains a finite amount of information about PAC. That realization was actually one of the most valuable moments in the project, because it told me exactly where to go next.
 
 *[Point to Stage 2: TCN]*
 
@@ -36,11 +36,11 @@ Instead of trying to predict PAC better from one snapshot, I shifted the questio
 
 *[Point to Figure 5: Horizon Sweep]*
 
-This figure is where the whole project comes together. I trained models at horizons from 1 second to 10 seconds. At short horizons, the brain barely changes -- persistence alone gets R-squared of 0.81. But at 5 seconds, persistence and Ridge regression both collapse to negative R-squared -- worse than guessing the average. The TCN is the only method that provides useful prediction at that range, holding at 0.25 -- a plus-0.5 margin. And 5 seconds is exactly the lead time a controller needs for proactive decisions.
+This figure is where the whole project comes together. I trained models at horizons from 1 second to 10 seconds. At short horizons, the brain barely changes -- Ridge regression alone gets R-squared of 0.81. But at 5 seconds, persistence and Ridge regression both collapse to negative R-squared -- worse than guessing the average. The TCN is the only method that provides useful prediction at that range, holding at 0.25 -- a plus-0.5 margin. And 5 seconds is exactly the lead time a controller needs for proactive decisions.
 
 *[Move to Results. Point to Result 1 table.]*
 
-I validated by replaying the TCN controller on all 35 patients' actual EEG -- real brain data, not simulation. The reactive approach catches 51.7% of the windows where the brain actually needed stimulation. The TCN catches 82.6%. That's a 60% improvement in therapeutic targeting, with Hedges' g of 4.47. And the TCN's targeting reaches 92% of a theoretical oracle with perfect future knowledge.
+I validated by replaying the TCN controller on all 35 patients' actual EEG -- real brain data, not simulation. The reactive approach catches 51.7% of the windows where the brain actually needed stimulation. The TCN catches 82.6%. That's a 60% improvement in therapeutic targeting, with Hedges' g of 4.47. And the TCN's targeting reaches 91% of a theoretical oracle with perfect future knowledge.
 
 *[Point to Figure 9]*
 
@@ -48,7 +48,7 @@ All 35 out of 35 patients showed higher clinical utility with the TCN than react
 
 *[Point to Result 3]*
 
-And the advantage grows with neural fatigue -- from plus 9% to plus 11.2% as fatigue worsens, holding across four different mathematical models of fatigue. Exactly when personalization matters most.
+And the advantage grows with neural fatigue -- from plus 9% to plus 11.2% as fatigue worsens, holding across six fatigue severity levels in simulation. Exactly when personalization matters most.
 
 *[Step back. Eye contact.]*
 
@@ -85,6 +85,6 @@ These are things you KNOW but don't say unprompted. If a judge asks, you have th
 | Dilation factors 1,2,4,8 / 31-step receptive field | "Dilated causal convolutions" covers it | "Dilation factors 1, 2, 4, and 8 give a 31-step receptive field -- about 62 seconds of history" |
 | Fixed schedule row-by-row walkthrough | Only the contrast matters | "Fixed schedule is actually *negative* PAC gap -- it stimulates in the wrong direction" |
 | 0.25 "doesn't sound impressive" hedging | One sentence handles it now | "The controller doesn't need exact prediction, it needs direction. 0.25 is enough for 83% targeting." |
-| Naming all four fatigue models | "Four different models" suffices | "Exponential decay, step function, heterogeneous population, synaptic saturation" |
+| Naming all six fatigue severity levels | "Six severity levels" suffices | "Rate 0.0, 0.008, 0.016, 0.024, 0.032, 0.040 — spanning no fatigue to high fatigue" |
 | Three separate limitation details | One sentence now | "Single cohort, 6-10 min sessions vs clinical 60 min, FDA clearance path" |
 | Lahijanian 2024 extended description | "Confirmed in human patients" covers it | "Lahijanian et al. 2024 showed auditory entrainment enhances default mode network connectivity" |
