@@ -15,7 +15,7 @@
 | 3 | Visual Polish | Add visuals and ensure quality standards | 4 | 3 |
 | 4 | Finalize Lab Notebook | ~~Finalize a judge-ready review bundle without touching original notebook files~~ DONE | 6 | 5/5 | Complete   | 2026-03-15 | Real-Time Demo | Interactive Streamlit dashboard with live PAC visualization and 40 Hz audio | 6 | 3 |
 | 6 | Write Research Paper | Comprehensive venue-agnostic research paper with full IMRAD structure | 10 | 4 |
-| 7 | Fix Data & Methodology Errors | Correct all factual errors in RESEARCH_PAPER.md (hysteresis, CI method, population labels, spectral features) | 7 | 3 |
+| 7 | 1/1 | Complete   | 2026-03-18 | 3 |
 | 8 | Fix Internal Consistency | Resolve all internal consistency issues in RESEARCH_PAPER.md (population labels, references, formatting, voice, terminology) | 7 | 4 |
 | 9 | Propagate & Recompile | Propagate all corrections to CSEF presentation and RESULTS_REPORT.md, then recompile the paper PDF | 3 | 3 |
 
@@ -97,7 +97,7 @@ Plans:
 
 **Depends on:** Phase 6
 **Requirements:** DATA-01, DATA-02, DATA-03, DATA-04, DATA-05, METH-01, METH-02
-**Plans:** 1 plan
+**Plans:** 1/1 plans complete
 
 **Success Criteria (what must be TRUE):**
 1. A reader of RESEARCH_PAPER.md can find "3-second" hysteresis in every location that previously said "5-second" (Sections 1.4, 3.6.2, Figure 3 caption)

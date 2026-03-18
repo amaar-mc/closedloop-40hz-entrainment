@@ -2,17 +2,15 @@
 gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: Paper Audit & Corrections
-current_plan: Not started
-status: Roadmap defined — ready to plan Phase 7
-stopped_at: null
+status: in-progress
 last_updated: "2026-03-17"
-last_activity: 2026-03-17
+last_activity: 2026-03-17 — Completed Phase 7 Plan 01 (DATA-01 through DATA-05, METH-01, METH-02)
+stopped_at: "Completed 07-fix-data-accuracy-and-methodology-errors 07-01-PLAN.md"
 progress:
-  total_phases: 3
-  completed_phases: 0
-  total_plans: 0
-  completed_plans: 0
-  percent: 0
+  total_phases: 9
+  completed_phases: 4
+  total_plans: 10
+  completed_plans: 10
 ---
 
 # Project State: Research Documentation Project
@@ -27,18 +25,18 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 ## Current Status
 
 **Milestone:** v2.0 Paper Audit & Corrections
-**Phase:** Phase 7 (not yet started) — Fix Data Accuracy & Methodology Errors
-**Plan:** —
-**Status:** Roadmap defined — ready to plan Phase 7
-**Last activity:** 2026-03-17 — Roadmap created with Phases 7, 8, 9
+**Phase:** Phase 7 (Plan 01 complete) — Fix Data Accuracy & Methodology Errors
+**Plan:** 07-01 complete
+**Status:** Phase 7 Plan 01 complete — 7 requirements (DATA-01 through DATA-05, METH-01, METH-02) corrected
+**Last activity:** 2026-03-17 — Completed 07-01 paper accuracy corrections (3 commits)
 
-**Progress bar:** [----------] 0% (0/3 phases complete)
+**Progress bar:** [██████████] 100% (10/10 plans complete)
 
 ## v2.0 Phase Summary
 
 | Phase | Goal | Status |
 |-------|------|--------|
-| 7. Fix Data & Methodology Errors | Correct hysteresis, CI method, population labels, spectral features, artifact handling in RESEARCH_PAPER.md | Not started |
+| 7. Fix Data & Methodology Errors | Correct hysteresis, CI method, population labels, spectral features, artifact handling in RESEARCH_PAPER.md | Plan 01 complete |
 | 8. Fix Internal Consistency | Fix population label, references, section heading, voice, and terminology throughout RESEARCH_PAPER.md | Not started |
 | 9. Propagate & Recompile | Propagate all corrections to CSEF presentation and RESULTS_REPORT.md; recompile paper PDF | Not started |
 
@@ -67,9 +65,19 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 - `temporal_multiscale/build_multiscale_dataset.py` — source of truth for spectral features (METH-01)
 - `src/controller.py` — source of truth for hysteresis value (DATA-01)
 
+## Accumulated Decisions (Phase 7)
+
+- **Hysteresis=3s:** run_tcn_validation.py confirms hysteresis_hold=3; all 3 paper locations corrected from 5s
+- **CI method:** large-sample normal approximation (g ± 1.96 × SE) used, not BCa bootstrap; 2 locations corrected
+- **Spectral features:** 4 bands (theta/alpha/beta/gamma) × 7ch = 28 + 7 ratios + 21 PAC-struct + 5 globals = 61; no delta, no coherence
+- **Artifact zeroing:** src/preprocessing.py sets samples to 0.0 (does not drop windows); wording corrected throughout Section 3.1.2
+- **EEGNet epoch 53:** confirmed only for TCN; EEGNet best epoch not recorded; claim qualified in Section 3.3.2
+- **Hedges' g Lead Time:** exact value 0.7549 rounds to 0.75 (not 0.76); RESULTS_REPORT.md corrected
+- **PAC Gap units:** MI is dimensionless (Tort 2010); correct unit is ×10⁻⁶ MI units, not µV²; 6 locations in RESULTS_REPORT.md corrected
+
 ## Blockers/Concerns
 
 None identified.
 
 ---
-Last activity: 2026-03-17 - Roadmap created for v2.0 milestone (Phases 7, 8, 9)
+Last activity: 2026-03-17 - Completed Phase 7 Plan 01: 7 paper accuracy corrections (DATA-01 to DATA-05, METH-01, METH-02)

@@ -59,16 +59,16 @@ Requirements for the lab notebook conversion project.
 
 ### Data Accuracy
 
-- [ ] **DATA-01**: Hysteresis duration corrected from "5-second" to "3-second" in all paper locations (Sections 1.4, 3.6.2, Figure 3 caption) and CSEF presentation
-- [ ] **DATA-02**: CI method corrected from "10,000-iteration BCa bootstrap" to "large-sample normal approximation" in Section 3.8
-- [ ] **DATA-03**: Lead time Hedges' g corrected from 0.76 to 0.75 in RESULTS_REPORT.md
-- [ ] **DATA-04**: EEGNet "best epoch 53" removed or qualified as unverifiable in Section 3.3.2
-- [ ] **DATA-05**: RESULTS_REPORT.md PAC Gap units corrected from "uV^2" to "x10^-6 MI units"
+- [x] **DATA-01**: Hysteresis duration corrected from "5-second" to "3-second" in all paper locations (Sections 1.4, 3.6.2, Figure 3 caption) and CSEF presentation
+- [x] **DATA-02**: CI method corrected from "10,000-iteration BCa bootstrap" to "large-sample normal approximation" in Section 3.8
+- [x] **DATA-03**: Lead time Hedges' g corrected from 0.76 to 0.75 in RESULTS_REPORT.md
+- [x] **DATA-04**: EEGNet "best epoch 53" removed or qualified as unverifiable in Section 3.3.2
+- [x] **DATA-05**: RESULTS_REPORT.md PAC Gap units corrected from "uV^2" to "x10^-6 MI units"
 
 ### Methodology
 
-- [ ] **METH-01**: Spectral features description corrected to match actual code (4 bands not 5, PAC-structure features not coherence, global stats) in Section 3.4.1
-- [ ] **METH-02**: Artifact rejection description corrected from "rejected" to "zeroed" in Section 3.1.2
+- [x] **METH-01**: Spectral features description corrected to match actual code (4 bands not 5, PAC-structure features not coherence, global stats) in Section 3.4.1
+- [x] **METH-02**: Artifact rejection description corrected from "rejected" to "zeroed" in Section 3.1.2
 
 ### Internal Consistency
 
@@ -134,13 +134,13 @@ Requirements for the lab notebook conversion project.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DATA-01 | Phase 7 | Pending |
-| DATA-02 | Phase 7 | Pending |
-| DATA-03 | Phase 7 | Pending |
-| DATA-04 | Phase 7 | Pending |
-| DATA-05 | Phase 7 | Pending |
-| METH-01 | Phase 7 | Pending |
-| METH-02 | Phase 7 | Pending |
+| DATA-01 | Phase 7 | Complete |
+| DATA-02 | Phase 7 | Complete |
+| DATA-03 | Phase 7 | Complete |
+| DATA-04 | Phase 7 | Complete |
+| DATA-05 | Phase 7 | Complete |
+| METH-01 | Phase 7 | Complete |
+| METH-02 | Phase 7 | Complete |
 | CONS-01 | Phase 8 | Pending |
 | CONS-02 | Phase 8 | Pending |
 | CONS-03 | Phase 8 | Pending |
