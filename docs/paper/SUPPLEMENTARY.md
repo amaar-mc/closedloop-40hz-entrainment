@@ -8,14 +8,14 @@
 
 ## Table S1: TCN Performance at ts=1 (Raw Targets) vs ts=5 (Smoothed Targets)
 
-The horizon sweep presented in Figure 3 of the main text uses a causal target smoothing window of ts=5 to characterize the comparative advantage of the TCN over baselines across prediction horizons. The deployed closed-loop controller checkpoint uses ts=1 (raw, unsmoothed PAC targets). These configurations measure different quantities and their results are not directly comparable.
+The horizon sweep presented in Figure 4 of the main text uses a causal target smoothing window of ts=5 to characterize the comparative advantage of the TCN over baselines across prediction horizons. The deployed closed-loop controller checkpoint uses ts=1 (raw, unsmoothed PAC targets). These configurations measure different quantities and their results are not directly comparable.
 
 | Configuration | Target Definition | 5s Horizon Test R² | Best Val R² | Note |
 |--------------|------------------|--------------------|-------------|------|
-| ts=5 (horizon sweep) | Smoothed PAC (5-window causal average) | 0.254 (TCN) | — | Used in Figure 3 to characterize comparative advantage |
+| ts=5 (horizon sweep) | Smoothed PAC (5-window causal average) | 0.254 (TCN) | — | Used in Figure 4 to characterize comparative advantage |
 | ts=1 (deployed checkpoint) | Raw PAC (unsmoothed) | 0.170 | 0.411 | Used in all closed-loop controller experiments |
 
-The ts=5 configuration inflates R² because consecutive target values share 4 of 5 data points, making them highly autocorrelated. The ts=1 configuration predicts raw PAC dynamics and represents the honest metric for the deployed model. The horizon sweep figure (Figure 3 in main text) uses ts=5 for visual clarity of the comparative advantage; Table S1 presents the deployed model's performance under raw target conditions.
+The ts=5 configuration inflates R² because consecutive target values share 4 of 5 data points, making them highly autocorrelated. The ts=1 configuration predicts raw PAC dynamics and represents the honest metric for the deployed model. The horizon sweep figure (Figure 4 in main text) uses ts=5 for visual clarity of the comparative advantage; Table S1 presents the deployed model's performance under raw target conditions.
 
 **Interpretation:** The key insight is that even at ts=1 (Test R²=0.170), the TCN provides directional forecasts of sufficient accuracy to produce large alignment improvements (Hedges' g=+1.31) over reactive threshold control. For binary stimulation timing decisions (STIMULATE vs REST vs MAINTAIN), directional accuracy matters more than absolute point-prediction accuracy. The TCN's Pearson r=0.433 on raw targets indicates strong rank correlation sufficient to support proactive control decisions.
 
@@ -33,7 +33,7 @@ The ts=5 configuration inflates R² because consecutive target values share 4 of
 
 ![Threshold Sensitivity Analysis](../../results/figures/threshold_sensitivity.png)
 
-*Figure S2.* Alignment (%) and Low-PAC Stimulation Rate (%) for the TCN Predictive controller as a function of the z-score threshold parameter (δz), ranging from 0.1 to 1.0 in steps of 0.1. The reactive threshold baseline (64.5% alignment, 51.7% Low-PAC Stim Rate) is shown as a horizontal dashed reference line. The TCN consistently outperforms the reactive baseline at all thresholds δz≥0.2. Performance plateaus in the range δz=0.3–1.0, indicating the predictive advantage is not an artifact of threshold tuning. Only at δz=0.1 (where frequent state-switching occurs) does TCN alignment approach the reactive baseline (59.6%). The operating threshold δz=0.5 (used in the primary controller comparison) is marked with a vertical indicator.
+*Figure S2.* Alignment (%) and Low-PAC Stimulation Rate (%) for the TCN Predictive controller as a function of the z-score threshold parameter (δz), ranging from 0.1 to 1.0 in steps of 0.1. The reactive threshold baseline (64.5% alignment, 51.7% Low-PAC Stim Rate) is shown as a horizontal dashed reference line. The TCN consistently outperforms the reactive baseline at all thresholds δz≥0.2. Performance plateaus in the range δz=0.3–1.0, indicating the predictive advantage is not an artifact of threshold tuning. Only at δz=0.1 (where frequent state-switching occurs) does TCN alignment approach the reactive baseline (59.6%). The operating threshold δz=0.3 (used in the primary controller comparison) is marked with a vertical indicator.
 
 ---
 
@@ -110,7 +110,7 @@ The EEGNet regression model (1,457 parameters) processes 2-second EEG windows of
 - **Block 1:** Temporal convolution (8 filters, 64-sample kernel) → Depthwise spatial convolution (depth multiplier D=2, 7 channels → 16 feature maps) → Batch normalization → ELU → Average pooling (pool=4)
 - **Block 2:** Depthwise separable convolution (16 pointwise filters, 16-sample kernel) → Batch normalization → ELU → Average pooling (pool=8)
 - **Head:** Linear (flattened → scalar PAC prediction)
-- **Training:** MSE loss, Adam (lr=0.001), ReduceLROnPlateau (patience=5), early stopping (patience=15), gradient clipping (max_norm=1.0). Best checkpoint at epoch 53. Test R²=0.287.
+- **Training:** MSE loss, Adam (lr=0.001), ReduceLROnPlateau (patience=5), early stopping (patience=15), gradient clipping (max_norm=1.0). Test R²=0.287.
 
 ### MultiscaleCausalTCN Architecture (Temporal PAC Forecaster)
 
@@ -126,8 +126,10 @@ The TCN (31,043 parameters) processes sequences of shape (batch, T=20, F=73):
 
 | Feature Group | Dimensions | Description |
 |---------------|-----------|-------------|
-| Spectral band power | 35 | 5 bands × 7 frontal channels (Welch PSD, current window) |
-| Cross-channel coherence | 26 | Pairwise coherence across selected frontal channel pairs |
+| Spectral band power | 28 | 4 bands (theta, alpha, beta, gamma) × 7 frontal channels (Welch PSD, current window) |
+| Theta-gamma ratio | 7 | Per-channel theta/gamma power ratio |
+| PAC-structure features | 21 | 3 per channel (phase resultant length, amplitude variance, preferred phase bin) |
+| Global statistics | 5 | Mean/std of theta power, mean/std of gamma power, mean theta-gamma ratio |
 | PAC history | 7 | Current PAC, causal moving averages (2,4,8,16 windows), first-order and 4-step differences |
 | Stimulation context | 5 | Binary stim state, time-since-switch (normalized), stim fraction (20s window), cycle phase (sin/cos) |
 
@@ -143,7 +145,7 @@ All controllers share a common personalization layer: a 30-second circular rolli
 | z > +0.5 | REST | PAC above baseline; avoid habituation |
 | −0.5 ≤ z ≤ +0.5 | MAINTAIN | PAC near baseline; continue current state |
 
-Hysteresis: minimum 5-second hold time in each state before transitions are considered.
+Hysteresis: minimum 3-second hold time in each state before transitions are considered.
 
 For the TCN Predictive controller, z is computed from the TCN's 5-second-ahead PAC forecast rather than the current observed PAC, enabling proactive rather than reactive decision-making.
 
