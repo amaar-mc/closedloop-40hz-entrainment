@@ -63,7 +63,7 @@ These are the projects most similar to yours from the 2025 Synopsys Championship
 | Clinical significance | Alzheimer's + adaptive therapy | Similar (Alzheimer's, neurodegeneration) |
 | Data scale | 35 real patients, public dataset | Variable (some use private data) |
 | Technical novelty | **Closed-loop temporal prediction at 5-10s** | Classification tasks only (no temporal forecasting) |
-| Statistical rigor | Hedges' g, Wilcoxon, bootstrap CI, 35/35 subjects | Most use only accuracy/AUC |
+| Statistical rigor | Hedges' g, Wilcoxon, 95% CIs (normal approximation), 35/35 subjects | Most use only accuracy/AUC |
 | Model justification | 8 architectures tested, horizon sweep | Most test 1-2 models |
 | Data integrity | Shuffle-label test, subject-level splits | Rarely reported |
 
