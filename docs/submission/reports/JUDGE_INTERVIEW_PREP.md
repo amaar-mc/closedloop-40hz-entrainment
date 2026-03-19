@@ -11,7 +11,7 @@
 
 "I built a deep learning system that personalizes 40 Hz auditory stimulation therapy for Alzheimer's patients. The basic idea is that 40 Hz sound pulses synchronize brain gamma waves, which activates immune cells that clear amyloid plaques. But current therapy uses the same fixed schedule for every patient — 40 seconds on, 20 seconds off. The problem is that half of patients habituate within minutes, while the other half stay fully engaged. A one-size-fits-all approach serves neither group.
 
-My system predicts when a patient's brain is about to lose entrainment 5 seconds before it happens, and adapts stimulation accordingly. I trained a Temporal Convolutional Network on real EEG from 35 dementia patients to forecast a biomarker called phase-amplitude coupling. The key finding is a horizon sweep: at 1-2 seconds ahead, simple baselines work fine. But at 5-10 seconds — where a controller actually needs predictions to act — all baselines fail and my model is the only one providing useful signal, with a +0.5 R-squared margin.
+My system predicts when a patient's brain is about to lose entrainment 5 seconds before it happens, and adapts stimulation accordingly. I trained a Temporal Convolutional Network on real EEG from 35 elderly subjects to forecast a biomarker called phase-amplitude coupling. The key finding is a horizon sweep: at 1-2 seconds ahead, simple baselines work fine. But at 5-10 seconds — where a controller actually needs predictions to act — all baselines fail and my model is the only one providing useful signal, with a +0.5 R-squared margin.
 
 When I replayed my controller on all 35 patients' actual brain data, it achieved 72.1% alignment versus 64.5% for reactive control, directed stimulation to 83% of windows where the brain genuinely needed it, and reached 91% of the theoretical maximum. Every single patient benefited."
 
@@ -166,7 +166,7 @@ Input Projection:
   Block 1: dilation=2, kernel=3 → covers 5 steps
   Block 2: dilation=4, kernel=3 → covers 9 steps
   Block 3: dilation=8, kernel=3 → covers 17 steps
-  Total receptive field: 22 steps = 44 seconds
+  Total receptive field: (1+2+4+8)×(3−1)+1 = 31 steps (covers full 20-step lookback with margin)
 
   Each block:
     Causal padding (LEFT ONLY — no future leakage)
@@ -203,8 +203,7 @@ Output:
 - TCN's inductive bias (local temporal patterns with increasing receptive field) matches the EEG signal structure
 
 **Why dilations [1,2,4,8]?**
-- Effective receptive field: (1+1×2 + 2×2 + 4×2) × 2 = 22 steps
-- 22 steps × 2 seconds/step = 44 seconds — nearly a full stimulation cycle (40s stim + 20s rest = 60s)
+- Effective receptive field: (1+2+4+8)×(3−1)+1 = 31 steps — covers the full 20-step lookback window with margin
 - Captures short-term dynamics (recent PAC trajectory) AND longer-term context (where in the stim/rest cycle)
 
 **Why GroupNorm instead of BatchNorm?**
@@ -226,8 +225,9 @@ Output:
 
 | Feature Group | Count | Description |
 |--------------|-------|-------------|
-| Band power | 35 | Power in 5 frequency bands × 7 channels (delta, theta, alpha, beta, gamma) |
-| Spectral coherence | 21 | Pairwise coherence between 7 channels (21 unique pairs) |
+| Band power | 28 | Power in 4 frequency bands × 7 channels (theta, alpha, beta, gamma — no delta) |
+| Theta/gamma ratios | 7 | Theta/gamma power ratio per channel |
+| PAC-structure | 21 | Inter-channel PAC-derived features |
 | Other spectral | 5 | Spectral entropy, peak frequency, bandwidth, asymmetry, concentration |
 | PAC features | 7 | Current PAC, moving averages (2,4,8,16 step), first differences (1,4 step) |
 | Stim context | 5 | Stim on/off, time since switch, recent stim fraction, cycle phase (sin, cos) |
@@ -294,7 +294,7 @@ Every second:
      - If predicted z < -0.5 → STIMULATE (PAC will drop)
      - If predicted z > +0.5 → REST (PAC is fine)
      - Otherwise → MAINTAIN current state
-  7. Apply 5-second hysteresis (don't flip-flop)
+  7. Apply 3-second hysteresis (don't flip-flop)
 ```
 
 ### The 6 Controllers Compared
@@ -310,10 +310,10 @@ Every second:
 
 | Controller | Alignment | Low-PAC Targeting | PAC Gap |
 |-----------|-----------|-------------------|---------|
-| Fixed Schedule | 45.0% | 61.4% | -6.6 µV² (WRONG) |
-| Reactive | 64.5% | 51.7% | +21.1 µV² |
-| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5 µV²** |
-| Oracle | 100.0% | 100.0% | +33.3 µV² |
+| Fixed Schedule | 45.0% | 61.4% | -6.6 ×10⁻⁶ MI (WRONG) |
+| Reactive | 64.5% | 51.7% | +21.1 ×10⁻⁶ MI |
+| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5 ×10⁻⁶ MI** |
+| Oracle | 100.0% | 100.0% | +33.3 ×10⁻⁶ MI |
 
 ### What the Metrics Mean
 
@@ -341,8 +341,8 @@ Every second:
   - g = 4.47 for low-PAC targeting (very large)
   - g = 1.57 for PAC gap (large)
 
-### 95% Confidence Intervals (Bootstrap)
-- 10,000 bootstrap resamples
+### 95% Confidence Intervals
+- Large-sample normal approximation (g ± 1.96 × SE)
 - Alignment g: [0.75, 1.87]
 - Low-PAC targeting g: [3.33, 5.62]
 - PAC gap g: [0.98, 2.17]
@@ -423,7 +423,7 @@ Every second:
 
 | Metric | Value | Context |
 |--------|-------|---------|
-| Subjects | 35 | Dementia patients, OpenNeuro ds005048 |
+| Subjects | 35 | Elderly subjects, OpenNeuro ds005048 |
 | Channels | 7 | Frontal EEG (Fp1, Fp2, F7, F3, Fz, F4, F8) |
 | Sampling rate | 250 Hz | |
 | Windows | 17,283 | 2-second segments |
@@ -432,11 +432,11 @@ Every second:
 | TCN features | 73 | 61 spectral + 7 PAC + 5 stim context |
 | Lookback | 20 steps | 20 seconds of history |
 | Horizon | 5 seconds | |
-| Dilations | [1,2,4,8] | 44-second receptive field |
+| Dilations | [1,2,4,8] | 31-step receptive field |
 | TCN R² at 5s | 0.25 | +0.5 margin over baselines |
 | Alignment | 72.1% vs 64.5% | TCN vs Reactive |
 | Low-PAC targeting | 82.6% vs 51.7% | TCN vs Reactive |
-| PAC gap | 30.5 vs 21.1 µV² | TCN vs Reactive |
+| PAC gap | 30.5 vs 21.1 ×10⁻⁶ MI | TCN vs Reactive |
 | Effect sizes | g=1.31, 4.47, 1.57 | All p<0.001 |
 | Oracle % | 91% | TCN reaches 91% of oracle |
 | Universal benefit | 35/35 | 100% of subjects |

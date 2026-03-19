@@ -1,99 +1,47 @@
 # Roadmap: Research Documentation Project
 
-**Created:** 2005-03-07
+**Created:** 2026-03-07
 **Project:** Research Documentation Project
-**Core Value:** Create an authentic chronological record that showcases scientific rigor through daily documentation of the complete research timeline.
+**Core Value:** Every claim in every document must be verifiably accurate against actual code, data, and results.
 
-## Phases Overview
+## Milestones
 
-**5 phases** | **28 requirements mapped** | Phase 5 demo requirements added ✓
+- ✅ **v2.0 Paper Audit & Corrections** — Phases 4-9 (shipped 2026-03-18)
 
-| # | Phase | Goal | Requirements | Success Criteria |
-|---|-------|------|--------------|------------------|
-| 1 | Content Foundation | Extract and organize research content | 4 | 2 |
-| 2 | Daily Entries | Create chronological lab notebook structure | 8 | 4 |
-| 3 | Visual Polish | Add visuals and ensure quality standards | 4 | 3 |
-| 4 | Finalize Lab Notebook | ~~Finalize a judge-ready review bundle without touching original notebook files~~ DONE | 6 | 3 |
-| 5 | Real-Time Demo | Interactive Streamlit dashboard with live PAC visualization and 40 Hz audio | 6 | 3 |
+## Phases
 
-## Phase Details
+<details>
+<summary>✅ v2.0 Paper Audit & Corrections (Phases 4-9) — SHIPPED 2026-03-18</summary>
 
-### Phase 1: Content Foundation
+- [x] Phase 4: Finalize Lab Notebook (3/3 plans) — completed 2026-03-15
+- [x] Phase 5: Real-Time Demo (1/1 plan) — completed
+- [x] Phase 6: Write Research Paper (5/5 plans) — completed
+- [x] Phase 7: Fix Data & Methodology Errors (1/1 plan) — completed 2026-03-17
+- [x] Phase 8: Fix Internal Consistency (2/2 plans) — completed 2026-03-18
+- [x] Phase 9: Propagate & Recompile (2/2 plans) — completed 2026-03-18
 
-**Goal:** Extract all research content and organize by chronological timeline using git commit history.
+</details>
 
-**Requirements:** CONT-01, CONT-02, CONT-03, CONT-04
+### Deferred (v1 Lab Notebook Phases)
 
-**Success Criteria:**
-1. All existing research content extracted from notebooks/ folder
-2. Complete timeline mapped to git commits (Dec 10, 2025 - Mar 6, 2026) with work identified for each date
+- [ ] Phase 1: Content Foundation — Extract and organize research content
+- [ ] Phase 2: Daily Entries — Create chronological lab notebook structure
+- [ ] Phase 3: Visual Polish — Add visuals and ensure quality standards
 
-### Phase 2: Daily Entries
+## Progress
 
-**Goal:** Transform research paper content into daily lab notebook entries with proper scientific logging structure.
-
-**Requirements:** ENTRY-01, ENTRY-02, ENTRY-03, ENTRY-04, ENTRY-05, ENTRY-06
-
-**Success Criteria:**
-1. Daily date headers for each research day
-2. Each entry contains: goals, procedures, results, failures documented
-3. Relevant code snippets included from daily commits
-4. Scientific narrative flows chronologically showing real research process
-
-### Phase 3: Visual Polish
-
-**Goal:** Add validated visual elements and ensure lab notebook meets quality standards.
-
-**Requirements:** VIS-01, VIS-02, VIS-03, VIS-04, QUAL-01, QUAL-02, QUAL-03, QUAL-04
-
-**Success Criteria:**
-1. All performance graphs and tables validated against repository data
-2. Architecture diagrams show model development progression
-3. Final document is 8-10 pages following Synopsys guidelines
-
-### Phase 5: Real-Time EEG Visualization and Audio Stimulation Demo
-
-**Goal:** Build an interactive Streamlit dashboard that demonstrates the closed-loop 40 Hz entrainment system in real time — visualizing simulated PAC dynamics across all four controller strategies with live 40 Hz audio click train stimulation output.
-
-**Requirements:** DEMO-01, DEMO-02, DEMO-03, DEMO-04, DEMO-05, DEMO-06
-**Depends on:** Phase 4
-**Plans:** 1 plan
-
-**Success Criteria:**
-1. `streamlit run` launches a single-page dashboard with configuration controls and four live PAC trace panels
-2. All four controller strategies run simultaneously on simulated brain dynamics with fatigue toggle, producing visible performance differences
-3. 40 Hz click trains play through speakers during STIMULATE periods with mute control
-
-Plans:
-- [x] 05-01-PLAN.md — Complete demo dashboard: Streamlit app with simulation engine, four-panel live PAC visualization, and 40 Hz audio stimulation
+| Phase | Milestone | Plans Complete | Status | Completed |
+|-------|-----------|----------------|--------|-----------|
+| 1. Content Foundation | deferred | - | Not started | - |
+| 2. Daily Entries | deferred | - | Not started | - |
+| 3. Visual Polish | deferred | - | Not started | - |
+| 4. Finalize Lab Notebook | v2.0 | 3/3 | Complete | 2026-03-15 |
+| 5. Real-Time Demo | v2.0 | 1/1 | Complete | - |
+| 6. Write Research Paper | v2.0 | 5/5 | Complete | - |
+| 7. Fix Data & Methodology Errors | v2.0 | 1/1 | Complete | 2026-03-17 |
+| 8. Fix Internal Consistency | v2.0 | 2/2 | Complete | 2026-03-18 |
+| 9. Propagate & Recompile | v2.0 | 2/2 | Complete | 2026-03-18 |
 
 ---
 
-## Dependencies
-
-- Phase 2 requires Phase 1 completion (need organized content before structuring entries)
-- Phase 3 requires Phase 2 completion (need entries before adding visuals)
-
-## Timeline Estimate
-
-- **Phase 1:** Content extraction and organization (moderate scope)
-- **Phase 2:** Daily entry creation (largest scope - 16 requirements total across timeline)
-- **Phase 3:** Visual elements and polishing (focused scope)
-
-### Phase 4: Finalize Lab Notebook
-
-**Goal:** Finalize a judge-ready, approval-anchored lab notebook review bundle that preserves originals, documents evidence, and supports manual PDF generation.
-
-**Requirements:** FNL-01, FNL-02, FNL-03, FNL-04, FNL-05, FNL-06
-**Depends on:** Phase 3
-**Plans:** 3 plans
-
-**Success Criteria:**
-1. A new corrected notebook source exists at the generator contract path without overwriting the original notebook files.
-2. The corrected notebook is re-anchored to the approval-era start date, uses active-day entries plus gap notes, and keeps claims traceable to repository evidence.
-3. The review bundle includes automated sanity checks, a human review checklist, and minimal docs packaging for manual PDF export.
-
-Plans:
-- [x] 04-01-PLAN.md — Create the Wave 0 verifier and non-destructive review bundle skeleton.
-- [x] 04-02-PLAN.md — Populate evidence mapping and rewrite the corrected notebook to the approval-era chronology.
-- [x] 04-03-PLAN.md — Package the review bundle, reorganize to V1/V2 naming, and gate final signoff with human review.
+_Full phase details archived in `.planning/milestones/v2.0-ROADMAP.md`_

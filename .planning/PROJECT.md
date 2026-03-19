@@ -2,68 +2,68 @@
 
 ## What This Is
 
-A comprehensive daily lab notebook documenting the complete research journey of "Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment to Optimize Theta-Gamma Coupling in Alzheimer's Disease" - transforming the existing research paper format into a chronological scientific log that demonstrates rigorous research methodology, systematic problem-solving, and day-by-day scientific thinking.
+A comprehensive research project on "Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment to Optimize Theta-Gamma Coupling in Alzheimer's Disease" — including a complete computational pipeline, research paper, lab notebook, demo dashboard, and CSEF presentation materials. All documents are now internally consistent and verified against source code.
 
 ## Core Value
 
-Create an authentic chronological record that showcases scientific rigor and research-grade methodology through daily documentation of goals, procedures, results, failures, and pivots across the entire research timeline (December 10, 2025 - March 6, 2026).
+Every claim in every document must be verifiably accurate against the actual code, data, and results — scientific integrity is non-negotiable.
 
 ## Requirements
 
 ### Validated
 
-(None yet — need to build documentation)
+- ✓ Lab notebook finalized (V1/V2 pair) — v1.0 Phase 4
+- ✓ Real-time demo dashboard (Streamlit + 40 Hz audio) — v1.0 Phase 5
+- ✓ Complete research paper (11,647 words, 23 references) — v1.0 Phase 6
+- ✓ CSEF 2026 presentation PDF (12 pages, Times New Roman) — v1.0
+- ✓ Hysteresis corrected to 3-second throughout all documents — v2.0
+- ✓ CI method corrected to large-sample normal approximation — v2.0
+- ✓ Spectral features corrected (4 bands + PAC-structure, not 5 + coherence) — v2.0
+- ✓ Population label standardized to "35 elderly subjects" — v2.0
+- ✓ References pruned from 39 to 23, all renumbered and consistent — v2.0
+- ✓ Single-author voice (I/my) throughout paper — v2.0
+- ✓ All corrections propagated to CSEF docs, RESULTS_REPORT, TeX, PDF — v2.0
 
 ### Active
 
-- [ ] Convert existing research content to daily chronological format
-- [ ] Extract and organize work by actual git commit dates
-- [ ] Document daily goals, procedures, results, and failures for each research day
-- [ ] Include validated performance data and results from repository
-- [ ] Add relevant code snippets from daily work
-- [ ] Incorporate visual elements (graphs, tables, architecture diagrams)
-- [ ] Structure following Synopsys lab notebook guidelines
-- [ ] Cover complete timeline including planning days, work days, and breaks
-- [ ] Maintain scientific narrative consistency throughout
-- [ ] Produce concise 8-10 page final document
+(No active requirements — next milestone not yet defined)
 
 ### Out of Scope
 
-- Fabricated data or results — only validated repository data
-- Verbose academic writing style — keep technical but concise
-- Reorganizing by research phases — maintain strict chronological order
-- Adding new research content — use existing work only
+- Rewriting the paper's narrative structure — only fix factual errors
+- Running new experiments or retraining models
+- Adding new analyses not in the original paper
+- Lab notebook phases 1-3 (deferred — content extraction, daily entries, visual polish)
 
 ## Context
 
-**Source Materials:**
-- Current research notebook (notebooks/P10_Research_Notebook_Final.md) - contains comprehensive content but in research paper format
-- Git commit history from December 2025 - March 2026 - provides actual timeline and work dates
-- Repository results and data files - all validated and real
-- Reference lab notebook (Project S-19-05) - demonstrates proper daily log format
+**Shipped v2.0 (2026-03-18):**
+Three parallel audit agents identified 6 critical, 5 important, and 4 minor issues in RESEARCH_PAPER.md. All were systematically corrected across phases 7-9 and propagated to 13+ supporting documents. Clean PDF compiled. 17/17 requirements verified.
 
-**Research Background:**
-- Completed research on closed-loop 40Hz entrainment for Alzheimer's disease
-- Achieved significant results: TCN predictive controller with 72.1% alignment vs 64.5% reactive control
-- Systematic methodology: 8 architecture experiments, temporal prediction innovation, real-data validation
-- Scientific rigor demonstrated through failure documentation, pivot decisions, and comprehensive analysis
-
-## Constraints
-
-- **Timeline**: December 10, 2025 - March 6, 2026 (complete research period)
-- **Length**: 8-10 pages maximum (concise, not verbose)
-- **Data integrity**: Only use validated results from repository, no fabrication
-- **Format**: Daily chronological entries following lab notebook standards
-- **Accuracy**: All dates must match actual git commit history
+**Current state:**
+- Research paper: `docs/paper/RESEARCH_PAPER.md` (806 lines, 23 references, internally consistent)
+- PDF: `docs/paper/RESEARCH_PAPER_v3.pdf` (2.7 MB, compiled from corrected TeX)
+- Results: `results/RESULTS_REPORT.md` (verified clean — g=0.75, ×10⁻⁶ MI units)
+- Poster: `docs/poster/POSTER_BOARD_V5.md` (all corrections propagated)
+- Demo: `src/dashboard.py` (Streamlit, live PAC visualization + 40 Hz audio)
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Chronological daily format | Demonstrates real scientific process and methodology | — Pending |
-| Use git dates as backbone | Ensures authenticity and prevents fabrication | — Pending |
-| Include failures and pivots | Shows scientific rigor and honest research process | — Pending |
-| 8-10 page target | Concise format more suitable for judges than 20+ page paper | — Pending |
+| Chronological daily format | Demonstrates real scientific process | ✓ Good |
+| Use git dates as backbone | Ensures authenticity | ✓ Good |
+| Fix paper to match code (not vice versa) | Code produced the actual results | ✓ Good |
+| Document 3s hysteresis (not change to 5s) | Results were generated with 3s | ✓ Good |
+| Prune orphan references (39→23) | Clean citation list, every ref cited | ✓ Good |
+| Single-author voice (I not we) | Single-author paper declaration | ✓ Good |
+| Out-of-scope docs/paper/sections/ from propagation | RESEARCH_PAPER.md is assembled source of truth | ✓ Good |
+
+## Constraints
+
+- **Data integrity**: Fix descriptions to match code, never change code to match descriptions
+- **Consistency**: All corrections must propagate to CSEF presentation and RESULTS_REPORT
+- **Accuracy**: Every number must be traceable to a source file
 
 ---
-*Last updated: 2026-03-07 after initialization*
+*Last updated: 2026-03-18 after v2.0 milestone*

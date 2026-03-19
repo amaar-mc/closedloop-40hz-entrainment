@@ -83,8 +83,8 @@ src/data_loader.py          Loads HDF5-format .set files (MATLAB v7.3), reads
                             actual EEG from .fdt (float32, Fortran order), applies
                             BIDS events.tsv for Stimulus/Rest segmentation
         ↓
-src/preprocessing.py        Bandpass (0.5–80 Hz), notch (50 Hz), artifact rejection
-                            (±100 µV threshold), common average reference
+src/preprocessing.py        Bandpass (0.5–80 Hz), notch (50 Hz), artifact zeroing
+                            (±100 µV threshold, samples set to 0.0), common average reference
         ↓
 src/pac_computation.py      Modulation Index (Tort 2010): theta (4–8 Hz) phase ×
                             gamma (38–42 Hz) amplitude → scalar PAC per window
@@ -124,7 +124,7 @@ The latest pipeline for predicting *future* PAC (5–10 s ahead):
 
 1. `ClosedLoopController` runs EEGNet inference on each 2-second window.
 2. `PersonalizationModule` maintains a 30-second rolling baseline; outputs z-score.
-3. Decision: z < −0.5 → STIMULATE, z > +0.5 → REST, else MAINTAIN. 5-second hysteresis.
+3. Decision: z < −0.5 → STIMULATE, z > +0.5 → REST, else MAINTAIN. 3-second hysteresis.
 4. `EntrainmentSimulator` models brain response (exponential PAC dynamics, optional fatigue model).
 5. `ValidationFramework` compares Fixed Schedule / Reactive / Predictive Look-Ahead / Oracle.
 

@@ -354,6 +354,15 @@ def load_subject_data(subject: str) -> Dict[str, np.ndarray]:
     phase_sin = np.sin(2.0 * np.pi * phase)
     phase_cos = np.cos(2.0 * np.pi * phase)
 
+    # Continuous raw EEG from one frontal channel, downsampled for display.
+    # With 1s hop and 2s windows at 250 Hz, use last 250 samples of each
+    # window (the non-overlapping portion) and concatenate for continuity.
+    windows = test["windows"][mask]  # (n, 1, 7, 500)
+    ch = windows[:, 0, 3, :]  # channel 3 (mid-frontal Fz), shape (n, 500)
+    continuous_eeg = ch[:, 250:].ravel()  # (n * 250,) at 250 Hz
+    eeg_ds = continuous_eeg[::10]  # downsample to ~25 Hz for display
+    _EEG_PTS_PER_STEP = 25  # 250 samples/step ÷ 10
+
     return {
         "pac": pac,
         "spectral": spectral,
@@ -363,6 +372,8 @@ def load_subject_data(subject: str) -> Dict[str, np.ndarray]:
         "phase_sin": phase_sin,
         "phase_cos": phase_cos,
         "events": events,
+        "eeg_trace": eeg_ds,
+        "eeg_pts_per_step": _EEG_PTS_PER_STEP,
     }
 
 
@@ -437,86 +448,67 @@ _lock = threading.RLock()
 
 def _build_figure(
     controller_names: List[str],
-    pac_history: List[float],
+    n_steps: int,
     action_histories: Dict[str, List[int]],
-    tcn_predictions: Optional[List[Tuple[int, float]]] = None,
-    pac_range: Optional[Tuple[float, float]] = None,
+    eeg_trace: np.ndarray,
+    eeg_pts_per_step: int = 25,
 ) -> plt.Figure:
-    """Create multi-panel figure: one shared PAC trace, per-controller decisions.
+    """Compact horizontal multi-panel figure for side-by-side comparison.
 
-    All controllers see the same real PAC trace.  Each panel shows the
-    controller's stim/rest decisions as coloured background bands overlaid
-    on the real PAC signal.  An optional TCN prediction overlay shows
-    forecast vs actual.
+    Plots the actual raw EEG waveform (one frontal channel, downsampled to
+    ~25 Hz) with green/red stim/rest decision bands per controller.  All
+    panels show the same brain signal — only the decisions differ.
     """
     n_panels = len(controller_names)
+
     with _lock:
         fig, axes = plt.subplots(
-            n_panels,
             1,
-            figsize=(12, 2.5 * n_panels),
-            sharex=True,
+            n_panels,
+            figsize=(3.2 * n_panels, 2.4),
+            sharey=True,
         )
         if n_panels == 1:
             axes = [axes]
 
-        y_lo = pac_range[0] if pac_range else 0.0
-        y_hi = (
-            pac_range[1]
-            if pac_range
-            else max(pac_history) * 1.2
-            if pac_history
-            else 1e-4
-        )
+        # Slice of EEG to display (progressive reveal)
+        n_eeg = min(n_steps * eeg_pts_per_step, len(eeg_trace))
+        eeg_display = eeg_trace[:n_eeg]
+        eeg_t = np.arange(n_eeg) / eeg_pts_per_step  # x-axis in seconds
 
         for idx, name in enumerate(controller_names):
             ax = axes[idx]
             acts = action_histories.get(name, [])
 
-            # Draw stim/rest background bands (consolidated runs)
+            # Stim/rest background bands (x in step = seconds)
             if len(acts) > 0:
                 run_start = 0
                 current = acts[0]
                 for t in range(1, len(acts)):
                     if acts[t] != current:
-                        color = "#c8e6c9" if current == 1 else "#ffcdd2"
-                        ax.axvspan(run_start, t, alpha=0.35, color=color, linewidth=0)
+                        c = "#a5d6a7" if current == 1 else "#ef9a9a"
+                        ax.axvspan(run_start, t, alpha=0.30, color=c, linewidth=0)
                         run_start = t
                         current = acts[t]
-                color = "#c8e6c9" if current == 1 else "#ffcdd2"
-                ax.axvspan(run_start, len(acts), alpha=0.35, color=color, linewidth=0)
+                c = "#a5d6a7" if current == 1 else "#ef9a9a"
+                ax.axvspan(run_start, len(acts), alpha=0.30, color=c, linewidth=0)
 
-            # Plot the real PAC trace
-            ax.plot(pac_history, color="black", linewidth=0.8, label="Real PAC")
+            # Raw EEG waveform
+            ax.plot(eeg_t, eeg_display, color="black", linewidth=0.35, alpha=0.85)
 
-            # TCN prediction overlay on TCN panel
-            if name == "Causal TCN (Ours)" and tcn_predictions:
-                pred_times = [p[0] for p in tcn_predictions]
-                pred_vals = [p[1] for p in tcn_predictions]
-                ax.plot(
-                    pred_times,
-                    pred_vals,
-                    color="#1565C0",
-                    linewidth=1.2,
-                    alpha=0.8,
-                    linestyle="--",
-                    label="TCN Forecast (+5s)",
-                )
-                ax.legend(loc="upper right", fontsize=7, framealpha=0.7)
+            # Title — annotate hysteresis on Predictive Look-Ahead
+            label = name
+            if "Look-Ahead" in name:
+                label += " (5 s hyst.)"
+            ax.set_title(label, fontsize=7, fontweight="bold", pad=2)
+            ax.set_xlim(0, max(n_steps, 1))
+            ax.tick_params(labelsize=5, length=2, pad=1)
 
-            ax.set_ylabel(name, fontsize=10, fontweight="bold")
-            ax.set_ylim(y_lo, y_hi)
-            ax.set_xlim(0, max(len(pac_history), 1))
-            ax.tick_params(labelsize=8)
+            if idx == 0:
+                ax.set_ylabel("EEG (uV)", fontsize=7, labelpad=2)
 
-        axes[-1].set_xlabel("Time (seconds)", fontsize=10)
-        fig.suptitle(
-            "Closed-Loop 40 Hz Entrainment — Real EEG Replay",
-            fontsize=13,
-            fontweight="bold",
-            y=0.98,
-        )
-        fig.tight_layout(rect=[0, 0, 1, 0.96])
+        axes[n_panels // 2].set_xlabel("Time (s)", fontsize=7, labelpad=2)
+        fig.tight_layout(pad=0.3, w_pad=0.4)
     return fig
 
 
@@ -627,6 +619,8 @@ def main():
         data = load_subject_data(subject)
         pac_full = data["pac"]
         spectral_full = data["spectral"]
+        eeg_trace = data["eeg_trace"]
+        eeg_pts_per_step = data["eeg_pts_per_step"]
         n_steps = len(pac_full)
 
         status_text = st.empty()
@@ -678,10 +672,6 @@ def main():
         action_histories: Dict[str, List[int]] = {name: [] for name in controller_names}
         tcn_predictions: List[Tuple[int, float]] = []
 
-        # PAC range for y-axis (computed from full trace)
-        pac_lo = float(pac_full.min()) * 0.8
-        pac_hi = float(pac_full.max()) * 1.2
-
         # Audio setup — driven by TCN controller decisions
         audio: AudioEngine | _NoOpAudioEngine
         if AUDIO_AVAILABLE:
@@ -695,6 +685,12 @@ def main():
             audio_started = True
         except Exception as exc:
             st.warning(f"⚠️ Audio could not start: {exc}")
+
+        # Color key
+        st.caption(
+            "Green = Stimulating  |  Red = Resting  |  "
+            "Black line = Raw EEG (frontal channel, ~25 Hz)"
+        )
 
         # Plot placeholder
         plot_placeholder = st.empty()
@@ -757,10 +753,10 @@ def main():
                 # Redraw plot
                 fig = _build_figure(
                     controller_names,
-                    pac_history,
+                    step,
                     action_histories,
-                    tcn_predictions=tcn_predictions if TCN_AVAILABLE else None,
-                    pac_range=(pac_lo, pac_hi),
+                    eeg_trace=eeg_trace,
+                    eeg_pts_per_step=eeg_pts_per_step,
                 )
                 plot_placeholder.pyplot(fig)
                 plt.close(fig)
@@ -790,10 +786,10 @@ def main():
         # Final static plot
         fig = _build_figure(
             controller_names,
-            pac_history,
+            n_steps,
             action_histories,
-            tcn_predictions=tcn_predictions if TCN_AVAILABLE else None,
-            pac_range=(pac_lo, pac_hi),
+            eeg_trace=eeg_trace,
+            eeg_pts_per_step=eeg_pts_per_step,
         )
         plot_placeholder.pyplot(fig)
         plt.close(fig)
