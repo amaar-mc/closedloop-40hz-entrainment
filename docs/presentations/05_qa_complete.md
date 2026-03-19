@@ -100,7 +100,7 @@ MSE for EEGNet -- straightforward regression. Huber loss for the TCN -- it's rob
 
 **What regularization did you use?**
 
-Dropout (0.5 for EEGNet, 0.1 for TCN), weight decay of 1e-3 in the TCN optimizer, early stopping on validation loss (patience 20 for TCN, 15 for EEGNet), gradient clipping at max_norm 1.0 for EEGNet, and intentionally small model size -- 31K parameters for the TCN when I could have used more.
+Dropout (0.5 for EEGNet, 0.2 for TCN), weight decay of 1e-3 in the TCN optimizer, early stopping on validation loss (patience 20 for TCN, 15 for EEGNet), gradient clipping at max_norm 1.0 for EEGNet, and intentionally small model size -- 31K parameters for the TCN when I could have used more.
 
 ---
 

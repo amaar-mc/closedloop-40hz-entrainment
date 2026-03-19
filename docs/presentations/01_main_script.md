@@ -82,7 +82,7 @@ These are things you KNOW but don't say unprompted. If a judge asks, you have th
 | Formal hypothesis statement | Already clear from the narrative | "My hypothesis was that a causal model could predict PAC 5-10 seconds ahead..." |
 | Tort's Modulation Index / KL divergence detail | Too granular for the flow | "I compute PAC using Tort's Modulation Index, which uses KL divergence across phase bins" |
 | TCN 73-feature breakdown (61+7+5) | Say "73 features" in the script, elaborate if asked | "61 spectral power, 7 PAC-derived like moving averages, 5 stimulation context" |
-| Dilation factors 1,2,4,8 / 31-step receptive field | "Dilated causal convolutions" covers it | "Dilation factors 1, 2, 4, and 8 give a 31-step receptive field -- about 62 seconds of history" |
+| Dilation factors 1,2,4,8 / 31-step receptive field | "Dilated causal convolutions" covers it | "Dilation factors 1, 2, 4, and 8 give a 31-step receptive field -- about 31 seconds of history" |
 | Fixed schedule row-by-row walkthrough | Only the contrast matters | "Fixed schedule is actually *negative* PAC gap -- it stimulates in the wrong direction" |
 | 0.25 "doesn't sound impressive" hedging | One sentence handles it now | "The controller doesn't need exact prediction, it needs direction. 0.25 is enough for 83% targeting." |
 | Naming all six fatigue severity levels | "Six severity levels" suffices | "Rate 0.0, 0.008, 0.016, 0.024, 0.032, 0.040 — spanning no fatigue to high fatigue" |
