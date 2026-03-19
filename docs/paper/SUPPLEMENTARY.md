@@ -47,7 +47,7 @@ The ts=5 configuration inflates R² because consecutive target values share 4 of
 
 ## Table S2: Complete Effect Sizes for All Pairwise Controller Comparisons
 
-Effect sizes (Hedges' g) with 95% bias-corrected bootstrap confidence intervals (10,000 iterations, BCa method) for all pairwise controller comparisons, computed over N=35 subjects. Statistical significance is from two-sided Wilcoxon signed-rank tests (non-parametric paired comparison). All effect sizes are from the primary closed-loop controller evaluation using ts=1 (raw PAC) ground-truth inputs.
+Effect sizes (Hedges' g) with 95% confidence intervals (large-sample normal approximation, g +/- 1.96 x SE) for all pairwise controller comparisons, computed over N=35 subjects. Statistical significance is from two-sided Wilcoxon signed-rank tests (non-parametric paired comparison). All effect sizes are from the primary closed-loop controller evaluation using ts=1 (raw PAC) ground-truth inputs.
 
 ### TCN Predictive vs Fixed Schedule (N=35)
 
@@ -107,8 +107,8 @@ Stimulation efficiency (mean PAC per unit stimulation time, scaled by ×10⁵ fo
 
 The EEGNet regression model (1,457 parameters) processes 2-second EEG windows of shape (batch, 1, 7, 500):
 
-- **Block 1:** Temporal convolution (8 filters, 64-sample kernel) → Depthwise spatial convolution (depth multiplier D=2, 7 channels → 16 feature maps) → Batch normalization → ELU → Average pooling (pool=4)
-- **Block 2:** Depthwise separable convolution (16 pointwise filters, 16-sample kernel) → Batch normalization → ELU → Average pooling (pool=8)
+- **Block 1:** Temporal convolution (8 filters, 64-sample kernel) → Depthwise spatial convolution (depth multiplier D=2, 7 channels → 16 feature maps) → Batch normalization → ELU → Average pooling (pool=4) → Dropout($p$=0.5)
+- **Block 2:** Depthwise separable convolution (16 pointwise filters, 16-sample kernel) → Batch normalization → ELU → Average pooling (pool=8) → Dropout($p$=0.5)
 - **Head:** Linear (flattened → scalar PAC prediction)
 - **Training:** MSE loss, Adam (lr=0.001), ReduceLROnPlateau (patience=5), early stopping (patience=15), gradient clipping (max_norm=1.0). Test R²=0.287.
 
@@ -117,9 +117,9 @@ The EEGNet regression model (1,457 parameters) processes 2-second EEG windows of
 The TCN (31,043 parameters) processes sequences of shape (batch, T=20, F=73):
 
 - **Input projection:** Linear (73→64) → LayerNorm → SiLU
-- **Causal TCN blocks (×4):** Causal depthwise-separable conv (kernel=3, dilations [1,2,4,8]) → GroupNorm → SiLU → Residual connection
+- **Causal TCN blocks (×4):** Causal depthwise-separable conv (kernel=3, dilations [1,2,4,8]) → GroupNorm(1, channels) [equivalent to LayerNorm] → SiLU → Dropout(0.2) → Residual connection → SiLU (double-SiLU pattern)
 - **Attention pooling:** Learned scalar weights over T=20 time steps → weighted sum
-- **Dual regression heads:** Linear → SiLU → Dropout(0.1) → Linear (×2 for y_future and y_delta)
+- **Dual regression heads:** Linear → SiLU → Dropout($p$=0.2) → Linear (×2 for y_future and y_delta)
 - **Training:** Huber loss (δ=1.0), AdamW (lr=1×10⁻³, wd=1×10⁻³), ReduceLROnPlateau (mode=max, patience=5), early stopping (patience=20 epochs on validation R²). Best checkpoint epoch 53. Test R²=0.170 (ts=1, 5s horizon).
 
 ### Causal Feature Vector (73 dimensions)

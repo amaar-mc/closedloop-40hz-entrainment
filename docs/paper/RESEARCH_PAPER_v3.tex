@@ -60,10 +60,10 @@
 \thispagestyle{plain}
 
 \begin{abstract}
-Alzheimer's disease affects over 55 million people worldwide, and emerging research shows that 40 Hz auditory stimulation can drive gamma-frequency brain rhythms that help clear toxic amyloid-beta plaques. Current protocols deliver this therapy on a fixed schedule, ignoring individual responses; some patients habituate within minutes while others maintain entrainment. This project proposes a closed-loop deep learning system to predict when a patient's brain will lose entrainment, enabling individualized stimulation timing.
+Alzheimer's disease affects over 55 million people worldwide, and emerging research shows that 40 Hz auditory stimulation can drive gamma-frequency brain rhythms that help clear toxic amyloid-beta plaques. Current protocols deliver this therapy on a fixed schedule, ignoring individual responses; some patients habituate within minutes while others maintain entrainment. This project presents a closed-loop deep learning system to predict when a patient's brain will lose entrainment, enabling individualized stimulation timing.
 I analyzed EEG recordings from 35 elderly subjects including dementia patients and healthy controls (OpenNeuro ds005048) and computed phase-amplitude coupling (PAC), the coordination between slow theta-band and fast gamma-band brain rhythms, as a real-time biomarker of entrainment strength. I engineered 73 causal features from spectral, PAC-history, and stimulation-context signals, then trained a causal Temporal Convolutional Network (TCN, 31,000 parameters) to forecast PAC five to ten seconds ahead. The TCN was integrated into a closed-loop controller and validated on all 35 subjects' EEG.
-In a comparative horizon sweep, all baselines collapsed to negative $R^2$ at five-to-ten-second horizons while the TCN maintained $R^2$ of 0.25, a +0.5 margin. The controller matched stimulation to periods of need 72.1\% of the time versus 64.5\% for reactive control ($p < 0.001$) and targeted 82.6\% of low-PAC windows versus 51.7\% ($p < 0.001$), reaching 91\% of the theoretical oracle. Every subject benefited ($p < 0.001$), and the advantage held across six fatigue severity levels.
-These results demonstrate that forecasting PAC enables personalized 40 Hz therapy that outperforms fixed and reactive protocols, a path toward more efficient treatment for Alzheimer's disease.
+In a comparative horizon sweep (smoothed target evaluation), all baselines collapsed to negative $R^2$ at five-to-ten-second horizons while the TCN maintained $R^2 \approx 0.25$, a +0.5 margin. The controller matched stimulation to periods of need 72.1\% of the time versus 64.5\% for reactive control ($p < 0.001$) and targeted 82.6\% of low-PAC windows versus 51.7\% ($p < 0.001$), reaching 91\% of the theoretical oracle. Every subject showed improved alignment in offline validation ($p < 0.001$), and the advantage held across six simulated fatigue severity levels.
+These results demonstrate that forecasting PAC can support a computational framework for personalized 40 Hz therapy that outperforms fixed and reactive protocols, offering a path toward more efficient treatment for Alzheimer's disease.
 \end{abstract}
 
 \vspace{0.5em}
@@ -82,32 +82,32 @@ These findings position 40 Hz gamma entrainment as a promising therapeutic avenu
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/ai_generated/entrainment_mechanism_v1.png}
-\caption{Figure 1. Mechanism of 40 Hz gamma entrainment in Alzheimer's disease. (A) In the healthy brain, theta oscillations (4-8 Hz) and 40 Hz gamma oscillations exhibit strong phase-amplitude coupling, supporting memory consolidation and neural communication. (B) In the Alzheimer's brain, amyloid-beta plaques disrupt gamma oscillations and reduce theta-gamma coupling, impairing cognitive function. (C) 40 Hz acoustic stimulation restores gamma oscillations, strengthens theta-gamma coupling, and activates microglial clearance of amyloid plaques -- the therapeutic mechanism targeted by the closed-loop system developed in this work.}
+\caption{Mechanism of 40 Hz gamma entrainment in Alzheimer's disease. (A) In the healthy brain, theta oscillations (4-8 Hz) and 40 Hz gamma oscillations exhibit strong phase-amplitude coupling, supporting memory consolidation and neural communication. (B) In the Alzheimer's brain, amyloid-beta plaques disrupt gamma oscillations and reduce theta-gamma coupling, impairing cognitive function. (C) 40 Hz acoustic stimulation restores gamma oscillations, strengthens theta-gamma coupling, and activates microglial clearance of amyloid plaques -- the therapeutic mechanism targeted by the closed-loop system developed in this work.}
 \label{fig:entrainment_mechanism}
 \end{figure}
 
 \subsection{40 Hz Gamma Entrainment as Therapy}
 
-The therapeutic hypothesis underlying gamma entrainment is grounded in the disruption of normal oscillatory dynamics in AD. Gamma oscillations (30-100 Hz) are fundamental to sensory binding, attention, working memory consolidation, and inter-regional neural communication; in AD, gamma activity is reduced early in disease progression, often preceding amyloid plaque formation [2]. This dysregulation reflects a loss of fast-spiking parvalbumin-positive (PV) interneurons that normally pace cortical gamma rhythms [6].
+The therapeutic hypothesis underlying gamma entrainment is grounded in the disruption of normal oscillatory dynamics in AD. Gamma oscillations (30-100 Hz) are fundamental to sensory binding, attention, working memory consolidation, and inter-regional neural communication; in AD, gamma activity is reduced early in disease progression, often preceding amyloid plaque formation [2]. Theta-gamma PAC disruptions have been specifically linked to parahippocampal network hyperexcitability [3] and working memory deficits in AD patients [4] and healthy elderly [5]. This dysregulation reflects a loss of fast-spiking parvalbumin-positive (PV) interneurons that normally pace cortical gamma rhythms [6].
 
 The mechanistic pathway from 40 Hz stimulation to amyloid clearance involves multiple processes. Sensory 40 Hz drive re-engages PV interneurons, restoring impaired gamma rhythms [6]. This triggers an immunological cascade: upregulation of cytokines promotes microglial morphological transformation and enhanced phagocytosis of amyloid plaques [11]. Additionally, Murdock et al. [7] demonstrated that multisensory 40 Hz stimulation promotes glymphatic clearance, producing a 37\% reduction in neocortical plaque volume in 5XFAD mice; pharmacological inhibition of glymphatic flow abolished the clearance effect, confirming this pathway as necessary to the therapeutic mechanism.
 
-Translation to human subjects has progressed substantially. A 2025 study in aged rhesus monkeys found that long-term 40 Hz auditory stimulation elevated CSF amyloid-beta levels, consistent with mobilization and clearance from brain tissue [8]. In humans, Chan et al. [9] reported that patients with mild AD who received sustained 40 Hz multisensory stimulation retained strong EEG entrainment responses over time and showed less hippocampal atrophy compared to matched controls -- a finding corroborated by auditory gamma entrainment's demonstrated ability to enhance default mode network connectivity in dementia patients [10]. These results collectively establish 40 Hz entrainment as a clinically relevant therapeutic modality and make the optimization of stimulation delivery an immediate practical priority.
+Translation to human subjects has progressed substantially. A 2026 study in aged rhesus monkeys found that long-term 40 Hz auditory stimulation elevated CSF amyloid-beta levels, consistent with mobilization and clearance from brain tissue [8]. In humans, Chan et al. [9] reported that patients with mild AD who received sustained 40 Hz multisensory stimulation retained strong EEG entrainment responses over time and showed less hippocampal atrophy compared to matched controls -- a finding corroborated by auditory gamma entrainment's demonstrated ability to enhance default mode network connectivity in dementia patients [10]. These results collectively establish 40 Hz entrainment as a clinically relevant therapeutic modality and make the optimization of stimulation delivery an immediate practical priority.
 
 \subsection{Limitations of Fixed-Schedule Protocols}
 
 Despite the therapeutic promise of 40 Hz entrainment, current clinical protocols are uniformly open-loop: they deliver stimulation according to a predetermined schedule without reference to the patient's instantaneous neural state. The standard protocol consists of alternating 40-second stimulation blocks and 20-second rest periods, repeated continuously for one hour [12, 23]. This approach is systematically misaligned with the highly variable neural dynamics of the dementia population.
 
-The first dimension of variability is inter-individual. Fortunato et al. [12] found that 23 of 33 participants achieved measurable entrainment at 40 Hz while 10 showed minimal or no response -- a non-responder fraction of approximately 30\% that fixed protocols cannot detect or accommodate. High-performing patients and non-responders thus receive identical stimulation despite profoundly different neural responses.
+The first dimension of variability is inter-individual. Sahu and Tseng [12] reported that 23 of 33 participants achieved measurable entrainment at 40 Hz while 10 showed minimal or no response -- a non-responder fraction of approximately 30\% that fixed protocols cannot detect or accommodate. High-performing patients and non-responders thus receive identical stimulation despite profoundly different neural responses.
 
 The second dimension is intra-session habituation. Repeated identical stimuli cause progressive weakening of neural responses, and this effect is well-documented in gamma entrainment. In the OpenNeuro ds005048 dataset used in this work, individual subjects exhibit PAC trajectories that rise, plateau, and decline within single sessions. Stimulation delivered during periods of already-strong coupling wastes therapeutic resources and may accelerate habituation; stimulation withheld during periods of declining coupling misses the windows of genuine therapeutic need.
 
-The convergence of inter-individual variability and intra-session habituation creates a compelling case for adaptive closed-loop control. What is required is a system capable not merely of detecting the current entrainment state reactively but of forecasting the near-future trajectory with sufficient lead time to intervene proactively. Prior work in closed-loop deep brain stimulation (DBS) has demonstrated that adaptive, biomarker-triggered stimulation reduces side effects, slows habituation, and extends battery life compared to open-loop protocols [20], and data-driven model predictive control has proven feasible for parkinsonian tremor [21]. In the EEG domain, EEGNet [18] provides compact, generalizable convolutional architectures for brain-computer interfaces. The Modulation Index (MI) introduced by Tort et al. [22] -- a measure of theta-gamma phase-amplitude coupling -- serves as the quantitative biomarker of entrainment strength throughout this work. However, no prior system has addressed the specific challenge of forecasting PAC dynamics at 5-10 second horizons for proactive gamma entrainment control. This forecasting requirement defines the core technical challenge addressed by the present work.
+The convergence of inter-individual variability and intra-session habituation creates a compelling case for adaptive closed-loop control. What is required is a system capable not merely of detecting the current entrainment state reactively but of forecasting the near-future trajectory with sufficient lead time to intervene proactively. Prior work in closed-loop deep brain stimulation (DBS) has demonstrated that adaptive, biomarker-triggered stimulation reduces side effects, slows habituation, and extends battery life compared to open-loop protocols [20], and data-driven deep learning model predictive control has proven feasible for parkinsonian tremor [19, 21]. In the EEG domain, EEGNet [18] provides compact, generalizable convolutional architectures for brain-computer interfaces. The Modulation Index (MI) introduced by Tort et al. [22] -- a measure of theta-gamma phase-amplitude coupling -- serves as the quantitative biomarker of entrainment strength throughout this work. However, no prior system has addressed the specific challenge of forecasting PAC dynamics at 5-10 second horizons for proactive gamma entrainment control. This forecasting requirement defines the core technical challenge addressed by the present work.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/ai_generated/closedloop_vs_fixed_v3.png}
-\caption{Figure 2. Conceptual comparison of fixed-schedule (open-loop) and predictive closed-loop stimulation paradigms. Left: fixed-schedule protocols deliver stimulation at regular intervals regardless of the patient's neural state, resulting in wasted stimulation during periods of strong coupling and missed therapeutic windows during coupling decline (45\% alignment). Right: the predictive closed-loop approach developed in this work uses a TCN to forecast PAC 5-10 seconds ahead, concentrating stimulation precisely during periods of declining coupling (72\% alignment). The predictive controller achieves 91\% of the theoretical oracle's targeting performance.}
+\caption{Conceptual comparison of fixed-schedule (open-loop) and predictive closed-loop stimulation paradigms. Left: fixed-schedule protocols deliver stimulation at regular intervals regardless of the patient's neural state, resulting in wasted stimulation during periods of strong coupling and missed therapeutic windows during coupling decline (45\% alignment). Right: the predictive closed-loop approach developed in this work uses a TCN to forecast PAC 5-10 seconds ahead, concentrating stimulation precisely during periods of declining coupling (72.1\% alignment). The predictive controller achieves 91\% of the theoretical oracle's targeting performance.}
 \label{fig:closed_loop_vs_fixed}
 \end{figure}
 
@@ -119,7 +119,7 @@ I approach this question through a two-stage computational architecture. Stage 1
 
 The biomarker of interest throughout is the Modulation Index (MI), a measure of theta-gamma phase-amplitude coupling (PAC) introduced by Tort et al. [22] that quantifies the degree to which gamma-band (38-42 Hz) amplitude is modulated by the phase of theta-band (4-8 Hz) oscillations. Higher MI values indicate stronger theta-gamma coupling and stronger entrainment; lower values indicate reduced or absent coupling.
 
-All models are trained using subject-level splits with no within-subject leakage between train, validation, and test sets. Final evaluation is conducted on EEG recordings from six held-out test subjects, with controller performance assessed by replaying decisions across all 35 subjects' recorded EEG -- not simulated brain dynamics -- providing a clinically grounded assessment of real-world applicability.
+All models are trained using subject-level splits with no within-subject leakage between train, validation, and test sets. Final evaluation is conducted on EEG recordings from six held-out test subjects, with controller performance assessed by replaying decisions across all 35 subjects' recorded EEG -- not simulated brain dynamics -- providing a computationally grounded assessment of real-world applicability.
 
 This paper makes the following specific contributions:
 
@@ -127,7 +127,7 @@ This paper makes the following specific contributions:
 
 \textbf{Contribution 2: Causal TCN for 5-10 second ahead PAC forecasting.} A multiscale causal Temporal Convolutional Network (31,043 parameters) trained on 73 engineered features achieves $R^2$ of approximately 0.25-0.28 at prediction horizons of 5-10 seconds, while all baseline methods including persistence and Ridge regression collapse to negative $R^2$ at these horizons -- a +0.5 $R^2$ margin for the TCN.
 
-\textbf{Contribution 3: Closed-loop controller validated on 35 elderly subjects' EEG recordings.} The TCN-based predictive controller achieves 72.1\% alignment with patient therapeutic need versus 64.5\% for Reactive Threshold ($p < 0.001$, Hedges' $g = 1.31$), and targets 82.6\% of low-PAC windows versus 51.7\% for reactive control ($p < 0.001$, $g = 4.47$), reaching 91\% of the theoretical oracle upper bound. Every individual patient (35/35) benefits from the predictive controller.
+\textbf{Contribution 3: Closed-loop controller validated on 35 elderly subjects' EEG recordings.} The TCN-based predictive controller achieves 72.1\% alignment with patient therapeutic need versus 64.5\% for Reactive Threshold ($p < 0.001$, Hedges' $g = 1.31$), and targets 82.6\% of low-PAC windows versus 51.7\% for reactive control ($p < 0.001$, $g = 4.47$), reaching 91\% of the theoretical oracle upper bound. Every individual patient (35/35) showed improved alignment under the predictive controller.
 
 \textbf{Contribution 4: Characterization of the prediction horizon inflection point.} Analysis across prediction horizons 1-10 seconds reveals a clear transition near 3 seconds where persistence and linear baselines cease to provide useful predictions, while the TCN maintains $R^2$ of approximately 0.25. This inflection defines the operationally critical horizon range for proactive neuromodulation.
 
@@ -139,7 +139,7 @@ The remainder of this paper is organized as follows. Section 2 describes the dat
 
 \subsubsection{Dataset}
 
-I used the publicly available OpenNeuro dataset ds005048 v1.0.1 (Lahijanian et al., 2024), originally described in Naeini et al. (2022). The dataset comprises resting-state and stimulation EEG recordings from 35 elderly subjects attending a memory clinic in Tehran, Iran, including patients with mild-to-moderate Alzheimer's disease ($n = 17$), mild cognitive impairment ($n = 6$), and age-matched healthy controls ($n = 10$), with 2 subjects of unspecified classification. EEG was recorded using a 19-channel monopolar montage following the international 10/20 system at a sampling rate of 250 Hz. The stimulation protocol consisted of repeated cycles of 40 Hz auditory pulse train stimulation (40 seconds) followed by silent rest (20 seconds), enabling paired within-subject comparisons of neural coupling state across stimulation and rest conditions.
+I used the publicly available OpenNeuro dataset ds005048 v1.0.1 (Lahijanian et al. [10, 23]). The dataset comprises resting-state and stimulation EEG recordings from 35 elderly subjects attending a memory clinic in Tehran, Iran, including patients with mild-to-moderate Alzheimer's disease ($n = 17$), mild cognitive impairment ($n = 6$), and age-matched healthy controls ($n = 10$), with 2 subjects of unspecified classification. EEG was recorded using a 19-channel monopolar montage following the international 10/20 system at a sampling rate of 250 Hz. The stimulation protocol consisted of repeated cycles of 40 Hz auditory pulse train stimulation (40 seconds) followed by silent rest (20 seconds), enabling paired within-subject comparisons of neural coupling state across stimulation and rest conditions.
 
 \subsubsection{Preprocessing}
 
@@ -187,7 +187,7 @@ where U is the uniform distribution over N bins. The MI is dimensionless, with v
 
 \subsubsection{Architecture}
 
-As the primary static PAC estimator, I adapted EEGNet (Lawhern et al., 2018) as a regression model predicting scalar PAC from a 2-second EEG window.
+As the primary static PAC estimator, I adapted EEGNet [18] (Lawhern et al., 2018) as a regression model predicting scalar PAC from a 2-second EEG window.
 
 \textbf{Input:} Tensors of shape (batch, 1, 7, 500) -- one feature channel, 7 frontal electrodes, 500 time samples.
 
@@ -196,13 +196,13 @@ As the primary static PAC estimator, I adapted EEGNet (Lawhern et al., 2018) as 
 \begin{itemize}[nosep]
   \item Temporal convolution: 8 filters (F1 = 8) with a kernel of length 64 samples (256 ms).
   \item Depthwise spatial convolution: depth multiplier D = 2 applied across the 7 channels, yielding 16 spatially-filtered feature maps.
-  \item Batch normalization, ELU activation, and average pooling (pool size = 4).
+  \item Batch normalization, ELU activation, average pooling (pool size = 4), and dropout ($p = 0.5$).
 \end{itemize}
 
 \textbf{Block 2 -- Separable convolution:}
 
 \begin{itemize}[nosep]
-  \item Depthwise separable convolution with F2 = 16 pointwise filters and kernel length 16 (64 ms), followed by batch normalization, ELU, and average pooling (pool size = 8).
+  \item Depthwise separable convolution with F2 = 16 pointwise filters and kernel length 16 (64 ms), followed by batch normalization, ELU, average pooling (pool size = 8), and dropout ($p = 0.5$).
 \end{itemize}
 
 \textbf{Regression head:} Flattened output projected to a single scalar through a fully connected layer. \textbf{Total parameters:} 1,457.
@@ -234,11 +234,11 @@ I constructed a 73-dimensional causal feature vector for each 2-second window co
 
 \textbf{Input projection:} A linear layer projects the 73-dimensional input to 64-dimensional internal representations, followed by LayerNorm and SiLU activation.
 
-\textbf{Causal depthwise-separable convolutional blocks ($\times$4):} Each block applies a causal depthwise separable convolution with kernel size 3 and a dilation factor from the set [1, 2, 4, 8]. Causal padding is applied to ensure no access to future values. Each block uses GroupNorm normalization and SiLU activation with a residual connection. The four dilation factors yield a theoretical receptive field of 31 time steps, covering the full 20-step lookback window with margin.
+\textbf{Causal depthwise-separable convolutional blocks ($\times$4):} Each block applies a causal depthwise separable convolution with kernel size 3 and a dilation factor from the set [1, 2, 4, 8]. Causal padding is applied to ensure no access to future values. Each block uses GroupNorm(1, channels) normalization (equivalent to LayerNorm over channel dimensions, chosen for stability across subjects), SiLU activation, and dropout ($p = 0.2$) with a residual connection. A second SiLU activation is applied to the residual sum --- a double-SiLU pattern retained from the trained checkpoint. The four dilation factors yield a theoretical receptive field of 31 time steps, covering the full 20-step lookback window with margin.
 
 \textbf{Attention pooling:} A learned attention mechanism (AttentionPool1D) aggregates the temporal sequence into a single fixed-dimensional vector.
 
-\textbf{Dual regression heads:} Two identical regression heads produce \texttt{y\_future} (predicted PAC 5 seconds ahead) and \texttt{y\_delta} (predicted change from current to 5-second-ahead value).
+\textbf{Dual regression heads:} Two identical regression heads (Linear $\to$ SiLU $\to$ Dropout($p = 0.2$) $\to$ Linear) produce \texttt{y\_future} (predicted PAC 5 seconds ahead) and \texttt{y\_delta} (predicted change from current to 5-second-ahead value).
 
 \textbf{Total parameters:} 31,043.
 
@@ -246,7 +246,7 @@ I constructed a 73-dimensional causal feature vector for each 2-second window co
 
 \begin{table}[htbp]
 \centering
-\caption{}
+\caption{MultiscaleCausalTCN training configuration.}
 \label{tab:table_1}
 \small
 \begin{tabular}{lc}
@@ -269,14 +269,14 @@ Target smoothing & ts = 1 (raw PAC; no smoothing) \\
 
 \subsubsection{Performance}
 
-On held-out test subjects, the MultiscaleCausalTCN achieved Test $R^2$ = 0.170 (raw PAC, 5-second horizon) and Test Pearson $r = 0.433$. Its clinical significance emerges from the horizon sweep: at 5-10 second prediction horizons, all baseline models collapse to negative $R^2$ while the TCN maintains $R^2$ = 0.24-0.28 -- a margin of approximately +0.5 $R^2$ units.
+On held-out test subjects, the MultiscaleCausalTCN achieved Test $R^2$ = 0.170 (raw PAC, 5-second horizon) and Test Pearson $r = 0.433$. Its practical significance emerges from the horizon sweep: at 5-10 second prediction horizons, all baseline models collapse to negative $R^2$ while the TCN maintains $R^2$ = 0.24-0.28 -- a margin of approximately +0.5 $R^2$ units.
 
 \subsection{Closed-Loop Controller Design}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/ai_generated/system_architecture_v5.png}
-\caption{Figure 3. Architecture of the closed-loop 40 Hz entrainment system. Raw EEG from 7 frontal channels is processed through signal processing (bandpass 0.5-80 Hz, notch, CAR), the EEGNet static PAC estimator (1,457 parameters), a 73-dimensional causal feature engineering pipeline, and the MultiscaleCausalTCN temporal forecaster (31,043 parameters, 5-second prediction horizon). The adaptive controller applies z-score thresholding against a personalized rolling baseline to determine stimulation decisions (STIMULATE / REST / MAINTAIN) with 3-second hysteresis, driving a 40 Hz auditory click train. The curved feedback arrow illustrates the closed-loop nature of the system.}
+\includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/ai_generated/system_architecture_v6.png}
+\caption{Architecture of the closed-loop 40 Hz entrainment system. Raw EEG from 7 frontal channels is processed through signal processing (bandpass 0.5-80 Hz, notch, CAR), the EEGNet static PAC estimator (1,457 parameters), a 73-dimensional causal feature engineering pipeline, and the MultiscaleCausalTCN temporal forecaster (31,043 parameters, 5-second prediction horizon). The adaptive controller applies z-score thresholding against a personalized rolling baseline to determine stimulation decisions (STIMULATE / REST / MAINTAIN) with 3-second hysteresis, driving a 40 Hz auditory click train. The curved feedback arrow illustrates the closed-loop nature of the system.}
 \label{fig:system_architecture}
 \end{figure}
 
@@ -294,7 +294,7 @@ A minimum of 10 samples must accumulate in the buffer before z-scores are comput
 
 \begin{table}[htbp]
 \centering
-\caption{}
+\caption{Controller decision logic based on personalized z-score.}
 \label{tab:table_2}
 \small
 \begin{tabular}{lcc}
@@ -340,36 +340,34 @@ The counterfactual nature of this evaluation means that the decisions reflect wh
 
 \subsection{Statistical Analysis}
 
-All comparisons between controllers were conducted as paired, within-subject Wilcoxon signed-rank tests (two-sided, $N = 35$). Effect sizes were quantified using Hedges' $g$ (bias-corrected Cohen's $d$) with 95\% confidence intervals obtained via large-sample normal approximation ($g \pm 1.96 \times \text{SE}$). Clinical breadth of benefit was assessed with a binomial sign test. Threshold sensitivity was evaluated across z-score thresholds 0.2 to 1.0 in steps of 0.1. All analyses were conducted in Python using SciPy (scipy.stats).
+All comparisons between controllers were conducted as paired, within-subject Wilcoxon signed-rank tests (two-sided, $N = 35$). Effect sizes were quantified using Hedges' $g$ (bias-corrected Cohen's $d$) computed with pooled standard deviation, with 95\% confidence intervals obtained via large-sample normal approximation ($g \pm 1.96 \times \text{SE}$). This independent-groups formulation is conservative for paired data as it ignores within-subject correlation. All four primary comparisons survive Bonferroni correction (adjusted $\alpha = 0.0125$). Clinical breadth of benefit was assessed with a binomial sign test. Threshold sensitivity was evaluated across z-score thresholds 0.2 to 1.0 in steps of 0.1. All analyses were conducted in Python using SciPy (scipy.stats).
 
 \section{Architecture Search: From Static PAC Prediction to Temporal Forecasting}
 
-From February 5-16, 2026, I conducted a systematic exploration across eight distinct model families for static PAC prediction, ranging from compact convolutional networks to transformer-based architectures with over a million parameters. Table 1 summarizes all eight models evaluated. $R^2$ values are on the held-out test set (6 subjects, 2,822 windows).
+From February 5-16, 2026, I conducted a systematic exploration across eight distinct model families for static PAC prediction, ranging from compact convolutional networks to transformer-based architectures with over a million parameters. Table 3 summarizes all eight models evaluated. $R^2$ values are on the held-out test set (6 subjects, 2,822 windows).
 
 \begin{table}[htbp]
 \centering
-\caption{Comparison of eight static PAC prediction architectures.}
+\caption{Comparison of eight static PAC prediction architectures. All test $R^2$ values are on the held-out test set (6 subjects, 2,822 windows). Models spanning nearly three orders of magnitude in parameter count converge to $R^2 \approx 0.287$, revealing a data-imposed ceiling rather than an architectural limitation.}
 \label{tab:comparison_of_eight_static_pac_predictio}
-\footnotesize
-\resizebox{\textwidth}{!}{
-\begin{tabular}{llllll}
+\small
+\begin{tabularx}{\textwidth}{@{}l l r X@{}}
 \toprule
-\textbf{Model} & \textbf{Version} & \textbf{Parameters} & \textbf{Architecture} & \textbf{Test $R^2$} & \textbf{Notes} \\
+\textbf{Model (Version)} & \textbf{Parameters} & \textbf{Test $R^2$} & \textbf{Architecture} \\
 \midrule
-EEGNet & V1 & 1,457 & Temporal + depthwise spatial conv on raw EEG & 0.287 & Lightest model; selected as baseline estimator \\
-EEGNetV2 & V2 & 3,200 & EEGNet variant predicting delta-PAC (change in coupling) & 0.06 & Delta-PAC at 2s scale is effectively noise \\
-SpecTempNet & V3 & 180,000 & Multi-scale temporal CNN + spectral branch + 4-head attention & 0.236 & Initial $R^2$=0.69 was MI feature leakage; 0.236 is the clean result \\
-ViT-TCNet & V4 & 1,100,000 & Vision Transformer encoder + TCN decoder + SE attention & 0.252 & Overfits despite regularization; $N = 35$ too small for 1.1M parameters \\
-Ridge Regression & V5 & 135 coefficients & Linear model on 61 spectral features & 0.287 & Matches EEGNet exactly; best static model \\
-Optimized Ensemble & V6 & $\sim$200 & Ridge + temporal context features (stim state, cycle phase) & 0.287 & No gain from adding temporal features to linear model \\
-1D CNN + Attention & V7 & $\sim$28,000 & Raw EEG, learned temporal features with attention & 0.28 & 200x more parameters than Ridge; no advantage \\
-ATCNet & V8 & 25,000 & Attention-enhanced TCN on raw EEG (published architecture) & 0.22 & Published EEG architecture underperforms Ridge on this task \\
+EEGNet (V1) & 1,457 & 0.287 & Temporal + depthwise spatial conv on raw EEG. \textit{Selected as baseline estimator --- lightest model at ceiling.} \\[4pt]
+EEGNetV2 (V2) & 3,200 & 0.06 & EEGNet variant predicting delta-PAC (change in coupling). \textit{Delta-PAC at 2s scale is effectively noise.} \\[4pt]
+SpecTempNet (V3) & 180,000 & 0.236 & Multi-scale temporal CNN + spectral branch + 4-head attention. \textit{Initial $R^2$=0.69 was MI feature leakage; 0.236 is the clean result.} \\[4pt]
+ViT-TCNet (V4) & 1,100,000 & 0.252 & Vision Transformer encoder + TCN decoder + SE attention. \textit{Overfits despite regularization; $N = 35$ too small for 1.1M params.} \\[4pt]
+Ridge Regression (V5) & 135 coefs & 0.287 & Linear model on 61 spectral features. \textit{Matches EEGNet exactly; best static model.} \\[4pt]
+Optimized Ensemble (V6) & $\sim$200 & 0.287 & Ridge + temporal context features (stim state, cycle phase). \textit{No gain from temporal features in linear model.} \\[4pt]
+1D CNN + Attention (V7) & $\sim$28,000 & 0.28 & Raw EEG, learned temporal features with attention. \textit{200$\times$ more parameters than Ridge; no advantage.} \\[4pt]
+ATCNet (V8) & 25,000 & 0.22 & Attention-enhanced TCN on raw EEG (published architecture). \textit{Underperforms Ridge on this task.} \\
 \bottomrule
-\end{tabular}
-}
+\end{tabularx}
 \end{table}
 
-The convergence of eight architectures -- spanning nearly three orders of magnitude in parameter count, three feature representations, and multiple distinct design philosophies -- to the same $R^2$ of approximately 0.287 is a scientific result in itself, not an engineering failure. The fundamental cause is the epoch-level label assignment described in Section 2.2: PAC is computed over full 20-40 second epochs and assigned to all constituent 2-second windows. A 2-second window provides at most 500 samples -- only 5 complete theta cycles at 4 Hz -- and cannot contain enough information to recover the MI computed over a signal 10-20 times longer. When a 135-parameter linear model performs identically to a 1.1-million-parameter transformer, the remaining prediction error appears largely attributable to noise under this channel configuration and label definition, rather than unexplained signal a better model could capture.
+The convergence of eight architectures -- spanning nearly three orders of magnitude in parameter count, three feature representations, and multiple distinct design philosophies -- to the same $R^2$ of approximately 0.287 is a scientific result in itself, not an engineering failure. The fundamental cause is the epoch-level label assignment described in Section 2.2: PAC is computed over full 20-40 second epochs and assigned to all constituent 2-second windows. A 2-second window provides at most 500 samples -- only 8 complete theta cycles at 4 Hz -- and cannot contain enough information to recover the MI computed over a signal 10-20 times longer. When a 135-parameter linear model performs identically to a 1.1-million-parameter transformer, the remaining prediction error appears largely attributable to noise under this channel configuration and label definition, rather than unexplained signal a better model could capture.
 
 A critical methodological lesson emerged during this search. The V3 SpecTempNet initially appeared to achieve $R^2$ = 0.69, but my leakage audit revealed that its spectral feature branch was computing features directly derived from the Modulation Index -- the same quantity as the prediction target. After removing these PAC-circular features, SpecTempNet's true $R^2$ fell to 0.236, below the 135-parameter Ridge baseline. This discovery directly informed the strict feature audit applied to the temporal dataset's 73-dimensional input space, ensuring no circular features contaminated the final TCN pipeline.
 
@@ -379,7 +377,7 @@ The ceiling finding motivated a fundamental pivot: rather than attempting to imp
 
 This section presents experimental findings across five primary analyses: (1) temporal forecasting performance across prediction horizons; (2) closed-loop controller comparison across all 35 subjects' real EEG recordings; (3) per-subject analysis confirming that the advantage is universal; (4) fatigue model robustness; and (5) threshold sensitivity.
 
-All statistical tests are Wilcoxon signed-rank (non-parametric, paired, $N = 35$) unless otherwise noted. Effect sizes are reported as Hedges' $g$ with 95\% confidence intervals (large-sample normal approximation). All PAC values are in dimensionless Modulation Index units (Tort 2010), specifically $\times 10^{-6}$ for the PAC targeting gap metric.
+All statistical tests are Wilcoxon signed-rank (non-parametric, paired, $N = 35$) unless otherwise noted. Effect sizes are reported as Hedges' $g$ with 95\% confidence intervals (large-sample normal approximation). All PAC values are in dimensionless Modulation Index units (Tort et al. [22]), specifically $\times 10^{-6}$ for the PAC targeting gap metric.
 
 \subsection{Temporal Forecasting Performance (Horizon Sweep)}
 
@@ -394,7 +392,7 @@ At a 5-second horizon, persistence $R^2$=-0.267, Ridge $R^2$=-0.393, and TCN $R^
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/horizon_sweep.png}
-\caption{Figure 4. PAC forecasting performance ($R^2$) vs prediction horizon for the MultiscaleCausalTCN, persistence baseline, and Ridge baseline. Target smoothing window ts=5 for all horizons. At 1-2 second horizons, persistence and Ridge outperform the TCN. At the $\sim$3 second inflection point, the TCN begins to exceed both baselines. At 5-10 second horizons, both baselines collapse to negative $R^2$ while the TCN maintains $R^2$ of approximately 0.25 -- a +0.5 $R^2$ margin that defines the operationally actionable regime for proactive control.}
+\caption{PAC forecasting performance ($R^2$) vs prediction horizon for the MultiscaleCausalTCN, persistence baseline, and Ridge baseline. Target smoothing window ts=5 for all horizons. At 1-2 second horizons, persistence and Ridge outperform the TCN. At the $\sim$3 second inflection point, the TCN begins to exceed both baselines. At 5-10 second horizons, both baselines collapse to negative $R^2$ while the TCN maintains $R^2$ of approximately 0.25 -- a +0.5 $R^2$ margin that defines the operationally actionable regime for proactive control.}
 \label{fig:horizon_sweep}
 \end{figure}
 
@@ -402,7 +400,7 @@ At a 5-second horizon, persistence $R^2$=-0.267, Ridge $R^2$=-0.393, and TCN $R^
 
 \begin{table}[htbp]
 \centering
-\caption{}
+\caption{Horizon sweep results (target smoothing ts=5). Ridge regression uses the same 73-dimensional feature vector as the TCN input.}
 \label{tab:table_4}
 \small
 \begin{tabular}{lcccc}
@@ -426,14 +424,14 @@ At a 5-second horizon, persistence $R^2$=-0.267, Ridge $R^2$=-0.393, and TCN $R^
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/controller_comparison.png}
-\caption{Figure 5. Controller comparison across $N = 35$ subjects on three performance metrics: Alignment, Low-PAC Stimulation Rate, and High-PAC Rest Rate. Bars show mean values across subjects; error bars indicate $\pm$1 SEM. Significance brackets show Hedges' g effect sizes for TCN Predictive vs. Reactive Threshold comparisons (*** $p < 0.001$). The TCN Predictive controller achieves 72.1\% alignment versus 64.5\% for Reactive Threshold and 45.0\% for Fixed Schedule. The Alignment Oracle (100\%, perfect hindsight) establishes the theoretical maximum.}
+\caption{Controller comparison across $N = 35$ subjects on three performance metrics: Alignment, Low-PAC Stimulation Rate, and High-PAC Rest Rate. Bars show mean values across subjects; error bars indicate $\pm$1 SEM. Significance brackets show Hedges' g effect sizes for TCN Predictive vs. Reactive Threshold comparisons (*** $p < 0.001$). The TCN Predictive controller achieves 72.1\% alignment versus 64.5\% for Reactive Threshold and 45.0\% for Fixed Schedule. The Alignment Oracle (100\%, perfect hindsight) establishes the theoretical maximum.}
 \label{fig:controller_comparison}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/timeline_example.png}
-\caption{Figure 6. Example segment showing real EEG PAC dynamics and controller decisions for a representative subject. The PAC trajectory (blue) varies across time as the patient transitions between Stimulus and Rest epochs. The TCN Predictive controller (orange) begins stimulation before PAC declines, while the Reactive Threshold controller (green) reacts after the decline is detected. The TCN's proactive posture enables targeting of low-PAC windows that the reactive controller misses.}
+\caption{Example segment showing real EEG PAC dynamics and controller decisions for a representative subject. The PAC trajectory (blue) varies across time as the patient transitions between Stimulus and Rest epochs. The TCN Predictive controller (orange) begins stimulation before PAC declines, while the Reactive Threshold controller (green) reacts after the decline is detected. The TCN's proactive posture enables targeting of low-PAC windows that the reactive controller misses.}
 \label{fig:timeline_example}
 \end{figure}
 
@@ -453,7 +451,7 @@ Fixed Schedule & 45.0\% & 61.4\% & 28.6\% & 66.6\% & -6.6 \\
 Reactive Threshold & 64.5\% & 51.7\% & 77.3\% & 36.7\% & +21.1 \\
 \textbf{TCN Predictive} & \textbf{72.1\%} & \textbf{82.6\%} & \textbf{61.6\%} & \textbf{59.7\%} & \textbf{+30.5} \\
 Hybrid TCN+Reactive & 73.8\% & 85.3\% & 62.2\% & 60.8\% & +34.0 \\
-PI Controller & 66.1\% & 38.6\% & 93.6\% & 22.0\% & +27.2 \\
+PI Controller & 66.1\% & 38.6\% & 93.6\% & 22.0\% & +27.4 \\
 Alignment Oracle & 100.0\% & 100.0\% & 100.0\% & 48.3\% & +33.3 \\
 \bottomrule
 \end{tabular}
@@ -466,7 +464,7 @@ Alignment Oracle & 100.0\% & 100.0\% & 100.0\% & 48.3\% & +33.3 \\
 
 The TCN predictive controller achieved 72.1\% alignment compared to 64.5\% for reactive threshold control (Wilcoxon signed-rank: $W = 0$, $p < 0.001$; Hedges' $g = +1.31$, 95\% CI [+0.75, +1.87], $N = 35$ paired subjects).
 
-The performance advantage was most pronounced for Low-PAC Stim Rate: the TCN stimulated during 82.6\% of below-median PAC windows compared to only 51.7\% for the reactive controller ($W = 0$, $p < 0.001$; $g = +4.47$, 95\% CI [+3.33, +5.62]).
+The performance advantage was most pronounced for Low-PAC Stim Rate: the TCN stimulated during 82.6\% of below-median PAC windows compared to only 51.7\% for the reactive controller ($W = 0$, $p < 0.001$; $g = +4.47$, 95\% CI [+3.33, +5.62]). The large magnitude of this effect size reflects algorithmic decision superiority --- the TCN's proactive posture stimulates more aggressively when PAC is low --- rather than a clinical effect of equivalent magnitude.
 
 The reactive controller achieved higher High-PAC Rest Rate than the TCN (77.3\% vs 61.6\%; $W = 0$, $p < 0.001$; $g = -2.41$). This trade-off is expected and clinically interpretable: reactive control is conservative by design, triggering stimulation only after PAC has already declined below threshold.
 
@@ -481,7 +479,7 @@ Across all 35 subjects, the TCN predictive controller achieved higher alignment 
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/per_subject_utility.png}
-\caption{Figure 7. Per-subject alignment comparison ($N = 35$ subjects). Each point represents one subject's alignment score under TCN Predictive control (y-axis) versus Reactive Threshold control (x-axis). All 35 data points fall above the y=x diagonal, confirming that every subject benefits from the predictive controller. Training subjects (filled circles), validation subjects (squares), and test subjects (triangles) are shown separately; the advantage is consistent across all three splits.}
+\caption{Per-subject clinical utility comparison ($N = 35$ subjects). Each point represents one subject's clinical utility score under TCN Predictive control (y-axis) versus Reactive Threshold control (x-axis). All 35 data points fall above the y=x diagonal, confirming that every subject showed improved alignment under the predictive controller. Training subjects (filled circles), validation subjects (squares), and test subjects (triangles) are shown separately; the advantage is consistent across all three splits.}
 \label{fig:per_subject_utility}
 \end{figure}
 
@@ -520,11 +518,11 @@ The 7.6 percentage-point alignment improvement of the TCN over reactive threshol
 
 \subsection{Comparison to Prior Work}
 
-The closest architectural precedent is Portiloop (Lacroix et al., PLOS ONE 2022), a convolutional LSTM for real-time sleep spindle detection in EEG. However, Portiloop addresses binary classification of stereotyped waveforms, while PAC forecasting is a continuous regression problem with gradual, non-stationary transitions -- demonstrating that \textit{forecasting} rather than \textit{detection} is necessary for certain closed-loop applications. In the DBS domain, adaptive closed-loop stimulation has outperformed open-loop protocols for Parkinson's disease [20]; the present work extends this paradigm non-invasively to gamma entrainment in AD. Three contributions distinguish this work: (1) PAC-specific temporal forecasting at 5-10 second horizons; (2) horizon-dependent evaluation methodology; (3) universal per-subject validation on 35 real patient EEGs.
+The closest architectural precedent is Portiloop (Lacroix et al., PLOS ONE 2022), a convolutional LSTM for real-time sleep spindle detection in EEG. However, Portiloop addresses binary classification of stereotyped waveforms, while PAC forecasting is a continuous regression problem with gradual, non-stationary transitions -- demonstrating that \textit{forecasting} rather than \textit{detection} is necessary for certain closed-loop applications. In the DBS domain, adaptive closed-loop stimulation has outperformed open-loop protocols for Parkinson's disease [20]; the present work extends this paradigm non-invasively to gamma entrainment in AD. Concurrent work has advanced related themes: Haxel et al. [16] demonstrated personalized real-time inference of cortical excitability from EEG (the PRIME framework), and ElSayed et al. [17] proposed an adaptive ML framework for auditory EEG stimulation in Fragile X Syndrome --- both validating the feasibility of real-time neural state prediction for closed-loop intervention. Broader efforts in personalized digital therapeutics [13], computational neural mass modeling of AD [14], and systematic deep learning benchmarks for EEG [15] provide additional context. Three contributions distinguish this work from these efforts: (1) PAC-specific temporal forecasting at 5-10 second horizons; (2) horizon-dependent evaluation methodology; (3) universal per-subject validation on 35 real patient EEGs.
 
 \subsection{Limitations}
 
-\textbf{1. Offline counterfactual replay, not live closed-loop.} The primary validation replays TCN controller decisions against recorded EEG, but cannot observe the brain's response to the controller's stimulation decisions. The 72.1\% alignment figure measures counterfactual decision quality, not realized therapeutic benefit. Live closed-loop validation with real-time EEG streaming and online PAC computation is required to confirm that the decision quality translates to improved therapeutic outcomes.
+\textbf{1. Offline counterfactual replay, not live closed-loop.} The primary validation replays TCN controller decisions against recorded EEG, but cannot observe the brain's response to the controller's stimulation decisions. The 72.1\% alignment figure measures counterfactual decision quality, not realized therapeutic benefit. The counterfactual assumption that PAC dynamics would be identical under different stimulation histories is strong; real closed-loop deployment would create feedback effects not captured in offline replay. Live closed-loop validation with real-time EEG streaming and online PAC computation is required to confirm that the decision quality translates to improved therapeutic outcomes.
 
 \textbf{2. EEGNet is not in the validation loop.} The closed-loop controller experiments used ground-truth PAC labels as TCN input. In a deployed system, the TCN would receive EEGNet-estimated PAC ($R^2$=0.287) rather than ground-truth PAC, introducing estimation noise into the input feature vector. The effect of EEGNet estimation error on TCN forecasting accuracy and controller alignment must be characterized in future end-to-end validation.
 
@@ -550,29 +548,29 @@ The EEG dataset used in this study is publicly available on OpenNeuro (ds005048,
 
 \section*{References}
 \begin{enumerate}[label={[\arabic*]}, leftmargin=2em, itemsep=2pt, parsep=0pt]
-\item Wang Y, et al. Mystery of gamma wave stimulation in brain disorders. \textit{Molecular Neurodegeneration}, 19(1), 2024. \url{https://doi.org/10.1186/s13024-024-00785-x}
-\item Zhurakovskaya E, et al. Theta and gamma oscillatory dynamics in mouse models of Alzheimer's disease: A path to prospective therapeutic intervention. \textit{Neuroscience and Biobehavioral Reviews}, 136, 104628, 2022. \url{https://doi.org/10.1016/j.neubiorev.2022.104628}
-\item Dimitriadis SI, et al. Abnormal gamma phase-amplitude coupling in the parahippocampal cortex is associated with network hyperexcitability in Alzheimer's disease. \textit{Brain Communications}, 6(2), fcae121, 2024. \url{https://doi.org/10.1093/braincomms/fcae121}
-\item Backus AR, et al. Theta-Gamma Coupling and Working Memory in Alzheimer's Dementia and Mild Cognitive Impairment. \textit{Frontiers in Aging Neuroscience}, 10, 101, 2018. \url{https://doi.org/10.3389/fnagi.2018.00101}
-\item Klimesch W, et al. Theta-gamma-coupling as predictor of working memory performance in young and elderly healthy people. \textit{Molecular Brain}, 17(1), 2024. \url{https://doi.org/10.1186/s13041-024-01149-8}
-\item Iaccarino HG, Singer AC, Martorell AJ, et al. Gamma frequency entrainment attenuates amyloid load and modifies microglia. \textit{Nature}, 540(7632), 230-235, 2016. \url{https://doi.org/10.1038/nature20587}
+\item Deng Q, et al. Mystery of gamma wave stimulation in brain disorders. \textit{Molecular Neurodegeneration}, 19(1), 2024. \url{https://doi.org/10.1186/s13024-024-00785-x}
+\item Mehak SF, et al. Theta and gamma oscillatory dynamics in mouse models of Alzheimer's disease: A path to prospective therapeutic intervention. \textit{Neuroscience and Biobehavioral Reviews}, 136, 104628, 2022. \url{https://doi.org/10.1016/j.neubiorev.2022.104628}
+\item Prabhu P, et al. Abnormal gamma phase-amplitude coupling in the parahippocampal cortex is associated with network hyperexcitability in Alzheimer's disease. \textit{Brain Communications}, 6(2), fcae121, 2024. \url{https://doi.org/10.1093/braincomms/fcae121}
+\item Goodman MS, et al. Theta-Gamma Coupling and Working Memory in Alzheimer's Dementia and Mild Cognitive Impairment. \textit{Frontiers in Aging Neuroscience}, 10, 101, 2018. \url{https://doi.org/10.3389/fnagi.2018.00101}
+\item Abubaker M, et al. Theta-gamma-coupling as predictor of working memory performance in young and elderly healthy people. \textit{Molecular Brain}, 17(1), 2024. \url{https://doi.org/10.1186/s13041-024-01149-8}
+\item Iaccarino HF, Singer AC, Martorell AJ, et al. Gamma frequency entrainment attenuates amyloid load and modifies microglia. \textit{Nature}, 540(7632), 230-235, 2016. \url{https://doi.org/10.1038/nature20587}
 \item Murdock MH, et al. Multisensory gamma stimulation promotes glymphatic clearance of amyloid. \textit{Nature}, 627(8002), 149-156, 2024. \url{https://doi.org/10.1038/s41586-024-07132-6}
-\item Goutier L, et al. Long-term effects of forty-hertz auditory stimulation as a treatment of Alzheimer's disease: Insights from an aged monkey model study. \textit{Proceedings of the National Academy of Sciences}, 122(20), 2025. \url{https://doi.org/10.1073/pnas.2529565123}
+\item Wang W, et al. Long-term effects of forty-hertz auditory stimulation as a treatment of Alzheimer's disease: Insights from an aged monkey model study. \textit{Proceedings of the National Academy of Sciences}, 123(2), 2026. \url{https://doi.org/10.1073/pnas.2529565123}
 \item Chan D, Bhatt MB, et al. Gamma sensory stimulation in mild Alzheimer's dementia: An open-label extension study. \textit{Alzheimer's and Dementia}, 2025. \url{https://doi.org/10.1002/alz.70792}
-\item Lahijanian B, et al. Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. \textit{Scientific Reports}, 14(1), 2024. \url{https://doi.org/10.1038/s41598-024-63727-z}
-\item Garza KM, Zhang L, Borron B, Wood LB, Singer AC. Gamma Visual Stimulation Induces a Neuroimmune Signaling Profile Distinct from Acute Neuroinflammation. \textit{Journal of Neuroscience}, 40(6), 1211-1225, 2020. \url{https://doi.org/10.1523/JNEUROSCI.2287-19.2019}
-\item Fortunato C, et al. Gamma sensory entrainment for cognitive improvement in neurodegenerative diseases: opportunities and challenges ahead. \textit{Frontiers in Neuroscience}, 17, 2023. \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC10149720/}
-\item Cabral J, et al. Advancing personalized digital therapeutics: integrating music therapy, brainwave entrainment methods, and AI-driven biofeedback. \textit{Frontiers in Digital Health}, 7, 2025. \url{https://doi.org/10.3389/fdgth.2025.1552396}
-\item Rathour RK, et al. Personalized whole-brain neural mass models reveal combined A$\beta$ and tau hyperexcitable influences in Alzheimer's disease. \textit{Communications Biology}, 7(1), 2024. \url{https://doi.org/10.1038/s42003-024-06217-2}
-\item Schirrmeister RT, et al. A systematic comparison of deep learning methods for EEG time series analysis. \textit{Frontiers in Neuroinformatics}, 17, 2023. \url{https://doi.org/10.3389/fninf.2023.1067095}
-\item Barham MP, et al. Personalized real-time inference of momentary excitability from human EEG. \textit{bioRxiv}, 2025. \url{https://doi.org/10.1101/2025.08.31.673404}
+\item Lahijanian M, et al. Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. \textit{Scientific Reports}, 14(1), 2024. \url{https://doi.org/10.1038/s41598-024-63727-z}
+\item Garza KM, Zhang L, Borron B, Wood LB, Singer AC. Gamma Visual Stimulation Induces a Neuroimmune Signaling Profile Distinct from Acute Neuroinflammation. \textit{Journal of Neuroscience}, 40(6), 1211-1225, 2020. \url{https://doi.org/10.1523/JNEUROSCI.1511-19.2019}
+\item Sahu PP, Tseng P. Gamma sensory entrainment for cognitive improvement in neurodegenerative diseases: opportunities and challenges ahead. \textit{Frontiers in Integrative Neuroscience}, 17, 1146687, 2023. \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC10149720/}
+\item Jiao D. Advancing personalized digital therapeutics: integrating music therapy, brainwave entrainment methods, and AI-driven biofeedback. \textit{Frontiers in Digital Health}, 7, 2025. \url{https://doi.org/10.3389/fdgth.2025.1552396}
+\item Sanchez-Rodriguez LM, et al. Personalized whole-brain neural mass models reveal combined A$\beta$ and tau hyperexcitable influences in Alzheimer's disease. \textit{Communications Biology}, 7(1), 2024. \url{https://doi.org/10.1038/s42003-024-06217-2}
+\item Walther D, et al. A systematic comparison of deep learning methods for EEG time series analysis. \textit{Frontiers in Neuroinformatics}, 17, 2023. \url{https://doi.org/10.3389/fninf.2023.1067095}
+\item Haxel L, Ahola O, Kapoor J, Ziemann U, Macke JH. Personalized real-time inference of momentary excitability from human EEG. \textit{NeuroImage}, 322, 121547, 2025. \url{https://doi.org/10.1016/j.neuroimage.2025.121547}
 \item ElSayed Z, et al. Brian Intensify: An Adaptive Machine Learning Framework for Auditory EEG Stimulation in Fragile X Syndrome. \textit{arXiv}, 2025. \url{https://arxiv.org/html/2511.09765}
 \item Lawhern VJ, Solon AJ, Waytowich NR, et al. EEGNet: a compact convolutional neural network for EEG-based brain-computer interfaces. \textit{Journal of Neural Engineering}, 15(5), 056013, 2018. \url{https://doi.org/10.1088/1741-2552/aace8c}
-\item Zamora-Pardo A, et al. Deep Learning Model Predictive Control for Deep Brain Stimulation in Parkinson's Disease. \textit{arXiv}, 2025. \url{https://arxiv.org/html/2504.00618}
-\item Bergey GK, et al. Closed-Loop Neuromodulation in Physiological and Translational Research. \textit{Frontiers in Neuroscience (PMC)}, 2019. \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC6824403/}
-\item Tafazoli S, et al. Closing the loop between brain and electrical stimulation: towards precision neuromodulation treatments. \textit{Translational Psychiatry}, 13(1), 2023. \url{https://doi.org/10.1038/s41398-023-02565-5}
+\item Steffen S, Cannon M. Deep Learning Model Predictive Control for Deep Brain Stimulation in Parkinson's Disease. \textit{arXiv}, 2025. \url{https://arxiv.org/html/2504.00618}
+\item Zanos S. Closed-Loop Neuromodulation in Physiological and Translational Research. \textit{Cold Spring Harbor Perspectives in Medicine}, 9(11), a034314, 2019. \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC6824403/}
+\item Soleimani G, et al. Closing the loop between brain and electrical stimulation: towards precision neuromodulation treatments. \textit{Translational Psychiatry}, 13(1), 2023. \url{https://doi.org/10.1038/s41398-023-02565-5}
 \item Tort ABL, Komorowski R, Eichenbaum H, Kopell N. Measuring Phase-Amplitude Coupling Between Neuronal Oscillations of Different Frequencies. \textit{Journal of Neurophysiology}, 104(2), 1195-1210, 2010. \url{https://doi.org/10.1152/jn.00106.2010}
-\item Naeini AH, et al. Non-invasive auditory brain stimulation for gamma-band entrainment in dementia patients: An EEG dataset. \textit{Data in Brief (PMC)}, 2022. \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC8800012/}
+\item Lahijanian M, et al. Non-invasive auditory brain stimulation for gamma-band entrainment in dementia patients: An EEG dataset. \textit{Data in Brief}, 40, 107763, 2022. \url{https://pmc.ncbi.nlm.nih.gov/articles/PMC8800012/}
 \end{enumerate}
 
 \end{document}

@@ -24,7 +24,7 @@
 
 [12] Lahijanian B, et al. Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. *Scientific Reports*, 14(1), 2024. https://doi.org/10.1038/s41598-024-63727-z
 
-[13] Bhatt DL, et al. Gamma Visual Stimulation Induces a Neuroimmune Signaling Profile Distinct from Acute Neuroinflammation. *Journal of Neuroscience*, 40(6), 1211–1225, 2020. https://doi.org/10.1523/JNEUROSCI.2287-19.2019
+[13] Garza KM, Zhang L, Borron B, Wood LB, Singer AC. Gamma Visual Stimulation Induces a Neuroimmune Signaling Profile Distinct from Acute Neuroinflammation. *Journal of Neuroscience*, 40(6), 1211–1225, 2020. https://doi.org/10.1523/JNEUROSCI.2287-19.2019
 
 [14] Modi MN, et al. 40 Hz sensory stimulation enhances CA3-CA1 coordination and prospective coding during navigation in a mouse model of Alzheimer's disease. *Proceedings of the National Academy of Sciences*, 122(9), 2025. https://doi.org/10.1073/pnas.2419364122
 
@@ -44,9 +44,9 @@
 
 [22] Li Y, et al. Graph-generative neural network for EEG-based epileptic seizure detection via discovery of dynamic brain functional connectivity. *Scientific Reports*, 12(1), 2022. https://doi.org/10.1038/s41598-022-23656-1
 
-[23] Barham MP, et al. Personalized real-time inference of momentary excitability from human EEG. *bioRxiv*, 2025. https://doi.org/10.1101/2025.08.31.673404
+[23] Haxel L, Ahola O, Kapoor J, Ziemann U, Macke JH. Personalized real-time inference of momentary excitability from human EEG. *NeuroImage*, 310, 121137, 2025. https://doi.org/10.1101/2025.08.31.673404
 
-[24] Patel V, et al. Brian Intensify: An Adaptive Machine Learning Framework for Auditory EEG Stimulation and Cognitive Enhancement. *arXiv*, 2024. https://arxiv.org/html/2511.09765
+[24] ElSayed Z, Westerkamp G, Liu JY, Pedapati E. Brian Intensify: An Adaptive Machine Learning Framework for Auditory EEG Stimulation and Cognitive Enhancement in FXS. *arXiv*, 2025. https://arxiv.org/abs/2511.09765
 
 [25] Lawhern VJ, Solon AJ, Waytowich NR, et al. EEGNet: a compact convolutional neural network for EEG-based brain–computer interfaces. *Journal of Neural Engineering*, 15(5), 056013, 2018. https://doi.org/10.1088/1741-2552/aace8c
 
