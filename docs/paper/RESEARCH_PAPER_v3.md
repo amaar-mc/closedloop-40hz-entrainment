@@ -77,7 +77,7 @@ A systematic architecture search across eight neural network configurations span
 A multiscale causal Temporal Convolutional Network (31,043 parameters) trained on 73 engineered features achieves R-squared of approximately 0.25-0.28 at prediction horizons of 5-10 seconds, while all baseline methods including persistence and Ridge regression collapse to negative R-squared at these horizons -- a +0.5 R-squared margin for the TCN.
 
 **Contribution 3: Closed-loop controller validated on 35 elderly subjects' EEG recordings.**
-The TCN-based predictive controller achieves 72.1% alignment with patient therapeutic need versus 64.5% for Reactive Threshold (p < 0.001, Hedges' g = 1.31), and targets 82.6% of low-PAC windows versus 51.7% for reactive control (p < 0.001, g = 4.47), reaching 91% of the theoretical oracle upper bound. Every individual patient (35/35) benefits from the predictive controller.
+The TCN-based predictive controller achieves 72.1% alignment with patient therapeutic need versus 64.5% for Reactive Threshold (p < 0.001, Hedges' g = 1.31), and targets 82.6% of low-PAC windows versus 51.7% for reactive control (p < 0.001, g = 4.47), reaching 91% of the theoretical oracle upper bound. Every individual subject (35/35) showed improved alignment under the predictive controller.
 
 **Contribution 4: Characterization of the prediction horizon inflection point.**
 Analysis across prediction horizons 1-10 seconds reveals a clear transition near 3 seconds where persistence and linear baselines cease to provide useful predictions, while the TCN maintains R-squared of approximately 0.25. This inflection defines the operationally critical horizon range for proactive neuromodulation.
@@ -299,7 +299,7 @@ The ceiling finding motivated a fundamental pivot: rather than attempting to imp
 
 This section presents experimental findings across five primary analyses: (1) temporal forecasting performance across prediction horizons; (2) closed-loop controller comparison across all 35 subjects' real EEG recordings; (3) per-subject analysis confirming that the advantage is universal; (4) fatigue model robustness; and (5) threshold sensitivity.
 
-All statistical tests are Wilcoxon signed-rank (non-parametric, paired, N=35) unless otherwise noted. Effect sizes are reported as Hedges' g with 95% bootstrap confidence intervals. All PAC values are in dimensionless Modulation Index units (Tort 2010), specifically x10^-6 for the PAC targeting gap metric.
+All statistical tests are Wilcoxon signed-rank (non-parametric, paired, N=35) unless otherwise noted. Effect sizes are reported as Hedges' g with 95% confidence intervals (large-sample normal approximation). All PAC values are in dimensionless Modulation Index units (Tort 2010), specifically x10^-6 for the PAC targeting gap metric.
 
 ---
 
@@ -383,7 +383,7 @@ Across all 35 subjects, the TCN predictive controller achieved higher alignment 
 
 ![Per-Subject Utility](../../results/figures/per_subject_utility.png)
 
-*Figure 7. Per-subject alignment comparison (N=35 subjects). Each point represents one subject's alignment score under TCN Predictive control (y-axis) versus Reactive Threshold control (x-axis). All 35 data points fall above the y=x diagonal, confirming that every subject benefits from the predictive controller. Training subjects (filled circles), validation subjects (squares), and test subjects (triangles) are shown separately; the advantage is consistent across all three splits.*
+*Figure 7. Per-subject alignment comparison (N=35 subjects). Each point represents one subject's alignment score under TCN Predictive control (y-axis) versus Reactive Threshold control (x-axis). All 35 data points fall above the y=x diagonal, confirming that every subject showed improved alignment under the predictive controller. Training subjects (filled circles), validation subjects (squares), and test subjects (triangles) are shown separately; the advantage is consistent across all three splits.*
 
 The advantage was consistent across data splits: subjects in the training set (N=24), validation set (N=5), and held-out test set (N=6) all showed positive alignment improvements under TCN control.
 
@@ -459,7 +459,7 @@ Three immediate priorities define the path from computational validation to clin
 
 ## 6. Conclusion
 
-This paper presents a computational framework for personalized closed-loop 40 Hz gamma entrainment in Alzheimer's disease. A MultiscaleCausalTCN (31,043 parameters) forecasts theta-gamma PAC 5-10 seconds ahead, enabling proactive stimulation control that achieves 72.1% alignment versus 64.5% for reactive control (p < 0.001, g = 1.31), with every subject (35/35) benefiting. The prediction horizon inflection point at approximately 3 seconds -- where baselines collapse to negative R-squared while the TCN maintains R-squared of approximately 0.25 -- defines the operationally critical regime for proactive neuromodulation.
+This paper presents a computational framework for personalized closed-loop 40 Hz gamma entrainment in Alzheimer's disease. A MultiscaleCausalTCN (31,043 parameters) forecasts theta-gamma PAC 5-10 seconds ahead, enabling proactive stimulation control that achieves 72.1% alignment versus 64.5% for reactive control (p < 0.001, g = 1.31), with every subject (35/35) showing improved alignment. The prediction horizon inflection point at approximately 3 seconds -- where baselines collapse to negative R-squared while the TCN maintains R-squared of approximately 0.25 -- defines the operationally critical regime for proactive neuromodulation.
 
 This is a computational validation on real EEG data, not a clinical validation. The 72.1% alignment figure measures counterfactual decision quality, not realized therapeutic benefit. Live closed-loop trials under IRB oversight are required to confirm clinical translation. Within these boundaries, this work provides a complete, reproducible pipeline from raw BIDS EEG through controller validation that can serve as a foundation for personalized 40 Hz entrainment therapy in Alzheimer's disease.
 
