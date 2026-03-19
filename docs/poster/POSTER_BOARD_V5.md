@@ -177,14 +177,14 @@ I tested 8 neural network configurations to estimate current PAC from a single 2
 |---|---|---|
 | **EEGNet (V1)** | **1,457** | **0.287** |
 | SpecTempNet (V3) | 180K | 0.236 |
-| ViT-TCNet (V4) | ~2M | 0.252 |
+| ViT-TCNet (V4) | ~1.1M | 0.252 |
 | Ridge Regression (V5) | 135 coefs | 0.287 |
-| ATCNet (V8) | 25K | 0.075 |
+| ATCNet (V8) | 25K | 0.22 |
 | EEGNetLarge (rigor) | 141K | 0.287 |
 
 **Key findings:**
 - Simplest models (EEGNet, Ridge, EEGNetLarge) converge to R² = 0.287
-- Larger models perform *worse* due to overfitting — the 2M-parameter ViT-TCNet scored lower than the 1,457-parameter EEGNet
+- Larger models perform *worse* due to overfitting — the 1.1M-parameter ViT-TCNet scored lower than the 1,457-parameter EEGNet
 - **Conclusion:** R² = 0.287 is a data ceiling (epoch-level PAC labels on 2s windows), not a model capacity limitation. More complex architectures cannot break through it.
 
 **Why EEGNet was selected:** EEGNet matches the best R² (0.287) with only 1,457 parameters — the most lightweight deep learning architecture tested, enabling real-time inference on embedded devices. It provides the current PAC estimate that feeds into the temporal predictor.
@@ -353,7 +353,7 @@ All p < 0.001. Advantage holds under all four mathematical models of neural fati
 
 2. On real patient EEG: **72.1% alignment vs 64.5% reactive** (p < 0.001), targeting **82.6% of low-PAC windows vs 51.7%** — a 60% improvement in therapeutic targeting
 
-3. **All 35 patients benefited**, including 6 held-out test subjects — generalizes across individual EEG patterns
+3. **All 35 patients showed improved alignment**, including 6 held-out test subjects — generalizes across individual EEG patterns
 
 4. Adaptive advantage **increases with fatigue** — confirmed across six fatigue severity levels in simulation and four fatigue model assumptions
 

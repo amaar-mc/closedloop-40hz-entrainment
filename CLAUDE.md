@@ -83,8 +83,8 @@ src/data_loader.py          Loads HDF5-format .set files (MATLAB v7.3), reads
                             actual EEG from .fdt (float32, Fortran order), applies
                             BIDS events.tsv for Stimulus/Rest segmentation
         ↓
-src/preprocessing.py        Bandpass (0.5–80 Hz), notch (50 Hz), artifact rejection
-                            (±100 µV threshold), common average reference
+src/preprocessing.py        Bandpass (0.5–80 Hz), notch (50 Hz), artifact zeroing
+                            (±100 µV threshold, samples set to 0.0), common average reference
         ↓
 src/pac_computation.py      Modulation Index (Tort 2010): theta (4–8 Hz) phase ×
                             gamma (38–42 Hz) amplitude → scalar PAC per window

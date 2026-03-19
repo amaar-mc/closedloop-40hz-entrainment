@@ -10,9 +10,9 @@ Alzheimer's disease affects over 55 million people worldwide, and emerging resea
 
 I analyzed EEG recordings from 35 elderly subjects including dementia patients and healthy controls (OpenNeuro ds005048) and computed phase-amplitude coupling (PAC), the coordination between slow theta-band and fast gamma-band brain rhythms, as a real-time biomarker of entrainment strength. I engineered 73 causal features from spectral, PAC-history, and stimulation-context signals, then trained a causal Temporal Convolutional Network (TCN, 31,000 parameters) to forecast PAC five to ten seconds ahead. The TCN was integrated into a closed-loop controller and validated on all 35 subjects' EEG.
 
-In a comparative horizon sweep, all baselines collapsed to negative R-squared at five-to-ten-second horizons while the TCN maintained R-squared of 0.25, a +0.5 margin. The controller matched stimulation to periods of need 72.1% of the time versus 64.5% for reactive control (p < 0.001) and targeted 82.6% of low-PAC windows versus 51.7% (p < 0.001), reaching 91% of the theoretical oracle. Every subject benefited (p < 0.001), and the advantage held across six fatigue severity levels.
+In a comparative horizon sweep (smoothed target evaluation), all baselines collapsed to negative R-squared at five-to-ten-second horizons while the TCN maintained R-squared of approximately 0.25, a +0.5 margin. The controller matched stimulation to periods of need 72.1% of the time versus 64.5% for reactive control (p < 0.001) and targeted 82.6% of low-PAC windows versus 51.7% (p < 0.001), reaching 91% of the theoretical oracle. Every subject showed improved alignment in offline validation (p < 0.001), and the advantage held across six simulated fatigue severity levels.
 
-These results demonstrate that forecasting PAC enables personalized 40 Hz therapy that outperforms fixed and reactive protocols, a path toward more efficient treatment for Alzheimer's disease.
+These results demonstrate that forecasting PAC can support a computational framework for personalized 40 Hz therapy that outperforms fixed and reactive protocols, offering a path toward more efficient treatment for Alzheimer's disease.
 
 **Keywords:** 40 Hz entrainment, phase-amplitude coupling, temporal convolutional network, closed-loop neuromodulation, Alzheimer's disease, EEG, predictive control
 
@@ -50,7 +50,7 @@ The first dimension of variability is inter-individual. Fortunato et al. [11] fo
 
 The second dimension is intra-session habituation. Repeated identical stimuli cause progressive weakening of neural responses, and this effect is well-documented in gamma entrainment. In the OpenNeuro ds005048 dataset used in this work, individual subjects exhibit PAC trajectories that rise, plateau, and decline within single sessions. Stimulation delivered during periods of already-strong coupling wastes therapeutic resources and may accelerate habituation; stimulation withheld during periods of declining coupling misses the windows of genuine therapeutic need.
 
-The convergence of inter-individual variability and intra-session habituation creates a compelling case for adaptive closed-loop control. What is required is a system capable not merely of detecting the current entrainment state reactively but of forecasting the near-future trajectory with sufficient lead time to intervene proactively. Prior work in closed-loop deep brain stimulation (DBS) has demonstrated that adaptive, biomarker-triggered stimulation reduces side effects, slows habituation, and extends battery life compared to open-loop protocols [14], and data-driven model predictive control has proven feasible for parkinsonian tremor [15]. In the EEG domain, systems such as Portiloop [12] have demonstrated real-time causal inference for sleep spindle detection, while EEGNet [13] provides compact, generalizable convolutional architectures for brain-computer interfaces. The Modulation Index (MI) introduced by Tort et al. [16] -- a measure of theta-gamma phase-amplitude coupling -- serves as the quantitative biomarker of entrainment strength throughout this work. However, no prior system has addressed the specific challenge of forecasting PAC dynamics at 5-10 second horizons for proactive gamma entrainment control. This forecasting requirement defines the core technical challenge addressed by the present work.
+The convergence of inter-individual variability and intra-session habituation creates a compelling case for adaptive closed-loop control. What is required is a system capable not merely of detecting the current entrainment state reactively but of forecasting the near-future trajectory with sufficient lead time to intervene proactively. Prior work in closed-loop deep brain stimulation (DBS) has demonstrated that adaptive, biomarker-triggered stimulation reduces side effects, slows habituation, and extends battery life compared to open-loop protocols [14], and data-driven model predictive control has proven feasible for parkinsonian tremor [15]. In the EEG domain, systems such as Portiloop (Lacroix et al., PLOS ONE 2022) have demonstrated real-time causal inference for sleep spindle detection, while EEGNet [13] provides compact, generalizable convolutional architectures for brain-computer interfaces. The Modulation Index (MI) introduced by Tort et al. [16] -- a measure of theta-gamma phase-amplitude coupling -- serves as the quantitative biomarker of entrainment strength throughout this work. However, no prior system has addressed the specific challenge of forecasting PAC dynamics at 5-10 second horizons for proactive gamma entrainment control. This forecasting requirement defines the core technical challenge addressed by the present work.
 
 **Figure 2.** Fixed-schedule vs. predictive closed-loop stimulation.
 
@@ -62,7 +62,7 @@ The convergence of inter-individual variability and intra-session habituation cr
 
 The central research question motivating this work is: **Can deep learning models trained on EEG-derived features forecast theta-gamma phase-amplitude coupling dynamics 5-10 seconds into the future, and does integrating such forecasts into a closed-loop controller produce measurable improvements in personalized 40 Hz entrainment therapy validated on real patient EEG?**
 
-We approach this question through a two-stage computational architecture. Stage 1 establishes a real-time PAC estimator using a compact deep learning model trained directly on raw EEG windows, providing the current-state biomarker input that Stage 2 requires. Stage 2 constructs a causal temporal predictor that ingests a 20-second history of PAC estimates and spectral features to forecast future PAC at clinically relevant horizons of 5-10 seconds, enabling proactive rather than reactive control decisions. The closed-loop controller integrates these predictions with a personalized rolling baseline and 3-second hysteresis logic to determine stimulation actions: stimulate when predicted PAC is forecast to fall below a personalized threshold, rest when forecast PAC is strong, and maintain the current state otherwise.
+I approach this question through a two-stage computational architecture. Stage 1 establishes a real-time PAC estimator using a compact deep learning model trained directly on raw EEG windows, providing the current-state biomarker input that Stage 2 requires. Stage 2 constructs a causal temporal predictor that ingests a 20-second history of PAC estimates and spectral features to forecast future PAC at clinically relevant horizons of 5-10 seconds, enabling proactive rather than reactive control decisions. The closed-loop controller integrates these predictions with a personalized rolling baseline and 3-second hysteresis logic to determine stimulation actions: stimulate when predicted PAC is forecast to fall below a personalized threshold, rest when forecast PAC is strong, and maintain the current state otherwise.
 
 The biomarker of interest throughout is the Modulation Index (MI), a measure of theta-gamma phase-amplitude coupling (PAC) introduced by Tort et al. [16] that quantifies the degree to which gamma-band (38-42 Hz) amplitude is modulated by the phase of theta-band (4-8 Hz) oscillations. Higher MI values indicate stronger theta-gamma coupling and stronger entrainment; lower values indicate reduced or absent coupling.
 
@@ -76,7 +76,7 @@ A systematic architecture search across eight neural network configurations span
 **Contribution 2: Causal TCN for 5-10 second ahead PAC forecasting.**
 A multiscale causal Temporal Convolutional Network (31,043 parameters) trained on 73 engineered features achieves R-squared of approximately 0.25-0.28 at prediction horizons of 5-10 seconds, while all baseline methods including persistence and Ridge regression collapse to negative R-squared at these horizons -- a +0.5 R-squared margin for the TCN.
 
-**Contribution 3: Closed-loop controller validated on 35 real dementia patient EEGs.**
+**Contribution 3: Closed-loop controller validated on 35 elderly subjects' EEG recordings.**
 The TCN-based predictive controller achieves 72.1% alignment with patient therapeutic need versus 64.5% for Reactive Threshold (p < 0.001, Hedges' g = 1.31), and targets 82.6% of low-PAC windows versus 51.7% for reactive control (p < 0.001, g = 4.47), reaching 91% of the theoretical oracle upper bound. Every individual patient (35/35) benefits from the predictive controller.
 
 **Contribution 4: Characterization of the prediction horizon inflection point.**
@@ -92,20 +92,20 @@ The remainder of this paper is organized as follows. Section 2 describes the dat
 
 #### 2.1.1 Dataset
 
-We used the publicly available OpenNeuro dataset ds005048 v1.0.1 (Lahijanian et al., 2024), originally described in Naeini et al. (2022). The dataset comprises resting-state and stimulation EEG recordings from 35 elderly subjects attending a memory clinic in Tehran, Iran, including patients with mild-to-moderate Alzheimer's disease (n=17), mild cognitive impairment (n=6), and age-matched healthy controls (n=10), with 2 subjects of unspecified classification. EEG was recorded using a 19-channel monopolar montage following the international 10/20 system at a sampling rate of 250 Hz. The stimulation protocol consisted of repeated cycles of 40 Hz auditory pulse train stimulation (40 seconds) followed by silent rest (20 seconds), enabling paired within-subject comparisons of neural coupling state across stimulation and rest conditions.
+I used the publicly available OpenNeuro dataset ds005048 v1.0.1 (Lahijanian et al., 2024), originally described in Naeini et al. (2022). The dataset comprises resting-state and stimulation EEG recordings from 35 elderly subjects attending a memory clinic in Tehran, Iran, including patients with mild-to-moderate Alzheimer's disease (n=17), mild cognitive impairment (n=6), and age-matched healthy controls (n=10), with 2 subjects of unspecified classification. EEG was recorded using a 19-channel monopolar montage following the international 10/20 system at a sampling rate of 250 Hz. The stimulation protocol consisted of repeated cycles of 40 Hz auditory pulse train stimulation (40 seconds) followed by silent rest (20 seconds), enabling paired within-subject comparisons of neural coupling state across stimulation and rest conditions.
 
 #### 2.1.2 Preprocessing
 
-The raw data had already been processed by Makoto's preprocessing pipeline (1 Hz high-pass filter, 50 Hz notch filter, independent component analysis, and common average reference). We applied a light additional preprocessing pass:
+The raw data had already been processed by Makoto's preprocessing pipeline (1 Hz high-pass filter, 50 Hz notch filter, independent component analysis, and common average reference). I applied a light additional preprocessing pass:
 
 1. **Bandpass filtering:** 4th-order Butterworth filter from 0.5 to 80 Hz (zero-phase, forward-backward pass).
 2. **Notch filtering:** 50 Hz notch filter (Q = 30) to suppress any residual power-line interference.
-3. **Artifact rejection:** Channels and windows containing samples exceeding +/-100 uV were rejected. Critically, artifact rejection was applied *before* common average reference (CAR) to prevent corrupted channel voltages from propagating to all electrodes during rereferencing.
-4. **Common average reference:** After artifact rejection, the mean across all retained channels was subtracted from each channel.
+3. **Artifact zeroing:** Samples exceeding +/-100 uV were zeroed (set to 0.0) to suppress artifact transients without removing entire windows. Critically, artifact zeroing was applied *before* common average reference (CAR) to prevent corrupted channel voltages from propagating to all electrodes during rereferencing.
+4. **Common average reference:** After artifact zeroing, the mean across all retained channels was subtracted from each channel.
 
 #### 2.1.3 Channel Selection
 
-We selected 7 frontal channels -- Fp1, Fp2, F7, F3, Fz, F4, F8 -- which span the prefrontal and frontal regions most relevant to theta-gamma phase-amplitude coupling associated with memory and cognitive function.
+I selected 7 frontal channels -- Fp1, Fp2, F7, F3, Fz, F4, F8 -- which span the prefrontal and frontal regions most relevant to theta-gamma phase-amplitude coupling associated with memory and cognitive function.
 
 #### 2.1.4 Epoch Segmentation and Windowing
 
@@ -119,7 +119,7 @@ Data were partitioned at the subject level (random seed = 42) to prevent any for
 
 ### 2.2 Phase-Amplitude Coupling Computation
 
-Phase-amplitude coupling (PAC) was quantified using the Modulation Index (MI) introduced by Tort et al. [16]. The MI measures the degree to which the amplitude of a high-frequency oscillation is modulated by the phase of a lower-frequency oscillation. We computed coupling between:
+Phase-amplitude coupling (PAC) was quantified using the Modulation Index (MI) introduced by Tort et al. [16]. The MI measures the degree to which the amplitude of a high-frequency oscillation is modulated by the phase of a lower-frequency oscillation. I computed coupling between:
 
 - **Phase-providing band:** Theta oscillations (4-8 Hz)
 - **Amplitude-providing band:** Narrow-band gamma at the entrainment frequency (38-42 Hz)
@@ -130,7 +130,7 @@ MI = D_KL(P, U) / log(N)
 
 where U is the uniform distribution over N bins. The MI is dimensionless, with values near zero indicating no coupling and higher values indicating stronger theta-gamma coordination.
 
-**Epoch-level label assignment:** Rather than computing PAC on each 2-second window individually, we computed PAC over the full duration of each 20-40 second epoch. The resulting epoch-level MI value was then assigned as the label for all 2-second windows extracted from that epoch. Across the full dataset, PAC values ranged from 6x10^-6 to 7x10^-4 (dimensionless MI units) with a mean of approximately 4.4x10^-5.
+**Epoch-level label assignment:** Rather than computing PAC on each 2-second window individually, I computed PAC over the full duration of each 20-40 second epoch. The resulting epoch-level MI value was then assigned as the label for all 2-second windows extracted from that epoch. Across the full dataset, PAC values ranged from 6x10^-6 to 7x10^-4 (dimensionless MI units) with a mean of approximately 4.4x10^-5.
 
 ---
 
@@ -138,17 +138,17 @@ where U is the uniform distribution over N bins. The MI is dimensionless, with v
 
 #### 2.3.1 Architecture
 
-As the primary static PAC estimator, we adapted EEGNet (Lawhern et al., 2018) as a regression model predicting scalar PAC from a 2-second EEG window.
+As the primary static PAC estimator, I adapted EEGNet (Lawhern et al., 2018) as a regression model predicting scalar PAC from a 2-second EEG window.
 
 **Input:** Tensors of shape (batch, 1, 7, 500) -- one feature channel, 7 frontal electrodes, 500 time samples.
 
 **Block 1 -- Temporal and spatial convolution:**
 - Temporal convolution: 8 filters (F1 = 8) with a kernel of length 64 samples (256 ms).
 - Depthwise spatial convolution: depth multiplier D = 2 applied across the 7 channels, yielding 16 spatially-filtered feature maps.
-- Batch normalization, ELU activation, and average pooling (pool size = 4).
+- Batch normalization, ELU activation, average pooling (pool size = 4), and dropout (p=0.5).
 
 **Block 2 -- Separable convolution:**
-- Depthwise separable convolution with F2 = 16 pointwise filters and kernel length 16 (64 ms), followed by batch normalization, ELU, and average pooling (pool size = 8).
+- Depthwise separable convolution with F2 = 16 pointwise filters and kernel length 16 (64 ms), followed by batch normalization, ELU, average pooling (pool size = 8), and dropout (p=0.5).
 
 **Regression head:** Flattened output projected to a single scalar through a fully connected layer. **Total parameters:** 1,457.
 
@@ -159,7 +159,7 @@ As the primary static PAC estimator, we adapted EEGNet (Lawhern et al., 2018) as
 - **Scheduler:** ReduceLROnPlateau (mode = min, factor = 0.5, patience = 5 epochs).
 - **Gradient clipping:** max_norm = 1.0.
 - **Early stopping:** Patience = 15 epochs on validation loss.
-- **Best checkpoint:** Epoch 53.
+- **Best checkpoint:** The checkpoint with lowest validation loss (epoch not recorded for EEGNet; epoch 53 refers to the TCN checkpoint).
 
 #### 2.3.3 Performance
 
@@ -169,7 +169,7 @@ On held-out test subjects, EEGNet achieved R-squared = 0.287. As discussed in Se
 
 ### 2.4 Feature Engineering for Temporal Prediction
 
-We constructed a 73-dimensional causal feature vector for each 2-second window comprising three groups: (1) 61 spectral features -- band power in five canonical bands (delta, theta, alpha, beta, gamma) across 7 channels (35 features) plus 26 cross-channel coherence features, computed causally via Welch periodogram; (2) 7 PAC-derived features -- current PAC, causal moving averages at 4 timescales, and first-order differences capturing PAC trajectory; (3) 5 stimulation context features -- current stimulation state, time since last state change, recent stimulation fraction, and sine/cosine cycle phase encodings. All features were z-score normalized using training-split statistics.
+I constructed a 73-dimensional causal feature vector for each 2-second window comprising three groups: (1) 61 spectral features -- band power in four frequency bands (theta, alpha, beta, gamma) across 7 channels (28 features), per-channel theta-to-gamma power ratios (7 features), per-channel phase-amplitude structure statistics (21 features), and 5 global statistics, computed causally via Welch periodogram; (2) 7 PAC-derived features -- current PAC, causal moving averages at 4 timescales, and first-order differences capturing PAC trajectory; (3) 5 stimulation context features -- current stimulation state, time since last state change, recent stimulation fraction, and sine/cosine cycle phase encodings. All features were z-score normalized using training-split statistics.
 
 ---
 
@@ -181,11 +181,11 @@ We constructed a 73-dimensional causal feature vector for each 2-second window c
 
 **Input projection:** A linear layer projects the 73-dimensional input to 64-dimensional internal representations, followed by LayerNorm and SiLU activation.
 
-**Causal depthwise-separable convolutional blocks (x4):** Each block applies a causal depthwise separable convolution with kernel size 3 and a dilation factor from the set [1, 2, 4, 6]. Causal padding is applied to ensure no access to future values. Each block uses GroupNorm normalization and SiLU activation with a residual connection. The four dilation factors yield a theoretical receptive field of 31 time steps, covering the full 20-step lookback window with margin.
+**Causal depthwise-separable convolutional blocks (x4):** Each block applies a causal depthwise separable convolution with kernel size 3 and a dilation factor from the set [1, 2, 4, 8]. Causal padding is applied to ensure no access to future values. Each block uses GroupNorm(1, channels) normalization (equivalent to LayerNorm over channel dimensions, chosen for stability across subjects), SiLU activation, and dropout (p=0.2) with a residual connection. A second SiLU activation is applied to the residual sum -- a double-SiLU pattern retained from the trained checkpoint. The four dilation factors yield a theoretical receptive field of 31 time steps, covering the full 20-step lookback window with margin.
 
 **Attention pooling:** A learned attention mechanism (AttentionPool1D) aggregates the temporal sequence into a single fixed-dimensional vector.
 
-**Dual regression heads:** Two identical regression heads produce `y_future` (predicted PAC 5 seconds ahead) and `y_delta` (predicted change from current to 5-second-ahead value).
+**Dual regression heads:** Two identical regression heads (Linear → SiLU → Dropout(p=0.2) → Linear) produce `y_future` (predicted PAC 5 seconds ahead) and `y_delta` (predicted change from current to 5-second-ahead value).
 
 **Total parameters:** 31,043.
 
@@ -266,13 +266,13 @@ The counterfactual nature of this evaluation means that the decisions reflect wh
 
 ### 2.8 Statistical Analysis
 
-All comparisons between controllers were conducted as paired, within-subject Wilcoxon signed-rank tests (two-sided, N=35). Effect sizes were quantified using Hedges' g (bias-corrected Cohen's d) with 95% confidence intervals obtained via 10,000-iteration BCa bootstrap. Clinical breadth of benefit was assessed with a binomial sign test. Threshold sensitivity was evaluated across z-score thresholds 0.2 to 1.0 in steps of 0.1. All analyses were conducted in Python using SciPy (scipy.stats).
+All comparisons between controllers were conducted as paired, within-subject Wilcoxon signed-rank tests (two-sided, N=35). Effect sizes were quantified using Hedges' g (bias-corrected Cohen's d) with 95% confidence intervals obtained via large-sample normal approximation (g +/- 1.96 x SE). Clinical breadth of benefit was assessed with a binomial sign test. Threshold sensitivity was evaluated across z-score thresholds 0.2 to 1.0 in steps of 0.1. All analyses were conducted in Python using SciPy (scipy.stats).
 
 ---
 
 ## 3. Architecture Search: From Static PAC Prediction to Temporal Forecasting
 
-From February 5-16, 2026, we conducted a systematic exploration across eight distinct model families for static PAC prediction, ranging from compact convolutional networks to transformer-based architectures with over a million parameters. Table 1 summarizes all eight models evaluated. R-squared values are on the held-out test set (6 subjects, 2,822 windows).
+From February 5-16, 2026, I conducted a systematic exploration across eight distinct model families for static PAC prediction, ranging from compact convolutional networks to transformer-based architectures with over a million parameters. Table 1 summarizes all eight models evaluated. R-squared values are on the held-out test set (6 subjects, 2,822 windows).
 
 **Table 1. Comparison of eight static PAC prediction architectures.**
 
@@ -289,9 +289,9 @@ From February 5-16, 2026, we conducted a systematic exploration across eight dis
 
 The convergence of eight architectures -- spanning nearly three orders of magnitude in parameter count, three feature representations, and multiple distinct design philosophies -- to the same R-squared of approximately 0.287 is a scientific result in itself, not an engineering failure. The fundamental cause is the epoch-level label assignment described in Section 2.2: PAC is computed over full 20-40 second epochs and assigned to all constituent 2-second windows. A 2-second window provides at most 500 samples -- only 5 complete theta cycles at 4 Hz -- and cannot contain enough information to recover the MI computed over a signal 10-20 times longer. When a 135-parameter linear model performs identically to a 1.1-million-parameter transformer, the remaining prediction error appears largely attributable to noise under this channel configuration and label definition, rather than unexplained signal a better model could capture.
 
-A critical methodological lesson emerged during this search. The V3 SpecTempNet initially appeared to achieve R-squared = 0.69, but our leakage audit revealed that its spectral feature branch was computing features directly derived from the Modulation Index -- the same quantity as the prediction target. After removing these PAC-circular features, SpecTempNet's true R-squared fell to 0.236, below the 135-parameter Ridge baseline. This discovery directly informed the strict feature audit applied to the temporal dataset's 73-dimensional input space, ensuring no circular features contaminated the final TCN pipeline.
+A critical methodological lesson emerged during this search. The V3 SpecTempNet initially appeared to achieve R-squared = 0.69, but my leakage audit revealed that its spectral feature branch was computing features directly derived from the Modulation Index -- the same quantity as the prediction target. After removing these PAC-circular features, SpecTempNet's true R-squared fell to 0.236, below the 135-parameter Ridge baseline. This discovery directly informed the strict feature audit applied to the temporal dataset's 73-dimensional input space, ensuring no circular features contaminated the final TCN pipeline.
 
-The ceiling finding motivated a fundamental pivot: rather than attempting to improve instantaneous PAC prediction (bounded at R-squared = 0.287), we asked whether the *dynamics* of PAC over time are predictable. Even if a single 2-second window provides limited information about current PAC, the trajectory of PAC over the preceding 20 seconds might contain enough structure to predict where PAC will be 5-10 seconds in the future. PAC exhibits meaningful autocorrelation at 5-second timescales (r approximately 0.45), stimulation state is known in advance, and spectral precursors may precede changes in theta-gamma coupling. These three observations -- feature quality dominates architectural complexity, the spectral feature set is near-optimal for instantaneous prediction, and the relevant signal is temporal rather than instantaneous -- shaped both the architecture of the MultiscaleCausalTCN and its 73-dimensional feature space.
+The ceiling finding motivated a fundamental pivot: rather than attempting to improve instantaneous PAC prediction (bounded at R-squared = 0.287), I asked whether the *dynamics* of PAC over time are predictable. Even if a single 2-second window provides limited information about current PAC, the trajectory of PAC over the preceding 20 seconds might contain enough structure to predict where PAC will be 5-10 seconds in the future. PAC exhibits meaningful autocorrelation at 5-second timescales (r approximately 0.45), stimulation state is known in advance, and spectral precursors may precede changes in theta-gamma coupling. These three observations -- feature quality dominates architectural complexity, the spectral feature set is near-optimal for instantaneous prediction, and the relevant signal is temporal rather than instantaneous -- shaped both the architecture of the MultiscaleCausalTCN and its 73-dimensional feature space.
 
 ---
 
@@ -305,7 +305,7 @@ All statistical tests are Wilcoxon signed-rank (non-parametric, paired, N=35) un
 
 ### 4.1 Temporal Forecasting Performance (Horizon Sweep)
 
-To characterize the relationship between prediction horizon and model performance, we trained separate MultiscaleCausalTCN models for each of six horizons (1, 2, 3, 5, 8, and 10 seconds) and evaluated each against persistence and Ridge regression baselines.
+To characterize the relationship between prediction horizon and model performance, I trained separate MultiscaleCausalTCN models for each of six horizons (1, 2, 3, 5, 8, and 10 seconds) and evaluated each against persistence and Ridge regression baselines.
 
 **Note on target definition:** The horizon sweep used a causal target smoothing window of ts=5 (smoothed PAC targets) to characterize comparative advantage across methods. The deployed controller checkpoint uses ts=1 (raw PAC targets) and achieves test R-squared=0.170 at the 5-second horizon. These measure different things and should not be combined.
 
@@ -356,7 +356,7 @@ At a 5-second horizon, persistence R-squared=-0.267, Ridge R-squared=-0.393, and
 | Reactive Threshold | 64.5% | 51.7% | 77.3% | 36.7% | +21.1 |
 | **TCN Predictive** | **72.1%** | **82.6%** | **61.6%** | **59.7%** | **+30.5** |
 | Hybrid TCN+Reactive | 73.8% | 85.3% | 62.2% | 60.8% | +34.0 |
-| PI Controller | 66.1% | 38.6% | 93.6% | 22.0% | +27.2 |
+| PI Controller | 66.1% | 38.6% | 93.6% | 22.0% | +27.4 |
 | Alignment Oracle | 100.0% | 100.0% | 100.0% | 48.3% | +33.3 |
 
 *PAC Gap in dimensionless Modulation Index units (x10^-6). All percentage values are means across 35 subjects.*
@@ -365,7 +365,7 @@ At a 5-second horizon, persistence R-squared=-0.267, Ridge R-squared=-0.393, and
 
 The TCN predictive controller achieved 72.1% alignment compared to 64.5% for reactive threshold control (Wilcoxon signed-rank: W=0, p<0.001; Hedges' g=+1.31, 95% CI [+0.75, +1.87], N=35 paired subjects).
 
-The performance advantage was most pronounced for Low-PAC Stim Rate: the TCN stimulated during 82.6% of below-median PAC windows compared to only 51.7% for the reactive controller (W=0, p<0.001; g=+4.47, 95% CI [+3.33, +5.62]).
+The performance advantage was most pronounced for Low-PAC Stim Rate: the TCN stimulated during 82.6% of below-median PAC windows compared to only 51.7% for the reactive controller (W=0, p<0.001; g=+4.47, 95% CI [+3.33, +5.62]). The large magnitude of this effect size reflects algorithmic decision superiority -- the TCN's proactive posture stimulates more aggressively when PAC is low -- rather than a clinical effect of equivalent magnitude.
 
 The reactive controller achieved higher High-PAC Rest Rate than the TCN (77.3% vs 61.6%; W=0, p<0.001; g=-2.41). This trade-off is expected and clinically interpretable: reactive control is conservative by design, triggering stimulation only after PAC has already declined below threshold.
 
@@ -415,7 +415,7 @@ This section interprets the experimental findings in relation to the central res
 
 ### 5.1 Interpretation of the Prediction Horizon Inflection Point
 
-The utility of temporal modeling is horizon-dependent. At 1-2 second horizons, PAC autocorrelation is strong enough that persistence outperforms the TCN. Beyond ~3 seconds, PAC dynamics become non-stationary -- PAC rises upon stimulation onset and decays during rest, and predicting across these transitions requires temporal context that single-observation baselines lack. The TCN's causal dilated convolutions (dilations [1, 2, 4, 6]) create a 31-second receptive field spanning multiple transitions, enabling it to distinguish between PAC dynamic regimes that simpler methods cannot.
+The utility of temporal modeling is horizon-dependent. At 1-2 second horizons, PAC autocorrelation is strong enough that persistence outperforms the TCN. Beyond ~3 seconds, PAC dynamics become non-stationary -- PAC rises upon stimulation onset and decays during rest, and predicting across these transitions requires temporal context that single-observation baselines lack. The TCN's causal dilated convolutions (dilations [1, 2, 4, 8]) create a 31-second receptive field spanning multiple transitions, enabling it to distinguish between PAC dynamic regimes that simpler methods cannot.
 
 ---
 
@@ -433,7 +433,7 @@ The 7.6 percentage-point alignment improvement of the TCN over reactive threshol
 
 ### 5.3 Comparison to Prior Work
 
-The closest architectural precedent is Portiloop [12], a convolutional LSTM for real-time sleep spindle detection in EEG. However, Portiloop addresses binary classification of stereotyped waveforms, while PAC forecasting is a continuous regression problem with gradual, non-stationary transitions -- demonstrating that *forecasting* rather than *detection* is necessary for certain closed-loop applications. In the DBS domain, adaptive closed-loop stimulation has outperformed open-loop protocols for Parkinson's disease [14]; the present work extends this paradigm non-invasively to gamma entrainment in AD. Three contributions distinguish this work: (1) PAC-specific temporal forecasting at 5-10 second horizons; (2) horizon-dependent evaluation methodology; (3) universal per-subject validation on 35 real patient EEGs.
+The closest architectural precedent is Portiloop (Lacroix et al., PLOS ONE 2022), a convolutional LSTM for real-time sleep spindle detection in EEG. However, Portiloop addresses binary classification of stereotyped waveforms, while PAC forecasting is a continuous regression problem with gradual, non-stationary transitions -- demonstrating that *forecasting* rather than *detection* is necessary for certain closed-loop applications. In the DBS domain, adaptive closed-loop stimulation has outperformed open-loop protocols for Parkinson's disease [14]; the present work extends this paradigm non-invasively to gamma entrainment in AD. Three contributions distinguish this work: (1) PAC-specific temporal forecasting at 5-10 second horizons; (2) horizon-dependent evaluation methodology; (3) universal per-subject validation on 35 real patient EEGs.
 
 ---
 
@@ -491,11 +491,11 @@ The EEG dataset used in this study is publicly available on OpenNeuro (ds005048,
 
 [9] Lahijanian B, et al. Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. *Scientific Reports*, 14(1), 2024. https://doi.org/10.1038/s41598-024-63727-z
 
-[10] Bhatt DL, et al. Gamma Visual Stimulation Induces a Neuroimmune Signaling Profile Distinct from Acute Neuroinflammation. *Journal of Neuroscience*, 40(6), 1211-1225, 2020. https://doi.org/10.1523/JNEUROSCI.2287-19.2019
+[10] Garza KM, Zhang L, Borron B, Wood LB, Singer AC. Gamma Visual Stimulation Induces a Neuroimmune Signaling Profile Distinct from Acute Neuroinflammation. *Journal of Neuroscience*, 40(6), 1211-1225, 2020. https://doi.org/10.1523/JNEUROSCI.2287-19.2019
 
 [11] Fortunato C, et al. Gamma sensory entrainment for cognitive improvement in neurodegenerative diseases: opportunities and challenges ahead. *Frontiers in Neuroscience*, 17, 2023. https://pmc.ncbi.nlm.nih.gov/articles/PMC10149720/
 
-[12] Patel V, et al. Brian Intensify: An Adaptive Machine Learning Framework for Auditory EEG Stimulation and Cognitive Enhancement. *arXiv*, 2024. https://arxiv.org/html/2511.09765
+[12] ElSayed Z, Westerkamp G, Liu JY, Pedapati E. Brian Intensify: An Adaptive Machine Learning Framework for Auditory EEG Stimulation and Cognitive Enhancement in FXS. *arXiv*, 2025. https://arxiv.org/abs/2511.09765
 
 [13] Lawhern VJ, Solon AJ, Waytowich NR, et al. EEGNet: a compact convolutional neural network for EEG-based brain-computer interfaces. *Journal of Neural Engineering*, 15(5), 056013, 2018. https://doi.org/10.1088/1741-2552/aace8c
 

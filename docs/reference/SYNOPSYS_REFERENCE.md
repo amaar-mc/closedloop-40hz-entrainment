@@ -51,9 +51,9 @@ All six must be addressed in the project:
 |---|-------------|-------------------|
 | 1 | **Data Source Traceability** | OpenNeuro ds005048 (Lahijanian et al. 2024), publicly available, de-identified |
 | 2 | **AI Rationale** | TCN chosen for causal temporal prediction; EEGNet for compact EEG processing. Both justified by data constraints (17K samples, 35 subjects) |
-| 3 | **Data Curation Plan** | Artifact rejection at +/-100 uV, 7 frontal channels selected, subject-level splits, windows with NaN excluded |
+| 3 | **Data Curation Plan** | Artifact zeroing at +/-100 uV, 7 frontal channels selected, subject-level splits, windows with NaN excluded |
 | 4 | **Unique Insights** | Horizon sweep (TCN predicts at 5-10s where baselines fail), habituation variability (49/51% split), adaptive efficiency gains |
-| 5 | **Model Development Plan** | Parameter counts sized for dataset (12 samples/param for EEGNet). Dilations [1,2,4,8] chosen for 44s receptive field. 4 architectural variants tested |
+| 5 | **Model Development Plan** | Parameter counts sized for dataset (12 samples/param for EEGNet). Dilations [1,2,4,8] chosen for 31-step receptive field. 4 architectural variants tested |
 | 6 | **Validation Strategy** | Subject-level train/val/test splits (24/5/6 subjects). No subject appears in multiple splits. Shuffle-label sanity check R²=-0.332 |
 
 ### Must Test At Least 2 of 5 Criteria

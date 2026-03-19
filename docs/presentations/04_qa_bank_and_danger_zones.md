@@ -253,9 +253,9 @@ Answers are written in first person, as you would naturally say them. Practice s
 
 > Six total. Fixed schedule -- 40 seconds on, 20 off -- which is the clinical standard. Reactive threshold -- stimulate whenever current PAC drops below a cutoff. PI controller -- a proportional-integral feedback controller. TCN predictive -- my system. Hybrid -- TCN plus reactive fallback. And an oracle that has perfect future knowledge, as an upper bound. The TCN predictive achieves 91% of the oracle's PAC targeting performance.
 
-**Q: You say all 35 patients benefited. How do you know?**
+**Q: You say all 35 patients showed improved alignment. How do you know?**
 
-> For every patient, I computed a clinical utility score under both TCN and reactive control. In a scatter plot with reactive on the x-axis and TCN on the y-axis, all 35 points fall above the diagonal line. That means for every single subject, TCN utility was higher than reactive utility. The probability of that happening by chance alone -- 35 out of 35 -- is less than one in 34 billion. The formal binomial p-value is below 0.001.
+> For every patient, I computed an alignment score under both TCN and reactive control. In a scatter plot with reactive on the x-axis and TCN on the y-axis, all 35 points fall above the diagonal line. That means for every single subject, TCN alignment was higher than reactive alignment. The probability of that happening by chance alone -- 35 out of 35 -- is less than one in 34 billion. The formal binomial p-value is below 0.001.
 
 **Q: What's the difference between alignment and low-PAC targeting?**
 
