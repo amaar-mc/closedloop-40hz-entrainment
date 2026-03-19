@@ -20,11 +20,11 @@
 | **Scientific Thought** | Significant problem, clear hypothesis, controls, justified conclusions, awareness of further research | 55M patients, $300B burden, clear gap (fixed vs adaptive), 6 controller comparisons as controls, honest limitations, future work section |
 | **Creativity** | Original approach, novel hypothesis checking, YOUR contributions | Nobody has built a predictive closed-loop controller for 40 Hz therapy before. Architecture marathon (8 models) to prove data limitation. SpecTempNet leakage discovery. Horizon sweep as novel evaluation |
 | **Independent Work/Skill** | Did YOU do it? Understanding appropriate for grade? Programming/analytical skills | You wrote every line of Python, you can explain PAC computation, causal convolutions, dilated receptive fields, why Ridge fails at 5s. Show notebook |
-| **Thoroughness/Clarity** | Adequate data, replications, claims supported, notebook, clear answers | 35 subjects, all 35 benefit, Wilcoxon signed-rank, Hedges' g, 6 integrity checks, 4 fatigue models, threshold robustness sweep |
+| **Thoroughness/Clarity** | Adequate data, replications, claims supported, notebook, clear answers | 35 subjects, all 35 showed improved alignment, Wilcoxon signed-rank, Hedges' g, 6 integrity checks, 4 fatigue models, threshold robustness sweep |
 
 ### Your Core Narrative Arc (What Judges Should Walk Away Remembering)
 
-> "She took a real clinical therapy for Alzheimer's -- 40 Hz sound -- and asked: can we make it smarter? She built a deep learning system that predicts when a patient's brain will lose response, 5 seconds before it happens. It worked on all 35 patients. Nobody had done this before."
+> "He took a real clinical therapy for Alzheimer's -- 40 Hz sound -- and asked: can we make it smarter? He built a deep learning system that predicts when a patient's brain will lose response, 5 seconds before it happens. It worked on all 35 patients. Nobody had done this before."
 
 Every sentence you say should build toward judges being able to retell that story.
 
@@ -96,7 +96,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 >
 > Then I needed to predict where PAC is going. Not just react to what it is now, but forecast what it will be in the future. That's the key difference -- reactive versus predictive.
 >
-> I trained a causal Temporal Convolutional Network -- a type of deep learning model that uses dilated convolutions to look back over 20 seconds of EEG history. It has about 31,000 parameters and takes 5 input features: theta power, gamma power, PAC value, PAC trend, and theta-gamma coherence. The "causal" part means the network architecturally cannot see future data -- it uses left-only padding, so it only has access to past and present. That's critical because in a real-time system, you don't have the future yet.
+> I trained a causal Temporal Convolutional Network -- a type of deep learning model that uses dilated convolutions to look back over 20 seconds of EEG history. It has about 31,000 parameters and takes 73 input features -- 61 spectral features across 7 channels, 7 PAC-derived features, and 5 stimulus context features -- sampled at 1 Hz over 20 timesteps. The "causal" part means the network architecturally cannot see future data -- it uses left-only padding, so it only has access to past and present. That's critical because in a real-time system, you don't have the future yet.
 >
 > I plugged this model into a closed-loop controller. Every epoch, it reads the current EEG, computes features, gets the TCN's prediction of PAC 5 seconds from now, and decides: stimulate, or rest.
 
@@ -142,7 +142,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 > *(make eye contact, slow down)*
 >
-> No one had built a predictive closed-loop controller for 40 hertz entrainment before. Existing approaches are either fixed-schedule or reactive at best. This project shows that predictive control is feasible, that it meaningfully outperforms current methods, and that it benefits every patient tested.
+> No one had built a predictive closed-loop controller for 40 hertz entrainment before. Existing approaches are either fixed-schedule or reactive at best. This project shows that predictive control is feasible, that it meaningfully outperforms current methods, and that every patient tested showed improved alignment.
 >
 > The immediate next step would be real-time validation on a streaming EEG system. The model runs in 2 milliseconds, so latency isn't a barrier. Beyond that, validation on additional patient cohorts and potentially using reinforcement learning to optimize the controller thresholds.
 
@@ -201,7 +201,7 @@ Answers are written in first person, as you would naturally say them. Practice s
 
 **Q: How do you actually compute PAC?**
 
-> I bandpass filter the EEG into theta (4-8 Hz) and gamma (38-42 Hz) bands. I extract the phase of theta using the Hilbert transform, and the amplitude envelope of gamma the same way. Then I compute the Modulation Index, which measures how non-uniformly the gamma amplitude is distributed across theta phases. If gamma power peaks at a specific theta phase, you get high PAC. If it's evenly spread, PAC is near zero. I compute this over 2-second sliding windows with 75% overlap.
+> I bandpass filter the EEG into theta (4-8 Hz) and gamma (38-42 Hz) bands. I extract the phase of theta using the Hilbert transform, and the amplitude envelope of gamma the same way. Then I compute the Modulation Index, which measures how non-uniformly the gamma amplitude is distributed across theta phases. If gamma power peaks at a specific theta phase, you get high PAC. If it's evenly spread, PAC is near zero. I compute this over 2-second sliding windows with 50% overlap.
 
 **Q: What is a Temporal Convolutional Network? Why not an LSTM or Transformer?**
 
@@ -225,11 +225,11 @@ Answers are written in first person, as you would naturally say them. Practice s
 
 **Q: What is your model's architecture exactly? How many parameters?**
 
-> The TCN has 4 residual blocks, each with two dilated causal convolutions, batch normalization, ReLU activation, and dropout. Dilation factors are 1, 2, 4, 8. The hidden dimension is 64 channels. Input is 5 features times 100 time steps (20 seconds at 5 Hz). The output is a single scalar: predicted PAC at the target horizon. About 31,000 total parameters. That's intentionally small -- with only 35 subjects, a larger model would overfit.
+> The TCN has 4 causal depthwise-separable conv blocks, each with GroupNorm, SiLU activation, and Dropout of 0.2. Dilation factors are 1, 2, 4, 8 with kernel size 3, giving a receptive field of 31 steps. Input is 73 features times 20 timesteps (20 seconds at 1 Hz). The output is a single scalar: predicted PAC at the target horizon. About 31,000 total parameters. That's intentionally small -- with only 35 subjects, a larger model would overfit.
 
-**Q: What are the 5 input features?**
+**Q: What are the 73 input features?**
 
-> Mean theta power, mean gamma power, mean PAC value, PAC trend (slope over the window), and theta-gamma coherence. All computed from 7 frontal EEG channels: Fp1, Fp2, F3, F4, F7, F8, and Fz. These were selected because frontal regions show the strongest 40 Hz entrainment response, and these 5 features capture both the individual frequency bands and their cross-frequency interaction.
+> They break down into three groups. First, 61 spectral features: 4 frequency bands times 7 channels gives 28 band powers, plus 7 band-power ratios, 21 PAC-structure features, and 5 global spectral descriptors. Second, 7 PAC-derived features computed from the 7 frontal channels. Third, 5 stimulus context features encoding the current stimulation state. All computed from 7 frontal EEG channels: Fp1, Fp2, F3, F4, F7, F8, and Fz. These were selected because frontal regions show the strongest 40 Hz entrainment response.
 
 **Q: How did you avoid data leakage?**
 
@@ -237,7 +237,7 @@ Answers are written in first person, as you would naturally say them. Practice s
 
 **Q: Tell me about the architecture marathon. You tested 8 models?**
 
-> Yes. Before building the temporal system, I tried to predict PAC from a single EEG window -- a static prediction task. I tested 8 architectures ranging from 135 parameters to 2 million: a small CNN, a medium CNN, EEGNet, ResNet, SpecTempNet, and several others. Every single one converged to R-squared of approximately 0.287. When 8 very different architectures all hit the same ceiling, that tells you the bottleneck is the data, not the model. 7 frontal channels at 250 Hz simply don't contain enough information for a single snapshot to predict PAC better than that. That's what motivated the shift to temporal modeling -- using sequences of windows instead of individual ones.
+> Yes. Before building the temporal system, I tried to predict PAC from a single EEG window -- a static prediction task. I tested 8 architectures ranging from 135 parameters to about 1.1 million: a small CNN, a medium CNN, EEGNet, ResNet, SpecTempNet, and several others. Every single one converged to R-squared of approximately 0.287. When 8 very different architectures all hit the same ceiling, that tells you the bottleneck is the data, not the model. 7 frontal channels at 250 Hz simply don't contain enough information for a single snapshot to predict PAC better than that. That's what motivated the shift to temporal modeling -- using sequences of windows instead of individual ones.
 
 **Q: What was the SpecTempNet leakage issue?**
 
@@ -317,11 +317,11 @@ Answers are written in first person, as you would naturally say them. Practice s
 
 **Q: What regularization did you use?**
 
-> Dropout of 0.2 between convolutional layers, weight decay of 1e-4 in the optimizer, and early stopping based on validation loss. The model is intentionally kept small (31K parameters) to limit capacity. Batch normalization also provides some implicit regularization by stabilizing training.
+> Dropout of 0.2 in the conv blocks and prediction heads, weight decay of 1e-3 in the AdamW optimizer, and early stopping based on validation loss with patience of 20. The model is intentionally kept small (31K parameters) to limit capacity. GroupNorm also provides some implicit regularization by stabilizing training across subjects.
 
 **Q: What loss function?**
 
-> Mean Squared Error. PAC prediction is a regression task -- I'm predicting a continuous value. I also computed MAE and R-squared as evaluation metrics, but training optimized MSE.
+> Huber loss with delta equal to 1.0. PAC prediction is a regression task -- I'm predicting a continuous value. I chose Huber over MSE because it's more robust to outlier PAC values, which can occur during artifact-heavy windows. I also computed MAE and R-squared as evaluation metrics, but training optimized Huber loss.
 
 ---
 
@@ -341,7 +341,7 @@ These are the moments that could cost you points. Have answers ready.
 ### Danger Zone 2: "R-squared of 0.25 doesn't seem very good"
 
 **Your answer:**
-> You're right to push on that -- I pushed on it too. The key insight is that the downstream controller doesn't need perfect prediction. It needs directional accuracy: is PAC going up or down? An R-squared of 0.25 at 5 seconds ahead provides enough signal for the controller to target 83% of low-PAC windows, compared to 52% for reactive. The proof that 0.25 is useful isn't the number itself -- it's the 72% alignment and the fact that all 35 patients benefited.
+> You're right to push on that -- I pushed on it too. The key insight is that the downstream controller doesn't need perfect prediction. It needs directional accuracy: is PAC going up or down? An R-squared of 0.25 at 5 seconds ahead provides enough signal for the controller to target 83% of low-PAC windows, compared to 52% for reactive. The proof that 0.25 is useful isn't the number itself -- it's the 72% alignment and the fact that all 35 patients showed improved alignment.
 
 ### Danger Zone 3: "This is just a simulation, not a real system"
 
@@ -403,18 +403,18 @@ KEY NUMBERS:
 - 55 million patients, $300B/year
 - 35 elderly subjects, 19 EEG channels, 250 Hz
 - TCN: 31K parameters, 4 residual blocks, dilation 1/2/4/8
-- 5 input features, 20-second lookback at 5 Hz
+- 73 input features, 20-second lookback at 1 Hz
 - Horizon sweep: R² = 0.25 at 5s (baselines: negative)
 - Alignment: 72.1% TCN vs 64.5% reactive (p < 0.001)
 - Low-PAC targeting: 82.6% vs 51.7% (g = 4.47)
-- 35/35 subjects benefited (binomial p < 0.001)
+- 35/35 subjects showed improved alignment (binomial p < 0.001)
 - 91% of oracle bound
 - Habituation: 48.6% habituate, 51.4% facilitate (p = 0.542)
 
 KEY PHRASES:
 - "Predict before the brain loses sync, not react after"
 - "The proof is in the downstream controller performance"
-- "Not the number -- it's that all 35 patients benefited"
+- "Not the number -- it's that all 35 patients showed improved alignment"
 - "Data limitation, not model limitation"
 - "Causal means no access to future data"
 ```
