@@ -81,7 +81,7 @@ These findings position 40 Hz gamma entrainment as a promising therapeutic avenu
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/ai_generated/entrainment_mechanism_v1.png}
+\includegraphics[width=0.85\textwidth]{../../results/figures/ai_generated/entrainment_mechanism_v1.png}
 \caption{Mechanism of 40 Hz gamma entrainment in Alzheimer's disease. (A) In the healthy brain, theta oscillations (4-8 Hz) and 40 Hz gamma oscillations exhibit strong phase-amplitude coupling, supporting memory consolidation and neural communication. (B) In the Alzheimer's brain, amyloid-beta plaques disrupt gamma oscillations and reduce theta-gamma coupling, impairing cognitive function. (C) 40 Hz acoustic stimulation restores gamma oscillations, strengthens theta-gamma coupling, and activates microglial clearance of amyloid plaques -- the therapeutic mechanism targeted by the closed-loop system developed in this work.}
 \label{fig:entrainment_mechanism}
 \end{figure}
@@ -106,7 +106,7 @@ The convergence of inter-individual variability and intra-session habituation cr
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/ai_generated/closedloop_vs_fixed_v3.png}
+\includegraphics[width=0.85\textwidth]{../../results/figures/ai_generated/closedloop_vs_fixed_v3.png}
 \caption{Conceptual comparison of fixed-schedule (open-loop) and predictive closed-loop stimulation paradigms. Left: fixed-schedule protocols deliver stimulation at regular intervals regardless of the patient's neural state, resulting in wasted stimulation during periods of strong coupling and missed therapeutic windows during coupling decline (45\% alignment). Right: the predictive closed-loop approach developed in this work uses a TCN to forecast PAC 5-10 seconds ahead, concentrating stimulation precisely during periods of declining coupling (72.1\% alignment). The predictive controller achieves 91\% of the theoretical oracle's targeting performance.}
 \label{fig:closed_loop_vs_fixed}
 \end{figure}
@@ -275,7 +275,7 @@ On held-out test subjects, the MultiscaleCausalTCN achieved Test $R^2$ = 0.170 (
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/ai_generated/system_architecture_v6.png}
+\includegraphics[width=0.85\textwidth]{../../results/figures/ai_generated/system_architecture_v6.png}
 \caption{Architecture of the closed-loop 40 Hz entrainment system. Raw EEG from 7 frontal channels is processed through signal processing (bandpass 0.5-80 Hz, notch, CAR), the EEGNet static PAC estimator (1,457 parameters), a 73-dimensional causal feature engineering pipeline, and the MultiscaleCausalTCN temporal forecaster (31,043 parameters, 5-second prediction horizon). The adaptive controller applies z-score thresholding against a personalized rolling baseline to determine stimulation decisions (STIMULATE / REST / MAINTAIN) with 3-second hysteresis, driving a 40 Hz auditory click train. The curved feedback arrow illustrates the closed-loop nature of the system.}
 \label{fig:system_architecture}
 \end{figure}
@@ -391,7 +391,7 @@ At a 5-second horizon, persistence $R^2$=-0.267, Ridge $R^2$=-0.393, and TCN $R^
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/horizon_sweep.png}
+\includegraphics[width=0.85\textwidth]{../../results/figures/horizon_sweep.png}
 \caption{PAC forecasting performance ($R^2$) vs prediction horizon for the MultiscaleCausalTCN, persistence baseline, and Ridge baseline. Target smoothing window ts=5 for all horizons. At 1-2 second horizons, persistence and Ridge outperform the TCN. At the $\sim$3 second inflection point, the TCN begins to exceed both baselines. At 5-10 second horizons, both baselines collapse to negative $R^2$ while the TCN maintains $R^2$ of approximately 0.25 -- a +0.5 $R^2$ margin that defines the operationally actionable regime for proactive control.}
 \label{fig:horizon_sweep}
 \end{figure}
@@ -423,14 +423,14 @@ At a 5-second horizon, persistence $R^2$=-0.267, Ridge $R^2$=-0.393, and TCN $R^
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/controller_comparison.png}
+\includegraphics[width=0.85\textwidth]{../../results/figures/controller_comparison.png}
 \caption{Controller comparison across $N = 35$ subjects on three performance metrics: Alignment, Low-PAC Stimulation Rate, and High-PAC Rest Rate. Bars show mean values across subjects; error bars indicate $\pm$1 SEM. Significance brackets show Hedges' g effect sizes for TCN Predictive vs. Reactive Threshold comparisons (*** $p < 0.001$). The TCN Predictive controller achieves 72.1\% alignment versus 64.5\% for Reactive Threshold and 45.0\% for Fixed Schedule. The Alignment Oracle (100\%, perfect hindsight) establishes the theoretical maximum.}
 \label{fig:controller_comparison}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/timeline_example.png}
+\includegraphics[width=0.85\textwidth]{../../results/figures/timeline_example.png}
 \caption{Example segment showing real EEG PAC dynamics and controller decisions for a representative subject. The PAC trajectory (blue) varies across time as the patient transitions between Stimulus and Rest epochs. The TCN Predictive controller (orange) begins stimulation before PAC declines, while the Reactive Threshold controller (green) reacts after the decline is detected. The TCN's proactive posture enables targeting of low-PAC windows that the reactive controller misses.}
 \label{fig:timeline_example}
 \end{figure}
@@ -478,7 +478,7 @@ Across all 35 subjects, the TCN predictive controller achieved higher alignment 
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.85\textwidth]{/Users/amaarchughtai/Developer/research/closedloop-40hz-entrainment/results/figures/per_subject_utility.png}
+\includegraphics[width=0.85\textwidth]{../../results/figures/per_subject_utility.png}
 \caption{Per-subject clinical utility comparison ($N = 35$ subjects). Each point represents one subject's clinical utility score under TCN Predictive control (y-axis) versus Reactive Threshold control (x-axis). All 35 data points fall above the y=x diagonal, confirming that every subject showed improved alignment under the predictive controller. Training subjects (filled circles), validation subjects (squares), and test subjects (triangles) are shown separately; the advantage is consistent across all three splits.}
 \label{fig:per_subject_utility}
 \end{figure}
