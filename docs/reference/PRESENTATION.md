@@ -18,7 +18,7 @@ The problem is **how we deliver it**. Current protocols use a **fixed schedule**
 
 ## SLIDE 2: Why Fixed Schedules Are Wasteful
 
-I analyzed real EEG data from 35 dementia patients who underwent 40 Hz stimulation. The dataset is from OpenNeuro (ds005048) — 19-channel EEG at 250 Hz, already preprocessed.
+I analyzed real EEG data from 35 elderly subjects who underwent 40 Hz stimulation. The dataset is from OpenNeuro (ds005048) — 19-channel EEG at 250 Hz, already preprocessed.
 
 I measured **phase-amplitude coupling (PAC)** — a metric that quantifies how well the brain's gamma oscillations (38-42 Hz) are locked to the theta rhythm (4-8 Hz). Higher PAC = stronger entrainment = more therapeutic benefit.
 
@@ -66,11 +66,11 @@ I built a **Multiscale Causal Temporal Convolutional Network (TCN)**.
 
 Architecture:
 - Input: 20-step sequences (40 seconds of history), each step has 73 features — spectral power, PAC history, and stimulation context
-- 4 dilated causal convolution blocks (dilations: 1, 2, 4, 8) giving a 44-second receptive field
+- 4 dilated causal convolution blocks (dilations: 1, 2, 4, 8) giving a 31-step receptive field
 - Attention-weighted pooling across time
 - Dual output heads: predicted future PAC and predicted PAC change
 
-~135,000 parameters. Inference under 20 milliseconds.
+31,043 parameters. Inference under 50 milliseconds.
 
 ---
 
@@ -155,8 +155,8 @@ All four new controllers significantly outperform Fixed Schedule (Wilcoxon p < 0
 
 I then integrated the trained TCN directly into the closed-loop controller and replayed all 35 subjects' real EEG data through six control strategies.
 
-| Controller | Epoch Alignment | Low-PAC Targeting | PAC Gap (µV²) | Stim % |
-|-----------|----------------|-------------------|---------------|--------|
+| Controller | Epoch Alignment | Low-PAC Targeting | PAC Gap (×10⁻⁶ MI) | Stim % |
+|-----------|----------------|-------------------|---------------------|--------|
 | Fixed Schedule | 45.0% | 61.4% | −6.6 (WRONG) | 66.6% |
 | Reactive Threshold | 64.5% | 51.7% | +21.1 | 36.7% |
 | **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** | 59.7% |
@@ -166,7 +166,7 @@ I then integrated the trained TCN directly into the closed-loop controller and r
 **Key findings (all N=35, Wilcoxon p < 0.001):**
 - TCN alignment 72.1% vs Reactive 64.5% — **Hedges' g = +1.31** (large effect)
 - TCN targets 82.6% of low-PAC windows vs Reactive's 51.7% — **g = +4.47** (very large)
-- TCN PAC targeting gap +30.5 µV² vs Reactive +21.1 — **g = +1.57** (large), reaching 91% of oracle bound
+- TCN PAC targeting gap +30.5 ×10⁻⁶ MI vs Reactive +21.1 ×10⁻⁶ MI — **g = +1.57** (large), reaching 91% of oracle bound
 - **35/35 subjects** (100%) show improved clinical utility with TCN (binomial p < 0.001)
 - Results robust across all delta-z thresholds 0.2–1.0
 
@@ -216,7 +216,7 @@ I want to be upfront about what this work does and doesn't show.
 - This has not been tested in a live closed-loop experiment. All results are from offline replay or simulation.
 - The dataset has 35 subjects from a single clinic. Generalization to other populations is unconfirmed.
 - Sessions are 6-10 minutes. Clinical protocols run 30-60 minutes, where fatigue effects may be more pronounced — which would actually *strengthen* the case for adaptive scheduling.
-- We measure PAC as a proxy for therapeutic benefit. The link between PAC and downstream outcomes (amyloid clearance, cognitive improvement) is supported by the literature but not directly measured here.
+- PAC is measured as a proxy for therapeutic benefit. The link between PAC and downstream outcomes (amyloid clearance, cognitive improvement) is supported by the literature but not directly measured here.
 
 **The R-squared of 0.25 at 5-10 seconds is modest in absolute terms.** But the right comparison isn't against 1.0 — it's against the baselines, which produce negative R-squared at those horizons. The TCN extracts the only useful signal available.
 
@@ -232,9 +232,9 @@ I want to be upfront about what this work does and doesn't show.
 
 4. **The clinical case:** Efficiency advantage scales with patient habituation (+1.3% to +5.7%, all p < 0.05). Half of patients habituate — they stand to benefit most.
 
-5. **The deployment path:** EEGNet (1,457 parameters, <10ms) for real-time PAC estimation. TCN (135K parameters, <20ms) for prediction. Both fit on embedded hardware for a wearable device.
+5. **The deployment path:** EEGNet (1,457 parameters, <10ms) for real-time PAC estimation. TCN (31K parameters, <50ms) for prediction. Both fit on embedded hardware for a wearable device.
 
-**Bottom line:** We can cut stimulation time by half while improving when we stimulate by 30 percentage points — just by listening to the brain and responding to what it's telling us.
+**Bottom line:** The system can cut stimulation time by half while improving when it stimulates by 30 percentage points — just by listening to the brain and responding to what it's telling us.
 
 Thank you.
 
@@ -253,7 +253,7 @@ Thank you.
 - Test R-squared: 0.287
 
 **Multiscale Causal TCN (Temporal Predictor)**
-- ~135,000 parameters
+- 31,043 parameters
 - Input: (batch, 20, 73) — 20 timesteps x 73 features
 - 4 causal depthwise-separable conv blocks, dilations [1, 2, 4, 8]
 - GroupNorm (not BatchNorm) for cross-subject stability
@@ -263,7 +263,7 @@ Thank you.
 ### Dataset
 
 - **Source:** OpenNeuro ds005048
-- **Subjects:** 35 dementia patients
+- **Subjects:** 35 elderly subjects
 - **Recording:** 19-channel EEG (10/20), 250 Hz, MATLAB v7.3 HDF5 format
 - **Preprocessing:** 1 Hz highpass, 50 Hz notch, ICA artifact removal, common average reference
 - **Windows:** 17,283 total (2-second, 7 frontal channels)

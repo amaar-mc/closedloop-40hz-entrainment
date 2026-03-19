@@ -7,7 +7,7 @@
 
 ## Executive Summary
 
-This project developed and validated a deep learning system for personalized closed-loop 40 Hz auditory entrainment therapy targeting Alzheimer's disease. The system predicts when a patient's brain will lose gamma entrainment 5-10 seconds before it happens and adapts stimulation timing accordingly. Validated on real EEG from 35 dementia patients, the system achieves 91% of theoretical oracle performance with statistically significant improvements over all baselines.
+This project developed and validated a deep learning system for personalized closed-loop 40 Hz auditory entrainment therapy targeting Alzheimer's disease. The system predicts when a patient's brain will lose gamma entrainment 5-10 seconds before it happens and adapts stimulation timing accordingly. Validated on real EEG from 35 elderly subjects, the system achieves 91% of theoretical oracle performance with statistically significant improvements over all baselines.
 
 ---
 
@@ -33,7 +33,7 @@ The TCN controller was replayed on all 35 subjects' actual EEG recordings (not s
 |--------|-------|----------|-----|--------|
 | Alignment | 45.0% | 64.5% | **72.1%** | 100% |
 | Low-PAC Targeting | 61.4% | 51.7% | **82.6%** | 100% |
-| PAC Gap (µV²) | -6.6 | +21.1 | **+30.5** | +33.3 |
+| PAC Gap (×10⁻⁶ MI) | -6.6 | +21.1 | **+30.5** | +33.3 |
 
 Key statistics (TCN vs Reactive):
 - Alignment: Hedges' g = 1.31, p < 0.001 (large effect)
@@ -100,7 +100,7 @@ The TCN controller reaches 91% of what you could achieve with perfect future kno
 
 ### 2.5 Fixed Schedule Goes WRONG Direction
 
-The standard clinical protocol (Fixed Schedule) actually stimulates *more* during high-PAC windows than low-PAC windows (PAC gap = -6.6 µV²). It's actively counterproductive at targeting therapy to need.
+The standard clinical protocol (Fixed Schedule) actually stimulates *more* during high-PAC windows than low-PAC windows (PAC gap = -6.6 ×10⁻⁶ MI). It's actively counterproductive at targeting therapy to need.
 
 ---
 
@@ -163,7 +163,7 @@ The closed-loop controller uses hand-tuned z-score thresholds (-0.5 for stimulat
 
 | Dimension | Assessment |
 |-----------|-----------|
-| Scientific Rigor | Strong — proper statistics (Wilcoxon, Hedges' g, bootstrap CI), data integrity audits, shuffle-label validation |
+| Scientific Rigor | Strong — proper statistics (Wilcoxon, Hedges' g, 95% CIs via large-sample normal approximation), data integrity audits, shuffle-label validation |
 | Innovation | Strong — novel application of causal TCN to entrainment prediction; horizon sweep demonstrates unique value |
 | Completeness | Strong — end-to-end pipeline from raw BIDS data to controller validation |
 | Reproducibility | Strong — all code open-source, deterministic seeds, OpenNeuro public dataset |
@@ -174,7 +174,7 @@ The closed-loop controller uses hand-tuned z-score thresholds (-0.5 for stimulat
 
 ## 6. Key Numbers for Quick Reference
 
-- **35 subjects** (dementia patients, OpenNeuro ds005048)
+- **35 subjects** (elderly subjects, OpenNeuro ds005048)
 - **17,283 windows** (2-second EEG segments, 7 frontal channels)
 - **1,457 parameters** (EEGNet, static PAC predictor)
 - **31,043 parameters** (TCN, temporal PAC predictor)

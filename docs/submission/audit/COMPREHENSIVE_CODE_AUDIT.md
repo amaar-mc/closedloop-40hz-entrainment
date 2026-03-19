@@ -85,7 +85,7 @@
 #### `validation.py` — VERIFIED, CORRECT
 - Compares 4 strategies: Fixed, Reactive, Predictive, Oracle
 - Proper statistical tests (Wilcoxon signed-rank)
-- Effect sizes (Hedges' g with bootstrap CI)
+- Effect sizes (Hedges' g with CI via normal approximation)
 - **No issues found**
 
 ### 2.2 Temporal Prediction (`temporal_multiscale/`)
@@ -135,7 +135,7 @@
 - Replays on all 35 subjects' real EEG PAC time series
 - Computes alignment, low-PAC targeting, PAC gap, clinical utility
 - Runs 6 controller variants
-- Statistical tests: Wilcoxon, Hedges' g with bootstrap CI
+- Statistical tests: Wilcoxon, Hedges' g with CI via normal approximation
 - Saves results to JSON
 - **This is the most important script — thoroughly verified**
 
@@ -163,7 +163,7 @@
 | +0.5 R² margin over baselines at 5-10s | Same source | HIGH |
 | TCN alignment 72.1% vs 64.5% reactive | tcn_validation_results.json | HIGH |
 | Low-PAC targeting 82.6% vs 51.7% | Same source | HIGH |
-| PAC gap 30.5 vs 21.1 µV² | Same source | HIGH |
+| PAC gap 30.5 vs 21.1 ×10⁻⁶ MI | Same source | HIGH |
 | g=1.31, g=4.47, g=1.57, all p<0.001 | Same source (proper stats) | HIGH |
 | 35/35 subjects benefit | Same source | HIGH |
 | 91% of oracle performance | Calculated: 30.5/33.3 = 91.5% | HIGH |
@@ -223,7 +223,7 @@ No claims in the repository were found to be false or misleading. All results ar
 
 **Decision:** 61 spectral + 7 PAC-derived + 5 stimulation context features.
 **Rationale:**
-- **61 spectral features:** Band power (5 bands × 7 channels = 35) + cross-channel coherence (21) + other spectral metrics (5). These are safe inputs (computed from raw EEG, not from the target PAC).
+- **61 spectral features:** Band power (4 bands × 7 channels = 28) + band-power ratios (7) + PAC-structure features (21) + global statistics (5). These are safe inputs (computed from raw EEG, not from the target PAC).
 - **7 PAC-derived features:** Current PAC + 4 moving averages (2,4,8,16 step) + 2 difference features. These encode the temporal dynamics of PAC that the model needs to predict.
 - **5 stim context features:** Stimulus state, time since last switch, recent stimulation fraction, cycle phase (sin/cos). These are necessary because PAC dynamics depend on whether stimulation is active.
 - **Feature ablation result:** PAC features alone → R²=0.859. Spectral only → R²=0.045. The model primarily learns PAC temporal dynamics, which is the correct signal for predicting future PAC.
@@ -353,9 +353,10 @@ TOTAL                          |                    | 31,043
 **TCN Input:** `(batch, 20, 73)`
 - 20 timesteps (20 seconds of history, 1 second per step)
 - 73 features per timestep:
-  - Channels 0-34: Band power (delta, theta, alpha, beta, gamma) × 7 channels
-  - Channels 35-55: Cross-channel spectral coherence (21 pairs)
-  - Channels 56-60: Other spectral metrics
+  - Channels 0-27: Band power (theta, alpha, beta, gamma) × 7 channels
+  - Channels 28-34: Band-power ratios (7 channels)
+  - Channels 35-55: PAC-structure features (21)
+  - Channels 56-60: Global statistics (5)
   - Channels 61-67: PAC features (current, MA2, MA4, MA8, MA16, diff1, diff4)
   - Channels 68-72: Stim context (state, time_since_switch, stim_frac_20s, cycle_sin, cycle_cos)
 
