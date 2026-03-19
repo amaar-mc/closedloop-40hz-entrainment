@@ -315,7 +315,7 @@ A 3-second hysteresis hold time prevents rapid oscillation between states.
 \begin{enumerate}[nosep]
   \item \textbf{Fixed Schedule (clinical reference):} Stimulation follows a fixed 40-second ON / 20-second OFF cycle.
   \item \textbf{Reactive Threshold:} Current PAC (estimated by EEGNet) compared to personalized baseline; no lookahead.
-  \item \textbf{TCN Predictive:} MultiscaleCausalTCN predicts PAC 5 seconds into the future; decisions made on predicted z-score.
+  \item \textbf{TCN Predictive:} MultiscaleCausalTCN predicts PAC 5 seconds into the future; decisions made on the TCN's normalized delta prediction with threshold $\delta_z = 0.3$, falling back to reactive z-score ($\pm 0.5$) when insufficient TCN history is available.
   \item \textbf{Hybrid TCN + Reactive:} Combines both TCN prediction and reactive threshold signals.
   \item \textbf{PI Controller:} Proportional-integral feedback controller modulating stimulation intensity.
   \item \textbf{Alignment Oracle:} Theoretical upper bound computed with perfect hindsight on actual future PAC values.
@@ -327,7 +327,7 @@ A 3-second hysteresis hold time prevents rapid oscillation between states.
 
 All validation was conducted via \textbf{offline counterfactual replay} on the full 35-subject dataset. At each 2-second window, the controller computed a stimulation decision based on the available EEG features, the rolling baseline, and (for the TCN Predictive controller) the TCN's future PAC prediction. The actual PAC labels observed in the data served as ground truth. Ground-truth PAC labels were used as TCN input features, isolating the TCN's predictive contribution from any additional error introduced by EEGNet's static PAC estimation.
 
-The counterfactual nature of this evaluation means that the decisions reflect what each controller \textit{would have done} had it been deployed, but the recorded EEG reflects only the stimulation actually delivered during data collection. All results describe computed stimulation decisions and their alignment with observed PAC ground truth.
+The counterfactual nature of this evaluation means that the decisions reflect what each controller \textit{would have done} had it been deployed, but the recorded EEG reflects only the stimulation actually delivered during data collection. All results describe computed stimulation decisions and their alignment with observed PAC ground truth. Note that the 5 stimulation context features (stim state, time since switch, stim fraction, cycle phase) encode the \textit{original} fixed-schedule protocol, not the adaptive controller's hypothetical decisions; the TCN therefore has access to protocol-cycle timing that a deployed adaptive system would not share.
 
 \subsubsection{Validation Metrics}
 
@@ -337,6 +337,8 @@ The counterfactual nature of this evaluation means that the decisions reflect wh
   \item \textbf{High-PAC Rest Rate:} Fraction of above-median PAC windows during which the controller prescribed rest.
   \item \textbf{PAC Gap:} Mean PAC during rest windows minus mean PAC during stimulation windows (positive = correct targeting).
 \end{itemize}
+
+\noindent The low/high PAC split is defined by each subject's full-session median PAC. This metric uses the complete recording to define ``therapeutic need'' and therefore represents an idealized evaluation; a deployed system would require a causal running estimate of the PAC distribution.
 
 \subsection{Statistical Analysis}
 
@@ -464,7 +466,7 @@ Alignment Oracle & 100.0\% & 100.0\% & 100.0\% & 48.3\% & +33.3 \\
 
 The TCN predictive controller achieved 72.1\% alignment compared to 64.5\% for reactive threshold control (Wilcoxon signed-rank: $W = 0$, $p < 0.001$; Hedges' $g = +1.31$, 95\% CI [+0.75, +1.87], $N = 35$ paired subjects).
 
-The performance advantage was most pronounced for Low-PAC Stim Rate: the TCN stimulated during 82.6\% of below-median PAC windows compared to only 51.7\% for the reactive controller ($W = 0$, $p < 0.001$; $g = +4.47$, 95\% CI [+3.33, +5.62]). The large magnitude of this effect size reflects algorithmic decision superiority --- the TCN's proactive posture stimulates more aggressively when PAC is low --- rather than a clinical effect of equivalent magnitude.
+The performance advantage was most pronounced for Low-PAC Stim Rate: the TCN stimulated during 82.6\% of below-median PAC windows compared to only 51.7\% for the reactive controller ($W = 0$, $p < 0.001$; $g = +4.47$, 95\% CI [+3.33, +5.62]). The large magnitude of this effect size reflects algorithmic decision superiority --- the TCN's proactive posture stimulates more aggressively when PAC is low (59.7\% total stimulation rate versus 36.7\% for reactive) --- rather than a clinical effect of equivalent magnitude. Part of the Low-PAC Stim advantage is attributable to the higher overall stimulation rate; however, a rate-matched random controller stimulating 59.7\% of the time would achieve approximately 59.7\% Low-PAC Stim Rate (since low-PAC windows comprise half the data by median split), well below the TCN's 82.6\%.
 
 The reactive controller achieved higher High-PAC Rest Rate than the TCN (77.3\% vs 61.6\%; $W = 0$, $p < 0.001$; $g = -2.41$). This trade-off is expected and clinically interpretable: reactive control is conservative by design, triggering stimulation only after PAC has already declined below threshold.
 
@@ -483,7 +485,7 @@ Across all 35 subjects, the TCN predictive controller achieved higher alignment 
 \label{fig:per_subject_utility}
 \end{figure}
 
-The advantage was consistent across data splits: subjects in the training set ($N = 24$), validation set ($N = 5$), and held-out test set ($N = 6$) all showed positive alignment improvements under TCN control.
+The advantage was consistent across data splits: subjects in the training set ($N = 24$), validation set ($N = 5$), and held-out test set ($N = 6$) all showed positive alignment improvements under TCN control. Note that the TCN-based controllers require a 20-second warm-up period (to fill the lookback buffer) during which they default to REST; alignment metrics are computed over the full recording including this warm-up.
 
 \subsection{Robustness Analysis}
 
@@ -531,6 +533,12 @@ The closest architectural precedent is Portiloop (Lacroix et al., PLOS ONE 2022)
 \textbf{4. Seven frontal channels and PAC labeling granularity.} The model uses 7 frontal EEG channels; relevant theta-gamma coupling has been reported in parietal and temporal regions not captured by this channel selection. Additionally, PAC is computed at the epoch level and assigned to all constituent 2-second windows, creating a target variable that is constant within epoch and discontinuous at epoch boundaries.
 
 \textbf{5. The $R^2$=0.287 static ceiling may be partly due to label assignment.} It is possible that a portion of the $R^2$=0.287 gap to 1.0 reflects the labeling artifact rather than fundamental limits of EEG predictability. Higher-resolution PAC labels -- from shorter epoch windows or sliding-window estimation -- could partially relax this ceiling.
+
+\textbf{6. Stimulation context features encode the original fixed schedule.} The 5 stimulation context features fed to the TCN during offline replay reflect the fixed-schedule protocol actually delivered during recording, not the adaptive controller's hypothetical decisions. The TCN may partly exploit the 60-second periodicity of the original protocol (via cycle phase encodings) rather than relying solely on EEG-derived predictions. A deployed adaptive system would not have access to the fixed-schedule cycle timing, potentially reducing the TCN's advantage.
+
+\textbf{7. Primary results include training-set subjects.} The headline $N = 35$ comparison includes 24 subjects whose EEG was used to train the TCN. While the TCN predicts \textit{future} PAC (not current), and the controller comparison is conducted at the decision level rather than the prediction level, the training-set subjects' PAC distributions were seen during optimization. The per-subject plot (Figure 7) separates training, validation, and test subjects, showing the advantage is consistent across all three splits including the 6 held-out test subjects.
+
+\textbf{8. Spectral features partially encode PAC structure.} Of the 61 spectral features, 21 are per-channel phase-amplitude structure statistics (phase resultant length, amplitude variance, preferred phase bin) that encode sub-computations of the Modulation Index. While these are computed per-window (2 seconds) and the PAC label is computed per-epoch (20-40 seconds), they represent a soft information pathway between the feature space and the target.
 
 \subsection{Future Directions}
 
