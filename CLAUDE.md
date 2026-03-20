@@ -72,6 +72,26 @@ python temporal_multiscale/direction_classifier.py               # 3-class PAC d
 
 There is no dedicated `tests/` package. For `src/` changes, run an end-to-end smoke path (data loading → training → validation) with a reduced `--epochs` count. Always run `temporal/validate_code.py` before any temporal training.
 
+There is no `pytest`, `tests/`, or configured CI test suite. Testing is a mix of module self-tests, audit scripts, reduced-epoch smoke runs, and full validation scripts.
+
+Most `src/` modules expose a bottom-of-file self-test and can be run directly:
+
+```bash
+python src/eegnet.py
+python src/controller.py
+python src/preprocessing.py
+python src/personalization.py
+python src/simulator.py
+python src/pac_computation.py
+```
+
+Run one specific audit function from `temporal/validate_code.py` with `python -c`:
+
+```bash
+python -c "from temporal.validate_code import load_data, test_no_subject_leakage; splits = load_data('data/processed'); raise SystemExit(0 if test_no_subject_leakage(splits) else 1)"
+python -c "from temporal.validate_code import load_data, test_temporal_sequence_logic; splits = load_data('data/processed'); raise SystemExit(0 if test_temporal_sequence_logic(splits, lookback=10, horizon=5) else 1)"
+```
+
 ## Architecture Overview
 
 ### Data Flow
@@ -134,6 +154,11 @@ Top-level demo scripts: `run_closed_loop_demo.py` (all strategies ± fatigue), `
 
 LSTM-based temporal prediction (Phase 2). Superseded by `temporal_multiscale/`. Only `temporal/validate_code.py` is still actively used as a pre-training audit gate.
 
+### Additional Directories
+
+- `rigor/`: Extended robustness, multi-seed, and statistical validation scripts.
+- `scripts/pipeline/`: Orchestration scripts; some entry points have fragile import-path assumptions — use carefully.
+
 ### Configuration
 
 All runtime parameters live in `config.yaml` — channel selection, filter bands, PAC bins, model hyperparameters, controller thresholds, simulator dynamics. Edit there rather than in source files.
@@ -151,7 +176,94 @@ All runtime parameters live in `config.yaml` — channel selection, filter bands
 - **Target smoothing changes evaluation:** `target_smooth_window=5` predicts a causal denoised PAC state (R² ≈ 0.74); `target_smooth_window=1` predicts raw PAC (R² ≈ 0.07). Never compare models across different target definitions.
 - **Persistence is a strong baseline at short horizons.** Always report persistence and Ridge alongside any TCN result. The TCN's value is exclusively at 3+ second horizons.
 - **Dataset rebuild required if args change.** `build_multiscale_dataset.py` enforces metadata consistency. If reusing a dataset dir with different lookback/horizon/smoothing args, rebuild or pass `--allow-metadata-mismatch`.
+- **Do not extend `archive/` unless explicitly asked.**
 
 ## Commit Style
 
-Conventional Commits: `feat:`, `fix:`, `docs:`, `chore:`. Imperative subject line (e.g., `fix: prevent subject leakage in temporal split builder`). PRs must include before/after R²/RMSE metrics when model behavior changes.
+Conventional Commits: `feat:`, `fix:`, `docs:`, `chore:`. Imperative subject line (e.g., `fix: prevent subject leakage in temporal split builder`). PRs must include before/after R²/RMSE metrics when model behavior changes. Include before/after metrics such as R², RMSE, alignment, or stimulation efficiency when model behavior changes. Record the exact validation commands you ran.
+
+## Code Style
+
+- Follow PEP 8 with 4-space indentation.
+- Aim for readable line lengths; existing code is usually under 100 chars and occasionally near 120.
+- Prefer simple, explicit NumPy/PyTorch code over abstraction-heavy frameworks.
+- Keep functions focused and pipeline stages obvious.
+- Match the surrounding file instead of forcing a repo-wide rewrite.
+
+## Imports
+
+- Order imports as: standard library, third-party, project-local.
+- Use standard aliases: `numpy as np`, `pandas as pd`, `matplotlib.pyplot as plt`, `seaborn as sns`.
+- Legacy `src/` modules often use `sys.path.insert(...)` when run as scripts; preserve that pattern if extending them.
+- Newer `temporal_multiscale/`, `rigor/`, and some `scripts/` files prefer `Path(__file__).resolve()`-based root discovery.
+- Use local imports only to avoid heavy optional dependencies or circular imports.
+
+## Typing
+
+- Add type hints to public functions, methods, and important helpers.
+- In `src/`, matching existing `typing` imports like `Dict`, `List`, `Optional`, and `Tuple` is fine.
+- In newer temporal and rigor modules, `from __future__ import annotations` plus built-in generics is the local preference.
+- Use type hints to clarify array/tensor shapes and returns, not to add noise.
+
+## Naming and Docstrings
+
+- Use `snake_case` for modules, functions, variables, and CLI flags.
+- Use `PascalCase` for classes and `UPPER_CASE` for constants.
+- Preserve common repo abbreviations such as `pac`, `eeg`, `snr`, `fs`, and `r2`.
+- Keep checkpoint and run names descriptive, e.g. `best_multiscale_tcn_lb20_hz5_ts1.pth`.
+- Most modules begin with a multi-line module docstring; keep that style when modifying substantial files.
+- Prefer good names and docstrings over inline comments; add comments only for non-obvious signal-processing or leakage-safety logic.
+
+## Error Handling and Logging
+
+- Use `assert` for internal invariants and shape checks in hot paths.
+- Raise `ValueError` for invalid inputs or unsupported states.
+- Raise `FileNotFoundError` for missing datasets, checkpoints, or artifacts.
+- Audit scripts should return `bool` and raise `SystemExit(1)` from `main()` on failure.
+- Use small epsilon guards for numerical stability instead of silent failures.
+- In reusable modules, prefer `logging.getLogger(__name__)` or the existing `closed_loop_entrainment` logger.
+- In one-shot audits and CLI scripts, `print()` output is normal.
+- Preserve the repo's `[PASS]` / `[FAIL]` output style for audits.
+- New CLI entry points should use `argparse` and keep defaults aligned with `config.yaml` or nearby scripts.
+
+## ML Guardrails
+
+- Never allow subject overlap across train, val, and test splits.
+- Preserve causal indexing: future targets must occur strictly after the sequence end.
+- Fit normalization statistics on train only, then reuse them for val, test, and inference.
+- Keep checkpoints self-describing when possible by storing config, metadata, and scaler values.
+- Use deterministic seeding for temporal experiments when touching training logic.
+- Report persistence and Ridge baselines honestly; they are expected reference points in this repo.
+
+## Data and Artifact Hygiene
+
+- Never commit raw data, private data, credentials, or large generated artifacts.
+- Write checkpoints to `models/`, reports to `results/`, and logs to `logs/`.
+- Do not mix generated outputs into `src/`, `temporal/`, or `temporal_multiscale/`.
+- If a change affects defaults or interfaces, update `README.md`, `config.yaml`, or the relevant docs.
+
+## When Adding New Code
+
+- Put active implementation in `src/`, `temporal_multiscale/`, `rigor/`, or `scripts/` as appropriate.
+- Add a small self-test or audit hook when practical, especially for new `src/` modules.
+- Reuse existing utilities and conventions before inventing new framework layers.
+- Optimize for correctness, leakage safety, and reproducibility before novelty or speed.
+
+## Lint and Syntax Checks
+
+No canonical formatter, linter, or type checker is configured. Default to syntax checks unless the user explicitly asks for a formatter/linter pass.
+
+```bash
+python -m py_compile src/training.py
+python -m compileall src temporal temporal_multiscale rigor scripts
+```
+
+If you use `ruff`, `black`, or `mypy`, keep scope narrow and avoid repo-wide churn.
+
+## Validation Matrix
+
+- Changed `src/eegnet.py`: run `python src/eegnet.py` and a reduced-epoch `src/training.py` smoke run.
+- Changed `src/controller.py`: run `python src/controller.py` and, if relevant, a closed-loop validation script.
+- Changed preprocessing or PAC logic: rebuild or at least spot-check processed data before retraining.
+- Changed `temporal/` or `temporal_multiscale/`: run `python temporal/validate_code.py` and the relevant multiscale audit.
+- Changed split logic: explicitly verify subject disjointness and temporal causality.
