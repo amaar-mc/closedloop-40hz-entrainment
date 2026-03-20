@@ -1,0 +1,97 @@
+# Requirements: Closed-Loop 40Hz Entrainment
+
+**Defined:** 2026-03-20
+**Core Value:** Every claim in every document must be verifiably accurate against actual code, data, and results — and the system must be demonstrably usable on consumer hardware.
+
+## v3.0 Requirements
+
+Requirements for CSEF 2026 (judging: 2026-04-09). Each maps to roadmap phases.
+
+### Research Deepening
+
+- [ ] **RSRCH-01**: Architecture comparison study — train XGBoost + Transformer on existing multiscale dataset, produce comparison table across horizons 1-10s vs existing TCN/LSTM/Ridge/persistence
+- [ ] **RSRCH-02**: Ablation study — TCN with components removed (GroupNorm off, attention off, multi-scale off, single dilation) to quantify each component's contribution with before/after R²
+- [ ] **RSRCH-03**: Multi-seed reproducibility — 3-5 seeds per model, report mean ± std R² to prove results aren't a lucky seed
+- [ ] **RSRCH-04**: Simulation defense — fit simulator τ parameters from real data or cite literature, document why simulation is valid for controller comparison
+- [ ] **RSRCH-05**: Retrain EEGNet and TCN on 4-channel subset matching Muse 2 electrode positions (F7≈AF7, F8≈AF8, + 2 nearest TP9/TP10), evaluate performance gap vs 7-channel research-grade baseline
+
+### Real-Time Inference
+
+- [ ] **RTINF-01**: StreamingFeatureExtractor computes spectral features from live 2s EEG windows using causal sosfilt filtering, verified within 1e-4 of offline pipeline on test windows
+- [ ] **RTINF-02**: SimulatedEEGAdapter generates synthetic EEG via BrainFlow SYNTHETIC_BOARD or EntrainmentSimulator replay for hardware-free development and demo fallback
+- [ ] **RTINF-03**: Muse 2 integration via BrainFlow — stream 4-channel EEG into the retrained model pipeline for live PAC prediction and closed-loop stimulus control
+- [ ] **RTINF-04**: Model registry with uniform TemporalModel protocol so TCN, XGBoost, Transformer can be hot-swapped in app and sweep scripts
+
+### Caregiver App
+
+- [ ] **APP-01**: Patient profiles — create/select patient, view session history with per-session metrics
+- [ ] **APP-02**: Session management — start/stop therapy sessions, log per-window PAC and stimulus decisions, session completion summary with plain-language metrics
+- [ ] **APP-03**: Caregiver-friendly UI — plain-language labels ("Brain Sync Level" not "PAC value"), volume slider, hardware status indicator, dual-mode toggle (simulated/real EEG)
+- [ ] **APP-04**: Real-time EEG visualization with PAC trend chart and adaptive 40Hz auditory stimulus with visual stimulus-active indicator
+- [ ] **APP-05**: Streamlit Cloud deployment with working QR code that judges and facility visitors can access on their phones
+
+### Presentation & Pilot
+
+- [ ] **PRES-01**: 1-minute elevator pitch script framed as "predictive model for neural state with temporal forecasting" — not "AI for Alzheimer's"
+- [ ] **PRES-02**: One-page flyer with QR code linking to live app, for facility leave-behinds and CSEF poster
+- [ ] **PRES-03**: Clinical roadmap document — integration with existing systems, clinical testing plan, remote monitoring vision, community benefit narrative, hardware scaling path (Muse → OpenBCI → clinical)
+- [ ] **PRES-04**: Pilot feedback form (Google Form) to collect structured caregiver feedback from facility demos — becomes "human testing data" for CSEF
+
+## Future Requirements
+
+Deferred to post-CSEF. Tracked but not in current roadmap.
+
+### Hardware Scaling
+- **HW-01**: OpenBCI Cyton/Ganglion integration for higher-quality gamma (8-channel, gel electrodes)
+- **HW-02**: Real-time ASSR phase-locking (ITPC) as supplementary entrainment quality metric
+
+### Product Expansion
+- **PROD-01**: React/FastAPI production web app (replace Streamlit for multi-user clinical deployment)
+- **PROD-02**: Mobile iOS/Android app
+- **PROD-03**: Multi-session PAC trend tracking across therapy sessions
+- **PROD-04**: Multisensory stimulation (audio + visual flicker)
+- **PROD-05**: Remote monitoring dashboard for clinicians
+- **PROD-06**: EHR integration (requires HIPAA compliance, institutional partnership)
+
+## Out of Scope
+
+| Feature | Reason |
+|---------|--------|
+| React/FastAPI rewrite | Correct for production but consumes 10-15 of 20 available days. Present as roadmap slide. |
+| Full mobile app | 6-month project. Roadmap narrative only. |
+| FDA regulatory submission | Clinical testing plan documented but not executed. |
+| Manufacturing hardware | Intelligence layer on existing hardware only. |
+| 64-channel research cap integration | Budget and demo practicality. OpenBCI path documented as scaling option. |
+| Real-time PAC from research-grade data | No research hardware available. Muse 2 is the demo platform. |
+
+## Traceability
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| RSRCH-01 | — | Pending |
+| RSRCH-02 | — | Pending |
+| RSRCH-03 | — | Pending |
+| RSRCH-04 | — | Pending |
+| RSRCH-05 | — | Pending |
+| RTINF-01 | — | Pending |
+| RTINF-02 | — | Pending |
+| RTINF-03 | — | Pending |
+| RTINF-04 | — | Pending |
+| APP-01 | — | Pending |
+| APP-02 | — | Pending |
+| APP-03 | — | Pending |
+| APP-04 | — | Pending |
+| APP-05 | — | Pending |
+| PRES-01 | — | Pending |
+| PRES-02 | — | Pending |
+| PRES-03 | — | Pending |
+| PRES-04 | — | Pending |
+
+**Coverage:**
+- v3.0 requirements: 18 total
+- Mapped to phases: 0 (awaiting roadmap)
+- Unmapped: 18
+
+---
+*Requirements defined: 2026-03-20*
+*Last updated: 2026-03-20 after initial definition*
