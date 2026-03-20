@@ -2,11 +2,11 @@
 gsd_state_version: 1.0
 milestone: v3.0
 milestone_name: Deepen Research
-status: defining_requirements
+status: ready_to_plan
 last_updated: "2026-03-20"
-last_activity: 2026-03-20 — Milestone v3.0 started
+last_activity: 2026-03-20 — Roadmap created for v3.0 (4 phases, 18 requirements mapped)
 progress:
-  total_phases: 0
+  total_phases: 4
   completed_phases: 0
   total_plans: 0
   completed_plans: 0
@@ -19,35 +19,49 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-20)
 
 **Core value:** Every claim in every document must be verifiably accurate against actual code, data, and results.
-**Current focus:** v3.0 Deepen Research — productize + deepen ML rigor for CSEF 2026-04-09
+**Current focus:** v3.0 Deepen Research — Phase 10: Scope Lock and Foundation
 
-## Current Status
+## Current Position
 
-**Milestone:** v3.0 Deepen Research
-**Status:** Defining requirements
+Phase: 10 of 13 (Scope Lock and Foundation)
+Plan: 0 of TBD in current phase
+Status: Ready to plan
+Last activity: 2026-03-20 — Roadmap created, 18/18 requirements mapped to 4 phases
 
-## Shipped Milestones
+Progress: [░░░░░░░░░░] 0%
 
-| Version | Name | Phases | Plans | Date |
-|---------|------|--------|-------|------|
-| v2.0 | Paper Audit & Corrections | 4-9 | 14 | 2026-03-18 |
+## Performance Metrics
+
+**Velocity:**
+- Total plans completed: 0 (v3.0)
+- Average duration: unknown
+- Total execution time: 0h
+
+**By Phase:**
+
+| Phase | Plans | Total | Avg/Plan |
+|-------|-------|-------|----------|
+| - | - | - | - |
+
+*Updated after each plan completion*
 
 ## Accumulated Context
 
-### Roadmap Evolution
-- Phase 1 added: Clean up documentation and archive stale content
+### Key Decisions
 
-### Key Decisions (Phase 01)
-- 01-03: AGENTS.md eliminated in favor of single CLAUDE.md; all 10+ sections merged without information loss
-- 01-03: docs/INDEX.md rewritten to accurately reflect post-cleanup structure; all links verified by automated script
-- 01-02: Preserve docs/archive/ .txt files — MD5 verified unique content differs from docs/research/ versions
-- 01-02: Archive pre-multiscale reports by moving to docs/archive/reports/ rather than deleting (preserves git history)
-- 01-01: docs/reference/ established as canonical location for educational/reference documents (COMPREHENSIVE_PROJECT_MAP.md, ML_ZERO_TO_HERO.md)
-- 01-01: archive/notebooks/ consolidates all superseded notebook versions; context/ preserved in archive/context/ (not deleted)
+- Roadmap: Keep Streamlit — no React/FastAPI rewrite for v3.0. Production stack is presentation narrative only.
+- Roadmap: Dual-mode confirmed — simulated EEG is primary PAC control path; Muse 2 for alpha/theta viz only (consumer EEG gamma unreliable).
+- Roadmap: Phase 10 must complete before Phase 11 — 4-channel channel mapping is a hard prerequisite for StreamingFeatureExtractor.
+- Roadmap: RSRCH-04 simulator defense = fit_simulator_params.py or cite Iaccarino et al. (2016) τ values — "empirically extracted" claim is a live judging risk.
 
-## Blockers/Concerns
+### Blockers/Concerns
 
-None.
+- Muse S BLE stability on macOS 25.x unverified — time-box hardware integration to 3 days max in Phase 11. If not working, ship simulated only.
+- pytorch-forecasting + existing torch version compatibility unverified — use lightweight custom Transformer if conflict.
+- Hard deadline: CSEF judging 2026-04-09 (20 days from milestone start).
 
----
-Last activity: 2026-03-20 — Milestone v3.0 started
+## Session Continuity
+
+Last session: 2026-03-20
+Stopped at: Roadmap created. Next: run /gsd:plan-phase 10
+Resume file: None

@@ -68,30 +68,30 @@ Deferred to post-CSEF. Tracked but not in current roadmap.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| RSRCH-01 | — | Pending |
-| RSRCH-02 | — | Pending |
-| RSRCH-03 | — | Pending |
-| RSRCH-04 | — | Pending |
-| RSRCH-05 | — | Pending |
-| RTINF-01 | — | Pending |
-| RTINF-02 | — | Pending |
-| RTINF-03 | — | Pending |
-| RTINF-04 | — | Pending |
-| APP-01 | — | Pending |
-| APP-02 | — | Pending |
-| APP-03 | — | Pending |
-| APP-04 | — | Pending |
-| APP-05 | — | Pending |
-| PRES-01 | — | Pending |
-| PRES-02 | — | Pending |
-| PRES-03 | — | Pending |
-| PRES-04 | — | Pending |
+| RSRCH-01 | Phase 12 | Pending |
+| RSRCH-02 | Phase 12 | Pending |
+| RSRCH-03 | Phase 12 | Pending |
+| RSRCH-04 | Phase 10 | Pending |
+| RSRCH-05 | Phase 10 | Pending |
+| RTINF-01 | Phase 11 | Pending |
+| RTINF-02 | Phase 11 | Pending |
+| RTINF-03 | Phase 11 | Pending |
+| RTINF-04 | Phase 11 | Pending |
+| APP-01 | Phase 13 | Pending |
+| APP-02 | Phase 13 | Pending |
+| APP-03 | Phase 13 | Pending |
+| APP-04 | Phase 13 | Pending |
+| APP-05 | Phase 13 | Pending |
+| PRES-01 | Phase 13 | Pending |
+| PRES-02 | Phase 13 | Pending |
+| PRES-03 | Phase 13 | Pending |
+| PRES-04 | Phase 13 | Pending |
 
 **Coverage:**
 - v3.0 requirements: 18 total
-- Mapped to phases: 0 (awaiting roadmap)
-- Unmapped: 18
+- Mapped to phases: 18
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-20*
-*Last updated: 2026-03-20 after initial definition*
+*Last updated: 2026-03-20 — traceability populated after roadmap creation*
