@@ -214,7 +214,7 @@ simulator:
   noise_std: 0.02   # Gaussian noise standard deviation
 
   # Time constants extraction
-  extraction_method: "empirical"  # From dataset transitions
+  extraction_method: "heuristic"  # Literature-informed estimates (see simulator.py docstring)
 
   # Simulation parameters
   simulation_duration_sec: 360  # 6 minutes per trial

@@ -1,0 +1,6 @@
+{
+  "checkpoint": "best_multiscale_tcn_4ch_lb20_hz5_ts1.pth",
+  "n_features": 49,
+  "val_future_r2": 0.4467615485191345,
+  "epoch": 12
+}
