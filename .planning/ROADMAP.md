@@ -42,6 +42,18 @@
 | 8. Fix Internal Consistency | v2.0 | 2/2 | Complete | 2026-03-18 |
 | 9. Propagate & Recompile | v2.0 | 2/2 | Complete | 2026-03-18 |
 
+### Phase 1: Clean up documentation and archive stale content
+
+**Goal:** Eliminate duplicate, stale, and superseded documentation files. Consolidate the FINAL/ staging directory into docs/, remove empty placeholder directories, archive old notebook versions and pre-multiscale reports, remove redundant .docx binaries, and update docs/INDEX.md and CLAUDE.md to reflect the cleaned-up state.
+**Requirements:** CLEAN-01 (consolidate FINAL/), CLEAN-02 (remove stale dirs), CLEAN-03 (remove .docx redundancy), CLEAN-04 (archive old reports), CLEAN-05 (update INDEX.md), CLEAN-06 (merge AGENTS.md into CLAUDE.md)
+**Depends on:** None
+**Plans:** 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Consolidate FINAL/ into docs/ and remove stale root directories
+- [ ] 01-02-PLAN.md — Remove redundant .docx files and archive superseded reports
+- [ ] 01-03-PLAN.md — Update docs/INDEX.md and merge AGENTS.md into CLAUDE.md
+
 ---
 
 _Full phase details archived in `.planning/milestones/v2.0-ROADMAP.md`_
