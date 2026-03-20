@@ -1,0 +1,18 @@
+{
+  "n_channels": 4,
+  "channels": [
+    "F7",
+    "F8",
+    "T7",
+    "T8"
+  ],
+  "n_params": 1409,
+  "best_epoch": 11,
+  "best_val_loss": 1.0433544522627842,
+  "test_r2_normalized": 0.016303592056487015,
+  "test_r2_raw": 0.016303594744873418,
+  "test_rmse_raw": 3.9719755490290014e-05,
+  "pac_mean": 4.1604739528809606e-05,
+  "pac_std": 3.374599708505444e-05,
+  "test_n_windows": 2822
+}

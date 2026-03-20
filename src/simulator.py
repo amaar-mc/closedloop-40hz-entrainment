@@ -7,12 +7,21 @@ approach model. Enables testing of control strategies without animal/human subje
 Model:
     PAC(t+1) = PAC(t) + τ × (PAC_target - PAC(t)) + noise
 
-Parameters (empirically extracted from dataset):
-    τ_rise = 0.15: PAC increase rate during stimulation
-    τ_decay = 0.10: PAC decrease rate during rest
-    PAC_max = 0.3: Maximum achievable PAC
-    PAC_min = 0.05: Minimum PAC baseline
+Parameters (heuristic estimates informed by gamma entrainment literature):
+    τ_rise = 0.15: PAC increase rate during stimulation (~6s time constant,
+        consistent with ASSR steady-state onset at 2-5s plus PAC measurement
+        smoothing; see Galambos 1981, Picton 2003)
+    τ_decay = 0.10: PAC decrease rate during rest (~10s time constant,
+        conservative estimate for post-stimulus gamma decay)
+    PAC_max = 0.3: Maximum achievable PAC (normalized scale)
+    PAC_min = 0.05: Minimum PAC baseline (normalized scale)
     noise_std = 0.02: Gaussian noise standard deviation
+
+Note: These parameters produce qualitatively realistic dynamics but were not
+numerically fit to ds005048 transition data. The closed-loop controller
+comparison (Predictive vs Reactive vs Fixed) is validated on real EEG replay
+(run_tcn_validation.py), not on simulated data. The simulator is used only
+for controller strategy comparison under controlled conditions.
 
 Author: Amaar Chughtai
 Date: February 2026
