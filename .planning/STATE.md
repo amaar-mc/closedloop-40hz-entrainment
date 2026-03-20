@@ -2,9 +2,9 @@
 gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
-status: planning
-last_updated: "2026-03-20T00:27:43.897Z"
-last_activity: 2026-03-20 — Completed 01-01-PLAN.md (consolidate FINAL/, archive stale dirs/notebooks)
+status: completed
+last_updated: "2026-03-20T00:31:33.967Z"
+last_activity: 2026-03-20 — Completed 01-03-PLAN.md (update INDEX.md, consolidate AGENTS.md into CLAUDE.md)
 progress:
   total_phases: 2
   completed_phases: 1
@@ -24,7 +24,7 @@ See: .planning/PROJECT.md (updated 2026-03-18)
 ## Current Status
 
 **Milestone:** v2.0 Paper Audit & Corrections — SHIPPED 2026-03-18
-**Status:** Complete and archived to `.planning/milestones/`
+**Status:** Milestone complete
 
 ## Shipped Milestones
 
