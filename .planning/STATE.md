@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v2.0
 milestone_name: milestone
 status: planning
-last_updated: "2026-03-20T00:17:31.172Z"
-last_activity: 2026-03-20 — Completed 01-02-PLAN.md (remove .docx binaries, archive stale reports)
+last_updated: "2026-03-20T00:20:11Z"
+last_activity: 2026-03-20 — Completed 01-01-PLAN.md (consolidate FINAL/, archive stale dirs/notebooks)
 progress:
   total_phases: 2
   completed_phases: 0
   total_plans: 3
-  completed_plans: 2
+  completed_plans: 3
 ---
 
 # Project State: Research Documentation Project
@@ -40,10 +40,12 @@ See: .planning/PROJECT.md (updated 2026-03-18)
 ### Key Decisions (Phase 01)
 - 01-02: Preserve docs/archive/ .txt files — MD5 verified unique content differs from docs/research/ versions
 - 01-02: Archive pre-multiscale reports by moving to docs/archive/reports/ rather than deleting (preserves git history)
+- 01-01: docs/reference/ established as canonical location for educational/reference documents (COMPREHENSIVE_PROJECT_MAP.md, ML_ZERO_TO_HERO.md)
+- 01-01: archive/notebooks/ consolidates all superseded notebook versions; context/ preserved in archive/context/ (not deleted)
 
 ## Blockers/Concerns
 
 None.
 
 ---
-Last activity: 2026-03-20 — Completed 01-02-PLAN.md (remove .docx binaries, archive stale reports)
+Last activity: 2026-03-20 — Completed 01-01-PLAN.md (consolidate FINAL/, archive stale dirs/notebooks)

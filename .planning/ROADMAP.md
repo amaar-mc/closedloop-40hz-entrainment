@@ -32,7 +32,7 @@
 
 | Phase | Milestone | Plans Complete | Status | Completed |
 |-------|-----------|----------------|--------|-----------|
-| 1. Content Foundation | 1/3 | In Progress|  | - |
+| 1. Content Foundation | 2/3 | In Progress|  | - |
 | 2. Daily Entries | deferred | - | Not started | - |
 | 3. Visual Polish | deferred | - | Not started | - |
 | 4. Finalize Lab Notebook | v2.0 | 3/3 | Complete | 2026-03-15 |
@@ -47,7 +47,7 @@
 **Goal:** Eliminate duplicate, stale, and superseded documentation files. Consolidate the FINAL/ staging directory into docs/, remove empty placeholder directories, archive old notebook versions and pre-multiscale reports, remove redundant .docx binaries, and update docs/INDEX.md and CLAUDE.md to reflect the cleaned-up state.
 **Requirements:** CLEAN-01 (consolidate FINAL/), CLEAN-02 (remove stale dirs), CLEAN-03 (remove .docx redundancy), CLEAN-04 (archive old reports), CLEAN-05 (update INDEX.md), CLEAN-06 (merge AGENTS.md into CLAUDE.md)
 **Depends on:** None
-**Plans:** 1/3 plans executed
+**Plans:** 2/3 plans executed
 
 Plans:
 - [ ] 01-01-PLAN.md — Consolidate FINAL/ into docs/ and remove stale root directories
