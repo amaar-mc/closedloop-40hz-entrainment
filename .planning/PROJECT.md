@@ -26,14 +26,54 @@ Every claim in every document must be verifiably accurate against the actual cod
 
 ### Active
 
-(No active requirements — next milestone not yet defined)
+<!-- Current scope: v3.0 Deepen Research -->
+
+**Research deepening (25%):**
+- [ ] Comprehensive architecture comparison study (8 static + temporal models + new architectures)
+- [ ] New model training (Transformer, XGBoost, etc.) to strengthen TCN selection narrative
+- [ ] Statistical robustness analyses (cross-validation, sensitivity, ablation)
+- [ ] Simulation accuracy defense (validation framework, comparison metrics)
+- [ ] Timing advantage analysis (why prediction is necessary, operational window)
+- [ ] Failure mode & limitations analysis (biggest reason this may NOT work)
+- [ ] EEG+audio hardware research (headsets that record EEG + play stimulus)
+- [ ] Multisensory stimulation expansion exploration
+
+**Product platform (75%):**
+- [ ] Web app — caregiver-facing closed-loop therapy platform
+- [ ] Dual mode: simulated EEG (demo fallback) + real EEG headset integration
+- [ ] Real-time adaptive auditory stimulus based on PAC prediction
+- [ ] Session management, data logging, patient tracking
+- [ ] Mobile app roadmap (productization narrative for judges)
+- [ ] Productization documentation (clinical roadmap, integration with existing systems, remote monitoring)
+
+**Presentation & pilot:**
+- [ ] Updated poster board with QR code + human testing data
+- [ ] Multiple presentation formats + 1-min elevator pitch
+- [ ] Pilot demos at facilities (Mission Villa, Valley Medical Veterans Center, regional hospital)
+- [ ] Flyer with QR code linking to live app
 
 ### Out of Scope
 
 - Rewriting the paper's narrative structure — only fix factual errors
-- Running new experiments or retraining models
-- Adding new analyses not in the original paper
 - Lab notebook phases 1-3 (deferred — content extraction, daily entries, visual polish)
+- Full mobile app build (roadmap only — web app is primary)
+- FDA regulatory submission (clinical testing plan documented but not executed)
+- Manufacturing hardware (intelligence layer on existing hardware only)
+
+## Current Milestone: v3.0 Deepen Research
+
+**Goal:** Transform the research project into a productized, demo-ready platform while deepening ML rigor — targeting CSEF judging on 2026-04-09.
+
+**Target features:**
+- Comprehensive model architecture comparison study with new models trained
+- Web app platform for caregiver-led closed-loop 40 Hz therapy sessions
+- Dual-mode EEG (real hardware + simulated fallback) with adaptive stimulus
+- Pilot demos at local facilities with collected feedback data
+- Updated presentations, poster board with QR code, elevator pitch
+
+**Framing guidance (from counselor):** "Predictive model for neural state with temporal forecasting" — NOT "AI for Alzheimer's." Intelligence layer on existing hardware. Project → solution → product.
+
+**Split:** 25% research deepening / 75% product & presentation
 
 ## Context
 
@@ -46,6 +86,13 @@ Three parallel audit agents identified 6 critical, 5 important, and 4 minor issu
 - Results: `results/RESULTS_REPORT.md` (verified clean — g=0.75, ×10⁻⁶ MI units)
 - Poster: `docs/poster/POSTER_BOARD_V5.md` (all corrections propagated)
 - Demo: `src/dashboard.py` (Streamlit, live PAC visualization + 40 Hz audio)
+
+**CSEF context:**
+- Admitted to California Science & Engineering Fair 2026
+- Judging: 2026-04-09 (20 days from milestone start)
+- Judges want productized, actionable solutions — not just research
+- Pilot facilities identified: Mission Villa Alzheimer's Residence, Valley Medical Veterans Center, regional medical hospital
+- Need: QR code on poster → live app, human testing data, clinical testing plan
 
 ## Key Decisions
 
@@ -66,4 +113,4 @@ Three parallel audit agents identified 6 critical, 5 important, and 4 minor issu
 - **Accuracy**: Every number must be traceable to a source file
 
 ---
-*Last updated: 2026-03-18 after v2.0 milestone*
+*Last updated: 2026-03-20 after v3.0 milestone start*

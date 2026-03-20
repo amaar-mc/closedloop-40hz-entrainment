@@ -1,30 +1,30 @@
 ---
 gsd_state_version: 1.0
-milestone: v2.0
-milestone_name: milestone
-status: completed
-last_updated: "2026-03-20T00:31:33.967Z"
-last_activity: 2026-03-20 — Completed 01-03-PLAN.md (update INDEX.md, consolidate AGENTS.md into CLAUDE.md)
+milestone: v3.0
+milestone_name: Deepen Research
+status: defining_requirements
+last_updated: "2026-03-20"
+last_activity: 2026-03-20 — Milestone v3.0 started
 progress:
-  total_phases: 2
-  completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
+  total_phases: 0
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
 ---
 
 # Project State: Research Documentation Project
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-03-18)
+See: .planning/PROJECT.md (updated 2026-03-20)
 
 **Core value:** Every claim in every document must be verifiably accurate against actual code, data, and results.
-**Current focus:** v2.0 shipped. No active milestone.
+**Current focus:** v3.0 Deepen Research — productize + deepen ML rigor for CSEF 2026-04-09
 
 ## Current Status
 
-**Milestone:** v2.0 Paper Audit & Corrections — SHIPPED 2026-03-18
-**Status:** Milestone complete
+**Milestone:** v3.0 Deepen Research
+**Status:** Defining requirements
 
 ## Shipped Milestones
 
@@ -50,4 +50,4 @@ See: .planning/PROJECT.md (updated 2026-03-18)
 None.
 
 ---
-Last activity: 2026-03-20 — Completed 01-03-PLAN.md (update INDEX.md, consolidate AGENTS.md into CLAUDE.md)
+Last activity: 2026-03-20 — Milestone v3.0 started
