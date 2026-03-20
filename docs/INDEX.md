@@ -1,6 +1,6 @@
 # Documentation Index
 
-**Last updated:** 2026-03-05
+**Last updated:** 2026-03-19
 
 ## Quick Navigation
 
@@ -16,10 +16,11 @@
 | Presentation script | [`reference/PRESENTATION.md`](reference/PRESENTATION.md) |
 | Current methodology | [`methodology/CURRENT_METHODOLOGY.md`](methodology/CURRENT_METHODOLOGY.md) |
 | Code architecture map | [`methodology/CODE_MAP.md`](methodology/CODE_MAP.md) |
+| Comprehensive project map | [`reference/COMPREHENSIVE_PROJECT_MAP.md`](reference/COMPREHENSIVE_PROJECT_MAP.md) |
 | Judge interview prep | [`submission/reports/JUDGE_INTERVIEW_PREP.md`](submission/reports/JUDGE_INTERVIEW_PREP.md) |
 | Pipeline audit results | [`audits/`](audits/) |
 | Research background papers | [`research/`](research/) |
-| Historical analysis reports | [`reports/`](reports/) |
+| Historical analysis reports (archived) | [`archive/reports/`](archive/reports/) |
 
 ---
 
@@ -36,9 +37,7 @@ docs/
 
   poster/                   Poster board materials
     POSTER_BOARD_V5.md        Latest poster content (visual-forward)
-    POSTER_BOARD_V5.pdf       Rendered PDF
-    Synopsys Poster Final.pptx  PowerPoint source
-    Synopsys Poster Final.pdf   Print-ready PDF
+    Synopsys Poster FINAL.pdf   Print-ready PDF
     exports/                  Slide image exports (PNG)
     archive/                  V1-V4 poster drafts
     reference/                Example posters from other projects
@@ -52,6 +51,8 @@ docs/
 
   reference/                Reference & preparation materials
     SYNOPSYS_REFERENCE.md     Fair rules, deadlines, judging criteria
+    COMPREHENSIVE_PROJECT_MAP.md  Full project structure map
+    ML_ZERO_TO_HERO.md        Educational reference on ML fundamentals
     PROJECT_DEEP_DIVE.md      Comprehensive glossary & judge prep
     PRESENTATION.md           Presentation script
     feedback-kushal.md        Mentor feedback notes
@@ -68,14 +69,40 @@ docs/
     COMPREHENSIVE_SUBMISSION_AUDIT_REPORT.md
     TEMPORAL_MULTISCALE_AUDIT_REPORT.md
 
-  reports/                  Historical analysis reports
-    SUMMARY_FOR_USER.md
-    COMPREHENSIVE_ANALYSIS_ALL_ATTEMPTS.md
-    TEMPORAL_PREDICTION_*.md  (3 reports)
+  paper/                    Research paper materials
+    RESEARCH_PAPER_v3.md      Latest research paper draft
+    SUPPLEMENTARY.md          Supplementary materials
+    REVIEW_REPORT.md          Review feedback
 
-  research/                 Background literature (7 papers, .docx/.txt)
+  presentations/            Presentation scripts and materials
+    01_main_script.md
+    02_short_version.md
+    03_memorization_guide.md
+    04_qa_bank_and_danger_zones.md
+    05_qa_complete.md
+    CSEF_2026_Presentation.pdf
+
+  research/                 Background literature (.txt files, 7 papers)
+    01_Foundational_Concepts_40Hz_Entrainment_AD.txt
+    02_Literature_Review_40Hz_Entrainment_AD.txt
+    03_Technical_Methods_Signal_Processing.txt
+    04_Research_Methodology_Proposed_Approach.txt
+    05_Annotated_Bibliography_Sources.txt
+    AD_40Hz_Entrainment_Research_Paper_IEEE.txt
+    Comprehensive_Methodology_Closed_Loop_40Hz_Entrainment.txt
 
   archive/                  Outdated docs (pre-multiscale era)
+    STATUS_REPORT_Synopsys_Readiness.md
+    STATUS_REPORT_Synopsys_Readiness_v2.md
+    04_Research_Methodology_Proposed_Approach.txt   (historical variant)
+    AD_40Hz_Entrainment_Research_Paper_IEEE.txt     (historical variant)
+    Comprehensive_Methodology_Closed_Loop_40Hz_Entrainment.txt  (historical variant)
+    reports/                  Pre-multiscale technical analysis reports (superseded)
+      SUMMARY_FOR_USER.md
+      COMPREHENSIVE_ANALYSIS_ALL_ATTEMPTS.md
+      TEMPORAL_PREDICTION_DEEP_DIVE.md
+      TEMPORAL_PREDICTION_FINAL_REPORT.md
+      TEMPORAL_PREDICTION_REPORT.md
 ```
 
 ---
@@ -87,6 +114,7 @@ docs/
 | [`methodology/CURRENT_METHODOLOGY.md`](methodology/CURRENT_METHODOLOGY.md) | **Start here.** Complete description of the implemented pipeline, model, training, results. |
 | [`methodology/CODE_MAP.md`](methodology/CODE_MAP.md) | File-by-file map of the codebase architecture. |
 | [`../FINDINGS.md`](../FINDINGS.md) | Consolidated findings: model results, comparisons, conclusions, limitations. |
+| [`reference/COMPREHENSIVE_PROJECT_MAP.md`](reference/COMPREHENSIVE_PROJECT_MAP.md) | Full structural map of the project codebase and documentation. |
 
 ## Submission Documents
 
@@ -104,31 +132,35 @@ docs/
 | [`audits/COMPREHENSIVE_SUBMISSION_AUDIT_REPORT.md`](audits/COMPREHENSIVE_SUBMISSION_AUDIT_REPORT.md) | Leakage/causality audit from submission gate scripts. |
 | [`audits/TEMPORAL_MULTISCALE_AUDIT_REPORT.md`](audits/TEMPORAL_MULTISCALE_AUDIT_REPORT.md) | File-by-file technical audit of `temporal_multiscale/` module. |
 
-## Technical Reports
+## Archived Reports
+
+These pre-multiscale technical reports are superseded by the current methodology. Preserved in [`archive/reports/`](archive/reports/) for historical reference.
 
 | Document | Description |
 |----------|-------------|
-| [`reports/TEMPORAL_PREDICTION_DEEP_DIVE.md`](reports/TEMPORAL_PREDICTION_DEEP_DIVE.md) | Why temporal PAC prediction is hard: raw R^2 ~0.07, smoothed R^2 ~0.75, autocorrelation ceiling. |
-| [`reports/TEMPORAL_PREDICTION_REPORT.md`](reports/TEMPORAL_PREDICTION_REPORT.md) | Temporal prediction approach and initial results. |
-| [`reports/TEMPORAL_PREDICTION_FINAL_REPORT.md`](reports/TEMPORAL_PREDICTION_FINAL_REPORT.md) | Final temporal prediction report with all horizon results. |
-| [`reports/COMPREHENSIVE_ANALYSIS_ALL_ATTEMPTS.md`](reports/COMPREHENSIVE_ANALYSIS_ALL_ATTEMPTS.md) | Analysis of all model architecture attempts (v1-v8). |
-| [`reports/SUMMARY_FOR_USER.md`](reports/SUMMARY_FOR_USER.md) | Plain-English project summary. |
+| [`archive/reports/TEMPORAL_PREDICTION_DEEP_DIVE.md`](archive/reports/TEMPORAL_PREDICTION_DEEP_DIVE.md) | Why temporal PAC prediction is hard: raw R^2 ~0.07, smoothed R^2 ~0.75, autocorrelation ceiling. |
+| [`archive/reports/TEMPORAL_PREDICTION_REPORT.md`](archive/reports/TEMPORAL_PREDICTION_REPORT.md) | Temporal prediction approach and initial results. |
+| [`archive/reports/TEMPORAL_PREDICTION_FINAL_REPORT.md`](archive/reports/TEMPORAL_PREDICTION_FINAL_REPORT.md) | Final temporal prediction report with all horizon results. |
+| [`archive/reports/COMPREHENSIVE_ANALYSIS_ALL_ATTEMPTS.md`](archive/reports/COMPREHENSIVE_ANALYSIS_ALL_ATTEMPTS.md) | Analysis of all model architecture attempts (v1-v8). |
+| [`archive/reports/SUMMARY_FOR_USER.md`](archive/reports/SUMMARY_FOR_USER.md) | Plain-English project summary. |
 
 ## Research Background
 
+All background literature is in `research/` as plain-text files.
+
 | Document | Description |
 |----------|-------------|
-| `research/01_Foundational_Concepts_*` | Neuroscience primer: gamma oscillations, PAC, 40 Hz entrainment, AD. |
-| `research/02_Literature_Review_*` | Literature synthesis: PAC as biomarker, entrainment mechanisms, clinical trials. |
-| `research/03_Technical_Methods_*` | EEG signal processing reference: filtering, PAC computation, DL architectures. |
-| `research/04_Research_Methodology_*` | Research methodology and proposed approach. |
-| `research/05_Annotated_Bibliography_*` | 39 annotated references. |
-| `research/AD_40Hz_Entrainment_Research_Paper_IEEE.*` | IEEE-format research paper. |
-| `research/Comprehensive_Methodology_*` | Full methodology document. |
+| `research/01_Foundational_Concepts_40Hz_Entrainment_AD.txt` | Neuroscience primer: gamma oscillations, PAC, 40 Hz entrainment, AD. |
+| `research/02_Literature_Review_40Hz_Entrainment_AD.txt` | Literature synthesis: PAC as biomarker, entrainment mechanisms, clinical trials. |
+| `research/03_Technical_Methods_Signal_Processing.txt` | EEG signal processing reference: filtering, PAC computation, DL architectures. |
+| `research/04_Research_Methodology_Proposed_Approach.txt` | Research methodology and proposed approach. |
+| `research/05_Annotated_Bibliography_Sources.txt` | 39 annotated references. |
+| `research/AD_40Hz_Entrainment_Research_Paper_IEEE.txt` | IEEE-format research paper. |
+| `research/Comprehensive_Methodology_Closed_Loop_40Hz_Entrainment.txt` | Full methodology document. |
 
 ## Archive (Outdated)
 
-Pre-multiscale versions preserved for history. See [`archive/`](archive/) -- these contain outdated assumptions (wrong subject counts, unimplemented architectures, placeholder results).
+Pre-multiscale versions preserved for history. See [`archive/`](archive/) — these contain outdated assumptions (wrong subject counts, unimplemented architectures, placeholder results).
 
 ## Key Discrepancies: Proposal vs. Reality
 
