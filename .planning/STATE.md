@@ -1,15 +1,15 @@
 ---
 gsd_state_version: 1.0
 milestone: v2.0
-milestone_name: Paper Audit & Corrections
-status: shipped
-last_updated: "2026-03-18T06:00:00Z"
-last_activity: 2026-03-18 — Milestone v2.0 completed and archived
+milestone_name: milestone
+status: planning
+last_updated: "2026-03-20T00:17:31.172Z"
+last_activity: 2026-03-20 — Completed 01-02-PLAN.md (remove .docx binaries, archive stale reports)
 progress:
-  total_phases: 9
-  completed_phases: 6
-  total_plans: 14
-  completed_plans: 14
+  total_phases: 2
+  completed_phases: 0
+  total_plans: 3
+  completed_plans: 2
 ---
 
 # Project State: Research Documentation Project
@@ -32,9 +32,18 @@ See: .planning/PROJECT.md (updated 2026-03-18)
 |---------|------|--------|-------|------|
 | v2.0 | Paper Audit & Corrections | 4-9 | 14 | 2026-03-18 |
 
+## Accumulated Context
+
+### Roadmap Evolution
+- Phase 1 added: Clean up documentation and archive stale content
+
+### Key Decisions (Phase 01)
+- 01-02: Preserve docs/archive/ .txt files — MD5 verified unique content differs from docs/research/ versions
+- 01-02: Archive pre-multiscale reports by moving to docs/archive/reports/ rather than deleting (preserves git history)
+
 ## Blockers/Concerns
 
 None.
 
 ---
-Last activity: 2026-03-18 — Milestone v2.0 archived
+Last activity: 2026-03-20 — Completed 01-02-PLAN.md (remove .docx binaries, archive stale reports)
