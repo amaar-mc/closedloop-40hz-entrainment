@@ -19,7 +19,7 @@ Requirements for CSEF 2026 (judging: 2026-04-09). Each maps to roadmap phases.
 
 - [x] **RTINF-01**: StreamingFeatureExtractor computes spectral features from live 2s EEG windows using causal sosfilt filtering, verified within 1e-4 of offline pipeline on test windows
 - [x] **RTINF-02**: SimulatedEEGAdapter generates synthetic EEG via BrainFlow SYNTHETIC_BOARD or EntrainmentSimulator replay for hardware-free development and demo fallback
-- [ ] **RTINF-03**: Muse 2 integration via BrainFlow — stream 4-channel EEG into the retrained model pipeline for live PAC prediction and closed-loop stimulus control
+- [x] **RTINF-03**: Muse 2 integration via BrainFlow — stream 4-channel EEG into the retrained model pipeline for live PAC prediction and closed-loop stimulus control
 - [x] **RTINF-04**: Model registry with uniform TemporalModel protocol so TCN, XGBoost, Transformer can be hot-swapped in app and sweep scripts
 
 ### Caregiver App
@@ -75,7 +75,7 @@ Deferred to post-CSEF. Tracked but not in current roadmap.
 | RSRCH-05 | Phase 10 | Pending |
 | RTINF-01 | Phase 11 | Complete |
 | RTINF-02 | Phase 11 | Complete |
-| RTINF-03 | Phase 11 | Pending |
+| RTINF-03 | Phase 11 | Complete |
 | RTINF-04 | Phase 11 | Complete |
 | APP-01 | Phase 13 | Pending |
 | APP-02 | Phase 13 | Pending |

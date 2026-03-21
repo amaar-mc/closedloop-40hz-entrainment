@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v3.0
 milestone_name: Deepen Research
 status: planning
-stopped_at: Completed 11-real-time-inference-pipeline/11-01-PLAN.md (StreamingFeatureExtractor)
-last_updated: "2026-03-21T01:56:42.603Z"
+stopped_at: "Completed 11-real-time-inference-pipeline/11-03-PLAN.md (streaming demo + Muse 2 non-viability)"
+last_updated: "2026-03-21T02:05:07.758Z"
 last_activity: 2026-03-20 — Roadmap created, 18/18 requirements mapped to 4 phases
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 2
+  completed_plans: 3
   percent: 0
 ---
 
@@ -48,6 +48,7 @@ Progress: [░░░░░░░░░░] 0%
 *Updated after each plan completion*
 | Phase 11-real-time-inference-pipeline P01 | 239 | 1 tasks | 3 files |
 | Phase 11-real-time-inference-pipeline P02 | 35 | 2 tasks | 5 files |
+| Phase 11-real-time-inference-pipeline P03 | 2100 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -59,15 +60,17 @@ Progress: [░░░░░░░░░░] 0%
 - Roadmap: RSRCH-04 simulator defense = fit_simulator_params.py or cite Iaccarino et al. (2016) τ values — "empirically extracted" claim is a live judging risk.
 - 11-01: PAC parity test uses valid-range checks — causal sosfilt vs non-causal two-pass is a systematic algorithmic difference, not a tolerance matter.
 - 11-01: src/streaming/__init__.py conditional import for adapters.py so package remains importable before Plan 03 implements hardware adapters.
+- 11-03: Muse 2 BLE non-viable on Darwin 25.4.0 (BOARD_NOT_READY_ERROR:7 — BLE not enabled); SimulatedEEGAdapter confirmed as shipping demo path (RTINF-02, RTINF-03 complete).
+- 11-03: demo_streaming.py --source muse falls back to simulated with warning — never attempts board connection on unpaired host.
 
 ### Blockers/Concerns
 
-- Muse S BLE stability on macOS 25.x unverified — time-box hardware integration to 3 days max in Phase 11. If not working, ship simulated only.
+- Muse S BLE not viable on current macOS 25.x host — resolved: simulated mode ships, full hardware implementation retained in RealEEGAdapter for future BLE-enabled system.
 - pytorch-forecasting + existing torch version compatibility unverified — use lightweight custom Transformer if conflict.
 - Hard deadline: CSEF judging 2026-04-09 (20 days from milestone start).
 
 ## Session Continuity
 
-Last session: 2026-03-21T01:56:42.601Z
-Stopped at: Completed 11-real-time-inference-pipeline/11-01-PLAN.md (StreamingFeatureExtractor)
+Last session: 2026-03-21T02:38:00Z
+Stopped at: Completed 11-real-time-inference-pipeline/11-03-PLAN.md (streaming demo + Muse 2 non-viability) — paused at Task 3 checkpoint:human-verify
 Resume file: None
