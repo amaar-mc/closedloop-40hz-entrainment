@@ -77,7 +77,10 @@ Plans:
   1. Comparison table exists with R² and RMSE across horizons 1-10s for at minimum: persistence, Ridge, LSTM, XGBoost, Transformer, and TCN — one file, ready to paste into the paper and poster
   2. Ablation table shows R² impact of removing each TCN component (GroupNorm, attention, multi-scale dilation, single dilation) — TCN's advantage is quantified not claimed
   3. Multi-seed results (3-5 seeds) for TCN report mean ± std R² — a single lucky seed is ruled out
-**Plans**: TBD
+**Plans:** 2 plans
+Plans:
+- [ ] 12-01-PLAN.md — Architecture comparison: build SimpleLSTM/Transformer/XGBoost and sweep all 6 models across horizons 1,3,5,8,10
+- [ ] 12-02-PLAN.md — TCN ablation (5 variants) and multi-seed reproducibility (5 seeds, 4ch+7ch)
 
 ### Phase 13: Caregiver App and Pilot Preparation
 **Goal**: A live caregiver-facing app is deployed on Streamlit Cloud with a working QR code, patient profiles, session logging, and all CSEF presentation materials are ready
@@ -108,7 +111,7 @@ Plans:
 | 9. Propagate & Recompile | v2.0 | 2/2 | Complete | 2026-03-18 |
 | 10. Scope Lock and Foundation | v3.0 | 0/TBD | Not started | - |
 | 11. Real-Time Inference Pipeline | 3/3 | Complete    | 2026-03-21 | - |
-| 12. Architecture Comparison Study | v3.0 | 0/TBD | Not started | - |
+| 12. Architecture Comparison Study | v3.0 | 0/2 | Planned | - |
 | 13. Caregiver App and Pilot Preparation | v3.0 | 0/TBD | Not started | - |
 
 ---
