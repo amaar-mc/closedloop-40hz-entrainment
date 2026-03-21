@@ -130,23 +130,51 @@ class SimulatedEEGAdapter:
 
 
 class _NumpySimulatedAdapter:
-    """Pure-numpy fallback when brainflow is not installed (e.g. cloud deploy)."""
+    """Pure-numpy fallback when brainflow is not installed (e.g. cloud deploy).
+
+    Generates synthetic EEG with alternating high/low gamma-theta coupling
+    to produce realistic PAC fluctuations and stimulus state transitions.
+    Cycle: ~20s high PAC (rest) → ~15s low PAC (stimulate) → repeat.
+    """
 
     def __init__(self, n_channels: int = 4) -> None:
         self.n_channels = n_channels
         self._fs = 250.0
         self._t = 0.0
+        self._window_count = 0
 
     def get_window(self) -> np.ndarray:
         time.sleep(WINDOW_DURATION_SEC)
         t = np.arange(WINDOW_SAMPLES) / self._fs + self._t
         self._t += WINDOW_DURATION_SEC
+        self._window_count += 1
+
+        # Slow oscillation in gamma coupling strength (~35s cycle)
+        cycle_phase = (self._t % 35.0) / 35.0
+        # Smooth transitions: high coupling 0-0.57 (20s), low 0.57-1.0 (15s)
+        if cycle_phase < 0.4:
+            gamma_strength = 1.5 + 0.3 * np.sin(2 * np.pi * cycle_phase * 2.5)
+        elif cycle_phase < 0.57:
+            # Transition down
+            blend = (cycle_phase - 0.4) / 0.17
+            gamma_strength = 1.5 * (1 - blend) + 0.2 * blend
+        elif cycle_phase < 0.83:
+            gamma_strength = 0.2 + 0.1 * np.sin(2 * np.pi * cycle_phase * 3)
+        else:
+            # Transition up
+            blend = (cycle_phase - 0.83) / 0.17
+            gamma_strength = 0.2 * (1 - blend) + 1.5 * blend
+
         window = np.zeros((self.n_channels, WINDOW_SAMPLES), dtype=np.float32)
         for ch in range(self.n_channels):
-            theta = 5.0 * np.sin(2 * np.pi * 6 * t + ch)
-            gamma = 0.8 * np.sin(2 * np.pi * 40 * t + ch * 0.5)
-            noise = np.random.randn(WINDOW_SAMPLES).astype(np.float32) * 2.0
-            window[ch] = (theta + gamma + noise).astype(np.float32)
+            theta = 8.0 * np.sin(2 * np.pi * 6 * t + ch * 0.7)
+            theta_phase = 2 * np.pi * 6 * t + ch * 0.7
+            # Phase-amplitude coupling: gamma amplitude modulated by theta phase
+            gamma_env = (1 + np.cos(theta_phase)) / 2  # peaks at theta peak
+            gamma = gamma_strength * gamma_env * np.sin(2 * np.pi * 40 * t + ch)
+            alpha = 3.0 * np.sin(2 * np.pi * 10 * t + ch * 1.2)
+            noise = np.random.randn(WINDOW_SAMPLES).astype(np.float32) * 1.5
+            window[ch] = (theta + gamma + alpha + noise).astype(np.float32)
         return window
 
     def close(self) -> None:
