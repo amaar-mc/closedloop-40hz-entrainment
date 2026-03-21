@@ -127,7 +127,7 @@ Plans:
 | 10. Scope Lock and Foundation | v3.0 | 0/TBD | Not started | - |
 | 11. Real-Time Inference Pipeline | 3/3 | Complete    | 2026-03-21 | - |
 | 12. Architecture Comparison Study | 2/2 | Complete    | 2026-03-21 | - |
-| 12.1 Improved TCN | 2/2 | Complete   | 2026-03-21 | - |
+| 12.1 Improved TCN | 2/2 | Complete    | 2026-03-21 | - |
 | 13. Caregiver App and Pilot Preparation | v3.0 | 0/TBD | Not started | - |
 
 ---
