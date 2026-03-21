@@ -63,7 +63,7 @@
   2. Running the simulated adapter produces a working demo session with PAC predictions and stimulus decisions visible in the terminal — no hardware required
   3. Muse 2 BrainFlow integration is either working (streams 4-channel EEG into retrained model) or documented as non-viable with fallback to simulated mode confirmed
   4. TCN, XGBoost, and Transformer can be selected via a single config flag or CLI argument — swapping models does not require code changes
-**Plans:** 3 plans
+**Plans:** 2/3 plans executed
 Plans:
 - [ ] 11-01-PLAN.md — StreamingFeatureExtractor with causal sosfilt and parity verification
 - [ ] 11-02-PLAN.md — SimulatedEEGAdapter (BrainFlow) and TemporalModel registry with TCN wrapper
@@ -107,7 +107,7 @@ Plans:
 | 8. Fix Internal Consistency | v2.0 | 2/2 | Complete | 2026-03-18 |
 | 9. Propagate & Recompile | v2.0 | 2/2 | Complete | 2026-03-18 |
 | 10. Scope Lock and Foundation | v3.0 | 0/TBD | Not started | - |
-| 11. Real-Time Inference Pipeline | v3.0 | 0/3 | Planned | - |
+| 11. Real-Time Inference Pipeline | 2/3 | In Progress|  | - |
 | 12. Architecture Comparison Study | v3.0 | 0/TBD | Not started | - |
 | 13. Caregiver App and Pilot Preparation | v3.0 | 0/TBD | Not started | - |
 
