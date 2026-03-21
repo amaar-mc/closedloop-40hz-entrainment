@@ -1,0 +1,99 @@
+[
+  {
+    "variant": "Full TCN",
+    "config": {
+      "dilations": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "pool_type": "attention",
+      "norm": "GroupNorm"
+    },
+    "n_params": 29507,
+    "best_epoch": 17,
+    "val_r2": 0.4585684537887573,
+    "test_r2": 0.1124383807182312,
+    "test_rmse": 3.856605326291174e-05,
+    "delta_r2_vs_full": 0.0,
+    "train_seconds": 55.7
+  },
+  {
+    "variant": "No attention (last step)",
+    "config": {
+      "dilations": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "pool_type": "last_step",
+      "norm": "GroupNorm"
+    },
+    "n_params": 29442,
+    "best_epoch": 29,
+    "val_r2": 0.46553152799606323,
+    "test_r2": 0.2674800157546997,
+    "test_rmse": 3.503609332256019e-05,
+    "delta_r2_vs_full": 0.155042,
+    "train_seconds": 68.4
+  },
+  {
+    "variant": "Single dilation (no multi-scale)",
+    "config": {
+      "dilations": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "pool_type": "attention",
+      "norm": "GroupNorm"
+    },
+    "n_params": 29507,
+    "best_epoch": 34,
+    "val_r2": 0.3578234910964966,
+    "test_r2": 0.12453007698059082,
+    "test_rmse": 3.830244895652868e-05,
+    "delta_r2_vs_full": 0.012092,
+    "train_seconds": 84.4
+  },
+  {
+    "variant": "Single block",
+    "config": {
+      "dilations": [
+        1
+      ],
+      "pool_type": "attention",
+      "norm": "GroupNorm"
+    },
+    "n_params": 16259,
+    "best_epoch": 7,
+    "val_r2": 0.33490437269210815,
+    "test_r2": 0.08522689342498779,
+    "test_rmse": 3.9152779208961874e-05,
+    "delta_r2_vs_full": -0.027211,
+    "train_seconds": 23.7
+  },
+  {
+    "variant": "No GroupNorm",
+    "config": {
+      "dilations": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "pool_type": "attention",
+      "norm": "Identity"
+    },
+    "n_params": 28995,
+    "best_epoch": 30,
+    "val_r2": 0.3866842985153198,
+    "test_r2": 0.12110006809234619,
+    "test_rmse": 3.8377405871869996e-05,
+    "delta_r2_vs_full": 0.008662,
+    "train_seconds": 50.3
+  }
+]
