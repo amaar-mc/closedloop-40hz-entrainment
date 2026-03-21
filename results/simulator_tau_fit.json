@@ -1,0 +1,298 @@
+{
+  "tau_rise_median": 0.6392444995611513,
+  "tau_rise_q25": 0.4936491400918129,
+  "tau_rise_q75": 0.7552511405376924,
+  "tau_rise_n_subjects": 32,
+  "tau_decay_median": 0.7556894308408146,
+  "tau_decay_q25": 0.5686478788474177,
+  "tau_decay_q75": 0.905872684045825,
+  "tau_decay_n_subjects": 29,
+  "tau_decay_n_pooled": 33,
+  "tau_decay_method": "pooled_across_subjects",
+  "heuristic_tau_rise": 0.15,
+  "heuristic_tau_decay": 0.1,
+  "per_subject": [
+    {
+      "tau_rise": 0.4148953041694093,
+      "tau_decay": 0.3505118196855567,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 11,
+      "subject": "sub-01"
+    },
+    {
+      "tau_rise": 0.6703249834209187,
+      "tau_decay": 0.9709558150137855,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 11,
+      "subject": "sub-02"
+    },
+    {
+      "tau_rise": 0.8094933065564238,
+      "tau_decay": null,
+      "n_rise_transitions": 4,
+      "n_decay_transitions": 0,
+      "n_epochs": 11,
+      "subject": "sub-03"
+    },
+    {
+      "tau_rise": 0.756156938563226,
+      "tau_decay": 1.0,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 11,
+      "subject": "sub-04"
+    },
+    {
+      "tau_rise": 0.49623467612884525,
+      "tau_decay": 0.909308539836547,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 11,
+      "subject": "sub-05"
+    },
+    {
+      "tau_rise": 0.7152446518170851,
+      "tau_decay": 0.9933240982310398,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 11,
+      "subject": "sub-06"
+    },
+    {
+      "tau_rise": 0.813523288809625,
+      "tau_decay": 0.8172232431051624,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 11,
+      "subject": "sub-07"
+    },
+    {
+      "tau_rise": 0.599901781195254,
+      "tau_decay": null,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 0,
+      "n_epochs": 11,
+      "subject": "sub-08"
+    },
+    {
+      "tau_rise": 0.6197751537128916,
+      "tau_decay": 0.7664274232321825,
+      "n_rise_transitions": 4,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-09"
+    },
+    {
+      "tau_rise": 0.8952022941985421,
+      "tau_decay": 0.9577075518359734,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-10"
+    },
+    {
+      "tau_rise": 0.6384095869161583,
+      "tau_decay": 0.7556894308408146,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-11"
+    },
+    {
+      "tau_rise": 0.7549492078625145,
+      "tau_decay": 0.615409471471527,
+      "n_rise_transitions": 5,
+      "n_decay_transitions": 2,
+      "n_epochs": 19,
+      "subject": "sub-12"
+    },
+    {
+      "tau_rise": null,
+      "tau_decay": 0.9037083931516889,
+      "n_rise_transitions": 2,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-13"
+    },
+    {
+      "tau_rise": 0.5496882591515999,
+      "tau_decay": 0.11982734039152808,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-14"
+    },
+    {
+      "tau_rise": 0.6400794122061442,
+      "tau_decay": 0.8884458185587172,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-15"
+    },
+    {
+      "tau_rise": 0.6725791219345405,
+      "tau_decay": 0.5122912001275732,
+      "n_rise_transitions": 4,
+      "n_decay_transitions": 2,
+      "n_epochs": 19,
+      "subject": "sub-16"
+    },
+    {
+      "tau_rise": 0.7809806659823069,
+      "tau_decay": null,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 0,
+      "n_epochs": 19,
+      "subject": "sub-17"
+    },
+    {
+      "tau_rise": 0.3828514788500586,
+      "tau_decay": 0.9970383466167472,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-18"
+    },
+    {
+      "tau_rise": 0.3495405492950543,
+      "tau_decay": 0.9173038865703832,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-19"
+    },
+    {
+      "tau_rise": 0.37125854774982014,
+      "tau_decay": 0.7098168231792032,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-20"
+    },
+    {
+      "tau_rise": 0.47292132596461767,
+      "tau_decay": 0.44318704382367224,
+      "n_rise_transitions": 4,
+      "n_decay_transitions": 2,
+      "n_epochs": 19,
+      "subject": "sub-21"
+    },
+    {
+      "tau_rise": 0.6780084518108366,
+      "tau_decay": 0.8945719848725096,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-22"
+    },
+    {
+      "tau_rise": 0.7251688536654428,
+      "tau_decay": 0.8968881176819271,
+      "n_rise_transitions": 4,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-23"
+    },
+    {
+      "tau_rise": 0.8795691149747719,
+      "tau_decay": null,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 0,
+      "n_epochs": 19,
+      "subject": "sub-24"
+    },
+    {
+      "tau_rise": 0.35260892073519434,
+      "tau_decay": 0.21844368779768128,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-25"
+    },
+    {
+      "tau_rise": 0.7023970863603038,
+      "tau_decay": 0.40312591525179764,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 2,
+      "n_epochs": 19,
+      "subject": "sub-26"
+    },
+    {
+      "tau_rise": 0.4858925319807158,
+      "tau_decay": 0.9974941531279303,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-27"
+    },
+    {
+      "tau_rise": 0.6030624175448128,
+      "tau_decay": 0.7120389208703787,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-28"
+    },
+    {
+      "tau_rise": 0.5478332347305026,
+      "tau_decay": null,
+      "n_rise_transitions": 4,
+      "n_decay_transitions": 0,
+      "n_epochs": 19,
+      "subject": "sub-29"
+    },
+    {
+      "tau_rise": 0.8259228453578109,
+      "tau_decay": 0.905872684045825,
+      "n_rise_transitions": 4,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-30"
+    },
+    {
+      "tau_rise": 0.44794201170353576,
+      "tau_decay": null,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 0,
+      "n_epochs": 19,
+      "subject": "sub-31"
+    },
+    {
+      "tau_rise": 0.5177627171716306,
+      "tau_decay": 0.6264864233413332,
+      "n_rise_transitions": 4,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-32"
+    },
+    {
+      "tau_rise": null,
+      "tau_decay": 0.1441824033925083,
+      "n_rise_transitions": 2,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-33"
+    },
+    {
+      "tau_rise": null,
+      "tau_decay": 0.41744840229263763,
+      "n_rise_transitions": 2,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-34"
+    },
+    {
+      "tau_rise": 0.7732793038340857,
+      "tau_decay": 0.6412906529442578,
+      "n_rise_transitions": 3,
+      "n_decay_transitions": 1,
+      "n_epochs": 19,
+      "subject": "sub-35"
+    }
+  ],
+  "fit_method": "exponential_approach_median_per_subject",
+  "data_source": "multiscale_temporal_lb20_hz5_ts1"
+}
