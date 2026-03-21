@@ -10,8 +10,8 @@ Requirements for CSEF 2026 (judging: 2026-04-09). Each maps to roadmap phases.
 ### Research Deepening
 
 - [ ] **RSRCH-01**: Architecture comparison study — train XGBoost + Transformer on existing multiscale dataset, produce comparison table across horizons 1-10s vs existing TCN/LSTM/Ridge/persistence
-- [ ] **RSRCH-02**: Ablation study — TCN with components removed (GroupNorm off, attention off, multi-scale off, single dilation) to quantify each component's contribution with before/after R²
-- [ ] **RSRCH-03**: Multi-seed reproducibility — 3-5 seeds per model, report mean ± std R² to prove results aren't a lucky seed
+- [x] **RSRCH-02**: Ablation study — TCN with components removed (GroupNorm off, attention off, multi-scale off, single dilation) to quantify each component's contribution with before/after R²
+- [x] **RSRCH-03**: Multi-seed reproducibility — 3-5 seeds per model, report mean ± std R² to prove results aren't a lucky seed
 - [ ] **RSRCH-04**: Simulation defense — fit simulator τ parameters from real data or cite literature, document why simulation is valid for controller comparison
 - [ ] **RSRCH-05**: Retrain EEGNet and TCN on 4-channel subset matching Muse 2 electrode positions (F7≈AF7, F8≈AF8, + 2 nearest TP9/TP10), evaluate performance gap vs 7-channel research-grade baseline
 
@@ -69,8 +69,8 @@ Deferred to post-CSEF. Tracked but not in current roadmap.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | RSRCH-01 | Phase 12 | Pending |
-| RSRCH-02 | Phase 12 | Pending |
-| RSRCH-03 | Phase 12 | Pending |
+| RSRCH-02 | Phase 12 | Complete |
+| RSRCH-03 | Phase 12 | Complete |
 | RSRCH-04 | Phase 10 | Pending |
 | RSRCH-05 | Phase 10 | Pending |
 | RTINF-01 | Phase 11 | Complete |
