@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v3.0
 milestone_name: Deepen Research
-status: executing
-stopped_at: Completed 13-caregiver-app-and-pilot-preparation/13-01-PLAN.md
-last_updated: "2026-03-21T08:40:36.871Z"
-last_activity: 2026-03-21 — Completed 13-01 deployment scaffolding and caregiver app skeleton
+status: completed
+stopped_at: Completed 13-caregiver-app-and-pilot-preparation/13-03-PLAN.md
+last_updated: "2026-03-21T09:00:12.863Z"
+last_activity: 2026-03-21 — Completed 13-03 presentation materials (elevator pitch, clinical roadmap, flyer PDF, QR codes)
 progress:
   total_phases: 5
-  completed_phases: 3
+  completed_phases: 5
   total_plans: 10
-  completed_plans: 8
-  percent: 93
+  completed_plans: 10
+  percent: 100
 ---
 
 # Project State: Research Documentation Project
@@ -26,11 +26,11 @@ See: .planning/PROJECT.md (updated 2026-03-20)
 ## Current Position
 
 Phase: 13 of 13 (Caregiver App and Pilot Preparation)
-Plan: 1 of 3 in current phase
-Status: Executing
-Last activity: 2026-03-21 — Completed 13-01 deployment scaffolding and caregiver app skeleton
+Plan: 3 of 3 in current phase
+Status: Complete
+Last activity: 2026-03-21 — Completed 13-03 presentation materials (elevator pitch, clinical roadmap, flyer PDF, QR codes)
 
-Progress: [█████████░] 93%
+Progress: [##########] 100%
 
 ## Performance Metrics
 
@@ -54,6 +54,8 @@ Progress: [█████████░] 93%
 | Phase 12.1-improved-tcn-enhanced-features-multi-task-self-attention P01 | 18 | 1 tasks | 3 files |
 | Phase 12.1-improved-tcn-enhanced-features-multi-task-self-attention P02 | 7 | 2 tasks | 5 files |
 | Phase 13 P01 | 196 | 2 tasks | 6 files |
+| Phase 13 P02 | 32 | 3 tasks | 1 files |
+| Phase 13 P03 | 12 | 3 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -71,6 +73,11 @@ Progress: [█████████░] 93%
 - 12.1-02: 4ch ImprovedTCN beats baseline (+0.054 R2 at hz=5); 7ch degrades (-0.195) — 2.3x more params overfit at same 11K dataset size. Evaluation uses future head only for apples-to-apples baseline comparison.
 - 13-01: Model artifacts tracked in models/muse_4ch/ subdirectory — gitignore models/*.pth only catches top-level, no exception needed.
 - 13-01: 3 demo patients with (Demo) suffix and realistic PAC ranges (0.000045-0.000068) matching actual dataset values.
+- 13-02: EEGNet constructor uses n_samples=500 (not n_times) and no n_classes -- actual class signature differs from plan spec.
+- 13-02: 40 Hz click-train WAV via scipy.io.wavfile cached with st.cache_data; Real EEG Mode toggle disabled with BLE tooltip (APP-03).
+- 13-03: Elevator pitch framed as "predictive model for neural state" not "AI for Alzheimer's" — scientifically honest framing for CSEF judges.
+- 13-03: Clinical roadmap uses 3-phase approach (observational, feasibility, comparative) matching real clinical trial design.
+- 13-03: QR generation and PDF generation split into separate CLI scripts for independent re-runs when URLs change.
 
 ### Roadmap Evolution
 - Phase 12.1 inserted after Phase 12: Improved TCN: Enhanced Features + Multi-Task + Self-Attention (URGENT)
@@ -83,6 +90,6 @@ Progress: [█████████░] 93%
 
 ## Session Continuity
 
-Last session: 2026-03-21T08:40:36.869Z
-Stopped at: Completed 13-caregiver-app-and-pilot-preparation/13-01-PLAN.md
+Last session: 2026-03-21T09:00:12.861Z
+Stopped at: Completed 13-caregiver-app-and-pilot-preparation/13-03-PLAN.md
 Resume file: None

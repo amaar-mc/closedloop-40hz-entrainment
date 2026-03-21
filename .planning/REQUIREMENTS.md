@@ -32,10 +32,10 @@ Requirements for CSEF 2026 (judging: 2026-04-09). Each maps to roadmap phases.
 
 ### Presentation & Pilot
 
-- [ ] **PRES-01**: 1-minute elevator pitch script framed as "predictive model for neural state with temporal forecasting" — not "AI for Alzheimer's"
-- [ ] **PRES-02**: One-page flyer with QR code linking to live app, for facility leave-behinds and CSEF poster
-- [ ] **PRES-03**: Clinical roadmap document — integration with existing systems, clinical testing plan, remote monitoring vision, community benefit narrative, hardware scaling path (Muse → OpenBCI → clinical)
-- [ ] **PRES-04**: Pilot feedback form (Google Form) to collect structured caregiver feedback from facility demos — becomes "human testing data" for CSEF
+- [x] **PRES-01**: 1-minute elevator pitch script framed as "predictive model for neural state with temporal forecasting" — not "AI for Alzheimer's"
+- [x] **PRES-02**: One-page flyer with QR code linking to live app, for facility leave-behinds and CSEF poster
+- [x] **PRES-03**: Clinical roadmap document — integration with existing systems, clinical testing plan, remote monitoring vision, community benefit narrative, hardware scaling path (Muse → OpenBCI → clinical)
+- [x] **PRES-04**: Pilot feedback form (Google Form) to collect structured caregiver feedback from facility demos — becomes "human testing data" for CSEF
 
 ## Future Requirements
 
@@ -82,10 +82,10 @@ Deferred to post-CSEF. Tracked but not in current roadmap.
 | APP-03 | Phase 13 | Complete |
 | APP-04 | Phase 13 | Complete |
 | APP-05 | Phase 13 | Complete |
-| PRES-01 | Phase 13 | Pending |
-| PRES-02 | Phase 13 | Pending |
-| PRES-03 | Phase 13 | Pending |
-| PRES-04 | Phase 13 | Pending |
+| PRES-01 | Phase 13 | Complete |
+| PRES-02 | Phase 13 | Complete |
+| PRES-03 | Phase 13 | Complete |
+| PRES-04 | Phase 13 | Complete |
 
 **Coverage:**
 - v3.0 requirements: 18 total
