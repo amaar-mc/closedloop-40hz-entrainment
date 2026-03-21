@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v3.0
 milestone_name: Deepen Research
-status: completed
-stopped_at: Completed 13-caregiver-app-and-pilot-preparation/13-03-PLAN.md
-last_updated: "2026-03-21T09:18:22.156Z"
-last_activity: 2026-03-21 — Completed 13-03 presentation materials (elevator pitch, clinical roadmap, flyer PDF, QR codes)
+status: in-progress
+stopped_at: Completed 14-scope-lock-completion/14-02-PLAN.md
+last_updated: "2026-03-21T09:45:00Z"
+last_activity: 2026-03-21 — Completed 14-02 4ch vs 7ch R2 gap report (RSRCH-05)
 progress:
-  total_phases: 5
+  total_phases: 7
   completed_phases: 4
-  total_plans: 10
-  completed_plans: 10
+  total_plans: 12
+  completed_plans: 11
   percent: 100
 ---
 
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-20)
 
 **Core value:** Every claim in every document must be verifiably accurate against actual code, data, and results.
-**Current focus:** v3.0 Deepen Research — Phase 13: Caregiver App and Pilot Preparation
+**Current focus:** v3.0 Deepen Research — Phase 14: Scope Lock Completion
 
 ## Current Position
 
-Phase: 13 of 13 (Caregiver App and Pilot Preparation)
-Plan: 3 of 3 in current phase
+Phase: 14 (Scope Lock Completion)
+Plan: 2 of 2 in current phase
 Status: Complete
-Last activity: 2026-03-21 — Completed 13-03 presentation materials (elevator pitch, clinical roadmap, flyer PDF, QR codes)
+Last activity: 2026-03-21 — Completed 14-02 4ch vs 7ch R2 gap report (RSRCH-05)
 
-Progress: [##########] 100%
+Progress: [██████████] 97%
 
 ## Performance Metrics
 
@@ -56,6 +56,7 @@ Progress: [##########] 100%
 | Phase 13 P01 | 196 | 2 tasks | 6 files |
 | Phase 13 P02 | 32 | 3 tasks | 1 files |
 | Phase 13 P03 | 12 | 3 tasks | 8 files |
+| Phase 14-scope-lock-completion P02 | 88 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -78,6 +79,8 @@ Progress: [##########] 100%
 - 13-03: Elevator pitch framed as "predictive model for neural state" not "AI for Alzheimer's" — scientifically honest framing for CSEF judges.
 - 13-03: Clinical roadmap uses 3-phase approach (observational, feasibility, comparative) matching real clinical trial design.
 - 13-03: QR generation and PDF generation split into separate CLI scripts for independent re-runs when URLs change.
+- 14-02: Used dedicated 4ch TCN run R2=0.156 (not sweep 0.112) as primary comparison number -- dedicated run more representative.
+- 14-02: Baseline-relative comparison (TCN vs persistence gain) is the honest metric across configurations with different PAC labels.
 
 ### Roadmap Evolution
 - Phase 12.1 inserted after Phase 12: Improved TCN: Enhanced Features + Multi-Task + Self-Attention (URGENT)
@@ -90,6 +93,6 @@ Progress: [##########] 100%
 
 ## Session Continuity
 
-Last session: 2026-03-21T09:00:12.861Z
-Stopped at: Completed 13-caregiver-app-and-pilot-preparation/13-03-PLAN.md
+Last session: 2026-03-21T09:45:00Z
+Stopped at: Completed 14-scope-lock-completion/14-02-PLAN.md
 Resume file: None

@@ -121,7 +121,7 @@ Plans:
 **Success Criteria** (what must be TRUE):
   1. src/simulator.py docstring cites Iaccarino et al. (2016) for τ_rise and τ_decay values, OR fit_simulator_params.py exists and produces fitted values from real data
   2. A formal 4ch vs 7ch R² gap report exists in results/ documenting the performance comparison from existing trained models
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 Plans:
 - [ ] 14-01-PLAN.md — fit_simulator_params.py: fit τ_rise and τ_decay from real PAC transition data in the multiscale temporal dataset
 - [ ] 14-02-PLAN.md — results/4ch_vs_7ch_r2_gap_report.md: formal R² gap report from existing models/muse_4ch/ artifacts
@@ -158,7 +158,7 @@ Plans:
 | 12. Architecture Comparison Study | 2/2 | Complete    | 2026-03-21 | - |
 | 12.1 Improved TCN | 2/2 | Complete    | 2026-03-21 | - |
 | 13. Caregiver App and Pilot Preparation | 3/3 | Complete    | 2026-03-21 | - |
-| 14. Scope Lock Completion (Gap Closure) | v3.0 | 0/2 | Not started | - |
+| 14. Scope Lock Completion (Gap Closure) | 1/2 | In Progress|  | - |
 | 15. Deploy and Finalize QR Codes (Gap Closure) | v3.0 | 0/TBD | Not started | - |
 
 ---
