@@ -113,9 +113,31 @@ Plans:
 - [x] 13-02-PLAN.md — Live session loop: EEG inference, 40 Hz audio via st.audio, PAC trend chart, session summary (APP-02, APP-03, APP-04)
 - [x] 13-03-PLAN.md — Elevator pitch, clinical roadmap, facility flyer PDF, QR code generation, pilot feedback form (PRES-01, PRES-02, PRES-03, PRES-04)
 
+### Phase 14: Scope Lock Completion (Gap Closure)
+**Goal**: Close RSRCH-04 and RSRCH-05 gaps — simulator τ values are cited to literature or fit from data, and 4ch vs 7ch performance gap is formally documented
+**Depends on**: None (uses existing artifacts in src/simulator.py and models/muse_4ch/)
+**Requirements**: RSRCH-04, RSRCH-05
+**Gap Closure**: Closes gaps from v3.0 milestone audit
+**Success Criteria** (what must be TRUE):
+  1. src/simulator.py docstring cites Iaccarino et al. (2016) for τ_rise and τ_decay values, OR fit_simulator_params.py exists and produces fitted values from real data
+  2. A formal 4ch vs 7ch R² gap report exists in results/ documenting the performance comparison from existing trained models
+**Plans**: TBD
+
+### Phase 15: Deploy and Finalize QR Codes (Gap Closure)
+**Goal**: Caregiver app is live on Streamlit Cloud with real QR codes on the flyer and a working Google Form for pilot feedback
+**Depends on**: Phase 13 (app code complete), Phase 14 (optional — deployment can proceed independently)
+**Requirements**: APP-05, PRES-02, PRES-04
+**Gap Closure**: Closes gaps from v3.0 milestone audit
+**Success Criteria** (what must be TRUE):
+  1. caregiver_app.py is deployed and accessible via a Streamlit Cloud HTTPS URL
+  2. docs/flyer/qr_app.png encodes the real deployed app URL (not a placeholder)
+  3. A Google Form for pilot feedback exists with at least one test response, and docs/flyer/qr_feedback.png encodes its URL
+  4. docs/flyer/facility_flyer.pdf has been regenerated with real QR codes
+**Plans**: TBD
+
 ## Progress
 
-**Execution Order:** 10 → 11 → 12 → 12.1 → 13
+**Execution Order:** 10 → 11 → 12 → 12.1 → 13 → 14 → 15
 
 | Phase | Milestone | Plans Complete | Status | Completed |
 |-------|-----------|----------------|--------|-----------|
@@ -133,6 +155,8 @@ Plans:
 | 12. Architecture Comparison Study | 2/2 | Complete    | 2026-03-21 | - |
 | 12.1 Improved TCN | 2/2 | Complete    | 2026-03-21 | - |
 | 13. Caregiver App and Pilot Preparation | 3/3 | Complete    | 2026-03-21 | - |
+| 14. Scope Lock Completion (Gap Closure) | v3.0 | 0/TBD | Not started | - |
+| 15. Deploy and Finalize QR Codes (Gap Closure) | v3.0 | 0/TBD | Not started | - |
 
 ---
 
