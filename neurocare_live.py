@@ -341,8 +341,8 @@ def live_fragment():
         with torch.no_grad():
             pred_norm = pac_stim_tcn(seq_tensor).item()
         # Denormalize: prediction is in z-score space of training targets
-        yf_mean = float(tcn_scalers["yf_mean"])
-        yf_std = float(tcn_scalers["yf_std"])
+        yf_mean = float(tcn_scalers["y_future_mean"])
+        yf_std = float(tcn_scalers["y_future_std"])
         future_pac = pred_norm * yf_std + yf_mean
         future_display = pac_to_display_adaptive(future_pac, st.session_state.pac_raw_history)
         has_prediction = True
@@ -435,23 +435,32 @@ def live_fragment():
         for band_name in BAND_RANGES:
             vals = st.session_state.band_history[band_name][-30:]
             if len(vals) > 1:
-                arr = np.array(vals)
-                mx = arr.max() if arr.max() > 0 else 1.0
-                band_df_data[band_name] = (arr / mx).tolist()
+                band_df_data[band_name] = list(vals)
         if band_df_data:
             max_len = max(len(v) for v in band_df_data.values())
             for k in band_df_data:
                 while len(band_df_data[k]) < max_len:
                     band_df_data[k].insert(0, 0.0)
-            st.line_chart(pd.DataFrame(band_df_data), use_container_width=True)
+            band_df = pd.DataFrame(band_df_data)
+            band_df.index.name = "window"
+            band_long = band_df.reset_index().melt(
+                id_vars="window", var_name="Band", value_name="Power"
+            )
+            st.vega_lite_chart(band_long, {
+                "mark": "line",
+                "encoding": {
+                    "x": {"field": "window", "type": "quantitative", "title": "Window"},
+                    "y": {"field": "Power", "type": "quantitative", "title": "Power (µV²)",
+                           "scale": {"domain": [0, max(1e-6, band_long["Power"].quantile(0.99) * 1.2)]}},
+                    "color": {"field": "Band", "type": "nominal"},
+                },
+                "width": "container", "height": 200,
+            }, use_container_width=True)
 
         # Per-channel gamma
         st.markdown("#### Per-Channel Gamma (µV²)")
         gamma_powers = band_powers["Gamma"]
-        gamma_df = pd.DataFrame(
-            {"Power": gamma_powers},
-            index=CHANNEL_NAMES,
-        )
+        gamma_df = pd.DataFrame({"Power": gamma_powers}, index=CHANNEL_NAMES)
         st.bar_chart(gamma_df, use_container_width=True, color="#EF4444")
 
     with col_pac:
@@ -465,14 +474,38 @@ def live_fragment():
                 pac_df_data["Predicted (5s)"] = [
                     v if v is not None else np.nan for v in future_vals
                 ]
-            st.line_chart(pd.DataFrame(pac_df_data), use_container_width=True)
+            pac_df = pd.DataFrame(pac_df_data)
+            pac_df.index.name = "window"
+            pac_long = pac_df.reset_index().melt(
+                id_vars="window", var_name="Metric", value_name="Value"
+            )
+            st.vega_lite_chart(pac_long, {
+                "mark": "line",
+                "encoding": {
+                    "x": {"field": "window", "type": "quantitative", "title": "Window"},
+                    "y": {"field": "Value", "type": "quantitative", "title": "Brain Sync (0-100)",
+                           "scale": {"domain": [0, 100]}},
+                    "color": {"field": "Metric", "type": "nominal"},
+                },
+                "width": "container", "height": 250,
+            }, use_container_width=True)
 
-        # Z-score trend
+        # Z-score trend — fixed axis [-3, 3]
         if len(st.session_state.z_score_history) > 1:
             st.markdown("#### Session Z-Score")
             z_data = st.session_state.z_score_history[-60:]
             z_df = pd.DataFrame({"Z-Score": z_data})
-            st.line_chart(z_df, use_container_width=True)
+            z_df.index.name = "window"
+            z_df = z_df.reset_index()
+            st.vega_lite_chart(z_df, {
+                "mark": "line",
+                "encoding": {
+                    "x": {"field": "window", "type": "quantitative"},
+                    "y": {"field": "Z-Score", "type": "quantitative",
+                           "scale": {"domain": [-3, 3]}},
+                },
+                "width": "container", "height": 150,
+            }, use_container_width=True)
 
     # --- Row 3: Raw EEG + Stimulus timeline ---
     col_eeg, col_stim = st.columns(2)
@@ -484,17 +517,36 @@ def live_fragment():
             {ch: eeg_window[i, :] for i, ch in enumerate(CHANNEL_NAMES)},
             index=t_axis,
         )
-        st.line_chart(eeg_df, use_container_width=True)
+        eeg_df.index.name = "time_s"
+        eeg_long = eeg_df.reset_index().melt(
+            id_vars="time_s", var_name="Channel", value_name="µV"
+        )
+        st.vega_lite_chart(eeg_long, {
+            "mark": "line",
+            "encoding": {
+                "x": {"field": "time_s", "type": "quantitative", "title": "Time (s)"},
+                "y": {"field": "µV", "type": "quantitative",
+                       "scale": {"domain": [-500, 500]}},
+                "color": {"field": "Channel", "type": "nominal"},
+            },
+            "width": "container", "height": 200,
+        }, use_container_width=True)
 
     with col_stim:
         st.markdown("#### Stimulus Timeline")
         if len(st.session_state.stim_history) > 1:
             stim_vals = [1.0 if s else 0.0
                         for s in st.session_state.stim_history[-60:]]
-            st.area_chart(
-                pd.DataFrame({"Stimulus": stim_vals}),
-                use_container_width=True, color="#10B981",
-            )
+            stim_df = pd.DataFrame({"window": range(len(stim_vals)), "Stimulus": stim_vals})
+            st.vega_lite_chart(stim_df, {
+                "mark": {"type": "area", "color": "#10B981"},
+                "encoding": {
+                    "x": {"field": "window", "type": "quantitative"},
+                    "y": {"field": "Stimulus", "type": "quantitative",
+                           "scale": {"domain": [0, 1]}},
+                },
+                "width": "container", "height": 200,
+            }, use_container_width=True)
 
     # --- Decision log ---
     with st.expander("Decision Log (last 10)", expanded=False):
