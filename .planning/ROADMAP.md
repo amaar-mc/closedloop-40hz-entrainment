@@ -38,7 +38,7 @@
 
 - [ ] **Phase 10: Scope Lock and Foundation** - Simulator defense, hardware mode decision, 4-channel Muse 2 model retraining
 - [x] **Phase 11: Real-Time Inference Pipeline** - StreamingFeatureExtractor, SimulatedEEGAdapter, Muse 2 integration, model registry (completed 2026-03-21)
-- [ ] **Phase 12: Architecture Comparison Study** - XGBoost + Transformer training, ablation, multi-seed reproducibility
+- [x] **Phase 12: Architecture Comparison Study** - XGBoost + Transformer training, ablation, multi-seed reproducibility (completed 2026-03-21)
 - [ ] **Phase 13: Caregiver App and Pilot Preparation** - Full caregiver UI, Streamlit Cloud deployment, presentation and pilot materials
 
 ## Phase Details
@@ -77,7 +77,7 @@ Plans:
   1. Comparison table exists with R² and RMSE across horizons 1-10s for at minimum: persistence, Ridge, LSTM, XGBoost, Transformer, and TCN — one file, ready to paste into the paper and poster
   2. Ablation table shows R² impact of removing each TCN component (GroupNorm, attention, multi-scale dilation, single dilation) — TCN's advantage is quantified not claimed
   3. Multi-seed results (3-5 seeds) for TCN report mean ± std R² — a single lucky seed is ruled out
-**Plans:** 1/2 plans executed
+**Plans:** 2/2 plans complete
 Plans:
 - [ ] 12-01-PLAN.md — Architecture comparison: build SimpleLSTM/Transformer/XGBoost and sweep all 6 models across horizons 1,3,5,8,10
 - [ ] 12-02-PLAN.md — TCN ablation (5 variants) and multi-seed reproducibility (5 seeds, 4ch+7ch)
@@ -111,7 +111,7 @@ Plans:
 | 9. Propagate & Recompile | v2.0 | 2/2 | Complete | 2026-03-18 |
 | 10. Scope Lock and Foundation | v3.0 | 0/TBD | Not started | - |
 | 11. Real-Time Inference Pipeline | 3/3 | Complete    | 2026-03-21 | - |
-| 12. Architecture Comparison Study | 1/2 | In Progress|  | - |
+| 12. Architecture Comparison Study | 2/2 | Complete   | 2026-03-21 | - |
 | 13. Caregiver App and Pilot Preparation | v3.0 | 0/TBD | Not started | - |
 
 ---
