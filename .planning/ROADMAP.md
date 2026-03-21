@@ -107,7 +107,7 @@ Plans:
   3. The app displays a real-time PAC trend chart and plays adaptive 40 Hz auditory stimulus with a visual stimulus-active indicator and volume slider
   4. One-page facility flyer exists (PDF, print-ready) with QR code, plain-language description, and contact info — ready to leave at Mission Villa and Valley Medical
   5. Pilot feedback Google Form exists and its QR code is on the poster — at least one test response collected before CSEF judging
-**Plans:** 3 plans
+**Plans:** 1/3 plans executed
 Plans:
 - [ ] 13-01-PLAN.md — Deployment scaffolding, patient profiles JSON, caregiver_app.py skeleton with page router and session history (APP-01, APP-05)
 - [ ] 13-02-PLAN.md — Live session loop: EEG inference, 40 Hz audio via st.audio, PAC trend chart, session summary (APP-02, APP-03, APP-04)
@@ -132,7 +132,7 @@ Plans:
 | 11. Real-Time Inference Pipeline | 3/3 | Complete    | 2026-03-21 | - |
 | 12. Architecture Comparison Study | 2/2 | Complete    | 2026-03-21 | - |
 | 12.1 Improved TCN | 2/2 | Complete    | 2026-03-21 | - |
-| 13. Caregiver App and Pilot Preparation | v3.0 | 0/3 | Not started | - |
+| 13. Caregiver App and Pilot Preparation | 1/3 | In Progress|  | - |
 
 ---
 

@@ -24,11 +24,11 @@ Requirements for CSEF 2026 (judging: 2026-04-09). Each maps to roadmap phases.
 
 ### Caregiver App
 
-- [ ] **APP-01**: Patient profiles — create/select patient, view session history with per-session metrics
+- [x] **APP-01**: Patient profiles — create/select patient, view session history with per-session metrics
 - [ ] **APP-02**: Session management — start/stop therapy sessions, log per-window PAC and stimulus decisions, session completion summary with plain-language metrics
 - [ ] **APP-03**: Caregiver-friendly UI — plain-language labels ("Brain Sync Level" not "PAC value"), volume slider, hardware status indicator, dual-mode toggle (simulated/real EEG)
 - [ ] **APP-04**: Real-time EEG visualization with PAC trend chart and adaptive 40Hz auditory stimulus with visual stimulus-active indicator
-- [ ] **APP-05**: Streamlit Cloud deployment with working QR code that judges and facility visitors can access on their phones
+- [x] **APP-05**: Streamlit Cloud deployment with working QR code that judges and facility visitors can access on their phones
 
 ### Presentation & Pilot
 
@@ -77,11 +77,11 @@ Deferred to post-CSEF. Tracked but not in current roadmap.
 | RTINF-02 | Phase 11 | Complete |
 | RTINF-03 | Phase 11 | Complete |
 | RTINF-04 | Phase 11 | Complete |
-| APP-01 | Phase 13 | Pending |
+| APP-01 | Phase 13 | Complete |
 | APP-02 | Phase 13 | Pending |
 | APP-03 | Phase 13 | Pending |
 | APP-04 | Phase 13 | Pending |
-| APP-05 | Phase 13 | Pending |
+| APP-05 | Phase 13 | Complete |
 | PRES-01 | Phase 13 | Pending |
 | PRES-02 | Phase 13 | Pending |
 | PRES-03 | Phase 13 | Pending |

@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v3.0
 milestone_name: Deepen Research
-status: planning
-stopped_at: Completed 12.1-improved-tcn-enhanced-features-multi-task-self-attention/12.1-02-PLAN.md (ImprovedTCN architecture + multi-task training + 7ch/4ch experiments)
-last_updated: "2026-03-21T04:56:33.076Z"
-last_activity: 2026-03-20 — Roadmap created, 18/18 requirements mapped to 4 phases
+status: executing
+stopped_at: Completed 13-caregiver-app-and-pilot-preparation/13-01-PLAN.md
+last_updated: "2026-03-21T08:40:36.871Z"
+last_activity: 2026-03-21 — Completed 13-01 deployment scaffolding and caregiver app skeleton
 progress:
   total_phases: 5
   completed_phases: 3
-  total_plans: 7
-  completed_plans: 7
-  percent: 0
+  total_plans: 10
+  completed_plans: 8
+  percent: 93
 ---
 
 # Project State: Research Documentation Project
@@ -21,16 +21,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-20)
 
 **Core value:** Every claim in every document must be verifiably accurate against actual code, data, and results.
-**Current focus:** v3.0 Deepen Research — Phase 10: Scope Lock and Foundation
+**Current focus:** v3.0 Deepen Research — Phase 13: Caregiver App and Pilot Preparation
 
 ## Current Position
 
-Phase: 10 of 13 (Scope Lock and Foundation)
-Plan: 0 of TBD in current phase
-Status: Ready to plan
-Last activity: 2026-03-20 — Roadmap created, 18/18 requirements mapped to 4 phases
+Phase: 13 of 13 (Caregiver App and Pilot Preparation)
+Plan: 1 of 3 in current phase
+Status: Executing
+Last activity: 2026-03-21 — Completed 13-01 deployment scaffolding and caregiver app skeleton
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█████████░] 93%
 
 ## Performance Metrics
 
@@ -53,6 +53,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 12-architecture-comparison-study P01 | 102 | 2 tasks | 4 files |
 | Phase 12.1-improved-tcn-enhanced-features-multi-task-self-attention P01 | 18 | 1 tasks | 3 files |
 | Phase 12.1-improved-tcn-enhanced-features-multi-task-self-attention P02 | 7 | 2 tasks | 5 files |
+| Phase 13 P01 | 196 | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -68,6 +69,8 @@ Progress: [░░░░░░░░░░] 0%
 - 11-03: demo_streaming.py --source muse falls back to simulated with warning — never attempts board connection on unpaired host.
 - 12.1-02: norm_first=True in TransformerEncoderLayer — pre-LayerNorm for stable gradients; per-subject causal trailing mean for auxiliary smooth targets prevents cross-subject NPZ contamination.
 - 12.1-02: 4ch ImprovedTCN beats baseline (+0.054 R2 at hz=5); 7ch degrades (-0.195) — 2.3x more params overfit at same 11K dataset size. Evaluation uses future head only for apples-to-apples baseline comparison.
+- 13-01: Model artifacts tracked in models/muse_4ch/ subdirectory — gitignore models/*.pth only catches top-level, no exception needed.
+- 13-01: 3 demo patients with (Demo) suffix and realistic PAC ranges (0.000045-0.000068) matching actual dataset values.
 
 ### Roadmap Evolution
 - Phase 12.1 inserted after Phase 12: Improved TCN: Enhanced Features + Multi-Task + Self-Attention (URGENT)
@@ -80,6 +83,6 @@ Progress: [░░░░░░░░░░] 0%
 
 ## Session Continuity
 
-Last session: 2026-03-21T04:52:46.461Z
-Stopped at: Completed 12.1-improved-tcn-enhanced-features-multi-task-self-attention/12.1-02-PLAN.md (ImprovedTCN architecture + multi-task training + 7ch/4ch experiments)
+Last session: 2026-03-21T08:40:36.869Z
+Stopped at: Completed 13-caregiver-app-and-pilot-preparation/13-01-PLAN.md
 Resume file: None
