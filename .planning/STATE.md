@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v3.0
 milestone_name: Deepen Research
 status: planning
-stopped_at: Completed 12.1-improved-tcn-enhanced-features-multi-task-self-attention/12.1-01-PLAN.md (enhanced feature extractor + 7ch/4ch datasets)
-last_updated: "2026-03-21T04:43:12.141Z"
+stopped_at: Completed 12.1-improved-tcn-enhanced-features-multi-task-self-attention/12.1-02-PLAN.md (ImprovedTCN architecture + multi-task training + 7ch/4ch experiments)
+last_updated: "2026-03-21T04:52:46.463Z"
 last_activity: 2026-03-20 — Roadmap created, 18/18 requirements mapped to 4 phases
 progress:
   total_phases: 5
-  completed_phases: 2
+  completed_phases: 3
   total_plans: 7
-  completed_plans: 6
+  completed_plans: 7
   percent: 0
 ---
 
@@ -52,6 +52,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 12-architecture-comparison-study P02 | 23 | 2 tasks | 4 files |
 | Phase 12-architecture-comparison-study P01 | 102 | 2 tasks | 4 files |
 | Phase 12.1-improved-tcn-enhanced-features-multi-task-self-attention P01 | 18 | 1 tasks | 3 files |
+| Phase 12.1-improved-tcn-enhanced-features-multi-task-self-attention P02 | 7 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -65,6 +66,8 @@ Progress: [░░░░░░░░░░] 0%
 - 11-01: src/streaming/__init__.py conditional import for adapters.py so package remains importable before Plan 03 implements hardware adapters.
 - 11-03: Muse 2 BLE non-viable on Darwin 25.4.0 (BOARD_NOT_READY_ERROR:7 — BLE not enabled); SimulatedEEGAdapter confirmed as shipping demo path (RTINF-02, RTINF-03 complete).
 - 11-03: demo_streaming.py --source muse falls back to simulated with warning — never attempts board connection on unpaired host.
+- 12.1-02: norm_first=True in TransformerEncoderLayer — pre-LayerNorm for stable gradients; per-subject causal trailing mean for auxiliary smooth targets prevents cross-subject NPZ contamination.
+- 12.1-02: 4ch ImprovedTCN beats baseline (+0.054 R2 at hz=5); 7ch degrades (-0.195) — 2.3x more params overfit at same 11K dataset size. Evaluation uses future head only for apples-to-apples baseline comparison.
 
 ### Roadmap Evolution
 - Phase 12.1 inserted after Phase 12: Improved TCN: Enhanced Features + Multi-Task + Self-Attention (URGENT)
@@ -77,6 +80,6 @@ Progress: [░░░░░░░░░░] 0%
 
 ## Session Continuity
 
-Last session: 2026-03-21T04:43:12.139Z
-Stopped at: Completed 12.1-improved-tcn-enhanced-features-multi-task-self-attention/12.1-01-PLAN.md (enhanced feature extractor + 7ch/4ch datasets)
+Last session: 2026-03-21T04:52:46.461Z
+Stopped at: Completed 12.1-improved-tcn-enhanced-features-multi-task-self-attention/12.1-02-PLAN.md (ImprovedTCN architecture + multi-task training + 7ch/4ch experiments)
 Resume file: None
