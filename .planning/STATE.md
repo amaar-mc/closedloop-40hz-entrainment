@@ -3,7 +3,7 @@ gsd_state_version: 1.0
 milestone: v3.0
 milestone_name: Deepen Research
 status: planning
-stopped_at: Completed 11-real-time-inference-pipeline plan 02 (SimulatedEEGAdapter + ModelRegistry)
+stopped_at: Completed 11-real-time-inference-pipeline/11-01-PLAN.md (StreamingFeatureExtractor)
 last_updated: "2026-03-21T01:56:42.603Z"
 last_activity: 2026-03-20 — Roadmap created, 18/18 requirements mapped to 4 phases
 progress:
@@ -57,6 +57,8 @@ Progress: [░░░░░░░░░░] 0%
 - Roadmap: Dual-mode confirmed — simulated EEG is primary PAC control path; Muse 2 for alpha/theta viz only (consumer EEG gamma unreliable).
 - Roadmap: Phase 10 must complete before Phase 11 — 4-channel channel mapping is a hard prerequisite for StreamingFeatureExtractor.
 - Roadmap: RSRCH-04 simulator defense = fit_simulator_params.py or cite Iaccarino et al. (2016) τ values — "empirically extracted" claim is a live judging risk.
+- 11-01: PAC parity test uses valid-range checks — causal sosfilt vs non-causal two-pass is a systematic algorithmic difference, not a tolerance matter.
+- 11-01: src/streaming/__init__.py conditional import for adapters.py so package remains importable before Plan 03 implements hardware adapters.
 
 ### Blockers/Concerns
 
@@ -67,5 +69,5 @@ Progress: [░░░░░░░░░░] 0%
 ## Session Continuity
 
 Last session: 2026-03-21T01:56:42.601Z
-Stopped at: Completed 11-real-time-inference-pipeline plan 02 (SimulatedEEGAdapter + ModelRegistry)
+Stopped at: Completed 11-real-time-inference-pipeline/11-01-PLAN.md (StreamingFeatureExtractor)
 Resume file: None
