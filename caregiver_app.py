@@ -98,7 +98,7 @@ def load_models():
     scalers_path = str(_ROOT / "models/muse_4ch/scalers.npz")
 
     ckpt = torch.load(eegnet_path, map_location=device, weights_only=False)
-    eegnet = EEGNet(n_channels=4, n_times=500, n_classes=1)
+    eegnet = EEGNet(n_channels=4, n_samples=500)
     eegnet.load_state_dict(ckpt["model_state_dict"])
     eegnet.eval()
     pac_mean = float(ckpt.get("pac_mean", 0.0))
