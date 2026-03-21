@@ -39,6 +39,7 @@
 - [ ] **Phase 10: Scope Lock and Foundation** - Simulator defense, hardware mode decision, 4-channel Muse 2 model retraining
 - [x] **Phase 11: Real-Time Inference Pipeline** - StreamingFeatureExtractor, SimulatedEEGAdapter, Muse 2 integration, model registry (completed 2026-03-21)
 - [x] **Phase 12: Architecture Comparison Study** - XGBoost + Transformer training, ablation, multi-seed reproducibility (completed 2026-03-21)
+- [ ] **Phase 12.1: Improved TCN** - Enhanced features + multi-task smoothing + temporal self-attention (URGENT INSERT)
 - [ ] **Phase 13: Caregiver App and Pilot Preparation** - Full caregiver UI, Streamlit Cloud deployment, presentation and pilot materials
 
 ## Phase Details
@@ -82,6 +83,20 @@ Plans:
 - [ ] 12-01-PLAN.md — Architecture comparison: build SimpleLSTM/Transformer/XGBoost and sweep all 6 models across horizons 1,3,5,8,10
 - [ ] 12-02-PLAN.md — TCN ablation (5 variants) and multi-seed reproducibility (5 seeds, 4ch+7ch)
 
+### Phase 12.1: Improved TCN: Enhanced Features + Multi-Task + Self-Attention (INSERTED)
+**Goal**: Improve TCN prediction accuracy on both 7-channel and 4-channel datasets through three stacked improvements (enhanced time-domain features, multi-task auxiliary smoothing, temporal self-attention), producing honest R2 comparisons against Phase 12 baselines
+**Requirements**: IMPROVE-01 (enhanced features), IMPROVE-02 (improved architecture), IMPROVE-03 (training and evaluation)
+**Depends on:** Phase 12
+**Success Criteria** (what must be TRUE):
+  1. Enhanced feature extractor computes Hjorth parameters, sample entropy, and zero-crossing rate per channel from raw EEG windows
+  2. Enhanced datasets exist for both 7ch (108 features) and 4ch (69 features) with correct train/val/test splits
+  3. ImprovedTCN architecture combines causal TCN + temporal self-attention + three-head regression (future, delta, smoothed auxiliary)
+  4. Training results exist for both datasets at horizon=5 with honest R2 delta vs Phase 12 baseline TCN
+**Plans:** 2 plans
+Plans:
+- [ ] 12.1-01-PLAN.md — Enhanced feature extraction and dataset building (7ch + 4ch)
+- [ ] 12.1-02-PLAN.md — Improved TCN architecture, training, and evaluation against baselines
+
 ### Phase 13: Caregiver App and Pilot Preparation
 **Goal**: A live caregiver-facing app is deployed on Streamlit Cloud with a working QR code, patient profiles, session logging, and all CSEF presentation materials are ready
 **Depends on**: Phase 11 (inference pipeline), Phase 12 (comparison results for poster content)
@@ -96,7 +111,7 @@ Plans:
 
 ## Progress
 
-**Execution Order:** 10 → 11 → 12 → 13
+**Execution Order:** 10 → 11 → 12 → 12.1 → 13
 
 | Phase | Milestone | Plans Complete | Status | Completed |
 |-------|-----------|----------------|--------|-----------|
@@ -112,6 +127,7 @@ Plans:
 | 10. Scope Lock and Foundation | v3.0 | 0/TBD | Not started | - |
 | 11. Real-Time Inference Pipeline | 3/3 | Complete    | 2026-03-21 | - |
 | 12. Architecture Comparison Study | 2/2 | Complete    | 2026-03-21 | - |
+| 12.1 Improved TCN | v3.0 | 0/2 | Planning complete | - |
 | 13. Caregiver App and Pilot Preparation | v3.0 | 0/TBD | Not started | - |
 
 ---
