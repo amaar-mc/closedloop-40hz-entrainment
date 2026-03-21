@@ -136,7 +136,9 @@ Plans:
   2. docs/flyer/qr_app.png encodes the real deployed app URL (not a placeholder)
   3. A Google Form for pilot feedback exists with at least one test response, and docs/flyer/qr_feedback.png encodes its URL
   4. docs/flyer/facility_flyer.pdf has been regenerated with real QR codes
-**Plans**: TBD
+**Plans:** 1 plan
+Plans:
+- [ ] 15-01-PLAN.md — Deploy to Streamlit Cloud, create Google Form, regenerate QR codes and flyer PDF (APP-05, PRES-02, PRES-04)
 
 ## Progress
 
@@ -159,7 +161,7 @@ Plans:
 | 12.1 Improved TCN | 2/2 | Complete    | 2026-03-21 | - |
 | 13. Caregiver App and Pilot Preparation | 3/3 | Complete    | 2026-03-21 | - |
 | 14. Scope Lock Completion (Gap Closure) | 1/2 | Complete    | 2026-03-21 | - |
-| 15. Deploy and Finalize QR Codes (Gap Closure) | v3.0 | 0/TBD | Not started | - |
+| 15. Deploy and Finalize QR Codes (Gap Closure) | v3.0 | 0/1 | Not started | - |
 
 ---
 
