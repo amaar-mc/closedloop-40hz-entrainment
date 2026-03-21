@@ -22,7 +22,11 @@ from typing import List, Optional
 
 import numpy as np
 
-from brainflow.board_shim import BoardIds, BoardShim, BrainFlowInputParams, LogLevels
+try:
+    from brainflow.board_shim import BoardIds, BoardShim, BrainFlowInputParams, LogLevels
+    _HAS_BRAINFLOW = True
+except ImportError:
+    _HAS_BRAINFLOW = False
 
 try:
     from scipy.signal import resample as _resample
@@ -123,6 +127,40 @@ class SimulatedEEGAdapter:
 
     def __exit__(self, exc_type: object, exc_val: object, exc_tb: object) -> None:
         self.close()
+
+
+class _NumpySimulatedAdapter:
+    """Pure-numpy fallback when brainflow is not installed (e.g. cloud deploy)."""
+
+    def __init__(self, n_channels: int = 4) -> None:
+        self.n_channels = n_channels
+        self._fs = 250.0
+        self._t = 0.0
+
+    def get_window(self) -> np.ndarray:
+        time.sleep(WINDOW_DURATION_SEC)
+        t = np.arange(WINDOW_SAMPLES) / self._fs + self._t
+        self._t += WINDOW_DURATION_SEC
+        window = np.zeros((self.n_channels, WINDOW_SAMPLES), dtype=np.float32)
+        for ch in range(self.n_channels):
+            theta = 5.0 * np.sin(2 * np.pi * 6 * t + ch)
+            gamma = 0.8 * np.sin(2 * np.pi * 40 * t + ch * 0.5)
+            noise = np.random.randn(WINDOW_SAMPLES).astype(np.float32) * 2.0
+            window[ch] = (theta + gamma + noise).astype(np.float32)
+        return window
+
+    def close(self) -> None:
+        pass
+
+    def __enter__(self) -> "_NumpySimulatedAdapter":
+        return self
+
+    def __exit__(self, exc_type: object, exc_val: object, exc_tb: object) -> None:
+        pass
+
+
+if not _HAS_BRAINFLOW:
+    SimulatedEEGAdapter = _NumpySimulatedAdapter  # type: ignore[misc]
 
 
 class RealEEGAdapter:
