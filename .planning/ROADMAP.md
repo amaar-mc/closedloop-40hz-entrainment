@@ -92,7 +92,7 @@ Plans:
   2. Enhanced datasets exist for both 7ch (108 features) and 4ch (69 features) with correct train/val/test splits
   3. ImprovedTCN architecture combines causal TCN + temporal self-attention + three-head regression (future, delta, smoothed auxiliary)
   4. Training results exist for both datasets at horizon=5 with honest R2 delta vs Phase 12 baseline TCN
-**Plans:** 2 plans
+**Plans:** 1/2 plans executed
 Plans:
 - [ ] 12.1-01-PLAN.md — Enhanced feature extraction and dataset building (7ch + 4ch)
 - [ ] 12.1-02-PLAN.md — Improved TCN architecture, training, and evaluation against baselines
@@ -127,7 +127,7 @@ Plans:
 | 10. Scope Lock and Foundation | v3.0 | 0/TBD | Not started | - |
 | 11. Real-Time Inference Pipeline | 3/3 | Complete    | 2026-03-21 | - |
 | 12. Architecture Comparison Study | 2/2 | Complete    | 2026-03-21 | - |
-| 12.1 Improved TCN | v3.0 | 0/2 | Planning complete | - |
+| 12.1 Improved TCN | 1/2 | In Progress|  | - |
 | 13. Caregiver App and Pilot Preparation | v3.0 | 0/TBD | Not started | - |
 
 ---

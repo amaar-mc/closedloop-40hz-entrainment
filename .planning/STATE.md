@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v3.0
 milestone_name: Deepen Research
 status: planning
-stopped_at: Completed 12-architecture-comparison-study/12-01-PLAN.md (6-model comparison study, 60 evaluations across 5 horizons)
-last_updated: "2026-03-21T04:20:05.244Z"
+stopped_at: Completed 12.1-improved-tcn-enhanced-features-multi-task-self-attention/12.1-01-PLAN.md (enhanced feature extractor + 7ch/4ch datasets)
+last_updated: "2026-03-21T04:43:12.141Z"
 last_activity: 2026-03-20 — Roadmap created, 18/18 requirements mapped to 4 phases
 progress:
-  total_phases: 4
+  total_phases: 5
   completed_phases: 2
-  total_plans: 5
-  completed_plans: 5
+  total_plans: 7
+  completed_plans: 6
   percent: 0
 ---
 
@@ -51,6 +51,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 11-real-time-inference-pipeline P03 | 2100 | 2 tasks | 3 files |
 | Phase 12-architecture-comparison-study P02 | 23 | 2 tasks | 4 files |
 | Phase 12-architecture-comparison-study P01 | 102 | 2 tasks | 4 files |
+| Phase 12.1-improved-tcn-enhanced-features-multi-task-self-attention P01 | 18 | 1 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -65,6 +66,9 @@ Progress: [░░░░░░░░░░] 0%
 - 11-03: Muse 2 BLE non-viable on Darwin 25.4.0 (BOARD_NOT_READY_ERROR:7 — BLE not enabled); SimulatedEEGAdapter confirmed as shipping demo path (RTINF-02, RTINF-03 complete).
 - 11-03: demo_streaming.py --source muse falls back to simulated with warning — never attempts board connection on unpaired host.
 
+### Roadmap Evolution
+- Phase 12.1 inserted after Phase 12: Improved TCN: Enhanced Features + Multi-Task + Self-Attention (URGENT)
+
 ### Blockers/Concerns
 
 - Muse S BLE not viable on current macOS 25.x host — resolved: simulated mode ships, full hardware implementation retained in RealEEGAdapter for future BLE-enabled system.
@@ -73,6 +77,6 @@ Progress: [░░░░░░░░░░] 0%
 
 ## Session Continuity
 
-Last session: 2026-03-21T04:16:16.331Z
-Stopped at: Completed 12-architecture-comparison-study/12-01-PLAN.md (6-model comparison study, 60 evaluations across 5 horizons)
+Last session: 2026-03-21T04:43:12.139Z
+Stopped at: Completed 12.1-improved-tcn-enhanced-features-multi-task-self-attention/12.1-01-PLAN.md (enhanced feature extractor + 7ch/4ch datasets)
 Resume file: None
