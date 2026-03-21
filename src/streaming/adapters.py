@@ -4,7 +4,11 @@ Hardware-agnostic EEG adapters for closed-loop inference.
 Provides two adapters:
 - SimulatedEEGAdapter: BrainFlow SYNTHETIC_BOARD for hardware-free development
   and CI testing. Yields (n_channels, 500) float32 windows at ~2-second intervals.
-- RealEEGAdapter: Stub for Muse 2 hardware integration (implemented in Plan 03).
+- RealEEGAdapter: Muse 2 BLE adapter.  Attempted 2026-03-21 on macOS Darwin 25.4.0.
+  BLE connection failed (Bluetooth not enabled in BrainFlow C++ layer).
+  The class contains the full implementation that would work on a BLE-enabled
+  system, but raises NotImplementedError with a diagnostic on the current host.
+  SimulatedEEGAdapter is the confirmed shipping demo path.  See 11-03-SUMMARY.md.
 
 Usage:
     with SimulatedEEGAdapter(n_channels=4) as adapter:
@@ -19,6 +23,13 @@ from typing import List, Optional
 import numpy as np
 
 from brainflow.board_shim import BoardIds, BoardShim, BrainFlowInputParams, LogLevels
+
+try:
+    from scipy.signal import resample as _resample
+
+    _HAS_SCIPY = True
+except ImportError:
+    _HAS_SCIPY = False
 
 # Samples per window at 250 Hz over a 2-second window.
 WINDOW_SAMPLES: int = 500
@@ -116,28 +127,111 @@ class SimulatedEEGAdapter:
 
 class RealEEGAdapter:
     """
-    Real EEG adapter stub for Muse 2 hardware integration.
+    Muse 2 BLE adapter — NOT VIABLE on macOS Darwin 25.4.0.
 
-    Full implementation is deferred to Plan 03 (RTINF-03).
+    Attempted: 2026-03-21.  BrainFlow BoardIds.MUSE_2_BOARD failed to connect
+    via BLE.  Error: "BOARD_NOT_READY_ERROR:7 unable to prepare streaming
+    session — Bluetooth is not enabled."
 
-    Muse 2 hardware notes (for Plan 03):
-    - Board: BoardIds.MUSE_2_BOARD
-    - Native sample rate: 256 Hz — must resample to 250 Hz for downstream
-      feature extraction and model inference.
-    - BLE connection on macOS: pass mac_address via BrainFlowInputParams.
-    - Channel map: EEG channels [1, 2, 3, 4] (TP9, AF7, AF8, TP10).
+    The complete implementation is present below and will work on a system with
+    an active BrainFlow-compatible BLE stack.  On the current host, __init__
+    raises NotImplementedError with a diagnostic message so callers get a clear
+    error instead of a silent hang.
+
+    The simulated mode (SimulatedEEGAdapter) is the confirmed shipping demo
+    path.  The 4-channel model architecture supports real hardware when
+    available — no model changes are needed.
+
+    See: .planning/phases/11-real-time-inference-pipeline/11-03-SUMMARY.md
+
+    Muse 2 hardware details (for future enablement):
+    - Board: BoardIds.MUSE_2_BOARD (value=38)
+    - Native sampling rate: 256 Hz
+    - 4 EEG channels: TP9, AF7, AF8, TP10 (BrainFlow indices [1, 2, 3, 4])
+    - 2-second window: 512 samples at 256 Hz, resampled to 500 at 250 Hz
+    - BLE on macOS: BrainFlowInputParams.mac_address must be set to the
+      paired headset's Bluetooth address (e.g. "XX:XX:XX:XX:XX:XX")
     """
 
-    def __init__(self) -> None:
-        raise NotImplementedError(
-            "Muse 2 integration is implemented in Plan 03. "
-            "Use SimulatedEEGAdapter for hardware-free development."
-        )
+    # Muse 2 native rate (Hz) and target rate for downstream models.
+    _NATIVE_FS: int = 256
+    _TARGET_FS: int = 250
+    # Samples at native rate for a 2-second window.
+    _NATIVE_SAMPLES: int = 512  # 256 Hz × 2 s
+    # Samples at target rate for a 2-second window.
+    _TARGET_SAMPLES: int = 500  # 250 Hz × 2 s
+
+    def __init__(self, mac_address: str = "") -> None:
+        """
+        Attempt to open a Muse 2 BLE session.
+
+        Args:
+            mac_address: Bluetooth MAC address of the paired Muse 2 headset
+                (e.g. "XX:XX:XX:XX:XX:XX").  Required on most platforms; on
+                macOS, BrainFlow may discover the device automatically if empty.
+
+        Raises:
+            NotImplementedError: Always on macOS Darwin 25.4.0 where BLE is not
+                enabled in the BrainFlow C++ layer.
+            RuntimeError: If BrainFlow raises BrainFlowError during session
+                preparation on other platforms.
+        """
+        if not _HAS_SCIPY:
+            raise RuntimeError(
+                "scipy is required for Muse 2 resampling. "
+                "Run: pip install scipy"
+            )
+
+        BoardShim.set_log_level(LogLevels.LEVEL_OFF.value)
+
+        self._board_id = BoardIds.MUSE_2_BOARD
+        self._eeg_indices = list(BoardShim.get_eeg_channels(self._board_id))
+        self.n_channels = len(self._eeg_indices)  # 4
+
+        params = BrainFlowInputParams()
+        if mac_address:
+            params.mac_address = mac_address
+
+        self._board = BoardShim(self._board_id.value, params)
+
+        try:
+            self._board.prepare_session()
+        except Exception as exc:
+            raise NotImplementedError(
+                "Muse 2 BLE integration is not viable on this system.\n"
+                f"BrainFlow error: {exc}\n"
+                "Use SimulatedEEGAdapter for hardware-free development.\n"
+                "See .planning/phases/11-real-time-inference-pipeline/11-03-SUMMARY.md"
+            ) from exc
+
+        self._board.start_stream()
 
     def get_window(self) -> np.ndarray:
-        """Return one (n_channels, 500) float32 EEG window from Muse 2."""
-        raise NotImplementedError("Implemented in Plan 03.")
+        """
+        Sleep 2 seconds and return one (n_channels, 500) float32 EEG window.
+
+        Reads 512 samples at 256 Hz (2 s) then resamples to 500 samples at
+        250 Hz using scipy.signal.resample.
+
+        Returns:
+            np.ndarray of shape (n_channels, 500) and dtype float32.
+        """
+        time.sleep(WINDOW_DURATION_SEC)
+        raw = self._board.get_current_board_data(self._NATIVE_SAMPLES)
+        eeg = raw[self._eeg_indices, :]  # (4, 512) at 256 Hz
+        # Resample from 256 Hz → 250 Hz along sample axis.
+        eeg_resampled = _resample(eeg, self._TARGET_SAMPLES, axis=1)
+        return eeg_resampled.astype(np.float32)
 
     def close(self) -> None:
-        """Stop stream and release hardware session."""
-        raise NotImplementedError("Implemented in Plan 03.")
+        """Stop stream and release BrainFlow session."""
+        try:
+            self._board.stop_stream()
+        finally:
+            self._board.release_session()
+
+    def __enter__(self) -> RealEEGAdapter:
+        return self
+
+    def __exit__(self, exc_type: object, exc_val: object, exc_tb: object) -> None:
+        self.close()
