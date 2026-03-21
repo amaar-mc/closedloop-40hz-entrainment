@@ -1,0 +1,76 @@
+{
+  "patients": [
+    {
+      "id": "demo-001",
+      "name": "Margaret Chen (Demo)",
+      "age": 74,
+      "diagnosis": "Mild Cognitive Impairment",
+      "sessions": [
+        {
+          "date": "2026-03-10",
+          "duration_min": 20,
+          "brain_sync_level": 0.000052,
+          "therapy_active_pct": 62.3,
+          "targeting_accuracy_pct": 71.5,
+          "notes": "Completed without interruption. Good engagement throughout."
+        },
+        {
+          "date": "2026-03-14",
+          "duration_min": 20,
+          "brain_sync_level": 0.000058,
+          "therapy_active_pct": 68.1,
+          "targeting_accuracy_pct": 74.2,
+          "notes": "Improved sync levels compared to first session."
+        },
+        {
+          "date": "2026-03-18",
+          "duration_min": 20,
+          "brain_sync_level": 0.000063,
+          "therapy_active_pct": 71.4,
+          "targeting_accuracy_pct": 76.8,
+          "notes": "Consistent upward trend. Patient reported feeling alert."
+        }
+      ]
+    },
+    {
+      "id": "demo-002",
+      "name": "Robert Torres (Demo)",
+      "age": 79,
+      "diagnosis": "Early-Stage Alzheimer's",
+      "sessions": [
+        {
+          "date": "2026-03-12",
+          "duration_min": 15,
+          "brain_sync_level": 0.000045,
+          "therapy_active_pct": 55.7,
+          "targeting_accuracy_pct": 68.3,
+          "notes": "Shortened session due to slight fatigue. Baseline established."
+        },
+        {
+          "date": "2026-03-17",
+          "duration_min": 20,
+          "brain_sync_level": 0.000049,
+          "therapy_active_pct": 61.2,
+          "targeting_accuracy_pct": 70.1,
+          "notes": "Full session completed. Slight fatigue noted at minute 18."
+        }
+      ]
+    },
+    {
+      "id": "demo-003",
+      "name": "Dorothy Williams (Demo)",
+      "age": 71,
+      "diagnosis": "Age-Related Memory Decline",
+      "sessions": [
+        {
+          "date": "2026-03-19",
+          "duration_min": 20,
+          "brain_sync_level": 0.000068,
+          "therapy_active_pct": 74.6,
+          "targeting_accuracy_pct": 78.2,
+          "notes": "Strong initial response. First session — will monitor trend."
+        }
+      ]
+    }
+  ]
+}
