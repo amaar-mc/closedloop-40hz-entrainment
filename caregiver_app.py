@@ -15,6 +15,7 @@ Date: March 2026
 
 from __future__ import annotations
 
+import io
 import json
 import sys
 from pathlib import Path
@@ -23,6 +24,7 @@ from typing import Any, Dict, List, Optional
 import numpy as np
 import pandas as pd
 import streamlit as st
+from scipy.io import wavfile
 
 # ---------------------------------------------------------------------------
 # Path setup (matches demo.py pattern)
@@ -56,6 +58,67 @@ LABEL_MAP: Dict[str, str] = {
 def label(key: str) -> str:
     """Map internal metric keys to plain-language labels."""
     return LABEL_MAP.get(key, key.replace("_", " ").title())
+
+
+# ---------------------------------------------------------------------------
+# Audio, model loading, and display helpers (Plan 02)
+# ---------------------------------------------------------------------------
+@st.cache_data
+def make_40hz_wav(volume: float = 0.3, sample_rate: int = 44100) -> bytes:
+    """One second of 40 Hz click-train, loopable WAV bytes for st.audio."""
+    period = sample_rate // 40  # 1102 samples per 40 Hz period
+    click_n = int(0.001 * sample_rate)  # 1 ms click pulse
+    period_buf = np.zeros(period, dtype=np.float32)
+    t = np.arange(click_n, dtype=np.float32) / sample_rate
+    period_buf[:click_n] = volume * np.sin(2 * np.pi * 1000 * t)
+    audio = np.tile(period_buf, 40).astype(np.float32)  # 40 periods = 1 second
+    buf = io.BytesIO()
+    wavfile.write(buf, sample_rate, audio)
+    return buf.getvalue()
+
+
+@st.cache_resource
+def load_models():
+    """Load 4-channel EEGNet + TCNTemporalModel. Cached across reruns.
+
+    Returns (eegnet, pac_mean, pac_std, tcn_model) where:
+    - eegnet: EEGNet nn.Module in eval mode
+    - pac_mean/pac_std: z-score normalization from training
+    - tcn_model: TCNTemporalModel wrapping RealtimePACForecaster
+    """
+    import torch
+    from eegnet import EEGNet
+    from temporal_multiscale.model_registry import TCNTemporalModel
+
+    device = "cpu"  # Cloud-safe; MPS/CUDA not available on Streamlit Cloud
+    eegnet_path = str(_ROOT / "models/muse_4ch/best_eegnet_4ch.pth")
+    tcn_path = str(_ROOT / "models/muse_4ch/best_multiscale_tcn_4ch_lb20_hz5_ts1.pth")
+    # scalers.npz was copied to models/muse_4ch/ by Plan 01 Task 1.
+    # Do NOT use data/processed/... — that path is gitignored and absent on Streamlit Cloud.
+    scalers_path = str(_ROOT / "models/muse_4ch/scalers.npz")
+
+    ckpt = torch.load(eegnet_path, map_location=device, weights_only=False)
+    eegnet = EEGNet(n_channels=4, n_times=500, n_classes=1)
+    eegnet.load_state_dict(ckpt["model_state_dict"])
+    eegnet.eval()
+    pac_mean = float(ckpt.get("pac_mean", 0.0))
+    pac_std = float(ckpt.get("pac_std", 1.0))
+
+    tcn_model = TCNTemporalModel(
+        checkpoint_path=tcn_path, scalers_path=scalers_path, device=device
+    )
+
+    return eegnet, pac_mean, pac_std, tcn_model
+
+
+def pac_to_display(pac_value: float, pac_mean: float, pac_std: float) -> float:
+    """Convert raw PAC to 0-100 Brain Sync Level for caregiver display."""
+    if pac_std == 0.0:
+        return 50.0
+    z = (pac_value - pac_mean) / pac_std
+    # Clamp z to [-3, 3], then map to [0, 100]
+    z_clamped = max(-3.0, min(3.0, z))
+    return round((z_clamped + 3.0) / 6.0 * 100.0, 1)
 
 
 # ---------------------------------------------------------------------------
