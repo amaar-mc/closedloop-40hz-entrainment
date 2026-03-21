@@ -40,7 +40,7 @@
 - [x] **Phase 11: Real-Time Inference Pipeline** - StreamingFeatureExtractor, SimulatedEEGAdapter, Muse 2 integration, model registry (completed 2026-03-21)
 - [x] **Phase 12: Architecture Comparison Study** - XGBoost + Transformer training, ablation, multi-seed reproducibility (completed 2026-03-21)
 - [x] **Phase 12.1: Improved TCN** - Enhanced features + multi-task smoothing + temporal self-attention (URGENT INSERT) (completed 2026-03-21)
-- [ ] **Phase 13: Caregiver App and Pilot Preparation** - Full caregiver UI, Streamlit Cloud deployment, presentation and pilot materials
+- [x] **Phase 13: Caregiver App and Pilot Preparation** - Full caregiver UI, Streamlit Cloud deployment, presentation and pilot materials (completed 2026-03-21)
 
 ## Phase Details
 
@@ -132,7 +132,7 @@ Plans:
 | 11. Real-Time Inference Pipeline | 3/3 | Complete    | 2026-03-21 | - |
 | 12. Architecture Comparison Study | 2/2 | Complete    | 2026-03-21 | - |
 | 12.1 Improved TCN | 2/2 | Complete    | 2026-03-21 | - |
-| 13. Caregiver App and Pilot Preparation | 3/3 | Complete | 2026-03-21 | - |
+| 13. Caregiver App and Pilot Preparation | 3/3 | Complete    | 2026-03-21 | - |
 
 ---
 
