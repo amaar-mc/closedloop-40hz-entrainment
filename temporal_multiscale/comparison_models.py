@@ -209,7 +209,9 @@ def train_pytorch_model(
         for batch in train_loader:
             x = batch["x_seq"].to(device)
             y = batch["y_future"].to(device)
-            pred = model(x)
+            out = model(x)
+            # MultiscaleCausalTCN returns a dict; extract the future head output.
+            pred = out["future"] if isinstance(out, dict) else out
             loss = criterion(pred, y)
             optimizer.zero_grad()
             loss.backward()
@@ -266,7 +268,8 @@ def _eval_r2_norm(
     for batch in loader:
         x = batch["x_seq"].to(device)
         y = batch["y_future"].cpu().numpy()
-        p = model(x).cpu().numpy()
+        out = model(x)
+        p = (out["future"] if isinstance(out, dict) else out).cpu().numpy()
         preds.append(p)
         trues.append(y)
     preds = np.concatenate(preds)
@@ -289,7 +292,8 @@ def _eval_denorm(
     for batch in loader:
         x = batch["x_seq"].to(device)
         y = batch["y_future"].cpu().numpy()
-        p = model(x).cpu().numpy()
+        out = model(x)
+        p = (out["future"] if isinstance(out, dict) else out).cpu().numpy()
         preds_norm.append(p)
         trues_norm.append(y)
     preds_norm = np.concatenate(preds_norm)
