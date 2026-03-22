@@ -189,7 +189,7 @@ def _wav(vol=0.3):
     cn = int(0.001 * sr)
     b = np.zeros(per, dtype=np.float32)
     b[:cn] = vol * np.sin(2 * np.pi * 1000 * np.arange(cn, dtype=np.float32) / sr)
-    audio = np.tile(np.tile(b, 40), 30).astype(np.float32)
+    audio = np.tile(np.tile(b, 40), 3).astype(np.float32)  # 3s, loops via HTML
     o = io.BytesIO()
     wavfile.write(o, sr, audio)
     return o.getvalue()
