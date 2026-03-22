@@ -115,7 +115,12 @@ def load_models():
     pac_stim_tcn.eval()
     tcn_scalers = tcn_ckpt["scalers"]
 
-    return pac_computer, pac_stim_tcn, tcn_scalers
+    # Per-feature normalization stats (model was trained on z-scored features)
+    feat_scalers = np.load(str(_ROOT / "models/muse_4ch/pac_stim_feature_scalers.npz"))
+    feat_mean = feat_scalers["mean"]  # (12,)
+    feat_std = feat_scalers["std"]    # (12,)
+
+    return pac_computer, pac_stim_tcn, tcn_scalers, feat_mean, feat_std
 
 
 # ---------------------------------------------------------------------------
@@ -223,7 +228,7 @@ def init_session():
     """Initialize all session state for a new live session."""
     from src.streaming.adapters import RealEEGAdapter
 
-    pac_computer, pac_stim_tcn, tcn_scalers = load_models()
+    pac_computer, pac_stim_tcn, tcn_scalers, feat_mean, feat_std = load_models()
     adapter = RealEEGAdapter()
 
     st.session_state.update({
@@ -231,6 +236,8 @@ def init_session():
         "pac_computer": pac_computer,
         "pac_stim_tcn": pac_stim_tcn,
         "tcn_scalers": tcn_scalers,
+        "feat_mean": feat_mean,
+        "feat_std": feat_std,
         "adapter": adapter,
         "step_count": 0,
         "stim_active": False,
@@ -326,9 +333,12 @@ def live_fragment():
     future_display = None
     has_prediction = False
     if len(st.session_state.pac_stim_buffer) >= LOOKBACK:
-        # Stack into (1, 20, 12) tensor and normalize with training scalers
+        # Stack into (20, 12) and z-score normalize using training feature stats
         seq = np.stack(st.session_state.pac_stim_buffer[-LOOKBACK:], axis=0)  # (20, 12)
-        seq_tensor = torch.from_numpy(seq[np.newaxis, :, :]).float()  # (1, 20, 12)
+        feat_mean = st.session_state.feat_mean  # (12,)
+        feat_std = st.session_state.feat_std    # (12,)
+        seq_norm = (seq - feat_mean) / (feat_std + 1e-12)  # z-score normalize
+        seq_tensor = torch.from_numpy(seq_norm[np.newaxis, :, :]).float()  # (1, 20, 12)
         with torch.no_grad():
             pred_norm = pac_stim_tcn(seq_tensor).item()
         # Denormalize: prediction is in z-score space of training targets
