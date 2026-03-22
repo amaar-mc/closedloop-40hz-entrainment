@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A comprehensive research project on "Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment to Optimize Theta-Gamma Coupling in Alzheimer's Disease" — including a complete computational pipeline, research paper, lab notebook, demo dashboard, and CSEF presentation materials. All documents are now internally consistent and verified against source code.
+A closed-loop 40 Hz gamma entrainment system for Alzheimer's disease that predicts theta-gamma phase-amplitude coupling 5-10 seconds ahead and adaptively delivers auditory stimulation. Includes a complete ML pipeline (EEGNet + PAC+Stim TCN), live Muse 2 EEG dashboard, caregiver-facing web app, and all CSEF 2026 presentation materials.
 
 ## Core Value
 
@@ -16,101 +16,74 @@ Every claim in every document must be verifiably accurate against the actual cod
 - ✓ Real-time demo dashboard (Streamlit + 40 Hz audio) — v1.0 Phase 5
 - ✓ Complete research paper (11,647 words, 23 references) — v1.0 Phase 6
 - ✓ CSEF 2026 presentation PDF (12 pages, Times New Roman) — v1.0
-- ✓ Hysteresis corrected to 3-second throughout all documents — v2.0
-- ✓ CI method corrected to large-sample normal approximation — v2.0
-- ✓ Spectral features corrected (4 bands + PAC-structure, not 5 + coherence) — v2.0
-- ✓ Population label standardized to "35 elderly subjects" — v2.0
-- ✓ References pruned from 39 to 23, all renumbered and consistent — v2.0
-- ✓ Single-author voice (I/my) throughout paper — v2.0
-- ✓ All corrections propagated to CSEF docs, RESULTS_REPORT, TeX, PDF — v2.0
+- ✓ All factual errors corrected and propagated across 13+ documents — v2.0
+- ✓ Architecture comparison (6 models × 5 horizons × 2 channel configs) — v3.0
+- ✓ TCN ablation study quantifying each component's contribution — v3.0
+- ✓ Multi-seed reproducibility (5 seeds, R²=0.606±0.032) — v3.0
+- ✓ Simulator τ parameters fit from real data (35 subjects) — v3.0
+- ✓ 4ch vs 7ch performance gap documented — v3.0
+- ✓ Streaming inference pipeline (causal sosfilt, Muse 2 BLE, model registry) — v3.0
+- ✓ PAC+Stim feature discovery (R² 0.12→0.60 by dropping spectral features) — v3.0
+- ✓ Caregiver app with patient profiles, session management, 40Hz audio — v3.0
+- ✓ Live mission control dashboard with real Muse 2 connection — v3.0
+- ✓ HF Spaces deployment with QR codes — v3.0
+- ✓ Elevator pitch, clinical roadmap, facility flyer, pilot feedback form — v3.0
 
 ### Active
 
-<!-- Current scope: v3.0 Deepen Research -->
-
-**Research deepening (25%):**
-- [ ] Comprehensive architecture comparison study (8 static + temporal models + new architectures)
-- [ ] New model training (Transformer, XGBoost, etc.) to strengthen TCN selection narrative
-- [ ] Statistical robustness analyses (cross-validation, sensitivity, ablation)
-- [ ] Simulation accuracy defense (validation framework, comparison metrics)
-- [ ] Timing advantage analysis (why prediction is necessary, operational window)
-- [ ] Failure mode & limitations analysis (biggest reason this may NOT work)
-- [ ] EEG+audio hardware research (headsets that record EEG + play stimulus)
-- [ ] Multisensory stimulation expansion exploration
-
-**Product platform (75%):**
-- [ ] Web app — caregiver-facing closed-loop therapy platform
-- [ ] Dual mode: simulated EEG (demo fallback) + real EEG headset integration
-- [ ] Real-time adaptive auditory stimulus based on PAC prediction
-- [ ] Session management, data logging, patient tracking
-- [ ] Mobile app roadmap (productization narrative for judges)
-- [ ] Productization documentation (clinical roadmap, integration with existing systems, remote monitoring)
-
-**Presentation & pilot:**
-- [ ] Updated poster board with QR code + human testing data
-- [ ] Multiple presentation formats + 1-min elevator pitch
-- [ ] Pilot demos at facilities (Mission Villa, Valley Medical Veterans Center, regional hospital)
-- [ ] Flyer with QR code linking to live app
+(No active milestone — next milestone TBD)
 
 ### Out of Scope
 
-- Rewriting the paper's narrative structure — only fix factual errors
 - Lab notebook phases 1-3 (deferred — content extraction, daily entries, visual polish)
-- Full mobile app build (roadmap only — web app is primary)
+- React/FastAPI production rewrite (Streamlit sufficient for CSEF)
+- Full mobile app build (roadmap narrative only)
 - FDA regulatory submission (clinical testing plan documented but not executed)
 - Manufacturing hardware (intelligence layer on existing hardware only)
+- Web Bluetooth for remote Muse 2 connection (BLE is local-only)
 
-## Current Milestone: v3.0 Deepen Research
+## Current State
 
-**Goal:** Transform the research project into a productized, demo-ready platform while deepening ML rigor — targeting CSEF judging on 2026-04-09.
+**Shipped v3.0 (2026-03-22):**
 
-**Target features:**
-- Comprehensive model architecture comparison study with new models trained
-- Web app platform for caregiver-led closed-loop 40 Hz therapy sessions
-- Dual-mode EEG (real hardware + simulated fallback) with adaptive stimulus
-- Pilot demos at local facilities with collected feedback data
-- Updated presentations, poster board with QR code, elevator pitch
+Key breakthrough: dropping 61 spectral features and using only 12 PAC trajectory + stim context features raises temporal PAC prediction R² from 0.12 to 0.60 (7ch) / 0.43 (4ch) at 5-second horizon. Spectral features encode subject-specific anatomy that doesn't generalize. Audited with 7 empirical tests — no data leakage.
 
-**Framing guidance (from counselor):** "Predictive model for neural state with temporal forecasting" — NOT "AI for Alzheimer's." Intelligence layer on existing hardware. Project → solution → product.
+**Live systems:**
+- `neurocare_live.py` — Muse 2 mission control with direct PAC, band powers, closed-loop 40Hz stimulus
+- `caregiver_app.py` — Patient-facing app deployed at https://huggingface.co/spaces/amaarc/neurocare-40hz
+- Pilot feedback form: https://forms.gle/NFkh2oWA1st3YrZT8
 
-**Split:** 25% research deepening / 75% product & presentation
+**Models (production):**
+- EEGNet 4ch: 1,409 params, static PAC estimation
+- PAC+Stim TCN 4ch: 6,338 params, 12 features, R²=0.43 on held-out test subjects
+- Direct PAC computation (Tort 2010 MI) for live Muse 2 sessions
 
-## Context
-
-**Shipped v2.0 (2026-03-18):**
-Three parallel audit agents identified 6 critical, 5 important, and 4 minor issues in RESEARCH_PAPER.md. All were systematically corrected across phases 7-9 and propagated to 13+ supporting documents. Clean PDF compiled. 17/17 requirements verified.
-
-**Current state:**
-- Research paper: `docs/paper/RESEARCH_PAPER.md` (806 lines, 23 references, internally consistent)
-- PDF: `docs/paper/RESEARCH_PAPER_v3.pdf` (2.7 MB, compiled from corrected TeX)
-- Results: `results/RESULTS_REPORT.md` (verified clean — g=0.75, ×10⁻⁶ MI units)
-- Poster: `docs/poster/POSTER_BOARD_V5.md` (all corrections propagated)
-- Demo: `src/dashboard.py` (Streamlit, live PAC visualization + 40 Hz audio)
+**Codebase:** 26,096 Python LOC across src/, temporal_multiscale/, experimental/, improved_tcn/, scripts/
 
 **CSEF context:**
-- Admitted to California Science & Engineering Fair 2026
-- Judging: 2026-04-09 (20 days from milestone start)
-- Judges want productized, actionable solutions — not just research
-- Pilot facilities identified: Mission Villa Alzheimer's Residence, Valley Medical Veterans Center, regional medical hospital
-- Need: QR code on poster → live app, human testing data, clinical testing plan
+- Judging: 2026-04-09
+- Poster, elevator pitch, clinical roadmap, facility flyer all ready
+- Pilot facilities: Mission Villa, Valley Medical, regional hospital, senior center
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Chronological daily format | Demonstrates real scientific process | ✓ Good |
-| Use git dates as backbone | Ensures authenticity | ✓ Good |
 | Fix paper to match code (not vice versa) | Code produced the actual results | ✓ Good |
-| Document 3s hysteresis (not change to 5s) | Results were generated with 3s | ✓ Good |
-| Prune orphan references (39→23) | Clean citation list, every ref cited | ✓ Good |
-| Single-author voice (I not we) | Single-author paper declaration | ✓ Good |
-| Out-of-scope docs/paper/sections/ from propagation | RESEARCH_PAPER.md is assembled source of truth | ✓ Good |
+| Drop spectral features for temporal prediction | Subject-specific overfitting destroys generalization | ✓ Good — R² 5× improvement |
+| Direct PAC computation instead of EEGNet for live | EEGNet doesn't generalize to Muse 2 dry electrodes | ✓ Good — no domain gap |
+| HF Spaces instead of Streamlit Cloud | Repo is private, Streamlit Cloud requires public | ✓ Good |
+| Simulated-only for cloud, real EEG local only | BLE is physical, can't bridge to cloud server | ✓ Good |
+| Session-adaptive normalization | Training z-scores saturate on Muse 2 signal | ✓ Good |
+| Z-score + hysteresis for stimulus decisions | Prevents twitchy flip-flopping from noisy predictions | ✓ Good |
+| Keep Streamlit (no React rewrite) | 20-day deadline, Streamlit sufficient for demo | ✓ Good |
 
 ## Constraints
 
 - **Data integrity**: Fix descriptions to match code, never change code to match descriptions
 - **Consistency**: All corrections must propagate to CSEF presentation and RESULTS_REPORT
 - **Accuracy**: Every number must be traceable to a source file
+- **Deadline**: CSEF judging 2026-04-09
 
 ---
-*Last updated: 2026-03-20 after v3.0 milestone start*
+*Last updated: 2026-03-22 after v3.0 milestone*
