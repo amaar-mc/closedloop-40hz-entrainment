@@ -28,14 +28,14 @@ Requirements for CSEF 2026 (judging: 2026-04-09). Each maps to roadmap phases.
 - [x] **APP-02**: Session management — start/stop therapy sessions, log per-window PAC and stimulus decisions, session completion summary with plain-language metrics
 - [x] **APP-03**: Caregiver-friendly UI — plain-language labels ("Brain Sync Level" not "PAC value"), volume slider, hardware status indicator, dual-mode toggle (simulated/real EEG)
 - [x] **APP-04**: Real-time EEG visualization with PAC trend chart and adaptive 40Hz auditory stimulus with visual stimulus-active indicator
-- [ ] **APP-05**: Streamlit Cloud deployment with working QR code that judges and facility visitors can access on their phones
+- [x] **APP-05**: Streamlit Cloud deployment with working QR code that judges and facility visitors can access on their phones
 
 ### Presentation & Pilot
 
 - [x] **PRES-01**: 1-minute elevator pitch script framed as "predictive model for neural state with temporal forecasting" — not "AI for Alzheimer's"
-- [ ] **PRES-02**: One-page flyer with QR code linking to live app, for facility leave-behinds and CSEF poster
+- [x] **PRES-02**: One-page flyer with QR code linking to live app, for facility leave-behinds and CSEF poster
 - [x] **PRES-03**: Clinical roadmap document — integration with existing systems, clinical testing plan, remote monitoring vision, community benefit narrative, hardware scaling path (Muse → OpenBCI → clinical)
-- [ ] **PRES-04**: Pilot feedback form (Google Form) to collect structured caregiver feedback from facility demos — becomes "human testing data" for CSEF
+- [x] **PRES-04**: Pilot feedback form (Google Form) to collect structured caregiver feedback from facility demos — becomes "human testing data" for CSEF
 
 ## Future Requirements
 
@@ -81,11 +81,11 @@ Deferred to post-CSEF. Tracked but not in current roadmap.
 | APP-02 | Phase 13 | Complete |
 | APP-03 | Phase 13 | Complete |
 | APP-04 | Phase 13 | Complete |
-| APP-05 | Phase 15 (gap closure) | Pending |
+| APP-05 | Phase 15 (gap closure) | Complete |
 | PRES-01 | Phase 13 | Complete |
-| PRES-02 | Phase 15 (gap closure) | Pending |
+| PRES-02 | Phase 15 (gap closure) | Complete |
 | PRES-03 | Phase 13 | Complete |
-| PRES-04 | Phase 15 (gap closure) | Pending |
+| PRES-04 | Phase 15 (gap closure) | Complete |
 
 **Coverage:**
 - v3.0 requirements: 18 total
