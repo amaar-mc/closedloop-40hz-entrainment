@@ -62,7 +62,7 @@ def _band_powers(eeg: np.ndarray) -> Dict[str, float]:
     """Mean band power across channels. Returns dict of scalars."""
     nperseg = min(256, eeg.shape[1])
     freqs, psd = signal.welch(eeg, fs=FS, nperseg=nperseg, axis=1)
-    _trapz = getattr(np, "trapz", None) or np.trapezoid
+    _trapz = np.trapezoid if hasattr(np, "trapezoid") else np.trapz
     out = {}
     for name, (lo, hi) in BANDS.items():
         idx = (freqs >= lo) & (freqs <= hi)

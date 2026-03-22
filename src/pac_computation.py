@@ -24,7 +24,6 @@ try:
     TENSORPAC_AVAILABLE = True
 except ImportError:
     TENSORPAC_AVAILABLE = False
-    warnings.warn("Tensorpac not available. Using manual PAC computation only.")
 
 
 class PACComputer:
