@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
 """
-Generate print-ready facility flyer PDF using reportlab canvas for full
-visual control — gradients, rounded boxes, custom typography, QR codes.
+Generate print-ready facility flyer PDF.
+Clean single-column layout with generous spacing. No overlaps.
 
 Usage:
     python scripts/generate_flyer_pdf.py [--output PATH]
-
-Output:
-    docs/flyer/facility_flyer.pdf
 """
 import argparse
 from pathlib import Path
@@ -18,230 +15,220 @@ QR_APP = REPO_ROOT / "docs" / "flyer" / "qr_app.png"
 QR_FORM = REPO_ROOT / "docs" / "flyer" / "qr_feedback.png"
 
 
-def _hex(h: str):
-    """Convert '#RRGGBB' to reportlab Color."""
-    from reportlab.lib.colors import HexColor
-    return HexColor(h)
-
-
-def _rounded_rect(c, x, y, w, h, r, fill_color, stroke_color=None):
-    """Draw a rounded rectangle on canvas."""
-    c.saveState()
-    c.setFillColor(fill_color)
-    if stroke_color:
-        c.setStrokeColor(stroke_color)
-        c.setLineWidth(0.5)
-    else:
-        c.setStrokeColor(fill_color)
-    c.roundRect(x, y, w, h, r, fill=1, stroke=1 if stroke_color else 0)
-    c.restoreState()
-
-
-def _gradient_rect(c, x, y, w, h, color_top, color_bot, steps=40):
-    """Simulate a vertical gradient with thin horizontal strips."""
-    from reportlab.lib.colors import Color
-    rt, gt, bt = color_top.red, color_top.green, color_top.blue
-    rb, gb, bb = color_bot.red, color_bot.green, color_bot.blue
-    strip_h = h / steps
-    for i in range(steps):
-        frac = i / steps
-        r = rt + (rb - rt) * frac
-        g = gt + (gb - gt) * frac
-        b = bt + (bb - bt) * frac
-        c.setFillColor(Color(r, g, b))
-        c.rect(x, y + h - (i + 1) * strip_h, w, strip_h + 0.5, fill=1, stroke=0)
-
-
 def build_pdf(output_path: Path) -> None:
     from reportlab.lib.pagesizes import letter
     from reportlab.lib.units import inch
     from reportlab.pdfgen import canvas
     from reportlab.lib.utils import ImageReader
+    from reportlab.lib.colors import HexColor
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    W, H = letter  # 612 x 792
+    W, H = letter
     c = canvas.Canvas(str(output_path), pagesize=letter)
 
-    # Colors
-    NAVY = _hex("#1E3A5F")
-    BLUE = _hex("#3B82F6")
-    LIGHT_BLUE = _hex("#DBEAFE")
-    TEAL = _hex("#0D9488")
-    LIGHT_TEAL = _hex("#CCFBF1")
-    WHITE = _hex("#FFFFFF")
-    GRAY_50 = _hex("#F9FAFB")
-    GRAY_100 = _hex("#F3F4F6")
-    GRAY_600 = _hex("#4B5563")
-    GRAY_800 = _hex("#1F2937")
-    GREEN = _hex("#059669")
-    AMBER = _hex("#D97706")
+    # --- Colors ---
+    NAVY = HexColor("#1A2744")
+    BLUE = HexColor("#2563EB")
+    DARK = HexColor("#111827")
+    MED = HexColor("#374151")
+    LIGHT = HexColor("#6B7280")
+    RULE = HexColor("#D1D5DB")
+    BG_CARD = HexColor("#F3F4F6")
+    WHITE = HexColor("#FFFFFF")
+    TEAL = HexColor("#0F766E")
+    GREEN_BG = HexColor("#ECFDF5")
+    AMBER_BG = HexColor("#FFFBEB")
 
-    margin = 0.6 * inch
-    content_w = W - 2 * margin
+    mx = 0.75 * inch  # margins
+    cw = W - 2 * mx   # content width
+    cursor = H - 0.7 * inch  # top-down cursor
 
-    # === HEADER BANNER ===
-    banner_h = 1.4 * inch
-    banner_y = H - margin - banner_h
-    _gradient_rect(c, margin, banner_y, content_w, banner_h, NAVY, _hex("#2563EB"))
+    def text(txt, x, y, font="Helvetica", size=10, color=DARK):
+        c.setFont(font, size)
+        c.setFillColor(color)
+        c.drawString(x, y, txt)
 
-    # Title text
-    c.setFillColor(WHITE)
-    c.setFont("Helvetica-Bold", 28)
-    c.drawCentredString(W / 2, banner_y + banner_h - 42, "NeuroCare 40Hz")
-    c.setFont("Helvetica", 13)
-    c.drawCentredString(W / 2, banner_y + banner_h - 62,
-                        "Personalized Neural Entrainment Therapy")
-    c.setFont("Helvetica", 9)
-    c.setFillColor(_hex("#93C5FD"))
-    c.drawCentredString(W / 2, banner_y + 14,
-                        "Non-invasive  |  AI-powered  |  Real-time  |  Personalized")
+    def centered(txt, y, font="Helvetica", size=10, color=DARK):
+        c.setFont(font, size)
+        c.setFillColor(color)
+        c.drawCentredString(W / 2, y, txt)
 
-    # === WHAT IT DOES (card) ===
-    card_y = banner_y - 1.15 * inch
-    card_h = 0.95 * inch
-    _rounded_rect(c, margin, card_y, content_w, card_h, 8, LIGHT_BLUE, BLUE)
+    def rule(y):
+        c.setStrokeColor(RULE)
+        c.setLineWidth(0.5)
+        c.line(mx, y, W - mx, y)
 
-    c.setFillColor(NAVY)
-    c.setFont("Helvetica-Bold", 12)
-    c.drawString(margin + 14, card_y + card_h - 22, "What It Does")
-    c.setFont("Helvetica", 9.5)
-    c.setFillColor(GRAY_800)
-    lines = [
-        "Restores disrupted 40 Hz gamma brainwave patterns in Alzheimer's and MCI patients",
-        "using non-invasive auditory stimulation that automatically adapts to each patient's",
-        "brain state in real time. No drugs. No implants. No side effects.",
+    # =========================================================
+    # HEADER
+    # =========================================================
+    centered("NeuroCare 40Hz", cursor, "Helvetica-Bold", 30, NAVY)
+    cursor -= 22
+    centered("Personalized Neural Entrainment Therapy", cursor, "Helvetica", 12, BLUE)
+    cursor -= 28
+    rule(cursor)
+    cursor -= 24
+
+    # =========================================================
+    # WHAT IT DOES
+    # =========================================================
+    text("WHAT IT DOES", mx, cursor, "Helvetica-Bold", 11, NAVY)
+    cursor -= 18
+    desc = [
+        "Restores disrupted 40 Hz gamma brainwave patterns in Alzheimer's and",
+        "MCI patients using non-invasive auditory stimulation that automatically",
+        "adapts to each patient's brain state in real time.",
     ]
-    for i, line in enumerate(lines):
-        c.drawString(margin + 14, card_y + card_h - 40 - i * 13, line)
+    for line in desc:
+        text(line, mx, cursor, "Helvetica", 9.5, MED)
+        cursor -= 14
+    cursor -= 6
+    text("No drugs.  No implants.  No side effects.", mx, cursor, "Helvetica-Bold", 9.5, TEAL)
+    cursor -= 24
+    rule(cursor)
+    cursor -= 24
 
-    # === HOW IT WORKS (4 steps) ===
-    steps_y = card_y - 1.65 * inch
-    c.setFillColor(NAVY)
-    c.setFont("Helvetica-Bold", 12)
-    c.drawString(margin, steps_y + 1.45 * inch, "How It Works")
+    # =========================================================
+    # HOW IT WORKS (horizontal steps)
+    # =========================================================
+    text("HOW IT WORKS", mx, cursor, "Helvetica-Bold", 11, NAVY)
+    cursor -= 24
 
     steps = [
-        ("1", "Wear", "Patient wears a lightweight\nEEG headset"),
-        ("2", "Read", "System reads brain activity\nin real time"),
-        ("3", "Predict", "AI predicts optimal timing\n5-10 seconds ahead"),
-        ("4", "Stimulate", "40 Hz audio activates when\nbrain sync is lowest"),
+        ("1", "WEAR", "Lightweight EEG headset"),
+        ("2", "READ", "Real-time brain activity"),
+        ("3", "PREDICT", "AI forecasts 5-10s ahead"),
+        ("4", "STIMULATE", "40 Hz audio when needed"),
     ]
-    step_w = (content_w - 3 * 8) / 4
+    step_w = cw / 4
     for i, (num, title, desc) in enumerate(steps):
-        sx = margin + i * (step_w + 8)
-        sy = steps_y
+        sx = mx + i * step_w + step_w / 2
 
-        # Step box
-        _rounded_rect(c, sx, sy, step_w, 1.3 * inch, 6, GRAY_50, _hex("#E5E7EB"))
-
-        # Number circle
-        circle_x = sx + step_w / 2
-        circle_y = sy + 1.3 * inch - 20
+        # Number
         c.setFillColor(BLUE)
-        c.circle(circle_x, circle_y, 11, fill=1, stroke=0)
-        c.setFillColor(WHITE)
-        c.setFont("Helvetica-Bold", 11)
-        c.drawCentredString(circle_x, circle_y - 4, num)
+        c.setFont("Helvetica-Bold", 14)
+        c.drawCentredString(sx, cursor, num)
 
         # Title
         c.setFillColor(NAVY)
-        c.setFont("Helvetica-Bold", 10)
-        c.drawCentredString(sx + step_w / 2, sy + 1.3 * inch - 42, title)
+        c.setFont("Helvetica-Bold", 8.5)
+        c.drawCentredString(sx, cursor - 16, title)
 
-        # Description
-        c.setFillColor(GRAY_600)
+        # Desc
+        c.setFillColor(LIGHT)
         c.setFont("Helvetica", 7.5)
-        for j, dline in enumerate(desc.split("\n")):
-            c.drawCentredString(sx + step_w / 2, sy + 1.3 * inch - 58 - j * 10, dline)
+        c.drawCentredString(sx, cursor - 28, desc)
 
-    # === KEY RESULTS (2 stat boxes) ===
-    results_y = steps_y - 1.1 * inch
-    c.setFillColor(NAVY)
-    c.setFont("Helvetica-Bold", 12)
-    c.drawString(margin, results_y + 0.9 * inch, "Key Results")
+    # Arrow connectors
+    c.setStrokeColor(RULE)
+    c.setLineWidth(0.8)
+    for i in range(3):
+        ax = mx + (i + 1) * step_w
+        c.line(ax - 8, cursor - 2, ax + 8, cursor - 2)
 
-    stat_w = (content_w - 12) / 2
+    cursor -= 46
+    rule(cursor)
+    cursor -= 24
 
-    # Stat 1: Targeting accuracy
-    _rounded_rect(c, margin, results_y, stat_w, 0.75 * inch, 6, _hex("#F0FDF4"), GREEN)
-    c.setFillColor(GREEN)
-    c.setFont("Helvetica-Bold", 24)
-    c.drawCentredString(margin + stat_w / 2, results_y + 0.75 * inch - 32, "72%")
-    c.setFont("Helvetica", 9)
-    c.setFillColor(GRAY_800)
-    c.drawCentredString(margin + stat_w / 2, results_y + 0.75 * inch - 48,
-                        "Targeting Accuracy (vs 64% reactive)")
-    c.setFont("Helvetica", 7.5)
-    c.setFillColor(GRAY_600)
-    c.drawCentredString(margin + stat_w / 2, results_y + 8,
-                        "Cohen's d = 1.31, p < 0.001, N = 35")
+    # =========================================================
+    # KEY RESULTS (two side-by-side stat cards)
+    # =========================================================
+    text("KEY RESULTS", mx, cursor, "Helvetica-Bold", 11, NAVY)
+    cursor -= 16
 
-    # Stat 2: Prediction R2
-    sx2 = margin + stat_w + 12
-    _rounded_rect(c, sx2, results_y, stat_w, 0.75 * inch, 6, _hex("#FFF7ED"), AMBER)
-    c.setFillColor(AMBER)
-    c.setFont("Helvetica-Bold", 24)
-    c.drawCentredString(sx2 + stat_w / 2, results_y + 0.75 * inch - 32, "R\u00b2 = 0.60")
-    c.setFont("Helvetica", 9)
-    c.setFillColor(GRAY_800)
-    c.drawCentredString(sx2 + stat_w / 2, results_y + 0.75 * inch - 48,
-                        "PAC Prediction (5s ahead, held-out subjects)")
-    c.setFont("Helvetica", 7.5)
-    c.setFillColor(GRAY_600)
-    c.drawCentredString(sx2 + stat_w / 2, results_y + 8,
-                        "5x improvement over previous best (0.12)")
+    card_w = (cw - 16) / 2
+    card_h = 72
 
-    # === WHY IT MATTERS (bullet points) ===
-    why_y = results_y - 1.0 * inch
-    c.setFillColor(NAVY)
-    c.setFont("Helvetica-Bold", 12)
-    c.drawString(margin, why_y + 0.85 * inch, "Why It Matters")
+    # Card 1: Targeting accuracy
+    c.setFillColor(GREEN_BG)
+    c.roundRect(mx, cursor - card_h, card_w, card_h, 6, fill=1, stroke=0)
+    centered_x1 = mx + card_w / 2
+    c.setFont("Helvetica-Bold", 28)
+    c.setFillColor(HexColor("#047857"))
+    c.drawCentredString(centered_x1, cursor - 32, "72%")
+    c.setFont("Helvetica", 8.5)
+    c.setFillColor(MED)
+    c.drawCentredString(centered_x1, cursor - 48, "Targeting Accuracy vs 64% reactive")
+    c.setFont("Helvetica", 7)
+    c.setFillColor(LIGHT)
+    c.drawCentredString(centered_x1, cursor - 62, "d = 1.31, p < 0.001, N = 35")
+
+    # Card 2: R2
+    x2 = mx + card_w + 16
+    c.setFillColor(AMBER_BG)
+    c.roundRect(x2, cursor - card_h, card_w, card_h, 6, fill=1, stroke=0)
+    centered_x2 = x2 + card_w / 2
+    c.setFont("Helvetica-Bold", 28)
+    c.setFillColor(HexColor("#B45309"))
+    c.drawCentredString(centered_x2, cursor - 32, "R\u00b2 = 0.60")
+    c.setFont("Helvetica", 8.5)
+    c.setFillColor(MED)
+    c.drawCentredString(centered_x2, cursor - 48, "PAC prediction 5s ahead")
+    c.setFont("Helvetica", 7)
+    c.setFillColor(LIGHT)
+    c.drawCentredString(centered_x2, cursor - 62, "5x improvement, held-out test subjects")
+
+    cursor -= card_h + 20
+    rule(cursor)
+    cursor -= 24
+
+    # =========================================================
+    # WHY IT MATTERS
+    # =========================================================
+    text("WHY IT MATTERS", mx, cursor, "Helvetica-Bold", 11, NAVY)
+    cursor -= 20
 
     bullets = [
-        "Non-invasive — safe for daily use, no clinical setting required",
-        "Personalized — adapts to each patient's unique neural response",
-        "Proactive — predicts optimal timing before the window passes",
-        "Validated — tested on EEG recordings from 35 participants",
+        ("Non-invasive", "safe for daily use, no clinical setting required"),
+        ("Personalized", "adapts to each patient's unique neural response"),
+        ("Proactive", "predicts optimal timing before the window passes"),
+        ("Validated", "tested on EEG recordings from 35 participants"),
     ]
-    c.setFont("Helvetica", 9.5)
-    for i, b in enumerate(bullets):
-        by = why_y + 0.85 * inch - 20 - i * 16
-        c.setFillColor(TEAL)
-        c.circle(margin + 6, by + 3, 2.5, fill=1, stroke=0)
-        c.setFillColor(GRAY_800)
-        c.drawString(margin + 16, by, b)
+    for bold_part, rest in bullets:
+        c.setFont("Helvetica-Bold", 9)
+        c.setFillColor(NAVY)
+        bw = c.stringWidth(bold_part, "Helvetica-Bold", 9)
+        c.drawString(mx + 12, cursor, bold_part)
+        c.setFont("Helvetica", 9)
+        c.setFillColor(MED)
+        c.drawString(mx + 12 + bw + 4, cursor, "-- " + rest)
+        cursor -= 16
 
-    # === QR CODES ===
-    qr_y = why_y - 1.25 * inch
-    qr_size = 0.95 * inch
+    cursor -= 16
+    rule(cursor)
+    cursor -= 24
 
-    # App QR
-    qr_app_x = W / 2 - qr_size - 0.6 * inch
-    _rounded_rect(c, qr_app_x - 8, qr_y - 8, qr_size + 16, qr_size + 40, 6,
-                  GRAY_100, _hex("#D1D5DB"))
-    if QR_APP.exists():
-        c.drawImage(ImageReader(str(QR_APP)), qr_app_x, qr_y,
-                     width=qr_size, height=qr_size, preserveAspectRatio=True)
-    c.setFillColor(GRAY_800)
-    c.setFont("Helvetica-Bold", 8)
-    c.drawCentredString(qr_app_x + qr_size / 2, qr_y - 14, "Try the Live Demo")
+    # =========================================================
+    # QR CODES
+    # =========================================================
+    qr_size = 0.85 * inch
+    qr_gap = 1.2 * inch
 
-    # Form QR
-    qr_form_x = W / 2 + 0.6 * inch
-    _rounded_rect(c, qr_form_x - 8, qr_y - 8, qr_size + 16, qr_size + 40, 6,
-                  GRAY_100, _hex("#D1D5DB"))
-    if QR_FORM.exists():
-        c.drawImage(ImageReader(str(QR_FORM)), qr_form_x, qr_y,
-                     width=qr_size, height=qr_size, preserveAspectRatio=True)
-    c.setFillColor(GRAY_800)
-    c.setFont("Helvetica-Bold", 8)
-    c.drawCentredString(qr_form_x + qr_size / 2, qr_y - 14, "Share Your Feedback")
+    qr1_x = W / 2 - qr_size - qr_gap / 2
+    qr2_x = W / 2 + qr_gap / 2
 
-    # === FOOTER ===
-    footer_y = 0.4 * inch
-    c.setFillColor(GRAY_600)
-    c.setFont("Helvetica", 8)
-    c.drawCentredString(W / 2, footer_y,
+    for qr_path, qr_x, label in [
+        (QR_APP, qr1_x, "Try the Live Demo"),
+        (QR_FORM, qr2_x, "Share Your Feedback"),
+    ]:
+        # Light background
+        c.setFillColor(BG_CARD)
+        c.roundRect(qr_x - 6, cursor - qr_size - 24, qr_size + 12, qr_size + 20, 4,
+                     fill=1, stroke=0)
+        if qr_path.exists():
+            c.drawImage(ImageReader(str(qr_path)), qr_x, cursor - qr_size,
+                         width=qr_size, height=qr_size, preserveAspectRatio=True)
+        c.setFont("Helvetica-Bold", 7.5)
+        c.setFillColor(NAVY)
+        c.drawCentredString(qr_x + qr_size / 2, cursor - qr_size - 16, label)
+
+    cursor -= qr_size + 40
+
+    # =========================================================
+    # FOOTER
+    # =========================================================
+    c.setFont("Helvetica", 7.5)
+    c.setFillColor(LIGHT)
+    c.drawCentredString(W / 2, 0.5 * inch,
                         "Amaar Chughtai  |  amaardevx@gmail.com  |  CSEF 2026")
 
     c.save()
