@@ -369,9 +369,14 @@ def main():
         ph_pred.metric("Predicted", f"{fd:.0f}/100" if fd is not None else "--")
         ph_windows.metric("Windows", sn)
 
-        # Audio: only update on state CHANGE to avoid duplicate ID and reduce render load
+        # Audio: use HTML audio element to avoid Streamlit duplicate ID issue
         if stim and not prev:
-            audio_ph.audio(_wav(vol), format="audio/wav", loop=True, autoplay=True)
+            import base64
+            b64 = base64.b64encode(_wav(vol)).decode()
+            audio_ph.markdown(
+                f'<audio autoplay loop src="data:audio/wav;base64,{b64}"></audio>',
+                unsafe_allow_html=True,
+            )
         elif not stim and prev:
             audio_ph.empty()
 
