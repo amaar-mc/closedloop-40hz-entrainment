@@ -1,0 +1,102 @@
+[
+  {
+    "channels": "7ch",
+    "horizon": 1,
+    "model_r2": 0.7246257066726685,
+    "persist_r2": 0.7264388799667358,
+    "delta": -0.0018131732940673828,
+    "correlation": 0.8528048540962375,
+    "best_epoch": 80,
+    "train_sec": 97.32265186309814
+  },
+  {
+    "channels": "7ch",
+    "horizon": 3,
+    "model_r2": 0.6070877313613892,
+    "persist_r2": 0.17828166484832764,
+    "delta": 0.4288060665130615,
+    "correlation": 0.7837146824173942,
+    "best_epoch": 76,
+    "train_sec": 95.79503774642944
+  },
+  {
+    "channels": "7ch",
+    "horizon": 5,
+    "model_r2": 0.5770882368087769,
+    "persist_r2": 0.10432112216949463,
+    "delta": 0.4727671146392822,
+    "correlation": 0.760286470499632,
+    "best_epoch": 43,
+    "train_sec": 78.86864399909973
+  },
+  {
+    "channels": "7ch",
+    "horizon": 8,
+    "model_r2": 0.37049806118011475,
+    "persist_r2": -0.006986737251281738,
+    "delta": 0.3774847984313965,
+    "correlation": 0.610561275998257,
+    "best_epoch": 77,
+    "train_sec": 96.36384201049805
+  },
+  {
+    "channels": "7ch",
+    "horizon": 10,
+    "model_r2": 0.6693224906921387,
+    "persist_r2": -0.08144044876098633,
+    "delta": 0.750762939453125,
+    "correlation": 0.8199714542458473,
+    "best_epoch": 52,
+    "train_sec": 88.8090329170227
+  },
+  {
+    "channels": "4ch",
+    "horizon": 1,
+    "model_r2": 0.6417446136474609,
+    "persist_r2": 0.7205029129981995,
+    "delta": -0.07875829935073853,
+    "correlation": 0.8113073321045396,
+    "best_epoch": 62,
+    "train_sec": 95.24989724159241
+  },
+  {
+    "channels": "4ch",
+    "horizon": 3,
+    "model_r2": 0.39091765880584717,
+    "persist_r2": 0.1608925461769104,
+    "delta": 0.23002511262893677,
+    "correlation": 0.626214202842163,
+    "best_epoch": 74,
+    "train_sec": 95.15862607955933
+  },
+  {
+    "channels": "4ch",
+    "horizon": 5,
+    "model_r2": 0.3981943130493164,
+    "persist_r2": 0.11690157651901245,
+    "delta": 0.28129273653030396,
+    "correlation": 0.6312942752101858,
+    "best_epoch": 74,
+    "train_sec": 93.38960790634155
+  },
+  {
+    "channels": "4ch",
+    "horizon": 8,
+    "model_r2": 0.41915661096572876,
+    "persist_r2": 0.05078190565109253,
+    "delta": 0.36837470531463623,
+    "correlation": 0.6498481775935191,
+    "best_epoch": 73,
+    "train_sec": 92.21324276924133
+  },
+  {
+    "channels": "4ch",
+    "horizon": 10,
+    "model_r2": 0.3873264193534851,
+    "persist_r2": 0.006612002849578857,
+    "delta": 0.38071441650390625,
+    "correlation": 0.6226173316729511,
+    "best_epoch": 66,
+    "train_sec": 92.64350986480713
+  }
+]
