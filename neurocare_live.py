@@ -82,32 +82,29 @@ def make_40hz_wav_long(volume: float = 0.3, duration_sec: int = 30,
 # ---------------------------------------------------------------------------
 @st.cache_resource
 def load_models():
-    """Load 4-channel EEGNet + PAC+stim TCN (experimental breakthrough model).
+    """Load PAC computer + PAC+stim TCN (experimental breakthrough model).
 
-    The PAC+stim TCN uses only 12 features (7 PAC-derived + 5 stim context),
-    dropping spectral features that cause subject-specific overfitting.
+    PAC is computed directly from raw EEG (Tort 2010 Modulation Index) instead
+    of using EEGNet, which doesn't generalize to Muse 2 dry electrodes.
+
+    The PAC+stim TCN uses only 12 features (7 PAC-derived + 5 stim context).
     Test R²=0.40 (4ch) vs 0.11 with all features.
 
-    Returns (eegnet, pac_mean, pac_std, pac_stim_tcn, tcn_scalers).
+    Returns (pac_computer, pac_stim_tcn, tcn_scalers).
     """
     import torch
-    from eegnet import EEGNet
+    from pac_computation import PACComputer
     from experimental.run_experiments import ImprovedTCN
 
-    device = "cpu"
-
-    # EEGNet for static PAC estimation
-    eegnet_path = str(_ROOT / "models/muse_4ch/best_eegnet_4ch.pth")
-    ckpt = torch.load(eegnet_path, map_location=device, weights_only=False)
-    eegnet = EEGNet(n_channels=4, n_samples=500)
-    eegnet.load_state_dict(ckpt["model_state_dict"])
-    eegnet.eval()
-    pac_mean = float(ckpt.get("pac_mean", 0.0))
-    pac_std = float(ckpt.get("pac_std", 1.0))
+    # Direct PAC computation — no domain gap, works on any EEG hardware
+    pac_computer = PACComputer(
+        theta_band=(4.0, 8.0), gamma_band=(38.0, 42.0),
+        fs=250.0, n_bins=18, filter_order=4,
+    )
 
     # PAC+stim TCN (12 features, experimental breakthrough)
     tcn_path = str(_ROOT / "models/muse_4ch/best_pac_stim_tcn_4ch.pth")
-    tcn_ckpt = torch.load(tcn_path, map_location=device, weights_only=False)
+    tcn_ckpt = torch.load(tcn_path, map_location="cpu", weights_only=False)
     cfg = tcn_ckpt["config"]
     pac_stim_tcn = ImprovedTCN(
         n_features=cfg["n_features"], hidden=cfg["hidden"],
@@ -118,7 +115,7 @@ def load_models():
     pac_stim_tcn.eval()
     tcn_scalers = tcn_ckpt["scalers"]
 
-    return eegnet, pac_mean, pac_std, pac_stim_tcn, tcn_scalers
+    return pac_computer, pac_stim_tcn, tcn_scalers
 
 
 # ---------------------------------------------------------------------------
@@ -226,14 +223,12 @@ def init_session():
     """Initialize all session state for a new live session."""
     from src.streaming.adapters import RealEEGAdapter
 
-    eegnet, pac_mean, pac_std, pac_stim_tcn, tcn_scalers = load_models()
+    pac_computer, pac_stim_tcn, tcn_scalers = load_models()
     adapter = RealEEGAdapter()
 
     st.session_state.update({
         "live_running": True,
-        "eegnet": eegnet,
-        "pac_mean": pac_mean,
-        "pac_std": pac_std,
+        "pac_computer": pac_computer,
         "pac_stim_tcn": pac_stim_tcn,
         "tcn_scalers": tcn_scalers,
         "adapter": adapter,
@@ -279,7 +274,7 @@ def live_fragment():
     if not st.session_state.get("live_running", False):
         return
 
-    eegnet = st.session_state.eegnet
+    pac_computer = st.session_state.pac_computer
     pac_stim_tcn = st.session_state.pac_stim_tcn
     tcn_scalers = st.session_state.tcn_scalers
     adapter = st.session_state.adapter
@@ -302,13 +297,9 @@ def live_fragment():
     for band_name, powers in band_powers.items():
         st.session_state.band_history[band_name].append(float(powers.mean()))
 
-    # --- EEGNet PAC estimate ---
-    with torch.no_grad():
-        eeg_tensor = torch.from_numpy(
-            eeg_window[np.newaxis, np.newaxis, :, :]
-        ).float()
-        pac_raw = eegnet(eeg_tensor).item()
-        pac_current = pac_raw * st.session_state.pac_std + st.session_state.pac_mean
+    # --- Direct PAC computation (Tort 2010 Modulation Index) ---
+    # Compute PAC from raw EEG — no trained model, no domain gap
+    pac_current = pac_computer.compute_pac_average(eeg_window)
     st.session_state.pac_raw_history.append(pac_current)
 
     # --- Adaptive display value ---
@@ -583,9 +574,9 @@ def main():
         volume = st.slider("Stimulus Volume", 0.0, 1.0, 0.3, 0.05)
         st.session_state["_volume"] = volume
         st.divider()
-        st.markdown("**Models**")
-        st.caption("EEGNet 4ch (1.4K params)")
-        st.caption("PAC+Stim TCN (6.3K params)")
+        st.markdown("**Pipeline**")
+        st.caption("PAC: Direct MI (Tort 2010)")
+        st.caption("TCN: PAC+Stim (6.3K params)")
         st.caption("12 features (no spectral)")
         st.caption("Horizon: 5s ahead")
         st.caption("Test R²: 0.40 (4ch)")
