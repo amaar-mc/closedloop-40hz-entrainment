@@ -376,18 +376,18 @@ def main():
         elif not stim and prev:
             audio_ph.empty()
 
-        # Render charts — use fixed keys (not per-step) so Streamlit patches in-place
-        ph_sync_chart.plotly_chart(_fig_sync(S["pd"], S["fd"]), key="c_sync",
+        # Render charts — placeholders handle in-place updates, no key needed
+        ph_sync_chart.plotly_chart(_fig_sync(S["pd"], S["fd"]),
                                     use_container_width=True)
-        ph_eeg_chart.plotly_chart(_fig_eeg(eeg), key="c_eeg",
+        ph_eeg_chart.plotly_chart(_fig_eeg(eeg),
                                    use_container_width=True)
         # Update secondary charts less frequently (every 3 steps) to reduce render load
         if sn % 3 == 0 or sn <= LOOKBACK + 1:
-            ph_band_chart.plotly_chart(_fig_bands(S["bands"]), key="c_band",
+            ph_band_chart.plotly_chart(_fig_bands(S["bands"]),
                                         use_container_width=True)
-            ph_stim_chart.plotly_chart(_fig_stim(S["sh"]), key="c_stim",
+            ph_stim_chart.plotly_chart(_fig_stim(S["sh"]),
                                         use_container_width=True)
-            ph_z_chart.plotly_chart(_fig_z(S["zh"]), key="c_z",
+            ph_z_chart.plotly_chart(_fig_z(S["zh"]),
                                      use_container_width=True)
 
         with ph_log:
