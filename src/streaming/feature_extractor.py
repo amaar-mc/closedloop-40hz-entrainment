@@ -168,7 +168,8 @@ class StreamingFeatureExtractor:
         nperseg = min(256, eeg.shape[1])
         freqs, psd = signal.welch(eeg, fs=self.fs, nperseg=nperseg, axis=1)
         idx = np.logical_and(freqs >= band[0], freqs <= band[1])
-        return np.trapz(psd[:, idx], freqs[idx], axis=1)
+        _trapz = getattr(np, 'trapz', None) or np.trapezoid
+        return _trapz(psd[:, idx], freqs[idx], axis=1)
 
     def _causal_phase_amplitude(
         self, eeg: np.ndarray
