@@ -332,7 +332,7 @@ def main():
         # Pad to force 0-100 axis
         df.loc[len(df)] = {"Brain Sync": 0.0}
         df.loc[len(df)] = {"Brain Sync": 100.0}
-        st.line_chart(df.iloc[:-2], use_container_width=True, height=250)
+        st.line_chart(df.iloc[:-2], width="stretch", height=250)
 
         # Band powers
         st.markdown("**Band Powers**")
@@ -347,21 +347,21 @@ def main():
             for col in bp_df.columns:
                 p99 = bp_df[col].quantile(0.95)
                 bp_df[col] = bp_df[col].clip(upper=p99 * 2)
-            st.line_chart(bp_df, use_container_width=True, height=200)
+            st.line_chart(bp_df, width="stretch", height=200)
 
     with right:
         # Raw EEG (bandpass filtered)
         st.markdown("**EEG (filtered 0.5-45 Hz)**")
         t = np.arange(N_SAMP) / FS
         eeg_df = pd.DataFrame({ch: eeg[i] for i, ch in enumerate(CH_NAMES)}, index=t)
-        st.line_chart(eeg_df, use_container_width=True, height=250)
+        st.line_chart(eeg_df, width="stretch", height=250)
 
         # Stimulus timeline
         st.markdown("**Stimulus Timeline**")
         if len(S["stim_hist"]) > 1:
             st.area_chart(
                 pd.DataFrame({"Stimulus": [float(s) for s in S["stim_hist"][-60:]]}),
-                use_container_width=True, height=100, color="#10B981",
+                width="stretch", height=100, color="#10B981",
             )
 
         # Z-score
@@ -369,7 +369,7 @@ def main():
         if len(S["z_hist"]) > 1:
             z_df = pd.DataFrame({"Z": S["z_hist"][-60:]})
             z_df["Zero"] = 0.0
-            st.line_chart(z_df, use_container_width=True, height=100)
+            st.line_chart(z_df, width="stretch", height=100)
 
     # Decision log
     with st.expander("Decision Log", expanded=False):
