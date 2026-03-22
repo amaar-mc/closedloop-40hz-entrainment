@@ -369,21 +369,26 @@ def main():
         ph_pred.metric("Predicted", f"{fd:.0f}/100" if fd is not None else "--")
         ph_windows.metric("Windows", sn)
 
-        if stim:
-            audio_ph.audio(_wav(vol), format="audio/wav", loop=True, autoplay=True)
-        else:
+        # Audio: only update on state CHANGE to avoid duplicate ID and reduce render load
+        if stim and not prev:
+            audio_ph.audio(_wav(vol), format="audio/wav", loop=True, autoplay=True,
+                           key=f"audio_{sn}")
+        elif not stim and prev:
             audio_ph.empty()
 
-        ph_sync_chart.plotly_chart(_fig_sync(S["pd"], S["fd"]), key=f"sync_{sn}",
+        # Render charts — use fixed keys (not per-step) so Streamlit patches in-place
+        ph_sync_chart.plotly_chart(_fig_sync(S["pd"], S["fd"]), key="c_sync",
                                     use_container_width=True)
-        ph_band_chart.plotly_chart(_fig_bands(S["bands"]), key=f"band_{sn}",
-                                    use_container_width=True)
-        ph_eeg_chart.plotly_chart(_fig_eeg(eeg), key=f"eeg_{sn}",
+        ph_eeg_chart.plotly_chart(_fig_eeg(eeg), key="c_eeg",
                                    use_container_width=True)
-        ph_stim_chart.plotly_chart(_fig_stim(S["sh"]), key=f"stim_{sn}",
-                                    use_container_width=True)
-        ph_z_chart.plotly_chart(_fig_z(S["zh"]), key=f"z_{sn}",
-                                 use_container_width=True)
+        # Update secondary charts less frequently (every 3 steps) to reduce render load
+        if sn % 3 == 0 or sn <= LOOKBACK + 1:
+            ph_band_chart.plotly_chart(_fig_bands(S["bands"]), key="c_band",
+                                        use_container_width=True)
+            ph_stim_chart.plotly_chart(_fig_stim(S["sh"]), key="c_stim",
+                                        use_container_width=True)
+            ph_z_chart.plotly_chart(_fig_z(S["zh"]), key="c_z",
+                                     use_container_width=True)
 
         with ph_log:
             for i, entry in enumerate(reversed(S["log"][-8:])):
