@@ -371,8 +371,7 @@ def main():
 
         # Audio: only update on state CHANGE to avoid duplicate ID and reduce render load
         if stim and not prev:
-            audio_ph.audio(_wav(vol), format="audio/wav", loop=True, autoplay=True,
-                           key=f"audio_{sn}")
+            audio_ph.audio(_wav(vol), format="audio/wav", loop=True, autoplay=True)
         elif not stim and prev:
             audio_ph.empty()
 
