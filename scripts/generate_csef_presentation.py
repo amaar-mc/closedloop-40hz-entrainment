@@ -385,8 +385,9 @@ def p05_methods2(p):
         "individual oscillation profiles) that does not generalize across "
         "subjects.  Dropping all spectral features and using only 12 "
         "PAC-derived and stimulation context features raised test R\u00b2 "
-        "from \u22120.025 to 0.606 \u2014 a 5\u00d7 improvement over the "
-        "previous best TCN result.")
+        "from \u22120.025 (73 features) to 0.558 (12 features, single "
+        "seed).  The 5-seed mean is R\u00b2 = 0.606 \u00b1 0.032, a "
+        "5\u00d7 improvement over the prior TCN best of 0.121.")
     p.ln(0.04)
     p.tbl(
         ["Feature Subset", "# Features", "Test R\u00b2"],
@@ -484,7 +485,7 @@ def p06_methods3(p):
           "PAC+Stim engineering, causal TCN forecasting (5 s horizon), "
           "and an adaptive controller that drives personalized 40 Hz "
           "auditory stimulation.  Dashed arrow indicates closed-loop "
-          "feedback.  (Diagram generated with AI assistance.)")
+          "feedback.  (Diagram created by the author.)")
 
 
 def p07_results1(p):
@@ -794,8 +795,12 @@ def p12_references(p):
         "BCIs.  J Neural Eng 15, 056013, 2018.",
         "[7]  Tort ABL et al.  Measuring phase-amplitude coupling.  "
         "J Neurophysiology 104, 1195\u20131210, 2010.",
-        "[8]  Wang Y et al.  Gamma wave stimulation in brain "
-        "disorders.  Mol Neurodegeneration 19, 2024.",
+        "[8]  Cabral J et al.  AI-driven biofeedback for personalized "
+        "digital therapeutics.  Front Digital Health 7, 2025.",
+        "[9]  Rosin B et al.  Closed-loop DBS for Parkinson\u2019s "
+        "disease.  Neuron 72, 370\u2013384, 2011.",
+        "[10] Lacroix A et al.  Portiloop: real-time causal sleep "
+        "spindle detection.  PLOS ONE 17, e0269421, 2022.",
     ]
     for r in refs:
         p.set_font(p._f, "", 14)
