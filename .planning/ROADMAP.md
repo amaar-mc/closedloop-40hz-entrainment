@@ -55,12 +55,16 @@
 ### 🚧 v4.0 CSEF Submission (In Progress — deadline 2026-04-09)
 
 ### Phase 16: CSEF Documentation and Presentation Package
-**Goal**: Update all CSEF submission materials to reflect PAC+Stim TCN breakthrough (R² 0.12→0.60), audiovisual stimulation, live Muse 2 demo, and productization narrative. Create project presentation (max 13 pages), update poster board V6, augment lab notebook, revise research paper, prepare interview scripts.
+**Goal**: Update all CSEF submission materials to reflect PAC+Stim TCN breakthrough (R2 0.12 to 0.60), audiovisual stimulation, live Muse 2 demo, and productization narrative. Create project presentation (max 13 pages), update poster board V6, augment lab notebook, revise research paper, prepare interview scripts.
 **Depends on:** Phase 15 (v3.0 complete)
-**Plans:** TBD
+**Plans:** 5 plans
 
 Plans:
-- [ ] TBD (run /gsd:plan-phase 16 to break down)
+- [ ] 16-01-PLAN.md — Update interview scripts (01-05) and elevator pitch with PAC+Stim narrative
+- [ ] 16-02-PLAN.md — Create Poster Board V6 with updated numbers and feature discovery
+- [ ] 16-03-PLAN.md — Update presentation PDF generator and regenerate CSEF presentation
+- [ ] 16-04-PLAN.md — Create Research Paper v4 with feature ablation study
+- [ ] 16-05-PLAN.md — Augment lab notebook, update abstract, final CSEF/ sync audit
 
 ---
 
