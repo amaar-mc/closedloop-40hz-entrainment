@@ -83,6 +83,8 @@ Progress: [██████████] 97%
 - 13-03: QR generation and PDF generation split into separate CLI scripts for independent re-runs when URLs change.
 - 14-02: Used dedicated 4ch TCN run R2=0.156 (not sweep 0.112) as primary comparison number -- dedicated run more representative.
 - 14-02: Baseline-relative comparison (TCN vs persistence gain) is the honest metric across configurations with different PAC labels.
+- 16-03: 12 PAC+Stim features (not 73) is the correct model description — feature ablation study raises test R2 from -0.025 to 0.606.
+- 16-03: Productization section replaces generic future-work in Conclusions — caregiver app (HF Spaces) + 3-phase clinical roadmap (observational, feasibility, comparative).
 
 ### Roadmap Evolution
 - Phase 12.1 inserted after Phase 12: Improved TCN: Enhanced Features + Multi-Task + Self-Attention (URGENT)
