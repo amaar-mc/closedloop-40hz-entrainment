@@ -8,6 +8,7 @@
 
 - ✅ **v2.0 Paper Audit & Corrections** — Phases 4-9 (shipped 2026-03-18)
 - ✅ **v3.0 Deepen Research** — Phases 10-15 (shipped 2026-03-22)
+- 🚧 **v4.0 CSEF Submission** — Phase 16 (in progress — deadline 2026-04-09)
 
 ## Phases
 
@@ -50,6 +51,16 @@
 |-------|-----------|-------|--------|-----------|
 | 4-9 | v2.0 | 14/14 | Complete | 2026-03-18 |
 | 10-15 | v3.0 | 13/13 | Complete | 2026-03-22 |
+
+### 🚧 v4.0 CSEF Submission (In Progress — deadline 2026-04-09)
+
+### Phase 16: CSEF Documentation and Presentation Package
+**Goal**: Update all CSEF submission materials to reflect PAC+Stim TCN breakthrough (R² 0.12→0.60), audiovisual stimulation, live Muse 2 demo, and productization narrative. Create project presentation (max 13 pages), update poster board V6, augment lab notebook, revise research paper, prepare interview scripts.
+**Depends on:** Phase 15 (v3.0 complete)
+**Plans:** TBD
+
+Plans:
+- [ ] TBD (run /gsd:plan-phase 16 to break down)
 
 ---
 

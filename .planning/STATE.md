@@ -84,6 +84,7 @@ Progress: [██████████] 97%
 
 ### Roadmap Evolution
 - Phase 12.1 inserted after Phase 12: Improved TCN: Enhanced Features + Multi-Task + Self-Attention (URGENT)
+- Phase 16 added: CSEF Documentation and Presentation Package (v4.0 milestone)
 
 ### Blockers/Concerns
 
