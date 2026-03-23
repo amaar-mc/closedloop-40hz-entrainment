@@ -8,11 +8,11 @@
 
 Alzheimer's disease affects over 55 million people worldwide, and emerging research shows that 40 Hz auditory stimulation can drive gamma-frequency brain rhythms that help clear toxic amyloid-beta plaques. Current protocols deliver this therapy on a fixed schedule, ignoring individual responses; some patients habituate within minutes while others maintain entrainment. This project proposes a closed-loop deep learning system to predict when a patient's brain will lose entrainment, enabling individualized stimulation timing.
 
-I analyzed EEG recordings from 35 elderly subjects including dementia patients and healthy controls (OpenNeuro ds005048) and computed phase-amplitude coupling (PAC), the coordination between slow theta-band and fast gamma-band brain rhythms, as a real-time biomarker of entrainment strength. A systematic feature ablation study revealed that spectral EEG features encode subject-specific anatomy that catastrophically overfits, while PAC trajectory and stimulation context features capture generalizable temporal dynamics. Using only 12 PAC trajectory and stimulation context features, I trained a causal Temporal Convolutional Network (TCN) to forecast PAC five to ten seconds ahead, achieving test R-squared = 0.606 ± 0.032 (5-seed mean) — a five-fold improvement over the previous 73-feature model (R-squared = 0.121). The TCN was integrated into a closed-loop controller and validated on all 35 subjects' EEG.
+I analyzed EEG recordings from 35 elderly subjects including dementia patients and healthy controls (OpenNeuro ds005048) and computed phase-amplitude coupling (PAC), the coordination between slow theta-band and fast gamma-band brain rhythms, as a real-time biomarker of entrainment strength. A feature ablation study across six input configurations revealed that 61 spectral EEG features encode subject-specific anatomy and cause catastrophic overfitting on held-out subjects, while 12 PAC trajectory and stimulation context features generalize across individuals. Using only these 12 features, I trained a causal Temporal Convolutional Network (TCN) to forecast PAC five to ten seconds ahead, achieving test R-squared = 0.606 ± 0.032 (5-seed mean) — up from R-squared = 0.121 with the original 73-feature model. The TCN was integrated into a closed-loop controller and validated on all 35 subjects' EEG.
 
 The controller matched stimulation to periods of need 72.1% of the time versus 64.5% for reactive control (p < 0.001) and targeted 82.6% of low-PAC windows versus 51.7% (p < 0.001), reaching 91% of the theoretical oracle. Every subject showed improved alignment in offline validation (p < 0.001), and the advantage held across six simulated fatigue severity levels.
 
-These results demonstrate that forecasting PAC can support a computational framework for personalized 40 Hz therapy that outperforms fixed and reactive protocols, offering a path toward more efficient treatment for Alzheimer's disease.
+These results show that PAC forecasting can drive a closed-loop controller that outperforms both fixed and reactive protocols on real patient EEG, though live closed-loop validation is still needed to confirm clinical translation.
 
 **Keywords:** 40 Hz entrainment, phase-amplitude coupling, temporal convolutional network, closed-loop neuromodulation, Alzheimer's disease, EEG, predictive control, feature ablation
 
@@ -73,8 +73,8 @@ This paper makes the following specific contributions:
 **Contribution 1: Empirical ceiling characterization for static PAC prediction.**
 A systematic architecture search across eight neural network configurations spanning nearly three orders of magnitude in parameter count (1,457 to 1.1 million) demonstrates that all architectures converge to R-squared of approximately 0.287 on held-out test subjects. This convergence reveals an information ceiling imposed by the epoch-level structure of PAC labels and the limited discriminative capacity of instantaneous EEG snapshots from seven frontal channels.
 
-**Contribution 2: Feature ablation study revealing spectral feature catastrophic overfitting.**
-A systematic ablation across six feature subsets demonstrates that spectral EEG features (61 of 73) cause catastrophic generalization failure (R-squared: 0.333 validation → -0.025 test) while 12 PAC trajectory and stimulation context features achieve robust cross-subject generalization (R-squared: 0.804 validation → 0.558 test). Feature selection, not architectural complexity, is the primary lever for temporal PAC prediction performance.
+**Contribution 2: Feature ablation study showing spectral features cause catastrophic overfitting.**
+An ablation across six feature subsets shows that spectral EEG features (61 of 73) cause generalization failure (R-squared: 0.333 validation, -0.025 test) while the remaining 12 PAC trajectory and stimulation context features generalize well (R-squared: 0.804 validation, 0.558 test). Feature selection, not architecture, is the primary lever for temporal PAC prediction.
 
 **Contribution 3: Causal TCN for 5-10 second ahead PAC forecasting achieving R-squared = 0.606.**
 Using the 12-feature PAC+Stim subset, a multiscale causal TCN achieves mean test R-squared = 0.606 ± 0.032 across five random seeds — a five-fold improvement over the previous 73-feature model (R-squared = 0.121). At the 5-second prediction horizon, PAC+Stim TCN R-squared = 0.577 versus persistence R-squared = 0.104, a +0.473 margin. The improvement is robust: the 4-channel Muse-compatible configuration achieves test R-squared = 0.430.
@@ -360,7 +360,7 @@ The feature ablation study (described in Section 2.4.2) establishes that feature
 - The 12-feature PAC+Stim model achieves R-squared = 0.804 on validation and R-squared = 0.558 on test (val-test gap = 0.246).
 - The pure spectral model (61 features) fails completely: test R-squared = -0.420.
 
-These results demonstrate that spectral features are the primary source of the val-test generalization gap. The 61 spectral features memorize subject-specific EEG power distributions that do not transfer to unseen test subjects. The 12 PAC+Stim features capture temporal coupling dynamics that generalize robustly.
+The spectral features are the primary source of the val-test gap. They let the model memorize subject-specific EEG power distributions that do not transfer to unseen subjects. The 12 PAC+Stim features, which encode how coupling changes over time rather than absolute power levels, generalize to held-out subjects.
 
 ---
 
@@ -379,7 +379,7 @@ To verify that the PAC+Stim result is not a lucky random initialization, I train
 | 2024 | 0.846 | 0.647 |
 | **Mean ± Std** | **0.820 ± 0.019** | **0.606 ± 0.032** |
 
-The improvement is robust across random seeds: test R-squared ranges from 0.558 to 0.647 (mean 0.606, std 0.032). No single seed explains the result -- the worst seed (0.558) still substantially outperforms the previous 73-feature best (0.121).
+Test R-squared ranges from 0.558 to 0.647 (mean 0.606, std 0.032) across seeds. The worst seed (0.558) still outperforms the 73-feature model (0.121) by a factor of 4.6.
 
 ---
 
@@ -400,7 +400,7 @@ With the 12-feature PAC+Stim dataset established, I conducted a secondary archit
 | TCN h=128 | 128 | 86,786 | 0.853 | 0.645 |
 | TCN h=64 + mixup(0.5) | 64 | 22,914 | 0.768 | 0.602 |
 
-Key finding: the h=32 high-regularization model (dropout=0.3, weight_decay=5e-3) achieves test R-squared = 0.613 with only 5,154 parameters -- the best regularized single-seed result. The best absolute result is h=128 (test R-squared = 0.645) at 86,786 parameters, but the efficiency gain of h=32 high-reg makes it preferable for deployment on constrained hardware. Ridge regression on PAC+Stim summary features achieves R-squared = 0.261, confirming that non-linear temporal modeling in the TCN provides substantive gains over linear methods.
+The h=32 model with strong regularization (dropout=0.3, weight_decay=5e-3) achieves test R-squared = 0.613 with 5,154 parameters. The h=128 model reaches 0.645 but is 17x larger with diminishing returns. Ridge regression on PAC+Stim summary features achieves R-squared = 0.261, confirming that the TCN's non-linear temporal modeling provides real gains beyond what a linear model can extract.
 
 ---
 
@@ -552,13 +552,13 @@ This section interprets the experimental findings in relation to the central res
 
 ---
 
-### 5.1 Why Spectral Features Fail: Subject-Specific Anatomy vs. Universal Dynamics
+### 5.1 Why Spectral Features Fail
 
-The feature ablation study's central finding -- that spectral features actively harm cross-subject generalization -- requires mechanistic interpretation. The 61 spectral features encode power spectral density across frequency bands within each 2-second window. These features are highly subject-specific: different individuals have different baseline spectral profiles due to skull thickness, cortical folding, electrode impedance, and age- and state-dependent baseline differences [experimental/FINDINGS.md]. The model can memorize the spectral profiles of training subjects, achieving validation R-squared = 0.333, but this memorization fails catastrophically on unseen test subjects (test R-squared = -0.025).
+The 61 spectral features encode power spectral density across frequency bands within each 2-second window. These values differ substantially between individuals due to skull thickness, cortical folding, electrode impedance, and age-related baseline differences. A model trained on spectral features can learn to identify which training subject it is looking at (achieving validation R-squared = 0.333) but this subject-identification strategy fails on unseen test subjects (test R-squared = -0.025).
 
-The PAC trajectory features, by contrast, encode the *relative temporal dynamics* of theta-gamma coupling -- how PAC rises, falls, and transitions -- rather than absolute spectral amplitudes. These dynamics are driven by the underlying stimulation protocol: PAC rises during stimulation periods and decays during rest in a pattern that reflects the biological response to 40 Hz entrainment rather than individual neural anatomy. The stimulation context features (stim_state, time_since_switch, protocol phase) directly encode the causal driver of these dynamics, explaining why their addition to the PAC features (moving from 7 to 12 features) provides a substantial test R-squared gain (0.344 → 0.558).
+The PAC trajectory features encode something different: the *relative temporal dynamics* of theta-gamma coupling, how PAC rises, falls, and transitions. These dynamics are driven by the stimulation protocol (PAC rises during stimulation and decays during rest) rather than by individual neural anatomy. The stimulation context features (stim_state, time_since_switch, protocol phase) directly encode the causal driver, which is why adding them to the PAC features raises test R-squared from 0.344 to 0.558.
 
-The dominance of PAC trajectory features over spectral features suggests that cross-subject generalization in PAC prediction depends on capturing temporal coupling dynamics rather than subject-specific EEG morphology. This finding has implications beyond 40 Hz entrainment: it suggests a general principle that temporal models for neuromodulation applications should prioritize protocol-driven dynamics over raw spectral anatomy features.
+The implication is straightforward: cross-subject generalization in PAC prediction depends on temporal coupling dynamics, not on spectral EEG morphology. This may apply more broadly — temporal models for neuromodulation should probably prioritize protocol-driven dynamics over raw spectral features.
 
 ---
 
@@ -586,7 +586,7 @@ The 7.6 percentage-point alignment improvement of the TCN over reactive threshol
 
 The 4-channel configuration (matching the consumer-grade Muse 2 headset electrode positions: F7, F8, T7, T8) achieves test R-squared = 0.430 with PAC+Stim features, compared to near-chance performance for static PAC prediction (EEGNet 4ch R-squared = 0.016). This asymmetry demonstrates that temporal context partially compensates for reduced spatial coverage: the model learns *when* PAC will change from the sequence of recent states and protocol context, which is less dependent on spatial electrode coverage than instantaneous PAC estimation.
 
-The practical implication is significant. Research-grade EEG with gel electrodes and 19+ channels is impractical for at-home therapy. The Muse 2 (4 dry electrodes, ~$200) represents a realistic consumer deployment target. The 4-channel temporal model (R-squared = 0.430) is 3.7x better than the 4-channel 73-feature model (R-squared = 0.112), suggesting that the PAC+Stim feature selection benefit is particularly valuable in the data-limited consumer hardware regime where spectral overfitting would otherwise dominate.
+For at-home therapy, research-grade EEG with gel electrodes and 19+ channels is not practical. The Muse 2 (4 dry electrodes, ~$200) is a realistic consumer target. The 4-channel temporal model (R-squared = 0.430) is 3.7x better than the 4-channel 73-feature model (R-squared = 0.112), and the PAC+Stim feature selection appears particularly valuable in this reduced-channel regime where spectral overfitting would otherwise dominate.
 
 This result should be interpreted as a proxy comparison: the 4-channel analysis uses clean research-grade recordings subsetted to 4 channels, not actual Muse 2 hardware. Real Muse 2 deployment would add dry-electrode noise (impedance >300 kΩ), EMG contamination at frontal sites, and reference electrode mismatch. The actual consumer hardware deployment gap will be larger than this proxy study indicates.
 
@@ -622,11 +622,11 @@ Three immediate priorities define the path from computational validation to clin
 
 ## 6. Conclusion
 
-This paper presents a computational framework for personalized closed-loop 40 Hz gamma entrainment in Alzheimer's disease. A systematic feature ablation study identified 12 PAC trajectory and stimulation context features as the key driver of cross-subject generalization, enabling a MultiscaleCausalTCN to achieve test R-squared = 0.606 ± 0.032 (5-seed mean) -- a five-fold improvement over the prior 73-feature model. The TCN-based closed-loop controller achieves 72.1% alignment versus 64.5% for reactive control (p < 0.001, g = 1.31), with every subject (35/35) showing improved alignment.
+This paper describes a closed-loop system for personalized 40 Hz gamma entrainment in Alzheimer's disease. A feature ablation study identified 12 PAC trajectory and stimulation context features as the driver of cross-subject generalization, raising the MultiscaleCausalTCN from test R-squared = 0.121 (73 features) to 0.606 ± 0.032 (5-seed mean). The TCN controller achieves 72.1% alignment versus 64.5% for reactive control (p < 0.001, g = 1.31), with all 35 subjects showing improvement.
 
-The core scientific finding is that spectral EEG features catastrophically overfit to subject-specific anatomy while PAC trajectory features capture universal temporal coupling dynamics. This principle -- that protocol-driven dynamics generalize across subjects while anatomical features do not -- may apply broadly to temporal prediction in closed-loop neuromodulation.
+The main scientific finding is that spectral EEG features overfit to subject-specific anatomy while PAC trajectory features capture temporal coupling dynamics that transfer across individuals. Protocol-driven dynamics generalize; anatomical features do not. This principle likely extends to other closed-loop neuromodulation applications.
 
-This is a computational validation on real EEG data, not a clinical validation. The 72.1% alignment figure measures counterfactual decision quality, not realized therapeutic benefit. Live closed-loop trials under IRB oversight are required to confirm clinical translation. Within these boundaries, this work provides a complete, reproducible pipeline from raw BIDS EEG through controller validation that can serve as a foundation for personalized 40 Hz entrainment therapy in Alzheimer's disease.
+This is a computational validation, not a clinical one. The 72.1% alignment measures counterfactual decision quality on recorded EEG, not realized therapeutic benefit. Live closed-loop trials are needed to confirm clinical translation. Within those boundaries, this work provides a reproducible pipeline from raw BIDS EEG through controller validation.
 
 ---
 
