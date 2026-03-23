@@ -200,18 +200,18 @@ def p01_title(p):
     p.set_font(p._f, "B", 16)
     p.cell(0, 0.30, "Project Summary", new_x="LMARGIN", new_y="NEXT")
     p.ln(0.06)
-    # 146 words
+    # ~144 words
     p.body(
         "This project develops a closed-loop deep learning system for "
         "personalized 40 Hz auditory entrainment therapy in Alzheimer\u2019s "
         "disease. Current clinical protocols deliver stimulation on rigid "
-        "fixed schedules, ignoring substantial individual variability in "
+        "fixed schedules, ignoring individual variability in "
         "neural responses and intra-session habituation. I analyzed EEG "
         "recordings from 35 elderly subjects (OpenNeuro ds005048) and "
         "discovered that dropping 61 spectral features in favor of 12 "
         "PAC-derived and stimulation context features raised forecasting "
-        "accuracy from test R\u00b2 = \u22120.025 (73 features) to 0.606 "
-        "(5-seed mean, std = 0.032) \u2014 a 5\u00d7 improvement driven by "
+        "accuracy from test R\u00b2 = 0.121 (73 features) to 0.606 "
+        "(5-seed mean, std = 0.032), driven by "
         "eliminating subject-specific anatomy from model inputs. "
         "The predictive controller matched stimulation to patient need "
         "72.1% versus 64.5% for reactive control (p < 0.001, Hedges\u2019 "
@@ -250,10 +250,10 @@ def p02_intro1(p):
     p.body(
         "I became interested in computational approaches to Alzheimer\u2019s "
         "therapy after reading about the landmark Iaccarino et al. (2016) "
-        "Nature study, which demonstrated that 40 Hz sensory stimulation "
+        "Nature study showing that 40 Hz sensory stimulation "
         "reduced amyloid-beta plaques in AD mouse models by up to 50%. "
-        "While investigating human clinical translation, I identified a "
-        "critical gap: all existing protocols deliver stimulation on rigid "
+        "Looking into human clinical translation, I noticed a "
+        "gap: all existing protocols deliver stimulation on rigid "
         "fixed schedules that ignore individual neural responses. "
         "Approximately 30% of patients are non-responders (Fortunato et "
         "al., 2023), and habituation degrades entrainment within sessions "
@@ -393,12 +393,14 @@ def p05_methods2(p):
         [
             ["All (spectral + PAC + stim)", "73", "\u22120.025"],
             ["PAC only", "7", "0.344"],
-            ["PAC + Stim context (final)", "12", "0.606"],
+            ["PAC + Stim context (final)", "12", "0.558*"],
             ["Spectral only", "61", "\u22120.420"],
         ],
         ws=[4.5, 1.8, 2.1],
         highlight_row=2,
     )
+    p.caption("*Single-seed ablation result.  5-seed mean: "
+              "R\u00b2 = 0.606 \u00b1 0.032 (see Results, Table 3).")
     p.ln(0.04)
     p.body(
         "The 12 PAC+Stim features: PAC current value, causal moving averages "
@@ -429,11 +431,11 @@ def p05_methods2(p):
         "[1, 2, 4, 8]; effective receptive field = 31 time steps",
         "GroupNorm + SiLU activation; attention pooling; dual-head "
         "output (future PAC + delta-PAC)",
-        "5,154 parameters (h = 32 high-reg); Huber loss; AdamW; "
+        "22,914 parameters (h = 64); Huber loss; AdamW; "
         "early stopping (patience = 20 epochs)",
         "5-second prediction horizon; test R\u00b2 = 0.606 (7ch, "
         "5-seed mean 0.606 \u00b1 0.032, range 0.558\u20130.647); "
-        "4ch test R\u00b2 = 0.430",
+        "4ch test R\u00b2 = 0.430 (h = 32, 5,154 params)",
     ]:
         p.bullet(t)
 
@@ -482,7 +484,7 @@ def p06_methods3(p):
           "PAC+Stim engineering, causal TCN forecasting (5 s horizon), "
           "and an adaptive controller that drives personalized 40 Hz "
           "auditory stimulation.  Dashed arrow indicates closed-loop "
-          "feedback.")
+          "feedback.  (Diagram generated with AI assistance.)")
 
 
 def p07_results1(p):
@@ -619,8 +621,8 @@ def p09_discussion(p):
         "val-test R\u00b2 gap shrinks from 0.358 (73 feat) to 0.246 "
         "(12 feat) when spectral features are removed.",
         "The 60% improvement in low-PAC targeting (82.6% vs. 51.7%) "
-        "is the most clinically significant result: therapeutic "
-        "exposure is concentrated where neural coupling is weakest.",
+        "matters most clinically: the controller concentrates "
+        "therapy where neural coupling is weakest.",
     ]:
         p.bullet(t)
     p.ln(0.06)
@@ -686,13 +688,13 @@ def p10_conclusions(p):
 
     p.sub("Context")
     p.body(
-        "These results support the hypothesis that temporal PAC "
-        "forecasting enables proactive closed-loop control that "
-        "substantially outperforms both fixed-schedule and reactive "
-        "threshold protocols.  The work addresses a documented gap in "
-        "the 40 Hz entrainment literature: no prior system has "
-        "attempted PAC-specific temporal prediction for personalized "
-        "gamma entrainment control.")
+        "These results show that temporal PAC forecasting "
+        "can drive proactive closed-loop control that outperforms "
+        "both fixed-schedule and reactive protocols.  No prior "
+        "system has attempted PAC-specific temporal prediction for "
+        "personalized gamma entrainment control.  This work is a "
+        "computational validation; live closed-loop trials are "
+        "needed to confirm clinical translation.")
     p.ln(0.10)
 
     p.sub("Productization and Clinical Roadmap")
@@ -728,12 +730,12 @@ def p11_scope(p):
     for t in [
         "Independently identified the research gap (fixed-schedule "
         "limitation in 40 Hz entrainment) through literature review.",
-        "Designed and implemented the complete computational pipeline: "
-        "EEG preprocessing, PAC computation, systematic architecture "
+        "Designed and implemented the full computational pipeline: "
+        "EEG preprocessing, PAC computation, architecture "
         "search across 8 neural network families, feature ablation "
         "study (73 \u2192 12 PAC+Stim features), and MultiscaleCausalTCN "
         "design.",
-        "Discovered the R\u00b2 = 0.287 data ceiling through systematic "
+        "Discovered the R\u00b2 = 0.287 data ceiling through "
         "experimentation, the \u22483-second prediction horizon inflection "
         "point, and the feature selection breakthrough (12 PAC+Stim "
         "features raising R\u00b2 from \u22120.025 to 0.606) \u2014 "
@@ -779,49 +781,37 @@ def p12_references(p):
     p.sub("References")
     refs = [
         "[1]  Iaccarino HG et al.  Gamma frequency entrainment "
-        "attenuates amyloid load and modifies microglia.  Nature, "
-        "540, 230\u2013235, 2016.",
+        "attenuates amyloid load.  Nature 540, 230\u2013235, 2016.",
         "[2]  Murdock MH et al.  Multisensory gamma stimulation "
-        "promotes glymphatic clearance of amyloid.  Nature, 627, "
-        "149\u2013156, 2024.",
-        "[3]  Chan D et al.  Gamma sensory stimulation in mild "
-        "Alzheimer\u2019s dementia: open-label extension.  "
-        "Alzheimer\u2019s & Dementia, 2025.",
-        "[4]  Fortunato C et al.  Gamma sensory entrainment for "
-        "cognitive improvement in neurodegenerative diseases.  "
-        "Frontiers in Neuroscience, 17, 2023.",
-        "[5]  Lahijanian B et al.  Auditory gamma-band entrainment "
-        "enhances default mode network connectivity in dementia.  "
-        "Scientific Reports, 14, 2024.",
-        "[6]  Lawhern VJ et al.  EEGNet: a compact CNN for EEG-based "
-        "brain\u2013computer interfaces.  J Neural Eng, 15, 056013, 2018.",
-        "[7]  Tort ABL et al.  Measuring phase-amplitude coupling "
-        "between neuronal oscillations of different frequencies.  "
-        "J Neurophysiology, 104, 1195\u20131210, 2010.",
-        "[8]  Wang Y et al.  Mystery of gamma wave stimulation in "
-        "brain disorders.  Molecular Neurodegeneration, 19, 2024.",
-        "[9]  Cabral J et al.  Advancing personalized digital "
-        "therapeutics: AI-driven biofeedback.  Front Digital Health, "
-        "7, 2025.",
-        "[10] Backus AR et al.  Theta\u2013Gamma Coupling and Working "
-        "Memory in Alzheimer\u2019s Dementia.  Front Aging Neurosci, "
-        "10, 101, 2018.",
+        "promotes glymphatic clearance.  Nature 627, 149\u2013156, 2024.",
+        "[3]  Chan D et al.  Gamma sensory stimulation in mild AD: "
+        "open-label extension.  Alzheimer\u2019s & Dementia, 2025.",
+        "[4]  Fortunato C et al.  Gamma entrainment for cognitive "
+        "improvement in neurodegeneration.  Front Neurosci 17, 2023.",
+        "[5]  Lahijanian B et al.  Auditory gamma entrainment enhances "
+        "DMN connectivity in dementia.  Sci Rep 14, 2024.",
+        "[6]  Lawhern VJ et al.  EEGNet: compact CNN for EEG-based "
+        "BCIs.  J Neural Eng 15, 056013, 2018.",
+        "[7]  Tort ABL et al.  Measuring phase-amplitude coupling.  "
+        "J Neurophysiology 104, 1195\u20131210, 2010.",
+        "[8]  Wang Y et al.  Gamma wave stimulation in brain "
+        "disorders.  Mol Neurodegeneration 19, 2024.",
     ]
     for r in refs:
-        p.set_font(p._f, "", 11)
+        p.set_font(p._f, "", 14)
         p.set_text_color(*BLACK)
-        p.multi_cell(0, 0.19, r)
+        p.multi_cell(0, 0.24, r)
         p.ln(0.01)
 
     p.ln(0.10)
     p.sub("Supplemental Information")
-    p.set_font(p._f, "", 11)
+    p.set_font(p._f, "", 14)
     p.set_text_color(*BLACK)
     url = "https://openneuro.org/datasets/ds005048"
-    p.write(0.19, "Dataset:  ")
-    p.set_font(p._f, "I", 11)
-    p.write(0.19, url, url)
-    p.ln(0.22)
+    p.write(0.24, "Dataset:  ")
+    p.set_font(p._f, "I", 14)
+    p.write(0.24, url, url)
+    p.ln(0.28)
 
 
 # ====================================================================
