@@ -382,17 +382,17 @@ def main():
 
         # Render charts — placeholders handle in-place updates, no key needed
         ph_sync_chart.plotly_chart(_fig_sync(S["pd"], S["fd"]),
-                                    use_container_width=True)
+                                    width="stretch")
         ph_eeg_chart.plotly_chart(_fig_eeg(eeg),
-                                   use_container_width=True)
+                                   width="stretch")
         # Update secondary charts less frequently (every 3 steps) to reduce render load
         if sn % 3 == 0 or sn <= LOOKBACK + 1:
             ph_band_chart.plotly_chart(_fig_bands(S["bands"]),
-                                        use_container_width=True)
+                                        width="stretch")
             ph_stim_chart.plotly_chart(_fig_stim(S["sh"]),
-                                        use_container_width=True)
+                                        width="stretch")
             ph_z_chart.plotly_chart(_fig_z(S["zh"]),
-                                     use_container_width=True)
+                                     width="stretch")
 
         with ph_log:
             for i, entry in enumerate(reversed(S["log"][-8:])):
