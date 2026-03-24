@@ -20,7 +20,7 @@ from typing import Dict, List
 import numpy as np
 from scipy import stats
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
@@ -80,9 +80,10 @@ class PredictiveLookAheadControl:
         z = (pac - mu) / sigma
         trend = self._trend()
         desired = None
-        if trend < -0.3 * sigma:
+        trend_thresh = 0.003  # fixed threshold in PAC-per-step units
+        if trend < -trend_thresh:
             desired = StimAction.STIMULATE
-        elif trend > 0.3 * sigma:
+        elif trend > trend_thresh:
             desired = StimAction.REST
         elif z < -self.z_thresh:
             desired = StimAction.STIMULATE
@@ -115,7 +116,8 @@ def run_trial(method, sim, duration_sec=600, seed=None):
 
     pac_arr = np.array(pac_values)
     act_arr = np.array(actions)
-    baseline = pac_arr[0]
+    n_baseline = min(10, len(pac_arr))
+    baseline = float(np.mean(pac_arr[:n_baseline]))
     mean_pac = float(np.mean(pac_arr))
     improvement = 100.0 * (mean_pac - baseline) / (baseline + 1e-8)
     stim_pct = 100.0 * float(np.mean(act_arr))
