@@ -142,10 +142,17 @@ class EEGNet(nn.Module):
         # OUTPUT LAYER: Regression Head
         # =====================================================================
 
-        # Calculate flattened size after convolutions and pooling
-        # After pool1: n_samples // pool_size_1
-        # After pool2: (n_samples // pool_size_1) // pool_size_2
-        flatten_size = F2 * (n_samples // (pool_size_1 * pool_size_2))
+        # Compute flattened size by tracing a dummy tensor through the conv
+        # layers. This is robust to arbitrary kernel/pool combinations that
+        # may not divide evenly (the formula n_samples // (p1*p2) silently
+        # gives wrong results for non-default params).
+        with torch.no_grad():
+            dummy = torch.zeros(1, 1, n_channels, n_samples)
+            dummy = self.pool1(self.elu1(self.batchnorm2(self.depthwise(
+                self.batchnorm1(self.conv1(dummy))))))
+            dummy = self.pool2(self.elu2(self.batchnorm3(self.separable_conv2(
+                self.separable_conv1(dummy)))))
+            flatten_size = dummy.numel()
 
         # Fully connected layer for PAC prediction
         self.fc = nn.Linear(flatten_size, 1)
