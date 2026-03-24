@@ -131,8 +131,8 @@ class EntrainmentSimulator:
         noise = np.random.normal(0, self.noise_std)
         pac_new = pac_new + noise
 
-        # Clip to valid range
-        pac_new = np.clip(pac_new, 0.0, 1.0)
+        # Clip to configured PAC bounds (not [0, 1])
+        pac_new = np.clip(pac_new, self.pac_min, self.pac_max)
 
         # Update state
         self.pac = pac_new
@@ -270,9 +270,9 @@ class FatigueAwareSimulator:
         else:
             raise ValueError(f"Invalid action: {action}")
 
-        # Add noise and clip
+        # Add noise and clip to configured PAC bounds
         pac_new += np.random.normal(0, self.noise_std)
-        pac_new = np.clip(pac_new, 0.0, 1.0)
+        pac_new = np.clip(pac_new, self.pac_min, self.pac_max)
 
         # Update state
         self.pac = pac_new
@@ -300,14 +300,18 @@ class FatigueAwareSimulator:
             'fatigue': np.array(self.fatigue_history),
             'pac_mean': np.mean(self.pac_history),
             'pac_std': np.std(self.pac_history),
-            'stimulation_time': 100.0 * np.mean(self.action_history)
-            if len(self.action_history) > 0 else 0.0,
+            'stimulation_time': (
+                100.0 * np.mean(self.action_history)
+                if len(self.action_history) > 0 else 0.0
+            ),
         }
 
 
 def extract_tau_parameters_from_data(pac_values: np.ndarray,
                                      actions: np.ndarray,
-                                     fs: float = 1.0) -> Dict[str, float]:
+                                     fs: float = 1.0,
+                                     pac_max: float = 0.3,
+                                     pac_min: float = 0.05) -> Dict[str, float]:
     """
     Extract tau parameters empirically from experimental data.
 
@@ -320,6 +324,8 @@ def extract_tau_parameters_from_data(pac_values: np.ndarray,
         pac_values: Time series of PAC values
         actions: Corresponding stimulation actions (0=rest, 1=stim)
         fs: Sampling frequency in Hz
+        pac_max: Target PAC during stimulation (must match data scale)
+        pac_min: Target PAC during rest (must match data scale)
 
     Returns:
         params: Dictionary with estimated tau_rise and tau_decay
@@ -332,18 +338,14 @@ def extract_tau_parameters_from_data(pac_values: np.ndarray,
         delta_pac = pac_values[i] - pac_values[i-1]
 
         if actions[i] == StimAction.STIMULATE:
-            # During stimulation: estimate tau_rise
-            # Assuming target = PAC_max = 0.3
-            target = 0.3
+            target = pac_max
             if target > pac_values[i-1]:  # Only if moving toward target
                 tau = delta_pac / (target - pac_values[i-1]) if (target - pac_values[i-1]) > 1e-6 else 0.0
                 if 0 <= tau <= 1:
                     tau_rise_values.append(tau)
 
         else:  # action == REST
-            # During rest: estimate tau_decay
-            # Assuming target = PAC_min = 0.05
-            target = 0.05
+            target = pac_min
             if target < pac_values[i-1]:  # Only if moving toward target
                 tau = delta_pac / (target - pac_values[i-1]) if (pac_values[i-1] - target) > 1e-6 else 0.0
                 if 0 <= tau <= 1:
