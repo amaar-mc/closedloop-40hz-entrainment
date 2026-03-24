@@ -48,4 +48,4 @@ notebooks/*.ipynb
 *.bak
 *.tmp
 
-node_modules/
+node_modules/~$*
