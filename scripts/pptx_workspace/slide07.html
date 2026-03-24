@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 792pt; height: 612pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: 'Times New Roman', Times, serif;
+  display: flex; flex-direction: column;
+}
+.content { margin: 43pt 54pt; flex: 1; }
+h1 { font-size: 22pt; color: #000; margin-bottom: 10pt; font-weight: bold; }
+h2 { font-size: 17pt; color: #000; margin-top: 12pt; margin-bottom: 4pt; font-weight: bold; }
+p { font-size: 14pt; color: #000; line-height: 1.35; margin: 3pt 0 6pt 0; }
+.caption { font-size: 11pt; color: #646464; font-style: italic; margin: 4pt 0; }
+.placeholder { background: #f0f0f0; }
+</style>
+</head>
+<body>
+<div class="content">
+  <h1>Results</h1>
+
+  <h2>Architecture Search: The R&#178; = 0.287 Static Ceiling</h2>
+  <p>Eight neural network architectures (1,457 to 1.1 M parameters) were tested for static PAC prediction from 2-second EEG snapshots. All converged to R&#178; &#8776; 0.287 &#8212; a data-imposed ceiling showing that epoch-level PAC cannot be recovered from instantaneous windows. This finding redirected the project toward temporal forecasting. <b>The bottleneck was in the features, not the architecture.</b></p>
+
+  <h2>Horizon Sweep: PAC+Stim TCN vs. Baselines</h2>
+  <p>TCN models trained on 12 PAC+Stim features at horizons 1&#8211;10 s (PAC+Stim features only). An inflection point emerges at &#8776;3 s where persistence collapses but the TCN maintains strong R&#178;:</p>
+
+  <div class="placeholder" id="table-horizon" style="width: 684pt; height: 162pt;"></div>
+
+  <p class="caption">Table 1. PAC+Stim TCN horizon sweep (single seed). At 1 s, persistence is competitive. At 3&#8211;10 s, persistence collapses while the TCN (7ch) maintains R&#178; = 0.37&#8211;0.67 &#8212; the operationally actionable regime for proactive neuromodulation. Multi-seed 5-seed mean at horizon 5: R&#178; = 0.606 &#177; 0.032, range 0.558&#8211;0.647.</p>
+</div>
+</body>
+</html>
