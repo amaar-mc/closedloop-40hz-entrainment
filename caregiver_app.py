@@ -188,7 +188,7 @@ def render_welcome() -> None:
             "needs it — maximizing therapeutic benefit while minimizing fatigue."
         )
         st.markdown("")
-        if st.button("Get Started", type="primary", use_container_width=True):
+        if st.button("Get Started", type="primary", width="stretch"):
             navigate("patient_select")
             st.rerun()
 
@@ -223,7 +223,7 @@ def render_patient_select() -> None:
                         "Start Session",
                         key=f"start_{patient['id']}",
                         type="primary",
-                        use_container_width=True,
+                        width="stretch",
                     ):
                         st.session_state.selected_patient_id = patient["id"]
                         navigate("session")
@@ -232,7 +232,7 @@ def render_patient_select() -> None:
                     if st.button(
                         "View History",
                         key=f"history_{patient['id']}",
-                        use_container_width=True,
+                        width="stretch",
                     ):
                         st.session_state.selected_patient_id = patient["id"]
                         navigate("patient_history")
@@ -286,7 +286,7 @@ def render_patient_history() -> None:
     df = pd.DataFrame(sessions)[display_cols]
     df.columns = [label(c) for c in display_cols]
 
-    st.dataframe(df, use_container_width=True, hide_index=True)
+    st.dataframe(df, width="stretch", hide_index=True)
 
     # Summary metrics row
     st.subheader("Averages")
@@ -478,7 +478,7 @@ def render_session() -> None:
                 len(st.session_state.pac_history),
             ),
         )
-        st.line_chart(chart_data, use_container_width=True)
+        st.line_chart(chart_data, width="stretch")
 
     # Auto-advance: rerun to simulate real-time
     # No extra sleep needed -- adapter.get_window() already sleeps 2 seconds
@@ -586,7 +586,7 @@ def render_sidebar() -> None:
 
         st.divider()
         if st.session_state.get("page") != "welcome":
-            if st.button("Home", use_container_width=True):
+            if st.button("Home", width="stretch"):
                 navigate("welcome")
                 st.rerun()
 
