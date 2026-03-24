@@ -25,8 +25,8 @@ from typing import Dict, List
 
 import numpy as np
 
-# Ensure src/ is importable
-ROOT = Path(__file__).resolve().parent
+# Ensure src/ is importable — resolve to repo root (two levels up from scripts/pipeline/)
+ROOT = Path(__file__).resolve().parent.parent.parent
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
@@ -58,29 +58,48 @@ class FixedScheduleControl:
 
 
 class ReactiveThresholdControl:
-    """Z-score reactive controller — stimulates when PAC drops below threshold."""
+    """Z-score reactive controller with hysteresis — maintains state in dead zone."""
     name = "Reactive Threshold"
 
-    def __init__(self, window: int = 30, z_thresh: float = 0.5):
+    def __init__(self, window: int = 30, z_thresh: float = 0.5, hold_time: int = 5):
         self.window = window
         self.z_thresh = z_thresh
+        self.hold_time = hold_time
         self.buf: list = []
+        self.state = StimAction.REST
+        self.t_in_state = 0
 
     def reset(self):
         self.buf = []
+        self.state = StimAction.REST
+        self.t_in_state = 0
 
     def step(self, pac: float) -> int:
         self.buf.append(pac)
         if len(self.buf) > self.window:
             self.buf.pop(0)
         if len(self.buf) < 10:
-            return StimAction.REST
+            self.t_in_state += 1
+            return self.state
         mu = np.mean(self.buf)
         sigma = np.std(self.buf) + 1e-8
         z = (pac - mu) / sigma
         if z < -self.z_thresh:
-            return StimAction.STIMULATE
-        return StimAction.REST
+            desired = StimAction.STIMULATE
+        elif z > self.z_thresh:
+            desired = StimAction.REST
+        else:
+            # Dead zone: maintain current state (not default to REST)
+            self.t_in_state += 1
+            return self.state
+
+        if desired != self.state:
+            if self.t_in_state >= self.hold_time:
+                self.state = desired
+                self.t_in_state = 0
+        else:
+            self.t_in_state += 1
+        return self.state
 
 
 class PredictiveLookAheadControl:
@@ -127,9 +146,10 @@ class PredictiveLookAheadControl:
         trend = self._trend()
 
         desired = None
-        if trend < -0.3 * sigma:
+        trend_thresh = 0.003  # fixed threshold in PAC-per-step units
+        if trend < -trend_thresh:
             desired = StimAction.STIMULATE
-        elif trend > 0.3 * sigma:
+        elif trend > trend_thresh:
             desired = StimAction.REST
         elif z < -self.z_thresh:
             desired = StimAction.STIMULATE
@@ -174,6 +194,8 @@ def run_trial(
     seed: int | None = None,
 ) -> Dict:
     """Run one simulation trial for a control method on a given simulator."""
+    # Seed RNG per trial so each method faces the same noise realization.
+    # Uses global seed (acceptable for single-threaded simulation).
     if seed is not None:
         np.random.seed(seed)
 
@@ -193,7 +215,8 @@ def run_trial(
     pac_arr = np.array(pac_values)
     act_arr = np.array(actions)
 
-    baseline = pac_arr[0]
+    n_baseline = min(10, len(pac_arr))
+    baseline = float(np.mean(pac_arr[:n_baseline]))
     mean_pac = float(np.mean(pac_arr))
     improvement = 100.0 * (mean_pac - baseline) / (baseline + 1e-8)
     stim_pct = 100.0 * float(np.mean(act_arr))
