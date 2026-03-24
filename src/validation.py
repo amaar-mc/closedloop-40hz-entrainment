@@ -43,7 +43,7 @@ import seaborn as sns
 from scipy import stats
 
 from controller import ClosedLoopController, StimState
-from simulator import EntrainmentSimulator, StimAction, extract_tau_parameters_from_data
+from simulator import EntrainmentSimulator, FatigueAwareSimulator, StimAction, extract_tau_parameters_from_data
 from utils import compute_regression_metrics, ensure_dir
 
 # Optional: TCN forecaster for PredictiveLookAheadControl
@@ -154,28 +154,38 @@ class FixedScheduleControl(ControlMethodBase):
 
 
 class ReactiveThresholdControl(ControlMethodBase):
-    """Reactive control based on current PAC vs. baseline."""
+    """Reactive control based on current PAC vs. baseline with hysteresis."""
 
-    def __init__(self, window_size: int = 30, threshold_std: float = 0.5):
+    def __init__(self, window_size: int = 30, threshold_std: float = 0.5,
+                 hold_time: int = 5):
         """
         Initialize reactive control.
 
         Args:
             window_size: Baseline window size in samples
             threshold_std: Threshold in standard deviations
+            hold_time: Minimum steps in current state before switching
         """
         super().__init__("Reactive Threshold (No Prediction)")
         self.window_size = window_size
         self.threshold_std = threshold_std
-        self.pac_buffer = []
+        self.hold_time = hold_time
+        self.pac_buffer: list = []
+        self.current_state = StimAction.REST
+        self.time_in_state = 0
 
     def reset(self):
-        """Reset baseline buffer."""
+        """Reset baseline buffer and state."""
         self.pac_buffer = []
+        self.current_state = StimAction.REST
+        self.time_in_state = 0
 
     def step(self, pac_current: float) -> int:
         """
         Make reactive decision based on current PAC.
+
+        Maintains current state in the dead zone (matching ClosedLoopController
+        behavior in controller.py) and applies hysteresis.
 
         Args:
             pac_current: Current PAC value
@@ -190,20 +200,32 @@ class ReactiveThresholdControl(ControlMethodBase):
 
         # Need minimum samples for baseline
         if len(self.pac_buffer) < max(5, self.window_size // 2):
-            return StimAction.REST
+            self.time_in_state += 1
+            return self.current_state
 
         # Compute z-score
         baseline_mean = np.mean(self.pac_buffer)
         baseline_std = np.std(self.pac_buffer)
         z_score = (pac_current - baseline_mean) / (baseline_std + 1e-8)
 
-        # Make decision
+        # Make decision — maintain current state in the dead zone
         if z_score < -self.threshold_std:
-            return StimAction.STIMULATE
+            desired_state = StimAction.STIMULATE
         elif z_score > self.threshold_std:
-            return StimAction.REST
+            desired_state = StimAction.REST
         else:
-            return StimAction.REST
+            # Dead zone: maintain current state (not default to REST)
+            self.time_in_state += 1
+            return self.current_state
+
+        # Apply hysteresis
+        if desired_state != self.current_state and self.time_in_state >= self.hold_time:
+            self.current_state = desired_state
+            self.time_in_state = 0
+        else:
+            self.time_in_state += 1
+
+        return self.current_state
 
 
 class PredictiveLookAheadControl(ControlMethodBase):
@@ -355,12 +377,16 @@ class PredictiveLookAheadControl(ControlMethodBase):
                     desired_state = StimAction.REST
 
         # Fall back to trend-based heuristic when TCN unavailable or
-        # when TCN prediction is not yet ready (lookback not filled)
+        # when TCN prediction is not yet ready (lookback not filled).
+        # Use a fixed threshold (decline_threshold is in PAC-per-step units)
+        # to avoid the sigma-scaling instability where sensitivity increases
+        # as PAC stabilizes.
         if desired_state is None and self.forecaster is None:
             trend = self._pac_trend()
-            if trend < self.decline_threshold * baseline_std:
+            trend_thresh = abs(self.decline_threshold) * 0.01  # fixed scale
+            if trend < -trend_thresh:
                 desired_state = StimAction.STIMULATE
-            elif trend > abs(self.decline_threshold) * baseline_std:
+            elif trend > trend_thresh:
                 desired_state = StimAction.REST
 
         # Reactive z-score fallback when neither look-ahead method fired
@@ -376,11 +402,13 @@ class PredictiveLookAheadControl(ControlMethodBase):
         # -----------------------------------------------------------------
         # Apply hysteresis
         # -----------------------------------------------------------------
-        if desired_state != self.current_state and self.time_in_state >= self.hold_time:
-            self.current_state = desired_state
-            self.time_in_state = 0
+        if desired_state != self.current_state:
+            if self.time_in_state >= self.hold_time:
+                self.current_state = desired_state
+                self.time_in_state = 0
+            # Hold time not met — stay, but don't increment time_in_state
+            # (we only count consecutive time in the *current* state)
         else:
-            # Still in current state (either desired==current or hold time not met)
             self.time_in_state += 1
 
         self.action_buffer.append(int(self.current_state))
@@ -453,19 +481,17 @@ class SimulationValidator:
                       fs: float = 1.0,
                       tau_rise: float = 0.15,
                       tau_decay: float = 0.10,
+                      seed: Optional[int] = None,
+                      use_fatigue: bool = False,
+                      fatigue_rate: float = 0.008,
+                      recovery_rate: float = 0.03,
+                      max_fatigue: float = 0.7,
                       spectral_features: Optional[np.ndarray] = None) -> ValidationMetrics:
         """
         Run simulation for a single control method.
 
-        Instantiates an ``EntrainmentSimulator``, steps through *duration_sec*
-        seconds at rate *fs*, and collects PAC values and actions.
-
-        If the control method is a ``PredictiveLookAheadControl`` with a
-        TCN forecaster, *spectral_features* (shape ``(n_steps, 61)``) can
-        be passed so that each step receives the spectral context needed for
-        TCN inference.  When *spectral_features* is ``None`` the method
-        receives only ``pac_current`` (which is sufficient for all methods
-        that do not use a TCN).
+        Seeds the RNG before each run so that every method faces the same
+        noise realization for a given seed, enabling fair comparisons.
 
         Args:
             method: Control method to test.
@@ -473,6 +499,13 @@ class SimulationValidator:
             fs: Sampling frequency (decisions per second).
             tau_rise: PAC rise time constant.
             tau_decay: PAC decay time constant.
+            seed: Random seed for reproducibility. When set, each method
+                faces the same noise realization for a given trial.
+            use_fatigue: If True, use FatigueAwareSimulator instead of
+                the basic EntrainmentSimulator.
+            fatigue_rate: Fatigue accumulation rate (only with use_fatigue).
+            recovery_rate: Fatigue recovery rate (only with use_fatigue).
+            max_fatigue: Maximum fatigue level (only with use_fatigue).
             spectral_features: Optional array of shape ``(n_steps, 61)``
                 with per-step spectral features for TCN-based controllers.
 
@@ -482,14 +515,30 @@ class SimulationValidator:
         logger.info(f"\nRunning simulation: {method.name}")
         logger.info(f"  Duration: {duration_sec}s")
 
-        # Initialize simulator
-        sim = EntrainmentSimulator(
-            tau_rise=tau_rise,
-            tau_decay=tau_decay,
-            pac_max=0.3,
-            pac_min=0.05,
-            noise_std=0.02
-        )
+        # Seed RNG so every method gets the same noise for a given trial
+        if seed is not None:
+            np.random.seed(seed)
+
+        # Initialize simulator — use fatigue-aware variant when requested
+        if use_fatigue:
+            sim = FatigueAwareSimulator(
+                tau_rise=tau_rise,
+                tau_decay=tau_decay,
+                pac_max=0.3,
+                pac_min=0.05,
+                noise_std=0.02,
+                fatigue_rate=fatigue_rate,
+                recovery_rate=recovery_rate,
+                max_fatigue=max_fatigue,
+            )
+        else:
+            sim = EntrainmentSimulator(
+                tau_rise=tau_rise,
+                tau_decay=tau_decay,
+                pac_max=0.3,
+                pac_min=0.05,
+                noise_std=0.02
+            )
 
         # Initialize method
         method.reset()
@@ -526,8 +575,9 @@ class SimulationValidator:
         pac_values = np.array(pac_values)
         actions = np.array(actions)
 
-        # Compute metrics
-        baseline_pac = pac_values[0]
+        # Compute metrics — use first 10 seconds as baseline (not just pac[0])
+        n_baseline = min(10, len(pac_values))
+        baseline_pac = float(np.mean(pac_values[:n_baseline]))
         pac_improvement = 100.0 * (np.mean(pac_values) - baseline_pac) / (baseline_pac + 1e-8)
         pac_variance_ratio = np.var(pac_values[-100:]) / (np.var(pac_values[:100]) + 1e-8)
         stimulation_time = 100.0 * np.mean(actions)
@@ -548,7 +598,7 @@ class SimulationValidator:
         logger.info(f"  Stimulation time: {metrics.stimulation_time:.1f}%")
         logger.info(f"  Efficiency ratio: {metrics.efficiency_ratio:.4f}")
 
-        # Store history
+        # Store history (last trial only — for plotting)
         self.results[method.name] = {
             'pac_values': pac_values,
             'actions': actions,
@@ -557,85 +607,111 @@ class SimulationValidator:
 
         return metrics
 
-    def run_all(self, duration_sec: int = 360, n_trials: int = 1) -> Dict[str, list]:
+    def run_all(self, duration_sec: int = 360, n_trials: int = 1,
+                base_seed: int = 42, **sim_kwargs) -> Dict[str, list]:
         """
-        Run all methods multiple times.
+        Run all methods multiple times with matched noise per trial.
+
+        Each trial uses the same seed for every method so comparisons are
+        fair (identical noise realizations). Multi-trial metrics are
+        accumulated in the returned dict; ``self.results`` retains the last
+        trial for plotting.
 
         Args:
-            duration_sec: Simulation duration per trial
-            n_trials: Number of trials per method
+            duration_sec: Simulation duration per trial.
+            n_trials: Number of trials per method.
+            base_seed: Starting seed; trial *i* uses ``base_seed + i``.
+            **sim_kwargs: Forwarded to ``run_simulation`` (e.g. use_fatigue).
 
         Returns:
-            results: Dictionary of metrics per method
+            results: ``{method_name: [ValidationMetrics, ...]}``
         """
-        all_results = {}
+        all_results: Dict[str, list] = {m.name: [] for m in self.methods}
 
-        for method in self.methods:
-            logger.info(f"\n" + "="*60)
-            logger.info(f"Testing: {method.name}")
-            logger.info("="*60)
+        for trial in range(n_trials):
+            seed = base_seed + trial
+            logger.info(f"\n{'='*60}")
+            logger.info(f"Trial {trial+1}/{n_trials} (seed={seed})")
+            logger.info("=" * 60)
 
-            trial_metrics = []
+            for method in self.methods:
+                metrics = self.run_simulation(
+                    method, duration_sec=duration_sec, seed=seed, **sim_kwargs
+                )
+                all_results[method.name].append(metrics)
 
-            for trial in range(n_trials):
-                logger.info(f"\nTrial {trial+1}/{n_trials}")
-                metrics = self.run_simulation(method, duration_sec=duration_sec)
-                trial_metrics.append(metrics)
-
-            all_results[method.name] = trial_metrics
-
+        # Store accumulated metrics for statistical_comparison
+        self._all_trial_metrics = all_results
         return all_results
 
     def statistical_comparison(self, metric_name: str = 'pac_improvement') -> dict:
         """
-        Compare methods using statistical tests.
+        Compare methods using statistical tests on multi-trial data.
+
+        Uses accumulated trial metrics from ``run_all`` when available,
+        falling back to single-trial ``self.results`` otherwise.
 
         Args:
-            metric_name: Metric to compare
+            metric_name: Metric to compare.
 
         Returns:
-            stats_result: Statistical test results
+            stats_result: Statistical test results.
         """
-        logger.info(f"\n" + "="*60)
+        logger.info(f"\n{'='*60}")
         logger.info(f"Statistical Comparison: {metric_name}")
-        logger.info("="*60)
+        logger.info("=" * 60)
 
-        # Extract metric values
-        data_by_method = {}
-        for method_name, results in self.results.items():
-            if isinstance(results, dict) and 'metrics' in results:
-                metrics = results['metrics']
-                data_by_method[method_name] = getattr(metrics, metric_name)
+        # Prefer multi-trial data from run_all
+        data_by_method: Dict[str, List[float]] = {}
+        if hasattr(self, '_all_trial_metrics') and self._all_trial_metrics:
+            for method_name, metrics_list in self._all_trial_metrics.items():
+                data_by_method[method_name] = [
+                    getattr(m, metric_name) for m in metrics_list
+                ]
+        else:
+            # Fallback: single-trial from self.results
+            for method_name, results in self.results.items():
+                if isinstance(results, dict) and 'metrics' in results:
+                    metrics = results['metrics']
+                    data_by_method[method_name] = [getattr(metrics, metric_name)]
 
         if len(data_by_method) < 2:
             logger.warning("Need at least 2 methods for comparison")
             return {}
 
-        # ANOVA
-        values = list(data_by_method.values())
-        # stats.f_oneway requires arrays with >1 element; with single-trial
-        # runs each group is a scalar, so wrap in a list and guard against
-        # degenerate inputs that produce NaN.
-        try:
-            f_stat, p_value = stats.f_oneway(*[[v] for v in values])
-        except Exception:
-            f_stat, p_value = float('nan'), float('nan')
+        groups = list(data_by_method.values())
+
+        # ANOVA requires n > 1 per group for within-group variance
+        min_group_size = min(len(g) for g in groups)
+        if min_group_size < 2:
+            logger.warning(
+                f"Only {min_group_size} trial(s) per group — ANOVA requires "
+                f"n >= 2. Run with n_trials >= 2 for valid statistics."
+            )
+            return {
+                'f_statistic': float('nan'),
+                'p_value': float('nan'),
+                'method_means': {k: float(np.mean(v)) for k, v in data_by_method.items()},
+            }
+
+        f_stat, p_value = stats.f_oneway(*groups)
 
         logger.info(f"One-way ANOVA:")
         logger.info(f"  F-statistic: {f_stat:.4f}")
         logger.info(f"  p-value: {p_value:.6f}")
 
-        # Effect size (Cohen's d) - simplified for 2 groups
-        if len(values) == 2:
-            mean_diff = abs(values[0] - values[1])
-            pooled_std = np.sqrt((np.var(values[0]) + np.var(values[1])) / 2 + 1e-8)
+        # Effect size (Cohen's d) for 2-group comparison
+        if len(groups) == 2:
+            g0, g1 = np.array(groups[0]), np.array(groups[1])
+            mean_diff = abs(np.mean(g0) - np.mean(g1))
+            pooled_std = np.sqrt((np.var(g0, ddof=1) + np.var(g1, ddof=1)) / 2)
             cohens_d = mean_diff / (pooled_std + 1e-8)
             logger.info(f"  Cohen's d: {cohens_d:.4f}")
 
         return {
-            'f_statistic': f_stat,
-            'p_value': p_value,
-            'method_means': data_by_method
+            'f_statistic': float(f_stat),
+            'p_value': float(p_value),
+            'method_means': {k: float(np.mean(v)) for k, v in data_by_method.items()},
         }
 
     def plot_comparison(self, output_name: str = 'validation_comparison.png'):
@@ -746,10 +822,11 @@ def main():
     validator.add_method(PredictiveLookAheadControl())
     validator.add_method(OracleControl())
 
-    # Run validation
+    # Run validation with matched seeds per trial
     all_results = validator.run_all(
         duration_sec=args.duration,
-        n_trials=args.n_trials
+        n_trials=args.n_trials,
+        base_seed=42,
     )
 
     # Statistical comparison
