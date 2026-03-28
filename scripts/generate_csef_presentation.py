@@ -212,13 +212,13 @@ def p01_title(p):
         "PAC-derived and stimulation context features raised forecasting "
         "accuracy from test R\u00b2 = 0.121 (73 features) to 0.606 "
         "(5-seed mean, std = 0.032), driven by "
-        "eliminating subject-specific anatomy from model inputs. "
+        "removing subject-specific EEG characteristics from model inputs. "
         "The predictive controller matched stimulation to patient need "
         "72.1% versus 64.5% for reactive control (p < 0.001, Hedges\u2019 "
         "g = 1.31), targeted 82.6% of low-coupling windows versus 51.7%, "
         "and reached 91% of the theoretical oracle. All 35 subjects "
         "benefited. A caregiver-facing web application is deployed on "
-        "Hugging Face Spaces as a path toward clinical translation.")
+        "Hugging Face Spaces to demonstrate the concept.")
 
 
 def p02_intro1(p):
@@ -315,8 +315,8 @@ def p03_intro2(p):
         "as the entrainment biomarker throughout this work.",
 
         "**Cabral et al. (2025, Frontiers in Digital Health):** "
-        "Advocated for AI-driven biofeedback as the path toward "
-        "personalized digital therapeutics for gamma entrainment.",
+        "Advocated for AI-driven biofeedback for personalized "
+        "digital therapeutics in gamma entrainment.",
     ]:
         p.bullet(t)
 
@@ -381,8 +381,8 @@ def p05_methods2(p):
     p.sub2("Feature Engineering: PAC + Stimulation Context (12 Features)")
     p.body(
         "A feature ablation study revealed that 61 spectral features encode "
-        "subject-specific EEG anatomy (skull thickness, electrode impedance, "
-        "individual oscillation profiles) that does not generalize across "
+        "subject-specific EEG characteristics (likely reflecting individual "
+        "anatomy and recording conditions) that do not generalize across "
         "subjects.  Dropping all spectral features and using only 12 "
         "PAC-derived and stimulation context features raised test R\u00b2 "
         "from \u22120.025 (73 features) to 0.558 (12 features, single "
@@ -475,9 +475,9 @@ def p06_methods3(p):
         p.bullet(t)
     p.ln(0.12)
 
-    fp = os.path.join(AI_FIGURES, "system_architecture_v5.png")
+    fp = os.path.join(AI_FIGURES, "system_architecture_v7.png")
     if not os.path.exists(fp):
-        fp = os.path.join(AI_FIGURES, "system_architecture_v3.png")
+        fp = os.path.join(AI_FIGURES, "system_architecture_v5.png")
     p.fig(fp, w=TW * 0.82,
           cap="Figure 1.  System architecture of the closed-loop 40 Hz "
           "entrainment system.  Raw EEG from 7 frontal channels flows "
@@ -608,17 +608,21 @@ def p09_discussion(p):
 
     p.sub("Interpretation of Results")
     for t in [
-        "**Feature selection matters more than architecture:** 8 model "
-        "families all converged to R\u00b2 \u2248 0.287 on 73 features; "
-        "switching to 12 PAC+Stim features raised test R\u00b2 to 0.606 "
-        "with the same TCN architecture.  The bottleneck was always "
-        "in the input representation, not the model.",
+        "**Feature selection matters more than architecture:** 8 static "
+        "model families all converged to R\u00b2 \u2248 0.287 on 73 features; "
+        "switching to 12 PAC+Stim features raised test R\u00b2 to 0.606.  "
+        "A post-hoc comparison of 10 temporal architectures (TCN, "
+        "Transformer, GRU, LSTM, CNN, XGBoost, Ridge, and linear "
+        "models) confirmed that all Tier\u20091 architectures converge "
+        "to R\u00b2 \u2248 0.61\u20130.65 on the same 12 features, while "
+        "none exceeds R\u00b2 = 0.28 on 73 features.  The bottleneck "
+        "was always in the input representation, not the model.",
         "The \u22483-second inflection point reflects PAC autocorrelation "
         "timescale: below 3 s, persistence suffices; above 3 s, "
         "state transitions require temporal context that only the "
         "TCN captures from the 20-step PAC trajectory.",
-        "Spectral features encode subject-specific EEG anatomy (skull "
-        "thickness, electrode impedance) that doesn\u2019t generalize: "
+        "Spectral features encode subject-specific EEG characteristics "
+        "(likely individual anatomy and recording conditions) that don\u2019t generalize: "
         "val-test R\u00b2 gap shrinks from 0.358 (73 feat) to 0.246 "
         "(12 feat) when spectral features are removed.",
         "The 60% improvement in low-PAC targeting (82.6% vs. 51.7%) "
@@ -681,8 +685,8 @@ def p10_conclusions(p):
         "The predictive controller achieves 72.1% alignment, 82.6% "
         "low-PAC targeting, and 91% of the theoretical oracle bound "
         "(all p < 0.001 vs. reactive; Hedges\u2019 g = 1.31\u20134.47).",
-        "Universal benefit across all 35 subjects, including 6 "
-        "held-out test subjects never seen during training.",
+        "All 35 subjects benefited, including 6 held-out test "
+        "subjects never seen during training.",
     ]:
         p.bullet(t)
     p.ln(0.10)
@@ -703,8 +707,8 @@ def p10_conclusions(p):
         "**Caregiver web application:** deployed on Hugging Face Spaces "
         "(Streamlit); PAC monitoring with simulated EEG, real-time "
         "stimulation control, and personalized session tracking "
-        "\u2014 the basis for a consumer neuromodulation device.",
-        "**Phase 1 \u2014 Observational (now):** collect real-world "
+        "\u2014 a prototype interface for clinician monitoring.",
+        "**Phase 1 \u2014 Observational (planned):** collect real-world "
         "EEG + PAC data via app to characterize inter-session "
         "habituation patterns.  No intervention arm.",
         "**Phase 2 \u2014 Feasibility (12\u201318 months):** IRB-approved "
@@ -763,11 +767,6 @@ def p11_scope(p):
         "specialized laboratory equipment were used.",
         "**Software:** open-source libraries (PyTorch, MNE-Python, "
         "SciPy, NumPy, Matplotlib) \u2014 all freely available.",
-        "**AI-assisted development:** Claude Code (Anthropic) was "
-        "used for code development assistance, debugging, and "
-        "document preparation.  All scientific decisions, research "
-        "direction, experimental design, data analysis, and "
-        "interpretation of results were performed by the author.",
         "No institutional lab, university mentor, summer research "
         "program, or specialized equipment was used at any stage.",
     ]:

@@ -1,0 +1,65 @@
+{
+  "context_sec": 5.0,
+  "n_bins_full": 18,
+  "n_bins_short": 9,
+  "theta_band": [
+    4.0,
+    8.0
+  ],
+  "gamma_band": [
+    38.0,
+    42.0
+  ],
+  "filter_order": 4,
+  "elapsed_sec": 45.04901099205017,
+  "stats": {
+    "train": {
+      "n_windows": 11736,
+      "original_unique": 432,
+      "sliding_unique": 11736,
+      "original_mean": 4.381484954085497e-05,
+      "original_std": 3.718071087830119e-05,
+      "original_min": 6.104595155669532e-06,
+      "original_max": 0.0006617201417373428,
+      "sliding_mean": 0.00038392731979999047,
+      "sliding_std": 0.0002250541014208557,
+      "sliding_min": 8.235803224295475e-05,
+      "sliding_max": 0.0037106455026513665,
+      "correlation": 0.22514031275891647,
+      "original_adjacent_same_pct": 96.32722624627183,
+      "sliding_adjacent_same_pct": 0.0
+    },
+    "val": {
+      "n_windows": 2725,
+      "original_unique": 100,
+      "sliding_unique": 2725,
+      "original_mean": 4.308244559779513e-05,
+      "original_std": 3.3091782525761304e-05,
+      "original_min": 1.3122137575102558e-05,
+      "original_max": 0.0005021665550135588,
+      "sliding_mean": 0.00039730552696470796,
+      "sliding_std": 0.00022501309145195892,
+      "sliding_min": 0.00010172610720868825,
+      "sliding_max": 0.002950655514897681,
+      "correlation": 0.1725376525864886,
+      "original_adjacent_same_pct": 96.36563876651982,
+      "sliding_adjacent_same_pct": 0.0
+    },
+    "test": {
+      "n_windows": 2822,
+      "original_unique": 104,
+      "sliding_unique": 2822,
+      "original_mean": 3.9301326796489055e-05,
+      "original_std": 3.561351955850562e-05,
+      "original_min": 1.2190913616454776e-05,
+      "original_max": 0.0007009597131974345,
+      "sliding_mean": 0.0003527180805815489,
+      "sliding_std": 0.00021901075451898012,
+      "sliding_min": 9.184757434266439e-05,
+      "sliding_max": 0.004460046842979091,
+      "correlation": 0.19965679294685004,
+      "original_adjacent_same_pct": 96.34881247784473,
+      "sliding_adjacent_same_pct": 0.0
+    }
+  }
+}

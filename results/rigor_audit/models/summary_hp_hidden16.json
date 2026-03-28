@@ -1,0 +1,42 @@
+{
+  "model": "MultiscaleCausalTCN",
+  "run_name": "hp_hidden16",
+  "n_params": 3155,
+  "best_epoch": 30,
+  "best_val_future_r2": 0.3301248550415039,
+  "test_future_metrics": {
+    "r2": 0.02752786874771118,
+    "corr": 0.34360581191746303,
+    "mae": 1.672977305133827e-05,
+    "rmse": 3.578838368412107e-05
+  },
+  "test_delta_metrics": {
+    "r2": -0.12890923023223877,
+    "corr": -0.11104047346584808,
+    "mae": 1.9276218154118396e-05,
+    "rmse": 3.6412853660294786e-05
+  },
+  "train_seconds": 158.3206808567047,
+  "config": {
+    "lookback": 20,
+    "horizon": 5,
+    "stim_history_sec": 20,
+    "target_smooth_window": 1,
+    "hidden": 16,
+    "kernel_size": 3,
+    "dilations": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "dropout": 0.2,
+    "pool_type": "attention",
+    "batch_size": 128,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "lambda_delta": 0.0,
+    "lambda_consistency": 0.0,
+    "seed": 42
+  }
+}
