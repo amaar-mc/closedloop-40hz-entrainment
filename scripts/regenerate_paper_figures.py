@@ -146,16 +146,16 @@ def fig_controller_comparison():
 
     rx = x[2]  # Reactive
     tx = x[3]  # TCN
-    bracket(rx - w, tx - w, 76, "g = 1.31")
-    bracket(rx, tx, 85, "g = 4.47")
-    bracket(rx + w, tx + w, 65, "g = \u22122.41")
-    ax.text((rx + tx)/2, 92, "***", ha="center", fontsize=9, fontweight="bold")
+    bracket(rx - w, tx - w, 78, "g = 1.31  (alignment)")
+    bracket(rx, tx, 90, "g = 4.47  (low-PAC targeting)")
+    ax.text((rx + tx)/2, 97, "*** p < 0.001", ha="center", fontsize=8,
+            fontweight="bold")
 
     ax.set_ylabel("Percentage (%)")
     ax.set_title("Controller Performance Comparison (N=35)")
     ax.set_xticks(x)
     ax.set_xticklabels(controllers)
-    ax.set_ylim(0, 108)
+    ax.set_ylim(0, 112)
     ax.legend(loc="upper left", framealpha=0.9)
     fig.tight_layout()
     save(fig, "controller_comparison")
