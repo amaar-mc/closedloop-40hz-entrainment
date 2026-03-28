@@ -62,7 +62,7 @@ The convergence of inter-individual variability and intra-session habituation cr
 
 The central research question motivating this work is: **Can deep learning models trained on EEG-derived features forecast theta-gamma phase-amplitude coupling dynamics 5-10 seconds into the future, and does integrating such forecasts into a closed-loop controller produce measurable improvements in personalized 40 Hz entrainment therapy validated on real patient EEG?**
 
-I approach this question through a two-stage computational architecture. Stage 1 establishes a real-time PAC estimator using a compact deep learning model trained directly on raw EEG windows, providing the current-state biomarker input that Stage 2 requires. Stage 2 constructs a causal temporal predictor that ingests a 20-second history of PAC estimates and stimulation context features to forecast future PAC at clinically relevant horizons of 5-10 seconds, enabling proactive rather than reactive control decisions. The closed-loop controller integrates these predictions with a personalized rolling baseline and 3-second hysteresis logic to determine stimulation actions: stimulate when predicted PAC is forecast to fall below a personalized threshold, rest when forecast PAC is strong, and maintain the current state otherwise.
+I approach this question through a two-stage computational architecture. Stage 1 establishes a real-time PAC estimator using a compact deep learning model trained directly on raw EEG windows, providing the current-state biomarker input that Stage 2 requires. Stage 2 constructs a causal temporal predictor that ingests a 20-second history of PAC estimates and stimulation context features to forecast future PAC at clinically relevant horizons of 5-10 seconds, enabling proactive rather than reactive control decisions. The closed-loop controller integrates these predictions with a personalized rolling baseline and 5-second hysteresis logic to determine stimulation actions: stimulate when predicted PAC is forecast to fall below a personalized threshold, rest when forecast PAC is strong, and maintain the current state otherwise.
 
 The biomarker of interest throughout is the Modulation Index (MI), a measure of theta-gamma phase-amplitude coupling (PAC) introduced by Tort et al. [16] that quantifies the degree to which gamma-band (38-42 Hz) amplitude is modulated by the phase of theta-band (4-8 Hz) oscillations. Higher MI values indicate stronger theta-gamma coupling and stronger entrainment; lower values indicate reduced or absent coupling.
 
@@ -263,9 +263,9 @@ On held-out test subjects, the MultiscaleCausalTCN with 12 PAC+Stim features ach
 
 **Figure 3.** System architecture overview.
 
-![System Architecture](../../results/figures/ai_generated/system_architecture_v5.png)
+![System Architecture](../../results/figures/ai_generated/system_architecture_v7.png)
 
-*Figure 3. Architecture of the closed-loop 40 Hz entrainment system. Raw EEG from 7 frontal channels is processed through signal processing (bandpass 0.5-80 Hz, notch, CAR), the EEGNet static PAC estimator (1,457 parameters), a 12-dimensional PAC+Stim feature engineering pipeline, and the MultiscaleCausalTCN temporal forecaster (22,914 parameters, 5-second prediction horizon). The adaptive controller applies z-score thresholding against a personalized rolling baseline to determine stimulation decisions (STIMULATE / REST / MAINTAIN) with 3-second hysteresis, driving a 40 Hz auditory click train. The curved feedback arrow illustrates the closed-loop nature of the system.*
+*Figure 3. Architecture of the closed-loop 40 Hz entrainment system. Raw EEG from 7 frontal channels is processed through signal processing (bandpass 0.5-80 Hz, notch, CAR), the EEGNet static PAC estimator (1,457 parameters), a 12-dimensional PAC+Stim feature engineering pipeline, and the MultiscaleCausalTCN temporal forecaster (22,914 parameters, 5-second prediction horizon). The adaptive controller applies z-score thresholding against a personalized rolling baseline to determine stimulation decisions (STIMULATE / REST / MAINTAIN) with 5-second hysteresis, driving a 40 Hz auditory click train. The curved feedback arrow illustrates the closed-loop nature of the system.*
 
 #### 2.6.1 Personalization Module
 
@@ -283,7 +283,7 @@ A minimum of 10 samples must accumulate in the buffer before z-scores are comput
 | z > +0.5 | REST | PAC above baseline; avoid habituation |
 | -0.5 <= z <= +0.5 | MAINTAIN | PAC near baseline; continue current state |
 
-A 3-second hysteresis hold time prevents rapid oscillation between states.
+A 5-second hysteresis hold time prevents rapid oscillation between states.
 
 #### 2.6.3 Controller Variants
 

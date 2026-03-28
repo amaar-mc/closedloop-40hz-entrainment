@@ -145,7 +145,7 @@ All controllers share a common personalization layer: a 30-second circular rolli
 | z > +0.5 | REST | PAC above baseline; avoid habituation |
 | −0.5 ≤ z ≤ +0.5 | MAINTAIN | PAC near baseline; continue current state |
 
-Hysteresis: minimum 3-second hold time in each state before transitions are considered.
+Hysteresis: minimum 5-second hold time in each state before transitions are considered.
 
 For the TCN Predictive controller, z is computed from the TCN's 5-second-ahead PAC forecast rather than the current observed PAC, enabling proactive rather than reactive decision-making.
 

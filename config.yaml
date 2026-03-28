@@ -178,7 +178,7 @@ controller:
     high: 0.5   # Strong coupling threshold: REST
 
   # Hysteresis (prevents rapid state switching)
-  hold_time_sec: 3.0  # Minimum time in state before transition
+  hold_time_sec: 5.0  # Minimum time in state before transition (matches controller.py default)
   decision_rate_hz: 1.0  # 1 decision per second
 
   # Personalization baseline

@@ -1,0 +1,42 @@
+{
+  "model": "MultiscaleCausalTCN",
+  "run_name": "repro_seed777",
+  "n_params": 31043,
+  "best_epoch": 34,
+  "best_val_future_r2": 0.3848211169242859,
+  "test_future_metrics": {
+    "r2": 0.3742017149925232,
+    "corr": 0.621201637911004,
+    "mae": 1.1102981261501554e-05,
+    "rmse": 2.870917523978278e-05
+  },
+  "test_delta_metrics": {
+    "r2": -0.012121438980102539,
+    "corr": 0.11781116060050008,
+    "mae": 1.0564284821157344e-05,
+    "rmse": 3.447795825195499e-05
+  },
+  "train_seconds": 62.999069929122925,
+  "config": {
+    "lookback": 20,
+    "horizon": 5,
+    "stim_history_sec": 20,
+    "target_smooth_window": 1,
+    "hidden": 64,
+    "kernel_size": 3,
+    "dilations": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "dropout": 0.2,
+    "pool_type": "attention",
+    "batch_size": 128,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "lambda_delta": 0.0,
+    "lambda_consistency": 0.0,
+    "seed": 777
+  }
+}

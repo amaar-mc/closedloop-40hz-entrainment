@@ -1,0 +1,11 @@
+Deployment Path
+
+Complete system under $250 per patient: consumer EEG headset (Muse 2, ~$200) paired with standard headphones, running the adaptive controller through the web application. No clinical hardware required.
+
+Caregiver dashboard: deployed on Hugging Face Spaces; remote PAC monitoring, session tracking, and memory assessment so families can follow a patient's progress from anywhere.
+
+This is not new hardware — it is an intelligence layer on top of existing devices. The predictive model plugs into current consumer EEG headsets and auditory stimulation setups, optimizing protocols that are already in use.
+
+Pilot in progress: outreach to regional memory care facilities (Mission Villa, Valley Medical) to demo the application and collect real-world EEG data during 15-minute supervised sessions. Collected data feeds back to improve the TCN model.
+
+Clinical pathway: observational data collection first (no intervention, no IRB required), then IRB-approved feasibility pilot (N = 5-10) comparing adaptive vs. fixed stimulation, with the goal of demonstrating improved entrainment maintenance in actual patients.
