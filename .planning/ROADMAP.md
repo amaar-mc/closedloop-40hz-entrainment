@@ -66,6 +66,17 @@ Plans:
 - [ ] 16-04-PLAN.md — Create Research Paper v4 with feature ablation study
 - [ ] 16-05-PLAN.md — Augment lab notebook, update abstract, final CSEF/ sync audit
 
+### Phase 17: Poster board deep audit — data accuracy, figures, visual cohesion, and judge-readiness
+
+**Goal:** Comprehensive read-only audit of the CSEF 2026 poster board, cross-referencing every numerical claim against ground-truth data, assessing figure quality, visual design cohesion, and judge-readiness. Produces actionable audit reports for last-minute fixes before judging.
+**Requirements**: AUDIT-DATA, AUDIT-FIGURES, AUDIT-VISUAL, AUDIT-JUDGE
+**Depends on:** Phase 16
+**Plans:** 2 plans
+
+Plans:
+- [ ] 17-01-PLAN.md — Data accuracy audit (every numerical claim) and figure audit (all poster figures)
+- [ ] 17-02-PLAN.md — Visual cohesion audit (layout, typography, colors) and judge-readiness evaluation (risks, responses, references)
+
 ---
 
 _Full phase details archived in `.planning/milestones/`_
