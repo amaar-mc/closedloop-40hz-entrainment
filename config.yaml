@@ -221,6 +221,42 @@ simulator:
   decision_rate_hz: 1.0  # 1 decision per second
 
 # ============================================================================
+# TRIBE V2-ENHANCED SIMULATOR
+# ============================================================================
+tribe_v2:
+  # Model settings
+  use_tribe_v2: true         # Use TRIBE V2 cortical model (falls back to parametric)
+  cache_dir: "./cache/tribe_v2"
+  device: "auto"             # "auto", "cpu", "mps", "cuda"
+
+  # Cortical response model (parametric fallback)
+  cortical:
+    stim_activations: [6.5, 6.5, 4.5, 4.5, 4.0, 3.8]  # [Aud_L, Aud_R, IFG_L, IFG_R, MFG, MedF]
+    rest_activations: [3.0, 3.0, 3.0, 3.0, 3.0, 3.0]
+    onset_tau_sec: 1.5       # ASSR onset time constant
+    offset_tau_sec: 2.0      # ASSR offset time constant
+    habituation_rate: 0.005  # Per-second habituation during stimulation
+
+  # Neural mass model (Wilson-Cowan)
+  neural_mass:
+    tau_e: 0.004             # Excitatory time constant (gamma range)
+    tau_i: 0.008             # Inhibitory time constant
+    theta_freq_hz: 6.0       # Theta rhythm frequency
+    theta_amplitude: 1.5     # Theta modulation depth
+    noise_std: 0.3           # Process noise
+
+  # Alzheimer's disease modeling
+  alzheimer:
+    default_severity: "healthy"  # healthy, preclinical, mild, moderate, severe
+    # See src/tribe_v2/alzheimer_model.py for per-severity parameter profiles
+
+  # Simulation
+  step_duration_sec: 1.0     # Time step for simulation loop
+  pac_max: 0.3
+  pac_min: 0.05
+  noise_std: 0.015
+
+# ============================================================================
 # VALIDATION CONFIGURATION
 # ============================================================================
 validation:
