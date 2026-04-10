@@ -77,6 +77,15 @@ Plans:
 - [ ] 17-01-PLAN.md — Data accuracy audit (every numerical claim) and figure audit (all poster figures)
 - [ ] 17-02-PLAN.md — Visual cohesion audit (layout, typography, colors) and judge-readiness evaluation (risks, responses, references)
 
+### Phase 18: Lab Notebook Comprehensive Rewrite
+
+**Goal:** Validate and finalize both lab notebook files to score 95+ on all audit dimensions (AI voice, code alignment, poster consistency, clinical depth, imperfection quotient, tonal consistency), fix any remaining issues, and regenerate the combined PDF for CSEF judging.
+**Depends on:** Phase 17
+**Plans:** 1 plan
+
+Plans:
+- [ ] 18-01-PLAN.md — Systematic validation of both notebooks against all audit dimensions + PDF regeneration
+
 ---
 
 _Full phase details archived in `.planning/milestones/`_
