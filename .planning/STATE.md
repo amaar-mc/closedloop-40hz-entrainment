@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v4.0
 milestone_name: CSEF Submission
 status: completed
-stopped_at: Completed 17-poster-board-deep-audit-data-accuracy-figures-visual-cohesion-and-judge-readiness/17-01-PLAN.md
-last_updated: "2026-04-07T19:19:34.039Z"
-last_activity: 2026-03-21 — Completed 14-02 4ch vs 7ch R2 gap report (RSRCH-05)
+stopped_at: Completed 18-lab-notebook-comprehensive-rewrite/18-01-PLAN.md
+last_updated: "2026-04-10T10:05:30Z"
+last_activity: 2026-04-10 — Completed 18-01 lab notebook validation + final PDF regeneration
 progress:
-  total_phases: 2
-  completed_phases: 2
-  total_plans: 7
-  completed_plans: 7
-  percent: 97
+  total_phases: 3
+  completed_phases: 3
+  total_plans: 8
+  completed_plans: 8
+  percent: 100
 ---
 
 # Project State: Research Documentation Project
@@ -25,12 +25,12 @@ See: .planning/PROJECT.md (updated 2026-03-20)
 
 ## Current Position
 
-Phase: 14 (Scope Lock Completion)
-Plan: 2 of 2 in current phase
+Phase: 18 (Lab Notebook Comprehensive Rewrite)
+Plan: 1 of 1 in current phase
 Status: Complete
-Last activity: 2026-03-21 — Completed 14-02 4ch vs 7ch R2 gap report (RSRCH-05)
+Last activity: 2026-04-10 — Completed 18-01 lab notebook validation + final PDF regeneration
 
-Progress: [██████████] 97%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -64,6 +64,7 @@ Progress: [██████████] 97%
 | Phase 16-csef-documentation-and-presentation-package P05 | 6 | 2 tasks | 7 files |
 | Phase 17-poster-board-deep-audit-data-accuracy-figures-visual-cohesion-and-judge-readiness P02 | 4 | 2 tasks | 2 files |
 | Phase 17-poster-board-deep-audit-data-accuracy-figures-visual-cohesion-and-judge-readiness P01 | 8 | 2 tasks | 2 files |
+| Phase 18-lab-notebook-comprehensive-rewrite P01 | 5 | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -92,20 +93,24 @@ Progress: [██████████] 97%
 - 16-01: docs/ and CSEF/ elevator pitch copies kept byte-identical per project convention; elevator pitch script tightened to ~130 words to fit 60s constraint.
 - 16-03: 12 PAC+Stim features (not 73) is the correct model description — feature ablation study raises test R2 from -0.025 to 0.606.
 - 16-03: Productization section replaces generic future-work in Conclusions — caregiver app (HF Spaces) + 3-phase clinical roadmap (observational, feasibility, comparative).
+- 18-01: Notebook rewrite was staged earlier today in-place; Task 1 ran validation-only (all 17 checks passed, zero surgical fixes required). Audit dimensions covered: em-dashes, code params (tau_e/onset_tau_sec/hold_time_sec), Fortunato [8], hysteresis, TCN param labeling, horizon sweep persistence, controller results (72.1/82.6/91), feature ablation, clinical depth.
+- 18-01: Added Fortunato [8] to PDF generator refs list and renumbered extension refs (Murdock->[9], Soula->[10], TRIBE V2->[11]) so PDF numbering matches notebook body. Kept hardcoded ref list rather than parsing markdown References section.
+- 18-01: Verified PDF content via pypdf text extraction (0 em-dashes, Fortunato present, all TCN param variants, all key numerical claims) instead of visual inspection — deterministic and greppable.
 
 ### Roadmap Evolution
 - Phase 12.1 inserted after Phase 12: Improved TCN: Enhanced Features + Multi-Task + Self-Attention (URGENT)
 - Phase 16 added: CSEF Documentation and Presentation Package (v4.0 milestone)
 - Phase 17 added: Poster board deep audit — data accuracy, figures, visual cohesion, and judge-readiness
+- Phase 18 added: Lab Notebook Comprehensive Rewrite — score 95+ on all audit dimensions, fix code/poster alignment, add clinical depth
 
 ### Blockers/Concerns
 
 - Muse S BLE not viable on current macOS 25.x host — resolved: simulated mode ships, full hardware implementation retained in RealEEGAdapter for future BLE-enabled system.
 - pytorch-forecasting + existing torch version compatibility unverified — use lightweight custom Transformer if conflict.
-- Hard deadline: CSEF judging 2026-04-09 (20 days from milestone start).
+- Hard deadline: CSEF judging 2026-04-11 (Saturday). Lab notebook validated and final PDF regenerated 2026-04-10.
 
 ## Session Continuity
 
-Last session: 2026-04-07T19:14:56.762Z
-Stopped at: Completed 17-poster-board-deep-audit-data-accuracy-figures-visual-cohesion-and-judge-readiness/17-01-PLAN.md
+Last session: 2026-04-10T10:05:30Z
+Stopped at: Completed 18-lab-notebook-comprehensive-rewrite/18-01-PLAN.md
 Resume file: None
