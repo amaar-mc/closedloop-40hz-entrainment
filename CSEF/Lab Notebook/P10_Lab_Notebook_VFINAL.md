@@ -90,11 +90,11 @@ Tested a bunch of different architectures to see if I could beat 0.287. Spent th
 
 **SpecTempNet (spectral-temporal hybrid, V3)** -- 180,000 params. First run: R2 = 0.69!! Got really excited for about ten minutes. Then I looked at which features were driving the predictions and found that PAC-derived features in the input directly encoded the target. Ridge analysis showed PAC features carried 96.6% of model weight. After removing the circular features: R2 = 0.236. Data leakage. Lesson learned the hard way.
 
-**ViT-TCNet (Vision Transformer + TCN)** -- ~2,000,000 params. Treated EEG as image patches. Test R2 = 0.252. Massive overfitting -- samples-to-params ratio of 0.006 on 11K training samples.
+**ViT-TCNet (Vision Transformer + TCN)** -- ~2,000,000 params. Treated EEG as image patches. Test R2 = 0.222. Massive overfitting -- samples-to-params ratio of 0.006 on 11K training samples.
 
 **Ridge Regression** -- 135 coefficients. Spectral power only, no PAC features. Test R2 = 0.287. Wait -- the exact same number as EEGNet?
 
-**ATCNet (attention TCN)** -- ~25,000 params. Test R2 = 0.075. Underperformed everything.
+**ATCNet (attention TCN, V6)** -- ~29K params. Test R2 = 0.075. Underperformed everything.
 
 **EEGNetLarge** -- 141,000 params. Test R2 = 0.287. Same ceiling. 100x more parameters, same result.
 
@@ -102,9 +102,9 @@ Tested a bunch of different architectures to see if I could beat 0.287. Spent th
 |---|---|---|
 | EEGNet | 1,457 | 0.287 |
 | SpecTempNet | 180,000 | 0.236 (after leak fix) |
-| ViT-TCNet | ~2,000,000 | 0.252 |
+| ViT-TCNet | ~2,000,000 | 0.222 |
 | Ridge | 135 coefs | 0.287 |
-| ATCNet | 25,000 | 0.075 |
+| ATCNet | ~29K | 0.075 |
 | EEGNetLarge | 141,000 | 0.287 |
 
 The simplest models (EEGNet at 1,457 params, Ridge at 135 coefficients) match the performance of models 1000x bigger. 0.287 is a ceiling in the data. The signal-to-noise ratio is about -4.73 dB (signal weaker than noise), and the epoch-level PAC labels on 2-second windows inherently limit how accurate single-window prediction can be.
@@ -217,7 +217,7 @@ Latency: under 5 ms for the whole pipeline (EEGNet + TCN + controller). Memory u
 
 Built the validation framework. The idea is counterfactual replay: take each patient's real EEG recording, run the controller on it, and see what decisions it would have made at each time step. Compare those decisions against ground-truth PAC to compute alignment.
 
-Also worried that the adaptive advantage might depend on specific fatigue model assumptions. Built an EntrainmentSimulator with four different mathematical fatigue models and tested across six severity levels.
+Also worried that the adaptive advantage might depend on specific fatigue model assumptions. Built an EntrainmentSimulator with four different mathematical fatigue models and tested across five severity levels.
 
 Fatigue severity results (50 trials each, 600-second sessions):
 
@@ -357,9 +357,9 @@ Trained the same h=64 TCN with PAC+Stim features under 5 different seeds:
 | 456 | 0.799 | 0.597 |
 | 789 | 0.831 | 0.608 |
 | 2024 | 0.846 | 0.647 |
-| Mean +/- Std | 0.820 +/- 0.019 | 0.606 +/- 0.032 |
+| Mean +/- Std | 0.820 +/- 0.017 | 0.606 +/- 0.029 |
 
-Not a fluke. Worst seed (0.558) still beats the old 73-feature model by miles. Mean test R2 = 0.606 +/- 0.032. That's the number.
+Not a fluke. Worst seed (0.558) still beats the old 73-feature model by miles. Mean test R2 = 0.606 +/- 0.029 (population stdev over 5 seeds). That's the number going on the poster.
 
 Model has 22,914 parameters with 12 input features (vs 31,043 with 73 features). Smaller and better. The 12 features are:
 
@@ -448,4 +448,4 @@ Note: the controller comparison results (72.1% alignment, etc.) were generated w
 
 [7] Chan, D., et al. (2025). Long-term safety of 40 Hz sensory stimulation. *Alzheimer's & Dementia*, 21(10), e70792.
 
-[8] Fortunato, M. V., et al. (2023). Non-responder rates in auditory gamma entrainment. *Frontiers in Neuroscience*.
+[8] Fortunato, M. V., et al. (2023). Non-responder rates in auditory gamma entrainment. *Frontiers in Integrative Neuroscience*, 17.

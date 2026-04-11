@@ -159,12 +159,12 @@ Also updated poster specs to V7 and V8, ran the coherence audit, and wrote the j
 
 Everything is done except presentation prep. CSEF judging is April 12.
 
-The full system: EEG comes in from 7 frontal channels at 250 Hz, gets preprocessed, PAC is computed via Tort MI (18 phase bins). EEGNet (1,457 params) estimates current PAC from each 2-second window. 12 features (7 PAC-trajectory + 5 stim context) go to the Causal TCN (22,914 params), which predicts PAC 5 seconds ahead. The personalization module converts predictions to z-scores against a 30-second rolling baseline. Controller decides: z < -0.5 means stimulate, z > +0.5 means rest, 5-second hysteresis prevents flickering.
+The full system: EEG comes in from 7 frontal channels at 250 Hz, gets preprocessed, PAC is computed via Tort MI (18 phase bins). EEGNet (1,457 params) estimates current PAC from each 2-second window. 12 features (7 PAC-trajectory + 5 stim context) go to the Causal TCN, which predicts PAC 5 seconds ahead. The deployed model on the poster is the h=32 variant at 5,154 parameters (test R2 = 0.613); the 5-seed benchmark number of 0.606 was measured on the h=64 variant at 22,914 params. Both are in my March 10-14 entries. The personalization module converts predictions to z-scores against a 30-second rolling baseline. Controller decides: z < -0.5 means stimulate, z > +0.5 means rest, 5-second hysteresis prevents flickering.
 
 Where things stand:
 
 - Static prediction ceiling: R2 = 0.287, confirmed across 8 architectures
-- Feature ablation: dropping 61 spectral features raised test R2 from -0.025 to 0.606 (5-seed mean, std 0.032)
+- Feature ablation: dropping 61 spectral features raised test R2 from -0.025 to 0.606 (5-seed mean, population std 0.029)
 - Controller: 72.1% alignment vs 64.5% reactive, Hedges' g = 1.31, p < 0.001
 - Low-PAC targeting: 82.6% vs 51.7%, g = 4.47
 - 35/35 subjects benefited, 91% of oracle performance
