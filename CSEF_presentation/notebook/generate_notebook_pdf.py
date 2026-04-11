@@ -431,7 +431,7 @@ def main():
     story.append(md_to_para("Compute: MacBook Pro (Apple M1 Pro, 16 GB RAM), NVIDIA GeForce RTX 3080. All computation on local hardware.", styles))
     story.append(md_to_para("Software: Python 3.13, PyTorch 2.6.0, NumPy, SciPy, scikit-learn, h5py, MNE-Python, Streamlit, reportlab. Version control with Git.", styles))
     story.append(md_to_para("Dataset: OpenNeuro ds005048 (Lahijanian et al., 2024). 35 elderly dementia patients, 7 frontal EEG channels, 250 Hz. Alternating stimulus (40 Hz AM auditory) and rest epochs. 17,283 two-second windows. Subject-level splits: 24 train / 5 val / 6 test. All data used under open access license.", styles))
-    story.append(md_to_para("Hardware demo: Muse 2 consumer EEG headset, standard headphones, laptop running controller web application.", styles))
+    story.append(md_to_para("Hardware demo: Muse 2 consumer EEG headband ($249, 4 dry electrodes), standard headphones, laptop running controller web application. Total cost under $300 per patient.", styles))
 
     story.append(Spacer(1, 12))
     story.append(Paragraph("References", styles["NB_DateHeader"]))
@@ -446,7 +446,7 @@ def main():
         "[5] Lahijanian, M., et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. Scientific Reports, 14, 13153.",
         "[6] Thompson, R. F., &amp; Spencer, W. A. (1966). Habituation: A model phenomenon for the study of neuronal substrates of behavior. Psychological Review, 73(1), 16-43.",
         "[7] Chan, D., et al. (2025). Long-term safety of 40 Hz sensory stimulation. Alzheimer's &amp; Dementia, 21(10), e70792.",
-        "[8] Fortunato, M. V., et al. (2023). Non-responder rates in auditory gamma entrainment. Frontiers in Neuroscience.",
+        "[8] Fortunato, M. V., et al. (2023). Non-responder rates in auditory gamma entrainment. Frontiers in Integrative Neuroscience, 17.",
         "[9] Murdock, M. H., et al. (2024). Multisensory gamma stimulation promotes glymphatic clearance of amyloid. Nature, 627, 149-156.",
         "[10] Soula, M., et al. (2023). Forty-hertz light stimulation does not entrain native gamma oscillations in Alzheimer's disease model mice. Nature Neuroscience, 26, 570-578.",
         "[11] Meta AI. (2026). TRIBE V2: A Predictive Foundation Model for Brain Encoding. HuggingFace: facebook/tribev2.",
