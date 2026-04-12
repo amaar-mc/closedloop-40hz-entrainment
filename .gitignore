@@ -55,3 +55,24 @@ node_modules/
 
 # Generated cache (TRIBE V2 audio, model cache)
 cache/
+
+# graphify intermediate artifacts (large, regenerable with --update)
+graphify-out/.graphify_chunk_*.json
+graphify-out/.graphify_ast*.json
+graphify-out/.graphify_ast*.log
+graphify-out/.graphify_semantic.json
+graphify-out/.graphify_extract.json
+graphify-out/.graphify_analysis.json
+graphify-out/.graphify_cached.json
+graphify-out/.graphify_uncached.txt
+graphify-out/.graphify_python
+graphify-out/.graphify_detect.stderr.log
+graphify-out/.community_summary.txt
+graphify-out/chunks/
+graphify-out/converted/
+graphify-out/graph.html
+graphify-out/graph.json
+
+# Temp files
+tmp_*.png
+tmp_*.jpg
