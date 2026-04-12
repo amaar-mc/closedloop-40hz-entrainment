@@ -2,7 +2,7 @@
 
 ### Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment to Optimize
 
-### Theta-Gamma Phase Amplitude Coupling in Alzheimer's Disease
+### Theta-Gamma Coupling in Alzheimer's Disease
 
 ### Amaar Chughtai
 
@@ -84,30 +84,30 @@ Training: MSE loss, Adam (lr=0.001, weight_decay=0.0001), gradient clipping at m
 
 Tested a bunch of different architectures to see if I could beat 0.287. Spent the past few days running these:
 
-**EEGNet (V1)** -- 1,457 params. Test R2 = 0.287. The baseline.
+**EEGNet (V4)** -- 1,457 params. Test R2 = 0.287. The baseline.
 
 **EEGNetV2 (delta PAC)** -- ~3,200 params. Tried predicting PAC change instead of absolute PAC. Test R2 = 0.06. Doesn't work. The changes at 2-second resolution are probably too noisy.
 
-**SpecTempNet (spectral-temporal hybrid, V3)** -- 180,000 params. First run: R2 = 0.69!! Got really excited for about ten minutes. Then I looked at which features were driving the predictions and found that PAC-derived features in the input directly encoded the target. Ridge analysis showed PAC features carried 96.6% of model weight. After removing the circular features: R2 = 0.236. Data leakage. Lesson learned the hard way.
+**SpecRNN (spectral-temporal hybrid, V3)** -- 180,000 params. First run: R2 = 0.69!! Got really excited for about ten minutes. Then I looked at which features were driving the predictions and found that PAC-derived features in the input directly encoded the target. Ridge analysis showed PAC features carried 96.6% of model weight. After removing the circular features: R2 = 0.236. Data leakage. Lesson learned the hard way.
 
-**ViT-TCNet (Vision Transformer + TCN)** -- ~2,000,000 params. Treated EEG as image patches. Test R2 = 0.222. Massive overfitting -- samples-to-params ratio of 0.006 on 11K training samples.
+**ViT-TCNet (Vision Transformer + TCN, V4)** -- ~2,000,000 params. Treated EEG as image patches. Test R2 = 0.222. Massive overfitting -- samples-to-params ratio of 0.006 on 11K training samples.
 
-**Ridge Regression** -- 135 coefficients. Spectral power only, no PAC features. Test R2 = 0.287. Wait -- the exact same number as EEGNet?
+**Ridge Regression (V1)** -- 135 coefficients. Spectral power only, no PAC features. Test R2 = 0.287. Wait -- the exact same number as EEGNet?
 
 **ATCNet (attention TCN, V6)** -- ~29K params. Test R2 = 0.075. Underperformed everything.
 
-**EEGNetLarge** -- 141,000 params. Test R2 = 0.287. Same ceiling. 100x more parameters, same result.
+**EEGNetLarge (input)** -- 141,000 params. Test R2 = 0.287. Same ceiling. 100x more parameters, same result.
 
 | Architecture | Parameters | Test R2 |
 |---|---|---|
-| EEGNet | 1,457 | 0.287 |
-| SpecTempNet | 180,000 | 0.236 (after leak fix) |
-| ViT-TCNet | ~2,000,000 | 0.222 |
-| Ridge | 135 coefs | 0.287 |
-| ATCNet | ~29K | 0.075 |
-| EEGNetLarge | 141,000 | 0.287 |
+| EEGNet (V4) | 1,457 | 0.287 |
+| SpecRNN (V3) | 180,000 | 0.236 (after leak fix) |
+| ViT-TCNet (V4) | ~2,000,000 | 0.222 |
+| Ridge (V1) | 135 coefs | 0.287 |
+| ATCNet (V6) | ~29K | 0.075 |
+| EEGNetLarge (input) | 141,000 | 0.287 |
 
-The simplest models (EEGNet at 1,457 params, Ridge at 135 coefficients) match the performance of models 1000x bigger. 0.287 is a ceiling in the data. The signal-to-noise ratio is about -4.73 dB (signal weaker than noise), and the epoch-level PAC labels on 2-second windows inherently limit how accurate single-window prediction can be.
+The simplest models (EEGNet at 1,457 params, Ridge at 135 coefficients) match the performance of models 1000x bigger. 0.287 is a ceiling in the data. The signal-to-noise ratio is about -4.73 dB (signal weaker than noise), and the epoch-level PAC labels on 2-second windows make it really hard for a single-window model to do better.
 
 I think the question needs to change.
 
@@ -159,7 +159,7 @@ Data integrity checklist:
 - Subject splits verified: training, validation, test completely disjoint. Checked with assertion.
 - All feature timestamps strictly precede target timestamps. Verified.
 - Scalers fit on training data only, then applied to val and test.
-- No input features exceed r = 0.5 correlation with target (learned this from the SpecTempNet disaster).
+- No input features exceed r = 0.5 correlation with target (learned this from the SpecRNN disaster).
 - Shuffle-label test: R2 = -0.332 on permuted labels. Good -- model learns nothing from random labels.
 
 Also looked at habituation patterns in the real data:
@@ -211,7 +211,7 @@ Raw EEG --> EEGNet (1,457 params) --> Current PAC Estimate
 
 The PersonalizationModule keeps a 30-second rolling buffer of PAC values per patient and converts predictions to z-scores. Controller logic: z < -0.5 means PAC is dropping, stimulate. z > +0.5 means PAC is holding strong, rest. Otherwise maintain current state. 5-second hysteresis to prevent rapid flickering between stim and rest.
 
-Latency: under 5 ms for the whole pipeline (EEGNet + TCN + controller). Memory under 100 MB. Could run on embedded hardware.
+End-to-end inference latency: under 50 ms for the whole pipeline (EEGNet + feature extraction + TCN + controller). Memory under 100 MB. Could run on embedded hardware.
 
 ## February 21, 2026
 
@@ -231,7 +231,7 @@ Fatigue severity results (50 trials each, 600-second sessions):
 
 All significant at p < 0.001, Hedges' g = 1.7-2.4. Advantage grows as fatigue gets worse, which makes sense -- the more the brain habituates, the more value there is in adaptive timing.
 
-Even with zero fatigue, adaptive helps by +9.5%. So it's not just about fatigue, it's also catching natural PAC fluctuations.
+Even with zero fatigue, adaptive helps by +9.5%. So fatigue isn't the only thing going on. It's also catching the random PAC dips that happen regardless.
 
 Tested four different fatigue mathematical models:
 
@@ -242,7 +242,7 @@ Tested four different fatigue mathematical models:
 | Heterogeneous (50/50) | +8.9% | 2.5e-14 | 1.71 |
 | Saturation (synaptic) | +19.0% | 1.8e-15 | 3.66 |
 
-The saturation model (Michaelis-Menten style receptor kinetics) showed the largest benefit at +19.0%. All four models give significant results, so the advantage doesn't depend on which fatigue model you believe.
+The saturation model (Michaelis-Menten style receptor kinetics) showed the largest benefit at +19.0%. All four are significant, so pick whichever fatigue model you want and the advantage still holds.
 
 Also checked threshold sensitivity across delta-z from 0.1 to 1.0:
 
@@ -265,7 +265,7 @@ Final controller comparison on real patient EEG. Method: replay each subject's f
 
 Important: I used ground-truth PAC labels as TCN input (not EEGNet estimates) to isolate the forecaster's contribution from EEGNet estimation error. This is a simplification -- in deployment, EEGNet would feed the TCN. But for evaluating the TCN's predictive quality, it's the right choice.
 
-Four controllers compared: Fixed Schedule (40s ON / 20s OFF), Reactive Threshold (z-score on current PAC, no prediction), TCN Predictive (z-score + 5s forecast), and Oracle (perfect hindsight).
+Five controllers compared: Fixed Schedule (40s ON / 20s OFF), Reactive Threshold (z-score on current PAC, no prediction), PI Controller (proportional-integral feedback on the PAC error), TCN Predictive (z-score + 5s forecast), and Alignment Oracle (perfect hindsight, upper bound). The PI controller underperformed Reactive in my runs so I left it out of the headline table, but it lives on the poster as a comparator so I'm noting it here.
 
 | Controller | Alignment | Low-PAC Stim | PAC Gap (x10^-6) | Stim % |
 |---|---|---|---|---|
@@ -292,13 +292,13 @@ Note: these results use the 73-feature TCN (31,043 params). The feature ablation
 Compiled everything for the Synopsys submission: poster, abstract, this notebook.
 
 Summary at this point:
-1. 8 architectures converge to R2 = 0.287 on static PAC estimation. It's a data ceiling.
-2. Temporal TCN maintains R2 around 0.25 at 5-10s horizons where all baselines collapse (+0.5 margin).
+1. Every architecture I tried converges to R2 = 0.287 on static PAC estimation (6 in the poster table plus an EEGNetV2 delta-PAC variant I discarded early). It's a data ceiling.
+2. Temporal TCN maintains R2 = 0.37-0.67 at 5-10s horizons where all baselines collapse (+0.5 margin).
 3. Controller: 72.1% alignment vs 64.5% reactive (p < 0.001). 82.6% low-PAC targeting vs 51.7%.
-4. 35/35 subjects benefit. Advantage grows with fatigue. Robust across thresholds.
+4. 35/35 subjects benefit. Advantage grows with fatigue. Holds across thresholds.
 5. Half of patients habituate while half don't, which validates the need for personalization.
 
-Main limitation: offline replay. The controller makes decisions on real brain data but can't observe how the brain responds to those decisions. Real-time validation is the next step.
+Main limitation: real-data validation uses offline replay on recorded EEG, not live closed-loop streaming. The controller makes decisions on real brain data. A biophysical simulator handles the brain-response modeling for the secondary validation (still need to build this -- see April 8). Live crossover validation is still the next step after that.
 
 ---
 
@@ -340,7 +340,7 @@ Spectral-only gets test R2 = -0.420. Not just unhelpful -- actively poisonous. T
 
 But 12 features -- just PAC trajectory and stim context -- hit 0.558 on the test set. That's... a lot better. The val-test gap also shrank from 0.358 to 0.246.
 
-I keep coming back to this: the bottleneck was never the model. It was the features. Eight architectures, three orders of magnitude in parameter count, and they all hit the same wall because the input features were wrong. The spectral features let the model identify which subject it was looking at and memorize that subject's patterns. Once you remove that crutch, it has to learn actual dynamics.
+I keep coming back to this: the bottleneck was never the model. It was the features. Every architecture I tried, three orders of magnitude in parameter count, and they all hit the same wall because the input features were wrong. The spectral features let the model identify which subject it was looking at and memorize that subject's patterns. Once you remove that crutch, it has to learn actual dynamics.
 
 ---
 
@@ -448,4 +448,4 @@ Note: the controller comparison results (72.1% alignment, etc.) were generated w
 
 [7] Chan, D., et al. (2025). Long-term safety of 40 Hz sensory stimulation. *Alzheimer's & Dementia*, 21(10), e70792.
 
-[8] Fortunato, M. V., et al. (2023). Non-responder rates in auditory gamma entrainment. *Frontiers in Integrative Neuroscience*, 17.
+[8] Fortunato et al. (2023). Non-responder rates in auditory gamma entrainment. *Frontiers in Integrative Neuroscience*, 17.
