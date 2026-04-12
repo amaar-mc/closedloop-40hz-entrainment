@@ -19,9 +19,9 @@ from reportlab.lib.enums import TA_LEFT, TA_CENTER
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 ORIGINAL = ROOT / "CSEF" / "Lab Notebook" / "P10_Lab_Notebook_VFINAL.md"
-EXTENSION = ROOT / "CSEF_presentation" / "notebook" / "v1_lab_notebook_extension.md"
+EXTENSION = ROOT / "CSEF_presentation" / "notebook" / "lab_notebook_extension.md"
 OUTPUT = ROOT / "CSEF_presentation" / "notebook" / "P10_Lab_Notebook_COMPLETE.pdf"
-FIGURES = ROOT / "results" / "figures"
+FIGURES = ROOT / "CSEF_figures"
 
 
 def build_styles():
@@ -127,11 +127,23 @@ def parse_table(lines, styles):
     return table
 
 
-def add_figure(path, caption, styles, width=4.5):
-    """Create a figure + caption block."""
+def add_figure(path, caption, styles, width=4.5, max_height=5.5):
+    """Create a figure + caption block with aspect ratio preserved."""
     elements = []
     if path.exists():
-        img = Image(str(path), width=width * inch, height=width * 0.6 * inch)
+        try:
+            from PIL import Image as PILImage
+            with PILImage.open(str(path)) as pil_img:
+                native_w, native_h = pil_img.size
+            aspect = native_h / native_w
+        except Exception:
+            aspect = 0.6
+        target_w = width * inch
+        target_h = target_w * aspect
+        if target_h > max_height * inch:
+            target_h = max_height * inch
+            target_w = target_h / aspect
+        img = Image(str(path), width=target_w, height=target_h)
         img.hAlign = "CENTER"
         elements.append(Spacer(1, 6))
         elements.append(img)
@@ -306,34 +318,29 @@ def main():
     for f in body_flowables:
         story.append(f)
 
-    # Insert figures at key points after original body
-    # Figure: Architecture comparison (after Feb 16 entry)
+    # Poster figures section at the end of original body
+    story.append(PageBreak())
+    story.append(Paragraph("Poster Figures (from the printed CSEF poster)", styles["NB_DateHeader"]))
     story.append(Spacer(1, 8))
+
     story.extend(add_figure(
-        FIGURES / "horizon_sweep.png",
-        "Figure: Horizon sweep showing TCN R-squared versus persistence and Ridge baselines at prediction horizons from 1 to 10 seconds. "
-        "Baselines collapse above 3 seconds while the TCN maintains useful accuracy.",
-        styles, width=5.0
+        FIGURES / "figure1.png",
+        "Figure 1: Fixed vs. Adaptive Stimulation Scheduling. Fixed schedule achieves 45% alignment; "
+        "the adaptive TCN controller achieves 72% by targeting periods of genuine therapeutic need.",
+        styles, width=5.5
     ))
 
     story.extend(add_figure(
-        FIGURES / "controller_comparison_v2.png",
-        "Figure: Controller comparison on all 35 subjects. TCN Predictive outperforms Fixed Schedule and Reactive Threshold "
-        "on alignment, low-PAC targeting, and PAC gap metrics.",
-        styles, width=5.0
+        FIGURES / "figure2.png",
+        "Figure 2: Phase-Amplitude Coupling (PAC) Mechanism. Theta rhythm (4-8 Hz) phase modulates "
+        "gamma amplitude (38-42 Hz). Strong PAC equals high Modulation Index, computed via Tort 2010.",
+        styles, width=5.5
     ))
 
     story.extend(add_figure(
-        FIGURES / "per_subject_utility.png",
-        "Figure: Per-subject clinical utility scatter. Every dot above the diagonal indicates a subject who benefited from "
-        "predictive control versus reactive. All 35 subjects fall above the line.",
-        styles, width=4.5
-    ))
-
-    story.extend(add_figure(
-        FIGURES / "timeline_example.png",
-        "Figure: Example controller timeline for one subject showing how TCN-driven decisions align stimulation "
-        "with periods of low PAC (blue shading = stimulation, gray = rest).",
+        FIGURES / "figure3.png",
+        "Figure 3: Fixed vs. Adaptive Stimulation Scheduling (detailed). Fixed schedule treats every "
+        "moment the same; adaptive schedule uses TCN forecasts to target low-PAC windows.",
         styles, width=5.0
     ))
 
@@ -365,62 +372,93 @@ def main():
     for f in ext_body:
         story.append(f)
 
-    # Insert extension-period figures
+    # Remaining CSEF poster figures after extension body
     story.append(Spacer(1, 8))
-    story.extend(add_figure(
-        FIGURES / "horizon_sweep_pac_stim.png",
-        "Figure: Updated horizon sweep with 12 PAC+Stim features. TCN R-squared reaches 0.577 at 5s horizon "
-        "and 0.669 at 10s, compared to negative values for persistence and Ridge.",
-        styles, width=5.0
-    ))
 
     story.extend(add_figure(
-        FIGURES / "threshold_sensitivity.png",
-        "Figure: Threshold sensitivity analysis. TCN controller outperforms reactive baseline across all "
-        "delta-z thresholds >= 0.2, with a stable plateau at >= 0.3.",
-        styles, width=4.5
-    ))
-
-    story.extend(add_figure(
-        FIGURES / "system_block_diagram.png",
-        "Figure: System architecture block diagram showing the two-stage pipeline from raw EEG through "
-        "EEGNet, feature extraction, TCN forecasting, and personalized controller decisions.",
-        styles, width=5.0
-    ))
-
-    story.extend(add_figure(
-        FIGURES / "pac_targeting_gap.png",
-        "Figure: PAC targeting gap by controller type. Positive gap means the controller correctly "
-        "concentrates stimulation during low-PAC periods. Fixed schedule goes negative (wrong direction).",
-        styles, width=4.5
-    ))
-
-    # TRIBE V2 figures
-    TRIBE_FIGS = ROOT / "results" / "tribe_v2"
-
-    story.extend(add_figure(
-        ROOT / "results" / "figures" / "ai_generated" / "brain_pac_concept_v1.png",
-        "Figure: Phase-amplitude coupling concept. Left: 7 frontal EEG channels (Fp1, Fp2, F7, F3, Fz, F4, F8) "
-        "on the cortical surface. Right: theta (4-8 Hz) phase modulates gamma (38-42 Hz) amplitude. "
-        "Strong coupling indicates active entrainment.",
-        styles, width=5.0
-    ))
-
-    story.extend(add_figure(
-        TRIBE_FIGS / "alzheimer_simulation.png",
-        "Figure: TRIBE V2 Alzheimer's disease simulation. (A) PAC response degrades with disease severity "
-        "across Fixed, Reactive, and Predictive controllers. (B) Real-time PAC dynamics show healthy subjects "
-        "sustaining entrainment while severe AD patients show minimal response. (C) Adaptive stimulation benefit "
-        "is largest for healthy and preclinical subjects, negligible for severe AD. (E) PAC heatmap across "
-        "strategy and severity confirms predictive advantage concentrates in early-to-moderate stages.",
+        FIGURES / "figure4.png",
+        "Figure 4: Feature Ablation, 73 to 12 Features. All 73 features gives test R2 = -0.025 (fails). "
+        "Spectral-only gives R2 = -0.420 (worse, these features encode patient-specific anatomy). "
+        "PAC + Stim with 12 features gives R2 = 0.606, a five-fold improvement.",
         styles, width=5.5
     ))
 
     story.extend(add_figure(
-        TRIBE_FIGS / "tribe_v2_backend_comparison.png",
-        "Figure: Simulation backend comparison. Original exponential model (green) versus TRIBE V2-enhanced "
-        "biophysical model (orange). The TRIBE V2 backend produces lower absolute PAC values but preserves "
-        "the relative controller ranking. Bottom-left: PAC dynamics over a 6-minute predictive controller session.",
+        FIGURES / "figure5.png",
+        "Figure 5: System Architecture Flowchart. Complete closed-loop pipeline from patient EEG through "
+        "EEGNet (1,457 params) PAC estimation, 12-feature extraction, Causal TCN (5,154 params) forecasting, "
+        "and audio stimulation delivery. Total prediction inference time under 50 ms.",
+        styles, width=5.5
+    ))
+
+    story.extend(add_figure(
+        FIGURES / "figure6.png",
+        "Figure 6: Prediction Horizon Sweep. At 1-2 seconds, persistence baseline is competitive. At 3-10 "
+        "seconds, baselines collapse while the TCN maintains R2 = 0.37-0.67. The 5-second operating point "
+        "sits squarely in the TCN advantage zone.",
+        styles, width=5.0
+    ))
+
+    story.extend(add_figure(
+        FIGURES / "figure7.png",
+        "Figure 7: Real-Data Controller Timeline, Sub-15 (Test Set). Same patient EEG, same threshold, same "
+        "hysteresis. Only difference: reactive uses current PAC, TCN uses predicted PAC 5 seconds ahead. "
+        "TCN catches decline earlier and avoids wasted stim on high-PAC windows.",
+        styles, width=5.5
+    ))
+
+    story.extend(add_figure(
+        FIGURES / "figure8.png",
+        "Figure 8: Dataset Overview. (A) 7 frontal EEG channels selected from 19-channel 10-20 montage, "
+        "250 Hz. (B) Stimulus (40 Hz AM) and Rest protocol, 40s on / 20s off, with 2-second analysis windows. "
+        "(C) Subject-level train/val/test split, 24/5/6. 17,283 total windows.",
+        styles, width=5.5
+    ))
+
+    story.extend(add_figure(
+        FIGURES / "figure9.png",
+        "Figure 9: Full Training and Validation Protocol. EEGNet training (MSE, Adam, patience 15) hits the "
+        "R2 = 0.287 data ceiling. Causal TCN training (Huber, AdamW, patience 20) with 12 features reaches "
+        "R2 = 0.606 (5-seed mean). Shuffle-label control gives R2 = -0.332, confirming the signal is real.",
+        styles, width=5.5
+    ))
+
+    story.extend(add_figure(
+        FIGURES / "figure10.png",
+        "Figure 10: Future Directions Roadmap. From offline replay validation (this project) to live EEG "
+        "streaming, 30-60 minute sessions, reinforcement learning controller, and multi-biomarker control. "
+        "At-home wearable therapy long term.",
+        styles, width=5.5
+    ))
+
+    story.extend(add_figure(
+        FIGURES / "figure11.png",
+        "Figure 11: Consumer Hardware for Clinical Deployment. Muse 2 headband ($249, 4 dry electrodes) "
+        "paired with standard audio headphones for 40 Hz amplitude-modulated auditory therapy. "
+        "Total cost per patient under $300.",
+        styles, width=4.0
+    ))
+
+    story.extend(add_figure(
+        FIGURES / "figure12.png",
+        "Figure 12: Metric Definitions. Low-PAC Stim Rate is the percentage of low-PAC windows that receive "
+        "stimulation (sensitivity). High-PAC Rest Rate is the percentage of high-PAC windows where the "
+        "controller rests (specificity). Alignment is the average of the two.",
+        styles, width=5.0
+    ))
+
+    story.extend(add_figure(
+        FIGURES / "figure13.png",
+        "Figure 13: Controller Performance Comparison (N=35). TCN predictive achieves 72.1% alignment, "
+        "82.6% low-PAC stim rate, and 61.6% high-PAC rest rate. Reactive trails at 64.5% alignment and "
+        "51.7% low-PAC targeting. Hedges' g = 1.31 for alignment, 4.47 for low-PAC, all p < 0.001.",
+        styles, width=5.5
+    ))
+
+    story.extend(add_figure(
+        FIGURES / "figure14.png",
+        "Figure 14: Per-Subject Clinical Utility. 35 of 35 subjects favor TCN over reactive (binomial p < 0.001). "
+        "All points sit in the advantage region above the diagonal, including the 6 held-out test subjects.",
         styles, width=5.0
     ))
 
@@ -437,19 +475,20 @@ def main():
     story.append(Paragraph("References", styles["NB_DateHeader"]))
     story.append(Spacer(1, 6))
 
-    # References match the poster board [1]-[7] plus additional sources
+    # References match the poster board [1]-[8] plus additional sources used in the extension
     refs = [
-        "[1] Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. Nature, 540(7632), 230-235.",
-        "[2] Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. Cell, 177(2), 256-271.",
-        "[3] Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. Journal of Neurophysiology, 104(2), 1195-1210.",
-        "[4] Lawhern, V. J., et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. Journal of Neural Engineering, 15(5), 056013.",
-        "[5] Lahijanian, M., et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. Scientific Reports, 14, 13153.",
-        "[6] Thompson, R. F., &amp; Spencer, W. A. (1966). Habituation: A model phenomenon for the study of neuronal substrates of behavior. Psychological Review, 73(1), 16-43.",
-        "[7] Chan, D., et al. (2025). Long-term safety of 40 Hz sensory stimulation. Alzheimer's &amp; Dementia, 21(10), e70792.",
-        "[8] Fortunato, M. V., et al. (2023). Non-responder rates in auditory gamma entrainment. Frontiers in Integrative Neuroscience, 17.",
-        "[9] Murdock, M. H., et al. (2024). Multisensory gamma stimulation promotes glymphatic clearance of amyloid. Nature, 627, 149-156.",
-        "[10] Soula, M., et al. (2023). Forty-hertz light stimulation does not entrain native gamma oscillations in Alzheimer's disease model mice. Nature Neuroscience, 26, 570-578.",
+        "[1] Iaccarino, H. F. et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. Nature, 540(7632), 230-235.",
+        "[2] Martorell, A. J. et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. Cell, 177(2), 256-271.",
+        "[3] Tort, A. B. L. et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. Journal of Neurophysiology, 104(2), 1195-1210.",
+        "[4] Lawhern, V. J. et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. Journal of Neural Engineering, 15(5), 056013.",
+        "[5] Lahijanian, M. et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. Scientific Reports, 14, 13153.",
+        "[6] Thompson, R. F. &amp; Spencer, W. A. (1966). Habituation: A model phenomenon for the study of neuronal substrates of behavior. Psychological Review, 73(1), 16-43.",
+        "[7] Chan, D. et al. (2025). Long-term safety and tolerability of gamma sensory stimulation for Alzheimer's disease. Alzheimer's &amp; Dementia, 21(10), e70792.",
+        "[8] Fortunato et al. (2023). Non-responder rates in auditory gamma entrainment studies. Frontiers in Integrative Neuroscience, 17.",
+        "[9] Murdock, M. H. et al. (2024). Multisensory gamma stimulation promotes glymphatic clearance of amyloid. Nature, 627, 149-156.",
+        "[10] Soula, M. et al. (2023). Forty-hertz light stimulation does not entrain native gamma oscillations in Alzheimer's disease model mice. Nature Neuroscience, 26, 570-578.",
         "[11] Meta AI. (2026). TRIBE V2: A Predictive Foundation Model for Brain Encoding. HuggingFace: facebook/tribev2.",
+        "[12] Wilson, H. R. &amp; Cowan, J. D. (1972). Excitatory and inhibitory interactions in localized populations of model neurons. Biophysical Journal, 12(1), 1-24.",
     ]
     for ref in refs:
         story.append(Paragraph(ref, styles["NB_Body"]))
