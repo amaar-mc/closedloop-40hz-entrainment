@@ -2,18 +2,23 @@
 
 **Adaptive scheduling of 40 Hz auditory stimulation using EEG-based PAC prediction**
 
+> **Status:** CSEF 2026 submission complete (April 2026). Codebase is research-complete and archived.
+
 ## What This Is
 
-A machine learning system that predicts when a person's brain will lose gamma entrainment during 40 Hz auditory stimulation, enabling adaptive scheduling that achieves comparable neural effects with significantly less stimulation than fixed-schedule protocols.
+A two-stage machine learning system that predicts when a patient's brain will lose gamma entrainment during 40 Hz auditory stimulation, enabling proactive adaptive scheduling that outperforms fixed and reactive protocols.
 
-Built on the OpenNeuro ds005048 dataset (35 dementia patients, 19-channel EEG, 250 Hz).
+Built on OpenNeuro ds005048 (35 dementia patients, 7 frontal EEG channels, 250 Hz). Validated on real patient EEG across all 35 subjects.
 
-**Key results:**
-- **Horizon sweep:** The causal TCN maintains R^2 = 0.24-0.28 at 5-10 second prediction horizons where all baselines collapse to negative R^2 — a +0.5 R^2 margin over persistence and Ridge regression.
-- **Real-data closed-loop validation (N=35 subjects):** The TCN predictive controller achieves 72.1% epoch alignment vs 64.5% for reactive control (Hedges' g = 1.31, p < 0.001). It targets 82.6% of low-PAC windows for stimulation vs 51.7% reactive (g = 4.47, p < 0.001). PAC targeting gap reaches 91% of the theoretical oracle bound. All 35/35 subjects benefit (binomial p < 0.001).
-- **Fatigue robustness:** Adaptive scheduling advantage grows with habituation severity (+9.0% to +11.2%, all p < 0.001) and holds across 4 different fatigue model assumptions (+6.9% to +19.0%, all p < 10^-13).
+**Key findings:**
 
-See [`FINDINGS.md`](FINDINGS.md) for the complete results and [`results/RESULTS_REPORT.md`](results/RESULTS_REPORT.md) for all statistics.
+- **Feature selection breakthrough (main scientific contribution):** Removing 61 spectral EEG features — which encode subject-specific brain anatomy and do not generalize — raised temporal prediction test R² from −0.025 to 0.606 ± 0.032 (5-seed mean). Using only 12 PAC trajectory + stimulation context features was more impactful than any architectural change across 8 models tested.
+- **Horizon sweep:** Causal TCN maintains R² = 0.577–0.669 at 3–10 second prediction horizons where persistence collapses to negative R² — a +0.47 R² margin at the operationally relevant range for proactive control.
+- **Real-data closed-loop validation (N=35):** TCN predictive controller achieves 72.1% epoch alignment vs 64.5% reactive (Hedges' g = 1.31, p < 0.001). Targets 82.6% of low-PAC windows vs 51.7% reactive (g = 4.47, p < 0.001). PAC targeting gap = 91% of theoretical oracle. All 35/35 subjects benefit (binomial p < 0.001).
+- **Fatigue robustness:** Adaptive advantage grows with habituation severity (+9.0% to +11.2%, all p < 0.001) and holds across 4 fatigue model assumptions (+6.9% to +19.0%, all p < 10⁻¹³).
+- **Architecture exploration:** 8 static PAC estimators tested (1,457 to ~1.1M params) — all converge to R² = 0.287 ceiling set by epoch-level label resolution, not model capacity.
+
+See [`FINDINGS.md`](FINDINGS.md) for complete results and [`results/RESULTS_REPORT.md`](results/RESULTS_REPORT.md) for all statistics.
 
 ## Repository Structure
 
@@ -163,35 +168,49 @@ python temporal_multiscale/comprehensive_submission_audit.py  # Submission audit
 
 ## Models
 
-### EEGNet (Static PAC Prediction)
+### Stage 1 — EEGNet (Static PAC Estimation)
 
-Predicts PAC from a single 2-second EEG window.
+Estimates current PAC from a single 2-second EEG window. Feeds Stage 2.
 
-- Input: `(batch, 1, 7, 500)` -- 7 frontal channels, 2s @ 250 Hz
-- Output: `(batch, 1)` -- predicted PAC
+- Input: `(batch, 1, 7, 500)` — 7 frontal channels, 2s @ 250 Hz
+- Output: `(batch, 1)` — current PAC estimate
 - Parameters: ~1,457
-- Test R^2: 0.287
+- Test R²: 0.287 (ceiling — epoch-level labels on 2s windows, not a model capacity limit)
+- 8 architectures explored (EEGNet to 1.1M-param ViT-TCNet); all converge to same R² = 0.287
 
-### Multiscale Causal TCN (Temporal PAC Prediction)
+### Stage 2 — Multiscale Causal TCN (Temporal PAC Prediction)
 
-Predicts future PAC from a sequence of past observations. Main contribution.
+Predicts future PAC (5s horizon) from a 20-second causal history. Main contribution.
 
-- Input: `(batch, seq_len, n_features)` -- PAC + stimulation context
-- Causal depthwise-separable convolutions, dilations [1, 2, 4, 8]
-- GroupNorm (cross-subject stable), attention pooling, dual regression heads
-- R^2 at horizon=1: 0.74 | R^2 at horizon=5-10: 0.24-0.28 (baselines: negative)
+- Input: `(batch, 20, 12)` — 12 PAC+Stim features × 20 timesteps (lookback)
+- Features: PAC trajectory (7: current + 4 trailing means + 2 differences) + stimulation context (5: state, time-since-switch, stim fraction, cycle sin/cos)
+- Architecture: dilated causal depthwise-separable conv, dilations [1, 2, 4, 8], GroupNorm, attention pooling, dual head (future PAC + delta-PAC)
+- Parameters: 5,154 (h=32)
+- Test R²: 0.606 ± 0.032 (5-seed mean) | Horizon 3–10s R²: 0.577–0.669
+- Checkpoint: `models/best_12feat_tcn_lb20_hz5_ts1.pth`
+
+**Feature ablation (key result):**
+
+| Feature Subset | # Features | Val R² | Test R² |
+|---|---|---|---|
+| All features (73) | 73 | 0.333 | −0.025 |
+| Spectral only (61) | 61 | −0.044 | −0.420 |
+| **PAC + Stim context** | **12** | **0.804** | **0.558** |
+
+Spectral features (indices 0–60) encode subject-specific anatomy that does not generalize. Removing them is the core scientific finding.
 
 ## Results Summary
 
-### Horizon Sweep (TCN Prediction)
+### Horizon Sweep (12-feat PAC+Stim TCN)
 
-| Horizon | Persistence R^2 | Ridge R^2 | TCN R^2 |
-|---------|-----------------|-----------|---------|
-| 1 sec | 0.76 | **0.81** | 0.74 |
-| 5 sec | -0.27 | -0.39 | **0.25** |
-| 10 sec | -0.26 | -0.21 | **0.28** |
+| Horizon | Persistence R² | Ridge R² | TCN R² |
+|---------|----------------|----------|--------|
+| 1 sec | ~0.76 | ~0.81 | ~0.74 |
+| 3 sec | −0.081 | negative | **0.577** |
+| 5 sec | negative | negative | **0.606** |
+| 10 sec | negative | negative | **0.669** |
 
-At 5-10 seconds — the operationally relevant range for proactive control — only the TCN provides useful predictions (+0.5 R^2 margin over all baselines).
+At 3–10 seconds — the operationally relevant range for proactive control — only the TCN provides useful predictions (+0.47 R² margin over persistence at collapse).
 
 ### Real-Data Closed-Loop Validation (N=35 subjects)
 
@@ -233,7 +252,7 @@ Full results: [`FINDINGS.md`](FINDINGS.md) | [`results/RESULTS_REPORT.md`](resul
 
 ## Author
 
-Amaar Chughtai | February 2026
+Amaar Chughtai | CSEF 2026 — submitted April 2026
 
 ## License
 
