@@ -102,6 +102,12 @@ class ClosedLoopController:
         checkpoint = torch.load(model_path, map_location=device, weights_only=False)
         self.model.load_state_dict(checkpoint['model_state_dict'])
         self.model.eval()
+
+        # Load PAC normalization stats so we can denormalize model output.
+        # training.py z-scores targets: z = (pac - mean) / std, so we invert.
+        self.pac_mean = checkpoint.get('pac_mean', 0.0)
+        self.pac_std = checkpoint.get('pac_std', 1.0)
+        logger.info(f"PAC denorm: mean={self.pac_mean:.6f}, std={self.pac_std:.6f}")
         logger.info("Model loaded and set to eval mode")
 
         # Personalization module
@@ -151,11 +157,11 @@ class ClosedLoopController:
 
         eeg_tensor = eeg_tensor.to(self.device)
 
-        # Predict PAC using model
+        # Predict PAC using model (output is z-normalized; denormalize)
         with torch.no_grad():
-            pac_pred = self.model(eeg_tensor).squeeze().item()
+            pac_z = self.model(eeg_tensor).squeeze().item()
 
-        # Clip to valid range [0, 1]
+        pac_pred = pac_z * self.pac_std + self.pac_mean
         pac_pred = np.clip(pac_pred, 0.0, 1.0)
 
         # Compute z-score BEFORE updating baseline so the current value
@@ -213,12 +219,11 @@ class ClosedLoopController:
             # Normal coupling: MAINTAIN
             return self.current_state
 
-        # Apply hysteresis
+        # Apply hysteresis — only transition if hold time has been met.
+        # State tracking (time_in_state) is updated in step(), not here.
         if desired_state != self.current_state:
             if self.time_in_state >= self.hold_samples:
-                # Can transition
                 self.current_state = desired_state
-                self.time_in_state = 0
             # else: stay in current state until hold time expires
 
         return self.current_state
@@ -374,9 +379,10 @@ class PredictiveLookAheadController:
             pac_current: Current PAC value (passthrough)
             prediction: Dict with future_pac, delta_pac, or None if not ready
         """
-        # Update personalization baseline
-        self.personalization.update(pac_current)
+        # Compute z-score BEFORE updating baseline so the current value
+        # doesn't contaminate its own z-score computation.
         z_score = self.personalization.compute_zscore(pac_current)
+        self.personalization.update(pac_current)
 
         # Get TCN prediction
         prediction = self.forecaster.step(
@@ -453,11 +459,11 @@ class PredictiveLookAheadController:
         if desired_state is None:
             return self.current_state
 
-        # Apply hysteresis
+        # Apply hysteresis — only transition if hold time has been met.
+        # State tracking (time_in_state) is updated in step(), not here.
         if desired_state != self.current_state:
             if self.time_in_state >= self.hold_samples:
                 self.current_state = desired_state
-                self.time_in_state = 0
 
         return self.current_state
 
@@ -539,7 +545,7 @@ def test_controller():
             if (step + 1) % 10 == 0:
                 logger.info(f"Step {step+1}:")
                 logger.info(f"  PAC: {pac_pred:.4f}")
-                logger.info(f"  Z-score: {z_score:.2f if z_score else 'N/A'}")
+                logger.info(f"  Z-score: {z_score:.2f}" if z_score is not None else "  Z-score: N/A")
                 logger.info(f"  Action: {action}")
 
         # Summary
@@ -554,8 +560,8 @@ def test_controller():
 
         baseline = controller.get_baseline_stats()
         logger.info(f"\nBaseline stats:")
-        logger.info(f"  Mean PAC: {baseline['mean']:.4f if baseline['mean'] else 'N/A'}")
-        logger.info(f"  Std PAC: {baseline['std']:.4f if baseline['std'] else 'N/A'}")
+        logger.info(f"  Mean PAC: {baseline['mean']:.4f}" if baseline['mean'] is not None else "  Mean PAC: N/A")
+        logger.info(f"  Std PAC: {baseline['std']:.4f}" if baseline['std'] is not None else "  Std PAC: N/A")
         logger.info(f"  Samples: {baseline['n_samples']}")
         logger.info(f"  Ready: {baseline['ready']}")
 

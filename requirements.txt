@@ -32,9 +32,17 @@ seaborn>=0.12.0
 # Interactive Demo
 streamlit>=1.35.0
 sounddevice>=0.5.0
+qrcode[pil]>=8.0
+reportlab>=4.0
 
 # Progress Bars
 tqdm>=4.65.0
+
+# Real-time EEG streaming (hardware + simulated)
+brainflow>=5.21.0
+
+# Gradient boosting baseline for model registry (Phase 12)
+xgboost>=3.2.0
 
 # Configuration
 pyyaml>=6.0

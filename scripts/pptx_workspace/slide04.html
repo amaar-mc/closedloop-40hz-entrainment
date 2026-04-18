@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 792pt; height: 612pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: 'Times New Roman', Times, serif;
+  display: flex; flex-direction: column;
+}
+.content { margin: 43pt 54pt; flex: 1; }
+h1 { font-size: 22pt; color: #000; margin-bottom: 10pt; font-weight: bold; }
+h3 { font-size: 15pt; color: #000; margin-top: 8pt; margin-bottom: 3pt; font-weight: bold; }
+p { font-size: 14pt; color: #000; line-height: 1.35; margin: 3pt 0 6pt 0; }
+ul { font-size: 14pt; color: #000; line-height: 1.35; margin: 2pt 0; padding-left: 20pt; }
+li { margin: 2pt 0 3pt 0; }
+</style>
+</head>
+<body>
+<div class="content">
+  <h1>Methods</h1>
+
+  <h3>Dataset</h3>
+  <ul>
+    <li>OpenNeuro ds005048 (Lahijanian et al., 2024)</li>
+    <li>35 elderly subjects: Alzheimer&#8217;s disease (n = 17), MCI (n = 6), healthy controls (n = 10), unspecified (n = 2)</li>
+    <li>7 frontal EEG channels (Fp1, Fp2, F7, F3, Fz, F4, F8), sampled at 250 Hz</li>
+    <li>Protocol: 40 Hz auditory stimulation (40 s ON / 20 s OFF cycles)</li>
+  </ul>
+
+  <h3>Preprocessing</h3>
+  <ul>
+    <li>Bandpass filter: 0.5&#8211;80 Hz (4th-order Butterworth, zero-phase)</li>
+    <li>Notch filter: 50 Hz (Q = 30) for power-line removal</li>
+    <li>Artifact rejection: &#177;100 &#181;V threshold (applied before CAR)</li>
+    <li>Common average reference (after artifact rejection)</li>
+    <li>Windowing: 2-second windows (500 samples), 1-second hop</li>
+  </ul>
+
+  <h3>Subject-Level Data Splits (No Within-Subject Leakage)</h3>
+  <ul>
+    <li>Training: 24 subjects (11,736 windows)</li>
+    <li>Validation: 5 subjects (2,725 windows)</li>
+    <li>Test: 6 subjects (2,822 windows) &#8212; never seen during training or hyperparameter selection</li>
+  </ul>
+
+  <h3>Phase-Amplitude Coupling (PAC) Computation</h3>
+  <ul>
+    <li>Modulation Index (Tort et al., 2010): measures coordination between theta phase (4&#8211;8 Hz) and gamma amplitude (38&#8211;42 Hz)</li>
+    <li>KL divergence from uniform distribution over 18 phase bins (20&#176; each)</li>
+    <li>Computed at epoch level (20&#8211;40 s); assigned to all constituent 2-second windows within each epoch</li>
+    <li>Range: 6e-6 to 7e-4 (dimensionless MI units); mean approx. 4.4e-5</li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "Fixed Schedule": {
+    "alignment_mean": 0.4501,
+    "low_stim_mean": 0.6143,
+    "high_rest_mean": 0.2859,
+    "pac_gap_mean": -6.55e-06,
+    "n_subjects": 35
+  },
+  "Reactive Threshold": {
+    "alignment_mean": 0.6449,
+    "low_stim_mean": 0.5167,
+    "high_rest_mean": 0.773,
+    "pac_gap_mean": 2.109e-05,
+    "n_subjects": 35
+  },
+  "TCN Predictive (12-feat)": {
+    "alignment_mean": 0.6223,
+    "low_stim_mean": 0.7377,
+    "high_rest_mean": 0.5068,
+    "pac_gap_mean": 2.1023e-05,
+    "n_subjects": 35
+  },
+  "Alignment Oracle": {
+    "alignment_mean": 1.0,
+    "low_stim_mean": 1.0,
+    "high_rest_mean": 1.0,
+    "pac_gap_mean": 3.3356e-05,
+    "n_subjects": 35
+  }
+}

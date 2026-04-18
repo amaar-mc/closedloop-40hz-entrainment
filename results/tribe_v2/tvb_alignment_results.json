@@ -1,0 +1,114 @@
+{
+  "healthy": {
+    "Oracle": {
+      "alignment_mean": 1.0,
+      "alignment_std": 0.0
+    },
+    "trend_vs_reactive_g": -5.8692,
+    "trend_vs_reactive_p": 0.001953,
+    "trend_pct_oracle": 25.9,
+    "reactive_pct_oracle": 77.3,
+    "Fixed Schedule": {
+      "alignment_mean": 0.1916,
+      "alignment_std": 0.0084,
+      "low_pac_stim_mean": 0.3584,
+      "pac_gap_mean": -0.079818
+    },
+    "Reactive Threshold": {
+      "alignment_mean": 0.7733,
+      "alignment_std": 0.1109,
+      "low_pac_stim_mean": 0.6333,
+      "pac_gap_mean": 0.053698
+    },
+    "Trend Predictive": {
+      "alignment_mean": 0.2592,
+      "alignment_std": 0.0192,
+      "low_pac_stim_mean": 0.2117,
+      "pac_gap_mean": -0.047429
+    }
+  },
+  "mild": {
+    "Oracle": {
+      "alignment_mean": 1.0,
+      "alignment_std": 0.0
+    },
+    "trend_vs_reactive_g": -5.598,
+    "trend_vs_reactive_p": 0.001953,
+    "trend_pct_oracle": 25.7,
+    "reactive_pct_oracle": 75.3,
+    "Fixed Schedule": {
+      "alignment_mean": 0.1933,
+      "alignment_std": 0.0082,
+      "low_pac_stim_mean": 0.36,
+      "pac_gap_mean": -0.079684
+    },
+    "Reactive Threshold": {
+      "alignment_mean": 0.7533,
+      "alignment_std": 0.1122,
+      "low_pac_stim_mean": 0.5816,
+      "pac_gap_mean": 0.048014
+    },
+    "Trend Predictive": {
+      "alignment_mean": 0.2575,
+      "alignment_std": 0.0192,
+      "low_pac_stim_mean": 0.21,
+      "pac_gap_mean": -0.04757
+    }
+  },
+  "moderate": {
+    "Oracle": {
+      "alignment_mean": 1.0,
+      "alignment_std": 0.0
+    },
+    "trend_vs_reactive_g": -6.7942,
+    "trend_vs_reactive_p": 0.001953,
+    "trend_pct_oracle": 25.2,
+    "reactive_pct_oracle": 76.4,
+    "Fixed Schedule": {
+      "alignment_mean": 0.1933,
+      "alignment_std": 0.0082,
+      "low_pac_stim_mean": 0.36,
+      "pac_gap_mean": -0.079702
+    },
+    "Reactive Threshold": {
+      "alignment_mean": 0.7642,
+      "alignment_std": 0.0955,
+      "low_pac_stim_mean": 0.6017,
+      "pac_gap_mean": 0.050177
+    },
+    "Trend Predictive": {
+      "alignment_mean": 0.2525,
+      "alignment_std": 0.0158,
+      "low_pac_stim_mean": 0.2017,
+      "pac_gap_mean": -0.047641
+    }
+  },
+  "severe": {
+    "Oracle": {
+      "alignment_mean": 1.0,
+      "alignment_std": 0.0
+    },
+    "trend_vs_reactive_g": -5.0428,
+    "trend_vs_reactive_p": 0.001953,
+    "trend_pct_oracle": 25.8,
+    "reactive_pct_oracle": 73.3,
+    "Fixed Schedule": {
+      "alignment_mean": 0.1933,
+      "alignment_std": 0.0082,
+      "low_pac_stim_mean": 0.36,
+      "pac_gap_mean": -0.079735
+    },
+    "Reactive Threshold": {
+      "alignment_mean": 0.7325,
+      "alignment_std": 0.1199,
+      "low_pac_stim_mean": 0.5283,
+      "pac_gap_mean": 0.044405
+    },
+    "Trend Predictive": {
+      "alignment_mean": 0.2575,
+      "alignment_std": 0.0164,
+      "low_pac_stim_mean": 0.2117,
+      "pac_gap_mean": -0.047231
+    }
+  }
+}

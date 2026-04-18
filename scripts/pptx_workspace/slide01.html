@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html { background: #ffffff; }
+body {
+  width: 792pt; height: 612pt; margin: 0; padding: 0;
+  background: #ffffff; font-family: 'Times New Roman', Times, serif;
+  display: flex; flex-direction: column;
+}
+.content { margin: 43pt 54pt; flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
+h1.title { font-size: 26pt; color: #000; text-align: center; margin-top: 50pt; margin-bottom: 22pt; line-height: 1.3; font-weight: bold; }
+p.author { font-size: 18pt; color: #000; text-align: center; margin-bottom: 30pt; }
+h2.summary-head { font-size: 16pt; color: #000; text-align: center; margin-bottom: 5pt; font-weight: bold; }
+p.summary { font-size: 14pt; color: #000; line-height: 1.35; margin: 3pt 0 6pt 0; text-align: left; max-width: 684pt; }
+</style>
+</head>
+<body>
+<div class="content">
+  <h1 class="title">Personalized Deep Learning Model for Closed-Loop<br>40 Hz Entrainment to Optimize Theta&#8211;Gamma<br>Coupling in Alzheimer&#8217;s Disease</h1>
+  <p class="author">Amaar Chughtai</p>
+  <h2 class="summary-head">Project Summary</h2>
+  <p class="summary">This project develops a closed-loop deep learning system for personalized 40 Hz auditory entrainment therapy in Alzheimer&#8217;s disease. Current clinical protocols deliver stimulation on rigid fixed schedules, ignoring individual variability in neural responses and intra-session habituation. I analyzed EEG recordings from 35 elderly subjects (OpenNeuro ds005048) and discovered that dropping 61 spectral features in favor of 12 PAC-derived and stimulation context features raised forecasting accuracy from test R&#178; = 0.121 (73 features) to 0.606 (5-seed mean, std = 0.032), driven by eliminating subject-specific anatomy from model inputs. The predictive controller matched stimulation to patient need 72.1% versus 64.5% for reactive control (p &lt; 0.001, Hedges&#8217; g = 1.31), targeted 82.6% of low-coupling windows versus 51.7%, and reached 91% of the theoretical oracle. All 35 subjects benefited. A caregiver-facing web application is deployed on Hugging Face Spaces as a path toward clinical translation.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+# Binary/generated — no semantic value
+cache/
+models/
+data/
+results/figures/
+results/*.pkl
+results/*.npz
+
+# Archived/duplicate content
+CSEF_FINAL/
+CSEF_presentation/archive/
+CSEF_presentation/memorization/
+
+# Admin PDFs (blank forms, not research)
+CSEF/Forms/
+CSEF_presentation/reference/
+
+# Trivial images
+CSEF/Flyer/qr_*.png
+tmp_poster_ocr-1.png
+
+# Standard
+venv/
+.venv/
+node_modules/
+__pycache__/
+.git/

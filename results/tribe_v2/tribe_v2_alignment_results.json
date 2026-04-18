@@ -1,0 +1,5642 @@
+{
+  "healthy": {
+    "Fixed Schedule": [
+      {
+        "alignment": 0.243333,
+        "low_pac_stim_rate": 0.41,
+        "high_pac_rest_rate": 0.076667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.036215,
+        "mean_pac_stim": 0.123039,
+        "mean_pac_rest": 0.086825,
+        "clinical_utility": 0.221667
+      },
+      {
+        "alignment": 0.22,
+        "low_pac_stim_rate": 0.386667,
+        "high_pac_rest_rate": 0.053333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.040536,
+        "mean_pac_stim": 0.128356,
+        "mean_pac_rest": 0.08782,
+        "clinical_utility": 0.21
+      },
+      {
+        "alignment": 0.223333,
+        "low_pac_stim_rate": 0.39,
+        "high_pac_rest_rate": 0.056667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.055818,
+        "mean_pac_stim": 0.16502,
+        "mean_pac_rest": 0.109202,
+        "clinical_utility": 0.211667
+      },
+      {
+        "alignment": 0.226667,
+        "low_pac_stim_rate": 0.393333,
+        "high_pac_rest_rate": 0.06,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.042501,
+        "mean_pac_stim": 0.134011,
+        "mean_pac_rest": 0.09151,
+        "clinical_utility": 0.213333
+      },
+      {
+        "alignment": 0.206667,
+        "low_pac_stim_rate": 0.373333,
+        "high_pac_rest_rate": 0.04,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.041761,
+        "mean_pac_stim": 0.129897,
+        "mean_pac_rest": 0.088136,
+        "clinical_utility": 0.203333
+      },
+      {
+        "alignment": 0.26,
+        "low_pac_stim_rate": 0.426667,
+        "high_pac_rest_rate": 0.093333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.024245,
+        "mean_pac_stim": 0.100924,
+        "mean_pac_rest": 0.076679,
+        "clinical_utility": 0.23
+      },
+      {
+        "alignment": 0.226667,
+        "low_pac_stim_rate": 0.393333,
+        "high_pac_rest_rate": 0.06,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.049607,
+        "mean_pac_stim": 0.149201,
+        "mean_pac_rest": 0.099594,
+        "clinical_utility": 0.213333
+      },
+      {
+        "alignment": 0.223333,
+        "low_pac_stim_rate": 0.39,
+        "high_pac_rest_rate": 0.056667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.04754,
+        "mean_pac_stim": 0.144159,
+        "mean_pac_rest": 0.096619,
+        "clinical_utility": 0.211667
+      },
+      {
+        "alignment": 0.24,
+        "low_pac_stim_rate": 0.406667,
+        "high_pac_rest_rate": 0.073333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.044189,
+        "mean_pac_stim": 0.139981,
+        "mean_pac_rest": 0.095793,
+        "clinical_utility": 0.22
+      },
+      {
+        "alignment": 0.243333,
+        "low_pac_stim_rate": 0.41,
+        "high_pac_rest_rate": 0.076667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.03646,
+        "mean_pac_stim": 0.126167,
+        "mean_pac_rest": 0.089707,
+        "clinical_utility": 0.221667
+      },
+      {
+        "alignment": 0.223333,
+        "low_pac_stim_rate": 0.39,
+        "high_pac_rest_rate": 0.056667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.043781,
+        "mean_pac_stim": 0.136918,
+        "mean_pac_rest": 0.093137,
+        "clinical_utility": 0.211667
+      },
+      {
+        "alignment": 0.236667,
+        "low_pac_stim_rate": 0.403333,
+        "high_pac_rest_rate": 0.07,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.039237,
+        "mean_pac_stim": 0.125817,
+        "mean_pac_rest": 0.08658,
+        "clinical_utility": 0.218333
+      },
+      {
+        "alignment": 0.236667,
+        "low_pac_stim_rate": 0.403333,
+        "high_pac_rest_rate": 0.07,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.045019,
+        "mean_pac_stim": 0.148878,
+        "mean_pac_rest": 0.10386,
+        "clinical_utility": 0.218333
+      },
+      {
+        "alignment": 0.246667,
+        "low_pac_stim_rate": 0.413333,
+        "high_pac_rest_rate": 0.08,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.034078,
+        "mean_pac_stim": 0.121074,
+        "mean_pac_rest": 0.086996,
+        "clinical_utility": 0.223333
+      },
+      {
+        "alignment": 0.233333,
+        "low_pac_stim_rate": 0.4,
+        "high_pac_rest_rate": 0.066667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.049855,
+        "mean_pac_stim": 0.15736,
+        "mean_pac_rest": 0.107506,
+        "clinical_utility": 0.216667
+      },
+      {
+        "alignment": 0.23,
+        "low_pac_stim_rate": 0.396667,
+        "high_pac_rest_rate": 0.063333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.052655,
+        "mean_pac_stim": 0.161884,
+        "mean_pac_rest": 0.109229,
+        "clinical_utility": 0.215
+      },
+      {
+        "alignment": 0.23,
+        "low_pac_stim_rate": 0.396667,
+        "high_pac_rest_rate": 0.063333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.029444,
+        "mean_pac_stim": 0.107533,
+        "mean_pac_rest": 0.078089,
+        "clinical_utility": 0.215
+      },
+      {
+        "alignment": 0.23,
+        "low_pac_stim_rate": 0.396667,
+        "high_pac_rest_rate": 0.063333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.046863,
+        "mean_pac_stim": 0.142968,
+        "mean_pac_rest": 0.096105,
+        "clinical_utility": 0.215
+      },
+      {
+        "alignment": 0.24,
+        "low_pac_stim_rate": 0.406667,
+        "high_pac_rest_rate": 0.073333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.033713,
+        "mean_pac_stim": 0.120742,
+        "mean_pac_rest": 0.087029,
+        "clinical_utility": 0.22
+      },
+      {
+        "alignment": 0.216667,
+        "low_pac_stim_rate": 0.383333,
+        "high_pac_rest_rate": 0.05,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.034103,
+        "mean_pac_stim": 0.116876,
+        "mean_pac_rest": 0.082772,
+        "clinical_utility": 0.208333
+      },
+      {
+        "alignment": 0.236667,
+        "low_pac_stim_rate": 0.403333,
+        "high_pac_rest_rate": 0.07,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.027643,
+        "mean_pac_stim": 0.106279,
+        "mean_pac_rest": 0.078635,
+        "clinical_utility": 0.218333
+      },
+      {
+        "alignment": 0.246667,
+        "low_pac_stim_rate": 0.413333,
+        "high_pac_rest_rate": 0.08,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.052525,
+        "mean_pac_stim": 0.161319,
+        "mean_pac_rest": 0.108794,
+        "clinical_utility": 0.223333
+      },
+      {
+        "alignment": 0.23,
+        "low_pac_stim_rate": 0.396667,
+        "high_pac_rest_rate": 0.063333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.045481,
+        "mean_pac_stim": 0.141374,
+        "mean_pac_rest": 0.095893,
+        "clinical_utility": 0.215
+      },
+      {
+        "alignment": 0.246667,
+        "low_pac_stim_rate": 0.413333,
+        "high_pac_rest_rate": 0.08,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.034944,
+        "mean_pac_stim": 0.120777,
+        "mean_pac_rest": 0.085833,
+        "clinical_utility": 0.223333
+      },
+      {
+        "alignment": 0.24,
+        "low_pac_stim_rate": 0.406667,
+        "high_pac_rest_rate": 0.073333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.033827,
+        "mean_pac_stim": 0.11444,
+        "mean_pac_rest": 0.080613,
+        "clinical_utility": 0.22
+      },
+      {
+        "alignment": 0.233333,
+        "low_pac_stim_rate": 0.4,
+        "high_pac_rest_rate": 0.066667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.044253,
+        "mean_pac_stim": 0.141591,
+        "mean_pac_rest": 0.097338,
+        "clinical_utility": 0.216667
+      },
+      {
+        "alignment": 0.24,
+        "low_pac_stim_rate": 0.406667,
+        "high_pac_rest_rate": 0.073333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.057578,
+        "mean_pac_stim": 0.172971,
+        "mean_pac_rest": 0.115393,
+        "clinical_utility": 0.22
+      },
+      {
+        "alignment": 0.223333,
+        "low_pac_stim_rate": 0.39,
+        "high_pac_rest_rate": 0.056667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.049751,
+        "mean_pac_stim": 0.150433,
+        "mean_pac_rest": 0.100681,
+        "clinical_utility": 0.211667
+      },
+      {
+        "alignment": 0.236667,
+        "low_pac_stim_rate": 0.403333,
+        "high_pac_rest_rate": 0.07,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.037992,
+        "mean_pac_stim": 0.130195,
+        "mean_pac_rest": 0.092202,
+        "clinical_utility": 0.218333
+      },
+      {
+        "alignment": 0.23,
+        "low_pac_stim_rate": 0.396667,
+        "high_pac_rest_rate": 0.063333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.046275,
+        "mean_pac_stim": 0.143775,
+        "mean_pac_rest": 0.097499,
+        "clinical_utility": 0.215
+      },
+      {
+        "alignment": 0.233333,
+        "low_pac_stim_rate": 0.4,
+        "high_pac_rest_rate": 0.066667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.030196,
+        "mean_pac_stim": 0.110875,
+        "mean_pac_rest": 0.08068,
+        "clinical_utility": 0.216667
+      },
+      {
+        "alignment": 0.24,
+        "low_pac_stim_rate": 0.406667,
+        "high_pac_rest_rate": 0.073333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.036914,
+        "mean_pac_stim": 0.123907,
+        "mean_pac_rest": 0.086993,
+        "clinical_utility": 0.22
+      },
+      {
+        "alignment": 0.233333,
+        "low_pac_stim_rate": 0.4,
+        "high_pac_rest_rate": 0.066667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.044281,
+        "mean_pac_stim": 0.135416,
+        "mean_pac_rest": 0.091135,
+        "clinical_utility": 0.216667
+      },
+      {
+        "alignment": 0.236667,
+        "low_pac_stim_rate": 0.403333,
+        "high_pac_rest_rate": 0.07,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.041855,
+        "mean_pac_stim": 0.13728,
+        "mean_pac_rest": 0.095425,
+        "clinical_utility": 0.218333
+      },
+      {
+        "alignment": 0.223333,
+        "low_pac_stim_rate": 0.39,
+        "high_pac_rest_rate": 0.056667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.051114,
+        "mean_pac_stim": 0.152355,
+        "mean_pac_rest": 0.101241,
+        "clinical_utility": 0.211667
+      }
+    ],
+    "Reactive Threshold": [
+      {
+        "alignment": 0.75,
+        "low_pac_stim_rate": 0.556667,
+        "high_pac_rest_rate": 0.943333,
+        "stim_pct": 30.666667,
+        "pac_gap": 0.015781,
+        "mean_pac_stim": 0.098613,
+        "mean_pac_rest": 0.114394,
+        "clinical_utility": 0.760652
+      },
+      {
+        "alignment": 0.796667,
+        "low_pac_stim_rate": 0.593333,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 29.666667,
+        "pac_gap": 0.020826,
+        "mean_pac_stim": 0.098583,
+        "mean_pac_rest": 0.11941,
+        "clinical_utility": 0.832984
+      },
+      {
+        "alignment": 0.798333,
+        "low_pac_stim_rate": 0.606667,
+        "high_pac_rest_rate": 0.99,
+        "stim_pct": 30.833333,
+        "pac_gap": 0.020312,
+        "mean_pac_stim": 0.132271,
+        "mean_pac_rest": 0.152583,
+        "clinical_utility": 0.768405
+      },
+      {
+        "alignment": 0.805,
+        "low_pac_stim_rate": 0.616667,
+        "high_pac_rest_rate": 0.993333,
+        "stim_pct": 31.166667,
+        "pac_gap": 0.019531,
+        "mean_pac_stim": 0.105783,
+        "mean_pac_rest": 0.125314,
+        "clinical_utility": 0.822713
+      },
+      {
+        "alignment": 0.805,
+        "low_pac_stim_rate": 0.613333,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 30.833333,
+        "pac_gap": 0.019782,
+        "mean_pac_stim": 0.101526,
+        "mean_pac_rest": 0.121308,
+        "clinical_utility": 0.828804
+      },
+      {
+        "alignment": 0.805,
+        "low_pac_stim_rate": 0.623333,
+        "high_pac_rest_rate": 0.986667,
+        "stim_pct": 31.833333,
+        "pac_gap": 0.017119,
+        "mean_pac_stim": 0.080967,
+        "mean_pac_rest": 0.098086,
+        "clinical_utility": 0.858494
+      },
+      {
+        "alignment": 0.795,
+        "low_pac_stim_rate": 0.616667,
+        "high_pac_rest_rate": 0.973333,
+        "stim_pct": 32.166667,
+        "pac_gap": 0.021287,
+        "mean_pac_stim": 0.118902,
+        "mean_pac_rest": 0.140189,
+        "clinical_utility": 0.802414
+      },
+      {
+        "alignment": 0.81,
+        "low_pac_stim_rate": 0.63,
+        "high_pac_rest_rate": 0.99,
+        "stim_pct": 32.0,
+        "pac_gap": 0.020365,
+        "mean_pac_stim": 0.114879,
+        "mean_pac_rest": 0.135243,
+        "clinical_utility": 0.798705
+      },
+      {
+        "alignment": 0.8,
+        "low_pac_stim_rate": 0.61,
+        "high_pac_rest_rate": 0.99,
+        "stim_pct": 31.0,
+        "pac_gap": 0.018746,
+        "mean_pac_stim": 0.112228,
+        "mean_pac_rest": 0.130974,
+        "clinical_utility": 0.792978
+      },
+      {
+        "alignment": 0.758333,
+        "low_pac_stim_rate": 0.55,
+        "high_pac_rest_rate": 0.966667,
+        "stim_pct": 29.166667,
+        "pac_gap": 0.01668,
+        "mean_pac_stim": 0.100243,
+        "mean_pac_rest": 0.116923,
+        "clinical_utility": 0.772874
+      },
+      {
+        "alignment": 0.803333,
+        "low_pac_stim_rate": 0.616667,
+        "high_pac_rest_rate": 0.99,
+        "stim_pct": 31.333333,
+        "pac_gap": 0.020344,
+        "mean_pac_stim": 0.108353,
+        "mean_pac_rest": 0.128697,
+        "clinical_utility": 0.823587
+      },
+      {
+        "alignment": 0.808333,
+        "low_pac_stim_rate": 0.616667,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 30.833333,
+        "pac_gap": 0.017914,
+        "mean_pac_stim": 0.099215,
+        "mean_pac_rest": 0.117129,
+        "clinical_utility": 0.808872
+      },
+      {
+        "alignment": 0.778333,
+        "low_pac_stim_rate": 0.586667,
+        "high_pac_rest_rate": 0.97,
+        "stim_pct": 30.833333,
+        "pac_gap": 0.017042,
+        "mean_pac_stim": 0.121329,
+        "mean_pac_rest": 0.138371,
+        "clinical_utility": 0.757532
+      },
+      {
+        "alignment": 0.788333,
+        "low_pac_stim_rate": 0.596667,
+        "high_pac_rest_rate": 0.98,
+        "stim_pct": 30.833333,
+        "pac_gap": 0.017193,
+        "mean_pac_stim": 0.096414,
+        "mean_pac_rest": 0.113607,
+        "clinical_utility": 0.813692
+      },
+      {
+        "alignment": 0.788333,
+        "low_pac_stim_rate": 0.61,
+        "high_pac_rest_rate": 0.966667,
+        "stim_pct": 32.166667,
+        "pac_gap": 0.020894,
+        "mean_pac_stim": 0.1273,
+        "mean_pac_rest": 0.148194,
+        "clinical_utility": 0.784472
+      },
+      {
+        "alignment": 0.735,
+        "low_pac_stim_rate": 0.53,
+        "high_pac_rest_rate": 0.94,
+        "stim_pct": 29.5,
+        "pac_gap": 0.019357,
+        "mean_pac_stim": 0.12879,
+        "mean_pac_rest": 0.148146,
+        "clinical_utility": 0.740947
+      },
+      {
+        "alignment": 0.801667,
+        "low_pac_stim_rate": 0.613333,
+        "high_pac_rest_rate": 0.99,
+        "stim_pct": 31.166667,
+        "pac_gap": 0.016267,
+        "mean_pac_stim": 0.086039,
+        "mean_pac_rest": 0.102305,
+        "clinical_utility": 0.840921
+      },
+      {
+        "alignment": 0.788333,
+        "low_pac_stim_rate": 0.58,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 29.166667,
+        "pac_gap": 0.018254,
+        "mean_pac_stim": 0.112169,
+        "mean_pac_rest": 0.130422,
+        "clinical_utility": 0.778906
+      },
+      {
+        "alignment": 0.815,
+        "low_pac_stim_rate": 0.63,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 31.5,
+        "pac_gap": 0.018517,
+        "mean_pac_stim": 0.09695,
+        "mean_pac_rest": 0.115467,
+        "clinical_utility": 0.84336
+      },
+      {
+        "alignment": 0.793333,
+        "low_pac_stim_rate": 0.606667,
+        "high_pac_rest_rate": 0.98,
+        "stim_pct": 31.333333,
+        "pac_gap": 0.016895,
+        "mean_pac_stim": 0.092885,
+        "mean_pac_rest": 0.10978,
+        "clinical_utility": 0.807148
+      },
+      {
+        "alignment": 0.788333,
+        "low_pac_stim_rate": 0.583333,
+        "high_pac_rest_rate": 0.993333,
+        "stim_pct": 29.5,
+        "pac_gap": 0.015646,
+        "mean_pac_stim": 0.08444,
+        "mean_pac_rest": 0.100086,
+        "clinical_utility": 0.817755
+      },
+      {
+        "alignment": 0.788333,
+        "low_pac_stim_rate": 0.61,
+        "high_pac_rest_rate": 0.966667,
+        "stim_pct": 32.166667,
+        "pac_gap": 0.018643,
+        "mean_pac_stim": 0.131388,
+        "mean_pac_rest": 0.150031,
+        "clinical_utility": 0.754586
+      },
+      {
+        "alignment": 0.821667,
+        "low_pac_stim_rate": 0.643333,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 32.166667,
+        "pac_gap": 0.021408,
+        "mean_pac_stim": 0.112025,
+        "mean_pac_rest": 0.133433,
+        "clinical_utility": 0.830058
+      },
+      {
+        "alignment": 0.815,
+        "low_pac_stim_rate": 0.633333,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 31.833333,
+        "pac_gap": 0.016943,
+        "mean_pac_stim": 0.097024,
+        "mean_pac_rest": 0.113967,
+        "clinical_utility": 0.824456
+      },
+      {
+        "alignment": 0.806667,
+        "low_pac_stim_rate": 0.616667,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 31.0,
+        "pac_gap": 0.016739,
+        "mean_pac_stim": 0.090985,
+        "mean_pac_rest": 0.107724,
+        "clinical_utility": 0.83359
+      },
+      {
+        "alignment": 0.761667,
+        "low_pac_stim_rate": 0.55,
+        "high_pac_rest_rate": 0.973333,
+        "stim_pct": 28.833333,
+        "pac_gap": 0.01698,
+        "mean_pac_stim": 0.11205,
+        "mean_pac_rest": 0.12903,
+        "clinical_utility": 0.763273
+      },
+      {
+        "alignment": 0.796667,
+        "low_pac_stim_rate": 0.6,
+        "high_pac_rest_rate": 0.993333,
+        "stim_pct": 30.333333,
+        "pac_gap": 0.023506,
+        "mean_pac_stim": 0.137211,
+        "mean_pac_rest": 0.160717,
+        "clinical_utility": 0.794022
+      },
+      {
+        "alignment": 0.795,
+        "low_pac_stim_rate": 0.61,
+        "high_pac_rest_rate": 0.98,
+        "stim_pct": 31.5,
+        "pac_gap": 0.020174,
+        "mean_pac_stim": 0.119581,
+        "mean_pac_rest": 0.139754,
+        "clinical_utility": 0.795246
+      },
+      {
+        "alignment": 0.815,
+        "low_pac_stim_rate": 0.63,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 31.5,
+        "pac_gap": 0.017918,
+        "mean_pac_stim": 0.105028,
+        "mean_pac_rest": 0.122947,
+        "clinical_utility": 0.82312
+      },
+      {
+        "alignment": 0.773333,
+        "low_pac_stim_rate": 0.57,
+        "high_pac_rest_rate": 0.976667,
+        "stim_pct": 29.666667,
+        "pac_gap": 0.018405,
+        "mean_pac_stim": 0.113614,
+        "mean_pac_rest": 0.132019,
+        "clinical_utility": 0.773758
+      },
+      {
+        "alignment": 0.795,
+        "low_pac_stim_rate": 0.61,
+        "high_pac_rest_rate": 0.98,
+        "stim_pct": 31.5,
+        "pac_gap": 0.016316,
+        "mean_pac_stim": 0.089348,
+        "mean_pac_rest": 0.105664,
+        "clinical_utility": 0.829645
+      },
+      {
+        "alignment": 0.783333,
+        "low_pac_stim_rate": 0.596667,
+        "high_pac_rest_rate": 0.97,
+        "stim_pct": 31.333333,
+        "pac_gap": 0.016835,
+        "mean_pac_stim": 0.099146,
+        "mean_pac_rest": 0.115981,
+        "clinical_utility": 0.791126
+      },
+      {
+        "alignment": 0.821667,
+        "low_pac_stim_rate": 0.646667,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 32.5,
+        "pac_gap": 0.01858,
+        "mean_pac_stim": 0.107976,
+        "mean_pac_rest": 0.126556,
+        "clinical_utility": 0.799982
+      },
+      {
+        "alignment": 0.773333,
+        "low_pac_stim_rate": 0.56,
+        "high_pac_rest_rate": 0.986667,
+        "stim_pct": 28.666667,
+        "pac_gap": 0.018043,
+        "mean_pac_stim": 0.107773,
+        "mean_pac_rest": 0.125816,
+        "clinical_utility": 0.796224
+      },
+      {
+        "alignment": 0.793333,
+        "low_pac_stim_rate": 0.596667,
+        "high_pac_rest_rate": 0.99,
+        "stim_pct": 30.333333,
+        "pac_gap": 0.021013,
+        "mean_pac_stim": 0.119568,
+        "mean_pac_rest": 0.140581,
+        "clinical_utility": 0.797381
+      }
+    ],
+    "TCN Predictive": [
+      {
+        "alignment": 0.641667,
+        "low_pac_stim_rate": 0.63,
+        "high_pac_rest_rate": 0.653333,
+        "stim_pct": 48.833333,
+        "pac_gap": 0.013935,
+        "mean_pac_stim": 0.106036,
+        "mean_pac_rest": 0.119971,
+        "clinical_utility": 0.598484
+      },
+      {
+        "alignment": 0.633333,
+        "low_pac_stim_rate": 0.62,
+        "high_pac_rest_rate": 0.646667,
+        "stim_pct": 48.666667,
+        "pac_gap": 0.014597,
+        "mean_pac_stim": 0.109705,
+        "mean_pac_rest": 0.124303,
+        "clinical_utility": 0.591048
+      },
+      {
+        "alignment": 0.653333,
+        "low_pac_stim_rate": 0.646667,
+        "high_pac_rest_rate": 0.66,
+        "stim_pct": 49.333333,
+        "pac_gap": 0.020543,
+        "mean_pac_stim": 0.140657,
+        "mean_pac_rest": 0.1612,
+        "clinical_utility": 0.612838
+      },
+      {
+        "alignment": 0.651667,
+        "low_pac_stim_rate": 0.64,
+        "high_pac_rest_rate": 0.663333,
+        "stim_pct": 48.833333,
+        "pac_gap": 0.016299,
+        "mean_pac_stim": 0.114137,
+        "mean_pac_rest": 0.130436,
+        "clinical_utility": 0.609798
+      },
+      {
+        "alignment": 0.666667,
+        "low_pac_stim_rate": 0.653333,
+        "high_pac_rest_rate": 0.68,
+        "stim_pct": 48.666667,
+        "pac_gap": 0.015365,
+        "mean_pac_stim": 0.110579,
+        "mean_pac_rest": 0.125944,
+        "clinical_utility": 0.618612
+      },
+      {
+        "alignment": 0.623333,
+        "low_pac_stim_rate": 0.616667,
+        "high_pac_rest_rate": 0.63,
+        "stim_pct": 49.333333,
+        "pac_gap": 0.00893,
+        "mean_pac_stim": 0.089733,
+        "mean_pac_rest": 0.098663,
+        "clinical_utility": 0.566536
+      },
+      {
+        "alignment": 0.651667,
+        "low_pac_stim_rate": 0.643333,
+        "high_pac_rest_rate": 0.66,
+        "stim_pct": 49.166667,
+        "pac_gap": 0.019088,
+        "mean_pac_stim": 0.126578,
+        "mean_pac_rest": 0.145667,
+        "clinical_utility": 0.614304
+      },
+      {
+        "alignment": 0.676667,
+        "low_pac_stim_rate": 0.666667,
+        "high_pac_rest_rate": 0.686667,
+        "stim_pct": 49.0,
+        "pac_gap": 0.017733,
+        "mean_pac_stim": 0.122583,
+        "mean_pac_rest": 0.140316,
+        "clinical_utility": 0.624081
+      },
+      {
+        "alignment": 0.65,
+        "low_pac_stim_rate": 0.636667,
+        "high_pac_rest_rate": 0.663333,
+        "stim_pct": 48.666667,
+        "pac_gap": 0.016176,
+        "mean_pac_stim": 0.119909,
+        "mean_pac_rest": 0.136084,
+        "clinical_utility": 0.601651
+      },
+      {
+        "alignment": 0.668333,
+        "low_pac_stim_rate": 0.656667,
+        "high_pac_rest_rate": 0.68,
+        "stim_pct": 48.833333,
+        "pac_gap": 0.015442,
+        "mean_pac_stim": 0.108531,
+        "mean_pac_rest": 0.123973,
+        "clinical_utility": 0.62425
+      },
+      {
+        "alignment": 0.66,
+        "low_pac_stim_rate": 0.646667,
+        "high_pac_rest_rate": 0.673333,
+        "stim_pct": 48.666667,
+        "pac_gap": 0.015285,
+        "mean_pac_stim": 0.11726,
+        "mean_pac_rest": 0.132545,
+        "clinical_utility": 0.609742
+      },
+      {
+        "alignment": 0.643333,
+        "low_pac_stim_rate": 0.633333,
+        "high_pac_rest_rate": 0.653333,
+        "stim_pct": 49.0,
+        "pac_gap": 0.015007,
+        "mean_pac_stim": 0.107507,
+        "mean_pac_rest": 0.122514,
+        "clinical_utility": 0.60453
+      },
+      {
+        "alignment": 0.656667,
+        "low_pac_stim_rate": 0.643333,
+        "high_pac_rest_rate": 0.67,
+        "stim_pct": 48.666667,
+        "pac_gap": 0.016703,
+        "mean_pac_stim": 0.12857,
+        "mean_pac_rest": 0.145273,
+        "clinical_utility": 0.603729
+      },
+      {
+        "alignment": 0.636667,
+        "low_pac_stim_rate": 0.626667,
+        "high_pac_rest_rate": 0.646667,
+        "stim_pct": 49.0,
+        "pac_gap": 0.012481,
+        "mean_pac_stim": 0.105435,
+        "mean_pac_rest": 0.117917,
+        "clinical_utility": 0.587136
+      },
+      {
+        "alignment": 0.666667,
+        "low_pac_stim_rate": 0.653333,
+        "high_pac_rest_rate": 0.68,
+        "stim_pct": 48.666667,
+        "pac_gap": 0.018639,
+        "mean_pac_stim": 0.135149,
+        "mean_pac_rest": 0.153788,
+        "clinical_utility": 0.616392
+      },
+      {
+        "alignment": 0.656667,
+        "low_pac_stim_rate": 0.646667,
+        "high_pac_rest_rate": 0.666667,
+        "stim_pct": 49.0,
+        "pac_gap": 0.02083,
+        "mean_pac_stim": 0.138078,
+        "mean_pac_rest": 0.158908,
+        "clinical_utility": 0.616746
+      },
+      {
+        "alignment": 0.653333,
+        "low_pac_stim_rate": 0.643333,
+        "high_pac_rest_rate": 0.663333,
+        "stim_pct": 49.0,
+        "pac_gap": 0.013266,
+        "mean_pac_stim": 0.09247,
+        "mean_pac_rest": 0.105736,
+        "clinical_utility": 0.618118
+      },
+      {
+        "alignment": 0.653333,
+        "low_pac_stim_rate": 0.64,
+        "high_pac_rest_rate": 0.666667,
+        "stim_pct": 48.666667,
+        "pac_gap": 0.015315,
+        "mean_pac_stim": 0.12256,
+        "mean_pac_rest": 0.137875,
+        "clinical_utility": 0.595267
+      },
+      {
+        "alignment": 0.648333,
+        "low_pac_stim_rate": 0.636667,
+        "high_pac_rest_rate": 0.66,
+        "stim_pct": 48.833333,
+        "pac_gap": 0.013447,
+        "mean_pac_stim": 0.104764,
+        "mean_pac_rest": 0.118211,
+        "clinical_utility": 0.60348
+      },
+      {
+        "alignment": 0.665,
+        "low_pac_stim_rate": 0.653333,
+        "high_pac_rest_rate": 0.676667,
+        "stim_pct": 48.833333,
+        "pac_gap": 0.013549,
+        "mean_pac_stim": 0.100601,
+        "mean_pac_rest": 0.11415,
+        "clinical_utility": 0.618175
+      },
+      {
+        "alignment": 0.655,
+        "low_pac_stim_rate": 0.636667,
+        "high_pac_rest_rate": 0.673333,
+        "stim_pct": 48.166667,
+        "pac_gap": 0.011527,
+        "mean_pac_stim": 0.092514,
+        "mean_pac_rest": 0.104041,
+        "clinical_utility": 0.607734
+      },
+      {
+        "alignment": 0.671667,
+        "low_pac_stim_rate": 0.663333,
+        "high_pac_rest_rate": 0.68,
+        "stim_pct": 49.166667,
+        "pac_gap": 0.020271,
+        "mean_pac_stim": 0.137935,
+        "mean_pac_rest": 0.158205,
+        "clinical_utility": 0.622394
+      },
+      {
+        "alignment": 0.65,
+        "low_pac_stim_rate": 0.63,
+        "high_pac_rest_rate": 0.67,
+        "stim_pct": 48.0,
+        "pac_gap": 0.015705,
+        "mean_pac_stim": 0.120491,
+        "mean_pac_rest": 0.136196,
+        "clinical_utility": 0.60017
+      },
+      {
+        "alignment": 0.643333,
+        "low_pac_stim_rate": 0.623333,
+        "high_pac_rest_rate": 0.663333,
+        "stim_pct": 48.0,
+        "pac_gap": 0.012363,
+        "mean_pac_stim": 0.104431,
+        "mean_pac_rest": 0.116794,
+        "clinical_utility": 0.588121
+      },
+      {
+        "alignment": 0.65,
+        "low_pac_stim_rate": 0.633333,
+        "high_pac_rest_rate": 0.666667,
+        "stim_pct": 48.333333,
+        "pac_gap": 0.012076,
+        "mean_pac_stim": 0.098426,
+        "mean_pac_rest": 0.110501,
+        "clinical_utility": 0.598352
+      },
+      {
+        "alignment": 0.643333,
+        "low_pac_stim_rate": 0.63,
+        "high_pac_rest_rate": 0.656667,
+        "stim_pct": 48.666667,
+        "pac_gap": 0.016306,
+        "mean_pac_stim": 0.121393,
+        "mean_pac_rest": 0.137699,
+        "clinical_utility": 0.600582
+      },
+      {
+        "alignment": 0.675,
+        "low_pac_stim_rate": 0.663333,
+        "high_pac_rest_rate": 0.686667,
+        "stim_pct": 48.833333,
+        "pac_gap": 0.023543,
+        "mean_pac_stim": 0.14684,
+        "mean_pac_rest": 0.170383,
+        "clinical_utility": 0.635027
+      },
+      {
+        "alignment": 0.658333,
+        "low_pac_stim_rate": 0.646667,
+        "high_pac_rest_rate": 0.67,
+        "stim_pct": 48.833333,
+        "pac_gap": 0.018696,
+        "mean_pac_stim": 0.127917,
+        "mean_pac_rest": 0.146613,
+        "clinical_utility": 0.612106
+      },
+      {
+        "alignment": 0.651667,
+        "low_pac_stim_rate": 0.643333,
+        "high_pac_rest_rate": 0.66,
+        "stim_pct": 49.166667,
+        "pac_gap": 0.015199,
+        "mean_pac_stim": 0.11237,
+        "mean_pac_rest": 0.127569,
+        "clinical_utility": 0.605845
+      },
+      {
+        "alignment": 0.651667,
+        "low_pac_stim_rate": 0.636667,
+        "high_pac_rest_rate": 0.666667,
+        "stim_pct": 48.5,
+        "pac_gap": 0.016658,
+        "mean_pac_stim": 0.122742,
+        "mean_pac_rest": 0.1394,
+        "clinical_utility": 0.6002
+      },
+      {
+        "alignment": 0.651667,
+        "low_pac_stim_rate": 0.633333,
+        "high_pac_rest_rate": 0.67,
+        "stim_pct": 48.166667,
+        "pac_gap": 0.011603,
+        "mean_pac_stim": 0.096238,
+        "mean_pac_rest": 0.10784,
+        "clinical_utility": 0.601566
+      },
+      {
+        "alignment": 0.68,
+        "low_pac_stim_rate": 0.67,
+        "high_pac_rest_rate": 0.69,
+        "stim_pct": 49.0,
+        "pac_gap": 0.016549,
+        "mean_pac_stim": 0.10551,
+        "mean_pac_rest": 0.122059,
+        "clinical_utility": 0.637945
+      },
+      {
+        "alignment": 0.626667,
+        "low_pac_stim_rate": 0.59,
+        "high_pac_rest_rate": 0.663333,
+        "stim_pct": 46.333333,
+        "pac_gap": 0.012018,
+        "mean_pac_stim": 0.115686,
+        "mean_pac_rest": 0.127704,
+        "clinical_utility": 0.567429
+      },
+      {
+        "alignment": 0.651667,
+        "low_pac_stim_rate": 0.643333,
+        "high_pac_rest_rate": 0.66,
+        "stim_pct": 49.166667,
+        "pac_gap": 0.016314,
+        "mean_pac_stim": 0.118032,
+        "mean_pac_rest": 0.134346,
+        "clinical_utility": 0.605811
+      },
+      {
+        "alignment": 0.676667,
+        "low_pac_stim_rate": 0.663333,
+        "high_pac_rest_rate": 0.69,
+        "stim_pct": 48.666667,
+        "pac_gap": 0.020598,
+        "mean_pac_stim": 0.128345,
+        "mean_pac_rest": 0.148943,
+        "clinical_utility": 0.635986
+      }
+    ],
+    "Alignment Oracle": [
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.04853,
+        "mean_pac_stim": 0.086703,
+        "mean_pac_rest": 0.135233,
+        "clinical_utility": 0.969101
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.053617,
+        "mean_pac_stim": 0.088035,
+        "mean_pac_rest": 0.141652,
+        "clinical_utility": 0.971206
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.069235,
+        "mean_pac_stim": 0.111796,
+        "mean_pac_rest": 0.181032,
+        "clinical_utility": 0.979608
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.056174,
+        "mean_pac_stim": 0.091757,
+        "mean_pac_rest": 0.147931,
+        "clinical_utility": 0.973069
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.05478,
+        "mean_pac_stim": 0.088587,
+        "mean_pac_rest": 0.143367,
+        "clinical_utility": 0.968731
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.036727,
+        "mean_pac_stim": 0.074479,
+        "mean_pac_rest": 0.111206,
+        "clinical_utility": 0.960749
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.063464,
+        "mean_pac_stim": 0.100933,
+        "mean_pac_rest": 0.164398,
+        "clinical_utility": 0.975013
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.06076,
+        "mean_pac_stim": 0.097932,
+        "mean_pac_rest": 0.158692,
+        "clinical_utility": 0.974751
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.058061,
+        "mean_pac_stim": 0.096221,
+        "mean_pac_rest": 0.154282,
+        "clinical_utility": 0.972717
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.050004,
+        "mean_pac_stim": 0.089012,
+        "mean_pac_rest": 0.139016,
+        "clinical_utility": 0.971171
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.056223,
+        "mean_pac_stim": 0.094213,
+        "mean_pac_rest": 0.150435,
+        "clinical_utility": 0.9728
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.051406,
+        "mean_pac_stim": 0.087035,
+        "mean_pac_rest": 0.138441,
+        "clinical_utility": 0.970328
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.060787,
+        "mean_pac_stim": 0.103479,
+        "mean_pac_rest": 0.164265,
+        "clinical_utility": 0.977081
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.046982,
+        "mean_pac_stim": 0.086224,
+        "mean_pac_rest": 0.133206,
+        "clinical_utility": 0.964669
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.06562,
+        "mean_pac_stim": 0.107932,
+        "mean_pac_rest": 0.173552,
+        "clinical_utility": 0.976651
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.068424,
+        "mean_pac_stim": 0.11012,
+        "mean_pac_rest": 0.178544,
+        "clinical_utility": 0.979611
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.04112,
+        "mean_pac_stim": 0.077158,
+        "mean_pac_rest": 0.118279,
+        "clinical_utility": 0.960035
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.059213,
+        "mean_pac_stim": 0.09774,
+        "mean_pac_rest": 0.156953,
+        "clinical_utility": 0.972651
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.045261,
+        "mean_pac_stim": 0.086874,
+        "mean_pac_rest": 0.132135,
+        "clinical_utility": 0.961432
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.045328,
+        "mean_pac_stim": 0.082844,
+        "mean_pac_rest": 0.128172,
+        "clinical_utility": 0.96873
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.038411,
+        "mean_pac_stim": 0.077859,
+        "mean_pac_rest": 0.116269,
+        "clinical_utility": 0.961289
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.06784,
+        "mean_pac_stim": 0.109891,
+        "mean_pac_rest": 0.177731,
+        "clinical_utility": 0.976284
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.057718,
+        "mean_pac_stim": 0.097354,
+        "mean_pac_rest": 0.155073,
+        "clinical_utility": 0.971788
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.048052,
+        "mean_pac_stim": 0.085103,
+        "mean_pac_rest": 0.133155,
+        "clinical_utility": 0.964678
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.045074,
+        "mean_pac_stim": 0.080627,
+        "mean_pac_rest": 0.125702,
+        "clinical_utility": 0.964163
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.058085,
+        "mean_pac_stim": 0.097797,
+        "mean_pac_rest": 0.155882,
+        "clinical_utility": 0.977447
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.07284,
+        "mean_pac_stim": 0.117359,
+        "mean_pac_rest": 0.190199,
+        "clinical_utility": 0.981297
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.06399,
+        "mean_pac_stim": 0.101854,
+        "mean_pac_rest": 0.165844,
+        "clinical_utility": 0.972717
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.051225,
+        "mean_pac_stim": 0.091918,
+        "mean_pac_rest": 0.143143,
+        "clinical_utility": 0.965266
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.062117,
+        "mean_pac_stim": 0.097291,
+        "mean_pac_rest": 0.159408,
+        "clinical_utility": 0.977764
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.042002,
+        "mean_pac_stim": 0.079809,
+        "mean_pac_rest": 0.121811,
+        "clinical_utility": 0.966925
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.048419,
+        "mean_pac_stim": 0.087393,
+        "mean_pac_rest": 0.135812,
+        "clinical_utility": 0.963993
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.057516,
+        "mean_pac_stim": 0.091898,
+        "mean_pac_rest": 0.149414,
+        "clinical_utility": 0.974567
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.05735,
+        "mean_pac_stim": 0.094653,
+        "mean_pac_rest": 0.152003,
+        "clinical_utility": 0.974679
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.065539,
+        "mean_pac_stim": 0.102548,
+        "mean_pac_rest": 0.168086,
+        "clinical_utility": 0.976906
+      }
+    ]
+  },
+  "mild": {
+    "Fixed Schedule": [
+      {
+        "alignment": 0.36,
+        "low_pac_stim_rate": 0.526667,
+        "high_pac_rest_rate": 0.193333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.008801,
+        "mean_pac_stim": 0.07235,
+        "mean_pac_rest": 0.063549,
+        "clinical_utility": 0.28
+      },
+      {
+        "alignment": 0.316667,
+        "low_pac_stim_rate": 0.483333,
+        "high_pac_rest_rate": 0.15,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.01118,
+        "mean_pac_stim": 0.073755,
+        "mean_pac_rest": 0.062575,
+        "clinical_utility": 0.258333
+      },
+      {
+        "alignment": 0.293333,
+        "low_pac_stim_rate": 0.46,
+        "high_pac_rest_rate": 0.126667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.017552,
+        "mean_pac_stim": 0.085393,
+        "mean_pac_rest": 0.067841,
+        "clinical_utility": 0.246667
+      },
+      {
+        "alignment": 0.32,
+        "low_pac_stim_rate": 0.486667,
+        "high_pac_rest_rate": 0.153333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.012353,
+        "mean_pac_stim": 0.075353,
+        "mean_pac_rest": 0.063001,
+        "clinical_utility": 0.26
+      },
+      {
+        "alignment": 0.32,
+        "low_pac_stim_rate": 0.486667,
+        "high_pac_rest_rate": 0.153333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.011712,
+        "mean_pac_stim": 0.074341,
+        "mean_pac_rest": 0.062629,
+        "clinical_utility": 0.26
+      },
+      {
+        "alignment": 0.42,
+        "low_pac_stim_rate": 0.586667,
+        "high_pac_rest_rate": 0.253333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.004584,
+        "mean_pac_stim": 0.066307,
+        "mean_pac_rest": 0.061724,
+        "clinical_utility": 0.31
+      },
+      {
+        "alignment": 0.286667,
+        "low_pac_stim_rate": 0.453333,
+        "high_pac_rest_rate": 0.12,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.014415,
+        "mean_pac_stim": 0.080343,
+        "mean_pac_rest": 0.065928,
+        "clinical_utility": 0.243333
+      },
+      {
+        "alignment": 0.3,
+        "low_pac_stim_rate": 0.466667,
+        "high_pac_rest_rate": 0.133333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.013176,
+        "mean_pac_stim": 0.078242,
+        "mean_pac_rest": 0.065066,
+        "clinical_utility": 0.25
+      },
+      {
+        "alignment": 0.33,
+        "low_pac_stim_rate": 0.496667,
+        "high_pac_rest_rate": 0.163333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.012171,
+        "mean_pac_stim": 0.077176,
+        "mean_pac_rest": 0.065005,
+        "clinical_utility": 0.265
+      },
+      {
+        "alignment": 0.37,
+        "low_pac_stim_rate": 0.536667,
+        "high_pac_rest_rate": 0.203333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.007988,
+        "mean_pac_stim": 0.072387,
+        "mean_pac_rest": 0.064399,
+        "clinical_utility": 0.285
+      },
+      {
+        "alignment": 0.316667,
+        "low_pac_stim_rate": 0.483333,
+        "high_pac_rest_rate": 0.15,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.013128,
+        "mean_pac_stim": 0.077151,
+        "mean_pac_rest": 0.064023,
+        "clinical_utility": 0.258333
+      },
+      {
+        "alignment": 0.353333,
+        "low_pac_stim_rate": 0.52,
+        "high_pac_rest_rate": 0.186667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.010405,
+        "mean_pac_stim": 0.072083,
+        "mean_pac_rest": 0.061677,
+        "clinical_utility": 0.276667
+      },
+      {
+        "alignment": 0.346667,
+        "low_pac_stim_rate": 0.513333,
+        "high_pac_rest_rate": 0.18,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.010721,
+        "mean_pac_stim": 0.079652,
+        "mean_pac_rest": 0.068931,
+        "clinical_utility": 0.273333
+      },
+      {
+        "alignment": 0.386667,
+        "low_pac_stim_rate": 0.553333,
+        "high_pac_rest_rate": 0.22,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.008222,
+        "mean_pac_stim": 0.072305,
+        "mean_pac_rest": 0.064083,
+        "clinical_utility": 0.293333
+      },
+      {
+        "alignment": 0.306667,
+        "low_pac_stim_rate": 0.473333,
+        "high_pac_rest_rate": 0.14,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.013698,
+        "mean_pac_stim": 0.081725,
+        "mean_pac_rest": 0.068027,
+        "clinical_utility": 0.253333
+      },
+      {
+        "alignment": 0.32,
+        "low_pac_stim_rate": 0.486667,
+        "high_pac_rest_rate": 0.153333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.014797,
+        "mean_pac_stim": 0.083552,
+        "mean_pac_rest": 0.068755,
+        "clinical_utility": 0.26
+      },
+      {
+        "alignment": 0.39,
+        "low_pac_stim_rate": 0.556667,
+        "high_pac_rest_rate": 0.223333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.007175,
+        "mean_pac_stim": 0.067441,
+        "mean_pac_rest": 0.060266,
+        "clinical_utility": 0.295
+      },
+      {
+        "alignment": 0.316667,
+        "low_pac_stim_rate": 0.483333,
+        "high_pac_rest_rate": 0.15,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.013017,
+        "mean_pac_stim": 0.077766,
+        "mean_pac_rest": 0.064749,
+        "clinical_utility": 0.258333
+      },
+      {
+        "alignment": 0.403333,
+        "low_pac_stim_rate": 0.57,
+        "high_pac_rest_rate": 0.236667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.007439,
+        "mean_pac_stim": 0.070877,
+        "mean_pac_rest": 0.063438,
+        "clinical_utility": 0.301667
+      },
+      {
+        "alignment": 0.333333,
+        "low_pac_stim_rate": 0.5,
+        "high_pac_rest_rate": 0.166667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.009338,
+        "mean_pac_stim": 0.069872,
+        "mean_pac_rest": 0.060534,
+        "clinical_utility": 0.266667
+      },
+      {
+        "alignment": 0.396667,
+        "low_pac_stim_rate": 0.563333,
+        "high_pac_rest_rate": 0.23,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.006113,
+        "mean_pac_stim": 0.066744,
+        "mean_pac_rest": 0.060631,
+        "clinical_utility": 0.298333
+      },
+      {
+        "alignment": 0.336667,
+        "low_pac_stim_rate": 0.503333,
+        "high_pac_rest_rate": 0.17,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.013378,
+        "mean_pac_stim": 0.08359,
+        "mean_pac_rest": 0.070212,
+        "clinical_utility": 0.268333
+      },
+      {
+        "alignment": 0.293333,
+        "low_pac_stim_rate": 0.46,
+        "high_pac_rest_rate": 0.126667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.014306,
+        "mean_pac_stim": 0.078724,
+        "mean_pac_rest": 0.064417,
+        "clinical_utility": 0.246667
+      },
+      {
+        "alignment": 0.363333,
+        "low_pac_stim_rate": 0.53,
+        "high_pac_rest_rate": 0.196667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.008766,
+        "mean_pac_stim": 0.072335,
+        "mean_pac_rest": 0.063569,
+        "clinical_utility": 0.281667
+      },
+      {
+        "alignment": 0.336667,
+        "low_pac_stim_rate": 0.503333,
+        "high_pac_rest_rate": 0.17,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.010079,
+        "mean_pac_stim": 0.071498,
+        "mean_pac_rest": 0.061418,
+        "clinical_utility": 0.268333
+      },
+      {
+        "alignment": 0.34,
+        "low_pac_stim_rate": 0.506667,
+        "high_pac_rest_rate": 0.173333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.011982,
+        "mean_pac_stim": 0.077825,
+        "mean_pac_rest": 0.065843,
+        "clinical_utility": 0.27
+      },
+      {
+        "alignment": 0.306667,
+        "low_pac_stim_rate": 0.473333,
+        "high_pac_rest_rate": 0.14,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.017209,
+        "mean_pac_stim": 0.087568,
+        "mean_pac_rest": 0.070359,
+        "clinical_utility": 0.253333
+      },
+      {
+        "alignment": 0.306667,
+        "low_pac_stim_rate": 0.473333,
+        "high_pac_rest_rate": 0.14,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.013951,
+        "mean_pac_stim": 0.080124,
+        "mean_pac_rest": 0.066173,
+        "clinical_utility": 0.253333
+      },
+      {
+        "alignment": 0.37,
+        "low_pac_stim_rate": 0.536667,
+        "high_pac_rest_rate": 0.203333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.008844,
+        "mean_pac_stim": 0.074218,
+        "mean_pac_rest": 0.065375,
+        "clinical_utility": 0.285
+      },
+      {
+        "alignment": 0.313333,
+        "low_pac_stim_rate": 0.48,
+        "high_pac_rest_rate": 0.146667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.012424,
+        "mean_pac_stim": 0.077642,
+        "mean_pac_rest": 0.065218,
+        "clinical_utility": 0.256667
+      },
+      {
+        "alignment": 0.35,
+        "low_pac_stim_rate": 0.516667,
+        "high_pac_rest_rate": 0.183333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.007394,
+        "mean_pac_stim": 0.069254,
+        "mean_pac_rest": 0.06186,
+        "clinical_utility": 0.275
+      },
+      {
+        "alignment": 0.38,
+        "low_pac_stim_rate": 0.546667,
+        "high_pac_rest_rate": 0.213333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.008606,
+        "mean_pac_stim": 0.071889,
+        "mean_pac_rest": 0.063284,
+        "clinical_utility": 0.29
+      },
+      {
+        "alignment": 0.313333,
+        "low_pac_stim_rate": 0.48,
+        "high_pac_rest_rate": 0.146667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.012958,
+        "mean_pac_stim": 0.075518,
+        "mean_pac_rest": 0.062561,
+        "clinical_utility": 0.256667
+      },
+      {
+        "alignment": 0.333333,
+        "low_pac_stim_rate": 0.5,
+        "high_pac_rest_rate": 0.166667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.010328,
+        "mean_pac_stim": 0.075458,
+        "mean_pac_rest": 0.065129,
+        "clinical_utility": 0.266667
+      },
+      {
+        "alignment": 0.306667,
+        "low_pac_stim_rate": 0.473333,
+        "high_pac_rest_rate": 0.14,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.015325,
+        "mean_pac_stim": 0.081903,
+        "mean_pac_rest": 0.066579,
+        "clinical_utility": 0.253333
+      }
+    ],
+    "Reactive Threshold": [
+      {
+        "alignment": 0.783333,
+        "low_pac_stim_rate": 0.57,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 28.666667,
+        "pac_gap": 0.014294,
+        "mean_pac_stim": 0.05851,
+        "mean_pac_rest": 0.072804,
+        "clinical_utility": 0.887168
+      },
+      {
+        "alignment": 0.803333,
+        "low_pac_stim_rate": 0.61,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 30.666667,
+        "pac_gap": 0.015313,
+        "mean_pac_stim": 0.059106,
+        "mean_pac_rest": 0.074418,
+        "clinical_utility": 0.883797
+      },
+      {
+        "alignment": 0.778333,
+        "low_pac_stim_rate": 0.566667,
+        "high_pac_rest_rate": 0.99,
+        "stim_pct": 28.833333,
+        "pac_gap": 0.01452,
+        "mean_pac_stim": 0.068099,
+        "mean_pac_rest": 0.082619,
+        "clinical_utility": 0.839712
+      },
+      {
+        "alignment": 0.825,
+        "low_pac_stim_rate": 0.65,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 32.5,
+        "pac_gap": 0.015621,
+        "mean_pac_stim": 0.060823,
+        "mean_pac_rest": 0.076444,
+        "clinical_utility": 0.906323
+      },
+      {
+        "alignment": 0.805,
+        "low_pac_stim_rate": 0.61,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 30.5,
+        "pac_gap": 0.015918,
+        "mean_pac_stim": 0.058922,
+        "mean_pac_rest": 0.07484,
+        "clinical_utility": 0.908915
+      },
+      {
+        "alignment": 0.79,
+        "low_pac_stim_rate": 0.593333,
+        "high_pac_rest_rate": 0.986667,
+        "stim_pct": 30.333333,
+        "pac_gap": 0.0134,
+        "mean_pac_stim": 0.055137,
+        "mean_pac_rest": 0.068537,
+        "clinical_utility": 0.877804
+      },
+      {
+        "alignment": 0.818333,
+        "low_pac_stim_rate": 0.636667,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 31.833333,
+        "pac_gap": 0.014561,
+        "mean_pac_stim": 0.065768,
+        "mean_pac_rest": 0.080328,
+        "clinical_utility": 0.893932
+      },
+      {
+        "alignment": 0.795,
+        "low_pac_stim_rate": 0.59,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 29.5,
+        "pac_gap": 0.014347,
+        "mean_pac_stim": 0.063062,
+        "mean_pac_rest": 0.07741,
+        "clinical_utility": 0.877877
+      },
+      {
+        "alignment": 0.8,
+        "low_pac_stim_rate": 0.6,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 30.0,
+        "pac_gap": 0.014201,
+        "mean_pac_stim": 0.062835,
+        "mean_pac_rest": 0.077036,
+        "clinical_utility": 0.874271
+      },
+      {
+        "alignment": 0.803333,
+        "low_pac_stim_rate": 0.606667,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 30.333333,
+        "pac_gap": 0.013602,
+        "mean_pac_stim": 0.060005,
+        "mean_pac_rest": 0.073606,
+        "clinical_utility": 0.875158
+      },
+      {
+        "alignment": 0.813333,
+        "low_pac_stim_rate": 0.626667,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 31.333333,
+        "pac_gap": 0.016324,
+        "mean_pac_stim": 0.061519,
+        "mean_pac_rest": 0.077843,
+        "clinical_utility": 0.910741
+      },
+      {
+        "alignment": 0.796667,
+        "low_pac_stim_rate": 0.593333,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 29.666667,
+        "pac_gap": 0.014412,
+        "mean_pac_stim": 0.057665,
+        "mean_pac_rest": 0.072078,
+        "clinical_utility": 0.894049
+      },
+      {
+        "alignment": 0.803333,
+        "low_pac_stim_rate": 0.606667,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 30.333333,
+        "pac_gap": 0.014953,
+        "mean_pac_stim": 0.065406,
+        "mean_pac_rest": 0.080359,
+        "clinical_utility": 0.874376
+      },
+      {
+        "alignment": 0.798333,
+        "low_pac_stim_rate": 0.6,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 30.166667,
+        "pac_gap": 0.014848,
+        "mean_pac_stim": 0.058721,
+        "mean_pac_rest": 0.073568,
+        "clinical_utility": 0.896656
+      },
+      {
+        "alignment": 0.806667,
+        "low_pac_stim_rate": 0.616667,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 31.0,
+        "pac_gap": 0.015868,
+        "mean_pac_stim": 0.06611,
+        "mean_pac_rest": 0.081978,
+        "clinical_utility": 0.902767
+      },
+      {
+        "alignment": 0.821667,
+        "low_pac_stim_rate": 0.643333,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 32.166667,
+        "pac_gap": 0.015872,
+        "mean_pac_stim": 0.067698,
+        "mean_pac_rest": 0.08357,
+        "clinical_utility": 0.871644
+      },
+      {
+        "alignment": 0.803333,
+        "low_pac_stim_rate": 0.606667,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 30.333333,
+        "pac_gap": 0.01382,
+        "mean_pac_stim": 0.054958,
+        "mean_pac_rest": 0.068778,
+        "clinical_utility": 0.909303
+      },
+      {
+        "alignment": 0.81,
+        "low_pac_stim_rate": 0.62,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 31.0,
+        "pac_gap": 0.013827,
+        "mean_pac_stim": 0.063825,
+        "mean_pac_rest": 0.077653,
+        "clinical_utility": 0.863123
+      },
+      {
+        "alignment": 0.801667,
+        "low_pac_stim_rate": 0.603333,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 30.166667,
+        "pac_gap": 0.014864,
+        "mean_pac_stim": 0.057734,
+        "mean_pac_rest": 0.072597,
+        "clinical_utility": 0.904657
+      },
+      {
+        "alignment": 0.815,
+        "low_pac_stim_rate": 0.63,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 31.5,
+        "pac_gap": 0.014831,
+        "mean_pac_stim": 0.056653,
+        "mean_pac_rest": 0.071484,
+        "clinical_utility": 0.901287
+      },
+      {
+        "alignment": 0.815,
+        "low_pac_stim_rate": 0.636667,
+        "high_pac_rest_rate": 0.993333,
+        "stim_pct": 32.166667,
+        "pac_gap": 0.014392,
+        "mean_pac_stim": 0.054789,
+        "mean_pac_rest": 0.069181,
+        "clinical_utility": 0.888584
+      },
+      {
+        "alignment": 0.823333,
+        "low_pac_stim_rate": 0.646667,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 32.333333,
+        "pac_gap": 0.015217,
+        "mean_pac_stim": 0.068745,
+        "mean_pac_rest": 0.083962,
+        "clinical_utility": 0.869126
+      },
+      {
+        "alignment": 0.786667,
+        "low_pac_stim_rate": 0.573333,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 28.666667,
+        "pac_gap": 0.015193,
+        "mean_pac_stim": 0.062289,
+        "mean_pac_rest": 0.077482,
+        "clinical_utility": 0.886276
+      },
+      {
+        "alignment": 0.803333,
+        "low_pac_stim_rate": 0.61,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 30.666667,
+        "pac_gap": 0.014734,
+        "mean_pac_stim": 0.058929,
+        "mean_pac_rest": 0.073662,
+        "clinical_utility": 0.89369
+      },
+      {
+        "alignment": 0.805,
+        "low_pac_stim_rate": 0.613333,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 30.833333,
+        "pac_gap": 0.013716,
+        "mean_pac_stim": 0.058396,
+        "mean_pac_rest": 0.072112,
+        "clinical_utility": 0.898939
+      },
+      {
+        "alignment": 0.803333,
+        "low_pac_stim_rate": 0.606667,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 30.333333,
+        "pac_gap": 0.015154,
+        "mean_pac_stim": 0.062931,
+        "mean_pac_rest": 0.078085,
+        "clinical_utility": 0.886926
+      },
+      {
+        "alignment": 0.806667,
+        "low_pac_stim_rate": 0.613333,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 30.666667,
+        "pac_gap": 0.017871,
+        "mean_pac_stim": 0.069235,
+        "mean_pac_rest": 0.087106,
+        "clinical_utility": 0.892579
+      },
+      {
+        "alignment": 0.808333,
+        "low_pac_stim_rate": 0.616667,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 30.833333,
+        "pac_gap": 0.014315,
+        "mean_pac_stim": 0.065141,
+        "mean_pac_rest": 0.079456,
+        "clinical_utility": 0.879972
+      },
+      {
+        "alignment": 0.798333,
+        "low_pac_stim_rate": 0.6,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 30.166667,
+        "pac_gap": 0.013549,
+        "mean_pac_stim": 0.061522,
+        "mean_pac_rest": 0.075071,
+        "clinical_utility": 0.887762
+      },
+      {
+        "alignment": 0.806667,
+        "low_pac_stim_rate": 0.616667,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 31.0,
+        "pac_gap": 0.015915,
+        "mean_pac_stim": 0.06231,
+        "mean_pac_rest": 0.078224,
+        "clinical_utility": 0.895007
+      },
+      {
+        "alignment": 0.818333,
+        "low_pac_stim_rate": 0.636667,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 31.833333,
+        "pac_gap": 0.014074,
+        "mean_pac_stim": 0.057178,
+        "mean_pac_rest": 0.071253,
+        "clinical_utility": 0.913904
+      },
+      {
+        "alignment": 0.795,
+        "low_pac_stim_rate": 0.59,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 29.5,
+        "pac_gap": 0.01465,
+        "mean_pac_stim": 0.058141,
+        "mean_pac_rest": 0.072791,
+        "clinical_utility": 0.885679
+      },
+      {
+        "alignment": 0.818333,
+        "low_pac_stim_rate": 0.64,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 32.166667,
+        "pac_gap": 0.014388,
+        "mean_pac_stim": 0.061314,
+        "mean_pac_rest": 0.075702,
+        "clinical_utility": 0.87859
+      },
+      {
+        "alignment": 0.801667,
+        "low_pac_stim_rate": 0.603333,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 30.166667,
+        "pac_gap": 0.014362,
+        "mean_pac_stim": 0.061596,
+        "mean_pac_rest": 0.075958,
+        "clinical_utility": 0.882647
+      },
+      {
+        "alignment": 0.798333,
+        "low_pac_stim_rate": 0.596667,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 29.833333,
+        "pac_gap": 0.015866,
+        "mean_pac_stim": 0.064981,
+        "mean_pac_rest": 0.080847,
+        "clinical_utility": 0.891614
+      }
+    ],
+    "TCN Predictive": [
+      {
+        "alignment": 0.66,
+        "low_pac_stim_rate": 0.633333,
+        "high_pac_rest_rate": 0.686667,
+        "stim_pct": 47.333333,
+        "pac_gap": 0.00788,
+        "mean_pac_stim": 0.065878,
+        "mean_pac_rest": 0.073759,
+        "clinical_utility": 0.631694
+      },
+      {
+        "alignment": 0.643333,
+        "low_pac_stim_rate": 0.636667,
+        "high_pac_rest_rate": 0.65,
+        "stim_pct": 49.333333,
+        "pac_gap": 0.007913,
+        "mean_pac_stim": 0.066621,
+        "mean_pac_rest": 0.074534,
+        "clinical_utility": 0.597597
+      },
+      {
+        "alignment": 0.645,
+        "low_pac_stim_rate": 0.633333,
+        "high_pac_rest_rate": 0.656667,
+        "stim_pct": 48.833333,
+        "pac_gap": 0.008845,
+        "mean_pac_stim": 0.075905,
+        "mean_pac_rest": 0.084749,
+        "clinical_utility": 0.598937
+      },
+      {
+        "alignment": 0.701667,
+        "low_pac_stim_rate": 0.686667,
+        "high_pac_rest_rate": 0.716667,
+        "stim_pct": 48.5,
+        "pac_gap": 0.00998,
+        "mean_pac_stim": 0.066584,
+        "mean_pac_rest": 0.076564,
+        "clinical_utility": 0.66305
+      },
+      {
+        "alignment": 0.65,
+        "low_pac_stim_rate": 0.64,
+        "high_pac_rest_rate": 0.66,
+        "stim_pct": 49.0,
+        "pac_gap": 0.008181,
+        "mean_pac_stim": 0.066601,
+        "mean_pac_rest": 0.074782,
+        "clinical_utility": 0.615799
+      },
+      {
+        "alignment": 0.685,
+        "low_pac_stim_rate": 0.656667,
+        "high_pac_rest_rate": 0.713333,
+        "stim_pct": 47.166667,
+        "pac_gap": 0.007008,
+        "mean_pac_stim": 0.061411,
+        "mean_pac_rest": 0.068419,
+        "clinical_utility": 0.633089
+      },
+      {
+        "alignment": 0.641667,
+        "low_pac_stim_rate": 0.643333,
+        "high_pac_rest_rate": 0.64,
+        "stim_pct": 50.166667,
+        "pac_gap": 0.007014,
+        "mean_pac_stim": 0.072795,
+        "mean_pac_rest": 0.079809,
+        "clinical_utility": 0.589992
+      },
+      {
+        "alignment": 0.655,
+        "low_pac_stim_rate": 0.643333,
+        "high_pac_rest_rate": 0.666667,
+        "stim_pct": 48.833333,
+        "pac_gap": 0.007897,
+        "mean_pac_stim": 0.070526,
+        "mean_pac_rest": 0.078423,
+        "clinical_utility": 0.612326
+      },
+      {
+        "alignment": 0.653333,
+        "low_pac_stim_rate": 0.61,
+        "high_pac_rest_rate": 0.696667,
+        "stim_pct": 45.666667,
+        "pac_gap": 0.008379,
+        "mean_pac_stim": 0.069127,
+        "mean_pac_rest": 0.077506,
+        "clinical_utility": 0.62721
+      },
+      {
+        "alignment": 0.686667,
+        "low_pac_stim_rate": 0.696667,
+        "high_pac_rest_rate": 0.676667,
+        "stim_pct": 51.0,
+        "pac_gap": 0.00925,
+        "mean_pac_stim": 0.065817,
+        "mean_pac_rest": 0.075067,
+        "clinical_utility": 0.648307
+      },
+      {
+        "alignment": 0.665,
+        "low_pac_stim_rate": 0.676667,
+        "high_pac_rest_rate": 0.653333,
+        "stim_pct": 51.166667,
+        "pac_gap": 0.008727,
+        "mean_pac_stim": 0.068944,
+        "mean_pac_rest": 0.077671,
+        "clinical_utility": 0.620998
+      },
+      {
+        "alignment": 0.621667,
+        "low_pac_stim_rate": 0.596667,
+        "high_pac_rest_rate": 0.646667,
+        "stim_pct": 47.5,
+        "pac_gap": 0.006668,
+        "mean_pac_stim": 0.065423,
+        "mean_pac_rest": 0.072091,
+        "clinical_utility": 0.588188
+      },
+      {
+        "alignment": 0.661667,
+        "low_pac_stim_rate": 0.64,
+        "high_pac_rest_rate": 0.683333,
+        "stim_pct": 47.833333,
+        "pac_gap": 0.009842,
+        "mean_pac_stim": 0.071374,
+        "mean_pac_rest": 0.081215,
+        "clinical_utility": 0.63685
+      },
+      {
+        "alignment": 0.668333,
+        "low_pac_stim_rate": 0.653333,
+        "high_pac_rest_rate": 0.683333,
+        "stim_pct": 48.5,
+        "pac_gap": 0.007402,
+        "mean_pac_stim": 0.066258,
+        "mean_pac_rest": 0.07366,
+        "clinical_utility": 0.61545
+      },
+      {
+        "alignment": 0.656667,
+        "low_pac_stim_rate": 0.656667,
+        "high_pac_rest_rate": 0.656667,
+        "stim_pct": 50.0,
+        "pac_gap": 0.008895,
+        "mean_pac_stim": 0.073428,
+        "mean_pac_rest": 0.082323,
+        "clinical_utility": 0.614916
+      },
+      {
+        "alignment": 0.685,
+        "low_pac_stim_rate": 0.673333,
+        "high_pac_rest_rate": 0.696667,
+        "stim_pct": 48.833333,
+        "pac_gap": 0.0106,
+        "mean_pac_stim": 0.074096,
+        "mean_pac_rest": 0.084696,
+        "clinical_utility": 0.644571
+      },
+      {
+        "alignment": 0.658333,
+        "low_pac_stim_rate": 0.656667,
+        "high_pac_rest_rate": 0.66,
+        "stim_pct": 49.833333,
+        "pac_gap": 0.006499,
+        "mean_pac_stim": 0.061844,
+        "mean_pac_rest": 0.068343,
+        "clinical_utility": 0.609285
+      },
+      {
+        "alignment": 0.636667,
+        "low_pac_stim_rate": 0.606667,
+        "high_pac_rest_rate": 0.666667,
+        "stim_pct": 47.0,
+        "pac_gap": 0.006225,
+        "mean_pac_stim": 0.070579,
+        "mean_pac_rest": 0.076804,
+        "clinical_utility": 0.580163
+      },
+      {
+        "alignment": 0.68,
+        "low_pac_stim_rate": 0.683333,
+        "high_pac_rest_rate": 0.676667,
+        "stim_pct": 50.333333,
+        "pac_gap": 0.0087,
+        "mean_pac_stim": 0.064641,
+        "mean_pac_rest": 0.07334,
+        "clinical_utility": 0.642979
+      },
+      {
+        "alignment": 0.678333,
+        "low_pac_stim_rate": 0.72,
+        "high_pac_rest_rate": 0.636667,
+        "stim_pct": 54.166667,
+        "pac_gap": 0.008351,
+        "mean_pac_stim": 0.063435,
+        "mean_pac_rest": 0.071787,
+        "clinical_utility": 0.631062
+      },
+      {
+        "alignment": 0.686667,
+        "low_pac_stim_rate": 0.69,
+        "high_pac_rest_rate": 0.683333,
+        "stim_pct": 50.333333,
+        "pac_gap": 0.008752,
+        "mean_pac_stim": 0.060598,
+        "mean_pac_rest": 0.06935,
+        "clinical_utility": 0.652115
+      },
+      {
+        "alignment": 0.62,
+        "low_pac_stim_rate": 0.606667,
+        "high_pac_rest_rate": 0.633333,
+        "stim_pct": 48.666667,
+        "pac_gap": 0.006847,
+        "mean_pac_stim": 0.076495,
+        "mean_pac_rest": 0.083342,
+        "clinical_utility": 0.56696
+      },
+      {
+        "alignment": 0.63,
+        "low_pac_stim_rate": 0.626667,
+        "high_pac_rest_rate": 0.633333,
+        "stim_pct": 49.666667,
+        "pac_gap": 0.006175,
+        "mean_pac_stim": 0.071487,
+        "mean_pac_rest": 0.077662,
+        "clinical_utility": 0.566319
+      },
+      {
+        "alignment": 0.645,
+        "low_pac_stim_rate": 0.656667,
+        "high_pac_rest_rate": 0.633333,
+        "stim_pct": 51.166667,
+        "pac_gap": 0.007468,
+        "mean_pac_stim": 0.065998,
+        "mean_pac_rest": 0.073466,
+        "clinical_utility": 0.597592
+      },
+      {
+        "alignment": 0.645,
+        "low_pac_stim_rate": 0.626667,
+        "high_pac_rest_rate": 0.663333,
+        "stim_pct": 48.166667,
+        "pac_gap": 0.006733,
+        "mean_pac_stim": 0.065008,
+        "mean_pac_rest": 0.071741,
+        "clinical_utility": 0.604438
+      },
+      {
+        "alignment": 0.648333,
+        "low_pac_stim_rate": 0.616667,
+        "high_pac_rest_rate": 0.68,
+        "stim_pct": 46.833333,
+        "pac_gap": 0.007011,
+        "mean_pac_stim": 0.070806,
+        "mean_pac_rest": 0.077817,
+        "clinical_utility": 0.597103
+      },
+      {
+        "alignment": 0.651667,
+        "low_pac_stim_rate": 0.643333,
+        "high_pac_rest_rate": 0.66,
+        "stim_pct": 49.166667,
+        "pac_gap": 0.010411,
+        "mean_pac_stim": 0.077519,
+        "mean_pac_rest": 0.08793,
+        "clinical_utility": 0.612916
+      },
+      {
+        "alignment": 0.66,
+        "low_pac_stim_rate": 0.646667,
+        "high_pac_rest_rate": 0.673333,
+        "stim_pct": 48.666667,
+        "pac_gap": 0.008406,
+        "mean_pac_stim": 0.071652,
+        "mean_pac_rest": 0.080058,
+        "clinical_utility": 0.616018
+      },
+      {
+        "alignment": 0.695,
+        "low_pac_stim_rate": 0.666667,
+        "high_pac_rest_rate": 0.723333,
+        "stim_pct": 47.166667,
+        "pac_gap": 0.008599,
+        "mean_pac_stim": 0.067359,
+        "mean_pac_rest": 0.075959,
+        "clinical_utility": 0.654561
+      },
+      {
+        "alignment": 0.645,
+        "low_pac_stim_rate": 0.636667,
+        "high_pac_rest_rate": 0.653333,
+        "stim_pct": 49.166667,
+        "pac_gap": 0.007519,
+        "mean_pac_stim": 0.070313,
+        "mean_pac_rest": 0.077832,
+        "clinical_utility": 0.593156
+      },
+      {
+        "alignment": 0.673333,
+        "low_pac_stim_rate": 0.66,
+        "high_pac_rest_rate": 0.686667,
+        "stim_pct": 48.666667,
+        "pac_gap": 0.007368,
+        "mean_pac_stim": 0.063354,
+        "mean_pac_rest": 0.070722,
+        "clinical_utility": 0.630547
+      },
+      {
+        "alignment": 0.648333,
+        "low_pac_stim_rate": 0.643333,
+        "high_pac_rest_rate": 0.653333,
+        "stim_pct": 49.5,
+        "pac_gap": 0.007452,
+        "mean_pac_stim": 0.065762,
+        "mean_pac_rest": 0.073214,
+        "clinical_utility": 0.604962
+      },
+      {
+        "alignment": 0.596667,
+        "low_pac_stim_rate": 0.576667,
+        "high_pac_rest_rate": 0.616667,
+        "stim_pct": 48.0,
+        "pac_gap": 0.005415,
+        "mean_pac_stim": 0.068751,
+        "mean_pac_rest": 0.074166,
+        "clinical_utility": 0.544805
+      },
+      {
+        "alignment": 0.673333,
+        "low_pac_stim_rate": 0.656667,
+        "high_pac_rest_rate": 0.69,
+        "stim_pct": 48.333333,
+        "pac_gap": 0.008133,
+        "mean_pac_stim": 0.068685,
+        "mean_pac_rest": 0.076817,
+        "clinical_utility": 0.629589
+      },
+      {
+        "alignment": 0.626667,
+        "low_pac_stim_rate": 0.63,
+        "high_pac_rest_rate": 0.623333,
+        "stim_pct": 50.333333,
+        "pac_gap": 0.007553,
+        "mean_pac_stim": 0.073591,
+        "mean_pac_rest": 0.081144,
+        "clinical_utility": 0.579843
+      }
+    ],
+    "Alignment Oracle": [
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.019033,
+        "mean_pac_stim": 0.059899,
+        "mean_pac_rest": 0.078932,
+        "clinical_utility": 0.96747
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.021732,
+        "mean_pac_stim": 0.059162,
+        "mean_pac_rest": 0.080894,
+        "clinical_utility": 0.960623
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.026839,
+        "mean_pac_stim": 0.066123,
+        "mean_pac_rest": 0.092962,
+        "clinical_utility": 0.971189
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.02347,
+        "mean_pac_stim": 0.059501,
+        "mean_pac_rest": 0.082971,
+        "clinical_utility": 0.970579
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.021828,
+        "mean_pac_stim": 0.059523,
+        "mean_pac_rest": 0.081351,
+        "clinical_utility": 0.967095
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.018194,
+        "mean_pac_stim": 0.055683,
+        "mean_pac_rest": 0.073876,
+        "clinical_utility": 0.972062
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.023526,
+        "mean_pac_stim": 0.063775,
+        "mean_pac_rest": 0.087301,
+        "clinical_utility": 0.960149
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.022358,
+        "mean_pac_stim": 0.062671,
+        "mean_pac_rest": 0.085029,
+        "clinical_utility": 0.968252
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.022265,
+        "mean_pac_stim": 0.061987,
+        "mean_pac_rest": 0.084251,
+        "clinical_utility": 0.962274
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.0201,
+        "mean_pac_stim": 0.059675,
+        "mean_pac_rest": 0.079774,
+        "clinical_utility": 0.973705
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.022891,
+        "mean_pac_stim": 0.06133,
+        "mean_pac_rest": 0.084221,
+        "clinical_utility": 0.969463
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.020239,
+        "mean_pac_stim": 0.058495,
+        "mean_pac_rest": 0.078733,
+        "clinical_utility": 0.968187
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.023364,
+        "mean_pac_stim": 0.064396,
+        "mean_pac_rest": 0.08776,
+        "clinical_utility": 0.963633
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.020384,
+        "mean_pac_stim": 0.059372,
+        "mean_pac_rest": 0.079757,
+        "clinical_utility": 0.965584
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.025112,
+        "mean_pac_stim": 0.064603,
+        "mean_pac_rest": 0.089715,
+        "clinical_utility": 0.961274
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.026849,
+        "mean_pac_stim": 0.065195,
+        "mean_pac_rest": 0.092044,
+        "clinical_utility": 0.972654
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.018128,
+        "mean_pac_stim": 0.055985,
+        "mean_pac_rest": 0.074113,
+        "clinical_utility": 0.964963
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.021471,
+        "mean_pac_stim": 0.062692,
+        "mean_pac_rest": 0.084162,
+        "clinical_utility": 0.960604
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.019118,
+        "mean_pac_stim": 0.058839,
+        "mean_pac_rest": 0.077957,
+        "clinical_utility": 0.962583
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.019011,
+        "mean_pac_stim": 0.057253,
+        "mean_pac_rest": 0.076265,
+        "clinical_utility": 0.968096
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.018246,
+        "mean_pac_stim": 0.055583,
+        "mean_pac_rest": 0.073829,
+        "clinical_utility": 0.965392
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.024449,
+        "mean_pac_stim": 0.066906,
+        "mean_pac_rest": 0.091355,
+        "clinical_utility": 0.95959
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.023578,
+        "mean_pac_stim": 0.062166,
+        "mean_pac_rest": 0.085744,
+        "clinical_utility": 0.968795
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.020609,
+        "mean_pac_stim": 0.059108,
+        "mean_pac_rest": 0.079718,
+        "clinical_utility": 0.966059
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.019602,
+        "mean_pac_stim": 0.058337,
+        "mean_pac_rest": 0.077939,
+        "clinical_utility": 0.96864
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.022467,
+        "mean_pac_stim": 0.062598,
+        "mean_pac_rest": 0.085065,
+        "clinical_utility": 0.971371
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.029047,
+        "mean_pac_stim": 0.067309,
+        "mean_pac_rest": 0.096355,
+        "clinical_utility": 0.970232
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.024008,
+        "mean_pac_stim": 0.063469,
+        "mean_pac_rest": 0.087477,
+        "clinical_utility": 0.960807
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.020241,
+        "mean_pac_stim": 0.06115,
+        "mean_pac_rest": 0.081391,
+        "clinical_utility": 0.955843
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.024261,
+        "mean_pac_stim": 0.06137,
+        "mean_pac_rest": 0.085631,
+        "clinical_utility": 0.970953
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.018035,
+        "mean_pac_stim": 0.057772,
+        "mean_pac_rest": 0.075807,
+        "clinical_utility": 0.965525
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.019548,
+        "mean_pac_stim": 0.059246,
+        "mean_pac_rest": 0.078795,
+        "clinical_utility": 0.964979
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.0224,
+        "mean_pac_stim": 0.059999,
+        "mean_pac_rest": 0.082399,
+        "clinical_utility": 0.970974
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.022219,
+        "mean_pac_stim": 0.060906,
+        "mean_pac_rest": 0.083124,
+        "clinical_utility": 0.96681
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.02515,
+        "mean_pac_stim": 0.06422,
+        "mean_pac_rest": 0.08937,
+        "clinical_utility": 0.968921
+      }
+    ]
+  },
+  "moderate": {
+    "Fixed Schedule": [
+      {
+        "alignment": 0.473333,
+        "low_pac_stim_rate": 0.64,
+        "high_pac_rest_rate": 0.306667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.001102,
+        "mean_pac_stim": 0.059184,
+        "mean_pac_rest": 0.058082,
+        "clinical_utility": 0.336667
+      },
+      {
+        "alignment": 0.46,
+        "low_pac_stim_rate": 0.626667,
+        "high_pac_rest_rate": 0.293333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.003377,
+        "mean_pac_stim": 0.059997,
+        "mean_pac_rest": 0.056619,
+        "clinical_utility": 0.33
+      },
+      {
+        "alignment": 0.406667,
+        "low_pac_stim_rate": 0.573333,
+        "high_pac_rest_rate": 0.24,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.004261,
+        "mean_pac_stim": 0.061633,
+        "mean_pac_rest": 0.057372,
+        "clinical_utility": 0.303333
+      },
+      {
+        "alignment": 0.42,
+        "low_pac_stim_rate": 0.586667,
+        "high_pac_rest_rate": 0.253333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.003906,
+        "mean_pac_stim": 0.060324,
+        "mean_pac_rest": 0.056418,
+        "clinical_utility": 0.31
+      },
+      {
+        "alignment": 0.44,
+        "low_pac_stim_rate": 0.606667,
+        "high_pac_rest_rate": 0.273333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.00283,
+        "mean_pac_stim": 0.059737,
+        "mean_pac_rest": 0.056906,
+        "clinical_utility": 0.32
+      },
+      {
+        "alignment": 0.493333,
+        "low_pac_stim_rate": 0.66,
+        "high_pac_rest_rate": 0.326667,
+        "stim_pct": 66.666667,
+        "pac_gap": 0.000212,
+        "mean_pac_stim": 0.058094,
+        "mean_pac_rest": 0.058306,
+        "clinical_utility": 0.351305
+      },
+      {
+        "alignment": 0.44,
+        "low_pac_stim_rate": 0.606667,
+        "high_pac_rest_rate": 0.273333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.00328,
+        "mean_pac_stim": 0.060996,
+        "mean_pac_rest": 0.057716,
+        "clinical_utility": 0.32
+      },
+      {
+        "alignment": 0.426667,
+        "low_pac_stim_rate": 0.593333,
+        "high_pac_rest_rate": 0.26,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.002826,
+        "mean_pac_stim": 0.060125,
+        "mean_pac_rest": 0.057299,
+        "clinical_utility": 0.313333
+      },
+      {
+        "alignment": 0.463333,
+        "low_pac_stim_rate": 0.63,
+        "high_pac_rest_rate": 0.296667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.002837,
+        "mean_pac_stim": 0.060239,
+        "mean_pac_rest": 0.057402,
+        "clinical_utility": 0.331667
+      },
+      {
+        "alignment": 0.486667,
+        "low_pac_stim_rate": 0.653333,
+        "high_pac_rest_rate": 0.32,
+        "stim_pct": 66.666667,
+        "pac_gap": -4.7e-05,
+        "mean_pac_stim": 0.05862,
+        "mean_pac_rest": 0.058573,
+        "clinical_utility": 0.343333
+      },
+      {
+        "alignment": 0.406667,
+        "low_pac_stim_rate": 0.573333,
+        "high_pac_rest_rate": 0.24,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.004239,
+        "mean_pac_stim": 0.061456,
+        "mean_pac_rest": 0.057217,
+        "clinical_utility": 0.303333
+      },
+      {
+        "alignment": 0.433333,
+        "low_pac_stim_rate": 0.6,
+        "high_pac_rest_rate": 0.266667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.002176,
+        "mean_pac_stim": 0.058387,
+        "mean_pac_rest": 0.056211,
+        "clinical_utility": 0.316667
+      },
+      {
+        "alignment": 0.51,
+        "low_pac_stim_rate": 0.676667,
+        "high_pac_rest_rate": 0.343333,
+        "stim_pct": 66.666667,
+        "pac_gap": 2.5e-05,
+        "mean_pac_stim": 0.060474,
+        "mean_pac_rest": 0.060499,
+        "clinical_utility": 0.355494
+      },
+      {
+        "alignment": 0.49,
+        "low_pac_stim_rate": 0.656667,
+        "high_pac_rest_rate": 0.323333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.00102,
+        "mean_pac_stim": 0.05988,
+        "mean_pac_rest": 0.058859,
+        "clinical_utility": 0.345
+      },
+      {
+        "alignment": 0.48,
+        "low_pac_stim_rate": 0.646667,
+        "high_pac_rest_rate": 0.313333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.001908,
+        "mean_pac_stim": 0.060007,
+        "mean_pac_rest": 0.058099,
+        "clinical_utility": 0.34
+      },
+      {
+        "alignment": 0.446667,
+        "low_pac_stim_rate": 0.613333,
+        "high_pac_rest_rate": 0.28,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.002096,
+        "mean_pac_stim": 0.060508,
+        "mean_pac_rest": 0.058412,
+        "clinical_utility": 0.323333
+      },
+      {
+        "alignment": 0.486667,
+        "low_pac_stim_rate": 0.653333,
+        "high_pac_rest_rate": 0.32,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.001651,
+        "mean_pac_stim": 0.057748,
+        "mean_pac_rest": 0.056096,
+        "clinical_utility": 0.343333
+      },
+      {
+        "alignment": 0.446667,
+        "low_pac_stim_rate": 0.613333,
+        "high_pac_rest_rate": 0.28,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.002376,
+        "mean_pac_stim": 0.059694,
+        "mean_pac_rest": 0.057318,
+        "clinical_utility": 0.323333
+      },
+      {
+        "alignment": 0.496667,
+        "low_pac_stim_rate": 0.663333,
+        "high_pac_rest_rate": 0.33,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.000549,
+        "mean_pac_stim": 0.058607,
+        "mean_pac_rest": 0.058058,
+        "clinical_utility": 0.348333
+      },
+      {
+        "alignment": 0.45,
+        "low_pac_stim_rate": 0.616667,
+        "high_pac_rest_rate": 0.283333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.002704,
+        "mean_pac_stim": 0.058222,
+        "mean_pac_rest": 0.055518,
+        "clinical_utility": 0.325
+      },
+      {
+        "alignment": 0.47,
+        "low_pac_stim_rate": 0.636667,
+        "high_pac_rest_rate": 0.303333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.000829,
+        "mean_pac_stim": 0.057533,
+        "mean_pac_rest": 0.056703,
+        "clinical_utility": 0.335
+      },
+      {
+        "alignment": 0.493333,
+        "low_pac_stim_rate": 0.66,
+        "high_pac_rest_rate": 0.326667,
+        "stim_pct": 66.666667,
+        "pac_gap": 9.5e-05,
+        "mean_pac_stim": 0.060562,
+        "mean_pac_rest": 0.060657,
+        "clinical_utility": 0.348707
+      },
+      {
+        "alignment": 0.4,
+        "low_pac_stim_rate": 0.566667,
+        "high_pac_rest_rate": 0.233333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.004953,
+        "mean_pac_stim": 0.061918,
+        "mean_pac_rest": 0.056965,
+        "clinical_utility": 0.3
+      },
+      {
+        "alignment": 0.46,
+        "low_pac_stim_rate": 0.626667,
+        "high_pac_rest_rate": 0.293333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.001712,
+        "mean_pac_stim": 0.059985,
+        "mean_pac_rest": 0.058273,
+        "clinical_utility": 0.33
+      },
+      {
+        "alignment": 0.406667,
+        "low_pac_stim_rate": 0.573333,
+        "high_pac_rest_rate": 0.24,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.003534,
+        "mean_pac_stim": 0.060537,
+        "mean_pac_rest": 0.057004,
+        "clinical_utility": 0.303333
+      },
+      {
+        "alignment": 0.433333,
+        "low_pac_stim_rate": 0.6,
+        "high_pac_rest_rate": 0.266667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.002738,
+        "mean_pac_stim": 0.060726,
+        "mean_pac_rest": 0.057988,
+        "clinical_utility": 0.316667
+      },
+      {
+        "alignment": 0.453333,
+        "low_pac_stim_rate": 0.62,
+        "high_pac_rest_rate": 0.286667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.00223,
+        "mean_pac_stim": 0.061305,
+        "mean_pac_rest": 0.059075,
+        "clinical_utility": 0.326667
+      },
+      {
+        "alignment": 0.43,
+        "low_pac_stim_rate": 0.596667,
+        "high_pac_rest_rate": 0.263333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.00247,
+        "mean_pac_stim": 0.060303,
+        "mean_pac_rest": 0.057834,
+        "clinical_utility": 0.315
+      },
+      {
+        "alignment": 0.503333,
+        "low_pac_stim_rate": 0.67,
+        "high_pac_rest_rate": 0.336667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.001108,
+        "mean_pac_stim": 0.05967,
+        "mean_pac_rest": 0.058562,
+        "clinical_utility": 0.351667
+      },
+      {
+        "alignment": 0.456667,
+        "low_pac_stim_rate": 0.623333,
+        "high_pac_rest_rate": 0.29,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.002461,
+        "mean_pac_stim": 0.059933,
+        "mean_pac_rest": 0.057472,
+        "clinical_utility": 0.328333
+      },
+      {
+        "alignment": 0.486667,
+        "low_pac_stim_rate": 0.653333,
+        "high_pac_rest_rate": 0.32,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.001568,
+        "mean_pac_stim": 0.058885,
+        "mean_pac_rest": 0.057317,
+        "clinical_utility": 0.343333
+      },
+      {
+        "alignment": 0.476667,
+        "low_pac_stim_rate": 0.643333,
+        "high_pac_rest_rate": 0.31,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.000602,
+        "mean_pac_stim": 0.058689,
+        "mean_pac_rest": 0.058087,
+        "clinical_utility": 0.338333
+      },
+      {
+        "alignment": 0.423333,
+        "low_pac_stim_rate": 0.59,
+        "high_pac_rest_rate": 0.256667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.003869,
+        "mean_pac_stim": 0.059724,
+        "mean_pac_rest": 0.055854,
+        "clinical_utility": 0.311667
+      },
+      {
+        "alignment": 0.463333,
+        "low_pac_stim_rate": 0.63,
+        "high_pac_rest_rate": 0.296667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.001793,
+        "mean_pac_stim": 0.059285,
+        "mean_pac_rest": 0.057492,
+        "clinical_utility": 0.331667
+      },
+      {
+        "alignment": 0.396667,
+        "low_pac_stim_rate": 0.563333,
+        "high_pac_rest_rate": 0.23,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.003815,
+        "mean_pac_stim": 0.061852,
+        "mean_pac_rest": 0.058037,
+        "clinical_utility": 0.298333
+      }
+    ],
+    "Reactive Threshold": [
+      {
+        "alignment": 0.87,
+        "low_pac_stim_rate": 0.74,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 37.0,
+        "pac_gap": 0.012116,
+        "mean_pac_stim": 0.051235,
+        "mean_pac_rest": 0.063352,
+        "clinical_utility": 0.905588
+      },
+      {
+        "alignment": 0.891667,
+        "low_pac_stim_rate": 0.793333,
+        "high_pac_rest_rate": 0.99,
+        "stim_pct": 40.166667,
+        "pac_gap": 0.013409,
+        "mean_pac_stim": 0.050852,
+        "mean_pac_rest": 0.064261,
+        "clinical_utility": 0.897905
+      },
+      {
+        "alignment": 0.823333,
+        "low_pac_stim_rate": 0.66,
+        "high_pac_rest_rate": 0.986667,
+        "stim_pct": 33.666667,
+        "pac_gap": 0.012854,
+        "mean_pac_stim": 0.051745,
+        "mean_pac_rest": 0.064599,
+        "clinical_utility": 0.874685
+      },
+      {
+        "alignment": 0.903333,
+        "low_pac_stim_rate": 0.826667,
+        "high_pac_rest_rate": 0.98,
+        "stim_pct": 42.333333,
+        "pac_gap": 0.013626,
+        "mean_pac_stim": 0.051062,
+        "mean_pac_rest": 0.064688,
+        "clinical_utility": 0.912497
+      },
+      {
+        "alignment": 0.876667,
+        "low_pac_stim_rate": 0.763333,
+        "high_pac_rest_rate": 0.99,
+        "stim_pct": 38.666667,
+        "pac_gap": 0.01286,
+        "mean_pac_stim": 0.050851,
+        "mean_pac_rest": 0.063711,
+        "clinical_utility": 0.898588
+      },
+      {
+        "alignment": 0.89,
+        "low_pac_stim_rate": 0.803333,
+        "high_pac_rest_rate": 0.976667,
+        "stim_pct": 41.333333,
+        "pac_gap": 0.012213,
+        "mean_pac_stim": 0.050946,
+        "mean_pac_rest": 0.06316,
+        "clinical_utility": 0.891133
+      },
+      {
+        "alignment": 0.861667,
+        "low_pac_stim_rate": 0.723333,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 36.166667,
+        "pac_gap": 0.012716,
+        "mean_pac_stim": 0.051677,
+        "mean_pac_rest": 0.064393,
+        "clinical_utility": 0.91094
+      },
+      {
+        "alignment": 0.855,
+        "low_pac_stim_rate": 0.726667,
+        "high_pac_rest_rate": 0.983333,
+        "stim_pct": 37.166667,
+        "pac_gap": 0.012079,
+        "mean_pac_stim": 0.051627,
+        "mean_pac_rest": 0.063706,
+        "clinical_utility": 0.888167
+      },
+      {
+        "alignment": 0.868333,
+        "low_pac_stim_rate": 0.74,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 37.166667,
+        "pac_gap": 0.012411,
+        "mean_pac_stim": 0.051466,
+        "mean_pac_rest": 0.063877,
+        "clinical_utility": 0.892889
+      },
+      {
+        "alignment": 0.88,
+        "low_pac_stim_rate": 0.773333,
+        "high_pac_rest_rate": 0.986667,
+        "stim_pct": 39.333333,
+        "pac_gap": 0.012503,
+        "mean_pac_stim": 0.050929,
+        "mean_pac_rest": 0.063432,
+        "clinical_utility": 0.901146
+      },
+      {
+        "alignment": 0.855,
+        "low_pac_stim_rate": 0.726667,
+        "high_pac_rest_rate": 0.983333,
+        "stim_pct": 37.166667,
+        "pac_gap": 0.013549,
+        "mean_pac_stim": 0.051443,
+        "mean_pac_rest": 0.064993,
+        "clinical_utility": 0.89799
+      },
+      {
+        "alignment": 0.9,
+        "low_pac_stim_rate": 0.816667,
+        "high_pac_rest_rate": 0.983333,
+        "stim_pct": 41.666667,
+        "pac_gap": 0.011632,
+        "mean_pac_stim": 0.050767,
+        "mean_pac_rest": 0.062399,
+        "clinical_utility": 0.9025
+      },
+      {
+        "alignment": 0.851667,
+        "low_pac_stim_rate": 0.72,
+        "high_pac_rest_rate": 0.983333,
+        "stim_pct": 36.833333,
+        "pac_gap": 0.01371,
+        "mean_pac_stim": 0.051828,
+        "mean_pac_rest": 0.065538,
+        "clinical_utility": 0.894463
+      },
+      {
+        "alignment": 0.886667,
+        "low_pac_stim_rate": 0.773333,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 38.666667,
+        "pac_gap": 0.013394,
+        "mean_pac_stim": 0.051218,
+        "mean_pac_rest": 0.064612,
+        "clinical_utility": 0.913101
+      },
+      {
+        "alignment": 0.865,
+        "low_pac_stim_rate": 0.736667,
+        "high_pac_rest_rate": 0.993333,
+        "stim_pct": 37.166667,
+        "pac_gap": 0.012584,
+        "mean_pac_stim": 0.051366,
+        "mean_pac_rest": 0.06395,
+        "clinical_utility": 0.912387
+      },
+      {
+        "alignment": 0.873333,
+        "low_pac_stim_rate": 0.753333,
+        "high_pac_rest_rate": 0.993333,
+        "stim_pct": 38.0,
+        "pac_gap": 0.013223,
+        "mean_pac_stim": 0.051655,
+        "mean_pac_rest": 0.064879,
+        "clinical_utility": 0.89551
+      },
+      {
+        "alignment": 0.915,
+        "low_pac_stim_rate": 0.836667,
+        "high_pac_rest_rate": 0.993333,
+        "stim_pct": 42.166667,
+        "pac_gap": 0.011214,
+        "mean_pac_stim": 0.050588,
+        "mean_pac_rest": 0.061803,
+        "clinical_utility": 0.905757
+      },
+      {
+        "alignment": 0.875,
+        "low_pac_stim_rate": 0.75,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 37.5,
+        "pac_gap": 0.012252,
+        "mean_pac_stim": 0.051306,
+        "mean_pac_rest": 0.063558,
+        "clinical_utility": 0.899733
+      },
+      {
+        "alignment": 0.878333,
+        "low_pac_stim_rate": 0.786667,
+        "high_pac_rest_rate": 0.97,
+        "stim_pct": 40.833333,
+        "pac_gap": 0.012458,
+        "mean_pac_stim": 0.050973,
+        "mean_pac_rest": 0.063431,
+        "clinical_utility": 0.897677
+      },
+      {
+        "alignment": 0.89,
+        "low_pac_stim_rate": 0.796667,
+        "high_pac_rest_rate": 0.983333,
+        "stim_pct": 40.666667,
+        "pac_gap": 0.011479,
+        "mean_pac_stim": 0.050589,
+        "mean_pac_rest": 0.062068,
+        "clinical_utility": 0.892612
+      },
+      {
+        "alignment": 0.913333,
+        "low_pac_stim_rate": 0.853333,
+        "high_pac_rest_rate": 0.973333,
+        "stim_pct": 44.0,
+        "pac_gap": 0.011983,
+        "mean_pac_stim": 0.050529,
+        "mean_pac_rest": 0.062511,
+        "clinical_utility": 0.887588
+      },
+      {
+        "alignment": 0.835,
+        "low_pac_stim_rate": 0.686667,
+        "high_pac_rest_rate": 0.983333,
+        "stim_pct": 35.166667,
+        "pac_gap": 0.012808,
+        "mean_pac_stim": 0.052221,
+        "mean_pac_rest": 0.065029,
+        "clinical_utility": 0.885294
+      },
+      {
+        "alignment": 0.858333,
+        "low_pac_stim_rate": 0.726667,
+        "high_pac_rest_rate": 0.99,
+        "stim_pct": 36.833333,
+        "pac_gap": 0.013384,
+        "mean_pac_stim": 0.051673,
+        "mean_pac_rest": 0.065056,
+        "clinical_utility": 0.89872
+      },
+      {
+        "alignment": 0.871667,
+        "low_pac_stim_rate": 0.75,
+        "high_pac_rest_rate": 0.993333,
+        "stim_pct": 37.833333,
+        "pac_gap": 0.013153,
+        "mean_pac_stim": 0.051167,
+        "mean_pac_rest": 0.06432,
+        "clinical_utility": 0.901762
+      },
+      {
+        "alignment": 0.885,
+        "low_pac_stim_rate": 0.78,
+        "high_pac_rest_rate": 0.99,
+        "stim_pct": 39.5,
+        "pac_gap": 0.012732,
+        "mean_pac_stim": 0.051553,
+        "mean_pac_rest": 0.064285,
+        "clinical_utility": 0.917671
+      },
+      {
+        "alignment": 0.846667,
+        "low_pac_stim_rate": 0.7,
+        "high_pac_rest_rate": 0.993333,
+        "stim_pct": 35.333333,
+        "pac_gap": 0.012648,
+        "mean_pac_stim": 0.051707,
+        "mean_pac_rest": 0.064356,
+        "clinical_utility": 0.895271
+      },
+      {
+        "alignment": 0.853333,
+        "low_pac_stim_rate": 0.706667,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 35.333333,
+        "pac_gap": 0.014241,
+        "mean_pac_stim": 0.051375,
+        "mean_pac_rest": 0.065616,
+        "clinical_utility": 0.909567
+      },
+      {
+        "alignment": 0.863333,
+        "low_pac_stim_rate": 0.733333,
+        "high_pac_rest_rate": 0.993333,
+        "stim_pct": 37.0,
+        "pac_gap": 0.012338,
+        "mean_pac_stim": 0.051624,
+        "mean_pac_rest": 0.063963,
+        "clinical_utility": 0.904495
+      },
+      {
+        "alignment": 0.885,
+        "low_pac_stim_rate": 0.773333,
+        "high_pac_rest_rate": 0.996667,
+        "stim_pct": 38.833333,
+        "pac_gap": 0.012716,
+        "mean_pac_stim": 0.051567,
+        "mean_pac_rest": 0.064283,
+        "clinical_utility": 0.909391
+      },
+      {
+        "alignment": 0.878333,
+        "low_pac_stim_rate": 0.766667,
+        "high_pac_rest_rate": 0.99,
+        "stim_pct": 38.833333,
+        "pac_gap": 0.012904,
+        "mean_pac_stim": 0.051154,
+        "mean_pac_rest": 0.064058,
+        "clinical_utility": 0.903516
+      },
+      {
+        "alignment": 0.901667,
+        "low_pac_stim_rate": 0.81,
+        "high_pac_rest_rate": 0.993333,
+        "stim_pct": 40.833333,
+        "pac_gap": 0.012398,
+        "mean_pac_stim": 0.050965,
+        "mean_pac_rest": 0.063363,
+        "clinical_utility": 0.917004
+      },
+      {
+        "alignment": 0.878333,
+        "low_pac_stim_rate": 0.77,
+        "high_pac_rest_rate": 0.986667,
+        "stim_pct": 39.166667,
+        "pac_gap": 0.012586,
+        "mean_pac_stim": 0.050775,
+        "mean_pac_rest": 0.063361,
+        "clinical_utility": 0.899563
+      },
+      {
+        "alignment": 0.876667,
+        "low_pac_stim_rate": 0.753333,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 37.666667,
+        "pac_gap": 0.012067,
+        "mean_pac_stim": 0.050803,
+        "mean_pac_rest": 0.06287,
+        "clinical_utility": 0.89891
+      },
+      {
+        "alignment": 0.878333,
+        "low_pac_stim_rate": 0.756667,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 37.833333,
+        "pac_gap": 0.011892,
+        "mean_pac_stim": 0.051292,
+        "mean_pac_rest": 0.063185,
+        "clinical_utility": 0.900517
+      },
+      {
+        "alignment": 0.858333,
+        "low_pac_stim_rate": 0.726667,
+        "high_pac_rest_rate": 0.99,
+        "stim_pct": 36.833333,
+        "pac_gap": 0.013398,
+        "mean_pac_stim": 0.05212,
+        "mean_pac_rest": 0.065518,
+        "clinical_utility": 0.903884
+      }
+    ],
+    "TCN Predictive": [
+      {
+        "alignment": 0.721667,
+        "low_pac_stim_rate": 0.723333,
+        "high_pac_rest_rate": 0.72,
+        "stim_pct": 50.166667,
+        "pac_gap": 0.007804,
+        "mean_pac_stim": 0.054959,
+        "mean_pac_rest": 0.062762,
+        "clinical_utility": 0.689532
+      },
+      {
+        "alignment": 0.723333,
+        "low_pac_stim_rate": 0.8,
+        "high_pac_rest_rate": 0.646667,
+        "stim_pct": 57.666667,
+        "pac_gap": 0.009341,
+        "mean_pac_stim": 0.055024,
+        "mean_pac_rest": 0.064364,
+        "clinical_utility": 0.673418
+      },
+      {
+        "alignment": 0.701667,
+        "low_pac_stim_rate": 0.743333,
+        "high_pac_rest_rate": 0.66,
+        "stim_pct": 54.166667,
+        "pac_gap": 0.008862,
+        "mean_pac_stim": 0.05625,
+        "mean_pac_rest": 0.065113,
+        "clinical_utility": 0.669761
+      },
+      {
+        "alignment": 0.745,
+        "low_pac_stim_rate": 0.81,
+        "high_pac_rest_rate": 0.68,
+        "stim_pct": 56.5,
+        "pac_gap": 0.0094,
+        "mean_pac_stim": 0.054819,
+        "mean_pac_rest": 0.064219,
+        "clinical_utility": 0.697827
+      },
+      {
+        "alignment": 0.73,
+        "low_pac_stim_rate": 0.796667,
+        "high_pac_rest_rate": 0.663333,
+        "stim_pct": 56.666667,
+        "pac_gap": 0.008941,
+        "mean_pac_stim": 0.054932,
+        "mean_pac_rest": 0.063873,
+        "clinical_utility": 0.68712
+      },
+      {
+        "alignment": 0.743333,
+        "low_pac_stim_rate": 0.786667,
+        "high_pac_rest_rate": 0.7,
+        "stim_pct": 54.333333,
+        "pac_gap": 0.008206,
+        "mean_pac_stim": 0.054401,
+        "mean_pac_rest": 0.062607,
+        "clinical_utility": 0.688638
+      },
+      {
+        "alignment": 0.748333,
+        "low_pac_stim_rate": 0.786667,
+        "high_pac_rest_rate": 0.71,
+        "stim_pct": 53.833333,
+        "pac_gap": 0.008817,
+        "mean_pac_stim": 0.055838,
+        "mean_pac_rest": 0.064655,
+        "clinical_utility": 0.707639
+      },
+      {
+        "alignment": 0.7,
+        "low_pac_stim_rate": 0.743333,
+        "high_pac_rest_rate": 0.656667,
+        "stim_pct": 54.333333,
+        "pac_gap": 0.007331,
+        "mean_pac_stim": 0.055881,
+        "mean_pac_rest": 0.063212,
+        "clinical_utility": 0.649264
+      },
+      {
+        "alignment": 0.75,
+        "low_pac_stim_rate": 0.78,
+        "high_pac_rest_rate": 0.72,
+        "stim_pct": 53.0,
+        "pac_gap": 0.009077,
+        "mean_pac_stim": 0.055113,
+        "mean_pac_rest": 0.064191,
+        "clinical_utility": 0.70821
+      },
+      {
+        "alignment": 0.73,
+        "low_pac_stim_rate": 0.746667,
+        "high_pac_rest_rate": 0.713333,
+        "stim_pct": 51.666667,
+        "pac_gap": 0.008296,
+        "mean_pac_stim": 0.054626,
+        "mean_pac_rest": 0.062921,
+        "clinical_utility": 0.692327
+      },
+      {
+        "alignment": 0.711667,
+        "low_pac_stim_rate": 0.76,
+        "high_pac_rest_rate": 0.663333,
+        "stim_pct": 54.833333,
+        "pac_gap": 0.009296,
+        "mean_pac_stim": 0.055859,
+        "mean_pac_rest": 0.065154,
+        "clinical_utility": 0.682
+      },
+      {
+        "alignment": 0.728333,
+        "low_pac_stim_rate": 0.783333,
+        "high_pac_rest_rate": 0.673333,
+        "stim_pct": 55.5,
+        "pac_gap": 0.007992,
+        "mean_pac_stim": 0.054087,
+        "mean_pac_rest": 0.062078,
+        "clinical_utility": 0.685787
+      },
+      {
+        "alignment": 0.718333,
+        "low_pac_stim_rate": 0.736667,
+        "high_pac_rest_rate": 0.7,
+        "stim_pct": 51.833333,
+        "pac_gap": 0.00901,
+        "mean_pac_stim": 0.056376,
+        "mean_pac_rest": 0.065386,
+        "clinical_utility": 0.681584
+      },
+      {
+        "alignment": 0.738333,
+        "low_pac_stim_rate": 0.79,
+        "high_pac_rest_rate": 0.686667,
+        "stim_pct": 55.166667,
+        "pac_gap": 0.009174,
+        "mean_pac_stim": 0.055413,
+        "mean_pac_rest": 0.064587,
+        "clinical_utility": 0.69726
+      },
+      {
+        "alignment": 0.76,
+        "low_pac_stim_rate": 0.786667,
+        "high_pac_rest_rate": 0.733333,
+        "stim_pct": 52.666667,
+        "pac_gap": 0.009035,
+        "mean_pac_stim": 0.055222,
+        "mean_pac_rest": 0.064257,
+        "clinical_utility": 0.724899
+      },
+      {
+        "alignment": 0.695,
+        "low_pac_stim_rate": 0.74,
+        "high_pac_rest_rate": 0.65,
+        "stim_pct": 54.5,
+        "pac_gap": 0.007867,
+        "mean_pac_stim": 0.056295,
+        "mean_pac_rest": 0.064162,
+        "clinical_utility": 0.64423
+      },
+      {
+        "alignment": 0.741667,
+        "low_pac_stim_rate": 0.82,
+        "high_pac_rest_rate": 0.663333,
+        "stim_pct": 57.833333,
+        "pac_gap": 0.008837,
+        "mean_pac_stim": 0.053403,
+        "mean_pac_rest": 0.06224,
+        "clinical_utility": 0.71234
+      },
+      {
+        "alignment": 0.728333,
+        "low_pac_stim_rate": 0.793333,
+        "high_pac_rest_rate": 0.663333,
+        "stim_pct": 56.5,
+        "pac_gap": 0.008209,
+        "mean_pac_stim": 0.055575,
+        "mean_pac_rest": 0.063784,
+        "clinical_utility": 0.67632
+      },
+      {
+        "alignment": 0.723333,
+        "low_pac_stim_rate": 0.786667,
+        "high_pac_rest_rate": 0.66,
+        "stim_pct": 56.333333,
+        "pac_gap": 0.00869,
+        "mean_pac_stim": 0.054643,
+        "mean_pac_rest": 0.063333,
+        "clinical_utility": 0.685449
+      },
+      {
+        "alignment": 0.698333,
+        "low_pac_stim_rate": 0.77,
+        "high_pac_rest_rate": 0.626667,
+        "stim_pct": 57.166667,
+        "pac_gap": 0.007886,
+        "mean_pac_stim": 0.054055,
+        "mean_pac_rest": 0.061941,
+        "clinical_utility": 0.660607
+      },
+      {
+        "alignment": 0.671667,
+        "low_pac_stim_rate": 0.766667,
+        "high_pac_rest_rate": 0.576667,
+        "stim_pct": 59.5,
+        "pac_gap": 0.007573,
+        "mean_pac_stim": 0.054227,
+        "mean_pac_rest": 0.0618,
+        "clinical_utility": 0.621984
+      },
+      {
+        "alignment": 0.706667,
+        "low_pac_stim_rate": 0.733333,
+        "high_pac_rest_rate": 0.68,
+        "stim_pct": 52.666667,
+        "pac_gap": 0.007216,
+        "mean_pac_stim": 0.057304,
+        "mean_pac_rest": 0.064521,
+        "clinical_utility": 0.644942
+      },
+      {
+        "alignment": 0.721667,
+        "low_pac_stim_rate": 0.766667,
+        "high_pac_rest_rate": 0.676667,
+        "stim_pct": 54.5,
+        "pac_gap": 0.008919,
+        "mean_pac_stim": 0.05619,
+        "mean_pac_rest": 0.065109,
+        "clinical_utility": 0.680123
+      },
+      {
+        "alignment": 0.706667,
+        "low_pac_stim_rate": 0.77,
+        "high_pac_rest_rate": 0.643333,
+        "stim_pct": 56.333333,
+        "pac_gap": 0.008115,
+        "mean_pac_stim": 0.055854,
+        "mean_pac_rest": 0.063969,
+        "clinical_utility": 0.65379
+      },
+      {
+        "alignment": 0.698333,
+        "low_pac_stim_rate": 0.73,
+        "high_pac_rest_rate": 0.666667,
+        "stim_pct": 53.166667,
+        "pac_gap": 0.006838,
+        "mean_pac_stim": 0.056098,
+        "mean_pac_rest": 0.062936,
+        "clinical_utility": 0.644677
+      },
+      {
+        "alignment": 0.705,
+        "low_pac_stim_rate": 0.743333,
+        "high_pac_rest_rate": 0.666667,
+        "stim_pct": 53.833333,
+        "pac_gap": 0.008121,
+        "mean_pac_stim": 0.056203,
+        "mean_pac_rest": 0.064324,
+        "clinical_utility": 0.663947
+      },
+      {
+        "alignment": 0.726667,
+        "low_pac_stim_rate": 0.75,
+        "high_pac_rest_rate": 0.703333,
+        "stim_pct": 52.333333,
+        "pac_gap": 0.009573,
+        "mean_pac_stim": 0.056218,
+        "mean_pac_rest": 0.065791,
+        "clinical_utility": 0.696303
+      },
+      {
+        "alignment": 0.713333,
+        "low_pac_stim_rate": 0.746667,
+        "high_pac_rest_rate": 0.68,
+        "stim_pct": 53.333333,
+        "pac_gap": 0.007387,
+        "mean_pac_stim": 0.056055,
+        "mean_pac_rest": 0.063442,
+        "clinical_utility": 0.663658
+      },
+      {
+        "alignment": 0.728333,
+        "low_pac_stim_rate": 0.796667,
+        "high_pac_rest_rate": 0.66,
+        "stim_pct": 56.833333,
+        "pac_gap": 0.009083,
+        "mean_pac_stim": 0.055527,
+        "mean_pac_rest": 0.06461,
+        "clinical_utility": 0.688806
+      },
+      {
+        "alignment": 0.75,
+        "low_pac_stim_rate": 0.8,
+        "high_pac_rest_rate": 0.7,
+        "stim_pct": 55.0,
+        "pac_gap": 0.009185,
+        "mean_pac_stim": 0.054958,
+        "mean_pac_rest": 0.064143,
+        "clinical_utility": 0.705628
+      },
+      {
+        "alignment": 0.75,
+        "low_pac_stim_rate": 0.82,
+        "high_pac_rest_rate": 0.68,
+        "stim_pct": 57.0,
+        "pac_gap": 0.00884,
+        "mean_pac_stim": 0.054527,
+        "mean_pac_rest": 0.063366,
+        "clinical_utility": 0.706484
+      },
+      {
+        "alignment": 0.73,
+        "low_pac_stim_rate": 0.81,
+        "high_pac_rest_rate": 0.65,
+        "stim_pct": 58.0,
+        "pac_gap": 0.009879,
+        "mean_pac_stim": 0.054422,
+        "mean_pac_rest": 0.064301,
+        "clinical_utility": 0.705428
+      },
+      {
+        "alignment": 0.675,
+        "low_pac_stim_rate": 0.733333,
+        "high_pac_rest_rate": 0.616667,
+        "stim_pct": 55.833333,
+        "pac_gap": 0.006695,
+        "mean_pac_stim": 0.055407,
+        "mean_pac_rest": 0.062102,
+        "clinical_utility": 0.621305
+      },
+      {
+        "alignment": 0.766667,
+        "low_pac_stim_rate": 0.803333,
+        "high_pac_rest_rate": 0.73,
+        "stim_pct": 53.666667,
+        "pac_gap": 0.008804,
+        "mean_pac_stim": 0.054699,
+        "mean_pac_rest": 0.063503,
+        "clinical_utility": 0.720126
+      },
+      {
+        "alignment": 0.688333,
+        "low_pac_stim_rate": 0.723333,
+        "high_pac_rest_rate": 0.653333,
+        "stim_pct": 53.5,
+        "pac_gap": 0.007151,
+        "mean_pac_stim": 0.057213,
+        "mean_pac_rest": 0.064364,
+        "clinical_utility": 0.636216
+      }
+    ],
+    "Alignment Oracle": [
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014005,
+        "mean_pac_stim": 0.051814,
+        "mean_pac_rest": 0.065819,
+        "clinical_utility": 0.971899
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.015775,
+        "mean_pac_stim": 0.050983,
+        "mean_pac_rest": 0.066758,
+        "clinical_utility": 0.95593
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.016065,
+        "mean_pac_stim": 0.05218,
+        "mean_pac_rest": 0.068246,
+        "clinical_utility": 0.969184
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.015975,
+        "mean_pac_stim": 0.051035,
+        "mean_pac_rest": 0.067009,
+        "clinical_utility": 0.971584
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.015117,
+        "mean_pac_stim": 0.051235,
+        "mean_pac_rest": 0.066351,
+        "clinical_utility": 0.96825
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.0143,
+        "mean_pac_stim": 0.051014,
+        "mean_pac_rest": 0.065315,
+        "clinical_utility": 0.962756
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.01456,
+        "mean_pac_stim": 0.052623,
+        "mean_pac_rest": 0.067183,
+        "clinical_utility": 0.965758
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014615,
+        "mean_pac_stim": 0.051876,
+        "mean_pac_rest": 0.066491,
+        "clinical_utility": 0.969034
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014819,
+        "mean_pac_stim": 0.051884,
+        "mean_pac_rest": 0.066703,
+        "clinical_utility": 0.959947
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.01458,
+        "mean_pac_stim": 0.051314,
+        "mean_pac_rest": 0.065894,
+        "clinical_utility": 0.974857
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.015856,
+        "mean_pac_stim": 0.052115,
+        "mean_pac_rest": 0.067971,
+        "clinical_utility": 0.967688
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013522,
+        "mean_pac_stim": 0.050901,
+        "mean_pac_rest": 0.064423,
+        "clinical_utility": 0.965118
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.016111,
+        "mean_pac_stim": 0.052427,
+        "mean_pac_rest": 0.068538,
+        "clinical_utility": 0.97118
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.015224,
+        "mean_pac_stim": 0.051927,
+        "mean_pac_rest": 0.067151,
+        "clinical_utility": 0.96677
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014885,
+        "mean_pac_stim": 0.051929,
+        "mean_pac_rest": 0.066814,
+        "clinical_utility": 0.974932
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.01604,
+        "mean_pac_stim": 0.051789,
+        "mean_pac_rest": 0.067829,
+        "clinical_utility": 0.973014
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013143,
+        "mean_pac_stim": 0.050626,
+        "mean_pac_rest": 0.063768,
+        "clinical_utility": 0.960616
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014577,
+        "mean_pac_stim": 0.051613,
+        "mean_pac_rest": 0.06619,
+        "clinical_utility": 0.967908
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014496,
+        "mean_pac_stim": 0.051176,
+        "mean_pac_rest": 0.065672,
+        "clinical_utility": 0.96933
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013412,
+        "mean_pac_stim": 0.050614,
+        "mean_pac_rest": 0.064026,
+        "clinical_utility": 0.958606
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013687,
+        "mean_pac_stim": 0.050413,
+        "mean_pac_rest": 0.0641,
+        "clinical_utility": 0.946506
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014778,
+        "mean_pac_stim": 0.053204,
+        "mean_pac_rest": 0.067982,
+        "clinical_utility": 0.966569
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.016294,
+        "mean_pac_stim": 0.05212,
+        "mean_pac_rest": 0.068414,
+        "clinical_utility": 0.974888
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.015454,
+        "mean_pac_stim": 0.051687,
+        "mean_pac_rest": 0.067141,
+        "clinical_utility": 0.969843
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014867,
+        "mean_pac_stim": 0.051926,
+        "mean_pac_rest": 0.066793,
+        "clinical_utility": 0.975609
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.015216,
+        "mean_pac_stim": 0.052205,
+        "mean_pac_rest": 0.067421,
+        "clinical_utility": 0.970178
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.016475,
+        "mean_pac_stim": 0.052324,
+        "mean_pac_rest": 0.068799,
+        "clinical_utility": 0.977904
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014732,
+        "mean_pac_stim": 0.052114,
+        "mean_pac_rest": 0.066846,
+        "clinical_utility": 0.973672
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014834,
+        "mean_pac_stim": 0.051884,
+        "mean_pac_rest": 0.066718,
+        "clinical_utility": 0.961932
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.015355,
+        "mean_pac_stim": 0.051435,
+        "mean_pac_rest": 0.06679,
+        "clinical_utility": 0.970451
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014032,
+        "mean_pac_stim": 0.051347,
+        "mean_pac_rest": 0.065378,
+        "clinical_utility": 0.96665
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014564,
+        "mean_pac_stim": 0.051206,
+        "mean_pac_rest": 0.06577,
+        "clinical_utility": 0.968639
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014399,
+        "mean_pac_stim": 0.051234,
+        "mean_pac_rest": 0.065634,
+        "clinical_utility": 0.963874
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014266,
+        "mean_pac_stim": 0.051554,
+        "mean_pac_rest": 0.06582,
+        "clinical_utility": 0.966679
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.015801,
+        "mean_pac_stim": 0.05268,
+        "mean_pac_rest": 0.068481,
+        "clinical_utility": 0.974699
+      }
+    ]
+  },
+  "severe": {
+    "Fixed Schedule": [
+      {
+        "alignment": 0.51,
+        "low_pac_stim_rate": 0.676667,
+        "high_pac_rest_rate": 0.343333,
+        "stim_pct": 66.666667,
+        "pac_gap": 0.0005,
+        "mean_pac_stim": 0.056373,
+        "mean_pac_rest": 0.056873,
+        "clinical_utility": 0.367013
+      },
+      {
+        "alignment": 0.486667,
+        "low_pac_stim_rate": 0.653333,
+        "high_pac_rest_rate": 0.32,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.002345,
+        "mean_pac_stim": 0.057568,
+        "mean_pac_rest": 0.055222,
+        "clinical_utility": 0.343333
+      },
+      {
+        "alignment": 0.45,
+        "low_pac_stim_rate": 0.616667,
+        "high_pac_rest_rate": 0.283333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.001696,
+        "mean_pac_stim": 0.057117,
+        "mean_pac_rest": 0.05542,
+        "clinical_utility": 0.325
+      },
+      {
+        "alignment": 0.443333,
+        "low_pac_stim_rate": 0.61,
+        "high_pac_rest_rate": 0.276667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.002077,
+        "mean_pac_stim": 0.057295,
+        "mean_pac_rest": 0.055217,
+        "clinical_utility": 0.321667
+      },
+      {
+        "alignment": 0.48,
+        "low_pac_stim_rate": 0.646667,
+        "high_pac_rest_rate": 0.313333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.001236,
+        "mean_pac_stim": 0.056843,
+        "mean_pac_rest": 0.055606,
+        "clinical_utility": 0.34
+      },
+      {
+        "alignment": 0.513333,
+        "low_pac_stim_rate": 0.68,
+        "high_pac_rest_rate": 0.346667,
+        "stim_pct": 66.666667,
+        "pac_gap": 0.001477,
+        "mean_pac_stim": 0.056248,
+        "mean_pac_rest": 0.057725,
+        "clinical_utility": 0.388845
+      },
+      {
+        "alignment": 0.5,
+        "low_pac_stim_rate": 0.666667,
+        "high_pac_rest_rate": 0.333333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.001096,
+        "mean_pac_stim": 0.056893,
+        "mean_pac_rest": 0.055797,
+        "clinical_utility": 0.35
+      },
+      {
+        "alignment": 0.46,
+        "low_pac_stim_rate": 0.626667,
+        "high_pac_rest_rate": 0.293333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.000643,
+        "mean_pac_stim": 0.056425,
+        "mean_pac_rest": 0.055782,
+        "clinical_utility": 0.33
+      },
+      {
+        "alignment": 0.51,
+        "low_pac_stim_rate": 0.676667,
+        "high_pac_rest_rate": 0.343333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.001282,
+        "mean_pac_stim": 0.056873,
+        "mean_pac_rest": 0.055591,
+        "clinical_utility": 0.355
+      },
+      {
+        "alignment": 0.516667,
+        "low_pac_stim_rate": 0.683333,
+        "high_pac_rest_rate": 0.35,
+        "stim_pct": 66.666667,
+        "pac_gap": 0.001528,
+        "mean_pac_stim": 0.055824,
+        "mean_pac_rest": 0.057352,
+        "clinical_utility": 0.394034
+      },
+      {
+        "alignment": 0.476667,
+        "low_pac_stim_rate": 0.643333,
+        "high_pac_rest_rate": 0.31,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.002467,
+        "mean_pac_stim": 0.058169,
+        "mean_pac_rest": 0.055702,
+        "clinical_utility": 0.338333
+      },
+      {
+        "alignment": 0.46,
+        "low_pac_stim_rate": 0.626667,
+        "high_pac_rest_rate": 0.293333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.000608,
+        "mean_pac_stim": 0.055586,
+        "mean_pac_rest": 0.054979,
+        "clinical_utility": 0.33
+      },
+      {
+        "alignment": 0.55,
+        "low_pac_stim_rate": 0.716667,
+        "high_pac_rest_rate": 0.383333,
+        "stim_pct": 66.666667,
+        "pac_gap": 0.001836,
+        "mean_pac_stim": 0.056711,
+        "mean_pac_rest": 0.058547,
+        "clinical_utility": 0.413606
+      },
+      {
+        "alignment": 0.513333,
+        "low_pac_stim_rate": 0.68,
+        "high_pac_rest_rate": 0.346667,
+        "stim_pct": 66.666667,
+        "pac_gap": 0.000541,
+        "mean_pac_stim": 0.057162,
+        "mean_pac_rest": 0.057703,
+        "clinical_utility": 0.36819
+      },
+      {
+        "alignment": 0.53,
+        "low_pac_stim_rate": 0.696667,
+        "high_pac_rest_rate": 0.363333,
+        "stim_pct": 66.666667,
+        "pac_gap": -7e-06,
+        "mean_pac_stim": 0.055807,
+        "mean_pac_rest": 0.0558,
+        "clinical_utility": 0.365
+      },
+      {
+        "alignment": 0.483333,
+        "low_pac_stim_rate": 0.65,
+        "high_pac_rest_rate": 0.316667,
+        "stim_pct": 66.666667,
+        "pac_gap": 0.000339,
+        "mean_pac_stim": 0.0561,
+        "mean_pac_rest": 0.056439,
+        "clinical_utility": 0.349302
+      },
+      {
+        "alignment": 0.5,
+        "low_pac_stim_rate": 0.666667,
+        "high_pac_rest_rate": 0.333333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.000582,
+        "mean_pac_stim": 0.055701,
+        "mean_pac_rest": 0.05512,
+        "clinical_utility": 0.35
+      },
+      {
+        "alignment": 0.503333,
+        "low_pac_stim_rate": 0.67,
+        "high_pac_rest_rate": 0.336667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.000492,
+        "mean_pac_stim": 0.056245,
+        "mean_pac_rest": 0.055753,
+        "clinical_utility": 0.351667
+      },
+      {
+        "alignment": 0.516667,
+        "low_pac_stim_rate": 0.683333,
+        "high_pac_rest_rate": 0.35,
+        "stim_pct": 66.666667,
+        "pac_gap": 0.001022,
+        "mean_pac_stim": 0.056052,
+        "mean_pac_rest": 0.057074,
+        "clinical_utility": 0.381669
+      },
+      {
+        "alignment": 0.47,
+        "low_pac_stim_rate": 0.636667,
+        "high_pac_rest_rate": 0.303333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.001455,
+        "mean_pac_stim": 0.055914,
+        "mean_pac_rest": 0.05446,
+        "clinical_utility": 0.335
+      },
+      {
+        "alignment": 0.503333,
+        "low_pac_stim_rate": 0.67,
+        "high_pac_rest_rate": 0.336667,
+        "stim_pct": 66.666667,
+        "pac_gap": 0.000137,
+        "mean_pac_stim": 0.055731,
+        "mean_pac_rest": 0.055868,
+        "clinical_utility": 0.354683
+      },
+      {
+        "alignment": 0.533333,
+        "low_pac_stim_rate": 0.7,
+        "high_pac_rest_rate": 0.366667,
+        "stim_pct": 66.666667,
+        "pac_gap": 0.002666,
+        "mean_pac_stim": 0.055832,
+        "mean_pac_rest": 0.058498,
+        "clinical_utility": 0.427023
+      },
+      {
+        "alignment": 0.416667,
+        "low_pac_stim_rate": 0.583333,
+        "high_pac_rest_rate": 0.25,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.002689,
+        "mean_pac_stim": 0.058299,
+        "mean_pac_rest": 0.05561,
+        "clinical_utility": 0.308333
+      },
+      {
+        "alignment": 0.48,
+        "low_pac_stim_rate": 0.646667,
+        "high_pac_rest_rate": 0.313333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.000291,
+        "mean_pac_stim": 0.057404,
+        "mean_pac_rest": 0.057113,
+        "clinical_utility": 0.34
+      },
+      {
+        "alignment": 0.436667,
+        "low_pac_stim_rate": 0.603333,
+        "high_pac_rest_rate": 0.27,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.001956,
+        "mean_pac_stim": 0.058057,
+        "mean_pac_rest": 0.056102,
+        "clinical_utility": 0.318333
+      },
+      {
+        "alignment": 0.466667,
+        "low_pac_stim_rate": 0.633333,
+        "high_pac_rest_rate": 0.3,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.000893,
+        "mean_pac_stim": 0.057159,
+        "mean_pac_rest": 0.056266,
+        "clinical_utility": 0.333333
+      },
+      {
+        "alignment": 0.503333,
+        "low_pac_stim_rate": 0.67,
+        "high_pac_rest_rate": 0.336667,
+        "stim_pct": 66.666667,
+        "pac_gap": 0.000425,
+        "mean_pac_stim": 0.056347,
+        "mean_pac_rest": 0.056772,
+        "clinical_utility": 0.361227
+      },
+      {
+        "alignment": 0.473333,
+        "low_pac_stim_rate": 0.64,
+        "high_pac_rest_rate": 0.306667,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.000296,
+        "mean_pac_stim": 0.056199,
+        "mean_pac_rest": 0.055903,
+        "clinical_utility": 0.336667
+      },
+      {
+        "alignment": 0.536667,
+        "low_pac_stim_rate": 0.703333,
+        "high_pac_rest_rate": 0.37,
+        "stim_pct": 66.666667,
+        "pac_gap": 8.1e-05,
+        "mean_pac_stim": 0.05679,
+        "mean_pac_rest": 0.05687,
+        "clinical_utility": 0.370117
+      },
+      {
+        "alignment": 0.486667,
+        "low_pac_stim_rate": 0.653333,
+        "high_pac_rest_rate": 0.32,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.000698,
+        "mean_pac_stim": 0.056494,
+        "mean_pac_rest": 0.055795,
+        "clinical_utility": 0.343333
+      },
+      {
+        "alignment": 0.516667,
+        "low_pac_stim_rate": 0.683333,
+        "high_pac_rest_rate": 0.35,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.000369,
+        "mean_pac_stim": 0.056702,
+        "mean_pac_rest": 0.056333,
+        "clinical_utility": 0.358333
+      },
+      {
+        "alignment": 0.51,
+        "low_pac_stim_rate": 0.676667,
+        "high_pac_rest_rate": 0.343333,
+        "stim_pct": 66.666667,
+        "pac_gap": 0.00097,
+        "mean_pac_stim": 0.056046,
+        "mean_pac_rest": 0.057016,
+        "clinical_utility": 0.377053
+      },
+      {
+        "alignment": 0.456667,
+        "low_pac_stim_rate": 0.623333,
+        "high_pac_rest_rate": 0.29,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.00228,
+        "mean_pac_stim": 0.056586,
+        "mean_pac_rest": 0.054306,
+        "clinical_utility": 0.328333
+      },
+      {
+        "alignment": 0.5,
+        "low_pac_stim_rate": 0.666667,
+        "high_pac_rest_rate": 0.333333,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.00033,
+        "mean_pac_stim": 0.055984,
+        "mean_pac_rest": 0.055655,
+        "clinical_utility": 0.35
+      },
+      {
+        "alignment": 0.456667,
+        "low_pac_stim_rate": 0.623333,
+        "high_pac_rest_rate": 0.29,
+        "stim_pct": 66.666667,
+        "pac_gap": -0.0012,
+        "mean_pac_stim": 0.057502,
+        "mean_pac_rest": 0.056302,
+        "clinical_utility": 0.328333
+      }
+    ],
+    "Reactive Threshold": [
+      {
+        "alignment": 0.93,
+        "low_pac_stim_rate": 0.873333,
+        "high_pac_rest_rate": 0.986667,
+        "stim_pct": 44.333333,
+        "pac_gap": 0.011235,
+        "mean_pac_stim": 0.050288,
+        "mean_pac_rest": 0.061522,
+        "clinical_utility": 0.901862
+      },
+      {
+        "alignment": 0.908333,
+        "low_pac_stim_rate": 0.883333,
+        "high_pac_rest_rate": 0.933333,
+        "stim_pct": 47.5,
+        "pac_gap": 0.01243,
+        "mean_pac_stim": 0.05026,
+        "mean_pac_rest": 0.06269,
+        "clinical_utility": 0.864441
+      },
+      {
+        "alignment": 0.898333,
+        "low_pac_stim_rate": 0.853333,
+        "high_pac_rest_rate": 0.943333,
+        "stim_pct": 45.5,
+        "pac_gap": 0.011352,
+        "mean_pac_stim": 0.050361,
+        "mean_pac_rest": 0.061713,
+        "clinical_utility": 0.862714
+      },
+      {
+        "alignment": 0.931667,
+        "low_pac_stim_rate": 0.913333,
+        "high_pac_rest_rate": 0.95,
+        "stim_pct": 48.166667,
+        "pac_gap": 0.012182,
+        "mean_pac_stim": 0.050247,
+        "mean_pac_rest": 0.062428,
+        "clinical_utility": 0.887073
+      },
+      {
+        "alignment": 0.85,
+        "low_pac_stim_rate": 0.766667,
+        "high_pac_rest_rate": 0.933333,
+        "stim_pct": 41.666667,
+        "pac_gap": 0.010512,
+        "mean_pac_stim": 0.050295,
+        "mean_pac_rest": 0.060806,
+        "clinical_utility": 0.83494
+      },
+      {
+        "alignment": 0.911667,
+        "low_pac_stim_rate": 0.876667,
+        "high_pac_rest_rate": 0.946667,
+        "stim_pct": 46.5,
+        "pac_gap": 0.011859,
+        "mean_pac_stim": 0.050386,
+        "mean_pac_rest": 0.062246,
+        "clinical_utility": 0.874819
+      },
+      {
+        "alignment": 0.93,
+        "low_pac_stim_rate": 0.883333,
+        "high_pac_rest_rate": 0.976667,
+        "stim_pct": 45.333333,
+        "pac_gap": 0.011349,
+        "mean_pac_stim": 0.050306,
+        "mean_pac_rest": 0.061655,
+        "clinical_utility": 0.898631
+      },
+      {
+        "alignment": 0.933333,
+        "low_pac_stim_rate": 0.903333,
+        "high_pac_rest_rate": 0.963333,
+        "stim_pct": 47.0,
+        "pac_gap": 0.011161,
+        "mean_pac_stim": 0.050288,
+        "mean_pac_rest": 0.061449,
+        "clinical_utility": 0.887317
+      },
+      {
+        "alignment": 0.908333,
+        "low_pac_stim_rate": 0.863333,
+        "high_pac_rest_rate": 0.953333,
+        "stim_pct": 45.5,
+        "pac_gap": 0.011271,
+        "mean_pac_stim": 0.0503,
+        "mean_pac_rest": 0.061571,
+        "clinical_utility": 0.872607
+      },
+      {
+        "alignment": 0.926667,
+        "low_pac_stim_rate": 0.903333,
+        "high_pac_rest_rate": 0.95,
+        "stim_pct": 47.666667,
+        "pac_gap": 0.011538,
+        "mean_pac_stim": 0.050293,
+        "mean_pac_rest": 0.06183,
+        "clinical_utility": 0.889674
+      },
+      {
+        "alignment": 0.926667,
+        "low_pac_stim_rate": 0.88,
+        "high_pac_rest_rate": 0.973333,
+        "stim_pct": 45.333333,
+        "pac_gap": 0.012649,
+        "mean_pac_stim": 0.050411,
+        "mean_pac_rest": 0.06306,
+        "clinical_utility": 0.895009
+      },
+      {
+        "alignment": 0.928333,
+        "low_pac_stim_rate": 0.923333,
+        "high_pac_rest_rate": 0.933333,
+        "stim_pct": 49.5,
+        "pac_gap": 0.010383,
+        "mean_pac_stim": 0.050125,
+        "mean_pac_rest": 0.060507,
+        "clinical_utility": 0.877182
+      },
+      {
+        "alignment": 0.9,
+        "low_pac_stim_rate": 0.846667,
+        "high_pac_rest_rate": 0.953333,
+        "stim_pct": 44.666667,
+        "pac_gap": 0.012432,
+        "mean_pac_stim": 0.050449,
+        "mean_pac_rest": 0.062881,
+        "clinical_utility": 0.87822
+      },
+      {
+        "alignment": 0.936667,
+        "low_pac_stim_rate": 0.9,
+        "high_pac_rest_rate": 0.973333,
+        "stim_pct": 46.333333,
+        "pac_gap": 0.012916,
+        "mean_pac_stim": 0.050406,
+        "mean_pac_rest": 0.063322,
+        "clinical_utility": 0.904909
+      },
+      {
+        "alignment": 0.94,
+        "low_pac_stim_rate": 0.91,
+        "high_pac_rest_rate": 0.97,
+        "stim_pct": 47.0,
+        "pac_gap": 0.010562,
+        "mean_pac_stim": 0.050182,
+        "mean_pac_rest": 0.060744,
+        "clinical_utility": 0.901338
+      },
+      {
+        "alignment": 0.915,
+        "low_pac_stim_rate": 0.896667,
+        "high_pac_rest_rate": 0.933333,
+        "stim_pct": 48.166667,
+        "pac_gap": 0.011573,
+        "mean_pac_stim": 0.05021,
+        "mean_pac_rest": 0.061783,
+        "clinical_utility": 0.873735
+      },
+      {
+        "alignment": 0.93,
+        "low_pac_stim_rate": 0.9,
+        "high_pac_rest_rate": 0.96,
+        "stim_pct": 47.0,
+        "pac_gap": 0.010216,
+        "mean_pac_stim": 0.050075,
+        "mean_pac_rest": 0.060291,
+        "clinical_utility": 0.877955
+      },
+      {
+        "alignment": 0.94,
+        "low_pac_stim_rate": 0.913333,
+        "high_pac_rest_rate": 0.966667,
+        "stim_pct": 47.333333,
+        "pac_gap": 0.011282,
+        "mean_pac_stim": 0.050147,
+        "mean_pac_rest": 0.061429,
+        "clinical_utility": 0.896136
+      },
+      {
+        "alignment": 0.925,
+        "low_pac_stim_rate": 0.916667,
+        "high_pac_rest_rate": 0.933333,
+        "stim_pct": 49.166667,
+        "pac_gap": 0.011869,
+        "mean_pac_stim": 0.050343,
+        "mean_pac_rest": 0.062212,
+        "clinical_utility": 0.886708
+      },
+      {
+        "alignment": 0.921667,
+        "low_pac_stim_rate": 0.903333,
+        "high_pac_rest_rate": 0.94,
+        "stim_pct": 48.166667,
+        "pac_gap": 0.010306,
+        "mean_pac_stim": 0.050092,
+        "mean_pac_rest": 0.060399,
+        "clinical_utility": 0.868709
+      },
+      {
+        "alignment": 0.901667,
+        "low_pac_stim_rate": 0.89,
+        "high_pac_rest_rate": 0.913333,
+        "stim_pct": 48.833333,
+        "pac_gap": 0.010974,
+        "mean_pac_stim": 0.050167,
+        "mean_pac_rest": 0.061141,
+        "clinical_utility": 0.845543
+      },
+      {
+        "alignment": 0.905,
+        "low_pac_stim_rate": 0.85,
+        "high_pac_rest_rate": 0.96,
+        "stim_pct": 44.5,
+        "pac_gap": 0.01141,
+        "mean_pac_stim": 0.0504,
+        "mean_pac_rest": 0.06181,
+        "clinical_utility": 0.876692
+      },
+      {
+        "alignment": 0.893333,
+        "low_pac_stim_rate": 0.826667,
+        "high_pac_rest_rate": 0.96,
+        "stim_pct": 43.333333,
+        "pac_gap": 0.012331,
+        "mean_pac_stim": 0.050387,
+        "mean_pac_rest": 0.062718,
+        "clinical_utility": 0.879739
+      },
+      {
+        "alignment": 0.91,
+        "low_pac_stim_rate": 0.843333,
+        "high_pac_rest_rate": 0.976667,
+        "stim_pct": 43.333333,
+        "pac_gap": 0.012011,
+        "mean_pac_stim": 0.050491,
+        "mean_pac_rest": 0.062502,
+        "clinical_utility": 0.883222
+      },
+      {
+        "alignment": 0.92,
+        "low_pac_stim_rate": 0.886667,
+        "high_pac_rest_rate": 0.953333,
+        "stim_pct": 46.666667,
+        "pac_gap": 0.012598,
+        "mean_pac_stim": 0.05066,
+        "mean_pac_rest": 0.063258,
+        "clinical_utility": 0.907924
+      },
+      {
+        "alignment": 0.895,
+        "low_pac_stim_rate": 0.826667,
+        "high_pac_rest_rate": 0.963333,
+        "stim_pct": 43.166667,
+        "pac_gap": 0.011231,
+        "mean_pac_stim": 0.05048,
+        "mean_pac_rest": 0.061711,
+        "clinical_utility": 0.870512
+      },
+      {
+        "alignment": 0.943333,
+        "low_pac_stim_rate": 0.913333,
+        "high_pac_rest_rate": 0.973333,
+        "stim_pct": 47.0,
+        "pac_gap": 0.011865,
+        "mean_pac_stim": 0.050199,
+        "mean_pac_rest": 0.062065,
+        "clinical_utility": 0.897398
+      },
+      {
+        "alignment": 0.903333,
+        "low_pac_stim_rate": 0.86,
+        "high_pac_rest_rate": 0.946667,
+        "stim_pct": 45.666667,
+        "pac_gap": 0.010511,
+        "mean_pac_stim": 0.05037,
+        "mean_pac_rest": 0.060882,
+        "clinical_utility": 0.87424
+      },
+      {
+        "alignment": 0.916667,
+        "low_pac_stim_rate": 0.88,
+        "high_pac_rest_rate": 0.953333,
+        "stim_pct": 46.333333,
+        "pac_gap": 0.011945,
+        "mean_pac_stim": 0.050398,
+        "mean_pac_rest": 0.062343,
+        "clinical_utility": 0.88548
+      },
+      {
+        "alignment": 0.881667,
+        "low_pac_stim_rate": 0.823333,
+        "high_pac_rest_rate": 0.94,
+        "stim_pct": 44.166667,
+        "pac_gap": 0.010693,
+        "mean_pac_stim": 0.050273,
+        "mean_pac_rest": 0.060965,
+        "clinical_utility": 0.855087
+      },
+      {
+        "alignment": 0.926667,
+        "low_pac_stim_rate": 0.883333,
+        "high_pac_rest_rate": 0.97,
+        "stim_pct": 45.666667,
+        "pac_gap": 0.011469,
+        "mean_pac_stim": 0.050331,
+        "mean_pac_rest": 0.0618,
+        "clinical_utility": 0.893233
+      },
+      {
+        "alignment": 0.915,
+        "low_pac_stim_rate": 0.886667,
+        "high_pac_rest_rate": 0.943333,
+        "stim_pct": 47.166667,
+        "pac_gap": 0.011482,
+        "mean_pac_stim": 0.050301,
+        "mean_pac_rest": 0.061783,
+        "clinical_utility": 0.877211
+      },
+      {
+        "alignment": 0.92,
+        "low_pac_stim_rate": 0.896667,
+        "high_pac_rest_rate": 0.943333,
+        "stim_pct": 47.666667,
+        "pac_gap": 0.010552,
+        "mean_pac_stim": 0.050283,
+        "mean_pac_rest": 0.060835,
+        "clinical_utility": 0.868051
+      },
+      {
+        "alignment": 0.896667,
+        "low_pac_stim_rate": 0.843333,
+        "high_pac_rest_rate": 0.95,
+        "stim_pct": 44.666667,
+        "pac_gap": 0.010176,
+        "mean_pac_stim": 0.050247,
+        "mean_pac_rest": 0.060423,
+        "clinical_utility": 0.86272
+      },
+      {
+        "alignment": 0.916667,
+        "low_pac_stim_rate": 0.86,
+        "high_pac_rest_rate": 0.973333,
+        "stim_pct": 44.333333,
+        "pac_gap": 0.012,
+        "mean_pac_stim": 0.050399,
+        "mean_pac_rest": 0.0624,
+        "clinical_utility": 0.891267
+      }
+    ],
+    "TCN Predictive": [
+      {
+        "alignment": 0.75,
+        "low_pac_stim_rate": 0.78,
+        "high_pac_rest_rate": 0.72,
+        "stim_pct": 53.0,
+        "pac_gap": 0.008345,
+        "mean_pac_stim": 0.052616,
+        "mean_pac_rest": 0.060961,
+        "clinical_utility": 0.71636
+      },
+      {
+        "alignment": 0.706667,
+        "low_pac_stim_rate": 0.843333,
+        "high_pac_rest_rate": 0.57,
+        "stim_pct": 63.666667,
+        "pac_gap": 0.010323,
+        "mean_pac_stim": 0.053043,
+        "mean_pac_rest": 0.063366,
+        "clinical_utility": 0.671789
+      },
+      {
+        "alignment": 0.736667,
+        "low_pac_stim_rate": 0.813333,
+        "high_pac_rest_rate": 0.66,
+        "stim_pct": 57.666667,
+        "pac_gap": 0.008649,
+        "mean_pac_stim": 0.052892,
+        "mean_pac_rest": 0.061542,
+        "clinical_utility": 0.685637
+      },
+      {
+        "alignment": 0.728333,
+        "low_pac_stim_rate": 0.82,
+        "high_pac_rest_rate": 0.636667,
+        "stim_pct": 59.166667,
+        "pac_gap": 0.009479,
+        "mean_pac_stim": 0.052703,
+        "mean_pac_rest": 0.062183,
+        "clinical_utility": 0.69336
+      },
+      {
+        "alignment": 0.716667,
+        "low_pac_stim_rate": 0.816667,
+        "high_pac_rest_rate": 0.616667,
+        "stim_pct": 60.0,
+        "pac_gap": 0.008382,
+        "mean_pac_stim": 0.053063,
+        "mean_pac_rest": 0.061446,
+        "clinical_utility": 0.665875
+      },
+      {
+        "alignment": 0.746667,
+        "low_pac_stim_rate": 0.816667,
+        "high_pac_rest_rate": 0.676667,
+        "stim_pct": 57.0,
+        "pac_gap": 0.008419,
+        "mean_pac_stim": 0.053118,
+        "mean_pac_rest": 0.061537,
+        "clinical_utility": 0.685629
+      },
+      {
+        "alignment": 0.713333,
+        "low_pac_stim_rate": 0.796667,
+        "high_pac_rest_rate": 0.63,
+        "stim_pct": 58.333333,
+        "pac_gap": 0.00811,
+        "mean_pac_stim": 0.053159,
+        "mean_pac_rest": 0.061269,
+        "clinical_utility": 0.673451
+      },
+      {
+        "alignment": 0.72,
+        "low_pac_stim_rate": 0.81,
+        "high_pac_rest_rate": 0.63,
+        "stim_pct": 59.0,
+        "pac_gap": 0.008234,
+        "mean_pac_stim": 0.052827,
+        "mean_pac_rest": 0.061061,
+        "clinical_utility": 0.675952
+      },
+      {
+        "alignment": 0.726667,
+        "low_pac_stim_rate": 0.8,
+        "high_pac_rest_rate": 0.653333,
+        "stim_pct": 57.333333,
+        "pac_gap": 0.008756,
+        "mean_pac_stim": 0.052719,
+        "mean_pac_rest": 0.061476,
+        "clinical_utility": 0.688739
+      },
+      {
+        "alignment": 0.706667,
+        "low_pac_stim_rate": 0.806667,
+        "high_pac_rest_rate": 0.606667,
+        "stim_pct": 60.0,
+        "pac_gap": 0.008567,
+        "mean_pac_stim": 0.052912,
+        "mean_pac_rest": 0.061479,
+        "clinical_utility": 0.673076
+      },
+      {
+        "alignment": 0.75,
+        "low_pac_stim_rate": 0.86,
+        "high_pac_rest_rate": 0.64,
+        "stim_pct": 61.0,
+        "pac_gap": 0.01051,
+        "mean_pac_stim": 0.053235,
+        "mean_pac_rest": 0.063745,
+        "clinical_utility": 0.714001
+      },
+      {
+        "alignment": 0.745,
+        "low_pac_stim_rate": 0.86,
+        "high_pac_rest_rate": 0.63,
+        "stim_pct": 61.5,
+        "pac_gap": 0.008072,
+        "mean_pac_stim": 0.052259,
+        "mean_pac_rest": 0.060331,
+        "clinical_utility": 0.691149
+      },
+      {
+        "alignment": 0.743333,
+        "low_pac_stim_rate": 0.796667,
+        "high_pac_rest_rate": 0.69,
+        "stim_pct": 55.333333,
+        "pac_gap": 0.008974,
+        "mean_pac_stim": 0.053346,
+        "mean_pac_rest": 0.06232,
+        "clinical_utility": 0.694196
+      },
+      {
+        "alignment": 0.728333,
+        "low_pac_stim_rate": 0.83,
+        "high_pac_rest_rate": 0.626667,
+        "stim_pct": 60.166667,
+        "pac_gap": 0.009269,
+        "mean_pac_stim": 0.053646,
+        "mean_pac_rest": 0.062915,
+        "clinical_utility": 0.681176
+      },
+      {
+        "alignment": 0.755,
+        "low_pac_stim_rate": 0.84,
+        "high_pac_rest_rate": 0.67,
+        "stim_pct": 58.5,
+        "pac_gap": 0.008112,
+        "mean_pac_stim": 0.052451,
+        "mean_pac_rest": 0.060563,
+        "clinical_utility": 0.710131
+      },
+      {
+        "alignment": 0.698333,
+        "low_pac_stim_rate": 0.833333,
+        "high_pac_rest_rate": 0.563333,
+        "stim_pct": 63.5,
+        "pac_gap": 0.008973,
+        "mean_pac_stim": 0.052938,
+        "mean_pac_rest": 0.06191,
+        "clinical_utility": 0.660814
+      },
+      {
+        "alignment": 0.74,
+        "low_pac_stim_rate": 0.843333,
+        "high_pac_rest_rate": 0.636667,
+        "stim_pct": 60.333333,
+        "pac_gap": 0.008424,
+        "mean_pac_stim": 0.052145,
+        "mean_pac_rest": 0.060569,
+        "clinical_utility": 0.698293
+      },
+      {
+        "alignment": 0.708333,
+        "low_pac_stim_rate": 0.823333,
+        "high_pac_rest_rate": 0.593333,
+        "stim_pct": 61.5,
+        "pac_gap": 0.007997,
+        "mean_pac_stim": 0.053027,
+        "mean_pac_rest": 0.061025,
+        "clinical_utility": 0.659452
+      },
+      {
+        "alignment": 0.728333,
+        "low_pac_stim_rate": 0.863333,
+        "high_pac_rest_rate": 0.593333,
+        "stim_pct": 63.5,
+        "pac_gap": 0.009101,
+        "mean_pac_stim": 0.053069,
+        "mean_pac_rest": 0.062171,
+        "clinical_utility": 0.68146
+      },
+      {
+        "alignment": 0.728333,
+        "low_pac_stim_rate": 0.863333,
+        "high_pac_rest_rate": 0.593333,
+        "stim_pct": 63.5,
+        "pac_gap": 0.009043,
+        "mean_pac_stim": 0.05213,
+        "mean_pac_rest": 0.061173,
+        "clinical_utility": 0.694979
+      },
+      {
+        "alignment": 0.673333,
+        "low_pac_stim_rate": 0.8,
+        "high_pac_rest_rate": 0.546667,
+        "stim_pct": 62.666667,
+        "pac_gap": 0.008264,
+        "mean_pac_stim": 0.052691,
+        "mean_pac_rest": 0.060955,
+        "clinical_utility": 0.63043
+      },
+      {
+        "alignment": 0.718333,
+        "low_pac_stim_rate": 0.806667,
+        "high_pac_rest_rate": 0.63,
+        "stim_pct": 58.833333,
+        "pac_gap": 0.007644,
+        "mean_pac_stim": 0.053606,
+        "mean_pac_rest": 0.06125,
+        "clinical_utility": 0.654874
+      },
+      {
+        "alignment": 0.745,
+        "low_pac_stim_rate": 0.82,
+        "high_pac_rest_rate": 0.67,
+        "stim_pct": 57.5,
+        "pac_gap": 0.009754,
+        "mean_pac_stim": 0.053247,
+        "mean_pac_rest": 0.063001,
+        "clinical_utility": 0.707798
+      },
+      {
+        "alignment": 0.711667,
+        "low_pac_stim_rate": 0.81,
+        "high_pac_rest_rate": 0.613333,
+        "stim_pct": 59.833333,
+        "pac_gap": 0.009215,
+        "mean_pac_stim": 0.053604,
+        "mean_pac_rest": 0.062819,
+        "clinical_utility": 0.674218
+      },
+      {
+        "alignment": 0.685,
+        "low_pac_stim_rate": 0.753333,
+        "high_pac_rest_rate": 0.616667,
+        "stim_pct": 56.833333,
+        "pac_gap": 0.006255,
+        "mean_pac_stim": 0.054683,
+        "mean_pac_rest": 0.060939,
+        "clinical_utility": 0.614825
+      },
+      {
+        "alignment": 0.723333,
+        "low_pac_stim_rate": 0.8,
+        "high_pac_rest_rate": 0.646667,
+        "stim_pct": 57.666667,
+        "pac_gap": 0.009006,
+        "mean_pac_stim": 0.053059,
+        "mean_pac_rest": 0.062065,
+        "clinical_utility": 0.690258
+      },
+      {
+        "alignment": 0.695,
+        "low_pac_stim_rate": 0.786667,
+        "high_pac_rest_rate": 0.603333,
+        "stim_pct": 59.166667,
+        "pac_gap": 0.008236,
+        "mean_pac_stim": 0.053148,
+        "mean_pac_rest": 0.061384,
+        "clinical_utility": 0.654763
+      },
+      {
+        "alignment": 0.743333,
+        "low_pac_stim_rate": 0.84,
+        "high_pac_rest_rate": 0.646667,
+        "stim_pct": 59.666667,
+        "pac_gap": 0.008383,
+        "mean_pac_stim": 0.052713,
+        "mean_pac_rest": 0.061096,
+        "clinical_utility": 0.699317
+      },
+      {
+        "alignment": 0.73,
+        "low_pac_stim_rate": 0.82,
+        "high_pac_rest_rate": 0.64,
+        "stim_pct": 59.0,
+        "pac_gap": 0.00872,
+        "mean_pac_stim": 0.053257,
+        "mean_pac_rest": 0.061978,
+        "clinical_utility": 0.681607
+      },
+      {
+        "alignment": 0.731667,
+        "low_pac_stim_rate": 0.846667,
+        "high_pac_rest_rate": 0.616667,
+        "stim_pct": 61.5,
+        "pac_gap": 0.009269,
+        "mean_pac_stim": 0.052699,
+        "mean_pac_rest": 0.061969,
+        "clinical_utility": 0.694472
+      },
+      {
+        "alignment": 0.713333,
+        "low_pac_stim_rate": 0.816667,
+        "high_pac_rest_rate": 0.61,
+        "stim_pct": 60.333333,
+        "pac_gap": 0.00808,
+        "mean_pac_stim": 0.053371,
+        "mean_pac_rest": 0.061451,
+        "clinical_utility": 0.663094
+      },
+      {
+        "alignment": 0.72,
+        "low_pac_stim_rate": 0.81,
+        "high_pac_rest_rate": 0.63,
+        "stim_pct": 59.0,
+        "pac_gap": 0.00927,
+        "mean_pac_stim": 0.052581,
+        "mean_pac_rest": 0.061852,
+        "clinical_utility": 0.693577
+      },
+      {
+        "alignment": 0.685,
+        "low_pac_stim_rate": 0.8,
+        "high_pac_rest_rate": 0.57,
+        "stim_pct": 61.5,
+        "pac_gap": 0.007589,
+        "mean_pac_stim": 0.052889,
+        "mean_pac_rest": 0.060478,
+        "clinical_utility": 0.63844
+      },
+      {
+        "alignment": 0.705,
+        "low_pac_stim_rate": 0.776667,
+        "high_pac_rest_rate": 0.633333,
+        "stim_pct": 57.166667,
+        "pac_gap": 0.006996,
+        "mean_pac_stim": 0.052884,
+        "mean_pac_rest": 0.05988,
+        "clinical_utility": 0.651426
+      },
+      {
+        "alignment": 0.721667,
+        "low_pac_stim_rate": 0.836667,
+        "high_pac_rest_rate": 0.606667,
+        "stim_pct": 61.5,
+        "pac_gap": 0.009411,
+        "mean_pac_stim": 0.053449,
+        "mean_pac_rest": 0.06286,
+        "clinical_utility": 0.685016
+      }
+    ],
+    "Alignment Oracle": [
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.01264,
+        "mean_pac_stim": 0.05022,
+        "mean_pac_rest": 0.062859,
+        "clinical_utility": 0.953601
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013816,
+        "mean_pac_stim": 0.049878,
+        "mean_pac_rest": 0.063694,
+        "clinical_utility": 0.929276
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013081,
+        "mean_pac_stim": 0.050011,
+        "mean_pac_rest": 0.063092,
+        "clinical_utility": 0.937262
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013433,
+        "mean_pac_stim": 0.049886,
+        "mean_pac_rest": 0.063319,
+        "clinical_utility": 0.941413
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013014,
+        "mean_pac_stim": 0.049923,
+        "mean_pac_rest": 0.062937,
+        "clinical_utility": 0.940025
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013387,
+        "mean_pac_stim": 0.050047,
+        "mean_pac_rest": 0.063433,
+        "clinical_utility": 0.941633
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.012623,
+        "mean_pac_stim": 0.050216,
+        "mean_pac_rest": 0.062839,
+        "clinical_utility": 0.948478
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.012399,
+        "mean_pac_stim": 0.050011,
+        "mean_pac_rest": 0.06241,
+        "clinical_utility": 0.940082
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.012884,
+        "mean_pac_stim": 0.050004,
+        "mean_pac_rest": 0.062888,
+        "clinical_utility": 0.939681
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.012742,
+        "mean_pac_stim": 0.049962,
+        "mean_pac_rest": 0.062704,
+        "clinical_utility": 0.94774
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014228,
+        "mean_pac_stim": 0.050232,
+        "mean_pac_rest": 0.06446,
+        "clinical_utility": 0.949339
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.011073,
+        "mean_pac_stim": 0.049847,
+        "mean_pac_rest": 0.06092,
+        "clinical_utility": 0.928016
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014419,
+        "mean_pac_stim": 0.050113,
+        "mean_pac_rest": 0.064533,
+        "clinical_utility": 0.953275
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014177,
+        "mean_pac_stim": 0.050254,
+        "mean_pac_rest": 0.064431,
+        "clinical_utility": 0.951779
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.011758,
+        "mean_pac_stim": 0.049925,
+        "mean_pac_rest": 0.061684,
+        "clinical_utility": 0.950984
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.012678,
+        "mean_pac_stim": 0.049874,
+        "mean_pac_rest": 0.062552,
+        "clinical_utility": 0.935497
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.011328,
+        "mean_pac_stim": 0.049844,
+        "mean_pac_rest": 0.061172,
+        "clinical_utility": 0.930277
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.012339,
+        "mean_pac_stim": 0.049912,
+        "mean_pac_rest": 0.062251,
+        "clinical_utility": 0.942754
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.012856,
+        "mean_pac_stim": 0.049965,
+        "mean_pac_rest": 0.062821,
+        "clinical_utility": 0.943678
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.011167,
+        "mean_pac_stim": 0.049845,
+        "mean_pac_rest": 0.061013,
+        "clinical_utility": 0.922722
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.011873,
+        "mean_pac_stim": 0.04984,
+        "mean_pac_rest": 0.061713,
+        "clinical_utility": 0.910801
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013145,
+        "mean_pac_stim": 0.050149,
+        "mean_pac_rest": 0.063293,
+        "clinical_utility": 0.947615
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014585,
+        "mean_pac_stim": 0.05011,
+        "mean_pac_rest": 0.064695,
+        "clinical_utility": 0.959407
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.014003,
+        "mean_pac_stim": 0.050306,
+        "mean_pac_rest": 0.064309,
+        "clinical_utility": 0.95045
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.0139,
+        "mean_pac_stim": 0.050456,
+        "mean_pac_rest": 0.064355,
+        "clinical_utility": 0.965729
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013266,
+        "mean_pac_stim": 0.050229,
+        "mean_pac_rest": 0.063494,
+        "clinical_utility": 0.94691
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013042,
+        "mean_pac_stim": 0.049968,
+        "mean_pac_rest": 0.06301,
+        "clinical_utility": 0.94351
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.012065,
+        "mean_pac_stim": 0.050068,
+        "mean_pac_rest": 0.062132,
+        "clinical_utility": 0.946836
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013285,
+        "mean_pac_stim": 0.050174,
+        "mean_pac_rest": 0.063459,
+        "clinical_utility": 0.94423
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.012681,
+        "mean_pac_stim": 0.04992,
+        "mean_pac_rest": 0.062601,
+        "clinical_utility": 0.94095
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.012867,
+        "mean_pac_stim": 0.050145,
+        "mean_pac_rest": 0.063012,
+        "clinical_utility": 0.94824
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.012797,
+        "mean_pac_stim": 0.049971,
+        "mean_pac_rest": 0.062767,
+        "clinical_utility": 0.940898
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.011791,
+        "mean_pac_stim": 0.04993,
+        "mean_pac_rest": 0.061721,
+        "clinical_utility": 0.928985
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.011888,
+        "mean_pac_stim": 0.04993,
+        "mean_pac_rest": 0.061819,
+        "clinical_utility": 0.939107
+      },
+      {
+        "alignment": 1.0,
+        "low_pac_stim_rate": 1.0,
+        "high_pac_rest_rate": 1.0,
+        "stim_pct": 50.0,
+        "pac_gap": 0.013673,
+        "mean_pac_stim": 0.050265,
+        "mean_pac_rest": 0.063938,
+        "clinical_utility": 0.952265
+      }
+    ]
+  }
+}

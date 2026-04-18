@@ -1,0 +1,53 @@
+{
+  "model": "ImprovedTCN",
+  "improvements": [
+    "enhanced_features",
+    "multi_task_smoothing",
+    "self_attention"
+  ],
+  "n_params": 68484,
+  "n_features": 69,
+  "best_epoch": 32,
+  "best_val_r2": 0.6032206416130066,
+  "test_future_metrics": {
+    "r2": 0.16655385494232178,
+    "corr": 0.4384328358118674,
+    "mae": 1.131646513385931e-05,
+    "rmse": 3.7371857615653425e-05
+  },
+  "test_delta_metrics": {
+    "r2": 0.0618366003036499,
+    "corr": 0.33763872714432885,
+    "mae": 9.1833444457734e-06,
+    "rmse": 3.717238359968178e-05
+  },
+  "baseline_tcn_r2": 0.1124383807182312,
+  "delta_r2": 0.054115474224090576,
+  "train_seconds": 112.76025080680847,
+  "config": {
+    "lookback": 20,
+    "horizon": 5,
+    "target_smooth_window": 1,
+    "smooth_window": 5,
+    "hidden": 64,
+    "kernel_size": 3,
+    "dilations": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "dropout": 0.2,
+    "pool_type": "attention",
+    "n_attn_heads": 4,
+    "attn_layers": 1,
+    "use_self_attention": true,
+    "batch_size": 128,
+    "lr": 0.001,
+    "weight_decay": 0.001,
+    "lambda_smooth": 0.3,
+    "lambda_delta": 0.3,
+    "lambda_consistency": 0.1,
+    "seed": 42
+  }
+}

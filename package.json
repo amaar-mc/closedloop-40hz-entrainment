@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/amaar-mc/closedloop-40hz-entrainment#readme",
   "dependencies": {
-    "docx": "^9.6.0"
+    "docx": "^9.6.0",
+    "playwright": "^1.58.2",
+    "pptxgenjs": "^4.0.1",
+    "sharp": "^0.34.5"
   }
 }
