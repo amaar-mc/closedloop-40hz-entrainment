@@ -8,7 +8,19 @@
 
 ## Motivation
 
-The project claims that dropping 61 spectral features and using only 12 PAC+Stim features raised validation R-squared from -0.025 to 0.606. This audit verifies the claim is not an artifact of data leakage, circular features, or normalization contamination.
+The project reports a matched single-seed held-out test change from `R^2 = -0.025` with 73 features
+to `R^2 = 0.558` with 12 PAC+Stim features, plus a separate five-seed mean of `R^2 = 0.606` for the
+selected 12-feature representation. This audit verifies that the stored-series result is not an
+artifact of split overlap or normalization contamination.
+
+## Follow-Up Clarification: Online Availability
+
+**Added 2026-05-31.** The checks below establish split disjointness, stored-series future indexing,
+and train-only normalization. They do not establish that the PAC inputs are available from a live
+stream. PAC is computed over each complete event period and assigned back to its constituent
+two-second windows. For early windows, the assigned value summarizes samples acquired later in the
+same period. Submission prose must therefore describe the result as retrospective stored-series
+forecasting until an online PAC estimator is evaluated.
 
 ## 1. Pre-Existing Validation Gate
 
@@ -136,7 +148,8 @@ The gap between real and shuffled is 0.738 R-squared units. Shuffled models conv
 | No single PAC feature has leaky correlation | PASS |
 | Permutation test (shuffled R-squared near zero) | PASS |
 
-**Verdict: NO DATA LEAKAGE DETECTED.**
+**Verdict: NO SPLIT OR NORMALIZATION LEAKAGE DETECTED. ONLINE FEATURE AVAILABILITY IS NOT
+ESTABLISHED.**
 
 The R-squared improvement from spectral-only to PAC+Stim features is genuine. The PAC history and stimulation context features provide the model with exploitable temporal structure (autocorrelation, epoch transitions, stimulation protocol phase) that spectral features alone do not capture at the 5-second prediction horizon.
 
@@ -147,6 +160,10 @@ The R-squared improvement from spectral-only to PAC+Stim features is genuine. Th
 2. **Permutation test trains for 20 epochs only.** The real model trains for 80 epochs with early stopping. The 20-epoch permutation result (R-squared = 0.734) is directionally correct but may not reach the same R-squared as the full training run reported elsewhere.
 
 3. **No independent replication of the dataset build.** This audit verifies the stored dataset is internally consistent. It does not re-derive the dataset from raw BIDS data to confirm end-to-end reproducibility. That would require running `build_multiscale_dataset.py` from scratch.
+
+4. **Online PAC availability is not established.** Complete-event PAC values are assigned back to
+   constituent windows. Future-index ordering in the stored PAC series is not equivalent to
+   prospective streaming availability.
 
 ## Artifacts
 

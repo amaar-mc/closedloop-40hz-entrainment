@@ -3,7 +3,7 @@ Data leakage audit for the multiscale temporal PAC forecasting pipeline.
 
 Checks:
 1. Zero subject overlap between train/val/test splits.
-2. Target PAC at horizon=5 is strictly in the future relative to sequence end.
+2. Target PAC at horizon=5 is later in the stored series relative to sequence end.
 3. Z-score scalers were fit on training data only.
 4. pac_current at the last timestep does NOT equal the target (circular leakage check).
 5. Persistence baseline R² matches expected ~0.10 (not near 1.0).
@@ -66,9 +66,9 @@ def check_subject_overlap(splits: dict) -> bool:
 
 
 def check_temporal_causality(splits: dict) -> bool:
-    """Verify target_idx > end_idx for every sample (target is in the future)."""
+    """Verify target_idx > end_idx for every stored-series sample."""
     print("=" * 70)
-    print("CHECK 2: Temporal Causality (target_idx > end_idx)")
+    print("CHECK 2: Stored-Series Future Indexing (target_idx > end_idx)")
     print("=" * 70)
 
     all_pass = True
@@ -99,7 +99,7 @@ def check_temporal_causality(splits: dict) -> bool:
             print(f"  {name}: all gaps == {expected_horizon} (matches metadata horizon)")
 
     tag = "[PASS]" if all_pass else "[FAIL]"
-    print(f"  {tag} Temporal causality check\n")
+    print(f"  {tag} Stored-series future-index check\n")
     return all_pass
 
 
@@ -330,7 +330,8 @@ def main() -> None:
             all_pass = False
 
     if all_pass:
-        print("\n  ALL CHECKS PASSED — No data leakage detected.")
+        print("\n  ALL STORED-SERIES CHECKS PASSED — No split or normalization leakage detected.")
+        print("  NOTE: This does not establish online availability of complete-event PAC inputs.")
     else:
         print("\n  LEAKAGE DETECTED — See failures above.")
 
