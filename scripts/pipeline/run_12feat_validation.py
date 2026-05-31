@@ -10,7 +10,7 @@ Reproduces the headline controller comparison with the improved model:
   - Prints comparison vs original 73-feature results
 
 Usage:
-    python run_12feat_validation.py [--no-train]  # --no-train to skip training if ckpt exists
+    python scripts/pipeline/run_12feat_validation.py [--no-train]  # --no-train to skip training if ckpt exists
 """
 
 from __future__ import annotations
@@ -30,7 +30,7 @@ import torch.nn as nn
 from scipy import stats
 from torch.utils.data import DataLoader, Dataset
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from temporal_multiscale.multiscale_tcn import ModelConfig, MultiscaleCausalTCN
@@ -44,7 +44,7 @@ DATASET_DIR = ROOT / "data/processed/multiscale_temporal_lb20_hz5_ts1"
 PROCESSED_DIR = ROOT / "data/processed"
 RAW_ROOT = ROOT / "data/raw/ds005048"
 CKPT_PATH = ROOT / "models/best_12feat_tcn_lb20_hz5_ts1.pth"
-RESULT_PATH = ROOT / "results/controller_comparison_12feat.json"
+RESULT_PATH = ROOT / "results/metrics/controller_comparison_12feat.json"
 
 # -----------------------------------------------------------------------
 # Training

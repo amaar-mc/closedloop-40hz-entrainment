@@ -20,7 +20,7 @@ Evaluation framework:
   - Clinical utility composite (weighted metric for therapeutic planning)
 
 Usage:
-    python run_tcn_validation.py
+    python scripts/pipeline/run_tcn_validation.py
 """
 
 from __future__ import annotations
@@ -37,7 +37,7 @@ import pandas as pd
 import torch
 from scipy import stats
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "archive" / "experimental_models"))
@@ -981,7 +981,7 @@ def main():
         "comparisons": comparisons,
         "per_subject": {name: trials for name, trials in all_results.items()},
     }
-    out_path = Path("results/tcn_validation_results.json")
+    out_path = Path("results/metrics/tcn_validation_results.json")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(output, indent=2, default=str))
 
