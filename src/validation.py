@@ -19,7 +19,7 @@ Metrics:
 - Statistical significance: ANOVA, Tukey HSD, Cohen's d
 
 Typical usage:
-    validator = SimulationValidator(output_dir='results')
+    validator = SimulationValidator(output_dir='results/figures')
     validator.add_method(FixedScheduleControl())
     validator.add_method(ReactiveThresholdControl())
     validator.add_method(PredictiveLookAheadControl())      # trend fallback
@@ -454,7 +454,7 @@ class SimulationValidator:
         5. Generate comparison plots
     """
 
-    def __init__(self, output_dir: str = 'results'):
+    def __init__(self, output_dir: str = 'results/figures'):
         """
         Initialize validator.
 
@@ -798,7 +798,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="Validate closed-loop control strategies"
     )
-    parser.add_argument('--output_dir', type=str, default='results',
+    parser.add_argument('--output_dir', type=str, default='results/figures',
                        help='Output directory for results')
     parser.add_argument('--duration', type=int, default=360,
                        help='Simulation duration in seconds')
