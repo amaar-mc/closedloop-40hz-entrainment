@@ -1,34 +1,35 @@
 ---
 status: drafting
-target_conference: TBD
-submission_deadline: TBD
-last_updated: 2026-04-18
+target_conference: MIT URTC 2026 paper presentation
+submission_deadline: TBD - official Fall 2026 cycle not yet posted
+last_updated: 2026-05-31
 ---
 
 # Research Paper — Status
 
 ## Paper
 
-**Title (working):** Personalized Deep Learning for Closed-Loop 40 Hz Gamma Entrainment: Feature Ablation Reveals Generalizable Temporal Prediction of Phase-Amplitude Coupling
+**Title (working):** Feature-Selected Temporal Forecasting for Retrospective Closed-Loop 40 Hz Auditory Entrainment
 
-**One-line:** A causal TCN using 12 PAC+stimulation context features (not spectral anatomy) predicts future entrainment 5-10 seconds ahead, enabling closed-loop adaptive scheduling that outperforms fixed and reactive protocols on real patient EEG.
+**One-line:** A causal TCN using 12 PAC-trajectory and stimulation-context features predicts future coupling on held-out participants; retrospective replay reveals a controller targeting-specificity tradeoff that must be calibrated before live testing.
 
 ## Target Conference
 
-See `conferences/targets.md`
+Selected planning target: MIT URTC 2026 paper presentation.
+
+See `conferences/targets.md` and `conferences/mit_urtc_2026/README.md`.
 
 ## Progress
 
 | Section | Draft | Reviewed | Final |
 |---|---|---|---|
-| Abstract | — | — | — |
-| Introduction | — | — | — |
-| Related Work | — | — | — |
-| Methods | — | — | — |
-| Architecture Search | — | — | — |
-| Results | — | — | — |
-| Discussion | — | — | — |
-| Conclusion | — | — | — |
+| Abstract | draft | — | — |
+| Introduction | draft | — | — |
+| Related Work | draft | — | — |
+| Methods | draft | — | — |
+| Results | draft | — | — |
+| Discussion | draft | — | — |
+| Conclusion | draft | — | — |
 
 ## Figures
 
@@ -43,14 +44,14 @@ See `conferences/targets.md`
 | Feature ablation table | — | needs standalone figure |
 | Threshold sensitivity | exists | `results/figures/threshold_sensitivity.pdf` |
 
-## Key Numbers (from ground truth)
+## Key Numbers (claim-generation aware)
 
 - EEGNet: 1,457 params, test R² = 0.287 (ceiling — not model capacity limit)
-- 12-feat TCN: 5,154 params, test R² = 0.606 ± 0.032 (5-seed mean)
-- 73-feat TCN: test R² = −0.025 (spectral features cause generalization failure)
-- Horizon 3-10s: TCN R² = 0.577–0.669 vs persistence collapse to negative
-- Alignment: 72.1% TCN vs 64.5% reactive (g=1.31, p<0.001)
-- Low-PAC targeting: 82.6% vs 51.7% (g=4.47, p<0.001)
-- PAC gap: 91% of oracle bound
-- 35/35 subjects benefit (binomial p<0.001)
-- Fatigue: +9.0% to +11.2%, all p<0.001 across 5 severity levels
+- Feature-ablation TCN: 73 features R² = −0.025; 12 PAC+Stim features R² = 0.558
+- Five-seed 12-feature forecasting experiment: mean R² = 0.606, range 0.558–0.647
+- Current integrated 12-feature replay checkpoint: 27,139 params, test R² = 0.5844
+- Current replay: 73.8% low-PAC targeting vs 51.7% reactive
+- Current replay: 62.2% balanced alignment vs 64.5% reactive
+
+The older 73-feature replay headline (72.1% alignment, 82.6% low-PAC targeting) is historical and
+must not be attributed to the current 12-feature checkpoint.

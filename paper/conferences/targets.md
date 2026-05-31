@@ -33,18 +33,21 @@ Appropriate venues span ML conferences (workshop tracks), biomedical engineering
 
 ## Selected target
 
-**TBD** — fill in once you pick.
+**MIT URTC 2026 paper presentation** — planning baseline created 2026-05-31.
+
+The official site currently publishes the 2025 paper guideline and 2025 dates. Track the Fall 2026
+cycle in [`mit_urtc_2026/`](mit_urtc_2026/) and refresh those rules when MIT posts them.
 
 ```
-Conference: 
-Submission deadline: 
-Notification date:  
-Camera-ready date:  
-Page limit:         
-Format:             (IEEE two-column / ACM / NeurIPS style)
-Template:           
-Blind review:       (single / double)
-Supplementary:      (allowed / not allowed)
+Conference:          MIT Undergraduate Research Technology Conference
+Submission deadline: TBD - official Fall 2026 date not posted
+Notification date:   TBD - official Fall 2026 date not posted
+Camera-ready date:   TBD - official Fall 2026 date not posted
+Page limit:          5 single-spaced pages in latest official guideline
+Format:              Confirm against 2026 guideline when posted
+Template:            Confirm against 2026 guideline when posted
+Blind review:        Confirm against 2026 guideline when posted
+Supplementary:       Confirm against 2026 guideline when posted
 ```
 
 ---
