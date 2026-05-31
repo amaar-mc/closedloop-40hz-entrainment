@@ -50,10 +50,6 @@ closedloop-40hz-entrainment/
 |   |-- realtime_inference.py        Streaming inference module
 |   +-- [analysis, audits, per-subject adaptation, fatigue, transitions]
 |
-|-- temporal/                      Earlier temporal models (v1, superseded)
-|   |-- validate_code.py             Pre-training leakage validation (still used)
-|   +-- [superseded: LSTM model, training scripts, dataset builders]
-|
 |-- scripts/                       Runnable scripts (moved from root)
 |   |-- pipeline/                    End-to-end pipeline orchestrators
 |   |   |-- run_full_pipeline.py       Preprocess → train → validate
@@ -66,30 +62,30 @@ closedloop-40hz-entrainment/
 |   |   |-- generate_figures.py        Controller comparison, PAC targeting, etc.
 |   |   |-- generate_timeline_figure.py  TCN vs reactive decision timeline
 |   |   +-- generate_controller_comparison.py  Bar chart comparison
+|   |-- audit/                       Leakage and pipeline integrity checks
+|   |-- tools/                       Supporting PDF, QR, and figure utilities
 |   +-- notebook/                    Research notebook generator (Node.js/docx)
 |
-|-- docs/                          Documentation (organized by category)
+|-- docs/                          Current documentation and historical research notes
 |   |-- INDEX.md                     Documentation navigation
-|   |-- abstract/                    Synopsys abstract (latest + archive of drafts)
-|   |-- poster/                      Poster board (V5 latest + V1-V4 archive)
-|   |-- notebook/                    Lab notebooks (formal + digital + DOCX)
 |   |-- methodology/                 CURRENT_METHODOLOGY.md, CODE_MAP.md
-|   |-- reference/                   Fair guide, judge prep, mentor feedback
-|   |-- submission/                  Championship reports and code audit
 |   |-- audits/                      Pipeline integrity audit reports
-|   |-- reports/                     Historical technical analysis reports
-|   |-- research/                    Background literature (.docx/.txt)
-|   +-- archive/                     Outdated pre-multiscale docs
+|   |-- research/                    Background literature
+|   +-- archive/                     Superseded reports and methodology notes
 |
 |-- results/                       Output data and reports
 |   |-- RESULTS_REPORT.md            Comprehensive results with all statistics
+|   |-- metrics/                     Machine-readable JSON metrics
 |   |-- figures/                     Publication-quality figures (PNG + PDF)
-|   +-- [JSON: validation, threshold sweep, fatigue, effect sizes]
+|   +-- reports/                     Focused technical reports
 |
-|-- rigor/                         Robustness validation & extended experiments
+|-- apps/                          Streamlit demonstration interfaces
+|-- validation/                    Robustness validation and extended experiments
 |-- models/                        Checkpoints (.pth) + training histories (.json)
 |-- logs/                          Training logs and output captures
-|-- archive/                       Old code: v1-v8 attempts, diagnostics
+|-- paper/                         Active conference-paper planning and drafting
+|-- submission/                    Completed CSEF 2026 submission archive
+|-- archive/                       Superseded code, diagnostics, and notebooks
 |-- data/                          Raw BIDS dataset + processed windows (not in git)
 +-- venv/                          Python virtual environment (not in git)
 ```
@@ -161,7 +157,7 @@ python scripts/figures/generate_timeline_figure.py
 ### Run Audits
 
 ```bash
-python temporal/validate_code.py                          # Pre-training leakage check
+python scripts/audit/validate_leakage.py                  # Pre-training leakage check
 python temporal_multiscale/audit_multiscale_pipeline.py    # Pipeline audit
 python temporal_multiscale/comprehensive_submission_audit.py  # Submission audit
 ```
