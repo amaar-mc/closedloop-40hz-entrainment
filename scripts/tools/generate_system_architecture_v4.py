@@ -25,7 +25,7 @@ WHITE = "#FFFFFF"
 LIGHT_GRAY = "#F5F5F5"
 DARK_GRAY = "#333333"
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUTPUT = os.path.join(PROJECT_ROOT, "results", "figures", "ai_generated", "system_architecture_v4.png")
 
 fig, ax = plt.subplots(figsize=(14, 6))

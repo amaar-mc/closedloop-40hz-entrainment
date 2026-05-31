@@ -15,7 +15,7 @@ matplotlib.rcParams.update({
     "font.size": 12,
 })
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUTPUT = os.path.join(PROJECT_ROOT, "results", "figures", "ai_generated", "system_architecture_v5.png")
 
 # ── Color scheme: light fills with dark borders for readability ──
