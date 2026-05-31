@@ -749,7 +749,7 @@ DIMENSIONS: 2700 x 1500 pixels (~1.8:1 aspect ratio), 300 DPI
 
 **Placement:** Column 4, Result 1 section, ~9" x 4" (working size)
 **Purpose:** Show TCN Predictive outperforms all controllers on real EEG
-**Data source:** `results/RESULTS_REPORT.md`, `results/tcn_validation_results.json`
+**Data source:** `results/RESULTS_REPORT.md`, `results/metrics/tcn_validation_results.json`
 
 **Prompt for Nano Banana Pro:**
 
