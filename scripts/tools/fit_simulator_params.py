@@ -367,7 +367,7 @@ def main() -> None:
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("results/simulator_tau_fit.json"),
+        default=Path("results/metrics/simulator_tau_fit.json"),
         help="Output JSON path for fitted parameters",
     )
     parser.add_argument(
