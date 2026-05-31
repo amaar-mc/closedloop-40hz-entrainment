@@ -3,7 +3,7 @@
 **Audit date:** 2026-03-24
 **Auditor:** Claude (automated rigor audit)
 **Source:** `scripts/generate_csef_presentation.py` (855 lines)
-**Output:** `docs/presentations/CSEF_2026_Presentation.pdf` (12 pages)
+**Output:** `submission/presentation/CSEF_2026_Presentation.pdf` (12 pages)
 
 ## CSEF Requirements Source
 

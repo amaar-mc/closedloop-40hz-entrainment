@@ -80,7 +80,7 @@ The 7-channel research-grade model achieves R2=0.287 for static PAC prediction a
 |---|---|
 | `models/muse_4ch/eegnet_4ch_results.json` | EEGNet 4ch training results (R2=0.016, 1,409 params) |
 | `models/muse_4ch/summary_multiscale_tcn_4ch_lb20_hz5_ts1.json` | Dedicated 4ch TCN results (test R2=0.156, 29,507 params) |
-| `results/comparison_table_7ch.json` | 7ch architecture sweep (persistence, Ridge, LSTM, XGBoost, Transformer, TCN at horizons 1-10) |
-| `results/comparison_table_4ch.json` | 4ch architecture sweep (same models and horizons) |
+| `results/metrics/comparison_table_7ch.json` | 7ch architecture sweep (persistence, Ridge, LSTM, XGBoost, Transformer, TCN at horizons 1-10) |
+| `results/metrics/comparison_table_4ch.json` | 4ch architecture sweep (same models and horizons) |
 | `models/muse_4ch/best_eegnet_4ch.pth` | EEGNet 4ch trained checkpoint |
 | `models/muse_4ch/best_multiscale_tcn_4ch_lb20_hz5_ts1.pth` | TCN 4ch trained checkpoint |
