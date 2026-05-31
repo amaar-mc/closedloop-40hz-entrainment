@@ -245,7 +245,7 @@ evidence that a nonlinear TCN is necessary for an online-compatible forecaster.
 
 ### D. Predictive Replay Revealed a Targeting-Specificity Tradeoff
 
-Table III reports offline replay of the integrated 12-feature checkpoint across all 35 recorded
+Table IV reports offline replay of the integrated 12-feature checkpoint across all 35 recorded
 trajectories. The
 predictive controller improved low-PAC stimulation targeting by 22.1 percentage points relative to
 reactive thresholding. However, high-PAC rest specificity decreased by 26.6 points. The targeting
