@@ -8,7 +8,7 @@ Architecture: ONE large text frame per slide (or text + table + optional
 caption frame for table/figure slides). PowerPoint handles all text flow,
 wrapping, and overflow — no manual Y-position tracking.
 
-Run:  python3 scripts/generate_csef_pptx.py
+Run:  python3 scripts/tools/generate_csef_pptx.py
 """
 
 import os
@@ -20,13 +20,13 @@ from pptx.enum.text import PP_ALIGN
 from pptx.oxml.ns import qn
 from lxml import etree
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FIGURES = os.path.join(PROJECT_ROOT, "results", "figures")
 AI_FIGURES = os.path.join(FIGURES, "ai_generated")
-OUTPUT = os.path.join(PROJECT_ROOT, "docs", "presentations",
+OUTPUT = os.path.join(PROJECT_ROOT, "submission", "presentation",
                       "CSEF_2026_Presentation.pptx")
-COPY_DEST = os.path.join(PROJECT_ROOT, "CSEF", "Presentation",
-                         "CSEF_2026_Presentation.pptx")
+COPY_DEST = os.path.join(PROJECT_ROOT, "submission", "presentation",
+                         "vfinal_presentation.pptx")
 
 # Layout (inches) — landscape letter
 SLIDE_W = Inches(11.0)

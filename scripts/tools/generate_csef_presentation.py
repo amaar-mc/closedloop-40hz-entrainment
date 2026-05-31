@@ -4,16 +4,16 @@
 12-page landscape PDF, Science Project Template.
 Times New Roman, all-black text, strict CSEF compliance.
 
-Run:  python3 scripts/generate_csef_presentation.py
+Run:  python3 scripts/tools/generate_csef_presentation.py
 """
 
 import os
 from fpdf import FPDF
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 FIGURES = os.path.join(PROJECT_ROOT, "results", "figures")
 AI_FIGURES = os.path.join(FIGURES, "ai_generated")
-OUTPUT = os.path.join(PROJECT_ROOT, "docs", "presentations",
+OUTPUT = os.path.join(PROJECT_ROOT, "submission", "presentation",
                       "CSEF_2026_Presentation.pdf")
 
 # Layout (inches) — landscape letter
