@@ -12,8 +12,8 @@ tags:
 # Add Gaussian noise at specified SNR.          Args:             window: EEG w
 
 ## Connections
-- [[.add_gaussian_noise()]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
+- [[add_gaussian_noise()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

@@ -12,11 +12,11 @@ tags:
 # Reactive
 
 ## Connections
-- [[.__init__()_78]] - `method` [EXTRACTED]
-- [[.reset()_16]] - `method` [EXTRACTED]
-- [[.step()_15]] - `method` [EXTRACTED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_78]] - `method` [EXTRACTED]
 - [[main()_39]] - `calls` [EXTRACTED]
+- [[reset()_16]] - `method` [EXTRACTED]
 - [[run_alzheimer_simulation.py]] - `contains` [EXTRACTED]
+- [[step()_16]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_62

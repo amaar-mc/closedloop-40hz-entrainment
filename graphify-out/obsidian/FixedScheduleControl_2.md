@@ -12,12 +12,12 @@ tags:
 # FixedScheduleControl
 
 ## Connections
-- [[.__init__()_84]] - `method` [EXTRACTED]
-- [[.reset()_22]] - `method` [EXTRACTED]
-- [[.step()_21]] - `method` [EXTRACTED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_84]] - `method` [EXTRACTED]
 - [[main()_41]] - `calls` [EXTRACTED]
+- [[reset()_22]] - `method` [EXTRACTED]
 - [[run_fatigue_sensitivity.py]] - `contains` [EXTRACTED]
+- [[step()_22]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_84

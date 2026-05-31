@@ -12,6 +12,6 @@ tags:
 # Compute z-scores for all channels.          Args:             pac_values: Cur
 
 ## Connections
-- [[.compute_zscores()]] - `rationale_for` [EXTRACTED]
+- [[compute_zscores()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_46

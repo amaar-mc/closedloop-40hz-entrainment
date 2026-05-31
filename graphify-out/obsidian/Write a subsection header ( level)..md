@@ -12,6 +12,6 @@ tags:
 # Write a subsection header (### level).
 
 ## Connections
-- [[.write_subsection_header()]] - `rationale_for` [EXTRACTED]
+- [[write_subsection_header()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders

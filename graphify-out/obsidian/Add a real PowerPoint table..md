@@ -12,6 +12,6 @@ tags:
 # Add a real PowerPoint table.
 
 ## Connections
-- [[.tbl()]] - `rationale_for` [EXTRACTED]
+- [[tbl()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/PPTX_Slide_Builder

@@ -12,6 +12,6 @@ tags:
 # 11pt italic caption in medium gray.
 
 ## Connections
-- [[.caption()]] - `rationale_for` [EXTRACTED]
+- [[caption()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/PPTX_Slide_Builder

@@ -12,6 +12,6 @@ tags:
 # Compute Modulation Index from phase and amplitude time series.          MI mea
 
 ## Connections
-- [[.compute_modulation_index()]] - `rationale_for` [EXTRACTED]
+- [[compute_modulation_index()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline

@@ -12,6 +12,6 @@ tags:
 # Subsection heading — 17 pt bold.
 
 ## Connections
-- [[.sub()_1]] - `rationale_for` [EXTRACTED]
+- [[sub()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders

@@ -8,18 +8,18 @@ members: 12
 **Members:** 12 nodes
 
 ## Members
-- [[.__init__()_84]] - code - scripts/pipeline/run_fatigue_sensitivity.py
-- [[.__init__()_85]] - code - scripts/pipeline/run_fatigue_sensitivity.py
-- [[._trend()_4]] - code - scripts/pipeline/run_fatigue_sensitivity.py
-- [[.reset()_22]] - code - scripts/pipeline/run_fatigue_sensitivity.py
-- [[.reset()_23]] - code - scripts/pipeline/run_fatigue_sensitivity.py
-- [[.step()_21]] - code - scripts/pipeline/run_fatigue_sensitivity.py
-- [[.step()_22]] - code - scripts/pipeline/run_fatigue_sensitivity.py
 - [[FixedScheduleControl_2]] - code - scripts/pipeline/run_fatigue_sensitivity.py
 - [[PredictiveLookAheadControl_2]] - code - scripts/pipeline/run_fatigue_sensitivity.py
+- [[__init__()_84]] - code - scripts/pipeline/run_fatigue_sensitivity.py
+- [[__init__()_85]] - code - scripts/pipeline/run_fatigue_sensitivity.py
+- [[_trend()_4]] - code - scripts/pipeline/run_fatigue_sensitivity.py
 - [[main()_41]] - code - scripts/pipeline/run_fatigue_sensitivity.py
+- [[reset()_22]] - code - scripts/pipeline/run_fatigue_sensitivity.py
+- [[reset()_23]] - code - scripts/pipeline/run_fatigue_sensitivity.py
 - [[run_fatigue_sensitivity.py]] - code - scripts/pipeline/run_fatigue_sensitivity.py
 - [[run_trial()_2]] - code - scripts/pipeline/run_fatigue_sensitivity.py
+- [[step()_22]] - code - scripts/pipeline/run_fatigue_sensitivity.py
+- [[step()_23]] - code - scripts/pipeline/run_fatigue_sensitivity.py
 
 ## Live Query (requires Dataview plugin)
 

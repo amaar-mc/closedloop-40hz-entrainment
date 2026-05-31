@@ -12,10 +12,10 @@ tags:
 # Reset state for a new trial.
 
 ## Connections
-- [[.reset()_53]] - `rationale_for` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[reset()_53]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

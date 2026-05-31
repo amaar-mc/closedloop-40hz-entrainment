@@ -12,7 +12,7 @@ tags:
 # Args:             windows:  (N, 1, 7, 500) raw EEG windows             pac:
 
 ## Connections
-- [[.__init__()_24]] - `rationale_for` [EXTRACTED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
+- [[__init__()_24]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Multiscale_TCN_&_Features

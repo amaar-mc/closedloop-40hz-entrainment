@@ -12,6 +12,6 @@ tags:
 # Forward pass.          Args:             x: Input EEG tensor (batch, 1, n_cha
 
 ## Connections
-- [[.forward()_19]] - `rationale_for` [EXTRACTED]
+- [[forward()_19]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_EEGNet_V2

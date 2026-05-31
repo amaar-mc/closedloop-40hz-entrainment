@@ -12,8 +12,8 @@ tags:
 # Get single window and its PAC label.          Args:             idx: Sample i
 
 ## Connections
-- [[.__getitem__()_18]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
+- [[__getitem__()_18]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

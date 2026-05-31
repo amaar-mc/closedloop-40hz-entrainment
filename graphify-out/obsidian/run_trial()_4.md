@@ -12,11 +12,11 @@ tags:
 # run_trial()
 
 ## Connections
-- [[.reset()_40]] - `calls` [EXTRACTED]
-- [[.step()_39]] - `calls` [EXTRACTED]
 - [[Run one simulation trial.]] - `rationale_for` [EXTRACTED]
+- [[reset()_40]] - `calls` [EXTRACTED]
 - [[run_comparison()]] - `calls` [EXTRACTED]
 - [[run_disease_sweep()]] - `calls` [EXTRACTED]
 - [[run_tribe_validation.py]] - `contains` [EXTRACTED]
+- [[step()_40]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

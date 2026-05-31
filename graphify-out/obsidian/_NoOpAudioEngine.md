@@ -12,12 +12,12 @@ tags:
 # _NoOpAudioEngine
 
 ## Connections
-- [[.start()_1]] - `method` [EXTRACTED]
-- [[.stop()_1]] - `method` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[Stub when sounddevice is unavailable.]] - `rationale_for` [EXTRACTED]
 - [[demo.py]] - `contains` [EXTRACTED]
 - [[main()_63]] - `calls` [EXTRACTED]
+- [[start()_1]] - `method` [EXTRACTED]
+- [[stop()_1]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

@@ -12,6 +12,6 @@ tags:
 # Upper-triangular boolean mask: True = masked (no attending to future).
 
 ## Connections
-- [[._make_causal_mask()]] - `rationale_for` [EXTRACTED]
+- [[_make_causal_mask()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Enhanced-Feature_TCN

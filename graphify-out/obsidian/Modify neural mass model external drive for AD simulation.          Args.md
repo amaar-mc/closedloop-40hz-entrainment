@@ -12,6 +12,6 @@ tags:
 # Modify neural mass model external drive for AD simulation.          Args:
 
 ## Connections
-- [[.modify_neural_mass_drive()]] - `rationale_for` [EXTRACTED]
+- [[modify_neural_mass_drive()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

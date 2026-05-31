@@ -12,8 +12,8 @@ tags:
 # p01_title()
 
 ## Connections
-- [[.body()_1]] - `calls` [EXTRACTED]
 - [[Title Page (max 1 page).  Title, author, =150-word summary.]] - `rationale_for` [EXTRACTED]
+- [[body()_1]] - `calls` [EXTRACTED]
 - [[generate_csef_presentation.py]] - `contains` [EXTRACTED]
 - [[main()_50]] - `calls` [EXTRACTED]
 

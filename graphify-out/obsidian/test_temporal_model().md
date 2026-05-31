@@ -12,11 +12,11 @@ tags:
 # test_temporal_model()
 
 ## Connections
-- [[.count_parameters()_6]] - `calls` [EXTRACTED]
-- [[.count_parameters_by_component()]] - `calls` [EXTRACTED]
 - [[MultiHorizonPredictor]] - `calls` [EXTRACTED]
 - [[TemporalPACPredictor]] - `calls` [EXTRACTED]
 - [[Test the temporal prediction model.]] - `rationale_for` [EXTRACTED]
+- [[count_parameters()_6]] - `calls` [EXTRACTED]
+- [[count_parameters_by_component()]] - `calls` [EXTRACTED]
 - [[temporal_model.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Archived_Temporal_PAC_Predictor

@@ -12,12 +12,12 @@ tags:
 # MultiBiomarkerReactiveControl
 
 ## Connections
-- [[.__init__()_33]] - `method` [EXTRACTED]
-- [[.reset()_5]] - `method` [EXTRACTED]
-- [[.step()_5]] - `method` [EXTRACTED]
 - [[Multi-biomarker reactive controller.]] - `rationale_for` [EXTRACTED]
 - [[Multi-biomarker reactive controller.      Uses PAC + gamma power + theta power,]] - `rationale_for` [EXTRACTED]
+- [[__init__()_33]] - `method` [EXTRACTED]
 - [[replay_subject()]] - `calls` [EXTRACTED]
+- [[reset()_5]] - `method` [EXTRACTED]
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
+- [[step()_5]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Replay_Analysis_&_Controllers

@@ -12,12 +12,6 @@ tags:
 # CorticalResponseModel
 
 ## Connections
-- [[.__init__()_170]] - `method` [EXTRACTED]
-- [[._load_roi_indices()]] - `method` [EXTRACTED]
-- [[._load_tribe_model()]] - `method` [EXTRACTED]
-- [[.get_activations()]] - `method` [EXTRACTED]
-- [[.predict_tribe_v2()]] - `method` [EXTRACTED]
-- [[.reset()_70]] - `method` [EXTRACTED]
 - [[Apply disease modifications to neural mass parameters.]] - `uses` [INFERRED]
 - [[Audit script for TRIBE V2 integration module.  Validates     1. All module impo]] - `uses` [INFERRED]
 - [[Biophysically grounded brain entrainment simulator.      This simulator replaces]] - `uses` [INFERRED]
@@ -43,6 +37,12 @@ tags:
 - [[Validate enhanced simulator compatibility and dynamics.]] - `uses` [INFERRED]
 - [[Validate neural mass model PAC generation.]] - `uses` [INFERRED]
 - [[Validate stimulus generation.]] - `uses` [INFERRED]
+- [[__init__()_170]] - `method` [EXTRACTED]
+- [[_load_roi_indices()]] - `method` [EXTRACTED]
+- [[_load_tribe_model()]] - `method` [EXTRACTED]
 - [[cortical_model.py]] - `contains` [EXTRACTED]
+- [[get_activations()]] - `method` [EXTRACTED]
+- [[predict_tribe_v2()]] - `method` [EXTRACTED]
+- [[reset()_70]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/TRIBE_Neural-Mass_Simulator

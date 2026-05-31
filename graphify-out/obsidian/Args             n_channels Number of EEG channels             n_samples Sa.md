@@ -12,6 +12,6 @@ tags:
 # Args:             n_channels: Number of EEG channels             n_samples: Sa
 
 ## Connections
-- [[.__init__()_26]] - `rationale_for` [EXTRACTED]
+- [[__init__()_26]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Temporal_PAC_Predictor

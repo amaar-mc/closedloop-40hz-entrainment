@@ -12,8 +12,8 @@ tags:
 # Validate model on validation set.          Args:             val_loader: Vali
 
 ## Connections
-- [[.validate()_1]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
+- [[validate()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

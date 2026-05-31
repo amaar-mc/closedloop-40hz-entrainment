@@ -12,10 +12,6 @@ tags:
 # ModelRegistry
 
 ## Connections
-- [[.__init__()_68]] - `method` [EXTRACTED]
-- [[.available()]] - `method` [EXTRACTED]
-- [[.get()]] - `method` [EXTRACTED]
-- [[.register()]] - `method` [EXTRACTED]
 - [[Bonus register() rejects objects that don't satisfy TemporalModel Protocol.]] - `uses` [INFERRED]
 - [[Name-keyed registry for TemporalModel instances.      Models are validated at re]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
@@ -26,8 +22,12 @@ tags:
 - [[Test 5 step() returns None until lookback windows accumulated, then dict.]] - `uses` [INFERRED]
 - [[Test 6 isinstance(tcn_model, TemporalModel) returns True.]] - `uses` [INFERRED]
 - [[Tests for temporal_multiscalemodel_registry.py.  Verifies 1. ModelRegistry reg]] - `uses` [INFERRED]
+- [[__init__()_68]] - `method` [EXTRACTED]
+- [[available()]] - `method` [EXTRACTED]
 - [[build_default_registry()]] - `calls` [EXTRACTED]
 - [[build_default_registry() returns registry with 'tcn' pre-registered.]] - `uses` [INFERRED]
+- [[get()]] - `method` [EXTRACTED]
 - [[model_registry.py]] - `contains` [EXTRACTED]
+- [[register()]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Models,_Streaming_&_Apps

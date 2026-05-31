@@ -1,0 +1,18 @@
+---
+source_file: "validation/experiments/tcn_integrated_simulation.py"
+type: "code"
+community: "Closed-Loop Control & Simulator"
+location: "L242"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Closed-Loop_Control_&_Simulator
+---
+
+# step()
+
+## Connections
+- [[ControlMethodBase_1]] - `method` [EXTRACTED]
+- [[Return 0 (REST) or 1 (STIMULATE)._1]] - `rationale_for` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

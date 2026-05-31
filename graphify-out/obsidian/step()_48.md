@@ -1,0 +1,19 @@
+---
+source_file: "apps/demo.py"
+type: "code"
+community: "Closed-Loop Control & Simulator"
+location: "L243"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Closed-Loop_Control_&_Simulator
+---
+
+# step()
+
+## Connections
+- [[Make a control decision using TCN forecast.]] - `rationale_for` [EXTRACTED]
+- [[TCNController]] - `method` [EXTRACTED]
+- [[main()_63]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

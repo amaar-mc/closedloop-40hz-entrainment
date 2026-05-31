@@ -12,9 +12,9 @@ tags:
 # LastStepPool
 
 ## Connections
-- [[.__init__()_12]] - `calls` [EXTRACTED]
-- [[.forward()_8]] - `method` [EXTRACTED]
 - [[Take last timestep from causal TCN output.      For a causal architecture the la]] - `rationale_for` [EXTRACTED]
+- [[__init__()_12]] - `calls` [EXTRACTED]
+- [[forward()_8]] - `method` [EXTRACTED]
 - [[improved_tcn_model.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Archived_Enhanced-Feature_TCN

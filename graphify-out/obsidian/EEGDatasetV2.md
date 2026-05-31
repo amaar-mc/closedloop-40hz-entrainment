@@ -12,12 +12,12 @@ tags:
 # EEGDatasetV2
 
 ## Connections
-- [[.__getitem__()_9]] - `method` [EXTRACTED]
-- [[.__init__()_57]] - `method` [EXTRACTED]
-- [[.__len__()_9]] - `method` [EXTRACTED]
-- [[._augment()]] - `method` [EXTRACTED]
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[PyTorch Dataset for EEG windows with ΔPAC labels.      Changes from v1     -]] - `rationale_for` [EXTRACTED]
+- [[__getitem__()_9]] - `method` [EXTRACTED]
+- [[__init__()_57]] - `method` [EXTRACTED]
+- [[__len__()_9]] - `method` [EXTRACTED]
+- [[_augment()]] - `method` [EXTRACTED]
 - [[data_loader_v2.py]] - `contains` [EXTRACTED]
 - [[load_processed_data_v2()]] - `calls` [EXTRACTED]
 

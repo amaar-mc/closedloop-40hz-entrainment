@@ -12,8 +12,8 @@ tags:
 # Get session ID for a sample.
 
 ## Connections
-- [[.get_session_id()]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
+- [[get_session_id()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

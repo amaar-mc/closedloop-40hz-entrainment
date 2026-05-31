@@ -12,6 +12,6 @@ tags:
 # Extract intermediate feature maps for visualization.          Args:
 
 ## Connections
-- [[.get_feature_maps()_2]] - `rationale_for` [EXTRACTED]
+- [[get_feature_maps()_2]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Models,_Streaming_&_Apps

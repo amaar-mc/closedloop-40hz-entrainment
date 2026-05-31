@@ -12,6 +12,6 @@ tags:
 # Modify exponential simulator parameters for AD simulation.          Compatible w
 
 ## Connections
-- [[.modify_simulator_params()]] - `rationale_for` [EXTRACTED]
+- [[modify_simulator_params()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

@@ -12,7 +12,7 @@ tags:
 # Return sorted list of registered model names.
 
 ## Connections
-- [[.available()]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
+- [[available()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Models,_Streaming_&_Apps

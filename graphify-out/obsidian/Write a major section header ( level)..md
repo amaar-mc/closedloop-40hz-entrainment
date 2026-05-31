@@ -12,6 +12,6 @@ tags:
 # Write a major section header (## level).
 
 ## Connections
-- [[.write_section_header()]] - `rationale_for` [EXTRACTED]
+- [[write_section_header()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders

@@ -12,11 +12,11 @@ tags:
 # ReactiveCtrl
 
 ## Connections
-- [[.__init__()_74]] - `method` [EXTRACTED]
-- [[.reset()_12]] - `method` [EXTRACTED]
-- [[.step()_11]] - `method` [EXTRACTED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_74]] - `method` [EXTRACTED]
 - [[main()_38]] - `calls` [EXTRACTED]
+- [[reset()_12]] - `method` [EXTRACTED]
 - [[run_tribe_alignment_validation.py]] - `contains` [EXTRACTED]
+- [[step()_12]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/12-Feature_TCN_Validation

@@ -1,0 +1,18 @@
+---
+source_file: "src/tribe_v2/alzheimer_model.py"
+type: "code"
+community: "TRIBE Neural-Mass Simulator"
+location: "L126"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/TRIBE_Neural-Mass_Simulator
+---
+
+# modify_neural_mass_drive()
+
+## Connections
+- [[AlzheimerProfile]] - `method` [EXTRACTED]
+- [[Modify neural mass model external drive for AD simulation.          Args]] - `rationale_for` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

@@ -12,10 +12,6 @@ tags:
 # FatigueAwareSimulator
 
 ## Connections
-- [[.__init__()_155]] - `method` [EXTRACTED]
-- [[.get_history()_3]] - `method` [EXTRACTED]
-- [[.reset()_62]] - `method` [EXTRACTED]
-- [[.step()_65]] - `method` [EXTRACTED]
 - [[40s ON + 20s OFF (standard clinical protocol).]] - `uses` [INFERRED]
 - [[Abstract base class for all control strategies.      Subclasses must implement]] - `uses` [INFERRED]
 - [[Add control method to comparison.]] - `uses` [INFERRED]
@@ -153,6 +149,10 @@ tags:
 - [[Whether a trained TCN forecaster is available.]] - `uses` [INFERRED]
 - [[Z-score reactive controller with hysteresis — maintains state in dead zone.]] - `uses` [INFERRED]
 - [[Z-score reactive with hysteresis.]] - `uses` [INFERRED]
+- [[__init__()_155]] - `method` [EXTRACTED]
+- [[get_history()_3]] - `method` [EXTRACTED]
+- [[reset()_62]] - `method` [EXTRACTED]
 - [[simulator.py]] - `contains` [EXTRACTED]
+- [[step()_66]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

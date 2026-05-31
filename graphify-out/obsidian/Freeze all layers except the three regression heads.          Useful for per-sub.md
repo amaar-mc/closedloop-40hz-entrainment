@@ -12,6 +12,6 @@ tags:
 # Freeze all layers except the three regression heads.          Useful for per-sub
 
 ## Connections
-- [[.freeze_backbone()]] - `rationale_for` [EXTRACTED]
+- [[freeze_backbone()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Enhanced-Feature_TCN

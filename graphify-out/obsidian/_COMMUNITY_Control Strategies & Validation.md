@@ -8,33 +8,6 @@ members: 97
 **Members:** 97 nodes
 
 ## Members
-- [[.__init__()_118]] - code - validation/rigorous_validation.py
-- [[.__init__()_119]] - code - validation/rigorous_validation.py
-- [[.__init__()_120]] - code - validation/rigorous_validation.py
-- [[.__init__()_121]] - code - validation/rigorous_validation.py
-- [[.__init__()_122]] - code - validation/rigorous_validation.py
-- [[.__init__()_127]] - code - validation/experiments/fatigue_model_sensitivity.py
-- [[.__init__()_128]] - code - validation/experiments/fatigue_model_sensitivity.py
-- [[.__init__()_129]] - code - validation/experiments/fatigue_model_sensitivity.py
-- [[.__init__()_130]] - code - validation/experiments/fatigue_model_sensitivity.py
-- [[._pac_trend()]] - code - validation/rigorous_validation.py
-- [[.get_description()]] - code - validation/experiments/fatigue_model_sensitivity.py
-- [[.get_description()_1]] - code - validation/experiments/fatigue_model_sensitivity.py
-- [[.get_description()_2]] - code - validation/experiments/fatigue_model_sensitivity.py
-- [[.get_description()_3]] - code - validation/experiments/fatigue_model_sensitivity.py
-- [[.reset()_49]] - code - validation/rigorous_validation.py
-- [[.reset()_50]] - code - validation/rigorous_validation.py
-- [[.reset()_52]] - code - validation/rigorous_validation.py
-- [[.step()_48]] - code - validation/rigorous_validation.py
-- [[.step()_49]] - code - validation/rigorous_validation.py
-- [[.step()_51]] - code - validation/rigorous_validation.py
-- [[.step()_52]] - code - validation/rigorous_validation.py
-- [[.step()_53]] - code - validation/experiments/fatigue_model_sensitivity.py
-- [[.step()_54]] - code - validation/experiments/fatigue_model_sensitivity.py
-- [[.step()_55]] - code - validation/experiments/fatigue_model_sensitivity.py
-- [[.step()_56]] - code - validation/experiments/fatigue_model_sensitivity.py
-- [[.to_dict()]] - code - validation/rigorous_validation.py
-- [[.to_dict()_1]] - code - validation/experiments/fatigue_model_sensitivity.py
 - [[Configuration for a fatigue model experiment.]] - rationale - validation/experiments/fatigue_model_sensitivity.py
 - [[ControlMethodBase]] - code - validation/rigorous_validation.py
 - [[Convert to serializable dict.]] - rationale - validation/experiments/fatigue_model_sensitivity.py
@@ -78,8 +51,18 @@ members: 97
 - [[StepFunctionSimulator (Fatigue Model 2 Sudden Threshold Drop)]] - code - validation/experiments/fatigue_model_sensitivity.py
 - [[TrialMetrics]] - code - validation/rigorous_validation.py
 - [[TrialMetrics Dataclass – Per-Trial Result Container]] - code - validation/rigorous_validation.py
+- [[__init__()_118]] - code - validation/rigorous_validation.py
+- [[__init__()_119]] - code - validation/rigorous_validation.py
+- [[__init__()_120]] - code - validation/rigorous_validation.py
+- [[__init__()_121]] - code - validation/rigorous_validation.py
+- [[__init__()_122]] - code - validation/rigorous_validation.py
+- [[__init__()_127]] - code - validation/experiments/fatigue_model_sensitivity.py
+- [[__init__()_128]] - code - validation/experiments/fatigue_model_sensitivity.py
+- [[__init__()_129]] - code - validation/experiments/fatigue_model_sensitivity.py
+- [[__init__()_130]] - code - validation/experiments/fatigue_model_sensitivity.py
 - [[_fmt_ci()]] - code - validation/rigorous_validation.py
 - [[_make_serializable()]] - code - validation/rigorous_validation.py
+- [[_pac_trend()]] - code - validation/rigorous_validation.py
 - [[bootstrap_ci()]] - code - validation/rigorous_validation.py
 - [[compute_all_statistics()]] - code - validation/rigorous_validation.py
 - [[compute_anova()]] - code - validation/rigorous_validation.py
@@ -88,6 +71,10 @@ members: 97
 - [[extract_metric_array()]] - code - validation/rigorous_validation.py
 - [[fatigue_model_sensitivity.py]] - code - validation/experiments/fatigue_model_sensitivity.py
 - [[generate_subject_parameters()]] - code - validation/rigorous_validation.py
+- [[get_description()]] - code - validation/experiments/fatigue_model_sensitivity.py
+- [[get_description()_1]] - code - validation/experiments/fatigue_model_sensitivity.py
+- [[get_description()_2]] - code - validation/experiments/fatigue_model_sensitivity.py
+- [[get_description()_3]] - code - validation/experiments/fatigue_model_sensitivity.py
 - [[hedges_g()_5]] - code - validation/rigorous_validation.py
 - [[main()_65]] - code - validation/rigorous_validation.py
 - [[main()_69]] - code - validation/experiments/fatigue_model_sensitivity.py
@@ -98,6 +85,9 @@ members: 97
 - [[print_summary_table()]] - code - validation/rigorous_validation.py
 - [[print_summary_table()_1]] - code - validation/experiments/fatigue_model_sensitivity.py
 - [[print_wilcoxon_table()]] - code - validation/rigorous_validation.py
+- [[reset()_49]] - code - validation/rigorous_validation.py
+- [[reset()_50]] - code - validation/rigorous_validation.py
+- [[reset()_52]] - code - validation/rigorous_validation.py
 - [[rigorous_validation.py]] - code - validation/rigorous_validation.py
 - [[run_fatigue_model_experiment()]] - code - validation/experiments/fatigue_model_sensitivity.py
 - [[run_fatigue_sweep()]] - code - validation/rigorous_validation.py
@@ -105,6 +95,16 @@ members: 97
 - [[run_single_trial()]] - code - validation/rigorous_validation.py
 - [[run_single_trial()_1]] - code - validation/experiments/fatigue_model_sensitivity.py
 - [[run_trial_batch()]] - code - validation/rigorous_validation.py
+- [[step()_49]] - code - validation/rigorous_validation.py
+- [[step()_50]] - code - validation/rigorous_validation.py
+- [[step()_52]] - code - validation/rigorous_validation.py
+- [[step()_53]] - code - validation/rigorous_validation.py
+- [[step()_54]] - code - validation/experiments/fatigue_model_sensitivity.py
+- [[step()_55]] - code - validation/experiments/fatigue_model_sensitivity.py
+- [[step()_56]] - code - validation/experiments/fatigue_model_sensitivity.py
+- [[step()_57]] - code - validation/experiments/fatigue_model_sensitivity.py
+- [[to_dict()]] - code - validation/rigorous_validation.py
+- [[to_dict()_1]] - code - validation/experiments/fatigue_model_sensitivity.py
 
 ## Live Query (requires Dataview plugin)
 

@@ -8,10 +8,10 @@ members: 18
 **Members:** 18 nodes
 
 ## Members
-- [[.__getitem__()_2]] - code - archive/experimental/sliding_pac/train_and_compare.py
-- [[.__init__()_8]] - code - archive/experimental/sliding_pac/train_and_compare.py
-- [[.__len__()_2]] - code - archive/experimental/sliding_pac/train_and_compare.py
 - [[SeqDataset_1]] - code - archive/experimental/sliding_pac/train_and_compare.py
+- [[__getitem__()_2]] - code - archive/experimental/sliding_pac/train_and_compare.py
+- [[__init__()_8]] - code - archive/experimental/sliding_pac/train_and_compare.py
+- [[__len__()_2]] - code - archive/experimental/sliding_pac/train_and_compare.py
 - [[_corr()]] - code - archive/experimental/sliding_pac/train_and_compare.py
 - [[_denorm()]] - code - archive/experimental/sliding_pac/train_and_compare.py
 - [[_r2()]] - code - archive/experimental/sliding_pac/train_and_compare.py

@@ -12,12 +12,12 @@ tags:
 # Make a stimulation decision.          Args:             pac_current: Current
 
 ## Connections
-- [[.step()_66]] - `rationale_for` [EXTRACTED]
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[StimState]] - `uses` [INFERRED]
+- [[step()_67]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

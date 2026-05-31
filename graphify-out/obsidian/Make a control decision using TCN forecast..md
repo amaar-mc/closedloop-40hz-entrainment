@@ -12,8 +12,8 @@ tags:
 # Make a control decision using TCN forecast.
 
 ## Connections
-- [[.step()_47]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[step()_48]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

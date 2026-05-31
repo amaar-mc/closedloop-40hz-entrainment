@@ -1,0 +1,18 @@
+---
+source_file: "src/simulator.py"
+type: "code"
+community: "Closed-Loop Control & Simulator"
+location: "L207"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Closed-Loop_Control_&_Simulator
+---
+
+# __init__()
+
+## Connections
+- [[Args             tau_rise Base time constant for PAC increase during stimulat]] - `rationale_for` [EXTRACTED]
+- [[FatigueAwareSimulator]] - `method` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

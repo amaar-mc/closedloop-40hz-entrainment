@@ -12,9 +12,9 @@ tags:
 # Forward hook that computes and stores attention weights.          The Attentio
 
 ## Connections
-- [[._hook_fn()]] - `rationale_for` [EXTRACTED]
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
+- [[_hook_fn()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Multiscale_TCN_&_Features

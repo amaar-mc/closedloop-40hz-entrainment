@@ -12,7 +12,7 @@ tags:
 # Return normalization parameters for inference / val / test sets.
 
 ## Connections
-- [[.get_normalization_stats()]] - `rationale_for` [EXTRACTED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
+- [[get_normalization_stats()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Multiscale_TCN_&_Features

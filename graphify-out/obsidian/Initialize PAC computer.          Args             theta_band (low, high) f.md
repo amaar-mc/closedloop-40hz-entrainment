@@ -12,6 +12,6 @@ tags:
 # Initialize PAC computer.          Args:             theta_band: (low, high) f
 
 ## Connections
-- [[.__init__()_145]] - `rationale_for` [EXTRACTED]
+- [[__init__()_145]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline

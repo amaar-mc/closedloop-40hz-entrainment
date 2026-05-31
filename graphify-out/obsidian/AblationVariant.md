@@ -12,13 +12,13 @@ tags:
 # AblationVariant
 
 ## Connections
-- [[.__post_init__()_1]] - `method` [EXTRACTED]
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[CausalDSConvBlock_1]] - `uses` [INFERRED]
 - [[LastStepPool_1]] - `uses` [INFERRED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SequenceDataset]] - `uses` [INFERRED]
+- [[__post_init__()_1]] - `method` [EXTRACTED]
 - [[build_variants()]] - `calls` [EXTRACTED]
 - [[run_ablation_study.py]] - `contains` [EXTRACTED]
 

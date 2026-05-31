@@ -12,9 +12,6 @@ tags:
 # FixedScheduleControl
 
 ## Connections
-- [[.__init__()_159]] - `method` [EXTRACTED]
-- [[.reset()_64]] - `method` [EXTRACTED]
-- [[.step()_67]] - `method` [EXTRACTED]
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[ControlMethodBase_2]] - `inherits` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
@@ -23,7 +20,10 @@ tags:
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[StimState]] - `uses` [INFERRED]
+- [[__init__()_159]] - `method` [EXTRACTED]
 - [[main()_78]] - `calls` [EXTRACTED]
+- [[reset()_64]] - `method` [EXTRACTED]
+- [[step()_68]] - `method` [EXTRACTED]
 - [[validation.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

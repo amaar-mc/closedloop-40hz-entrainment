@@ -12,6 +12,6 @@ tags:
 # Write a formatted table.
 
 ## Connections
-- [[.write_table()]] - `rationale_for` [EXTRACTED]
+- [[write_table()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders

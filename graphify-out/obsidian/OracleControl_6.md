@@ -12,8 +12,6 @@ tags:
 # OracleControl
 
 ## Connections
-- [[.__init__()_162]] - `method` [EXTRACTED]
-- [[.step()_70]] - `method` [EXTRACTED]
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[ControlMethodBase_2]] - `inherits` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
@@ -22,7 +20,9 @@ tags:
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[StimState]] - `uses` [INFERRED]
+- [[__init__()_162]] - `method` [EXTRACTED]
 - [[main()_78]] - `calls` [EXTRACTED]
+- [[step()_71]] - `method` [EXTRACTED]
 - [[validation.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

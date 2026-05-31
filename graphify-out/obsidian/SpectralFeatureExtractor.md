@@ -12,9 +12,6 @@ tags:
 # SpectralFeatureExtractor
 
 ## Connections
-- [[.__init__()_40]] - `method` [EXTRACTED]
-- [[.extract()_2]] - `method` [EXTRACTED]
-- [[.extract_torch()]] - `method` [EXTRACTED]
 - [[Add rolling mean and std features.]] - `uses` [INFERRED]
 - [[AlignmentOracleCtrl]] - `uses` [INFERRED]
 - [[Args             windows  (N, 1, 7, 500) raw EEG windows             pac]] - `uses` [INFERRED]
@@ -69,6 +66,9 @@ tags:
 - [[Test the temporal dataset creation.]] - `uses` [INFERRED]
 - [[V6 Optimized Ensemble for Maximum Honest Performance  Strategy 1. Feature sele]] - `uses` [INFERRED]
 - [[Wilcoxon signed-rank test with zero-difference handling.]] - `uses` [INFERRED]
+- [[__init__()_40]] - `method` [EXTRACTED]
+- [[extract()_2]] - `method` [EXTRACTED]
+- [[extract_torch()]] - `method` [EXTRACTED]
 - [[spectral_features.py]] - `contains` [EXTRACTED]
 - [[test_spectral_features()]] - `calls` [EXTRACTED]
 

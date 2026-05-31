@@ -12,6 +12,6 @@ tags:
 # Count parameters per component.
 
 ## Connections
-- [[.count_parameters_by_component()]] - `rationale_for` [EXTRACTED]
+- [[count_parameters_by_component()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Temporal_PAC_Predictor

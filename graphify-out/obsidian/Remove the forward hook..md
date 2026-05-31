@@ -12,9 +12,9 @@ tags:
 # Remove the forward hook.
 
 ## Connections
-- [[.remove()]] - `rationale_for` [EXTRACTED]
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
+- [[remove()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Multiscale_TCN_&_Features

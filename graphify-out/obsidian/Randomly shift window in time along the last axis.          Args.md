@@ -12,8 +12,8 @@ tags:
 # Randomly shift window in time along the last axis.          Args:
 
 ## Connections
-- [[.time_shift()]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
+- [[time_shift()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

@@ -12,8 +12,8 @@ tags:
 # Get list of subjects in BIDS dataset.          Returns:             subjects:
 
 ## Connections
-- [[.get_subject_list()]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
+- [[get_subject_list()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

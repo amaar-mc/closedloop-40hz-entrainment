@@ -24,7 +24,7 @@ members: 30
 - [[Save results dictionary to CSV file.      Args         results Results dict]] - rationale - src/utils.py
 - [[Utility Functions for Closed-Loop 40Hz Entrainment Project  This module provid]] - rationale - src/utils.py
 - [[compute_regression_metrics()]] - code - src/utils.py
-- [[count_parameters()_5]] - code - src/utils.py
+- [[count_parameters()_17]] - code - src/utils.py
 - [[ensure_dir()]] - code - src/utils.py
 - [[get_device()_2]] - code - src/utils.py
 - [[load_config()]] - code - src/utils.py

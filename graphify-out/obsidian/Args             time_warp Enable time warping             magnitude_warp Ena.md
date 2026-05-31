@@ -12,6 +12,6 @@ tags:
 # Args:             time_warp: Enable time warping             magnitude_warp: Ena
 
 ## Connections
-- [[.__init__()_52]] - `rationale_for` [EXTRACTED]
+- [[__init__()_52]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

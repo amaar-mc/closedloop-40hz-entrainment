@@ -12,16 +12,16 @@ tags:
 # StepFunctionSimulator
 
 ## Connections
-- [[.__init__()_128]] - `method` [EXTRACTED]
-- [[.get_description()_1]] - `method` [EXTRACTED]
-- [[.step()_54]] - `method` [EXTRACTED]
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[Fatigue Model 2 Step Function (sudden drop after continuous stim).      Respo]] - `rationale_for` [EXTRACTED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
 - [[PredictiveLookAheadControl_5]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[TrialMetrics]] - `uses` [INFERRED]
+- [[__init__()_128]] - `method` [EXTRACTED]
 - [[create_simulator()]] - `calls` [EXTRACTED]
 - [[fatigue_model_sensitivity.py]] - `contains` [EXTRACTED]
+- [[get_description()_1]] - `method` [EXTRACTED]
+- [[step()_55]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation

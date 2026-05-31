@@ -12,6 +12,6 @@ tags:
 # Return current number of samples in baseline buffer.
 
 ## Connections
-- [[.get_buffer_size()]] - `rationale_for` [EXTRACTED]
+- [[get_buffer_size()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_46

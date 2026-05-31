@@ -12,6 +12,6 @@ tags:
 # Insert a figure with caption.
 
 ## Connections
-- [[.write_figure()]] - `rationale_for` [EXTRACTED]
+- [[write_figure()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders

@@ -12,10 +12,10 @@ tags:
 # DeepDilationTCN
 
 ## Connections
-- [[.__init__()_133]] - `method` [EXTRACTED]
-- [[.count_parameters()_8]] - `method` [EXTRACTED]
-- [[.forward()_42]] - `method` [EXTRACTED]
 - [[Causal TCN with extended dilation stack for larger receptive field.      Defau]] - `rationale_for` [EXTRACTED]
+- [[__init__()_133]] - `method` [EXTRACTED]
+- [[count_parameters()_12]] - `method` [EXTRACTED]
+- [[forward()_42]] - `method` [EXTRACTED]
 - [[tcn_variants.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TCN_Layer_Internals

@@ -12,6 +12,6 @@ tags:
 # Reset simulator to initial state.          Args:             initial_pac: Overri
 
 ## Connections
-- [[.reset()_71]] - `rationale_for` [EXTRACTED]
+- [[reset()_71]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator

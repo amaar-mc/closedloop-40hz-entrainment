@@ -12,10 +12,10 @@ tags:
 # Return 0 (REST) or 1 (STIMULATE).
 
 ## Connections
-- [[.step()_57]] - `rationale_for` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[step()_58]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

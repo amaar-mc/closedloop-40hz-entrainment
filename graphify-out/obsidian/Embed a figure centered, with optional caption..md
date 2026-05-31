@@ -12,6 +12,6 @@ tags:
 # Embed a figure centered, with optional caption.
 
 ## Connections
-- [[.fig()]] - `rationale_for` [EXTRACTED]
+- [[fig()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/PPTX_Slide_Builder

@@ -12,7 +12,7 @@ tags:
 # Forward pass through EEGNetEnhanced.          Args:             x: Input EEG
 
 ## Connections
-- [[.forward()_37]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
+- [[forward()_37]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Models,_Streaming_&_Apps

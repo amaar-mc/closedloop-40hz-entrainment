@@ -12,13 +12,6 @@ tags:
 # PACComputer
 
 ## Connections
-- [[.__init__()_145]] - `method` [EXTRACTED]
-- [[.bandpass_filter()]] - `method` [EXTRACTED]
-- [[.compute_modulation_index()]] - `method` [EXTRACTED]
-- [[.compute_pac()]] - `method` [EXTRACTED]
-- [[.compute_pac_average()]] - `method` [EXTRACTED]
-- [[.compute_pac_multichannel()]] - `method` [EXTRACTED]
-- [[.extract_phase_amplitude()]] - `method` [EXTRACTED]
 - [[BIDS Data Loader for Closed-Loop 40Hz Entrainment Research  Loads OpenNeuro ds]] - `uses` [INFERRED]
 - [[BIDSDataProcessor]] - `uses` [INFERRED]
 - [[Computes Phase-Amplitude Coupling using Modulation Index method.      The Modu]] - `rationale_for` [EXTRACTED]
@@ -44,6 +37,13 @@ tags:
 - [[Return number of samples.]] - `uses` [INFERRED]
 - [[Save trainvaltest splits to npz files.          Args             splits D]] - `uses` [INFERRED]
 - [[Select 7 frontal channels from full EEG montage.          Args             r]] - `uses` [INFERRED]
+- [[__init__()_145]] - `method` [EXTRACTED]
+- [[bandpass_filter()]] - `method` [EXTRACTED]
+- [[compute_modulation_index()]] - `method` [EXTRACTED]
+- [[compute_pac()]] - `method` [EXTRACTED]
+- [[compute_pac_average()]] - `method` [EXTRACTED]
+- [[compute_pac_multichannel()]] - `method` [EXTRACTED]
+- [[extract_phase_amplitude()_1]] - `method` [EXTRACTED]
 - [[pac_computation.py]] - `contains` [EXTRACTED]
 - [[validate_pac_computation()]] - `calls` [EXTRACTED]
 

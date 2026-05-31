@@ -12,11 +12,11 @@ tags:
 # Map mean cortical activation to PAC value.          Uses a sigmoidal mapping cal
 
 ## Connections
-- [[._activation_to_pac()]] - `rationale_for` [EXTRACTED]
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]
 - [[NeuralMassConfig]] - `uses` [INFERRED]
 - [[WilsonCowanModel]] - `uses` [INFERRED]
+- [[_activation_to_pac()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/TRIBE_Neural-Mass_Simulator

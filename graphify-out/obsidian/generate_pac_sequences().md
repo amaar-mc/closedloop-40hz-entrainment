@@ -12,10 +12,10 @@ tags:
 # generate_pac_sequences()
 
 ## Connections
-- [[.step()_42]] - `calls` [EXTRACTED]
 - [[Generate PAC time series from TRIBE V2 simulator with realistic noise.      Uses]] - `rationale_for` [EXTRACTED]
 - [[TRIBE TCN Validation Pipeline Script]] - `calls` [EXTRACTED]
 - [[main()_48]] - `calls` [EXTRACTED]
 - [[run_tribe_tcn_validation.py]] - `contains` [EXTRACTED]
+- [[step()_43]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TRIBE-TCN_Validation

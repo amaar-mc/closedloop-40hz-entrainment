@@ -12,8 +12,8 @@ tags:
 # Initialize closed-loop controller.          Args:             model_path: Pat
 
 ## Connections
-- [[.__init__()_146]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
+- [[__init__()_146]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

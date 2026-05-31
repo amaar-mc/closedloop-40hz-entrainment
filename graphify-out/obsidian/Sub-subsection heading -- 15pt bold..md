@@ -12,6 +12,6 @@ tags:
 # Sub-subsection heading -- 15pt bold.
 
 ## Connections
-- [[.sub2()]] - `rationale_for` [EXTRACTED]
+- [[sub2()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/PPTX_Slide_Builder

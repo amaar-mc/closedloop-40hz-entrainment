@@ -12,6 +12,6 @@ tags:
 # Precompute filter coefficients for efficiency.
 
 ## Connections
-- [[._compute_filter_coefficients()]] - `rationale_for` [EXTRACTED]
+- [[_compute_filter_coefficients()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline

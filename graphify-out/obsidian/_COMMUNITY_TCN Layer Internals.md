@@ -8,25 +8,6 @@ members: 46
 **Members:** 46 nodes
 
 ## Members
-- [[.__init__()_131]] - code - validation/experiments/tcn_variants.py
-- [[.__init__()_132]] - code - validation/experiments/tcn_variants.py
-- [[.__init__()_133]] - code - validation/experiments/tcn_variants.py
-- [[.__init__()_134]] - code - validation/experiments/tcn_variants.py
-- [[.__init__()_135]] - code - validation/experiments/tcn_variants.py
-- [[.__init__()_136]] - code - validation/experiments/tcn_variants.py
-- [[.__init__()_137]] - code - validation/experiments/tcn_variants.py
-- [[._generate_causal_mask()]] - code - validation/experiments/tcn_variants.py
-- [[.count_parameters()_8]] - code - validation/experiments/tcn_variants.py
-- [[.count_parameters()_9]] - code - validation/experiments/tcn_variants.py
-- [[.count_parameters()_10]] - code - validation/experiments/tcn_variants.py
-- [[.count_parameters()_11]] - code - validation/experiments/tcn_variants.py
-- [[.forward()_39]] - code - validation/experiments/tcn_variants.py
-- [[.forward()_40]] - code - validation/experiments/tcn_variants.py
-- [[.forward()_41]] - code - validation/experiments/tcn_variants.py
-- [[.forward()_42]] - code - validation/experiments/tcn_variants.py
-- [[.forward()_44]] - code - validation/experiments/tcn_variants.py
-- [[.forward()_45]] - code - validation/experiments/tcn_variants.py
-- [[.forward()_46]] - code - validation/experiments/tcn_variants.py
 - [[Add positional encoding to input.          Args             x Input tensor]] - rationale - validation/experiments/tcn_variants.py
 - [[Attention pooling over time axis._2]] - rationale - validation/experiments/tcn_variants.py
 - [[AttentionPool1D_2]] - code - validation/experiments/tcn_variants.py
@@ -52,8 +33,27 @@ members: 46
 - [[TransformerTCN]] - code - validation/experiments/tcn_variants.py
 - [[Two-layer MLP head hidden - hidden - 1.]] - rationale - validation/experiments/tcn_variants.py
 - [[WiderTCN]] - code - validation/experiments/tcn_variants.py
+- [[__init__()_131]] - code - validation/experiments/tcn_variants.py
+- [[__init__()_132]] - code - validation/experiments/tcn_variants.py
+- [[__init__()_133]] - code - validation/experiments/tcn_variants.py
+- [[__init__()_134]] - code - validation/experiments/tcn_variants.py
+- [[__init__()_135]] - code - validation/experiments/tcn_variants.py
+- [[__init__()_136]] - code - validation/experiments/tcn_variants.py
+- [[__init__()_137]] - code - validation/experiments/tcn_variants.py
 - [[_count_parameters()]] - code - validation/experiments/tcn_variants.py
+- [[_generate_causal_mask()]] - code - validation/experiments/tcn_variants.py
 - [[_make_regression_head()]] - code - validation/experiments/tcn_variants.py
+- [[count_parameters()_12]] - code - validation/experiments/tcn_variants.py
+- [[count_parameters()_13]] - code - validation/experiments/tcn_variants.py
+- [[count_parameters()_14]] - code - validation/experiments/tcn_variants.py
+- [[count_parameters()_15]] - code - validation/experiments/tcn_variants.py
+- [[forward()_39]] - code - validation/experiments/tcn_variants.py
+- [[forward()_40]] - code - validation/experiments/tcn_variants.py
+- [[forward()_41]] - code - validation/experiments/tcn_variants.py
+- [[forward()_42]] - code - validation/experiments/tcn_variants.py
+- [[forward()_44]] - code - validation/experiments/tcn_variants.py
+- [[forward()_45]] - code - validation/experiments/tcn_variants.py
+- [[forward()_46]] - code - validation/experiments/tcn_variants.py
 
 ## Live Query (requires Dataview plugin)
 

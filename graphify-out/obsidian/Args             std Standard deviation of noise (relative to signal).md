@@ -12,6 +12,6 @@ tags:
 # Args:             std: Standard deviation of noise (relative to signal)
 
 ## Connections
-- [[.__init__()_49]] - `rationale_for` [EXTRACTED]
+- [[__init__()_49]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

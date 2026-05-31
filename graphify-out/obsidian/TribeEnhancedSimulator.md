@@ -12,15 +12,6 @@ tags:
 # TribeEnhancedSimulator
 
 ## Connections
-- [[.__init__()_169]] - `method` [EXTRACTED]
-- [[._activation_to_pac()]] - `method` [EXTRACTED]
-- [[._apply_disease_to_neural_mass()]] - `method` [EXTRACTED]
-- [[._compute_pac_from_eeg()]] - `method` [EXTRACTED]
-- [[._warmup()]] - `method` [EXTRACTED]
-- [[.get_history()_4]] - `method` [EXTRACTED]
-- [[.get_state()_2]] - `method` [EXTRACTED]
-- [[.reset()_69]] - `method` [EXTRACTED]
-- [[.step()_71]] - `method` [EXTRACTED]
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[Audit script for TRIBE V2 integration module.  Validates     1. All module impo]] - `uses` [INFERRED]
 - [[Biophysically grounded brain entrainment simulator.      This simulator replaces]] - `rationale_for` [EXTRACTED]
@@ -49,7 +40,16 @@ tags:
 - [[Validate stimulus generation.]] - `uses` [INFERRED]
 - [[WilsonCowanModel]] - `uses` [INFERRED]
 - [[Z-score reactive with hysteresis.]] - `uses` [INFERRED]
+- [[__init__()_169]] - `method` [EXTRACTED]
+- [[_activation_to_pac()]] - `method` [EXTRACTED]
+- [[_apply_disease_to_neural_mass()]] - `method` [EXTRACTED]
+- [[_compute_pac_from_eeg()]] - `method` [EXTRACTED]
+- [[_warmup()]] - `method` [EXTRACTED]
 - [[create_simulator()_1]] - `calls` [EXTRACTED]
 - [[enhanced_simulator.py]] - `contains` [EXTRACTED]
+- [[get_history()_4]] - `method` [EXTRACTED]
+- [[get_state()_2]] - `method` [EXTRACTED]
+- [[reset()_69]] - `method` [EXTRACTED]
+- [[step()_72]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/TRIBE_Neural-Mass_Simulator

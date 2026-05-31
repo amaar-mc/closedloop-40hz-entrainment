@@ -12,12 +12,12 @@ tags:
 # analyze_attention_weights()
 
 ## Connections
-- [[.get_all_weights()]] - `calls` [EXTRACTED]
-- [[.remove()]] - `calls` [EXTRACTED]
 - [[AttentionWeightCapture]] - `calls` [EXTRACTED]
 - [[AttentionWeightCapture (Hook-Based Attention Weight Capture)]] - `calls` [EXTRACTED]
 - [[Run the test set through the model and capture attention weights.      Args]] - `rationale_for` [EXTRACTED]
+- [[get_all_weights()]] - `calls` [EXTRACTED]
 - [[main()_71]] - `calls` [EXTRACTED]
+- [[remove()]] - `calls` [EXTRACTED]
 - [[tcn_interpretability.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Multiscale_TCN_&_Features

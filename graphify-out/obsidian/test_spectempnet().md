@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[SpecTempNet]] - `calls` [EXTRACTED]
 - [[Test the SpecTempNet architecture.]] - `rationale_for` [EXTRACTED]
-- [[count_parameters()_2]] - `calls` [EXTRACTED]
+- [[count_parameters()_9]] - `calls` [EXTRACTED]
 - [[spectempnet.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Archived_SpecTempNet_V3

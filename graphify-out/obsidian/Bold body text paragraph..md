@@ -12,6 +12,6 @@ tags:
 # Bold body text paragraph.
 
 ## Connections
-- [[.body_bold()]] - `rationale_for` [EXTRACTED]
+- [[body_bold()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/PPTX_Slide_Builder

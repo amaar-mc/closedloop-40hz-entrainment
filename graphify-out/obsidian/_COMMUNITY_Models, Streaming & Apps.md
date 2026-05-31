@@ -8,34 +8,6 @@ members: 272
 **Members:** 272 nodes
 
 ## Members
-- [[.__enter__()]] - code - src/streaming/adapters.py
-- [[.__init__()_67]] - code - temporal_multiscale/model_registry.py
-- [[.__init__()_68]] - code - temporal_multiscale/model_registry.py
-- [[.__init__()_123]] - code - validation/eegnet_enhanced.py
-- [[.__init__()_124]] - code - validation/eegnet_enhanced.py
-- [[.__init__()_148]] - code - src/eegnet.py
-- [[.__init__()_164]] - code - src/streaming/feature_extractor.py
-- [[.__init__()_165]] - code - src/streaming/adapters.py
-- [[._causal_phase_amplitude()]] - code - src/streaming/feature_extractor.py
-- [[._compute_pac_features()]] - code - src/streaming/feature_extractor.py
-- [[._welch_band()]] - code - src/streaming/feature_extractor.py
-- [[.available()]] - code - temporal_multiscale/model_registry.py
-- [[.close()]] - code - src/streaming/adapters.py
-- [[.forward()_37]] - code - validation/eegnet_enhanced.py
-- [[.forward()_38]] - code - validation/eegnet_enhanced.py
-- [[.forward()_47]] - code - src/eegnet.py
-- [[.get()]] - code - temporal_multiscale/model_registry.py
-- [[.get_feature_maps()]] - code - validation/eegnet_enhanced.py
-- [[.get_feature_maps()_1]] - code - validation/eegnet_enhanced.py
-- [[.get_feature_maps()_2]] - code - src/eegnet.py
-- [[.get_window()]] - code - src/streaming/adapters.py
-- [[.process_window()]] - code - src/streaming/feature_extractor.py
-- [[.register()]] - code - temporal_multiscale/model_registry.py
-- [[.reset()_9]] - code - temporal_multiscale/model_registry.py
-- [[.reset()_10]] - code - temporal_multiscale/model_registry.py
-- [[.reset()_67]] - code - src/streaming/feature_extractor.py
-- [[.step()_8]] - code - temporal_multiscale/model_registry.py
-- [[.step()_9]] - code - temporal_multiscale/model_registry.py
 - [[4-Channel Deployment Limitations (spatial approx, dry electrodes, reference mismatch)]] - document - archive/muse_4ch/CHANNEL_MAPPING.md
 - [[4-Channel Muse 2 Model Retraining Pipeline  Retrains the full EEGNet + TCN pipel]] - rationale - archive/muse_4ch/retrain_pipeline.py
 - [[4-Channel Muse 2 Retraining Pipeline]] - code - archive/muse_4ch/retrain_pipeline.py
@@ -187,21 +159,34 @@ members: 272
 - [[Train TCN on 4-channel multiscale temporal dataset.]] - rationale - archive/muse_4ch/retrain_pipeline.py
 - [[Train a model for one seed and evaluate on the test split.      Uses Huber los]] - rationale - validation/multi_seed_training.py
 - [[Zero all filter states (restart as if no prior windows seen).]] - rationale - src/streaming/feature_extractor.py
+- [[__enter__()]] - code - src/streaming/adapters.py
+- [[__init__()_67]] - code - temporal_multiscale/model_registry.py
+- [[__init__()_68]] - code - temporal_multiscale/model_registry.py
+- [[__init__()_123]] - code - validation/eegnet_enhanced.py
+- [[__init__()_124]] - code - validation/eegnet_enhanced.py
+- [[__init__()_148]] - code - src/eegnet.py
+- [[__init__()_164]] - code - src/streaming/feature_extractor.py
+- [[__init__()_165]] - code - src/streaming/adapters.py
 - [[__init__.py]] - code - src/tribe_v2/__init__.py
 - [[_assert()]] - code - tests/test_model_registry.py
+- [[_causal_phase_amplitude()]] - code - src/streaming/feature_extractor.py
+- [[_compute_pac_features()]] - code - src/streaming/feature_extractor.py
 - [[_feature_slices()]] - code - tests/test_streaming_parity.py
 - [[_get_patient_by_id()]] - code - apps/caregiver_app.py
 - [[_init_session_state()]] - code - apps/caregiver_app.py
 - [[_make_windows()]] - code - tests/test_streaming_parity.py
 - [[_print_layer_params()]] - code - validation/eegnet_enhanced.py
+- [[_welch_band()]] - code - src/streaming/feature_extractor.py
 - [[auto_device()]] - code - scripts/tools/demo_streaming.py
+- [[available()]] - code - temporal_multiscale/model_registry.py
 - [[build_default_registry()]] - code - temporal_multiscale/model_registry.py
 - [[build_default_registry() returns registry with 'tcn' pre-registered.]] - rationale - tests/test_model_registry.py
 - [[caregiver_app.py]] - code - apps/caregiver_app.py
 - [[check()]] - code - tests/test_simulated_session.py
+- [[close()]] - code - src/streaming/adapters.py
 - [[compute_aggregate_stats()]] - code - validation/multi_seed_training.py
-- [[count_parameters()_3]] - code - validation/eegnet_enhanced.py
-- [[count_parameters()_4]] - code - src/eegnet.py
+- [[count_parameters()_11]] - code - validation/eegnet_enhanced.py
+- [[count_parameters()_16]] - code - src/eegnet.py
 - [[create_model()]] - code - validation/multi_seed_training.py
 - [[demo_streaming.py]] - code - scripts/tools/demo_streaming.py
 - [[eegnet.py]] - code - src/eegnet.py
@@ -211,7 +196,15 @@ members: 272
 - [[feature_dim()]] - code - temporal_multiscale/model_registry.py
 - [[feature_extractor.py]] - code - src/streaming/feature_extractor.py
 - [[format_state()]] - code - scripts/tools/demo_streaming.py
+- [[forward()_37]] - code - validation/eegnet_enhanced.py
+- [[forward()_38]] - code - validation/eegnet_enhanced.py
+- [[forward()_47]] - code - src/eegnet.py
+- [[get()]] - code - temporal_multiscale/model_registry.py
+- [[get_feature_maps()]] - code - validation/eegnet_enhanced.py
+- [[get_feature_maps()_1]] - code - validation/eegnet_enhanced.py
+- [[get_feature_maps()_2]] - code - src/eegnet.py
 - [[get_feature_maps() Visualization Hook]] - code - validation/eegnet_enhanced.py
+- [[get_window()]] - code - src/streaming/adapters.py
 - [[label()]] - code - apps/caregiver_app.py
 - [[load_all_data()]] - code - validation/multi_seed_training.py
 - [[load_eegnet()]] - code - scripts/tools/demo_streaming.py
@@ -232,12 +225,17 @@ members: 272
 - [[navigate()]] - code - apps/caregiver_app.py
 - [[pac_to_display()]] - code - apps/caregiver_app.py
 - [[parse_args()_18]] - code - scripts/tools/demo_streaming.py
+- [[process_window()]] - code - src/streaming/feature_extractor.py
+- [[register()]] - code - temporal_multiscale/model_registry.py
 - [[render_patient_history()]] - code - apps/caregiver_app.py
 - [[render_patient_select()]] - code - apps/caregiver_app.py
 - [[render_session()]] - code - apps/caregiver_app.py
 - [[render_sidebar()]] - code - apps/caregiver_app.py
 - [[render_summary()]] - code - apps/caregiver_app.py
 - [[render_welcome()]] - code - apps/caregiver_app.py
+- [[reset()_9]] - code - temporal_multiscale/model_registry.py
+- [[reset()_10]] - code - temporal_multiscale/model_registry.py
+- [[reset()_67]] - code - src/streaming/feature_extractor.py
 - [[reset() zeroes filter state so subsequent call matches a fresh instance.]] - rationale - tests/test_streaming_parity.py
 - [[retrain_pipeline.py]] - code - archive/muse_4ch/retrain_pipeline.py
 - [[run_demo()]] - code - scripts/tools/demo_streaming.py
@@ -248,6 +246,8 @@ members: 272
 - [[srcpersonalization.py (PersonalizationModule)]] - code - src/personalization.py
 - [[srcstreamingadapters.py (SimulatedEEGAdapter)]] - code - src/streaming/adapters.py
 - [[srcstreamingfeature_extractor.py (StreamingFeatureExtractor)]] - code - src/streaming/feature_extractor.py
+- [[step()_9]] - code - temporal_multiscale/model_registry.py
+- [[step()_10]] - code - temporal_multiscale/model_registry.py
 - [[step1_process_data()]] - code - archive/muse_4ch/retrain_pipeline.py
 - [[step2_spectral_caches()]] - code - archive/muse_4ch/retrain_pipeline.py
 - [[step3_build_multiscale_dataset()]] - code - archive/muse_4ch/retrain_pipeline.py

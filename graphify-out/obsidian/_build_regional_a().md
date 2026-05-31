@@ -12,8 +12,8 @@ tags:
 # _build_regional_a()
 
 ## Connections
-- [[.__init__()_171]] - `calls` [EXTRACTED]
 - [[Build a per-region A (excitatory gain) array from a disease profile.      Return]] - `rationale_for` [EXTRACTED]
+- [[__init__()_171]] - `calls` [EXTRACTED]
 - [[tvb_simulator.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator

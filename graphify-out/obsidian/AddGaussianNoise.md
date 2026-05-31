@@ -12,10 +12,10 @@ tags:
 # AddGaussianNoise
 
 ## Connections
-- [[.__call__()_4]] - `method` [EXTRACTED]
-- [[.__init__()_49]] - `method` [EXTRACTED]
-- [[.__init__()_52]] - `calls` [EXTRACTED]
 - [[Add Gaussian noise to simulate measurement noise.]] - `rationale_for` [EXTRACTED]
+- [[__call__()_4]] - `method` [EXTRACTED]
+- [[__init__()_49]] - `method` [EXTRACTED]
+- [[__init__()_52]] - `calls` [EXTRACTED]
 - [[data_augmentation.py]] - `contains` [EXTRACTED]
 - [[test_augmentation()]] - `calls` [EXTRACTED]
 

@@ -8,20 +8,6 @@ members: 80
 **Members:** 80 nodes
 
 ## Members
-- [[.__getitem__()_3]] - code - archive/improved_tcn/train_improved_tcn.py
-- [[.__init__()_9]] - code - archive/improved_tcn/train_improved_tcn.py
-- [[.__init__()_10]] - code - archive/improved_tcn/improved_tcn_model.py
-- [[.__init__()_11]] - code - archive/improved_tcn/improved_tcn_model.py
-- [[.__init__()_12]] - code - archive/improved_tcn/improved_tcn_model.py
-- [[.__len__()_3]] - code - archive/improved_tcn/train_improved_tcn.py
-- [[._make_causal_mask()]] - code - archive/improved_tcn/improved_tcn_model.py
-- [[.count_parameters()_5]] - code - archive/improved_tcn/improved_tcn_model.py
-- [[.forward()_6]] - code - archive/improved_tcn/improved_tcn_model.py
-- [[.forward()_7]] - code - archive/improved_tcn/improved_tcn_model.py
-- [[.forward()_8]] - code - archive/improved_tcn/improved_tcn_model.py
-- [[.forward()_9]] - code - archive/improved_tcn/improved_tcn_model.py
-- [[.freeze_backbone()]] - code - archive/improved_tcn/improved_tcn_model.py
-- [[.unfreeze_all()]] - code - archive/improved_tcn/improved_tcn_model.py
 - [[Attention pooling over time axis.]] - rationale - archive/improved_tcn/improved_tcn_model.py
 - [[AttentionPool1D]] - code - archive/improved_tcn/improved_tcn_model.py
 - [[AttentionPool1D_3]] - code - archive/improved_tcn/improved_tcn_model.py
@@ -63,10 +49,17 @@ members: 80
 - [[Train ImprovedTCN on enhanced multiscale datasets.  Key differences from train_m]] - rationale - archive/improved_tcn/train_improved_tcn.py
 - [[Unfreeze all parameters (reverses freeze_backbone).]] - rationale - archive/improved_tcn/improved_tcn_model.py
 - [[Upper-triangular boolean mask True = masked (no attending to future).]] - rationale - archive/improved_tcn/improved_tcn_model.py
+- [[__getitem__()_3]] - code - archive/improved_tcn/train_improved_tcn.py
+- [[__init__()_9]] - code - archive/improved_tcn/train_improved_tcn.py
+- [[__init__()_10]] - code - archive/improved_tcn/improved_tcn_model.py
+- [[__init__()_11]] - code - archive/improved_tcn/improved_tcn_model.py
+- [[__init__()_12]] - code - archive/improved_tcn/improved_tcn_model.py
+- [[__len__()_3]] - code - archive/improved_tcn/train_improved_tcn.py
 - [[_build_split_samples_enhanced()]] - code - archive/improved_tcn/build_enhanced_dataset.py
 - [[_compute_per_subject_smooth()]] - code - archive/improved_tcn/train_improved_tcn.py
 - [[_corr()_1]] - code - archive/improved_tcn/train_improved_tcn.py
 - [[_denorm()_1]] - code - archive/improved_tcn/train_improved_tcn.py
+- [[_make_causal_mask()]] - code - archive/improved_tcn/improved_tcn_model.py
 - [[_metrics()]] - code - archive/improved_tcn/train_improved_tcn.py
 - [[_r2()_1]] - code - archive/improved_tcn/train_improved_tcn.py
 - [[build_enhanced_dataset()]] - code - archive/improved_tcn/build_enhanced_dataset.py
@@ -74,11 +67,17 @@ members: 80
 - [[compute_hjorth_params()]] - code - archive/improved_tcn/enhanced_features.py
 - [[compute_sample_entropy()]] - code - archive/improved_tcn/enhanced_features.py
 - [[compute_zero_crossing_rate()]] - code - archive/improved_tcn/enhanced_features.py
+- [[count_parameters()_5]] - code - archive/improved_tcn/improved_tcn_model.py
 - [[enhanced_features.py]] - code - archive/improved_tcn/enhanced_features.py
 - [[evaluate()]] - code - archive/improved_tcn/train_improved_tcn.py
 - [[extract_enhanced_features()]] - code - archive/improved_tcn/enhanced_features.py
 - [[extract_enhanced_features_batch()]] - code - archive/improved_tcn/enhanced_features.py
+- [[forward()_6]] - code - archive/improved_tcn/improved_tcn_model.py
+- [[forward()_7]] - code - archive/improved_tcn/improved_tcn_model.py
+- [[forward()_8]] - code - archive/improved_tcn/improved_tcn_model.py
+- [[forward()_9]] - code - archive/improved_tcn/improved_tcn_model.py
 - [[freeze_backbone (per-subject fine-tuning support)]] - code - archive/improved_tcn/improved_tcn_model.py
+- [[freeze_backbone()]] - code - archive/improved_tcn/improved_tcn_model.py
 - [[get_baseline_tcn_r2()]] - code - archive/improved_tcn/train_improved_tcn.py
 - [[get_enhanced_feature_names()]] - code - archive/improved_tcn/enhanced_features.py
 - [[improved_tcn_model.py]] - code - archive/improved_tcn/improved_tcn_model.py
@@ -88,6 +87,7 @@ members: 80
 - [[parse_args()_1]] - code - archive/improved_tcn/train_improved_tcn.py
 - [[train_improved_tcn.py]] - code - archive/improved_tcn/train_improved_tcn.py
 - [[train_one_epoch()_1]] - code - archive/improved_tcn/train_improved_tcn.py
+- [[unfreeze_all()]] - code - archive/improved_tcn/improved_tcn_model.py
 
 ## Live Query (requires Dataview plugin)
 

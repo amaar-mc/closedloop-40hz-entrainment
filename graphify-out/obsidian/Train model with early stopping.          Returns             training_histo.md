@@ -12,7 +12,7 @@ tags:
 # Train model with early stopping.          Returns:             training_histo
 
 ## Connections
-- [[.fit()]] - `rationale_for` [EXTRACTED]
 - [[EEGNetV2]] - `uses` [INFERRED]
+- [[fit()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_EEGNet_V2

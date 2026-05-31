@@ -12,9 +12,9 @@ tags:
 # test_pac_features()
 
 ## Connections
-- [[.extract()_1]] - `calls` [EXTRACTED]
 - [[PACFeatureExtractor]] - `calls` [EXTRACTED]
 - [[Test PAC feature extraction.]] - `rationale_for` [EXTRACTED]
+- [[extract()_1]] - `calls` [EXTRACTED]
 - [[pac_features.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

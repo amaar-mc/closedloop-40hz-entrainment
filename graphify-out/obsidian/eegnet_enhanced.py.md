@@ -16,7 +16,7 @@ tags:
 - [[EEGNetLarge]] - `contains` [EXTRACTED]
 - [[Enhanced EEGNet Architectures for PAC Prediction Capacity Experiments  Tests w]] - `rationale_for` [EXTRACTED]
 - [[_print_layer_params()]] - `contains` [EXTRACTED]
-- [[count_parameters()_3]] - `contains` [EXTRACTED]
+- [[count_parameters()_11]] - `contains` [EXTRACTED]
 - [[multi_seed_training.py]] - `imports_from` [EXTRACTED]
 - [[test_all()]] - `contains` [EXTRACTED]
 - [[test_eegnet_enhanced()]] - `contains` [EXTRACTED]

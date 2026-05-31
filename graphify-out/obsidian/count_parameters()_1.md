@@ -1,19 +1,17 @@
 ---
-source_file: "archive/experimental_models/vit_tcnet.py"
+source_file: "archive/experimental/run_experiments.py"
 type: "code"
-community: "Archived Feature Experiments (v4)"
-location: "L368"
+community: "Archived ImprovedTCN Experiments"
+location: "L193"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archived_Feature_Experiments_(v4)
+  - community/Archived_ImprovedTCN_Experiments
 ---
 
 # count_parameters()
 
 ## Connections
-- [[Count trainable parameters._1]] - `rationale_for` [EXTRACTED]
-- [[test_vit_tcnet()]] - `calls` [EXTRACTED]
-- [[vit_tcnet.py]] - `contains` [EXTRACTED]
+- [[ImprovedTCN]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)
+#graphify/code #graphify/EXTRACTED #community/Archived_ImprovedTCN_Experiments

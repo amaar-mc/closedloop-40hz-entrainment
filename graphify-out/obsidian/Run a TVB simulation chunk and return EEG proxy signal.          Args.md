@@ -12,6 +12,6 @@ tags:
 # Run a TVB simulation chunk and return EEG proxy signal.          Args:
 
 ## Connections
-- [[._run_tvb()]] - `rationale_for` [EXTRACTED]
+- [[_run_tvb()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator

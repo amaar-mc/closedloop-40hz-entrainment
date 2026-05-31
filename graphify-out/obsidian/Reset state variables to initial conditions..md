@@ -12,6 +12,6 @@ tags:
 # Reset state variables to initial conditions.
 
 ## Connections
-- [[.reset()_68]] - `rationale_for` [EXTRACTED]
+- [[reset()_68]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

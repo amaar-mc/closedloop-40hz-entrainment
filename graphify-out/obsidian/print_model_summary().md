@@ -13,7 +13,7 @@ tags:
 
 ## Connections
 - [[Print model architecture summary.      Args         model PyTorch model]] - `rationale_for` [EXTRACTED]
-- [[count_parameters()_5]] - `calls` [EXTRACTED]
+- [[count_parameters()_17]] - `calls` [EXTRACTED]
 - [[utils.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_35

@@ -12,6 +12,6 @@ tags:
 # Compute mean and standard deviation of baseline PAC values.          Returns:
 
 ## Connections
-- [[.get_baseline_stats()_1]] - `rationale_for` [EXTRACTED]
+- [[get_baseline_stats()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_46

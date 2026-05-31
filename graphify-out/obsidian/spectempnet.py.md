@@ -17,7 +17,7 @@ tags:
 - [[SpecTempNet]] - `contains` [EXTRACTED]
 - [[SpecTempNet Hybrid Spectral-Temporal Network for PAC Prediction  Combines 1]] - `rationale_for` [EXTRACTED]
 - [[SpectralBranch]] - `contains` [EXTRACTED]
-- [[count_parameters()_2]] - `contains` [EXTRACTED]
+- [[count_parameters()_9]] - `contains` [EXTRACTED]
 - [[run_training_v3.py]] - `imports_from` [EXTRACTED]
 - [[test_spectempnet()]] - `contains` [EXTRACTED]
 

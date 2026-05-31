@@ -1,11 +1,4 @@
 {
-  "collapse-filter": false,
-  "search": "",
-  "showTags": false,
-  "showAttachments": false,
-  "hideUnresolved": false,
-  "showOrphans": true,
-  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "tag:#community/Closed-Loop_Control_&_Simulator",
@@ -1442,17 +1435,5 @@
         "rgb": 5873999
       }
     }
-  ],
-  "collapse-display": false,
-  "showArrow": false,
-  "textFadeMultiplier": 0,
-  "nodeSizeMultiplier": 1,
-  "lineSizeMultiplier": 1,
-  "collapse-forces": false,
-  "centerStrength": 0.5375,
-  "repelStrength": 10,
-  "linkStrength": 1,
-  "linkDistance": 321,
-  "scale": 0.0936679403015294,
-  "close": true
+  ]
 }

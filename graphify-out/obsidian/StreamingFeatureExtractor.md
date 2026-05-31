@@ -12,12 +12,6 @@ tags:
 # StreamingFeatureExtractor
 
 ## Connections
-- [[.__init__()_164]] - `method` [EXTRACTED]
-- [[._causal_phase_amplitude()]] - `method` [EXTRACTED]
-- [[._compute_pac_features()]] - `method` [EXTRACTED]
-- [[._welch_band()]] - `method` [EXTRACTED]
-- [[.process_window()]] - `method` [EXTRACTED]
-- [[.reset()_67]] - `method` [EXTRACTED]
 - [[4-channel streaming matches offline within tolerances on windows 5-14.     Retu]] - `uses` [INFERRED]
 - [[7-channel streaming matches offline within tolerances on windows 5-14.]] - `uses` [INFERRED]
 - [[Append a session record to the given patient and clear cache.]] - `uses` [INFERRED]
@@ -56,8 +50,14 @@ tags:
 - [[StreamingFeatureExtractor(n_channels=4) produces (37,) output.]] - `uses` [INFERRED]
 - [[StreamingFeatureExtractor(n_channels=7) produces (61,) output.]] - `uses` [INFERRED]
 - [[TRIBE V2 Integration Module for Closed-Loop 40Hz Entrainment  Integrates Meta's]] - `uses` [INFERRED]
+- [[__init__()_164]] - `method` [EXTRACTED]
+- [[_causal_phase_amplitude()]] - `method` [EXTRACTED]
+- [[_compute_pac_features()]] - `method` [EXTRACTED]
+- [[_welch_band()]] - `method` [EXTRACTED]
 - [[feature_extractor.py]] - `contains` [EXTRACTED]
 - [[n_features property returns 8n_channels + 5.]] - `uses` [INFERRED]
+- [[process_window()]] - `method` [EXTRACTED]
+- [[reset()_67]] - `method` [EXTRACTED]
 - [[reset() zeroes filter state so subsequent call matches a fresh instance.]] - `uses` [INFERRED]
 
 #graphify/code #graphify/INFERRED #community/Models,_Streaming_&_Apps

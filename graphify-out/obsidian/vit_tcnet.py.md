@@ -18,7 +18,7 @@ tags:
 - [[TemporalConvolutionalNetwork]] - `contains` [EXTRACTED]
 - [[ViT-TCNet Vision Transformer + Temporal Convolutional Network for PAC Predictio]] - `rationale_for` [EXTRACTED]
 - [[ViTTCNet]] - `contains` [EXTRACTED]
-- [[count_parameters()_1]] - `contains` [EXTRACTED]
+- [[count_parameters()_8]] - `contains` [EXTRACTED]
 - [[run_training_v4.py]] - `imports_from` [EXTRACTED]
 - [[test_vit_tcnet()]] - `contains` [EXTRACTED]
 

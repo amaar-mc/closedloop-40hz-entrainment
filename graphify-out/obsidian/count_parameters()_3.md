@@ -1,23 +1,17 @@
 ---
-source_file: "validation/eegnet_enhanced.py"
+source_file: "archive/experimental/run_experiments.py"
 type: "code"
-community: "Models, Streaming & Apps"
-location: "L412"
+community: "Archived ImprovedTCN Experiments"
+location: "L294"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Models,_Streaming_&_Apps
+  - community/Archived_ImprovedTCN_Experiments
 ---
 
 # count_parameters()
 
 ## Connections
-- [[Count number of trainable parameters in model.      Args         model PyTo]] - `rationale_for` [EXTRACTED]
-- [[EEGNetEnhanced (~35K params, 24x original)]] - `calls` [INFERRED]
-- [[EEGNetLarge (~141K params, 97x original)]] - `calls` [INFERRED]
-- [[eegnet_enhanced.py]] - `contains` [EXTRACTED]
-- [[test_all()]] - `calls` [EXTRACTED]
-- [[test_eegnet_enhanced()]] - `calls` [EXTRACTED]
-- [[test_eegnet_large()]] - `calls` [EXTRACTED]
+- [[ResidualTCN]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+#graphify/code #graphify/EXTRACTED #community/Archived_ImprovedTCN_Experiments

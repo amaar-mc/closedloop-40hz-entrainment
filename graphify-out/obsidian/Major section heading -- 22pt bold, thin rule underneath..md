@@ -12,6 +12,6 @@ tags:
 # Major section heading -- 22pt bold, thin rule underneath.
 
 ## Connections
-- [[.sec()]] - `rationale_for` [EXTRACTED]
+- [[sec()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/PPTX_Slide_Builder

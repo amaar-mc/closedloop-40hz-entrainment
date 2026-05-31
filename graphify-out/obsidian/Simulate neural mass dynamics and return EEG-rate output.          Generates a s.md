@@ -12,6 +12,6 @@ tags:
 # Simulate neural mass dynamics and return EEG-rate output.          Generates a s
 
 ## Connections
-- [[.simulate()]] - `rationale_for` [EXTRACTED]
+- [[simulate()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

@@ -12,7 +12,6 @@ tags:
 # PairwiseResult
 
 ## Connections
-- [[.to_dict()_1]] - `method` [EXTRACTED]
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
 - [[PredictiveLookAheadControl_5]] - `uses` [INFERRED]
@@ -21,5 +20,6 @@ tags:
 - [[TrialMetrics]] - `uses` [INFERRED]
 - [[fatigue_model_sensitivity.py]] - `contains` [EXTRACTED]
 - [[run_fatigue_model_experiment()]] - `calls` [EXTRACTED]
+- [[to_dict()_1]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Control_Strategies_&_Validation

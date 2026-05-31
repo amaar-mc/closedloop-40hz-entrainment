@@ -12,6 +12,6 @@ tags:
 # Reset all channel baselines.
 
 ## Connections
-- [[.reset()_60]] - `rationale_for` [EXTRACTED]
+- [[reset()_60]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_46

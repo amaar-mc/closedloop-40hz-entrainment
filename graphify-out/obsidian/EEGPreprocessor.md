@@ -12,16 +12,6 @@ tags:
 # EEGPreprocessor
 
 ## Connections
-- [[.__init__()_151]] - `method` [EXTRACTED]
-- [[._compute_filter_coefficients()]] - `method` [EXTRACTED]
-- [[.artifact_rejection()]] - `method` [EXTRACTED]
-- [[.bandpass_filter()_1]] - `method` [EXTRACTED]
-- [[.common_average_reference()]] - `method` [EXTRACTED]
-- [[.detect_bad_channels()]] - `method` [EXTRACTED]
-- [[.estimate_snr()]] - `method` [EXTRACTED]
-- [[.notch_filter()]] - `method` [EXTRACTED]
-- [[.plot_filter_response()]] - `method` [EXTRACTED]
-- [[.preprocess()]] - `method` [EXTRACTED]
 - [[BIDS Data Loader for Closed-Loop 40Hz Entrainment Research  Loads OpenNeuro ds]] - `uses` [INFERRED]
 - [[BIDSDataProcessor]] - `uses` [INFERRED]
 - [[Create PyTorch DataLoaders from splits.          Args             splits Di]] - `uses` [INFERRED]
@@ -44,6 +34,16 @@ tags:
 - [[Return number of samples.]] - `uses` [INFERRED]
 - [[Save trainvaltest splits to npz files.          Args             splits D]] - `uses` [INFERRED]
 - [[Select 7 frontal channels from full EEG montage.          Args             r]] - `uses` [INFERRED]
+- [[__init__()_151]] - `method` [EXTRACTED]
+- [[_compute_filter_coefficients()]] - `method` [EXTRACTED]
+- [[artifact_rejection()]] - `method` [EXTRACTED]
+- [[bandpass_filter()_1]] - `method` [EXTRACTED]
+- [[common_average_reference()]] - `method` [EXTRACTED]
+- [[detect_bad_channels()]] - `method` [EXTRACTED]
+- [[estimate_snr()]] - `method` [EXTRACTED]
+- [[notch_filter()]] - `method` [EXTRACTED]
+- [[plot_filter_response()]] - `method` [EXTRACTED]
+- [[preprocess()]] - `method` [EXTRACTED]
 - [[preprocessing.py]] - `contains` [EXTRACTED]
 - [[test_preprocessing()]] - `calls` [EXTRACTED]
 

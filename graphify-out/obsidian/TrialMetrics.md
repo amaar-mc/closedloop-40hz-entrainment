@@ -12,7 +12,6 @@ tags:
 # TrialMetrics
 
 ## Connections
-- [[.to_dict()]] - `method` [EXTRACTED]
 - [[Configuration for a fatigue model experiment.]] - `uses` [INFERRED]
 - [[Convert to serializable dict.]] - `uses` [INFERRED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
@@ -47,5 +46,6 @@ tags:
 - [[StimAction]] - `uses` [INFERRED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 - [[run_single_trial()]] - `calls` [EXTRACTED]
+- [[to_dict()]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Control_Strategies_&_Validation

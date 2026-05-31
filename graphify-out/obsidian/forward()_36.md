@@ -1,0 +1,17 @@
+---
+source_file: "scripts/pipeline/run_tribe_tcn_validation.py"
+type: "code"
+community: "TRIBE-TCN Validation"
+location: "L210"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/TRIBE-TCN_Validation
+---
+
+# forward()
+
+## Connections
+- [[TCNTribe]] - `method` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/TRIBE-TCN_Validation

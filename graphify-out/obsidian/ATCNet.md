@@ -12,10 +12,10 @@ tags:
 # ATCNet
 
 ## Connections
-- [[.__init__()_16]] - `method` [EXTRACTED]
-- [[._make_tcn_block()]] - `method` [EXTRACTED]
-- [[.forward()_11]] - `method` [EXTRACTED]
 - [[ATCNet Attention Temporal Convolutional Network.      Combines multi-head self-]] - `rationale_for` [EXTRACTED]
+- [[__init__()_16]] - `method` [EXTRACTED]
+- [[_make_tcn_block()]] - `method` [EXTRACTED]
+- [[forward()_11]] - `method` [EXTRACTED]
 - [[run_v8_specialized_eeg.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_38

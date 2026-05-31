@@ -12,6 +12,6 @@ tags:
 # Args:             x: (batch, n_spectral_features)          Returns:
 
 ## Connections
-- [[.forward()_26]] - `rationale_for` [EXTRACTED]
+- [[forward()_26]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_SpecTempNet_V3

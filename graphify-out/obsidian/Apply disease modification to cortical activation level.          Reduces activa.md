@@ -12,6 +12,6 @@ tags:
 # Apply disease modification to cortical activation level.          Reduces activa
 
 ## Connections
-- [[.apply_to_activation()]] - `rationale_for` [EXTRACTED]
+- [[apply_to_activation()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

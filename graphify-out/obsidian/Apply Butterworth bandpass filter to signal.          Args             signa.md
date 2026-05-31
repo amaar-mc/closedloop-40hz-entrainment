@@ -12,6 +12,6 @@ tags:
 # Apply Butterworth bandpass filter to signal.          Args:             signa
 
 ## Connections
-- [[.bandpass_filter()]] - `rationale_for` [EXTRACTED]
+- [[bandpass_filter()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline

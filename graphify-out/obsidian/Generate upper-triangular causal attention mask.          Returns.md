@@ -12,6 +12,6 @@ tags:
 # Generate upper-triangular causal attention mask.          Returns:
 
 ## Connections
-- [[._generate_causal_mask()]] - `rationale_for` [EXTRACTED]
+- [[_generate_causal_mask()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TCN_Layer_Internals

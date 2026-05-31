@@ -12,9 +12,6 @@ tags:
 # FixedScheduleControl
 
 ## Connections
-- [[.__init__()_119]] - `method` [EXTRACTED]
-- [[.reset()_50]] - `method` [EXTRACTED]
-- [[.step()_49]] - `method` [EXTRACTED]
 - [[Configuration for a fatigue model experiment.]] - `uses` [INFERRED]
 - [[ControlMethodBase]] - `inherits` [EXTRACTED]
 - [[Convert to serializable dict.]] - `uses` [INFERRED]
@@ -48,7 +45,10 @@ tags:
 - [[Simulate one time step with step-function fatigue.]] - `uses` [INFERRED]
 - [[StepFunctionSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_119]] - `method` [EXTRACTED]
 - [[main()_65]] - `calls` [EXTRACTED]
+- [[reset()_50]] - `method` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
+- [[step()_50]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Control_Strategies_&_Validation

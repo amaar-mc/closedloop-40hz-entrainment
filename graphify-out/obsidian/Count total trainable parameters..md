@@ -12,6 +12,6 @@ tags:
 # Count total trainable parameters.
 
 ## Connections
-- [[.count_parameters()_6]] - `rationale_for` [EXTRACTED]
+- [[count_parameters()_6]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Temporal_PAC_Predictor

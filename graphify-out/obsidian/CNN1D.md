@@ -12,9 +12,9 @@ tags:
 # CNN1D
 
 ## Connections
-- [[.__init__()_19]] - `method` [EXTRACTED]
-- [[.forward()_13]] - `method` [EXTRACTED]
 - [[1D CNN for EEG time series.      Learns spectro-temporal filters from raw EEG.]] - `rationale_for` [EXTRACTED]
+- [[__init__()_19]] - `method` [EXTRACTED]
+- [[forward()_13]] - `method` [EXTRACTED]
 - [[run_v7_raw_eeg_models.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_57

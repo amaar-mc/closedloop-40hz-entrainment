@@ -12,6 +12,6 @@ tags:
 # Write multiple styled runs in a single paragraph.          Each segment: (text,
 
 ## Connections
-- [[.write_inline()]] - `rationale_for` [EXTRACTED]
+- [[write_inline()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/PPTX_Slide_Builder

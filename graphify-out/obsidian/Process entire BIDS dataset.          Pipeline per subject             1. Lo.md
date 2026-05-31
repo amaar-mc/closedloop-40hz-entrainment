@@ -12,8 +12,8 @@ tags:
 # Process entire BIDS dataset.          Pipeline per subject:             1. Lo
 
 ## Connections
-- [[.process_dataset()]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
+- [[process_dataset()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

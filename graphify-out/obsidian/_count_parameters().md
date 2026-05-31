@@ -12,11 +12,11 @@ tags:
 # _count_parameters()
 
 ## Connections
-- [[.count_parameters()_8]] - `calls` [EXTRACTED]
-- [[.count_parameters()_9]] - `calls` [EXTRACTED]
-- [[.count_parameters()_10]] - `calls` [EXTRACTED]
-- [[.count_parameters()_11]] - `calls` [EXTRACTED]
 - [[Count trainable parameters in a model.]] - `rationale_for` [EXTRACTED]
+- [[count_parameters()_12]] - `calls` [EXTRACTED]
+- [[count_parameters()_13]] - `calls` [EXTRACTED]
+- [[count_parameters()_14]] - `calls` [EXTRACTED]
+- [[count_parameters()_15]] - `calls` [EXTRACTED]
 - [[tcn_variants.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TCN_Layer_Internals

@@ -12,7 +12,6 @@ tags:
 # main()
 
 ## Connections
-- [[.to_dict()]] - `calls` [EXTRACTED]
 - [[Critical Finding ANOVA on n=1 Samples]] - `references` [EXTRACTED]
 - [[FixedScheduleControl_5]] - `calls` [EXTRACTED]
 - [[FixedScheduleControl – 40s ON  20s OFF Baseline]] - `calls` [EXTRACTED]
@@ -40,5 +39,6 @@ tags:
 - [[run_fatigue_sweep()]] - `calls` [EXTRACTED]
 - [[run_population_diverse()]] - `calls` [EXTRACTED]
 - [[run_trial_batch()]] - `calls` [EXTRACTED]
+- [[to_dict()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation

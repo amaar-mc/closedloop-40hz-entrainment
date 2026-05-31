@@ -12,6 +12,6 @@ tags:
 # Load and configure the TVB 76-region connectome.
 
 ## Connections
-- [[._load_connectome()]] - `rationale_for` [EXTRACTED]
+- [[_load_connectome()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator

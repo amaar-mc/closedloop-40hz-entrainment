@@ -8,17 +8,6 @@ members: 36
 **Members:** 36 nodes
 
 ## Members
-- [[.__enter__()_1]] - code - src/streaming/adapters.py
-- [[.__enter__()_2]] - code - src/streaming/adapters.py
-- [[.__exit__()]] - code - src/streaming/adapters.py
-- [[.__exit__()_1]] - code - src/streaming/adapters.py
-- [[.__exit__()_2]] - code - src/streaming/adapters.py
-- [[.__init__()_166]] - code - src/streaming/adapters.py
-- [[.__init__()_167]] - code - src/streaming/adapters.py
-- [[.close()_1]] - code - src/streaming/adapters.py
-- [[.close()_2]] - code - src/streaming/adapters.py
-- [[.get_window()_1]] - code - src/streaming/adapters.py
-- [[.get_window()_2]] - code - src/streaming/adapters.py
 - [[Attempt to open a Muse 2 BLE session.          Args             mac_address Bl]] - rationale - src/streaming/adapters.py
 - [[Hardware-agnostic EEG adapters for closed-loop inference.  Provides two adapters]] - rationale - src/streaming/adapters.py
 - [[Muse 2 BLE adapter — NOT VIABLE on macOS Darwin 25.4.0.      Attempted 2026-03-]] - rationale - src/streaming/adapters.py
@@ -28,6 +17,13 @@ members: 36
 - [[Sleep 2 seconds and return one (n_channels, 500) float32 EEG window.          Re]] - rationale - src/streaming/adapters.py
 - [[Stop stream and release BrainFlow session._1]] - rationale - src/streaming/adapters.py
 - [[_NumpySimulatedAdapter]] - code - src/streaming/adapters.py
+- [[__enter__()_1]] - code - src/streaming/adapters.py
+- [[__enter__()_2]] - code - src/streaming/adapters.py
+- [[__exit__()]] - code - src/streaming/adapters.py
+- [[__exit__()_1]] - code - src/streaming/adapters.py
+- [[__exit__()_2]] - code - src/streaming/adapters.py
+- [[__init__()_166]] - code - src/streaming/adapters.py
+- [[__init__()_167]] - code - src/streaming/adapters.py
 - [[_bp()]] - code - apps/neurocare_live.py
 - [[_bpow()]] - code - apps/neurocare_live.py
 - [[_feats()]] - code - apps/neurocare_live.py
@@ -42,6 +38,10 @@ members: 36
 - [[_wav()]] - code - apps/neurocare_live.py
 - [[_zscore()]] - code - apps/neurocare_live.py
 - [[adapters.py]] - code - src/streaming/adapters.py
+- [[close()_1]] - code - src/streaming/adapters.py
+- [[close()_2]] - code - src/streaming/adapters.py
+- [[get_window()_1]] - code - src/streaming/adapters.py
+- [[get_window()_2]] - code - src/streaming/adapters.py
 - [[main()_62]] - code - apps/neurocare_live.py
 - [[neurocare_live.py]] - code - apps/neurocare_live.py
 
@@ -62,4 +62,4 @@ SORT file.name ASC
 - [[NeuroCare 40Hz -- Live Mission Control v5  Uses st.empty() placeholders for flic]] - degree 4, connects to 2 communities
 - [[RealEEGAdapter]] - degree 9, connects to 1 community
 - [[adapters.py]] - degree 4, connects to 1 community
-- [[.__exit__()]] - degree 2, connects to 1 community
+- [[__exit__()]] - degree 2, connects to 1 community

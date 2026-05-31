@@ -12,11 +12,6 @@ tags:
 # SimulatedEEGAdapter
 
 ## Connections
-- [[.__enter__()]] - `method` [EXTRACTED]
-- [[.__exit__()]] - `method` [EXTRACTED]
-- [[.__init__()_165]] - `method` [EXTRACTED]
-- [[.close()]] - `method` [EXTRACTED]
-- [[.get_window()]] - `method` [EXTRACTED]
 - [[Append a session record to the given patient and clear cache.]] - `uses` [INFERRED]
 - [[Automated end-to-end test for the simulated streaming session.  Runs 25 steps of]] - `uses` [INFERRED]
 - [[Convert raw PAC to 0-100 Brain Sync Level for caregiver display.]] - `uses` [INFERRED]
@@ -45,6 +40,11 @@ tags:
 - [[Set the active page in session state.]] - `uses` [INFERRED]
 - [[Simulated EEG source using BrainFlow SYNTHETIC_BOARD.      Creates a BrainFlow b]] - `rationale_for` [EXTRACTED]
 - [[TRIBE V2 Integration Module for Closed-Loop 40Hz Entrainment  Integrates Meta's]] - `uses` [INFERRED]
+- [[__enter__()]] - `method` [EXTRACTED]
+- [[__exit__()]] - `method` [EXTRACTED]
+- [[__init__()_165]] - `method` [EXTRACTED]
 - [[adapters.py]] - `contains` [EXTRACTED]
+- [[close()]] - `method` [EXTRACTED]
+- [[get_window()]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Models,_Streaming_&_Apps

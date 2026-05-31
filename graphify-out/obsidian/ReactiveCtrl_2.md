@@ -12,11 +12,11 @@ tags:
 # ReactiveCtrl
 
 ## Connections
-- [[.__init__()_93]] - `method` [EXTRACTED]
-- [[.reset()_31]] - `method` [EXTRACTED]
-- [[.step()_30]] - `method` [EXTRACTED]
 - [[TVBAlzheimerSimulator]] - `uses` [INFERRED]
+- [[__init__()_93]] - `method` [EXTRACTED]
 - [[main()_43]] - `calls` [EXTRACTED]
+- [[reset()_31]] - `method` [EXTRACTED]
 - [[run_tvb_alignment.py]] - `contains` [EXTRACTED]
+- [[step()_31]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator

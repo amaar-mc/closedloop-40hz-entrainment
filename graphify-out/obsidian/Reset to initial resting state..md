@@ -12,6 +12,6 @@ tags:
 # Reset to initial resting state.
 
 ## Connections
-- [[.reset()_70]] - `rationale_for` [EXTRACTED]
+- [[reset()_70]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

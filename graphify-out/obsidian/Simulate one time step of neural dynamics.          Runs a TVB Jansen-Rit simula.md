@@ -12,6 +12,6 @@ tags:
 # Simulate one time step of neural dynamics.          Runs a TVB Jansen-Rit simula
 
 ## Connections
-- [[.step()_72]] - `rationale_for` [EXTRACTED]
+- [[step()_73]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator

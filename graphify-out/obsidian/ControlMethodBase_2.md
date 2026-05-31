@@ -12,9 +12,6 @@ tags:
 # ControlMethodBase
 
 ## Connections
-- [[.__init__()_158]] - `method` [EXTRACTED]
-- [[.reset()_63]] - `method` [EXTRACTED]
-- [[.step()_66]] - `method` [EXTRACTED]
 - [[Abstract base class for all control strategies.      Subclasses must implement]] - `rationale_for` [EXTRACTED]
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
@@ -26,6 +23,9 @@ tags:
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[StimState]] - `uses` [INFERRED]
+- [[__init__()_158]] - `method` [EXTRACTED]
+- [[reset()_63]] - `method` [EXTRACTED]
+- [[step()_67]] - `method` [EXTRACTED]
 - [[validation.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

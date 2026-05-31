@@ -12,12 +12,12 @@ tags:
 # _set_font()
 
 ## Connections
-- [[.bullet()]] - `calls` [EXTRACTED]
-- [[.tbl()]] - `calls` [EXTRACTED]
-- [[.write_inline()]] - `calls` [EXTRACTED]
 - [[Apply font formatting to a run.]] - `rationale_for` [EXTRACTED]
 - [[_add_paragraph()]] - `calls` [EXTRACTED]
 - [[_first_paragraph()]] - `calls` [EXTRACTED]
 - [[build_pptx.py]] - `contains` [EXTRACTED]
+- [[bullet()]] - `calls` [EXTRACTED]
+- [[tbl()]] - `calls` [EXTRACTED]
+- [[write_inline()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PPTX_Slide_Builder

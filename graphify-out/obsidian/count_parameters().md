@@ -1,19 +1,20 @@
 ---
-source_file: "archive/experimental_models/eegnet_v2.py"
+source_file: "archive/experimental/run_generalization.py"
 type: "code"
-community: "Archived EEGNet V2"
-location: "L162"
+community: "Archived ImprovedTCN Experiments"
+location: "L150"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archived_EEGNet_V2
+  - community/Archived_ImprovedTCN_Experiments
 ---
 
 # count_parameters()
 
 ## Connections
-- [[Count trainable parameters.]] - `rationale_for` [EXTRACTED]
-- [[eegnet_v2.py]] - `contains` [EXTRACTED]
-- [[test_eegnet_v2()]] - `calls` [EXTRACTED]
+- [[TinyTCN]] - `method` [EXTRACTED]
+- [[train_heavily_regularized()]] - `calls` [EXTRACTED]
+- [[train_with_feature_subset()]] - `calls` [EXTRACTED]
+- [[train_with_mixup()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_EEGNet_V2
+#graphify/code #graphify/EXTRACTED #community/Archived_ImprovedTCN_Experiments

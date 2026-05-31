@@ -12,6 +12,6 @@ tags:
 # Load TRIBE V2 model from HuggingFace Hub.
 
 ## Connections
-- [[._load_tribe_model()]] - `rationale_for` [EXTRACTED]
+- [[_load_tribe_model()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

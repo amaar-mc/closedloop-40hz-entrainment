@@ -8,31 +8,6 @@ members: 115
 **Members:** 115 nodes
 
 ## Members
-- [[.__init__()_168]] - code - src/tribe_v2/neural_mass.py
-- [[.__init__()_169]] - code - src/tribe_v2/enhanced_simulator.py
-- [[.__init__()_170]] - code - src/tribe_v2/cortical_model.py
-- [[._activation_to_pac()]] - code - src/tribe_v2/enhanced_simulator.py
-- [[._apply_disease_to_neural_mass()]] - code - src/tribe_v2/enhanced_simulator.py
-- [[._compute_pac_from_eeg()]] - code - src/tribe_v2/enhanced_simulator.py
-- [[._load_roi_indices()]] - code - src/tribe_v2/cortical_model.py
-- [[._load_tribe_model()]] - code - src/tribe_v2/cortical_model.py
-- [[._sigmoid()]] - code - src/tribe_v2/neural_mass.py
-- [[._warmup()]] - code - src/tribe_v2/enhanced_simulator.py
-- [[.apply_to_activation()]] - code - src/tribe_v2/alzheimer_model.py
-- [[.apply_to_roi_activations()]] - code - src/tribe_v2/alzheimer_model.py
-- [[.compute_pac_from_signal()]] - code - src/tribe_v2/neural_mass.py
-- [[.get_activations()]] - code - src/tribe_v2/cortical_model.py
-- [[.get_history()_4]] - code - src/tribe_v2/enhanced_simulator.py
-- [[.get_state()_2]] - code - src/tribe_v2/enhanced_simulator.py
-- [[.modify_neural_mass_drive()]] - code - src/tribe_v2/alzheimer_model.py
-- [[.modify_simulator_params()]] - code - src/tribe_v2/alzheimer_model.py
-- [[.predict_tribe_v2()]] - code - src/tribe_v2/cortical_model.py
-- [[.reset()_68]] - code - src/tribe_v2/neural_mass.py
-- [[.reset()_69]] - code - src/tribe_v2/enhanced_simulator.py
-- [[.reset()_70]] - code - src/tribe_v2/cortical_model.py
-- [[.simulate()]] - code - src/tribe_v2/neural_mass.py
-- [[.simulate_multichannel()]] - code - src/tribe_v2/neural_mass.py
-- [[.step()_71]] - code - src/tribe_v2/enhanced_simulator.py
 - [[40 Hz Auditory Stimulus Generator for TRIBE V2 Integration  Generates auditory c]] - rationale - src/tribe_v2/stimulus_generator.py
 - [[Alzheimer's Disease Modeling Layer for TRIBE V2 Integration  Models the effects]] - rationale - src/tribe_v2/alzheimer_model.py
 - [[AlzheimerProfile]] - code - src/tribe_v2/alzheimer_model.py
@@ -97,9 +72,21 @@ members: 115
 - [[Wilson-Cowan Neural Mass Model for Theta-Gamma Oscillatory Dynamics  Converts co]] - rationale - src/tribe_v2/neural_mass.py
 - [[Wilson-Cowan neural mass model producing theta-gamma coupled oscillations.]] - rationale - src/tribe_v2/neural_mass.py
 - [[WilsonCowanModel]] - code - src/tribe_v2/neural_mass.py
+- [[__init__()_168]] - code - src/tribe_v2/neural_mass.py
+- [[__init__()_169]] - code - src/tribe_v2/enhanced_simulator.py
+- [[__init__()_170]] - code - src/tribe_v2/cortical_model.py
+- [[_activation_to_pac()]] - code - src/tribe_v2/enhanced_simulator.py
+- [[_apply_disease_to_neural_mass()]] - code - src/tribe_v2/enhanced_simulator.py
 - [[_apply_ramp()]] - code - src/tribe_v2/stimulus_generator.py
+- [[_compute_pac_from_eeg()]] - code - src/tribe_v2/enhanced_simulator.py
 - [[_default_frontal_mixing_matrix()]] - code - src/tribe_v2/neural_mass.py
+- [[_load_roi_indices()]] - code - src/tribe_v2/cortical_model.py
+- [[_load_tribe_model()]] - code - src/tribe_v2/cortical_model.py
+- [[_sigmoid()]] - code - src/tribe_v2/neural_mass.py
+- [[_warmup()]] - code - src/tribe_v2/enhanced_simulator.py
 - [[alzheimer_model.py]] - code - src/tribe_v2/alzheimer_model.py
+- [[apply_to_activation()]] - code - src/tribe_v2/alzheimer_model.py
+- [[apply_to_roi_activations()]] - code - src/tribe_v2/alzheimer_model.py
 - [[audit_alzheimer_model()]] - code - src/tribe_v2/audit_tribe_integration.py
 - [[audit_cortical_model()]] - code - src/tribe_v2/audit_tribe_integration.py
 - [[audit_disease_sweep()]] - code - src/tribe_v2/audit_tribe_integration.py
@@ -109,6 +96,7 @@ members: 115
 - [[audit_stimulus_generator()]] - code - src/tribe_v2/audit_tribe_integration.py
 - [[audit_tribe_integration.py]] - code - src/tribe_v2/audit_tribe_integration.py
 - [[check()_1]] - code - src/tribe_v2/audit_tribe_integration.py
+- [[compute_pac_from_signal()]] - code - src/tribe_v2/neural_mass.py
 - [[cortical_model.py]] - code - src/tribe_v2/cortical_model.py
 - [[create_simulator()_1]] - code - src/tribe_v2/enhanced_simulator.py
 - [[enhanced_simulator.py]] - code - src/tribe_v2/enhanced_simulator.py
@@ -117,11 +105,23 @@ members: 115
 - [[generate_silence()]] - code - src/tribe_v2/stimulus_generator.py
 - [[generate_stimulus()]] - code - src/tribe_v2/stimulus_generator.py
 - [[generate_stimulus_library()]] - code - src/tribe_v2/stimulus_generator.py
+- [[get_activations()]] - code - src/tribe_v2/cortical_model.py
+- [[get_history()_4]] - code - src/tribe_v2/enhanced_simulator.py
 - [[get_profile()]] - code - src/tribe_v2/alzheimer_model.py
+- [[get_state()_2]] - code - src/tribe_v2/enhanced_simulator.py
 - [[interpolate_profile()]] - code - src/tribe_v2/alzheimer_model.py
 - [[main()_79]] - code - src/tribe_v2/audit_tribe_integration.py
+- [[modify_neural_mass_drive()]] - code - src/tribe_v2/alzheimer_model.py
+- [[modify_simulator_params()]] - code - src/tribe_v2/alzheimer_model.py
 - [[neural_mass.py]] - code - src/tribe_v2/neural_mass.py
+- [[predict_tribe_v2()]] - code - src/tribe_v2/cortical_model.py
+- [[reset()_68]] - code - src/tribe_v2/neural_mass.py
+- [[reset()_69]] - code - src/tribe_v2/enhanced_simulator.py
+- [[reset()_70]] - code - src/tribe_v2/cortical_model.py
 - [[save_stimulus_wav()]] - code - src/tribe_v2/stimulus_generator.py
+- [[simulate()]] - code - src/tribe_v2/neural_mass.py
+- [[simulate_multichannel()]] - code - src/tribe_v2/neural_mass.py
+- [[step()_72]] - code - src/tribe_v2/enhanced_simulator.py
 - [[stimulus_generator.py]] - code - src/tribe_v2/stimulus_generator.py
 
 ## Live Query (requires Dataview plugin)

@@ -12,7 +12,7 @@ tags:
 # Delegate to RealtimePACForecaster.step() with fixed cycle-phase defaults.
 
 ## Connections
-- [[.step()_9]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
+- [[step()_10]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Models,_Streaming_&_Apps

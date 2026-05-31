@@ -12,8 +12,8 @@ tags:
 # Initialize predictive look-ahead controller.          Args:             forec
 
 ## Connections
-- [[.__init__()_147]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
+- [[__init__()_147]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

@@ -8,17 +8,6 @@ members: 56
 **Members:** 56 nodes
 
 ## Members
-- [[.__getitem__()_7]] - code - archive/temporal_legacy/train_temporal_long_windows.py
-- [[.__init__()_23]] - code - archive/temporal_legacy/train_temporal_long_windows.py
-- [[.__init__()_25]] - code - archive/temporal_legacy/temporal_model.py
-- [[.__init__()_26]] - code - archive/temporal_legacy/temporal_model.py
-- [[.__init__()_27]] - code - archive/temporal_legacy/temporal_model.py
-- [[.__len__()_7]] - code - archive/temporal_legacy/train_temporal_long_windows.py
-- [[.count_parameters()_6]] - code - archive/temporal_legacy/temporal_model.py
-- [[.count_parameters_by_component()]] - code - archive/temporal_legacy/temporal_model.py
-- [[.forward()_16]] - code - archive/temporal_legacy/temporal_model.py
-- [[.forward()_17]] - code - archive/temporal_legacy/temporal_model.py
-- [[.forward()_18]] - code - archive/temporal_legacy/temporal_model.py
 - [[Args             batch Dictionary with keys                 'eeg']] - rationale - archive/temporal_legacy/temporal_model.py
 - [[Args             lookback Number of windows to look back (5 windows = 20 seco]] - rationale - archive/temporal_legacy/train_temporal_long_windows.py
 - [[Args             n_channels Number of EEG channels             n_samples Sa]] - rationale - archive/temporal_legacy/temporal_model.py
@@ -49,11 +38,22 @@ members: 56
 - [[Train models for multiple prediction horizons (1, 3, 5, 10 seconds)     to char]] - rationale - archive/temporal_legacy/train_temporal.py
 - [[Train temporal PAC predictor using 8-second windows.  Expected improvement -]] - rationale - archive/temporal_legacy/train_temporal_long_windows.py
 - [[Training Pipeline for Temporal PAC Prediction  Trains the LSTM temporal predic]] - rationale - archive/temporal_legacy/train_temporal.py
+- [[__getitem__()_7]] - code - archive/temporal_legacy/train_temporal_long_windows.py
+- [[__init__()_23]] - code - archive/temporal_legacy/train_temporal_long_windows.py
+- [[__init__()_25]] - code - archive/temporal_legacy/temporal_model.py
+- [[__init__()_26]] - code - archive/temporal_legacy/temporal_model.py
+- [[__init__()_27]] - code - archive/temporal_legacy/temporal_model.py
+- [[__len__()_7]] - code - archive/temporal_legacy/train_temporal_long_windows.py
 - [[compute_metrics()_1]] - code - archive/temporal_legacy/train_temporal.py
+- [[count_parameters()_6]] - code - archive/temporal_legacy/temporal_model.py
+- [[count_parameters_by_component()]] - code - archive/temporal_legacy/temporal_model.py
 - [[create_dataloaders()]] - code - archive/temporal_legacy/train_temporal_long_windows.py
 - [[create_temporal_features (Flat Feature Vector Builder)]] - code - archive/temporal_legacy/train_sklearn_temporal.py
 - [[evaluate()_3]] - code - archive/temporal_legacy/train_temporal_long_windows.py
 - [[evaluate()_4]] - code - archive/temporal_legacy/train_temporal.py
+- [[forward()_16]] - code - archive/temporal_legacy/temporal_model.py
+- [[forward()_17]] - code - archive/temporal_legacy/temporal_model.py
+- [[forward()_18]] - code - archive/temporal_legacy/temporal_model.py
 - [[main()_13]] - code - archive/temporal_legacy/train_temporal_long_windows.py
 - [[run_multi_horizon_experiment()]] - code - archive/temporal_legacy/train_temporal.py
 - [[temporal_model.py]] - code - archive/temporal_legacy/temporal_model.py

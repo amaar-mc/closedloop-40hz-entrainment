@@ -1,19 +1,17 @@
 ---
-source_file: "src/eegnet.py"
+source_file: "archive/experimental/run_experiments.py"
 type: "code"
-community: "Models, Streaming & Apps"
-location: "L230"
+community: "Archived ImprovedTCN Experiments"
+location: "L346"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Models,_Streaming_&_Apps
+  - community/Archived_ImprovedTCN_Experiments
 ---
 
 # count_parameters()
 
 ## Connections
-- [[Count number of trainable parameters in model.      Args         model PyTo_1]] - `rationale_for` [EXTRACTED]
-- [[eegnet.py]] - `contains` [EXTRACTED]
-- [[test_eegnet()]] - `calls` [EXTRACTED]
+- [[SubjectAdaptiveTCN]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+#graphify/code #graphify/EXTRACTED #community/Archived_ImprovedTCN_Experiments

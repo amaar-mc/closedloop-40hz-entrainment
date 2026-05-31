@@ -12,8 +12,8 @@ tags:
 # train_with_feature_subset()
 
 ## Connections
-- [[.count_parameters()]] - `calls` [EXTRACTED]
 - [[Train a TCN on a subset of features.]] - `rationale_for` [EXTRACTED]
+- [[count_parameters()]] - `calls` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
 - [[run_generalization.py]] - `contains` [EXTRACTED]
 

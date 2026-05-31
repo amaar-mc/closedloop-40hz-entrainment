@@ -12,12 +12,12 @@ tags:
 # OracleCtrl
 
 ## Connections
-- [[.__init__()_76]] - `method` [EXTRACTED]
-- [[.reset()_14]] - `method` [EXTRACTED]
-- [[.set_pac()]] - `method` [EXTRACTED]
-- [[.step()_13]] - `method` [EXTRACTED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_76]] - `method` [EXTRACTED]
 - [[main()_38]] - `calls` [EXTRACTED]
+- [[reset()_14]] - `method` [EXTRACTED]
 - [[run_tribe_alignment_validation.py]] - `contains` [EXTRACTED]
+- [[set_pac()]] - `method` [EXTRACTED]
+- [[step()_14]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/12-Feature_TCN_Validation

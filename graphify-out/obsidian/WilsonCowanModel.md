@@ -12,12 +12,6 @@ tags:
 # WilsonCowanModel
 
 ## Connections
-- [[.__init__()_168]] - `method` [EXTRACTED]
-- [[._sigmoid()]] - `method` [EXTRACTED]
-- [[.compute_pac_from_signal()]] - `method` [EXTRACTED]
-- [[.reset()_68]] - `method` [EXTRACTED]
-- [[.simulate()]] - `method` [EXTRACTED]
-- [[.simulate_multichannel()]] - `calls` [EXTRACTED]
 - [[Apply disease modifications to neural mass parameters.]] - `uses` [INFERRED]
 - [[Audit script for TRIBE V2 integration module.  Validates     1. All module impo]] - `uses` [INFERRED]
 - [[Biophysically grounded brain entrainment simulator.      This simulator replaces]] - `uses` [INFERRED]
@@ -43,6 +37,12 @@ tags:
 - [[Validate neural mass model PAC generation.]] - `uses` [INFERRED]
 - [[Validate stimulus generation.]] - `uses` [INFERRED]
 - [[Wilson-Cowan neural mass model producing theta-gamma coupled oscillations.]] - `rationale_for` [EXTRACTED]
+- [[__init__()_168]] - `method` [EXTRACTED]
+- [[_sigmoid()]] - `method` [EXTRACTED]
+- [[compute_pac_from_signal()]] - `method` [EXTRACTED]
 - [[neural_mass.py]] - `contains` [EXTRACTED]
+- [[reset()_68]] - `method` [EXTRACTED]
+- [[simulate()]] - `method` [EXTRACTED]
+- [[simulate_multichannel()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/TRIBE_Neural-Mass_Simulator

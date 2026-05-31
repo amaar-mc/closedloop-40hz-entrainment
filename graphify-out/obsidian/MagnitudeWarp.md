@@ -12,10 +12,10 @@ tags:
 # MagnitudeWarp
 
 ## Connections
-- [[.__call__()_2]] - `method` [EXTRACTED]
-- [[.__init__()_47]] - `method` [EXTRACTED]
-- [[.__init__()_52]] - `calls` [EXTRACTED]
 - [[Warp the magnitude (amplitude) of the signal smoothly over time.      This simul]] - `rationale_for` [EXTRACTED]
+- [[__call__()_2]] - `method` [EXTRACTED]
+- [[__init__()_47]] - `method` [EXTRACTED]
+- [[__init__()_52]] - `calls` [EXTRACTED]
 - [[data_augmentation.py]] - `contains` [EXTRACTED]
 - [[test_augmentation()]] - `calls` [EXTRACTED]
 

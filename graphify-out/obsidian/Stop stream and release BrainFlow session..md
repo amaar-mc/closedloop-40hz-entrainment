@@ -12,6 +12,6 @@ tags:
 # Stop stream and release BrainFlow session.
 
 ## Connections
-- [[.close()]] - `rationale_for` [EXTRACTED]
+- [[close()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Models,_Streaming_&_Apps

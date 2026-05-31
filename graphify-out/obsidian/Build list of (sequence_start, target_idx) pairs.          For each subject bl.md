@@ -12,7 +12,7 @@ tags:
 # Build list of (sequence_start, target_idx) pairs.          For each subject bl
 
 ## Connections
-- [[._build_indices()]] - `rationale_for` [EXTRACTED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
+- [[_build_indices()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Multiscale_TCN_&_Features

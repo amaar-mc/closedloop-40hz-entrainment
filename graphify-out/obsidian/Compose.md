@@ -12,10 +12,10 @@ tags:
 # Compose
 
 ## Connections
-- [[.__call__()_6]] - `method` [EXTRACTED]
-- [[.__init__()_51]] - `method` [EXTRACTED]
-- [[.__init__()_52]] - `calls` [EXTRACTED]
 - [[Compose multiple augmentations together.]] - `rationale_for` [EXTRACTED]
+- [[__call__()_6]] - `method` [EXTRACTED]
+- [[__init__()_51]] - `method` [EXTRACTED]
+- [[__init__()_52]] - `calls` [EXTRACTED]
 - [[data_augmentation.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

@@ -12,7 +12,6 @@ tags:
 # ModelConfig
 
 ## Connections
-- [[.__post_init__()]] - `method` [EXTRACTED]
 - [[AblationVariant]] - `uses` [INFERRED]
 - [[Add one new observation and return prediction when ready.]] - `uses` [INFERRED]
 - [[AlignmentOracleCtrl]] - `uses` [INFERRED]
@@ -147,6 +146,7 @@ tags:
 - [[Wilcoxon signed-rank test with zero-difference handling.]] - `uses` [INFERRED]
 - [[Z-score normalize features and targets using train statistics.      Mirrors th]] - `uses` [INFERRED]
 - [[Zero-ablation experiment zero out each feature group and measure R2 drop.]] - `uses` [INFERRED]
+- [[__post_init__()]] - `method` [EXTRACTED]
 - [[multiscale_tcn.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Multiscale_TCN_&_Features

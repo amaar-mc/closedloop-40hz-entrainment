@@ -12,9 +12,6 @@ tags:
 # SequenceDataset
 
 ## Connections
-- [[.__getitem__()_16]] - `method` [EXTRACTED]
-- [[.__init__()_126]] - `method` [EXTRACTED]
-- [[.__len__()_16]] - `method` [EXTRACTED]
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[Loads a multiscale temporal dataset from disk.]] - `rationale_for` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
@@ -22,6 +19,9 @@ tags:
 - [[MultiTaskTCN]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[TransformerConfig]] - `uses` [INFERRED]
+- [[__getitem__()_16]] - `method` [EXTRACTED]
+- [[__init__()_126]] - `method` [EXTRACTED]
+- [[__len__()_16]] - `method` [EXTRACTED]
 - [[main()_68]] - `calls` [EXTRACTED]
 - [[run_all_experiments.py]] - `contains` [EXTRACTED]
 

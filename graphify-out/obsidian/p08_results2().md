@@ -12,15 +12,15 @@ tags:
 # p08_results2()
 
 ## Connections
-- [[.body()]] - `calls` [EXTRACTED]
-- [[.bullet()]] - `calls` [EXTRACTED]
-- [[.caption()]] - `calls` [EXTRACTED]
-- [[.ln()]] - `calls` [EXTRACTED]
-- [[.sub()]] - `calls` [EXTRACTED]
-- [[.tbl()]] - `calls` [EXTRACTED]
 - [[Slide 8 Results page 2.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `calls` [EXTRACTED]
+- [[body()]] - `calls` [EXTRACTED]
 - [[build_pptx.py]] - `contains` [EXTRACTED]
+- [[bullet()]] - `calls` [EXTRACTED]
+- [[caption()]] - `calls` [EXTRACTED]
+- [[ln()]] - `calls` [EXTRACTED]
 - [[main()_37]] - `calls` [EXTRACTED]
+- [[sub()]] - `calls` [EXTRACTED]
+- [[tbl()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PPTX_Slide_Builder

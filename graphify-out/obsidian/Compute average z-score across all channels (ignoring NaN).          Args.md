@@ -12,6 +12,6 @@ tags:
 # Compute average z-score across all channels (ignoring NaN).          Args:
 
 ## Connections
-- [[.compute_average_zscore()]] - `rationale_for` [EXTRACTED]
+- [[compute_average_zscore()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_46

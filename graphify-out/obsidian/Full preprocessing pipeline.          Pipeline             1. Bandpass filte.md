@@ -12,6 +12,6 @@ tags:
 # Full preprocessing pipeline.          Pipeline:             1. Bandpass filte
 
 ## Connections
-- [[.preprocess()]] - `rationale_for` [EXTRACTED]
+- [[preprocess()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline

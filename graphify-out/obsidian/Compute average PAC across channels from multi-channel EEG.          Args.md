@@ -12,11 +12,11 @@ tags:
 # Compute average PAC across channels from multi-channel EEG.          Args:
 
 ## Connections
-- [[._compute_pac_from_eeg()]] - `rationale_for` [EXTRACTED]
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]
 - [[NeuralMassConfig]] - `uses` [INFERRED]
 - [[WilsonCowanModel]] - `uses` [INFERRED]
+- [[_compute_pac_from_eeg()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/TRIBE_Neural-Mass_Simulator

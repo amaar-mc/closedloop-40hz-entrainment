@@ -12,6 +12,6 @@ tags:
 # Detect and mark artifact samples using amplitude thresholding.          Marks
 
 ## Connections
-- [[.artifact_rejection()]] - `rationale_for` [EXTRACTED]
+- [[artifact_rejection()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline

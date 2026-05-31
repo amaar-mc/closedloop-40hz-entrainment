@@ -12,6 +12,6 @@ tags:
 # Forward pass.          Args:             x_seq: Input tensor of shape (B, T,
 
 ## Connections
-- [[.forward()_43]] - `rationale_for` [EXTRACTED]
+- [[forward()_43]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Multiscale_TCN_&_Features

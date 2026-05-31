@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[Test the ViT-TCNet architecture.]] - `rationale_for` [EXTRACTED]
 - [[ViTTCNet]] - `calls` [EXTRACTED]
-- [[count_parameters()_1]] - `calls` [EXTRACTED]
+- [[count_parameters()_8]] - `calls` [EXTRACTED]
 - [[vit_tcnet.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

@@ -12,6 +12,6 @@ tags:
 # Simulate one time step with fatigue dynamics.
 
 ## Connections
-- [[.step()_65]] - `rationale_for` [EXTRACTED]
+- [[step()_66]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

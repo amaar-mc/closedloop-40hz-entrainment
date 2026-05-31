@@ -12,6 +12,6 @@ tags:
 # Apply region-specific disease modification to ROI activations.          Differen
 
 ## Connections
-- [[.apply_to_roi_activations()]] - `rationale_for` [EXTRACTED]
+- [[apply_to_roi_activations()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

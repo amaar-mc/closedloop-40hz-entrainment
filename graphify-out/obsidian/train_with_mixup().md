@@ -12,8 +12,8 @@ tags:
 # train_with_mixup()
 
 ## Connections
-- [[.count_parameters()]] - `calls` [EXTRACTED]
 - [[MixupSeqDataset]] - `calls` [EXTRACTED]
+- [[count_parameters()]] - `calls` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
 - [[run_generalization.py]] - `contains` [EXTRACTED]
 

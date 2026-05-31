@@ -12,9 +12,6 @@ tags:
 # SequenceDataset
 
 ## Connections
-- [[.__getitem__()_11]] - `method` [EXTRACTED]
-- [[.__init__()_69]] - `method` [EXTRACTED]
-- [[.__len__()_11]] - `method` [EXTRACTED]
 - [[AblationVariant]] - `uses` [INFERRED]
 - [[Architecture comparison study train and evaluate all models across horizons.  R]] - `uses` [INFERRED]
 - [[Baseline and comparison model architectures for the architecture comparison stud]] - `uses` [INFERRED]
@@ -41,6 +38,9 @@ tags:
 - [[Train a single variant and return its result dict.]] - `uses` [INFERRED]
 - [[Train any nn.Module that takes (B, T, F) and outputs (B,) scalar predictions.]] - `uses` [INFERRED]
 - [[Two-layer LSTM for sequence-to-scalar PAC prediction.      Input  (B, T, F)  —]] - `uses` [INFERRED]
+- [[__getitem__()_11]] - `method` [EXTRACTED]
+- [[__init__()_69]] - `method` [EXTRACTED]
+- [[__len__()_11]] - `method` [EXTRACTED]
 - [[main()_34]] - `calls` [EXTRACTED]
 - [[train_multiscale_tcn.py]] - `contains` [EXTRACTED]
 

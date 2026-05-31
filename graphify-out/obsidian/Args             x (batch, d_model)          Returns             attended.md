@@ -12,6 +12,6 @@ tags:
 # Args:             x: (batch, d_model)          Returns:             attended
 
 ## Connections
-- [[.forward()_27]] - `rationale_for` [EXTRACTED]
+- [[forward()_27]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_SpecTempNet_V3

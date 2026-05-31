@@ -12,11 +12,11 @@ tags:
 # FixedScheduleCtrl
 
 ## Connections
-- [[.__init__()_73]] - `method` [EXTRACTED]
-- [[.reset()_11]] - `method` [EXTRACTED]
-- [[.step()_10]] - `method` [EXTRACTED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_73]] - `method` [EXTRACTED]
 - [[main()_38]] - `calls` [EXTRACTED]
+- [[reset()_11]] - `method` [EXTRACTED]
 - [[run_tribe_alignment_validation.py]] - `contains` [EXTRACTED]
+- [[step()_11]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/12-Feature_TCN_Validation

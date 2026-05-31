@@ -12,8 +12,8 @@ tags:
 # Make stimulation decision based on z-score.          Logic:             - If
 
 ## Connections
-- [[._make_decision()]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
+- [[_make_decision()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

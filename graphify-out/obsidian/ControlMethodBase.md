@@ -12,9 +12,6 @@ tags:
 # ControlMethodBase
 
 ## Connections
-- [[.__init__()_118]] - `method` [EXTRACTED]
-- [[.reset()_49]] - `method` [EXTRACTED]
-- [[.step()_48]] - `method` [EXTRACTED]
 - [[Base class for control strategies.]] - `rationale_for` [EXTRACTED]
 - [[Configuration for a fatigue model experiment.]] - `uses` [INFERRED]
 - [[Convert to serializable dict.]] - `uses` [INFERRED]
@@ -51,6 +48,9 @@ tags:
 - [[Simulate one time step with step-function fatigue.]] - `uses` [INFERRED]
 - [[StepFunctionSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_118]] - `method` [EXTRACTED]
+- [[reset()_49]] - `method` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
+- [[step()_49]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Control_Strategies_&_Validation

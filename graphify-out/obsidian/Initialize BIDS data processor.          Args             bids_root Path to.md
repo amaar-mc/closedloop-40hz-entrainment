@@ -12,8 +12,8 @@ tags:
 # Initialize BIDS data processor.          Args:             bids_root: Path to
 
 ## Connections
-- [[.__init__()_150]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
+- [[__init__()_150]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

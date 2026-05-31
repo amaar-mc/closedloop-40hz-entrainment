@@ -12,10 +12,10 @@ tags:
 # TimeShift
 
 ## Connections
-- [[.__call__()_3]] - `method` [EXTRACTED]
-- [[.__init__()_48]] - `method` [EXTRACTED]
-- [[.__init__()_52]] - `calls` [EXTRACTED]
 - [[Shift the signal in time (circular shift).      This makes the model robust to t]] - `rationale_for` [EXTRACTED]
+- [[__call__()_3]] - `method` [EXTRACTED]
+- [[__init__()_48]] - `method` [EXTRACTED]
+- [[__init__()_52]] - `calls` [EXTRACTED]
 - [[data_augmentation.py]] - `contains` [EXTRACTED]
 - [[test_augmentation()]] - `calls` [EXTRACTED]
 

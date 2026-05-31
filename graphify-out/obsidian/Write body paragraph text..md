@@ -12,6 +12,6 @@ tags:
 # Write body paragraph text.
 
 ## Connections
-- [[.write_body_text()]] - `rationale_for` [EXTRACTED]
+- [[write_body_text()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders

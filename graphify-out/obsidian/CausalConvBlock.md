@@ -12,11 +12,6 @@ tags:
 # CausalConvBlock
 
 ## Connections
-- [[.__init__()_3]] - `method` [EXTRACTED]
-- [[.__init__()_4]] - `calls` [EXTRACTED]
-- [[.__init__()_6]] - `calls` [EXTRACTED]
-- [[.__init__()_7]] - `calls` [EXTRACTED]
-- [[.forward()_1]] - `method` [EXTRACTED]
 - [[Compute persistence R2 per subject.]] - `uses` [INFERRED]
 - [[Define feature subsets to test which features help generalization.]] - `uses` [INFERRED]
 - [[Evaluate model per subject.]] - `uses` [INFERRED]
@@ -32,6 +27,11 @@ tags:
 - [[Sequence dataset with mixup augmentation applied at getitem time.]] - `uses` [INFERRED]
 - [[TinyTCN]] - `uses` [INFERRED]
 - [[Train a TCN on a subset of features.]] - `uses` [INFERRED]
+- [[__init__()_3]] - `method` [EXTRACTED]
+- [[__init__()_4]] - `calls` [EXTRACTED]
+- [[__init__()_6]] - `calls` [EXTRACTED]
+- [[__init__()_7]] - `calls` [EXTRACTED]
+- [[forward()_1]] - `method` [EXTRACTED]
 - [[run_experiments.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Archived_ImprovedTCN_Experiments

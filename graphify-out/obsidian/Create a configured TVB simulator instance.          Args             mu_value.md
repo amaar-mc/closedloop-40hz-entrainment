@@ -12,6 +12,6 @@ tags:
 # Create a configured TVB simulator instance.          Args:             mu_value:
 
 ## Connections
-- [[._create_simulator()]] - `rationale_for` [EXTRACTED]
+- [[_create_simulator()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator

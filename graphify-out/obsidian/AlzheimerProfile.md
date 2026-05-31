@@ -12,10 +12,6 @@ tags:
 # AlzheimerProfile
 
 ## Connections
-- [[.apply_to_activation()]] - `method` [EXTRACTED]
-- [[.apply_to_roi_activations()]] - `method` [EXTRACTED]
-- [[.modify_neural_mass_drive()]] - `method` [EXTRACTED]
-- [[.modify_simulator_params()]] - `method` [EXTRACTED]
 - [[Apply disease modifications to neural mass parameters.]] - `uses` [INFERRED]
 - [[Biophysically grounded brain entrainment simulator.      This simulator replaces]] - `uses` [INFERRED]
 - [[Compute average PAC across channels from multi-channel EEG.          Args]] - `uses` [INFERRED]
@@ -34,6 +30,10 @@ tags:
 - [[TribeEnhancedSimulator]] - `uses` [INFERRED]
 - [[TribeSimulatorConfig]] - `uses` [INFERRED]
 - [[alzheimer_model.py]] - `contains` [EXTRACTED]
+- [[apply_to_activation()]] - `method` [EXTRACTED]
+- [[apply_to_roi_activations()]] - `method` [EXTRACTED]
 - [[interpolate_profile()]] - `calls` [EXTRACTED]
+- [[modify_neural_mass_drive()]] - `method` [EXTRACTED]
+- [[modify_simulator_params()]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/TRIBE_Neural-Mass_Simulator

@@ -12,11 +12,11 @@ tags:
 # Apply disease modifications to neural mass parameters.
 
 ## Connections
-- [[._apply_disease_to_neural_mass()]] - `rationale_for` [EXTRACTED]
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]
 - [[NeuralMassConfig]] - `uses` [INFERRED]
 - [[WilsonCowanModel]] - `uses` [INFERRED]
+- [[_apply_disease_to_neural_mass()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/TRIBE_Neural-Mass_Simulator

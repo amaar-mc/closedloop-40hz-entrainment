@@ -12,6 +12,6 @@ tags:
 # Simulate multi-channel EEG from multiple ROI activations.          Each ROI driv
 
 ## Connections
-- [[.simulate_multichannel()]] - `rationale_for` [EXTRACTED]
+- [[simulate_multichannel()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

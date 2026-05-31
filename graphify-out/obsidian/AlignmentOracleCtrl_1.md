@@ -12,12 +12,12 @@ tags:
 # AlignmentOracleCtrl
 
 ## Connections
-- [[.__init__()_99]] - `method` [EXTRACTED]
-- [[.reset()_36]] - `method` [EXTRACTED]
-- [[.step()_35]] - `method` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
+- [[__init__()_99]] - `method` [EXTRACTED]
+- [[reset()_36]] - `method` [EXTRACTED]
 - [[run_12feat_validation.py]] - `contains` [EXTRACTED]
 - [[run_replay()]] - `calls` [EXTRACTED]
+- [[step()_36]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/12-Feature_TCN_Validation

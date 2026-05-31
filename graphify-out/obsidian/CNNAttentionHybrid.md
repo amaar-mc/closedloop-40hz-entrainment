@@ -12,9 +12,9 @@ tags:
 # CNNAttentionHybrid
 
 ## Connections
-- [[.__init__()_21]] - `method` [EXTRACTED]
-- [[.forward()_15]] - `method` [EXTRACTED]
 - [[Hybrid CNN extracts features, Attention pools them.      Combines local pattern]] - `rationale_for` [EXTRACTED]
+- [[__init__()_21]] - `method` [EXTRACTED]
+- [[forward()_15]] - `method` [EXTRACTED]
 - [[run_v7_raw_eeg_models.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_57

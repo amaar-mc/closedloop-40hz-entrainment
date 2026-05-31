@@ -12,6 +12,6 @@ tags:
 # Apply notch filter to remove powerline interference.          Removes 50 Hz (E
 
 ## Connections
-- [[.notch_filter()]] - `rationale_for` [EXTRACTED]
+- [[notch_filter()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline

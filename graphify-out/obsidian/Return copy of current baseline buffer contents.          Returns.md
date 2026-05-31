@@ -12,6 +12,6 @@ tags:
 # Return copy of current baseline buffer contents.          Returns:
 
 ## Connections
-- [[.get_buffer_contents()]] - `rationale_for` [EXTRACTED]
+- [[get_buffer_contents()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

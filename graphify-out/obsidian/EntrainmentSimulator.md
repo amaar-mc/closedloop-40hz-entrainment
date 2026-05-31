@@ -12,12 +12,6 @@ tags:
 # EntrainmentSimulator
 
 ## Connections
-- [[.__init__()_154]] - `method` [EXTRACTED]
-- [[.get_history()_2]] - `method` [EXTRACTED]
-- [[.get_pac_at_step()]] - `method` [EXTRACTED]
-- [[.get_state()_1]] - `method` [EXTRACTED]
-- [[.reset()_61]] - `method` [EXTRACTED]
-- [[.step()_64]] - `method` [EXTRACTED]
 - [[40s ON + 20s OFF (standard clinical protocol).]] - `uses` [INFERRED]
 - [[Abstract base class for all control strategies.      Subclasses must implement]] - `uses` [INFERRED]
 - [[Add control method to comparison.]] - `uses` [INFERRED]
@@ -152,7 +146,13 @@ tags:
 - [[Whether a trained TCN forecaster is available.]] - `uses` [INFERRED]
 - [[Z-score reactive controller with hysteresis — maintains state in dead zone.]] - `uses` [INFERRED]
 - [[Z-score reactive with hysteresis.]] - `uses` [INFERRED]
+- [[__init__()_154]] - `method` [EXTRACTED]
+- [[get_history()_2]] - `method` [EXTRACTED]
+- [[get_pac_at_step()]] - `method` [EXTRACTED]
+- [[get_state()_1]] - `method` [EXTRACTED]
+- [[reset()_61]] - `method` [EXTRACTED]
 - [[simulator.py]] - `contains` [EXTRACTED]
+- [[step()_65]] - `method` [EXTRACTED]
 - [[validate_simulator_dynamics()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

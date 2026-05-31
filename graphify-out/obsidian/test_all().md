@@ -15,7 +15,7 @@ tags:
 - [[EEGNetEnhanced]] - `calls` [EXTRACTED]
 - [[EEGNetLarge]] - `calls` [EXTRACTED]
 - [[Run all architecture tests and print comparative summary.]] - `rationale_for` [EXTRACTED]
-- [[count_parameters()_3]] - `calls` [EXTRACTED]
+- [[count_parameters()_11]] - `calls` [EXTRACTED]
 - [[eegnet_enhanced.py]] - `contains` [EXTRACTED]
 - [[test_eegnet_enhanced()]] - `calls` [EXTRACTED]
 - [[test_eegnet_large()]] - `calls` [EXTRACTED]

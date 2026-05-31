@@ -12,6 +12,6 @@ tags:
 # Reset simulator to initial state.
 
 ## Connections
-- [[.reset()_62]] - `rationale_for` [EXTRACTED]
+- [[reset()_62]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

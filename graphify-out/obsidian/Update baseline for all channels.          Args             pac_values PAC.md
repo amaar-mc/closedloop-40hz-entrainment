@@ -12,6 +12,6 @@ tags:
 # Update baseline for all channels.          Args:             pac_values: PAC
 
 ## Connections
-- [[.update()_1]] - `rationale_for` [EXTRACTED]
+- [[update()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_46

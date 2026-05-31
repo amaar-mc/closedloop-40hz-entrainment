@@ -12,14 +12,14 @@ tags:
 # FixedScheduleControl
 
 ## Connections
-- [[.__init__()_80]] - `method` [EXTRACTED]
-- [[.reset()_18]] - `method` [EXTRACTED]
-- [[.step()_17]] - `method` [EXTRACTED]
 - [[40s ON + 20s OFF (standard clinical protocol).]] - `rationale_for` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_80]] - `method` [EXTRACTED]
 - [[main()_40]] - `calls` [EXTRACTED]
+- [[reset()_18]] - `method` [EXTRACTED]
 - [[run_closed_loop_demo.py]] - `contains` [EXTRACTED]
+- [[step()_18]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

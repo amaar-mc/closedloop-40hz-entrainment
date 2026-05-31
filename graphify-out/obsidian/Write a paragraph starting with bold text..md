@@ -12,6 +12,6 @@ tags:
 # Write a paragraph starting with bold text.
 
 ## Connections
-- [[.write_bold_paragraph()]] - `rationale_for` [EXTRACTED]
+- [[write_bold_paragraph()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders

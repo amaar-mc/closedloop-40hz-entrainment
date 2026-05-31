@@ -12,13 +12,13 @@ tags:
 # FeatureMaskedDataset
 
 ## Connections
-- [[.__getitem__()_14]] - `method` [EXTRACTED]
-- [[.__init__()_95]] - `method` [EXTRACTED]
-- [[.__len__()_14]] - `method` [EXTRACTED]
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[Load multiscale npz, slice features to PAC+context only.]] - `rationale_for` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
+- [[__getitem__()_14]] - `method` [EXTRACTED]
+- [[__init__()_95]] - `method` [EXTRACTED]
+- [[__len__()_14]] - `method` [EXTRACTED]
 - [[run_12feat_validation.py]] - `contains` [EXTRACTED]
 - [[train_12feat_tcn()]] - `calls` [EXTRACTED]
 

@@ -12,15 +12,15 @@ tags:
 # FixedScheduleControl
 
 ## Connections
-- [[.__init__()_100]] - `method` [EXTRACTED]
-- [[.reset()_37]] - `method` [EXTRACTED]
-- [[.step()_36]] - `method` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[TribeEnhancedSimulator]] - `uses` [INFERRED]
 - [[TribeSimulatorConfig]] - `uses` [INFERRED]
+- [[__init__()_100]] - `method` [EXTRACTED]
 - [[main()_46]] - `calls` [EXTRACTED]
+- [[reset()_37]] - `method` [EXTRACTED]
 - [[run_tribe_validation.py]] - `contains` [EXTRACTED]
+- [[step()_37]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

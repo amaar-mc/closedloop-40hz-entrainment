@@ -12,9 +12,9 @@ tags:
 # test_spectral_features()
 
 ## Connections
-- [[.extract()_2]] - `calls` [EXTRACTED]
 - [[SpectralFeatureExtractor]] - `calls` [EXTRACTED]
 - [[Test the spectral feature extraction.]] - `rationale_for` [EXTRACTED]
+- [[extract()_2]] - `calls` [EXTRACTED]
 - [[extract_spectral_features()_1]] - `calls` [EXTRACTED]
 - [[spectral_features.py]] - `contains` [EXTRACTED]
 

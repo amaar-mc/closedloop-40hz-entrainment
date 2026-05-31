@@ -12,15 +12,6 @@ tags:
 # PersonalizationModule
 
 ## Connections
-- [[.__init__()_152]] - `method` [EXTRACTED]
-- [[.__init__()_153]] - `calls` [EXTRACTED]
-- [[.compute_zscore()]] - `method` [EXTRACTED]
-- [[.get_baseline_stats()_1]] - `method` [EXTRACTED]
-- [[.get_buffer_contents()]] - `method` [EXTRACTED]
-- [[.get_buffer_size()]] - `method` [EXTRACTED]
-- [[.is_ready()]] - `method` [EXTRACTED]
-- [[.reset()_59]] - `method` [EXTRACTED]
-- [[.update()]] - `method` [EXTRACTED]
 - [[Closed-Loop Controller for Real-Time PAC-Based Neuromodulation  Implements thr]] - `uses` [INFERRED]
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[End-to-end streaming inference demo for closed-loop 40 Hz entrainment.  Runs the]] - `uses` [INFERRED]
@@ -47,7 +38,16 @@ tags:
 - [[StimState]] - `uses` [INFERRED]
 - [[Stimulation state enumeration.      Values         STIMULATE = 1 Active 40]] - `uses` [INFERRED]
 - [[Test controller with synthetic EEG and simulated PAC.]] - `uses` [INFERRED]
+- [[__init__()_152]] - `method` [EXTRACTED]
+- [[__init__()_153]] - `calls` [EXTRACTED]
+- [[compute_zscore()]] - `method` [EXTRACTED]
+- [[get_baseline_stats()_1]] - `method` [EXTRACTED]
+- [[get_buffer_contents()]] - `method` [EXTRACTED]
+- [[get_buffer_size()]] - `method` [EXTRACTED]
+- [[is_ready()]] - `method` [EXTRACTED]
 - [[personalization.py]] - `contains` [EXTRACTED]
+- [[reset()_59]] - `method` [EXTRACTED]
 - [[test_personalization()]] - `calls` [EXTRACTED]
+- [[update()]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

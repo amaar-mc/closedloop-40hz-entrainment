@@ -12,13 +12,13 @@ tags:
 # p04_methods1()
 
 ## Connections
-- [[.bullet()]] - `calls` [EXTRACTED]
-- [[.ln()]] - `calls` [EXTRACTED]
-- [[.sec()]] - `calls` [EXTRACTED]
-- [[.sub2()]] - `calls` [EXTRACTED]
 - [[Slide 4 Methods page 1.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `calls` [EXTRACTED]
 - [[build_pptx.py]] - `contains` [EXTRACTED]
+- [[bullet()]] - `calls` [EXTRACTED]
+- [[ln()]] - `calls` [EXTRACTED]
 - [[main()_37]] - `calls` [EXTRACTED]
+- [[sec()]] - `calls` [EXTRACTED]
+- [[sub2()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PPTX_Slide_Builder

@@ -12,8 +12,8 @@ tags:
 # Load model checkpoint.
 
 ## Connections
-- [[.load_checkpoint()]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
+- [[load_checkpoint()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

@@ -12,6 +12,6 @@ tags:
 # Extract features for a batch of EEG windows.          Args:             eeg_b
 
 ## Connections
-- [[.extract()_2]] - `rationale_for` [EXTRACTED]
+- [[extract()_2]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

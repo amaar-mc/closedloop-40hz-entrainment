@@ -12,9 +12,6 @@ tags:
 # ImprovedTCN
 
 ## Connections
-- [[.__init__()_4]] - `method` [EXTRACTED]
-- [[.count_parameters()_1]] - `method` [EXTRACTED]
-- [[.forward()_2]] - `method` [EXTRACTED]
 - [[Best combination experiments 1. Target smoothing (ts=5) + deep TCN architecture]] - `uses` [INFERRED]
 - [[Build dataset with given smoothing, train TCN, evaluate.]] - `uses` [INFERRED]
 - [[Compute persistence R2 per subject.]] - `uses` [INFERRED]
@@ -36,6 +33,9 @@ tags:
 - [[TinyTCN]] - `uses` [INFERRED]
 - [[Train a TCN on a subset of features.]] - `uses` [INFERRED]
 - [[Train model and evaluate.]] - `uses` [INFERRED]
+- [[__init__()_4]] - `method` [EXTRACTED]
+- [[count_parameters()_1]] - `method` [EXTRACTED]
+- [[forward()_2]] - `method` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]
 - [[run_experiments.py]] - `contains` [EXTRACTED]
 

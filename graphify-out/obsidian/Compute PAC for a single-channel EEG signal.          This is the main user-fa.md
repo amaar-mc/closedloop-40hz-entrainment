@@ -12,6 +12,6 @@ tags:
 # Compute PAC for a single-channel EEG signal.          This is the main user-fa
 
 ## Connections
-- [[.compute_pac()]] - `rationale_for` [EXTRACTED]
+- [[compute_pac()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline

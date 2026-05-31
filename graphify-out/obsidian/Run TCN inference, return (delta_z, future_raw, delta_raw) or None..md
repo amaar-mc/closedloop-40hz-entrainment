@@ -12,9 +12,9 @@ tags:
 # Run TCN inference, return (delta_z, future_raw, delta_raw) or None.
 
 ## Connections
-- [[._predict()]] - `rationale_for` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
+- [[_predict()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Multiscale_TCN_&_Features

@@ -12,6 +12,6 @@ tags:
 # Args:             x: EEG data (n_channels, n_samples)          Returns:
 
 ## Connections
-- [[.__call__()_2]] - `rationale_for` [EXTRACTED]
+- [[__call__()_2]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

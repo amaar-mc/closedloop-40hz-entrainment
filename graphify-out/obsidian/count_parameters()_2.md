@@ -1,19 +1,17 @@
 ---
-source_file: "archive/experimental_models/spectempnet.py"
+source_file: "archive/experimental/run_experiments.py"
 type: "code"
-community: "Archived SpecTempNet V3"
-location: "L302"
+community: "Archived ImprovedTCN Experiments"
+location: "L246"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Archived_SpecTempNet_V3
+  - community/Archived_ImprovedTCN_Experiments
 ---
 
 # count_parameters()
 
 ## Connections
-- [[Count trainable parameters._2]] - `rationale_for` [EXTRACTED]
-- [[spectempnet.py]] - `contains` [EXTRACTED]
-- [[test_spectempnet()]] - `calls` [EXTRACTED]
+- [[TransformerPredictor]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_SpecTempNet_V3
+#graphify/code #graphify/EXTRACTED #community/Archived_ImprovedTCN_Experiments

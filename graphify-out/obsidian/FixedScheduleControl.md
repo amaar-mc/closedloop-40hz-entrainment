@@ -12,12 +12,12 @@ tags:
 # FixedScheduleControl
 
 ## Connections
-- [[.__init__()_28]] - `method` [EXTRACTED]
-- [[.reset()]] - `method` [EXTRACTED]
-- [[.step()]] - `method` [EXTRACTED]
 - [[Replays the actual fixed schedule from BIDS events.]] - `rationale_for` [EXTRACTED]
 - [[Replays the actual fixed schedule from BIDS events._1]] - `rationale_for` [EXTRACTED]
+- [[__init__()_28]] - `method` [EXTRACTED]
 - [[replay_subject()]] - `calls` [EXTRACTED]
+- [[reset()]] - `method` [EXTRACTED]
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
+- [[step()]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Replay_Analysis_&_Controllers

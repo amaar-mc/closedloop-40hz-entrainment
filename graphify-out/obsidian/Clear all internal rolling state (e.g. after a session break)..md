@@ -12,7 +12,7 @@ tags:
 # Clear all internal rolling state (e.g. after a session break).
 
 ## Connections
-- [[.reset()_9]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
+- [[reset()_9]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Models,_Streaming_&_Apps

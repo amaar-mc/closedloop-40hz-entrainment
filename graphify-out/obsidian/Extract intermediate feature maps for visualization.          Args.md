@@ -12,7 +12,7 @@ tags:
 # Extract intermediate feature maps for visualization.          Args:
 
 ## Connections
-- [[.get_feature_maps()]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
+- [[get_feature_maps()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Models,_Streaming_&_Apps

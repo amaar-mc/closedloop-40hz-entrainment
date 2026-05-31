@@ -12,11 +12,11 @@ tags:
 # Get current simulator state.
 
 ## Connections
-- [[.get_state()_2]] - `rationale_for` [EXTRACTED]
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]
 - [[NeuralMassConfig]] - `uses` [INFERRED]
 - [[WilsonCowanModel]] - `uses` [INFERRED]
+- [[get_state()_2]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/TRIBE_Neural-Mass_Simulator

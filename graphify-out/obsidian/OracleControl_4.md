@@ -12,14 +12,14 @@ tags:
 # OracleControl
 
 ## Connections
-- [[.__init__()_122]] - `method` [EXTRACTED]
-- [[.step()_52]] - `method` [EXTRACTED]
 - [[ControlMethodBase]] - `inherits` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[Oracle with perfect information (upper bound).]] - `rationale_for` [EXTRACTED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_122]] - `method` [EXTRACTED]
 - [[main()_65]] - `calls` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
+- [[step()_53]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation

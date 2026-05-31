@@ -12,14 +12,14 @@ tags:
 # PredictiveLookAheadControl
 
 ## Connections
-- [[.__init__()_114]] - `method` [EXTRACTED]
-- [[._trend()_7]] - `method` [EXTRACTED]
-- [[.reset()_46]] - `method` [EXTRACTED]
-- [[.step()_45]] - `method` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[Trend-based look-ahead controller with hysteresis._1]] - `rationale_for` [EXTRACTED]
+- [[__init__()_114]] - `method` [EXTRACTED]
+- [[_trend()_7]] - `method` [EXTRACTED]
 - [[demo.py]] - `contains` [EXTRACTED]
 - [[main()_63]] - `calls` [EXTRACTED]
+- [[reset()_46]] - `method` [EXTRACTED]
+- [[step()_46]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

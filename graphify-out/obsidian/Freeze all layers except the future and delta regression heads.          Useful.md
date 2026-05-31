@@ -12,6 +12,6 @@ tags:
 # Freeze all layers except the future and delta regression heads.          Useful
 
 ## Connections
-- [[.freeze_backbone()_1]] - `rationale_for` [EXTRACTED]
+- [[freeze_backbone()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Multiscale_TCN_&_Features

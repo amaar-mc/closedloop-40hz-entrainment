@@ -8,28 +8,6 @@ members: 52
 **Members:** 52 nodes
 
 ## Members
-- [[.__init__()_92]] - code - scripts/pipeline/run_tvb_alignment.py
-- [[.__init__()_93]] - code - scripts/pipeline/run_tvb_alignment.py
-- [[.__init__()_94]] - code - scripts/pipeline/run_tvb_alignment.py
-- [[.__init__()_171]] - code - src/tribe_v2/tvb_simulator.py
-- [[._compute_pac()]] - code - src/tribe_v2/tvb_simulator.py
-- [[._create_simulator()]] - code - src/tribe_v2/tvb_simulator.py
-- [[._load_connectome()]] - code - src/tribe_v2/tvb_simulator.py
-- [[._run_tvb()]] - code - src/tribe_v2/tvb_simulator.py
-- [[._trend()_5]] - code - scripts/pipeline/run_tvb_alignment.py
-- [[._warmup()_1]] - code - src/tribe_v2/tvb_simulator.py
-- [[.get_history()_5]] - code - src/tribe_v2/tvb_simulator.py
-- [[.get_raw_pac_history()]] - code - src/tribe_v2/tvb_simulator.py
-- [[.get_regional_a()]] - code - src/tribe_v2/tvb_simulator.py
-- [[.get_state()_3]] - code - src/tribe_v2/tvb_simulator.py
-- [[.reset()_30]] - code - scripts/pipeline/run_tvb_alignment.py
-- [[.reset()_31]] - code - scripts/pipeline/run_tvb_alignment.py
-- [[.reset()_32]] - code - scripts/pipeline/run_tvb_alignment.py
-- [[.reset()_71]] - code - src/tribe_v2/tvb_simulator.py
-- [[.step()_29]] - code - scripts/pipeline/run_tvb_alignment.py
-- [[.step()_30]] - code - scripts/pipeline/run_tvb_alignment.py
-- [[.step()_31]] - code - scripts/pipeline/run_tvb_alignment.py
-- [[.step()_72]] - code - src/tribe_v2/tvb_simulator.py
 - [[Build a per-region A (excitatory gain) array from a disease profile.      Return]] - rationale - src/tribe_v2/tvb_simulator.py
 - [[Compute PAC from TVB EEG signal using a hybrid approach.          The Jansen-Rit]] - rationale - src/tribe_v2/tvb_simulator.py
 - [[Create a configured TVB simulator instance.          Args             mu_value]] - rationale - src/tribe_v2/tvb_simulator.py
@@ -52,13 +30,35 @@ members: 52
 - [[TVB-based brain simulator with Alzheimer's disease modeling.      Uses the Janse]] - rationale - src/tribe_v2/tvb_simulator.py
 - [[TVBAlzheimerSimulator]] - code - src/tribe_v2/tvb_simulator.py
 - [[TrendPredictiveCtrl]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[__init__()_92]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[__init__()_93]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[__init__()_94]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[__init__()_171]] - code - src/tribe_v2/tvb_simulator.py
 - [[_build_regional_a()]] - code - src/tribe_v2/tvb_simulator.py
+- [[_compute_pac()]] - code - src/tribe_v2/tvb_simulator.py
+- [[_create_simulator()]] - code - src/tribe_v2/tvb_simulator.py
+- [[_load_connectome()]] - code - src/tribe_v2/tvb_simulator.py
+- [[_run_tvb()]] - code - src/tribe_v2/tvb_simulator.py
+- [[_trend()_5]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[_warmup()_1]] - code - src/tribe_v2/tvb_simulator.py
 - [[evaluate_alignment()_1]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[get_history()_5]] - code - src/tribe_v2/tvb_simulator.py
+- [[get_raw_pac_history()]] - code - src/tribe_v2/tvb_simulator.py
+- [[get_regional_a()]] - code - src/tribe_v2/tvb_simulator.py
+- [[get_state()_3]] - code - src/tribe_v2/tvb_simulator.py
 - [[hedges_g()_2]] - code - scripts/pipeline/run_tvb_alignment.py
 - [[main()_43]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[reset()_30]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[reset()_31]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[reset()_32]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[reset()_71]] - code - src/tribe_v2/tvb_simulator.py
 - [[run_oracle_trial()]] - code - scripts/pipeline/run_tvb_alignment.py
 - [[run_trial()_3]] - code - scripts/pipeline/run_tvb_alignment.py
 - [[run_tvb_alignment.py]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[step()_30]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[step()_31]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[step()_32]] - code - scripts/pipeline/run_tvb_alignment.py
+- [[step()_73]] - code - src/tribe_v2/tvb_simulator.py
 - [[tvb_simulator.py]] - code - src/tribe_v2/tvb_simulator.py
 
 ## Live Query (requires Dataview plugin)

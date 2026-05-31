@@ -12,14 +12,14 @@ tags:
 # TemporalPACDataset
 
 ## Connections
-- [[.__getitem__()_8]] - `method` [EXTRACTED]
-- [[.__init__()_24]] - `method` [EXTRACTED]
-- [[.__len__()_8]] - `method` [EXTRACTED]
-- [[._build_indices()]] - `method` [EXTRACTED]
-- [[.get_normalization_stats()]] - `method` [EXTRACTED]
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[PyTorch Dataset that creates temporal sequences from contiguous EEG windows.]] - `rationale_for` [EXTRACTED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
+- [[__getitem__()_8]] - `method` [EXTRACTED]
+- [[__init__()_24]] - `method` [EXTRACTED]
+- [[__len__()_8]] - `method` [EXTRACTED]
+- [[_build_indices()]] - `method` [EXTRACTED]
+- [[get_normalization_stats()]] - `method` [EXTRACTED]
 - [[prepare_temporal_data()]] - `calls` [EXTRACTED]
 - [[temporal_dataset.py]] - `contains` [EXTRACTED]
 - [[test_temporal_dataset()]] - `calls` [EXTRACTED]

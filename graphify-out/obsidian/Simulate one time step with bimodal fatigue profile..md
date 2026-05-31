@@ -12,11 +12,11 @@ tags:
 # Simulate one time step with bimodal fatigue profile.
 
 ## Connections
-- [[.step()_55]] - `rationale_for` [EXTRACTED]
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
 - [[PredictiveLookAheadControl_5]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[TrialMetrics]] - `uses` [INFERRED]
+- [[step()_56]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Control_Strategies_&_Validation

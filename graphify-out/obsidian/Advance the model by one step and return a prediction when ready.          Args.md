@@ -12,7 +12,7 @@ tags:
 # Advance the model by one step and return a prediction when ready.          Args:
 
 ## Connections
-- [[.step()_8]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
+- [[step()_9]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Models,_Streaming_&_Apps

@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[EEGNetV2]] - `contains` [EXTRACTED]
 - [[Enhanced EEGNet Architecture for ΔPAC Prediction (Version 2)  Key improvements]] - `rationale_for` [EXTRACTED]
-- [[count_parameters()]] - `contains` [EXTRACTED]
+- [[count_parameters()_7]] - `contains` [EXTRACTED]
 - [[test_eegnet_v2()]] - `contains` [EXTRACTED]
 - [[training_v2.py]] - `imports_from` [EXTRACTED]
 

@@ -12,6 +12,6 @@ tags:
 # Initialize personalization module.          Args:             window_size: Nu
 
 ## Connections
-- [[.__init__()_152]] - `rationale_for` [EXTRACTED]
+- [[__init__()_152]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

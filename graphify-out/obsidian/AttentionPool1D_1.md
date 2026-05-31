@@ -12,9 +12,6 @@ tags:
 # AttentionPool1D
 
 ## Connections
-- [[.__init__()_60]] - `method` [EXTRACTED]
-- [[.__init__()_61]] - `calls` [EXTRACTED]
-- [[.forward()_30]] - `method` [EXTRACTED]
 - [[AblationVariant]] - `uses` [INFERRED]
 - [[Attention pooling over time axis._1]] - `rationale_for` [EXTRACTED]
 - [[AttentionWeightCapture]] - `uses` [INFERRED]
@@ -47,6 +44,9 @@ tags:
 - [[TCN ablation study quantify contribution of each architectural component.  Trai]] - `uses` [INFERRED]
 - [[Train a single variant and return its result dict.]] - `uses` [INFERRED]
 - [[Zero-ablation experiment zero out each feature group and measure R2 drop.]] - `uses` [INFERRED]
+- [[__init__()_60]] - `method` [EXTRACTED]
+- [[__init__()_61]] - `calls` [EXTRACTED]
+- [[forward()_30]] - `method` [EXTRACTED]
 - [[multiscale_tcn.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Multiscale_TCN_&_Features

@@ -12,12 +12,12 @@ tags:
 # LastStepPool
 
 ## Connections
-- [[.__init__()_133]] - `calls` [EXTRACTED]
-- [[.__init__()_134]] - `calls` [EXTRACTED]
-- [[.__init__()_135]] - `calls` [EXTRACTED]
-- [[.__init__()_137]] - `calls` [EXTRACTED]
-- [[.forward()_41]] - `method` [EXTRACTED]
 - [[Take last timestep from causal output.      For a causal architecture the last]] - `rationale_for` [EXTRACTED]
+- [[__init__()_133]] - `calls` [EXTRACTED]
+- [[__init__()_134]] - `calls` [EXTRACTED]
+- [[__init__()_135]] - `calls` [EXTRACTED]
+- [[__init__()_137]] - `calls` [EXTRACTED]
+- [[forward()_41]] - `method` [EXTRACTED]
 - [[tcn_variants.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TCN_Layer_Internals

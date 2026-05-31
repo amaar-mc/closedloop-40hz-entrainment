@@ -12,6 +12,6 @@ tags:
 # Check if baseline has sufficient samples for z-score computation.
 
 ## Connections
-- [[.is_ready()]] - `rationale_for` [EXTRACTED]
+- [[is_ready()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

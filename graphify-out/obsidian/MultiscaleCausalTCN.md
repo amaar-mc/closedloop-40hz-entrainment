@@ -12,11 +12,6 @@ tags:
 # MultiscaleCausalTCN
 
 ## Connections
-- [[.__init__()_61]] - `method` [EXTRACTED]
-- [[.count_parameters()_7]] - `method` [EXTRACTED]
-- [[.forward()_32]] - `method` [EXTRACTED]
-- [[.freeze_backbone()_1]] - `method` [EXTRACTED]
-- [[.unfreeze_all()_1]] - `method` [EXTRACTED]
 - [[AblationVariant]] - `uses` [INFERRED]
 - [[Add one new observation and return prediction when ready.]] - `uses` [INFERRED]
 - [[AlignmentOracleCtrl]] - `uses` [INFERRED]
@@ -152,6 +147,11 @@ tags:
 - [[Wilcoxon signed-rank test with zero-difference handling.]] - `uses` [INFERRED]
 - [[Z-score normalize features and targets using train statistics.      Mirrors th]] - `uses` [INFERRED]
 - [[Zero-ablation experiment zero out each feature group and measure R2 drop.]] - `uses` [INFERRED]
+- [[__init__()_61]] - `method` [EXTRACTED]
+- [[count_parameters()_10]] - `method` [EXTRACTED]
+- [[forward()_32]] - `method` [EXTRACTED]
+- [[freeze_backbone()_1]] - `method` [EXTRACTED]
 - [[multiscale_tcn.py]] - `contains` [EXTRACTED]
+- [[unfreeze_all()_1]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Multiscale_TCN_&_Features

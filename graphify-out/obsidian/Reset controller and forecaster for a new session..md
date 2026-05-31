@@ -12,8 +12,8 @@ tags:
 # Reset controller and forecaster for a new session.
 
 ## Connections
-- [[.reset()_58]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
+- [[reset()_58]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

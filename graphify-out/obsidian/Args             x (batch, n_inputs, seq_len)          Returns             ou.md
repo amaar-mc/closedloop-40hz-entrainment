@@ -12,6 +12,6 @@ tags:
 # Args:             x: (batch, n_inputs, seq_len)          Returns:             ou
 
 ## Connections
-- [[.forward()_20]] - `rationale_for` [EXTRACTED]
+- [[forward()_20]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

@@ -12,12 +12,12 @@ tags:
 # TCNTribeController
 
 ## Connections
-- [[.__init__()_106]] - `method` [EXTRACTED]
-- [[._build_features()]] - `method` [EXTRACTED]
-- [[.reset()_41]] - `method` [EXTRACTED]
-- [[.step()_40]] - `method` [EXTRACTED]
 - [[Closed-loop controller using TCN-TRIBE for proactive decisions.]] - `rationale_for` [EXTRACTED]
+- [[__init__()_106]] - `method` [EXTRACTED]
+- [[_build_features()]] - `method` [EXTRACTED]
 - [[main()_48]] - `calls` [EXTRACTED]
+- [[reset()_41]] - `method` [EXTRACTED]
 - [[run_tribe_tcn_validation.py]] - `contains` [EXTRACTED]
+- [[step()_41]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TRIBE-TCN_Validation

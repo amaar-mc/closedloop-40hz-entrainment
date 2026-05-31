@@ -12,11 +12,11 @@ tags:
 # Simulate one time step of neural dynamics.          Pipeline:             1. Get
 
 ## Connections
-- [[.step()_71]] - `rationale_for` [EXTRACTED]
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]
 - [[NeuralMassConfig]] - `uses` [INFERRED]
 - [[WilsonCowanModel]] - `uses` [INFERRED]
+- [[step()_72]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/TRIBE_Neural-Mass_Simulator

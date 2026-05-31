@@ -15,7 +15,7 @@ tags:
 - [[EEGNet_1]] - `contains` [EXTRACTED]
 - [[EEGNet Architecture for PAC Prediction  Implements compact convolutional neura]] - `rationale_for` [EXTRACTED]
 - [[controller.py]] - `imports_from` [EXTRACTED]
-- [[count_parameters()_4]] - `contains` [EXTRACTED]
+- [[count_parameters()_16]] - `contains` [EXTRACTED]
 - [[demo_streaming.py]] - `imports_from` [EXTRACTED]
 - [[multi_seed_training.py]] - `imports_from` [EXTRACTED]
 - [[test_eegnet()]] - `contains` [EXTRACTED]

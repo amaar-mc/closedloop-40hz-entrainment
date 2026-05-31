@@ -1,0 +1,17 @@
+---
+source_file: "src/streaming/adapters.py"
+type: "code"
+community: "Community 32"
+location: "L299"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Community_32
+---
+
+# __enter__()
+
+## Connections
+- [[RealEEGAdapter]] - `method` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Community_32

@@ -12,14 +12,14 @@ tags:
 # AudioEngine
 
 ## Connections
-- [[.__init__()_117]] - `method` [EXTRACTED]
-- [[.callback()]] - `method` [EXTRACTED]
-- [[.start()]] - `method` [EXTRACTED]
-- [[.stop()]] - `method` [EXTRACTED]
 - [[Produces 40 Hz click-train audio during stimulation periods.]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_117]] - `method` [EXTRACTED]
+- [[callback()]] - `method` [EXTRACTED]
 - [[demo.py]] - `contains` [EXTRACTED]
 - [[main()_63]] - `calls` [EXTRACTED]
+- [[start()]] - `method` [EXTRACTED]
+- [[stop()]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

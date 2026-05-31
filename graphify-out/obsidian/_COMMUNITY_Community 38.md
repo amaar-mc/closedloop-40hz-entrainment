@@ -8,18 +8,6 @@ members: 27
 **Members:** 27 nodes
 
 ## Members
-- [[.__call__()]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
-- [[.__getitem__()_4]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
-- [[.__init__()_13]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
-- [[.__init__()_14]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
-- [[.__init__()_15]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
-- [[.__init__()_16]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
-- [[.__init__()_17]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
-- [[.__len__()_4]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
-- [[._make_tcn_block()]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
-- [[.forward()_10]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
-- [[.forward()_11]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
-- [[.forward()_12]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
 - [[ATCNet]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
 - [[ATCNet Attention Temporal Convolutional Network.      Combines multi-head self-]] - rationale - archive/v1_v8_attempts/run_v8_specialized_eeg.py
 - [[AugmentedDataset]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
@@ -32,7 +20,19 @@ members: 27
 - [[TransformEEG]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
 - [[TransformEEG-inspired Convolutional-Transformer for PAC.      Inspired by Sel]] - rationale - archive/v1_v8_attempts/run_v8_specialized_eeg.py
 - [[V8 Specialized EEG Architectures from Research  Based on recent literature (202]] - rationale - archive/v1_v8_attempts/run_v8_specialized_eeg.py
+- [[__call__()]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
+- [[__getitem__()_4]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
+- [[__init__()_13]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
+- [[__init__()_14]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
+- [[__init__()_15]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
+- [[__init__()_16]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
+- [[__init__()_17]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
+- [[__len__()_4]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
+- [[_make_tcn_block()]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
 - [[evaluate_model()_2]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
+- [[forward()_10]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
+- [[forward()_11]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
+- [[forward()_12]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
 - [[run_v8_specialized_eeg.py]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
 - [[train_model()_1]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
 

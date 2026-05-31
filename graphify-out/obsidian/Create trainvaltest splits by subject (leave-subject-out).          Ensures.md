@@ -12,8 +12,8 @@ tags:
 # Create train/val/test splits by subject (leave-subject-out).          Ensures
 
 ## Connections
-- [[.create_splits()]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
+- [[create_splits()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

@@ -12,6 +12,6 @@ tags:
 # Get PAC value at specific step.
 
 ## Connections
-- [[.get_pac_at_step()]] - `rationale_for` [EXTRACTED]
+- [[get_pac_at_step()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

@@ -12,8 +12,6 @@ tags:
 # main()
 
 ## Connections
-- [[.reset()_29]] - `calls` [EXTRACTED]
-- [[.step()_28]] - `calls` [EXTRACTED]
 - [[AlignmentOracleCtrl]] - `calls` [EXTRACTED]
 - [[FixedScheduleCtrl_1]] - `calls` [EXTRACTED]
 - [[HybridTCNCtrl]] - `calls` [EXTRACTED]
@@ -28,6 +26,8 @@ tags:
 - [[hedges_g()_1]] - `calls` [EXTRACTED]
 - [[load_subjects()_1]] - `calls` [EXTRACTED]
 - [[paired_wilcoxon()]] - `calls` [EXTRACTED]
+- [[reset()_29]] - `calls` [EXTRACTED]
 - [[run_tcn_validation.py]] - `contains` [EXTRACTED]
+- [[step()_29]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Multiscale_TCN_&_Features

@@ -12,8 +12,8 @@ tags:
 # Select 7 frontal channels from full EEG montage.          Args:             r
 
 ## Connections
-- [[.select_frontal_channels()]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
+- [[select_frontal_channels()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

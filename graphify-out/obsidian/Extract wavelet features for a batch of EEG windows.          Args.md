@@ -12,6 +12,6 @@ tags:
 # Extract wavelet features for a batch of EEG windows.          Args:
 
 ## Connections
-- [[.extract()]] - `rationale_for` [EXTRACTED]
+- [[extract()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

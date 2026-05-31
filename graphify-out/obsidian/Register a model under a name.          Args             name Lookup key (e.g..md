@@ -12,7 +12,7 @@ tags:
 # Register a model under a name.          Args:             name: Lookup key (e.g.
 
 ## Connections
-- [[.register()]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
+- [[register()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Models,_Streaming_&_Apps

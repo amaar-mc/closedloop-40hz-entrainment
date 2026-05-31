@@ -12,10 +12,10 @@ tags:
 # TransformerPredictor
 
 ## Connections
-- [[.__init__()_5]] - `method` [EXTRACTED]
-- [[.count_parameters()_2]] - `method` [EXTRACTED]
-- [[.forward()_3]] - `method` [EXTRACTED]
 - [[Causal Transformer encoder for sequence-to-scalar regression.]] - `rationale_for` [EXTRACTED]
+- [[__init__()_5]] - `method` [EXTRACTED]
+- [[count_parameters()_2]] - `method` [EXTRACTED]
+- [[forward()_3]] - `method` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]
 - [[run_experiments.py]] - `contains` [EXTRACTED]
 

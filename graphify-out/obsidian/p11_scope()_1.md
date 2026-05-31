@@ -12,10 +12,10 @@ tags:
 # p11_scope()
 
 ## Connections
-- [[.bullet()_1]] - `calls` [EXTRACTED]
-- [[.sec()_1]] - `calls` [EXTRACTED]
-- [[.sub()_1]] - `calls` [EXTRACTED]
+- [[bullet()_1]] - `calls` [EXTRACTED]
 - [[generate_csef_presentation.py]] - `contains` [EXTRACTED]
 - [[main()_50]] - `calls` [EXTRACTED]
+- [[sec()_1]] - `calls` [EXTRACTED]
+- [[sub()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders

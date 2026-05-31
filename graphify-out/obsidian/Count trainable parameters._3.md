@@ -12,6 +12,6 @@ tags:
 # Count trainable parameters.
 
 ## Connections
-- [[.count_parameters()_8]] - `rationale_for` [EXTRACTED]
+- [[count_parameters()_12]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TCN_Layer_Internals

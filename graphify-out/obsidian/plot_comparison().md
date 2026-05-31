@@ -1,0 +1,19 @@
+---
+source_file: "src/validation.py"
+type: "code"
+community: "Closed-Loop Control & Simulator"
+location: "L717"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Closed-Loop_Control_&_Simulator
+---
+
+# plot_comparison()
+
+## Connections
+- [[Generate comparison plots.          Args             output_name Output fil]] - `rationale_for` [EXTRACTED]
+- [[SimulationValidator]] - `method` [EXTRACTED]
+- [[main()_78]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

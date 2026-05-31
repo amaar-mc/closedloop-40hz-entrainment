@@ -12,7 +12,7 @@ tags:
 # Clear the rolling buffer in the underlying forecaster.
 
 ## Connections
-- [[.reset()_10]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
+- [[reset()_10]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Models,_Streaming_&_Apps

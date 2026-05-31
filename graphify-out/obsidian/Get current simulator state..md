@@ -12,6 +12,6 @@ tags:
 # Get current simulator state.
 
 ## Connections
-- [[.get_state()_1]] - `rationale_for` [EXTRACTED]
+- [[get_state()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

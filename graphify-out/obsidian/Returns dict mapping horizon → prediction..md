@@ -12,6 +12,6 @@ tags:
 # Returns dict mapping horizon → prediction.
 
 ## Connections
-- [[.forward()_18]] - `rationale_for` [EXTRACTED]
+- [[forward()_18]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Temporal_PAC_Predictor

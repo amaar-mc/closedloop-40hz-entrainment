@@ -12,7 +12,7 @@ tags:
 # Args:             lookback: Number of windows to look back (5 windows = 20 seco
 
 ## Connections
-- [[.__init__()_23]] - `rationale_for` [EXTRACTED]
 - [[TemporalPACPredictor]] - `uses` [INFERRED]
+- [[__init__()_23]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Temporal_PAC_Predictor

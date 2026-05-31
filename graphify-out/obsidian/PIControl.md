@@ -12,12 +12,12 @@ tags:
 # PIControl
 
 ## Connections
-- [[.__init__()_35]] - `method` [EXTRACTED]
-- [[.reset()_7]] - `method` [EXTRACTED]
-- [[.step()_7]] - `method` [EXTRACTED]
 - [[Proportional-Integral (PI) controller for PAC maintenance.]] - `rationale_for` [EXTRACTED]
 - [[Proportional-Integral (PI) controller for PAC maintenance.      Error e(t) = ro]] - `rationale_for` [EXTRACTED]
+- [[__init__()_35]] - `method` [EXTRACTED]
 - [[replay_subject()]] - `calls` [EXTRACTED]
+- [[reset()_7]] - `method` [EXTRACTED]
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
+- [[step()_7]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Replay_Analysis_&_Controllers

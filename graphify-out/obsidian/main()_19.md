@@ -12,9 +12,9 @@ tags:
 # main()
 
 ## Connections
-- [[.fit()]] - `calls` [EXTRACTED]
 - [[Main training script.]] - `rationale_for` [EXTRACTED]
 - [[ModelTrainerV2]] - `calls` [EXTRACTED]
+- [[fit()]] - `calls` [EXTRACTED]
 - [[training_v2.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Archived_EEGNet_V2

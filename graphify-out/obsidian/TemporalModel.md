@@ -12,8 +12,6 @@ tags:
 # TemporalModel
 
 ## Connections
-- [[.reset()_9]] - `method` [EXTRACTED]
-- [[.step()_8]] - `method` [EXTRACTED]
 - [[Bonus register() rejects objects that don't satisfy TemporalModel Protocol.]] - `uses` [INFERRED]
 - [[Protocol]] - `inherits` [EXTRACTED]
 - [[Protocol that every temporal PAC predictor must satisfy.      All methods are ca]] - `rationale_for` [EXTRACTED]
@@ -27,5 +25,7 @@ tags:
 - [[Tests for temporal_multiscalemodel_registry.py.  Verifies 1. ModelRegistry reg]] - `uses` [INFERRED]
 - [[build_default_registry() returns registry with 'tcn' pre-registered.]] - `uses` [INFERRED]
 - [[model_registry.py]] - `contains` [EXTRACTED]
+- [[reset()_9]] - `method` [EXTRACTED]
+- [[step()_9]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Models,_Streaming_&_Apps

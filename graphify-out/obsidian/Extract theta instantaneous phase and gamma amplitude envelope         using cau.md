@@ -12,6 +12,6 @@ tags:
 # Extract theta instantaneous phase and gamma amplitude envelope         using cau
 
 ## Connections
-- [[._causal_phase_amplitude()]] - `rationale_for` [EXTRACTED]
+- [[_causal_phase_amplitude()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Models,_Streaming_&_Apps

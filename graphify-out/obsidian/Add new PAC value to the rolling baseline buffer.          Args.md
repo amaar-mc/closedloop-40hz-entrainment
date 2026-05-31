@@ -12,6 +12,6 @@ tags:
 # Add new PAC value to the rolling baseline buffer.          Args:
 
 ## Connections
-- [[.update()]] - `rationale_for` [EXTRACTED]
+- [[update()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

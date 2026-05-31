@@ -12,6 +12,6 @@ tags:
 # Apply data augmentation to EEG window.          Techniques:         1. Time j
 
 ## Connections
-- [[._augment()]] - `rationale_for` [EXTRACTED]
+- [[_augment()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_EEGNet_V2

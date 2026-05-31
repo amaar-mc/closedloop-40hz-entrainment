@@ -12,9 +12,9 @@ tags:
 # run_trial()
 
 ## Connections
-- [[.reset()_23]] - `calls` [EXTRACTED]
-- [[.step()_22]] - `calls` [EXTRACTED]
 - [[main()_41]] - `calls` [EXTRACTED]
+- [[reset()_23]] - `calls` [EXTRACTED]
 - [[run_fatigue_sensitivity.py]] - `contains` [EXTRACTED]
+- [[step()_23]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_84

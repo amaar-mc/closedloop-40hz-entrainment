@@ -12,11 +12,11 @@ tags:
 # FixedScheduleCtrl
 
 ## Connections
-- [[.__init__()_92]] - `method` [EXTRACTED]
-- [[.reset()_30]] - `method` [EXTRACTED]
-- [[.step()_29]] - `method` [EXTRACTED]
 - [[TVBAlzheimerSimulator]] - `uses` [INFERRED]
+- [[__init__()_92]] - `method` [EXTRACTED]
 - [[main()_43]] - `calls` [EXTRACTED]
+- [[reset()_30]] - `method` [EXTRACTED]
 - [[run_tvb_alignment.py]] - `contains` [EXTRACTED]
+- [[step()_30]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator

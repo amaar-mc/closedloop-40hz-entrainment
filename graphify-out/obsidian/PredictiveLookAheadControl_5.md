@@ -12,10 +12,6 @@ tags:
 # PredictiveLookAheadControl
 
 ## Connections
-- [[.__init__()_121]] - `method` [EXTRACTED]
-- [[._pac_trend()]] - `method` [EXTRACTED]
-- [[.reset()_52]] - `method` [EXTRACTED]
-- [[.step()_51]] - `method` [EXTRACTED]
 - [[Configuration for a fatigue model experiment.]] - `uses` [INFERRED]
 - [[ControlMethodBase]] - `inherits` [EXTRACTED]
 - [[Convert to serializable dict.]] - `uses` [INFERRED]
@@ -49,7 +45,11 @@ tags:
 - [[StepFunctionSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[Trend-based predictive look-ahead with hysteresis.      Uses linear regression]] - `rationale_for` [EXTRACTED]
+- [[__init__()_121]] - `method` [EXTRACTED]
+- [[_pac_trend()]] - `method` [EXTRACTED]
 - [[main()_65]] - `calls` [EXTRACTED]
+- [[reset()_52]] - `method` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
+- [[step()_52]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Control_Strategies_&_Validation

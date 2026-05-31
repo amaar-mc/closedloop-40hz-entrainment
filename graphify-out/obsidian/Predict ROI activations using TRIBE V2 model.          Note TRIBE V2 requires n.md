@@ -12,6 +12,6 @@ tags:
 # Predict ROI activations using TRIBE V2 model.          Note: TRIBE V2 requires n
 
 ## Connections
-- [[.predict_tribe_v2()]] - `rationale_for` [EXTRACTED]
+- [[predict_tribe_v2()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

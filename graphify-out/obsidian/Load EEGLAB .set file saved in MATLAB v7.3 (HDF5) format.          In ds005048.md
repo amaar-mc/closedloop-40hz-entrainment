@@ -12,8 +12,8 @@ tags:
 # Load EEGLAB .set file saved in MATLAB v7.3 (HDF5) format.          In ds005048
 
 ## Connections
-- [[._load_hdf5_set()]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
+- [[_load_hdf5_set()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

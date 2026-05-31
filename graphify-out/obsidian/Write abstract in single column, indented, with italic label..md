@@ -12,6 +12,6 @@ tags:
 # Write abstract in single column, indented, with italic label.
 
 ## Connections
-- [[.write_abstract()]] - `rationale_for` [EXTRACTED]
+- [[write_abstract()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders

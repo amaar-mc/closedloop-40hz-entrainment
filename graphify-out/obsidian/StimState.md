@@ -12,7 +12,6 @@ tags:
 # StimState
 
 ## Connections
-- [[.__str__()]] - `method` [EXTRACTED]
 - [[Abstract base class for all control strategies.      Subclasses must implement]] - `uses` [INFERRED]
 - [[Add control method to comparison.]] - `uses` [INFERRED]
 - [[Compare methods using statistical tests on multi-trial data.          Uses acc]] - `uses` [INFERRED]
@@ -55,6 +54,7 @@ tags:
 - [[Validation and Comparison Framework for Closed-Loop Control Strategies.  Compa]] - `uses` [INFERRED]
 - [[ValidationMetrics]] - `uses` [INFERRED]
 - [[Whether a trained TCN forecaster is available.]] - `uses` [INFERRED]
+- [[__str__()]] - `method` [EXTRACTED]
 - [[controller.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

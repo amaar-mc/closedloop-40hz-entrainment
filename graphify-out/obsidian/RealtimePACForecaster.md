@@ -12,10 +12,6 @@ tags:
 # RealtimePACForecaster
 
 ## Connections
-- [[.__init__()_66]] - `method` [EXTRACTED]
-- [[._build_step_feature()]] - `method` [EXTRACTED]
-- [[._pac_features()]] - `method` [EXTRACTED]
-- [[.reset()_8]] - `method` [EXTRACTED]
 - [[40s ON + 20s OFF (standard clinical protocol)._1]] - `uses` [INFERRED]
 - [[Abstract base class for all control strategies.      Subclasses must implement]] - `uses` [INFERRED]
 - [[Adapter that wraps RealtimePACForecaster to satisfy the TemporalModel Protocol.]] - `uses` [INFERRED]
@@ -129,6 +125,10 @@ tags:
 - [[Whether a trained TCN forecaster is available.]] - `uses` [INFERRED]
 - [[Z-score reactive controller — stimulates when PAC drops below threshold.]] - `uses` [INFERRED]
 - [[_NoOpAudioEngine]] - `uses` [INFERRED]
+- [[__init__()_66]] - `method` [EXTRACTED]
+- [[_build_step_feature()]] - `method` [EXTRACTED]
+- [[_pac_features()]] - `method` [EXTRACTED]
 - [[realtime_inference.py]] - `contains` [EXTRACTED]
+- [[reset()_8]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

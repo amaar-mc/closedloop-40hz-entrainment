@@ -13,6 +13,6 @@ tags:
 
 ## Connections
 - [[EEGNet_1]] - `uses` [INFERRED]
-- [[count_parameters()_3]] - `rationale_for` [EXTRACTED]
+- [[count_parameters()_11]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Models,_Streaming_&_Apps

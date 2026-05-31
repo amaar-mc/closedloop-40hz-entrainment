@@ -12,10 +12,10 @@ tags:
 # TimeWarp
 
 ## Connections
-- [[.__call__()_1]] - `method` [EXTRACTED]
-- [[.__init__()_46]] - `method` [EXTRACTED]
-- [[.__init__()_52]] - `calls` [EXTRACTED]
 - [[Warp the time axis by changing the speed of the signal.      This simulates natu]] - `rationale_for` [EXTRACTED]
+- [[__call__()_1]] - `method` [EXTRACTED]
+- [[__init__()_46]] - `method` [EXTRACTED]
+- [[__init__()_52]] - `calls` [EXTRACTED]
 - [[data_augmentation.py]] - `contains` [EXTRACTED]
 - [[test_augmentation()]] - `calls` [EXTRACTED]
 

@@ -12,6 +12,6 @@ tags:
 # Get unscaled raw MI values for diagnostics.
 
 ## Connections
-- [[.get_raw_pac_history()]] - `rationale_for` [EXTRACTED]
+- [[get_raw_pac_history()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator

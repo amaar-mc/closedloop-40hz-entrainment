@@ -12,14 +12,14 @@ tags:
 # InterpretabilityDataset
 
 ## Connections
-- [[.__getitem__()_17]] - `method` [EXTRACTED]
-- [[.__init__()_143]] - `method` [EXTRACTED]
-- [[.__len__()_17]] - `method` [EXTRACTED]
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[Loads multiscale temporal dataset with metadata for interpretability.      Ext]] - `rationale_for` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
+- [[__getitem__()_17]] - `method` [EXTRACTED]
+- [[__init__()_143]] - `method` [EXTRACTED]
+- [[__len__()_17]] - `method` [EXTRACTED]
 - [[main()_71]] - `calls` [EXTRACTED]
 - [[tcn_interpretability.py]] - `contains` [EXTRACTED]
 

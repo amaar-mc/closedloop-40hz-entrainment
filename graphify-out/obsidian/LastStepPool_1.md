@@ -12,8 +12,6 @@ tags:
 # LastStepPool
 
 ## Connections
-- [[.__init__()_61]] - `calls` [EXTRACTED]
-- [[.forward()_31]] - `method` [EXTRACTED]
 - [[AblationVariant]] - `uses` [INFERRED]
 - [[CausalDSConvBlock with GroupNorm replaced by Identity (ablation).]] - `uses` [INFERRED]
 - [[CausalDSConvBlockNoNorm]] - `uses` [INFERRED]
@@ -22,6 +20,8 @@ tags:
 - [[TCN ablation study quantify contribution of each architectural component.  Trai]] - `uses` [INFERRED]
 - [[Take last timestep from causal TCN output.      For a causal architecture the la_1]] - `rationale_for` [EXTRACTED]
 - [[Train a single variant and return its result dict.]] - `uses` [INFERRED]
+- [[__init__()_61]] - `calls` [EXTRACTED]
+- [[forward()_31]] - `method` [EXTRACTED]
 - [[multiscale_tcn.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Multiscale_TCN_&_Features

@@ -12,8 +12,8 @@ tags:
 # Save model checkpoint.
 
 ## Connections
-- [[._save_checkpoint()]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
+- [[_save_checkpoint()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

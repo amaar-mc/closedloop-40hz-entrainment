@@ -12,10 +12,10 @@ tags:
 # run_trial()
 
 ## Connections
-- [[.reset()_32]] - `calls` [EXTRACTED]
-- [[.step()_31]] - `calls` [EXTRACTED]
 - [[evaluate_alignment()_1]] - `calls` [EXTRACTED]
 - [[main()_43]] - `calls` [EXTRACTED]
+- [[reset()_32]] - `calls` [EXTRACTED]
 - [[run_tvb_alignment.py]] - `contains` [EXTRACTED]
+- [[step()_32]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator

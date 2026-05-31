@@ -12,6 +12,6 @@ tags:
 # Compute the feature vector for a single 2-second EEG window.          The filter
 
 ## Connections
-- [[.process_window()]] - `rationale_for` [EXTRACTED]
+- [[process_window()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Models,_Streaming_&_Apps

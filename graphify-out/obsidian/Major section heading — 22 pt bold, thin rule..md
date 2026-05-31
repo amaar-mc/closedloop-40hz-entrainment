@@ -12,6 +12,6 @@ tags:
 # Major section heading — 22 pt bold, thin rule.
 
 ## Connections
-- [[.sec()_1]] - `rationale_for` [EXTRACTED]
+- [[sec()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders

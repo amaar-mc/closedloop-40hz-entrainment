@@ -12,6 +12,6 @@ tags:
 # Args:             x: (batch, 1, n_channels, n_samples)          Returns:
 
 ## Connections
-- [[.forward()_23]] - `rationale_for` [EXTRACTED]
+- [[forward()_23]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

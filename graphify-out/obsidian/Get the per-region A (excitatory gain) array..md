@@ -12,6 +12,6 @@ tags:
 # Get the per-region A (excitatory gain) array.
 
 ## Connections
-- [[.get_regional_a()]] - `rationale_for` [EXTRACTED]
+- [[get_regional_a()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator

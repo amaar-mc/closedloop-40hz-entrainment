@@ -12,6 +12,6 @@ tags:
 # Args:             eeg: (batch, 1, n_channels, n_samples) - Raw EEG             s
 
 ## Connections
-- [[.forward()_24]] - `rationale_for` [EXTRACTED]
+- [[forward()_24]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

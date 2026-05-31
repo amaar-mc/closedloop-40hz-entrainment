@@ -12,6 +12,6 @@ tags:
 # Get current ROI activations for the simulation step.          In parametric mode
 
 ## Connections
-- [[.get_activations()]] - `rationale_for` [EXTRACTED]
+- [[get_activations()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

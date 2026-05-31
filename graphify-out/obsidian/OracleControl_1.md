@@ -12,14 +12,14 @@ tags:
 # OracleControl
 
 ## Connections
-- [[.__init__()_83]] - `method` [EXTRACTED]
-- [[.reset()_21]] - `method` [EXTRACTED]
-- [[.step()_20]] - `method` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[Perfect knowledge — stimulate when below target.]] - `rationale_for` [EXTRACTED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_83]] - `method` [EXTRACTED]
 - [[main()_40]] - `calls` [EXTRACTED]
+- [[reset()_21]] - `method` [EXTRACTED]
 - [[run_closed_loop_demo.py]] - `contains` [EXTRACTED]
+- [[step()_21]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

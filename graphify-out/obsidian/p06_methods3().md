@@ -12,13 +12,13 @@ tags:
 # p06_methods3()
 
 ## Connections
-- [[.bullet()]] - `calls` [EXTRACTED]
-- [[.fig()]] - `calls` [EXTRACTED]
-- [[.ln()]] - `calls` [EXTRACTED]
-- [[.sub2()]] - `calls` [EXTRACTED]
 - [[Slide 6 Methods page 3 -- Controller, Validation, Figure.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `calls` [EXTRACTED]
 - [[build_pptx.py]] - `contains` [EXTRACTED]
+- [[bullet()]] - `calls` [EXTRACTED]
+- [[fig()]] - `calls` [EXTRACTED]
+- [[ln()]] - `calls` [EXTRACTED]
 - [[main()_37]] - `calls` [EXTRACTED]
+- [[sub2()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PPTX_Slide_Builder

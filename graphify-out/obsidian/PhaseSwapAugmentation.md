@@ -12,9 +12,9 @@ tags:
 # PhaseSwapAugmentation
 
 ## Connections
-- [[.__call__()]] - `method` [EXTRACTED]
-- [[.__init__()_13]] - `method` [EXTRACTED]
 - [[Phase-swap augmentation from TransformEEG paper.]] - `rationale_for` [EXTRACTED]
+- [[__call__()]] - `method` [EXTRACTED]
+- [[__init__()_13]] - `method` [EXTRACTED]
 - [[run_v8_specialized_eeg.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_38

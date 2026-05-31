@@ -8,20 +8,6 @@ members: 44
 **Members:** 44 nodes
 
 ## Members
-- [[.__init__()_104]] - code - scripts/pipeline/run_tribe_tcn_validation.py
-- [[.__init__()_105]] - code - scripts/pipeline/run_tribe_tcn_validation.py
-- [[.__init__()_106]] - code - scripts/pipeline/run_tribe_tcn_validation.py
-- [[.__init__()_107]] - code - scripts/pipeline/run_tribe_tcn_validation.py
-- [[.__init__()_108]] - code - scripts/pipeline/run_tribe_tcn_validation.py
-- [[._build_features()]] - code - scripts/pipeline/run_tribe_tcn_validation.py
-- [[.forward()_35]] - code - scripts/pipeline/run_tribe_tcn_validation.py
-- [[.forward()_36]] - code - scripts/pipeline/run_tribe_tcn_validation.py
-- [[.reset()_41]] - code - scripts/pipeline/run_tribe_tcn_validation.py
-- [[.reset()_42]] - code - scripts/pipeline/run_tribe_tcn_validation.py
-- [[.reset()_43]] - code - scripts/pipeline/run_tribe_tcn_validation.py
-- [[.step()_40]] - code - scripts/pipeline/run_tribe_tcn_validation.py
-- [[.step()_41]] - code - scripts/pipeline/run_tribe_tcn_validation.py
-- [[.step()_42]] - code - scripts/pipeline/run_tribe_tcn_validation.py
 - [[Build causal feature sequences and future PAC targets.      Features per step (1]] - rationale - scripts/pipeline/run_tribe_tcn_validation.py
 - [[Build single-step feature vector (12 dims).]] - rationale - scripts/pipeline/run_tribe_tcn_validation.py
 - [[CausalConv1dBlock]] - code - scripts/pipeline/run_tribe_tcn_validation.py
@@ -43,14 +29,28 @@ members: 44
 - [[TRIBE TCN Validation Pipeline Script]] - code - scripts/pipeline/run_tribe_tcn_validation.py
 - [[TRIBE V2 + TCN-TRIBE Train a TCN on TRIBE simulator data, then evaluate.  Pipel]] - rationale - scripts/pipeline/run_tribe_tcn_validation.py
 - [[Train TCN-TRIBE with early stopping.]] - rationale - scripts/pipeline/run_tribe_tcn_validation.py
+- [[__init__()_104]] - code - scripts/pipeline/run_tribe_tcn_validation.py
+- [[__init__()_105]] - code - scripts/pipeline/run_tribe_tcn_validation.py
+- [[__init__()_106]] - code - scripts/pipeline/run_tribe_tcn_validation.py
+- [[__init__()_107]] - code - scripts/pipeline/run_tribe_tcn_validation.py
+- [[__init__()_108]] - code - scripts/pipeline/run_tribe_tcn_validation.py
+- [[_build_features()]] - code - scripts/pipeline/run_tribe_tcn_validation.py
 - [[build_features_from_sequence()]] - code - scripts/pipeline/run_tribe_tcn_validation.py
 - [[evaluate_alignment()_2]] - code - scripts/pipeline/run_tribe_tcn_validation.py
+- [[forward()_35]] - code - scripts/pipeline/run_tribe_tcn_validation.py
+- [[forward()_36]] - code - scripts/pipeline/run_tribe_tcn_validation.py
 - [[generate_pac_sequences()]] - code - scripts/pipeline/run_tribe_tcn_validation.py
 - [[hedges_g()_4]] - code - scripts/pipeline/run_tribe_tcn_validation.py
 - [[main()_48]] - code - scripts/pipeline/run_tribe_tcn_validation.py
+- [[reset()_41]] - code - scripts/pipeline/run_tribe_tcn_validation.py
+- [[reset()_42]] - code - scripts/pipeline/run_tribe_tcn_validation.py
+- [[reset()_43]] - code - scripts/pipeline/run_tribe_tcn_validation.py
 - [[run_oracle_trial()_1]] - code - scripts/pipeline/run_tribe_tcn_validation.py
 - [[run_trial()_5]] - code - scripts/pipeline/run_tribe_tcn_validation.py
 - [[run_tribe_tcn_validation.py]] - code - scripts/pipeline/run_tribe_tcn_validation.py
+- [[step()_41]] - code - scripts/pipeline/run_tribe_tcn_validation.py
+- [[step()_42]] - code - scripts/pipeline/run_tribe_tcn_validation.py
+- [[step()_43]] - code - scripts/pipeline/run_tribe_tcn_validation.py
 - [[train_tcn_tribe()]] - code - scripts/pipeline/run_tribe_tcn_validation.py
 
 ## Live Query (requires Dataview plugin)

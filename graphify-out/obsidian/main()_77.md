@@ -12,9 +12,9 @@ tags:
 # main()
 
 ## Connections
-- [[.train()]] - `calls` [EXTRACTED]
 - [[Main entry point for training pipeline.]] - `rationale_for` [EXTRACTED]
 - [[ModelTrainer]] - `calls` [EXTRACTED]
+- [[train()]] - `calls` [EXTRACTED]
 - [[training.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline

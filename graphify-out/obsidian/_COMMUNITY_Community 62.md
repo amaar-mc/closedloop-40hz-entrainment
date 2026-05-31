@@ -8,23 +8,23 @@ members: 17
 **Members:** 17 nodes
 
 ## Members
-- [[.__init__()_77]] - code - scripts/pipeline/run_alzheimer_simulation.py
-- [[.__init__()_78]] - code - scripts/pipeline/run_alzheimer_simulation.py
-- [[.__init__()_79]] - code - scripts/pipeline/run_alzheimer_simulation.py
-- [[._trend()_2]] - code - scripts/pipeline/run_alzheimer_simulation.py
-- [[.reset()_15]] - code - scripts/pipeline/run_alzheimer_simulation.py
-- [[.reset()_16]] - code - scripts/pipeline/run_alzheimer_simulation.py
-- [[.reset()_17]] - code - scripts/pipeline/run_alzheimer_simulation.py
-- [[.step()_14]] - code - scripts/pipeline/run_alzheimer_simulation.py
-- [[.step()_15]] - code - scripts/pipeline/run_alzheimer_simulation.py
-- [[.step()_16]] - code - scripts/pipeline/run_alzheimer_simulation.py
 - [[Alzheimer's Disease Simulation with TRIBE V2-Enhanced Closed-Loop Control  Demon]] - rationale - scripts/pipeline/run_alzheimer_simulation.py
 - [[FixedSchedule]] - code - scripts/pipeline/run_alzheimer_simulation.py
 - [[Predictive]] - code - scripts/pipeline/run_alzheimer_simulation.py
 - [[Reactive]] - code - scripts/pipeline/run_alzheimer_simulation.py
+- [[__init__()_77]] - code - scripts/pipeline/run_alzheimer_simulation.py
+- [[__init__()_78]] - code - scripts/pipeline/run_alzheimer_simulation.py
+- [[__init__()_79]] - code - scripts/pipeline/run_alzheimer_simulation.py
+- [[_trend()_2]] - code - scripts/pipeline/run_alzheimer_simulation.py
 - [[main()_39]] - code - scripts/pipeline/run_alzheimer_simulation.py
+- [[reset()_15]] - code - scripts/pipeline/run_alzheimer_simulation.py
+- [[reset()_16]] - code - scripts/pipeline/run_alzheimer_simulation.py
+- [[reset()_17]] - code - scripts/pipeline/run_alzheimer_simulation.py
 - [[run_alzheimer_simulation.py]] - code - scripts/pipeline/run_alzheimer_simulation.py
 - [[run_trial()]] - code - scripts/pipeline/run_alzheimer_simulation.py
+- [[step()_15]] - code - scripts/pipeline/run_alzheimer_simulation.py
+- [[step()_16]] - code - scripts/pipeline/run_alzheimer_simulation.py
+- [[step()_17]] - code - scripts/pipeline/run_alzheimer_simulation.py
 
 ## Live Query (requires Dataview plugin)
 

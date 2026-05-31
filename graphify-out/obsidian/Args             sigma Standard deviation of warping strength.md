@@ -12,6 +12,6 @@ tags:
 # Args:             sigma: Standard deviation of warping strength
 
 ## Connections
-- [[.__init__()_46]] - `rationale_for` [EXTRACTED]
+- [[__init__()_46]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

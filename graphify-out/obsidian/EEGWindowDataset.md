@@ -12,12 +12,6 @@ tags:
 # EEGWindowDataset
 
 ## Connections
-- [[.__getitem__()_18]] - `method` [EXTRACTED]
-- [[.__init__()_149]] - `method` [EXTRACTED]
-- [[.__len__()_18]] - `method` [EXTRACTED]
-- [[.create_dataloaders()]] - `calls` [EXTRACTED]
-- [[.get_session_id()]] - `method` [EXTRACTED]
-- [[.get_subject_id()]] - `method` [EXTRACTED]
 - [[Add Gaussian noise at specified SNR.          Args             window EEG w]] - `uses` [INFERRED]
 - [[Applies data augmentation to EEG windows.      Augmentation strategies]] - `uses` [INFERRED]
 - [[Apply random augmentations.          Args             window Input window]] - `uses` [INFERRED]
@@ -38,6 +32,12 @@ tags:
 - [[Train for one epoch.          Args             train_loader Training DataLo]] - `uses` [INFERRED]
 - [[Training Pipeline for EEGNet PAC Prediction Model  Implements model training w]] - `uses` [INFERRED]
 - [[Validate model on validation set.          Args             val_loader Vali]] - `uses` [INFERRED]
+- [[__getitem__()_18]] - `method` [EXTRACTED]
+- [[__init__()_149]] - `method` [EXTRACTED]
+- [[__len__()_18]] - `method` [EXTRACTED]
+- [[create_dataloaders()_1]] - `calls` [EXTRACTED]
 - [[data_loader.py]] - `contains` [EXTRACTED]
+- [[get_session_id()]] - `method` [EXTRACTED]
+- [[get_subject_id()]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

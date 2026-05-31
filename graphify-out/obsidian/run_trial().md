@@ -12,9 +12,9 @@ tags:
 # run_trial()
 
 ## Connections
-- [[.reset()_17]] - `calls` [EXTRACTED]
-- [[.step()_16]] - `calls` [EXTRACTED]
 - [[main()_39]] - `calls` [EXTRACTED]
+- [[reset()_17]] - `calls` [EXTRACTED]
 - [[run_alzheimer_simulation.py]] - `contains` [EXTRACTED]
+- [[step()_17]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_62

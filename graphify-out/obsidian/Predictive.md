@@ -12,12 +12,12 @@ tags:
 # Predictive
 
 ## Connections
-- [[.__init__()_79]] - `method` [EXTRACTED]
-- [[._trend()_2]] - `method` [EXTRACTED]
-- [[.reset()_17]] - `method` [EXTRACTED]
-- [[.step()_16]] - `method` [EXTRACTED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_79]] - `method` [EXTRACTED]
+- [[_trend()_2]] - `method` [EXTRACTED]
 - [[main()_39]] - `calls` [EXTRACTED]
+- [[reset()_17]] - `method` [EXTRACTED]
 - [[run_alzheimer_simulation.py]] - `contains` [EXTRACTED]
+- [[step()_17]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_62

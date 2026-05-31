@@ -8,31 +8,6 @@ members: 65
 **Members:** 65 nodes
 
 ## Members
-- [[.__init__()_28]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.__init__()_29]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.__init__()_30]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.__init__()_31]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.__init__()_32]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.__init__()_33]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.__init__()_34]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.__init__()_35]] - code - scripts/pipeline/run_replay_analysis.py
-- [[._trend()]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.reset()]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.reset()_1]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.reset()_2]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.reset()_3]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.reset()_4]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.reset()_5]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.reset()_6]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.reset()_7]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.step()]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.step()_1]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.step()_2]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.step()_3]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.step()_4]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.step()_5]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.step()_6]] - code - scripts/pipeline/run_replay_analysis.py
-- [[.step()_7]] - code - scripts/pipeline/run_replay_analysis.py
 - [[CUSUM change-detection controller (Page 1954).]] - rationale - archive/perwindow_pac/run_replay_analysis.py
 - [[CUSUM change-detection controller (Page 1954).      Detects sustained PAC drop]] - rationale - scripts/pipeline/run_replay_analysis.py
 - [[CUSUMControl]] - code - scripts/pipeline/run_replay_analysis.py
@@ -65,14 +40,39 @@ members: 65
 - [[Replay real PAC data through controllers — no simulator, no fake dynamics.  For]] - rationale - scripts/pipeline/run_replay_analysis.py
 - [[Replays the actual fixed schedule from BIDS events.]] - rationale - archive/perwindow_pac/run_replay_analysis.py
 - [[Replays the actual fixed schedule from BIDS events._1]] - rationale - scripts/pipeline/run_replay_analysis.py
+- [[__init__()_28]] - code - scripts/pipeline/run_replay_analysis.py
+- [[__init__()_29]] - code - scripts/pipeline/run_replay_analysis.py
+- [[__init__()_30]] - code - scripts/pipeline/run_replay_analysis.py
+- [[__init__()_31]] - code - scripts/pipeline/run_replay_analysis.py
+- [[__init__()_32]] - code - scripts/pipeline/run_replay_analysis.py
+- [[__init__()_33]] - code - scripts/pipeline/run_replay_analysis.py
+- [[__init__()_34]] - code - scripts/pipeline/run_replay_analysis.py
+- [[__init__()_35]] - code - scripts/pipeline/run_replay_analysis.py
 - [[_extract_biomarkers_single()]] - code - scripts/pipeline/run_replay_analysis.py
+- [[_trend()]] - code - scripts/pipeline/run_replay_analysis.py
 - [[evaluate_decisions()]] - code - scripts/pipeline/run_replay_analysis.py
 - [[load_subjects()]] - code - scripts/pipeline/run_replay_analysis.py
 - [[main()_17]] - code - scripts/pipeline/run_replay_analysis.py
 - [[precompute_biomarker_features()]] - code - scripts/pipeline/run_replay_analysis.py
 - [[print_comparison()]] - code - archive/perwindow_pac/run_replay_analysis.py
 - [[replay_subject()]] - code - scripts/pipeline/run_replay_analysis.py
+- [[reset()]] - code - scripts/pipeline/run_replay_analysis.py
+- [[reset()_1]] - code - scripts/pipeline/run_replay_analysis.py
+- [[reset()_2]] - code - scripts/pipeline/run_replay_analysis.py
+- [[reset()_3]] - code - scripts/pipeline/run_replay_analysis.py
+- [[reset()_4]] - code - scripts/pipeline/run_replay_analysis.py
+- [[reset()_5]] - code - scripts/pipeline/run_replay_analysis.py
+- [[reset()_6]] - code - scripts/pipeline/run_replay_analysis.py
+- [[reset()_7]] - code - scripts/pipeline/run_replay_analysis.py
 - [[run_replay_analysis.py]] - code - scripts/pipeline/run_replay_analysis.py
+- [[step()]] - code - scripts/pipeline/run_replay_analysis.py
+- [[step()_1]] - code - scripts/pipeline/run_replay_analysis.py
+- [[step()_2]] - code - scripts/pipeline/run_replay_analysis.py
+- [[step()_3]] - code - scripts/pipeline/run_replay_analysis.py
+- [[step()_4]] - code - scripts/pipeline/run_replay_analysis.py
+- [[step()_5]] - code - scripts/pipeline/run_replay_analysis.py
+- [[step()_6]] - code - scripts/pipeline/run_replay_analysis.py
+- [[step()_7]] - code - scripts/pipeline/run_replay_analysis.py
 
 ## Live Query (requires Dataview plugin)
 

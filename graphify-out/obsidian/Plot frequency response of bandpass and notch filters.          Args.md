@@ -12,6 +12,6 @@ tags:
 # Plot frequency response of bandpass and notch filters.          Args:
 
 ## Connections
-- [[.plot_filter_response()]] - `rationale_for` [EXTRACTED]
+- [[plot_filter_response()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline

@@ -12,9 +12,9 @@ tags:
 # extract_spectral_features()
 
 ## Connections
-- [[.extract()_2]] - `calls` [EXTRACTED]
 - [[Extract comprehensive spectral features for PAC prediction.      Args]] - `rationale_for` [EXTRACTED]
 - [[compute_pac_features()]] - `calls` [EXTRACTED]
+- [[extract()_2]] - `calls` [EXTRACTED]
 - [[extract_band_power()]] - `calls` [EXTRACTED]
 - [[extract_phase_amplitude()]] - `calls` [EXTRACTED]
 - [[spectral_features.py]] - `contains` [EXTRACTED]

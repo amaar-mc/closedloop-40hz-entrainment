@@ -12,6 +12,6 @@ tags:
 # Detect bad/noisy channels using standard deviation criterion.          Channel
 
 ## Connections
-- [[.detect_bad_channels()]] - `rationale_for` [EXTRACTED]
+- [[detect_bad_channels()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline

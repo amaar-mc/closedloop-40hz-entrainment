@@ -12,11 +12,11 @@ tags:
 # PredictiveLookAheadControl
 
 ## Connections
-- [[.__init__()_30]] - `method` [EXTRACTED]
-- [[._trend()]] - `method` [EXTRACTED]
-- [[.reset()_2]] - `method` [EXTRACTED]
-- [[.step()_2]] - `method` [EXTRACTED]
+- [[__init__()_30]] - `method` [EXTRACTED]
+- [[_trend()]] - `method` [EXTRACTED]
 - [[replay_subject()]] - `calls` [EXTRACTED]
+- [[reset()_2]] - `method` [EXTRACTED]
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
+- [[step()_2]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Replay_Analysis_&_Controllers

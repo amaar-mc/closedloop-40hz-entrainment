@@ -12,10 +12,10 @@ tags:
 # ReactiveThresholdControl
 
 ## Connections
-- [[.__init__()_29]] - `method` [EXTRACTED]
-- [[.reset()_1]] - `method` [EXTRACTED]
-- [[.step()_1]] - `method` [EXTRACTED]
+- [[__init__()_29]] - `method` [EXTRACTED]
 - [[replay_subject()]] - `calls` [EXTRACTED]
+- [[reset()_1]] - `method` [EXTRACTED]
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
+- [[step()_1]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Replay_Analysis_&_Controllers

@@ -12,8 +12,8 @@ tags:
 # Get full history of decisions and measurements.          Returns:
 
 ## Connections
-- [[.get_history()]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
+- [[get_history()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

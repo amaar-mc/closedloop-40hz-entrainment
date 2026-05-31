@@ -12,8 +12,8 @@ tags:
 # Randomly scale amplitude.          Args:             window: EEG window
 
 ## Connections
-- [[.amplitude_scaling()]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
+- [[amplitude_scaling()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

@@ -12,6 +12,6 @@ tags:
 # Zero all filter states (restart as if no prior windows seen).
 
 ## Connections
-- [[.reset()_67]] - `rationale_for` [EXTRACTED]
+- [[reset()_67]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Models,_Streaming_&_Apps

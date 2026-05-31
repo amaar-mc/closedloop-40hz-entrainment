@@ -12,6 +12,6 @@ tags:
 # Add positional encoding to input.          Args:             x: Input tensor
 
 ## Connections
-- [[.forward()_45]] - `rationale_for` [EXTRACTED]
+- [[forward()_45]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TCN_Layer_Internals

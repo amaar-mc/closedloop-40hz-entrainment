@@ -12,10 +12,10 @@ tags:
 # p01_title()
 
 ## Connections
-- [[.body()]] - `calls` [EXTRACTED]
 - [[SlideBuilder]] - `calls` [EXTRACTED]
 - [[_add_textbox()]] - `calls` [EXTRACTED]
 - [[_first_paragraph()]] - `calls` [EXTRACTED]
+- [[body()]] - `calls` [EXTRACTED]
 - [[build_pptx.py]] - `contains` [EXTRACTED]
 - [[main()_37]] - `calls` [EXTRACTED]
 

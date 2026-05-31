@@ -12,7 +12,7 @@ tags:
 # Retrieve a registered model by name.          Args:             name: The regist
 
 ## Connections
-- [[.get()]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
+- [[get()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Models,_Streaming_&_Apps

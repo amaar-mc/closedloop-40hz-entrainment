@@ -12,9 +12,6 @@ tags:
 # EEGNet
 
 ## Connections
-- [[.__init__()_148]] - `method` [EXTRACTED]
-- [[.forward()_47]] - `method` [EXTRACTED]
-- [[.get_feature_maps()_2]] - `method` [EXTRACTED]
 - [[4-Channel Muse 2 Model Retraining Pipeline  Retrains the full EEGNet + TCN pipel]] - `uses` [INFERRED]
 - [[Add Gaussian noise at specified SNR.          Args             window EEG w]] - `uses` [INFERRED]
 - [[Append a session record to the given patient and clear cache.]] - `uses` [INFERRED]
@@ -107,7 +104,10 @@ tags:
 - [[Train for one epoch.          Args             train_loader Training DataLo]] - `uses` [INFERRED]
 - [[Training Pipeline for EEGNet PAC Prediction Model  Implements model training w]] - `uses` [INFERRED]
 - [[Validate model on validation set.          Args             val_loader Vali]] - `uses` [INFERRED]
+- [[__init__()_148]] - `method` [EXTRACTED]
 - [[eegnet.py]] - `contains` [EXTRACTED]
+- [[forward()_47]] - `method` [EXTRACTED]
+- [[get_feature_maps()_2]] - `method` [EXTRACTED]
 - [[test_eegnet()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Models,_Streaming_&_Apps

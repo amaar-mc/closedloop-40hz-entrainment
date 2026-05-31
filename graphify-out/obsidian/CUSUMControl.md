@@ -12,12 +12,12 @@ tags:
 # CUSUMControl
 
 ## Connections
-- [[.__init__()_32]] - `method` [EXTRACTED]
-- [[.reset()_4]] - `method` [EXTRACTED]
-- [[.step()_4]] - `method` [EXTRACTED]
 - [[CUSUM change-detection controller (Page 1954).]] - `rationale_for` [EXTRACTED]
 - [[CUSUM change-detection controller (Page 1954).      Detects sustained PAC drop]] - `rationale_for` [EXTRACTED]
+- [[__init__()_32]] - `method` [EXTRACTED]
 - [[replay_subject()]] - `calls` [EXTRACTED]
+- [[reset()_4]] - `method` [EXTRACTED]
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
+- [[step()_4]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Replay_Analysis_&_Controllers

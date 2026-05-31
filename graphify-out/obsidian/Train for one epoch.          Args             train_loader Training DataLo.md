@@ -12,8 +12,8 @@ tags:
 # Train for one epoch.          Args:             train_loader: Training DataLo
 
 ## Connections
-- [[.train_epoch()_1]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
+- [[train_epoch()_4]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

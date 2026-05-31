@@ -12,6 +12,6 @@ tags:
 # Attempt to open a Muse 2 BLE session.          Args:             mac_address: Bl
 
 ## Connections
-- [[.__init__()_167]] - `rationale_for` [EXTRACTED]
+- [[__init__()_167]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_32

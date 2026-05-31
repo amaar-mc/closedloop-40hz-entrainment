@@ -12,10 +12,10 @@ tags:
 # prepare_temporal_data()
 
 ## Connections
-- [[.get_normalization_stats()]] - `calls` [EXTRACTED]
 - [[Prepare temporal DataLoaders from the existing processed data splits.      The]] - `rationale_for` [EXTRACTED]
 - [[TemporalPACDataset]] - `calls` [EXTRACTED]
 - [[TemporalPACDataset (PyTorch Dataset)]] - `calls` [EXTRACTED]
+- [[get_normalization_stats()]] - `calls` [EXTRACTED]
 - [[temporal_dataset.py]] - `contains` [EXTRACTED]
 - [[train_temporal_predictor()]] - `calls` [EXTRACTED]
 

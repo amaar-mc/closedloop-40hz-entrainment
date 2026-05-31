@@ -12,9 +12,6 @@ tags:
 # TCNTemporalModel
 
 ## Connections
-- [[.__init__()_67]] - `method` [EXTRACTED]
-- [[.reset()_10]] - `method` [EXTRACTED]
-- [[.step()_9]] - `method` [EXTRACTED]
 - [[Adapter that wraps RealtimePACForecaster to satisfy the TemporalModel Protocol.]] - `rationale_for` [EXTRACTED]
 - [[Append a session record to the given patient and clear cache.]] - `uses` [INFERRED]
 - [[Bonus register() rejects objects that don't satisfy TemporalModel Protocol.]] - `uses` [INFERRED]
@@ -42,8 +39,11 @@ tags:
 - [[Test 5 step() returns None until lookback windows accumulated, then dict.]] - `uses` [INFERRED]
 - [[Test 6 isinstance(tcn_model, TemporalModel) returns True.]] - `uses` [INFERRED]
 - [[Tests for temporal_multiscalemodel_registry.py.  Verifies 1. ModelRegistry reg]] - `uses` [INFERRED]
+- [[__init__()_67]] - `method` [EXTRACTED]
 - [[build_default_registry()]] - `calls` [EXTRACTED]
 - [[build_default_registry() returns registry with 'tcn' pre-registered.]] - `uses` [INFERRED]
 - [[model_registry.py]] - `contains` [EXTRACTED]
+- [[reset()_10]] - `method` [EXTRACTED]
+- [[step()_10]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Models,_Streaming_&_Apps

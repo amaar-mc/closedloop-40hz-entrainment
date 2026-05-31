@@ -12,9 +12,6 @@ tags:
 # SyntheticDataset
 
 ## Connections
-- [[.__getitem__()_15]] - `method` [EXTRACTED]
-- [[.__init__()_125]] - `method` [EXTRACTED]
-- [[.__len__()_15]] - `method` [EXTRACTED]
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[ModelConfig_1]] - `uses` [INFERRED]
@@ -22,6 +19,9 @@ tags:
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[PyTorch Dataset wrapper for synthetic data arrays.]] - `rationale_for` [EXTRACTED]
 - [[TransformerConfig]] - `uses` [INFERRED]
+- [[__getitem__()_15]] - `method` [EXTRACTED]
+- [[__init__()_125]] - `method` [EXTRACTED]
+- [[__len__()_15]] - `method` [EXTRACTED]
 - [[run_benchmark()]] - `calls` [EXTRACTED]
 - [[synthetic_benchmark.py]] - `contains` [EXTRACTED]
 

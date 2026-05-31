@@ -12,8 +12,6 @@ tags:
 # run_replay()
 
 ## Connections
-- [[.reset()_36]] - `calls` [EXTRACTED]
-- [[.step()_35]] - `calls` [EXTRACTED]
 - [[12-Feature TCN Validation Script (PAC+Context Only, N=35 Real EEG)]] - `calls` [EXTRACTED]
 - [[AlignmentOracleCtrl_1]] - `calls` [EXTRACTED]
 - [[FixedScheduleCtrl_3]] - `calls` [EXTRACTED]
@@ -23,6 +21,8 @@ tags:
 - [[evaluate_epoch_alignment()_1]] - `calls` [EXTRACTED]
 - [[load_subjects()_2]] - `calls` [EXTRACTED]
 - [[main()_45]] - `calls` [EXTRACTED]
+- [[reset()_36]] - `calls` [EXTRACTED]
 - [[run_12feat_validation.py]] - `contains` [EXTRACTED]
+- [[step()_36]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/12-Feature_TCN_Validation

@@ -12,6 +12,6 @@ tags:
 # Args:             batch: Dictionary with keys:                 'eeg':
 
 ## Connections
-- [[.forward()_17]] - `rationale_for` [EXTRACTED]
+- [[forward()_17]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Temporal_PAC_Predictor

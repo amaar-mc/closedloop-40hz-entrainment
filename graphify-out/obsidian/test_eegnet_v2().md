@@ -14,7 +14,7 @@ tags:
 ## Connections
 - [[EEGNetV2]] - `calls` [EXTRACTED]
 - [[Test enhanced EEGNet.]] - `rationale_for` [EXTRACTED]
-- [[count_parameters()]] - `calls` [EXTRACTED]
+- [[count_parameters()_7]] - `calls` [EXTRACTED]
 - [[eegnet_v2.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Archived_EEGNet_V2

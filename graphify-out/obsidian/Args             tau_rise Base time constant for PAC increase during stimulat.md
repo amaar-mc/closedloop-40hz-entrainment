@@ -12,6 +12,6 @@ tags:
 # Args:             tau_rise: Base time constant for PAC increase during stimulat
 
 ## Connections
-- [[.__init__()_155]] - `rationale_for` [EXTRACTED]
+- [[__init__()_155]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

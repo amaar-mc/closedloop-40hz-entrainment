@@ -8,29 +8,6 @@ members: 100
 **Members:** 100 nodes
 
 ## Members
-- [[.__getitem__()]] - code - archive/experimental/run_generalization.py
-- [[.__getitem__()_1]] - code - archive/experimental/run_experiments.py
-- [[.__init__()]] - code - archive/experimental/run_generalization.py
-- [[.__init__()_1]] - code - archive/experimental/run_generalization.py
-- [[.__init__()_2]] - code - archive/experimental/run_experiments.py
-- [[.__init__()_3]] - code - archive/experimental/run_experiments.py
-- [[.__init__()_4]] - code - archive/experimental/run_experiments.py
-- [[.__init__()_5]] - code - archive/experimental/run_experiments.py
-- [[.__init__()_6]] - code - archive/experimental/run_experiments.py
-- [[.__init__()_7]] - code - archive/experimental/run_experiments.py
-- [[.__len__()]] - code - archive/experimental/run_generalization.py
-- [[.__len__()_1]] - code - archive/experimental/run_experiments.py
-- [[.count_parameters()]] - code - archive/experimental/run_generalization.py
-- [[.count_parameters()_1]] - code - archive/experimental/run_experiments.py
-- [[.count_parameters()_2]] - code - archive/experimental/run_experiments.py
-- [[.count_parameters()_3]] - code - archive/experimental/run_experiments.py
-- [[.count_parameters()_4]] - code - archive/experimental/run_experiments.py
-- [[.forward()]] - code - archive/experimental/run_generalization.py
-- [[.forward()_1]] - code - archive/experimental/run_experiments.py
-- [[.forward()_2]] - code - archive/experimental/run_experiments.py
-- [[.forward()_3]] - code - archive/experimental/run_experiments.py
-- [[.forward()_4]] - code - archive/experimental/run_experiments.py
-- [[.forward()_5]] - code - archive/experimental/run_experiments.py
 - [[Best combination experiments 1. Target smoothing (ts=5) + deep TCN architecture]] - rationale - archive/experimental/run_best_combo.py
 - [[Build dataset with given smoothing, train TCN, evaluate.]] - rationale - archive/experimental/run_target_smoothing.py
 - [[Causal Transformer encoder for sequence-to-scalar regression.]] - rationale - archive/experimental/run_experiments.py
@@ -69,13 +46,36 @@ members: 100
 - [[Train a TCN on a subset of features.]] - rationale - archive/experimental/run_generalization.py
 - [[Train model and evaluate.]] - rationale - archive/experimental/run_best_combo.py
 - [[TransformerPredictor]] - code - archive/experimental/run_experiments.py
+- [[__getitem__()]] - code - archive/experimental/run_generalization.py
+- [[__getitem__()_1]] - code - archive/experimental/run_experiments.py
+- [[__init__()]] - code - archive/experimental/run_generalization.py
+- [[__init__()_1]] - code - archive/experimental/run_generalization.py
+- [[__init__()_2]] - code - archive/experimental/run_experiments.py
+- [[__init__()_3]] - code - archive/experimental/run_experiments.py
+- [[__init__()_4]] - code - archive/experimental/run_experiments.py
+- [[__init__()_5]] - code - archive/experimental/run_experiments.py
+- [[__init__()_6]] - code - archive/experimental/run_experiments.py
+- [[__init__()_7]] - code - archive/experimental/run_experiments.py
+- [[__len__()]] - code - archive/experimental/run_generalization.py
+- [[__len__()_1]] - code - archive/experimental/run_experiments.py
 - [[compute_metrics()]] - code - archive/experimental/run_experiments.py
+- [[count_parameters()]] - code - archive/experimental/run_generalization.py
+- [[count_parameters()_1]] - code - archive/experimental/run_experiments.py
+- [[count_parameters()_2]] - code - archive/experimental/run_experiments.py
+- [[count_parameters()_3]] - code - archive/experimental/run_experiments.py
+- [[count_parameters()_4]] - code - archive/experimental/run_experiments.py
 - [[denorm()]] - code - archive/experimental/run_experiments.py
 - [[ensemble_evaluate()]] - code - archive/experimental/run_best_combo.py
 - [[evaluate_model()]] - code - archive/experimental/run_experiments.py
 - [[extract_pac_only()]] - code - archive/experimental/run_pac_stim_focused.py
 - [[extract_pac_stim()]] - code - archive/experimental/run_pac_stim_focused.py
 - [[extract_pac_stim_topspec()]] - code - archive/experimental/run_pac_stim_focused.py
+- [[forward()]] - code - archive/experimental/run_generalization.py
+- [[forward()_1]] - code - archive/experimental/run_experiments.py
+- [[forward()_2]] - code - archive/experimental/run_experiments.py
+- [[forward()_3]] - code - archive/experimental/run_experiments.py
+- [[forward()_4]] - code - archive/experimental/run_experiments.py
+- [[forward()_5]] - code - archive/experimental/run_experiments.py
 - [[get_device()]] - code - archive/experimental/run_experiments.py
 - [[load_scalers()]] - code - archive/experimental/run_experiments.py
 - [[load_split()]] - code - archive/experimental/run_experiments.py

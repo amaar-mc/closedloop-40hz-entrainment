@@ -12,9 +12,6 @@ tags:
 # MixupSeqDataset
 
 ## Connections
-- [[.__getitem__()]] - `method` [EXTRACTED]
-- [[.__init__()]] - `method` [EXTRACTED]
-- [[.__len__()]] - `method` [EXTRACTED]
 - [[Best combination experiments 1. Target smoothing (ts=5) + deep TCN architecture]] - `uses` [INFERRED]
 - [[CausalConvBlock]] - `uses` [INFERRED]
 - [[Dataset]] - `inherits` [EXTRACTED]
@@ -29,6 +26,9 @@ tags:
 - [[Sequence dataset with mixup augmentation applied at getitem time.]] - `rationale_for` [EXTRACTED]
 - [[SplitData]] - `uses` [INFERRED]
 - [[Train model and evaluate.]] - `uses` [INFERRED]
+- [[__getitem__()]] - `method` [EXTRACTED]
+- [[__init__()]] - `method` [EXTRACTED]
+- [[__len__()]] - `method` [EXTRACTED]
 - [[run_generalization.py]] - `contains` [EXTRACTED]
 - [[train_with_mixup()]] - `calls` [EXTRACTED]
 

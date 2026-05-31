@@ -12,9 +12,9 @@ tags:
 # test_wavelet_features()
 
 ## Connections
-- [[.extract()]] - `calls` [EXTRACTED]
 - [[Test the wavelet feature extraction.]] - `rationale_for` [EXTRACTED]
 - [[WaveletFeatureExtractor]] - `calls` [EXTRACTED]
+- [[extract()]] - `calls` [EXTRACTED]
 - [[extract_wavelet_features()]] - `calls` [EXTRACTED]
 - [[wavelet_features.py]] - `contains` [EXTRACTED]
 

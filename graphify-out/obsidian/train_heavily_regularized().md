@@ -12,8 +12,8 @@ tags:
 # train_heavily_regularized()
 
 ## Connections
-- [[.count_parameters()]] - `calls` [EXTRACTED]
 - [[TinyTCN]] - `calls` [EXTRACTED]
+- [[count_parameters()]] - `calls` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
 - [[run_generalization.py]] - `contains` [EXTRACTED]
 

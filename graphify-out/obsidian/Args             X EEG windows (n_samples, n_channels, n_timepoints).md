@@ -12,6 +12,6 @@ tags:
 # Args:             X: EEG windows (n_samples, n_channels, n_timepoints)
 
 ## Connections
-- [[.__init__()_57]] - `rationale_for` [EXTRACTED]
+- [[__init__()_57]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_EEGNet_V2

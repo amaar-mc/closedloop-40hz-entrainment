@@ -12,16 +12,16 @@ tags:
 # HeterogeneousPopulationSimulator
 
 ## Connections
-- [[.__init__()_129]] - `method` [EXTRACTED]
-- [[.get_description()_2]] - `method` [EXTRACTED]
-- [[.step()_55]] - `method` [EXTRACTED]
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[Fatigue Model 3 Heterogeneous Population (bimodal fatigue).      Models the r]] - `rationale_for` [EXTRACTED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
 - [[PredictiveLookAheadControl_5]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[TrialMetrics]] - `uses` [INFERRED]
+- [[__init__()_129]] - `method` [EXTRACTED]
 - [[create_simulator()]] - `calls` [EXTRACTED]
 - [[fatigue_model_sensitivity.py]] - `contains` [EXTRACTED]
+- [[get_description()_2]] - `method` [EXTRACTED]
+- [[step()_56]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation

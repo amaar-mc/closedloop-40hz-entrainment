@@ -12,9 +12,6 @@ tags:
 # MultiTaskTCN
 
 ## Connections
-- [[.__init__()_134]] - `method` [EXTRACTED]
-- [[.count_parameters()_9]] - `method` [EXTRACTED]
-- [[.forward()_43]] - `method` [EXTRACTED]
 - [[Baseline TCN architecture with multi-task training enabled.      Architectural]] - `rationale_for` [EXTRACTED]
 - [[Compute Pearson correlation coefficient.]] - `uses` [INFERRED]
 - [[Compute Pearson correlation.]] - `uses` [INFERRED]
@@ -43,6 +40,9 @@ tags:
 - [[Train and evaluate a single model variant.      Args         variant_name N]] - `uses` [INFERRED]
 - [[Train for one epoch.      Args         model Model to train.         loade]] - `uses` [INFERRED]
 - [[Z-score normalize features and targets using train statistics.      Mirrors th]] - `uses` [INFERRED]
+- [[__init__()_134]] - `method` [EXTRACTED]
+- [[count_parameters()_13]] - `method` [EXTRACTED]
+- [[forward()_43]] - `method` [EXTRACTED]
 - [[tcn_variants.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Multiscale_TCN_&_Features

@@ -12,10 +12,10 @@ tags:
 # run_oracle_trial()
 
 ## Connections
-- [[.step()_42]] - `calls` [EXTRACTED]
 - [[Oracle two-pass — collect PAC, then decide with perfect info.]] - `rationale_for` [EXTRACTED]
 - [[evaluate_alignment()_2]] - `calls` [EXTRACTED]
 - [[main()_48]] - `calls` [EXTRACTED]
 - [[run_tribe_tcn_validation.py]] - `contains` [EXTRACTED]
+- [[step()_43]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TRIBE-TCN_Validation

@@ -12,7 +12,6 @@ tags:
 # train_12feat_tcn()
 
 ## Connections
-- [[.step()_35]] - `calls` [EXTRACTED]
 - [[12-Feature TCN Validation Script (PAC+Context Only, N=35 Real EEG)]] - `calls` [EXTRACTED]
 - [[FeatureMaskedDataset]] - `calls` [EXTRACTED]
 - [[FeatureMaskedDataset (73→12 Feature Slice Dataset)]] - `calls` [EXTRACTED]
@@ -21,5 +20,6 @@ tags:
 - [[_r2()_7]] - `calls` [EXTRACTED]
 - [[main()_45]] - `calls` [EXTRACTED]
 - [[run_12feat_validation.py]] - `contains` [EXTRACTED]
+- [[step()_36]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/12-Feature_TCN_Validation

@@ -12,6 +12,6 @@ tags:
 # Sigmoidal activation function for population firing rate.
 
 ## Connections
-- [[._sigmoid()]] - `rationale_for` [EXTRACTED]
+- [[_sigmoid()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

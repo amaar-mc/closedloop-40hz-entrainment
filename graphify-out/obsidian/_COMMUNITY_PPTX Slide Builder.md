@@ -8,19 +8,6 @@ members: 57
 **Members:** 57 nodes
 
 ## Members
-- [[.__init__()_72]] - code - results/rigor_audit/build_pptx.py
-- [[._parse_bold_segments()]] - code - results/rigor_audit/build_pptx.py
-- [[.body()]] - code - results/rigor_audit/build_pptx.py
-- [[.body_bold()]] - code - results/rigor_audit/build_pptx.py
-- [[.bullet()]] - code - results/rigor_audit/build_pptx.py
-- [[.caption()]] - code - results/rigor_audit/build_pptx.py
-- [[.fig()]] - code - results/rigor_audit/build_pptx.py
-- [[.ln()]] - code - results/rigor_audit/build_pptx.py
-- [[.sec()]] - code - results/rigor_audit/build_pptx.py
-- [[.sub()]] - code - results/rigor_audit/build_pptx.py
-- [[.sub2()]] - code - results/rigor_audit/build_pptx.py
-- [[.tbl()]] - code - results/rigor_audit/build_pptx.py
-- [[.write_inline()]] - code - results/rigor_audit/build_pptx.py
 - [[11pt italic caption in medium gray.]] - rationale - results/rigor_audit/build_pptx.py
 - [[Add a real PowerPoint table.]] - rationale - results/rigor_audit/build_pptx.py
 - [[Add a textbox and return the shape. Dimensions in inches.]] - rationale - results/rigor_audit/build_pptx.py
@@ -47,11 +34,19 @@ members: 57
 - [[Subsection heading -- 17pt bold.]] - rationale - results/rigor_audit/build_pptx.py
 - [[Tracks vertical cursor and builds content on a slide.]] - rationale - results/rigor_audit/build_pptx.py
 - [[Write multiple styled runs in a single paragraph.          Each segment (text,]] - rationale - results/rigor_audit/build_pptx.py
+- [[__init__()_72]] - code - results/rigor_audit/build_pptx.py
 - [[_add_paragraph()]] - code - results/rigor_audit/build_pptx.py
 - [[_add_textbox()]] - code - results/rigor_audit/build_pptx.py
 - [[_first_paragraph()]] - code - results/rigor_audit/build_pptx.py
+- [[_parse_bold_segments()]] - code - results/rigor_audit/build_pptx.py
 - [[_set_font()]] - code - results/rigor_audit/build_pptx.py
+- [[body()]] - code - results/rigor_audit/build_pptx.py
+- [[body_bold()]] - code - results/rigor_audit/build_pptx.py
 - [[build_pptx.py]] - code - results/rigor_audit/build_pptx.py
+- [[bullet()]] - code - results/rigor_audit/build_pptx.py
+- [[caption()]] - code - results/rigor_audit/build_pptx.py
+- [[fig()]] - code - results/rigor_audit/build_pptx.py
+- [[ln()]] - code - results/rigor_audit/build_pptx.py
 - [[main()_37]] - code - results/rigor_audit/build_pptx.py
 - [[p01_title()]] - code - results/rigor_audit/build_pptx.py
 - [[p02_intro1()]] - code - results/rigor_audit/build_pptx.py
@@ -65,6 +60,11 @@ members: 57
 - [[p10_conclusions()]] - code - results/rigor_audit/build_pptx.py
 - [[p11_scope()]] - code - results/rigor_audit/build_pptx.py
 - [[p12_references()]] - code - results/rigor_audit/build_pptx.py
+- [[sec()]] - code - results/rigor_audit/build_pptx.py
+- [[sub()]] - code - results/rigor_audit/build_pptx.py
+- [[sub2()]] - code - results/rigor_audit/build_pptx.py
+- [[tbl()]] - code - results/rigor_audit/build_pptx.py
+- [[write_inline()]] - code - results/rigor_audit/build_pptx.py
 
 ## Live Query (requires Dataview plugin)
 

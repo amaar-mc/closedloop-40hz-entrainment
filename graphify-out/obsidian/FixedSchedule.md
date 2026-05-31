@@ -12,11 +12,11 @@ tags:
 # FixedSchedule
 
 ## Connections
-- [[.__init__()_77]] - `method` [EXTRACTED]
-- [[.reset()_15]] - `method` [EXTRACTED]
-- [[.step()_14]] - `method` [EXTRACTED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_77]] - `method` [EXTRACTED]
 - [[main()_39]] - `calls` [EXTRACTED]
+- [[reset()_15]] - `method` [EXTRACTED]
 - [[run_alzheimer_simulation.py]] - `contains` [EXTRACTED]
+- [[step()_15]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_62

@@ -12,8 +12,8 @@ tags:
 # Initialize trainer.          Args:             model: PyTorch model
 
 ## Connections
-- [[.__init__()_157]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
+- [[__init__()_157]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

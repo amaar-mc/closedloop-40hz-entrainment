@@ -12,6 +12,6 @@ tags:
 # Count trainable parameters in a PyTorch model.      Args:         model: PyTo
 
 ## Connections
-- [[count_parameters()_5]] - `rationale_for` [EXTRACTED]
+- [[count_parameters()_17]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Community_35

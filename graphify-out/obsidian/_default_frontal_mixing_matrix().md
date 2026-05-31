@@ -12,8 +12,8 @@ tags:
 # _default_frontal_mixing_matrix()
 
 ## Connections
-- [[.simulate_multichannel()]] - `calls` [EXTRACTED]
 - [[Create a default frontal lead field approximation.      Based on typical volume]] - `rationale_for` [EXTRACTED]
 - [[neural_mass.py]] - `contains` [EXTRACTED]
+- [[simulate_multichannel()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

@@ -12,6 +12,6 @@ tags:
 # Unfreeze all parameters (reverses freeze_backbone).
 
 ## Connections
-- [[.unfreeze_all()]] - `rationale_for` [EXTRACTED]
+- [[unfreeze_all()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Enhanced-Feature_TCN

@@ -12,13 +12,13 @@ tags:
 # PredictiveLookAheadControl
 
 ## Connections
-- [[.__init__()_85]] - `method` [EXTRACTED]
-- [[._trend()_4]] - `method` [EXTRACTED]
-- [[.reset()_23]] - `method` [EXTRACTED]
-- [[.step()_22]] - `method` [EXTRACTED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
+- [[__init__()_85]] - `method` [EXTRACTED]
+- [[_trend()_4]] - `method` [EXTRACTED]
 - [[main()_41]] - `calls` [EXTRACTED]
+- [[reset()_23]] - `method` [EXTRACTED]
 - [[run_fatigue_sensitivity.py]] - `contains` [EXTRACTED]
+- [[step()_23]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Community_84

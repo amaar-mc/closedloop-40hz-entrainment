@@ -12,12 +12,12 @@ tags:
 # SeqDataset
 
 ## Connections
-- [[.__getitem__()_10]] - `method` [EXTRACTED]
-- [[.__init__()_58]] - `method` [EXTRACTED]
-- [[.__len__()_10]] - `method` [EXTRACTED]
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
+- [[__getitem__()_10]] - `method` [EXTRACTED]
+- [[__init__()_58]] - `method` [EXTRACTED]
+- [[__len__()_10]] - `method` [EXTRACTED]
 - [[checkpoint_deployment_audit.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Multiscale_TCN_&_Features

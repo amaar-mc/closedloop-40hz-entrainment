@@ -12,12 +12,12 @@ tags:
 # test_eegnet_large()
 
 ## Connections
-- [[.get_feature_maps()_1]] - `calls` [EXTRACTED]
 - [[EEGNetLarge]] - `calls` [EXTRACTED]
 - [[Test EEGNetLarge with example input and print architecture details.]] - `rationale_for` [EXTRACTED]
 - [[_print_layer_params()]] - `calls` [EXTRACTED]
-- [[count_parameters()_3]] - `calls` [EXTRACTED]
+- [[count_parameters()_11]] - `calls` [EXTRACTED]
 - [[eegnet_enhanced.py]] - `contains` [EXTRACTED]
+- [[get_feature_maps()_1]] - `calls` [EXTRACTED]
 - [[test_all()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps

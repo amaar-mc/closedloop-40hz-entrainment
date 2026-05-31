@@ -12,6 +12,6 @@ tags:
 # Initialize EEG preprocessor.          Args:             fs: Sampling frequenc
 
 ## Connections
-- [[.__init__()_151]] - `rationale_for` [EXTRACTED]
+- [[__init__()_151]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline

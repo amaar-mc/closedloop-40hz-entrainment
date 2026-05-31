@@ -12,9 +12,6 @@ tags:
 # main()
 
 ## Connections
-- [[.start()_1]] - `calls` [EXTRACTED]
-- [[.step()_47]] - `calls` [EXTRACTED]
-- [[.stop()_1]] - `calls` [EXTRACTED]
 - [[AudioEngine]] - `calls` [EXTRACTED]
 - [[FixedScheduleControl_4]] - `calls` [EXTRACTED]
 - [[OracleControl_3]] - `calls` [EXTRACTED]
@@ -26,5 +23,8 @@ tags:
 - [[demo.py]] - `contains` [EXTRACTED]
 - [[load_subject_data()]] - `calls` [EXTRACTED]
 - [[load_test_subjects()]] - `calls` [EXTRACTED]
+- [[start()_1]] - `calls` [EXTRACTED]
+- [[step()_48]] - `calls` [EXTRACTED]
+- [[stop()_1]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

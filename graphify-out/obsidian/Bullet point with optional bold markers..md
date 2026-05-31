@@ -12,6 +12,6 @@ tags:
 # Bullet point with optional **bold** markers.
 
 ## Connections
-- [[.bullet()]] - `rationale_for` [EXTRACTED]
+- [[bullet()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/PPTX_Slide_Builder

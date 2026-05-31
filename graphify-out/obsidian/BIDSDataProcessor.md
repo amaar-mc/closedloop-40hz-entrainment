@@ -12,16 +12,6 @@ tags:
 # BIDSDataProcessor
 
 ## Connections
-- [[.__init__()_150]] - `method` [EXTRACTED]
-- [[._load_hdf5_set()]] - `method` [EXTRACTED]
-- [[.create_dataloaders()]] - `method` [EXTRACTED]
-- [[.create_splits()]] - `method` [EXTRACTED]
-- [[.extract_stimulus_windows()]] - `method` [EXTRACTED]
-- [[.get_subject_list()]] - `method` [EXTRACTED]
-- [[.load_raw_data()]] - `method` [EXTRACTED]
-- [[.process_dataset()]] - `method` [EXTRACTED]
-- [[.save_splits()]] - `method` [EXTRACTED]
-- [[.select_frontal_channels()]] - `method` [EXTRACTED]
 - [[4-Channel Muse 2 Model Retraining Pipeline  Retrains the full EEGNet + TCN pipel]] - `uses` [INFERRED]
 - [[Build causal temporal sequences for TCN training.]] - `uses` [INFERRED]
 - [[Compute spectral features (37-dim) for each window in each split.]] - `uses` [INFERRED]
@@ -39,7 +29,17 @@ tags:
 - [[Step 6 Compute proper effect sizes and clinical interpretability.]] - `uses` [INFERRED]
 - [[Train EEGNet on 4-channel windows for static PAC prediction.]] - `uses` [INFERRED]
 - [[Train TCN on 4-channel multiscale temporal dataset.]] - `uses` [INFERRED]
+- [[__init__()_150]] - `method` [EXTRACTED]
+- [[_load_hdf5_set()]] - `method` [EXTRACTED]
+- [[create_dataloaders()_1]] - `method` [EXTRACTED]
+- [[create_splits()]] - `method` [EXTRACTED]
 - [[data_loader.py]] - `contains` [EXTRACTED]
+- [[extract_stimulus_windows()]] - `method` [EXTRACTED]
+- [[get_subject_list()]] - `method` [EXTRACTED]
+- [[load_raw_data()]] - `method` [EXTRACTED]
 - [[main()_76]] - `calls` [EXTRACTED]
+- [[process_dataset()]] - `method` [EXTRACTED]
+- [[save_splits()]] - `method` [EXTRACTED]
+- [[select_frontal_channels()]] - `method` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Multiscale_TCN_&_Features

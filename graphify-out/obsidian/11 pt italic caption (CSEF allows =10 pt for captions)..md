@@ -12,6 +12,6 @@ tags:
 # 11 pt italic caption (CSEF allows >=10 pt for captions).
 
 ## Connections
-- [[.caption()_1]] - `rationale_for` [EXTRACTED]
+- [[caption()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders

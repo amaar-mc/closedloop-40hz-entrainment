@@ -12,13 +12,6 @@ tags:
 # ClosedLoopController
 
 ## Connections
-- [[.__init__()_146]] - `method` [EXTRACTED]
-- [[._make_decision()]] - `method` [EXTRACTED]
-- [[.get_baseline_stats()]] - `method` [EXTRACTED]
-- [[.get_history()]] - `method` [EXTRACTED]
-- [[.get_state()]] - `method` [EXTRACTED]
-- [[.reset()_57]] - `method` [EXTRACTED]
-- [[.step()_62]] - `method` [EXTRACTED]
 - [[Abstract base class for all control strategies.      Subclasses must implement]] - `uses` [INFERRED]
 - [[Add control method to comparison.]] - `uses` [INFERRED]
 - [[Compare methods using statistical tests on multi-trial data.          Uses acc]] - `uses` [INFERRED]
@@ -60,7 +53,14 @@ tags:
 - [[Validation and Comparison Framework for Closed-Loop Control Strategies.  Compa]] - `uses` [INFERRED]
 - [[ValidationMetrics]] - `uses` [INFERRED]
 - [[Whether a trained TCN forecaster is available.]] - `uses` [INFERRED]
+- [[__init__()_146]] - `method` [EXTRACTED]
+- [[_make_decision()]] - `method` [EXTRACTED]
 - [[controller.py]] - `contains` [EXTRACTED]
+- [[get_baseline_stats()]] - `method` [EXTRACTED]
+- [[get_history()]] - `method` [EXTRACTED]
+- [[get_state()]] - `method` [EXTRACTED]
+- [[reset()_57]] - `method` [EXTRACTED]
+- [[step()_63]] - `method` [EXTRACTED]
 - [[test_controller()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

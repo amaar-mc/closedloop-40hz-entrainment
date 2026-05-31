@@ -12,11 +12,11 @@ tags:
 # _make_regression_head()
 
 ## Connections
-- [[.__init__()_133]] - `calls` [EXTRACTED]
-- [[.__init__()_134]] - `calls` [EXTRACTED]
-- [[.__init__()_135]] - `calls` [EXTRACTED]
-- [[.__init__()_137]] - `calls` [EXTRACTED]
 - [[Two-layer MLP head hidden - hidden - 1.]] - `rationale_for` [EXTRACTED]
+- [[__init__()_133]] - `calls` [EXTRACTED]
+- [[__init__()_134]] - `calls` [EXTRACTED]
+- [[__init__()_135]] - `calls` [EXTRACTED]
+- [[__init__()_137]] - `calls` [EXTRACTED]
 - [[tcn_variants.py]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/TCN_Layer_Internals

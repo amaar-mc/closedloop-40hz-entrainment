@@ -12,8 +12,6 @@ tags:
 # WaveletFeatureExtractor
 
 ## Connections
-- [[.__init__()_36]] - `method` [EXTRACTED]
-- [[.extract()]] - `method` [EXTRACTED]
 - [[Add rolling mean and std features.]] - `uses` [INFERRED]
 - [[Batch processor for wavelet feature extraction.]] - `rationale_for` [EXTRACTED]
 - [[Dataset with raw EEG, spectral features, and wavelet features.     Includes data]] - `uses` [INFERRED]
@@ -26,6 +24,8 @@ tags:
 - [[Simple Baseline Models for PAC Prediction  Tests if features are predictive usin]] - `uses` [INFERRED]
 - [[Simple Diagnostic Analysis - No external ML libraries required  Investigates why]] - `uses` [INFERRED]
 - [[V6 Optimized Ensemble for Maximum Honest Performance  Strategy 1. Feature sele]] - `uses` [INFERRED]
+- [[__init__()_36]] - `method` [EXTRACTED]
+- [[extract()]] - `method` [EXTRACTED]
 - [[test_wavelet_features()]] - `calls` [EXTRACTED]
 - [[wavelet_features.py]] - `contains` [EXTRACTED]
 

@@ -1,0 +1,28 @@
+---
+source_file: "results/rigor_audit/build_pptx.py"
+type: "code"
+community: "PPTX Slide Builder"
+location: "L312"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/PPTX_Slide_Builder
+---
+
+# ln()
+
+## Connections
+- [[SlideBuilder]] - `method` [EXTRACTED]
+- [[p02_intro1()]] - `calls` [EXTRACTED]
+- [[p03_intro2()]] - `calls` [EXTRACTED]
+- [[p04_methods1()]] - `calls` [EXTRACTED]
+- [[p05_methods2()]] - `calls` [EXTRACTED]
+- [[p06_methods3()]] - `calls` [EXTRACTED]
+- [[p07_results1()]] - `calls` [EXTRACTED]
+- [[p08_results2()]] - `calls` [EXTRACTED]
+- [[p09_discussion()]] - `calls` [EXTRACTED]
+- [[p10_conclusions()]] - `calls` [EXTRACTED]
+- [[p11_scope()]] - `calls` [EXTRACTED]
+- [[p12_references()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/PPTX_Slide_Builder

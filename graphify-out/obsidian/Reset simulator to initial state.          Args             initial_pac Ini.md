@@ -12,6 +12,6 @@ tags:
 # Reset simulator to initial state.          Args:             initial_pac: Ini
 
 ## Connections
-- [[.reset()_61]] - `rationale_for` [EXTRACTED]
+- [[reset()_61]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

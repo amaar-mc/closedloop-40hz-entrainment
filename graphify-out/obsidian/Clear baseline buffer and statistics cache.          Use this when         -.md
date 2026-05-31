@@ -12,6 +12,6 @@ tags:
 # Clear baseline buffer and statistics cache.          Use this when:         -
 
 ## Connections
-- [[.reset()_59]] - `rationale_for` [EXTRACTED]
+- [[reset()_59]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

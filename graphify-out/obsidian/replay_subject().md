@@ -12,8 +12,6 @@ tags:
 # replay_subject()
 
 ## Connections
-- [[.reset()_7]] - `calls` [EXTRACTED]
-- [[.step()_7]] - `calls` [EXTRACTED]
 - [[CUSUMControl]] - `calls` [EXTRACTED]
 - [[FixedScheduleControl]] - `calls` [EXTRACTED]
 - [[MultiBiomarkerReactiveControl]] - `calls` [EXTRACTED]
@@ -26,6 +24,8 @@ tags:
 - [[Replay all controllers on one subject's real PAC data._1]] - `rationale_for` [EXTRACTED]
 - [[evaluate_decisions()]] - `calls` [EXTRACTED]
 - [[main()_17]] - `calls` [EXTRACTED]
+- [[reset()_7]] - `calls` [EXTRACTED]
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
+- [[step()_7]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Replay_Analysis_&_Controllers

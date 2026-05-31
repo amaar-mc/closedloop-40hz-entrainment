@@ -12,13 +12,13 @@ tags:
 # MaskedSequenceDataset
 
 ## Connections
-- [[.__getitem__()_12]] - `method` [EXTRACTED]
-- [[.__init__()_70]] - `method` [EXTRACTED]
-- [[.__len__()_12]] - `method` [EXTRACTED]
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[Load multiscale dataset with optional feature column selection.]] - `rationale_for` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
+- [[__getitem__()_12]] - `method` [EXTRACTED]
+- [[__init__()_70]] - `method` [EXTRACTED]
+- [[__len__()_12]] - `method` [EXTRACTED]
 - [[run_feature_ablation.py]] - `contains` [EXTRACTED]
 - [[train_subset()]] - `calls` [EXTRACTED]
 

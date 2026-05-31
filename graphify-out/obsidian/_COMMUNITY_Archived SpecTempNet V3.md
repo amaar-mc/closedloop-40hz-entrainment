@@ -8,17 +8,6 @@ members: 39
 **Members:** 39 nodes
 
 ## Members
-- [[.__getitem__()_5]] - code - archive/v1_v8_attempts/run_training_v3.py
-- [[.__init__()_18]] - code - archive/v1_v8_attempts/run_training_v3.py
-- [[.__init__()_53]] - code - archive/experimental_models/spectempnet.py
-- [[.__init__()_54]] - code - archive/experimental_models/spectempnet.py
-- [[.__init__()_55]] - code - archive/experimental_models/spectempnet.py
-- [[.__init__()_56]] - code - archive/experimental_models/spectempnet.py
-- [[.__len__()_5]] - code - archive/v1_v8_attempts/run_training_v3.py
-- [[.forward()_25]] - code - archive/experimental_models/spectempnet.py
-- [[.forward()_26]] - code - archive/experimental_models/spectempnet.py
-- [[.forward()_27]] - code - archive/experimental_models/spectempnet.py
-- [[.forward()_28]] - code - archive/experimental_models/spectempnet.py
 - [[Args             eeg (batch, 1, n_channels, n_samples) - Raw EEG]] - rationale - archive/experimental_models/spectempnet.py
 - [[Args             x (batch, 1, n_channels, n_samples)          Returns_1]] - rationale - archive/experimental_models/spectempnet.py
 - [[Args             x (batch, d_model)          Returns             attended]] - rationale - archive/experimental_models/spectempnet.py
@@ -38,9 +27,20 @@ members: 39
 - [[SpecTempNet Hybrid Spectral-Temporal Network for PAC Prediction  Combines 1]] - rationale - archive/experimental_models/spectempnet.py
 - [[SpectralBranch]] - code - archive/experimental_models/spectempnet.py
 - [[Test the SpecTempNet architecture.]] - rationale - archive/experimental_models/spectempnet.py
+- [[__getitem__()_5]] - code - archive/v1_v8_attempts/run_training_v3.py
+- [[__init__()_18]] - code - archive/v1_v8_attempts/run_training_v3.py
+- [[__init__()_53]] - code - archive/experimental_models/spectempnet.py
+- [[__init__()_54]] - code - archive/experimental_models/spectempnet.py
+- [[__init__()_55]] - code - archive/experimental_models/spectempnet.py
+- [[__init__()_56]] - code - archive/experimental_models/spectempnet.py
+- [[__len__()_5]] - code - archive/v1_v8_attempts/run_training_v3.py
 - [[compute_r2()]] - code - archive/v1_v8_attempts/run_training_v3.py
-- [[count_parameters()_2]] - code - archive/experimental_models/spectempnet.py
+- [[count_parameters()_9]] - code - archive/experimental_models/spectempnet.py
 - [[evaluate()_1]] - code - archive/v1_v8_attempts/run_training_v3.py
+- [[forward()_25]] - code - archive/experimental_models/spectempnet.py
+- [[forward()_26]] - code - archive/experimental_models/spectempnet.py
+- [[forward()_27]] - code - archive/experimental_models/spectempnet.py
+- [[forward()_28]] - code - archive/experimental_models/spectempnet.py
 - [[load_and_preprocess_data()]] - code - archive/v1_v8_attempts/run_training_v3.py
 - [[main()_10]] - code - archive/v1_v8_attempts/run_training_v3.py
 - [[run_training_v3.py]] - code - archive/v1_v8_attempts/run_training_v3.py

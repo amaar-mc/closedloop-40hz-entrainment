@@ -12,6 +12,6 @@ tags:
 # Args:             sigma: Standard deviation of magnitude changes
 
 ## Connections
-- [[.__init__()_47]] - `rationale_for` [EXTRACTED]
+- [[__init__()_47]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

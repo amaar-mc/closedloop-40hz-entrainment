@@ -14,6 +14,6 @@ tags:
 ## Connections
 - [[Realtime inference wrapper for the multiscale causal TCN.  This utility keeps ro]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `contains` [EXTRACTED]
-- [[step()]] - `contains` [EXTRACTED]
+- [[step()_8]] - `contains` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

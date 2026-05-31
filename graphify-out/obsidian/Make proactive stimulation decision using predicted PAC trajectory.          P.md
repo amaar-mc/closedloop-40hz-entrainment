@@ -12,8 +12,8 @@ tags:
 # Make proactive stimulation decision using predicted PAC trajectory.          P
 
 ## Connections
-- [[._make_decision()_1]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
+- [[_make_decision()_1]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

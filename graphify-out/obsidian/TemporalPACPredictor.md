@@ -12,10 +12,6 @@ tags:
 # TemporalPACPredictor
 
 ## Connections
-- [[.__init__()_26]] - `method` [EXTRACTED]
-- [[.count_parameters()_6]] - `method` [EXTRACTED]
-- [[.count_parameters_by_component()]] - `method` [EXTRACTED]
-- [[.forward()_17]] - `method` [EXTRACTED]
 - [[Args             lookback Number of windows to look back (5 windows = 20 seco]] - `uses` [INFERRED]
 - [[Compute regression metrics in original (denormalized) PAC scale.      Returns]] - `uses` [INFERRED]
 - [[Create trainvaltest dataloaders with temporal split.      Args         dat]] - `uses` [INFERRED]
@@ -29,6 +25,10 @@ tags:
 - [[Train models for multiple prediction horizons (1, 3, 5, 10 seconds)     to char]] - `uses` [INFERRED]
 - [[Train temporal PAC predictor using 8-second windows.  Expected improvement -]] - `uses` [INFERRED]
 - [[Training Pipeline for Temporal PAC Prediction  Trains the LSTM temporal predic]] - `uses` [INFERRED]
+- [[__init__()_26]] - `method` [EXTRACTED]
+- [[count_parameters()_6]] - `method` [EXTRACTED]
+- [[count_parameters_by_component()]] - `method` [EXTRACTED]
+- [[forward()_17]] - `method` [EXTRACTED]
 - [[temporal_model.py]] - `contains` [EXTRACTED]
 - [[test_temporal_model()]] - `calls` [EXTRACTED]
 

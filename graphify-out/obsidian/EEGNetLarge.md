@@ -12,9 +12,6 @@ tags:
 # EEGNetLarge
 
 ## Connections
-- [[.__init__()_124]] - `method` [EXTRACTED]
-- [[.forward()_38]] - `method` [EXTRACTED]
-- [[.get_feature_maps()_1]] - `method` [EXTRACTED]
 - [[Compute aggregate statistics across seeds for each metric.      Computes mean,]] - `uses` [INFERRED]
 - [[Create a DataLoader from numpy arrays.      Args         windows EEG window]] - `uses` [INFERRED]
 - [[Create trainvaltest splits by subject with a given random seed.      Ensures]] - `uses` [INFERRED]
@@ -25,7 +22,10 @@ tags:
 - [[Multi-Seed Training for Robustness Evaluation  Trains EEGNet variants (origina]] - `uses` [INFERRED]
 - [[Run multi-seed training experiment.]] - `uses` [INFERRED]
 - [[Train a model for one seed and evaluate on the test split.      Uses Huber los]] - `uses` [INFERRED]
+- [[__init__()_124]] - `method` [EXTRACTED]
 - [[eegnet_enhanced.py]] - `contains` [EXTRACTED]
+- [[forward()_38]] - `method` [EXTRACTED]
+- [[get_feature_maps()_1]] - `method` [EXTRACTED]
 - [[test_all()]] - `calls` [EXTRACTED]
 - [[test_eegnet_large()]] - `calls` [EXTRACTED]
 

@@ -12,9 +12,9 @@ tags:
 # clean()
 
 ## Connections
-- [[.table()]] - `calls` [EXTRACTED]
 - [[Strip markdown formatting and normalize unicode for PDF rendering.]] - `rationale_for` [EXTRACTED]
 - [[generate()]] - `calls` [EXTRACTED]
 - [[generate_paper_pdf_v2.py]] - `contains` [EXTRACTED]
+- [[table()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders

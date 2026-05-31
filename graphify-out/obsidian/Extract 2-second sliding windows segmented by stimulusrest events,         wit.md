@@ -12,8 +12,8 @@ tags:
 # Extract 2-second sliding windows segmented by stimulus/rest events,         wit
 
 ## Connections
-- [[.extract_stimulus_windows()]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
+- [[extract_stimulus_windows()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline

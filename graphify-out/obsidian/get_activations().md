@@ -1,0 +1,18 @@
+---
+source_file: "src/tribe_v2/cortical_model.py"
+type: "code"
+community: "TRIBE Neural-Mass Simulator"
+location: "L290"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/TRIBE_Neural-Mass_Simulator
+---
+
+# get_activations()
+
+## Connections
+- [[CorticalResponseModel]] - `method` [EXTRACTED]
+- [[Get current ROI activations for the simulation step.          In parametric mode]] - `rationale_for` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator

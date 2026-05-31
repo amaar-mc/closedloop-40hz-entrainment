@@ -1,0 +1,17 @@
+---
+source_file: "results/rigor_audit/build_pptx.py"
+type: "code"
+community: "PPTX Slide Builder"
+location: "L99"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/PPTX_Slide_Builder
+---
+
+# __init__()
+
+## Connections
+- [[SlideBuilder]] - `method` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/PPTX_Slide_Builder

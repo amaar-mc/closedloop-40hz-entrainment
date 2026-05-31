@@ -12,9 +12,6 @@ tags:
 # SeqDataset
 
 ## Connections
-- [[.__getitem__()_1]] - `method` [EXTRACTED]
-- [[.__init__()_2]] - `method` [EXTRACTED]
-- [[.__len__()_1]] - `method` [EXTRACTED]
 - [[Best combination experiments 1. Target smoothing (ts=5) + deep TCN architecture]] - `uses` [INFERRED]
 - [[Build dataset with given smoothing, train TCN, evaluate.]] - `uses` [INFERRED]
 - [[Compute persistence R2 per subject.]] - `uses` [INFERRED]
@@ -35,6 +32,9 @@ tags:
 - [[TinyTCN]] - `uses` [INFERRED]
 - [[Train a TCN on a subset of features.]] - `uses` [INFERRED]
 - [[Train model and evaluate.]] - `uses` [INFERRED]
+- [[__getitem__()_1]] - `method` [EXTRACTED]
+- [[__init__()_2]] - `method` [EXTRACTED]
+- [[__len__()_1]] - `method` [EXTRACTED]
 - [[run_experiment()]] - `calls` [EXTRACTED]
 - [[run_experiments.py]] - `contains` [EXTRACTED]
 

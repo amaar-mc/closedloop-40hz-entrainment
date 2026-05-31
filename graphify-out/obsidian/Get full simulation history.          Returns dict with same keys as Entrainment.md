@@ -12,6 +12,6 @@ tags:
 # Get full simulation history.          Returns dict with same keys as Entrainment
 
 ## Connections
-- [[.get_history()_5]] - `rationale_for` [EXTRACTED]
+- [[get_history()_5]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator

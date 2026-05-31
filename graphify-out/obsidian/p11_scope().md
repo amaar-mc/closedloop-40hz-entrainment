@@ -12,13 +12,13 @@ tags:
 # p11_scope()
 
 ## Connections
-- [[.bullet()]] - `calls` [EXTRACTED]
-- [[.ln()]] - `calls` [EXTRACTED]
-- [[.sec()]] - `calls` [EXTRACTED]
-- [[.sub()]] - `calls` [EXTRACTED]
 - [[Slide 11 Scope of Work.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `calls` [EXTRACTED]
 - [[build_pptx.py]] - `contains` [EXTRACTED]
+- [[bullet()]] - `calls` [EXTRACTED]
+- [[ln()]] - `calls` [EXTRACTED]
 - [[main()_37]] - `calls` [EXTRACTED]
+- [[sec()]] - `calls` [EXTRACTED]
+- [[sub()]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/PPTX_Slide_Builder

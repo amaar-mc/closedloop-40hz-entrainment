@@ -12,7 +12,6 @@ tags:
 # main()
 
 ## Connections
-- [[.to_dict()_2]] - `calls` [EXTRACTED]
 - [[FixedScheduleControl_6]] - `calls` [EXTRACTED]
 - [[OracleControl_5]] - `calls` [EXTRACTED]
 - [[ReactiveThresholdControl_5]] - `calls` [EXTRACTED]
@@ -27,5 +26,6 @@ tags:
 - [[run_population_diverse()_1]] - `calls` [EXTRACTED]
 - [[run_trial_batch()_1]] - `calls` [EXTRACTED]
 - [[tcn_integrated_simulation.py]] - `contains` [EXTRACTED]
+- [[to_dict()_2]] - `calls` [EXTRACTED]
 
 #graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator

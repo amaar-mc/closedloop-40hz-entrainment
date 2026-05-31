@@ -12,6 +12,6 @@ tags:
 # Parse **bold** markers into segments of (text, is_bold).
 
 ## Connections
-- [[._parse_bold_segments()]] - `rationale_for` [EXTRACTED]
+- [[_parse_bold_segments()]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/PPTX_Slide_Builder

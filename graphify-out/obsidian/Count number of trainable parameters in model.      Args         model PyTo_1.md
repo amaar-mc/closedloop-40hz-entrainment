@@ -12,6 +12,6 @@ tags:
 # Count number of trainable parameters in model.      Args:         model: PyTo
 
 ## Connections
-- [[count_parameters()_4]] - `rationale_for` [EXTRACTED]
+- [[count_parameters()_16]] - `rationale_for` [EXTRACTED]
 
 #graphify/rationale #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
