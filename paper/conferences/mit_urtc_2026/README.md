@@ -25,7 +25,7 @@ baseline. Refresh the official site before submission and replace any historical
 ## Completed Manuscript Files
 
 - [`draft/MIT_URTC_MANUSCRIPT.docx`](draft/MIT_URTC_MANUSCRIPT.docx): clean editable Word file.
-- [`draft/MIT_URTC_MANUSCRIPT.pdf`](draft/MIT_URTC_MANUSCRIPT.pdf): visually inspected three-page PDF
+- [`draft/MIT_URTC_MANUSCRIPT.pdf`](draft/MIT_URTC_MANUSCRIPT.pdf): visually inspected four-page PDF
   proof.
 
 ## Working Directories
