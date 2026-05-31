@@ -24,8 +24,8 @@ Verified on 2026-05-31:
 - The document contains two US Letter sections: a one-column title and abstract section followed by
   a continuous two-column manuscript section.
 - Explicit text sizes range from 10 to 18 points; no explicit text size is below 10 points.
-- All three result tables are present.
-- The abstract contains 229 words and avoids mathematical symbols in the abstract text.
+- All four result tables and the target-definition stress-test figure are present.
+- The abstract contains 209 words and avoids mathematical symbols in the abstract text.
 - The abstract and keyword labels use colons; no visible double-hyphen labels remain.
 - All six manuscript references were checked against primary sources, including a standalone
   OpenNeuro dataset citation for `ds005048` version `1.0.1`.
@@ -36,8 +36,10 @@ Verified on 2026-05-31:
 - The final ambiguity audit distinguishes stored-series future indexing from online PAC-feature
   availability. The manuscript does not imply that an end-to-end streaming estimator has been
   validated.
-- The PDF proof is three US Letter pages, within the currently published five-page maximum.
-- All three PDF pages were rendered to images and visually inspected.
+- The revised manuscript reports the backward-looking PAC stress test separately from the
+  event-summary benchmark and does not present it as a validated streaming estimator.
+- The PDF proof is four US Letter pages, within the currently published five-page maximum.
+- All four PDF pages and the standalone figure were rendered to images and visually inspected.
 
 ## Layout Limitation
 

@@ -1,24 +1,26 @@
 # MIT URTC Submission-Readiness Audit
 
 **Audited:** 2026-05-31  
-**Artifact reviewed:** [`MANUSCRIPT.md`](MANUSCRIPT.md), generated Word manuscript, PDF proof, repository evidence, and archived experimental artifacts  
+**Artifact reviewed:** revised [`MANUSCRIPT.md`](MANUSCRIPT.md), generated Word manuscript, PDF proof, latest poster PDFs, repository evidence, and archived experimental artifacts  
 **Decision standard:** competitive MIT URTC paper submission by a high-school author
 
 ## Direct Verdict
 
-The manuscript is polished, technically ambitious, and unusually candid for a high-school research
-submission. It is credible as a retrospective computational study. It is not yet rigorous enough for
-a confident MIT URTC paper submission in its current form.
+The revised manuscript is rigorous enough to submit as a competitive MIT URTC paper if the
+high-school eligibility requirement is satisfied. Acceptance is not predictable, but the paper now
+has a defensible and distinctive contribution: it stress-tests an apparently strong retrospective
+forecasting pipeline and shows exactly where its conclusion weakens as PAC labels move closer to
+online availability.
 
-The limiting issue is not the writing. The main reported forecasting result (`R-squared = 0.606`)
-comes from PAC values computed over complete 20-40 second event periods and assigned back to their
-constituent two-second windows. For an early window, the assigned current-PAC feature includes signal
-samples acquired later in the same event period. The manuscript now discloses this clearly, but the
-disclosure does not make the headline result a valid streaming forecast.
+The original headline result (`R-squared = 0.606`) comes from PAC values computed over complete 20-40
+second event periods and assigned back to their constituent two-second windows. For an early window,
+the assigned current-PAC feature includes signal samples acquired later in the same event period.
+The revised paper no longer treats that result as evidence for a streaming forecaster.
 
-A stronger archived experiment already exists in
-[`archive/experimental/sliding_pac`](../../../../archive/experimental/sliding_pac). It computes PAC
-from a five-second backward-looking window. In that more meaningful task:
+The archived experiment in
+[`archive/experimental/sliding_pac`](../../../../archive/experimental/sliding_pac) computes PAC from a
+five-second backward-looking window. The revised manuscript now reports this stress test directly.
+In the more meaningful task:
 
 | Model | Epoch-summary PAC target | Backward-looking sliding PAC target |
 |---|---:|---:|
@@ -27,8 +29,30 @@ from a five-second backward-looking window. In that more meaningful task:
 | TCN | **0.554** | 0.212 |
 
 The TCN remains positively predictive on the harder target, but it no longer outperforms Ridge. This
-is scientifically useful. It also means that the present paper should not center the `0.606` result
-as evidence for a nonlinear online forecaster.
+is scientifically useful. The paper's contribution is now the target-definition audit, compact
+feature-design result, and disciplined separation of retrospective replay from live validation.
+
+## Poster-Informed Re-Audit
+
+The April poster PDFs were visually inspected in depth:
+
+- [`submission/poster/vfinal_poster.pdf`](../../../../submission/poster/vfinal_poster.pdf)
+- [`archive/CSEF_Old/Poster_FINAL/CSEF_FINAL.pdf`](../../../../archive/CSEF_Old/Poster_FINAL/CSEF_FINAL.pdf)
+
+The posters reveal a broader engineering arc: raw-EEG PAC estimation, temporal feature selection,
+forecasting, controller replay, and a future streaming path. That system-level story is impressive.
+The revised manuscript now states that a broader raw-EEG prototype exists while keeping its validated
+scope narrow.
+
+Several poster claims were intentionally not imported:
+
+- `72.1%` alignment and `82.6%` low-PAC targeting came from the older 73-feature replay, not the final
+  12-feature checkpoint.
+- Fatigue-model results used a trend-based adaptive heuristic, not the TCN.
+- Consumer-hardware latency and a complete EEGNet-to-TCN-to-controller loop were not validated
+  end-to-end by the manuscript experiments.
+- The source cohort includes multiple clinical classifications; it should not be described as 35
+  dementia patients.
 
 ## MIT URTC Standard
 
@@ -67,16 +91,21 @@ toward a poster or lightning talk instead of a paper presentation.
 | Writing and polish | Strong | The manuscript is concise, bounded, professional, and free of inflated clinical claims. |
 | Reference hygiene | Strong | The six citations are primary or appropriate sources, and the dataset is formally cited. |
 | Participant-split hygiene | Strong | The stored dataset uses disjoint 24/5/6 participant splits and train-only normalization. |
-| Central forecasting rigor | Borderline | Complete-event PAC back-assignment makes the headline result retrospective and unavailable at live decision time. |
-| Causal-model evidence | Preliminary | The existing backward-looking PAC experiment is valuable, but its TCN is approximately tied with Ridge and needs replication. |
+| Central forecasting rigor | Strongly bounded | The revised paper reports both the event-summary benchmark and the backward-looking PAC stress test instead of hiding the availability limitation. |
+| Causal-model evidence | Preliminary but useful | The backward-looking PAC experiment retains positive held-out signal, but its TCN is approximately tied with Ridge and needs replication. |
 | Controller evidence | Bounded but preliminary | Replay is diagnostic only, uses all 35 trajectories, uses nominal recorded context, and does not model physiological response to counterfactual actions. |
 | Statistical robustness | Partial | Five seeds address initialization variance, not participant-split sensitivity. A single held-out split is too narrow for a strong generalization claim. |
-| Presentation | Solid but visually plain | The three-page proof is clean and within the limit, but it has three dense tables and no explanatory figure. |
+| Presentation | Strong | The four-page proof is clean, within the limit, and includes a compact figure explaining the target-definition stress test. |
 | Paper eligibility | Unresolved | The required university relationship is not visible in the paper. |
 
-## Stop-Ship Issues for a Confident Paper Submission
+## Remaining Gates and Next Experiments
 
-### 1. Reframe around a live-available PAC target
+### 1. Confirm paper-track eligibility
+
+The qualifying university connection remains the only administrative stop-ship issue. State the
+relationship accurately in the submission metadata and manuscript acknowledgment if it exists.
+
+### 2. Continue the live-available PAC benchmark
 
 The archived sliding-PAC result should become the starting point, not an appendix-level caveat. A
 submission-strength analysis should compare several backward-looking PAC context windows, such as
@@ -90,27 +119,27 @@ That is not itself a production streaming estimator. The paper should separate:
 2. streaming estimator implementation;
 3. model comparison on the same live-available target.
 
-### 2. Report whether a nonlinear model adds value
+### 3. Report whether a nonlinear model adds value
 
 On the existing sliding-PAC experiment, Ridge (`R-squared = 0.216`) slightly exceeds the TCN
 (`R-squared = 0.212`). That is a legitimate result. It does not support a claim that the TCN is
 necessary. Retrain and compare persistence, Ridge, and TCN under the corrected target definition.
 Select the simplest model supported by the evidence.
 
-### 3. Measure participant-split sensitivity
+### 4. Measure participant-split sensitivity
 
 The current five-seed study varies model initialization while holding the six-person test split
 fixed. Add grouped cross-validation or repeated participant-level splits. Report the distribution of
 test performance across held-out participants and splits.
 
-### 4. Add transition-specific evaluation
+### 5. Add transition-specific evaluation
 
 The epoch-summary target repeats within event periods, and `82.2%` of five-step pairs have identical
 current and target PAC. Report model performance specifically where PAC or stimulation state changes.
 The repository contains a transition-analysis starting point, but the primary paper does not yet
 report a transition-specific TCN comparison for its selected checkpoint.
 
-### 5. Keep replay subordinate to forecasting validation
+### 6. Keep replay subordinate to forecasting validation
 
 The replay is useful only as an engineering diagnostic. The predictive policy increases low-PAC
 targeting but reduces high-PAC rest specificity and lowers balanced alignment from `64.5%` to `62.2%`
@@ -143,10 +172,9 @@ The manuscript has several qualities worth preserving:
 
 ## Recommended Submission Position
 
-Do not submit the current paper unchanged as a confident paper-track entry. Rebuild the central
-forecasting section around a live-available PAC benchmark and repeated participant-level evaluation.
-If the deadline arrives before that work is complete, the current study is better positioned as a
-poster or lightning talk: an honest retrospective systems study that identifies why an apparently
-strong forecast weakens under a more realistic target definition.
+Submit the revised paper as a paper-track entry if the high-school eligibility requirement is
+satisfied. Position it as an honest retrospective systems study that identifies why an apparently
+strong forecast weakens under a more realistic target definition. Do not position it as a validated
+closed-loop therapy or a deployable nonlinear controller.
 
 MIT does not publish acceptance rates, so an admission probability cannot be estimated responsibly.
