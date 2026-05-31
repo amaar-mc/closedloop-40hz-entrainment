@@ -12,7 +12,7 @@ import torch
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "archive" / "experimental_models"))
@@ -240,7 +240,7 @@ def main():
     print(f"Saved: {out_dir}/timeline_example.png")
 
     # Also generate threshold sensitivity figure
-    sweep_data = json.loads(Path("results/threshold_sweep.json").read_text())
+    sweep_data = json.loads(Path("results/metrics/threshold_sweep.json").read_text())
 
     fig2, ax = plt.subplots(figsize=(8, 5))
     thresholds = [r["threshold"] for r in sweep_data["thresholds"]]

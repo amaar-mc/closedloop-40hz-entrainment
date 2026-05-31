@@ -21,7 +21,7 @@ from matplotlib.patches import FancyBboxPatch
 # Configuration
 # ---------------------------------------------------------------------------
 OUT_DIR = "results/figures"
-JSON_PATH = "results/tcn_validation_results.json"
+JSON_PATH = "results/metrics/tcn_validation_results.json"
 FIG_SIZE = (8, 6)
 DPI = 300
 FONT_SIZE = 12
