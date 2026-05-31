@@ -67,6 +67,8 @@ graphify-out/.graphify_cached.json
 graphify-out/.graphify_uncached.txt
 graphify-out/.graphify_python
 graphify-out/.graphify_detect.stderr.log
+graphify-out/.graphify_agent_instructions.md
+graphify-out/.graphify_chunkplan.json
 graphify-out/.community_summary.txt
 graphify-out/chunks/
 graphify-out/converted/
