@@ -474,7 +474,7 @@ All 35 subjects' EEG recordings were replayed through each controller in an offl
 | PI Controller            | 66.1%           | 38.6%           | 93.6%           | 22.0%           | +27.2            |
 | Alignment Oracle         | 100.0%          | 100.0%          | 100.0%          | 48.3%           | +33.3            |
 
-Source: results/tcn_validation_results.json (all values verified).
+Source: results/metrics/tcn_validation_results.json (all values verified).
 
 **Metric definitions:**
 
@@ -544,7 +544,7 @@ Adaptive vs. fixed scheduling was tested across six fatigue severity levels usin
 | 0.025 (high)     | 4.968            | 5.184               | +4.35%   | 0.002        |
 | 0.040 (severe)   | 4.819            | 5.092               | +5.65%   | 0.010        |
 
-Source: results/fatigue_sensitivity.json (n = 10 trials per condition).
+Source: results/metrics/fatigue_sensitivity.json (n = 10 trials per condition).
 
 The adaptive advantage is non-significant without fatigue (p = 0.492) but grows monotonically with fatigue severity, reaching +5.65% under severe habituation. This pattern confirms that adaptive scheduling becomes increasingly valuable as habituation worsens, precisely when it matters most clinically.
 
@@ -576,7 +576,7 @@ The TCN controller's delta-z threshold was swept from 0.1 to 1.0 to verify that 
 | 1.0                   | 73.8%     | 85.3%        | 34.0             |
 | *Reactive baseline* | *64.5%* | *51.7%*    | *21.1*         |
 
-Source: results/threshold_sweep.json.
+Source: results/metrics/threshold_sweep.json.
 
 Performance plateaus at delta-z >= 0.3, and the TCN outperforms the reactive baseline at all thresholds >= 0.2. This stability indicates the result is robust to threshold selection and not dependent on specific parameter tuning.
 

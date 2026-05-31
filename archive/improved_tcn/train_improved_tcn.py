@@ -19,7 +19,7 @@ Usage:
       --n-attn-heads 4 --attn-layers 1 \\
       --epochs 80 --patience 20 --batch-size 128 --lr 1e-3 \\
       --seed 42 --allow-metadata-mismatch \\
-      --compare-baseline results/comparison_table_7ch.json
+      --compare-baseline results/metrics/comparison_table_7ch.json
 """
 
 from __future__ import annotations
@@ -268,7 +268,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--results-dir", default="results", type=str)
     p.add_argument("--run-name", default="", type=str)
     p.add_argument("--allow-metadata-mismatch", action="store_true")
-    p.add_argument("--compare-baseline", default="results/comparison_table_7ch.json", type=str,
+    p.add_argument("--compare-baseline", default="results/metrics/comparison_table_7ch.json", type=str,
                    help="Path to comparison table JSON for baseline TCN R2 delta computation.")
     p.add_argument("--dataset-tag", default="", type=str,
                    help="Short label for the output JSON filename (e.g. '7ch' or '4ch'). "
