@@ -7,7 +7,7 @@ Run from the repo root with the venv active.
 
 | Figure | Script | Output |
 |---|---|---|
-| Horizon sweep | `results/figures/horizon_sweep_pac_stim.py` | `results/figures/horizon_sweep.pdf` |
+| Horizon sweep | `scripts/figures/horizon_sweep_pac_stim.py` | `results/figures/horizon_sweep.pdf` |
 | Controller comparison | `scripts/figures/generate_figures.py` | `results/figures/controller_comparison_v2.pdf` |
 | PAC targeting gap | `scripts/figures/generate_figures.py` | `results/figures/pac_targeting_gap.pdf` |
 | Per-subject utility | `scripts/figures/generate_figures.py` | `results/figures/per_subject_utility.pdf` |
