@@ -13,7 +13,7 @@ Caption note (horizon sweep):
   under that condition.
 
 Usage:
-    python scripts/generate_paper_figures.py
+    python scripts/tools/generate_paper_figures.py
 """
 
 import json
@@ -29,7 +29,7 @@ from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 FIGURES_DIR = REPO_ROOT / "results" / "figures"
 SWEEP_JSON = REPO_ROOT / "models" / "sweep_horizons_results.json"
 

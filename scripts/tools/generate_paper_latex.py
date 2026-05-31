@@ -13,10 +13,10 @@ import subprocess
 import sys
 
 # ─── Paths ───────────────────────────────────────────────────────────────────
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PAPER_MD = os.path.join(PROJECT_ROOT, "docs", "paper", "RESEARCH_PAPER_v3.md")
-OUTPUT_TEX = os.path.join(PROJECT_ROOT, "docs", "paper", "RESEARCH_PAPER_v3.tex")
-OUTPUT_PDF = os.path.join(PROJECT_ROOT, "docs", "paper", "RESEARCH_PAPER_v3.pdf")
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+PAPER_MD = os.path.join(PROJECT_ROOT, "submission", "paper", "RESEARCH_PAPER_v3.md")
+OUTPUT_TEX = os.path.join(PROJECT_ROOT, "submission", "paper", "RESEARCH_PAPER_v3.tex")
+OUTPUT_PDF = os.path.join(PROJECT_ROOT, "submission", "paper", "RESEARCH_PAPER_v3.pdf")
 FIGURES_DIR = os.path.join(PROJECT_ROOT, "results", "figures")
 TECTONIC = "/opt/homebrew/bin/tectonic"
 
@@ -149,9 +149,9 @@ def process_line(text):
 
 
 def resolve_image_path(rel_path):
-    """Resolve an image path relative to docs/paper/ to an absolute path."""
+    """Resolve an image path relative to submission/paper/ to an absolute path."""
     candidates = [
-        os.path.normpath(os.path.join(PROJECT_ROOT, "docs", "paper", rel_path)),
+        os.path.normpath(os.path.join(PROJECT_ROOT, "submission", "paper", rel_path)),
         os.path.normpath(os.path.join(PROJECT_ROOT, rel_path.lstrip("./"))),
         os.path.join(FIGURES_DIR, os.path.basename(rel_path)),
         os.path.join(FIGURES_DIR, "ai_generated", os.path.basename(rel_path)),
