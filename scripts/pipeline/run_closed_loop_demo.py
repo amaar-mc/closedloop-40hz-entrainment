@@ -10,8 +10,8 @@ The fatigue-aware scenario demonstrates why adaptive scheduling outperforms
 fixed-schedule stimulation — the key scientific claim.
 
 Usage:
-    python run_closed_loop_demo.py
-    python run_closed_loop_demo.py --duration 600 --n-trials 10
+    python scripts/pipeline/run_closed_loop_demo.py
+    python scripts/pipeline/run_closed_loop_demo.py --duration 600 --n-trials 10
 """
 
 from __future__ import annotations
@@ -375,7 +375,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--n-trials", default=10, type=int,
                    help="Number of independent trials per method")
     p.add_argument("--seed", default=42, type=int)
-    p.add_argument("--output-dir", default="results", type=str)
+    p.add_argument("--output-dir", default="results/metrics", type=str)
     return p.parse_args()
 
 

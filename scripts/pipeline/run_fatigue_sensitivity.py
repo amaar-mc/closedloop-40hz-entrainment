@@ -7,7 +7,7 @@ and shows that the efficiency gap between Predictive Look-Ahead and
 Fixed Schedule widens with stronger fatigue.
 
 Usage:
-    python run_fatigue_sensitivity.py
+    python scripts/pipeline/run_fatigue_sensitivity.py
 """
 
 from __future__ import annotations
@@ -234,7 +234,7 @@ def main():
     total_non_zero = sum(1 for r in results if r["fatigue_rate"] > 0)
     print(f"Statistically significant (p<0.05) at {sig_count}/{total_non_zero} non-zero fatigue levels.")
 
-    out_path = Path("results/fatigue_sensitivity.json")
+    out_path = Path("results/metrics/fatigue_sensitivity.json")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(results, indent=2))
     print(f"\nSaved: {out_path}")
