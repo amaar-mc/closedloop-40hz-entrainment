@@ -21,7 +21,7 @@
 - [x] Create integrated manuscript draft at [`draft/MANUSCRIPT.md`](draft/MANUSCRIPT.md).
 - [x] Verify first-draft quantitative claims against [`EVIDENCE_MAP.md`](EVIDENCE_MAP.md).
 - [x] Create clean editable DOCX at [`draft/MIT_URTC_MANUSCRIPT.docx`](draft/MIT_URTC_MANUSCRIPT.docx).
-- [x] Create and inspect three-page PDF proof at [`draft/MIT_URTC_MANUSCRIPT.pdf`](draft/MIT_URTC_MANUSCRIPT.pdf).
+- [x] Create and inspect four-page PDF proof at [`draft/MIT_URTC_MANUSCRIPT.pdf`](draft/MIT_URTC_MANUSCRIPT.pdf).
 - [ ] Convert the approved manuscript into the confirmed Fall 2026 IEEE proceedings layout.
 - [x] Keep the current-baseline proof within the published five-page limit.
 - [x] Keep the abstract below the official word limit.
