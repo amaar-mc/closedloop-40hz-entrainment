@@ -335,7 +335,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--epochs", default=80, type=int)
     p.add_argument("--patience", default=20, type=int)
     p.add_argument(
-        "--output-dir", default="results", type=str,
+        "--output-dir", default="results/metrics", type=str,
         help="Directory to write JSON comparison tables",
     )
     p.add_argument(

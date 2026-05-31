@@ -8,7 +8,7 @@ dilation, or reducing to a single block.
 Usage:
     python temporal_multiscale/run_ablation_study.py \
         --dataset-dir data/processed/muse_4ch/multiscale_temporal_lb20_hz5_ts1 \
-        --output results/ablation_table.json \
+        --output results/metrics/ablation_table.json \
         --epochs 80 --patience 20 --seed 42
 
     # Dry run (no training):
@@ -299,7 +299,7 @@ def parse_args() -> argparse.Namespace:
         default="data/processed/muse_4ch/multiscale_temporal_lb20_hz5_ts1",
         type=str,
     )
-    p.add_argument("--output", default="results/ablation_table.json", type=str)
+    p.add_argument("--output", default="results/metrics/ablation_table.json", type=str)
     p.add_argument("--epochs", default=80, type=int)
     p.add_argument("--patience", default=20, type=int)
     p.add_argument("--batch-size", default=128, type=int)
