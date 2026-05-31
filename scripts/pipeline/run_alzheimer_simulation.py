@@ -18,8 +18,8 @@ Produces a comprehensive figure showing:
     - Stimulation efficiency by severity
 
 Usage:
-    python run_alzheimer_simulation.py
-    python run_alzheimer_simulation.py --duration 600 --n-trials 10
+    python scripts/pipeline/run_alzheimer_simulation.py
+    python scripts/pipeline/run_alzheimer_simulation.py --duration 600 --n-trials 10
 """
 
 from __future__ import annotations
@@ -35,7 +35,7 @@ import matplotlib.gridspec as gridspec
 import seaborn as sns
 from scipy import stats
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 

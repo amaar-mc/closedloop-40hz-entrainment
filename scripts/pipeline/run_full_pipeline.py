@@ -6,10 +6,10 @@ publication-ready results. It checks for intermediate outputs so you can
 resume from any point.
 
 Usage:
-    python run_full_pipeline.py                    # Run everything
-    python run_full_pipeline.py --skip-preprocess  # Skip raw data processing
-    python run_full_pipeline.py --horizon 5        # Train at specific horizon
-    python run_full_pipeline.py --target-smooth 1  # Raw targets (no smoothing)
+    python scripts/pipeline/run_full_pipeline.py                    # Run everything
+    python scripts/pipeline/run_full_pipeline.py --skip-preprocess  # Skip raw data processing
+    python scripts/pipeline/run_full_pipeline.py --horizon 5        # Train at specific horizon
+    python scripts/pipeline/run_full_pipeline.py --target-smooth 1  # Raw targets (no smoothing)
 """
 
 from __future__ import annotations
@@ -22,7 +22,7 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT))
 
@@ -866,13 +866,13 @@ def main():
 
     # Step 5: Real-data replay with TCN
     scalers_path = dataset_dir / "scalers.npz"
-    replay_output = Path("results") / f"tcn_replay_lb{args.lookback}_hz{args.horizon}_ts{args.target_smooth}.json"
+    replay_output = Path("results/metrics") / f"tcn_replay_lb{args.lookback}_hz{args.horizon}_ts{args.target_smooth}.json"
     replay_results = step_replay_with_tcn(
         processed_dir, bids_root, ckpt_path, scalers_path, replay_output
     )
 
     # Step 6: Statistics
-    stats_output = Path("results") / f"effect_sizes_lb{args.lookback}_hz{args.horizon}_ts{args.target_smooth}.json"
+    stats_output = Path("results/metrics") / f"effect_sizes_lb{args.lookback}_hz{args.horizon}_ts{args.target_smooth}.json"
     step_compute_statistics(replay_results, stats_output)
 
     elapsed = time.time() - t0
