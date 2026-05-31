@@ -13,7 +13,7 @@ real EEG data and underperforms on TRIBE simulator dynamics. TCN-TRIBE is
 trained on the simulator's OWN dynamics, giving it a fair shot.
 
 Usage:
-    PYTHONPATH=src python run_tribe_tcn_validation.py
+    PYTHONPATH=src python scripts/pipeline/run_tribe_tcn_validation.py
 """
 
 from __future__ import annotations
@@ -30,7 +30,7 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 

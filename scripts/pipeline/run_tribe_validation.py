@@ -11,9 +11,9 @@ And across Alzheimer's disease severity levels:
 Generates comprehensive comparison figures and statistics.
 
 Usage:
-    python run_tribe_validation.py
-    python run_tribe_validation.py --duration 600 --n-trials 10
-    python run_tribe_validation.py --disease-sweep --output-dir results/tribe_v2
+    python scripts/pipeline/run_tribe_validation.py
+    python scripts/pipeline/run_tribe_validation.py --duration 600 --n-trials 10
+    python scripts/pipeline/run_tribe_validation.py --disease-sweep --output-dir results/tribe_v2
 """
 
 from __future__ import annotations
@@ -32,7 +32,7 @@ import seaborn as sns
 from scipy import stats
 
 # Ensure src/ is importable
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
