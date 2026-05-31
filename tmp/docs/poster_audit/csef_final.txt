@@ -1,0 +1,148 @@
+               Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment to Optimize
+                                Theta-Gamma Coupling in Alzheimer's Disease
+                                                                                                                                      Amaar M. Chughtai
+
+ Introduction                                                         System Architecture                                                               Materials                                                                     Results / Findings
+Alzheimer's disease affects over 55 million people worldwide         To control stimulation proactively, the system needs to predict PAC 5-10       Dataset:                                                                         Result 1: TCN Predictive Controller Outperforms All
+with no cure. Recent research shows 40 Hz auditory                   seconds into the future. The approach consists of two phases:                                                                                                   Alternatives Controller performance replayed on all 35
+stimulation synchronizes brain gamma oscillations, reducing                                                                                         •    35 dementia patients, OpenNeuro ds005048 (Lahijanian 2024)                  subjects' real EEG:
+amyloid-beta plaques and tau tangles in animal models                • Estimate current PAC from raw EEG in real time (since live patients          •    7 frontal EEG channels (Fp1, Fp2, F3, F4, F7, F8, Fz), 250 Hz
+(Iaccarino 2016) and showing cognitive benefits in human trials        don't have ground-truth labels)                                              •    Alternating Stimulus (40 Hz AM auditory) and Rest epochs, 20-40s each
+(Chan 2025).                                                         • Predict future PAC from a history of past estimates (temporal                •    17,283 two-second windows; subject-level splits (24 train / 5 val / 6
+                                                                       forecasting)                                                                      test)
+Current protocols deliver stimulation on a fixed schedule — 40s
+ON / 20s OFF, cycling for one hour regardless of how the                Stage 1: Architecture Decision for Static PAC Estimation                    Compute: Python 3.13, PyTorch, Apple Silicon (MPS), no cloud GPU required
+patient's brain responds. This ignores that some patients
+maintain strong theta-gamma coupling throughout a session            Architecture              Params       Test R²     EEGNet matches the best
+while others lose it within seconds. Prolonged stimulation also                                                         R² (0.287) with only
+causes neural habituation, where the brain "tunes out" the           EEGNet (V4)               1457         0.287       1,457 parameters. It's
+stimulus. The result: wasted stimulation during strong coupling                                                         the lightest weight
+and missed therapeutic windows during fading coupling.                                                                  architecture tested,
+                                                                     SpecRNN (V3)              180K         0.236       enabling real-time
+                                                                                                                                                                                                                                   Controller        Alignment     Low-PAC         PAC Gap        Stim %
+Can we predict when a patient's brain will lose entrainment and                                                         inference on embedded
+                                                                                                                                                                                                                                                                   Targeting       (×10⁻⁶)
+stimulate proactively, before decline occurs?                        ViT-TCNet (V4)            ~2M          0.222       devices. It provides the
+                                                                                                                        current PAC estimate                                                                                       Fixed             45.0%         61.4%           -6.6 (wrong 66.6%
+                                                                     Ridge Regression (V1)     135 coefs 0.287          that feeds into the                                                                                        Schedule                                        direction)
+                                                                                                                        temporal predictor.                                                                                        Reactive          64.5%         51.7%           +21.1          36.7%
+                                                                     ATCNet (V6)               29K          0.075                                                                                                                  TCN               72.1%         82.6%           +30.5          59.7%
+                                                                                                                        Conclusion: R² = 0.287 is
+                                                                                                                                                                                                                                   Predictive
+                                                                                                                        a data ceiling (epoch-
+                                                                     EEGNetLarge (input)       141K         0.287       level PAC labels on 2s                                                                                     Oracle            100.0%        100.0%          +33.3          48.3%
+                                                                                                                        windows).
+                                                                                                                                                                                                                                   - TCN vs Reactive: Alignment g = +1.31, Low-PAC targeting g =
+                                                                                                                                                                                                                                     +4.47, PAC gap g = +1.57 (all p < 0.001)
+                                                                     Dropping 61 spectral features and keeping only 12 PAC-trajectory features                                                                                     - TCN PAC targeting gap reaches 91% of the theoretical oracle
+                                                                     raised test R² from -0.025 to 0.606 (5-seed mean ± 0.029). Spectral                                                                                           - TCN uses less stimulation than Fixed Schedule (59.7% vs 66.6%)
+                                                                     features encoded patient-specific anatomy that does not generalize across                                                                                     - Reactive misses 48% of low-PAC windows that need treatment
+                                                                     subjects. Feature selection improved R² more than architecture.
+ Background
+40 Hz gamma entrainment reduces amyloid load in Alzheimer's
+mouse models by activating microglia (Iaccarino 2016); multi-
+sensory stimulation reduces tau pathology and improves
+cognition (Martorell 2019); auditory entrainment enhances
+default mode network connectivity in human dementia patients
+(Lahijanian 2024)
+                                                                                                                                                        Procedure
+                                                                                                                                                    Training:
+Phase-Amplitude Coupling (PAC) quantifies entrainment
+success: How strongly gamma amplitude (38-42 Hz) locks to                                                                                           • EEGNet: MSE loss, Adam optimizer, gradient clipping (max_norm=1.0),
+theta phase (4-8 Hz), measured via the Modulation Index (Tort                                                                                         early stopping                                                               Result 2: Every Patient Benefits
+2010). High PAC = entrained; low PAC = lost synchronization.                                                                                        • Causal TCN: Huber loss (robust to PAC outliers), learning rate reduction
+                                                                                                                                                      on plateau, early stopping (patience=20)
+Neural habituation causes repeated identical stimuli to produce      Stage 2: Temporal Prediction; Causal TCN                                       • All hyperparameters tuned on validation set (5 subjects); test set (6
+progressively weaker neural responses (Thompson & Spencer                                                                                             subjects) used only for final evaluation
+1966), making fixed schedules less effective over time.              Since no single-window architecture could exceed R² = 0.287, I shifted the
+                                                                     approach: instead of predicting PAC better from one snapshot, predict it       Validation (two independent protocols):
+No existing system predicts future entrainment state for             further into the future from a sequence of snapshots. The Causal TCN
+proactive control. Current approaches either use fixed               ingests 20 seconds of history and forecasts PAC 5 seconds ahead.               • Primary (real data): Replayed TCN controller on all 35 subjects' actual
+schedules (no adaptation) or reactive thresholds (respond after                       EEGNet                          Causal TCN                      EEG recordings (offline counterfactual decisions on real brain data). For
+PAC decline has already occurred).                                                                                                                    validation, ground-truth PAC labels were used as TCN input, isolating
+                                                                     Purpose          Estimate current PAC (raw       Predict future PAC (5s          the TCN's predictive contribution from EEGNet estimation error.
+                                                                                      EEG)                            horizon)                      • Secondary (simulation): Closed-loop simulation with neural fatigue
+                                                                     Parameters       1,457 (7 ch x 500 windows)      5,154                           modeling — 5 severity levels × 50 trials × 600 seconds per trial             - 35/35 subjects (100%) show higher utility with TCN vs Reactive
+                                                                                                                                                                                                                                     (binomial p < 0.001)
+                                                                     Input            Raw EEG (7 ch x 500             12 features x 20 timesteps    Statistical validation:                                                        - Advantage holds for 6 held-out test subjects never seen during
+                                                                                      samples)
+                                                                                                                                                                                                                                     training
+                                                                     Architecture     Temporal + depth-wise           Dilated causal conv           •    Wilcoxon signed-rank tests (non-parametric, paired)
+                                                                                      spatial conv.                   (d=1,2,4,8)                   •    Bootstrap 95% confidence intervals                                        Result 3: Advantage Increases with Fatigue
+                                                                     Output           Current PAC Estimate            Future PAC (5s Horizon)       •    Hedges' g effect sizes                                                    Simulation results across 5 fatigue severity levels (n=50 trials
+                                                                                                                                                    •    Compared against: Fixed Schedule, Reactive Threshold, PI Controller,      each):
+                                                                     Key Feature      Real-time-inference             31-step receptive field,           Alignment Oracle (theoretical upper bound)
+                                                                                                                                                                                                                                   Fatigue             Fixed               Adaptive           Improvement
+                                                                                                                      causal (no future leakage)
+                                                                                                                                                                                                                                   Level               Efficiency          Efficiency
+                                                                     12 TCN input features: 7 PAC-derived (current value from EEGNet, moving                                                                                       None                0.343               0.375              +9.5%***
+                                                                     averages, trends) + 5 stimulation context (on/off state, duration, session
+                                                                     phase)                                                                                                                                                        Mild                0.341               0.375              +10.0%***
+                                                                                                                                                                                                                                   Moderate            0.335               0.366              +9.0%***
+                                                                                                                                                                                                                                   High                0.319               0.354              +10.8%***
+                                                                                                                                                                                                                                   Severe              0.316               0.352              +11.2%***
+
+                                                                                                                                                                                                                                   ***p < 0.001, Hedges' g = 1.7–2.4 (large to very large effects).
+                                                                                                                                                                                                                                   Advantage grows as fatigue worsens; exactly when
+                                                                                                                                                                                                                                   personalization matters most.
+
+
+                                                                                                                                                                                                                                   Result 4: Robust Across Fatigue Model Assumptions
+                                                                                                                                                                                                                                   Tested under 4 different mathematical models of neural fatigue
+                                                                                                                                                                                                                                   (n = 50 trials each):
+
+                                                                                                                                                                                                                                   Fatigue Model               Advantage       P-Value          Hedges’ g
+
+                                                                                                                                                                                                                                   Exponential Decay           +9.0%           1.8 × 10⁻¹⁵      2.31
+                                                                                                                                                                                                                                   Step Function               +6.9%           4.4 × 10⁻¹⁴      1.21
+                                                                      Data Analysis                                                                 Future Directions                                                              Heterogeneous               +8.9%           2.5 × 10⁻¹⁴      1.71
+ Hypothesis                                                          Each horizon trains a separate model. Persistence works at 1-2s; the TCN's         • Deploy with live EEG streaming for real-time crossover validation        (50/50)
+                                                                     advantage emerges at 3-10s, the lead time needed for proactive control.              (adaptive vs fixed within-same session)                                  Saturation (synaptic) +19.0%                1.8 × 10⁻¹⁵      3.66
+A causal Temporal Convolutional Network trained on phase                                                                                                • Record 30-60-minute sessions to capture the full habituation time
+amplitude coupling trajectory features can forecast coupling                                                                                              course
+dynamics 5-10 seconds ahead, a horizon where simpler                                                                                                    • Replace the heuristic controller with reinforcement learning for long-                       Summary of Key Results
+baselines collapse, enabling a closed-loop controller that                                                                                                horizon optimization
+delivers stimulation proactively.                                                                                                                       • Extend to multi-biomarker control (PAC + spectral power +                 72.1% Alignment              82.6% Low-PAC               35/35 Subjects
+                                                                                                                                                          connectivity)                                                                                             Targeting                  benefited
+Goals:                                                                                                                                                  • System cost under $300/patient (consumer EEG + headphones)
+1. Predict brain entrainment 5-10s into the future (the
+    minimum lead time for proactive control)                                                                                                                                                                                              vs. 64.5%                    vs. 51.7%             Via EEG Replay
+2. Create a closed-loop controller to integrate predictions into                                                                                                                                                                           reactive                     reactive
+    personalized stimulation                                                                                                                                                                                                                                                               Binomial p < 0.001
+3. Validate on real patient EEG that predictive control                                                                                                                                                                                   g = 1.31                     g = 4.47
+                                                                                                                                                                                                                                                                                              91% of oracle
+    outperforms fixed and reactive approaches                                                                                                                                                                                             p < 0.001                    p < 0.001                 bound
+
+                                                                     Real EEG from a held-out test subject. The reactive controller stimulates
+ References / Acknowledgements                                       after PAC drops; the TCN anticipates decline 5 seconds early.
+                                                                                                                                                                                                                                      Conclusions
+[1] Iaccarino et al. Nature 540(7632), 230-235, 2016.
+                                                                                                                                                                                                                                     1. At 5-10s horizons, the TCN maintains R² = 0.37-0.67 while
+[2] Martorell et al. Cell 177(2), 256-271, 2019.
+[3] Tort et al. J Neurophysiol 104(2), 1195-1210, 2010.
+                                                                                                                                                    Towards Clinical Use                                                                all baselines collapse below zero; a +0.5 R² margin at the
+                                                                                                                                                                                                                                        operationally relevant range for proactive control
+[4] Lawhern et al. J Neural Eng 15(5), 056013, 2018.
+                                                                                                                                                                                          The full pipeline runs in real time on     2. On real patient EEG: 72.1% alignment vs 64.5% reactive (p <
+[5] Lahijanian et al. Sci Rep 14, 13153, 2024.
+                                                                                                                                                                                          consumer hardware:                            0.001), targeting 82.6% of low-PAC windows vs 51.7% —
+[6] Thompson & Spencer. Psychol Rev 73(1), 16-43, 1966.
+                                                                                                                                                                                                                                        60% improvement in therapeutic targeting
+[7] Chan et al. Alz & Dem 21(10), e70792, 2025.
+                                                                                                                                                                                          • EEG capture: Muse 2 headband             3. All 35 patients benefited, including 6 held-out test
+[8] Fortunato et al. Front Integr Neurosci 17, 2023.
+                                                                                                                                                                                            ($249); 4 dry electrodes, no gel or         subjects, generalizing across individuals without retraining
+                                                                                                                                                                                            technician needed                        4. Adaptive advantage increases with fatigue (+9.0% to
+AP Statistics teacher consulted on statistical test selection. All
+                                                                                                                                                                                          • Processing: Single laptop, <50ms            +11.2%) and holds across four fatigue model assumptions
+other work conducted independently. Computing: personal
+                                                                                                                                                                                            end-to-end inference latency
+MacBook + RTX 3080. No institutional lab or mentor.
+                                                                                                                                                                                          • Audio       delivery:     Standard
+                                                                                                                                                                                            headphones       with     40    Hz       Real-data validation uses offline replay on recorded EEG, not
+Data: OpenNeuro ds005048, open access license. All diagrams
+                                                                                                                                                                                            amplitude-modulated audio                live closed-loop streaming. The system makes decisions on real
+by the author. All experimental design, analysis, interpretation,
+                                                                                                                                                                                          • Total cost per patient: Under $300       brain data and simulates how the brain will respond to the
+and conclusions are the student's own work.
+                                                                                                                                                                                            (headband + headphones)                  stimulus.
