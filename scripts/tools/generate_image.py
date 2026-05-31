@@ -4,7 +4,7 @@ Generate a single publication-quality figure using an image-generating model
 via OpenRouter API.
 
 Usage:
-    python scripts/generate_image.py "Your prompt here" --output path/to/output.png
+    python scripts/tools/generate_image.py "Your prompt here" --output path/to/output.png
 """
 
 import os
@@ -15,7 +15,7 @@ import re
 import argparse
 import requests
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 def load_api_key():
