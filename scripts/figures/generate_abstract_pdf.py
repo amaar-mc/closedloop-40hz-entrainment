@@ -84,6 +84,6 @@ pdf.multi_cell(0, 0.22, para3, align="J")
 pdf.ln(0.08)
 pdf.multi_cell(0, 0.22, para4, align="J")
 
-output_path = "P10.Abstract.pdf"
+output_path = "submission/abstract/P10.Abstract.pdf"
 pdf.output(output_path)
 print(f"Generated {output_path}")

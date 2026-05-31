@@ -7,7 +7,7 @@ import matplotlib.ticker as mticker
 import numpy as np
 from pathlib import Path
 
-OUTPUT = Path(__file__).resolve().parent / "horizon_sweep_pac_stim.png"
+OUTPUT = REPO / "results" / "figures" / "horizon_sweep_pac_stim.png"
 
 # Verified data (matches table AND JSON exactly)
 horizons = [1, 3, 5, 8, 10]
