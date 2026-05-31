@@ -75,9 +75,11 @@ Best regularized: **h=32 with dropout=0.3, wd=5e-3, test R2=0.613** (only 5,154 
 | 456 | 0.799 | 0.597 |
 | 789 | 0.831 | 0.608 |
 | 2024 | 0.846 | 0.647 |
-| **Mean +/- Std** | **0.820 +/- 0.019** | **0.606 +/- 0.032** |
+| **Mean** | **0.820** | **0.606** |
 
-The improvement is robust across seeds: test R2 ranges from 0.56 to 0.65 (mean 0.606).
+The improvement is robust across seeds: test R2 ranges from 0.56 to 0.65 (mean 0.606). The raw test
+values have population SD 0.029 and sample SD 0.033; reports should name the SD convention if a
+spread value is included.
 
 ## 4ch Results (PAC+Stim features)
 

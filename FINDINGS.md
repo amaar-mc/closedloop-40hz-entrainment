@@ -414,10 +414,10 @@ python temporal_multiscale/sweep_horizons.py \
 python temporal_multiscale/fatigue_analysis.py
 
 # 7. Run closed-loop simulation (with fatigue comparison)
-python run_closed_loop_demo.py --duration 600 --n-trials 10
+python scripts/pipeline/run_closed_loop_demo.py --duration 600 --n-trials 10
 
 # 8. Run fatigue sensitivity sweep
-python run_fatigue_sensitivity.py
+python scripts/pipeline/run_fatigue_sensitivity.py
 
 # 9. Audit pipeline integrity
 python temporal_multiscale/audit_multiscale_pipeline.py
@@ -473,7 +473,7 @@ See `results/figures/` for publication-quality visualizations:
 - `timeline_example.png` — Real PAC trajectory with TCN vs Reactive decisions
 - `threshold_sensitivity.png` — Robustness analysis
 
-Full statistical details: `results/RESULTS_REPORT.md` and `results/tcn_validation_results.json`.
+Full statistical details: `results/RESULTS_REPORT.md` and `results/metrics/tcn_validation_results.json`.
 
 ---
 
