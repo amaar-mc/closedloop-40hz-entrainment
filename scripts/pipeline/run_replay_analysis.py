@@ -29,7 +29,7 @@ Controllers (8 total):
   - PI Controller: Proportional-integral control on PAC error
 
 Usage:
-    python run_replay_analysis.py
+    python scripts/pipeline/run_replay_analysis.py
 """
 
 from __future__ import annotations
@@ -46,7 +46,7 @@ import pandas as pd
 from scipy import signal as sig
 from scipy import stats
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 
 
 # ---------------------------------------------------------------------------
@@ -857,7 +857,7 @@ def main():
     # ------------------------------------------------------------------
     # Save results
     # ------------------------------------------------------------------
-    out_path = Path("results/replay_analysis.json")
+    out_path = Path("results/metrics/replay_analysis.json")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     output = {
         "n_subjects": len(subjects),

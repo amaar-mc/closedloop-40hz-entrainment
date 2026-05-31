@@ -7,7 +7,7 @@ from collections import deque
 import numpy as np
 import torch
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "archive" / "experimental_models"))
@@ -204,8 +204,8 @@ def main():
 
     # Save
     out = {"thresholds": results, "reactive_baseline_alignment": round(reactive_mean, 1)}
-    Path("results/threshold_sweep.json").write_text(json.dumps(out, indent=2))
-    print("Saved: results/threshold_sweep.json")
+    Path("results/metrics/threshold_sweep.json").write_text(json.dumps(out, indent=2))
+    print("Saved: results/metrics/threshold_sweep.json")
 
 
 if __name__ == "__main__":
