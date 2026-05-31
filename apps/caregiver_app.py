@@ -7,7 +7,7 @@ the skeleton: profile loading, page routing, patient selection, and history
 view.  Plan 02 adds the live session and summary pages.
 
 Launch:
-    streamlit run caregiver_app.py
+    streamlit run apps/caregiver_app.py
 
 Author: Amaar Chughtai
 Date: March 2026
@@ -29,7 +29,7 @@ from scipy.io import wavfile
 # ---------------------------------------------------------------------------
 # Path setup (matches demo.py pattern)
 # ---------------------------------------------------------------------------
-_ROOT = Path(__file__).resolve().parent
+_ROOT = Path(__file__).resolve().parents[1]
 if str(_ROOT / "src") not in sys.path:
     sys.path.insert(0, str(_ROOT / "src"))
 if str(_ROOT) not in sys.path:

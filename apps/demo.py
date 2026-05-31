@@ -9,7 +9,7 @@ running the TCN in real time on the same 73-dimensional feature vectors it
 was trained on.
 
 Launch:
-    streamlit run demo.py
+    streamlit run apps/demo.py
 
 Author: Amaar Chughtai
 Date: March 2026
@@ -36,7 +36,7 @@ import streamlit as st
 # ---------------------------------------------------------------------------
 # Path setup
 # ---------------------------------------------------------------------------
-_ROOT = Path(__file__).resolve().parent
+_ROOT = Path(__file__).resolve().parents[1]
 if str(_ROOT / "src") not in sys.path:
     sys.path.insert(0, str(_ROOT / "src"))
 if str(_ROOT) not in sys.path:
