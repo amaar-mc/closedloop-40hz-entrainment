@@ -70,7 +70,7 @@ Checked all 37 numbers on the poster against the actual JSON and NPZ files. Wrot
 
 ```python
 import json
-with open('results/tcn_validation_results.json') as f:
+with open('results/metrics/tcn_validation_results.json') as f:
     data = json.load(f)
 
 print(f"TCN alignment: {data['tcn_predictive']['alignment']:.1f}%")

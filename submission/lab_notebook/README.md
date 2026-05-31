@@ -1,20 +1,23 @@
-# Notebook Review Bundle
+# Lab Notebook Archive
 
-This directory is a minimal pointer to the notebook artifacts. The working files live in `notebooks/` with a V1/V2 naming scheme: V1 is the preserved original and V2 is the corrected approval-era review candidate.
+This directory contains the final CSEF 2026 lab-notebook bundle.
 
-## Notebook Artifacts
+## Final Artifacts
 
-- Preserved original notebook: [`../../notebooks/P10_Lab_Notebook_V1.md`](../../notebooks/P10_Lab_Notebook_V1.md)
-- Preserved original PDF: [`../../notebooks/P10_Lab_Notebook_V1.pdf`](../../notebooks/P10_Lab_Notebook_V1.pdf)
-- Corrected review candidate: [`../../notebooks/P10_Lab_Notebook_V2.md`](../../notebooks/P10_Lab_Notebook_V2.md)
-- Corrected PDF: [`../../notebooks/P10_Lab_Notebook_V2.pdf`](../../notebooks/P10_Lab_Notebook_V2.pdf)
+- [`P10_Lab_Notebook_V3.md`](P10_Lab_Notebook_V3.md)
+- [`P10_Lab_Notebook_V3.pdf`](P10_Lab_Notebook_V3.pdf)
+- [`P10_Lab_Notebook_V3.docx`](P10_Lab_Notebook_V3.docx)
+- [`P10_Lab_Notebook_VFINAL.md`](P10_Lab_Notebook_VFINAL.md)
+- [`P10_Lab_Notebook_VFINAL.pdf`](P10_Lab_Notebook_VFINAL.pdf)
 
-## Manual PDF Export
+## Preserved Earlier Versions
 
-Generate the final PDF only after the corrected notebook is approved during human review.
+The V1 and V2 review artifacts are retained under [`../../archive/notebooks/`](../../archive/notebooks/).
 
-1. Activate the project environment.
-2. Run [`../../notebooks/generate_notebook_pdf.py`](../../notebooks/generate_notebook_pdf.py) from the repository root.
-3. Inspect `notebooks/P10_Lab_Notebook_V2.pdf` for missing assets or formatting issues.
+## Verification
 
-This page intentionally stays small so Phase 4 fixes the broken notebook path without turning into a broader docs reorganization.
+From the repository root:
+
+```bash
+python scripts/tools/verify_notebook_finalization.py --full
+```
