@@ -496,7 +496,7 @@ The ~700 word reduction frees space for larger figures and increased font size (
 14. **All numerical claims re-verified against:**
     - `results/RESULTS_REPORT.md` — controller comparison table ✓
     - `models/sweep_horizons_results.json` — horizon sweep data points ✓
-    - `results/threshold_sweep.json` — threshold sensitivity ✓
+    - `results/metrics/threshold_sweep.json` — threshold sensitivity ✓
     - `docs/CODE_MAP.md` — architecture exploration R² values ✓
     - `temporal_multiscale/multiscale_tcn.py` — TCN architecture (dilations, kernel_size) ✓
 
