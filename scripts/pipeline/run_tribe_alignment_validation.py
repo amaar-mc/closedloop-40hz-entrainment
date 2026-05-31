@@ -13,7 +13,7 @@ Runs across Alzheimer's disease severities to show how the therapeutic
 benefit of predictive control changes with disease progression.
 
 Usage:
-    PYTHONPATH=src python run_tribe_alignment_validation.py
+    PYTHONPATH=src python scripts/pipeline/run_tribe_alignment_validation.py
 """
 
 from __future__ import annotations
@@ -25,7 +25,7 @@ from pathlib import Path
 import numpy as np
 from scipy import stats
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 

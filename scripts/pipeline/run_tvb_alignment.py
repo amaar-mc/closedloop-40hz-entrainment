@@ -11,7 +11,7 @@ Each TVB step() takes ~0.5s, so we use reduced trial parameters:
     - Estimated runtime: ~25 minutes
 
 Usage:
-    PYTHONPATH=src python3 run_tvb_alignment.py
+    PYTHONPATH=src python3 scripts/pipeline/run_tvb_alignment.py
 """
 
 from __future__ import annotations
@@ -24,7 +24,7 @@ from pathlib import Path
 import numpy as np
 from scipy.stats import wilcoxon
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT / "src") not in sys.path:
     sys.path.insert(0, str(ROOT / "src"))
 
