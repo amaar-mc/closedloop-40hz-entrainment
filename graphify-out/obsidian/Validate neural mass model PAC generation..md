@@ -1,0 +1,25 @@
+---
+source_file: "src/tribe_v2/audit_tribe_integration.py"
+type: "rationale"
+community: "TRIBE Neural-Mass Simulator"
+location: "L127"
+tags:
+  - graphify/rationale
+  - graphify/INFERRED
+  - community/TRIBE_Neural-Mass_Simulator
+---
+
+# Validate neural mass model PAC generation.
+
+## Connections
+- [[CorticalResponseConfig]] - `uses` [INFERRED]
+- [[CorticalResponseModel]] - `uses` [INFERRED]
+- [[NeuralMassConfig]] - `uses` [INFERRED]
+- [[StimAction_1]] - `uses` [INFERRED]
+- [[StimulusConfig]] - `uses` [INFERRED]
+- [[TribeEnhancedSimulator]] - `uses` [INFERRED]
+- [[TribeSimulatorConfig]] - `uses` [INFERRED]
+- [[WilsonCowanModel]] - `uses` [INFERRED]
+- [[audit_neural_mass()]] - `rationale_for` [EXTRACTED]
+
+#graphify/rationale #graphify/INFERRED #community/TRIBE_Neural-Mass_Simulator

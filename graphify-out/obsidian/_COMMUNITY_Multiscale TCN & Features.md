@@ -1,0 +1,411 @@
+---
+type: community
+members: 367
+---
+
+# Multiscale TCN & Features
+
+**Members:** 367 nodes
+
+## Members
+- [[NOTE This applies SiLU twice (once on x, once on x+residual).]] - rationale - temporal_multiscale/multiscale_tcn.py
+- [[.__getitem__()_8]] - code - archive/temporal_legacy/temporal_dataset.py
+- [[.__getitem__()_10]] - code - temporal_multiscale/checkpoint_deployment_audit.py
+- [[.__getitem__()_11]] - code - temporal_multiscale/train_multiscale_tcn.py
+- [[.__getitem__()_12]] - code - results/rigor_audit/run_feature_ablation.py
+- [[.__getitem__()_13]] - code - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[.__getitem__()_14]] - code - scripts/pipeline/run_12feat_validation.py
+- [[.__getitem__()_15]] - code - validation/experiments/synthetic_benchmark.py
+- [[.__getitem__()_16]] - code - validation/experiments/run_all_experiments.py
+- [[.__getitem__()_17]] - code - validation/experiments/tcn_interpretability.py
+- [[.__init__()_24]] - code - archive/temporal_legacy/temporal_dataset.py
+- [[.__init__()_40]] - code - archive/experimental_models/spectral_features.py
+- [[.__init__()_58]] - code - temporal_multiscale/checkpoint_deployment_audit.py
+- [[.__init__()_59]] - code - temporal_multiscale/multiscale_tcn.py
+- [[.__init__()_60]] - code - temporal_multiscale/multiscale_tcn.py
+- [[.__init__()_61]] - code - temporal_multiscale/multiscale_tcn.py
+- [[.__init__()_62]] - code - temporal_multiscale/comparison_models.py
+- [[.__init__()_63]] - code - temporal_multiscale/comparison_models.py
+- [[.__init__()_64]] - code - temporal_multiscale/run_ablation_study.py
+- [[.__init__()_65]] - code - temporal_multiscale/run_ablation_study.py
+- [[.__init__()_69]] - code - temporal_multiscale/train_multiscale_tcn.py
+- [[.__init__()_70]] - code - results/rigor_audit/run_feature_ablation.py
+- [[.__init__()_71]] - code - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[.__init__()_86]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.__init__()_87]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.__init__()_88]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.__init__()_89]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.__init__()_90]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.__init__()_91]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.__init__()_95]] - code - scripts/pipeline/run_12feat_validation.py
+- [[.__init__()_125]] - code - validation/experiments/synthetic_benchmark.py
+- [[.__init__()_126]] - code - validation/experiments/run_all_experiments.py
+- [[.__init__()_143]] - code - validation/experiments/tcn_interpretability.py
+- [[.__init__()_144]] - code - validation/experiments/tcn_interpretability.py
+- [[.__len__()_8]] - code - archive/temporal_legacy/temporal_dataset.py
+- [[.__len__()_10]] - code - temporal_multiscale/checkpoint_deployment_audit.py
+- [[.__len__()_11]] - code - temporal_multiscale/train_multiscale_tcn.py
+- [[.__len__()_12]] - code - results/rigor_audit/run_feature_ablation.py
+- [[.__len__()_13]] - code - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[.__len__()_14]] - code - scripts/pipeline/run_12feat_validation.py
+- [[.__len__()_15]] - code - validation/experiments/synthetic_benchmark.py
+- [[.__len__()_16]] - code - validation/experiments/run_all_experiments.py
+- [[.__len__()_17]] - code - validation/experiments/tcn_interpretability.py
+- [[.__post_init__()]] - code - temporal_multiscale/multiscale_tcn.py
+- [[.__post_init__()_1]] - code - temporal_multiscale/run_ablation_study.py
+- [[.__post_init__()_2]] - code - validation/experiments/tcn_variants.py
+- [[._build_feature()]] - code - scripts/pipeline/run_tcn_validation.py
+- [[._build_indices()]] - code - archive/temporal_legacy/temporal_dataset.py
+- [[._hook_fn()]] - code - validation/experiments/tcn_interpretability.py
+- [[._pac_features()_1]] - code - scripts/pipeline/run_tcn_validation.py
+- [[._pac_features()_2]] - code - scripts/pipeline/run_tcn_validation.py
+- [[._predict()]] - code - scripts/pipeline/run_tcn_validation.py
+- [[._predict()_1]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.count_parameters()_7]] - code - temporal_multiscale/multiscale_tcn.py
+- [[.forward()_29]] - code - temporal_multiscale/multiscale_tcn.py
+- [[.forward()_30]] - code - temporal_multiscale/multiscale_tcn.py
+- [[.forward()_31]] - code - temporal_multiscale/multiscale_tcn.py
+- [[.forward()_32]] - code - temporal_multiscale/multiscale_tcn.py
+- [[.forward()_33]] - code - temporal_multiscale/comparison_models.py
+- [[.forward()_34]] - code - temporal_multiscale/comparison_models.py
+- [[.forward()_43]] - code - validation/experiments/tcn_variants.py
+- [[.freeze_backbone()_1]] - code - temporal_multiscale/multiscale_tcn.py
+- [[.get_all_weights()]] - code - validation/experiments/tcn_interpretability.py
+- [[.get_normalization_stats()]] - code - archive/temporal_legacy/temporal_dataset.py
+- [[.remove()]] - code - validation/experiments/tcn_interpretability.py
+- [[.reset()_24]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.reset()_25]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.reset()_26]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.reset()_27]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.reset()_28]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.reset()_29]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.step()_23]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.step()_24]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.step()_25]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.step()_26]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.step()_27]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.step()_28]] - code - scripts/pipeline/run_tcn_validation.py
+- [[.unfreeze_all()_1]] - code - temporal_multiscale/multiscale_tcn.py
+- [[AblationVariant]] - code - temporal_multiscale/run_ablation_study.py
+- [[Add one new observation and return prediction when ready.]] - rationale - temporal_multiscale/realtime_inference.py
+- [[AlignmentOracleCtrl]] - code - scripts/pipeline/run_tcn_validation.py
+- [[Architecture comparison study train and evaluate all models across horizons.  R]] - rationale - temporal_multiscale/run_comparison_study.py
+- [[Args             windows  (N, 1, 7, 500) raw EEG windows             pac]] - rationale - archive/temporal_legacy/temporal_dataset.py
+- [[Attention pooling over time axis._1]] - rationale - temporal_multiscale/multiscale_tcn.py
+- [[AttentionPool1D_1]] - code - temporal_multiscale/multiscale_tcn.py
+- [[AttentionWeightCapture]] - code - validation/experiments/tcn_interpretability.py
+- [[BIDSDataProcessor]] - code - src/data_loader.py
+- [[Baseline TCN architecture with multi-task training enabled.      Architectural]] - rationale - validation/experiments/tcn_variants.py
+- [[Baseline and comparison model architectures for the architecture comparison stud]] - rationale - temporal_multiscale/comparison_models.py
+- [[Batch processor for spectral feature extraction.]] - rationale - archive/experimental_models/spectral_features.py
+- [[Build list of (sequence_start, target_idx) pairs.          For each subject bl]] - rationale - archive/temporal_legacy/temporal_dataset.py
+- [[Causal Transformer encoder for sequence-to-scalar PAC prediction.      A causal]] - rationale - temporal_multiscale/comparison_models.py
+- [[Causal multiscale TCN with two regression heads.      Input         x_seq (B,]] - rationale - temporal_multiscale/multiscale_tcn.py
+- [[CausalDSConvBlock_1]] - code - temporal_multiscale/multiscale_tcn.py
+- [[CausalDSConvBlock_2]] - code
+- [[CausalDSConvBlock with GroupNorm replaced by Identity (ablation).]] - rationale - temporal_multiscale/run_ablation_study.py
+- [[CausalDSConvBlockNoNorm]] - code - temporal_multiscale/run_ablation_study.py
+- [[Checkpoint deployment realism audit.  Evaluates a trained checkpoint under multi]] - rationale - temporal_multiscale/checkpoint_deployment_audit.py
+- [[Comprehensive TCN-integrated real-data validation with epoch-level evaluation.]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[Compute Hedges' g with 95% CI between paired samples.]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[Compute Pearson correlation coefficient.]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[Compute Pearson correlation.]] - rationale - validation/experiments/run_all_experiments.py
+- [[Compute R-squared (coefficient of determination).]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[Compute R-squared, returning 0.0 when variance is near zero.]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Compute a clinical utility composite score.      In adaptive music therapy for]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[Compute persistence baseline (predict last PAC as future PAC).      Args]] - rationale - validation/experiments/run_all_experiments.py
+- [[Compute prediction performance conditioned on stimulation state.      Splits t]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Compute regression metrics.]] - rationale - validation/experiments/run_all_experiments.py
+- [[Compute root mean squared error.]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[Compute standard regression metrics.]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Compute stimulation efficiency metrics.]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[Compute synthetic targets from a known nonlinear function.      The target mim]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[Concatenate all captured weights into (N, T) array.]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Configuration shared across all TCN variants.      Attributes         n_feat]] - rationale - validation/experiments/tcn_variants.py
+- [[Dataset]] - code
+- [[Denormalize z-scored predictions.]] - rationale - validation/experiments/run_all_experiments.py
+- [[Denormalize z-scored predictions._1]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Entry point for the experiment runner.]] - rationale - validation/experiments/run_all_experiments.py
+- [[Entry point for the synthetic benchmark.]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[Evaluate R² on normalized targets (for early stopping).]] - rationale - temporal_multiscale/comparison_models.py
+- [[Evaluate TCN only on samples where the target crosses an epoch boundary.      Fo]] - rationale - archive/experimental/sliding_pac/train_and_compare.py
+- [[Evaluate how early the controller responds to PAC drop transitions.      For e]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[Evaluate how well controller decisions align with PAC epochs.]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[Evaluate metrics on denormalized predictions in raw PAC units.]] - rationale - temporal_multiscale/comparison_models.py
+- [[Evaluate model on a data split.      Args         model Trained model.]] - rationale - validation/experiments/run_all_experiments.py
+- [[Extended configuration for the Transformer-based variant.      Attributes]] - rationale - validation/experiments/tcn_variants.py
+- [[Extract spectral features for TCN controller.]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[FEATURE_GROUP_PREFIXES (PAC History  Spectral  Stim Context Groups)]] - code - validation/experiments/tcn_interpretability.py
+- [[Fallback reconstruct stim states from BIDS events.tsv.]] - rationale - temporal_multiscale/transition_analysis.py
+- [[Feature ablation validation for MultiscaleCausalTCN.  Trains TCN with 30 epochs]] - rationale - results/rigor_audit/run_feature_ablation.py
+- [[FeatureMaskedDataset]] - code - scripts/pipeline/run_12feat_validation.py
+- [[Find the index of the stim_state feature.      Args         feature_names L]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Find the index of the time_since_switch feature.      Args         feature_n]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Fine-tune TCN heads on calibration data, evaluate on eval.]] - rationale - temporal_multiscale/per_subject_adaptation.py
+- [[FixedScheduleCtrl_1]] - code - scripts/pipeline/run_tcn_validation.py
+- [[Forward hook that computes and stores attention weights.          The Attentio]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Forward pass.          Args             x_seq Input tensor of shape (B, T,_1]] - rationale - validation/experiments/tcn_variants.py
+- [[Freeze all layers except the future and delta regression heads.          Useful]] - rationale - temporal_multiscale/multiscale_tcn.py
+- [[Full end-to-end pipeline preprocess → spectral cache → temporal dataset → train]] - rationale - scripts/pipeline/run_full_pipeline.py
+- [[Generate PAC-like features with autoregressive structure.      Mimics the real]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[Generate a complete synthetic dataset split (unnormalized).      Args]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[Generate a timeline figure showing TCN vs Reactive decisions for one subject.]] - rationale - scripts/figures/generate_timeline_figure.py
+- [[Generate spectral-like features with temporal smoothness.      Real spectral f]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[Generate stimulation-context features.      Mimics the real features binary s]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[Get TCN, Ridge, and persistence predictions on a split.      Returns         y_]] - rationale - temporal_multiscale/transition_analysis.py
+- [[Hook-based capture of AttentionPool1D attention weights.      Registers a forw]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Hybrid controller reactive base + TCN proactive override.      The reactive c]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[HybridTCNCtrl]] - code - scripts/pipeline/run_tcn_validation.py
+- [[Hyperparameter sensitivity sweep for MultiscaleCausalTCN.  Tests whether the TCN]] - rationale - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[Identify transition vs steady-state windows in a split.      A window is transi]] - rationale - temporal_multiscale/transition_analysis.py
+- [[Instantiate a model variant by name.      Args         name One of the keys]] - rationale - validation/experiments/tcn_variants.py
+- [[InterpretabilityDataset]] - code - validation/experiments/tcn_interpretability.py
+- [[InterpretabilityDataset (Test Dataset with Metadata)]] - code - validation/experiments/tcn_interpretability.py
+- [[Last-value baseline predict y_future = last_pac (current).]] - rationale - archive/experimental/sliding_pac/train_and_compare.py
+- [[LastStepPool_1]] - code - temporal_multiscale/multiscale_tcn.py
+- [[Lightweight multiscale causal TCN for future PAC and delta-PAC prediction.  Desi]] - rationale - temporal_multiscale/multiscale_tcn.py
+- [[Load multiscale dataset with optional feature column selection.]] - rationale - results/rigor_audit/run_feature_ablation.py
+- [[Load multiscale dataset with optional feature column selection._1]] - rationale - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[Load multiscale npz, slice features to PAC+context only.]] - rationale - scripts/pipeline/run_12feat_validation.py
+- [[Load subjects with PAC, EEG windows, stim state, and epoch boundaries.]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[Load test split and group by subject.]] - rationale - temporal_multiscale/per_subject_adaptation.py
+- [[Load the trained TCN checkpoint.      Args         checkpoint_path Path to]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Loads a multiscale temporal dataset from disk.]] - rationale - validation/experiments/run_all_experiments.py
+- [[Loads multiscale temporal dataset with metadata for interpretability.      Ext]] - rationale - validation/experiments/tcn_interpretability.py
+- [[LongWindowTemporalDataset (8-sec Window Dataset)]] - code - archive/temporal_legacy/train_temporal_long_windows.py
+- [[Map feature group names to column indices using prefix matching.      Args]] - rationale - validation/experiments/tcn_interpretability.py
+- [[MaskedSequenceDataset]] - code - results/rigor_audit/run_feature_ablation.py
+- [[MaskedSequenceDataset_1]] - code - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[ModelConfig]] - code - temporal_multiscale/multiscale_tcn.py
+- [[ModelConfig_1]] - code - validation/experiments/tcn_variants.py
+- [[MultiTaskTCN]] - code - validation/experiments/tcn_variants.py
+- [[MultiscaleCausalTCN]] - code - temporal_multiscale/multiscale_tcn.py
+- [[MultiscaleCausalTCN_1]] - code
+- [[MultiscaleCausalTCN using CausalDSConvBlockNoNorm in all blocks.]] - rationale - temporal_multiscale/run_ablation_study.py
+- [[MultiscaleCausalTCNNoNorm]] - code - temporal_multiscale/run_ablation_study.py
+- [[Oracle that perfectly allocates stim to lowest-PAC windows.      Given full PA]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[PICtrl]] - code - scripts/pipeline/run_tcn_validation.py
+- [[Parse command-line arguments.]] - rationale - validation/experiments/run_all_experiments.py
+- [[Parse command-line arguments._2]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Per-subject Ridge blend global with locally-fit Ridge.]] - rationale - temporal_multiscale/per_subject_adaptation.py
+- [[Per-subject adaptation via calibration windows.  For each test subject   1. Use]] - rationale - temporal_multiscale/per_subject_adaptation.py
+- [[Prepare temporal DataLoaders from the existing processed data splits.      The]] - rationale - archive/temporal_legacy/temporal_dataset.py
+- [[Print attention weight analysis summary.]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Print feature group ablation summary.]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Print stimulation-conditional performance summary.]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Processes BIDS-compliant EEG dataset into training windows.      Pipeline]] - rationale - src/data_loader.py
+- [[Pure TCN-based predictive controller using predicted delta for decisions.]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[PyTorch Dataset that creates temporal sequences from contiguous EEG windows.]] - rationale - archive/temporal_legacy/temporal_dataset.py
+- [[PyTorch Dataset wrapper for synthetic data arrays.]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[Quick threshold sensitivity sweep for TCN controller. Shows that TCN advantage]] - rationale - scripts/pipeline/run_threshold_sweep.py
+- [[Reactive z-score threshold controller on rolling PAC baseline.]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[ReactiveCtrl_1]] - code - scripts/pipeline/run_tcn_validation.py
+- [[Realtime PAC forecaster with causal rolling buffer.      Expected per-step input]] - rationale - temporal_multiscale/realtime_inference.py
+- [[Realtime inference wrapper for the multiscale causal TCN.  This utility keeps ro]] - rationale - temporal_multiscale/realtime_inference.py
+- [[Recursively convert numpy types for JSON serialization.]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Remove the forward hook.]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Residual depthwise-separable causal temporal block._1]] - rationale - temporal_multiscale/multiscale_tcn.py
+- [[Return dataset_dir, building it if it does not exist.      For horizon==5 the da]] - rationale - temporal_multiscale/run_comparison_study.py
+- [[Return normalization parameters for inference  val  test sets.]] - rationale - archive/temporal_legacy/temporal_dataset.py
+- [[Return the pre-built or to-be-built dataset directory for a given config.]] - rationale - temporal_multiscale/run_comparison_study.py
+- [[Ridge regression on flattened sequence features._1]] - rationale - archive/experimental/sliding_pac/train_and_compare.py
+- [[Ridge with alpha auto-scaled to input dimensionality.      alpha=1.0 overflows w]] - rationale - temporal_multiscale/run_comparison_study.py
+- [[Run All TCN Architecture Experiments on Real Data.  Trains all TCN variants (b]] - rationale - validation/experiments/run_all_experiments.py
+- [[Run TCN inference, return (delta_z, future_raw, delta_raw) or None.]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[Run all interpretability analyses.]] - rationale - validation/experiments/tcn_interpretability.py
+- [[Run the full synthetic benchmark across all variants.      Returns         D]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[Run the test set through the model and capture attention weights.      Args]] - rationale - validation/experiments/tcn_interpretability.py
+- [[SeqDataset_2]] - code - temporal_multiscale/checkpoint_deployment_audit.py
+- [[Sequence dataset loading from npz.]] - rationale - archive/experimental/sliding_pac/train_and_compare.py
+- [[SequenceDataset]] - code - temporal_multiscale/train_multiscale_tcn.py
+- [[SequenceDataset_1]] - code - validation/experiments/run_all_experiments.py
+- [[SequenceDataset (Multiscale Temporal Dataset Loader)]] - code - validation/experiments/run_all_experiments.py
+- [[Set all random seeds for reproducibility.]] - rationale - temporal_multiscale/comparison_models.py
+- [[SimpleLSTM]] - code - temporal_multiscale/comparison_models.py
+- [[SimpleTransformer]] - code - temporal_multiscale/comparison_models.py
+- [[Spectral Feature Generalization Failure Risk (Legacy)]] - document - archive/temporal_legacy/temporal_dataset.py
+- [[SpectralFeatureExtractor]] - code - archive/experimental_models/spectral_features.py
+- [[Split subject data into calibration (first N) and eval (rest).]] - rationale - temporal_multiscale/per_subject_adaptation.py
+- [[Step 1 Preprocess raw BIDS data into trainvaltest splits.]] - rationale - scripts/pipeline/run_full_pipeline.py
+- [[Step 2 Generate spectral feature caches for each split.]] - rationale - scripts/pipeline/run_full_pipeline.py
+- [[Step 3 Build multiscale temporal dataset.]] - rationale - scripts/pipeline/run_full_pipeline.py
+- [[Step 4 Train multiscale causal TCN.]] - rationale - scripts/pipeline/run_full_pipeline.py
+- [[Step 5 Replay real data through controllers including TCN-based predictive.]] - rationale - scripts/pipeline/run_full_pipeline.py
+- [[Step 6 Compute proper effect sizes and clinical interpretability.]] - rationale - scripts/pipeline/run_full_pipeline.py
+- [[Synthetic Benchmark for TCN Architecture Variants.  Generates synthetic tempor]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[SyntheticDataset]] - code - validation/experiments/synthetic_benchmark.py
+- [[SyntheticDataset (PyTorch Dataset for Synthetic Data)]] - code - validation/experiments/synthetic_benchmark.py
+- [[TCN Architecture Variants for Temporal PAC Prediction Experiments.  Tests four]] - rationale - validation/experiments/tcn_variants.py
+- [[TCN Interpretability Analysis for Multiscale Causal TCN.  Performs three inter]] - rationale - validation/experiments/tcn_interpretability.py
+- [[TCN ablation study quantify contribution of each architectural component.  Trai]] - rationale - temporal_multiscale/run_ablation_study.py
+- [[TCN multi-seed reproducibility study.  Trains MultiscaleCausalTCN across multipl]] - rationale - temporal_multiscale/run_multiseed_study.py
+- [[TCN predictive controller using only PAC+context features (no spectral).]] - rationale - scripts/pipeline/run_12feat_validation.py
+- [[TCNPredictiveCtrl]] - code - scripts/pipeline/run_tcn_validation.py
+- [[Take last timestep from causal TCN output.      For a causal architecture the la_1]] - rationale - temporal_multiscale/multiscale_tcn.py
+- [[Temporal Dataset Preparation for Future PAC Prediction  Creates sequential (lo]] - rationale - archive/temporal_legacy/temporal_dataset.py
+- [[TemporalPACDataset]] - code - archive/temporal_legacy/temporal_dataset.py
+- [[TemporalPACDataset (PyTorch Dataset)]] - code - archive/temporal_legacy/temporal_dataset.py
+- [[Test the temporal dataset creation.]] - rationale - archive/temporal_legacy/temporal_dataset.py
+- [[Train 12-feature TCN (PAC+context only) and run 35-subject controller replay.  D]] - rationale - scripts/pipeline/run_12feat_validation.py
+- [[Train Full TCN for one seed and return per-seed metrics.      CRITICAL Datasets]] - rationale - temporal_multiscale/run_multiseed_study.py
+- [[Train MultiscaleCausalTCN with 12 features, save checkpoint, return path.]] - rationale - scripts/pipeline/run_12feat_validation.py
+- [[Train TCN on a dataset and return results.]] - rationale - archive/experimental/sliding_pac/train_and_compare.py
+- [[Train XGBoost on flattened (N, TF) feature sequences.      Targets are RAW y_fu]] - rationale - temporal_multiscale/comparison_models.py
+- [[Train a global Ridge on the full training split. Returns model.]] - rationale - temporal_multiscale/per_subject_adaptation.py
+- [[Train a model variant and return evaluation metrics.      Args         model]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[Train a single variant and return its result dict.]] - rationale - temporal_multiscale/run_ablation_study.py
+- [[Train and compare TCN models on epoch-level vs sliding-window PAC targets.  Trai]] - rationale - archive/experimental/sliding_pac/train_and_compare.py
+- [[Train and evaluate a single configuration.]] - rationale - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[Train and evaluate a single model variant.      Args         variant_name N]] - rationale - validation/experiments/run_all_experiments.py
+- [[Train any nn.Module that takes (B, T, F) and outputs (B,) scalar predictions.]] - rationale - temporal_multiscale/comparison_models.py
+- [[Train for one epoch.      Args         model Model to train.         loade]] - rationale - validation/experiments/run_all_experiments.py
+- [[Train multiscale causal TCN for PAC forecasting.  Usage     python temporal_mul]] - rationale - temporal_multiscale/train_multiscale_tcn.py
+- [[TransformerConfig]] - code - validation/experiments/tcn_variants.py
+- [[Transition analysis compare model accuracy at stimrest state transitions vs st]] - rationale - temporal_multiscale/transition_analysis.py
+- [[Two-layer LSTM for sequence-to-scalar PAC prediction.      Input  (B, T, F)  —]] - rationale - temporal_multiscale/comparison_models.py
+- [[Unfreeze all parameters (reverses ``freeze_backbone``).]] - rationale - temporal_multiscale/multiscale_tcn.py
+- [[Wilcoxon signed-rank test with zero-difference handling.]] - rationale - scripts/pipeline/run_tcn_validation.py
+- [[Z-score normalize features and targets using train statistics.      Mirrors th]] - rationale - validation/experiments/synthetic_benchmark.py
+- [[Zero-ablation experiment zero out each feature group and measure R2 drop.]] - rationale - validation/experiments/tcn_interpretability.py
+- [[_corr()_7]] - code - validation/experiments/synthetic_benchmark.py
+- [[_corr()_8]] - code - validation/experiments/run_all_experiments.py
+- [[_denorm()_3]] - code - validation/experiments/run_all_experiments.py
+- [[_denorm()_4]] - code - validation/experiments/tcn_interpretability.py
+- [[_eval_denorm()]] - code - temporal_multiscale/comparison_models.py
+- [[_eval_r2_norm()]] - code - temporal_multiscale/comparison_models.py
+- [[_find_stim_state_index()]] - code - validation/experiments/tcn_interpretability.py
+- [[_find_time_since_switch_index()]] - code - validation/experiments/tcn_interpretability.py
+- [[_generate_pac_features()]] - code - validation/experiments/synthetic_benchmark.py
+- [[_generate_spectral_features()]] - code - validation/experiments/synthetic_benchmark.py
+- [[_generate_stim_features()]] - code - validation/experiments/synthetic_benchmark.py
+- [[_mae()]] - code - temporal_multiscale/transition_analysis.py
+- [[_make_serializable()_2]] - code - validation/experiments/tcn_interpretability.py
+- [[_metrics()_2]] - code - validation/experiments/run_all_experiments.py
+- [[_metrics()_3]] - code - validation/experiments/tcn_interpretability.py
+- [[_persistence_baseline()_1]] - code - validation/experiments/run_all_experiments.py
+- [[_r2()_5]] - code - temporal_multiscale/transition_analysis.py
+- [[_r2()_8]] - code - validation/experiments/synthetic_benchmark.py
+- [[_r2()_9]] - code - validation/experiments/run_all_experiments.py
+- [[_r2()_10]] - code - validation/experiments/tcn_interpretability.py
+- [[_resolve_feature_groups()]] - code - validation/experiments/tcn_interpretability.py
+- [[_rmse()_3]] - code - temporal_multiscale/comparison_models.py
+- [[_rmse()_4]] - code - temporal_multiscale/transition_analysis.py
+- [[_rmse()_5]] - code - validation/experiments/synthetic_benchmark.py
+- [[_stim_states_from_events()]] - code - temporal_multiscale/transition_analysis.py
+- [[_target_function()]] - code - validation/experiments/synthetic_benchmark.py
+- [[analyze_attention_weights()]] - code - validation/experiments/tcn_interpretability.py
+- [[analyze_stimulation_conditional()]] - code - validation/experiments/tcn_interpretability.py
+- [[build_model()]] - code - temporal_multiscale/run_ablation_study.py
+- [[build_variant()]] - code - validation/experiments/tcn_variants.py
+- [[build_variants()]] - code - temporal_multiscale/run_ablation_study.py
+- [[comparison_models.py]] - code - temporal_multiscale/comparison_models.py
+- [[compute_clinical_utility()]] - code - scripts/pipeline/run_tcn_validation.py
+- [[compute_summary()]] - code - temporal_multiscale/run_multiseed_study.py
+- [[compute_temporal_autocorrelation (PAC Lag Analysis)]] - code - archive/temporal_legacy/reprocess_long_windows.py
+- [[corr_score()_1]] - code - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[create_dataloaders (Long-Window DataLoader Factory)]] - code - archive/temporal_legacy/train_temporal_long_windows.py
+- [[denorm()_2]] - code - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[evaluate()_7]] - code - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[evaluate()_8]] - code - validation/experiments/run_all_experiments.py
+- [[evaluate_efficiency()]] - code - scripts/pipeline/run_tcn_validation.py
+- [[evaluate_epoch_alignment()]] - code - scripts/pipeline/run_tcn_validation.py
+- [[evaluate_subset()]] - code - temporal_multiscale/transition_analysis.py
+- [[evaluate_transition_anticipation()]] - code - scripts/pipeline/run_tcn_validation.py
+- [[extract_spectral_features()_2]] - code - scripts/pipeline/run_tcn_validation.py
+- [[generate_synthetic_dataset()]] - code - validation/experiments/synthetic_benchmark.py
+- [[generate_timeline_figure.py]] - code - scripts/figures/generate_timeline_figure.py
+- [[get_predictions()]] - code - temporal_multiscale/transition_analysis.py
+- [[hedges_g()_1]] - code - scripts/pipeline/run_tcn_validation.py
+- [[identify_transitions()]] - code - temporal_multiscale/transition_analysis.py
+- [[load_model_and_scalers()]] - code - validation/experiments/tcn_interpretability.py
+- [[load_subjects()_1]] - code - scripts/pipeline/run_tcn_validation.py
+- [[main()_25]] - code - temporal_multiscale/run_multiseed_study.py
+- [[main()_28]] - code - temporal_multiscale/run_ablation_study.py
+- [[main()_31]] - code - temporal_multiscale/transition_analysis.py
+- [[main()_36]] - code - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[main()_42]] - code - scripts/pipeline/run_tcn_validation.py
+- [[main()_44]] - code - scripts/pipeline/run_threshold_sweep.py
+- [[main()_47]] - code - scripts/pipeline/run_full_pipeline.py
+- [[main()_60]] - code - scripts/figures/generate_timeline_figure.py
+- [[main()_67]] - code - validation/experiments/synthetic_benchmark.py
+- [[main()_68]] - code - validation/experiments/run_all_experiments.py
+- [[main()_71]] - code - validation/experiments/tcn_interpretability.py
+- [[multiscale_tcn.py]] - code - temporal_multiscale/multiscale_tcn.py
+- [[normalize_datasets()]] - code - validation/experiments/synthetic_benchmark.py
+- [[paired_wilcoxon()]] - code - scripts/pipeline/run_tcn_validation.py
+- [[parse_args()_6]] - code - temporal_multiscale/run_multiseed_study.py
+- [[parse_args()_9]] - code - temporal_multiscale/run_ablation_study.py
+- [[parse_args()_11]] - code - temporal_multiscale/transition_analysis.py
+- [[parse_args()_19]] - code - validation/experiments/run_all_experiments.py
+- [[parse_args()_21]] - code - validation/experiments/tcn_interpretability.py
+- [[prepare_temporal_data()]] - code - archive/temporal_legacy/temporal_dataset.py
+- [[print_ablation_summary()]] - code - validation/experiments/tcn_interpretability.py
+- [[print_attention_summary()]] - code - validation/experiments/tcn_interpretability.py
+- [[print_conditional_summary()]] - code - validation/experiments/tcn_interpretability.py
+- [[r2_score()_2]] - code - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[resolve_dataset_dir()]] - code - temporal_multiscale/run_multiseed_study.py
+- [[run_ablation_experiment()]] - code - validation/experiments/tcn_interpretability.py
+- [[run_ablation_study.py]] - code - temporal_multiscale/run_ablation_study.py
+- [[run_all_experiments.py]] - code - validation/experiments/run_all_experiments.py
+- [[run_benchmark()]] - code - validation/experiments/synthetic_benchmark.py
+- [[run_full_pipeline.py]] - code - scripts/pipeline/run_full_pipeline.py
+- [[run_hyperparam_sensitivity.py]] - code - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[run_multiseed_study.py]] - code - temporal_multiscale/run_multiseed_study.py
+- [[run_single_config()]] - code - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[run_single_experiment()]] - code - validation/experiments/run_all_experiments.py
+- [[run_tcn_validation.py]] - code - scripts/pipeline/run_tcn_validation.py
+- [[run_threshold_sweep.py]] - code - scripts/pipeline/run_threshold_sweep.py
+- [[set_seed()_2]] - code - temporal_multiscale/comparison_models.py
+- [[step_build_dataset()]] - code - scripts/pipeline/run_full_pipeline.py
+- [[step_compute_statistics()]] - code - scripts/pipeline/run_full_pipeline.py
+- [[step_preprocess()]] - code - scripts/pipeline/run_full_pipeline.py
+- [[step_replay_with_tcn()]] - code - scripts/pipeline/run_full_pipeline.py
+- [[step_spectral_cache()]] - code - scripts/pipeline/run_full_pipeline.py
+- [[step_train_tcn()]] - code - scripts/pipeline/run_full_pipeline.py
+- [[synthetic_benchmark.py]] - code - validation/experiments/synthetic_benchmark.py
+- [[tcn_interpretability.py]] - code - validation/experiments/tcn_interpretability.py
+- [[tcn_variants.py]] - code - validation/experiments/tcn_variants.py
+- [[temporal_dataset.py]] - code - archive/temporal_legacy/temporal_dataset.py
+- [[test_temporal_dataset()]] - code - archive/temporal_legacy/temporal_dataset.py
+- [[train_and_evaluate()_1]] - code - validation/experiments/synthetic_benchmark.py
+- [[train_one_epoch()_5]] - code - results/rigor_audit/run_hyperparam_sensitivity.py
+- [[train_one_epoch()_6]] - code - validation/experiments/run_all_experiments.py
+- [[train_one_seed()]] - code - temporal_multiscale/run_multiseed_study.py
+- [[train_pytorch_model()]] - code - temporal_multiscale/comparison_models.py
+- [[train_variant()]] - code - temporal_multiscale/run_ablation_study.py
+- [[train_xgboost_model()]] - code - temporal_multiscale/comparison_models.py
+- [[transition_analysis.py]] - code - temporal_multiscale/transition_analysis.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Multiscale_TCN_&_Features
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 17 edges to [[_COMMUNITY_Archived Feature Experiments (v4)]]
+- 17 edges to [[_COMMUNITY_Core Data & PAC Pipeline]]
+- 13 edges to [[_COMMUNITY_12-Feature TCN Validation]]
+- 11 edges to [[_COMMUNITY_TCN Layer Internals]]
+- 9 edges to [[_COMMUNITY_Community 56]]
+- 7 edges to [[_COMMUNITY_Models, Streaming & Apps]]
+- 6 edges to [[_COMMUNITY_Community 81]]
+- 5 edges to [[_COMMUNITY_Archived SpecTempNet V3]]
+- 4 edges to [[_COMMUNITY_Community 65]]
+- 4 edges to [[_COMMUNITY_Closed-Loop Control & Simulator]]
+- 4 edges to [[_COMMUNITY_Community 60]]
+- 3 edges to [[_COMMUNITY_Archived Temporal PAC Predictor]]
+- 3 edges to [[_COMMUNITY_Community 94]]
+- 3 edges to [[_COMMUNITY_Community 98]]
+- 2 edges to [[_COMMUNITY_Archived ImprovedTCN Experiments]]
+- 2 edges to [[_COMMUNITY_Community 97]]
+- 1 edge to [[_COMMUNITY_Archived Enhanced-Feature TCN]]
+- 1 edge to [[_COMMUNITY_Archived EEGNet V2]]
+
+## Top bridge nodes
+- [[Dataset]] - degree 18, connects to 8 communities
+- [[MultiscaleCausalTCN]] - degree 141, connects to 3 communities
+- [[ModelConfig]] - degree 136, connects to 3 communities
+- [[SpectralFeatureExtractor]] - degree 59, connects to 2 communities
+- [[BIDSDataProcessor]] - degree 29, connects to 2 communities

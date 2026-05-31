@@ -1,0 +1,20 @@
+---
+source_file: "temporal_multiscale/direction_classifier.py"
+type: "code"
+community: "Community 83"
+location: "L91"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Community_83
+---
+
+# majority_baseline()
+
+## Connections
+- [[Predict most frequent class from training set.]] - `rationale_for` [EXTRACTED]
+- [[direction_classifier.py]] - `contains` [EXTRACTED]
+- [[eval_classifier()]] - `calls` [EXTRACTED]
+- [[main()_24]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Community_83

@@ -1,0 +1,195 @@
+---
+type: community
+members: 167
+---
+
+# Archived Feature Experiments (v4)
+
+**Members:** 167 nodes
+
+## Members
+- [[.__call__()_1]] - code - archive/experimental_models/data_augmentation.py
+- [[.__call__()_2]] - code - archive/experimental_models/data_augmentation.py
+- [[.__call__()_3]] - code - archive/experimental_models/data_augmentation.py
+- [[.__call__()_4]] - code - archive/experimental_models/data_augmentation.py
+- [[.__call__()_5]] - code - archive/experimental_models/data_augmentation.py
+- [[.__call__()_6]] - code - archive/experimental_models/data_augmentation.py
+- [[.__call__()_7]] - code - archive/experimental_models/data_augmentation.py
+- [[.__getitem__()_6]] - code - archive/v1_v8_attempts/run_training_v4.py
+- [[.__init__()_22]] - code - archive/v1_v8_attempts/run_training_v4.py
+- [[.__init__()_36]] - code - archive/experimental_models/wavelet_features.py
+- [[.__init__()_39]] - code - archive/experimental_models/pac_features.py
+- [[.__init__()_41]] - code - archive/experimental_models/vit_tcnet.py
+- [[.__init__()_42]] - code - archive/experimental_models/vit_tcnet.py
+- [[.__init__()_43]] - code - archive/experimental_models/vit_tcnet.py
+- [[.__init__()_44]] - code - archive/experimental_models/vit_tcnet.py
+- [[.__init__()_45]] - code - archive/experimental_models/vit_tcnet.py
+- [[.__init__()_46]] - code - archive/experimental_models/data_augmentation.py
+- [[.__init__()_47]] - code - archive/experimental_models/data_augmentation.py
+- [[.__init__()_48]] - code - archive/experimental_models/data_augmentation.py
+- [[.__init__()_49]] - code - archive/experimental_models/data_augmentation.py
+- [[.__init__()_50]] - code - archive/experimental_models/data_augmentation.py
+- [[.__init__()_51]] - code - archive/experimental_models/data_augmentation.py
+- [[.__init__()_52]] - code - archive/experimental_models/data_augmentation.py
+- [[.__len__()_6]] - code - archive/v1_v8_attempts/run_training_v4.py
+- [[.extract()]] - code - archive/experimental_models/wavelet_features.py
+- [[.extract()_1]] - code - archive/experimental_models/pac_features.py
+- [[.extract()_2]] - code - archive/experimental_models/spectral_features.py
+- [[.extract_torch()]] - code - archive/experimental_models/spectral_features.py
+- [[.forward()_20]] - code - archive/experimental_models/vit_tcnet.py
+- [[.forward()_21]] - code - archive/experimental_models/vit_tcnet.py
+- [[.forward()_22]] - code - archive/experimental_models/vit_tcnet.py
+- [[.forward()_23]] - code - archive/experimental_models/vit_tcnet.py
+- [[.forward()_24]] - code - archive/experimental_models/vit_tcnet.py
+- [[Add Gaussian noise to simulate measurement noise.]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Add rolling mean and std features.]] - rationale - archive/v1_v8_attempts/run_v6_optimized.py
+- [[AddGaussianNoise]] - code - archive/experimental_models/data_augmentation.py
+- [[Args             eeg (batch, 1, n_channels, n_samples) - Raw EEG             s]] - rationale - archive/experimental_models/vit_tcnet.py
+- [[Args             max_shift Maximum shift in samples (±100ms at 250Hz)]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Args             p Probability of dropping each channel]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Args             sigma Standard deviation of magnitude changes]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Args             sigma Standard deviation of warping strength]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Args             std Standard deviation of noise (relative to signal)]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Args             time_warp Enable time warping             magnitude_warp Ena]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Args             x (batch, 1, n_channels, n_samples)          Returns]] - rationale - archive/experimental_models/vit_tcnet.py
+- [[Args             x (batch, channels, seq_len)          Returns             ou]] - rationale - archive/experimental_models/vit_tcnet.py
+- [[Args             x (batch, n_inputs, seq_len)          Returns             ou]] - rationale - archive/experimental_models/vit_tcnet.py
+- [[Args             x (batch, n_inputs, seq_len)          Returns             ou_1]] - rationale - archive/experimental_models/vit_tcnet.py
+- [[Args             x EEG data (n_channels, n_samples)          Returns]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Args             x EEG data (n_channels, n_samples)          Returns_1]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Args             x EEG data (n_channels, n_samples)          Returns_2]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Args             x EEG data (n_channels, n_samples)          Returns_3]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Args             x EEG data (n_channels, n_samples)          Returns_4]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Args             x EEG data (n_channels, n_samples)          Returns_5]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Bandpass filter using Butterworth filter.]] - rationale - archive/experimental_models/pac_features.py
+- [[Batch processor for wavelet feature extraction.]] - rationale - archive/experimental_models/wavelet_features.py
+- [[ChannelDropout]] - code - archive/experimental_models/data_augmentation.py
+- [[Complete augmentation pipeline for EEG data.]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Compose]] - code - archive/experimental_models/data_augmentation.py
+- [[Compose multiple augmentations together.]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Compute Continuous Wavelet Transform features for theta-gamma PAC.      Args]] - rationale - archive/experimental_models/wavelet_features.py
+- [[Compute PAC-specific features from phase and amplitude.      Args         ph]] - rationale - archive/experimental_models/spectral_features.py
+- [[Compute Phase-Amplitude Coupling directly.      This is the Modulation Index (MI]] - rationale - archive/experimental_models/pac_features.py
+- [[Compute Phase-Locking Value (PLV) between all channel pairs.      Args]] - rationale - archive/experimental_models/pac_features.py
+- [[Compute Phase-Locking Value (PLV) between two phase time series.      PLV measur]] - rationale - archive/experimental_models/pac_features.py
+- [[Compute Wavelet Packet Decomposition features.      WPD provides a complete deco]] - rationale - archive/experimental_models/wavelet_features.py
+- [[Compute correlation between theta phase and gamma amplitude.      Alternative PA]] - rationale - archive/experimental_models/pac_features.py
+- [[Compute phase synchronization index between theta and gamma bands.      Measures]] - rationale - archive/experimental_models/wavelet_features.py
+- [[Compute the preferred theta phase for maximum gamma amplitude.      Args]] - rationale - archive/experimental_models/pac_features.py
+- [[Convert EEG data to image-like representation for ViT.      Maps (batch, 1, n_ch]] - rationale - archive/experimental_models/vit_tcnet.py
+- [[Count trainable parameters._1]] - rationale - archive/experimental_models/vit_tcnet.py
+- [[Critical audit Check if spectral features include target PAC]] - rationale - archive/diagnostics/audit_leakage.py
+- [[Dataset with raw EEG, spectral features, and wavelet features.     Includes data]] - rationale - archive/v1_v8_attempts/run_training_v4.py
+- [[Diagnostic Analysis for V4 ViT-TCNet Failure  This script investigates why the m]] - rationale - archive/diagnostics/diagnostic_analysis.py
+- [[EEGAugmentation]] - code - archive/experimental_models/data_augmentation.py
+- [[EEGDatasetV4]] - code - archive/v1_v8_attempts/run_training_v4.py
+- [[EEGToImage]] - code - archive/experimental_models/vit_tcnet.py
+- [[Enhanced Features + Ridge Model (V5)  Combines original features (135) with PAC-]] - rationale - archive/v1_v8_attempts/run_enhanced_features.py
+- [[Evaluate on validationtest set._1]] - rationale - archive/v1_v8_attempts/run_training_v4.py
+- [[Extract PAC features from batch of EEG windows.          Args             eeg_b]] - rationale - archive/experimental_models/pac_features.py
+- [[Extract comprehensive PAC-specific features.      Args         eeg (n_channels]] - rationale - archive/experimental_models/pac_features.py
+- [[Extract comprehensive spectral features for PAC prediction.      Args]] - rationale - archive/experimental_models/spectral_features.py
+- [[Extract comprehensive wavelet-based features for PAC prediction.      Args]] - rationale - archive/experimental_models/wavelet_features.py
+- [[Extract features for a batch of EEG windows.          Args             eeg_b]] - rationale - archive/experimental_models/spectral_features.py
+- [[Extract features from PyTorch tensor.          Args             eeg_batch (]] - rationale - archive/experimental_models/spectral_features.py
+- [[Extract instantaneous phase and amplitude using Hilbert transform.      Args]] - rationale - archive/experimental_models/pac_features.py
+- [[Extract phase of low-frequency oscillation and amplitude envelope of high-freque]] - rationale - archive/experimental_models/spectral_features.py
+- [[Extract power in a specific frequency band using Welch's method.      Args]] - rationale - archive/experimental_models/spectral_features.py
+- [[Extract wavelet features for a batch of EEG windows.          Args]] - rationale - archive/experimental_models/wavelet_features.py
+- [[Extracts PAC-specific features from EEG data.      Total features 116 features]] - rationale - archive/experimental_models/pac_features.py
+- [[Hybrid Vision Transformer + Temporal Convolutional Network for PAC prediction.]] - rationale - archive/experimental_models/vit_tcnet.py
+- [[Load processed data and extract both spectral and wavelet features.]] - rationale - archive/v1_v8_attempts/run_training_v4.py
+- [[MagnitudeWarp]] - code - archive/experimental_models/data_augmentation.py
+- [[Negative R² for minimization.]] - rationale - archive/v1_v8_attempts/run_v6_optimized.py
+- [[PAC-Specific Feature Extraction  Direct computation of phase-amplitude coupling]] - rationale - archive/experimental_models/pac_features.py
+- [[PACFeatureExtractor]] - code - archive/experimental_models/pac_features.py
+- [[Randomly drop (zero out) one or more channels.      This makes the model robust]] - rationale - archive/experimental_models/data_augmentation.py
+- [[SEBlock]] - code - archive/experimental_models/vit_tcnet.py
+- [[Shift the signal in time (circular shift).      This makes the model robust to t]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Simple Baseline Models for PAC Prediction  Tests if features are predictive usin]] - rationale - archive/v1_v8_attempts/run_simple_baselines.py
+- [[Simple Diagnostic Analysis - No external ML libraries required  Investigates why]] - rationale - archive/diagnostics/simple_diagnostic.py
+- [[Spectral Feature Extraction for PAC Prediction  Extracts frequency-domain feat]] - rationale - archive/experimental_models/spectral_features.py
+- [[Squeeze-and-Excitation block for channel attention.      Learns to emphasize inf]] - rationale - archive/experimental_models/vit_tcnet.py
+- [[Temporal Convolutional Block with exponential dilation.      Uses residual conne]] - rationale - archive/experimental_models/vit_tcnet.py
+- [[Temporal Convolutional Network with multiple blocks and exponential dilation.]] - rationale - archive/experimental_models/vit_tcnet.py
+- [[TemporalBlock]] - code - archive/experimental_models/vit_tcnet.py
+- [[TemporalConvolutionalNetwork]] - code - archive/experimental_models/vit_tcnet.py
+- [[Test PAC feature extraction.]] - rationale - archive/experimental_models/pac_features.py
+- [[Test the ViT-TCNet architecture.]] - rationale - archive/experimental_models/vit_tcnet.py
+- [[Test the augmentation pipeline.]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Test the spectral feature extraction.]] - rationale - archive/experimental_models/spectral_features.py
+- [[Test the wavelet feature extraction.]] - rationale - archive/experimental_models/wavelet_features.py
+- [[Time-Series Data Augmentation for EEG  Implements augmentation techniques specif]] - rationale - archive/experimental_models/data_augmentation.py
+- [[TimeShift]] - code - archive/experimental_models/data_augmentation.py
+- [[TimeWarp]] - code - archive/experimental_models/data_augmentation.py
+- [[V6 Optimized Ensemble for Maximum Honest Performance  Strategy 1. Feature sele]] - rationale - archive/v1_v8_attempts/run_v6_optimized.py
+- [[ViT-TCNet Vision Transformer + Temporal Convolutional Network for PAC Predictio]] - rationale - archive/experimental_models/vit_tcnet.py
+- [[ViTTCNet]] - code - archive/experimental_models/vit_tcnet.py
+- [[Warp the magnitude (amplitude) of the signal smoothly over time.      This simul]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Warp the time axis by changing the speed of the signal.      This simulates natu]] - rationale - archive/experimental_models/data_augmentation.py
+- [[Wavelet Feature Extraction for Enhanced PAC Prediction  Extracts time-frequency]] - rationale - archive/experimental_models/wavelet_features.py
+- [[WaveletFeatureExtractor]] - code - archive/experimental_models/wavelet_features.py
+- [[add_temporal_features()]] - code - archive/v1_v8_attempts/run_v6_optimized.py
+- [[audit_leakage.py]] - code - archive/diagnostics/audit_leakage.py
+- [[butter_bandpass_filter()]] - code - archive/experimental_models/pac_features.py
+- [[compute_cross_channel_plv()]] - code - archive/experimental_models/pac_features.py
+- [[compute_cwt_features()]] - code - archive/experimental_models/wavelet_features.py
+- [[compute_direct_pac()]] - code - archive/experimental_models/pac_features.py
+- [[compute_instantaneous_phase_amplitude()]] - code - archive/experimental_models/pac_features.py
+- [[compute_pac_features()]] - code - archive/experimental_models/spectral_features.py
+- [[compute_phase_amplitude_correlation()]] - code - archive/experimental_models/pac_features.py
+- [[compute_phase_locking_value()]] - code - archive/experimental_models/pac_features.py
+- [[compute_phase_sync_index()]] - code - archive/experimental_models/wavelet_features.py
+- [[compute_preferred_phase()]] - code - archive/experimental_models/pac_features.py
+- [[compute_r2()_1]] - code - archive/v1_v8_attempts/run_training_v4.py
+- [[compute_wpd_features()]] - code - archive/experimental_models/wavelet_features.py
+- [[count_parameters()_1]] - code - archive/experimental_models/vit_tcnet.py
+- [[data_augmentation.py]] - code - archive/experimental_models/data_augmentation.py
+- [[diagnostic_analysis.py]] - code - archive/diagnostics/diagnostic_analysis.py
+- [[ensemble_loss()]] - code - archive/v1_v8_attempts/run_v6_optimized.py
+- [[evaluate()_2]] - code - archive/v1_v8_attempts/run_training_v4.py
+- [[extract_all_features()]] - code - archive/v1_v8_attempts/run_enhanced_features.py
+- [[extract_all_features()_1]] - code - archive/v1_v8_attempts/run_simple_baselines.py
+- [[extract_all_features()_2]] - code - archive/v1_v8_attempts/run_v6_optimized.py
+- [[extract_all_features()_3]] - code - archive/diagnostics/simple_diagnostic.py
+- [[extract_all_features()_4]] - code - archive/diagnostics/diagnostic_analysis.py
+- [[extract_band_power()]] - code - archive/experimental_models/spectral_features.py
+- [[extract_pac_features()]] - code - archive/experimental_models/pac_features.py
+- [[extract_phase_amplitude()]] - code - archive/experimental_models/spectral_features.py
+- [[extract_spectral_features()_1]] - code - archive/experimental_models/spectral_features.py
+- [[extract_wavelet_features()]] - code - archive/experimental_models/wavelet_features.py
+- [[load_and_preprocess_data()_1]] - code - archive/v1_v8_attempts/run_training_v4.py
+- [[main()_11]] - code - archive/v1_v8_attempts/run_training_v4.py
+- [[pac_features.py]] - code - archive/experimental_models/pac_features.py
+- [[run_enhanced_features.py]] - code - archive/v1_v8_attempts/run_enhanced_features.py
+- [[run_simple_baselines.py]] - code - archive/v1_v8_attempts/run_simple_baselines.py
+- [[run_training_v4.py]] - code - archive/v1_v8_attempts/run_training_v4.py
+- [[run_v6_optimized.py]] - code - archive/v1_v8_attempts/run_v6_optimized.py
+- [[simple_diagnostic.py]] - code - archive/diagnostics/simple_diagnostic.py
+- [[spectral_features.py]] - code - archive/experimental_models/spectral_features.py
+- [[test_augmentation()]] - code - archive/experimental_models/data_augmentation.py
+- [[test_pac_features()]] - code - archive/experimental_models/pac_features.py
+- [[test_spectral_features()]] - code - archive/experimental_models/spectral_features.py
+- [[test_vit_tcnet()]] - code - archive/experimental_models/vit_tcnet.py
+- [[test_wavelet_features()]] - code - archive/experimental_models/wavelet_features.py
+- [[train_epoch()_1]] - code - archive/v1_v8_attempts/run_training_v4.py
+- [[vit_tcnet.py]] - code - archive/experimental_models/vit_tcnet.py
+- [[wavelet_features.py]] - code - archive/experimental_models/wavelet_features.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Archived_Feature_Experiments_(v4)
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 17 edges to [[_COMMUNITY_Multiscale TCN & Features]]
+- 1 edge to [[_COMMUNITY_Archived SpecTempNet V3]]
+
+## Top bridge nodes
+- [[spectral_features.py]] - degree 15, connects to 2 communities
+- [[EEGDatasetV4]] - degree 11, connects to 1 community
+- [[Dataset with raw EEG, spectral features, and wavelet features.     Includes data]] - degree 5, connects to 1 community
+- [[Load processed data and extract both spectral and wavelet features.]] - degree 5, connects to 1 community
+- [[Evaluate on validationtest set._1]] - degree 5, connects to 1 community

@@ -1,0 +1,18 @@
+---
+source_file: "temporal_multiscale/build_multiscale_dataset.py"
+type: "code"
+community: "Community 53"
+location: "L403"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Community_53
+---
+
+# parse_args()
+
+## Connections
+- [[build_multiscale_dataset.py]] - `contains` [EXTRACTED]
+- [[main()_26]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Community_53

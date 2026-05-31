@@ -1,0 +1,17 @@
+---
+source_file: "submission/presentation/02_short_version.md"
+type: "document"
+community: "Controller Results & Judge Prep"
+location: "Expansion modules"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/Controller_Results_&_Judge_Prep
+---
+
+# Expansion Modules for Short Script (Model, PAC, Leakage, Problems, Patients)
+
+## Connections
+- [[Short Accessible Presentation Script (02, Elevator-Expandable)]] - `references` [EXTRACTED]
+
+#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep

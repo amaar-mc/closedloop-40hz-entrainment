@@ -1,0 +1,22 @@
+---
+source_file: "archive/experimental_models/data_augmentation.py"
+type: "code"
+community: "Archived Feature Experiments (v4)"
+location: "L121"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Archived_Feature_Experiments_(v4)
+---
+
+# TimeShift
+
+## Connections
+- [[.__call__()_3]] - `method` [EXTRACTED]
+- [[.__init__()_48]] - `method` [EXTRACTED]
+- [[.__init__()_52]] - `calls` [EXTRACTED]
+- [[Shift the signal in time (circular shift).      This makes the model robust to t]] - `rationale_for` [EXTRACTED]
+- [[data_augmentation.py]] - `contains` [EXTRACTED]
+- [[test_augmentation()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

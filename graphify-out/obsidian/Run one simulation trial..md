@@ -1,0 +1,22 @@
+---
+source_file: "scripts/pipeline/run_tribe_validation.py"
+type: "rationale"
+community: "Closed-Loop Control & Simulator"
+location: "L193"
+tags:
+  - graphify/rationale
+  - graphify/INFERRED
+  - community/Closed-Loop_Control_&_Simulator
+---
+
+# Run one simulation trial.
+
+## Connections
+- [[EntrainmentSimulator]] - `uses` [INFERRED]
+- [[FatigueAwareSimulator]] - `uses` [INFERRED]
+- [[StimAction]] - `uses` [INFERRED]
+- [[TribeEnhancedSimulator]] - `uses` [INFERRED]
+- [[TribeSimulatorConfig]] - `uses` [INFERRED]
+- [[run_trial()_4]] - `rationale_for` [EXTRACTED]
+
+#graphify/rationale #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

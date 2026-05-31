@@ -1,0 +1,305 @@
+---
+type: community
+members: 272
+---
+
+# Models, Streaming & Apps
+
+**Members:** 272 nodes
+
+## Members
+- [[.__enter__()]] - code - src/streaming/adapters.py
+- [[.__init__()_67]] - code - temporal_multiscale/model_registry.py
+- [[.__init__()_68]] - code - temporal_multiscale/model_registry.py
+- [[.__init__()_123]] - code - validation/eegnet_enhanced.py
+- [[.__init__()_124]] - code - validation/eegnet_enhanced.py
+- [[.__init__()_148]] - code - src/eegnet.py
+- [[.__init__()_164]] - code - src/streaming/feature_extractor.py
+- [[.__init__()_165]] - code - src/streaming/adapters.py
+- [[._causal_phase_amplitude()]] - code - src/streaming/feature_extractor.py
+- [[._compute_pac_features()]] - code - src/streaming/feature_extractor.py
+- [[._welch_band()]] - code - src/streaming/feature_extractor.py
+- [[.available()]] - code - temporal_multiscale/model_registry.py
+- [[.close()]] - code - src/streaming/adapters.py
+- [[.forward()_37]] - code - validation/eegnet_enhanced.py
+- [[.forward()_38]] - code - validation/eegnet_enhanced.py
+- [[.forward()_47]] - code - src/eegnet.py
+- [[.get()]] - code - temporal_multiscale/model_registry.py
+- [[.get_feature_maps()]] - code - validation/eegnet_enhanced.py
+- [[.get_feature_maps()_1]] - code - validation/eegnet_enhanced.py
+- [[.get_feature_maps()_2]] - code - src/eegnet.py
+- [[.get_window()]] - code - src/streaming/adapters.py
+- [[.process_window()]] - code - src/streaming/feature_extractor.py
+- [[.register()]] - code - temporal_multiscale/model_registry.py
+- [[.reset()_9]] - code - temporal_multiscale/model_registry.py
+- [[.reset()_10]] - code - temporal_multiscale/model_registry.py
+- [[.reset()_67]] - code - src/streaming/feature_extractor.py
+- [[.step()_8]] - code - temporal_multiscale/model_registry.py
+- [[.step()_9]] - code - temporal_multiscale/model_registry.py
+- [[4-Channel Deployment Limitations (spatial approx, dry electrodes, reference mismatch)]] - document - archive/muse_4ch/CHANNEL_MAPPING.md
+- [[4-Channel Muse 2 Model Retraining Pipeline  Retrains the full EEGNet + TCN pipel]] - rationale - archive/muse_4ch/retrain_pipeline.py
+- [[4-Channel Muse 2 Retraining Pipeline]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[4-channel streaming matches offline within tolerances on windows 5-14.     Retu]] - rationale - tests/test_streaming_parity.py
+- [[40 Hz Click-Train Audio Generator]] - code - apps/neurocare_live.py
+- [[7-Channel Baseline Metrics (EEGNet R²=0.287, TCN val R²=0.411)]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[7-channel streaming matches offline within tolerances on windows 5-14.]] - rationale - tests/test_streaming_parity.py
+- [[AF7 → F7 Proxy (Inferior Frontal Left)]] - document - archive/muse_4ch/CHANNEL_MAPPING.md
+- [[Adapter that wraps RealtimePACForecaster to satisfy the TemporalModel Protocol.]] - rationale - temporal_multiscale/model_registry.py
+- [[Advance the model by one step and return a prediction when ready.          Args]] - rationale - temporal_multiscale/model_registry.py
+- [[Append a session record to the given patient and clear cache.]] - rationale - apps/caregiver_app.py
+- [[Automated end-to-end test for the simulated streaming session.  Runs 25 steps of]] - rationale - tests/test_simulated_session.py
+- [[BIDSDataProcessor Channel Monkey-Patch]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[Bonus register() rejects objects that don't satisfy TemporalModel Protocol.]] - rationale - tests/test_model_registry.py
+- [[Build causal temporal sequences for TCN training.]] - rationale - archive/muse_4ch/retrain_pipeline.py
+- [[Calling process_window() twice with the same input produces different     PAC-st]] - rationale - tests/test_streaming_parity.py
+- [[Clarification Predictive Look-Ahead is Trend-Based Not TCN]] - document - validation/AUDIT_REPORT.md
+- [[Clear all internal rolling state (e.g. after a session break).]] - rationale - temporal_multiscale/model_registry.py
+- [[Clear the rolling buffer in the underlying forecaster.]] - rationale - temporal_multiscale/model_registry.py
+- [[Closed-Loop Stimulation Decision Logic]] - code - apps/neurocare_live.py
+- [[Compact CNN architecture for EEG-based PAC regression.      Architecture]] - rationale - src/eegnet.py
+- [[Compute PAC-structure features identical to offline compute_pac_features().]] - rationale - src/streaming/feature_extractor.py
+- [[Compute aggregate statistics across seeds for each metric.      Computes mean,]] - rationale - validation/multi_seed_training.py
+- [[Compute band power per channel using Welch's method.          This is Welch-base]] - rationale - src/streaming/feature_extractor.py
+- [[Compute spectral features (37-dim) for each window in each split.]] - rationale - archive/muse_4ch/retrain_pipeline.py
+- [[Compute spectral features from sequential 2-second EEG windows.      Uses causal]] - rationale - src/streaming/feature_extractor.py
+- [[Compute the feature vector for a single 2-second EEG window.          The filter]] - rationale - src/streaming/feature_extractor.py
+- [[Convert raw PAC to 0-100 Brain Sync Level for caregiver display.]] - rationale - apps/caregiver_app.py
+- [[Count number of trainable parameters in model.      Args         model PyTo]] - rationale - validation/eegnet_enhanced.py
+- [[Count number of trainable parameters in model.      Args         model PyTo_1]] - rationale - src/eegnet.py
+- [[Create a DataLoader from numpy arrays.      Args         windows EEG window]] - rationale - validation/multi_seed_training.py
+- [[Create trainvaltest splits by subject with a given random seed.      Ensures]] - rationale - validation/multi_seed_training.py
+- [[Critical Finding Validation Does Not Test Trained TCN]] - document - validation/AUDIT_REPORT.md
+- [[Delegate to RealtimePACForecaster.step() with fixed cycle-phase defaults.]] - rationale - temporal_multiscale/model_registry.py
+- [[EEGNet_1]] - code - src/eegnet.py
+- [[EEGNet (4-channel, caregiver app)]] - code - apps/caregiver_app.py
+- [[EEGNet 4-Channel Checkpoint (best_eegnet_4ch.pth)]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[EEGNet Architecture for PAC Prediction  Implements compact convolutional neura]] - rationale - src/eegnet.py
+- [[EEGNetEnhanced]] - code - validation/eegnet_enhanced.py
+- [[EEGNetEnhanced (~35K params, 24x original)]] - code - validation/eegnet_enhanced.py
+- [[EEGNetLarge]] - code - validation/eegnet_enhanced.py
+- [[EEGNetLarge (~141K params, 97x original)]] - code - validation/eegnet_enhanced.py
+- [[End-to-end streaming inference demo for closed-loop 40 Hz entrainment.  Runs the]] - rationale - scripts/tools/demo_streaming.py
+- [[Enhanced EEGNet Architectures for PAC Prediction Capacity Experiments  Tests w]] - rationale - validation/eegnet_enhanced.py
+- [[Enhanced EEGNet with increased capacity (~35K parameters, ~24x original).]] - rationale - validation/eegnet_enhanced.py
+- [[Ensure all session-state keys exist with defaults.]] - rationale - apps/caregiver_app.py
+- [[Ensure filtfilt is not imported or used anywhere in srcstreaming.     This is]] - rationale - tests/test_streaming_parity.py
+- [[Entry point — configure page, init state, route to active page.]] - rationale - apps/caregiver_app.py
+- [[Extract intermediate feature maps for visualization.          Args]] - rationale - validation/eegnet_enhanced.py
+- [[Extract intermediate feature maps for visualization.          Args_1]] - rationale - validation/eegnet_enhanced.py
+- [[Extract intermediate feature maps for visualization.          Args_2]] - rationale - src/eegnet.py
+- [[Extract theta instantaneous phase and gamma amplitude envelope         using cau]] - rationale - src/streaming/feature_extractor.py
+- [[Factory that returns a ModelRegistry with the 4-channel TCN pre-registered.]] - rationale - temporal_multiscale/model_registry.py
+- [[Feature Dimension Table (7-ch 73 features, 4-ch 49 features)]] - document - archive/muse_4ch/CHANNEL_MAPPING.md
+- [[Forward pass through EEGNet.          Args             x Input EEG tensor o]] - rationale - src/eegnet.py
+- [[Forward pass through EEGNetEnhanced.          Args             x Input EEG]] - rationale - validation/eegnet_enhanced.py
+- [[Forward pass through EEGNetLarge.          Args             x Input EEG ten]] - rationale - validation/eegnet_enhanced.py
+- [[Generate a comparison report 4-channel vs 7-channel models.]] - rationale - archive/muse_4ch/retrain_pipeline.py
+- [[Grid of patient cards with Start Session and View History actions.]] - rationale - apps/caregiver_app.py
+- [[High Finding Cohen's d Mathematically Wrong]] - document - validation/AUDIT_REPORT.md
+- [[High Finding EEGNet Under-Parameterized (~1457 params)]] - document - validation/AUDIT_REPORT.md
+- [[High Finding No Cross-Validation (Single Seed 42 Split)]] - document - validation/AUDIT_REPORT.md
+- [[ImprovedTCN (4ch PAC+Stim model)]] - code - apps/neurocare_live.py
+- [[Instantiate a model by name and move to device.      Args         model_name]] - rationale - validation/multi_seed_training.py
+- [[Key Result TCN R²=0.25 at 5-10s Horizons vs Negative Persistence]] - document - validation/AUDIT_REPORT.md
+- [[Landing page with app title and call-to-action.]] - rationale - apps/caregiver_app.py
+- [[Large EEGNet with ~141K parameters for capacity ceiling experiments.      Key]] - rationale - validation/eegnet_enhanced.py
+- [[Live therapy session with 40 Hz audio, PAC trend, and warmup indicator.      Run]] - rationale - apps/caregiver_app.py
+- [[Load 4-channel EEGNet + TCNTemporalModel. Cached across reruns.      Returns (ee]] - rationale - apps/caregiver_app.py
+- [[Load 4-channel EEGNet from checkpoint.      Returns         model EEGNet in ev]] - rationale - scripts/tools/demo_streaming.py
+- [[Load and concatenate trainvaltest npz splits into a single pool.      The or]] - rationale - validation/multi_seed_training.py
+- [[Load patient profiles from JSON.  Cached until file changes.]] - rationale - apps/caregiver_app.py
+- [[Load raw BIDS data, select F7F8T7T8, preprocess, window, compute PAC.]] - rationale - archive/muse_4ch/retrain_pipeline.py
+- [[Look up a patient by ID from the cached profiles.]] - rationale - apps/caregiver_app.py
+- [[MODEL_REGISTRY – originalenhancedlarge Variants]] - code - validation/multi_seed_training.py
+- [[Map internal metric keys to plain-language labels.]] - rationale - apps/caregiver_app.py
+- [[Model registry for hot-swapping temporal PAC prediction models by name.  Provide]] - rationale - temporal_multiscale/model_registry.py
+- [[ModelRegistry]] - code - temporal_multiscale/model_registry.py
+- [[Multi-Seed Training for Robustness Evaluation  Trains EEGNet variants (origina]] - rationale - validation/multi_seed_training.py
+- [[Muse 2 to ds005048 Channel Mapping]] - document - archive/muse_4ch/CHANNEL_MAPPING.md
+- [[Muse 4-Channel EEGNet Checkpoint (best_eegnet_4ch.pth)]] - code - apps/caregiver_app.py
+- [[Muse 4-Channel TCN Checkpoint (best_multiscale_tcn_4ch_lb20_hz5_ts1.pth)]] - code - apps/caregiver_app.py
+- [[Muse 4-Channel TCN Checkpoint (best_pac_stim_tcn_4ch.pth)]] - code - apps/neurocare_live.py
+- [[Muse Proxy Channels (F7, F8, T7, T8)]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[Name-keyed registry for TemporalModel instances.      Models are validated at re]] - rationale - temporal_multiscale/model_registry.py
+- [[NeuroCare 40Hz Live Mission Control v5]] - code - apps/neurocare_live.py
+- [[NeuroCare 40Hz Therapy — Caregiver Dashboard  Multi-page Streamlit app for careg]] - rationale - apps/caregiver_app.py
+- [[NeuroCare Caregiver Dashboard (Multi-page Streamlit)]] - code - apps/caregiver_app.py
+- [[One second of 40 Hz click-train, loopable WAV bytes for st.audio.]] - rationale - apps/caregiver_app.py
+- [[PAC Computer (Tort 2010 MI)]] - code - apps/neurocare_live.py
+- [[Parity verification StreamingFeatureExtractor vs offline extract_spectral_featu]] - rationale - tests/test_streaming_parity.py
+- [[Passing (3, 500) to a 4-channel extractor raises an assertion or ValueError.]] - rationale - tests/test_streaming_parity.py
+- [[Patient Profiles JSON Store]] - code - apps/caregiver_app.py
+- [[Per-patient session history table and summary metrics.]] - rationale - apps/caregiver_app.py
+- [[Persistent sidebar with hardware status, Real EEG toggle, and navigation.]] - rationale - apps/caregiver_app.py
+- [[Post-session summary with plain-language metrics and session saving.]] - rationale - apps/caregiver_app.py
+- [[Print PASSFAIL and return the boolean result.]] - rationale - tests/test_simulated_session.py
+- [[Print per-layer parameter counts for a model.      Args         model PyTor]] - rationale - validation/eegnet_enhanced.py
+- [[Protocol]] - code
+- [[Protocol that every temporal PAC predictor must satisfy.      All methods are ca]] - rationale - temporal_multiscale/model_registry.py
+- [[Rationale Capacity Scaling to Test Performance Ceiling Hypothesis]] - code - validation/eegnet_enhanced.py
+- [[Rationale Domain Gap Between Lab and Consumer EEG]] - document - archive/muse_4ch/CHANNEL_MAPPING.md
+- [[Rationale PAC Labels Not Directly Comparable Across Channel Sets]] - document - archive/muse_4ch/CHANNEL_MAPPING.md
+- [[Rationale R²=0.287 Is Data Limitation Not Model Bottleneck]] - document - validation/AUDIT_REPORT.md
+- [[Reactive z-score stimulus decision with hysteresis hold.      Args         pac_]] - rationale - scripts/tools/demo_streaming.py
+- [[Real EEG Adapter (Muse 2 BLE)]] - code - apps/neurocare_live.py
+- [[Register a model under a name.          Args             name Lookup key (e.g.]] - rationale - temporal_multiscale/model_registry.py
+- [[Retrieve a registered model by name.          Args             name The regist]] - rationale - temporal_multiscale/model_registry.py
+- [[Return 'mps' if available, else 'cuda' if available, else 'cpu'.]] - rationale - scripts/tools/demo_streaming.py
+- [[Return (n_windows, n_channels, 500) synthetic EEG windows.]] - rationale - tests/test_streaming_parity.py
+- [[Return dict of feature slice indices by component.]] - rationale - tests/test_streaming_parity.py
+- [[Return sorted list of registered model names.]] - rationale - temporal_multiscale/model_registry.py
+- [[Rigorous Pipeline Audit Report]] - document - validation/AUDIT_REPORT.md
+- [[Run EEGNet on a (n_channels, 500) window and return denormalised PAC.      Args]] - rationale - scripts/tools/demo_streaming.py
+- [[Run EEGNet on one window and return denormalised PAC.]] - rationale - tests/test_simulated_session.py
+- [[Run all architecture tests and print comparative summary.]] - rationale - validation/eegnet_enhanced.py
+- [[Run all checks for a 25-step simulated session.      Returns         0 if all c]] - rationale - tests/test_simulated_session.py
+- [[Run multi-seed training experiment.]] - rationale - validation/multi_seed_training.py
+- [[Scientific Justification for 4-Channel Selection]] - document - archive/muse_4ch/CHANNEL_MAPPING.md
+- [[Set the active page in session state.]] - rationale - apps/caregiver_app.py
+- [[Simulated EEG Adapter]] - code - apps/caregiver_app.py
+- [[Simulated EEG source using BrainFlow SYNTHETIC_BOARD.      Creates a BrainFlow b]] - rationale - src/streaming/adapters.py
+- [[SimulatedEEGAdapter]] - code - src/streaming/adapters.py
+- [[SimulatedEEGAdapter (Demo Streaming)]] - code - scripts/tools/demo_streaming.py
+- [[Sleep 2 seconds and return one (n_channels, 500) float32 EEG window.          Sl]] - rationale - src/streaming/adapters.py
+- [[Step 3 Build Multiscale Temporal Dataset (49 features)]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[Stop stream and release BrainFlow session.]] - rationale - src/streaming/adapters.py
+- [[Streaming Feature Extractor]] - code - apps/caregiver_app.py
+- [[Streaming spectral feature extractor for closed-loop EEG inference.  Computes th]] - rationale - src/streaming/feature_extractor.py
+- [[StreamingFeatureExtractor]] - code - src/streaming/feature_extractor.py
+- [[StreamingFeatureExtractor (Demo Streaming)]] - code - scripts/tools/demo_streaming.py
+- [[StreamingFeatureExtractor(n_channels=4) produces (37,) output.]] - rationale - tests/test_streaming_parity.py
+- [[StreamingFeatureExtractor(n_channels=7) produces (61,) output.]] - rationale - tests/test_streaming_parity.py
+- [[TCNTemporalModel]] - code - temporal_multiscale/model_registry.py
+- [[TCNTemporalModel (model_registry wrapper)]] - code - apps/caregiver_app.py
+- [[TP9 → T7 Proxy (Temporal Left  Auditory Cortex)]] - document - archive/muse_4ch/CHANNEL_MAPPING.md
+- [[TemporalModel]] - code - temporal_multiscale/model_registry.py
+- [[Test 1 ModelRegistry registers and retrieves a TCN model by name.]] - rationale - tests/test_model_registry.py
+- [[Test 2 registry.available() lists registered model names.]] - rationale - tests/test_model_registry.py
+- [[Test 3 registry.get('nonexistent') raises KeyError with available model list.]] - rationale - tests/test_model_registry.py
+- [[Test 4 TCNTemporalModel wraps RealtimePACForecaster and exposes stepreset.]] - rationale - tests/test_model_registry.py
+- [[Test 5 step() returns None until lookback windows accumulated, then dict.]] - rationale - tests/test_model_registry.py
+- [[Test 6 isinstance(tcn_model, TemporalModel) returns True.]] - rationale - tests/test_model_registry.py
+- [[Test EEGNet with example input.]] - rationale - src/eegnet.py
+- [[Test EEGNetEnhanced with example input and print architecture details.]] - rationale - validation/eegnet_enhanced.py
+- [[Test EEGNetLarge with example input and print architecture details.]] - rationale - validation/eegnet_enhanced.py
+- [[Tests for temporal_multiscalemodel_registry.py.  Verifies 1. ModelRegistry reg]] - rationale - tests/test_model_registry.py
+- [[Train EEGNet on 4-channel windows for static PAC prediction.]] - rationale - archive/muse_4ch/retrain_pipeline.py
+- [[Train TCN on 4-channel multiscale temporal dataset.]] - rationale - archive/muse_4ch/retrain_pipeline.py
+- [[Train a model for one seed and evaluate on the test split.      Uses Huber los]] - rationale - validation/multi_seed_training.py
+- [[Zero all filter states (restart as if no prior windows seen).]] - rationale - src/streaming/feature_extractor.py
+- [[__init__.py]] - code - src/tribe_v2/__init__.py
+- [[_assert()]] - code - tests/test_model_registry.py
+- [[_feature_slices()]] - code - tests/test_streaming_parity.py
+- [[_get_patient_by_id()]] - code - apps/caregiver_app.py
+- [[_init_session_state()]] - code - apps/caregiver_app.py
+- [[_make_windows()]] - code - tests/test_streaming_parity.py
+- [[_print_layer_params()]] - code - validation/eegnet_enhanced.py
+- [[auto_device()]] - code - scripts/tools/demo_streaming.py
+- [[build_default_registry()]] - code - temporal_multiscale/model_registry.py
+- [[build_default_registry() returns registry with 'tcn' pre-registered.]] - rationale - tests/test_model_registry.py
+- [[caregiver_app.py]] - code - apps/caregiver_app.py
+- [[check()]] - code - tests/test_simulated_session.py
+- [[compute_aggregate_stats()]] - code - validation/multi_seed_training.py
+- [[count_parameters()_3]] - code - validation/eegnet_enhanced.py
+- [[count_parameters()_4]] - code - src/eegnet.py
+- [[create_model()]] - code - validation/multi_seed_training.py
+- [[demo_streaming.py]] - code - scripts/tools/demo_streaming.py
+- [[eegnet.py]] - code - src/eegnet.py
+- [[eegnet_enhanced.py]] - code - validation/eegnet_enhanced.py
+- [[eegnet_predict_pac()]] - code - tests/test_simulated_session.py
+- [[eegnet_predict_pac()_1]] - code - scripts/tools/demo_streaming.py
+- [[feature_dim()]] - code - temporal_multiscale/model_registry.py
+- [[feature_extractor.py]] - code - src/streaming/feature_extractor.py
+- [[format_state()]] - code - scripts/tools/demo_streaming.py
+- [[get_feature_maps() Visualization Hook]] - code - validation/eegnet_enhanced.py
+- [[label()]] - code - apps/caregiver_app.py
+- [[load_all_data()]] - code - validation/multi_seed_training.py
+- [[load_eegnet()]] - code - scripts/tools/demo_streaming.py
+- [[load_models()]] - code - apps/caregiver_app.py
+- [[load_profiles()]] - code - apps/caregiver_app.py
+- [[lookback()]] - code - temporal_multiscale/model_registry.py
+- [[main()_12]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[main()_20]] - code - tests/test_streaming_parity.py
+- [[main()_64]] - code - apps/caregiver_app.py
+- [[main()_66]] - code - validation/multi_seed_training.py
+- [[make_40hz_wav()]] - code - apps/caregiver_app.py
+- [[make_dataloader()]] - code - validation/multi_seed_training.py
+- [[make_decision()]] - code - scripts/tools/demo_streaming.py
+- [[model_registry.py]] - code - temporal_multiscale/model_registry.py
+- [[multi_seed_training.py]] - code - validation/multi_seed_training.py
+- [[n_features property returns 8n_channels + 5.]] - rationale - tests/test_streaming_parity.py
+- [[n_features()]] - code - src/streaming/feature_extractor.py
+- [[navigate()]] - code - apps/caregiver_app.py
+- [[pac_to_display()]] - code - apps/caregiver_app.py
+- [[parse_args()_18]] - code - scripts/tools/demo_streaming.py
+- [[render_patient_history()]] - code - apps/caregiver_app.py
+- [[render_patient_select()]] - code - apps/caregiver_app.py
+- [[render_session()]] - code - apps/caregiver_app.py
+- [[render_sidebar()]] - code - apps/caregiver_app.py
+- [[render_summary()]] - code - apps/caregiver_app.py
+- [[render_welcome()]] - code - apps/caregiver_app.py
+- [[reset() zeroes filter state so subsequent call matches a fresh instance.]] - rationale - tests/test_streaming_parity.py
+- [[retrain_pipeline.py]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[run_demo()]] - code - scripts/tools/demo_streaming.py
+- [[run_tests()]] - code - tests/test_simulated_session.py
+- [[save_session()]] - code - apps/caregiver_app.py
+- [[split_by_subject()]] - code - validation/multi_seed_training.py
+- [[srceegnet.py (EEGNet)]] - code - src/eegnet.py
+- [[srcpersonalization.py (PersonalizationModule)]] - code - src/personalization.py
+- [[srcstreamingadapters.py (SimulatedEEGAdapter)]] - code - src/streaming/adapters.py
+- [[srcstreamingfeature_extractor.py (StreamingFeatureExtractor)]] - code - src/streaming/feature_extractor.py
+- [[step1_process_data()]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[step2_spectral_caches()]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[step3_build_multiscale_dataset()]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[step4_train_eegnet()]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[step5_train_tcn()]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[step6_comparison_report()]] - code - archive/muse_4ch/retrain_pipeline.py
+- [[temporal_multiscalemodel_registry.py (build_default_registry)]] - code - temporal_multiscale/model_registry.py
+- [[test_all()]] - code - validation/eegnet_enhanced.py
+- [[test_build_default_registry()]] - code - tests/test_model_registry.py
+- [[test_eegnet()]] - code - src/eegnet.py
+- [[test_eegnet_enhanced()]] - code - validation/eegnet_enhanced.py
+- [[test_eegnet_large()]] - code - validation/eegnet_enhanced.py
+- [[test_filter_state_persists()]] - code - tests/test_streaming_parity.py
+- [[test_isinstance_temporal_model_protocol()]] - code - tests/test_model_registry.py
+- [[test_model_registry.py]] - code - tests/test_model_registry.py
+- [[test_n_features_property()]] - code - tests/test_streaming_parity.py
+- [[test_no_filtfilt_in_streaming()]] - code - tests/test_streaming_parity.py
+- [[test_output_shape_4ch()]] - code - tests/test_streaming_parity.py
+- [[test_output_shape_7ch()]] - code - tests/test_streaming_parity.py
+- [[test_parity_4ch()]] - code - tests/test_streaming_parity.py
+- [[test_parity_7ch()]] - code - tests/test_streaming_parity.py
+- [[test_registry_available()]] - code - tests/test_model_registry.py
+- [[test_registry_get_nonexistent_raises_key_error()]] - code - tests/test_model_registry.py
+- [[test_registry_register_and_get()]] - code - tests/test_model_registry.py
+- [[test_registry_rejects_non_temporal_model()]] - code - tests/test_model_registry.py
+- [[test_reset_zeroes_state()]] - code - tests/test_streaming_parity.py
+- [[test_simulated_session.py]] - code - tests/test_simulated_session.py
+- [[test_streaming_parity.py]] - code - tests/test_streaming_parity.py
+- [[test_tcn_step_returns_none_then_dict()]] - code - tests/test_model_registry.py
+- [[test_tcn_temporal_model_wraps_forecaster()]] - code - tests/test_model_registry.py
+- [[test_wrong_shape_raises()]] - code - tests/test_streaming_parity.py
+- [[train_single_seed()]] - code - validation/multi_seed_training.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Models,_Streaming_&_Apps
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 43 edges to [[_COMMUNITY_Closed-Loop Control & Simulator]]
+- 17 edges to [[_COMMUNITY_Core Data & PAC Pipeline]]
+- 7 edges to [[_COMMUNITY_Multiscale TCN & Features]]
+- 4 edges to [[_COMMUNITY_Control Strategies & Validation]]
+- 3 edges to [[_COMMUNITY_TRIBE Neural-Mass Simulator]]
+- 2 edges to [[_COMMUNITY_Community 32]]
+- 1 edge to [[_COMMUNITY_Community 91]]
+
+## Top bridge nodes
+- [[EEGNet_1]] - degree 97, connects to 2 communities
+- [[SimulatedEEGAdapter]] - degree 34, connects to 2 communities
+- [[eegnet.py]] - degree 9, connects to 2 communities
+- [[StreamingFeatureExtractor]] - degree 47, connects to 1 community
+- [[TCNTemporalModel]] - degree 33, connects to 1 community

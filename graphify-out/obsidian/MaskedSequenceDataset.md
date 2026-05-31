@@ -1,0 +1,25 @@
+---
+source_file: "results/rigor_audit/run_feature_ablation.py"
+type: "code"
+community: "Multiscale TCN & Features"
+location: "L41"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Multiscale_TCN_&_Features
+---
+
+# MaskedSequenceDataset
+
+## Connections
+- [[.__getitem__()_12]] - `method` [EXTRACTED]
+- [[.__init__()_70]] - `method` [EXTRACTED]
+- [[.__len__()_12]] - `method` [EXTRACTED]
+- [[Dataset]] - `inherits` [EXTRACTED]
+- [[Load multiscale dataset with optional feature column selection.]] - `rationale_for` [EXTRACTED]
+- [[ModelConfig]] - `uses` [INFERRED]
+- [[MultiscaleCausalTCN]] - `uses` [INFERRED]
+- [[run_feature_ablation.py]] - `contains` [EXTRACTED]
+- [[train_subset()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Multiscale_TCN_&_Features

@@ -1,0 +1,24 @@
+---
+source_file: "validation/experiments/tcn_integrated_simulation.py"
+type: "code"
+community: "Closed-Loop Control & Simulator"
+location: "L77"
+tags:
+  - graphify/code
+  - graphify/INFERRED
+  - community/Closed-Loop_Control_&_Simulator
+---
+
+# TrialMetrics
+
+## Connections
+- [[.to_dict()_2]] - `method` [EXTRACTED]
+- [[EntrainmentSimulator]] - `uses` [INFERRED]
+- [[FatigueAwareSimulator]] - `uses` [INFERRED]
+- [[Metrics extracted from a single simulation trial._1]] - `rationale_for` [EXTRACTED]
+- [[RealtimePACForecaster]] - `uses` [INFERRED]
+- [[StimAction]] - `uses` [INFERRED]
+- [[run_single_trial()_2]] - `calls` [EXTRACTED]
+- [[tcn_integrated_simulation.py]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator

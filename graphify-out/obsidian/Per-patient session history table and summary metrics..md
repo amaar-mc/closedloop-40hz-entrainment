@@ -1,0 +1,21 @@
+---
+source_file: "apps/caregiver_app.py"
+type: "rationale"
+community: "Models, Streaming & Apps"
+location: "L252"
+tags:
+  - graphify/rationale
+  - graphify/INFERRED
+  - community/Models,_Streaming_&_Apps
+---
+
+# Per-patient session history table and summary metrics.
+
+## Connections
+- [[EEGNet_1]] - `uses` [INFERRED]
+- [[SimulatedEEGAdapter]] - `uses` [INFERRED]
+- [[StreamingFeatureExtractor]] - `uses` [INFERRED]
+- [[TCNTemporalModel]] - `uses` [INFERRED]
+- [[render_patient_history()]] - `rationale_for` [EXTRACTED]
+
+#graphify/rationale #graphify/INFERRED #community/Models,_Streaming_&_Apps

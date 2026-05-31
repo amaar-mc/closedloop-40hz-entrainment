@@ -1,0 +1,17 @@
+---
+source_file: "submission/presentation/docs/current_methodology.md"
+type: "document"
+community: "Community 30"
+location: "Section 2"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/Community_30
+---
+
+# OpenNeuro ds005048 Dataset (Lahijanian 2024, N=35)
+
+## Connections
+- [[Research Objective Predictive Closed-Loop PAC Forecasting]] - `references` [EXTRACTED]
+
+#graphify/document #graphify/EXTRACTED #community/Community_30

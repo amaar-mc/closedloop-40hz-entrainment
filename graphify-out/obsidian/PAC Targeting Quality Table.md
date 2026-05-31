@@ -1,0 +1,17 @@
+---
+source_file: "archive/context/results.md"
+type: "document"
+community: "Community 89"
+location: "Section 4"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/Community_89
+---
+
+# PAC Targeting Quality Table
+
+## Connections
+- [[Controller Comparison Results (N=35 Real EEG)]] - `references` [EXTRACTED]
+
+#graphify/document #graphify/EXTRACTED #community/Community_89

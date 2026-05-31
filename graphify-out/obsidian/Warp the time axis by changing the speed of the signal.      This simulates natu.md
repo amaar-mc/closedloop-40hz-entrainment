@@ -1,0 +1,17 @@
+---
+source_file: "archive/experimental_models/data_augmentation.py"
+type: "rationale"
+community: "Archived Feature Experiments (v4)"
+location: "L28"
+tags:
+  - graphify/rationale
+  - graphify/EXTRACTED
+  - community/Archived_Feature_Experiments_(v4)
+---
+
+# Warp the time axis by changing the speed of the signal.      This simulates natu
+
+## Connections
+- [[TimeWarp]] - `rationale_for` [EXTRACTED]
+
+#graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

@@ -1,0 +1,23 @@
+---
+source_file: "scripts/pipeline/run_replay_analysis.py"
+type: "code"
+community: "Replay Analysis & Controllers"
+location: "L56"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Replay_Analysis_&_Controllers
+---
+
+# FixedScheduleControl
+
+## Connections
+- [[.__init__()_28]] - `method` [EXTRACTED]
+- [[.reset()]] - `method` [EXTRACTED]
+- [[.step()]] - `method` [EXTRACTED]
+- [[Replays the actual fixed schedule from BIDS events.]] - `rationale_for` [EXTRACTED]
+- [[Replays the actual fixed schedule from BIDS events._1]] - `rationale_for` [EXTRACTED]
+- [[replay_subject()]] - `calls` [EXTRACTED]
+- [[run_replay_analysis.py]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Replay_Analysis_&_Controllers

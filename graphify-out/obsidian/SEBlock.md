@@ -1,0 +1,21 @@
+---
+source_file: "archive/experimental_models/vit_tcnet.py"
+type: "code"
+community: "Archived Feature Experiments (v4)"
+location: "L129"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Archived_Feature_Experiments_(v4)
+---
+
+# SEBlock
+
+## Connections
+- [[.__init__()_43]] - `method` [EXTRACTED]
+- [[.__init__()_45]] - `calls` [EXTRACTED]
+- [[.forward()_22]] - `method` [EXTRACTED]
+- [[Squeeze-and-Excitation block for channel attention.      Learns to emphasize inf]] - `rationale_for` [EXTRACTED]
+- [[vit_tcnet.py]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)

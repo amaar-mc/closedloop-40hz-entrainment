@@ -1,0 +1,17 @@
+---
+source_file: "src/utils.py"
+type: "rationale"
+community: "Community 35"
+location: "L400"
+tags:
+  - graphify/rationale
+  - graphify/EXTRACTED
+  - community/Community_35
+---
+
+# Count trainable parameters in a PyTorch model.      Args:         model: PyTo
+
+## Connections
+- [[count_parameters()_5]] - `rationale_for` [EXTRACTED]
+
+#graphify/rationale #graphify/EXTRACTED #community/Community_35

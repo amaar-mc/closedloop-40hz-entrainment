@@ -1,0 +1,406 @@
+---
+type: community
+members: 370
+---
+
+# Closed-Loop Control & Simulator
+
+**Members:** 370 nodes
+
+## Members
+- [[.__init__()_66]] - code - temporal_multiscale/realtime_inference.py
+- [[.__init__()_80]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[.__init__()_81]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[.__init__()_82]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[.__init__()_83]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[.__init__()_100]] - code - scripts/pipeline/run_tribe_validation.py
+- [[.__init__()_101]] - code - scripts/pipeline/run_tribe_validation.py
+- [[.__init__()_102]] - code - scripts/pipeline/run_tribe_validation.py
+- [[.__init__()_103]] - code - scripts/pipeline/run_tribe_validation.py
+- [[.__init__()_112]] - code - apps/demo.py
+- [[.__init__()_113]] - code - apps/demo.py
+- [[.__init__()_114]] - code - apps/demo.py
+- [[.__init__()_115]] - code - apps/demo.py
+- [[.__init__()_116]] - code - apps/demo.py
+- [[.__init__()_117]] - code - apps/demo.py
+- [[.__init__()_138]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.__init__()_139]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.__init__()_140]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.__init__()_141]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.__init__()_142]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.__init__()_146]] - code - src/controller.py
+- [[.__init__()_147]] - code - src/controller.py
+- [[.__init__()_152]] - code - src/personalization.py
+- [[.__init__()_154]] - code - src/simulator.py
+- [[.__init__()_155]] - code - src/simulator.py
+- [[.__init__()_158]] - code - src/validation.py
+- [[.__init__()_159]] - code - src/validation.py
+- [[.__init__()_160]] - code - src/validation.py
+- [[.__init__()_161]] - code - src/validation.py
+- [[.__init__()_162]] - code - src/validation.py
+- [[.__init__()_163]] - code - src/validation.py
+- [[.__str__()]] - code - src/controller.py
+- [[._build_step_feature()]] - code - temporal_multiscale/realtime_inference.py
+- [[._compute_stim_context()]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[._make_decision()]] - code - src/controller.py
+- [[._make_decision()_1]] - code - src/controller.py
+- [[._pac_features()]] - code - temporal_multiscale/realtime_inference.py
+- [[._pac_trend()_1]] - code - src/validation.py
+- [[._trend()_3]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[._trend()_6]] - code - scripts/pipeline/run_tribe_validation.py
+- [[._trend()_7]] - code - apps/demo.py
+- [[.add_method()]] - code - src/validation.py
+- [[.callback()]] - code - apps/demo.py
+- [[.get_baseline_stats()]] - code - src/controller.py
+- [[.get_buffer_contents()]] - code - src/personalization.py
+- [[.get_history()]] - code - src/controller.py
+- [[.get_history()_1]] - code - src/controller.py
+- [[.get_history()_2]] - code - src/simulator.py
+- [[.get_history()_3]] - code - src/simulator.py
+- [[.get_pac_at_step()]] - code - src/simulator.py
+- [[.get_state()]] - code - src/controller.py
+- [[.get_state()_1]] - code - src/simulator.py
+- [[.is_ready()]] - code - src/personalization.py
+- [[.plot_comparison()]] - code - src/validation.py
+- [[.reset()_8]] - code - temporal_multiscale/realtime_inference.py
+- [[.reset()_18]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[.reset()_19]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[.reset()_20]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[.reset()_21]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[.reset()_37]] - code - scripts/pipeline/run_tribe_validation.py
+- [[.reset()_38]] - code - scripts/pipeline/run_tribe_validation.py
+- [[.reset()_39]] - code - scripts/pipeline/run_tribe_validation.py
+- [[.reset()_40]] - code - scripts/pipeline/run_tribe_validation.py
+- [[.reset()_44]] - code - apps/demo.py
+- [[.reset()_45]] - code - apps/demo.py
+- [[.reset()_46]] - code - apps/demo.py
+- [[.reset()_47]] - code - apps/demo.py
+- [[.reset()_48]] - code - apps/demo.py
+- [[.reset()_51]] - code - validation/rigorous_validation.py
+- [[.reset()_53]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.reset()_54]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.reset()_55]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.reset()_56]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.reset()_57]] - code - src/controller.py
+- [[.reset()_58]] - code - src/controller.py
+- [[.reset()_59]] - code - src/personalization.py
+- [[.reset()_61]] - code - src/simulator.py
+- [[.reset()_62]] - code - src/simulator.py
+- [[.reset()_63]] - code - src/validation.py
+- [[.reset()_64]] - code - src/validation.py
+- [[.reset()_65]] - code - src/validation.py
+- [[.reset()_66]] - code - src/validation.py
+- [[.run_all()]] - code - src/validation.py
+- [[.run_simulation()]] - code - src/validation.py
+- [[.start()]] - code - apps/demo.py
+- [[.start()_1]] - code - apps/demo.py
+- [[.statistical_comparison()]] - code - src/validation.py
+- [[.step()_17]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[.step()_18]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[.step()_19]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[.step()_20]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[.step()_36]] - code - scripts/pipeline/run_tribe_validation.py
+- [[.step()_37]] - code - scripts/pipeline/run_tribe_validation.py
+- [[.step()_38]] - code - scripts/pipeline/run_tribe_validation.py
+- [[.step()_39]] - code - scripts/pipeline/run_tribe_validation.py
+- [[.step()_43]] - code - apps/demo.py
+- [[.step()_44]] - code - apps/demo.py
+- [[.step()_45]] - code - apps/demo.py
+- [[.step()_46]] - code - apps/demo.py
+- [[.step()_47]] - code - apps/demo.py
+- [[.step()_50]] - code - validation/rigorous_validation.py
+- [[.step()_57]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.step()_58]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.step()_59]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.step()_60]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.step()_61]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.step()_62]] - code - src/controller.py
+- [[.step()_63]] - code - src/controller.py
+- [[.step()_64]] - code - src/simulator.py
+- [[.step()_65]] - code - src/simulator.py
+- [[.step()_66]] - code - src/validation.py
+- [[.step()_67]] - code - src/validation.py
+- [[.step()_68]] - code - src/validation.py
+- [[.step()_69]] - code - src/validation.py
+- [[.step()_70]] - code - src/validation.py
+- [[.stop()]] - code - apps/demo.py
+- [[.stop()_1]] - code - apps/demo.py
+- [[.to_dict()_2]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[.to_dict()_3]] - code - src/validation.py
+- [[.update()]] - code - src/personalization.py
+- [[40s ON + 20s OFF (standard clinical protocol).]] - rationale - scripts/pipeline/run_closed_loop_demo.py
+- [[40s ON + 20s OFF (standard clinical protocol)._1]] - rationale - apps/demo.py
+- [[Abstract base class for all control strategies.      Subclasses must implement]] - rationale - src/validation.py
+- [[Add control method to comparison.]] - rationale - src/validation.py
+- [[Add new PAC value to the rolling baseline buffer.          Args]] - rationale - src/personalization.py
+- [[Args             tau_rise Base time constant for PAC increase during stimulat]] - rationale - src/simulator.py
+- [[AudioEngine]] - code - apps/demo.py
+- [[Base class for control strategies.]] - rationale - validation/rigorous_validation.py
+- [[Base class for control strategies._1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Brain Entrainment Simulator for Closed-Loop Control Validation  Simulates neur]] - rationale - src/simulator.py
+- [[Check if baseline has sufficient samples for z-score computation.]] - rationale - src/personalization.py
+- [[Clear baseline buffer and statistics cache.          Use this when         -]] - rationale - src/personalization.py
+- [[Closed-Loop Controller for Real-Time PAC-Based Neuromodulation  Implements thr]] - rationale - src/controller.py
+- [[ClosedLoopController]] - code - src/controller.py
+- [[Compact horizontal multi-panel figure for side-by-side comparison.      Plots th]] - rationale - apps/demo.py
+- [[Compare methods using statistical tests on multi-trial data.          Uses acc]] - rationale - src/validation.py
+- [[Compute Hedges' g (bias-corrected Cohen's d).      Uses pooled standard deviat]] - rationale - validation/rigorous_validation.py
+- [[Compute Hedges' g (bias-corrected Cohen's d).      Uses pooled standard deviat_1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Compute bootstrap confidence interval.      Args         data 1-D array of]] - rationale - validation/rigorous_validation.py
+- [[Compute bootstrap confidence interval.      Args         data 1-D array of_1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Compute full statistical analysis suite.      Args         results Dictiona]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Compute full statistical analysis suite.      Args         results {method_]] - rationale - validation/rigorous_validation.py
+- [[Compute per-method summary statistics with bootstrap CIs.      Args]] - rationale - validation/rigorous_validation.py
+- [[Compute per-method summary statistics with bootstrap CIs.      Args_1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Compute recent PAC slope over last k steps (trend fallback).          Uses o]] - rationale - src/validation.py
+- [[Compute stimulation context features from action history.          Returns]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Container for validation metrics.]] - rationale - src/validation.py
+- [[ControlMethodBase_1]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[ControlMethodBase_2]] - code - src/validation.py
+- [[Convert to dictionary.]] - rationale - src/validation.py
+- [[Convert to plain dictionary for JSON serialization.]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Determine action based on fixed schedule.          Args             pac_curr]] - rationale - src/validation.py
+- [[End-to-end closed-loop demo compare control strategies with and without fatigue]] - rationale - scripts/pipeline/run_closed_loop_demo.py
+- [[EntrainmentSimulator]] - code - src/simulator.py
+- [[Execute one control step with look-ahead prediction.          Args]] - rationale - src/controller.py
+- [[Execute one control step.          Processes incoming EEG window and makes sti]] - rationale - src/controller.py
+- [[Extract a single metric from a list of TrialMetrics into an array.]] - rationale - validation/rigorous_validation.py
+- [[Extract a single metric from a list of TrialMetrics.]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Extract tau parameters empirically from experimental data.      Fits exponenti]] - rationale - src/simulator.py
+- [[Fatigue sensitivity sweep how does the advantage of adaptive scheduling grow as]] - rationale - scripts/pipeline/run_fatigue_sensitivity.py
+- [[FatigueAwareSimulator]] - code - src/simulator.py
+- [[Fixed 40 s ON + 20 s OFF schedule (control condition).]] - rationale - validation/rigorous_validation.py
+- [[Fixed 40s ON + 20s OFF schedule (control condition).]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Fixed 40s ON + 20s OFF schedule (control condition)._1]] - rationale - src/validation.py
+- [[FixedScheduleControl_1]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[FixedScheduleControl_3]] - code - scripts/pipeline/run_tribe_validation.py
+- [[FixedScheduleControl_4]] - code - apps/demo.py
+- [[FixedScheduleControl_6]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[FixedScheduleControl_7]] - code - src/validation.py
+- [[Format a value with its 95% CI.]] - rationale - validation/rigorous_validation.py
+- [[Format a value with its 95% CI._1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Generate comparison plots.          Args             output_name Output fil]] - rationale - src/validation.py
+- [[Generate randomized simulator parameters for diverse subjects.      Varies tau]] - rationale - validation/rigorous_validation.py
+- [[Generate randomized simulator parameters for diverse subjects.      Varies tau_1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Get PAC value at specific step.]] - rationale - src/simulator.py
+- [[Get current controller state.          Returns             state Dictionary]] - rationale - src/controller.py
+- [[Get current simulator state.]] - rationale - src/simulator.py
+- [[Get full history of PAC and actions.]] - rationale - src/simulator.py
+- [[Get full history of decisions and measurements.          Returns]] - rationale - src/controller.py
+- [[Get full history of decisions, measurements, and predictions.]] - rationale - src/controller.py
+- [[Get personalization baseline statistics.          Returns             stats]] - rationale - src/controller.py
+- [[Initialize closed-loop controller.          Args             model_path Pat]] - rationale - src/controller.py
+- [[Initialize control method.          Args             name Human-readable na]] - rationale - src/validation.py
+- [[Initialize entrainment simulator.          Args             tau_rise Time c]] - rationale - src/simulator.py
+- [[Initialize fixed schedule.          Args             stim_duration Stimulat]] - rationale - src/validation.py
+- [[Initialize oracle control.          Args             pac_target Target PAC]] - rationale - src/validation.py
+- [[Initialize personalization module.          Args             window_size Nu]] - rationale - src/personalization.py
+- [[Initialize predictive look-ahead controller.          Args             forec]] - rationale - src/controller.py
+- [[Initialize reactive control.          Args             window_size Baseline]] - rationale - src/validation.py
+- [[Initialize validator.          Args             output_dir Directory for sa]] - rationale - src/validation.py
+- [[IntEnum]] - code
+- [[Load a test subject's PAC, spectral features, and stim events.]] - rationale - apps/demo.py
+- [[Load test subject metadata for the subject selector.]] - rationale - apps/demo.py
+- [[Main entry point for validation.]] - rationale - src/validation.py
+- [[Maintains patient-specific baseline statistics and computes z-scores.      The]] - rationale - src/personalization.py
+- [[Make a control decision using TCN forecast.]] - rationale - apps/demo.py
+- [[Make a stimulation decision using look-ahead prediction.          When a TCN f]] - rationale - src/validation.py
+- [[Make a stimulation decision.          Args             pac_current Current]] - rationale - src/validation.py
+- [[Make optimal decision based on perfect information.          Args]] - rationale - src/validation.py
+- [[Make proactive stimulation decision using predicted PAC trajectory.          P]] - rationale - src/controller.py
+- [[Make reactive decision based on current PAC.          Maintains current state]] - rationale - src/validation.py
+- [[Make stimulation decision based on z-score.          Logic             - If]] - rationale - src/controller.py
+- [[Make stimulation decision using TCN look-ahead prediction.          Args]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Metrics extracted from a single simulation trial.]] - rationale - validation/rigorous_validation.py
+- [[Metrics extracted from a single simulation trial._1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Number of history windows required before predictions are produced.]] - rationale - temporal_multiscale/model_registry.py
+- [[Oracle with perfect information (upper bound).]] - rationale - validation/rigorous_validation.py
+- [[Oracle with perfect information (upper bound)._1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Oracle perfect knowledge of optimal PAC (theoretical upper bound).]] - rationale - src/validation.py
+- [[OracleControl_1]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[OracleControl_2]] - code - scripts/pipeline/run_tribe_validation.py
+- [[OracleControl_3]] - code - apps/demo.py
+- [[OracleControl_5]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[OracleControl_6]] - code - src/validation.py
+- [[Parse command-line arguments._1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Perfect knowledge oracle.]] - rationale - scripts/pipeline/run_tribe_validation.py
+- [[Perfect knowledge — stimulate when below target.]] - rationale - scripts/pipeline/run_closed_loop_demo.py
+- [[Perfect knowledge — stimulate when below target._1]] - rationale - apps/demo.py
+- [[Personalization Module for Adaptive Baseline Tracking  Implements rolling wind]] - rationale - src/personalization.py
+- [[PersonalizationModule]] - code - src/personalization.py
+- [[Plot Alzheimer's disease severity sweep results.]] - rationale - scripts/pipeline/run_tribe_validation.py
+- [[Plot original vs TRIBE V2-enhanced simulation comparison.]] - rationale - scripts/pipeline/run_tribe_validation.py
+- [[Predictive closed-loop controller using a trained TCN to forecast     future PA]] - rationale - src/controller.py
+- [[Predictive control using the trained MultiscaleCausalTCN.      Wraps the Realt]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Predictive look-ahead control for proactive stimulation scheduling.      When]] - rationale - src/validation.py
+- [[PredictiveLookAheadControl_1]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[PredictiveLookAheadControl_3]] - code - scripts/pipeline/run_tribe_validation.py
+- [[PredictiveLookAheadControl_4]] - code - apps/demo.py
+- [[PredictiveLookAheadControl_6]] - code - src/validation.py
+- [[PredictiveLookAheadControl (Trend-Based Controller)]] - code - scripts/pipeline/run_tribe_validation.py
+- [[PredictiveLookAheadController]] - code - src/controller.py
+- [[Print Hedges' g for Predictive vs Fixed across all metrics.]] - rationale - validation/rigorous_validation.py
+- [[Print Hedges' g for TCN-Predictive vs all other methods.]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Print a formatted summary table to stdout.]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Print a nicely formatted summary table to stdout.]] - rationale - validation/rigorous_validation.py
+- [[Print comparison summary table and return summary dict.]] - rationale - scripts/pipeline/run_closed_loop_demo.py
+- [[Print fatigue sweep efficiency comparison.]] - rationale - validation/rigorous_validation.py
+- [[Print pairwise Wilcoxon p-values.]] - rationale - validation/rigorous_validation.py
+- [[Print pairwise Wilcoxon p-values._1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Produces 40 Hz click-train audio during stimulation periods.]] - rationale - apps/demo.py
+- [[Reactive control based on current PAC vs. baseline with hysteresis.]] - rationale - src/validation.py
+- [[Reactive z-score-based control with rolling baseline.]] - rationale - validation/rigorous_validation.py
+- [[Reactive z-score-based control with rolling baseline._1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[ReactiveThresholdControl_1]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[ReactiveThresholdControl_2]] - code - scripts/pipeline/run_tribe_validation.py
+- [[ReactiveThresholdControl_3]] - code - apps/demo.py
+- [[ReactiveThresholdControl_4]] - code - validation/rigorous_validation.py
+- [[ReactiveThresholdControl_5]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[ReactiveThresholdControl_6]] - code - src/validation.py
+- [[Real-Time Closed-Loop 40 Hz Entrainment Demo — Real EEG Data  Interactive Stream]] - rationale - apps/demo.py
+- [[Real-time closed-loop controller for adaptive neuromodulation.      Integrates]] - rationale - src/controller.py
+- [[RealtimePACForecaster]] - code - temporal_multiscale/realtime_inference.py
+- [[Recursively convert numpy types and dataclasses for JSON.]] - rationale - validation/rigorous_validation.py
+- [[Recursively convert numpy types and dataclasses for JSON._1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Reset baseline buffer and state.]] - rationale - src/validation.py
+- [[Reset controller and forecaster for a new session.]] - rationale - src/controller.py
+- [[Reset controller and forecaster for a new trial.]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Reset controller for new session.          Clears all state, baseline, and his]] - rationale - src/controller.py
+- [[Reset method state for a new trial.]] - rationale - src/validation.py
+- [[Reset simulator to initial state.]] - rationale - src/simulator.py
+- [[Reset simulator to initial state.          Args             initial_pac Ini]] - rationale - src/simulator.py
+- [[Reset state for a new trial.]] - rationale - validation/rigorous_validation.py
+- [[Reset state for a new trial._1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Reset state for a new trial._2]] - rationale - src/validation.py
+- [[Reset to start of cycle.]] - rationale - src/validation.py
+- [[Return 0 (REST) or 1 (STIMULATE).]] - rationale - validation/rigorous_validation.py
+- [[Return 0 (REST) or 1 (STIMULATE)._1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Return copy of current baseline buffer contents.          Returns]] - rationale - src/personalization.py
+- [[Rigorous Statistical Validation of Closed-Loop 40Hz Entrainment Control Strategi]] - rationale - validation/rigorous_validation.py
+- [[Run Predictive controller across all disease severities.]] - rationale - scripts/pipeline/run_tribe_validation.py
+- [[Run Wilcoxon signed-rank tests for all pairs of methods.      Args         d]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Run Wilcoxon signed-rank tests for all pairs of methods.      The Wilcoxon sig]] - rationale - validation/rigorous_validation.py
+- [[Run all methods for a scenario and print results.]] - rationale - scripts/pipeline/run_closed_loop_demo.py
+- [[Run all methods multiple times with matched noise per trial.          Each tri]] - rationale - src/validation.py
+- [[Run comprehensive simulator tests.]] - rationale - src/simulator.py
+- [[Run methods on both simulation backends.]] - rationale - scripts/pipeline/run_tribe_validation.py
+- [[Run n_trials for each method with reproducible seeds.      Args         meth]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Run n_trials for each method, accumulating all results.      Each trial uses a]] - rationale - validation/rigorous_validation.py
+- [[Run one simulation trial and return metrics.      Args         method Contr]] - rationale - validation/rigorous_validation.py
+- [[Run one simulation trial and return metrics.      Args         method Contr_2]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Run one simulation trial for a control method on a given simulator.]] - rationale - scripts/pipeline/run_closed_loop_demo.py
+- [[Run one simulation trial.]] - rationale - scripts/pipeline/run_tribe_validation.py
+- [[Run one trial per subject with randomized simulator parameters.      Args]] - rationale - validation/rigorous_validation.py
+- [[Run one trial per subject with randomized simulator parameters.      Args_1]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Run one-way ANOVA on a metric across all methods.      Passes full arrays (not]] - rationale - validation/rigorous_validation.py
+- [[Run simulation for a single control method.          Seeds the RNG before each]] - rationale - src/validation.py
+- [[Run the full TCN-integrated simulation validation.]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[Run the full rigorous validation pipeline.]] - rationale - validation/rigorous_validation.py
+- [[Run trial batches at each fatigue rate.      Args         methods Control m]] - rationale - validation/rigorous_validation.py
+- [[Simulate one time step of neural dynamics.          Updates PAC based on actio]] - rationale - src/simulator.py
+- [[Simulate one time step with fatigue dynamics.]] - rationale - src/simulator.py
+- [[Simulates brain PAC dynamics in response to stimulation.      Uses exponential]] - rationale - src/simulator.py
+- [[SimulationValidator]] - code - src/validation.py
+- [[Simulator with neural habituation  synaptic fatigue dynamics.      Continuous]] - rationale - src/simulator.py
+- [[StimAction]] - code - src/simulator.py
+- [[StimState]] - code - src/controller.py
+- [[Stimulation state enumeration.      Values         STIMULATE = 1 Active 40]] - rationale - src/controller.py
+- [[Stub when sounddevice is unavailable.]] - rationale - apps/demo.py
+- [[TCN-Integrated Closed-Loop Simulation Validation.  Integrates the trained Mult]] - rationale - validation/experiments/tcn_integrated_simulation.py
+- [[TCN-based predictive controller using the trained causal forecaster.      Uses t]] - rationale - apps/demo.py
+- [[TCNController]] - code - apps/demo.py
+- [[TCNPredictiveControl]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[TRIBE V2 Closed-Loop Validation Script (Backend Comparison)]] - code - scripts/pipeline/run_tribe_validation.py
+- [[TRIBE V2-Enhanced Closed-Loop Validation  Compares control strategies across two]] - rationale - scripts/pipeline/run_tribe_validation.py
+- [[Test controller with synthetic EEG and simulated PAC.]] - rationale - src/controller.py
+- [[Total feature vector length (spectral + PAC-derived + stim context).]] - rationale - temporal_multiscale/model_registry.py
+- [[Trend-based look-ahead controller with hysteresis.]] - rationale - scripts/pipeline/run_closed_loop_demo.py
+- [[Trend-based look-ahead controller with hysteresis._1]] - rationale - apps/demo.py
+- [[Trend-based look-ahead with hysteresis.]] - rationale - scripts/pipeline/run_tribe_validation.py
+- [[Trend-based predictive look-ahead with hysteresis.      Uses linear regression]] - rationale - validation/rigorous_validation.py
+- [[TrialMetrics_1]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[TrialMetrics Dataclass (Per-Trial Simulation Metrics)]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[Validate simulator dynamics with test cases.]] - rationale - src/simulator.py
+- [[Validates and compares control strategies using simulation.      Workflow]] - rationale - src/validation.py
+- [[Validation and Comparison Framework for Closed-Loop Control Strategies.  Compa]] - rationale - src/validation.py
+- [[ValidationMetrics]] - code - src/validation.py
+- [[Whether a trained TCN forecaster is available.]] - rationale - src/validation.py
+- [[Z-score reactive controller with hysteresis — maintains state in dead zone.]] - rationale - scripts/pipeline/run_closed_loop_demo.py
+- [[Z-score reactive controller — stimulates when PAC drops below threshold.]] - rationale - apps/demo.py
+- [[Z-score reactive with hysteresis.]] - rationale - scripts/pipeline/run_tribe_validation.py
+- [[_NoOpAudioEngine]] - code - apps/demo.py
+- [[_build_figure()]] - code - apps/demo.py
+- [[_fmt_ci()_1]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[_make_serializable()_1]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[bootstrap_ci()_1]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[compute_all_statistics()_1]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[compute_summary_stats()_1]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[controller.py]] - code - src/controller.py
+- [[demo.py]] - code - apps/demo.py
+- [[extract_metric_array()_1]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[extract_tau_parameters_from_data()]] - code - src/simulator.py
+- [[generate_subject_parameters()_1]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[has_forecaster()]] - code - src/validation.py
+- [[hedges_g()_6]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[load_subject_data()]] - code - apps/demo.py
+- [[load_test_subjects()]] - code - apps/demo.py
+- [[main()_40]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[main()_46]] - code - scripts/pipeline/run_tribe_validation.py
+- [[main()_63]] - code - apps/demo.py
+- [[main()_70]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[main()_78]] - code - src/validation.py
+- [[pairwise_wilcoxon()_1]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[parse_args()_15]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[parse_args()_16]] - code - scripts/pipeline/run_tribe_validation.py
+- [[parse_args()_20]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[personalization.py]] - code - src/personalization.py
+- [[plot_backend_comparison()]] - code - scripts/pipeline/run_tribe_validation.py
+- [[plot_disease_sweep()]] - code - scripts/pipeline/run_tribe_validation.py
+- [[print_summary()_2]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[print_summary_table()_2]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[print_tcn_vs_others()]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[print_wilcoxon_table()_1]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[realtime_inference.py]] - code - temporal_multiscale/realtime_inference.py
+- [[run_closed_loop_demo.py]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[run_comparison()]] - code - scripts/pipeline/run_tribe_validation.py
+- [[run_disease_sweep()]] - code - scripts/pipeline/run_tribe_validation.py
+- [[run_population_diverse()_1]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[run_scenario()]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[run_single_trial()_2]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[run_trial()_1]] - code - scripts/pipeline/run_closed_loop_demo.py
+- [[run_trial()_4]] - code - scripts/pipeline/run_tribe_validation.py
+- [[run_trial_batch()_1]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[run_tribe_validation.py]] - code - scripts/pipeline/run_tribe_validation.py
+- [[simulator.py]] - code - src/simulator.py
+- [[step()]] - code - temporal_multiscale/realtime_inference.py
+- [[tcn_integrated_simulation.py]] - code - validation/experiments/tcn_integrated_simulation.py
+- [[test_controller()]] - code - src/controller.py
+- [[test_simulator()]] - code - src/simulator.py
+- [[validate_simulator_dynamics()]] - code - src/simulator.py
+- [[validation.py]] - code - src/validation.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Closed-Loop_Control_&_Simulator
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 76 edges to [[_COMMUNITY_Control Strategies & Validation]]
+- 43 edges to [[_COMMUNITY_Models, Streaming & Apps]]
+- 26 edges to [[_COMMUNITY_TRIBE Neural-Mass Simulator]]
+- 10 edges to [[_COMMUNITY_12-Feature TCN Validation]]
+- 7 edges to [[_COMMUNITY_Community 46]]
+- 6 edges to [[_COMMUNITY_Community 84]]
+- 5 edges to [[_COMMUNITY_Community 62]]
+- 4 edges to [[_COMMUNITY_Multiscale TCN & Features]]
+- 2 edges to [[_COMMUNITY_Community 91]]
+- 1 edge to [[_COMMUNITY_Community 35]]
+
+## Top bridge nodes
+- [[StimAction]] - degree 197, connects to 4 communities
+- [[simulator.py]] - degree 17, connects to 4 communities
+- [[FatigueAwareSimulator]] - degree 142, connects to 2 communities
+- [[RealtimePACForecaster]] - degree 118, connects to 2 communities
+- [[PersonalizationModule]] - degree 37, connects to 2 communities

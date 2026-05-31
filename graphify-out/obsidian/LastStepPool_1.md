@@ -1,0 +1,27 @@
+---
+source_file: "temporal_multiscale/multiscale_tcn.py"
+type: "code"
+community: "Multiscale TCN & Features"
+location: "L76"
+tags:
+  - graphify/code
+  - graphify/INFERRED
+  - community/Multiscale_TCN_&_Features
+---
+
+# LastStepPool
+
+## Connections
+- [[.__init__()_61]] - `calls` [EXTRACTED]
+- [[.forward()_31]] - `method` [EXTRACTED]
+- [[AblationVariant]] - `uses` [INFERRED]
+- [[CausalDSConvBlock with GroupNorm replaced by Identity (ablation).]] - `uses` [INFERRED]
+- [[CausalDSConvBlockNoNorm]] - `uses` [INFERRED]
+- [[MultiscaleCausalTCN using CausalDSConvBlockNoNorm in all blocks.]] - `uses` [INFERRED]
+- [[MultiscaleCausalTCNNoNorm]] - `uses` [INFERRED]
+- [[TCN ablation study quantify contribution of each architectural component.  Trai]] - `uses` [INFERRED]
+- [[Take last timestep from causal TCN output.      For a causal architecture the la_1]] - `rationale_for` [EXTRACTED]
+- [[Train a single variant and return its result dict.]] - `uses` [INFERRED]
+- [[multiscale_tcn.py]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/INFERRED #community/Multiscale_TCN_&_Features

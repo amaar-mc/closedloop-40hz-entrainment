@@ -1,0 +1,18 @@
+---
+source_file: "submission/submission/vfinal_submission.pdf"
+type: "document"
+community: "Community 50"
+location: "Future Directions section"
+tags:
+  - graphify/document
+  - graphify/EXTRACTED
+  - community/Community_50
+---
+
+# Future Directions: Live EEG streaming crossover validation, 60-min habituation capture, reinforcement learning, multi-biomarker
+
+## Connections
+- [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
+- [[Towards Clinical Use Muse 2 headband, $300 total, no GPU, 40Hz audio delivery]] - `conceptually_related_to` [INFERRED]
+
+#graphify/document #graphify/EXTRACTED #community/Community_50
