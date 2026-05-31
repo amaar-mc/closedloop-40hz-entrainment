@@ -17,9 +17,9 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import numpy as np
 
-REPO = Path(__file__).resolve().parent.parent
+REPO = Path(__file__).resolve().parents[2]
 OUT = REPO / "results" / "figures"
-DATA = REPO / "results"
+DATA = REPO / "results" / "metrics"
 
 # ── Unified Publication Style ──────────────────────────────────────────────
 

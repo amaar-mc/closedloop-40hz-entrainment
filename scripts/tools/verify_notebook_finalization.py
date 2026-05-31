@@ -9,13 +9,14 @@ from datetime import datetime
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[1]
-NOTEBOOKS_DIR = ROOT / "notebooks"
+ROOT = Path(__file__).resolve().parents[2]
+ARCHIVE_NOTEBOOKS_DIR = ROOT / "archive" / "notebooks"
+NOTEBOOKS_DIR = ROOT / "submission" / "lab_notebook"
 
-ORIGINAL_MD = NOTEBOOKS_DIR / "P10_Lab_Notebook_V1.md"
-ORIGINAL_PDF = NOTEBOOKS_DIR / "P10_Lab_Notebook_V1.pdf"
-CORRECTED_MD = NOTEBOOKS_DIR / "P10_Lab_Notebook_V2.md"
-CORRECTED_PDF = NOTEBOOKS_DIR / "P10_Lab_Notebook_V2.pdf"
+ORIGINAL_MD = ARCHIVE_NOTEBOOKS_DIR / "P10_Lab_Notebook_V1.md"
+ORIGINAL_PDF = ARCHIVE_NOTEBOOKS_DIR / "P10_Lab_Notebook_V1.pdf"
+CORRECTED_MD = ARCHIVE_NOTEBOOKS_DIR / "P10_Lab_Notebook_V2.md"
+CORRECTED_PDF = ARCHIVE_NOTEBOOKS_DIR / "P10_Lab_Notebook_V2.pdf"
 FINAL_MD = NOTEBOOKS_DIR / "P10_Lab_Notebook_V3.md"
 GENERATOR_PY = NOTEBOOKS_DIR / "generate_notebook_pdf.py"
 
@@ -51,7 +52,7 @@ SECTION_DATE_RE = re.compile(
     re.MULTILINE,
 )
 REPO_PATH_RE = re.compile(
-    r"(?P<path>(?:\.planning|archive|docs|logs|models|notebooks|results|scripts)/[^`\s)\]]+)"
+    r"(?P<path>(?:\.planning|archive|docs|logs|models|results|scripts|submission)/[^`\s)\]]+)"
 )
 
 
