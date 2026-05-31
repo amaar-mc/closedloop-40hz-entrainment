@@ -4,8 +4,6 @@ type: "code"
 community: "TVB Alzheimer Simulator"
 location: "L621"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TVB_Alzheimer_Simulator
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Get current simulator state._2]] - `rationale_for` [EXTRACTED]
 - [[TVBAlzheimerSimulator]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator
+  #community/TVB_Alzheimer_Simulator

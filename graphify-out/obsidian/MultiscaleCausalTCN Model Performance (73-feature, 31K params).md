@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "## 1. TCN Model Performance"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[EEGNet Static PAC Prediction 7ch R2=0.287 vs 4ch R2=0.016]] - `semantically_similar_to` [INFERRED]
 - [[MultiscaleCausalTCN Architecture (causal depthwise-sep, dilations 1,2,4,8)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

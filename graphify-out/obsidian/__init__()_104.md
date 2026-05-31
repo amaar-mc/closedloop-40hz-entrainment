@@ -4,8 +4,6 @@ type: "code"
 community: "TRIBE-TCN Validation"
 location: "L167"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TRIBE-TCN_Validation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[CausalConv1dBlock]] - `method` [EXTRACTED]
 - [[__init__()_108]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TRIBE-TCN_Validation
+  #community/TRIBE-TCN_Validation

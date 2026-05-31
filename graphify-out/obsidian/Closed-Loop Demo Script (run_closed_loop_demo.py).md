@@ -4,8 +4,6 @@ type: "document"
 community: "Community 107"
 location: "line 585"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_107
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Predictive Look-Ahead Strategy (PAC=0.1878, stim=52.1%, eff=5.302)]] - `references` [EXTRACTED]
 - [[Reactive Threshold Strategy (PAC=0.1361, stim=25.4%, eff=6.779)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_107
+  #community/Community_107

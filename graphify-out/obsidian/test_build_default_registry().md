@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "L176"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[build_default_registry() returns registry with 'tcn' pre-registered.]] - `rationale_for` [EXTRACTED]
 - [[test_model_registry.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

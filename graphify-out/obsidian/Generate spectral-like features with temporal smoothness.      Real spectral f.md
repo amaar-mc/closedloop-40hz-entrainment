@@ -4,8 +4,6 @@ type: "rationale"
 community: "Multiscale TCN & Features"
 location: "L141"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[TransformerConfig]] - `uses` [INFERRED]
 - [[_generate_spectral_features()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

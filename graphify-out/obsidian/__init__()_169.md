@@ -4,8 +4,6 @@ type: "code"
 community: "TRIBE Neural-Mass Simulator"
 location: "L121"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[_apply_disease_to_neural_mass()]] - `calls` [EXTRACTED]
 - [[_warmup()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator
+  #community/TRIBE_Neural-Mass_Simulator

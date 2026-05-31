@@ -4,8 +4,6 @@ type: "document"
 community: "Community 41"
 location: "V6 CHANGELOG — Primary Change"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_41
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Key Discovery Callout Box 12-Feature Ablation Narrative]] - `references` [INFERRED]
 - [[Poster Board V6 (PAC+Stim Feature Discovery Update)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Community_41
+  #community/Community_41

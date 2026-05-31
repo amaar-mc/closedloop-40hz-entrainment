@@ -3,8 +3,6 @@ source_file: "submission/abstract/ABSTRACT.md"
 type: "document"
 community: "Community 55"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_55
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Project P10 Personalized Deep Learning for Closed-Loop 40 Hz Entrainment]] - `references` [EXTRACTED]
 - [[Synopsys Championship Submission (Santa Clara County, March 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_55
+  #community/Community_55

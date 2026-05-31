@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Part 1, lines 10-365"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[ML Zero to Hero Educational Guide (Foundations to Causal TCN)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

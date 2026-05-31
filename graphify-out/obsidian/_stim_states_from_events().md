@@ -4,8 +4,6 @@ type: "code"
 community: "Multiscale TCN & Features"
 location: "L114"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[identify_transitions()]] - `calls` [EXTRACTED]
 - [[transition_analysis.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

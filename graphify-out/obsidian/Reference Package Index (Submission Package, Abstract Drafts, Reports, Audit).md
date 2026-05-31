@@ -3,8 +3,6 @@ source_file: "submission/reference/INDEX.md"
 type: "document"
 community: "Research Paper & Manuscript"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Project Achievement Report (Feb 2026) What Was Achieved, Notable, Could Be Better]] - `references` [EXTRACTED]
 - [[Synopsys Championship Winning Analysis (Feb 27, 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

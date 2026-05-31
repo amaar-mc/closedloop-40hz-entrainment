@@ -4,8 +4,6 @@ type: "code"
 community: "TRIBE-TCN Validation"
 location: "L457"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TRIBE-TCN_Validation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[FixedScheduleCtrl_4]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TRIBE-TCN_Validation
+  #community/TRIBE-TCN_Validation

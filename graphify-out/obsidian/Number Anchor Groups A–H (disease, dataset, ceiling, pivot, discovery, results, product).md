@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Step 4"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Final Memorization Guide 9-Beat Spine with Number Anchors]] - `references` [EXTRACTED]
 - [[Numbers Sheet v2 Key Metrics (disease, dataset, pivot story, main results, deployment)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

@@ -4,8 +4,6 @@ type: "document"
 community: "Lab Notebook PDF Generation"
 location: "References section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Phase-Amplitude Coupling (PAC) Biomarker Choice]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

@@ -3,8 +3,6 @@ source_file: "archive/experimental/AUDIT_AND_REPORT.md"
 type: "document"
 community: "Generalization-Gap Experiments"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Multi-Seed Robustness Evaluation (5 seeds on best TCN config)]] - `conceptually_related_to` [INFERRED]
 - [[Rationale Spectral Features Cause Subject-Specific Overfitting]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

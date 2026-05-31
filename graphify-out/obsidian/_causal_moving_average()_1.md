@@ -4,8 +4,6 @@ type: "code"
 community: "Community 53"
 location: "L27"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_53
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[_stim_context_from_events()_1]] - `calls` [EXTRACTED]
 - [[build_multiscale_dataset.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_53
+  #community/Community_53

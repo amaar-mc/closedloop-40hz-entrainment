@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "class StepFunctionSimulator"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[ExponentialDecaySimulator (Fatigue Model 1 Exponential Decay)]] - `semantically_similar_to` [INFERRED]
 - [[create_simulator()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

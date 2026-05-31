@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 2.4"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[MultiscaleCausalTCN Architecture (31,043 params, dilations 1,2,4,8)]] - `shares_data_with` [EXTRACTED]
 - [[Research Paper v3 (Full Manuscript)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

@@ -4,8 +4,6 @@ type: "document"
 community: "Models, Streaming & Apps"
 location: "Mapping table, row 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Muse 2 to ds005048 Channel Mapping]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

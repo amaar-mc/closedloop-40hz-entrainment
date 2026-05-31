@@ -3,8 +3,6 @@ source_file: "submission/abstract/ABSTRACT.md"
 type: "document"
 community: "Community 55"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_55
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Feature Ablation Finding 12-feat (R²=0.606) vs 73-feat (R²=-0.025)]] - `conceptually_related_to` [INFERRED]
 - [[OpenNeuro ds005048 Dataset (35 subjects)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_55
+  #community/Community_55

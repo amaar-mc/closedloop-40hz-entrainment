@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Enhanced-Feature TCN"
 location: "L98"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_Enhanced-Feature_TCN
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[EnhancedSequenceDataset]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_Enhanced-Feature_TCN
+  #community/Archived_Enhanced-Feature_TCN

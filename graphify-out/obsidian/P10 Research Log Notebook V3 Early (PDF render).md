@@ -3,8 +3,6 @@ source_file: "archive/notebooks/P10_Lab_Notebook_V3_early.pdf"
 type: "document"
 community: "Community 95"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_95
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[P10 Research Log Notebook V3 Early (Jan 15 - Mar 1 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_95
+  #community/Community_95

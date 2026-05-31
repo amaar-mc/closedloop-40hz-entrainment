@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "## 5. CSEF Defense Narrative"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[EEGNet Static PAC Prediction 7ch R2=0.287 vs 4ch R2=0.016]] - `references` [EXTRACTED]
 - [[Rationale Why Static Gap Larger Than Temporal Gap]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

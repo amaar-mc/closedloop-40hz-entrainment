@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section V.D: Transformer Architectures"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Temporal Transformer Module for EEG Sequence Modeling]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/07_leakage_audit.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[Temporal Causality Check (target_idx - end_idx == 5, 0 violations)]] - `references` [EXTRACTED]
 - [[Z-Score Scalers Fit on Train Only Verification]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

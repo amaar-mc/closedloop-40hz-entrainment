@@ -4,8 +4,6 @@ type: "code"
 community: "Archived EEGNet V2"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_EEGNet_V2
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[training_v2.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_EEGNet_V2
+  #community/Archived_EEGNet_V2

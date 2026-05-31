@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived Feature Experiments (v4)"
 location: "L225"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Archived_Feature_Experiments_(v4)
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[extract_torch()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)
+  #community/Archived_Feature_Experiments_(v4)

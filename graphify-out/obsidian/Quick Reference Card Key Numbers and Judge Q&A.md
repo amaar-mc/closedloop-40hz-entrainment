@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 9, lines 440-515"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Project Achievement Report (Feb 2026) What Was Achieved, Notable, Could Be Better]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

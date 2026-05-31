@@ -4,8 +4,6 @@ type: "document"
 community: "Poster Boards & Figures"
 location: "lines 221-226"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Hysteresis Correction Note (3s override vs 5s config default)]] - `conceptually_related_to` [INFERRED]
 - [[Poster Board V5 (Condensed, Visual-Forward, Synopsys 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

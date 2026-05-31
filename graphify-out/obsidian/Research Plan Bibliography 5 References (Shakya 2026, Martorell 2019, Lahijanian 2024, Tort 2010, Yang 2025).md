@@ -4,8 +4,6 @@ type: "document"
 community: "Community 132"
 location: "pages 4-5, Bibliography"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_132
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Citation Martorell et al. 2019 — Multi-sensory Gamma Stimulation Ameliorates AD Pathology (Cell)]] - `references` [EXTRACTED]
 - [[Citation Tort et al. 2010 — Measuring Phase-Amplitude Coupling (J Neurophysiol)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_132
+  #community/Community_132

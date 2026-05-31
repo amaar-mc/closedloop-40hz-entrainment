@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 3, lines 152-165"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Architecture Exploration Journey Phase 1 to Phase 3 (V1-V8 Models, Leakage, Pivot)]] - `rationale_for` [EXTRACTED]
 - [[Design Decision Rationale Data, Model, Training, Controller Choices]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

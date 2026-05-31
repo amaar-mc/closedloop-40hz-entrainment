@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L241"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[_make_serializable()]] - `calls` [EXTRACTED]
 - [[main()_65]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 83"
 location: "L98"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_83
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[main()_24]] - `calls` [EXTRACTED]
 - [[make_direction_labels()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_83
+  #community/Community_83

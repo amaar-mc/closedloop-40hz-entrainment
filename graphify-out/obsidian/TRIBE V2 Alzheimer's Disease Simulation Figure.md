@@ -4,8 +4,6 @@ type: "image"
 community: "Community 31"
 location: "page 1"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -27,4 +25,4 @@ tags:
 - [[Sustained Response by Severity - Last 25% of Session (Panel F)]] - `references` [EXTRACTED]
 - [[TRIBE V2 Alzheimer's Disease Simulation Predictive Controller (3-Panel Sweep)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

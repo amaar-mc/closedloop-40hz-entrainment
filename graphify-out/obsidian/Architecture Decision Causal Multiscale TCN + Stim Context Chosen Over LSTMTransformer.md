@@ -4,8 +4,6 @@ type: "document"
 community: "Community 71"
 location: "Section 3-D"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_71
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Target Smoothing Causal Denoised PAC State Achieves R²=0.75 vs Raw R²=0.07]] - `conceptually_related_to` [EXTRACTED]
 - [[temporal_multiscale Module Leakage-Safe Multiscale TCN Pipeline]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_71
+  #community/Community_71

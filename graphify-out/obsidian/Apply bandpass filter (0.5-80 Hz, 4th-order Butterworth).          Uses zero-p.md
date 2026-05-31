@@ -4,8 +4,6 @@ type: "rationale"
 community: "Core Data & PAC Pipeline"
 location: "L104"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Core_Data_&_PAC_Pipeline
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[bandpass_filter()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline
+  #community/Core_Data_&_PAC_Pipeline

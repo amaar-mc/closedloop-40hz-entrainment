@@ -4,8 +4,6 @@ type: "code"
 community: "Community 74"
 location: "L88"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_74
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[_ablation_tests()]] - `calls` [EXTRACTED]
 - [[comprehensive_submission_audit.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_74
+  #community/Community_74

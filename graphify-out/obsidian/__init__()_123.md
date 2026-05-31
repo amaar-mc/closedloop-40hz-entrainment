@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "L70"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[EEGNetEnhanced]] - `method` [EXTRACTED]
 - [[__init__()_124]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

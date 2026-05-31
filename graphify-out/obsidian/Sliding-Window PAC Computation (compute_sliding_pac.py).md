@@ -3,8 +3,6 @@ source_file: "archive/experimental/sliding_pac/compute_sliding_pac.py"
 type: "code"
 community: "Generalization-Gap Experiments"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Sliding-Window PAC Experiment Results (RESULTS.md)]] - `references` [EXTRACTED]
 - [[Tort Modulation Index (Causal Sliding Window)]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 39"
 location: "L88-L123"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_39
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Rationale Causal Convolutions to Prevent Future Leakage]] - `rationale_for` [EXTRACTED]
 - [[Rationale GroupNorm over BatchNorm for Cross-Subject Stability]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_39
+  #community/Community_39

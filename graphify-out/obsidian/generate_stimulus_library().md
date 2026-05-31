@@ -4,8 +4,6 @@ type: "code"
 community: "TRIBE Neural-Mass Simulator"
 location: "L173"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[save_stimulus_wav()]] - `calls` [EXTRACTED]
 - [[stimulus_generator.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator
+  #community/TRIBE_Neural-Mass_Simulator

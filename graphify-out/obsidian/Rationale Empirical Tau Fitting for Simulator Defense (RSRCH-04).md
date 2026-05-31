@@ -4,8 +4,6 @@ type: "document"
 community: "Community 131"
 location: "module docstring"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_131
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Simulator Tau RiseDecay Parameters]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_131
+  #community/Community_131

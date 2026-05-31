@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section 9.2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Comprehensive Literature Review Closed-Loop 40Hz Gamma Entrainment for AD]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

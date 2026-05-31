@@ -4,8 +4,6 @@ type: "document"
 community: "Community 47"
 location: "Section 5.1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_47
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Closed-Loop Feasibility (1ms inference  1Hz budget)]] - `semantically_similar_to` [INFERRED]
 - [[Pipeline Audit Report Multiscale Causal TCN (ts5_clean)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_47
+  #community/Community_47

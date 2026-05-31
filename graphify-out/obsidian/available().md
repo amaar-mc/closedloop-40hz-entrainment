@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "L193"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Return sorted list of registered model names.]] - `rationale_for` [EXTRACTED]
 - [[get()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

@@ -4,8 +4,6 @@ type: "document"
 community: "Poster Boards & Figures"
 location: "Section 4"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Anticipated Judge Q&A Bank (12 Questions with Scripted Answers)]] - `references` [EXTRACTED]
 - [[Architecture Exploration (8 Configurations, R²=0.287 Ceiling)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

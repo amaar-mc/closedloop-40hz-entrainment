@@ -4,8 +4,6 @@ type: "code"
 community: "Closed-Loop Control & Simulator"
 location: "L470"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Closed-Loop_Control_&_Simulator
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Reset controller and forecaster for a new session.]] - `rationale_for` [EXTRACTED]
 - [[reset()_57]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop_Control_&_Simulator

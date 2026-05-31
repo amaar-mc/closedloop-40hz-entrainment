@@ -4,8 +4,6 @@ type: "code"
 community: "TVB Alzheimer Simulator"
 location: "L657"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TVB_Alzheimer_Simulator
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Get the per-region A (excitatory gain) array.]] - `rationale_for` [EXTRACTED]
 - [[TVBAlzheimerSimulator]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator
+  #community/TVB_Alzheimer_Simulator

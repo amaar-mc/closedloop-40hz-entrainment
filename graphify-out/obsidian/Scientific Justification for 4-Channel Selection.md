@@ -4,8 +4,6 @@ type: "document"
 community: "Models, Streaming & Apps"
 location: "Scientific Justification section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Muse 2 to ds005048 Channel Mapping]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

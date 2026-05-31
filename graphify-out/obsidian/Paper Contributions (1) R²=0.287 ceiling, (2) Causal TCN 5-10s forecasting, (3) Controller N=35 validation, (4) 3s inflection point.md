@@ -4,8 +4,6 @@ type: "paper"
 community: "Controller Results & Judge Prep"
 location: "page 4-5 section 1.4"
 tags:
-  - graphify/paper
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Research Paper v3 Abstract 35 subjects, TCN 31K params, R²≈0.25 at 5-10s, 72.1% vs 64.5% alignment, 91% oracle]] - `references` [EXTRACTED]
 
-#graphify/paper #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

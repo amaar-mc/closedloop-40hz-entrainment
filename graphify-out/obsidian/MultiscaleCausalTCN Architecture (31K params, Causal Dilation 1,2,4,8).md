@@ -4,8 +4,6 @@ type: "document"
 community: "Community 40"
 location: "Section 4.2: Temporal PAC Forecasting: MultiscaleCausalTCN"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_40
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[MultiscaleCausalTCN (temporal_multiscalemultiscale_tcn.py, 31K params)]] - `semantically_similar_to` [EXTRACTED]
 - [[Training Configuration (AdamW, Huber Loss, ReduceLROnPlateau, Early Stopping)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_40
+  #community/Community_40

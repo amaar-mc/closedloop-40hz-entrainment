@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 52"
 location: "L113"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_52
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[find_contiguous_segments()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_52
+  #community/Community_52

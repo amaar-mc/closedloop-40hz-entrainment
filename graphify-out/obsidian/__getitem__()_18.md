@@ -4,8 +4,6 @@ type: "code"
 community: "Core Data & PAC Pipeline"
 location: "L87"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Core_Data_&_PAC_Pipeline
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[EEGWindowDataset]] - `method` [EXTRACTED]
 - [[Get single window and its PAC label.          Args             idx Sample i]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline
+  #community/Core_Data_&_PAC_Pipeline

@@ -4,8 +4,6 @@ type: "code"
 community: "TVB Alzheimer Simulator"
 location: "L543"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TVB_Alzheimer_Simulator
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[_run_tvb()]] - `calls` [EXTRACTED]
 - [[reset()_71]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator
+  #community/TVB_Alzheimer_Simulator

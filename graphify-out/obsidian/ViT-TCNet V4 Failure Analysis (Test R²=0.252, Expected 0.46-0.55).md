@@ -3,8 +3,6 @@ source_file: "archive/docs_v1_v8/V4_FAILURE_ANALYSIS.md"
 type: "document"
 community: "Model Ceiling & Leakage Audits"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Model_Ceiling_&_Leakage_Audits
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Domain Mismatch ImageNet Pre-training Does Not Transfer to EEG]] - `references` [EXTRACTED]
 - [[Overparameterization Failure Pattern (ViT-TCNet 1.1M params vs 11k samples)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model_Ceiling_&_Leakage_Audits

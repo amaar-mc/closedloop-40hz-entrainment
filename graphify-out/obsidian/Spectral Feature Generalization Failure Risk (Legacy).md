@@ -4,8 +4,6 @@ type: "document"
 community: "Multiscale TCN & Features"
 location: "temporal_dataset.py:1"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[TemporalPACDataset (PyTorch Dataset)]] - `rationale_for` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L663"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[extract_metric_array()]] - `calls` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 34"
 location: "Section 6"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_34
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Individual Variability in 40Hz Response (30% non-responders)]] - `references` [EXTRACTED]
 - [[Research Gap No Predictive Closed-Loop for 40Hz]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_34
+  #community/Community_34

@@ -4,8 +4,6 @@ type: "rationale"
 community: "Core Data & PAC Pipeline"
 location: "L106"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Core_Data_&_PAC_Pipeline
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[EEGWindowDataset]] - `uses` [INFERRED]
 - [[add_gaussian_noise()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline
+  #community/Core_Data_&_PAC_Pipeline

@@ -3,8 +3,6 @@ source_file: "submission/presentation/reference/key_citations.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Key Citations Reference Sheet (v1, Old)]] - `references` [EXTRACTED]
 - [[Phase-Amplitude Coupling (PAC) as Entrainment Biomarker_1]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

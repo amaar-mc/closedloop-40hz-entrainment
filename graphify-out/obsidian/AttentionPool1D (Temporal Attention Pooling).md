@@ -4,8 +4,6 @@ type: "code"
 community: "Community 60"
 location: "class AttentionPool1D"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[DeepDilationTCN (Dilations 1,2,4,8,16,32, 127-step RF)]] - `calls` [EXTRACTED]
 - [[TransformerTCN (4-layer Causal Transformer Encoder, ~85K params)]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

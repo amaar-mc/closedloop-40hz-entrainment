@@ -4,8 +4,6 @@ type: "code"
 community: "TCN Layer Internals"
 location: "L557"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TCN_Layer_Internals
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[TransformerTCN]] - `method` [EXTRACTED]
 - [[_generate_causal_mask()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TCN_Layer_Internals
+  #community/TCN_Layer_Internals

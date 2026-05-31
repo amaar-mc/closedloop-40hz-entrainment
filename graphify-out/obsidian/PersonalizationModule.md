@@ -4,8 +4,6 @@ type: "code"
 community: "Closed-Loop Control & Simulator"
 location: "L22"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Closed-Loop_Control_&_Simulator
 ---
 
@@ -50,4 +48,4 @@ tags:
 - [[test_personalization()]] - `calls` [EXTRACTED]
 - [[update()]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop_Control_&_Simulator

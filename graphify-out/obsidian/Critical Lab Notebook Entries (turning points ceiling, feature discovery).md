@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Critical Entries to Include"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Lab Notebook Tab Organization System for CSEF Judging]] - `references` [EXTRACTED]
 - [[Spectral Feature Overfitting Discovery (73→12 features)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

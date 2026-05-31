@@ -4,8 +4,6 @@ type: "code"
 community: "Community 74"
 location: "L260"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_74
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[print_summary()_1]] - `calls` [EXTRACTED]
 - [[run_audit()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_74
+  #community/Community_74

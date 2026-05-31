@@ -4,8 +4,6 @@ type: "document"
 community: "Community 73"
 location: "page 10"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_73
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Project Limitations offline replay only, single dataset, short sessions (6-10 min), static PAC ceiling, heuristic thresholds]] - `shares_data_with` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_73
+  #community/Community_73

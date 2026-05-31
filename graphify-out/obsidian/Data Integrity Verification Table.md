@@ -4,8 +4,6 @@ type: "document"
 community: "Community 34"
 location: "Section 8"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_34
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Study Limitations (Offline Replay, Single Dataset)]] - `references` [INFERRED]
 - [[Subject-Level Data Split (No Leakage)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_34
+  #community/Community_34

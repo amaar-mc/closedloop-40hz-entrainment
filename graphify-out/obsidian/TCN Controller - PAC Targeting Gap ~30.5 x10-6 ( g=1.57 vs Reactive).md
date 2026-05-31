@@ -4,8 +4,6 @@ type: "image"
 community: "Community 31"
 location: "TCN bar"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Oracle Controller - PAC Targeting Gap ~33 x10-6 (Upper Bound)]] - `conceptually_related_to` [EXTRACTED]
 - [[PAC Targeting Gap by Controller (Bar Chart)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

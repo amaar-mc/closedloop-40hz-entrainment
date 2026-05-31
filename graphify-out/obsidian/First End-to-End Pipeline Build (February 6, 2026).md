@@ -4,8 +4,6 @@ type: "document"
 community: "Lab Notebook PDF Generation"
 location: "February 6, 2026 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Project P10 Research Log Notebook (VFINAL)]] - `references` [EXTRACTED]
 - [[Rationale Subject-Level Splits to Prevent Patient Data Leakage]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

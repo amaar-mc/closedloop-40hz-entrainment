@@ -4,8 +4,6 @@ type: "document"
 community: "Lab Notebook PDF Generation"
 location: "February 6, 2026 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[First End-to-End Pipeline Build (February 6, 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

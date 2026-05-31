@@ -4,8 +4,6 @@ type: "rationale"
 community: "Multiscale TCN & Features"
 location: "L871"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[main()_71]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

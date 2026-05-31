@@ -3,8 +3,6 @@ source_file: "submission/figures/figure10.png"
 type: "image"
 community: "Community 42"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_42
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Adaptive Schedule TCN Predicts 3s Ahead, Targets Low-PAC Windows, 3s Hysteresis]] - `conceptually_related_to` [INFERRED]
 - [[Figure 10 Future Directions Roadmap]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_42
+  #community/Community_42

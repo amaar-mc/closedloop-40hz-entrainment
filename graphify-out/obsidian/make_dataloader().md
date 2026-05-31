@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "L178"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[multi_seed_training.py]] - `contains` [EXTRACTED]
 - [[train_single_seed()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

@@ -4,8 +4,6 @@ type: "rationale"
 community: "Closed-Loop Control & Simulator"
 location: "L118"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Closed-Loop_Control_&_Simulator
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[StimAction]] - `uses` [INFERRED]
 - [[StimState]] - `uses` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop_Control_&_Simulator

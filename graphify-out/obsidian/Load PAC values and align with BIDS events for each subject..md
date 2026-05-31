@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 101"
 location: "L32"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_101
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[load_subject_pac_and_events()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_101
+  #community/Community_101

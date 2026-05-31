@@ -3,8 +3,6 @@ source_file: "submission/presentation/reference/key_citations.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Core Literature Citations for Presentation]] - `references` [EXTRACTED]
 - [[Habituation vs Facilitation Finding (~50% each in 35-patient cohort)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

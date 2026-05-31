@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Lab Notebook/P10_Lab_Notebook_VFINAL.md"
 type: "document"
 community: "Archived CSEF Paper & Abstract"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Archived_CSEF_Paper_&_Abstract
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Literature Review Entry Iaccarino 2016, Martorell 2019, Lahijanian 2024]] - `references` [EXTRACTED]
 - [[PAC via Tort Modulation Index (18-bin KL divergence)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived_CSEF_Paper_&_Abstract

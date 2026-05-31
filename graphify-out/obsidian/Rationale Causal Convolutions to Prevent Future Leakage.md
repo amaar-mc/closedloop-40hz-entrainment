@@ -4,8 +4,6 @@ type: "document"
 community: "Community 39"
 location: "L119-L120"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_39
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Multiscale Causal TCN Architecture Detail]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_39
+  #community/Community_39

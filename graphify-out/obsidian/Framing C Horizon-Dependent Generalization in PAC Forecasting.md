@@ -4,8 +4,6 @@ type: "document"
 community: "Community 147"
 location: "### Framing C"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_147
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Results Section Arc]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_147
+  #community/Community_147

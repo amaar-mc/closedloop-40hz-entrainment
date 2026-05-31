@@ -4,8 +4,6 @@ type: "document"
 community: "Community 69"
 location: "Section 5"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_69
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[CSEF Action Items and Preparation Checklist]] - `references` [EXTRACTED]
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_69
+  #community/Community_69

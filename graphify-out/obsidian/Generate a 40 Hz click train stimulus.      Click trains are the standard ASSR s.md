@@ -4,8 +4,6 @@ type: "rationale"
 community: "TRIBE Neural-Mass Simulator"
 location: "L51"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[generate_click_train()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator
+  #community/TRIBE_Neural-Mass_Simulator

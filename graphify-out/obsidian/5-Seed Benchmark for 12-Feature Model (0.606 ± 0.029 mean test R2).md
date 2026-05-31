@@ -4,8 +4,6 @@ type: "document"
 community: "Lab Notebook PDF Generation"
 location: "March 10-12, 2026 section (vfinal notebook)"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Feature Ablation Discovery (73→12 features, R2=-0.025→0.606)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

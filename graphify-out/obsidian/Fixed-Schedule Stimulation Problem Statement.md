@@ -3,8 +3,6 @@ source_file: "archive/context/overview.md"
 type: "document"
 community: "Community 34"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_34
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Research Gap No Predictive Closed-Loop for 40Hz]] - `semantically_similar_to` [INFERRED]
 - [[Two-Tier Predictive System Solution]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_34
+  #community/Community_34

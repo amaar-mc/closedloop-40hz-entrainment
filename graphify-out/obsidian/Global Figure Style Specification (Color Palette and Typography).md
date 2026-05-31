@@ -4,8 +4,6 @@ type: "document"
 community: "Community 41"
 location: "GLOBAL FIGURE STYLE SPECIFICATION section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_41
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Poster Board V8 (CSEF 2026, 4-Column Layout)]] - `references` [EXTRACTED]
 - [[Poster Figure Generation Prompts (Nano Banana Pro)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_41
+  #community/Community_41

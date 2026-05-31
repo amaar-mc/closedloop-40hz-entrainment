@@ -3,8 +3,6 @@ source_file: "scripts/tools/demo_streaming.py"
 type: "code"
 community: "Community 37"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Community_37
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Generate Closed-Loop vs Fixed v3 Figure Script]] - `semantically_similar_to` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_37
+  #community/Community_37

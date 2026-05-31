@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section V.A.3: Depthwise Separable Convolutions"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[EEGNet Architecture (IEEE Paper Specification)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

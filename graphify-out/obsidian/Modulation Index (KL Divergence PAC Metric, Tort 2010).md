@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section IV.B: Modulation Index Computation"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[PAC Computation Pipeline (IEEE Paper)]] - `implements` [EXTRACTED]
 - [[Tort 2010 (J. Neurophysiol) Modulation Index PAC Method]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

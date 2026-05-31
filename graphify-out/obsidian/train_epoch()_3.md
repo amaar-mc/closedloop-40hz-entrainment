@@ -4,8 +4,6 @@ type: "code"
 community: "Archived EEGNet V2"
 location: "L89"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_EEGNet_V2
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[ModelTrainerV2]] - `method` [EXTRACTED]
 - [[fit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_EEGNet_V2
+  #community/Archived_EEGNet_V2

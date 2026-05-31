@@ -4,8 +4,6 @@ type: "image"
 community: "Community 134"
 location: "page 1"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_134
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Achievement TCN Only Useful Method at 5-10s Horizons (Persistence and Ridge collapse to negative R²)]] - `shares_data_with` [EXTRACTED]
 - [[Horizon Sweep Table PAC+Stim TCN R²=0.37-0.67 at 3-10s while persistence collapses]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_134
+  #community/Community_134

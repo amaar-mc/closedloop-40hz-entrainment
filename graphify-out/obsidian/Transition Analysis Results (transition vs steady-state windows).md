@@ -4,8 +4,6 @@ type: "document"
 community: "Community 144"
 location: "line 525-553"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_144
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Transition Analysis Script (transition_analysis.py)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_144
+  #community/Community_144

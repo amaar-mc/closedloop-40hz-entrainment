@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Temporal PAC Predictor"
 location: "L334"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_Temporal_PAC_Predictor
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[count_parameters_by_component()]] - `calls` [EXTRACTED]
 - [[temporal_model.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_Temporal_PAC_Predictor
+  #community/Archived_Temporal_PAC_Predictor

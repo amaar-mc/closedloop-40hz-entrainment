@@ -4,8 +4,6 @@ type: "document"
 community: "Community 34"
 location: "Section 7"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_34
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Habituation Analysis (1735 habituate, 1835 facilitate)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_34
+  #community/Community_34

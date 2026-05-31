@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 4.2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Reference Tort et al. 2010 — Modulation Index for PAC (J Neurophysiol)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

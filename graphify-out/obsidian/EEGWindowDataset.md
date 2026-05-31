@@ -4,8 +4,6 @@ type: "code"
 community: "Core Data & PAC Pipeline"
 location: "L50"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Core_Data_&_PAC_Pipeline
 ---
 
@@ -40,4 +38,4 @@ tags:
 - [[get_session_id()]] - `method` [EXTRACTED]
 - [[get_subject_id()]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline
+  #community/Core_Data_&_PAC_Pipeline

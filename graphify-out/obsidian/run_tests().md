@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "L93"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[eegnet_predict_pac()]] - `calls` [EXTRACTED]
 - [[test_simulated_session.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

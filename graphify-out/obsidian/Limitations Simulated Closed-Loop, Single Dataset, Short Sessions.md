@@ -4,8 +4,6 @@ type: "document"
 community: "Community 39"
 location: "L361-L385"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_39
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Real-Data Closed-Loop Validation Update (Feb 26 2026)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_39
+  #community/Community_39

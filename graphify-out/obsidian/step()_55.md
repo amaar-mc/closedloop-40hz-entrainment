@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L208"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Simulate one time step with step-function fatigue.]] - `rationale_for` [EXTRACTED]
 - [[StepFunctionSimulator]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

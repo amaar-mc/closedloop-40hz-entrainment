@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/STATUS.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[MultiscaleCausalTCN Reproducibility Audit (3 new seeds)]] - `references` [EXTRACTED]
 - [[Rigor Audit Status Overview]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

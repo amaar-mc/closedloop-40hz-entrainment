@@ -4,8 +4,6 @@ type: "code"
 community: "Core Data & PAC Pipeline"
 location: "L249"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Core_Data_&_PAC_Pipeline
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Load EEGLAB .set file saved in MATLAB v7.3 (HDF5) format.          In ds005048]] - `rationale_for` [EXTRACTED]
 - [[load_raw_data()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline
+  #community/Core_Data_&_PAC_Pipeline

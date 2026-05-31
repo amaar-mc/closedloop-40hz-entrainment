@@ -4,8 +4,6 @@ type: "document"
 community: "Lab Notebook PDF Generation"
 location: "March 21-22, 2026 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[CSEF Materials Update Feature Ablation Discovery Front and Center (March 21-22, 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

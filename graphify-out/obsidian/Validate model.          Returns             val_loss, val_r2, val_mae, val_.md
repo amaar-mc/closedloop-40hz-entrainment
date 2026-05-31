@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived EEGNet V2"
 location: "L125"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Archived_EEGNet_V2
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[EEGNetV2]] - `uses` [INFERRED]
 - [[validate()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archived_EEGNet_V2
+  #community/Archived_EEGNet_V2

@@ -4,8 +4,6 @@ type: "rationale"
 community: "Multiscale TCN & Features"
 location: "L64"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[SequenceDataset]] - `uses` [INFERRED]
 - [[SimpleLSTM]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

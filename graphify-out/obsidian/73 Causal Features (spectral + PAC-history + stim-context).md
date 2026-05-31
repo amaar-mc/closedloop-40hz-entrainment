@@ -3,8 +3,6 @@ source_file: "submission/abstract/ABSTRACT.md"
 type: "document"
 community: "Community 55"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_55
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Causal Temporal Convolutional Network (TCN, ~31K params)]] - `shares_data_with` [EXTRACTED]
 - [[Phase-Amplitude Coupling (PAC) as Entrainment Biomarker]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_55
+  #community/Community_55

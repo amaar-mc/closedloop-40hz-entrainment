@@ -4,8 +4,6 @@ type: "document"
 community: "Community 130"
 location: "## Tone guidance"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_130
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Related Work Section Arc]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_130
+  #community/Community_130

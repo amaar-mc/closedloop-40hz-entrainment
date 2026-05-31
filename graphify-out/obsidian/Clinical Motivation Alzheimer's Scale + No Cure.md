@@ -4,8 +4,6 @@ type: "document"
 community: "Community 148"
 location: "### Introduction 1. Alzheimer's"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_148
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Introduction Section Arc]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_148
+  #community/Community_148

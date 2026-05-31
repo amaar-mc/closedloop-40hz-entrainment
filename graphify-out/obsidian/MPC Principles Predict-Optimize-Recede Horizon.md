@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section 8.2: Principles of Model Predictive Control"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Foundational Concepts Document 40Hz Entrainment in AD]] - `references` [EXTRACTED]
 - [[MPC Optimization Formulation (MIQP Binary Control)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

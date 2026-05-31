@@ -4,8 +4,6 @@ type: "code"
 community: "Multiscale TCN & Features"
 location: "L31"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[__len__()_10]] - `method` [EXTRACTED]
 - [[checkpoint_deployment_audit.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

@@ -4,8 +4,6 @@ type: "image"
 community: "Community 31"
 location: "Panel E"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[PAC Response by Disease Severity (Panel A)]] - `shares_data_with` [INFERRED]
 - [[TRIBE V2 Alzheimer's Disease Simulation Figure]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

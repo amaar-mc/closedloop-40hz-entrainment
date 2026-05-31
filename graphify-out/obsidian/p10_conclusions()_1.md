@@ -4,8 +4,6 @@ type: "code"
 community: "Paper/Presentation PDF Builders"
 location: "L667"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Paper/Presentation_PDF_Builders
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[sec()_1]] - `calls` [EXTRACTED]
 - [[sub()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders
+  #community/Paper/Presentation_PDF_Builders

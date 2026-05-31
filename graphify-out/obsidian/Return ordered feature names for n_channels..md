@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived Enhanced-Feature TCN"
 location: "L147"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Archived_Enhanced-Feature_TCN
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[get_enhanced_feature_names()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archived_Enhanced-Feature_TCN
+  #community/Archived_Enhanced-Feature_TCN

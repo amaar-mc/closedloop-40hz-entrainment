@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "lines 22-28"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[CSEF 2026 Judging Strategy and Competitive Positioning]] - `semantically_similar_to` [INFERRED]
 - [[Synopsys Championship Reference Guide (Fair Day March 10, 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

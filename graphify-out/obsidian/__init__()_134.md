@@ -4,8 +4,6 @@ type: "code"
 community: "TCN Layer Internals"
 location: "L309"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TCN_Layer_Internals
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[__init__()_137]] - `calls` [EXTRACTED]
 - [[_make_regression_head()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TCN_Layer_Internals
+  #community/TCN_Layer_Internals

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 43"
 location: "Section 5 / V3 SpecTempNet Leakage"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_43
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Digital Research Log Notebook (Detailed Chronological)]] - `references` [EXTRACTED]
 - [[Static PAC Prediction Ceiling R²=0.287]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_43
+  #community/Community_43

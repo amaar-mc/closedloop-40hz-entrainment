@@ -4,8 +4,6 @@ type: "code"
 community: "Community 97"
 location: "L62"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_97
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[checkpoint_deployment_audit.py]] - `contains` [EXTRACTED]
 - [[run_audit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_97
+  #community/Community_97

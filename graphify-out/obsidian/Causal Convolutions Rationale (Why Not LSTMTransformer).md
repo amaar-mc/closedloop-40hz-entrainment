@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "Q1-Q4"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Computational Deep Dive (ML Specialist Judge Q&A)]] - `references` [EXTRACTED]
 - [[MultiscaleCausalTCN Architecture Details (Interview Prep)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

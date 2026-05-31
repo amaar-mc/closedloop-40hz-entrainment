@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived Feature Experiments (v4)"
 location: "L52"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Archived_Feature_Experiments_(v4)
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[compute_phase_locking_value()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)
+  #community/Archived_Feature_Experiments_(v4)

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 90"
 location: "L73"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_90
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[main()_21]] - `calls` [EXTRACTED]
 - [[sweep_horizons.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_90
+  #community/Community_90

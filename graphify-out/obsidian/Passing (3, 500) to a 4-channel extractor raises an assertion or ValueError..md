@@ -4,8 +4,6 @@ type: "rationale"
 community: "Models, Streaming & Apps"
 location: "L300"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[test_wrong_shape_raises()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

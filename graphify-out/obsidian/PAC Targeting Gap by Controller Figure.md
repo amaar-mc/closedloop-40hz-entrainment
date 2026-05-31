@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/pac_targeting_gap.png"
 type: "image"
 community: "Community 36"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_36
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Reactive Controller PAC Gap (~21e-6)]] - `references` [EXTRACTED]
 - [[TCN Controller PAC Gap (~30.5e-6, g=1.57 vs Reactive)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_36
+  #community/Community_36

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 130"
 location: "### Related Work"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_130
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Key Literature Citations (Iaccarino, Martorell, Tort, Bai)]] - `references` [EXTRACTED]
 - [[Paper Tone Guidance (ML + Neuroscience Dual Audience)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_130
+  #community/Community_130

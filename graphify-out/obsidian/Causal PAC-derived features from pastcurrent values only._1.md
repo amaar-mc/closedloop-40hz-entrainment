@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 53"
 location: "L141"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_53
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[_pac_multiscale_features()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_53
+  #community/Community_53

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "The 8-Section Story Arc"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Poster as Memory Palace (Left→Center→Right columns mapped to story beats)]] - `references` [EXTRACTED]
 - [[Three Key Scientific Moments (Ceiling Discovery, Feature Paradox, Horizon Inflection)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

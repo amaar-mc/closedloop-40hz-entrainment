@@ -4,8 +4,6 @@ type: "code"
 community: "Archived ImprovedTCN Experiments"
 location: "L172"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_ImprovedTCN_Experiments
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[run_pac_stim_focused.py]] - `contains` [EXTRACTED]
 - [[train_eval_subset()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_ImprovedTCN_Experiments
+  #community/Archived_ImprovedTCN_Experiments

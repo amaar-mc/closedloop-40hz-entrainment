@@ -4,8 +4,6 @@ type: "code"
 community: "Community 60"
 location: "VARIANT_REGISTRY"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[build_variant()]] - `calls` [EXTRACTED]
 - [[run_benchmark()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

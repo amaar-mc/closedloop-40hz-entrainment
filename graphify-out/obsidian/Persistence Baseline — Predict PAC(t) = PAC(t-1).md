@@ -4,8 +4,6 @@ type: "code"
 community: "Community 49"
 location: "line 316"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_49
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[run_sklearn_temporal_baseline()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+  #community/Community_49

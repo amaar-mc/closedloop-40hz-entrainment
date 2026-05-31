@@ -4,8 +4,6 @@ type: "code"
 community: "Community 46"
 location: "L184"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_46
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Update baseline for all channels.          Args             pac_values PAC]] - `rationale_for` [EXTRACTED]
 - [[test_personalization()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+  #community/Community_46

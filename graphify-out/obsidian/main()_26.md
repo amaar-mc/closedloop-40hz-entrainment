@@ -4,8 +4,6 @@ type: "code"
 community: "Community 53"
 location: "L417"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_53
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[build_multiscale_dataset.py]] - `contains` [EXTRACTED]
 - [[parse_args()_7]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_53
+  #community/Community_53

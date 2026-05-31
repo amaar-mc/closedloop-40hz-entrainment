@@ -4,8 +4,6 @@ type: "document"
 community: "Archived CSEF Paper & Abstract"
 location: "## 5. Hardware Scaling Path"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Archived_CSEF_Paper_&_Abstract
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Clinical Roadmap (Research to Practice Pathway)]] - `references` [EXTRACTED]
 - [[NeuroCare 40Hz Facility Flyer]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived_CSEF_Paper_&_Abstract

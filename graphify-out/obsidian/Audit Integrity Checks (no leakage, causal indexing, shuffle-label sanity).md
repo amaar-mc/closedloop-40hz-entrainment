@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Section 6.3"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[12-Feature PAC+Stim Configuration (test R²=0.606)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

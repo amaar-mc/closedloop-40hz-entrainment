@@ -4,8 +4,6 @@ type: "document"
 community: "Community 41"
 location: "COLUMN 4 RESULTS section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_41
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Controller Comparison Result 72.1% vs 64.5% Alignment]] - `semantically_similar_to` [INFERRED]
 - [[Poster Board V8 (CSEF 2026, 4-Column Layout)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_41
+  #community/Community_41

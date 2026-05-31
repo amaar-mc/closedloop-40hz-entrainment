@@ -4,8 +4,6 @@ type: "document"
 community: "Community 41"
 location: "Result 3 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_41
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Poster Board V8 (CSEF 2026, 4-Column Layout)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_41
+  #community/Community_41

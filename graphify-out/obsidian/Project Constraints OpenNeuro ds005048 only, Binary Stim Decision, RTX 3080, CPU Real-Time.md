@@ -4,8 +4,6 @@ type: "document"
 community: "Community 48"
 location: "page 2, Constraints section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_48
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Data Source OpenNeuro ds005048 (external dataset)]] - `references` [EXTRACTED]
 - [[No SRCIRBIACUC Pre-Approval Required (computational-only project)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_48
+  #community/Community_48

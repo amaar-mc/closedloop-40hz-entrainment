@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 4.2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[MultiscaleCausalTCN (12-Feature, h=64, 22914 Params)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

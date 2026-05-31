@@ -4,8 +4,6 @@ type: "document"
 community: "Lab Notebook PDF Generation"
 location: "March 21-22, 2026 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Controller Result Caveat 73-Feature TCN Used for Controller, Not 12-Feature Model]] - `references` [EXTRACTED]
 - [[Project P10 Research Log Notebook (vfinal, CSEF 2026 version)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

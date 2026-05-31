@@ -4,8 +4,6 @@ type: "document"
 community: "Community 104"
 location: "3. Clinical Testing Plan"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_104
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Clinical Roadmap (Phase ABC + Hardware Tiers)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_104
+  #community/Community_104

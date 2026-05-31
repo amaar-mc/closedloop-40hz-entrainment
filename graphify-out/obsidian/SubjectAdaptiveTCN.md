@@ -4,8 +4,6 @@ type: "code"
 community: "Archived ImprovedTCN Experiments"
 location: "L298"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_ImprovedTCN_Experiments
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[forward()_5]] - `method` [EXTRACTED]
 - [[run_experiments.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_ImprovedTCN_Experiments
+  #community/Archived_ImprovedTCN_Experiments

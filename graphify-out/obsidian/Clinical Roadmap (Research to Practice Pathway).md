@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Presentation/CLINICAL_ROADMAP.md"
 type: "document"
 community: "Archived CSEF Paper & Abstract"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Archived_CSEF_Paper_&_Abstract
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Phase B Feasibility (20 participants, IRB required, crossover RCT)]] - `references` [EXTRACTED]
 - [[Phase C Comparative Trial (50 participants, TCN vs Reactive, MMSE primary outcome)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived_CSEF_Paper_&_Abstract

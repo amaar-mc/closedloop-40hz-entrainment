@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L164"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[PredictiveLookAheadControl_5]] - `method` [EXTRACTED]
 - [[step()_52]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

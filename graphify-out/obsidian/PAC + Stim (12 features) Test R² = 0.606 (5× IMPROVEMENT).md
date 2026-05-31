@@ -3,8 +3,6 @@ source_file: "submission/figures/figure4.png"
 type: "image"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Spectral Only (61 features) Test R² = -0.420 (WORSE — spectral features overfit patient anatomy)]] - `conceptually_related_to` [EXTRACTED]
 - [[TCN Predictive Clinical Utility Exceeds Reactive for All 35 Subjects]] - `semantically_similar_to` [INFERRED]
 
-#graphify/image #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/per_subject_utility.pdf"
 type: "image"
 community: "Community 33"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Per-Subject Analysis (3535 Subjects Favor TCN)]] - `references` [EXTRACTED]
 - [[Section 06 Results Controller Comparison Table (6 Controllers, N=35)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

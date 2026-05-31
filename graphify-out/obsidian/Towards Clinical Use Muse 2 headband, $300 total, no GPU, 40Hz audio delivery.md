@@ -4,8 +4,6 @@ type: "document"
 community: "Community 50"
 location: "Towards Clinical Use section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_50
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 - [[Future Directions Live EEG streaming crossover validation, 60-min habituation capture, reinforcement learning, multi-biomarker]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_50
+  #community/Community_50

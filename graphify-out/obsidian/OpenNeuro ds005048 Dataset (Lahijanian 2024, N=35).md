@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Section 2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Research Objective Predictive Closed-Loop PAC Forecasting]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

@@ -4,8 +4,6 @@ type: "code"
 community: "Closed-Loop Control & Simulator"
 location: "L134"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Closed-Loop_Control_&_Simulator
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[reset()_46]] - `method` [EXTRACTED]
 - [[step()_46]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop_Control_&_Simulator

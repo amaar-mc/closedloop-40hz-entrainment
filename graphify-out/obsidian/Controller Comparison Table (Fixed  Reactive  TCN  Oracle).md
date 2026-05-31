@@ -4,8 +4,6 @@ type: "document"
 community: "Poster Boards & Figures"
 location: "RESULTS — Result 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Per-Subject Alignment Scatter Plot (3535 Favor TCN)]] - `shares_data_with` [INFERRED]
 - [[Poster Board V5 (Condensed, Visual-Forward, Synopsys 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

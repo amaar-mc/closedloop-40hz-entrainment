@@ -4,8 +4,6 @@ type: "code"
 community: "Community 49"
 location: "L26"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_49
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[main()_59]] - `calls` [EXTRACTED]
 - [[validate_leakage.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+  #community/Community_49

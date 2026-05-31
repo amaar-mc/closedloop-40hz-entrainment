@@ -4,8 +4,6 @@ type: "code"
 community: "Community 128"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_128
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Generate a standalone References Sheet PDF to bring to CSEF. Print this and keep]] - `rationale_for` [EXTRACTED]
 - [[main()_74]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_128
+  #community/Community_128

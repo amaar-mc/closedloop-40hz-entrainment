@@ -4,8 +4,6 @@ type: "document"
 community: "Community 77"
 location: "line 11"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_77
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Generate Figures Script (generate_figures.py)]] - `implements` [EXTRACTED]
 - [[Paper Figures Source Directory]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_77
+  #community/Community_77

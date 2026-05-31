@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "## Study Overview"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Per-Subject Consistency (3535 subjects benefit)]] - `references` [EXTRACTED]
 - [[Summary Statistics for Abstract (N=35, R2=0.170, g=1.31)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

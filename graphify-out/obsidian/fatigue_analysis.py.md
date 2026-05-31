@@ -4,8 +4,6 @@ type: "code"
 community: "Community 101"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_101
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[load_subject_pac_and_events()]] - `contains` [EXTRACTED]
 - [[main()_29]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_101
+  #community/Community_101

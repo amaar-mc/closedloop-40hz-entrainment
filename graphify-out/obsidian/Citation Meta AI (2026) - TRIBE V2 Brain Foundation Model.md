@@ -4,8 +4,6 @@ type: "document"
 community: "Community 109"
 location: "Additional References section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_109
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[TRIBE V2 Integration Attempt and Biophysical Workaround (April 8, 2026)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_109
+  #community/Community_109

@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L219"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[__init__()_120]] - `calls` [EXTRACTED]
 - [[__init__()_121]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "@dataclass class TrialMetrics"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[main()_65]] - `shares_data_with` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

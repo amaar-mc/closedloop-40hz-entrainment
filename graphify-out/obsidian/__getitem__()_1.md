@@ -4,8 +4,6 @@ type: "code"
 community: "Archived ImprovedTCN Experiments"
 location: "L119"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_ImprovedTCN_Experiments
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[SeqDataset]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_ImprovedTCN_Experiments
+  #community/Archived_ImprovedTCN_Experiments

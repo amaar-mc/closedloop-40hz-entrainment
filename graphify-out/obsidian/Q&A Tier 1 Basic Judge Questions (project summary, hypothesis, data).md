@@ -4,11 +4,9 @@ type: "document"
 community: "Community 195"
 location: "TIER 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_195
 ---
 
 # Q&A Tier 1: Basic Judge Questions (project summary, hypothesis, data)
 
-#graphify/document #graphify/EXTRACTED #community/Community_195
+  #community/Community_195

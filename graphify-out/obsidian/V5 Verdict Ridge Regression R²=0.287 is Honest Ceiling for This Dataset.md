@@ -4,8 +4,6 @@ type: "document"
 community: "Community 71"
 location: "V5 section and Final Verdict"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_71
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Recommendation Deploy Reactive Ridge Model (R²=0.287) for Closed-Loop Control]] - `conceptually_related_to` [EXTRACTED]
 - [[V1 Data Leakage MI Features Used to Predict PAC (R²=0.69, Circular)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_71
+  #community/Community_71

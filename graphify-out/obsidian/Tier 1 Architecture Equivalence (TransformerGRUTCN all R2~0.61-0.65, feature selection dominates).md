@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/10_architecture_exploration.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Rigor_Audit_Reports
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Architecture Exploration Comparison (10 models, 5-seed)]] - `references` [EXTRACTED]
 - [[Feature Ablation Validation (pac_stim  pac  all  spectral confirmed)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

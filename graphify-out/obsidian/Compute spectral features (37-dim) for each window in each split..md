@@ -4,8 +4,6 @@ type: "rationale"
 community: "Models, Streaming & Apps"
 location: "L135"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[step2_spectral_caches()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

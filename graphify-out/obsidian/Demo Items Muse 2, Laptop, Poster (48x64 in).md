@@ -4,8 +4,6 @@ type: "document"
 community: "Community 117"
 location: "What to Bring"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_117
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[CSEF 2026 Day-of Logistics Checklist]] - `references` [EXTRACTED]
 - [[Muse 2 Product Demo Protocol (30-60 second booth demo)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_117
+  #community/Community_117

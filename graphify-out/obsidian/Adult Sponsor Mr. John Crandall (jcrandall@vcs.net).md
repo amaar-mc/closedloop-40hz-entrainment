@@ -4,8 +4,6 @@ type: "document"
 community: "Community 48"
 location: "page 1, item 4"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_48
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Student Checklist (1A) — Project Registration Form]] - `references` [EXTRACTED]
 - [[TeacherSponsor Mr. John Crandall, Valley Christian High School]] - `shares_data_with` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_48
+  #community/Community_48

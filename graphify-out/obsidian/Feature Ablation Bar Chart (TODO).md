@@ -4,8 +4,6 @@ type: "document"
 community: "Community 77"
 location: "line 21"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_77
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Architecture Search Comparison Figure (TODO)]] - `conceptually_related_to` [INFERRED]
 - [[Paper Figures Source Directory]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_77
+  #community/Community_77

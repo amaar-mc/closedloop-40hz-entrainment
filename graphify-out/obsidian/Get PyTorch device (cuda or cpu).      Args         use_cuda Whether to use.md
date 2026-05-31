@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 35"
 location: "L380"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_35
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[get_device()_2]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_35
+  #community/Community_35

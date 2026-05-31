@@ -4,8 +4,6 @@ type: "code"
 community: "Core Data & PAC Pipeline"
 location: "L357"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Core_Data_&_PAC_Pipeline
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Extract 2-second sliding windows segmented by stimulusrest events,         wit]] - `rationale_for` [EXTRACTED]
 - [[process_dataset()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline
+  #community/Core_Data_&_PAC_Pipeline

@@ -4,8 +4,6 @@ type: "rationale"
 community: "Control Strategies & Validation"
 location: "L468"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[TrialMetrics]] - `uses` [INFERRED]
 - [[create_simulator()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

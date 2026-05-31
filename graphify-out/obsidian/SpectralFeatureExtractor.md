@@ -4,8 +4,6 @@ type: "code"
 community: "Multiscale TCN & Features"
 location: "L197"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -72,4 +70,4 @@ tags:
 - [[spectral_features.py]] - `contains` [EXTRACTED]
 - [[test_spectral_features()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

@@ -4,8 +4,6 @@ type: "document"
 community: "Lab Notebook PDF Generation"
 location: "February 16, 2026 section"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Feature Ablation Study Results (March 3-8, 2026)]] - `conceptually_related_to` [INFERRED]
 - [[Rationale Pivot from Static PAC Estimation to Temporal Forecasting]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

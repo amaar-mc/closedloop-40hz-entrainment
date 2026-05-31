@@ -3,8 +3,6 @@ source_file: "submission/figures/figure9.png"
 type: "image"
 community: "Community 42"
 tags:
-  - graphify/image
-  - graphify/INFERRED
   - community/Community_42
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Real EEG Replay Validation with TCN Controller (STIMULATERESTMAINTAIN)]] - `conceptually_related_to` [INFERRED]
 - [[TCN Dilation Architecture 1,2,4,8 — 12-Feature Input]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/INFERRED #community/Community_42
+  #community/Community_42

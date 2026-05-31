@@ -4,8 +4,6 @@ type: "document"
 community: "Poster Boards & Figures"
 location: "Section 7"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Controller Comparison Table (Fixed  Reactive  TCN  Oracle)]] - `references` [EXTRACTED]
 - [[Controller Logic (z-score ±0.5, 3s Hysteresis, STIMULATERESTMAINTAIN)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

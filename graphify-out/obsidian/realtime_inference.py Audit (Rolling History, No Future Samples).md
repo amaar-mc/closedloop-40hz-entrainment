@@ -4,8 +4,6 @@ type: "document"
 community: "Community 47"
 location: "File-by-file review"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_47
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Temporal Multiscale Pipeline Audit Report (Feb 17, 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_47
+  #community/Community_47

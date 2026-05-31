@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 5.3"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Ridge Regression V5 (135 Coefficients, Matches EEGNet)]] - `references` [EXTRACTED]
 - [[ViT-TCNet V4 (1.1M Params, Overfits N=35)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

@@ -4,8 +4,6 @@ type: "paper"
 community: "Archived CSEF Paper & Abstract"
 location: "Section 1.4"
 tags:
-  - graphify/paper
-  - graphify/INFERRED
   - community/Archived_CSEF_Paper_&_Abstract
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Research Paper v3 (Full CSEF Submission Paper)]] - `references` [EXTRACTED]
 - [[SpecTempNet Leakage Discovery Story (R²=0.69 inflated by circular PAC feature)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/paper #graphify/INFERRED #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived_CSEF_Paper_&_Abstract

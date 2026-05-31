@@ -4,8 +4,6 @@ type: "document"
 community: "Generalization-Gap Experiments"
 location: "Section 3.2"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[PAC+Stim Feature Discovery Audit Report]] - `references` [EXTRACTED]
 - [[Tort Modulation Index (Causal Sliding Window)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 104"
 location: "5. Hardware Scaling Path"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_104
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Clinical Roadmap (Phase ABC + Hardware Tiers)]] - `references` [EXTRACTED]
 - [[Productization Roadmap (Muse 2 + Caregiver App + Pilot)]] - `shares_data_with` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_104
+  #community/Community_104

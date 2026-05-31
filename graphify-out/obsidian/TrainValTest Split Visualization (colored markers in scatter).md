@@ -4,8 +4,6 @@ type: "image"
 community: "Poster Boards & Figures"
 location: "legend"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Per-Subject Alignment Scatter Plot (3535 Favor TCN)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

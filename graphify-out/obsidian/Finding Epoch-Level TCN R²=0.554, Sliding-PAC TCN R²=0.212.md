@@ -4,8 +4,6 @@ type: "document"
 community: "Generalization-Gap Experiments"
 location: "Prediction Performance table"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Sliding-Window PAC Experiment Results (RESULTS.md)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

@@ -4,8 +4,6 @@ type: "code"
 community: "Generalization-Gap Experiments"
 location: "lines 86-137"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Build Sliding-PAC Temporal Dataset (build_sliding_dataset.py)]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

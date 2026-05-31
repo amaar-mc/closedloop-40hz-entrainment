@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Research Paper/Figures/controller_comparison_v2.p
 type: "image"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/image
-  - graphify/INFERRED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Per-Subject Alignment Scatter Plot (3535 Favor TCN)]] - `conceptually_related_to` [INFERRED]
 - [[TCN Controller ~60% Stim Rate, ~72% Alignment]] - `semantically_similar_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

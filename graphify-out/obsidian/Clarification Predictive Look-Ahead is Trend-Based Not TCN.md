@@ -3,8 +3,6 @@ source_file: "validation/AUDIT_REPORT.md"
 type: "document"
 community: "Models, Streaming & Apps"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Critical Finding Validation Does Not Test Trained TCN]] - `rationale_for` [EXTRACTED]
 - [[PredictiveLookAheadControl – Trend-Based Hysteresis Controller]] - `implements` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 137"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_137
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[debug_leakage.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_137
+  #community/Community_137

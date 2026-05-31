@@ -3,8 +3,6 @@ source_file: "submission/reference/reports/PROJECT_ACHIEVEMENT_REPORT.md"
 type: "document"
 community: "Research Paper & Manuscript"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Quick Reference Card Key Numbers and Judge Q&A]] - `semantically_similar_to` [INFERRED]
 - [[Reference Package Index (Submission Package, Abstract Drafts, Reports, Audit)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

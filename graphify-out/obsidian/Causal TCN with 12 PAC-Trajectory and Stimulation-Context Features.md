@@ -4,8 +4,6 @@ type: "document"
 community: "Community 59"
 location: "paper/PAPER_STATUS.md:14"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_59
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Five-Seed 12-Feature TCN Mean R²=0.606, Range 0.558–0.647]] - `references` [EXTRACTED]
 - [[Working Paper Title Feature-Selected Temporal Forecasting for Retrospective Closed-Loop 40Hz Auditory Entrainment]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_59
+  #community/Community_59

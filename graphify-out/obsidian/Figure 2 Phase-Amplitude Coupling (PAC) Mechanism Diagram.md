@@ -3,8 +3,6 @@ source_file: "submission/figures/figure2.png"
 type: "image"
 community: "Community 85"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_85
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[PAC Modulation Index (Tort 2010)]] - `references` [EXTRACTED]
 - [[Theta Rhythm (4-8 Hz) Phase Signal]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_85
+  #community/Community_85

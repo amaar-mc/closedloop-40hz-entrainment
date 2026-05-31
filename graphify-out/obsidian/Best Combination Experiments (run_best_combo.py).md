@@ -3,8 +3,6 @@ source_file: "archive/experimental/run_best_combo.py"
 type: "code"
 community: "Generalization-Gap Experiments"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[MixupSeqDataset (mixup augmentation for EEG sequences)]] - `references` [EXTRACTED]
 - [[Multi-Seed Robustness Evaluation (5 seeds on best TCN config)]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

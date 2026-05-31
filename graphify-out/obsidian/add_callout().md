@@ -4,8 +4,6 @@ type: "code"
 community: "Community 63"
 location: "L193"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_63
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[add_text()]] - `calls` [EXTRACTED]
 - [[v2_builder.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_63
+  #community/Community_63

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 60"
 location: "class MultiTaskTCN"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[VARIANT_REGISTRY (Model Variant Registry Dict)]] - `references` [EXTRACTED]
 - [[run_single_experiment()]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

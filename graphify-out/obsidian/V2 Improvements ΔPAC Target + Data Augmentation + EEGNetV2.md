@@ -3,8 +3,6 @@ source_file: "archive/docs_v1_v8/IMPROVEMENTS_V2_SUMMARY.md"
 type: "document"
 community: "Model Ceiling & Leakage Audits"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Model_Ceiling_&_Leakage_Audits
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[V2 Data Augmentation (Time Jitter, Amplitude Scaling, Gaussian Noise, Channel Dropout)]] - `references` [EXTRACTED]
 - [[ΔPAC Prediction Target (Change vs Absolute PAC)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model_Ceiling_&_Leakage_Audits

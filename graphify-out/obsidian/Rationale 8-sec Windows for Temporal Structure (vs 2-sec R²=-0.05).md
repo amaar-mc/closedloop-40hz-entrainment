@@ -4,8 +4,6 @@ type: "document"
 community: "Community 129"
 location: "reprocess_long_windows.py:1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_129
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[process_subject (Per-Subject Long-Window Extractor)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_129
+  #community/Community_129

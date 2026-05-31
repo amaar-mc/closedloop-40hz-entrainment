@@ -4,8 +4,6 @@ type: "document"
 community: "Community 76"
 location: "Executive Summary"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_76
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[code_drafts_v2 Complete 10-Module Pipeline (4159 lines)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_76
+  #community/Community_76

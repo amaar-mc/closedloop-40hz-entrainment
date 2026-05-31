@@ -4,8 +4,6 @@ type: "document"
 community: "Community 135"
 location: "page 1"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_135
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[CSEF Final Poster (CSEF_FINAL.pdf) Complete CSEF 2026 submission poster]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_135
+  #community/Community_135

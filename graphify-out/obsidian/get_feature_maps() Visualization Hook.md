@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "def get_feature_maps"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[EEGNetEnhanced (~35K params, 24x original)]] - `implements` [EXTRACTED]
 - [[EEGNetLarge (~141K params, 97x original)]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

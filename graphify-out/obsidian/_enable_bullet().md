@@ -4,8 +4,6 @@ type: "code"
 community: "CSEF Presentation Generator"
 location: "L90"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/CSEF_Presentation_Generator
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Set native bullet via XML so Google Slides renders it correctly.]] - `rationale_for` [EXTRACTED]
 - [[generate_csef_pptx.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CSEF_Presentation_Generator
+  #community/CSEF_Presentation_Generator

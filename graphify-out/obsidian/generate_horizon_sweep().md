@@ -4,8 +4,6 @@ type: "code"
 community: "Community 37"
 location: "L64"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_37
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[generate_paper_figures.py]] - `contains` [EXTRACTED]
 - [[modelssweep_horizons_results.json]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_37
+  #community/Community_37

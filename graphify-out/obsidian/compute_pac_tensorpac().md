@@ -4,8 +4,6 @@ type: "code"
 community: "Core Data & PAC Pipeline"
 location: "L214"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Core_Data_&_PAC_Pipeline
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Compute PAC using Tensorpac library (for validationcomparison).      Args]] - `rationale_for` [EXTRACTED]
 - [[pac_computation.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline
+  #community/Core_Data_&_PAC_Pipeline

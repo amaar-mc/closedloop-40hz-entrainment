@@ -4,8 +4,6 @@ type: "rationale"
 community: "Models, Streaming & Apps"
 location: "L252"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[TCNTemporalModel]] - `uses` [INFERRED]
 - [[render_patient_history()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 4.2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[Supplementary Table S2 Complete Pairwise Controller Effect Sizes]] - `references` [EXTRACTED]
 - [[Supplementary Table S3 Fatigue Sensitivity Results (6 Severity Levels)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

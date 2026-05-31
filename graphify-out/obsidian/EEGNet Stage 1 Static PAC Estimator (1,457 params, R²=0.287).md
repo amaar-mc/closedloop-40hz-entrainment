@@ -4,8 +4,6 @@ type: "document"
 community: "Community 88"
 location: "Stage 1 table"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_88
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Numbers Sheet (Old v1 Reference)]] - `references` [EXTRACTED]
 - [[OpenNeuro ds005048 Dataset (35 Subjects)]] - `shares_data_with` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_88
+  #community/Community_88

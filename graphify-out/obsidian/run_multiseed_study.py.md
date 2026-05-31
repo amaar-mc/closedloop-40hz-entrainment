@@ -4,8 +4,6 @@ type: "code"
 community: "Multiscale TCN & Features"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[resolve_dataset_dir()]] - `contains` [EXTRACTED]
 - [[train_one_seed()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

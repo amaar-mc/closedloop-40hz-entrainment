@@ -4,8 +4,6 @@ type: "code"
 community: "Community 75"
 location: "L34"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_75
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[add_section_header()_1]] - `calls` [EXTRACTED]
 - [[v1_builder.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_75
+  #community/Community_75

@@ -3,8 +3,6 @@ source_file: "archive/docs_v1_v8/ARCHITECTURE_V3_DESIGN.md"
 type: "document"
 community: "Model Ceiling & Leakage Audits"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Model_Ceiling_&_Leakage_Audits
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Rationale Features  Architecture for Small EEG Datasets]] - `rationale_for` [INFERRED]
 - [[SpecTempNet Architecture Design (3-Branch Raw EEG + Spectral + Phase-Amplitude)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model_Ceiling_&_Leakage_Audits

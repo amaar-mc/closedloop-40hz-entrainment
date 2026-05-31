@@ -4,8 +4,6 @@ type: "document"
 community: "Community 71"
 location: "Phase 1 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_71
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Critical Finding Near-Zero PAC Temporal Autocorrelation in 2-Second Windows]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_71
+  #community/Community_71

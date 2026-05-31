@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/stim_vs_alignment.png"
 type: "image"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[Reactive Controller ~38% Stim Rate, ~65% Alignment]] - `references` [EXTRACTED]
 - [[TCN Controller ~60% Stim Rate, ~72% Alignment]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

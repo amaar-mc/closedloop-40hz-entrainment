@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived SpecTempNet V3"
 location: "L39"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Archived_SpecTempNet_V3
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[SpecTempNet]] - `uses` [INFERRED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Archived_SpecTempNet_V3
+  #community/Archived_SpecTempNet_V3

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 46"
 location: "L158"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_46
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[test_personalization()]] - `calls` [EXTRACTED]
 - [[update()_1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+  #community/Community_46

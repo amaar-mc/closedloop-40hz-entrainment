@@ -4,8 +4,6 @@ type: "code"
 community: "TRIBE-TCN Validation"
 location: "line 184"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TRIBE-TCN_Validation
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[build_features_from_sequence()]] - `shares_data_with` [INFERRED]
 - [[train_tcn_tribe()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TRIBE-TCN_Validation
+  #community/TRIBE-TCN_Validation

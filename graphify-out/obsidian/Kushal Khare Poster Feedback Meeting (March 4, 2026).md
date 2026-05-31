@@ -3,8 +3,6 @@ source_file: "submission/reference/feedback-kushal.md"
 type: "document"
 community: "Community 113"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_113
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Poster Design Advice Reduce Text, Enlarge Figures]] - `references` [EXTRACTED]
 - [[Two Oral Presentation Versions (Simple and Technical)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_113
+  #community/Community_113

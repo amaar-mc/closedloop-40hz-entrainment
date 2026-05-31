@@ -4,8 +4,6 @@ type: "rationale"
 community: "TRIBE Neural-Mass Simulator"
 location: "L101"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[TribeEnhancedSimulator]] - `rationale_for` [EXTRACTED]
 - [[WilsonCowanModel]] - `uses` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/TRIBE_Neural-Mass_Simulator
+  #community/TRIBE_Neural-Mass_Simulator

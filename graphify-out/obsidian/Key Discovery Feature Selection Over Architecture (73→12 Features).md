@@ -4,8 +4,6 @@ type: "document"
 community: "Poster Boards & Figures"
 location: "lines 179-182"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Feature Ablation Figure on vFinal Poster (73 Features → 12, R²=-0.025→0.606)]] - `implements` [INFERRED]
 - [[Poster Board V7 (Audit-Clean, CSEF 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

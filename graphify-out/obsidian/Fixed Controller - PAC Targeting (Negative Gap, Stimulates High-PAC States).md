@@ -4,8 +4,6 @@ type: "image"
 community: "Community 31"
 location: "Fixed bar"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[PAC Targeting Gap Metric (rest minus stim PAC)]] - `references` [EXTRACTED]
 - [[PAC Targeting Gap by Controller (Bar Chart)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

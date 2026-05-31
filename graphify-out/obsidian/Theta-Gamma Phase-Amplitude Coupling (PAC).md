@@ -4,8 +4,6 @@ type: "document"
 community: "Community 72"
 location: "line 10"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_72
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Two-Stage Predictive Closed-Loop System]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_72
+  #community/Community_72

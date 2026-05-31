@@ -4,8 +4,6 @@ type: "code"
 community: "Closed-Loop Control & Simulator"
 location: "L72"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Closed-Loop_Control_&_Simulator
 ---
 
@@ -24,4 +22,4 @@ tags:
 - [[run_tribe_validation.py]] - `contains` [EXTRACTED]
 - [[step()_38]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop_Control_&_Simulator

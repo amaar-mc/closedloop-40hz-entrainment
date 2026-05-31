@@ -4,8 +4,6 @@ type: "rationale"
 community: "Multiscale TCN & Features"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[SimpleTransformer]] - `uses` [INFERRED]
 - [[run_comparison_study.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

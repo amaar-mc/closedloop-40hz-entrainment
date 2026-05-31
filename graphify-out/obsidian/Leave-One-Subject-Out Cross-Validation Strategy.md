@@ -4,8 +4,6 @@ type: "document"
 community: "Community 76"
 location: "Section VI-D"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_76
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Proposed GAT-Transformer Architecture for EEG PAC Prediction]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_76
+  #community/Community_76

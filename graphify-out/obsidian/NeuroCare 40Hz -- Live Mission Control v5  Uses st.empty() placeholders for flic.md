@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 32"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Community_32
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[RealEEGAdapter]] - `uses` [INFERRED]
 - [[neurocare_live.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Community_32
+  #community/Community_32

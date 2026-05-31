@@ -4,8 +4,6 @@ type: "code"
 community: "CSEF Presentation Generator"
 location: "L676"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/CSEF_Presentation_Generator
 ---
 
@@ -24,4 +22,4 @@ tags:
 - [[make_text_frame()]] - `calls` [EXTRACTED]
 - [[new_slide()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CSEF_Presentation_Generator
+  #community/CSEF_Presentation_Generator

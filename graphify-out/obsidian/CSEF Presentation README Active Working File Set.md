@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Active Files"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[9-Beat Presentation Spine (Hook→Gap→Biomarker→Ceiling→Pivot→Discovery→Horizon→Results→Product)]] - `references` [EXTRACTED]
 - [[Numbers Sheet v2 Key Metrics (disease, dataset, pivot story, main results, deployment)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

@@ -3,8 +3,6 @@ source_file: "submission/presentation/reference/key_citations.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Iaccarino et al. 2016 (MIT 40Hz landmark paper)]] - `conceptually_related_to` [INFERRED]
 - [[Key Citations Reference Sheet (v1, Old)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

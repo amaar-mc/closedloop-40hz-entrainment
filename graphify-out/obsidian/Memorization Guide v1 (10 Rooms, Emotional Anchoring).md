@@ -3,8 +3,6 @@ source_file: "submission/presentation/memorization/v1_memo_guide.md"
 type: "document"
 community: "Controller Results & Judge Prep"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[7 Number Clusters for Memorization]] - `references` [EXTRACTED]
 - [[Main Presentation Script (4-5 Min, 01)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

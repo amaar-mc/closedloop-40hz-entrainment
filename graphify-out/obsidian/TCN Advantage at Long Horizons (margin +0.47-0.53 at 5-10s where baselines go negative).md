@@ -4,8 +4,6 @@ type: "document"
 community: "Community 58"
 location: "line 449-460"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_58
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[TCN Horizon=5 Training Result (test R2=0.2541, persistence R2=-0.2671)]] - `conceptually_related_to` [INFERRED]
 - [[TCN Horizon=8 Training Result (test R2=0.2395, persistence R2=-0.2757)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_58
+  #community/Community_58

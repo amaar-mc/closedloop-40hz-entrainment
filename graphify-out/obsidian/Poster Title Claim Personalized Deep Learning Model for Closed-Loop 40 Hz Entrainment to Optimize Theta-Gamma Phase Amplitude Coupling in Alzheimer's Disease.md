@@ -4,8 +4,6 @@ type: "image"
 community: "Community 31"
 location: "Title section"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Synopsys Final Poster - Full Layout (Personalized Deep Learning for Closed-Loop 40 Hz Entrainment)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

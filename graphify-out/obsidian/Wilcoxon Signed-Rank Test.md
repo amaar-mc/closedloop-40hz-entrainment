@@ -4,8 +4,6 @@ type: "document"
 community: "Community 136"
 location: "Section 8"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_136
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Statistical Analysis Framework]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_136
+  #community/Community_136

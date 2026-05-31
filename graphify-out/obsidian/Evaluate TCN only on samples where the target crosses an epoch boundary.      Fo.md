@@ -4,8 +4,6 @@ type: "rationale"
 community: "Multiscale TCN & Features"
 location: "L332"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[analyze_cross_epoch_transitions()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

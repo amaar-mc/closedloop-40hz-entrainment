@@ -4,8 +4,6 @@ type: "document"
 community: "Community 43"
 location: "Section 5 / Architecture Marathon"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_43
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[PAC Epoch-Level Assignment Design (epoch PAC assigned to 2s windows)]] - `rationale_for` [INFERRED]
 - [[Temporal Prediction Pivot (static ceiling → future PAC forecasting)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_43
+  #community/Community_43

@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/system_block_diagram.png"
 type: "image"
 community: "Community 36"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_36
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Feature Extraction Block (73 features 61+7+5)]] - `calls` [EXTRACTED]
 - [[TCN Controller PAC Gap (~30.5e-6, g=1.57 vs Reactive)]] - `implements` [INFERRED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_36
+  #community/Community_36

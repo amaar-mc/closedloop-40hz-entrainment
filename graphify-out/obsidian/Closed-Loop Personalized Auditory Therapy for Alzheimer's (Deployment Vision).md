@@ -3,8 +3,6 @@ source_file: "submission/figures/figure11.png"
 type: "image"
 community: "Community 51"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_51
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Figure 11 Consumer Hardware for Clinical Deployment]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_51
+  #community/Community_51

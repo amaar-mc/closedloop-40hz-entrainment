@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 74"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_74
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[comprehensive_submission_audit.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_74
+  #community/Community_74

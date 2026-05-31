@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section I.C: Research Hypotheses"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Research Methodology Document GAT-Transformer Predictive Framework]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

@@ -3,8 +3,6 @@ source_file: "validation/AUDIT_REPORT.md"
 type: "document"
 community: "Models, Streaming & Apps"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[High Finding EEGNet Under-Parameterized (~1457 params)]] - `rationale_for` [EXTRACTED]
 - [[Rationale Capacity Scaling to Test Performance Ceiling Hypothesis]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

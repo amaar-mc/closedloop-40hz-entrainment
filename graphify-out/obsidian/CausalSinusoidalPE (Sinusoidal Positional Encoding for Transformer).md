@@ -4,8 +4,6 @@ type: "code"
 community: "Community 60"
 location: "class CausalSinusoidalPE"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[TransformerTCN (4-layer Causal Transformer Encoder, ~85K params)]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

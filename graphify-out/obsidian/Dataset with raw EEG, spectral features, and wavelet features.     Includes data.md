@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived Feature Experiments (v4)"
 location: "L44"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Archived_Feature_Experiments_(v4)
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[ViTTCNet]] - `uses` [INFERRED]
 - [[WaveletFeatureExtractor]] - `uses` [INFERRED]
 
-#graphify/rationale #graphify/INFERRED #community/Archived_Feature_Experiments_(v4)
+  #community/Archived_Feature_Experiments_(v4)

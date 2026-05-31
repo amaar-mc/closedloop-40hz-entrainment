@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 4.7"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Methods Wilcoxon Signed-Rank, Hedges' g, BCa Bootstrap CIs]] - `references` [EXTRACTED]
 - [[Offline Counterfactual Replay Validation on 35 Subjects]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

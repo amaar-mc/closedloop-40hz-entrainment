@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 2.4"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Contribution 3 Closed-Loop Controller Validated on 35 EEG Subjects]] - `references` [EXTRACTED]
 - [[Contribution 4 Prediction Horizon Inflection Point (~3 seconds)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

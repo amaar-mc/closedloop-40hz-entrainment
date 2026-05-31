@@ -3,8 +3,6 @@ source_file: "submission/presentation/interview/csef_interview_qa.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Feature Ablation Discovery 12-Feature vs 73-Feature Generalization]] - `references` [EXTRACTED]
 - [[Offline Replay Validation (real EEG, counterfactual decisions, 35 subjects)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

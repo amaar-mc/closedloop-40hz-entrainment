@@ -4,8 +4,6 @@ type: "code"
 community: "Community 128"
 location: "L38"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_128
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[references_sheet.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_128
+  #community/Community_128

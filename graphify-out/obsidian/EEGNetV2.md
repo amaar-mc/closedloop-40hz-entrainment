@@ -4,8 +4,6 @@ type: "code"
 community: "Archived EEGNet V2"
 location: "L20"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Archived_EEGNet_V2
 ---
 
@@ -25,4 +23,4 @@ tags:
 - [[forward()_19]] - `method` [EXTRACTED]
 - [[test_eegnet_v2()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Archived_EEGNet_V2
+  #community/Archived_EEGNet_V2

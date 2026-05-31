@@ -4,8 +4,6 @@ type: "image"
 community: "Community 31"
 location: "panel A"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[Reactive Stimulation Strategy]] - `references` [EXTRACTED]
 - [[TRIBE V2 Alzheimer's Disease Simulation Figure]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

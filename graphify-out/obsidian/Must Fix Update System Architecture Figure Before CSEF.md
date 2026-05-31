@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/SYNTHESIS.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Rigor Audit Synthesis (HIGH overall confidence, results genuine and reproducible)]] - `references` [EXTRACTED]
 - [[System Architecture Figure Outdated Specs Warning (73-feat31K shown vs 12-feat22914)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

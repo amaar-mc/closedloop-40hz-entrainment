@@ -3,8 +3,6 @@ source_file: "scripts/pipeline/run_tvb_alignment.py"
 type: "code"
 community: "12-Feature TCN Validation"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/12-Feature_TCN_Validation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[TVBAlzheimerSimulator (Jansen-Rit Biophysical Brain Simulator)]] - `calls` [EXTRACTED]
 - [[TrendPredictiveCtrl (Linear Trend Look-Ahead Controller)]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/12-Feature_TCN_Validation
+  #community/12-Feature_TCN_Validation

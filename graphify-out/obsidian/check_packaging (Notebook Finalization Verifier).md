@@ -4,8 +4,6 @@ type: "code"
 community: "Community 103"
 location: "line 117"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_103
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Verify Notebook Finalization Script]] - `calls` [EXTRACTED]
 - [[submissionlab_notebookgenerate_notebook_pdf.py]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_103
+  #community/Community_103

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 73"
 location: "Model Zoo"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_73
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Architecture Timeline Phase 1 (V1-V8 static, Feb 5-16), Phase 2 (temporal LSTM, Feb 16-17), Phase 3 (multiscale TCN, Feb 17)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_73
+  #community/Community_73

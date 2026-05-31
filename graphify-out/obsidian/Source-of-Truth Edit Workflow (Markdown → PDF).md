@@ -4,8 +4,6 @@ type: "document"
 community: "Community 149"
 location: "## Source-of-Truth Workflow"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_149
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[CSEF Old Repository Guidelines]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_149
+  #community/Community_149

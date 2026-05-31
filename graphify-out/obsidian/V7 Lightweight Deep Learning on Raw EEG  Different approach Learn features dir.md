@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 57"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_57
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[run_v7_raw_eeg_models.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_57
+  #community/Community_57

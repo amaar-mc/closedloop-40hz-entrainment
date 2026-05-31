@@ -4,8 +4,6 @@ type: "code"
 community: "Generalization-Gap Experiments"
 location: "lines 94-119"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Generalization Gap Experiments (run_generalization.py)]] - `implements` [EXTRACTED]
 - [[PAC+Stim Focused Experiments (run_pac_stim_focused.py)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

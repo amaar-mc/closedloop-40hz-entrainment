@@ -4,8 +4,6 @@ type: "code"
 community: "TRIBE Neural-Mass Simulator"
 location: "L44"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
@@ -39,4 +37,4 @@ tags:
 - [[Validate stimulus generation.]] - `uses` [INFERRED]
 - [[neural_mass.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/TRIBE_Neural-Mass_Simulator
+  #community/TRIBE_Neural-Mass_Simulator

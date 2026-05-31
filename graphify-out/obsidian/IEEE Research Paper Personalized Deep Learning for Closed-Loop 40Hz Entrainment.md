@@ -3,8 +3,6 @@ source_file: "docs/research/AD_40Hz_Entrainment_Research_Paper_IEEE.txt"
 type: "document"
 community: "Literature Review & Methodology Docs"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -23,4 +21,4 @@ tags:
 - [[Personalization Module (IEEE Paper)]] - `references` [EXTRACTED]
 - [[Tort 2010 (J. Neurophysiol) Modulation Index PAC Method]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

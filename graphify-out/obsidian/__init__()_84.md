@@ -4,8 +4,6 @@ type: "code"
 community: "Community 84"
 location: "L34"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_84
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[FixedScheduleControl_2]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_84
+  #community/Community_84

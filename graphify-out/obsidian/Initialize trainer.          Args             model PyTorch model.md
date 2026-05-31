@@ -4,8 +4,6 @@ type: "rationale"
 community: "Core Data & PAC Pipeline"
 location: "L177"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Core_Data_&_PAC_Pipeline
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[EEGWindowDataset]] - `uses` [INFERRED]
 - [[__init__()_157]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline
+  #community/Core_Data_&_PAC_Pipeline

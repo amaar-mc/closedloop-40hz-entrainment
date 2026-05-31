@@ -4,8 +4,6 @@ type: "document"
 community: "Community 40"
 location: "Timeline of Approaches"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_40
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Repository Organization & Approach History]] - `references` [EXTRACTED]
 - [[Target Smoothing (ts=5) Inflates R² Artifactually]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_40
+  #community/Community_40

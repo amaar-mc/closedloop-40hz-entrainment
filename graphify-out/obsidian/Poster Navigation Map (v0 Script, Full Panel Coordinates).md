@@ -4,8 +4,6 @@ type: "document"
 community: "Community 112"
 location: "Poster Navigation Map"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_112
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Original Poster Presentation Script (v0, Synopsys Championship)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_112
+  #community/Community_112

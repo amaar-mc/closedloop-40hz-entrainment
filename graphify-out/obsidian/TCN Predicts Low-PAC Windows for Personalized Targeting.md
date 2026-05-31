@@ -3,8 +3,6 @@ source_file: "submission/figures/figure1.png"
 type: "image"
 community: "Community 85"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_85
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Adaptive Schedule (This Project) - 72% Alignment]] - `implements` [EXTRACTED]
 - [[Figure 1 Fixed vs. Adaptive Stimulation Scheduling Comparison]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_85
+  #community/Community_85

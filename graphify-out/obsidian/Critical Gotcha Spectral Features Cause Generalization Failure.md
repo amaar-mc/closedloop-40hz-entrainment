@@ -3,8 +3,6 @@ source_file: "CLAUDE.md"
 type: "document"
 community: "Community 39"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_39
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Feature Ablation PAC+Stim vs Spectral Features]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_39
+  #community/Community_39

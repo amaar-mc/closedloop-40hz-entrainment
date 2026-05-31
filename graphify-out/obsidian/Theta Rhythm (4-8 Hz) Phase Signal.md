@@ -3,8 +3,6 @@ source_file: "submission/figures/figure2.png"
 type: "image"
 community: "Community 85"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_85
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Gamma Oscillations (38-42 Hz) Amplitude Signal]] - `conceptually_related_to` [EXTRACTED]
 - [[Phase Modulates Amplitude Relationship]] - `implements` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_85
+  #community/Community_85

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 48"
 location: "page 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_48
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Required Forms Confirmed Adult Sponsor Checklist, Student Checklist 1A, Research Plan, Approval Form 1B]] - `references` [EXTRACTED]
 - [[Student Checklist (1A) — Project Registration Form]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_48
+  #community/Community_48

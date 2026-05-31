@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Presentation/SYNOPSYS_WINNING_ANALYSIS.md"
 type: "document"
 community: "Research Paper & Manuscript"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Unique Differentiator Temporal Prediction for Proactive Control (vs Classification Tasks)]] - `references` [EXTRACTED]
 - [[Winning Abstract Structure (results 32–40% dominant section)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 81"
 location: "L122"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_81
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[main()_27]] - `calls` [EXTRACTED]
 - [[per_subject_adaptation.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_81
+  #community/Community_81

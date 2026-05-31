@@ -4,8 +4,6 @@ type: "code"
 community: "Community 84"
 location: "L72"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_84
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[_trend()_4]] - `calls` [EXTRACTED]
 - [[run_trial()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_84
+  #community/Community_84

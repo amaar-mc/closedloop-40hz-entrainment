@@ -4,8 +4,6 @@ type: "code"
 community: "Community 46"
 location: "L70"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_46
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[compute_zscore()]] - `calls` [EXTRACTED]
 - [[test_personalization()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+  #community/Community_46

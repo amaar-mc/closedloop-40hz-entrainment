@@ -4,8 +4,6 @@ type: "image"
 community: "Community 31"
 location: "y-axis"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Fixed Controller - PAC Targeting (Negative Gap, Stimulates High-PAC States)]] - `references` [EXTRACTED]
 - [[PAC Targeting Gap by Controller (Bar Chart)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

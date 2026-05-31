@@ -4,8 +4,6 @@ type: "code"
 community: "Community 119"
 location: "L25"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_119
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Extract 12 PAC+Stim features and re-normalize from scratch.      This ensures th]] - `rationale_for` [EXTRACTED]
 - [[build_original_12feat.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_119
+  #community/Community_119

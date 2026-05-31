@@ -4,8 +4,6 @@ type: "document"
 community: "Community 99"
 location: "line 8"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_99
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[ViT-TCNet V4 Requirements]] - `rationale_for` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_99
+  #community/Community_99

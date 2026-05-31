@@ -3,8 +3,6 @@ source_file: "submission/CSEF_vs_Synopsys_Rules.md"
 type: "document"
 community: "Community 69"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_69
 ---
 
@@ -25,4 +23,4 @@ tags:
 - [[Synopsys 40-Point Numerical Judging Rubric]] - `references` [EXTRACTED]
 - [[Synopsys Silicon Valley Science & Technology Championship (SCVSEF)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_69
+  #community/Community_69

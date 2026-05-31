@@ -4,8 +4,6 @@ type: "document"
 community: "Community 143"
 location: "Feature Engineering Summary"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_143
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Spectral Features (61 dims, srcspectral_features.py)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_143
+  #community/Community_143

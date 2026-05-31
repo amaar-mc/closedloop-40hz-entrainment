@@ -4,8 +4,6 @@ type: "code"
 community: "12-Feature TCN Validation"
 location: "L302"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/12-Feature_TCN_Validation
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[_build_feature()_1]] - `calls` [EXTRACTED]
 - [[_predict()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/12-Feature_TCN_Validation
+  #community/12-Feature_TCN_Validation

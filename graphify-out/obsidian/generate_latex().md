@@ -4,8 +4,6 @@ type: "code"
 community: "Community 44"
 location: "L193"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_44
 ---
 
@@ -23,4 +21,4 @@ tags:
 - [[process_line()]] - `calls` [EXTRACTED]
 - [[resolve_image_path()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+  #community/Community_44

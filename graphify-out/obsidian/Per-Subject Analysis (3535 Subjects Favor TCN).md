@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 4.7"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Controller Comparison Results (N=35 Real EEG, 6 Controllers)]] - `references` [EXTRACTED]
 - [[Figure Per-Subject Alignment (3535 Subjects Favor TCN, Scatter Plot)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

@@ -4,8 +4,6 @@ type: "code"
 community: "Multiscale TCN & Features"
 location: "FEATURE_GROUP_PREFIXES"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[run_ablation_experiment()]] - `references` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

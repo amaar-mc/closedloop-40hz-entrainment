@@ -4,8 +4,6 @@ type: "document"
 community: "Community 50"
 location: "Data Analysis Figure 6"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_50
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 - [[Causal TCN Temporal PAC Forecaster — 5,154 params, 12 PAC+Stim features, 5s horizon]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_50
+  #community/Community_50

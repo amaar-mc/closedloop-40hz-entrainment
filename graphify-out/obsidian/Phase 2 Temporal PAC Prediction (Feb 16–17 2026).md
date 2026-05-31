@@ -4,8 +4,6 @@ type: "document"
 community: "Community 40"
 location: "Timeline of Approaches"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_40
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Phase 3 Multiscale Causal TCN (Feb 17 2026)]] - `conceptually_related_to` [EXTRACTED]
 - [[Repository Organization & Approach History]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_40
+  #community/Community_40

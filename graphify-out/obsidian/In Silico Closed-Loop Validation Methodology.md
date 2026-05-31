@@ -4,8 +4,6 @@ type: "document"
 community: "Community 76"
 location: "Section VII"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_76
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Model Predictive Control (MPC) Framework for Stimulation Optimization]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_76
+  #community/Community_76

@@ -4,8 +4,6 @@ type: "code"
 community: "Archived SpecTempNet V3"
 location: "L307"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_SpecTempNet_V3
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[count_parameters()_9]] - `calls` [EXTRACTED]
 - [[spectempnet.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_SpecTempNet_V3
+  #community/Archived_SpecTempNet_V3

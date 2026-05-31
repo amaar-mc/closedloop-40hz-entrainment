@@ -4,8 +4,6 @@ type: "code"
 community: "Paper/Presentation PDF Builders"
 location: "L183"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Paper/Presentation_PDF_Builders
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[generate_csef_presentation.py]] - `contains` [EXTRACTED]
 - [[main()_50]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders
+  #community/Paper/Presentation_PDF_Builders

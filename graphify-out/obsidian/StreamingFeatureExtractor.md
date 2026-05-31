@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "L28"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -60,4 +58,4 @@ tags:
 - [[reset()_67]] - `method` [EXTRACTED]
 - [[reset() zeroes filter state so subsequent call matches a fresh instance.]] - `uses` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

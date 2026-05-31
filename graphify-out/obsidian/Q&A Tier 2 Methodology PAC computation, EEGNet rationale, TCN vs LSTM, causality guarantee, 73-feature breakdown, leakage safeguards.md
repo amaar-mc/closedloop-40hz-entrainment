@@ -4,8 +4,6 @@ type: "document"
 community: "Community 73"
 location: "Tier 2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_73
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Rationale TCN chosen over LSTMTransformer — causal by construction, faster, less overfit risk with 35 subjects, inductive bias matches EEG]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_73
+  #community/Community_73

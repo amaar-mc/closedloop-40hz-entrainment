@@ -4,8 +4,6 @@ type: "code"
 community: "Community 49"
 location: "line 273"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_49
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[run_multi_horizon_baseline()]] - `implements` [EXTRACTED]
 - [[run_sklearn_temporal_baseline()]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+  #community/Community_49

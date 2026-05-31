@@ -4,8 +4,6 @@ type: "document"
 community: "Archived Enhanced-Feature TCN"
 location: "line 170"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Archived_Enhanced-Feature_TCN
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[train_one_epoch()_1]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Archived_Enhanced-Feature_TCN
+  #community/Archived_Enhanced-Feature_TCN

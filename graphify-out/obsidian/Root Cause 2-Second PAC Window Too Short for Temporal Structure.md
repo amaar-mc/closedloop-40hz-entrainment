@@ -4,8 +4,6 @@ type: "document"
 community: "Community 71"
 location: "Key Takeaway section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_71
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Critical Finding Near-Zero PAC Temporal Autocorrelation in 2-Second Windows]] - `rationale_for` [EXTRACTED]
 - [[Key Insight Temporal PAC Prediction Fails Without Stimulation Context]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_71
+  #community/Community_71

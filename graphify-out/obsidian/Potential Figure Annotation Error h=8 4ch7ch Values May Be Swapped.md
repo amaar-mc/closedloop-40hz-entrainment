@@ -4,8 +4,6 @@ type: "document"
 community: "Community 41"
 location: "Issue #5"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_41
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Poster Results Coherence Audit]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_41
+  #community/Community_41

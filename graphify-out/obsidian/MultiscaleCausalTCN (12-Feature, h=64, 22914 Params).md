@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 2.5"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Rationale for Temporal Prediction Pivot (from Static Ceiling)]] - `rationale_for` [EXTRACTED]
 - [[Section 06 Results Deployed Model Performance (ts=1, Test R²=0.170)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

@@ -4,8 +4,6 @@ type: "code"
 community: "12-Feature TCN Validation"
 location: "L88"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/12-Feature_TCN_Validation
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[run_12feat_validation.py]] - `contains` [EXTRACTED]
 - [[step()_36]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/12-Feature_TCN_Validation
+  #community/12-Feature_TCN_Validation

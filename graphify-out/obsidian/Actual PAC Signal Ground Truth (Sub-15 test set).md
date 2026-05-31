@@ -3,8 +3,6 @@ source_file: "submission/figures/figure7.png"
 type: "image"
 community: "Community 64"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_64
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Reactive Controller Stimulation Decisions (Sub-15)]] - `shares_data_with` [EXTRACTED]
 - [[TCN Predictive Controller Decisions (Sub-15, 5s ahead)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_64
+  #community/Community_64

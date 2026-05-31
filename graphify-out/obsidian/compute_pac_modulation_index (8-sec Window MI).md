@@ -4,8 +4,6 @@ type: "code"
 community: "Community 129"
 location: "reprocess_long_windows.py:21"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_129
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[process_subject (Per-Subject Long-Window Extractor)]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_129
+  #community/Community_129

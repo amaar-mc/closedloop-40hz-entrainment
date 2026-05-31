@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -28,4 +26,4 @@ tags:
 - [[run_single_trial()_1]] - `contains` [EXTRACTED]
 - [[simulator.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

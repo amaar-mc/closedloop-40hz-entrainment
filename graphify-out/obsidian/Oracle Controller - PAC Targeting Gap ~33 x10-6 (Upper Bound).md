@@ -4,8 +4,6 @@ type: "image"
 community: "Community 31"
 location: "Oracle bar"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[PAC Targeting Gap by Controller (Bar Chart)]] - `references` [EXTRACTED]
 - [[TCN Controller - PAC Targeting Gap ~30.5 x10-6 ( g=1.57 vs Reactive)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

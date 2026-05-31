@@ -4,8 +4,6 @@ type: "code"
 community: "TRIBE Neural-Mass Simulator"
 location: "L179"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Load fsaverage5 atlas labels and build ROI vertex index map.]] - `rationale_for` [EXTRACTED]
 - [[predict_tribe_v2()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator
+  #community/TRIBE_Neural-Mass_Simulator

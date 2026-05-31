@@ -4,8 +4,6 @@ type: "code"
 community: "Generalization-Gap Experiments"
 location: "lines 34-87"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Epoch-Level PAC Caveat 82.2% Same-Epoch Samples]] - `conceptually_related_to` [INFERRED]
 - [[Sliding-Window PAC Computation (compute_sliding_pac.py)]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

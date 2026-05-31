@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Feature Experiments (v4)"
 location: "L142"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_Feature_Experiments_(v4)
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Args             x (batch, channels, seq_len)          Returns             ou]] - `rationale_for` [EXTRACTED]
 - [[SEBlock]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)
+  #community/Archived_Feature_Experiments_(v4)

@@ -4,8 +4,6 @@ type: "code"
 community: "TCN Layer Internals"
 location: "L176"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TCN_Layer_Internals
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[count_parameters()_15]] - `calls` [EXTRACTED]
 - [[tcn_variants.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TCN_Layer_Internals
+  #community/TCN_Layer_Internals

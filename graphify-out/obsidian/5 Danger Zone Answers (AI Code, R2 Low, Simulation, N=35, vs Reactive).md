@@ -4,8 +4,6 @@ type: "document"
 community: "Community 112"
 location: "4. Danger Zones"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_112
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Final Q&A Bank and Danger Zones (FINAL_04, Archived)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_112
+  #community/Community_112

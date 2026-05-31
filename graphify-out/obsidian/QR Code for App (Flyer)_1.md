@@ -3,8 +3,6 @@ source_file: "submission/flyer/qr_app.png"
 type: "image"
 community: "Community 85"
 tags:
-  - graphify/image
-  - graphify/AMBIGUOUS
   - community/Community_85
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Adaptive Schedule (This Project) - 72% Alignment]] - `conceptually_related_to` [AMBIGUOUS]
 
-#graphify/image #graphify/AMBIGUOUS #community/Community_85
+  #community/Community_85

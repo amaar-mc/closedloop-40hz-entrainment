@@ -4,8 +4,6 @@ type: "document"
 community: "Community 72"
 location: "line 12"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_72
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Causal Temporal Convolutional Network (TCN)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_72
+  #community/Community_72

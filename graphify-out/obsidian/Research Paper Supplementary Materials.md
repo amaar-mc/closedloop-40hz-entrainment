@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Research Paper/SUPPLEMENTARY.md"
 type: "document"
 community: "Archived CSEF Paper & Abstract"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Archived_CSEF_Paper_&_Abstract
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Table S2 Complete Hedges' g Effect Sizes for All Controller Pairwise Comparisons]] - `references` [EXTRACTED]
 - [[ts=1 vs ts=5 Target Smoothing Trade-off (Raw vs Smoothed PAC Evaluation)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived_CSEF_Paper_&_Abstract

@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "[25]"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Methods EEGNet Regression (1,457 params, input 1×7×500, MSE loss, Adam)]] - `cites` [EXTRACTED]
 - [[Research Paper v3 (Full Manuscript)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

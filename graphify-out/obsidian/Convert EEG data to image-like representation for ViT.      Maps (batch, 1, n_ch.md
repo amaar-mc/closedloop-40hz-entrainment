@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived Feature Experiments (v4)"
 location: "L166"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Archived_Feature_Experiments_(v4)
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[EEGToImage]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)
+  #community/Archived_Feature_Experiments_(v4)

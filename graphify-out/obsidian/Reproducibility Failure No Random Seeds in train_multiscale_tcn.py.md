@@ -4,8 +4,6 @@ type: "document"
 community: "Community 47"
 location: "Section 4.2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_47
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Pipeline Audit Report Multiscale Causal TCN (ts5_clean)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_47
+  #community/Community_47

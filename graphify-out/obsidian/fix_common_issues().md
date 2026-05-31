@@ -4,8 +4,6 @@ type: "code"
 community: "Community 44"
 location: "L746"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_44
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[generate_paper_latex.py]] - `contains` [EXTRACTED]
 - [[main()_49]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_44
+  #community/Community_44

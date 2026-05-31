@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[srcstreamingadapters.py (SimulatedEEGAdapter)]] - `imports_from` [EXTRACTED]
 - [[srcstreamingfeature_extractor.py (StreamingFeatureExtractor)]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

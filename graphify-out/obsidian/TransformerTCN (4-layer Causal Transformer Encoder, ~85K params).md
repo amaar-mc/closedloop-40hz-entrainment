@@ -4,8 +4,6 @@ type: "code"
 community: "Community 60"
 location: "class TransformerTCN"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[TransformerTCN Hypothesis (Self-Attention vs Fixed Dilation)]] - `rationale_for` [EXTRACTED]
 - [[VARIANT_REGISTRY (Model Variant Registry Dict)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

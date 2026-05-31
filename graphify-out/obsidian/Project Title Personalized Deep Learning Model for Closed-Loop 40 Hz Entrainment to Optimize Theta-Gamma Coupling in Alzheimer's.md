@@ -4,8 +4,6 @@ type: "document"
 community: "Community 48"
 location: "page 1, item 2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_48
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Engineering Goal Closed-Loop EEG Controller to Maximize Theta-Gamma PAC]] - `references` [EXTRACTED]
 - [[Student Checklist (1A) — Project Registration Form]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_48
+  #community/Community_48

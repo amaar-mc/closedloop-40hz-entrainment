@@ -3,8 +3,6 @@ source_file: "submission/presentation/archive/v1_reference/past_winners_analysis
 type: "document"
 community: "Community 111"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_111
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Judge Interaction Guide]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_111
+  #community/Community_111

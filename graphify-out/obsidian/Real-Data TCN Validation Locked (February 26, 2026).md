@@ -4,8 +4,6 @@ type: "document"
 community: "Lab Notebook PDF Generation"
 location: "February 26, 2026 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Project P10 Research Log Notebook (VFINAL)]] - `references` [EXTRACTED]
 - [[TCN Achieves 92% of Oracle Performance (PAC gap 30.5 vs 33.3)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

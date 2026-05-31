@@ -3,8 +3,6 @@ source_file: "archive/notebooks/v2_daily_log_draft.pdf"
 type: "document"
 community: "Community 141"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_141
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[P10 Daily Research Notebook (v2 daily log draft)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_141
+  #community/Community_141

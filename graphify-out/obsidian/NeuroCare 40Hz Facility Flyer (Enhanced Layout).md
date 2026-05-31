@@ -3,8 +3,6 @@ source_file: "submission/flyer/facility_flyer.pdf"
 type: "document"
 community: "Community 78"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_78
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Key Result R² = 0.60 PAC Prediction 5s Ahead (5x improvement)]] - `references` [EXTRACTED]
 - [[NeuroCare 40Hz Product Flyer]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_78
+  #community/Community_78

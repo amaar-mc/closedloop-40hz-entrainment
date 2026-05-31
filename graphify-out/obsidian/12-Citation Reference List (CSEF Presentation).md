@@ -4,8 +4,6 @@ type: "code"
 community: "Presentation Scripts & Citations"
 location: "REFS list"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Key Citations Reference Sheet (v1, Old)]] - `semantically_similar_to` [INFERRED]
 - [[References Sheet PDF Generator Script]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

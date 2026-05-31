@@ -4,8 +4,6 @@ type: "document"
 community: "Community 89"
 location: "Section 2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_89
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[TCN Closed-Loop Validation Result (247-word Abstract)]] - `conceptually_related_to` [INFERRED]
 - [[Threshold Robustness (delta-z sweep 0.1-1.0)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_89
+  #community/Community_89

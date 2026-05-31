@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/01_compliance_checklist.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Page Count and Section Structure Requirements (12 pages, 8 sections)]] - `references` [EXTRACTED]
 - [[Project Summary Word Count Check (142 words, under 150 limit)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

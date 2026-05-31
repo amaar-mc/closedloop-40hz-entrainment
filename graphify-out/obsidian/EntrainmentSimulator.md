@@ -4,8 +4,6 @@ type: "code"
 community: "Closed-Loop Control & Simulator"
 location: "L45"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Closed-Loop_Control_&_Simulator
 ---
 
@@ -155,4 +153,4 @@ tags:
 - [[step()_65]] - `method` [EXTRACTED]
 - [[validate_simulator_dynamics()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop_Control_&_Simulator

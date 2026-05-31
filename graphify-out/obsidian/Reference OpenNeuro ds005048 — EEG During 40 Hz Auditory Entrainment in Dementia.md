@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "[38]/[39]"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Research Paper v3 (Full Manuscript)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

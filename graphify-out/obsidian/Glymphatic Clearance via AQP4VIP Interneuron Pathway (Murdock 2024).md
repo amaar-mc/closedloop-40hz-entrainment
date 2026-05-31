@@ -4,8 +4,6 @@ type: "document"
 community: "Community 124"
 location: "Question 2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_124
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Amyloid Cascade Hypothesis and 40Hz Mechanism (Iaccarino + Murdock pathways)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_124
+  #community/Community_124

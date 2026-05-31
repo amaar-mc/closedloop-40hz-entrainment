@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Feature Experiments (v4)"
 location: "L68"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_Feature_Experiments_(v4)
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[EEGDatasetV4]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)
+  #community/Archived_Feature_Experiments_(v4)

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 79"
 location: "line 6"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_79
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Multiscale Temporal PAC Module]] - `references` [EXTRACTED]
 - [[Recommended Hyperparameters (lookback=20, horizon=5, dilations=1,2,4,8)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_79
+  #community/Community_79

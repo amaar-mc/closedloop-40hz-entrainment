@@ -4,8 +4,6 @@ type: "document"
 community: "Community 71"
 location: "Section 9"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_71
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Architecture Decision Causal Multiscale TCN + Stim Context Chosen Over LSTMTransformer]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_71
+  #community/Community_71

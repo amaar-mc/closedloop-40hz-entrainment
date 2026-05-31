@@ -4,8 +4,6 @@ type: "document"
 community: "Community 39"
 location: "L55-L84"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_39
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[EEGNet Static PAC Estimator (Stage 1)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_39
+  #community/Community_39

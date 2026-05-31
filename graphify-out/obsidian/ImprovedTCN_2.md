@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Enhanced-Feature TCN"
 location: "line 108"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_Enhanced-Feature_TCN
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[freeze_backbone (per-subject fine-tuning support)]] - `rationale_for` [EXTRACTED]
 - [[main()_9]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_Enhanced-Feature_TCN
+  #community/Archived_Enhanced-Feature_TCN

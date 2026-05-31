@@ -3,8 +3,6 @@ source_file: "archive/docs_v1_v8/V3_CLEAN_NO_MI.md"
 type: "document"
 community: "Model Ceiling & Leakage Audits"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Model_Ceiling_&_Leakage_Audits
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[135 Total Features (61 Spectral + 74 Wavelet) for V4]] - `conceptually_related_to` [EXTRACTED]
 - [[V3-Clean Model 61 Spectral Features (MI Removed)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model_Ceiling_&_Leakage_Audits

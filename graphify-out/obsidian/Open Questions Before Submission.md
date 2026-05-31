@@ -4,8 +4,6 @@ type: "document"
 community: "Community 68"
 location: "## Open questions to resolve before submission"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_68
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Anticipated Reviewer Weaknesses]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_68
+  #community/Community_68

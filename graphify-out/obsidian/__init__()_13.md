@@ -4,8 +4,6 @@ type: "code"
 community: "Community 38"
 location: "L70"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_38
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[PhaseSwapAugmentation]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+  #community/Community_38

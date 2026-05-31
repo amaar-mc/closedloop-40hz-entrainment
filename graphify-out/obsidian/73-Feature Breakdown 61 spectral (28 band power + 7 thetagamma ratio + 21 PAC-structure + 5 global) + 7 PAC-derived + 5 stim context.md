@@ -4,8 +4,6 @@ type: "document"
 community: "Community 73"
 location: "Section 3.2-3.3"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_73
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Feature Engineering Summary raw EEG (1,7,500), spectral 61-dim, wavelet 74-dim, PAC features 116-dim (circular), multiscale 73-dim]] - `shares_data_with` [EXTRACTED]
 - [[MultiscaleCausalTCN Architecture (B,20,73)→future PAC+delta, 31,043 params, dilation 1,2,4,8, receptive field 31 steps]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_73
+  #community/Community_73

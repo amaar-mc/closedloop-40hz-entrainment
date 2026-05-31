@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/03_figure_audit.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Figure and Visual Compliance Audit]] - `references` [EXTRACTED]
 - [[Must Fix Update System Architecture Figure Before CSEF]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

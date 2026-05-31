@@ -4,8 +4,6 @@ type: "image"
 community: "Community 31"
 location: "all panels"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[PAC Heatmap Strategy × Severity (Panel E)]] - `references` [EXTRACTED]
 - [[PAC Response by Disease Severity (Panel A)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

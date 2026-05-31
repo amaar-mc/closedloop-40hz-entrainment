@@ -3,8 +3,6 @@ source_file: "archive/docs_v1_v8/V4_VIT_TCNET.md"
 type: "document"
 community: "Model Ceiling & Leakage Audits"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Model_Ceiling_&_Leakage_Audits
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[V4 Wavelet Features 74 Features (35 CWT + 28 WPD + 11 Global)]] - `references` [EXTRACTED]
 - [[ViT-TCNet Architecture Plan (Pre-trained ViT + TCN Decoder)]] - `implements` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model_Ceiling_&_Leakage_Audits

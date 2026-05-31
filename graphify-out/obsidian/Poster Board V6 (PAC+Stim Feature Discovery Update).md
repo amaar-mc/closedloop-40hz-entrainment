@@ -3,8 +3,6 @@ source_file: "submission/poster/POSTER_BOARD_V6.md"
 type: "document"
 community: "Community 41"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_41
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[V6 Horizon Sweep Updated to PAC+Stim Values (h=5 0.577)]] - `references` [EXTRACTED]
 - [[V6 Key Change 12-Feature PAC+Stim Discovery Narrative]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_41
+  #community/Community_41

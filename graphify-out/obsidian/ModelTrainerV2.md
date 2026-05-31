@@ -4,8 +4,6 @@ type: "code"
 community: "Archived EEGNet V2"
 location: "L32"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_EEGNet_V2
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[training_v2.py]] - `contains` [EXTRACTED]
 - [[validate()]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_EEGNet_V2
+  #community/Archived_EEGNet_V2

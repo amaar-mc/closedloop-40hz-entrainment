@@ -4,8 +4,6 @@ type: "code"
 community: "Community 35"
 location: "L112"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_35
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[plot_prediction_scatter()]] - `calls` [EXTRACTED]
 - [[utils.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_35
+  #community/Community_35

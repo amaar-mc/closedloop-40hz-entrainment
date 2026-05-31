@@ -4,8 +4,6 @@ type: "document"
 community: "Archived CSEF Paper & Abstract"
 location: "## Regulatory Considerations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Archived_CSEF_Paper_&_Abstract
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Clinical Roadmap (Research to Practice Pathway)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived_CSEF_Paper_&_Abstract

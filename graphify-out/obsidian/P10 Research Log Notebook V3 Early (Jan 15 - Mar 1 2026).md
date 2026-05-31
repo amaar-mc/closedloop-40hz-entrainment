@@ -3,8 +3,6 @@ source_file: "archive/notebooks/P10_Lab_Notebook_V3_early.md"
 type: "document"
 community: "Community 95"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_95
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[P10 Research Log Notebook V2 (Corrected Review Candidate)]] - `semantically_similar_to` [INFERRED]
 - [[P10 Research Log Notebook V3 Early (PDF render)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_95
+  #community/Community_95

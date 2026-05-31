@@ -4,8 +4,6 @@ type: "code"
 community: "TCN Layer Internals"
 location: "L470"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TCN_Layer_Internals
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Add positional encoding to input.          Args             x Input tensor]] - `rationale_for` [EXTRACTED]
 - [[CausalSinusoidalPE]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TCN_Layer_Internals
+  #community/TCN_Layer_Internals

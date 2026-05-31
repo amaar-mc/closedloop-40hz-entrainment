@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "L226"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -29,4 +27,4 @@ tags:
 - [[test_all()]] - `calls` [EXTRACTED]
 - [[test_eegnet_large()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 39"
 location: "L481-L487"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_39
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Problem Statement Fixed-Schedule Stimulation Limitations]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_39
+  #community/Community_39

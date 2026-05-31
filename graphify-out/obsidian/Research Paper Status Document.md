@@ -4,8 +4,6 @@ type: "document"
 community: "Community 59"
 location: "paper/PAPER_STATUS.md"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_59
 ---
 
@@ -27,4 +25,4 @@ tags:
 - [[Target Conference MIT URTC 2026 Paper Presentation]] - `references` [EXTRACTED]
 - [[Working Paper Title Feature-Selected Temporal Forecasting for Retrospective Closed-Loop 40Hz Auditory Entrainment]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_59
+  #community/Community_59

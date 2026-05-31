@@ -3,8 +3,6 @@ source_file: "submission/paper/REVIEW_REPORT.md"
 type: "document"
 community: "Community 33"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[CR-07 Figure 3 Shows 5s Hysteresis — Should Be 3s (Code-Verified)]] - `references` [EXTRACTED]
 - [[Research Paper v4 (Full Paper, Feature-Ablation Version)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

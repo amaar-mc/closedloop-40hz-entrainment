@@ -3,8 +3,6 @@ source_file: "submission/abstract/v2_abstract.md"
 type: "document"
 community: "Community 55"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_55
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[CSEF Abstract (v2  vfinal, 250-word)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_55
+  #community/Community_55

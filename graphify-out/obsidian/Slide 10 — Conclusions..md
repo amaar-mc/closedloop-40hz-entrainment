@@ -4,8 +4,6 @@ type: "rationale"
 community: "CSEF Presentation Generator"
 location: "L884"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/CSEF_Presentation_Generator
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[p10_conclusions()_2]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/CSEF_Presentation_Generator
+  #community/CSEF_Presentation_Generator

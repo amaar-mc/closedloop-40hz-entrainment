@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L810"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[print_summary_table()_1]] - `calls` [EXTRACTED]
 - [[run_fatigue_model_experiment()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

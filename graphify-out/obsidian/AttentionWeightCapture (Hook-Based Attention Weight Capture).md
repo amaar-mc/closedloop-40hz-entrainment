@@ -4,8 +4,6 @@ type: "code"
 community: "Community 60"
 location: "class AttentionWeightCapture"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[AttentionPool1D (Temporal Attention Pooling)]] - `references` [EXTRACTED]
 - [[analyze_attention_weights()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 102"
 location: "L23"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_102
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[audit_multiscale_pipeline.py]] - `contains` [EXTRACTED]
 - [[run_audit()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_102
+  #community/Community_102

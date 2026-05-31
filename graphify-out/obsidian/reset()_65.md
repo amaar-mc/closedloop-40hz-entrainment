@@ -4,8 +4,6 @@ type: "code"
 community: "Closed-Loop Control & Simulator"
 location: "L177"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Closed-Loop_Control_&_Simulator
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[ReactiveThresholdControl_6]] - `method` [EXTRACTED]
 - [[Reset baseline buffer and state.]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop_Control_&_Simulator

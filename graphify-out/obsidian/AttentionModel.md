@@ -4,8 +4,6 @@ type: "code"
 community: "Community 57"
 location: "L125"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_57
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[forward()_14]] - `method` [EXTRACTED]
 - [[run_v7_raw_eeg_models.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_57
+  #community/Community_57

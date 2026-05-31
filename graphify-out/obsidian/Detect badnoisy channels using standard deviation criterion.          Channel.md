@@ -4,8 +4,6 @@ type: "rationale"
 community: "Core Data & PAC Pipeline"
 location: "L250"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Core_Data_&_PAC_Pipeline
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[detect_bad_channels()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Core_Data_&_PAC_Pipeline
+  #community/Core_Data_&_PAC_Pipeline

@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 52"
 location: "L41"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_52
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[_bandpass_filter()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_52
+  #community/Community_52

@@ -3,8 +3,6 @@ source_file: "submission/presentation/archive/v1_interview/computational_deep_di
 type: "document"
 community: "Controller Results & Judge Prep"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Inference Latency Breakdown (Feature 5ms + TCN 2ms)]] - `references` [EXTRACTED]
 - [[Judge Interview Prep Guide (Complete Technical Deep-Dive)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 155"
 location: "Section 2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_155
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[CSEF Presentation Methods Dataset breakdown (AD n=17, MCI n=6, controls n=10), preprocessing, PAC computation]] - `shares_data_with` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_155
+  #community/Community_155

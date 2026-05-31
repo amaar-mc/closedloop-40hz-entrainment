@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/SYNTHESIS.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Hysteresis Value Discrepancy (5s in codepresentation vs 3s in paper)]] - `rationale_for` [EXTRACTED]
 - [[Rigor Audit Synthesis (HIGH overall confidence, results genuine and reproducible)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

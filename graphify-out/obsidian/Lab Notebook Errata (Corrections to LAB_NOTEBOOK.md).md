@@ -3,8 +3,6 @@ source_file: "archive/notebooks/LAB_NOTEBOOK_ERRATA.md"
 type: "document"
 community: "Community 122"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_122
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Laboratory Research Notebook (Structured Study Format)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_122
+  #community/Community_122

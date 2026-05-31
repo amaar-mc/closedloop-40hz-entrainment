@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "L37"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -28,4 +26,4 @@ tags:
 - [[reset()_9]] - `method` [EXTRACTED]
 - [[step()_9]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

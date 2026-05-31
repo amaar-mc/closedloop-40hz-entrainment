@@ -4,8 +4,6 @@ type: "document"
 community: "Lab Notebook PDF Generation"
 location: "pages 1-3"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[main()_72]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

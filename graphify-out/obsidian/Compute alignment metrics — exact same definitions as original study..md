@@ -4,8 +4,6 @@ type: "rationale"
 community: "12-Feature TCN Validation"
 location: "L107"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/12-Feature_TCN_Validation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[StimAction]] - `uses` [INFERRED]
 - [[evaluate_alignment()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/12-Feature_TCN_Validation
+  #community/12-Feature_TCN_Validation

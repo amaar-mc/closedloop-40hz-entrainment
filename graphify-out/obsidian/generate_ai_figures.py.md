@@ -4,8 +4,6 @@ type: "code"
 community: "Community 120"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_120
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[generate_image()]] - `contains` [EXTRACTED]
 - [[main()_52]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_120
+  #community/Community_120

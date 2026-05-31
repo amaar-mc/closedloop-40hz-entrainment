@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Feature Experiments (v4)"
 location: "L211"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_Feature_Experiments_(v4)
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[test_vit_tcnet()]] - `calls` [EXTRACTED]
 - [[vit_tcnet.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)
+  #community/Archived_Feature_Experiments_(v4)

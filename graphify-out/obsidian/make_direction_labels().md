@@ -4,8 +4,6 @@ type: "code"
 community: "Community 83"
 location: "L49"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_83
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[main()_24]] - `calls` [EXTRACTED]
 - [[persistence_direction_baseline()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_83
+  #community/Community_83

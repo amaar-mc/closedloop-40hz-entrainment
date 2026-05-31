@@ -4,8 +4,6 @@ type: "code"
 community: "Replay Analysis & Controllers"
 location: "L247"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Replay_Analysis_&_Controllers
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 - [[step()_5]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Replay_Analysis_&_Controllers
+  #community/Replay_Analysis_&_Controllers

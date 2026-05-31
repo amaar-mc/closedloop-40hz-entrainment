@@ -3,8 +3,6 @@ source_file: "submission/poster/archive/POSTER_BOARD_V4.md"
 type: "document"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Poster Board V5 (Condensed, Visual-Forward, Synopsys 2026)]] - `references` [EXTRACTED]
 - [[TCN vs Reactive Trade-off Analysis (Stim% vs Targeting)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

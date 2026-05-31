@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 2, lines 79-103"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Project Connection Two-Stage EEGNet+TCN System Explained for Judges]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

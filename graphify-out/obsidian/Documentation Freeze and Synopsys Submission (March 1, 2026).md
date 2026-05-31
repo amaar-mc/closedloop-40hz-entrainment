@@ -4,11 +4,9 @@ type: "document"
 community: "Community 179"
 location: "March 1, 2026 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_179
 ---
 
 # Documentation Freeze and Synopsys Submission (March 1, 2026)
 
-#graphify/document #graphify/EXTRACTED #community/Community_179
+  #community/Community_179

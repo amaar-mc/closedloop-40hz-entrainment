@@ -4,8 +4,6 @@ type: "code"
 community: "Archived SpecTempNet V3"
 location: "L231"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_SpecTempNet_V3
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[run_training_v3.py]] - `contains` [EXTRACTED]
 - [[train_epoch()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_SpecTempNet_V3
+  #community/Archived_SpecTempNet_V3

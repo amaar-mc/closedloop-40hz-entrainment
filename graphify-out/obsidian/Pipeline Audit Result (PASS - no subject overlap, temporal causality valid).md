@@ -4,8 +4,6 @@ type: "document"
 community: "Community 146"
 location: "line 740-763"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_146
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Audit Multiscale Pipeline Script (audit_multiscale_pipeline.py)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_146
+  #community/Community_146

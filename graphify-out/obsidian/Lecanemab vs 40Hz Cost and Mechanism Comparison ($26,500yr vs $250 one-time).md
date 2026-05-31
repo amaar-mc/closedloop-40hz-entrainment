@@ -4,8 +4,6 @@ type: "document"
 community: "Community 124"
 location: "Question 6"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_124
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Amyloid Cascade Hypothesis and 40Hz Mechanism (Iaccarino + Murdock pathways)]] - `conceptually_related_to` [INFERRED]
 - [[FDA De Novo Classification Pathway for Novel Device]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_124
+  #community/Community_124

@@ -4,8 +4,6 @@ type: "code"
 community: "Lab Notebook PDF Generation"
 location: "L302"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[md_inline()]] - `calls` [EXTRACTED]
 - [[parse_table()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

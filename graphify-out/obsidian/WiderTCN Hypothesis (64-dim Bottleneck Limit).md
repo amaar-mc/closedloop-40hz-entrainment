@@ -4,8 +4,6 @@ type: "document"
 community: "Community 60"
 location: "Section 2.3"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[TCN Architecture Experiment Design]] - `references` [EXTRACTED]
 - [[WiderTCN (hidden=128, ~120K params)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

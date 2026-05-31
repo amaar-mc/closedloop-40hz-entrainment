@@ -4,8 +4,6 @@ type: "code"
 community: "CSEF Presentation Generator"
 location: "L165"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/CSEF_Presentation_Generator
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[add_bullet()]] - `calls` [EXTRACTED]
 - [[generate_csef_pptx.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CSEF_Presentation_Generator
+  #community/CSEF_Presentation_Generator

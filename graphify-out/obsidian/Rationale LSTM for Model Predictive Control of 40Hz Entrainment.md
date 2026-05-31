@@ -4,8 +4,6 @@ type: "document"
 community: "Archived Temporal PAC Predictor"
 location: "__init__.py:1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Archived_Temporal_PAC_Predictor
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[TemporalPACPredictor (LSTMGRU Model)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Archived_Temporal_PAC_Predictor
+  #community/Archived_Temporal_PAC_Predictor

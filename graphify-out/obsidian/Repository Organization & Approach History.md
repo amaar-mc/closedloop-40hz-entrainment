@@ -3,8 +3,6 @@ source_file: "docs/methodology/CODE_MAP.md"
 type: "document"
 community: "Community 40"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_40
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Phase 2 Temporal PAC Prediction (Feb 16–17 2026)]] - `references` [EXTRACTED]
 - [[Phase 3 Multiscale Causal TCN (Feb 17 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_40
+  #community/Community_40

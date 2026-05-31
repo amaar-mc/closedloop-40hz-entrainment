@@ -3,8 +3,6 @@ source_file: "archive/experimental/sliding_pac/build_sliding_dataset.py"
 type: "code"
 community: "Generalization-Gap Experiments"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Sliding-Window PAC Computation (compute_sliding_pac.py)]] - `references` [EXTRACTED]
 - [[Stim Context Feature Builder from BIDS Events]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

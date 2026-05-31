@@ -3,8 +3,6 @@ source_file: "submission/presentation/scripts/vfinal_script.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Medicine & Physiology Hard Interview Questions]] - `references` [EXTRACTED]
 - [[Tort et al. 2010 (Modulation Index PAC Method)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

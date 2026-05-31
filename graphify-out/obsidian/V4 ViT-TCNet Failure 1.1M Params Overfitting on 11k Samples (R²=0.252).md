@@ -4,8 +4,6 @@ type: "document"
 community: "Community 76"
 location: "V4 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_76
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Rationale EEGNet Chosen Over GAT-Transformer (~2000 params vs 50k+)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_76
+  #community/Community_76

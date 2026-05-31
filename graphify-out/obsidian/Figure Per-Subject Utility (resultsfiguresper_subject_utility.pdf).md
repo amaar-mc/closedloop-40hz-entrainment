@@ -4,8 +4,6 @@ type: "document"
 community: "Community 59"
 location: "paper/PAPER_STATUS.md:42"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_59
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Research Paper Status Document]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_59
+  #community/Community_59

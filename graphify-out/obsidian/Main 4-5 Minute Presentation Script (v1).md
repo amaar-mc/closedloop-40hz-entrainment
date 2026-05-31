@@ -3,8 +3,6 @@ source_file: "submission/presentation/scripts/v1_script.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Iaccarino et al. 2016 (MIT 40Hz landmark paper)]] - `cites` [EXTRACTED]
 - [[Presentation Timing Map (8-section breakdown)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

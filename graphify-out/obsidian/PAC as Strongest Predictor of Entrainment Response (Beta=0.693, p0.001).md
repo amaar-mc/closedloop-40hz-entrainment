@@ -4,8 +4,6 @@ type: "document"
 community: "Community 76"
 location: "Introduction and Section D"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_76
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[30% Non-Responder Problem Inter-Individual Variability in 40Hz Entrainment]] - `rationale_for` [EXTRACTED]
 - [[IEEE Draft Paper EEGNet Architecture for Real-Time PAC Prediction in AD]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_76
+  #community/Community_76

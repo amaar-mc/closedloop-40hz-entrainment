@@ -4,8 +4,6 @@ type: "document"
 community: "Community 58"
 location: "line 25"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_58
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[NVIDIA GeForce RTX 3080 GPU (Training Hardware)]] - `references` [EXTRACTED]
 - [[TCN Horizon=1 Training Result (test R2=0.7352, val R2=0.7659)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_58
+  #community/Community_58

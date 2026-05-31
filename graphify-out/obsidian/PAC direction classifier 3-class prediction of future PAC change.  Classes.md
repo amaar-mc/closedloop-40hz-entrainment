@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 83"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_83
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[direction_classifier.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_83
+  #community/Community_83

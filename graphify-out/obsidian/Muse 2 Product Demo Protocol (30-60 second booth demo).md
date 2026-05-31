@@ -4,8 +4,6 @@ type: "document"
 community: "Community 117"
 location: "The Product Demo"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_117
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Demo Items Muse 2, Laptop, Poster (48x64 in)]] - `conceptually_related_to` [INFERRED]
 - [[Judge Interaction Flow Reading Engagement Signals]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Community_117
+  #community/Community_117

@@ -4,8 +4,6 @@ type: "code"
 community: "Archived SpecTempNet V3"
 location: "L137"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_SpecTempNet_V3
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Args             x (batch, n_spectral_features)          Returns]] - `rationale_for` [EXTRACTED]
 - [[SpectralBranch]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_SpecTempNet_V3
+  #community/Archived_SpecTempNet_V3

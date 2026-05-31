@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section V: MPC Framework"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[MPC Principles Predict-Optimize-Recede Horizon]] - `conceptually_related_to` [INFERRED]
 - [[Research Methodology Document GAT-Transformer Predictive Framework]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 120"
 location: "L255"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_120
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[generate_ai_figures.py]] - `contains` [EXTRACTED]
 - [[generate_image()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_120
+  #community/Community_120

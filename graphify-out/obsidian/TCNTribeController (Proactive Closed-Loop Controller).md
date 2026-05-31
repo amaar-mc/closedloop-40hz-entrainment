@@ -4,8 +4,6 @@ type: "code"
 community: "TRIBE-TCN Validation"
 location: "line 342"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TRIBE-TCN_Validation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[TCNTribe Model (TRIBE-trained Causal TCN)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TRIBE-TCN_Validation
+  #community/TRIBE-TCN_Validation

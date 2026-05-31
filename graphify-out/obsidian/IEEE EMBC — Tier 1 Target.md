@@ -3,8 +3,6 @@ source_file: "paper/conferences/targets.md"
 type: "document"
 community: "Community 96"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_96
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[IEEE EMBC Conference]] - `references` [EXTRACTED]
 - [[MIT URTC 2026 — Selected Primary Target]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_96
+  #community/Community_96

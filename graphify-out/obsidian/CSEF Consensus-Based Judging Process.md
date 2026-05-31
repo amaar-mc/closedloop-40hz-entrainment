@@ -4,8 +4,6 @@ type: "document"
 community: "Community 69"
 location: "Section 3"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_69
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Rationale Consensus Judging Favors Memorable Projects Over Rubric Gaming]] - `rationale_for` [EXTRACTED]
 - [[Synopsys 40-Point Numerical Judging Rubric]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_69
+  #community/Community_69

@@ -3,8 +3,6 @@ source_file: "submission/figures/figure12.png"
 type: "image"
 community: "Community 61"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_61
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Low-PAC Stimulation Rate Metric]] - `references` [EXTRACTED]
 - [[Subject Median PAC Threshold for Stimulation Decision]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_61
+  #community/Community_61

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 50"
 location: "Feature Ablation section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_50
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Feature Ablation Finding 73-feature model R²=−0.025; 12 PAC+Stim features R²=0.606]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_50
+  #community/Community_50

@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "6. The Horizon Sweep"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Judge Interview Prep Guide (Complete Technical Deep-Dive)]] - `references` [EXTRACTED]
 - [[Why 5-Second Horizon Matters Explanation (3 Levels)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

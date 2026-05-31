@@ -3,8 +3,6 @@ source_file: "submission/presentation/02_short_version.md"
 type: "document"
 community: "Controller Results & Judge Prep"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Main Presentation Script (4-5 Min, 01)]] - `conceptually_related_to` [INFERRED]
 - [[Short Accessible Script v2 (Elevator-Expandable, Updated)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

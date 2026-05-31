@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section IV.D: Statistical Validation with Surrogates"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Leave-One-Subject-Out Cross-Validation Strategy_1]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

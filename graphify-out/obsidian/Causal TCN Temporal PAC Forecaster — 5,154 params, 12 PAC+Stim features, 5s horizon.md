@@ -4,8 +4,6 @@ type: "document"
 community: "Community 50"
 location: "System Architecture / Stage 2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_50
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 - [[Horizon Sweep TCN advantage emerges at 3-10s where persistence baseline collapses (Figure 6)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_50
+  #community/Community_50

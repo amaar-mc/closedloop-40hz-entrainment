@@ -4,8 +4,6 @@ type: "code"
 community: "12-Feature TCN Validation"
 location: "line 75"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/12-Feature_TCN_Validation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Alzheimer Simulation Script (Disease Severity × Strategy Matrix)]] - `implements` [EXTRACTED]
 - [[PredictiveCtrl (Trend + Z-score with Hysteresis)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/12-Feature_TCN_Validation
+  #community/12-Feature_TCN_Validation

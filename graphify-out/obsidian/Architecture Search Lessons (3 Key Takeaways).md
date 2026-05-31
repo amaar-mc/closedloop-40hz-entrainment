@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 5.5"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[SpecTempNet V3 Leakage Discovery (R²=0.69→0.236 After Fix)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

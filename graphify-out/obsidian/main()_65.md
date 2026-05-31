@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L948"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -41,4 +39,4 @@ tags:
 - [[run_trial_batch()]] - `calls` [EXTRACTED]
 - [[to_dict()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

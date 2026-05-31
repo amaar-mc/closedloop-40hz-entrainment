@@ -4,8 +4,6 @@ type: "image"
 community: "Poster Boards & Figures"
 location: "System Architecture section"
 tags:
-  - graphify/image
-  - graphify/INFERRED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[CSEF Poster V3 (Final Print-Ready Poster)]] - `references` [EXTRACTED]
 - [[Two-Stage Predictive Pipeline (EEGNet → Feature Extraction → Causal TCN)]] - `references` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

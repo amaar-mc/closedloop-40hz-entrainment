@@ -3,8 +3,6 @@ source_file: "submission/figures/figure1.png"
 type: "image"
 community: "Community 85"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_85
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[QR Code for App (Flyer)_1]] - `conceptually_related_to` [AMBIGUOUS]
 - [[TCN Predicts Low-PAC Windows for Personalized Targeting]] - `implements` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_85
+  #community/Community_85

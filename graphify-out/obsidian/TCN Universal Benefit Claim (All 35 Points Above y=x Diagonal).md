@@ -4,8 +4,6 @@ type: "image"
 community: "Poster Boards & Figures"
 location: "scatter plot region annotations"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Competitive Edge vs. 2025 Synopsys Projects (7 Differentiators)]] - `references` [EXTRACTED]
 - [[Per-Subject Alignment Scatter Plot (3535 Favor TCN)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

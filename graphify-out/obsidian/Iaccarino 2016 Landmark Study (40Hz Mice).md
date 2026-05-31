@@ -3,8 +3,6 @@ source_file: "archive/context/motivation.md"
 type: "document"
 community: "Community 118"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_118
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Iaccarino 2016 Optogenetic 40Hz Stimulation]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_118
+  #community/Community_118

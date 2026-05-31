@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Question 3"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Spectral Feature Overfitting Discovery (73→12 features)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

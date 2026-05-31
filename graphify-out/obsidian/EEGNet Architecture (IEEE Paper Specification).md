@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section D: Deep Learning Architecture"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[EEGNet PyTorch Implementation (7-channel, 500 samples)]] - `semantically_similar_to` [INFERRED]
 - [[IEEE Research Paper Personalized Deep Learning for Closed-Loop 40Hz Entrainment]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

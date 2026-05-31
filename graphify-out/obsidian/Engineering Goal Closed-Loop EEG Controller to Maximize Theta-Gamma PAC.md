@@ -4,8 +4,6 @@ type: "document"
 community: "Community 48"
 location: "page 1, Engineering Goal section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_48
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Project Title Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment to Optimize Theta-Gamma Coupling in Alzheimer's]] - `references` [EXTRACTED]
 - [[System Design 5-Component Closed-Loop Controller (DataLoader, SignalProc, EEGNet, Personalization, DecisionEngine)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_48
+  #community/Community_48

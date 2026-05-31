@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Feature Experiments (v4)"
 location: "L297"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_Feature_Experiments_(v4)
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Negative R² for minimization.]] - `rationale_for` [EXTRACTED]
 - [[run_v6_optimized.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)
+  #community/Archived_Feature_Experiments_(v4)

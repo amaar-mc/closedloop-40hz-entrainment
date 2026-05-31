@@ -3,8 +3,6 @@ source_file: "submission/poster/v6_board.md"
 type: "document"
 community: "Community 41"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_41
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Poster Board V6 (PAC+Stim Feature Discovery Update)]] - `semantically_similar_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_41
+  #community/Community_41

@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 115"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_115
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[sweep_multiscale_configs.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_115
+  #community/Community_115

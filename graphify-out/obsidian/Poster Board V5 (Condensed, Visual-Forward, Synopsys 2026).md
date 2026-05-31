@@ -3,8 +3,6 @@ source_file: "submission/poster/POSTER_BOARD_V5.md"
 type: "document"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -27,4 +25,4 @@ tags:
 - [[Two-Stage Predictive Pipeline (EEGNet → Feature Extraction → Causal TCN)]] - `references` [EXTRACTED]
 - [[V5 Changelog from V4 (Structural + Numerical Corrections)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

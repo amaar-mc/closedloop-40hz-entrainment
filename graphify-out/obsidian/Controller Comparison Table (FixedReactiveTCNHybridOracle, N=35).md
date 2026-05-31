@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "## 2. Controller Comparison"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -23,4 +21,4 @@ tags:
 - [[TCN Predictive vs Reactive Threshold Primary Result]] - `references` [EXTRACTED]
 - [[TCN vs Reactive Primary Statistics alignment g=1.31, low-PAC targeting g=4.47, PAC gap g=1.57, all p0.001]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

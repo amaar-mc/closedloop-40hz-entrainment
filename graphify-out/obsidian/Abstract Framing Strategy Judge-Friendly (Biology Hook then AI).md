@@ -3,8 +3,6 @@ source_file: "docs/abstract/archive/drafts/round1/draft4_judges_perspective.md"
 type: "document"
 community: "Community 54"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_54
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Abstract Round 2 Draft A Best Narrative]] - `implements` [INFERRED]
 - [[Final Abstract Round 3 (Selected Version)]] - `implements` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_54
+  #community/Community_54

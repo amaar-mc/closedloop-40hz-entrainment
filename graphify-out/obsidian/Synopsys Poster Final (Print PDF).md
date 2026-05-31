@@ -3,8 +3,6 @@ source_file: "submission/poster/Synopsys Poster Final.pdf"
 type: "document"
 community: "Community 154"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_154
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Synopsys Poster Final Flat (Text Extraction from PDF)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_154
+  #community/Community_154

@@ -3,8 +3,6 @@ source_file: "submission/figures/figure4.png"
 type: "image"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Figure 4 Feature Ablation — 73 to 12 Features]] - `references` [EXTRACTED]
 - [[PAC + Stim (12 features) Test R² = 0.606 (5× IMPROVEMENT)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

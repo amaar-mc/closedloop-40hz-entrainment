@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/08_reproducibility.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[MultiscaleCausalTCN Reproducibility Audit (3 new seeds)]] - `references` [EXTRACTED]
 - [[PAC+Stim 12-Feature Subset (test R2=0.568, validated match)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

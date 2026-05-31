@@ -3,8 +3,6 @@ source_file: "submission/figures/figure10.png"
 type: "image"
 community: "Community 42"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_42
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Figure 10 Future Directions Roadmap]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_42
+  #community/Community_42

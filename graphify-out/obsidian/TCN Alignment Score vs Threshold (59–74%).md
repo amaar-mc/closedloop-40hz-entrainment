@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/threshold_sensitivity.png"
 type: "image"
 community: "Community 36"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_36
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[TCN Controller PAC Gap (~30.5e-6, g=1.57 vs Reactive)]] - `semantically_similar_to` [INFERRED]
 - [[TCN Robustness Threshold Sensitivity Analysis Figure]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_36
+  #community/Community_36

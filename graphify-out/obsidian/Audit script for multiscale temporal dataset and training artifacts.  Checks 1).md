@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 102"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_102
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[audit_multiscale_pipeline.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_102
+  #community/Community_102

@@ -3,8 +3,6 @@ source_file: "validation/AUDIT_REPORT.md"
 type: "document"
 community: "Models, Streaming & Apps"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[main()_65]] - `references` [EXTRACTED]
 - [[main()_66]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

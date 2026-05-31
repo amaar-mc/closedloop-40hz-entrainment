@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 3, lines 109-173"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Rationale Epoch-Level PAC Labels Chosen for Stability — 2s window too short for reliable MI; creates static prediction ceiling]] - `rationale_for` [EXTRACTED]
 - [[Unique Differentiator Temporal Prediction for Proactive Control (vs Classification Tasks)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

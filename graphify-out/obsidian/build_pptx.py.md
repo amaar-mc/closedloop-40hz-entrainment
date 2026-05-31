@@ -4,8 +4,6 @@ type: "code"
 community: "PPTX Slide Builder"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/PPTX_Slide_Builder
 ---
 
@@ -31,4 +29,4 @@ tags:
 - [[p11_scope()]] - `contains` [EXTRACTED]
 - [[p12_references()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PPTX_Slide_Builder
+  #community/PPTX_Slide_Builder

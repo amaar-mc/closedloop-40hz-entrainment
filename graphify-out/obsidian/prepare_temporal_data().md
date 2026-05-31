@@ -4,8 +4,6 @@ type: "code"
 community: "Multiscale TCN & Features"
 location: "L195"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[temporal_dataset.py]] - `contains` [EXTRACTED]
 - [[train_temporal_predictor()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived Feature Experiments (v4)"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Archived_Feature_Experiments_(v4)
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[WaveletFeatureExtractor]] - `uses` [INFERRED]
 - [[run_enhanced_features.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Archived_Feature_Experiments_(v4)
+  #community/Archived_Feature_Experiments_(v4)

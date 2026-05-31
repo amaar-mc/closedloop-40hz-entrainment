@@ -4,8 +4,6 @@ type: "document"
 community: "Community 95"
 location: "Background Framing section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_95
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[P10 Research Log Notebook V2 (Corrected Review Candidate)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_95
+  #community/Community_95

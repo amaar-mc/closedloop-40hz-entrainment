@@ -4,8 +4,6 @@ type: "document"
 community: "Presentation Scripts & Citations"
 location: "Industry and Regulatory"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Key Citations Reference Sheet (v1, Old)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

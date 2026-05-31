@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Presentation/02_short_version.md"
 type: "document"
 community: "Archived CSEF Paper & Abstract"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Archived_CSEF_Paper_&_Abstract
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Rationale 0.287 R² Ceiling Is Data-Imposed, Not Architectural]] - `references` [EXTRACTED]
 - [[SpecTempNet Leakage Discovery Story (R²=0.69 inflated by circular PAC feature)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived_CSEF_Paper_&_Abstract

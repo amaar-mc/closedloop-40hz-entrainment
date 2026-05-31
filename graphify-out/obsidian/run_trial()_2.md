@@ -4,8 +4,6 @@ type: "code"
 community: "Community 84"
 location: "L103"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_84
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[run_fatigue_sensitivity.py]] - `contains` [EXTRACTED]
 - [[step()_23]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_84
+  #community/Community_84

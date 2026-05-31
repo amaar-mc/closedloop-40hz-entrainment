@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Section 4.1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Three Key Scientific Moments (Ceiling Discovery, Feature Paradox, Horizon Inflection)]] - `references` [EXTRACTED]
 - [[v2 Full Technical 6-Minute Presentation Script]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

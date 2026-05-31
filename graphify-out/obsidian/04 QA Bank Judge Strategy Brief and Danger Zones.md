@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 1"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[v1 Q&A Bank Synopsys Strategy Brief (rubric mapping, core narrative arc)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

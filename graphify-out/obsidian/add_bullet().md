@@ -4,8 +4,6 @@ type: "code"
 community: "CSEF Presentation Generator"
 location: "L186"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/CSEF_Presentation_Generator
 ---
 
@@ -26,4 +24,4 @@ tags:
 - [[p10_conclusions()_2]] - `calls` [EXTRACTED]
 - [[p11_scope()_2]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/CSEF_Presentation_Generator
+  #community/CSEF_Presentation_Generator

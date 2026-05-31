@@ -4,8 +4,6 @@ type: "document"
 community: "Community 88"
 location: "Statistical Significance table"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_88
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Controller Comparison (FixedReactiveTCNHybridOracle, N=35)]] - `conceptually_related_to` [EXTRACTED]
 - [[Numbers Sheet (Old v1 Reference)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_88
+  #community/Community_88

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 45"
 location: "L272"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_45
 ---
 
@@ -24,4 +22,4 @@ tags:
 - [[build_section_7()]] - `calls` [EXTRACTED]
 - [[generate_excalidraw.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+  #community/Community_45

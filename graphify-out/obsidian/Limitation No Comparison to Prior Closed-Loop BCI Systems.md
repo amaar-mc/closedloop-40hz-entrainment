@@ -4,8 +4,6 @@ type: "document"
 community: "Community 68"
 location: "5. **No comparison to prior closed-loop BCI systems**"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_68
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Anticipated Reviewer Weaknesses]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_68
+  #community/Community_68

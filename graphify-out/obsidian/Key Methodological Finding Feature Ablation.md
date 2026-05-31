@@ -4,8 +4,6 @@ type: "document"
 community: "Community 72"
 location: "line 12"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_72
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Paper Draft Abstract (Conference)]] - `references` [EXTRACTED]
 - [[Spectral EEG Feature Generalization Failure]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_72
+  #community/Community_72

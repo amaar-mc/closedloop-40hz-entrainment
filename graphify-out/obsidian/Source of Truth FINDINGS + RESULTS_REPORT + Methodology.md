@@ -4,8 +4,6 @@ type: "document"
 community: "Community 67"
 location: "docs/INDEX.md:33-35"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_67
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Current Technical Methodology]] - `conceptually_related_to` [EXTRACTED]
 - [[Superseded Implementation Archive]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_67
+  #community/Community_67

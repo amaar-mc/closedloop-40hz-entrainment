@@ -3,8 +3,6 @@ source_file: "submission/poster/POSTER_COHERENCE_AUDIT.md"
 type: "document"
 community: "Community 41"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_41
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[Potential Figure Annotation Error h=8 4ch7ch Values May Be Swapped]] - `references` [EXTRACTED]
 - [[Synopsys Era (73-Feature Model) — Poster Provenance]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_41
+  #community/Community_41

@@ -3,8 +3,6 @@ source_file: "submission/figures/figure8.png"
 type: "image"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[StimulusRest Protocol 40 Hz AM blocks (40s stim  20s rest), 2s analysis windows]] - `references` [EXTRACTED]
 - [[Subject-Level TrainValTest Split 2456 subjects, 17,283 total windows]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

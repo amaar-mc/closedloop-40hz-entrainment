@@ -3,8 +3,6 @@ source_file: "submission/paper/RESEARCH_PAPER_v3.md"
 type: "document"
 community: "Community 151"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_151
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Generate Paper LaTeX Script]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_151
+  #community/Community_151

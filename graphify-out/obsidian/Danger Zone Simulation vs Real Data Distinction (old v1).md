@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Question 1"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_30
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Offline Replay Limitation Framing (not live closed-loop, next step is crossover study)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_30
+  #community/Community_30

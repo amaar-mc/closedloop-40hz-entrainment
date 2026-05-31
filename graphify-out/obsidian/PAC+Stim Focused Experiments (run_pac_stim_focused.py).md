@@ -3,8 +3,6 @@ source_file: "archive/experimental/run_pac_stim_focused.py"
 type: "code"
 community: "Generalization-Gap Experiments"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[ML Experiment Framework (run_experiments.py)]] - `references` [EXTRACTED]
 - [[MixupSeqDataset (mixup augmentation for EEG sequences)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

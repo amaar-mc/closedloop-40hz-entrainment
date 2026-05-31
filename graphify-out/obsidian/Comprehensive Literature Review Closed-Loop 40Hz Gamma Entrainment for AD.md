@@ -3,8 +3,6 @@ source_file: "docs/research/02_Literature_Review_40Hz_Entrainment_AD.txt"
 type: "document"
 community: "Literature Review & Methodology Docs"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[Research Gaps No Personalization in Open-Loop Protocols]] - `references` [EXTRACTED]
 - [[TGC as Working Memory Predictor β=0.693 p0.001 (Frontiers 20182024)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

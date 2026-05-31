@@ -4,8 +4,6 @@ type: "document"
 community: "Community 39"
 location: "L432-L477"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_39
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Limitations Simulated Closed-Loop, Single Dataset, Short Sessions]] - `references` [INFERRED]
 - [[Real-Data Closed-Loop Validation (N=35 Subjects)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_39
+  #community/Community_39

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 118"
 location: "Section 3"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_118
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Glymphatic Clearance Pathway (40Hz Mechanism)]] - `conceptually_related_to` [INFERRED]
 - [[Iaccarino 2016 Optogenetic 40Hz Stimulation]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_118
+  #community/Community_118

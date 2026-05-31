@@ -4,8 +4,6 @@ type: "code"
 community: "Archived ImprovedTCN Experiments"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_ImprovedTCN_Experiments
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[ridge_on_subset()]] - `contains` [EXTRACTED]
 - [[train_eval_subset()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_ImprovedTCN_Experiments
+  #community/Archived_ImprovedTCN_Experiments

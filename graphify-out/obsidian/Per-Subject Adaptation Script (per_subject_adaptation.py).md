@@ -4,8 +4,6 @@ type: "document"
 community: "Community 58"
 location: "line 461"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_58
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Per-Subject Adaptation Results (TCN adapted vs persistence, 6 test subjects)]] - `implements` [EXTRACTED]
 - [[TCN Horizon=1 Training Result (test R2=0.7352, val R2=0.7659)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_58
+  #community/Community_58

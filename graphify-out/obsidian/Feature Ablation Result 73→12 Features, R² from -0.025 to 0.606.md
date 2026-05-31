@@ -4,8 +4,6 @@ type: "document"
 community: "Community 41"
 location: "Result Provenance section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_41
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Poster Results Coherence Audit]] - `references` [EXTRACTED]
 - [[V6 Key Change 12-Feature PAC+Stim Discovery Narrative]] - `references` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_41
+  #community/Community_41

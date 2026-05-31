@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Phase 6: Decision Engine"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[EEGNet PyTorch Implementation (7-channel, 500 samples)]] - `calls` [EXTRACTED]
 - [[PersonalizationModule Rolling 30s PAC Baseline with Z-Score]] - `calls` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

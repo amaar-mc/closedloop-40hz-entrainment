@@ -4,8 +4,6 @@ type: "document"
 community: "Community 47"
 location: "Section 2"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_47
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Metadata Mismatch Guard (train_multiscale_tcn.py)]] - `rationale_for` [INFERRED]
 - [[PAC Autocorrelation Inflates R² (target smoothing rationale)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_47
+  #community/Community_47

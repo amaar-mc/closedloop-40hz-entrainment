@@ -3,8 +3,6 @@ source_file: "docs/research/04_Research_Methodology_Proposed_Approach.txt"
 type: "document"
 community: "Literature Review & Methodology Docs"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Research Hypotheses H1-H4 (PAC Prediction and Control Efficacy)]] - `references` [EXTRACTED]
 - [[Temporal Transformer Module for EEG Sequence Modeling]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

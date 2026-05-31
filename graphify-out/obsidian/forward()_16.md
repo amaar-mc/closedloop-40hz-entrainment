@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Temporal PAC Predictor"
 location: "L66"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_Temporal_PAC_Predictor
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Args             x (batch, n_channels, n_samples) single EEG window]] - `rationale_for` [EXTRACTED]
 - [[SpatialEncoder]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_Temporal_PAC_Predictor
+  #community/Archived_Temporal_PAC_Predictor

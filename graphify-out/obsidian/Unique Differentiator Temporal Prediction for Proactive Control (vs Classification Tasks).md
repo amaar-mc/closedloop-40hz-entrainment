@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "## 4. How YOUR Project Compares"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Research Objective Predictive Closed-Loop PAC Forecasting]] - `conceptually_related_to` [INFERRED]
 - [[Synopsys Championship Winning Analysis (Feb 27, 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

@@ -4,8 +4,6 @@ type: "code"
 community: "Multiscale TCN & Features"
 location: "L61"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -49,4 +47,4 @@ tags:
 - [[forward()_30]] - `method` [EXTRACTED]
 - [[multiscale_tcn.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

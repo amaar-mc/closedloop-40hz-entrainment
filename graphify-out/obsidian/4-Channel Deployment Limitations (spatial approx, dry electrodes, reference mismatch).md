@@ -4,8 +4,6 @@ type: "document"
 community: "Models, Streaming & Apps"
 location: "Known Limitations section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Rationale PAC Labels Not Directly Comparable Across Channel Sets]] - `rationale_for` [EXTRACTED]
 - [[step6_comparison_report()]] - `references` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

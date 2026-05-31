@@ -4,8 +4,6 @@ type: "code"
 community: "Community 77"
 location: "lines 11-14"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_77
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Per-Subject Utility Figure]] - `implements` [EXTRACTED]
 - [[Threshold Sensitivity Figure]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_77
+  #community/Community_77

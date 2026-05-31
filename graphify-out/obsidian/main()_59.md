@@ -4,8 +4,6 @@ type: "code"
 community: "Community 49"
 location: "L494"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_49
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[test_temporal_sequence_logic()]] - `calls` [EXTRACTED]
 - [[validate_leakage.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+  #community/Community_49

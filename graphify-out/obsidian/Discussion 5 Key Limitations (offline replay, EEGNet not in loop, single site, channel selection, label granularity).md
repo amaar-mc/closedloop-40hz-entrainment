@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 7.4"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Future Directions Online Adaptation, End-to-End Validation, Multi-site, RL Controller]] - `references` [EXTRACTED]
 - [[Offline Counterfactual Replay Validation on 35 Subjects]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

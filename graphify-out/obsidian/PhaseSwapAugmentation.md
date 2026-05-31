@@ -4,8 +4,6 @@ type: "code"
 community: "Community 38"
 location: "L68"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_38
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[__init__()_13]] - `method` [EXTRACTED]
 - [[run_v8_specialized_eeg.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+  #community/Community_38

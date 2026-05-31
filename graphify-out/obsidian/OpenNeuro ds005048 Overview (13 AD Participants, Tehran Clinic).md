@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section 10.1: Overview of ds005048 Dataset"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Foundational Concepts Document 40Hz Entrainment in AD]] - `references` [EXTRACTED]
 - [[Lahijanian 2024 (Scientific Reports) ds005048 DMN Connectivity Study]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

@@ -4,8 +4,6 @@ type: "document"
 community: "Poster Boards & Figures"
 location: "Section 3"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Judge 90-Second Verbal Summary Script]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

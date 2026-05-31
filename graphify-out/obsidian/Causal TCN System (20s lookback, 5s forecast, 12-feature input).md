@@ -3,8 +3,6 @@ source_file: "submission/presentation/scripts/v1_script.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Quick-Reference Numbers for CSEF Interview]] - `references` [EXTRACTED]
 - [[Simplified Presentation Script (~3.5 min, non-technical judges)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

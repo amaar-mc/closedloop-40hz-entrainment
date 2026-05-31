@@ -4,8 +4,6 @@ type: "code"
 community: "Community 46"
 location: "L101"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_46
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[get_baseline_stats()_1]] - `calls` [EXTRACTED]
 - [[test_personalization()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_46
+  #community/Community_46

@@ -4,8 +4,6 @@ type: "code"
 community: "Multiscale TCN & Features"
 location: "L339"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Forward pass.          Args             x_seq Input tensor of shape (B, T,_1]] - `rationale_for` [EXTRACTED]
 - [[MultiTaskTCN]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

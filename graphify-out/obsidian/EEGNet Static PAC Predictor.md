@@ -4,8 +4,6 @@ type: "document"
 community: "Community 34"
 location: "Section 4"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_34
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[PAC as Biomarker for Alzheimer's Disease]] - `shares_data_with` [INFERRED]
 - [[Static PAC Estimation Tier (EEGNet)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_34
+  #community/Community_34

@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 80"
 location: "L153"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_80
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[build_sliding_dataset()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_80
+  #community/Community_80

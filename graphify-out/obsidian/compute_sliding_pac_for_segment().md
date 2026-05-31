@@ -4,8 +4,6 @@ type: "code"
 community: "Community 52"
 location: "L180"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_52
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[compute_sliding_pac.py]] - `contains` [EXTRACTED]
 - [[compute_sliding_pac_for_split()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_52
+  #community/Community_52

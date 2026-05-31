@@ -4,8 +4,6 @@ type: "document"
 community: "Community 111"
 location: "The Caucus Sentence"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_111
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Judge Interaction Guide]] - `references` [EXTRACTED]
 - [[Winner Narrative vs Report Framing Strategy]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_111
+  #community/Community_111

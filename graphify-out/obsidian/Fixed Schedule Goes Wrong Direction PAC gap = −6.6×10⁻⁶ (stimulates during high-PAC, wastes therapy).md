@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "Section 2.5"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Fixed-Schedule Limitation in Paper open-loop, ignores inter-individual variability and intra-session habituation, 2333 responders (Sahu & Tseng)]] - `semantically_similar_to` [INFERRED]
 - [[PAC Targeting Quality by Controller]] - `shares_data_with` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

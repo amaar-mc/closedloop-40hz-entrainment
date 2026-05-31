@@ -4,8 +4,6 @@ type: "document"
 community: "Community 43"
 location: "Section 4.5, Key design decisions"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_43
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[MultiscaleCausalTCN Architecture Design Rationale]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_43
+  #community/Community_43

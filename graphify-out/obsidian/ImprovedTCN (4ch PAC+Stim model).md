@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "line 205"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Closed-Loop Stimulation Decision Logic]] - `shares_data_with` [INFERRED]
 - [[NeuroCare 40Hz Live Mission Control v5]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

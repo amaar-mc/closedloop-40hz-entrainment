@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/09_feature_validation.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Stimulation Context Boosts PAC Prediction (+0.230 R2 from pac to pac_stim)]] - `references` [EXTRACTED]
 - [[Tier 1 Architecture Equivalence (TransformerGRUTCN all R2~0.61-0.65, feature selection dominates)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

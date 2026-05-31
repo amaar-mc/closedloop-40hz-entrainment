@@ -4,8 +4,6 @@ type: "code"
 community: "Closed-Loop Control & Simulator"
 location: "L20"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Closed-Loop_Control_&_Simulator
 ---
 
@@ -131,4 +129,4 @@ tags:
 - [[realtime_inference.py]] - `contains` [EXTRACTED]
 - [[reset()_8]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop_Control_&_Simulator

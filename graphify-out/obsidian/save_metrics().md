@@ -4,8 +4,6 @@ type: "code"
 community: "Community 35"
 location: "L99"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_35
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Save metrics dictionary to JSON file.      Args         metrics Metrics dic]] - `rationale_for` [EXTRACTED]
 - [[utils.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_35
+  #community/Community_35

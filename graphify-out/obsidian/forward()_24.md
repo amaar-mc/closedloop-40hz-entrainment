@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Feature Experiments (v4)"
 location: "L316"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_Feature_Experiments_(v4)
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Args             eeg (batch, 1, n_channels, n_samples) - Raw EEG             s]] - `rationale_for` [EXTRACTED]
 - [[ViTTCNet]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_Feature_Experiments_(v4)
+  #community/Archived_Feature_Experiments_(v4)

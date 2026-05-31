@@ -3,8 +3,6 @@ source_file: "submission/flyer/flyer.md"
 type: "document"
 community: "Community 78"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_78
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[What It Does 40Hz Gamma Brainwave Restoration]] - `references` [EXTRACTED]
 - [[Why It Matters Non-invasive, Personalized, Evidence-based, Proactive]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_78
+  #community/Community_78

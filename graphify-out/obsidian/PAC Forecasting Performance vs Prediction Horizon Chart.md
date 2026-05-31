@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Research Paper/Figures/horizon_sweep.png"
 type: "image"
 community: "Community 42"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_42
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Persistence Baseline (Collapses Below R²=0 at 5+ Seconds)]] - `references` [EXTRACTED]
 - [[Ridge Regression Baseline (Collapses Below R²=0 at 5+ Seconds)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_42
+  #community/Community_42

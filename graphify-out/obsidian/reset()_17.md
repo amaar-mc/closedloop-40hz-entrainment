@@ -4,8 +4,6 @@ type: "code"
 community: "Community 62"
 location: "L78"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_62
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Predictive]] - `method` [EXTRACTED]
 - [[run_trial()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_62
+  #community/Community_62

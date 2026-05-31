@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/system_block_diagram.png"
 type: "image"
 community: "Community 36"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_36
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[Preprocessing Block (BP 0.5-80 Hz, notch, CAR)]] - `references` [EXTRACTED]
 - [[TRIBE V2-Enhanced Simulation Backend]] - `semantically_similar_to` [INFERRED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_36
+  #community/Community_36

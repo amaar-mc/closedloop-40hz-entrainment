@@ -4,8 +4,6 @@ type: "document"
 community: "Community 40"
 location: "Active Code — temporal_multiscale/"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_40
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[MultiscaleCausalTCN Architecture (31K params, Causal Dilation 1,2,4,8)]] - `semantically_similar_to` [EXTRACTED]
 - [[Phase 3 Multiscale Causal TCN (Feb 17 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_40
+  #community/Community_40

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 140"
 location: "L23-L95"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_140
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Architecture Overview Data Flow (CLAUDE.md)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_140
+  #community/Community_140

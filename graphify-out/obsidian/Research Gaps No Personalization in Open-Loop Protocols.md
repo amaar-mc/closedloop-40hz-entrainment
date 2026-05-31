@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section 9.1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Comprehensive Literature Review Closed-Loop 40Hz Gamma Entrainment for AD]] - `references` [EXTRACTED]
 - [[Rationale Why Closed-Loop Outperforms Open-Loop for AD Entrainment]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 37"
 location: "L65"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_37
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[generate_horizon_sweep()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_37
+  #community/Community_37

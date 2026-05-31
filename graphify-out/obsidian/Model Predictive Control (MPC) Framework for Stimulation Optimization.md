@@ -4,8 +4,6 @@ type: "document"
 community: "Community 76"
 location: "Section V"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_76
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[In Silico Closed-Loop Validation Methodology]] - `references` [EXTRACTED]
 - [[Proposed GAT-Transformer Architecture for EEG PAC Prediction]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_76
+  #community/Community_76

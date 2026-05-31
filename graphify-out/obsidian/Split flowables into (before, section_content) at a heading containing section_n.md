@@ -4,8 +4,6 @@ type: "rationale"
 community: "Lab Notebook PDF Generation"
 location: "L226"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[split_at_section()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

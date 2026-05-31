@@ -4,8 +4,6 @@ type: "document"
 community: "Community 43"
 location: "Section 3 / February 6 entry"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_43
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Digital Research Log Notebook (Detailed Chronological)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_43
+  #community/Community_43

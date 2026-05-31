@@ -4,8 +4,6 @@ type: "code"
 community: "TRIBE-TCN Validation"
 location: "L164"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TRIBE-TCN_Validation
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[forward()_35]] - `method` [EXTRACTED]
 - [[run_tribe_tcn_validation.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TRIBE-TCN_Validation
+  #community/TRIBE-TCN_Validation

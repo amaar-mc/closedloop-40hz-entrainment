@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/STATUS.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Model Architecture Deep Dive Phase (Phase 3)]] - `references` [EXTRACTED]
 - [[Rigor Audit Synthesis (HIGH overall confidence, results genuine and reproducible)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

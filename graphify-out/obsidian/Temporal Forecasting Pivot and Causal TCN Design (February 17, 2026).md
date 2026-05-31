@@ -4,8 +4,6 @@ type: "document"
 community: "Lab Notebook PDF Generation"
 location: "February 17, 2026 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[R2=0.287 Data Ceiling Finding (All Architectures Converge)]] - `conceptually_related_to` [EXTRACTED]
 - [[Rationale Pivot from Static PAC Estimation to Temporal Forecasting]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

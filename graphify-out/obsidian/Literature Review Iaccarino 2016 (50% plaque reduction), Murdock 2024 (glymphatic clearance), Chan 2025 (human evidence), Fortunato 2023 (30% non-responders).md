@@ -4,8 +4,6 @@ type: "paper"
 community: "Controller Results & Judge Prep"
 location: "pages 2-3 section 1"
 tags:
-  - graphify/paper
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Fixed-Schedule Limitation in Paper open-loop, ignores inter-individual variability and intra-session habituation, 2333 responders (Sahu & Tseng)]] - `references` [EXTRACTED]
 - [[Key Literature Citations Iaccarino 2016, Murdock 2024, Chan 2025, Fortunato 2023, Lahijanian 2024, Lawhern 2018, Tort 2010, Jiao 2025]] - `references` [EXTRACTED]
 
-#graphify/paper #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

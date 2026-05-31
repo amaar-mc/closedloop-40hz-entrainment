@@ -4,8 +4,6 @@ type: "document"
 community: "Poster Boards & Figures"
 location: "Section 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[OpenNeuro ds005048 Dataset Technical Details]] - `references` [EXTRACTED]
 - [[PAC Biomarker Deep Explanation (Modulation Index, Tort 2010)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

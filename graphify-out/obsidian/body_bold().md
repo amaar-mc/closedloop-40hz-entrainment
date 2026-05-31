@@ -4,8 +4,6 @@ type: "code"
 community: "PPTX Slide Builder"
 location: "L150"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/PPTX_Slide_Builder
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[_add_textbox()]] - `calls` [EXTRACTED]
 - [[_first_paragraph()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PPTX_Slide_Builder
+  #community/PPTX_Slide_Builder

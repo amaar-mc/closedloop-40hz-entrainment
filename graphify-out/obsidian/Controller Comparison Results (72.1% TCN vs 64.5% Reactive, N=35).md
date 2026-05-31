@@ -4,8 +4,6 @@ type: "document"
 community: "Community 43"
 location: "Section 8 / February 19 controller section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_43
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Subject-Level Split Rationale (no within-subject leakage)]] - `rationale_for` [INFERRED]
 - [[TCN Validation Date Correction (Feb 26, not Feb 21)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_43
+  #community/Community_43

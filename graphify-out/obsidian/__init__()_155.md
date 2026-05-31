@@ -4,8 +4,6 @@ type: "code"
 community: "Closed-Loop Control & Simulator"
 location: "L207"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Closed-Loop_Control_&_Simulator
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Args             tau_rise Base time constant for PAC increase during stimulat]] - `rationale_for` [EXTRACTED]
 - [[FatigueAwareSimulator]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop_Control_&_Simulator

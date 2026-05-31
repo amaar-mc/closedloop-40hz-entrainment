@@ -4,8 +4,6 @@ type: "document"
 community: "Community 104"
 location: "Product Framing: Does It Help?"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_104
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Productization Roadmap (Muse 2 + Caregiver App + Pilot)]] - `rationale_for` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_104
+  #community/Community_104

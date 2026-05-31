@@ -4,8 +4,6 @@ type: "code"
 community: "12-Feature TCN Validation"
 location: "line 60"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/12-Feature_TCN_Validation
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[TRIBE V2 Alignment Validation Script (N=35 Simulated Subjects)]] - `implements` [EXTRACTED]
 - [[TrendPredictiveCtrl (Linear Trend Look-Ahead Controller)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/12-Feature_TCN_Validation
+  #community/12-Feature_TCN_Validation

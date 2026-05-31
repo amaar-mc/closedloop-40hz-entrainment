@@ -3,8 +3,6 @@ source_file: "submission/figures/figure12.png"
 type: "image"
 community: "Community 61"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_61
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[High-PAC Rest Rate Metric]] - `conceptually_related_to` [EXTRACTED]
 - [[Low-PAC Stimulation Rate Metric]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_61
+  #community/Community_61

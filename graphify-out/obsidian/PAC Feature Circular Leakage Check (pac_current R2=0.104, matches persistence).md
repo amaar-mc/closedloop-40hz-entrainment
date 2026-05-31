@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/07_leakage_audit.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Data Leakage Audit (77 checks pass, no leakage)]] - `references` [EXTRACTED]
 - [[Epoch-Level PAC Granularity Caveat (82% same-epoch pairs)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 35"
 location: "L140"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_35
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[compute_regression_metrics()]] - `calls` [EXTRACTED]
 - [[utils.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_35
+  #community/Community_35

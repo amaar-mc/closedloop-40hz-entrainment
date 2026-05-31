@@ -4,8 +4,6 @@ type: "document"
 community: "Community 69"
 location: "Section 4"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_69
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_69
+  #community/Community_69

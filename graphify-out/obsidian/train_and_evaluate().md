@@ -4,8 +4,6 @@ type: "code"
 community: "Community 92"
 location: "L164"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_92
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[main()_15]] - `calls` [EXTRACTED]
 - [[train_sklearn_temporal.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_92
+  #community/Community_92

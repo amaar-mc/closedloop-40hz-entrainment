@@ -4,8 +4,6 @@ type: "document"
 community: "Community 76"
 location: "Introduction, Section D"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_76
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[PAC as Strongest Predictor of Entrainment Response (Beta=0.693, p0.001)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_76
+  #community/Community_76

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 60"
 location: "Section 4.2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[TCN Architecture Experiment Design]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

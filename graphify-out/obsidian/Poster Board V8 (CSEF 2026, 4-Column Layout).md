@@ -3,8 +3,6 @@ source_file: "submission/poster/POSTER_BOARD_V8.md"
 type: "document"
 community: "Community 41"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_41
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[Stage 1 Architecture Exploration Table (8 Models Tested)]] - `references` [EXTRACTED]
 - [[Toward Clinical Use Muse 2 + Headphones ($300 Total Cost)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_41
+  #community/Community_41

@@ -3,8 +3,6 @@ source_file: "submission/figures/figure8.png"
 type: "image"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Figure 8 Dataset Overview (EEG Channels, Protocol, Splits)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

@@ -3,8 +3,6 @@ source_file: "submission/lab_notebook/vfinal_lab_notebook.md"
 type: "document"
 community: "Lab Notebook PDF Generation"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Model Size Sweep (h=32 to h=128, March 13-14, 2026)]] - `references` [EXTRACTED]
 - [[Project P10 Research Log Notebook (VFINAL)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

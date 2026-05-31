@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Poster as Memory Palace"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[9-Beat Presentation Spine (Hook→Gap→Biomarker→Ceiling→Pivot→Discovery→Horizon→Results→Product)]] - `references` [EXTRACTED]
 - [[Archive Memorization Guide 12-Room Poster Memory Palace]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

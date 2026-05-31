@@ -3,8 +3,6 @@ source_file: "docs/audits/TEMPORAL_MULTISCALE_AUDIT_REPORT.md"
 type: "document"
 community: "Community 47"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_47
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[build_multiscale_dataset.py Audit (Causal Features, Train-Only Normalization)]] - `references` [EXTRACTED]
 - [[realtime_inference.py Audit (Rolling History, No Future Samples)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_47
+  #community/Community_47

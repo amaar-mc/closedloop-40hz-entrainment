@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/controller_comparison_v2.png"
 type: "image"
 community: "Community 86"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_86
 ---
 
@@ -23,4 +21,4 @@ tags:
 - [[TCN Predictive Controller (This Project)]] - `references` [EXTRACTED]
 - [[Wilcoxon Signed-Rank Statistical Result p0.001, g=1.31 (Alignment), g=4.47 (Low-PAC Targeting), N=35]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_86
+  #community/Community_86

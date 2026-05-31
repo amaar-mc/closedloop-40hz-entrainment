@@ -3,8 +3,6 @@ source_file: "archive/docs_v1_v8/FINAL_ASSESSMENT.md"
 type: "document"
 community: "Model Ceiling & Leakage Audits"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Model_Ceiling_&_Leakage_Audits
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Ridge Regression Best Model (R²=0.287, ~200 params)]] - `conceptually_related_to` [INFERRED]
 - [[Three Data Leakage Encounters (V1 MI, V4 Suspected, V5 PAC Features)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model_Ceiling_&_Leakage_Audits

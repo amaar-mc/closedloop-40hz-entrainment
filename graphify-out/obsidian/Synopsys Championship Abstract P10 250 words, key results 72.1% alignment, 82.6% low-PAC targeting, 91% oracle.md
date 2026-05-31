@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "page 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Research Paper v3 Abstract 35 subjects, TCN 31K params, R²≈0.25 at 5-10s, 72.1% vs 64.5% alignment, 91% oracle]] - `shares_data_with` [INFERRED]
 - [[TCN vs Reactive Primary Statistics alignment g=1.31, low-PAC targeting g=4.47, PAC gap g=1.57, all p0.001]] - `shares_data_with` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

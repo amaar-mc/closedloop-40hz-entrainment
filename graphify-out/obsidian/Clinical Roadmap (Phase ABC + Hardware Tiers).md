@@ -3,8 +3,6 @@ source_file: "submission/presentation/docs/clinical_roadmap.md"
 type: "document"
 community: "Community 104"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_104
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Productization Roadmap (Muse 2 + Caregiver App + Pilot)]] - `conceptually_related_to` [INFERRED]
 - [[Remote Monitoring Architecture (Cloud Dashboard + Clinician Portal)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_104
+  #community/Community_104

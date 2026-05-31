@@ -4,8 +4,6 @@ type: "document"
 community: "Community 118"
 location: "Section 3"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_118
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Microglial Activation Pathway (40Hz Mechanism)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_118
+  #community/Community_118

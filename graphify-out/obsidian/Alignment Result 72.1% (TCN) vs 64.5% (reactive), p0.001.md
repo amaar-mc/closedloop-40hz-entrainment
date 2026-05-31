@@ -3,8 +3,6 @@ source_file: "submission/abstract/ABSTRACT.md"
 type: "document"
 community: "Community 55"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_55
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[CSEF Abstract (v2  vfinal, 250-word)]] - `references` [EXTRACTED]
 - [[Closed-Loop Controller (PAC-forecast-driven stimulation)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_55
+  #community/Community_55

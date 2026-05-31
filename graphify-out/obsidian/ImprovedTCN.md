@@ -4,8 +4,6 @@ type: "code"
 community: "Archived ImprovedTCN Experiments"
 location: "L148"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Archived_ImprovedTCN_Experiments
 ---
 
@@ -39,4 +37,4 @@ tags:
 - [[main()_3]] - `calls` [EXTRACTED]
 - [[run_experiments.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Archived_ImprovedTCN_Experiments
+  #community/Archived_ImprovedTCN_Experiments

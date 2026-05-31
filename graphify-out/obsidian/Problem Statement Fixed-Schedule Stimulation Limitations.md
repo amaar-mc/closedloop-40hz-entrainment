@@ -4,8 +4,6 @@ type: "document"
 community: "Community 39"
 location: "L10-L17"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_39
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Closed-Loop 40 Hz Gamma Entrainment System]] - `references` [EXTRACTED]
 - [[Key References (Iaccarino 2016, Tort 2010, Lawhern 2018, etc.)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_39
+  #community/Community_39

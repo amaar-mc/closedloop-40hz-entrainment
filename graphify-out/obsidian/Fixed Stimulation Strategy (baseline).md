@@ -4,8 +4,6 @@ type: "image"
 community: "Community 31"
 location: "panels A,D,E,F"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Stimulation Efficiency Ratio by Disease Severity (Panel D)]] - `references` [EXTRACTED]
 - [[Sustained Late-Session PAC Response by Severity (Panel F)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

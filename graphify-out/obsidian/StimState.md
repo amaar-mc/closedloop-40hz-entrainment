@@ -4,8 +4,6 @@ type: "code"
 community: "Closed-Loop Control & Simulator"
 location: "L34"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Closed-Loop_Control_&_Simulator
 ---
 
@@ -57,4 +55,4 @@ tags:
 - [[__str__()]] - `method` [EXTRACTED]
 - [[controller.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop_Control_&_Simulator

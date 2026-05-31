@@ -4,8 +4,6 @@ type: "document"
 community: "Poster Boards & Figures"
 location: "lines 287-290"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Poster Board V4 (Print-Ready, Audit-Corrected, Synopsys 2026)]] - `references` [EXTRACTED]
 - [[V5 Changelog from V4 (Structural + Numerical Corrections)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

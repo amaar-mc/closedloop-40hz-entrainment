@@ -4,8 +4,6 @@ type: "document"
 community: "Poster Boards & Figures"
 location: "lines 166-204"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[R²=0.287 Is a Data Ceiling, Not Model Capacity Limitation]] - `rationale_for` [EXTRACTED]
 - [[System Architecture Flowchart on Poster (EEGNet→Features→TCN→Controller)]] - `references` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 6.2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Figure Per-Subject Alignment (3535 Subjects Favor TCN, Scatter Plot)]] - `references` [EXTRACTED]
 - [[Figure Real-Data Controller Timeline (sub-15, Test Set)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

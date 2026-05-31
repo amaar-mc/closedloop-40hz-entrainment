@@ -3,8 +3,6 @@ source_file: "submission/figures/figure10.png"
 type: "image"
 community: "Community 42"
 tags:
-  - graphify/image
-  - graphify/INFERRED
   - community/Community_42
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Figure 10 Future Directions Roadmap]] - `references` [EXTRACTED]
 - [[QR Code for App (Flyer)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Community_42
+  #community/Community_42

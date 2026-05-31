@@ -4,8 +4,6 @@ type: "code"
 community: "Generalization-Gap Experiments"
 location: "lines 77-94"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Build Original 12-Feature Dataset (build_original_12feat.py)]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

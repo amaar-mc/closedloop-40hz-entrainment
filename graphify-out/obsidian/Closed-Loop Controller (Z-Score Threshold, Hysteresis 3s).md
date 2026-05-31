@@ -4,8 +4,6 @@ type: "document"
 community: "Community 40"
 location: "Section 5.1: Controller"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_40
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[MultiscaleCausalTCN Architecture (31K params, Causal Dilation 1,2,4,8)]] - `conceptually_related_to` [EXTRACTED]
 - [[Personalization Module (Rolling 30s Baseline Z-Score)]] - `shares_data_with` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_40
+  #community/Community_40

@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "The Script"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Elevator Pitch 60-Second Script 40Hz disruption → reactive problem → TCN forecast → 72% vs 64% result → QRpilot]] - `conceptually_related_to` [INFERRED]
 - [[Presentation Timing Map 6 sections mapped to poster locations, total ~4 min 10 sec]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

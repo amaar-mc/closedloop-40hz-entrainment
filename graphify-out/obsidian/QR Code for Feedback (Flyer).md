@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Flyer/qr_feedback.png"
 type: "image"
 community: "Community 86"
 tags:
-  - graphify/image
-  - graphify/AMBIGUOUS
   - community/Community_86
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Figure 8 Controller Comparison Bar Chart]] - `semantically_similar_to` [AMBIGUOUS]
 
-#graphify/image #graphify/AMBIGUOUS #community/Community_86
+  #community/Community_86

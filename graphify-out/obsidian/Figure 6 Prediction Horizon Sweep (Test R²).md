@@ -3,8 +3,6 @@ source_file: "submission/figures/figure6.png"
 type: "image"
 community: "Community 51"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_51
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Prediction Horizon Sweep (Poster Figure 5)]] - `semantically_similar_to` [INFERRED]
 - [[TCN Advantage Zone (3-10s horizons, Δ = +0.473)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_51
+  #community/Community_51

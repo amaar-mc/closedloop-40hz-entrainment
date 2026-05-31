@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/AGENTS.md"
 type: "document"
 community: "Community 149"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_149
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Source-of-Truth Edit Workflow (Markdown → PDF)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_149
+  #community/Community_149

@@ -4,8 +4,6 @@ type: "code"
 community: "TCN Layer Internals"
 location: "L268"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TCN_Layer_Internals
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[DeepDilationTCN]] - `method` [EXTRACTED]
 - [[_count_parameters()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TCN_Layer_Internals
+  #community/TCN_Layer_Internals

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 118"
 location: "Section 3"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_118
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Iaccarino 2016 Landmark Study (40Hz Mice)]] - `conceptually_related_to` [INFERRED]
 - [[Microglial Activation Pathway (40Hz Mechanism)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Community_118
+  #community/Community_118

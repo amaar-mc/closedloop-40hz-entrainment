@@ -4,8 +4,6 @@ type: "rationale"
 community: "Paper/Presentation PDF Builders"
 location: "L325"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Paper/Presentation_PDF_Builders
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[p04_methods1()_1]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Paper/Presentation_PDF_Builders
+  #community/Paper/Presentation_PDF_Builders

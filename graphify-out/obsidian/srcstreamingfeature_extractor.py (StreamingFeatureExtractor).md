@@ -3,8 +3,6 @@ source_file: "src/streaming/feature_extractor.py"
 type: "code"
 community: "Models, Streaming & Apps"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[test_simulated_session.py]] - `imports_from` [EXTRACTED]
 - [[test_streaming_parity.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

@@ -4,8 +4,6 @@ type: "code"
 community: "TCN Layer Internals"
 location: "L49"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TCN_Layer_Internals
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[forward()_39]] - `method` [EXTRACTED]
 - [[tcn_variants.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TCN_Layer_Internals
+  #community/TCN_Layer_Internals

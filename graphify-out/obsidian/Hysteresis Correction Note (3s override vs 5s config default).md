@@ -4,8 +4,6 @@ type: "document"
 community: "Poster Boards & Figures"
 location: "lines 37-38"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Numerical Verification Table (V7 Claims vs Source Files)]] - `conceptually_related_to` [EXTRACTED]
 - [[Poster Board V7 (Audit-Clean, CSEF 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

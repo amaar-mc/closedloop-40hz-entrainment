@@ -3,8 +3,6 @@ source_file: "submission/abstract/ABSTRACT.md"
 type: "document"
 community: "Community 55"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_55
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Causal Temporal Convolutional Network (TCN, ~31K params)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_55
+  #community/Community_55

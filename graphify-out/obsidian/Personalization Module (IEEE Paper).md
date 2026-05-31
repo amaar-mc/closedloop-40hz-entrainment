@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section G: Personalization and Adaptive Threshold"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[PersonalizationModule Rolling 30s PAC Baseline with Z-Score]] - `semantically_similar_to` [INFERRED]
 - [[Rationale PAC as Biomarker for Stimulation Timing (β=0.693)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

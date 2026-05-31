@@ -3,8 +3,6 @@ source_file: "submission/presentation/scripts/v1_script.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[SpecTempNet Leakage Incident (R2=0.69 inflated, dropped to 0.236 after fix)]] - `conceptually_related_to` [INFERRED]
 - [[Tier 5 Hard Challenge Q&A (Architecture, novelty, impact)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

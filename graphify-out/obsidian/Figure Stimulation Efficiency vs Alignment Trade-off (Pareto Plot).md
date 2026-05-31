@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/stim_vs_alignment.pdf"
 type: "image"
 community: "Community 33"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Controller Comparison Results (N=35 Real EEG, 6 Controllers)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

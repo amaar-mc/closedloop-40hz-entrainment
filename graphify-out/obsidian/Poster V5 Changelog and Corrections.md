@@ -3,8 +3,6 @@ source_file: "archive/context/poster_board.md"
 type: "document"
 community: "Community 34"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_34
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Architecture Exploration Table (6 models)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_34
+  #community/Community_34

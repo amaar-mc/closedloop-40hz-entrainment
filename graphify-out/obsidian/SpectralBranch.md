@@ -4,8 +4,6 @@ type: "code"
 community: "Archived SpecTempNet V3"
 location: "L115"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_SpecTempNet_V3
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[forward()_26]] - `method` [EXTRACTED]
 - [[spectempnet.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_SpecTempNet_V3
+  #community/Archived_SpecTempNet_V3

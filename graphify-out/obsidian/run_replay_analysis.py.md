@@ -4,8 +4,6 @@ type: "code"
 community: "Replay Analysis & Controllers"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Replay_Analysis_&_Controllers
 ---
 
@@ -29,4 +27,4 @@ tags:
 - [[print_comparison()]] - `contains` [EXTRACTED]
 - [[replay_subject()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Replay_Analysis_&_Controllers
+  #community/Replay_Analysis_&_Controllers

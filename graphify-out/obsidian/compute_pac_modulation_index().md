@@ -4,8 +4,6 @@ type: "code"
 community: "Community 82"
 location: "L21"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_82
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[process_subject()]] - `calls` [EXTRACTED]
 - [[reprocess_long_windows.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_82
+  #community/Community_82

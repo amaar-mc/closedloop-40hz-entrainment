@@ -4,8 +4,6 @@ type: "code"
 community: "PPTX Slide Builder"
 location: "L296"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/PPTX_Slide_Builder
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[caption()]] - `calls` [EXTRACTED]
 - [[p06_methods3()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PPTX_Slide_Builder
+  #community/PPTX_Slide_Builder

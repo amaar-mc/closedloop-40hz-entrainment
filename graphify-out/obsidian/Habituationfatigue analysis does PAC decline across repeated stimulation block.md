@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 101"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_101
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[fatigue_analysis.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_101
+  #community/Community_101

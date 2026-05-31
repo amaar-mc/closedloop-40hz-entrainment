@@ -4,8 +4,6 @@ type: "document"
 community: "Community 123"
 location: "February 19, 2026 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_123
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Horizon Sweep Results (TCN R2~0.25 at 5-10s, Baselines Collapse)]] - `references` [EXTRACTED]
 - [[Two-Stage EEGNet+TCN Controller Pipeline]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_123
+  #community/Community_123

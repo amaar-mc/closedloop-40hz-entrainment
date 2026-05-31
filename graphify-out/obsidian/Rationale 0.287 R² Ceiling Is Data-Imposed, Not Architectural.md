@@ -4,8 +4,6 @@ type: "document"
 community: "Archived CSEF Paper & Abstract"
 location: "Expansion module: how does prediction work"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Archived_CSEF_Paper_&_Abstract
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Contribution 2 Causal TCN for 5-10s PAC Forecasting (+0.5 R² over baselines)]] - `rationale_for` [INFERRED]
 - [[Short Version Presentation Script (2–4 min Expandable)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived_CSEF_Paper_&_Abstract

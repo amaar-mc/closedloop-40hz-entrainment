@@ -4,8 +4,6 @@ type: "document"
 community: "Community 78"
 location: "HOW IT WORKS section"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_78
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[How It Works 4-Step Wear-Read-Predict-Stimulate Pipeline]] - `semantically_similar_to` [INFERRED]
 - [[NeuroCare 40Hz Facility Flyer (Enhanced Layout)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Community_78
+  #community/Community_78

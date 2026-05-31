@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 6.6"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[MultiscaleCausalTCN (12-Feature, h=64, 22914 Params)]] - `references` [EXTRACTED]
 - [[Rationale R²=0.170 Forecasting Sufficient for g=1.31 Control Advantage]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

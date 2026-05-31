@@ -3,8 +3,6 @@ source_file: "submission/presentation/reference/references_sheet.py"
 type: "code"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[12-Citation Reference List (CSEF Presentation)]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

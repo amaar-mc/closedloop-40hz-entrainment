@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "page 1 methods"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[12-Feature PAC+Stim TCN Test R²=0.606±0.032 (5 seeds)]] - `references` [EXTRACTED]
 - [[TCN vs Reactive Primary Statistics alignment g=1.31, low-PAC targeting g=4.47, PAC gap g=1.57, all p0.001]] - `shares_data_with` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

@@ -4,8 +4,6 @@ type: "code"
 community: "TRIBE Neural-Mass Simulator"
 location: "L220"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Predict ROI activations using TRIBE V2 model.          Note TRIBE V2 requires n]] - `rationale_for` [EXTRACTED]
 - [[_load_roi_indices()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator
+  #community/TRIBE_Neural-Mass_Simulator

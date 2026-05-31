@@ -3,8 +3,6 @@ source_file: "submission/figures/figure9.png"
 type: "image"
 community: "Community 42"
 tags:
-  - graphify/image
-  - graphify/INFERRED
   - community/Community_42
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Figure 14 Per-Subject Clinical Utility (3535 Favor TCN)]] - `semantically_similar_to` [INFERRED]
 - [[Figure 9 Full Training & Validation Protocol Diagram]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/INFERRED #community/Community_42
+  #community/Community_42

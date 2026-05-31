@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Temporal PAC Predictor"
 location: "L82"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Archived_Temporal_PAC_Predictor
 ---
 
@@ -32,4 +30,4 @@ tags:
 - [[temporal_model.py]] - `contains` [EXTRACTED]
 - [[test_temporal_model()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Archived_Temporal_PAC_Predictor
+  #community/Archived_Temporal_PAC_Predictor

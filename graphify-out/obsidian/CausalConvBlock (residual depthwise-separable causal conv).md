@@ -4,8 +4,6 @@ type: "code"
 community: "Generalization-Gap Experiments"
 location: "lines 125-145"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[ImprovedTCN Model (configurable dilated causal TCN with attention pooling)]] - `implements` [EXTRACTED]
 - [[TinyTCN (minimalist 2-block causal TCN)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

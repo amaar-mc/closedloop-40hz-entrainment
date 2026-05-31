@@ -4,11 +4,9 @@ type: "code"
 community: "Community 177"
 location: "line 80"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_177
 ---
 
 # PaperPDF Class (fpdf2-based PDF generator)
 
-#graphify/code #graphify/EXTRACTED #community/Community_177
+  #community/Community_177

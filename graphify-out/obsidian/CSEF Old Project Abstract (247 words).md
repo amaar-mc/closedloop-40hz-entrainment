@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Abstract/ABSTRACT.md"
 type: "document"
 community: "Archived CSEF Paper & Abstract"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Archived_CSEF_Paper_&_Abstract
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[TCN +0.5 R² Margin Over Baselines at 5-10s Horizon]] - `references` [EXTRACTED]
 - [[TCN Reaches 91% of Theoretical Oracle Performance]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived_CSEF_Paper_&_Abstract

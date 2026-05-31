@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "class ExponentialDecaySimulator"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[StepFunctionSimulator (Fatigue Model 2 Sudden Threshold Drop)]] - `semantically_similar_to` [INFERRED]
 - [[create_simulator()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

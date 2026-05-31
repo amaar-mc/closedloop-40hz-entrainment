@@ -4,8 +4,6 @@ type: "code"
 community: "Community 94"
 location: "L210"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_94
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[train_multiscale_tcn.py]] - `contains` [EXTRACTED]
 - [[train_one_epoch()_3]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_94
+  #community/Community_94

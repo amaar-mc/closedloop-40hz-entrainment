@@ -4,8 +4,6 @@ type: "code"
 community: "Community 49"
 location: "line 104"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_49
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[audit_code()]] - `references` [INFERRED]
 - [[test_no_subject_leakage()]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+  #community/Community_49

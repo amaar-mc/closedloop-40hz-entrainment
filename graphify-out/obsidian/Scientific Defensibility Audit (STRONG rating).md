@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/05_defensibility.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[EEGNet Not in Validation Loop Disclosure]] - `references` [EXTRACTED]
 - [[Offline Counterfactual Replay Limitation Disclosure]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

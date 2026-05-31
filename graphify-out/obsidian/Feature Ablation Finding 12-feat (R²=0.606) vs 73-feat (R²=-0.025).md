@@ -3,8 +3,6 @@ source_file: "submission/abstract/v2_abstract.md"
 type: "document"
 community: "Community 55"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_55
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Phase-Amplitude Coupling (PAC) as Entrainment Biomarker]] - `conceptually_related_to` [INFERRED]
 - [[Spectral Features as Cross-Subject Overfitting Source]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_55
+  #community/Community_55

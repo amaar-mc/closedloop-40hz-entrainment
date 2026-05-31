@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Enhanced-Feature TCN"
 location: "L216"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_Enhanced-Feature_TCN
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Freeze all layers except the three regression heads.          Useful for per-sub]] - `rationale_for` [EXTRACTED]
 - [[ImprovedTCN_1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_Enhanced-Feature_TCN
+  #community/Archived_Enhanced-Feature_TCN

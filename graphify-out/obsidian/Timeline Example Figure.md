@@ -4,8 +4,6 @@ type: "document"
 community: "Community 77"
 location: "line 15"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_77
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Generate Timeline Figure Script (generate_timeline_figure.py)]] - `implements` [EXTRACTED]
 - [[Paper Figures Source Directory]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_77
+  #community/Community_77

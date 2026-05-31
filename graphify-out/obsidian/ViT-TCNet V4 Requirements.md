@@ -4,8 +4,6 @@ type: "document"
 community: "Community 99"
 location: "line 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_99
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[h5py (=3.8.0)]] - `references` [EXTRACTED]
 - [[tqdm (=4.65.0)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_99
+  #community/Community_99

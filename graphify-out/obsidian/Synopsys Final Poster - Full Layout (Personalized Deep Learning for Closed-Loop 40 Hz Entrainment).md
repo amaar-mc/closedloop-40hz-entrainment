@@ -3,8 +3,6 @@ source_file: "submission/poster/exports/Synopsys Poster Final/Slide1.png"
 type: "image"
 community: "Community 31"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Poster Results and Findings Section - Bar Charts and Key Metrics]] - `references` [EXTRACTED]
 - [[Poster Title Claim Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment to Optimize Theta-Gamma Phase Amplitude Coupling in Alzheimer's Disease]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

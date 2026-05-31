@@ -4,8 +4,6 @@ type: "document"
 community: "Community 146"
 location: "line 736"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_146
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Pipeline Audit Result (PASS - no subject overlap, temporal causality valid)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_146
+  #community/Community_146

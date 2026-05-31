@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/timeline_example.png"
 type: "image"
 community: "Community 61"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_61
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Reactive Controller Stimulation Timeline (sub-15)]] - `references` [EXTRACTED]
 - [[TCN Predictive Controller Stimulation Timeline (sub-15)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_61
+  #community/Community_61

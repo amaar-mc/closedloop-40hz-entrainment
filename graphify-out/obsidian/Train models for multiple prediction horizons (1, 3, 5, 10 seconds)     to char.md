@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived Temporal PAC Predictor"
 location: "L411"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Archived_Temporal_PAC_Predictor
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[TemporalPACPredictor]] - `uses` [INFERRED]
 - [[run_multi_horizon_experiment()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Archived_Temporal_PAC_Predictor
+  #community/Archived_Temporal_PAC_Predictor

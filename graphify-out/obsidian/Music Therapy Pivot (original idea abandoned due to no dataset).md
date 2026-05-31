@@ -4,8 +4,6 @@ type: "document"
 community: "Community 43"
 location: "December 13-15 entry"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_43
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Iaccarino 2016 Discovery (40Hz entrainment concept)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_43
+  #community/Community_43

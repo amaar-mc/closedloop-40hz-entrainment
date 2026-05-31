@@ -3,8 +3,6 @@ source_file: "docs/abstract/archive/drafts/round1/draft5_concise_impact.md"
 type: "document"
 community: "Community 54"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_54
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Abstract Round 2 Draft B Technical Precision]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_54
+  #community/Community_54

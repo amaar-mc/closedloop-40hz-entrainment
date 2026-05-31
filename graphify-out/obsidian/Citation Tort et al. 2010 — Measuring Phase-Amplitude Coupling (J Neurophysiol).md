@@ -4,8 +4,6 @@ type: "document"
 community: "Community 132"
 location: "page 4, reference 4"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_132
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Research Plan Bibliography 5 References (Shakya 2026, Martorell 2019, Lahijanian 2024, Tort 2010, Yang 2025)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_132
+  #community/Community_132

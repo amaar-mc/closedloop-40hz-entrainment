@@ -4,8 +4,6 @@ type: "code"
 community: "Community 60"
 location: "class DeepDilationTCN"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[ModelConfig Dataclass (TCN Variant Configuration)]] - `shares_data_with` [EXTRACTED]
 - [[VARIANT_REGISTRY (Model Variant Registry Dict)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

@@ -4,8 +4,6 @@ type: "code"
 community: "Core Data & PAC Pipeline"
 location: "L29"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Core_Data_&_PAC_Pipeline
 ---
 
@@ -47,4 +45,4 @@ tags:
 - [[pac_computation.py]] - `contains` [EXTRACTED]
 - [[validate_pac_computation()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Core_Data_&_PAC_Pipeline
+  #community/Core_Data_&_PAC_Pipeline

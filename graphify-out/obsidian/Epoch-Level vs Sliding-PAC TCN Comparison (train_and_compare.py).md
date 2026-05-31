@@ -3,8 +3,6 @@ source_file: "archive/experimental/sliding_pac/train_and_compare.py"
 type: "code"
 community: "Generalization-Gap Experiments"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Cross-Epoch Transition Analysis (hard prediction samples)]] - `implements` [EXTRACTED]
 - [[Sliding-Window PAC Experiment Results (RESULTS.md)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

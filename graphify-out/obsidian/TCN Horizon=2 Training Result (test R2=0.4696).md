@@ -4,8 +4,6 @@ type: "document"
 community: "Community 58"
 location: "line 193-197"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_58
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Sweep Horizons Script (sweep_horizons.py)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_58
+  #community/Community_58

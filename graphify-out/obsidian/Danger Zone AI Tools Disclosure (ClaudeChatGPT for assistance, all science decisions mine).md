@@ -4,8 +4,6 @@ type: "document"
 community: "Community 157"
 location: "Question 4"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_157
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Q&A Tier 4 Process and Independence Questions (SpecTempNet leakage discovery, AI tool disclosure)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_157
+  #community/Community_157

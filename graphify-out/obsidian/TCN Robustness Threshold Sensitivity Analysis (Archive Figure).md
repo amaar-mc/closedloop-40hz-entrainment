@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Research Paper/Figures/threshold_sensitivity.png"
 type: "image"
 community: "Community 51"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_51
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[TCN Advantage Zone (Threshold 0.2-1.0) (Archive)]] - `references` [EXTRACTED]
 - [[TCN Alignment (%) vs Delta-z Threshold (Archive)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_51
+  #community/Community_51

@@ -4,8 +4,6 @@ type: "code"
 community: "Archived EEGNet V2"
 location: "L167"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_EEGNet_V2
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[count_parameters()_7]] - `calls` [EXTRACTED]
 - [[eegnet_v2.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_EEGNet_V2
+  #community/Archived_EEGNet_V2

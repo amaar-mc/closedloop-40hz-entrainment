@@ -4,8 +4,6 @@ type: "code"
 community: "Community 62"
 location: "L126"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_62
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[run_alzheimer_simulation.py]] - `contains` [EXTRACTED]
 - [[run_trial()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_62
+  #community/Community_62

@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Enhanced-Feature TCN"
 location: "line 25"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Archived_Enhanced-Feature_TCN
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[ImprovedTCN_2]] - `conceptually_related_to` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Archived_Enhanced-Feature_TCN
+  #community/Archived_Enhanced-Feature_TCN

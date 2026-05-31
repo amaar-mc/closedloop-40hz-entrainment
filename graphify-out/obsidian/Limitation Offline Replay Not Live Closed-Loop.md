@@ -4,8 +4,6 @@ type: "document"
 community: "Community 68"
 location: "1. **Offline replay, not live closed-loop**"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_68
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Anticipated Reviewer Weaknesses]] - `references` [EXTRACTED]
 - [[Discussion Section Arc]] - `references` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_68
+  #community/Community_68

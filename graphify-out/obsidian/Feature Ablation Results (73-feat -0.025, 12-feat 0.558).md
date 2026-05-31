@@ -4,8 +4,6 @@ type: "document"
 community: "Community 88"
 location: "Feature Ablation table"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_88
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[12 PAC+Stim Features (pac_current, pac_ma, pac_diff, stim context)]] - `conceptually_related_to` [EXTRACTED]
 - [[Numbers Sheet (Old v1 Reference)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_88
+  #community/Community_88

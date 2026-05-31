@@ -4,8 +4,6 @@ type: "document"
 community: "Community 40"
 location: "What Each R² Actually Means"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_40
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Phase 3 Multiscale Causal TCN (Feb 17 2026)]] - `references` [EXTRACTED]
 - [[Resolved Target Smoothing (ts=5) Inflated R² — Retrained on Raw Targets (ts=1)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_40
+  #community/Community_40

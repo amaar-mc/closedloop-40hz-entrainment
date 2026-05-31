@@ -4,8 +4,6 @@ type: "code"
 community: "Community 106"
 location: "L38"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_106
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[generate_qr_codes.py]] - `contains` [EXTRACTED]
 - [[make_qr()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_106
+  #community/Community_106

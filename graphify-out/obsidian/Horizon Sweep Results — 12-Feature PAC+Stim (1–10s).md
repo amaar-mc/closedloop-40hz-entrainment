@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 4.4"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[MultiscaleCausalTCN (12-Feature, h=64, 22914 Params)]] - `references` [EXTRACTED]
 - [[Section 06 Results Horizon Sweep (ts=5 Smoothed Targets, TCN R²≈0.25 at 5–10s)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

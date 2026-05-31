@@ -3,8 +3,6 @@ source_file: "submission/presentation/reference/numbers_sheet.md"
 type: "document"
 community: "Community 30"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Number Anchor Groups A–H (disease, dataset, ceiling, pivot, discovery, results, product)]] - `semantically_similar_to` [INFERRED]
 - [[TCN vs Reactive Controller Results (72.1% vs 64.5% alignment, 3535 subjects)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

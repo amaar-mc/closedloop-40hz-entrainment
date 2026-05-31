@@ -4,8 +4,6 @@ type: "code"
 community: "Archived SpecTempNet V3"
 location: "L275"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_SpecTempNet_V3
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Args             eeg (batch, 1, n_channels, n_samples) - Raw EEG]] - `rationale_for` [EXTRACTED]
 - [[SpecTempNet]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_SpecTempNet_V3
+  #community/Archived_SpecTempNet_V3

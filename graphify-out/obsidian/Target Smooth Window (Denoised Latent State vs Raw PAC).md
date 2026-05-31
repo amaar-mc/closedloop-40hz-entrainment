@@ -4,8 +4,6 @@ type: "document"
 community: "Community 79"
 location: "line 45-48"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_79
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Future PAC Target (Horizon h)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_79
+  #community/Community_79

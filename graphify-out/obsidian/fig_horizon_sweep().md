@@ -4,8 +4,6 @@ type: "code"
 community: "Community 37"
 location: "L72"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_37
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[regenerate_paper_figures.py]] - `contains` [EXTRACTED]
 - [[save()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_37
+  #community/Community_37

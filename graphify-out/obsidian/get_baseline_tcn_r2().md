@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Enhanced-Feature TCN"
 location: "L244"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_Enhanced-Feature_TCN
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[main()_9]] - `calls` [EXTRACTED]
 - [[train_improved_tcn.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_Enhanced-Feature_TCN
+  #community/Archived_Enhanced-Feature_TCN

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 73"
 location: "Active Code — src/"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_73
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[EEGNet Architecture (B,1,7,500) → (B,1), 1,457 params, temporal+depthwise spatial conv, R²=0.287]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_73
+  #community/Community_73

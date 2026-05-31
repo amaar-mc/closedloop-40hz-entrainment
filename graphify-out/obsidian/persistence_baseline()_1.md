@@ -4,8 +4,6 @@ type: "code"
 community: "Community 56"
 location: "L87"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_56
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[train_and_compare.py]] - `contains` [EXTRACTED]
 - [[train_tcn()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_56
+  #community/Community_56

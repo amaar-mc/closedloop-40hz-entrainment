@@ -4,8 +4,6 @@ type: "document"
 community: "Community 34"
 location: "Section 2"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_34
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[PAC Computation (Modulation Index)]] - `conceptually_related_to` [INFERRED]
 - [[Tort 2010 Modulation Index Method]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Community_34
+  #community/Community_34

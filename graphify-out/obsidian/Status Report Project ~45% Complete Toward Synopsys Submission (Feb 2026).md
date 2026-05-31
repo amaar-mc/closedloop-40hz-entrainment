@@ -4,8 +4,6 @@ type: "document"
 community: "Community 142"
 location: "Executive Summary"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_142
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Status Report v1 Project Status Feb 2026 (Duplicate of v2)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_142
+  #community/Community_142

@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "## Study Overview"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[MultiscaleCausalTCN Model Performance (73-feature, 31K params)]] - `conceptually_related_to` [EXTRACTED]
 - [[OpenNeuro ds005048 Dataset (35 subjects, 7ch frontal EEG, 250Hz)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

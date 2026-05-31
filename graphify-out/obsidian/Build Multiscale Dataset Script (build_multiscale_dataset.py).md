@@ -4,8 +4,6 @@ type: "document"
 community: "Community 58"
 location: "line 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_58
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[73-Feature Multiscale Dataset (lookback=20, 73 features, trainvaltest splits)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_58
+  #community/Community_58

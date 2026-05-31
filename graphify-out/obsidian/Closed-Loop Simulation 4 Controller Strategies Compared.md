@@ -4,8 +4,6 @@ type: "document"
 community: "Community 116"
 location: "L215-L255"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_116
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Fatigue Sensitivity Sweep (6 Levels, Adaptive vs Fixed)]] - `references` [EXTRACTED]
 - [[Rigorous Re-Evaluation N=50 Trials, Bootstrap CIs, Hedges g]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_116
+  #community/Community_116

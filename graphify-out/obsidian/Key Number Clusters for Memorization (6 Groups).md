@@ -4,8 +4,6 @@ type: "document"
 community: "Poster Boards & Figures"
 location: "NUMBER CLUSTERS section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Poster Memory Palace (9 Rooms, Left-to-Right Journey)]] - `references` [EXTRACTED]
 - [[Prediction Horizon Sweep Figure (TCN vs Baselines, 1–10s)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

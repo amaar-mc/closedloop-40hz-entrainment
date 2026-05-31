@@ -3,8 +3,6 @@ source_file: "docs/audits/PIPELINE_AUDIT_REPORT.md"
 type: "document"
 community: "Community 47"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_47
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[Ridge Regression Outperforms TCN (R²=0.81 vs 0.74)]] - `references` [EXTRACTED]
 - [[TCN vs Persistence Baseline Comparison (R² Failure)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_47
+  #community/Community_47

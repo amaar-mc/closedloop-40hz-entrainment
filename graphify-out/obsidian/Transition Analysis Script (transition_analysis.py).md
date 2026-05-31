@@ -4,8 +4,6 @@ type: "document"
 community: "Community 144"
 location: "line 521"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_144
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Transition Analysis Results (transition vs steady-state windows)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_144
+  #community/Community_144

@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Research Paper/Figures/stim_vs_alignment.png"
 type: "image"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/image
-  - graphify/INFERRED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Stimulation Efficiency vs Alignment Trade-off (CSEF Old Archive)]] - `references` [EXTRACTED]
 - [[StimulusRest Protocol 40 Hz AM blocks (40s stim  20s rest), 2s analysis windows]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

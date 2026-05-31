@@ -4,8 +4,6 @@ type: "code"
 community: "Replay Analysis & Controllers"
 location: "L447"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Replay_Analysis_&_Controllers
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[precompute_biomarker_features()]] - `calls` [EXTRACTED]
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Replay_Analysis_&_Controllers
+  #community/Replay_Analysis_&_Controllers

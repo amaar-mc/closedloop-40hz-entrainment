@@ -3,8 +3,6 @@ source_file: "submission/figures/figure7.png"
 type: "image"
 community: "Community 64"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_64
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Figure 7 Real-Data Controller Timeline — Sub-15 (Test Set)]] - `references` [EXTRACTED]
 - [[TCN Catches PAC Decline Early and Avoids Wasted Stimulation]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_64
+  #community/Community_64

@@ -4,8 +4,6 @@ type: "code"
 community: "Archived EEGNet V2"
 location: "L32"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_EEGNet_V2
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Args             X EEG windows (n_samples, n_channels, n_timepoints)]] - `rationale_for` [EXTRACTED]
 - [[EEGDatasetV2]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_EEGNet_V2
+  #community/Archived_EEGNet_V2

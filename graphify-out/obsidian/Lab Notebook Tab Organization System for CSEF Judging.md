@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "How to Organize"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Critical Lab Notebook Entries (turning points ceiling, feature discovery)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

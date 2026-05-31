@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived Feature Experiments (v4)"
 location: "L298"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Archived_Feature_Experiments_(v4)
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[WaveletFeatureExtractor]] - `uses` [INFERRED]
 - [[ensemble_loss()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Archived_Feature_Experiments_(v4)
+  #community/Archived_Feature_Experiments_(v4)

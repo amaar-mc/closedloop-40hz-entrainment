@@ -4,8 +4,6 @@ type: "document"
 community: "Community 68"
 location: "## Potential weaknesses reviewers will flag"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_68
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Limitation PAC Label Granularity (Epoch-Level)]] - `references` [EXTRACTED]
 - [[Open Questions Before Submission]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_68
+  #community/Community_68

@@ -3,8 +3,6 @@ source_file: "archive/docs_v1_v8/IMPROVEMENT_PLAN.md"
 type: "document"
 community: "Model Ceiling & Leakage Audits"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Model_Ceiling_&_Leakage_Audits
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[ViT-TCNet Architecture Plan (Pre-trained ViT + TCN Decoder)]] - `references` [EXTRACTED]
 - [[Wavelet Features Plan (CWT + WPD, +30-40 features)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model_Ceiling_&_Leakage_Audits

@@ -3,8 +3,6 @@ source_file: "archive/notebooks/LOG_NOTEBOOK.md"
 type: "document"
 community: "Community 43"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_43
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[Target Smoothing Investigation (ts=5 inflates R² to 0.764, ts=1 = 0.067)]] - `references` [EXTRACTED]
 - [[Temporal Prediction Pivot (static ceiling → future PAC forecasting)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_43
+  #community/Community_43

@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "## 3. Primary Result: TCN Predictive vs Reactive Threshold"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Summary Statistics for Abstract (N=35, R2=0.170, g=1.31)]] - `references` [EXTRACTED]
 - [[Threshold Sensitivity Analysis (delta-z 0.1–1.0)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "TIER 2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[12-Feature PAC+Stim Configuration (test R²=0.606)]] - `references` [EXTRACTED]
 - [[MultiscaleCausalTCN Temporal Forecaster]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

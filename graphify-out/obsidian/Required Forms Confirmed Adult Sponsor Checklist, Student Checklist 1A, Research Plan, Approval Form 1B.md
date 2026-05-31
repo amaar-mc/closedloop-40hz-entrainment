@@ -4,8 +4,6 @@ type: "document"
 community: "Community 48"
 location: "page 1, item 5"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_48
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Checklist for Adult Sponsor (1) — John Crandall Signed]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_48
+  #community/Community_48

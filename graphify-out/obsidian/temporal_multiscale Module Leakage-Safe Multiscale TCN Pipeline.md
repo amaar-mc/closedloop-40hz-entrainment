@@ -4,8 +4,6 @@ type: "document"
 community: "Community 71"
 location: "Section 5"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_71
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Architecture Decision Causal Multiscale TCN + Stim Context Chosen Over LSTMTransformer]] - `rationale_for` [EXTRACTED]
 - [[Recommendation Deploy Reactive Ridge Model (R²=0.287) for Closed-Loop Control]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_71
+  #community/Community_71

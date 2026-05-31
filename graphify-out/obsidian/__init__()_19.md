@@ -4,8 +4,6 @@ type: "code"
 community: "Community 57"
 location: "L90"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_57
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[CNN1D]] - `method` [EXTRACTED]
 - [[__init__()_21]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_57
+  #community/Community_57

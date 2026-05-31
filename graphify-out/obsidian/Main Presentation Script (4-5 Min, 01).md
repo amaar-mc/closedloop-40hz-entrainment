@@ -3,8 +3,6 @@ source_file: "submission/presentation/01_main_script.md"
 type: "document"
 community: "Controller Results & Judge Prep"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Presentation Timing Map 6 sections mapped to poster locations, total ~4 min 10 sec]] - `references` [EXTRACTED]
 - [[Short Accessible Presentation Script (02, Elevator-Expandable)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

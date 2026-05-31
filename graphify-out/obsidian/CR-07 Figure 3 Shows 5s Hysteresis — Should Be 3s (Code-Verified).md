@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "CR-07"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Closed-Loop Controller (TCN Predictive, 5-Second Horizon)]] - `references` [EXTRACTED]
 - [[Full-Spectrum Critical Review Report (7 Agents, 14 Critical Issues)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

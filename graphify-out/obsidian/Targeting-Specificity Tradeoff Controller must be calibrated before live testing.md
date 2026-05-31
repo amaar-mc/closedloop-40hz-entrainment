@@ -4,8 +4,6 @@ type: "document"
 community: "Community 59"
 location: "paper/PAPER_STATUS.md:14"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_59
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Replay Alignment 62.2% balanced alignment vs 64.5% reactive]] - `conceptually_related_to` [INFERRED]
 - [[Replay Targeting 73.8% low-PAC targeting vs 51.7% reactive]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_59
+  #community/Community_59

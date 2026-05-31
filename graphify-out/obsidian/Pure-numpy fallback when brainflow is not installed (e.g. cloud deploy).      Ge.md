@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 32"
 location: "L133"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_32
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[_NumpySimulatedAdapter]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_32
+  #community/Community_32

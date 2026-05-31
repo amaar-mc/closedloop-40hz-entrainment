@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/10_architecture_exploration.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Tier 1 Architecture Equivalence (TransformerGRUTCN all R2~0.61-0.65, feature selection dominates)]] - `references` [EXTRACTED]
 - [[XGBoost Subject-Specific Overfitting (val-test gap=0.323, trees fail to generalize)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

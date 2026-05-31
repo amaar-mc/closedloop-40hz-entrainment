@@ -3,8 +3,6 @@ source_file: "submission/poster/vfinal_poster.pdf"
 type: "image"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[Towards Clinical Use Section (Muse Headband, $300, Consumer Hardware)]] - `references` [EXTRACTED]
 - [[vFinal Poster Layout Introduction, Background, Hypothesis, System Architecture, Materials, Procedure, Data Analysis, Results, Conclusions, Future Directions]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

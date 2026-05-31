@@ -3,8 +3,6 @@ source_file: "submission/presentation/archive/FINAL_05_qa_complete.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Feature Ablation Discovery 12-Feature vs 73-Feature Generalization]] - `conceptually_related_to` [INFERRED]
 - [[Tier 5 Hard Challenge Q&A (Architecture, novelty, impact)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

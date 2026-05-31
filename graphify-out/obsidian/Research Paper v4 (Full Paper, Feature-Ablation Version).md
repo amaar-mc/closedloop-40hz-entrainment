@@ -3,8 +3,6 @@ source_file: "submission/paper/v4_paper.md"
 type: "document"
 community: "Community 33"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Research Paper v4 Markdown (Feature-Ablation Narrative, Same As v4_paper.md)]] - `semantically_similar_to` [INFERRED]
 - [[Static PAC Prediction Ceiling (R²=0.287, 8 Architectures)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

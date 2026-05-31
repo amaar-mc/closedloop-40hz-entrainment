@@ -4,8 +4,6 @@ type: "document"
 community: "Community 79"
 location: "line 9"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_79
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Causal Multiscale TCN Model]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_79
+  #community/Community_79

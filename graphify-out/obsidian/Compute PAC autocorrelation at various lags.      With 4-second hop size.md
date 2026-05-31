@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 82"
 location: "L213"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_82
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[compute_temporal_autocorrelation()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_82
+  #community/Community_82

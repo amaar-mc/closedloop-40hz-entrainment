@@ -3,8 +3,6 @@ source_file: "submission/figures/figure12.png"
 type: "image"
 community: "Community 61"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_61
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Figure 12 Metric Definitions (Low-PAC Stim Rate & High-PAC Rest Rate)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_61
+  #community/Community_61

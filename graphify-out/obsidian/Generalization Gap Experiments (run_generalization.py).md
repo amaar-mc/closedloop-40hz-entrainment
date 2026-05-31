@@ -3,8 +3,6 @@ source_file: "archive/experimental/run_generalization.py"
 type: "code"
 community: "Generalization-Gap Experiments"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Per-Subject Persistence and Model Analysis]] - `implements` [EXTRACTED]
 - [[TinyTCN (minimalist 2-block causal TCN)]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

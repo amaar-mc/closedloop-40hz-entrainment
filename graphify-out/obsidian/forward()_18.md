@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Temporal PAC Predictor"
 location: "L309"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_Temporal_PAC_Predictor
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[MultiHorizonPredictor]] - `method` [EXTRACTED]
 - [[Returns dict mapping horizon → prediction.]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_Temporal_PAC_Predictor
+  #community/Archived_Temporal_PAC_Predictor

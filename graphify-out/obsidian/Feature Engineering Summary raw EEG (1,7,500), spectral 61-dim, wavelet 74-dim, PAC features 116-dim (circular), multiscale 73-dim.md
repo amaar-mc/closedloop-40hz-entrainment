@@ -4,8 +4,6 @@ type: "document"
 community: "Community 73"
 location: "Feature Engineering Summary"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_73
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[73-Feature Breakdown 61 spectral (28 band power + 7 thetagamma ratio + 21 PAC-structure + 5 global) + 7 PAC-derived + 5 stim context]] - `shares_data_with` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_73
+  #community/Community_73

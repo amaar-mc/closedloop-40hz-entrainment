@@ -4,8 +4,6 @@ type: "document"
 community: "Community 71"
 location: "Option 1 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_71
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[V5 Verdict Ridge Regression R²=0.287 is Honest Ceiling for This Dataset]] - `conceptually_related_to` [EXTRACTED]
 - [[temporal_multiscale Module Leakage-Safe Multiscale TCN Pipeline]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_71
+  #community/Community_71

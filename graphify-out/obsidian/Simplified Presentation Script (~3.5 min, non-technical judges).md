@@ -3,8 +3,6 @@ source_file: "submission/presentation/archive/v1_simplified.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Causal TCN System (20s lookback, 5s forecast, 12-feature input)]] - `references` [EXTRACTED]
 - [[Habituation vs Facilitation Finding (~50% each in 35-patient cohort)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

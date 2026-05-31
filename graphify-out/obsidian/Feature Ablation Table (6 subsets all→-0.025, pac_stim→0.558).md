@@ -4,8 +4,6 @@ type: "document"
 community: "Generalization-Gap Experiments"
 location: "Feature Ablation Results table"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[FINDINGS Spectral Features Cause Catastrophic Generalization Failure]] - `references` [EXTRACTED]
 - [[Feature Subset Ablation Study]] - `shares_data_with` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

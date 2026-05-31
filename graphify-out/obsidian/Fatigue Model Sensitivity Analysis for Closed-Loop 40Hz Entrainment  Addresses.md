@@ -4,8 +4,6 @@ type: "rationale"
 community: "Control Strategies & Validation"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[TrialMetrics]] - `uses` [INFERRED]
 - [[fatigue_model_sensitivity.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

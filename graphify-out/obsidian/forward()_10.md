@@ -4,8 +4,6 @@ type: "code"
 community: "Community 38"
 location: "L162"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_38
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[EEGNet]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+  #community/Community_38

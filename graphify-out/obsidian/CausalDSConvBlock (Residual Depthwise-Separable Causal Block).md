@@ -4,8 +4,6 @@ type: "code"
 community: "Community 60"
 location: "class CausalDSConvBlock"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[MultiTaskTCN (lambda_delta=0.3, lambda_consistency=0.1)]] - `calls` [EXTRACTED]
 - [[WiderTCN (hidden=128, ~120K params)]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

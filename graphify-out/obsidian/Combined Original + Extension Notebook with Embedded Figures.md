@@ -4,8 +4,6 @@ type: "code"
 community: "Lab Notebook PDF Generation"
 location: "main, process_md, add_figure"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[main()_73]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

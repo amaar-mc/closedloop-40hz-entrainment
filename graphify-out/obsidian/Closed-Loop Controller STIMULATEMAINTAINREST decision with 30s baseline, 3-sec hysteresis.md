@@ -3,8 +3,6 @@ source_file: "submission/figures/figure5.png"
 type: "image"
 community: "Community 100"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_100
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Causal TCN 5,154 params, dilated causal convolutions (d=1,2,4,8)]] - `references` [EXTRACTED]
 - [[Figure 5 System Architecture Flowchart — Complete Closed-Loop Pipeline]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_100
+  #community/Community_100

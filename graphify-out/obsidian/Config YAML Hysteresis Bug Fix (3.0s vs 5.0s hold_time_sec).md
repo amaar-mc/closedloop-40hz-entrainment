@@ -4,8 +4,6 @@ type: "document"
 community: "Community 123"
 location: "March 27-28, 2026 section"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_123
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Two-Stage EEGNet+TCN Controller Pipeline]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_123
+  #community/Community_123

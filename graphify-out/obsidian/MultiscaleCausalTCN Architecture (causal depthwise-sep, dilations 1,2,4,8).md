@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "## 1. TCN Model Performance"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[MultiscaleCausalTCN Model Performance (73-feature, 31K params)]] - `implements` [EXTRACTED]
 - [[TCN Temporal Forecasting 7ch vs 4ch at Horizon=5s]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

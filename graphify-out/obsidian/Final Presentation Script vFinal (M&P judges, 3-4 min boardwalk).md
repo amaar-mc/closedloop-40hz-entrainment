@@ -3,8 +3,6 @@ source_file: "submission/presentation/scripts/vfinal_script.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[Murdock et al. 2024 (Glymphatic Clearance Mechanism)]] - `cites` [EXTRACTED]
 - [[Phase-Amplitude Coupling (PAC) as Entrainment Biomarker_1]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

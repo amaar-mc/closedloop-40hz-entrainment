@@ -3,8 +3,6 @@ source_file: "submission/figures/figure8.png"
 type: "image"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Figure 8 Dataset Overview (EEG Channels, Protocol, Splits)]] - `references` [EXTRACTED]
 - [[Fixed Schedule Controller ~68% Stim Rate, ~45% Alignment (worst alignment)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

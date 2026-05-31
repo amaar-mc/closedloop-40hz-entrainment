@@ -4,8 +4,6 @@ type: "document"
 community: "Community 39"
 location: "L1-L10"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_39
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[Real-Data Closed-Loop Validation (N=35 Subjects)]] - `references` [EXTRACTED]
 - [[Streamlit Interactive Demo Dependency]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_39
+  #community/Community_39

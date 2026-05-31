@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "class PredictiveLookAheadControl"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Clarification Predictive Look-Ahead is Trend-Based Not TCN]] - `implements` [INFERRED]
 - [[main()_65]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

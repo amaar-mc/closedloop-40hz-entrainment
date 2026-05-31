@@ -3,8 +3,6 @@ source_file: "submission/figures/figure2.png"
 type: "image"
 community: "Community 85"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_85
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Adaptive Schedule (This Project) - 72% Alignment]] - `semantically_similar_to` [INFERRED]
 - [[PAC Modulation Index (Tort 2010)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_85
+  #community/Community_85

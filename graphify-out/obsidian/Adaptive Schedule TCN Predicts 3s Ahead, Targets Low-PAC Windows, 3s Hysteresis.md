@@ -3,8 +3,6 @@ source_file: "submission/figures/figure3.png"
 type: "image"
 community: "Community 42"
 tags:
-  - graphify/image
-  - graphify/INFERRED
   - community/Community_42
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Fixed Schedule Treats Every Moment the Same, Wastes Stim During High PAC, Misses Low PAC]] - `conceptually_related_to` [EXTRACTED]
 - [[Next Steps Live Closed-Loop EEG Streaming, 30-60 min Sessions, Reinforcement Learning Controller]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Community_42
+  #community/Community_42

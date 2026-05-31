@@ -3,8 +3,6 @@ source_file: "submission/poster/archive/POSTER_BOARD.md"
 type: "document"
 community: "Community 41"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_41
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Poster Board V2 (Print-Ready, Synopsys)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_41
+  #community/Community_41

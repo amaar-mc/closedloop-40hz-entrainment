@@ -4,8 +4,6 @@ type: "document"
 community: "Community 108"
 location: "page 1, section 1a"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_108
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Final ISEF Affiliated Fair SRC Approval — Required, Pending Signature]] - `references` [EXTRACTED]
 - [[SRC Ethics Statement (ISEF Rules)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_108
+  #community/Community_108

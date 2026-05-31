@@ -3,8 +3,6 @@ source_file: "docs/research/Comprehensive_Methodology_Closed_Loop_40Hz_Entrainme
 type: "document"
 community: "Literature Review & Methodology Docs"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Manual PAC Computation (Butterworth + Hilbert, compute_pac_manual)]] - `references` [EXTRACTED]
 - [[PersonalizationModule Rolling 30s PAC Baseline with Z-Score]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

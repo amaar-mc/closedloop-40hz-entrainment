@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 38"
 location: "L272"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_38
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[TransformEEG]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_38
+  #community/Community_38

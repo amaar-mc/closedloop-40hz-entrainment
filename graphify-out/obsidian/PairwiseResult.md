@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L498"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[run_fatigue_model_experiment()]] - `calls` [EXTRACTED]
 - [[to_dict()_1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

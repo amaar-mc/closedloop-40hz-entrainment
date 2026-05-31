@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Poster_FINAL/CSEF_poster_v3.pdf"
 type: "image"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[System Architecture Flowchart on Poster (EEGNet→Features→TCN→Controller)]] - `references` [EXTRACTED]
 - [[Towards Clinical Use Section (Muse 2 headband, $300 system)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

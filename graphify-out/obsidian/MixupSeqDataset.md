@@ -4,8 +4,6 @@ type: "code"
 community: "Archived ImprovedTCN Experiments"
 location: "L94"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Archived_ImprovedTCN_Experiments
 ---
 
@@ -32,4 +30,4 @@ tags:
 - [[run_generalization.py]] - `contains` [EXTRACTED]
 - [[train_with_mixup()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Archived_ImprovedTCN_Experiments
+  #community/Archived_ImprovedTCN_Experiments

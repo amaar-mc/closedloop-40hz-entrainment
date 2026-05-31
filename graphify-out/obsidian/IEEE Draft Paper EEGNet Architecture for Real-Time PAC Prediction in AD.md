@@ -4,8 +4,6 @@ type: "document"
 community: "Community 76"
 location: "Section D, Methodology"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_76
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Proposed GAT-Transformer Architecture for EEG PAC Prediction]] - `semantically_similar_to` [INFERRED]
 - [[code_drafts_v2 Complete 10-Module Pipeline (4159 lines)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_76
+  #community/Community_76

@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Research Paper/Figures/controller_comparison_v2.p
 type: "image"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[Stimulation Efficiency vs Alignment Trade-off Scatter Plot]] - `semantically_similar_to` [INFERRED]
 - [[TCN Predictive (this project) 72% alignment, 83% low-PAC stim, 62% high-PAC rest]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

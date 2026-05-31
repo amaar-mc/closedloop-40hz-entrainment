@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 49"
 location: "L195"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_49
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[run_sklearn_temporal_baseline()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_49
+  #community/Community_49

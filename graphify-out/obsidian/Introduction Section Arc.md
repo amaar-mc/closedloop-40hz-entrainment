@@ -4,8 +4,6 @@ type: "document"
 community: "Community 148"
 location: "### Introduction"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_148
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Clinical Motivation Alzheimer's Scale + No Cure]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_148
+  #community/Community_148

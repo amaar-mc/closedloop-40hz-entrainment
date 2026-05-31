@@ -4,8 +4,6 @@ type: "document"
 community: "Community 34"
 location: "Section 7"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_34
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[MultiscaleCausalTCN Architecture]] - `calls` [EXTRACTED]
 - [[Reactive Threshold Controller]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_34
+  #community/Community_34

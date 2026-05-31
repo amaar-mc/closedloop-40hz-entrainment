@@ -4,8 +4,6 @@ type: "document"
 community: "Community 39"
 location: "L184-L199"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_39
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Horizon Sweep Results Table (1–10 seconds)]] - `references` [EXTRACTED]
 - [[Multiscale Causal TCN Architecture Detail]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_39
+  #community/Community_39

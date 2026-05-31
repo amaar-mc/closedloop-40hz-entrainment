@@ -4,8 +4,6 @@ type: "code"
 community: "Multiscale TCN & Features"
 location: "class SyntheticDataset"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[SequenceDataset (Multiscale Temporal Dataset Loader)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

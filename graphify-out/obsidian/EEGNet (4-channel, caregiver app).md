@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "line 101"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[NeuroCare Caregiver Dashboard (Multi-page Streamlit)]] - `calls` [EXTRACTED]
 - [[render_session()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

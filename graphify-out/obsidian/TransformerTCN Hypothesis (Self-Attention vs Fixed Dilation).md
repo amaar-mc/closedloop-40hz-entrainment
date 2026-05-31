@@ -4,8 +4,6 @@ type: "document"
 community: "Community 60"
 location: "Section 2.4"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[TCN Architecture Experiment Design]] - `references` [EXTRACTED]
 - [[TransformerTCN (4-layer Causal Transformer Encoder, ~85K params)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

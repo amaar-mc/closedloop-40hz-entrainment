@@ -4,8 +4,6 @@ type: "code"
 community: "Lab Notebook PDF Generation"
 location: "L27"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[generate_pdf.py]] - `contains` [EXTRACTED]
 - [[main()_73]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

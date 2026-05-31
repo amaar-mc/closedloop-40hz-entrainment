@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Section 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[OpenNeuro ds005048 Dataset (Lahijanian 2024, N=35)]] - `references` [EXTRACTED]
 - [[Unique Differentiator Temporal Prediction for Proactive Control (vs Classification Tasks)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

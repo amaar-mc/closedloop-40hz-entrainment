@@ -4,8 +4,6 @@ type: "image"
 community: "Community 31"
 location: "Panel C"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[PAC Targeting Gap Metric (rest minus stim PAC)]] - `semantically_similar_to` [INFERRED]
 - [[TRIBE V2 Alzheimer's Disease Simulation Figure]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

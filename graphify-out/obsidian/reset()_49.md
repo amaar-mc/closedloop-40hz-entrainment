@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L69"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[ControlMethodBase]] - `method` [EXTRACTED]
 - [[Reset state for a new trial.]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

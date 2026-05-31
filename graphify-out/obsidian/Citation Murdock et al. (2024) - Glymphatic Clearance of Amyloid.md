@@ -4,8 +4,6 @@ type: "document"
 community: "Lab Notebook PDF Generation"
 location: "Additional References section"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Citation Iaccarino et al. (2016) - 40Hz gamma entrainment reduces amyloid]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

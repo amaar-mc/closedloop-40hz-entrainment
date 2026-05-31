@@ -4,8 +4,6 @@ type: "document"
 community: "Community 69"
 location: "Section 3"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_69
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[CSEF Consensus-Based Judging Process]] - `conceptually_related_to` [EXTRACTED]
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_69
+  #community/Community_69

@@ -3,8 +3,6 @@ source_file: "submission/presentation/archive/v2_memorization_guide.md"
 type: "document"
 community: "Community 30"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_30
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Archive Memorization Guide 12-Room Poster Memory Palace]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_30
+  #community/Community_30

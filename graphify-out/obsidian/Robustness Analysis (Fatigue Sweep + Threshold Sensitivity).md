@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 4.8"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Figure TCN Robustness — Threshold Sensitivity Analysis]] - `references` [EXTRACTED]
 - [[Section 06 Results Fatigue Robustness (6 Rates, Advantage Grows With Fatigue)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

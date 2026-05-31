@@ -4,8 +4,6 @@ type: "code"
 community: "Community 121"
 location: "L33"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_121
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[build.js]] - `contains` [EXTRACTED]
 - [[main()_58]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_121
+  #community/Community_121

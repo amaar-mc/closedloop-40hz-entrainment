@@ -4,8 +4,6 @@ type: "code"
 community: "Community 101"
 location: "L29"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_101
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[fatigue_analysis.py]] - `contains` [EXTRACTED]
 - [[main()_29]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_101
+  #community/Community_101

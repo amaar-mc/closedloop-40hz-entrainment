@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "## 1. Static PAC Prediction"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Rationale Why Static Gap Larger Than Temporal Gap]] - `rationale_for` [EXTRACTED]
 - [[Source Files model checkpoints, metrics JSONs for 4ch and 7ch]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

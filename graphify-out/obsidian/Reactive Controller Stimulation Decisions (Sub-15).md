@@ -3,8 +3,6 @@ source_file: "submission/figures/figure7.png"
 type: "image"
 community: "Community 64"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_64
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Closed-Loop Controller (z-score ±0.5, 5s hysteresis)]] - `conceptually_related_to` [INFERRED]
 - [[Figure 7 Real-Data Controller Timeline — Sub-15 (Test Set)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_64
+  #community/Community_64

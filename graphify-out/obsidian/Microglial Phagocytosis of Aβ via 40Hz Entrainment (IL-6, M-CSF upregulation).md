@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section 2.1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[GENUS Gamma Entrainment Using Sensory Stimulation]] - `conceptually_related_to` [INFERRED]
 - [[Iaccarino 2016 (Nature) Gamma Entrainment Reduces Amyloid Load]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

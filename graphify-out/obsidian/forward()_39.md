@@ -4,8 +4,6 @@ type: "code"
 community: "TCN Layer Internals"
 location: "L78"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TCN_Layer_Internals
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[CausalDSConvBlock_3]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TCN_Layer_Internals
+  #community/TCN_Layer_Internals

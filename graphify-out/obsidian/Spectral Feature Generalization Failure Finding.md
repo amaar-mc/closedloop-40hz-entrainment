@@ -4,8 +4,6 @@ type: "document"
 community: "Community 68"
 location: "## Differentiators vs prior work"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_68
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Differentiators vs Prior Work]] - `references` [EXTRACTED]
 - [[Framing A Feature Selection  Architecture]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_68
+  #community/Community_68

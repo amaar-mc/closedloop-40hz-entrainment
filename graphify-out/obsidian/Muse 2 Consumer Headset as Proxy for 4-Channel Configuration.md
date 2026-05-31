@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "## Hardware Configuration"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Clinical Interpretation for Adaptive Music Therapy]] - `semantically_similar_to` [INFERRED]
 - [[Hardware Configuration 7ch Research-Grade vs 4ch Muse 2 Proxy]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

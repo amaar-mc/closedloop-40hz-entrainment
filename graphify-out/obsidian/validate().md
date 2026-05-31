@@ -4,8 +4,6 @@ type: "code"
 community: "Archived EEGNet V2"
 location: "L124"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_EEGNet_V2
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[_r2_score()]] - `calls` [EXTRACTED]
 - [[fit()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_EEGNet_V2
+  #community/Archived_EEGNet_V2

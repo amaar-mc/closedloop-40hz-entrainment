@@ -4,8 +4,6 @@ type: "document"
 community: "Poster Boards & Figures"
 location: "Section 12"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[TCN Universal Benefit Claim (All 35 Points Above y=x Diagonal)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

@@ -3,8 +3,6 @@ source_file: "results/figures"
 type: "code"
 community: "Community 37"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_37
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Generate Paper PDF v2 Script]] - `references` [EXTRACTED]
 - [[Regenerate Paper Figures Script]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_37
+  #community/Community_37

@@ -4,8 +4,6 @@ type: "document"
 community: "Archived CSEF Paper & Abstract"
 location: "Figure S1"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Archived_CSEF_Paper_&_Abstract
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Research Paper Supplementary Materials]] - `references` [EXTRACTED]
 - [[TCN Reaches 91% of Theoretical Oracle Performance]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived_CSEF_Paper_&_Abstract

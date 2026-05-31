@@ -3,8 +3,6 @@ source_file: "submission/figures/figure5.png"
 type: "image"
 community: "Community 100"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_100
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[EEGNet Block 1,457 params, temporal + spatial convolutions]] - `references` [EXTRACTED]
 - [[Figure 5 System Architecture Flowchart — Complete Closed-Loop Pipeline]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_100
+  #community/Community_100

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 103"
 location: "line 139"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_103
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Verify Notebook Finalization Script]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_103
+  #community/Community_103

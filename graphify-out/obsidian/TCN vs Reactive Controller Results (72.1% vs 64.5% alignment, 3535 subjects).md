@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Section 6.2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Offline Replay Limitation Framing (not live closed-loop, next step is crossover study)]] - `conceptually_related_to` [INFERRED]
 - [[Q&A Tier 3 Results and Validation Questions (Wilcoxon, Hedges g, habituation finding)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Research Paper/Figures/system_block_diagram.png"
 type: "image"
 community: "Community 64"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_64
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[EEGNet ML Model (1,457 params, MSE trained, 50ms inference)]] - `calls` [EXTRACTED]
 - [[Patient EEG Input (7 frontal channels, 250 Hz)_1]] - `calls` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_64
+  #community/Community_64

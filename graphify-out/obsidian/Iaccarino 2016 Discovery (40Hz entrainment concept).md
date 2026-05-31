@@ -4,8 +4,6 @@ type: "document"
 community: "Community 43"
 location: "December 16 entry"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_43
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Closed-Loop Control Formulation (EEGNet→TCN→PersonalizationModule→Decision)]] - `rationale_for` [EXTRACTED]
 - [[Music Therapy Pivot (original idea abandoned due to no dataset)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_43
+  #community/Community_43

@@ -3,8 +3,6 @@ source_file: "submission/presentation/archive/FINAL_05_qa_complete.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[CSEF Interview Tier 1 Warm-Up Questions]] - `semantically_similar_to` [INFERRED]
 - [[Habituation vs Facilitation Finding (~50% each in 35-patient cohort)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

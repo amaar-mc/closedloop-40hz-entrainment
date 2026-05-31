@@ -4,8 +4,6 @@ type: "code"
 community: "Replay Analysis & Controllers"
 location: "L204"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Replay_Analysis_&_Controllers
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[CUSUMControl]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Replay_Analysis_&_Controllers
+  #community/Replay_Analysis_&_Controllers

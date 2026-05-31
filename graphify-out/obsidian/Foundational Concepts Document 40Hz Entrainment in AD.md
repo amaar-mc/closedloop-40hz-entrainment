@@ -3,8 +3,6 @@ source_file: "docs/research/01_Foundational_Concepts_40Hz_Entrainment_AD.txt"
 type: "document"
 community: "Literature Review & Methodology Docs"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[PING Mechanism Pyramidal-Interneuron Network Gamma]] - `references` [EXTRACTED]
 - [[Theta-Gamma PAC Computational Significance and Working Memory]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

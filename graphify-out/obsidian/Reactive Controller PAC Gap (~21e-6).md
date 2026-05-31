@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/pac_targeting_gap.png"
 type: "image"
 community: "Community 36"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_36
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Effect Size g=1.57 (TCN vs Reactive PAC Gap)]] - `conceptually_related_to` [EXTRACTED]
 - [[PAC Targeting Gap by Controller Figure]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_36
+  #community/Community_36

@@ -4,11 +4,9 @@ type: "rationale"
 community: "Community 159"
 location: "L77"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_159
 ---
 
 # Apply causal trailing mean within each subject block.          Causal (trailing)
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_159
+  #community/Community_159

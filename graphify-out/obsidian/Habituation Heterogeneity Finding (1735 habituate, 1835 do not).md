@@ -4,8 +4,6 @@ type: "document"
 community: "Community 43"
 location: "Section 8 / Habituation analysis"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_43
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Closed-Loop Control Formulation (EEGNet→TCN→PersonalizationModule→Decision)]] - `rationale_for` [INFERRED]
 - [[Digital Research Log Notebook (Detailed Chronological)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_43
+  #community/Community_43

@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 119"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_119
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[build_original_12feat.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_119
+  #community/Community_119

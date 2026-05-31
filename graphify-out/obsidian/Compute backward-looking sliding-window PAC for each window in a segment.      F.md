@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 52"
 location: "L194"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_52
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[compute_sliding_pac_for_segment()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_52
+  #community/Community_52

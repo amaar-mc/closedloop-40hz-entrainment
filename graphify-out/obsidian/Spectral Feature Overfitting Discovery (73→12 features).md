@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Section 3.3 note"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Danger Zone Spectral Feature Drop Not In Presentation (timeline defense)]] - `references` [EXTRACTED]
 - [[Three Key Scientific Moments (Ceiling Discovery, Feature Paradox, Horizon Inflection)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 81"
 location: "L106"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_81
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[ridge_global()]] - `calls` [EXTRACTED]
 - [[ridge_per_subject()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_81
+  #community/Community_81

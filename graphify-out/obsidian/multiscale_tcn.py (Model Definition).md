@@ -4,8 +4,6 @@ type: "code"
 community: "Community 79"
 location: "line 15"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_79
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Multiscale Temporal PAC Module]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_79
+  #community/Community_79

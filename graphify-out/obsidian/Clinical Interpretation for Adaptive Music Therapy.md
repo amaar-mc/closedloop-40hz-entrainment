@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "## 7. Clinical Interpretation"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Muse 2 Consumer Headset as Proxy for 4-Channel Configuration]] - `semantically_similar_to` [INFERRED]
 - [[TCN Predictive vs Reactive Threshold Primary Result]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

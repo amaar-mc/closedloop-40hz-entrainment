@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 4.6"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Robustness Analysis (Fatigue Sweep + Threshold Sensitivity)]] - `references` [EXTRACTED]
 - [[Section 06 Results Controller Comparison Table (6 Controllers, N=35)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

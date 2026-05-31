@@ -4,8 +4,6 @@ type: "code"
 community: "Community 125"
 location: "class FixedScheduleControl"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Community_125
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[TCNPredictiveControl (Neural Network Look-Ahead Controller)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_125
+  #community/Community_125

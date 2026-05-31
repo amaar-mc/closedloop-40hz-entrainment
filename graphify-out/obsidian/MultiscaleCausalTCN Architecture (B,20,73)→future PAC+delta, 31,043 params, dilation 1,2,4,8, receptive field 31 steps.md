@@ -4,8 +4,6 @@ type: "document"
 community: "Community 73"
 location: "Section 4.2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_73
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[EEGNet Architecture (B,1,7,500) → (B,1), 1,457 params, temporal+depthwise spatial conv, R²=0.287]] - `references` [EXTRACTED]
 - [[Rationale TCN chosen over LSTMTransformer — causal by construction, faster, less overfit risk with 35 subjects, inductive bias matches EEG]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_73
+  #community/Community_73

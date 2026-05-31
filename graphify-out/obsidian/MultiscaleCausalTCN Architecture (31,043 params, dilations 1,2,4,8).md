@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 2.5"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[Results Report 12-Feature TCN Test R²=0.606±0.032 (5 Seeds, PAC+Stim Only)]] - `references` [EXTRACTED]
 - [[Supplementary Table S1 ts=1 vs ts=5 Target Smoothing Comparison]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

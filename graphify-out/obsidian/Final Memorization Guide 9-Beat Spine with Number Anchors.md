@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Step 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[9-Beat Presentation Spine (Hook→Gap→Biomarker→Ceiling→Pivot→Discovery→Horizon→Results→Product)]] - `semantically_similar_to` [INFERRED]
 - [[Number Anchor Groups A–H (disease, dataset, ceiling, pivot, discovery, results, product)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

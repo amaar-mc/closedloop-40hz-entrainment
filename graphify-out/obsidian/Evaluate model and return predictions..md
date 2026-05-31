@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 57"
 location: "L294"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_57
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[evaluate_model()_3]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_57
+  #community/Community_57

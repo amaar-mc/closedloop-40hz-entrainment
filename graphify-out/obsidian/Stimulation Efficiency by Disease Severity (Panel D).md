@@ -4,8 +4,6 @@ type: "image"
 community: "Community 31"
 location: "Panel D"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Stimulation Efficiency vs Severity - Healthy ~1.75, Severe ~0.25]] - `semantically_similar_to` [INFERRED]
 - [[TRIBE V2 Alzheimer's Disease Simulation Figure]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

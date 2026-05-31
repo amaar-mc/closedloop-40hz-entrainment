@@ -4,8 +4,6 @@ type: "document"
 community: "Community 59"
 location: "paper/PAPER_STATUS.md:50"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_59
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[12 PAC+Stim Features PAC trajectory + stimulation context]] - `conceptually_related_to` [INFERRED]
 - [[Research Paper Status Document]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_59
+  #community/Community_59

@@ -3,8 +3,6 @@ source_file: "submission/reference/audit/COMPREHENSIVE_CODE_AUDIT.md"
 type: "document"
 community: "Research Paper & Manuscript"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Reference Package Index (Submission Package, Abstract Drafts, Reports, Audit)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 41"
 location: "Result 1 section"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_41
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Poster Board V6 (PAC+Stim Feature Discovery Update)]] - `references` [EXTRACTED]
 - [[Result 1 Controller Comparison Table (72.1% vs 64.5%)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_41
+  #community/Community_41

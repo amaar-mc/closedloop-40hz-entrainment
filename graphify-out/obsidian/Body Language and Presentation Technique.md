@@ -4,8 +4,6 @@ type: "document"
 community: "Community 111"
 location: "Body Language Basics"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_111
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Judge Interaction Guide]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_111
+  #community/Community_111

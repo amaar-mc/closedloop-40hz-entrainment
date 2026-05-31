@@ -4,8 +4,6 @@ type: "document"
 community: "Community 41"
 location: "FIGURE GENERATION PROMPTS section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_41
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Global Figure Style Specification (Color Palette and Typography)]] - `references` [EXTRACTED]
 - [[Poster Board V8 (CSEF 2026, 4-Column Layout)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_41
+  #community/Community_41

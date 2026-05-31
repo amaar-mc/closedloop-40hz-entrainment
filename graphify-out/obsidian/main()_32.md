@@ -4,8 +4,6 @@ type: "code"
 community: "Community 115"
 location: "L38"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_115
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[run_cmd()]] - `calls` [EXTRACTED]
 - [[sweep_multiscale_configs.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_115
+  #community/Community_115

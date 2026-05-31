@@ -4,8 +4,6 @@ type: "code"
 community: "Community 38"
 location: "L282"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_38
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[__init__()_15]] - `calls` [EXTRACTED]
 - [[__init__()_16]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+  #community/Community_38

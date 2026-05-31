@@ -4,8 +4,6 @@ type: "document"
 community: "Community 99"
 location: "line 5"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_99
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[ViT-TCNet V4 Requirements]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_99
+  #community/Community_99

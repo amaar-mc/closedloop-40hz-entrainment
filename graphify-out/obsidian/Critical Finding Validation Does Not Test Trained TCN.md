@@ -4,8 +4,6 @@ type: "document"
 community: "Models, Streaming & Apps"
 location: "lines 26-31"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Clarification Predictive Look-Ahead is Trend-Based Not TCN]] - `rationale_for` [EXTRACTED]
 - [[Rigorous Pipeline Audit Report]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

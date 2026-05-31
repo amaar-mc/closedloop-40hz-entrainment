@@ -4,8 +4,6 @@ type: "code"
 community: "Lab Notebook PDF Generation"
 location: "L250"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[md_to_para()]] - `calls` [EXTRACTED]
 - [[process_md()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

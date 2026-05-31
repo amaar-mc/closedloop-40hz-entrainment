@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L541"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 - [[run_single_trial()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

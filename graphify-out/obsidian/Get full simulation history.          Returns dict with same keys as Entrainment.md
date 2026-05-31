@@ -4,8 +4,6 @@ type: "rationale"
 community: "TVB Alzheimer Simulator"
 location: "L635"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/TVB_Alzheimer_Simulator
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[get_history()_5]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/TVB_Alzheimer_Simulator
+  #community/TVB_Alzheimer_Simulator

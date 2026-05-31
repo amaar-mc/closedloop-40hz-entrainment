@@ -4,8 +4,6 @@ type: "document"
 community: "Community 108"
 location: "page 1, Rule #2 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_108
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[SRC Ethics Statement (ISEF Rules)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_108
+  #community/Community_108

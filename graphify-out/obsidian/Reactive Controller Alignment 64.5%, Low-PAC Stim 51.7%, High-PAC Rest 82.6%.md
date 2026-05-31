@@ -3,8 +3,6 @@ source_file: "submission/figures/figure13.png"
 type: "image"
 community: "Community 61"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_61
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Reactive Controller Stimulation Timeline (sub-15)]] - `semantically_similar_to` [INFERRED]
 - [[TCN Predictive Controller Alignment 72.1%, Low-PAC Stim 77.3%, High-PAC Rest 61.6%]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_61
+  #community/Community_61

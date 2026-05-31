@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 70"
 location: "L188"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_70
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[fit_population_tau()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_70
+  #community/Community_70

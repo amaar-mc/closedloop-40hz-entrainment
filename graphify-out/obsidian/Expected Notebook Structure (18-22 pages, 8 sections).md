@@ -4,8 +4,6 @@ type: "document"
 community: "Community 95"
 location: "Section 8"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_95
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Research Notebook Enhancement Prompt (FormattingContent Guidelines)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_95
+  #community/Community_95

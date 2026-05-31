@@ -4,8 +4,6 @@ type: "code"
 community: "TCN Layer Internals"
 location: "L251"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TCN_Layer_Internals
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[DeepDilationTCN]] - `method` [EXTRACTED]
 - [[Forward pass.          Args             x_seq Input tensor of shape (B, T,]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TCN_Layer_Internals
+  #community/TCN_Layer_Internals

@@ -3,8 +3,6 @@ source_file: "archive/context/abstract.md"
 type: "document"
 community: "Community 89"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_89
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[TCN Closed-Loop Validation Result (247-word Abstract)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_89
+  #community/Community_89

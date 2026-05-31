@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived ImprovedTCN Experiments"
 location: "L487"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Archived_ImprovedTCN_Experiments
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[evaluate_model()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archived_ImprovedTCN_Experiments
+  #community/Archived_ImprovedTCN_Experiments

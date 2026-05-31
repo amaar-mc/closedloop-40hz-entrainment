@@ -4,8 +4,6 @@ type: "code"
 community: "TRIBE Neural-Mass Simulator"
 location: "L100"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
@@ -52,4 +50,4 @@ tags:
 - [[reset()_69]] - `method` [EXTRACTED]
 - [[step()_72]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/TRIBE_Neural-Mass_Simulator
+  #community/TRIBE_Neural-Mass_Simulator

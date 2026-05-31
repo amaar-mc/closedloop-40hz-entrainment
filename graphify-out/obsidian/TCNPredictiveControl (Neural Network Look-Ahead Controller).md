@@ -4,8 +4,6 @@ type: "code"
 community: "Community 125"
 location: "class TCNPredictiveControl"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Community_125
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[OracleControl (Perfect PAC Knowledge Upper Bound)]] - `references` [INFERRED]
 - [[ReactiveThresholdControl (Z-Score Rolling Baseline Controller)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_125
+  #community/Community_125

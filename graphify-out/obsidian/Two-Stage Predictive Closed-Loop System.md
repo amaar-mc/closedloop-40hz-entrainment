@@ -4,8 +4,6 @@ type: "document"
 community: "Community 72"
 location: "line 10"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_72
 ---
 
@@ -23,4 +21,4 @@ tags:
 - [[Reactive Closed-Loop Stimulation System]] - `references` [EXTRACTED]
 - [[Theta-Gamma Phase-Amplitude Coupling (PAC)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_72
+  #community/Community_72

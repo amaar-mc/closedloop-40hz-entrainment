@@ -4,8 +4,6 @@ type: "document"
 community: "Community 43"
 location: "Section 3.4 / Architecture Exploration Summary"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_43
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Static PAC Prediction Ceiling R²=0.287]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_43
+  #community/Community_43

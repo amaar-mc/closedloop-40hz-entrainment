@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/system_block_diagram.png"
 type: "image"
 community: "Community 36"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_36
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Feature Extraction Block (73 features 61+7+5)]] - `calls` [EXTRACTED]
 - [[Preprocessing Block (BP 0.5-80 Hz, notch, CAR)]] - `calls` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_36
+  #community/Community_36

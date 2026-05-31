@@ -3,8 +3,6 @@ source_file: "submission/reference/COMPREHENSIVE_PROJECT_MAP.md"
 type: "document"
 community: "Research Paper & Manuscript"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[PAC Computation Mermaid Diagram Tort Modulation Index Steps]] - `references` [EXTRACTED]
 - [[Project Evolution Timeline (Jan 15 - Mar 1, 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

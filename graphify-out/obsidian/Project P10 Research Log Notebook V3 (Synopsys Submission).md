@@ -3,8 +3,6 @@ source_file: "submission/lab_notebook/P10_Lab_Notebook_V3.md"
 type: "document"
 community: "Lab Notebook PDF Generation"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Project P10 Research Log Notebook (VFINAL)]] - `semantically_similar_to` [INFERRED]
 - [[main()_72]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

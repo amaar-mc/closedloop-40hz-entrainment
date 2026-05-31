@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "L213"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -24,4 +22,4 @@ tags:
 - [[srcpersonalization.py (PersonalizationModule)]] - `calls` [EXTRACTED]
 - [[temporal_multiscalemodel_registry.py (build_default_registry)]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

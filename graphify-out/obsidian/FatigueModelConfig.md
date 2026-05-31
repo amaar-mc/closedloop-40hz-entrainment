@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L459"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[fatigue_model_sensitivity.py]] - `contains` [EXTRACTED]
 - [[main()_69]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

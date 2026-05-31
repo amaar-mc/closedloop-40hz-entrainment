@@ -4,8 +4,6 @@ type: "code"
 community: "Community 98"
 location: "L242"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_98
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[run_feature_ablation.py]] - `contains` [EXTRACTED]
 - [[train_subset()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_98
+  #community/Community_98

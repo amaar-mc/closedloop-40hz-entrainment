@@ -4,8 +4,6 @@ type: "code"
 community: "Community 66"
 location: "L404"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_66
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[fig_stim_vs_alignment()]] - `calls` [EXTRACTED]
 - [[generate_figures.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_66
+  #community/Community_66

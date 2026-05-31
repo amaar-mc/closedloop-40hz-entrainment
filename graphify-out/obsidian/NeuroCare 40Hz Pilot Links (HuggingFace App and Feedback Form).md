@@ -3,8 +3,6 @@ source_file: "submission/reference/PILOT_LINKS.md"
 type: "document"
 community: "Research Paper & Manuscript"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Clinical Roadmap Reference Current State, Integration Path, Testing Plan]] - `references` [EXTRACTED]
 - [[Elevator Pitch Script (60 Seconds, CSEF + Facility Audiences)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

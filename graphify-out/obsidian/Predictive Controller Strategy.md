@@ -3,8 +3,6 @@ source_file: "results/tribe_v2/alzheimer_simulation.png"
 type: "image"
 community: "Community 31"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Reactive Controller Strategy]] - `conceptually_related_to` [EXTRACTED]
 - [[TRIBE V2 Alzheimer's Disease Simulation Figure]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

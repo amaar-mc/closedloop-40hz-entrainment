@@ -4,8 +4,6 @@ type: "rationale"
 community: "TCN Layer Internals"
 location: "L424"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/TCN_Layer_Internals
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[forward()_44]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/TCN_Layer_Internals
+  #community/TCN_Layer_Internals

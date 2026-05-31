@@ -3,8 +3,6 @@ source_file: "submission/presentation/docs/productization_roadmap.txt"
 type: "document"
 community: "Community 104"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_104
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Hardware Scaling Tiers (Muse 2 → OpenBCI → 64-ch Clinical)]] - `shares_data_with` [INFERRED]
 - [[Product Framing 2575 Research-Product Balance]] - `rationale_for` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_104
+  #community/Community_104

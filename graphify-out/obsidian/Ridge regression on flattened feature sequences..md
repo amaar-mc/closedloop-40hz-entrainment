@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 90"
 location: "L49"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_90
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[ridge_baseline()_2]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_90
+  #community/Community_90

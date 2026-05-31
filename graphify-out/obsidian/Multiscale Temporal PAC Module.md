@@ -4,8 +4,6 @@ type: "document"
 community: "Community 79"
 location: "line 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_79
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[realtime_inference.py (Closed-Loop Wrapper)]] - `references` [EXTRACTED]
 - [[train_multiscale_tcn.py_1]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_79
+  #community/Community_79

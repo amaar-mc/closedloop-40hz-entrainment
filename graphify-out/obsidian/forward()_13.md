@@ -4,8 +4,6 @@ type: "code"
 community: "Community 57"
 location: "L112"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_57
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[CNN1D]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_57
+  #community/Community_57

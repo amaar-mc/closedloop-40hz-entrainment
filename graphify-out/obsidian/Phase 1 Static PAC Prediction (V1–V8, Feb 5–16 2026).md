@@ -4,8 +4,6 @@ type: "document"
 community: "Community 40"
 location: "Timeline of Approaches"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_40
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Repository Organization & Approach History]] - `references` [EXTRACTED]
 - [[Ridge Regression Best Static Baseline (R²=0.287)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_40
+  #community/Community_40

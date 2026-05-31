@@ -4,8 +4,6 @@ type: "code"
 community: "Community 52"
 location: "L90"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_52
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[compute_sliding_pac_for_segment()]] - `calls` [EXTRACTED]
 - [[compute_tort_mi()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_52
+  #community/Community_52

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 40"
 location: "Section 6.2: Real-Data Closed-Loop Validation"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_40
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[TCN Value at 5–10s Horizons (R²=0.24–0.28 vs Baseline Collapse)]] - `rationale_for` [EXTRACTED]
 - [[Validation Framework (6 Strategies FixedReactiveTCN PredictiveHybridPIOracle)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_40
+  #community/Community_40

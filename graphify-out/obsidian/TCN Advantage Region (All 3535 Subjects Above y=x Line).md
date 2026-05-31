@@ -3,8 +3,6 @@ source_file: "submission/figures/figure14.png"
 type: "image"
 community: "Community 42"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_42
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Causal TCN R² Curve at 1–10s Horizons (Maintains ~0.25–0.30 at 5–10s)]] - `semantically_similar_to` [INFERRED]
 - [[Figure 14 Per-Subject Clinical Utility (3535 Favor TCN)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_42
+  #community/Community_42

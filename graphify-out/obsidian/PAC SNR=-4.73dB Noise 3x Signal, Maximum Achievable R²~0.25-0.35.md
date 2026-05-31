@@ -4,8 +4,6 @@ type: "document"
 community: "Community 71"
 location: "Why We're Stuck at R²~0.29, Reason 2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_71
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[V5 Verdict Ridge Regression R²=0.287 is Honest Ceiling for This Dataset]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_71
+  #community/Community_71

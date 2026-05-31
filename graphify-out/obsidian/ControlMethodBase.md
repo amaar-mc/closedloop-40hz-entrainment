@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L63"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -53,4 +51,4 @@ tags:
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 - [[step()_49]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

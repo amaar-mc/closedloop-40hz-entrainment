@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 6.4"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_33
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Robustness Analysis (Fatigue Sweep + Threshold Sensitivity)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_33
+  #community/Community_33

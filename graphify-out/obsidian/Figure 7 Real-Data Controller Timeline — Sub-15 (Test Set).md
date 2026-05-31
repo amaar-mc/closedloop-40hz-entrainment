@@ -3,8 +3,6 @@ source_file: "submission/figures/figure7.png"
 type: "image"
 community: "Community 64"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_64
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Real-Data Controller Timeline — Sub-15 (Test Set, Archive Version)]] - `semantically_similar_to` [INFERRED]
 - [[TCN Predictive Controller Decisions (Sub-15, 5s ahead)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_64
+  #community/Community_64

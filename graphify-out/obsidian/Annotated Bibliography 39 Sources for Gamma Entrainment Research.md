@@ -3,8 +3,6 @@ source_file: "docs/research/05_Annotated_Bibliography_Sources.txt"
 type: "document"
 community: "Literature Review & Methodology Docs"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Martorell 2024 (Nature) Multisensory Gamma Promotes Glymphatic Clearance]] - `references` [EXTRACTED]
 - [[Tort 2010 (J. Neurophysiol) Modulation Index PAC Method]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

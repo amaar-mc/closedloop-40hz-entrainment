@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Research Paper/Figures/stim_vs_alignment.png"
 type: "image"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/image
-  - graphify/INFERRED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[TCN Predictive (this project) 72% alignment, 83% low-PAC stim, 62% high-PAC rest]] - `semantically_similar_to` [INFERRED]
 - [[TCN Predictive Clinical Utility Exceeds Reactive for All 35 Subjects]] - `conceptually_related_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

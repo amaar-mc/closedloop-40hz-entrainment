@@ -4,8 +4,6 @@ type: "document"
 community: "Generalization-Gap Experiments"
 location: "Interpretation point 1"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Epoch-Level PAC Caveat 82.2% Same-Epoch Samples]] - `rationale_for` [INFERRED]
 - [[Sliding-Window PAC Experiment Results (RESULTS.md)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

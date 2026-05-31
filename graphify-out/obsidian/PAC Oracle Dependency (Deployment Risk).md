@@ -4,8 +4,6 @@ type: "document"
 community: "Community 47"
 location: "Section 3"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_47
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Deployment Realism Failure PAC Oracle Dependency]] - `semantically_similar_to` [INFERRED]
 - [[PAC-Zeroed Ablation (93% R² Collapse)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_47
+  #community/Community_47

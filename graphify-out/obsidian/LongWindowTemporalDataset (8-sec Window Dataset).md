@@ -4,8 +4,6 @@ type: "code"
 community: "Multiscale TCN & Features"
 location: "train_temporal_long_windows.py:27"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[TemporalPACDataset (PyTorch Dataset)]] - `semantically_similar_to` [INFERRED]
 - [[create_dataloaders (Long-Window DataLoader Factory)]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

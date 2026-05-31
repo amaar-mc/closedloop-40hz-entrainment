@@ -4,8 +4,6 @@ type: "document"
 community: "Community 48"
 location: "page 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_48
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[Research PlanProject Summary Instructions (ISEF Form Requirements)]] - `references` [EXTRACTED]
 - [[Student Info Amaar Chughtai, Grade 11, Valley Christian High School]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_48
+  #community/Community_48

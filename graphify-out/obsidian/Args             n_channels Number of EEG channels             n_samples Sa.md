@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived Temporal PAC Predictor"
 location: "L110"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Archived_Temporal_PAC_Predictor
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[__init__()_26]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archived_Temporal_PAC_Predictor
+  #community/Archived_Temporal_PAC_Predictor

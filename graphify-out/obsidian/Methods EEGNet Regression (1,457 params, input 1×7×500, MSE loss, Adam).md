@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 4.3"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[EEGNet Architecture (1,457 params, R²=0.287 static PAC ceiling)]] - `references` [EXTRACTED]
 - [[Reference Lawhern et al. 2018 — EEGNet Compact CNN for BCI (J Neural Eng)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

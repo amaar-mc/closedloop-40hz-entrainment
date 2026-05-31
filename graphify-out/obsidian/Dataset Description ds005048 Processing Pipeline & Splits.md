@@ -4,8 +4,6 @@ type: "document"
 community: "Community 39"
 location: "L19-L48"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_39
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[OpenNeuro Dataset ds005048 (35 Dementia Patients)]] - `references` [EXTRACTED]
 - [[Signal Processing Dependencies (NumPy, SciPy, tensorpac)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_39
+  #community/Community_39

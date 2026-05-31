@@ -4,8 +4,6 @@ type: "document"
 community: "Community 58"
 location: "line 127-131"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_58
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Sweep Horizons Script (sweep_horizons.py)]] - `references` [EXTRACTED]
 - [[Train Multiscale TCN Script (train_multiscale_tcn.py)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_58
+  #community/Community_58

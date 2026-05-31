@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 5.2 V3"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Feature Ablation Study (6 Subsets, 73→12 Features)]] - `rationale_for` [EXTRACTED]
 - [[Spectral Features Cause Catastrophic Overfitting (Main Finding)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

@@ -4,8 +4,6 @@ type: "image"
 community: "Poster Boards & Figures"
 location: "Background section figure"
 tags:
-  - graphify/image
-  - graphify/INFERRED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[CSEF Poster V3 (Final Print-Ready Poster)]] - `references` [EXTRACTED]
 - [[R²=0.287 Is a Data Ceiling, Not Model Capacity Limitation]] - `references` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

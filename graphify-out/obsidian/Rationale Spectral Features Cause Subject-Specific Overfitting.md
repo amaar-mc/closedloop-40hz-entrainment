@@ -4,8 +4,6 @@ type: "document"
 community: "Generalization-Gap Experiments"
 location: "Section 2.5"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Approaches That Did NOT Work (architecture, mixup, heavy-reg on all 73)]] - `rationale_for` [INFERRED]
 - [[PAC+Stim Feature Discovery Audit Report]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

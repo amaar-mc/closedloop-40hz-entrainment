@@ -4,8 +4,6 @@ type: "code"
 community: "Community 37"
 location: "L62"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_37
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[fig_timeline()]] - `calls` [EXTRACTED]
 - [[regenerate_paper_figures.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_37
+  #community/Community_37

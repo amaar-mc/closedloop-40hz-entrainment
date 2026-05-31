@@ -4,8 +4,6 @@ type: "document"
 community: "Community 34"
 location: "Section 6"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_34
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Fatigue Sensitivity Results (6 severity levels)]] - `references` [INFERRED]
 - [[Individual Variability in 40Hz Response (30% non-responders)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_34
+  #community/Community_34

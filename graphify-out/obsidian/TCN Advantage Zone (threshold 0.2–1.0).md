@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/threshold_sensitivity.png"
 type: "image"
 community: "Community 36"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_36
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Delta-z Threshold (0.1–1.0 sweep)]] - `conceptually_related_to` [EXTRACTED]
 - [[TCN Robustness Threshold Sensitivity Analysis Figure]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_36
+  #community/Community_36

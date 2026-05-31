@@ -4,8 +4,6 @@ type: "document"
 community: "Community 50"
 location: "Data Analysis / Validation section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_50
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[3535 Subjects Benefit from TCN Predictive vs Reactive (Figure 14)]] - `conceptually_related_to` [INFERRED]
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_50
+  #community/Community_50

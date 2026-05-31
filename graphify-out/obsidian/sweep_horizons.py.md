@@ -4,8 +4,6 @@ type: "code"
 community: "Community 90"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_90
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[persistence_baseline()_2]] - `contains` [EXTRACTED]
 - [[ridge_baseline()_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_90
+  #community/Community_90

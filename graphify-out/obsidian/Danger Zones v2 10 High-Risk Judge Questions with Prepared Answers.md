@@ -3,8 +3,6 @@ source_file: "submission/presentation/interview/danger_zones.md"
 type: "document"
 community: "Community 30"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Overclaim Avoidance Phrases ('not a cure', 'adaptive therapy timing')]] - `references` [EXTRACTED]
 - [[Q&A Tier 5 Hard Skeptical Questions (architecture marathon, controller decisions, limitations)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

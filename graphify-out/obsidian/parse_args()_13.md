@@ -4,8 +4,6 @@ type: "code"
 community: "Community 74"
 location: "L245"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_74
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[comprehensive_submission_audit.py]] - `contains` [EXTRACTED]
 - [[main()_33]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_74
+  #community/Community_74

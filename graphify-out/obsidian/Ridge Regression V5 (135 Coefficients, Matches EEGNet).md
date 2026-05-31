@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 5.2 V5"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Static PAC Prediction Ceiling (R²=0.287, 8 Architectures)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 37"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_37
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[generate_horizon_sweep()]] - `contains` [EXTRACTED]
 - [[generate_system_block_diagram()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_37
+  #community/Community_37

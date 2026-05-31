@@ -3,8 +3,6 @@ source_file: "archive/context/overview.md"
 type: "document"
 community: "Community 34"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_34
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[EEGNet Static PAC Predictor]] - `conceptually_related_to` [INFERRED]
 - [[Two-Tier Predictive System Solution]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Community_34
+  #community/Community_34

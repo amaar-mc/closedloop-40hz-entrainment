@@ -4,8 +4,6 @@ type: "code"
 community: "TRIBE Neural-Mass Simulator"
 location: "L261"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Get Alzheimer's profile by severity name.      Args         severity One of h]] - `rationale_for` [EXTRACTED]
 - [[alzheimer_model.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator
+  #community/TRIBE_Neural-Mass_Simulator

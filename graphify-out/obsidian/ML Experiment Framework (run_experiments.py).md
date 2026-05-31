@@ -3,8 +3,6 @@ source_file: "archive/experimental/run_experiments.py"
 type: "code"
 community: "Generalization-Gap Experiments"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[Target Smoothing Experiment (run_target_smoothing.py)]] - `references` [EXTRACTED]
 - [[TransformerPredictor (causal encoder, sequence-to-scalar)]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

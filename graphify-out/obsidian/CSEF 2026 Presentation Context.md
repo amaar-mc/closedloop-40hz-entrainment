@@ -4,8 +4,6 @@ type: "document"
 community: "Community 78"
 location: "line 38-39"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_78
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[NeuroCare 40Hz Product Flyer]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_78
+  #community/Community_78

@@ -3,8 +3,6 @@ source_file: "scripts/pipeline/run_tribe_alignment_validation.py"
 type: "code"
 community: "12-Feature TCN Validation"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/12-Feature_TCN_Validation
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[evaluate_alignment()]] - `calls` [EXTRACTED]
 - [[hedges_g()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/12-Feature_TCN_Validation
+  #community/12-Feature_TCN_Validation

@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L95"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[FixedScheduleControl_5]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

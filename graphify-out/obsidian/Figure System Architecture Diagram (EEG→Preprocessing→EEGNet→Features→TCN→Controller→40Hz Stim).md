@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/system_block_diagram.pdf"
 type: "image"
 community: "Research Paper & Manuscript"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[EEGNet Architecture (1,457 params, R²=0.287 static PAC ceiling)]] - `references` [EXTRACTED]
 - [[MultiscaleCausalTCN Architecture (31,043 params, dilations 1,2,4,8)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "L43"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[test_tcn_step_returns_none_then_dict()]] - `calls` [EXTRACTED]
 - [[test_tcn_temporal_model_wraps_forecaster()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 83"
 location: "L91"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_83
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[eval_classifier()]] - `calls` [EXTRACTED]
 - [[main()_24]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_83
+  #community/Community_83

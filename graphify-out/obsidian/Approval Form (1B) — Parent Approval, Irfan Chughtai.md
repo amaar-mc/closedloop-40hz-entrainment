@@ -4,8 +4,6 @@ type: "document"
 community: "Community 108"
 location: "page 1, section 1b"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_108
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Approval Form (1B) — Student Acknowledgment, Amaar Chughtai]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_108
+  #community/Community_108

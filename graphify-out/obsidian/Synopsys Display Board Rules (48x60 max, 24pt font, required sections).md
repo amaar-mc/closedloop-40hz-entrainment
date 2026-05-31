@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "lines 32-41"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Synopsys Championship Reference Guide (Fair Day March 10, 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

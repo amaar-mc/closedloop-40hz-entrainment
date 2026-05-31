@@ -3,8 +3,6 @@ source_file: "archive/notebooks/P10_Lab_Notebook_V2.md"
 type: "document"
 community: "Community 95"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_95
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[P10 Research Log Notebook V1 (Daily Format)]] - `references` [EXTRACTED]
 - [[P10 Research Log Notebook V3 Early (Jan 15 - Mar 1 2026)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_95
+  #community/Community_95

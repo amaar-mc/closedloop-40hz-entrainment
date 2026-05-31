@@ -4,8 +4,6 @@ type: "document"
 community: "Community 50"
 location: "System Architecture table"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_50
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[12 TCN Input Features PAC trajectory (7) + stimulation context (5)]] - `shares_data_with` [INFERRED]
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_50
+  #community/Community_50

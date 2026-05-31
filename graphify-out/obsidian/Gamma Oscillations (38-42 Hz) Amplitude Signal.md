@@ -3,8 +3,6 @@ source_file: "submission/figures/figure2.png"
 type: "image"
 community: "Community 85"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_85
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Phase Modulates Amplitude Relationship]] - `conceptually_related_to` [EXTRACTED]
 - [[Theta Rhythm (4-8 Hz) Phase Signal]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_85
+  #community/Community_85

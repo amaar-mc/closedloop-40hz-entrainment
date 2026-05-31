@@ -3,8 +3,6 @@ source_file: "submission/paper/archive/RESEARCH_PAPER_v2_full_26pages.md"
 type: "document"
 community: "Community 33"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_33
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Research Paper v3 PDF (PublishedFormatted Version)]] - `references` [INFERRED]
 - [[Research Paper v4 (Full Paper, Feature-Ablation Version)]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_33
+  #community/Community_33

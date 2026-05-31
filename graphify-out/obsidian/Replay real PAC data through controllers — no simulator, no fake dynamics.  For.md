@@ -4,8 +4,6 @@ type: "rationale"
 community: "Replay Analysis & Controllers"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Replay_Analysis_&_Controllers
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[run_replay_analysis.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Replay_Analysis_&_Controllers
+  #community/Replay_Analysis_&_Controllers

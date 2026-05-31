@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived SpecTempNet V3"
 location: "L303"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Archived_SpecTempNet_V3
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[count_parameters()_9]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Archived_SpecTempNet_V3
+  #community/Archived_SpecTempNet_V3

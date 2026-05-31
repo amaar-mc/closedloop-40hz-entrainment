@@ -3,8 +3,6 @@ source_file: "submission/presentation/interview/csef_interview_qa.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Medicine & Physiology Hard Interview Questions]] - `references` [EXTRACTED]
 - [[Project Limitations (Offline replay, Single dataset, Short sessions)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

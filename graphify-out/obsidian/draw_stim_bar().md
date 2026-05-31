@@ -4,8 +4,6 @@ type: "code"
 community: "Community 139"
 location: "L64"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_139
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[generate_closedloop_vs_fixed_v3.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_139
+  #community/Community_139

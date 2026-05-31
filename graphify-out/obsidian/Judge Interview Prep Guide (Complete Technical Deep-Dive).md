@@ -3,8 +3,6 @@ source_file: "submission/presentation/interview/judge_interview_prep.md"
 type: "document"
 community: "Controller Results & Judge Prep"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[MultiscaleCausalTCN Architecture Details (Interview Prep)]] - `references` [EXTRACTED]
 - [[Statistical Methods Rationale (Wilcoxon, Hedges g, BCa)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

@@ -4,8 +4,6 @@ type: "document"
 community: "Models, Streaming & Apps"
 location: "Mapping table"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Scientific Justification for 4-Channel Selection]] - `rationale_for` [EXTRACTED]
 - [[TP9 → T7 Proxy (Temporal Left  Auditory Cortex)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

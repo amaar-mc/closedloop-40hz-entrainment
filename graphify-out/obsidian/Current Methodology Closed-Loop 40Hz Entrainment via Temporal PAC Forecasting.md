@@ -3,8 +3,6 @@ source_file: "docs/methodology/CURRENT_METHODOLOGY.md"
 type: "document"
 community: "Community 40"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_40
 ---
 
@@ -27,4 +25,4 @@ tags:
 - [[Training Configuration (AdamW, Huber Loss, ReduceLROnPlateau, Early Stopping)]] - `references` [EXTRACTED]
 - [[Validation Framework (6 Strategies FixedReactiveTCN PredictiveHybridPIOracle)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_40
+  #community/Community_40

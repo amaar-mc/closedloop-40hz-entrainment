@@ -4,8 +4,6 @@ type: "document"
 community: "Community 58"
 location: "line 769-791"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_58
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Comprehensive Submission Audit Script (comprehensive_submission_audit.py)]] - `implements` [EXTRACTED]
 - [[TCN Advantage at Long Horizons (margin +0.47-0.53 at 5-10s where baselines go negative)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_58
+  #community/Community_58

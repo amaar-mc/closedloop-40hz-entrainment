@@ -4,8 +4,6 @@ type: "code"
 community: "Community 127"
 location: "L65"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_127
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[generate_controller_comparison.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_127
+  #community/Community_127

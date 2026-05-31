@@ -4,8 +4,6 @@ type: "document"
 community: "Community 67"
 location: "docs/INDEX.md:1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_67
 ---
 
@@ -27,4 +25,4 @@ tags:
 - [[Superseded Implementation Archive]] - `references` [EXTRACTED]
 - [[Validated Metrics and Figures Directory]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_67
+  #community/Community_67

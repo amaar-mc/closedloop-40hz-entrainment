@@ -4,8 +4,6 @@ type: "document"
 community: "Community 108"
 location: "page 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_108
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Ethics Statement Student Signature — Amaar Chughtai]] - `references` [EXTRACTED]
 - [[SCVSEFA Rule 2 — Scientific Fraud and Misconduct Prohibition]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_108
+  #community/Community_108

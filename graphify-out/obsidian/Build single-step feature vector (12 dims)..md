@@ -4,8 +4,6 @@ type: "rationale"
 community: "TRIBE-TCN Validation"
 location: "L367"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/TRIBE-TCN_Validation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[_build_features()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/TRIBE-TCN_Validation
+  #community/TRIBE-TCN_Validation

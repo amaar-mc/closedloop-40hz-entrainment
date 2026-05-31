@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/SYNTHESIS.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Rigor Audit Status Overview]] - `references` [EXTRACTED]
 - [[Should Fix Hysteresis Value in Research Paper (3s → 5s)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

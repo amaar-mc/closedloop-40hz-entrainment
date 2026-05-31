@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "CR-01"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Section 06 Results Deployed Model Performance (ts=1, Test R²=0.170)]] - `references` [EXTRACTED]
 - [[Section 06 Results Horizon Sweep (ts=5 Smoothed Targets, TCN R²≈0.25 at 5–10s)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

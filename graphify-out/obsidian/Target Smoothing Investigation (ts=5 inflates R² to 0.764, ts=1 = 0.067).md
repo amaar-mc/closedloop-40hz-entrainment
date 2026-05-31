@@ -4,8 +4,6 @@ type: "document"
 community: "Community 43"
 location: "Section 6 / February 17 evening"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_43
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Digital Research Log Notebook (Detailed Chronological)]] - `references` [EXTRACTED]
 - [[MultiscaleCausalTCN Architecture Design Rationale]] - `rationale_for` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_43
+  #community/Community_43

@@ -3,8 +3,6 @@ source_file: "scripts/tools/generate_system_architecture_v4.py"
 type: "code"
 community: "Community 150"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Community_150
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[Generate System Architecture v5 Script]] - `semantically_similar_to` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Community_150
+  #community/Community_150

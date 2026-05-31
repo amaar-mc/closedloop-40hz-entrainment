@@ -4,8 +4,6 @@ type: "document"
 community: "Community 48"
 location: "page 1, Category section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_48
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[2026 Project Application Form — SCVSEFA P10, Computational Biology Category]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_48
+  #community/Community_48

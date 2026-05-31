@@ -4,8 +4,6 @@ type: "code"
 community: "Community 77"
 location: "line 15"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_77
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Timeline Example Figure]] - `implements` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_77
+  #community/Community_77

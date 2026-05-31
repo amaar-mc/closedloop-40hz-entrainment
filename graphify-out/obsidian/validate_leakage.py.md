@@ -4,8 +4,6 @@ type: "code"
 community: "Community 49"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_49
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[test_pac_autocorrelation()]] - `contains` [EXTRACTED]
 - [[test_temporal_sequence_logic()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_49
+  #community/Community_49

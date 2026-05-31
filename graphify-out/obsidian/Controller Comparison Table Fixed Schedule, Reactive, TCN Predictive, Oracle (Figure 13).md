@@ -4,8 +4,6 @@ type: "document"
 community: "Community 50"
 location: "Results Figure 13"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_50
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_50
+  #community/Community_50

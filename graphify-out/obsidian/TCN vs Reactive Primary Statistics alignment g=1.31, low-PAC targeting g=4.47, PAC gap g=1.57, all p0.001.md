@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "Section 3"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[Synopsys Championship Abstract P10 250 words, key results 72.1% alignment, 82.6% low-PAC targeting, 91% oracle]] - `shares_data_with` [EXTRACTED]
 - [[Threshold Sensitivity Analysis (delta-z 0.1–1.0)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

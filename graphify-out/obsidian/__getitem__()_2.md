@@ -4,8 +4,6 @@ type: "code"
 community: "Community 56"
 location: "L54"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_56
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[SeqDataset_1]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_56
+  #community/Community_56

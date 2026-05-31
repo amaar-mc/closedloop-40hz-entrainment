@@ -4,8 +4,6 @@ type: "rationale"
 community: "PPTX Slide Builder"
 location: "L938"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/PPTX_Slide_Builder
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[p11_scope()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/PPTX_Slide_Builder
+  #community/PPTX_Slide_Builder

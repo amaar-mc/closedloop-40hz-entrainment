@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "Section 5.1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_30
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[PAC as HRV Analogy for Cardiologist Judges]] - `conceptually_related_to` [INFERRED]
 - [[TCN vs Reactive Controller Results (72.1% vs 64.5% alignment, 3535 subjects)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_30
+  #community/Community_30

@@ -3,8 +3,6 @@ source_file: "submission/reference/SYNOPSYS_REFERENCE.md"
 type: "document"
 community: "Research Paper & Manuscript"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Synopsys Judging Criteria (40 Points Scientific Thought, Creativity, Independent Work, Thoroughness)]] - `references` [EXTRACTED]
 - [[Synopsys MLAI Mandatory Requirements (6 Requirements for 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

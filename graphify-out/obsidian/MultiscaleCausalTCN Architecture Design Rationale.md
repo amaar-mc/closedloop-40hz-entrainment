@@ -4,8 +4,6 @@ type: "document"
 community: "Community 43"
 location: "Section 4.5"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_43
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[GroupNorm vs BatchNorm Rationale (cross-subject stability)]] - `rationale_for` [EXTRACTED]
 - [[Target Smoothing Investigation (ts=5 inflates R² to 0.764, ts=1 = 0.067)]] - `rationale_for` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_43
+  #community/Community_43

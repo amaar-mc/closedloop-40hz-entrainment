@@ -3,8 +3,6 @@ source_file: "submission/poster/exports/Slide1_print.png"
 type: "image"
 community: "Community 51"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_51
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[System Architecture Flowchart (Poster Figure 6)]] - `references` [EXTRACTED]
 - [[TCN Predictive Control Result (72.1% vs 64.5% alignment)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_51
+  #community/Community_51

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 116"
 location: "L190-L213"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_116
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Fatigue Sensitivity Sweep (6 Levels, Adaptive vs Fixed)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_116
+  #community/Community_116

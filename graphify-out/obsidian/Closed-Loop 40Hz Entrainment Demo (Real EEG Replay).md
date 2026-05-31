@@ -4,8 +4,6 @@ type: "code"
 community: "Community 91"
 location: "module"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_91
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[_build_figure()]] - `calls` [EXTRACTED]
 - [[load_subject_data()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_91
+  #community/Community_91

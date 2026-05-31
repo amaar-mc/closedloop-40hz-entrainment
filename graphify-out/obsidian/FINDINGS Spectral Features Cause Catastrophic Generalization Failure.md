@@ -3,8 +3,6 @@ source_file: "archive/experimental/FINDINGS.md"
 type: "document"
 community: "Generalization-Gap Experiments"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[PAC+Stim Feature Discovery Audit Report]] - `semantically_similar_to` [INFERRED]
 - [[Target Smoothing + PAC+Stim Best R²=0.793 (ts=5, h=64)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 76"
 location: "Section IV"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_76
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[Rationale EEGNet Chosen Over GAT-Transformer (~2000 params vs 50k+)]] - `rationale_for` [EXTRACTED]
 - [[Temporal Transformer Encoder for EEG Sequence Modeling]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_76
+  #community/Community_76

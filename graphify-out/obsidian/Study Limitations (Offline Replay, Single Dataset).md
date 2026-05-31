@@ -4,8 +4,6 @@ type: "document"
 community: "Community 34"
 location: "Section 9"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_34
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Data Integrity Verification Table]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_34
+  #community/Community_34

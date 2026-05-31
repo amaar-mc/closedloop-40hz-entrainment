@@ -4,8 +4,6 @@ type: "document"
 community: "Community 157"
 location: "TIER 4"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_157
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Danger Zone AI Tools Disclosure (ClaudeChatGPT for assistance, all science decisions mine)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_157
+  #community/Community_157

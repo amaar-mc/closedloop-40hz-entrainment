@@ -4,8 +4,6 @@ type: "document"
 community: "Community 67"
 location: "docs/INDEX.md:14"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_67
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Active Conference Paper Workspace]] - `conceptually_related_to` [INFERRED]
 - [[Documentation Index]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_67
+  #community/Community_67

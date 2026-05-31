@@ -3,8 +3,6 @@ source_file: "validation/experiments/EXPERIMENT_DESIGN.md"
 type: "document"
 community: "Community 60"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[TransformerTCN Hypothesis (Self-Attention vs Fixed Dilation)]] - `references` [EXTRACTED]
 - [[WiderTCN Hypothesis (64-dim Bottleneck Limit)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

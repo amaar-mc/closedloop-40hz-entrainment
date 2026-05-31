@@ -3,8 +3,6 @@ source_file: "docs/audits/COMPREHENSIVE_SUBMISSION_AUDIT_REPORT.md"
 type: "document"
 community: "Community 47"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_47
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[Temporal Causality Leakage Check]] - `references` [EXTRACTED]
 - [[Temporal Multiscale Pipeline Audit Report (Feb 17, 2026)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_47
+  #community/Community_47

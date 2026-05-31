@@ -4,8 +4,6 @@ type: "document"
 community: "Community 136"
 location: "Section 8"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_136
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Hedges' g Effect Size]] - `implements` [EXTRACTED]
 - [[Wilcoxon Signed-Rank Test]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_136
+  #community/Community_136

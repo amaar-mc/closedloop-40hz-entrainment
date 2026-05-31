@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Research Paper/Figures/pac_targeting_gap.png"
 type: "image"
 community: "Community 31"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Poster Results and Findings Section - Bar Charts and Key Metrics]] - `references` [INFERRED]
 - [[TCN Controller - PAC Targeting Gap ~30.5 x10-6 ( g=1.57 vs Reactive)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

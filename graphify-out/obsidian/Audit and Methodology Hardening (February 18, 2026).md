@@ -4,8 +4,6 @@ type: "document"
 community: "Community 153"
 location: "February 18, 2026 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_153
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Habituation Pattern Analysis (1735 habituators, 1835 facilitators)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_153
+  #community/Community_153

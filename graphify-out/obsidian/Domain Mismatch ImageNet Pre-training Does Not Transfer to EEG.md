@@ -3,8 +3,6 @@ source_file: "archive/docs_v1_v8/V4_FAILURE_ANALYSIS.md"
 type: "document"
 community: "Model Ceiling & Leakage Audits"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Model_Ceiling_&_Leakage_Audits
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Meta-Learning Plan (MAML for Subject-Independent Transfer)]] - `conceptually_related_to` [INFERRED]
 - [[ViT-TCNet V4 Failure Analysis (Test R²=0.252, Expected 0.46-0.55)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model_Ceiling_&_Leakage_Audits

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 73"
 location: "Timeline of Approaches"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_73
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Model Zoo EEGNet R²=0.287, EEGNetV2 R²=0.06, SpecTempNet R²=0.236, ViT-TCNet R²=0.252, LSTM R²=−0.05, MultiscaleCausalTCN R²=0.74]] - `references` [EXTRACTED]
 - [[Rationale for Architecture Marathon 8 configs (1.5K–1.1M params) all converge at R²=0.287, proving data ceiling not model limitation]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_73
+  #community/Community_73

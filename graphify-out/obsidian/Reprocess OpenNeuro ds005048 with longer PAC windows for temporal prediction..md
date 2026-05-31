@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 82"
 location: "L1"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_82
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[reprocess_long_windows.py]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_82
+  #community/Community_82

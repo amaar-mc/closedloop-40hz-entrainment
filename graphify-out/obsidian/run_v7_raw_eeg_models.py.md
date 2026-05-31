@@ -4,8 +4,6 @@ type: "code"
 community: "Community 57"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_57
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[evaluate_model()_3]] - `contains` [EXTRACTED]
 - [[train_model()_2]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_57
+  #community/Community_57

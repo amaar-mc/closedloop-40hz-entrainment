@@ -4,8 +4,6 @@ type: "document"
 community: "Community 50"
 location: "System Architecture Stage 2"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_50
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Causal TCN Temporal PAC Forecaster — 5,154 params, 12 PAC+Stim features, 5s horizon]] - `references` [EXTRACTED]
 - [[EEGNet (V4) Static PAC Predictor — 1,457 params, R²=0.287]] - `shares_data_with` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_50
+  #community/Community_50

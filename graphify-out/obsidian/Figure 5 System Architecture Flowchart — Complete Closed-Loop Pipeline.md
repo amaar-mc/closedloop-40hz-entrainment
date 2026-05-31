@@ -3,8 +3,6 @@ source_file: "submission/figures/figure5.png"
 type: "image"
 community: "Community 100"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_100
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Raw EEG Input Patient with EEG headset, 7 frontal channels]] - `references` [EXTRACTED]
 - [[Simulation Update 5s param TCN, Simul. PACEEG, Stim effects]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_100
+  #community/Community_100

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 62"
 location: "L61"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_62
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Reactive]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_62
+  #community/Community_62

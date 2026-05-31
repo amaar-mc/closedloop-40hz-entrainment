@@ -4,8 +4,6 @@ type: "code"
 community: "TRIBE Neural-Mass Simulator"
 location: "L257"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Compute PAC (Modulation Index) from a simulated signal.          Uses the same T]] - `rationale_for` [EXTRACTED]
 - [[WilsonCowanModel]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/TRIBE_Neural-Mass_Simulator
+  #community/TRIBE_Neural-Mass_Simulator

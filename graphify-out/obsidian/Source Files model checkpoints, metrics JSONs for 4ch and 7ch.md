@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "## 6. Source Files"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[EEGNet Static PAC Prediction 7ch R2=0.287 vs 4ch R2=0.016]] - `references` [EXTRACTED]
 - [[TCN Temporal Forecasting 7ch vs 4ch at Horizon=5s]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

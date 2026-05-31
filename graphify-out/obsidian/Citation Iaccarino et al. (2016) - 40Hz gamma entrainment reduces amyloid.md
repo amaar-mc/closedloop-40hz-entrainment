@@ -4,8 +4,6 @@ type: "document"
 community: "Lab Notebook PDF Generation"
 location: "References section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Lab_Notebook_PDF_Generation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Citation Murdock et al. (2024) - Glymphatic Clearance of Amyloid]] - `conceptually_related_to` [INFERRED]
 - [[Literature Review Entry (January 15, 2026)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Lab_Notebook_PDF_Generation
+  #community/Lab_Notebook_PDF_Generation

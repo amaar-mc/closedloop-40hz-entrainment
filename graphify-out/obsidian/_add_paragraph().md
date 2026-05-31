@@ -4,8 +4,6 @@ type: "code"
 community: "PPTX Slide Builder"
 location: "L67"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/PPTX_Slide_Builder
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[_set_font()]] - `calls` [EXTRACTED]
 - [[build_pptx.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PPTX_Slide_Builder
+  #community/PPTX_Slide_Builder

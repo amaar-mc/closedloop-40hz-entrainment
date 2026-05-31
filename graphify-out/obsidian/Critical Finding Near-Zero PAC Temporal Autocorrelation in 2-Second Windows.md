@@ -4,8 +4,6 @@ type: "document"
 community: "Community 71"
 location: "Critical Empirical Finding section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_71
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Phase 1 Finding 2-Second PAC Autocorrelation ~0 (r=0.018 at lag-1)]] - `conceptually_related_to` [EXTRACTED]
 - [[Root Cause 2-Second PAC Window Too Short for Temporal Structure]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_71
+  #community/Community_71

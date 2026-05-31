@@ -4,8 +4,6 @@ type: "document"
 community: "Community 152"
 location: "page 1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_152
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Media Release Parent Consent — Irfan Chughtai (granted permission)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_152
+  #community/Community_152

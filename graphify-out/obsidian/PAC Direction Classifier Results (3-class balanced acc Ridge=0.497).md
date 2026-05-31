@@ -4,8 +4,6 @@ type: "document"
 community: "Community 145"
 location: "line 555-584"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_145
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[PAC Direction Classifier Script (direction_classifier.py)]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_145
+  #community/Community_145

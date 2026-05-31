@@ -4,8 +4,6 @@ type: "document"
 community: "Poster Boards & Figures"
 location: "Section 10"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Poster Memory Palace (9 Rooms, Left-to-Right Journey)]] - `semantically_similar_to` [INFERRED]
 - [[Statistical Methods Justification (Wilcoxon, Hedges g, Binomial)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

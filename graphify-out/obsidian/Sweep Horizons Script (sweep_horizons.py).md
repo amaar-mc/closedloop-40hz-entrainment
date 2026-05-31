@@ -4,8 +4,6 @@ type: "document"
 community: "Community 58"
 location: "line 60"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_58
 ---
 
@@ -20,4 +18,4 @@ tags:
 - [[TCN Horizon=5 Training Result (test R2=0.2541, persistence R2=-0.2671)]] - `references` [EXTRACTED]
 - [[TCN Horizon=8 Training Result (test R2=0.2395, persistence R2=-0.2757)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_58
+  #community/Community_58

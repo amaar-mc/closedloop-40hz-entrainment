@@ -4,8 +4,6 @@ type: "document"
 community: "Literature Review & Methodology Docs"
 location: "Section F: Model Predictive Control Framework"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Literature_Review_&_Methodology_Docs
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[MPC Optimization Formulation (MIQP Binary Control)]] - `semantically_similar_to` [INFERRED]
 - [[Rationale Why Closed-Loop Outperforms Open-Loop for AD Entrainment]] - `rationale_for` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Literature_Review_&_Methodology_Docs
+  #community/Literature_Review_&_Methodology_Docs

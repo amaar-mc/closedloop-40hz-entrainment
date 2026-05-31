@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "## 3. Why the Static Gap Is Larger Than the Temporal Gap"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[EEGNet Static PAC Prediction 7ch R2=0.287 vs 4ch R2=0.016]] - `rationale_for` [EXTRACTED]
 - [[TCN Temporal Forecasting 7ch vs 4ch at Horizon=5s]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

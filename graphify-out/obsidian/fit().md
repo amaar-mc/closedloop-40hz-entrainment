@@ -4,8 +4,6 @@ type: "code"
 community: "Archived EEGNet V2"
 location: "L171"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_EEGNet_V2
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[train_epoch()_3]] - `calls` [EXTRACTED]
 - [[validate()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_EEGNet_V2
+  #community/Archived_EEGNet_V2

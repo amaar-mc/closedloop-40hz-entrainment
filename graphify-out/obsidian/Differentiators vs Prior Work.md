@@ -4,8 +4,6 @@ type: "document"
 community: "Community 68"
 location: "## Differentiators vs prior work"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_68
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Spectral Feature Generalization Failure Finding]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_68
+  #community/Community_68

@@ -4,11 +4,9 @@ type: "document"
 community: "Community 170"
 location: "Section I: Background"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_170
 ---
 
 # Rationale: Spectral Features Cause Generalization Failure (CLAUDE.md finding)
 
-#graphify/document #graphify/EXTRACTED #community/Community_170
+  #community/Community_170

@@ -3,8 +3,6 @@ source_file: "submission/presentation/interview/csef_interview_qa.md"
 type: "document"
 community: "Presentation Scripts & Citations"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Presentation_Scripts_&_Citations
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Offline Replay Validation (real EEG, counterfactual decisions, 35 subjects)]] - `conceptually_related_to` [EXTRACTED]
 - [[Quick-Reference Numbers for CSEF Interview]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Presentation_Scripts_&_Citations
+  #community/Presentation_Scripts_&_Citations

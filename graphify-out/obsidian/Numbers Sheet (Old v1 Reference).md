@@ -3,8 +3,6 @@ source_file: "submission/presentation/archive/v1_reference/numbers_sheet_old.md"
 type: "document"
 community: "Community 88"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_88
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[OpenNeuro ds005048 Dataset (35 Subjects)]] - `references` [EXTRACTED]
 - [[Statistical Significance TCN vs Reactive (g=1.314.471.57, p0.001)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_88
+  #community/Community_88

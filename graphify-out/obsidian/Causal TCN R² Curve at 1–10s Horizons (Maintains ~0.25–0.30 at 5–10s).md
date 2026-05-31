@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Research Paper/Figures/horizon_sweep.png"
 type: "image"
 community: "Community 42"
 tags:
-  - graphify/image
-  - graphify/INFERRED
   - community/Community_42
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[PAC Forecasting Performance vs Prediction Horizon Chart]] - `references` [EXTRACTED]
 - [[TCN Advantage Region (All 3535 Subjects Above y=x Line)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Community_42
+  #community/Community_42

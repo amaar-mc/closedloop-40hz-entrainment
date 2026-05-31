@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 2.6"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Controller Comparison Results (N=35 Real EEG, 6 Controllers)]] - `references` [EXTRACTED]
 - [[MultiscaleCausalTCN (12-Feature, h=64, 22914 Params)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

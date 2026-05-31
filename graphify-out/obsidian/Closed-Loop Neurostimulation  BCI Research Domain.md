@@ -3,8 +3,6 @@ source_file: "paper/conferences/targets.md"
 type: "document"
 community: "Community 96"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_96
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[MIT URTC 2026 — Selected Primary Target]] - `conceptually_related_to` [INFERRED]
 - [[NeurIPS Workshop — Tier 1 Target]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_96
+  #community/Community_96

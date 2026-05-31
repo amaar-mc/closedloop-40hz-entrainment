@@ -3,8 +3,6 @@ source_file: "submission/abstract/ABSTRACT.md"
 type: "document"
 community: "Community 55"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_55
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Closed-Loop Controller (PAC-forecast-driven stimulation)]] - `implements` [EXTRACTED]
 - [[Horizon Sweep Baselines collapse at 5-10s, TCN R²≈0.25]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_55
+  #community/Community_55

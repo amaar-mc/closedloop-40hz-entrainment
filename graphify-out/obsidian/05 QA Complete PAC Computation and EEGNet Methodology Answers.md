@@ -4,8 +4,6 @@ type: "document"
 community: "Community 30"
 location: "TIER 2"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_30
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Q&A Tier 2 Methodology Questions (PAC computation, EEGNet, TCN, causal design, 12 features)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_30
+  #community/Community_30

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 41"
 location: "TOWARD CLINICAL USE section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_41
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[4ch vs 7ch Channel Configuration Table (Muse Compatibility)]] - `conceptually_related_to` [INFERRED]
 - [[Poster Board V8 (CSEF 2026, 4-Column Layout)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_41
+  #community/Community_41

@@ -3,8 +3,6 @@ source_file: "archive/docs_v1_v8/FINAL_VERDICT_MASTER_MODEL.md"
 type: "document"
 community: "Model Ceiling & Leakage Audits"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Model_Ceiling_&_Leakage_Audits
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Information-Theoretic Limit Shannon Mutual Information Confirms R² ≈ 0.29]] - `conceptually_related_to` [INFERRED]
 - [[Master Model Verdict R² ≈ 0.29 Ceiling]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/INFERRED #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model_Ceiling_&_Leakage_Audits

@@ -4,8 +4,6 @@ type: "code"
 community: "PPTX Slide Builder"
 location: "L59"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/PPTX_Slide_Builder
 ---
 
@@ -25,4 +23,4 @@ tags:
 - [[sub2()]] - `calls` [EXTRACTED]
 - [[write_inline()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/PPTX_Slide_Builder
+  #community/PPTX_Slide_Builder

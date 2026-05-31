@@ -4,8 +4,6 @@ type: "document"
 community: "Community 77"
 location: "lines 26-32"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_77
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Horizon Sweep Figure]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_77
+  #community/Community_77

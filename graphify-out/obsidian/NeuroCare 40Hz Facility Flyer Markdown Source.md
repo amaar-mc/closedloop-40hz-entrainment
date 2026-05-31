@@ -3,8 +3,6 @@ source_file: "submission/flyer/FACILITY_FLYER.md"
 type: "document"
 community: "Community 78"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_78
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[NeuroCare 40Hz Product Flyer]] - `semantically_similar_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_78
+  #community/Community_78

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 91"
 location: "line 68"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_91
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Closed-Loop 40Hz Entrainment Demo (Real EEG Replay)]] - `references` [EXTRACTED]
 - [[RealtimePACForecaster (temporal_multiscale)]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_91
+  #community/Community_91

@@ -4,8 +4,6 @@ type: "document"
 community: "Archived Enhanced-Feature TCN"
 location: "line 1-16"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Archived_Enhanced-Feature_TCN
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[_build_split_samples_enhanced()]] - `implements` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Archived_Enhanced-Feature_TCN
+  #community/Archived_Enhanced-Feature_TCN

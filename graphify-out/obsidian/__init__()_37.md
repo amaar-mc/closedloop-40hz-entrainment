@@ -4,8 +4,6 @@ type: "code"
 community: "Archived EEGNet V2"
 location: "L37"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_EEGNet_V2
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Args             model EEGNetV2 model             device 'cuda' or 'cpu']] - `rationale_for` [EXTRACTED]
 - [[ModelTrainerV2]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_EEGNet_V2
+  #community/Archived_EEGNet_V2

@@ -4,8 +4,6 @@ type: "document"
 community: "Controller Results & Judge Prep"
 location: "5. Model 2: MultiscaleCausalTCN"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Judge Interview Prep Guide (Complete Technical Deep-Dive)]] - `references` [EXTRACTED]
 - [[Spectral Feature Generalization Failure Explanation (3 Levels)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

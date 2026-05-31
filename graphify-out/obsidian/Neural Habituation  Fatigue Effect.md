@@ -4,8 +4,6 @@ type: "document"
 community: "Community 72"
 location: "line 14"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_72
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[12-Feature PAC+Stim Model (test R²=0.606)]] - `conceptually_related_to` [INFERRED]
 - [[Two-Stage Predictive Closed-Loop System]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_72
+  #community/Community_72

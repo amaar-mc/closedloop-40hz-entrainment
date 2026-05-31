@@ -4,8 +4,6 @@ type: "document"
 community: "Community 130"
 location: "### Related Work"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_130
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Related Work Section Arc]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_130
+  #community/Community_130

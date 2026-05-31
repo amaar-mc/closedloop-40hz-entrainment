@@ -3,8 +3,6 @@ source_file: "archive/experimental/sliding_pac/RESULTS.md"
 type: "document"
 community: "Generalization-Gap Experiments"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Generalization-Gap_Experiments
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Finding Persistence R²=-0.897 on Sliding PAC (vs 0.104 epoch PAC)]] - `references` [EXTRACTED]
 - [[Sliding-Window PAC Computation (compute_sliding_pac.py)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Generalization-Gap_Experiments
+  #community/Generalization-Gap_Experiments

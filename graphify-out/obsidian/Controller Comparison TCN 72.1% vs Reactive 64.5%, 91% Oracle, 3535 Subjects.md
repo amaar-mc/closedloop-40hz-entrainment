@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 1.2, lines 30-48"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Project Achievement Report (Feb 2026) What Was Achieved, Notable, Could Be Better]] - `references` [EXTRACTED]
 - [[Simulation vs Real Data Validation Distinction]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

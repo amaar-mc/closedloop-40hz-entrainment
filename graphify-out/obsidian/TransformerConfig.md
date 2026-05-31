@@ -4,8 +4,6 @@ type: "code"
 community: "Multiscale TCN & Features"
 location: "L147"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -42,4 +40,4 @@ tags:
 - [[Z-score normalize features and targets using train statistics.      Mirrors th]] - `uses` [INFERRED]
 - [[tcn_variants.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

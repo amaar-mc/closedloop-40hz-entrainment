@@ -4,8 +4,6 @@ type: "code"
 community: "Community 32"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_32
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[SimulatedEEGAdapter]] - `contains` [EXTRACTED]
 - [[_NumpySimulatedAdapter]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_32
+  #community/Community_32

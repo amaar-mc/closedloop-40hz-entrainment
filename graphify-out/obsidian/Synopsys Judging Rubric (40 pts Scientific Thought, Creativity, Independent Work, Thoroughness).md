@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "## 1. Strategy Brief"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Judge Q&A Bank and Danger Zones (Synopsys Oral Prep)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

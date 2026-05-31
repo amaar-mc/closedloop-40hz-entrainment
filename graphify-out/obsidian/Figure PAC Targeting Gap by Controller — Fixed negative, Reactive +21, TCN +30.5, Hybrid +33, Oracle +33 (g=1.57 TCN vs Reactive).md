@@ -4,8 +4,6 @@ type: "image"
 community: "Controller Results & Judge Prep"
 location: "page 1"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Controller_Results_&_Judge_Prep
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[PAC Targeting Quality by Controller]] - `shares_data_with` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Controller_Results_&_Judge_Prep
+  #community/Controller_Results_&_Judge_Prep

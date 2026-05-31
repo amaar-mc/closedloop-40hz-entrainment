@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "module docstring"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[EEGNetLarge (~141K params, 97x original)]] - `implements` [EXTRACTED]
 - [[Rationale R²=0.287 Is Data Limitation Not Model Bottleneck]] - `semantically_similar_to` [INFERRED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

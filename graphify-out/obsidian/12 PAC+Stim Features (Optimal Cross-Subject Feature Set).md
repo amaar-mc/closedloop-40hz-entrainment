@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 2.4.4"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Feature Ablation Study (6 Subsets, 73→12 Features)]] - `references` [EXTRACTED]
 - [[MultiscaleCausalTCN (12-Feature, h=64, 22914 Params)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

@@ -4,8 +4,6 @@ type: "rationale"
 community: "Archived Enhanced-Feature TCN"
 location: "L211"
 tags:
-  - graphify/rationale
-  - graphify/INFERRED
   - community/Archived_Enhanced-Feature_TCN
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[ImprovedTCN_1]] - `uses` [INFERRED]
 - [[evaluate()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/INFERRED #community/Archived_Enhanced-Feature_TCN
+  #community/Archived_Enhanced-Feature_TCN

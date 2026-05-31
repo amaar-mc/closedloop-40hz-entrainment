@@ -4,8 +4,6 @@ type: "code"
 community: "Community 52"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_52
 ---
 
@@ -23,4 +21,4 @@ tags:
 - [[report_statistics()]] - `contains` [EXTRACTED]
 - [[stitch_segment()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_52
+  #community/Community_52

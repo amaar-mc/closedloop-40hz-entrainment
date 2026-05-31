@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "line 204"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[NeuroCare 40Hz Live Mission Control v5]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

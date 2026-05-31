@@ -4,8 +4,6 @@ type: "code"
 community: "Community 93"
 location: "L29"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_93
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[analyze_subject()]] - `calls` [EXTRACTED]
 - [[compare_pac_methods.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_93
+  #community/Community_93

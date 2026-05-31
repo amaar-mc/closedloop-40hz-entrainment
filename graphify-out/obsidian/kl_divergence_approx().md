@@ -4,8 +4,6 @@ type: "code"
 community: "Community 114"
 location: "L56"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_114
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Approximate KL divergence using histograms]] - `rationale_for` [EXTRACTED]
 - [[pure_numpy_diagnostic.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_114
+  #community/Community_114

@@ -3,8 +3,6 @@ source_file: "submission/abstract/v2_abstract.md"
 type: "document"
 community: "Community 55"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_55
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Low-PAC Window Targeting 82.6% vs 51.7%, 91% of Oracle]] - `references` [EXTRACTED]
 - [[Synopsys Championship Abstract (v1  vfinal  P10)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_55
+  #community/Community_55

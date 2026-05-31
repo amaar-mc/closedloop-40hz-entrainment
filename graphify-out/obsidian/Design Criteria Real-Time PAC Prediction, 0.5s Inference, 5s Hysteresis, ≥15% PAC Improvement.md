@@ -4,8 +4,6 @@ type: "document"
 community: "Community 48"
 location: "page 1, Design Criteria section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_48
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[System Flowchart BIDS Load → 2s Window → EEGNet → PAC Predict → Z-Score → Decision (StimulateRestMaintain)]] - `implements` [INFERRED]
 - [[Test Method Replay Pre-Recorded EEG on 7 Held-Out Test Subjects, Compare vs Fixed Schedule]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_48
+  #community/Community_48

@@ -3,8 +3,6 @@ source_file: "src/streaming/adapters.py"
 type: "code"
 community: "Models, Streaming & Apps"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[demo_streaming.py]] - `imports_from` [EXTRACTED]
 - [[test_simulated_session.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

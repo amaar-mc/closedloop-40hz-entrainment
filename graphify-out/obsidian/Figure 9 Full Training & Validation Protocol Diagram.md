@@ -3,8 +3,6 @@ source_file: "submission/figures/figure9.png"
 type: "image"
 community: "Community 42"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_42
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Fatigue Robustness Validation (6 Severity Levels, TCN Advantage Maintained)]] - `references` [EXTRACTED]
 - [[Real EEG Replay Validation with TCN Controller (STIMULATERESTMAINTAIN)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_42
+  #community/Community_42

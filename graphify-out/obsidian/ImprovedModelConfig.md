@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Enhanced-Feature TCN"
 location: "L96"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Archived_Enhanced-Feature_TCN
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[Train ImprovedTCN on enhanced multiscale datasets.  Key differences from train_m]] - `uses` [INFERRED]
 - [[improved_tcn_model.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/INFERRED #community/Archived_Enhanced-Feature_TCN
+  #community/Archived_Enhanced-Feature_TCN

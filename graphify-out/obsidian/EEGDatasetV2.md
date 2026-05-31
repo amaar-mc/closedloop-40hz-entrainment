@@ -4,8 +4,6 @@ type: "code"
 community: "Archived EEGNet V2"
 location: "L22"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_EEGNet_V2
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[data_loader_v2.py]] - `contains` [EXTRACTED]
 - [[load_processed_data_v2()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_EEGNet_V2
+  #community/Archived_EEGNet_V2

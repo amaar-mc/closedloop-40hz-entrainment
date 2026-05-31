@@ -4,8 +4,6 @@ type: "document"
 community: "Community 40"
 location: "Model Zoo"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_40
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Phase 1 Static PAC Prediction (V1–V8, Feb 5–16 2026)]] - `references` [EXTRACTED]
 - [[R²=0.287 Static PAC Prediction Ceiling]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_40
+  #community/Community_40

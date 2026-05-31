@@ -4,8 +4,6 @@ type: "rationale"
 community: "Community 63"
 location: "L56"
 tags:
-  - graphify/rationale
-  - graphify/EXTRACTED
   - community/Community_63
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[add_gradient_rect()]] - `rationale_for` [EXTRACTED]
 
-#graphify/rationale #graphify/EXTRACTED #community/Community_63
+  #community/Community_63

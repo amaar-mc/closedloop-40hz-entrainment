@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "Section 7.2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Controller Results TCN 72.1% vs Reactive 64.5%, g=1.31, p0.001]] - `references` [EXTRACTED]
 - [[Rationale Proactive Control Preferred — Low cost of unnecessary stim, high cost of missed therapeutic windows]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

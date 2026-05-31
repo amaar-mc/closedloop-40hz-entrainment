@@ -4,8 +4,6 @@ type: "code"
 community: "Community 32"
 location: "L299"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_32
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[RealEEGAdapter]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_32
+  #community/Community_32

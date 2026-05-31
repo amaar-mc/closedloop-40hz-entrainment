@@ -4,8 +4,6 @@ type: "document"
 community: "Community 34"
 location: "Section 6"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_34
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[TCN Predictive Controller]] - `calls` [EXTRACTED]
 - [[Temporal PAC Forecasting Tier (TCN)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_34
+  #community/Community_34

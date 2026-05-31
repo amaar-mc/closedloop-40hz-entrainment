@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L373"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Simulate one time step with saturation ceiling dynamics.]] - `rationale_for` [EXTRACTED]
 - [[run_single_trial()_1]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

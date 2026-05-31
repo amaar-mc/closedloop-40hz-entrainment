@@ -4,8 +4,6 @@ type: "code"
 community: "Community 45"
 location: "L240"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_45
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[_seed()]] - `calls` [EXTRACTED]
 - [[generate_excalidraw.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_45
+  #community/Community_45

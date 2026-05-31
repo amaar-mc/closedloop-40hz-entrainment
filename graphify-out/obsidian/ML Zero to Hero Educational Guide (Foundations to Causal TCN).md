@@ -3,8 +3,6 @@ source_file: "submission/reference/ML_ZERO_TO_HERO.md"
 type: "document"
 community: "Research Paper & Manuscript"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[Sequence Models RNN, LSTM, GRU Explanations and Limitations]] - `references` [EXTRACTED]
 - [[TCN Deep Dive Causal Convolution, Dilation, Residual Connections, Attention Pooling]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

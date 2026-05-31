@@ -4,8 +4,6 @@ type: "document"
 community: "Community 60"
 location: "Section 2.1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[DeepDilationTCN (Dilations 1,2,4,8,16,32, 127-step RF)]] - `rationale_for` [EXTRACTED]
 - [[TCN Architecture Experiment Design]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

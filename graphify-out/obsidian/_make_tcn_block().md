@@ -4,8 +4,6 @@ type: "code"
 community: "Community 38"
 location: "L232"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_38
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[ATCNet]] - `method` [EXTRACTED]
 - [[__init__()_16]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_38
+  #community/Community_38

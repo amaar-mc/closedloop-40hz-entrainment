@@ -4,8 +4,6 @@ type: "code"
 community: "Community 35"
 location: "L1"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_35
 ---
 
@@ -30,4 +28,4 @@ tags:
 - [[training.py]] - `imports_from` [EXTRACTED]
 - [[validation.py]] - `imports_from` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_35
+  #community/Community_35

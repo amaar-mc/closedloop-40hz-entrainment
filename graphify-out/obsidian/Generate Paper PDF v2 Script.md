@@ -3,8 +3,6 @@ source_file: "scripts/tools/generate_paper_pdf_v2.py"
 type: "code"
 community: "Community 37"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_37
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[resultsfigures (Publication Figure Output Directory)]] - `references` [EXTRACTED]
 - [[submissionpaperRESEARCH_PAPER.md]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_37
+  #community/Community_37

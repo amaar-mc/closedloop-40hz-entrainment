@@ -4,8 +4,6 @@ type: "document"
 community: "Community 73"
 location: "Tier 2 TCN answer"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_73
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[MultiscaleCausalTCN Architecture (B,20,73)→future PAC+delta, 31,043 params, dilation 1,2,4,8, receptive field 31 steps]] - `rationale_for` [EXTRACTED]
 - [[Q&A Tier 2 Methodology PAC computation, EEGNet rationale, TCN vs LSTM, causality guarantee, 73-feature breakdown, leakage safeguards]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_73
+  #community/Community_73

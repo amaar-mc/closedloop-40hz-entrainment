@@ -4,8 +4,6 @@ type: "document"
 community: "Community 39"
 location: "L181-L188"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_39
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Dataset Description ds005048 Processing Pipeline & Splits]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_39
+  #community/Community_39

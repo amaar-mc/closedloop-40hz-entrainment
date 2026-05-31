@@ -4,8 +4,6 @@ type: "code"
 community: "Archived Temporal PAC Predictor"
 location: "train_sklearn_temporal.py:164"
 tags:
-  - graphify/code
-  - graphify/INFERRED
   - community/Archived_Temporal_PAC_Predictor
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[create_temporal_features (Flat Feature Vector Builder)]] - `calls` [EXTRACTED]
 - [[train_temporal_predictor()]] - `semantically_similar_to` [INFERRED]
 
-#graphify/code #graphify/INFERRED #community/Archived_Temporal_PAC_Predictor
+  #community/Archived_Temporal_PAC_Predictor

@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Research Paper/Figures/timeline_example.png"
 type: "image"
 community: "Community 64"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_64
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[PAC Signal Trace Over 500s (Sub-15, LowHigh PAC epochs)]] - `references` [EXTRACTED]
 - [[Reactive vs TCN Controller Panel Comparison (Sub-15)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_64
+  #community/Community_64

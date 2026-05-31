@@ -4,8 +4,6 @@ type: "document"
 community: "Community 58"
 location: "line 380-384"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_58
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Sweep Horizons Script (sweep_horizons.py)]] - `references` [EXTRACTED]
 - [[TCN Advantage at Long Horizons (margin +0.47-0.53 at 5-10s where baselines go negative)]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_58
+  #community/Community_58

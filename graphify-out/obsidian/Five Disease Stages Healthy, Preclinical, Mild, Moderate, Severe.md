@@ -4,8 +4,6 @@ type: "image"
 community: "Community 31"
 location: "Legend"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_31
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[TRIBE V2 Alzheimer's Disease Simulation Predictive Controller (3-Panel Sweep)]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_31
+  #community/Community_31

@@ -4,8 +4,6 @@ type: "code"
 community: "12-Feature TCN Validation"
 location: "line 165"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/12-Feature_TCN_Validation
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[TVB Jansen-Rit Alignment Evaluation Script]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/12-Feature_TCN_Validation
+  #community/12-Feature_TCN_Validation

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 79"
 location: "line 18"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_79
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[1 Hz Closed-Loop Decision Loop]] - `implements` [EXTRACTED]
 - [[Multiscale Temporal PAC Module]] - `references` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_79
+  #community/Community_79

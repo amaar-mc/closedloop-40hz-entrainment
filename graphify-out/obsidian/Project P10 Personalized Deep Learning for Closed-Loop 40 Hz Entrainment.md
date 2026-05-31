@@ -3,8 +3,6 @@ source_file: "submission/abstract/ABSTRACT.md"
 type: "document"
 community: "Community 55"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_55
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[OpenNeuro ds005048 Dataset (35 subjects)]] - `references` [EXTRACTED]
 - [[Synopsys Championship Abstract (v1  vfinal  P10)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_55
+  #community/Community_55

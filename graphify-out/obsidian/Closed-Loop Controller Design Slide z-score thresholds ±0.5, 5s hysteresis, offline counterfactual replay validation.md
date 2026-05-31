@@ -4,8 +4,6 @@ type: "document"
 community: "Community 73"
 location: "page 6"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_73
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Closed-Loop Controller z−0.5→STIMULATE, z+0.5→REST, 3s hysteresis, 30s rolling baseline]] - `shares_data_with` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_73
+  #community/Community_73

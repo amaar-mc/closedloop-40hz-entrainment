@@ -4,8 +4,6 @@ type: "document"
 community: "Community 41"
 location: "Issue #1"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_41
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Controller Comparison Result 72.1% vs 64.5% Alignment]] - `rationale_for` [INFERRED]
 - [[Poster Results Coherence Audit]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_41
+  #community/Community_41

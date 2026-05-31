@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/pac_targeting_gap.png"
 type: "image"
 community: "Community 36"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_36
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[Oracle Controller PAC Gap (~33e-6)]] - `conceptually_related_to` [INFERRED]
 - [[PAC Targeting Gap by Controller Figure]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_36
+  #community/Community_36

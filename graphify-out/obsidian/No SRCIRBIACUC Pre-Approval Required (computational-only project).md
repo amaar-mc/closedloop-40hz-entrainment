@@ -4,8 +4,6 @@ type: "document"
 community: "Community 48"
 location: "page 1, item 4 unchecked"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_48
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Checklist for Adult Sponsor (1) — John Crandall Signed]] - `references` [EXTRACTED]
 - [[Project Constraints OpenNeuro ds005048 only, Binary Stim Decision, RTX 3080, CPU Real-Time]] - `conceptually_related_to` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_48
+  #community/Community_48

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 73"
 location: "Tier 5 architecture marathon answer"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_73
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[EEGNet Architecture (B,1,7,500) → (B,1), 1,457 params, temporal+depthwise spatial conv, R²=0.287]] - `rationale_for` [EXTRACTED]
 - [[Q&A Tier 5 Hard R²=0.25 usefulness defense, offline vs live argument, sample size defense, novelty claims]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_73
+  #community/Community_73

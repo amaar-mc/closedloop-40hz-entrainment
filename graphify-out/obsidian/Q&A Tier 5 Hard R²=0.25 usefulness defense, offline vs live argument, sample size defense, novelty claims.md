@@ -4,8 +4,6 @@ type: "document"
 community: "Community 73"
 location: "Tier 5"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_73
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Project Limitations offline replay only, single dataset, short sessions (6-10 min), static PAC ceiling, heuristic thresholds]] - `conceptually_related_to` [INFERRED]
 - [[Rationale for Architecture Marathon 8 configs (1.5K–1.1M params) all converge at R²=0.287, proving data ceiling not model limitation]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_73
+  #community/Community_73

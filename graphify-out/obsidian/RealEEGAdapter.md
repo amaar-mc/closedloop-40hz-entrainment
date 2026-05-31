@@ -4,8 +4,6 @@ type: "code"
 community: "Community 32"
 location: "L194"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_32
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[close()_2]] - `method` [EXTRACTED]
 - [[get_window()_2]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_32
+  #community/Community_32

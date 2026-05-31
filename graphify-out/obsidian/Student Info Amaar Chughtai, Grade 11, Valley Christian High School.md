@@ -4,8 +4,6 @@ type: "document"
 community: "Community 48"
 location: "page 1, items 1 & 3"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_48
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Student Checklist (1A) — Project Registration Form]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_48
+  #community/Community_48

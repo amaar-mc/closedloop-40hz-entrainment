@@ -4,8 +4,6 @@ type: "paper"
 community: "Archived CSEF Paper & Abstract"
 location: "Section 1.4"
 tags:
-  - graphify/paper
-  - graphify/INFERRED
   - community/Archived_CSEF_Paper_&_Abstract
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Research Paper v3 (Full CSEF Submission Paper)]] - `references` [EXTRACTED]
 - [[ts=1 vs ts=5 Target Smoothing Trade-off (Raw vs Smoothed PAC Evaluation)]] - `rationale_for` [INFERRED]
 
-#graphify/paper #graphify/INFERRED #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived_CSEF_Paper_&_Abstract

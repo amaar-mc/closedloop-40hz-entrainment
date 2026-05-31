@@ -4,8 +4,6 @@ type: "code"
 community: "Community 32"
 location: "L275"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_32
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[RealEEGAdapter]] - `method` [EXTRACTED]
 - [[Sleep 2 seconds and return one (n_channels, 500) float32 EEG window.          Re]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_32
+  #community/Community_32

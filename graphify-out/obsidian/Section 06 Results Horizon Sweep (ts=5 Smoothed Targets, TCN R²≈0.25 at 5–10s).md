@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 6.1"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_33
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Figure PAC Forecasting Performance vs Prediction Horizon (TCN vs Baselines)]] - `references` [INFERRED]
 - [[Horizon Sweep Results — 12-Feature PAC+Stim (1–10s)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_33
+  #community/Community_33

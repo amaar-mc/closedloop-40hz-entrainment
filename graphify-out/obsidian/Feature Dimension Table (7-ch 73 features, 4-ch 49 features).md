@@ -4,8 +4,6 @@ type: "document"
 community: "Models, Streaming & Apps"
 location: "Feature Dimensions section"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[step2_spectral_caches()]] - `references` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

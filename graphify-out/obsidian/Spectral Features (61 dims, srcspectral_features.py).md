@@ -4,8 +4,6 @@ type: "document"
 community: "Community 143"
 location: "Feature Engineering Summary"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_143
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Multiscale Temporal Features (73 dims 61 spectral + 7 PAC-derived + 5 stim context)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_143
+  #community/Community_143

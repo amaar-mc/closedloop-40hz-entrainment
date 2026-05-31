@@ -4,8 +4,6 @@ type: "code"
 community: "Community 80"
 location: "L142"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_80
 ---
 
@@ -19,4 +17,4 @@ tags:
 - [[build_sliding_dataset.py]] - `contains` [EXTRACTED]
 - [[main()_7]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_80
+  #community/Community_80

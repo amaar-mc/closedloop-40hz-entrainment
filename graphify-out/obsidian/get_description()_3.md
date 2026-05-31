@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L389"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Return human-readable model description._3]] - `rationale_for` [EXTRACTED]
 - [[SaturationModelSimulator]] - `method` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

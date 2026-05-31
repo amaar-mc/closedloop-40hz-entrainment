@@ -3,8 +3,6 @@ source_file: "docs/abstract/archive/drafts/round2/draft_A_best_narrative.md"
 type: "document"
 community: "Community 54"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_54
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[Abstract Framing Strategy Judge-Friendly (Biology Hook then AI)]] - `implements` [INFERRED]
 - [[Final Abstract Round 3 (Selected Version)]] - `references` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_54
+  #community/Community_54

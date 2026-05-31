@@ -4,8 +4,6 @@ type: "document"
 community: "Community 48"
 location: "page 4, test section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_48
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Design Criteria Real-Time PAC Prediction, 0.5s Inference, 5s Hysteresis, ≥15% PAC Improvement]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_48
+  #community/Community_48

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 65"
 location: "L225"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_65
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[main()_22]] - `calls` [EXTRACTED]
 - [[run_comparison_study.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_65
+  #community/Community_65

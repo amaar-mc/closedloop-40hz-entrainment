@@ -4,8 +4,6 @@ type: "document"
 community: "Community 133"
 location: "February 21, 2026 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_133
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Replay Framework and Robustness (February 21, 2026)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_133
+  #community/Community_133

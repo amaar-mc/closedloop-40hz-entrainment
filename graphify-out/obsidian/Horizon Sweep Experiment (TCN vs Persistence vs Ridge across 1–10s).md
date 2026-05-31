@@ -4,8 +4,6 @@ type: "document"
 community: "Community 43"
 location: "Section 8 / February 19"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_43
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Controller Comparison Results (72.1% TCN vs 64.5% Reactive, N=35)]] - `rationale_for` [INFERRED]
 - [[Digital Research Log Notebook (Detailed Chronological)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_43
+  #community/Community_43

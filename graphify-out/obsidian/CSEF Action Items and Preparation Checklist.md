@@ -4,8 +4,6 @@ type: "document"
 community: "Community 69"
 location: "Section 10"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_69
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 - [[Project Notebook  Lab Notebook Requirements]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_69
+  #community/Community_69

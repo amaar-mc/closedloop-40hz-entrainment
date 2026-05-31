@@ -4,8 +4,6 @@ type: "document"
 community: "Community 47"
 location: "Section 4"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_47
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Comprehensive Submission Audit Report]] - `references` [EXTRACTED]
 - [[Target Smoothing Effect on R² (ts1ts5ts15)]] - `rationale_for` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_47
+  #community/Community_47

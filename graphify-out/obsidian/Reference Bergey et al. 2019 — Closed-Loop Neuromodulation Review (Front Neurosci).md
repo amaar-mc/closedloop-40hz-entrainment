@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "[27]"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Discussion Comparison to Portiloop, Scalable Framework, DBS Literature]] - `cites` [EXTRACTED]
 - [[Research Paper v3 (Full Manuscript)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

@@ -3,8 +3,6 @@ source_file: "submission/poster/POSTER_BOARD_V7.md"
 type: "document"
 community: "Poster Boards & Figures"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Poster_Boards_&_Figures
 ---
 
@@ -22,4 +20,4 @@ tags:
 - [[Results Gold Callout Boxes (72.1%  82.6%  3535)]] - `references` [EXTRACTED]
 - [[vFinal Poster PDF (CSEF 2026 Submission Print)]] - `implements` [INFERRED]
 
-#graphify/document #graphify/EXTRACTED #community/Poster_Boards_&_Figures
+  #community/Poster_Boards_&_Figures

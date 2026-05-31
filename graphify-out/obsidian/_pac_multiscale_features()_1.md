@@ -4,8 +4,6 @@ type: "code"
 community: "Community 53"
 location: "L140"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_53
 ---
 
@@ -17,4 +15,4 @@ tags:
 - [[_causal_moving_average()_1]] - `calls` [EXTRACTED]
 - [[build_multiscale_dataset.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_53
+  #community/Community_53

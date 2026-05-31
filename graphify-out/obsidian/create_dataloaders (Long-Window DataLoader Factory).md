@@ -4,8 +4,6 @@ type: "code"
 community: "Multiscale TCN & Features"
 location: "train_temporal_long_windows.py:106"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Multiscale_TCN_&_Features
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[LongWindowTemporalDataset (8-sec Window Dataset)]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Multiscale_TCN_&_Features
+  #community/Multiscale_TCN_&_Features

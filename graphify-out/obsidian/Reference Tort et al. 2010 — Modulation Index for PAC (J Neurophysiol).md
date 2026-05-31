@@ -4,8 +4,6 @@ type: "document"
 community: "Research Paper & Manuscript"
 location: "[31]"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Research_Paper_&_Manuscript
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[PAC Computation Modulation Index (Tort 2010), Theta-Gamma, Epoch-Level Labels]] - `cites` [EXTRACTED]
 - [[Research Paper v3 (Full Manuscript)]] - `cites` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Research_Paper_&_Manuscript
+  #community/Research_Paper_&_Manuscript

@@ -4,8 +4,6 @@ type: "code"
 community: "Models, Streaming & Apps"
 location: "module"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Models,_Streaming_&_Apps
 ---
 
@@ -23,4 +21,4 @@ tags:
 - [[render_session()]] - `calls` [EXTRACTED]
 - [[render_summary()]] - `calls` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&_Apps

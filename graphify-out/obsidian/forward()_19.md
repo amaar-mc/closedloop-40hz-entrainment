@@ -4,8 +4,6 @@ type: "code"
 community: "Archived EEGNet V2"
 location: "L120"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Archived_EEGNet_V2
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[EEGNetV2]] - `method` [EXTRACTED]
 - [[Forward pass.          Args             x Input EEG tensor (batch, 1, n_cha]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Archived_EEGNet_V2
+  #community/Archived_EEGNet_V2

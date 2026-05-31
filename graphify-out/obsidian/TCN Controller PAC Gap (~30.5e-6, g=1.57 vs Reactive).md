@@ -3,8 +3,6 @@ source_file: "submission/paper/figures/pac_targeting_gap.png"
 type: "image"
 community: "Community 36"
 tags:
-  - graphify/image
-  - graphify/INFERRED
   - community/Community_36
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[PAC Targeting Gap by Controller Figure]] - `references` [EXTRACTED]
 - [[TCN Alignment Score vs Threshold (59–74%)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/image #graphify/INFERRED #community/Community_36
+  #community/Community_36

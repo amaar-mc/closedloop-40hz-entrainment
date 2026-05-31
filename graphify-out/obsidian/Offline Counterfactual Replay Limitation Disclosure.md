@@ -3,8 +3,6 @@ source_file: "results/rigor_audit/05_defensibility.md"
 type: "document"
 community: "Rigor Audit Reports"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Rigor_Audit_Reports
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[EEGNet Not in Validation Loop Disclosure]] - `conceptually_related_to` [INFERRED]
 - [[Scientific Defensibility Audit (STRONG rating)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Rigor_Audit_Reports
+  #community/Rigor_Audit_Reports

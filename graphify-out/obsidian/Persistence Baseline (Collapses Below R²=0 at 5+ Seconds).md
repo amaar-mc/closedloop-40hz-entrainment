@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Research Paper/Figures/horizon_sweep.png"
 type: "image"
 community: "Community 42"
 tags:
-  - graphify/image
-  - graphify/EXTRACTED
   - community/Community_42
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Operationally Useful Region (5–10s Prediction Horizon)]] - `conceptually_related_to` [EXTRACTED]
 - [[PAC Forecasting Performance vs Prediction Horizon Chart]] - `references` [EXTRACTED]
 
-#graphify/image #graphify/EXTRACTED #community/Community_42
+  #community/Community_42

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 33"
 location: "Section 6 Summary"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_33
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Section 06 Results Deployed Model Performance (ts=1, Test R²=0.170)]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_33
+  #community/Community_33

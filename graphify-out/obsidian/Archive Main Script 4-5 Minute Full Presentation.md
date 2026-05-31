@@ -3,8 +3,6 @@ source_file: "submission/presentation/archive/FINAL_01_main_script.md"
 type: "document"
 community: "Community 30"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_30
 ---
 
@@ -13,4 +11,4 @@ tags:
 ## Connections
 - [[v2 Full Technical 6-Minute Presentation Script]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_30
+  #community/Community_30

@@ -4,8 +4,6 @@ type: "document"
 community: "Community 34"
 location: "Section 2"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_34
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[EEG Preprocessing Pipeline]] - `implements` [EXTRACTED]
 - [[GroupNorm Over BatchNorm Rationale]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_34
+  #community/Community_34

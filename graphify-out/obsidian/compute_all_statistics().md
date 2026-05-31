@@ -4,8 +4,6 @@ type: "code"
 community: "Control Strategies & Validation"
 location: "L727"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -21,4 +19,4 @@ tags:
 - [[pairwise_wilcoxon()]] - `calls` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

@@ -4,8 +4,6 @@ type: "code"
 community: "Community 60"
 location: "class WiderTCN"
 tags:
-  - graphify/code
-  - graphify/EXTRACTED
   - community/Community_60
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[VARIANT_REGISTRY (Model Variant Registry Dict)]] - `references` [EXTRACTED]
 - [[WiderTCN Hypothesis (64-dim Bottleneck Limit)]] - `rationale_for` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Community_60
+  #community/Community_60

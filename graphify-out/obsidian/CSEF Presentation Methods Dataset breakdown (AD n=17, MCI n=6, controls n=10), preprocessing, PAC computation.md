@@ -4,8 +4,6 @@ type: "document"
 community: "Community 155"
 location: "page 4"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_155
 ---
 
@@ -14,4 +12,4 @@ tags:
 ## Connections
 - [[Current Methodology Dataset OpenNeuro ds005048, 35 subjects, BIDS HDF5FDT format, 250Hz, 40s ON20s OFF]] - `shares_data_with` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_155
+  #community/Community_155

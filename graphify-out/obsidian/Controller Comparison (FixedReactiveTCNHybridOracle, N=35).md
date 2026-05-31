@@ -4,8 +4,6 @@ type: "document"
 community: "Community 88"
 location: "Controller Comparison table"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_88
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[Numbers Sheet (Old v1 Reference)]] - `references` [EXTRACTED]
 - [[Statistical Significance TCN vs Reactive (g=1.314.471.57, p0.001)]] - `conceptually_related_to` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_88
+  #community/Community_88

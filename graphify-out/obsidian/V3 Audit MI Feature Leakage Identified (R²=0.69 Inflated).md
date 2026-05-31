@@ -3,8 +3,6 @@ source_file: "archive/docs_v1_v8/AUDIT_REPORT.md"
 type: "document"
 community: "Model Ceiling & Leakage Audits"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Model_Ceiling_&_Leakage_Audits
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[MI Leakage Fix Modulation Index Removed from Spectral Features]] - `references` [INFERRED]
 - [[Three Data Leakage Encounters (V1 MI, V4 Suspected, V5 PAC Features)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model_Ceiling_&_Leakage_Audits

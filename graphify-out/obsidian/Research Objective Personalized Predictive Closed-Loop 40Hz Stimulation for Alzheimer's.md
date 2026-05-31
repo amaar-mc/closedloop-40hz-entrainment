@@ -4,8 +4,6 @@ type: "document"
 community: "Community 40"
 location: "Section 1: Research Objective"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_40
 ---
 
@@ -15,4 +13,4 @@ tags:
 - [[Clinical Implication Proactive Stimulation Lead Time for Adaptive Music Therapy]] - `conceptually_related_to` [EXTRACTED]
 - [[Current Methodology Closed-Loop 40Hz Entrainment via Temporal PAC Forecasting]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_40
+  #community/Community_40

@@ -4,8 +4,6 @@ type: "document"
 community: "Control Strategies & Validation"
 location: "lines 33-39"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Control_Strategies_&_Validation
 ---
 
@@ -16,4 +14,4 @@ tags:
 - [[compute_anova()]] - `implements` [INFERRED]
 - [[main()_65]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Control_Strategies_&_Validation
+  #community/Control_Strategies_&_Validation

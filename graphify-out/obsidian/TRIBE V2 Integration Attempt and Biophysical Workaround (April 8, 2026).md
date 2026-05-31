@@ -4,8 +4,6 @@ type: "document"
 community: "Community 109"
 location: "April 8, 2026 section"
 tags:
-  - graphify/document
-  - graphify/EXTRACTED
   - community/Community_109
 ---
 
@@ -18,4 +16,4 @@ tags:
 - [[CorticalResponseConfig Biophysical Model (ASSR-calibrated)]] - `references` [EXTRACTED]
 - [[Wilson-Cowan Neural Mass Model (EI dynamics for theta-gamma PAC)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Community_109
+  #community/Community_109

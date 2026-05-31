@@ -3,8 +3,6 @@ source_file: "archive/CSEF_Old/Poster_FINAL/CSEF_FINAL.pdf"
 type: "document"
 community: "Community 135"
 tags:
-  - graphify/document
-  - graphify/INFERRED
   - community/Community_135
 ---
 
@@ -14,4 +12,4 @@ tags:
 - [[CSEF Poster vF2 Small (print-optimized version of CSEF final poster)]] - `references` [INFERRED]
 - [[Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment (CSEF Poster v2)]] - `semantically_similar_to` [INFERRED]
 
-#graphify/document #graphify/INFERRED #community/Community_135
+  #community/Community_135
