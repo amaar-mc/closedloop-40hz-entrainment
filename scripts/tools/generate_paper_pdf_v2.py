@@ -9,10 +9,10 @@ import re
 import os
 from fpdf import FPDF
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PAPER_MD = os.path.join(PROJECT_ROOT, "docs", "paper", "RESEARCH_PAPER.md")
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+PAPER_MD = os.path.join(PROJECT_ROOT, "submission", "paper", "RESEARCH_PAPER.md")
 FIGURES_DIR = os.path.join(PROJECT_ROOT, "results", "figures")
-OUTPUT_PDF = os.path.join(PROJECT_ROOT, "docs", "paper", "RESEARCH_PAPER_v2.pdf")
+OUTPUT_PDF = os.path.join(PROJECT_ROOT, "submission", "paper", "RESEARCH_PAPER_v2.pdf")
 
 # Font config
 FONT = "TNR"
@@ -64,9 +64,9 @@ def clean(text):
 
 
 def resolve_img(rel_path):
-    """Resolve image path relative to docs/paper/."""
+    """Resolve image path relative to submission/paper/."""
     candidates = [
-        os.path.normpath(os.path.join(PROJECT_ROOT, "docs", "paper", rel_path)),
+        os.path.normpath(os.path.join(PROJECT_ROOT, "submission", "paper", rel_path)),
         os.path.normpath(os.path.join(PROJECT_ROOT, rel_path.lstrip('./'))),
         os.path.join(FIGURES_DIR, os.path.basename(rel_path)),
         os.path.join(FIGURES_DIR, "ai_generated", os.path.basename(rel_path)),

@@ -17,10 +17,10 @@ import textwrap
 from fpdf import FPDF
 
 # Paths
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PAPER_MD = os.path.join(PROJECT_ROOT, "docs", "paper", "RESEARCH_PAPER.md")
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+PAPER_MD = os.path.join(PROJECT_ROOT, "submission", "paper", "RESEARCH_PAPER.md")
 FIGURES_DIR = os.path.join(PROJECT_ROOT, "results", "figures")
-OUTPUT_PDF = os.path.join(PROJECT_ROOT, "docs", "paper", "RESEARCH_PAPER.pdf")
+OUTPUT_PDF = os.path.join(PROJECT_ROOT, "submission", "paper", "RESEARCH_PAPER.pdf")
 
 
 class ResearchPaperPDF(FPDF):
@@ -410,8 +410,8 @@ def generate_pdf():
             match = re.search(r'!\[.*?\]\((.*?)\)', line)
             if match:
                 img_rel = match.group(1)
-                # Resolve path relative to docs/paper/
-                img_path = os.path.normpath(os.path.join(PROJECT_ROOT, "docs", "paper", img_rel))
+                # Resolve path relative to submission/paper/
+                img_path = os.path.normpath(os.path.join(PROJECT_ROOT, "submission", "paper", img_rel))
                 if not os.path.exists(img_path):
                     # Try from project root
                     img_path = os.path.normpath(os.path.join(PROJECT_ROOT, img_rel.lstrip('../')))
