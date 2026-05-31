@@ -3,19 +3,19 @@
 Generate QR code PNGs for the caregiver app URL and pilot feedback Google Form URL.
 
 Usage:
-    python scripts/generate_qr_codes.py --app-url URL --form-url URL [--output-dir PATH]
-    python scripts/generate_qr_codes.py --check   # verify output files exist
+    python scripts/tools/generate_qr_codes.py --app-url URL --form-url URL [--output-dir PATH]
+    python scripts/tools/generate_qr_codes.py --check   # verify output files exist
 
 Outputs:
-    docs/flyer/qr_app.png       -- QR code for the Streamlit app
-    docs/flyer/qr_feedback.png  -- QR code for the pilot feedback Google Form
+    submission/flyer/qr_app.png       -- QR code for the Streamlit app
+    submission/flyer/qr_feedback.png  -- QR code for the pilot feedback Google Form
 """
 import argparse
 import sys
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_OUTPUT = REPO_ROOT / "docs" / "flyer"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_OUTPUT = REPO_ROOT / "submission" / "flyer"
 
 
 def make_qr(url: str, output_path: Path) -> None:

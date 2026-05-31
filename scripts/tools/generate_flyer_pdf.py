@@ -4,15 +4,15 @@ Generate print-ready facility flyer PDF.
 Clean single-column layout with generous spacing. No overlaps.
 
 Usage:
-    python scripts/generate_flyer_pdf.py [--output PATH]
+    python scripts/tools/generate_flyer_pdf.py [--output PATH]
 """
 import argparse
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_OUTPUT = REPO_ROOT / "docs" / "flyer" / "facility_flyer.pdf"
-QR_APP = REPO_ROOT / "docs" / "flyer" / "qr_app.png"
-QR_FORM = REPO_ROOT / "docs" / "flyer" / "qr_feedback.png"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_OUTPUT = REPO_ROOT / "submission" / "flyer" / "facility_flyer.pdf"
+QR_APP = REPO_ROOT / "submission" / "flyer" / "qr_app.png"
+QR_FORM = REPO_ROOT / "submission" / "flyer" / "qr_feedback.png"
 
 
 def build_pdf(output_path: Path) -> None:
