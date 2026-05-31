@@ -52,7 +52,7 @@
 
 | Poster Claim | JSON Value | Source |
 |---|---|---|
-| Fixed: 45.0% | 45.0% | `results/tcn_validation_results.json` |
+| Fixed: 45.0% | 45.0% | `results/metrics/tcn_validation_results.json` |
 | Reactive: 64.5% | 64.5% | same |
 | TCN Predictive: 72.1% | 72.1% | same |
 | Oracle: 100.0% | 100.0% | same |
@@ -69,7 +69,7 @@
 
 | Poster Label | Fixed Eff | Adaptive Eff | Gain | Source |
 |---|---|---|---|---|
-| None (rate=0.0) | 5.381 | 5.401 | +0.4% | `results/fatigue_sensitivity.json` |
+| None (rate=0.0) | 5.381 | 5.401 | +0.4% | `results/metrics/fatigue_sensitivity.json` |
 | Mild (rate=0.004) | 5.294 | 5.361 | +1.3% | same |
 | Moderate (rate=0.015) | 5.101 | 5.231 | +2.6% | same |
 | Severe (rate=0.025) | 4.968 | 5.184 | +4.3% | same |
@@ -95,10 +95,10 @@ Four models tested: Exponential Decay, Step Function, Heterogeneous Population, 
 |---|---|---|
 | "R² = 0.25 at 5-10s" | `models/sweep_horizons_results.json` (original 73-feat model) | **STALE** — poster Figure 6 shows 0.577 at h=5 from the ablated model |
 | "+0.5 R² margin" | Original model: 0.254 - (-0.267) = 0.521 | **STALE** — ablated model margin is 0.577-0.104 = 0.473 |
-| "72.1% vs 64.5%" | `results/tcn_validation_results.json` | CORRECT |
+| "72.1% vs 64.5%" | `results/metrics/tcn_validation_results.json` | CORRECT |
 | "82.6% vs 51.7%" | same | CORRECT |
 | "35/35 patients" | same | CORRECT |
-| "+0.4% to +5.7%" | `results/fatigue_sensitivity.json` | CORRECT (but non-TCN) |
+| "+0.4% to +5.7%" | `results/metrics/fatigue_sensitivity.json` | CORRECT (but non-TCN) |
 | "Half of patients habituate" | **NO SOURCE FOUND** | **UNSUBSTANTIATED** |
 
 ---
@@ -188,9 +188,9 @@ The poster tells this story:
 | Feature ablation (single-seed JSON) | `results/rigor_audit/feature_ablation_results.json` |
 | Horizon sweep (ablated model) | `experimental/results/horizon_sweep_pac_stim.json` |
 | Horizon sweep (original model, ts=5) | `models/sweep_horizons_results.json` |
-| Architecture comparison | `results/comparison_table_7ch.json` |
-| Controller comparison (real EEG) | `results/tcn_validation_results.json` |
-| Fatigue sensitivity | `results/fatigue_sensitivity.json` |
+| Architecture comparison | `results/metrics/comparison_table_7ch.json` |
+| Controller comparison (real EEG) | `results/metrics/tcn_validation_results.json` |
+| Fatigue sensitivity | `results/metrics/fatigue_sensitivity.json` |
 | Fatigue models (4 types) | `rigor/experiments/fatigue_model_sensitivity.py` |
 | PAC+Stim model details | `experimental/results/pac_stim_focused.json` |
 | 12 feature definitions | `experimental/FINDINGS.md` lines 38-49 |
