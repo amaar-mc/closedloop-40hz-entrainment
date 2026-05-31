@@ -9,8 +9,8 @@ import numpy as np
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent.parent
-DATA = REPO / "results" / "tcn_validation_results.json"
-OUTPUT = Path(__file__).resolve().parent / "per_subject_utility.png"
+DATA = REPO / "results" / "metrics" / "tcn_validation_results.json"
+OUTPUT = REPO / "results" / "figures" / "per_subject_utility.png"
 
 # Load verified data
 with open(DATA) as f:
