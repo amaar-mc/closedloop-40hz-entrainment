@@ -6,7 +6,7 @@ No st.rerun(), no st.fragment() -- a while loop with adapter.get_window()
 providing natural 2s pacing. Charts update in-place via placeholder.plotly_chart().
 
 Launch:
-    streamlit run neurocare_live.py
+    streamlit run apps/neurocare_live.py
 
 Author: Amaar Chughtai
 Date: March 2026
@@ -26,7 +26,7 @@ import streamlit as st
 from scipy import signal
 from scipy.io import wavfile
 
-_ROOT = Path(__file__).resolve().parent
+_ROOT = Path(__file__).resolve().parents[1]
 if str(_ROOT / "src") not in sys.path:
     sys.path.insert(0, str(_ROOT / "src"))
 if str(_ROOT) not in sys.path:
