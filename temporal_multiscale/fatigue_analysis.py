@@ -240,7 +240,7 @@ def main() -> None:
         print("Habituation evidence is mixed — some subjects habituate, others don't.")
         print("Adaptive scheduling still justified for fatiguing subjects.")
 
-    out_path = Path("results/fatigue_analysis.json")
+    out_path = Path("results/metrics/fatigue_analysis.json")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(summary, indent=2))
     print(f"\nSaved: {out_path}")

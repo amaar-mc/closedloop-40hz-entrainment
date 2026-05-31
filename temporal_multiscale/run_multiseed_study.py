@@ -14,7 +14,7 @@ Usage:
     python temporal_multiscale/run_multiseed_study.py \
         --datasets 4ch,7ch \
         --seeds 42,123,456,789,1337 \
-        --output results/multiseed_summary.json \
+        --output results/metrics/multiseed_summary.json \
         --epochs 80 --patience 20
 """
 
@@ -218,7 +218,7 @@ def parse_args() -> argparse.Namespace:
         type=str,
         help="Comma-separated random seeds.",
     )
-    p.add_argument("--output", default="results/multiseed_summary.json", type=str)
+    p.add_argument("--output", default="results/metrics/multiseed_summary.json", type=str)
     p.add_argument("--epochs", default=80, type=int)
     p.add_argument("--patience", default=20, type=int)
     p.add_argument("--batch-size", default=128, type=int)
