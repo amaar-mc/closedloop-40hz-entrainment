@@ -7,9 +7,10 @@ tags:
   - community/Community_46
 ---
 
-# Compute average z-score across all channels (ignoring NaN).          Args:
+# Compute average z-score across all channels (ignoring NaN). Args:
 
 ## Connections
+
 - [[compute_average_zscore()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_46

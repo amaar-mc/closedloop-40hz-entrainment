@@ -9,4 +9,4 @@ tags:
 
 # Poster V8 and Coherence Audit (April 7-8, 2026)
 
-  #community/Community_181
+#community/Community_181

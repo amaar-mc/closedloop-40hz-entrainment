@@ -10,6 +10,7 @@ tags:
 # numbered()
 
 ## Connections
+
 - [[PaperPDF]] - `method` [EXTRACTED]
 - [[generate()]] - `calls` [EXTRACTED]
 

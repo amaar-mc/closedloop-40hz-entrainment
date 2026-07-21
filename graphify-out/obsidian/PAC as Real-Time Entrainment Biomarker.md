@@ -10,6 +10,7 @@ tags:
 # PAC as Real-Time Entrainment Biomarker
 
 ## Connections
+
 - [[CSEF Old Project Abstract (247 words)]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

@@ -10,6 +10,7 @@ tags:
 # Minimal CPU Deployment Requirements
 
 ## Connections
+
 - [[PyTorch + TorchVision + TorchAudio Dependency]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_39

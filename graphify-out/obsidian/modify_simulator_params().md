@@ -10,6 +10,7 @@ tags:
 # modify_simulator_params()
 
 ## Connections
+
 - [[AlzheimerProfile]] - `method` [EXTRACTED]
 - [[Modify exponential simulator parameters for AD simulation.          Compatible w]] - `rationale_for` [EXTRACTED]
 

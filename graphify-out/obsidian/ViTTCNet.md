@@ -10,6 +10,7 @@ tags:
 # ViTTCNet
 
 ## Connections
+
 - [[Dataset with raw EEG, spectral features, and wavelet features.     Includes data]] - `uses` [INFERRED]
 - [[EEGDatasetV4]] - `uses` [INFERRED]
 - [[Evaluate on validationtest set._1]] - `uses` [INFERRED]
@@ -20,4 +21,4 @@ tags:
 - [[test_vit_tcnet()]] - `calls` [EXTRACTED]
 - [[vit_tcnet.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

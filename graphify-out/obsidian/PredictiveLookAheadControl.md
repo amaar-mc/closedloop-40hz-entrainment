@@ -10,6 +10,7 @@ tags:
 # PredictiveLookAheadControl
 
 ## Connections
+
 - [[__init__()_30]] - `method` [EXTRACTED]
 - [[_trend()]] - `method` [EXTRACTED]
 - [[replay_subject()]] - `calls` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 - [[step()_2]] - `method` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

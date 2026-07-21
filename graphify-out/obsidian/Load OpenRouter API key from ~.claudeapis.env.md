@@ -10,6 +10,7 @@ tags:
 # Load OpenRouter API key from ~/.claude/apis.env
 
 ## Connections
+
 - [[load_api_key()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_105

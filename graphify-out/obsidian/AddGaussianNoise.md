@@ -10,6 +10,7 @@ tags:
 # AddGaussianNoise
 
 ## Connections
+
 - [[Add Gaussian noise to simulate measurement noise.]] - `rationale_for` [EXTRACTED]
 - [[__call__()_4]] - `method` [EXTRACTED]
 - [[__init__()_49]] - `method` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[data_augmentation.py]] - `contains` [EXTRACTED]
 - [[test_augmentation()]] - `calls` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

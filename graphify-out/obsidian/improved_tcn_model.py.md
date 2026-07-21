@@ -10,6 +10,7 @@ tags:
 # improved_tcn_model.py
 
 ## Connections
+
 - [[AttentionPool1D]] - `contains` [EXTRACTED]
 - [[CausalDSConvBlock]] - `contains` [EXTRACTED]
 - [[ImprovedModelConfig]] - `contains` [EXTRACTED]

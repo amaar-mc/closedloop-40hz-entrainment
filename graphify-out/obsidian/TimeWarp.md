@@ -10,6 +10,7 @@ tags:
 # TimeWarp
 
 ## Connections
+
 - [[Warp the time axis by changing the speed of the signal.      This simulates natu]] - `rationale_for` [EXTRACTED]
 - [[__call__()_1]] - `method` [EXTRACTED]
 - [[__init__()_46]] - `method` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[data_augmentation.py]] - `contains` [EXTRACTED]
 - [[test_augmentation()]] - `calls` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

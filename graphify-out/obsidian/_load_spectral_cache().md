@@ -7,9 +7,10 @@ tags:
   - community/Community_53
 ---
 
-# _load_spectral_cache()
+# \_load_spectral_cache()
 
 ## Connections
+
 - [[build_multiscale_dataset()]] - `calls` [EXTRACTED]
 - [[build_multiscale_dataset.py]] - `contains` [EXTRACTED]
 

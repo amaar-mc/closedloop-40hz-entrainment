@@ -7,9 +7,10 @@ tags:
   - community/Community_56
 ---
 
-# _denorm()
+# \_denorm()
 
 ## Connections
+
 - [[analyze_cross_epoch_transitions()]] - `calls` [EXTRACTED]
 - [[evaluate_model()_1]] - `calls` [EXTRACTED]
 - [[ridge_baseline()_1]] - `calls` [EXTRACTED]

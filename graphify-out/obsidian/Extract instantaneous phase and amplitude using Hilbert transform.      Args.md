@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Extract instantaneous phase and amplitude using Hilbert transform.      Args:
+# Extract instantaneous phase and amplitude using Hilbert transform. Args:
 
 ## Connections
+
 - [[compute_instantaneous_phase_amplitude()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

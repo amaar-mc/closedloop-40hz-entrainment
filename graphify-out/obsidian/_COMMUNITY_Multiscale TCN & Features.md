@@ -8,6 +8,7 @@ members: 367
 **Members:** 367 nodes
 
 ## Members
+
 - [[NOTE This applies SiLU twice (once on x, once on x+residual).]] - rationale - temporal_multiscale/multiscale_tcn.py
 - [[AblationVariant]] - code - temporal_multiscale/run_ablation_study.py
 - [[Add one new observation and return prediction when ready.]] - rationale - temporal_multiscale/realtime_inference.py
@@ -384,6 +385,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 17 edges to [[_COMMUNITY_Archived Feature Experiments (v4)]]
 - 17 edges to [[_COMMUNITY_Core Data & PAC Pipeline]]
 - 13 edges to [[_COMMUNITY_12-Feature TCN Validation]]
@@ -404,6 +406,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Archived EEGNet V2]]
 
 ## Top bridge nodes
+
 - [[Dataset]] - degree 18, connects to 8 communities
 - [[MultiscaleCausalTCN]] - degree 141, connects to 3 communities
 - [[ModelConfig]] - degree 136, connects to 3 communities

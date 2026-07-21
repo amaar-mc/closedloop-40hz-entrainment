@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Simulate neural mass dynamics and return EEG-rate output.          Generates a s
+# Simulate neural mass dynamics and return EEG-rate output. Generates a s
 
 ## Connections
+
 - [[simulate()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

@@ -10,6 +10,7 @@ tags:
 # TCNTemporalModel
 
 ## Connections
+
 - [[Adapter that wraps RealtimePACForecaster to satisfy the TemporalModel Protocol.]] - `rationale_for` [EXTRACTED]
 - [[Append a session record to the given patient and clear cache.]] - `uses` [INFERRED]
 - [[Bonus register() rejects objects that don't satisfy TemporalModel Protocol.]] - `uses` [INFERRED]
@@ -44,4 +45,4 @@ tags:
 - [[reset()_10]] - `method` [EXTRACTED]
 - [[step()_10]] - `method` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

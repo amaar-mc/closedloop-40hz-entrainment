@@ -10,6 +10,7 @@ tags:
 # add_section_header()
 
 ## Connections
+
 - [[Add a teal section header bar with white Amaranth text.]] - `rationale_for` [EXTRACTED]
 - [[add_rect()]] - `calls` [EXTRACTED]
 - [[add_text()]] - `calls` [EXTRACTED]

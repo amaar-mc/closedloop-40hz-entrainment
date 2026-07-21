@@ -10,7 +10,8 @@ tags:
 # Return dict of feature slice indices by component.
 
 ## Connections
+
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[_feature_slices()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # Current 12-Feature Replay Checkpoint: 27,139 params, test R²=0.5844
 
 ## Connections
+
 - [[Causal TCN with 12 PAC-Trajectory and Stimulation-Context Features]] - `references` [EXTRACTED]
 - [[Research Paper Status Document]] - `references` [EXTRACTED]
 

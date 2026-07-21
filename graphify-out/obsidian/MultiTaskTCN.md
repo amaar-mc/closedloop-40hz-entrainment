@@ -10,6 +10,7 @@ tags:
 # MultiTaskTCN
 
 ## Connections
+
 - [[Baseline TCN architecture with multi-task training enabled.      Architectural]] - `rationale_for` [EXTRACTED]
 - [[Compute Pearson correlation coefficient.]] - `uses` [INFERRED]
 - [[Compute Pearson correlation.]] - `uses` [INFERRED]
@@ -43,4 +44,4 @@ tags:
 - [[forward()_43]] - `method` [EXTRACTED]
 - [[tcn_variants.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

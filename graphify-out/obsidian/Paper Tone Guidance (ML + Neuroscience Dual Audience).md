@@ -10,6 +10,7 @@ tags:
 # Paper Tone Guidance (ML + Neuroscience Dual Audience)
 
 ## Connections
+
 - [[Related Work Section Arc]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_130

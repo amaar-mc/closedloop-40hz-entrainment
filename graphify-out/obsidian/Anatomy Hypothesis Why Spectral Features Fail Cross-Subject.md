@@ -10,6 +10,7 @@ tags:
 # Anatomy Hypothesis: Why Spectral Features Fail Cross-Subject
 
 ## Connections
+
 - [[Discussion Section Arc]] - `references` [EXTRACTED]
 - [[Spectral Feature Generalization Failure Finding]] - `semantically_similar_to` [INFERRED]
 

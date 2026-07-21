@@ -8,6 +8,7 @@ members: 7
 **Members:** 7 nodes
 
 ## Members
+
 - [[Verify Notebook Finalization Script]] - code - scripts/tools/verify_notebook_finalization.py
 - [[archivenotebooksP10_Lab_Notebook_V1.md (Original Notebook)]] - document - archive/notebooks/P10_Lab_Notebook_V1.md
 - [[check_chronology (Notebook Finalization Verifier)]] - code - scripts/tools/verify_notebook_finalization.py

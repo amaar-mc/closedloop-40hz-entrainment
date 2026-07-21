@@ -7,9 +7,10 @@ tags:
   - community/Community_62
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[Reactive]] - `method` [EXTRACTED]
 
   #community/Community_62

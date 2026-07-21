@@ -10,6 +10,7 @@ tags:
 # MultiscaleCausalTCN using CausalDSConvBlockNoNorm in all blocks.
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[CausalDSConvBlock_1]] - `uses` [INFERRED]
 - [[LastStepPool_1]] - `uses` [INFERRED]
@@ -18,4 +19,4 @@ tags:
 - [[MultiscaleCausalTCNNoNorm]] - `rationale_for` [EXTRACTED]
 - [[SequenceDataset]] - `uses` [INFERRED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

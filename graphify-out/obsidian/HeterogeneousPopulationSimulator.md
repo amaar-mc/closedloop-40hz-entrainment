@@ -10,6 +10,7 @@ tags:
 # HeterogeneousPopulationSimulator
 
 ## Connections
+
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[Fatigue Model 3 Heterogeneous Population (bimodal fatigue).      Models the r]] - `rationale_for` [EXTRACTED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
@@ -22,4 +23,4 @@ tags:
 - [[get_description()_2]] - `method` [EXTRACTED]
 - [[step()_56]] - `method` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

@@ -10,9 +10,10 @@ tags:
 # Pure TCN-based predictive controller using predicted delta for decisions.
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[TCNPredictiveCtrl]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

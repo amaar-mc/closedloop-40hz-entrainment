@@ -10,6 +10,7 @@ tags:
 # Per-Subject Adaptation Results (TCN adapted vs persistence, 6 test subjects)
 
 ## Connections
+
 - [[Per-Subject Adaptation Script (per_subject_adaptation.py)]] - `implements` [EXTRACTED]
 
   #community/Community_58

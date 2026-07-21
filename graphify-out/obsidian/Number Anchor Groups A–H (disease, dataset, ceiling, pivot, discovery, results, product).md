@@ -10,6 +10,7 @@ tags:
 # Number Anchor Groups A–H (disease, dataset, ceiling, pivot, discovery, results, product)
 
 ## Connections
+
 - [[Final Memorization Guide 9-Beat Spine with Number Anchors]] - `references` [EXTRACTED]
 - [[Numbers Sheet v2 Key Metrics (disease, dataset, pivot story, main results, deployment)]] - `semantically_similar_to` [INFERRED]
 

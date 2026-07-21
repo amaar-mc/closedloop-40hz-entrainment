@@ -10,9 +10,10 @@ tags:
 # butter_bandpass_filter()
 
 ## Connections
+
 - [[Bandpass filter using Butterworth filter.]] - `rationale_for` [EXTRACTED]
 - [[compute_instantaneous_phase_amplitude()]] - `calls` [EXTRACTED]
 - [[extract_pac_features()]] - `calls` [EXTRACTED]
 - [[pac_features.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

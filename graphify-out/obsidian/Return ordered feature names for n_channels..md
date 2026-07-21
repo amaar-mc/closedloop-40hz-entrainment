@@ -10,6 +10,7 @@ tags:
 # Return ordered feature names for n_channels.
 
 ## Connections
+
 - [[get_enhanced_feature_names()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

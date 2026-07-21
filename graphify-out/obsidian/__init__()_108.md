@@ -7,9 +7,10 @@ tags:
   - community/TRIBE-TCN_Validation
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[ReactiveCtrl_4]] - `method` [EXTRACTED]
 - [[__init__()_104]] - `calls` [EXTRACTED]
 - [[__init__()_105]] - `calls` [EXTRACTED]

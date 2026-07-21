@@ -10,6 +10,7 @@ tags:
 # Key Discovery Callout Box: 12-Feature Ablation Narrative
 
 ## Connections
+
 - [[Poster Board V8 (CSEF 2026, 4-Column Layout)]] - `references` [EXTRACTED]
 - [[V6 Key Change 12-Feature PAC+Stim Discovery Narrative]] - `references` [INFERRED]
 

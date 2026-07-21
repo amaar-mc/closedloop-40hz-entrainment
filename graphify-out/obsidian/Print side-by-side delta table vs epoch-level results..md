@@ -10,6 +10,7 @@ tags:
 # Print side-by-side delta table vs epoch-level results.
 
 ## Connections
+
 - [[print_comparison()]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

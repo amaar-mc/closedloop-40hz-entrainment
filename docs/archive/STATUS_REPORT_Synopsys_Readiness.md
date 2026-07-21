@@ -33,34 +33,34 @@ All 7 research documents are thorough and publication-quality:
 
 #### Previously Existing (code_drafts/src/) — 4 files, ~1,490 lines:
 
-| Module | Lines | Status | Methodology Compliance |
-|--------|-------|--------|----------------------|
-| `pac_computation.py` | 349 | COMPLETE, validated with synthetic signals | 100% — Tort MI method, theta 4-8Hz, gamma 38-42Hz, 18 bins, Hilbert transform, KL divergence |
-| `eegnet.py` | 296 | COMPLETE, forward pass tested | 100% — 7 channels, 500 samples, F1=8, D=2, F2=16, dropout=0.5, ~2000 params, regression head |
-| `personalization.py` | 327 | COMPLETE, unit tested | 100% — 30s rolling window, z-score normalization, circular buffer, min_samples=10 |
-| `utils.py` | 447 | COMPLETE | 100% — Plotting, metrics (R², RMSE, MAE, correlation), logging, config management |
+| Module               | Lines | Status                                     | Methodology Compliance                                                                       |
+| -------------------- | ----- | ------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| `pac_computation.py` | 349   | COMPLETE, validated with synthetic signals | 100% — Tort MI method, theta 4-8Hz, gamma 38-42Hz, 18 bins, Hilbert transform, KL divergence |
+| `eegnet.py`          | 296   | COMPLETE, forward pass tested              | 100% — 7 channels, 500 samples, F1=8, D=2, F2=16, dropout=0.5, ~2000 params, regression head |
+| `personalization.py` | 327   | COMPLETE, unit tested                      | 100% — 30s rolling window, z-score normalization, circular buffer, min_samples=10            |
+| `utils.py`           | 447   | COMPLETE                                   | 100% — Plotting, metrics (R², RMSE, MAE, correlation), logging, config management            |
 
 #### Newly Created (code_drafts_v2/src/) — 6 files, ~2,669 lines:
 
-| Module | Lines | Status | Methodology Compliance |
-|--------|-------|--------|----------------------|
-| `data_loader.py` | 576 | NEW — needs dataset to test | Implements BIDSPath loading, 7-channel selection, 2s windows, 50% overlap, PAC labels, 70/15/15 subject-level splits |
-| `preprocessing.py` | 440 | NEW — needs dataset to test | Bandpass 0.5-80Hz, notch 50/60Hz, ±100µV artifact rejection, CAR, SNR estimation, bad channel detection |
-| `training.py` | 507 | NEW — needs dataset to run | MSE loss, Adam (lr=0.001, wd=1e-4), ReduceLROnPlateau, early stopping (patience=15), data augmentation (time shift, amplitude scale, noise) |
-| `controller.py` | 364 | NEW — needs trained model | StimState enum, z-score thresholds (-0.5/+0.5), 5s hysteresis, EEGNet + PersonalizationModule integration |
-| `simulator.py` | 308 | NEW — can test with synthetic data | Exponential dynamics, tau_rise=0.15, tau_decay=0.10, PAC range [0.05, 0.3], noise σ=0.02, empirical tau extraction |
-| `validation.py` | 549 | NEW — needs trained model + simulator | 4-way comparison (fixed/reactive/predictive/oracle), ANOVA, Tukey HSD, Cohen's d, cross-subject CV |
+| Module             | Lines | Status                                | Methodology Compliance                                                                                                                      |
+| ------------------ | ----- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data_loader.py`   | 576   | NEW — needs dataset to test           | Implements BIDSPath loading, 7-channel selection, 2s windows, 50% overlap, PAC labels, 70/15/15 subject-level splits                        |
+| `preprocessing.py` | 440   | NEW — needs dataset to test           | Bandpass 0.5-80Hz, notch 50/60Hz, ±100µV artifact rejection, CAR, SNR estimation, bad channel detection                                     |
+| `training.py`      | 507   | NEW — needs dataset to run            | MSE loss, Adam (lr=0.001, wd=1e-4), ReduceLROnPlateau, early stopping (patience=15), data augmentation (time shift, amplitude scale, noise) |
+| `controller.py`    | 364   | NEW — needs trained model             | StimState enum, z-score thresholds (-0.5/+0.5), 5s hysteresis, EEGNet + PersonalizationModule integration                                   |
+| `simulator.py`     | 308   | NEW — can test with synthetic data    | Exponential dynamics, tau_rise=0.15, tau_decay=0.10, PAC range [0.05, 0.3], noise σ=0.02, empirical tau extraction                          |
+| `validation.py`    | 549   | NEW — needs trained model + simulator | 4-way comparison (fixed/reactive/predictive/oracle), ANOVA, Tukey HSD, Cohen's d, cross-subject CV                                          |
 
 ### 2.3 Configuration and Documentation
 
-| Item | Status |
-|------|--------|
-| `config.yaml` | NEW — centralized parameter management for all modules |
-| `requirements.txt` | Complete — PyTorch 2.0+, MNE, scipy, tensorpac, etc. |
-| `README.md` | Complete — setup, usage, citations |
-| `GAP_ANALYSIS.md` | Complete — identified all gaps (now resolved in v2) |
-| `IMPLEMENTATION_SUMMARY.md` | Complete — technical overview |
-| `DEVELOPMENT_LOG.md` | Complete — design decisions documented |
+| Item                        | Status                                                 |
+| --------------------------- | ------------------------------------------------------ |
+| `config.yaml`               | NEW — centralized parameter management for all modules |
+| `requirements.txt`          | Complete — PyTorch 2.0+, MNE, scipy, tensorpac, etc.   |
+| `README.md`                 | Complete — setup, usage, citations                     |
+| `GAP_ANALYSIS.md`           | Complete — identified all gaps (now resolved in v2)    |
+| `IMPLEMENTATION_SUMMARY.md` | Complete — technical overview                          |
+| `DEVELOPMENT_LOG.md`        | Complete — design decisions documented                 |
 
 ---
 
@@ -68,18 +68,18 @@ All 7 research documents are thorough and publication-quality:
 
 These are the operational steps — not code, but execution:
 
-| Step | Status | Dependency | Estimated Time |
-|------|--------|------------|----------------|
-| Download OpenNeuro ds005048 dataset | NOT DONE | Internet + ~10GB storage | 30-60 min |
-| Run preprocessing on raw data | NOT DONE | Downloaded dataset | 1-2 hours |
-| Generate PAC labels for all windows | NOT DONE | Preprocessed data | 2-3 hours |
-| Train EEGNet model | NOT DONE | PAC labels + RTX 3080 | 2-3 hours |
-| Evaluate model accuracy (R² > 0.80 target) | NOT DONE | Trained model | 30 min |
-| Extract empirical tau parameters | NOT DONE | Preprocessed data + PAC values | 1 hour |
-| Run closed-loop simulation | NOT DONE | Trained model + simulator | 1-2 hours |
-| Statistical analysis (ANOVA, effect sizes) | NOT DONE | Simulation results | 1-2 hours |
-| Generate publication figures | NOT DONE | All results | 2-3 hours |
-| Write final Synopsys report | NOT DONE | All results | 4-8 hours |
+| Step                                       | Status   | Dependency                     | Estimated Time |
+| ------------------------------------------ | -------- | ------------------------------ | -------------- |
+| Download OpenNeuro ds005048 dataset        | NOT DONE | Internet + ~10GB storage       | 30-60 min      |
+| Run preprocessing on raw data              | NOT DONE | Downloaded dataset             | 1-2 hours      |
+| Generate PAC labels for all windows        | NOT DONE | Preprocessed data              | 2-3 hours      |
+| Train EEGNet model                         | NOT DONE | PAC labels + RTX 3080          | 2-3 hours      |
+| Evaluate model accuracy (R² > 0.80 target) | NOT DONE | Trained model                  | 30 min         |
+| Extract empirical tau parameters           | NOT DONE | Preprocessed data + PAC values | 1 hour         |
+| Run closed-loop simulation                 | NOT DONE | Trained model + simulator      | 1-2 hours      |
+| Statistical analysis (ANOVA, effect sizes) | NOT DONE | Simulation results             | 1-2 hours      |
+| Generate publication figures               | NOT DONE | All results                    | 2-3 hours      |
+| Write final Synopsys report                | NOT DONE | All results                    | 4-8 hours      |
 
 **Total remaining effort: ~15-25 hours (~3-4 days of focused work)**
 
@@ -116,6 +116,7 @@ aws s3 sync --no-sign-request s3://openneuro.org/ds005048 data/raw/ds005048/
 ```
 
 After download, verify the structure:
+
 ```bash
 ls data/raw/ds005048/sub-*/ses-*/eeg/*.set
 # Should show .set files for each subject
@@ -132,6 +133,7 @@ python src/data_loader.py \
 ```
 
 This will:
+
 - Load each subject's EEG from BIDS .set files
 - Select 7 frontal channels (Fp1, Fp2, F7, F3, Fz, F4, F8)
 - Apply preprocessing (bandpass, notch, artifact rejection)
@@ -141,6 +143,7 @@ This will:
 - Save everything to `data/processed/`
 
 **What to check after this step:**
+
 - How many total windows were generated? (expect ~5,000-15,000)
 - What is the PAC distribution? (expect range ~0.001 to ~0.3)
 - Are there any subjects with no valid windows? (if so, check data quality)
@@ -158,6 +161,7 @@ python src/training.py \
 ```
 
 **What you're looking for:**
+
 - Training loss should decrease smoothly
 - Validation loss should track training loss (no large gap = no overfitting)
 - Early stopping should trigger around epoch 40-80
@@ -168,6 +172,7 @@ python src/training.py \
 **This is the moment of truth.** Your target is R² > 0.80.
 
 Run the model on the test set and check:
+
 - **R² score** (coefficient of determination)
 - **RMSE** (root mean squared error)
 - **Correlation** (Pearson r)
@@ -175,12 +180,14 @@ Run the model on the test set and check:
 **IF R² > 0.80:** Proceed to Step 6. You're on track.
 
 **IF R² = 0.60-0.80:** Acceptable for a research project. You can still demonstrate the closed-loop concept works. Adjust your paper's claims to report the actual R² and discuss limitations. Try these improvements:
+
 - Enable data augmentation (time shifting, amplitude scaling)
 - Increase epochs to 150
 - Try batch size 32 (sometimes helps)
 - Try learning rate 0.0005
 
 **IF R² < 0.60:** More work needed. Try:
+
 - Check PAC label quality — are labels noisy? Try averaging PAC across channels differently
 - Add L2 regularization (increase weight_decay to 1e-3)
 - Try subject-specific fine-tuning: train on all subjects, then fine-tune final layer on each test subject
@@ -198,12 +205,14 @@ python src/validation.py \
 ```
 
 This runs 4 control strategies head-to-head:
+
 1. **Fixed Schedule** (control): 40s ON / 20s OFF
 2. **Reactive Threshold**: Decisions based on current PAC (no prediction)
 3. **Predictive MPC** (your system): EEGNet prediction + z-score + hysteresis
 4. **Oracle**: Perfect PAC knowledge (theoretical upper bound)
 
 **Target results:**
+
 - Predictive MPC achieves ≥15% PAC improvement over Fixed Schedule
 - Predictive MPC uses 30-40% stimulation time (vs. 67% for Fixed Schedule)
 - Predictive MPC outperforms Reactive by 10-20%
@@ -212,12 +221,14 @@ This runs 4 control strategies head-to-head:
 ### STEP 7: Analyze and Iterate (Day 3-4, ~2-3 hours)
 
 If targets are not met, iterate:
+
 - Tune z-score thresholds (-0.5/+0.5 are starting points)
 - Adjust hysteresis hold time (try 3s or 7s instead of 5s)
 - Adjust simulator tau parameters using empirical extraction from your data
 - Try different test subjects
 
 Generate all publication figures:
+
 - PAC prediction scatter plot (predicted vs. actual)
 - Training curves (loss over epochs)
 - Closed-loop vs. open-loop PAC time series
@@ -227,6 +238,7 @@ Generate all publication figures:
 ### STEP 8: Write Synopsys Report (Day 4-5, ~4-8 hours)
 
 Your Synopsys submission needs:
+
 - Abstract (250 words)
 - Introduction and background
 - Methods (reference your Comprehensive Methodology)
@@ -332,23 +344,24 @@ Your original methodology (Document 04) proposed a Graph Attention Network + Tra
 
 ### Primary Metrics (Must Achieve)
 
-| Metric | Target | What It Proves |
-|--------|--------|---------------|
-| Prediction R² | > 0.80 | EEGNet can forecast near-future PAC from EEG |
-| PAC Improvement | ≥ 15% over fixed schedule | Closed-loop is better than open-loop |
-| p-value | < 0.05 | Results are statistically significant |
+| Metric          | Target                    | What It Proves                               |
+| --------------- | ------------------------- | -------------------------------------------- |
+| Prediction R²   | > 0.80                    | EEGNet can forecast near-future PAC from EEG |
+| PAC Improvement | ≥ 15% over fixed schedule | Closed-loop is better than open-loop         |
+| p-value         | < 0.05                    | Results are statistically significant        |
 
 ### Secondary Metrics (Strengthen the Paper)
 
-| Metric | Target | What It Proves |
-|--------|--------|---------------|
-| Stimulation reduction | 60-70% less than fixed schedule | Energy efficiency / reduced exposure |
-| PAC stability | Lower variance than fixed schedule | More consistent therapeutic state |
-| Cohen's d | > 0.5 (medium effect) | Clinically meaningful effect size |
+| Metric                | Target                             | What It Proves                       |
+| --------------------- | ---------------------------------- | ------------------------------------ |
+| Stimulation reduction | 60-70% less than fixed schedule    | Energy efficiency / reduced exposure |
+| PAC stability         | Lower variance than fixed schedule | More consistent therapeutic state    |
+| Cohen's d             | > 0.5 (medium effect)              | Clinically meaningful effect size    |
 
 ### The Synopsys Narrative
 
 Your paper tells this story:
+
 1. **Problem**: AD disrupts gamma oscillations and theta-gamma coupling. Current 40Hz entrainment is static (one-size-fits-all).
 2. **Gap**: 30% of patients don't respond. Individual variability is not addressed.
 3. **Solution**: A personalized closed-loop system that predicts brain state and adapts stimulation in real-time.
@@ -360,20 +373,21 @@ Your paper tells this story:
 
 ## 7. RISK REGISTER
 
-| Risk | Likelihood | Impact | Mitigation |
-|------|-----------|--------|------------|
-| R² < 0.80 | Medium | HIGH | Data augmentation, ensemble, fine-tuning, lower prediction horizon |
-| Dataset download fails | Low | HIGH | 3 download methods available, can start with 2-3 subjects |
-| PAC improvement < 15% | Medium | HIGH | Tune thresholds, adjust hysteresis, try different tau parameters |
-| Overfitting (small dataset) | Medium | MEDIUM | ~2000 params, dropout 0.5, L2, early stopping, LOSO-CV |
-| RTX 3080 memory issues | Low | LOW | Reduce batch size to 16-32, gradient accumulation |
-| Simulation doesn't match real brain dynamics | Medium | MEDIUM | Extract empirical tau from data, sensitivity analysis, acknowledge limitation |
+| Risk                                         | Likelihood | Impact | Mitigation                                                                    |
+| -------------------------------------------- | ---------- | ------ | ----------------------------------------------------------------------------- |
+| R² < 0.80                                    | Medium     | HIGH   | Data augmentation, ensemble, fine-tuning, lower prediction horizon            |
+| Dataset download fails                       | Low        | HIGH   | 3 download methods available, can start with 2-3 subjects                     |
+| PAC improvement < 15%                        | Medium     | HIGH   | Tune thresholds, adjust hysteresis, try different tau parameters              |
+| Overfitting (small dataset)                  | Medium     | MEDIUM | ~2000 params, dropout 0.5, L2, early stopping, LOSO-CV                        |
+| RTX 3080 memory issues                       | Low        | LOW    | Reduce batch size to 16-32, gradient accumulation                             |
+| Simulation doesn't match real brain dynamics | Medium     | MEDIUM | Extract empirical tau from data, sensitivity analysis, acknowledge limitation |
 
 ---
 
 ## 8. FILE INVENTORY
 
 ### code_drafts/ (Original — Untouched)
+
 ```
 src/eegnet.py             296 lines  ✅ Complete
 src/pac_computation.py     349 lines  ✅ Complete
@@ -382,6 +396,7 @@ src/utils.py               447 lines  ✅ Complete
 ```
 
 ### code_drafts_v2/ (New — Complete Pipeline)
+
 ```
 src/eegnet.py              295 lines  ✅ (copied from v1)
 src/pac_computation.py     348 lines  ✅ (copied from v1)
@@ -401,6 +416,7 @@ TOTAL:                    4,159 lines of Python
 ```
 
 ### Research Documents
+
 ```
 01_Foundational_Concepts_40Hz_Entrainment_AD.docx       ✅
 02_Literature_Review_40Hz_Entrainment_AD.docx            ✅
@@ -415,19 +431,19 @@ Comprehensive_Methodology_Closed_Loop_40Hz_Entrainment.docx  ✅
 
 ## 9. TIMELINE TO SYNOPSYS SUBMISSION
 
-| Day | Task | Deliverable |
-|-----|------|-------------|
-| Day 1 | Setup environment, download dataset | Working environment, raw data on disk |
-| Day 1-2 | Preprocess data, generate PAC labels | `data/processed/` with all windows and labels |
-| Day 2 | Train EEGNet | `models/best_eegnet.pth`, training curves |
-| Day 2 | Evaluate model accuracy | R² score, prediction scatter plot |
-| Day 3 | Run closed-loop simulation | Comparison metrics for 4 strategies |
-| Day 3 | Statistical analysis | ANOVA, Tukey HSD, effect sizes |
-| Day 3-4 | Generate all figures | Publication-quality plots in `results/figures/` |
-| Day 4-5 | Write Synopsys report | Final paper with abstract, methods, results, discussion |
+| Day     | Task                                 | Deliverable                                             |
+| ------- | ------------------------------------ | ------------------------------------------------------- |
+| Day 1   | Setup environment, download dataset  | Working environment, raw data on disk                   |
+| Day 1-2 | Preprocess data, generate PAC labels | `data/processed/` with all windows and labels           |
+| Day 2   | Train EEGNet                         | `models/best_eegnet.pth`, training curves               |
+| Day 2   | Evaluate model accuracy              | R² score, prediction scatter plot                       |
+| Day 3   | Run closed-loop simulation           | Comparison metrics for 4 strategies                     |
+| Day 3   | Statistical analysis                 | ANOVA, Tukey HSD, effect sizes                          |
+| Day 3-4 | Generate all figures                 | Publication-quality plots in `results/figures/`         |
+| Day 4-5 | Write Synopsys report                | Final paper with abstract, methods, results, discussion |
 
 **Estimated total: 4-5 focused days from today.**
 
 ---
 
-*Report generated February 5, 2026. All code files are in `code_drafts_v2/`. Original drafts preserved in `code_drafts/`.*
+_Report generated February 5, 2026. All code files are in `code_drafts_v2/`. Original drafts preserved in `code_drafts/`._

@@ -7,11 +7,12 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Full training loop with early stopping and checkpointing.          Args:
+# Full training loop with early stopping and checkpointing. Args:
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
 - [[train()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

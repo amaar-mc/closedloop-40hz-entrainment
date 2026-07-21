@@ -10,6 +10,7 @@ tags:
 # read_text()
 
 ## Connections
+
 - [[check_chronology()]] - `calls` [EXTRACTED]
 - [[check_packaging()]] - `calls` [EXTRACTED]
 - [[verify_notebook_finalization.py]] - `contains` [EXTRACTED]

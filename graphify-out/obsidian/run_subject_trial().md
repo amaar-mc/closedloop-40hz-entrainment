@@ -10,6 +10,7 @@ tags:
 # run_subject_trial()
 
 ## Connections
+
 - [[Run one simulated subject trial and return alignment metrics.]] - `rationale_for` [EXTRACTED]
 - [[evaluate_alignment()]] - `calls` [EXTRACTED]
 - [[main()_38]] - `calls` [EXTRACTED]

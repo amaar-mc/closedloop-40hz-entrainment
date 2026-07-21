@@ -9,6 +9,7 @@ tags:
 # P10 Research Log Notebook V3 Early (Jan 15 - Mar 1 2026)
 
 ## Connections
+
 - [[P10 Research Log Notebook V2 (Corrected Review Candidate)]] - `semantically_similar_to` [INFERRED]
 - [[P10 Research Log Notebook V3 Early (PDF render)]] - `references` [EXTRACTED]
 

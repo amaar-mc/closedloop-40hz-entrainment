@@ -10,7 +10,8 @@ tags:
 # reset() zeroes filter state so subsequent call matches a fresh instance.
 
 ## Connections
+
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[test_reset_zeroes_state()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # Slide 11: Scope of Work.
 
 ## Connections
+
 - [[p11_scope()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

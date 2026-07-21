@@ -10,7 +10,8 @@ tags:
 # ISEF Form 1A: Student Checklist (Amaar Chughtai, Grade 11, Valley Christian)
 
 ## Connections
+
 - [[CSEF Old Project Abstract (247 words)]] - `conceptually_related_to` [INFERRED]
 - [[Engineering Design Criteria Controller decision ≤0.5s, ≥15% PAC improvement over fixed schedule]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

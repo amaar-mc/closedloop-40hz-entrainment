@@ -10,8 +10,9 @@ tags:
 # test_simulator()
 
 ## Connections
+
 - [[Run comprehensive simulator tests.]] - `rationale_for` [EXTRACTED]
 - [[simulator.py]] - `contains` [EXTRACTED]
 - [[validate_simulator_dynamics()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

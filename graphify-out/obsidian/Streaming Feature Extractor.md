@@ -10,8 +10,9 @@ tags:
 # Streaming Feature Extractor
 
 ## Connections
+
 - [[NeuroCare Caregiver Dashboard (Multi-page Streamlit)]] - `calls` [EXTRACTED]
 - [[load_subject_data()]] - `semantically_similar_to` [INFERRED]
 - [[render_session()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

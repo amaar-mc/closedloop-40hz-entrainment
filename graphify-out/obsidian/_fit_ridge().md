@@ -7,9 +7,10 @@ tags:
   - community/Community_74
 ---
 
-# _fit_ridge()
+# \_fit_ridge()
 
 ## Connections
+
 - [[_ablation_tests()]] - `calls` [EXTRACTED]
 - [[_corr()_4]] - `calls` [EXTRACTED]
 - [[_shuffle_label_sanity()]] - `calls` [EXTRACTED]

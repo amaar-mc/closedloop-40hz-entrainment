@@ -10,8 +10,9 @@ tags:
 # hedges_g()
 
 ## Connections
+
 - [[Compute Hedges' g with 95% CI between paired samples.]] - `rationale_for` [EXTRACTED]
 - [[main()_42]] - `calls` [EXTRACTED]
 - [[run_tcn_validation.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

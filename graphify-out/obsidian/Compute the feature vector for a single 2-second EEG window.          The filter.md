@@ -7,9 +7,10 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Compute the feature vector for a single 2-second EEG window.          The filter
+# Compute the feature vector for a single 2-second EEG window. The filter
 
 ## Connections
+
 - [[process_window()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -9,6 +9,7 @@ tags:
 # Abstract Round 2 Draft B: Technical Precision
 
 ## Connections
+
 - [[Abstract Draft 2 Engineering Focus Approach]] - `references` [EXTRACTED]
 - [[Abstract Draft 5 Concise High-Impact]] - `references` [EXTRACTED]
 

@@ -7,9 +7,10 @@ tags:
   - community/Community_57
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[CNNAttentionHybrid]] - `method` [EXTRACTED]
 - [[__init__()_19]] - `calls` [EXTRACTED]
 - [[__init__()_20]] - `calls` [EXTRACTED]

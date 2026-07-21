@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Make a stimulation decision.          Args:             pac_current: Current
+# Make a stimulation decision. Args: pac_current: Current
 
 ## Connections
+
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
@@ -18,4 +19,4 @@ tags:
 - [[StimState]] - `uses` [INFERRED]
 - [[step()_67]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

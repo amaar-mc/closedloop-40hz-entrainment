@@ -10,8 +10,9 @@ tags:
 # compute_pac_average()
 
 ## Connections
+
 - [[Compute average PAC across all channels.          Args             signals]] - `rationale_for` [EXTRACTED]
 - [[PACComputer]] - `method` [EXTRACTED]
 - [[compute_pac_multichannel()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

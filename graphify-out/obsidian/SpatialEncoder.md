@@ -10,6 +10,7 @@ tags:
 # SpatialEncoder
 
 ## Connections
+
 - [[Lightweight spatial encoder for individual EEG windows.      Reduces (7, 500)]] - `rationale_for` [EXTRACTED]
 - [[__init__()_25]] - `method` [EXTRACTED]
 - [[__init__()_26]] - `calls` [EXTRACTED]

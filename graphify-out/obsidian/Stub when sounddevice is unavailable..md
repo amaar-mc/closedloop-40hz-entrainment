@@ -10,8 +10,9 @@ tags:
 # Stub when sounddevice is unavailable.
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[_NoOpAudioEngine]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

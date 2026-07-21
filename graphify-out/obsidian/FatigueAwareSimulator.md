@@ -10,6 +10,7 @@ tags:
 # FatigueAwareSimulator
 
 ## Connections
+
 - [[40s ON + 20s OFF (standard clinical protocol).]] - `uses` [INFERRED]
 - [[Abstract base class for all control strategies.      Subclasses must implement]] - `uses` [INFERRED]
 - [[Add control method to comparison.]] - `uses` [INFERRED]
@@ -153,4 +154,4 @@ tags:
 - [[simulator.py]] - `contains` [EXTRACTED]
 - [[step()_66]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

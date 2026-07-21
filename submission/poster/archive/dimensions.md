@@ -7,12 +7,12 @@ Fonts listed are what you TYPE in PowerPoint — they print at 2x.
 
 ## TITLE BANNER
 
-| Property | Value |
-|----------|-------|
-| X | 0.3 |
-| Y | 0.2 |
-| W | 23.4 |
-| H | 2.6 |
+| Property   | Value               |
+| ---------- | ------------------- |
+| X          | 0.3                 |
+| Y          | 0.2                 |
+| W          | 23.4                |
+| H          | 2.6                 |
 | Background | Dark navy (#1B2A4A) |
 
 **Title text box** (inside banner):
@@ -67,6 +67,7 @@ Column width: 7.63"
 | Bullet spacing | 0.8 line spacing |
 
 Content for this box (from blueprint):
+
 - Problem statement (2-3 sentences on Alzheimer's + 40 Hz)
 - Fixed vs Adaptive comparison figure (~3.5" tall inside this box)
 - Background on PAC (2-3 sentences)
@@ -98,6 +99,7 @@ Content for this box (from blueprint):
 | Background | Light gray (#EEF2F5) |
 
 Content for this box:
+
 - System architecture diagram (fill most of the box, ~7" W x 5" H)
 - Key Discovery callout box below the diagram:
   - Inner box: gold background (#D4A843), 0.15" padding
@@ -131,6 +133,7 @@ Content for this box:
 | Subheader font | Arial Bold, 9 pt (prints 18pt), Black |
 
 Content (use bullet points, not paragraphs):
+
 - **Dataset** — OpenNeuro ds005048, 35 subjects, 7 channels, 250 Hz
 - **Preprocessing** — bandpass, notch, artifact rejection, CAR, 2s windows
 - **Model** — MultiscaleCausalTCN, 22,914 params, 12 features
@@ -168,6 +171,7 @@ Column width: 11.58"
 | Background | Light gray (#EEF2F5) |
 
 Layout inside this box (top to bottom):
+
 1. **Controller comparison figure** — W: 11.0", H: 4.5", centered
    - Caption below: Arial Italic 7pt (prints 14pt)
 2. **Two figures side by side** (below controller comparison):
@@ -215,6 +219,7 @@ Box 3: "35/35" / "Subjects Benefited" / "p < 0.001"
 Layout inside (top to bottom):
 
 **CONCLUSIONS subheader** (9pt Bold):
+
 - The predictive controller reaches 91% of the oracle's targeting gap
 - Feature selection mattered more than architecture (8 models converged at R² = 0.287; 12 PAC features → R² = 0.606)
 - TCN maintains R² = 0.37-0.67 at 3-10s where all baselines collapse
@@ -222,18 +227,20 @@ Layout inside (top to bottom):
 - Advantage holds across z-score thresholds 0.2-1.0 and four fatigue models
 
 **STATISTICAL VALIDATION subheader** (9pt Bold):
+
 - Effect size table (small table, 7pt font):
 
-| Metric | g | 95% CI | p |
-|--------|---|--------|---|
+| Metric    | g    | 95% CI       | p      |
+| --------- | ---- | ------------ | ------ |
 | Alignment | 1.31 | [0.75, 1.87] | <0.001 |
-| Low-PAC | 4.47 | [3.33, 5.62] | <0.001 |
-| PAC Gap | 1.57 | [0.98, 2.17] | <0.001 |
+| Low-PAC   | 4.47 | [3.33, 5.62] | <0.001 |
+| PAC Gap   | 1.57 | [0.98, 2.17] | <0.001 |
 
 - Wilcoxon signed-rank, Hedges' g, BCa bootstrap 10,000 iterations
 - 5-seed TCN: R² = 0.606 ± 0.032
 
 **FUTURE DIRECTIONS subheader** (9pt Bold):
+
 - Real-time validation with live EEG streaming
 - IRB-approved pilot at memory care facilities (N = 5-10)
 - Crossover study: adaptive vs fixed with cognitive outcome measures
@@ -267,12 +274,14 @@ Layout inside (top to bottom):
 Layout inside — two columns:
 
 **Left half** (Acknowledgements) — X offset 0.2", W: 11.2"
+
 - Font: Arial Regular 7pt (prints 14pt)
 - "My AP Statistics teacher was consulted on statistical test selection. All other work was conducted independently. Computing: personal Apple Silicon MacBook and personal RTX 3080 GPU. No institutional lab, university mentor, or summer research program was used."
 - "Data source: OpenNeuro ds005048, used under open access license."
 - "All diagrams created by the author unless otherwise noted."
 
 **Right half** (References) — X offset 11.8", W: 11.2"
+
 - Font: Arial Regular 6.5pt (prints 13pt)
 - [1] Iaccarino HG et al. Nature 540, 230-235, 2016.
 - [2] Murdock MH et al. Nature 627, 149-156, 2024.
@@ -287,12 +296,12 @@ Layout inside — two columns:
 
 ## FOOTER BAR
 
-| Property | Value |
-|----------|-------|
-| X | 0.3 |
-| Y | 31.3 |
-| W | 23.4 |
-| H | 0.4 |
+| Property   | Value               |
+| ---------- | ------------------- |
+| X          | 0.3                 |
+| Y          | 31.3                |
+| W          | 23.4                |
+| H          | 0.4                 |
 | Background | Dark navy (#1B2A4A) |
 
 Optional: small text "California Science and Engineering Fair 2026" in white, 6pt, centered.
@@ -301,30 +310,30 @@ Optional: small text "California Science and Engineering Fair 2026" in white, 6p
 
 ## FONT QUICK REFERENCE (what you type in PowerPoint)
 
-| Element | PowerPoint Size | Prints As | Weight |
-|---------|----------------|-----------|--------|
-| Title | 26 pt | 52 pt | Arial Black |
-| Author name | 13 pt | 26 pt | Arial Regular |
-| Section headers | 11 pt | 22 pt | Arial Bold, White |
-| Subheaders | 9 pt | 18 pt | Arial Bold, Black |
-| Body text | 8 pt | 16 pt | Arial Regular, Black |
-| Figure captions | 7 pt | 14 pt | Arial Italic, Black |
-| Callout numbers | 18 pt | 36 pt | Arial Black, Navy |
-| Callout labels | 8 pt | 16 pt | Arial Bold, Navy |
-| Table text | 7 pt | 14 pt | Arial Regular |
-| References | 6.5 pt | 13 pt | Arial Regular |
-| Acknowledgements | 7 pt | 14 pt | Arial Regular |
+| Element          | PowerPoint Size | Prints As | Weight               |
+| ---------------- | --------------- | --------- | -------------------- |
+| Title            | 26 pt           | 52 pt     | Arial Black          |
+| Author name      | 13 pt           | 26 pt     | Arial Regular        |
+| Section headers  | 11 pt           | 22 pt     | Arial Bold, White    |
+| Subheaders       | 9 pt            | 18 pt     | Arial Bold, Black    |
+| Body text        | 8 pt            | 16 pt     | Arial Regular, Black |
+| Figure captions  | 7 pt            | 14 pt     | Arial Italic, Black  |
+| Callout numbers  | 18 pt           | 36 pt     | Arial Black, Navy    |
+| Callout labels   | 8 pt            | 16 pt     | Arial Bold, Navy     |
+| Table text       | 7 pt            | 14 pt     | Arial Regular        |
+| References       | 6.5 pt          | 13 pt     | Arial Regular        |
+| Acknowledgements | 7 pt            | 14 pt     | Arial Regular        |
 
 ---
 
 ## COLOR REFERENCE
 
-| Use | Hex | Where |
-|-----|-----|-------|
-| Title banner / footer | #1B2A4A | Dark navy |
-| Section header bars | #3A7CA5 | Teal/steel blue (match template) |
-| Content backgrounds | #EEF2F5 | Light gray |
-| Callout boxes | #D4A843 | Gold |
-| Body text | #000000 | Black |
-| Header text on bars | #FFFFFF | White |
-| Slide background | #FFFFFF | White |
+| Use                   | Hex     | Where                            |
+| --------------------- | ------- | -------------------------------- |
+| Title banner / footer | #1B2A4A | Dark navy                        |
+| Section header bars   | #3A7CA5 | Teal/steel blue (match template) |
+| Content backgrounds   | #EEF2F5 | Light gray                       |
+| Callout boxes         | #D4A843 | Gold                             |
+| Body text             | #000000 | Black                            |
+| Header text on bars   | #FFFFFF | White                            |
+| Slide background      | #FFFFFF | White                            |

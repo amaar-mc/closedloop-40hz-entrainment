@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Generate a 40 Hz click train stimulus.      Click trains are the standard ASSR s
+# Generate a 40 Hz click train stimulus. Click trains are the standard ASSR s
 
 ## Connections
+
 - [[generate_click_train()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

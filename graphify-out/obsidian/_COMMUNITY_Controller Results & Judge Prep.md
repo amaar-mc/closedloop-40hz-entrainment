@@ -8,6 +8,7 @@ members: 80
 **Members:** 80 nodes
 
 ## Members
+
 - [[10 Anticipated Judge Q&A Pairs (Interview Prep)]] - document - submission/presentation/interview/judge_interview_prep.md
 - [[10-Room Memory Palace for CSEF Presentation]] - document - submission/presentation/memorization/v1_memo_guide.md
 - [[12 PAC+Stim Feature Engineering Slide spectral features cause subject-specific overfitting, ablation table]] - document - archive/CSEF_Old/CSEF_2026_Presentation.pdf

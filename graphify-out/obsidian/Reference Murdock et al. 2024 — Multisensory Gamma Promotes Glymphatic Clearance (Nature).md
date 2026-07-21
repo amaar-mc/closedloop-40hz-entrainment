@@ -10,6 +10,7 @@ tags:
 # Reference: Murdock et al. 2024 — Multisensory Gamma Promotes Glymphatic Clearance (Nature)
 
 ## Connections
+
 - [[Research Paper v3 (Full Manuscript)]] - `cites` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

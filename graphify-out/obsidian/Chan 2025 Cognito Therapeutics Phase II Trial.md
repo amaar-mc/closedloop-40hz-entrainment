@@ -10,6 +10,7 @@ tags:
 # Chan 2025 Cognito Therapeutics Phase II Trial
 
 ## Connections
+
 - [[Iaccarino 2016 Optogenetic 40Hz Stimulation]] - `references` [INFERRED]
 
   #community/Community_118

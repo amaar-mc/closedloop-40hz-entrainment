@@ -10,8 +10,9 @@ tags:
 # Discussion: 5 Key Limitations (offline replay, EEGNet not in loop, single site, channel selection, label granularity)
 
 ## Connections
+
 - [[Future Directions 3-Phase Clinical Translation (IRB Feasibility, Pilot RCT, Regulatory)]] - `references` [EXTRACTED]
 - [[Future Directions Online Adaptation, End-to-End Validation, Multi-site, RL Controller]] - `references` [EXTRACTED]
 - [[Offline Counterfactual Replay Validation on 35 Subjects]] - `conceptually_related_to` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

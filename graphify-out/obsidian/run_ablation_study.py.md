@@ -10,6 +10,7 @@ tags:
 # run_ablation_study.py
 
 ## Connections
+
 - [[AblationVariant]] - `contains` [EXTRACTED]
 - [[CausalDSConvBlockNoNorm]] - `contains` [EXTRACTED]
 - [[MultiscaleCausalTCNNoNorm]] - `contains` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[parse_args()_9]] - `contains` [EXTRACTED]
 - [[train_variant()]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

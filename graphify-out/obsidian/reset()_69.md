@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[Reset simulator to initial state._1]] - `rationale_for` [EXTRACTED]
 - [[TribeEnhancedSimulator]] - `method` [EXTRACTED]
 - [[_warmup()]] - `calls` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # Load all subjects with per-window PAC, raw EEG windows, + stim/rest labels.
 
 ## Connections
+
 - [[load_subjects()]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

@@ -10,6 +10,7 @@ tags:
 # Evaluate model per subject.
 
 ## Connections
+
 - [[CausalConvBlock]] - `uses` [INFERRED]
 - [[ImprovedTCN]] - `uses` [INFERRED]
 - [[SeqDataset]] - `uses` [INFERRED]

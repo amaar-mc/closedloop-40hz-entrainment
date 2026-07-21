@@ -21,28 +21,28 @@ See `conferences/targets.md` and `conferences/mit_urtc_2026/README.md`.
 
 ## Progress
 
-| Section | Draft | Reviewed | Final |
-|---|---|---|---|
-| Abstract | draft | — | — |
-| Introduction | draft | — | — |
-| Related Work | draft | — | — |
-| Methods | draft | — | — |
-| Results | draft | — | — |
-| Discussion | draft | — | — |
-| Conclusion | draft | — | — |
+| Section      | Draft | Reviewed | Final |
+| ------------ | ----- | -------- | ----- |
+| Abstract     | draft | —        | —     |
+| Introduction | draft | —        | —     |
+| Related Work | draft | —        | —     |
+| Methods      | draft | —        | —     |
+| Results      | draft | —        | —     |
+| Discussion   | draft | —        | —     |
+| Conclusion   | draft | —        | —     |
 
 ## Figures
 
-| Figure | Status | File |
-|---|---|---|
-| System pipeline diagram | exists | `results/figures/system_block_diagram.pdf` |
-| Horizon sweep | exists | `results/figures/horizon_sweep.pdf` |
-| Controller comparison | exists | `results/figures/controller_comparison_v2.pdf` |
-| PAC targeting gap | exists | `results/figures/pac_targeting_gap.pdf` |
-| Per-subject utility | exists | `results/figures/per_subject_utility.pdf` |
-| Timeline example | exists | `submission/paper/figures/timeline_example.pdf` |
-| Feature ablation table | — | needs standalone figure |
-| Threshold sensitivity | exists | `results/figures/threshold_sensitivity.pdf` |
+| Figure                  | Status | File                                            |
+| ----------------------- | ------ | ----------------------------------------------- |
+| System pipeline diagram | exists | `results/figures/system_block_diagram.pdf`      |
+| Horizon sweep           | exists | `results/figures/horizon_sweep.pdf`             |
+| Controller comparison   | exists | `results/figures/controller_comparison_v2.pdf`  |
+| PAC targeting gap       | exists | `results/figures/pac_targeting_gap.pdf`         |
+| Per-subject utility     | exists | `results/figures/per_subject_utility.pdf`       |
+| Timeline example        | exists | `submission/paper/figures/timeline_example.pdf` |
+| Feature ablation table  | —      | needs standalone figure                         |
+| Threshold sensitivity   | exists | `results/figures/threshold_sensitivity.pdf`     |
 
 ## Key Numbers (claim-generation aware)
 

@@ -14,7 +14,7 @@ The controller matched stimulation to periods of need 72.1% of the time versus 6
 
 These results demonstrate that a minimal feature set capturing PAC dynamics outperforms complex spectral models, offering a practical path toward personalized 40 Hz therapy that is both more accurate and more deployable.
 
-*Word count: ~240 / 250 max*
+_Word count: ~240 / 250 max_
 
-*Category: Biological Science and Engineering, Computational Biology and Bioinformatics*
-*Synopsys Championship — Santa Clara County, March 2026*
+_Category: Biological Science and Engineering, Computational Biology and Bioinformatics_
+_Synopsys Championship — Santa Clara County, March 2026_

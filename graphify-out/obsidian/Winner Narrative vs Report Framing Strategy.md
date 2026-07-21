@@ -10,6 +10,7 @@ tags:
 # Winner Narrative vs Report Framing Strategy
 
 ## Connections
+
 - [[Caucus Retellable Sentence]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_111

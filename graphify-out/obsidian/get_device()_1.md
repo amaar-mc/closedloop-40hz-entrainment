@@ -10,6 +10,7 @@ tags:
 # get_device()
 
 ## Connections
+
 - [[main()_6]] - `calls` [EXTRACTED]
 - [[train_and_compare.py]] - `contains` [EXTRACTED]
 

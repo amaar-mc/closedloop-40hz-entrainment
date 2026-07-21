@@ -10,6 +10,7 @@ tags:
 # generate()
 
 ## Connections
+
 - [[PaperPDF]] - `calls` [EXTRACTED]
 - [[abstract_block()]] - `calls` [EXTRACTED]
 - [[body()_2]] - `calls` [EXTRACTED]

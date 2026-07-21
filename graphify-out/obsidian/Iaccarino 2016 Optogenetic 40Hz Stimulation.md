@@ -10,6 +10,7 @@ tags:
 # Iaccarino 2016 Optogenetic 40Hz Stimulation
 
 ## Connections
+
 - [[Chan 2025 Cognito Therapeutics Phase II Trial]] - `references` [INFERRED]
 - [[Iaccarino 2016 Landmark Study (40Hz Mice)]] - `conceptually_related_to` [INFERRED]
 - [[Microglial Activation Pathway (40Hz Mechanism)]] - `references` [EXTRACTED]

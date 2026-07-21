@@ -10,6 +10,7 @@ tags:
 # CSEF Era (12-Feature Ablated Model) — Poster Provenance
 
 ## Connections
+
 - [[Poster Results Coherence Audit]] - `references` [EXTRACTED]
 
   #community/Community_41

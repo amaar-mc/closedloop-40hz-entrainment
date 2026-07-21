@@ -97,14 +97,14 @@ This was a critical learning moment. Feature leakage can produce results that lo
 
 **EEGNetLarge (scaled EEGNet)** -- 141,000 parameters. Test R^2 = 0.287. Same ceiling, 100x more parameters.
 
-| Architecture | Parameters | Test R^2 | Notes |
-|---|---|---|---|
-| EEGNet | 1,457 | 0.287 | Optimal parameter efficiency |
-| SpecTempNet | 180,000 | 0.236 | After leak fix |
-| ViT-TCNet | ~2,000,000 | 0.252 | Overfitting |
-| Ridge Regression | 135 coefs | 0.287 | Matches deep learning |
-| ATCNet | 25,000 | 0.075 | Underperformed |
-| EEGNetLarge | 141,000 | 0.287 | Same ceiling |
+| Architecture     | Parameters | Test R^2 | Notes                        |
+| ---------------- | ---------- | -------- | ---------------------------- |
+| EEGNet           | 1,457      | 0.287    | Optimal parameter efficiency |
+| SpecTempNet      | 180,000    | 0.236    | After leak fix               |
+| ViT-TCNet        | ~2,000,000 | 0.252    | Overfitting                  |
+| Ridge Regression | 135 coefs  | 0.287    | Matches deep learning        |
+| ATCNet           | 25,000     | 0.075    | Underperformed               |
+| EEGNetLarge      | 141,000    | 0.287    | Same ceiling                 |
 
 The pattern was unmistakable. The simplest models (EEGNet with 1,457 parameters, Ridge with 135 coefficients) matched the performance of models with 1,000x more parameters. R^2 = 0.287 was a data ceiling, not a model capacity limitation. The signal-to-noise ratio was approximately -4.73 dB (signal weaker than noise), and epoch-level PAC labels assigned to 2-second windows inherently limit single-window accuracy.
 
@@ -139,20 +139,21 @@ dilations = [1, 2, 4, 8]
 The receptive field calculation: kernel size 3, dilations [1, 2, 4, 8], RF = 1 + (3-1) x (1+2+4+8) = 31 timesteps. That covers the full 20-step input with margin. Output goes through learned attention pooling over the time dimension, then to a future PAC prediction head. Total parameters: 31,043.
 
 Key design choices and why:
+
 - **GroupNorm instead of BatchNorm:** Different patients have different PAC baselines; GroupNorm normalizes per-sample rather than per-batch, which stabilizes cross-subject training.
 - **Depthwise separable convolutions:** Parameter efficiency by factorizing spatial and channel mixing.
 - **Huber loss instead of MSE:** PAC has outliers; Huber transitions from quadratic to linear for large errors, preventing outlier-driven gradient spikes.
 - **AdamW optimizer** with lr=0.001, weight_decay=0.001.
 - **Early stopping:** patience=20, monitoring validation R^2.
 
-| Component | EEGNet | Causal TCN |
-|---|---|---|
-| Purpose | Estimate current PAC from raw EEG | Predict future PAC from history |
-| Parameters | 1,457 | 31,043 |
-| Input | Raw EEG (7 ch x 500 samples) | 73 features x 20 timesteps |
+| Component    | EEGNet                            | Causal TCN                      |
+| ------------ | --------------------------------- | ------------------------------- |
+| Purpose      | Estimate current PAC from raw EEG | Predict future PAC from history |
+| Parameters   | 1,457                             | 31,043                          |
+| Input        | Raw EEG (7 ch x 500 samples)      | 73 features x 20 timesteps      |
 | Architecture | Temporal + depthwise spatial conv | Dilated causal conv (d=1,2,4,8) |
-| Output | Current PAC estimate | Future PAC (5s horizon) |
-| Key feature | Real-time inference | 31-step receptive field, causal |
+| Output       | Current PAC estimate              | Future PAC (5s horizon)         |
+| Key feature  | Real-time inference               | 31-step receptive field, causal |
 
 First training results were promising but showed a gap: validation R^2 = 0.411 versus test R^2 = 0.170. That gap reflects the cross-subject generalization challenge -- PAC dynamics vary across patients. It also reinforced why personalized control matters.
 
@@ -180,10 +181,10 @@ Population Change:    +4.5% (not significant, p = 0.542)
 
 No population-level trend -- but the individual variability told the real story:
 
-| Response Pattern | Count | Percentage | Range |
-|---|---|---|---|
-| Habituators (PAC decline) | 17/35 | 48.6% | -66.8% to -5% |
-| Facilitators (PAC increase) | 18/35 | 51.4% | +5% to +149.1% |
+| Response Pattern            | Count | Percentage | Range          |
+| --------------------------- | ----- | ---------- | -------------- |
+| Habituators (PAC decline)   | 17/35 | 48.6%      | -66.8% to -5%  |
+| Facilitators (PAC increase) | 18/35 | 51.4%      | +5% to +149.1% |
 
 The cohort splits nearly equally between habituators and facilitators, which is why there is no population-level trend -- the two groups cancel out. This validated the fundamental premise of the project: half of patients habituate while half do not, so fixed scheduling cannot serve both groups. One patient showed -66.8% decline (strong fatigue), another showed +149.1% increase (enhanced entrainment over time), and about 46.7% of individual stimulation blocks showed within-block PAC decline.
 
@@ -198,13 +199,13 @@ This data made it clear that adaptive control is not just an optimization; it ad
 For the horizon sweep, I trained separate TCN models for prediction horizons of 1, 2, 3, 5, 8, and 10 seconds, comparing each against persistence (assume PAC stays the same) and Ridge regression (linear model on the same 73 features).
 
 | Horizon | Persistence R^2 | Ridge R^2 | TCN R^2 |
-|---|---|---|---|
-| 1 s | 0.760 | 0.812 | 0.735 |
-| 2 s | 0.488 | 0.542 | 0.470 |
-| 3 s | 0.234 | 0.253 | 0.277 |
-| 5 s | -0.267 | -0.393 | 0.254 |
-| 8 s | -0.276 | -0.211 | 0.240 |
-| 10 s | -0.256 | -0.212 | 0.278 |
+| ------- | --------------- | --------- | ------- |
+| 1 s     | 0.760           | 0.812     | 0.735   |
+| 2 s     | 0.488           | 0.542     | 0.470   |
+| 3 s     | 0.234           | 0.253     | 0.277   |
+| 5 s     | -0.267          | -0.393    | 0.254   |
+| 8 s     | -0.276          | -0.211    | 0.240   |
+| 10 s    | -0.256          | -0.212    | 0.278   |
 
 The pattern was clean. At 1-2 second horizons, PAC changes slowly enough that simple baselines win -- persistence and Ridge both outperform the TCN. But at the 3-second crossover point, the TCN starts winning. At 5-10 seconds, both baselines collapse to negative R^2 (worse than predicting the mean) while the TCN maintains R^2 around 0.25. That +0.5 R^2 margin at the operationally relevant range is the TCN's value proposition.
 
@@ -237,37 +238,37 @@ I also ran fatigue sensitivity analysis through simulation. The question: does t
 
 **Fatigue severity results (n = 50 trials each, 600-second sessions):**
 
-| Fatigue Level | Fixed Efficiency | Adaptive Efficiency | Improvement |
-|---|---|---|---|
-| None | 0.343 | 0.375 | +9.5%*** |
-| Mild | 0.341 | 0.375 | +10.0%*** |
-| Moderate | 0.335 | 0.366 | +9.0%*** |
-| High | 0.319 | 0.354 | +10.8%*** |
-| Severe | 0.316 | 0.352 | +11.2%*** |
+| Fatigue Level | Fixed Efficiency | Adaptive Efficiency | Improvement  |
+| ------------- | ---------------- | ------------------- | ------------ |
+| None          | 0.343            | 0.375               | +9.5%\*\*\*  |
+| Mild          | 0.341            | 0.375               | +10.0%\*\*\* |
+| Moderate      | 0.335            | 0.366               | +9.0%\*\*\*  |
+| High          | 0.319            | 0.354               | +10.8%\*\*\* |
+| Severe        | 0.316            | 0.352               | +11.2%\*\*\* |
 
-***p < 0.001, Hedges' g = 1.7-2.4 (large to very large effects). The advantage grows as fatigue worsens -- exactly when personalization matters most. Even with no fatigue at all, adaptive control wins by +9.5%, suggesting benefits beyond fatigue mitigation (targeting natural PAC fluctuations).
+\*\*\*p < 0.001, Hedges' g = 1.7-2.4 (large to very large effects). The advantage grows as fatigue worsens -- exactly when personalization matters most. Even with no fatigue at all, adaptive control wins by +9.5%, suggesting benefits beyond fatigue mitigation (targeting natural PAC fluctuations).
 
 **Fatigue model robustness (4 different mathematical models, n = 50 trials each):**
 
-| Fatigue Model | Advantage | p-value | Hedges' g |
-|---|---|---|---|
-| Exponential Decay | +9.0% | 1.8 x 10^-15 | 2.31 |
-| Step Function | +6.9% | 4.4 x 10^-14 | 1.21 |
-| Heterogeneous (50/50) | +8.9% | 2.5 x 10^-14 | 1.71 |
-| Saturation (synaptic) | +19.0% | 1.8 x 10^-15 | 3.66 |
+| Fatigue Model         | Advantage | p-value      | Hedges' g |
+| --------------------- | --------- | ------------ | --------- |
+| Exponential Decay     | +9.0%     | 1.8 x 10^-15 | 2.31      |
+| Step Function         | +6.9%     | 4.4 x 10^-14 | 1.21      |
+| Heterogeneous (50/50) | +8.9%     | 2.5 x 10^-14 | 1.71      |
+| Saturation (synaptic) | +19.0%    | 1.8 x 10^-15 | 3.66      |
 
 All models showed significant advantage. The saturation model (most biologically realistic, based on Michaelis-Menten receptor kinetics) showed the largest benefit at +19.0% with g = 3.66. The consistent advantage across four different mathematical formulations proved the results are not artifacts of any specific fatigue assumption.
 
 I also ran threshold sensitivity analysis on the TCN controller, sweeping delta-z thresholds from 0.1 to 1.0:
 
 | Delta-z Threshold | Alignment | Low-PAC Stim | PAC Gap (x10^-6) |
-|---|---|---|---|
-| 0.1 | 59.6% | 51.2% | 12.4 |
-| 0.2 | 68.5% | 72.9% | 26.3 |
-| 0.3 | 73.7% | 84.9% | 32.4 |
-| 0.4 | 73.9% | 85.3% | 33.7 |
-| 0.5 | 73.7% | 85.3% | 33.8 |
-| 1.0 | 73.8% | 85.3% | 34.0 |
+| ----------------- | --------- | ------------ | ---------------- |
+| 0.1               | 59.6%     | 51.2%        | 12.4             |
+| 0.2               | 68.5%     | 72.9%        | 26.3             |
+| 0.3               | 73.7%     | 84.9%        | 32.4             |
+| 0.4               | 73.9%     | 85.3%        | 33.7             |
+| 0.5               | 73.7%     | 85.3%        | 33.8             |
+| 1.0               | 73.8%     | 85.3%        | 34.0             |
 
 Performance plateaus at delta-z >= 0.3 and consistently exceeds the reactive baseline across all thresholds >= 0.2. The results are not dependent on precise threshold tuning.
 
@@ -287,16 +288,17 @@ Four controllers tested: Fixed Schedule (clinical standard: 40s ON / 20s OFF), R
 
 **Controller performance replayed on all 35 subjects' real EEG:**
 
-| Controller | Alignment | Low-PAC Targeting | PAC Gap (x10^-6) | Stim % |
-|---|---|---|---|---|
-| Fixed Schedule | 45.0% | 61.4% | -6.6 (wrong direction) | 66.6% |
-| Reactive | 64.5% | 51.7% | +21.1 | 36.7% |
-| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** | **59.7%** |
-| Oracle (upper bound) | 100.0% | 100.0% | +33.3 | 48.3% |
+| Controller           | Alignment | Low-PAC Targeting | PAC Gap (x10^-6)       | Stim %    |
+| -------------------- | --------- | ----------------- | ---------------------- | --------- |
+| Fixed Schedule       | 45.0%     | 61.4%             | -6.6 (wrong direction) | 66.6%     |
+| Reactive             | 64.5%     | 51.7%             | +21.1                  | 36.7%     |
+| **TCN Predictive**   | **72.1%** | **82.6%**         | **+30.5**              | **59.7%** |
+| Oracle (upper bound) | 100.0%    | 100.0%            | +33.3                  | 48.3%     |
 
 Metric definitions: Alignment = (Low-PAC Stim Rate + High-PAC Rest Rate) / 2, measuring balanced accuracy of therapeutic targeting. Low-PAC Targeting = percentage of below-median PAC windows where the controller stimulates ("did we treat when the brain needed it?"). PAC Gap = mean PAC during rest minus mean PAC during stim (positive means the controller correctly targets low-PAC periods).
 
 **Statistical significance (TCN vs Reactive):**
+
 - Alignment: Hedges' g = +1.31, p < 0.001
 - Low-PAC targeting: Hedges' g = +4.47, p < 0.001
 - PAC gap: Hedges' g = +1.57, p < 0.001
@@ -314,15 +316,15 @@ All 35 of 35 subjects showed higher clinical utility with TCN versus Reactive (b
 
 ![Controller Comparison](../results/figures/controller_comparison_v2.png)
 
-*Controller comparison on all 35 subjects' real EEG recordings. TCN Predictive outperforms all alternatives on alignment, low-PAC targeting, and PAC gap.*
+_Controller comparison on all 35 subjects' real EEG recordings. TCN Predictive outperforms all alternatives on alignment, low-PAC targeting, and PAC gap._
 
 ![Per-Subject Clinical Utility](../results/figures/per_subject_utility.png)
 
-*Every patient benefits: 35/35 subjects show higher utility with TCN vs Reactive.*
+_Every patient benefits: 35/35 subjects show higher utility with TCN vs Reactive._
 
 ![Real-Time Controller Timeline](../results/figures/timeline_example.png)
 
-*Example controller timeline for one subject, showing how the TCN-driven controller aligns stimulation with periods of low PAC.*
+_Example controller timeline for one subject, showing how the TCN-driven controller aligns stimulation with periods of low PAC._
 
 ---
 
@@ -349,6 +351,7 @@ The system works in two stages. EEGNet (1,457 parameters) estimates current PAC 
 **Limitation:** Real-data validation uses offline replay on recorded EEG, not live closed-loop streaming. The system makes decisions on real brain data but cannot observe the brain's response to those decisions.
 
 **Further research directions:**
+
 - Deploy with live EEG streaming for real-time crossover validation (adaptive vs fixed within same session)
 - Record 30-60 minute sessions to capture the full habituation time course
 - Replace the heuristic controller with reinforcement learning for long-horizon optimization
@@ -366,17 +369,17 @@ The system works in two stages. EEGNet (1,457 parameters) estimates current PAC 
 
 ## References
 
-Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. *Nature*, 540(7632), 230-235.
+Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. _Nature_, 540(7632), 230-235.
 
-Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. *Cell*, 177(2), 256-271.
+Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. _Cell_, 177(2), 256-271.
 
-Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. *Journal of Neurophysiology*, 104(2), 1195-1210.
+Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. _Journal of Neurophysiology_, 104(2), 1195-1210.
 
-Lawhern, V. J., et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. *Journal of Neural Engineering*, 15(5), 056013.
+Lawhern, V. J., et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. _Journal of Neural Engineering_, 15(5), 056013.
 
-Lahijanian, M., et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. *Scientific Reports*, 14, 13153.
+Lahijanian, M., et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. _Scientific Reports_, 14, 13153.
 
-Thompson, R. F., & Spencer, W. A. (1966). Habituation: A model phenomenon for the study of neuronal substrates of behavior. *Psychological Review*, 73(1), 16-43.
+Thompson, R. F., & Spencer, W. A. (1966). Habituation: A model phenomenon for the study of neuronal substrates of behavior. _Psychological Review_, 73(1), 16-43.
 
 ---
 

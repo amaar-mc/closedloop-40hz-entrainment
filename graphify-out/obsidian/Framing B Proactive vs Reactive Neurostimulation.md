@@ -10,6 +10,7 @@ tags:
 # Framing B: Proactive vs Reactive Neurostimulation
 
 ## Connections
+
 - [[Paper Story One Paragraph Summary]] - `conceptually_related_to` [INFERRED]
 - [[Recommended Combined Framing A+B]] - `conceptually_related_to` [EXTRACTED]
 

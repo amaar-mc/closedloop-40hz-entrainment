@@ -10,6 +10,7 @@ tags:
 # eegnet.py
 
 ## Connections
+
 - [[EEGNet_1]] - `contains` [EXTRACTED]
 - [[EEGNet Architecture for PAC Prediction  Implements compact convolutional neura]] - `rationale_for` [EXTRACTED]
 - [[controller.py]] - `imports_from` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[test_simulated_session.py]] - `imports_from` [EXTRACTED]
 - [[training.py]] - `imports_from` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

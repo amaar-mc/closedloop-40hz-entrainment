@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[analyze_fatigue()]] - `calls` [EXTRACTED]
 - [[fatigue_analysis.py]] - `contains` [EXTRACTED]
 - [[load_subject_pac_and_events()]] - `calls` [EXTRACTED]

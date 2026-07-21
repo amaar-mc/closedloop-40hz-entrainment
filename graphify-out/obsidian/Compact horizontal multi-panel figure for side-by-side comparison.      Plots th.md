@@ -7,11 +7,12 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Compact horizontal multi-panel figure for side-by-side comparison.      Plots th
+# Compact horizontal multi-panel figure for side-by-side comparison. Plots th
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[_build_figure()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

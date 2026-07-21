@@ -10,6 +10,7 @@ tags:
 # Validate cortical response model dynamics.
 
 ## Connections
+
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]
 - [[NeuralMassConfig]] - `uses` [INFERRED]

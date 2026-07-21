@@ -10,6 +10,7 @@ tags:
 # CausalConv1dBlock
 
 ## Connections
+
 - [[Single causal dilated conv block with residual.]] - `rationale_for` [EXTRACTED]
 - [[__init__()_104]] - `method` [EXTRACTED]
 - [[__init__()_105]] - `calls` [EXTRACTED]

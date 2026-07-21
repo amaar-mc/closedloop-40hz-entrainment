@@ -10,6 +10,7 @@ tags:
 # Anticipated Reviewer Weaknesses
 
 ## Connections
+
 - [[Limitation Dataset Size (N=35)]] - `references` [EXTRACTED]
 - [[Limitation Fatigue Simulator Not Empirically Validated]] - `references` [EXTRACTED]
 - [[Limitation No Comparison to Prior Closed-Loop BCI Systems]] - `references` [EXTRACTED]

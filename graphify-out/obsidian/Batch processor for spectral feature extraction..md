@@ -10,6 +10,7 @@ tags:
 # Batch processor for spectral feature extraction.
 
 ## Connections
+
 - [[SpectralFeatureExtractor]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

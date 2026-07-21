@@ -9,6 +9,7 @@ tags:
 # All 73 Features: Test R² = -0.025 (FAILS — negative R²)
 
 ## Connections
+
 - [[Figure 4 Feature Ablation — 73 to 12 Features]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

@@ -10,6 +10,7 @@ tags:
 # multiscale_tcn.py
 
 ## Connections
+
 - [[NOTE This applies SiLU twice (once on x, once on x+residual).]] - `rationale_for` [EXTRACTED]
 - [[AttentionPool1D_1]] - `contains` [EXTRACTED]
 - [[CausalDSConvBlock_1]] - `contains` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[ModelConfig]] - `contains` [EXTRACTED]
 - [[MultiscaleCausalTCN]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

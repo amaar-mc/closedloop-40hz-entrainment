@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[CausalConv1dBlock]] - `method` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

@@ -10,6 +10,7 @@ tags:
 # Open Questions Before Submission
 
 ## Connections
+
 - [[Anticipated Reviewer Weaknesses]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_68

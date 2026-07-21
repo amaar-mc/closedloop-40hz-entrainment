@@ -10,6 +10,7 @@ tags:
 # run_trial()
 
 ## Connections
+
 - [[evaluate_alignment()_1]] - `calls` [EXTRACTED]
 - [[main()_43]] - `calls` [EXTRACTED]
 - [[reset()_32]] - `calls` [EXTRACTED]

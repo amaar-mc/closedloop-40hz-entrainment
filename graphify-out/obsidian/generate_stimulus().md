@@ -10,6 +10,7 @@ tags:
 # generate_stimulus()
 
 ## Connections
+
 - [[Generate auditory stimulus based on configuration.      Args         cfg Stimu]] - `rationale_for` [EXTRACTED]
 - [[generate_am_tone()]] - `calls` [EXTRACTED]
 - [[generate_click_train()]] - `calls` [EXTRACTED]

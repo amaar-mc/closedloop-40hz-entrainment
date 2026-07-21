@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[EEGNet]] - `method` [EXTRACTED]
 
   #community/Community_38

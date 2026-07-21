@@ -10,10 +10,11 @@ tags:
 # main()
 
 ## Connections
+
 - [[build_model()]] - `calls` [EXTRACTED]
 - [[build_variants()]] - `calls` [EXTRACTED]
 - [[parse_args()_9]] - `calls` [EXTRACTED]
 - [[run_ablation_study.py]] - `contains` [EXTRACTED]
 - [[train_variant()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

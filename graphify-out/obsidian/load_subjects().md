@@ -10,9 +10,10 @@ tags:
 # load_subjects()
 
 ## Connections
+
 - [[Load all subjects with PAC time series, raw EEG windows, + stimrest labels.]] - `rationale_for` [EXTRACTED]
 - [[Load all subjects with per-window PAC, raw EEG windows, + stimrest labels.]] - `rationale_for` [EXTRACTED]
 - [[main()_17]] - `calls` [EXTRACTED]
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

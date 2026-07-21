@@ -7,13 +7,14 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Compute stimulation context features from action history.          Returns:
+# Compute stimulation context features from action history. Returns:
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[_compute_stim_context()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

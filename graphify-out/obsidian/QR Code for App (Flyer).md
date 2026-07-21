@@ -9,6 +9,7 @@ tags:
 # QR Code for App (Flyer)
 
 ## Connections
+
 - [[Clinical Vision Multi-biomarker PAC+connectivity control, IRB Crossover Trial, At-home Wearable Therapy]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_42

@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Checkpoint deployment realism audit.  Evaluates a trained checkpoint under multi
+# Checkpoint deployment realism audit. Evaluates a trained checkpoint under multi
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[checkpoint_deployment_audit.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

@@ -10,7 +10,8 @@ tags:
 # Evaluate R² on normalized targets (for early stopping).
 
 ## Connections
+
 - [[SequenceDataset]] - `uses` [INFERRED]
 - [[_eval_r2_norm()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

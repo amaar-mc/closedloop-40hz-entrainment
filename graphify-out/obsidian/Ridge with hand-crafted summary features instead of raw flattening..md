@@ -10,6 +10,7 @@ tags:
 # Ridge with hand-crafted summary features instead of raw flattening.
 
 ## Connections
+
 - [[ridge_enhanced_baseline()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_ImprovedTCN_Experiments

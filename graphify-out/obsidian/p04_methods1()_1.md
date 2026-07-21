@@ -10,6 +10,7 @@ tags:
 # p04_methods1()
 
 ## Connections
+
 - [[Methods page 1 Dataset, Preprocessing, Splits, PAC.]] - `rationale_for` [EXTRACTED]
 - [[bullet()_1]] - `calls` [EXTRACTED]
 - [[generate_csef_presentation.py]] - `contains` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # Fixed Schedule Controller (40s ON/20s OFF)
 
 ## Connections
+
 - [[Closed-Loop 40Hz Entrainment Demo (Real EEG Replay)]] - `calls` [EXTRACTED]
 - [[StimAction Enum (STIMULATEREST)]] - `calls` [EXTRACTED]
 

@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Train multiscale causal TCN for PAC forecasting.  Usage:     python temporal_mul
+# Train multiscale causal TCN for PAC forecasting. Usage: python temporal_mul
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[train_multiscale_tcn.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

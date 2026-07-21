@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[MultiHorizonPredictor]] - `method` [EXTRACTED]
 - [[Returns dict mapping horizon → prediction.]] - `rationale_for` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # Predictive Look-Ahead Strategy (PAC=0.1878, stim=52.1%, eff=5.302)
 
 ## Connections
+
 - [[Closed-Loop Demo Script (run_closed_loop_demo.py)]] - `references` [EXTRACTED]
 
   #community/Community_107

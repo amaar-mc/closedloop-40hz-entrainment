@@ -7,11 +7,12 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Predictive closed-loop controller using a trained TCN to forecast     future PA
+# Predictive closed-loop controller using a trained TCN to forecast future PA
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
 - [[PredictiveLookAheadController]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

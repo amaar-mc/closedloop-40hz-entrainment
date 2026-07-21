@@ -10,6 +10,7 @@ tags:
 # EnhancedSequenceDataset
 
 ## Connections
+
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[ImprovedModelConfig]] - `uses` [INFERRED]
 - [[ImprovedTCN_1]] - `uses` [INFERRED]

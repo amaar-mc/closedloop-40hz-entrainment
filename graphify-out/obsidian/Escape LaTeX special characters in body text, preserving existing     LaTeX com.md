@@ -7,9 +7,10 @@ tags:
   - community/Community_44
 ---
 
-# Escape LaTeX special characters in body text, preserving existing     LaTeX com
+# Escape LaTeX special characters in body text, preserving existing LaTeX com
 
 ## Connections
+
 - [[escape_latex()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_44

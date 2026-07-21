@@ -10,8 +10,9 @@ tags:
 # step()
 
 ## Connections
+
 - [[SaturationModelSimulator]] - `method` [EXTRACTED]
 - [[Simulate one time step with saturation ceiling dynamics.]] - `rationale_for` [EXTRACTED]
 - [[run_single_trial()_1]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

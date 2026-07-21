@@ -7,11 +7,12 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Create train/val/test splits by subject (leave-subject-out).          Ensures
+# Create train/val/test splits by subject (leave-subject-out). Ensures
 
 ## Connections
+
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
 - [[create_splits()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

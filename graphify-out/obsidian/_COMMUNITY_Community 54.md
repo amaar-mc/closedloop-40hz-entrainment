@@ -8,6 +8,7 @@ members: 19
 **Members:** 19 nodes
 
 ## Members
+
 - [[Abstract Draft 1 Clinical Hook Approach]] - document - docs/abstract/archive/drafts/round1/draft1_clinical_hook.md
 - [[Abstract Draft 2 Engineering Focus Approach]] - document - docs/abstract/archive/drafts/round1/draft2_engineering_focus.md
 - [[Abstract Draft 3 Problem-Solution Narrative]] - document - docs/abstract/archive/drafts/round1/draft3_problem_solution.md

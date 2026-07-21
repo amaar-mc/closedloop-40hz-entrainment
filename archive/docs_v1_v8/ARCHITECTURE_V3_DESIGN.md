@@ -3,6 +3,7 @@
 ## Why Previous Approaches Failed
 
 **EEGNet V1/V2 Issues:**
+
 - Too simple (1.4k-25k params) for complex PAC dynamics
 - Only uses raw EEG → misses explicit frequency relationships
 - PAC has low temporal autocorrelation (0.137) → need richer features
@@ -79,12 +80,14 @@ PREDICTION HEAD:
 ### Model Size & Regularization
 
 **Parameters:** ~180k total
+
 - Multi-scale CNN: ~60k params
 - Spectral/Phase branches: ~40k params
 - Attention: ~30k params
 - Prediction head: ~50k params
 
 **Regularization Strategy:**
+
 - Dropout: 0.4 (aggressive)
 - Weight decay: 0.0005
 - Batch normalization after each conv
@@ -93,6 +96,7 @@ PREDICTION HEAD:
 - Data augmentation (as before)
 
 **With 11,735 training samples:**
+
 - Samples per parameter: ~65 (healthy ratio)
 - Should avoid overfitting with proper regularization
 
@@ -115,6 +119,7 @@ Augmentation: Time jitter, amplitude scaling, channel dropout, Gaussian noise
 **Realistic Target:** R² > 0.30
 
 **Why this should work better:**
+
 1. Explicit frequency features reduce learning difficulty
 2. Multi-scale temporal features capture oscillations better
 3. More parameters = more capacity for complex patterns
@@ -145,20 +150,24 @@ Still quite fast! Larger model but still reasonable on RTX 3080.
 If R² < 0.25 after this:
 
 **Option A: Subject-Specific Fine-Tuning**
+
 - Train global model on all subjects
 - Fine-tune last 2 layers per-subject on their data
 - Test with leave-one-subject-out cross-validation
 
 **Option B: Multi-Task Learning**
+
 - Predict PAC + theta power + gamma power simultaneously
 - Auxiliary tasks provide additional signal
 
 **Option C: Ensemble Model**
+
 - Train 5 models with different random seeds
 - Average predictions
 - Reduces variance
 
 **Option D: Accept Lower R² & Focus on Closed-Loop**
+
 - Use current best model (R² ~0.15-0.25)
 - Demonstrate closed-loop control concept
 - Discuss limitations honestly in paper

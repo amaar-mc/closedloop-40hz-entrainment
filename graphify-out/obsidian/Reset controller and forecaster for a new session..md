@@ -10,8 +10,9 @@ tags:
 # Reset controller and forecaster for a new session.
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
 - [[reset()_58]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

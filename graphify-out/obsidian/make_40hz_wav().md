@@ -10,8 +10,9 @@ tags:
 # make_40hz_wav()
 
 ## Connections
+
 - [[One second of 40 Hz click-train, loopable WAV bytes for st.audio.]] - `rationale_for` [EXTRACTED]
 - [[caregiver_app.py]] - `contains` [EXTRACTED]
 - [[render_session()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

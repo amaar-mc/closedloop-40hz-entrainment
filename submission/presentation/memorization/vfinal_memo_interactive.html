@@ -1,502 +1,640 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>9-Beat Spine — CSEF Memorization</title>
-<style>
-  :root {
-    --bg: #0d0d12;
-    --surface: #16161f;
-    --surface2: #1e1e2a;
-    --border: #2a2a38;
-    --text: #e8e8f0;
-    --muted: #7a7a9a;
-    --c1: #4361ee;
-    --c2: #7b2d8b;
-    --c3: #06d6a0;
-    --c4: #f4a261;
-    --c5: #e76f51;
-    --c6: #e9c46a;
-    --c7: #2a9d8f;
-    --c8: #2dc653;
-    --c9: #9d4edd;
-    --active: var(--c1);
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9-Beat Spine — CSEF Memorization</title>
+    <style>
+      :root {
+        --bg: #0d0d12;
+        --surface: #16161f;
+        --surface2: #1e1e2a;
+        --border: #2a2a38;
+        --text: #e8e8f0;
+        --muted: #7a7a9a;
+        --c1: #4361ee;
+        --c2: #7b2d8b;
+        --c3: #06d6a0;
+        --c4: #f4a261;
+        --c5: #e76f51;
+        --c6: #e9c46a;
+        --c7: #2a9d8f;
+        --c8: #2dc653;
+        --c9: #9d4edd;
+        --active: var(--c1);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
 
-  /* ── HEADER ── */
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 24px;
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .logo { font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; }
-  .logo span { color: var(--text); }
-  .controls { display: flex; align-items: center; gap: 10px; }
-  .btn {
-    padding: 6px 14px;
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    background: transparent;
-    color: var(--muted);
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    transition: all 0.15s;
-  }
-  .btn:hover { border-color: var(--text); color: var(--text); }
-  .btn.active { background: var(--active); border-color: var(--active); color: white; }
-  .timer {
-    font-family: 'SF Mono', 'Fira Code', monospace;
-    font-size: 14px;
-    color: var(--muted);
-    background: var(--surface2);
-    padding: 5px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    border: 1px solid var(--border);
-    min-width: 64px;
-    text-align: center;
-    transition: color 0.2s;
-  }
-  .timer.running { color: #2dc653; border-color: #2dc653; }
+      /* ── HEADER ── */
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 24px;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .logo {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+      .logo span {
+        color: var(--text);
+      }
+      .controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .btn {
+        padding: 6px 14px;
+        border-radius: 6px;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        transition: all 0.15s;
+      }
+      .btn:hover {
+        border-color: var(--text);
+        color: var(--text);
+      }
+      .btn.active {
+        background: var(--active);
+        border-color: var(--active);
+        color: white;
+      }
+      .timer {
+        font-family: "SF Mono", "Fira Code", monospace;
+        font-size: 14px;
+        color: var(--muted);
+        background: var(--surface2);
+        padding: 5px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        border: 1px solid var(--border);
+        min-width: 64px;
+        text-align: center;
+        transition: color 0.2s;
+      }
+      .timer.running {
+        color: #2dc653;
+        border-color: #2dc653;
+      }
 
-  /* ── SPINE BAR ── */
-  .spine-bar {
-    display: flex;
-    align-items: center;
-    gap: 0;
-    padding: 16px 24px;
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-  .spine-bar::-webkit-scrollbar { display: none; }
-  .beat-chip {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px 14px;
-    border-radius: 8px;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: all 0.2s;
-    min-width: 72px;
-    flex-shrink: 0;
-  }
-  .beat-chip:hover { background: var(--surface2); }
-  .beat-chip.selected { border-color: var(--beat-color); background: color-mix(in srgb, var(--beat-color) 15%, transparent); }
-  .chip-num { font-size: 10px; font-weight: 700; color: var(--beat-color); letter-spacing: 0.1em; margin-bottom: 3px; }
-  .chip-name { font-size: 11px; font-weight: 600; color: var(--text); letter-spacing: 0.04em; }
-  .chip-time { font-size: 10px; color: var(--muted); margin-top: 2px; }
-  .arrow {
-    color: var(--border);
-    font-size: 16px;
-    padding: 0 4px;
-    flex-shrink: 0;
-    align-self: center;
-  }
+      /* ── SPINE BAR ── */
+      .spine-bar {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        padding: 16px 24px;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+      .spine-bar::-webkit-scrollbar {
+        display: none;
+      }
+      .beat-chip {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 14px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 2px solid transparent;
+        transition: all 0.2s;
+        min-width: 72px;
+        flex-shrink: 0;
+      }
+      .beat-chip:hover {
+        background: var(--surface2);
+      }
+      .beat-chip.selected {
+        border-color: var(--beat-color);
+        background: color-mix(in srgb, var(--beat-color) 15%, transparent);
+      }
+      .chip-num {
+        font-size: 10px;
+        font-weight: 700;
+        color: var(--beat-color);
+        letter-spacing: 0.1em;
+        margin-bottom: 3px;
+      }
+      .chip-name {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--text);
+        letter-spacing: 0.04em;
+      }
+      .chip-time {
+        font-size: 10px;
+        color: var(--muted);
+        margin-top: 2px;
+      }
+      .arrow {
+        color: var(--border);
+        font-size: 16px;
+        padding: 0 4px;
+        flex-shrink: 0;
+        align-self: center;
+      }
 
-  /* ── MAIN ── */
-  main {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 280px;
-    gap: 0;
-    overflow: hidden;
-  }
+      /* ── MAIN ── */
+      main {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 280px;
+        gap: 0;
+        overflow: hidden;
+      }
 
-  /* ── DETAIL PANEL ── */
-  .detail {
-    padding: 32px;
-    overflow-y: auto;
-  }
-  .beat-header {
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-    margin-bottom: 24px;
-  }
-  .beat-num-big {
-    font-size: 48px;
-    font-weight: 800;
-    line-height: 1;
-    color: var(--beat-color);
-    font-variant-numeric: tabular-nums;
-  }
-  .beat-name-big {
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--text);
-  }
-  .beat-timing {
-    margin-left: auto;
-    font-size: 12px;
-    color: var(--muted);
-    background: var(--surface2);
-    padding: 4px 10px;
-    border-radius: 20px;
-  }
+      /* ── DETAIL PANEL ── */
+      .detail {
+        padding: 32px;
+        overflow-y: auto;
+      }
+      .beat-header {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+      .beat-num-big {
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1;
+        color: var(--beat-color);
+        font-variant-numeric: tabular-nums;
+      }
+      .beat-name-big {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--text);
+      }
+      .beat-timing {
+        margin-left: auto;
+        font-size: 12px;
+        color: var(--muted);
+        background: var(--surface2);
+        padding: 4px 10px;
+        border-radius: 20px;
+      }
 
-  .section-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 8px;
-  }
+      .section-label {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
 
-  .unlock-box {
-    background: color-mix(in srgb, var(--beat-color) 12%, var(--surface2));
-    border: 1px solid color-mix(in srgb, var(--beat-color) 40%, transparent);
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-bottom: 24px;
-    position: relative;
-  }
-  .unlock-box .key-icon {
-    font-size: 14px;
-    margin-right: 6px;
-  }
-  .unlock-text {
-    font-size: 16px;
-    font-weight: 600;
-    font-style: italic;
-    color: var(--text);
-    line-height: 1.5;
-  }
+      .unlock-box {
+        background: color-mix(in srgb, var(--beat-color) 12%, var(--surface2));
+        border: 1px solid color-mix(in srgb, var(--beat-color) 40%, transparent);
+        border-radius: 10px;
+        padding: 16px 20px;
+        margin-bottom: 24px;
+        position: relative;
+      }
+      .unlock-box .key-icon {
+        font-size: 14px;
+        margin-right: 6px;
+      }
+      .unlock-text {
+        font-size: 16px;
+        font-weight: 600;
+        font-style: italic;
+        color: var(--text);
+        line-height: 1.5;
+      }
 
-  /* Drill mode blur */
-  .drillable { transition: filter 0.3s, opacity 0.3s; }
-  .drillable.hidden { filter: blur(6px); opacity: 0.3; user-select: none; }
+      /* Drill mode blur */
+      .drillable {
+        transition:
+          filter 0.3s,
+          opacity 0.3s;
+      }
+      .drillable.hidden {
+        filter: blur(6px);
+        opacity: 0.3;
+        user-select: none;
+      }
 
-  .reveal-btn {
-    display: none;
-    padding: 8px 18px;
-    background: color-mix(in srgb, var(--beat-color) 20%, var(--surface2));
-    border: 1px solid color-mix(in srgb, var(--beat-color) 50%, transparent);
-    color: var(--beat-color);
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    width: 100%;
-    transition: all 0.15s;
-  }
-  .reveal-btn:hover { background: color-mix(in srgb, var(--beat-color) 30%, var(--surface2)); }
-  .drill-mode .reveal-btn { display: block; }
+      .reveal-btn {
+        display: none;
+        padding: 8px 18px;
+        background: color-mix(in srgb, var(--beat-color) 20%, var(--surface2));
+        border: 1px solid color-mix(in srgb, var(--beat-color) 50%, transparent);
+        color: var(--beat-color);
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        width: 100%;
+        transition: all 0.15s;
+      }
+      .reveal-btn:hover {
+        background: color-mix(in srgb, var(--beat-color) 30%, var(--surface2));
+      }
+      .drill-mode .reveal-btn {
+        display: block;
+      }
 
-  .card {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px 20px;
-    margin-bottom: 16px;
-  }
+      .card {
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 16px 20px;
+        margin-bottom: 16px;
+      }
 
-  .logic-text {
-    font-size: 14px;
-    color: var(--text);
-    line-height: 1.6;
-  }
+      .logic-text {
+        font-size: 14px;
+        color: var(--text);
+        line-height: 1.6;
+      }
 
-  .flow-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .flow-list li {
-    font-size: 13px;
-    color: var(--text);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    padding: 4px 10px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-  .flow-list li::before { content: '→'; color: var(--beat-color); font-size: 11px; }
-  .flow-list li:first-child::before { content: ''; }
+      .flow-list {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .flow-list li {
+        font-size: 13px;
+        color: var(--text);
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 4px 10px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .flow-list li::before {
+        content: "→";
+        color: var(--beat-color);
+        font-size: 11px;
+      }
+      .flow-list li:first-child::before {
+        content: "";
+      }
 
-  .numbers-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .num-chip {
-    background: color-mix(in srgb, var(--beat-color) 15%, var(--surface));
-    border: 1px solid color-mix(in srgb, var(--beat-color) 30%, transparent);
-    border-radius: 8px;
-    padding: 8px 12px;
-    text-align: center;
-    min-width: 70px;
-  }
-  .num-val {
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--beat-color);
-    font-variant-numeric: tabular-nums;
-    display: block;
-  }
-  .num-desc {
-    font-size: 10px;
-    color: var(--muted);
-    margin-top: 2px;
-    display: block;
-  }
+      .numbers-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .num-chip {
+        background: color-mix(in srgb, var(--beat-color) 15%, var(--surface));
+        border: 1px solid color-mix(in srgb, var(--beat-color) 30%, transparent);
+        border-radius: 8px;
+        padding: 8px 12px;
+        text-align: center;
+        min-width: 70px;
+      }
+      .num-val {
+        font-size: 16px;
+        font-weight: 800;
+        color: var(--beat-color);
+        font-variant-numeric: tabular-nums;
+        display: block;
+      }
+      .num-desc {
+        font-size: 10px;
+        color: var(--muted);
+        margin-top: 2px;
+        display: block;
+      }
 
-  .trick-box {
-    margin-top: 8px;
-    padding: 10px 14px;
-    background: var(--surface);
-    border-left: 3px solid var(--beat-color);
-    border-radius: 0 6px 6px 0;
-    font-size: 12px;
-    color: var(--muted);
-    font-style: italic;
-  }
-  .trick-label { color: var(--beat-color); font-weight: 700; font-style: normal; }
+      .trick-box {
+        margin-top: 8px;
+        padding: 10px 14px;
+        background: var(--surface);
+        border-left: 3px solid var(--beat-color);
+        border-radius: 0 6px 6px 0;
+        font-size: 12px;
+        color: var(--muted);
+        font-style: italic;
+      }
+      .trick-label {
+        color: var(--beat-color);
+        font-weight: 700;
+        font-style: normal;
+      }
 
-  .script-box {
-    font-size: 13px;
-    color: var(--text);
-    line-height: 1.7;
-    white-space: pre-wrap;
-  }
-  .script-box em {
-    color: var(--muted);
-    font-style: normal;
-    font-size: 12px;
-    font-weight: 600;
-  }
+      .script-box {
+        font-size: 13px;
+        color: var(--text);
+        line-height: 1.7;
+        white-space: pre-wrap;
+      }
+      .script-box em {
+        color: var(--muted);
+        font-style: normal;
+        font-size: 12px;
+        font-weight: 600;
+      }
 
-  /* ── NAV BUTTONS ── */
-  .beat-nav {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 24px;
-    gap: 12px;
-  }
-  .nav-btn {
-    flex: 1;
-    padding: 10px 18px;
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    color: var(--text);
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-    transition: all 0.15s;
-    text-align: center;
-  }
-  .nav-btn:hover { background: var(--surface); border-color: var(--text); }
-  .nav-btn:disabled { opacity: 0.3; cursor: not-allowed; }
-  .nav-btn.primary {
-    background: color-mix(in srgb, var(--beat-color) 20%, var(--surface2));
-    border-color: var(--beat-color);
-    color: var(--beat-color);
-  }
+      /* ── NAV BUTTONS ── */
+      .beat-nav {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 24px;
+        gap: 12px;
+      }
+      .nav-btn {
+        flex: 1;
+        padding: 10px 18px;
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        color: var(--text);
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
+        transition: all 0.15s;
+        text-align: center;
+      }
+      .nav-btn:hover {
+        background: var(--surface);
+        border-color: var(--text);
+      }
+      .nav-btn:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+      .nav-btn.primary {
+        background: color-mix(in srgb, var(--beat-color) 20%, var(--surface2));
+        border-color: var(--beat-color);
+        color: var(--beat-color);
+      }
 
-  /* ── SIDEBAR ── */
-  .sidebar {
-    border-left: 1px solid var(--border);
-    background: var(--surface);
-    overflow-y: auto;
-    padding: 24px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+      /* ── SIDEBAR ── */
+      .sidebar {
+        border-left: 1px solid var(--border);
+        background: var(--surface);
+        overflow-y: auto;
+        padding: 24px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
 
-  .sidebar-section { }
-  .sidebar-title {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 12px;
-  }
+      .sidebar-section {
+      }
+      .sidebar-title {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 12px;
+      }
 
-  /* Spine summary in sidebar */
-  .spine-summary { display: flex; flex-direction: column; gap: 4px; }
-  .spine-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 5px 8px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background 0.15s;
-    font-size: 12px;
-  }
-  .spine-row:hover { background: var(--surface2); }
-  .spine-row.active { background: color-mix(in srgb, var(--beat-color) 15%, var(--surface2)); }
-  .spine-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--beat-color);
-    flex-shrink: 0;
-  }
-  .spine-label { color: var(--text); font-weight: 600; }
-  .spine-anchor { color: var(--muted); font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      /* Spine summary in sidebar */
+      .spine-summary {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .spine-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 5px 8px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.15s;
+        font-size: 12px;
+      }
+      .spine-row:hover {
+        background: var(--surface2);
+      }
+      .spine-row.active {
+        background: color-mix(in srgb, var(--beat-color) 15%, var(--surface2));
+      }
+      .spine-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--beat-color);
+        flex-shrink: 0;
+      }
+      .spine-label {
+        color: var(--text);
+        font-weight: 600;
+      }
+      .spine-anchor {
+        color: var(--muted);
+        font-size: 11px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
 
-  /* Poster map */
-  .poster-map {
-    background: var(--surface2);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 12px;
-    font-size: 11px;
-  }
-  .poster-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 4px;
-    margin-top: 8px;
-  }
-  .poster-col {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .poster-cell {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 5px 7px;
-    font-size: 10px;
-    color: var(--muted);
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
-  .poster-cell.active {
-    background: color-mix(in srgb, var(--beat-color) 20%, var(--surface));
-    border-color: var(--beat-color);
-    color: var(--text);
-  }
-  .poster-col-label {
-    font-size: 9px;
-    color: var(--muted);
-    text-align: center;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 2px;
-  }
+      /* Poster map */
+      .poster-map {
+        background: var(--surface2);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 12px;
+        font-size: 11px;
+      }
+      .poster-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 4px;
+        margin-top: 8px;
+      }
+      .poster-col {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      .poster-cell {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        padding: 5px 7px;
+        font-size: 10px;
+        color: var(--muted);
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .poster-cell.active {
+        background: color-mix(in srgb, var(--beat-color) 20%, var(--surface));
+        border-color: var(--beat-color);
+        color: var(--text);
+      }
+      .poster-col-label {
+        font-size: 9px;
+        color: var(--muted);
+        text-align: center;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 2px;
+      }
 
-  /* Progress bar */
-  .progress-bar {
-    height: 3px;
-    background: var(--border);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  .progress-fill {
-    height: 100%;
-    background: var(--beat-color);
-    transition: width 0.3s ease, background 0.3s;
-  }
+      /* Progress bar */
+      .progress-bar {
+        height: 3px;
+        background: var(--border);
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      .progress-fill {
+        height: 100%;
+        background: var(--beat-color);
+        transition:
+          width 0.3s ease,
+          background 0.3s;
+      }
 
-  /* drill overlay */
-  .drill-stage-indicator {
-    display: none;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-  .drill-mode .drill-stage-indicator { display: flex; }
-  .stage-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--border);
-    transition: background 0.2s;
-  }
-  .stage-dot.done { background: var(--beat-color); }
-  .stage-label { font-size: 11px; color: var(--muted); }
-</style>
-</head>
-<body>
+      /* drill overlay */
+      .drill-stage-indicator {
+        display: none;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+      .drill-mode .drill-stage-indicator {
+        display: flex;
+      }
+      .stage-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--border);
+        transition: background 0.2s;
+      }
+      .stage-dot.done {
+        background: var(--beat-color);
+      }
+      .stage-label {
+        font-size: 11px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">CSEF 2026 &nbsp;·&nbsp; <span>9-Beat Spine</span></div>
+      <div class="controls">
+        <button
+          class="btn active"
+          id="btn-explore"
+          onclick="setMode('explore')"
+        >
+          Explore
+        </button>
+        <button class="btn" id="btn-drill" onclick="setMode('drill')">
+          Drill
+        </button>
+        <div class="timer" id="timer" onclick="toggleTimer()">0:00</div>
+      </div>
+    </header>
 
-<header>
-  <div class="logo">CSEF 2026 &nbsp;·&nbsp; <span>9-Beat Spine</span></div>
-  <div class="controls">
-    <button class="btn active" id="btn-explore" onclick="setMode('explore')">Explore</button>
-    <button class="btn" id="btn-drill" onclick="setMode('drill')">Drill</button>
-    <div class="timer" id="timer" onclick="toggleTimer()">0:00</div>
-  </div>
-</header>
+    <div class="spine-bar" id="spine-bar"></div>
 
-<div class="spine-bar" id="spine-bar"></div>
+    <main>
+      <div class="detail" id="detail"></div>
+      <div class="sidebar" id="sidebar"></div>
+    </main>
 
-<main>
-  <div class="detail" id="detail"></div>
-  <div class="sidebar" id="sidebar"></div>
-</main>
-
-<script>
-const BEATS = [
-  {
-    num: 1, name: 'HOOK', color: 'var(--c1)', time: '45s',
-    poster: 'Introduction + Background (top left)',
-    unlock: "Alzheimer's affects more than 55 million people worldwide, and there is still no cure.",
-    logic: "Disease is massive. Mechanism is scientifically real — not hype. Establish that this is a serious problem with proven biology, not a speculative idea.",
-    flow: ["Scale of disease", "Therapy type: 40Hz auditory", "Iaccarino 2016 / Tsai lab MIT", "40–50% amyloid reduction in mice", "Murdock 2024 glymphatic mechanism", "Chan 2025 long-term human safety", '"The mechanism is real."'],
-    numbers: [
-      { val: '55M', desc: 'people worldwide' },
-      { val: '2016', desc: 'Iaccarino (MIT)' },
-      { val: '40–50%', desc: 'amyloid reduction' },
-      { val: '2024', desc: 'Murdock glymphatic' },
-      { val: '2025', desc: 'Chan safety' },
-    ],
-    trick: 'Years count up: 2016 → 2024 → 2025. Disease and reduction are both round numbers.',
-    script: `Hi, I'm Amaar. Thanks for coming by. Let me walk you through this.
+    <script>
+      const BEATS = [
+        {
+          num: 1,
+          name: "HOOK",
+          color: "var(--c1)",
+          time: "45s",
+          poster: "Introduction + Background (top left)",
+          unlock:
+            "Alzheimer's affects more than 55 million people worldwide, and there is still no cure.",
+          logic:
+            "Disease is massive. Mechanism is scientifically real — not hype. Establish that this is a serious problem with proven biology, not a speculative idea.",
+          flow: [
+            "Scale of disease",
+            "Therapy type: 40Hz auditory",
+            "Iaccarino 2016 / Tsai lab MIT",
+            "40–50% amyloid reduction in mice",
+            "Murdock 2024 glymphatic mechanism",
+            "Chan 2025 long-term human safety",
+            '"The mechanism is real."',
+          ],
+          numbers: [
+            { val: "55M", desc: "people worldwide" },
+            { val: "2016", desc: "Iaccarino (MIT)" },
+            { val: "40–50%", desc: "amyloid reduction" },
+            { val: "2024", desc: "Murdock glymphatic" },
+            { val: "2025", desc: "Chan safety" },
+          ],
+          trick:
+            "Years count up: 2016 → 2024 → 2025. Disease and reduction are both round numbers.",
+          script: `Hi, I'm Amaar. Thanks for coming by. Let me walk you through this.
 
 [Point to Introduction, top left.]
 
-Alzheimer's affects more than 55 million people worldwide and there is still no cure. One of the most promising non-drug approaches is 40 hertz auditory stimulation. The idea goes back to work by Tsai's lab at MIT in 2016. Iaccarino and colleagues showed that pulsing sensory input at 40 hertz activates microglia and reduces amyloid plaque load in mouse models by about 40 to 50 percent. Since then, Murdock 2024 identified a glymphatic clearance mechanism, and Chan 2025 showed long-term safety in human trials. The mechanism is real.`
-  },
-  {
-    num: 2, name: 'GAP', color: 'var(--c2)', time: '40s',
-    poster: 'Fig 3: Fixed vs Adaptive + Materials',
-    unlock: "But every clinical protocol delivers this therapy the same way.",
-    logic: "The therapy exists but the delivery is primitive. Fixed schedule for everyone. Half the patients habituate — the system can't detect this, let alone predict it.",
-    flow: ["Fixed schedule: 40s on, 20s off, every patient", "Half habituate (Thompson & Spencer 1966)", "Other half get stronger", "Fixed schedule can't serve both", "No existing system predicts this", "Dataset: OpenNeuro ds005048, Lahijanian 2024"],
-    numbers: [
-      { val: '40s on', desc: '20s off protocol' },
-      { val: '35', desc: 'subjects (ds005048)' },
-      { val: '7', desc: 'frontal channels' },
-      { val: '250Hz', desc: 'sampling rate' },
-      { val: '1966', desc: 'Thompson & Spencer' },
-    ],
-    trick: '"35 patients, 7 channels, 250 Hz" — say it like a rhythm.',
-    script: `[Point down to Figure 3: Fixed vs Adaptive Stimulation Scheduling.]
+Alzheimer's affects more than 55 million people worldwide and there is still no cure. One of the most promising non-drug approaches is 40 hertz auditory stimulation. The idea goes back to work by Tsai's lab at MIT in 2016. Iaccarino and colleagues showed that pulsing sensory input at 40 hertz activates microglia and reduces amyloid plaque load in mouse models by about 40 to 50 percent. Since then, Murdock 2024 identified a glymphatic clearance mechanism, and Chan 2025 showed long-term safety in human trials. The mechanism is real.`,
+        },
+        {
+          num: 2,
+          name: "GAP",
+          color: "var(--c2)",
+          time: "40s",
+          poster: "Fig 3: Fixed vs Adaptive + Materials",
+          unlock:
+            "But every clinical protocol delivers this therapy the same way.",
+          logic:
+            "The therapy exists but the delivery is primitive. Fixed schedule for everyone. Half the patients habituate — the system can't detect this, let alone predict it.",
+          flow: [
+            "Fixed schedule: 40s on, 20s off, every patient",
+            "Half habituate (Thompson & Spencer 1966)",
+            "Other half get stronger",
+            "Fixed schedule can't serve both",
+            "No existing system predicts this",
+            "Dataset: OpenNeuro ds005048, Lahijanian 2024",
+          ],
+          numbers: [
+            { val: "40s on", desc: "20s off protocol" },
+            { val: "35", desc: "subjects (ds005048)" },
+            { val: "7", desc: "frontal channels" },
+            { val: "250Hz", desc: "sampling rate" },
+            { val: "1966", desc: "Thompson & Spencer" },
+          ],
+          trick: '"35 patients, 7 channels, 250 Hz" — say it like a rhythm.',
+          script: `[Point down to Figure 3: Fixed vs Adaptive Stimulation Scheduling.]
 
 But every clinical protocol delivers this therapy the same way. Forty seconds on, twenty off, cycling for an hour. Same schedule, every patient, regardless of how the brain is actually responding.
 
@@ -504,120 +642,189 @@ When I analyzed EEG from 35 elderly dementia patients, I found that roughly half
 
 [Move to Materials and dataset overview figure.]
 
-The dataset is OpenNeuro ds005048, published by Lahijanian 2024. Thirty-five subjects, seven frontal EEG channels at 250 hertz, subject-level splits with zero overlap.`
-  },
-  {
-    num: 3, name: 'BIOMARKER', color: 'var(--c3)', time: '30s',
-    poster: 'System Architecture (pause before Stage 1)',
-    unlock: "Before I walk through the system — everything here is built around one biomarker: phase-amplitude coupling, PAC.",
-    logic: "Ground the judge in the single signal the entire system tracks and optimizes. If they don't understand PAC, nothing downstream lands.",
-    flow: ["Name PAC (phase-amplitude coupling)", "Define: 40Hz gamma amplitude locked to theta phase", "High PAC = brain entrained, therapy landing", "Low PAC = circuit gone quiet, therapy not landing", '"This is the only number that matters"'],
-    numbers: [
-      { val: '40Hz', desc: 'gamma amplitude' },
-      { val: '4–8Hz', desc: 'theta phase' },
-      { val: 'High', desc: 'entrained ✓' },
-      { val: 'Low', desc: 'drifted ✗' },
-    ],
-    trick: '"Gamma locked to theta." One phrase. Always the same.',
-    script: `[Move to System Architecture. Pause. Do not point to a stage yet.]
+The dataset is OpenNeuro ds005048, published by Lahijanian 2024. Thirty-five subjects, seven frontal EEG channels at 250 hertz, subject-level splits with zero overlap.`,
+        },
+        {
+          num: 3,
+          name: "BIOMARKER",
+          color: "var(--c3)",
+          time: "30s",
+          poster: "System Architecture (pause before Stage 1)",
+          unlock:
+            "Before I walk through the system — everything here is built around one biomarker: phase-amplitude coupling, PAC.",
+          logic:
+            "Ground the judge in the single signal the entire system tracks and optimizes. If they don't understand PAC, nothing downstream lands.",
+          flow: [
+            "Name PAC (phase-amplitude coupling)",
+            "Define: 40Hz gamma amplitude locked to theta phase",
+            "High PAC = brain entrained, therapy landing",
+            "Low PAC = circuit gone quiet, therapy not landing",
+            '"This is the only number that matters"',
+          ],
+          numbers: [
+            { val: "40Hz", desc: "gamma amplitude" },
+            { val: "4–8Hz", desc: "theta phase" },
+            { val: "High", desc: "entrained ✓" },
+            { val: "Low", desc: "drifted ✗" },
+          ],
+          trick: '"Gamma locked to theta." One phrase. Always the same.',
+          script: `[Move to System Architecture. Pause. Do not point to a stage yet.]
 
 Before I walk through the system — everything here is built around one biomarker: phase-amplitude coupling, PAC.
 
 PAC measures how tightly 40 hertz gamma amplitude locks to the phase of theta waves, roughly 4 to 8 hertz. When that coupling is strong, the brain is entrained — firing in sync with the stimulus. When PAC drops, the circuit has gone quiet. The therapy is no longer landing.
 
-This is the only number that matters in this system. It is what tells us whether stimulation is working right now, and it is what we need to predict in advance to do something about it before the window closes.`
-  },
-  {
-    num: 4, name: 'CEILING', color: 'var(--c4)', time: '40s',
-    poster: 'Stage 1 table',
-    unlock: "The system runs in two stages.",
-    logic: "I tried the obvious approach — estimate current PAC from EEG — and it failed. But the failure was informative: it told me I was hitting a fundamental data ceiling, not a model weakness.",
-    flow: ["Stage 1: estimate current PAC from raw EEG", "Tested 8 architectures (1.5K to 2M params)", "All converged: R² = 0.287", "Million-param model slightly WORSE (overfitting)", "Diagnosis: data ceiling, not model ceiling", "2s window can't see epoch-level coupling"],
-    numbers: [
-      { val: '8', desc: 'architectures tested' },
-      { val: '~1,500', desc: 'EEGNet params' },
-      { val: '~2M', desc: 'ViT params' },
-      { val: '0.287', desc: 'R² — every single one' },
-      { val: '2s', desc: 'window limit' },
-    ],
-    trick: '"1,500 to 2 million, all equal 0.287." Spread of 3 orders of magnitude, one answer.',
-    script: `[Point to Stage 1.]
+This is the only number that matters in this system. It is what tells us whether stimulation is working right now, and it is what we need to predict in advance to do something about it before the window closes.`,
+        },
+        {
+          num: 4,
+          name: "CEILING",
+          color: "var(--c4)",
+          time: "40s",
+          poster: "Stage 1 table",
+          unlock: "The system runs in two stages.",
+          logic:
+            "I tried the obvious approach — estimate current PAC from EEG — and it failed. But the failure was informative: it told me I was hitting a fundamental data ceiling, not a model weakness.",
+          flow: [
+            "Stage 1: estimate current PAC from raw EEG",
+            "Tested 8 architectures (1.5K to 2M params)",
+            "All converged: R² = 0.287",
+            "Million-param model slightly WORSE (overfitting)",
+            "Diagnosis: data ceiling, not model ceiling",
+            "2s window can't see epoch-level coupling",
+          ],
+          numbers: [
+            { val: "8", desc: "architectures tested" },
+            { val: "~1,500", desc: "EEGNet params" },
+            { val: "~2M", desc: "ViT params" },
+            { val: "0.287", desc: "R² — every single one" },
+            { val: "2s", desc: "window limit" },
+          ],
+          trick:
+            '"1,500 to 2 million, all equal 0.287." Spread of 3 orders of magnitude, one answer.',
+          script: `[Point to Stage 1.]
 
 The system runs in two stages. The first stage estimates current PAC from raw EEG.
 
-To estimate PAC, I tested eight different model configurations, from a small EEGNet with about 1,500 parameters up to a Vision Transformer with around two million. Every single one converged to essentially the same R squared, 0.287. The million-parameter model actually performed slightly worse because of overfitting. That convergence told me I was hitting a data ceiling, not a model ceiling. A two-second EEG window simply does not contain enough information to estimate epoch-level coupling more precisely.`
-  },
-  {
-    num: 5, name: 'PIVOT', color: 'var(--c5)', time: '25s',
-    poster: 'Stage 2 table',
-    unlock: "So I changed the question.",
-    logic: "New question unlocks new architecture. Instead of estimating current PAC better from one snapshot, predict future PAC from a sequence. The causal constraint is structural — the model physically cannot cheat.",
-    flow: ["New question: predict future PAC, not estimate current", "Causal TCN (Temporal Convolutional Network)", "20s history → 5s ahead forecast", "Causal constraint is architectural: left-only padding", "Model physically cannot access future data"],
-    numbers: [
-      { val: '20s', desc: 'history in' },
-      { val: '5s', desc: 'ahead (output)' },
-    ],
-    trick: '"20 in, 5 out."',
-    script: `[Point lower to Stage 2: Temporal Prediction; Causal TCN.]
+To estimate PAC, I tested eight different model configurations, from a small EEGNet with about 1,500 parameters up to a Vision Transformer with around two million. Every single one converged to essentially the same R squared, 0.287. The million-parameter model actually performed slightly worse because of overfitting. That convergence told me I was hitting a data ceiling, not a model ceiling. A two-second EEG window simply does not contain enough information to estimate epoch-level coupling more precisely.`,
+        },
+        {
+          num: 5,
+          name: "PIVOT",
+          color: "var(--c5)",
+          time: "25s",
+          poster: "Stage 2 table",
+          unlock: "So I changed the question.",
+          logic:
+            "New question unlocks new architecture. Instead of estimating current PAC better from one snapshot, predict future PAC from a sequence. The causal constraint is structural — the model physically cannot cheat.",
+          flow: [
+            "New question: predict future PAC, not estimate current",
+            "Causal TCN (Temporal Convolutional Network)",
+            "20s history → 5s ahead forecast",
+            "Causal constraint is architectural: left-only padding",
+            "Model physically cannot access future data",
+          ],
+          numbers: [
+            { val: "20s", desc: "history in" },
+            { val: "5s", desc: "ahead (output)" },
+          ],
+          trick: '"20 in, 5 out."',
+          script: `[Point lower to Stage 2: Temporal Prediction; Causal TCN.]
 
-So I changed the question. Instead of trying to estimate current PAC better from one snapshot, I asked whether I could predict future PAC from a sequence of snapshots. That is the causal temporal convolutional network. It takes twenty seconds of history and forecasts PAC five seconds ahead. The causal constraint is architectural, not just a training rule. The convolutions use left-only padding so the model physically cannot access future data.`
-  },
-  {
-    num: 6, name: 'DISCOVERY', color: 'var(--c6)', time: '35s',
-    poster: 'Feature reduction visual',
-    unlock: "I also made an unexpected discovery.",
-    logic: "Spectral features were memorizing patient anatomy — skull conductivity, electrode impedance — not learning coupling dynamics. Dropping them produced a 30× improvement. The signal was in the dynamics, not the fingerprint.",
-    flow: ["Original: 73 features (61 spectral)", "Test R² ≈ 0 — val-test gap", "Investigation: spectral features encode skull anatomy", "Model memorized patients, not coupling dynamics", "Dropped 61 spectral → kept 12 PAC-trajectory features", "R² jumped: −0.025 → 0.606", "Validated across 5 random seeds"],
-    numbers: [
-      { val: '73', desc: 'original features' },
-      { val: '61', desc: 'spectral (dropped)' },
-      { val: '12', desc: 'features kept' },
-      { val: '−0.025', desc: 'R² before' },
-      { val: '0.606', desc: 'R² after' },
-      { val: '5', desc: 'seeds validated' },
-    ],
-    trick: '"73 minus 61 leaves 12. Negative zero to point six."',
-    script: `[Point to the feature reduction visuals.]
+So I changed the question. Instead of trying to estimate current PAC better from one snapshot, I asked whether I could predict future PAC from a sequence of snapshots. That is the causal temporal convolutional network. It takes twenty seconds of history and forecasts PAC five seconds ahead. The causal constraint is architectural, not just a training rule. The convolutions use left-only padding so the model physically cannot access future data.`,
+        },
+        {
+          num: 6,
+          name: "DISCOVERY",
+          color: "var(--c6)",
+          time: "35s",
+          poster: "Feature reduction visual",
+          unlock: "I also made an unexpected discovery.",
+          logic:
+            "Spectral features were memorizing patient anatomy — skull conductivity, electrode impedance — not learning coupling dynamics. Dropping them produced a 30× improvement. The signal was in the dynamics, not the fingerprint.",
+          flow: [
+            "Original: 73 features (61 spectral)",
+            "Test R² ≈ 0 — val-test gap",
+            "Investigation: spectral features encode skull anatomy",
+            "Model memorized patients, not coupling dynamics",
+            "Dropped 61 spectral → kept 12 PAC-trajectory features",
+            "R² jumped: −0.025 → 0.606",
+            "Validated across 5 random seeds",
+          ],
+          numbers: [
+            { val: "73", desc: "original features" },
+            { val: "61", desc: "spectral (dropped)" },
+            { val: "12", desc: "features kept" },
+            { val: "−0.025", desc: "R² before" },
+            { val: "0.606", desc: "R² after" },
+            { val: "5", desc: "seeds validated" },
+          ],
+          trick: '"73 minus 61 leaves 12. Negative zero to point six."',
+          script: `[Point to the feature reduction visuals.]
 
-I also made an unexpected discovery. My original model used seventy-three features per timestep, including sixty-one spectral power features across the frontal channels. Test R squared was essentially zero. When I investigated the validation-test gap, I realized those spectral features were encoding subject-specific anatomy — skull conductivity and electrode impedance — which let the model memorize individual patients instead of learning generalizable coupling dynamics. When I dropped all sixty-one spectral features and kept only twelve features that track PAC trajectory and stimulation context, test R squared jumped from negative 0.025 to 0.606. I validated across five random seeds. The signal was never in the spectral fingerprint. It was in the dynamics.`
-  },
-  {
-    num: 7, name: 'HORIZON', color: 'var(--c7)', time: '25s',
-    poster: 'Data Analysis — Horizon figure',
-    unlock: "This is where the project holds together.",
-    logic: "5 seconds is the operationally necessary lead time for a controller to act. The TCN is the only method that provides useful prediction at that horizon. Baselines don't just underperform — they fail completely.",
-    flow: ["1–2s horizon: persistence wins (brain barely changes)", "5s horizon: persistence AND Ridge → negative R²", "TCN at 5s: maintains useful prediction", "5s = exactly the lead time a controller needs to act"],
-    numbers: [
-      { val: '1–2s', desc: 'persistence wins' },
-      { val: '5s', desc: 'baselines collapse' },
-      { val: '<0', desc: 'baseline R² at 5s' },
-      { val: '>0', desc: 'TCN R² at 5s' },
-    ],
-    trick: '"1s baselines win. 5s they collapse. TCN holds."',
-    script: `[Move to Data Analysis and point to the horizon figure.]
+I also made an unexpected discovery. My original model used seventy-three features per timestep, including sixty-one spectral power features across the frontal channels. Test R squared was essentially zero. When I investigated the validation-test gap, I realized those spectral features were encoding subject-specific anatomy — skull conductivity and electrode impedance — which let the model memorize individual patients instead of learning generalizable coupling dynamics. When I dropped all sixty-one spectral features and kept only twelve features that track PAC trajectory and stimulation context, test R squared jumped from negative 0.025 to 0.606. I validated across five random seeds. The signal was never in the spectral fingerprint. It was in the dynamics.`,
+        },
+        {
+          num: 7,
+          name: "HORIZON",
+          color: "var(--c7)",
+          time: "25s",
+          poster: "Data Analysis — Horizon figure",
+          unlock: "This is where the project holds together.",
+          logic:
+            "5 seconds is the operationally necessary lead time for a controller to act. The TCN is the only method that provides useful prediction at that horizon. Baselines don't just underperform — they fail completely.",
+          flow: [
+            "1–2s horizon: persistence wins (brain barely changes)",
+            "5s horizon: persistence AND Ridge → negative R²",
+            "TCN at 5s: maintains useful prediction",
+            "5s = exactly the lead time a controller needs to act",
+          ],
+          numbers: [
+            { val: "1–2s", desc: "persistence wins" },
+            { val: "5s", desc: "baselines collapse" },
+            { val: "<0", desc: "baseline R² at 5s" },
+            { val: ">0", desc: "TCN R² at 5s" },
+          ],
+          trick: '"1s baselines win. 5s they collapse. TCN holds."',
+          script: `[Move to Data Analysis and point to the horizon figure.]
 
-This is where the project holds together. At one or two seconds ahead, simple persistence wins because the brain barely changes in that window. But at five seconds out, persistence and Ridge regression both collapse to negative R squared, worse than guessing the average. The TCN is the only method that maintains useful prediction at that horizon. And five seconds is exactly the lead time a controller needs to actually change stimulation state before coupling drops.`
-  },
-  {
-    num: 8, name: 'RESULTS', color: 'var(--c8)', time: '40s',
-    poster: 'Results column (right)',
-    unlock: "I validated by replaying the controller on all 35 patients' real EEG recordings.",
-    logic: "Real data. Large effect sizes. Universal benefit — not an average. Every single patient improved, including the 6 held-out test subjects the model never saw.",
-    flow: ["Replay on all 35 patients' real EEG", "Targeting: 82.6% vs 51.7% (TCN vs Reactive)", "Alignment: 72.1% vs 64.5%", "Hedges' g = 4.47 (targeting), 1.31 (alignment)", "p < 0.001 for both", "91% of oracle (perfect knowledge)", "35/35 patients benefit — universal, not average", "6 held-out test subjects included"],
-    numbers: [
-      { val: '82.6%', desc: 'TCN targeting' },
-      { val: '51.7%', desc: 'Reactive targeting' },
-      { val: 'g=4.47', desc: 'targeting effect' },
-      { val: '72.1%', desc: 'TCN alignment' },
-      { val: '64.5%', desc: 'Reactive alignment' },
-      { val: 'g=1.31', desc: 'alignment effect' },
-      { val: 'p<0.001', desc: 'significance' },
-      { val: '91%', desc: 'of oracle' },
-      { val: '35/35', desc: 'patients benefit' },
-      { val: '6', desc: 'test subjects' },
-    ],
-    trick: 'Two pairs: "83 vs 52, 72 vs 64." Two g\'s: "4.47 and 1.31." Three closers: "91% oracle, 35/35, 6 test."',
-    script: `[Move to Results / Findings. Point to the main controller table.]
+This is where the project holds together. At one or two seconds ahead, simple persistence wins because the brain barely changes in that window. But at five seconds out, persistence and Ridge regression both collapse to negative R squared, worse than guessing the average. The TCN is the only method that maintains useful prediction at that horizon. And five seconds is exactly the lead time a controller needs to actually change stimulation state before coupling drops.`,
+        },
+        {
+          num: 8,
+          name: "RESULTS",
+          color: "var(--c8)",
+          time: "40s",
+          poster: "Results column (right)",
+          unlock:
+            "I validated by replaying the controller on all 35 patients' real EEG recordings.",
+          logic:
+            "Real data. Large effect sizes. Universal benefit — not an average. Every single patient improved, including the 6 held-out test subjects the model never saw.",
+          flow: [
+            "Replay on all 35 patients' real EEG",
+            "Targeting: 82.6% vs 51.7% (TCN vs Reactive)",
+            "Alignment: 72.1% vs 64.5%",
+            "Hedges' g = 4.47 (targeting), 1.31 (alignment)",
+            "p < 0.001 for both",
+            "91% of oracle (perfect knowledge)",
+            "35/35 patients benefit — universal, not average",
+            "6 held-out test subjects included",
+          ],
+          numbers: [
+            { val: "82.6%", desc: "TCN targeting" },
+            { val: "51.7%", desc: "Reactive targeting" },
+            { val: "g=4.47", desc: "targeting effect" },
+            { val: "72.1%", desc: "TCN alignment" },
+            { val: "64.5%", desc: "Reactive alignment" },
+            { val: "g=1.31", desc: "alignment effect" },
+            { val: "p<0.001", desc: "significance" },
+            { val: "91%", desc: "of oracle" },
+            { val: "35/35", desc: "patients benefit" },
+            { val: "6", desc: "test subjects" },
+          ],
+          trick:
+            'Two pairs: "83 vs 52, 72 vs 64." Two g\'s: "4.47 and 1.31." Three closers: "91% oracle, 35/35, 6 test."',
+          script: `[Move to Results / Findings. Point to the main controller table.]
 
 I validated by replaying the controller on all 35 patients' real EEG recordings. The reactive controller catches 51.7 percent of the windows where the brain actually needed stimulation. The predictive TCN catches 82.6 percent. Overall alignment is 72.1 percent versus 64.5 percent for reactive, with a Hedges' g of 1.31 and p less than 0.001. The targeting improvement is a Hedges' g of 4.47, which is a very large effect size. And the system reaches 91 percent of a theoretical oracle that has perfect future knowledge.
 
@@ -627,22 +834,36 @@ Every single one of the 35 patients benefited, including the six held-out test s
 
 [Point to Result 3: Advantage Increases with Fatigue.]
 
-And the advantage actually grows as fatigue worsens, across five severity levels in simulation, which is exactly when personalization matters most clinically.`
-  },
-  {
-    num: 9, name: 'PRODUCT', color: 'var(--c9)', time: '30s',
-    poster: 'Towards Clinical Use (right column)',
-    unlock: "I want to be clear about where this becomes a product.",
-    logic: "This is deployable today on $300 hardware. Be specific, then be honest about the limitation. End with the one-sentence closer.",
-    flow: ["Muse 2 headband — $249, 4 dry electrodes", "Standard headphones, 40Hz AM audio", "Single laptop, <50ms end-to-end latency", "Under $300 total per patient", '"Not a lab instrument"', "Honest limitation: offline replay, not live closed-loop", "Next step: crossover clinical study", "One-sentence closer", '"What would you like me to go deeper on?"'],
-    numbers: [
-      { val: '$249', desc: 'Muse 2 headset' },
-      { val: '4', desc: 'dry electrodes' },
-      { val: '<50ms', desc: 'end-to-end latency' },
-      { val: '<$300', desc: 'per patient total' },
-    ],
-    trick: '"$249 headset, 4 electrodes, 50ms, $300."',
-    script: `[Step back slightly. Optionally hold up the physical Muse 2 headset and headphones.]
+And the advantage actually grows as fatigue worsens, across five severity levels in simulation, which is exactly when personalization matters most clinically.`,
+        },
+        {
+          num: 9,
+          name: "PRODUCT",
+          color: "var(--c9)",
+          time: "30s",
+          poster: "Towards Clinical Use (right column)",
+          unlock: "I want to be clear about where this becomes a product.",
+          logic:
+            "This is deployable today on $300 hardware. Be specific, then be honest about the limitation. End with the one-sentence closer.",
+          flow: [
+            "Muse 2 headband — $249, 4 dry electrodes",
+            "Standard headphones, 40Hz AM audio",
+            "Single laptop, <50ms end-to-end latency",
+            "Under $300 total per patient",
+            '"Not a lab instrument"',
+            "Honest limitation: offline replay, not live closed-loop",
+            "Next step: crossover clinical study",
+            "One-sentence closer",
+            '"What would you like me to go deeper on?"',
+          ],
+          numbers: [
+            { val: "$249", desc: "Muse 2 headset" },
+            { val: "4", desc: "dry electrodes" },
+            { val: "<50ms", desc: "end-to-end latency" },
+            { val: "<$300", desc: "per patient total" },
+          ],
+          trick: '"$249 headset, 4 electrodes, 50ms, $300."',
+          script: `[Step back slightly. Optionally hold up the physical Muse 2 headset and headphones.]
 
 I want to be clear about where this becomes a product. The full pipeline runs in real time on consumer hardware. This is a Muse 2 headband, which is 249 dollars and uses four dry electrodes, paired with standard headphones that deliver the 40 hertz amplitude-modulated audio. Processing runs on a single laptop with under fifty milliseconds end-to-end inference latency. Total cost per patient is under three hundred dollars. This is not a lab instrument. It is a deployable system for a memory care facility or home use.
 
@@ -650,93 +871,103 @@ The honest limitation is that this is still offline replay on recorded EEG, not 
 
 In one sentence: I built a system that predicts when an Alzheimer's patient's brain is about to lose response to 40 hertz therapy, and times stimulation to the moments it actually matters.
 
-What would you like me to go deeper on?`
-  }
-];
+What would you like me to go deeper on?`,
+        },
+      ];
 
-let currentBeat = 0;
-let mode = 'explore'; // 'explore' | 'drill'
-let drillStage = 0; // 0=name only, 1=unlock, 2=details, 3=numbers
-let timerInterval = null;
-let timerSeconds = 0;
-let timerRunning = false;
+      let currentBeat = 0;
+      let mode = "explore"; // 'explore' | 'drill'
+      let drillStage = 0; // 0=name only, 1=unlock, 2=details, 3=numbers
+      let timerInterval = null;
+      let timerSeconds = 0;
+      let timerRunning = false;
 
-function getBeatColor(beat) {
-  return beat.color;
-}
+      function getBeatColor(beat) {
+        return beat.color;
+      }
 
-function setMode(m) {
-  mode = m;
-  drillStage = 0;
-  document.getElementById('btn-explore').classList.toggle('active', m === 'explore');
-  document.getElementById('btn-drill').classList.toggle('active', m === 'drill');
-  renderDetail();
-}
+      function setMode(m) {
+        mode = m;
+        drillStage = 0;
+        document
+          .getElementById("btn-explore")
+          .classList.toggle("active", m === "explore");
+        document
+          .getElementById("btn-drill")
+          .classList.toggle("active", m === "drill");
+        renderDetail();
+      }
 
-function selectBeat(idx) {
-  currentBeat = idx;
-  drillStage = 0;
-  renderAll();
-}
+      function selectBeat(idx) {
+        currentBeat = idx;
+        drillStage = 0;
+        renderAll();
+      }
 
-function advanceDrill() {
-  if (drillStage < 3) {
-    drillStage++;
-    renderDetail();
-  }
-}
+      function advanceDrill() {
+        if (drillStage < 3) {
+          drillStage++;
+          renderDetail();
+        }
+      }
 
-function renderSpineBar() {
-  const bar = document.getElementById('spine-bar');
-  bar.innerHTML = BEATS.map((b, i) => `
-    ${i > 0 ? '<span class="arrow">›</span>' : ''}
-    <div class="beat-chip ${i === currentBeat ? 'selected' : ''}"
+      function renderSpineBar() {
+        const bar = document.getElementById("spine-bar");
+        bar.innerHTML = BEATS.map(
+          (b, i) => `
+    ${i > 0 ? '<span class="arrow">›</span>' : ""}
+    <div class="beat-chip ${i === currentBeat ? "selected" : ""}"
          style="--beat-color: ${b.color}"
          onclick="selectBeat(${i})">
       <span class="chip-num">BEAT ${b.num}</span>
       <span class="chip-name">${b.name}</span>
       <span class="chip-time">${b.time}</span>
     </div>
-  `).join('');
-}
+  `,
+        ).join("");
+      }
 
-function renderDetail() {
-  const b = BEATS[currentBeat];
-  const detail = document.getElementById('detail');
-  const isDrill = mode === 'drill';
+      function renderDetail() {
+        const b = BEATS[currentBeat];
+        const detail = document.getElementById("detail");
+        const isDrill = mode === "drill";
 
-  const unlockHidden = isDrill && drillStage < 1;
-  const detailHidden = isDrill && drillStage < 2;
-  const numbersHidden = isDrill && drillStage < 3;
+        const unlockHidden = isDrill && drillStage < 1;
+        const detailHidden = isDrill && drillStage < 2;
+        const numbersHidden = isDrill && drillStage < 3;
 
-  const stageLabels = ['Name', 'Unlock', 'Details', 'Numbers'];
+        const stageLabels = ["Name", "Unlock", "Details", "Numbers"];
 
-  detail.style.setProperty('--beat-color', b.color);
-  detail.innerHTML = `
+        detail.style.setProperty("--beat-color", b.color);
+        detail.innerHTML = `
     <div class="beat-header">
       <div class="beat-num-big">${b.num}</div>
       <div class="beat-name-big">${b.name}</div>
-      <div class="beat-timing">⏱ ${b.time} · ${b.poster.split(' ')[0]}…</div>
+      <div class="beat-timing">⏱ ${b.time} · ${b.poster.split(" ")[0]}…</div>
     </div>
 
     <div class="progress-bar" style="margin-bottom: 20px;">
       <div class="progress-fill" style="width: ${((currentBeat + 1) / BEATS.length) * 100}%; background: ${b.color};"></div>
     </div>
 
-    ${isDrill ? `
+    ${
+      isDrill
+        ? `
     <div class="drill-stage-indicator">
-      ${stageLabels.map((l, i) => `<div class="stage-dot ${i <= drillStage ? 'done' : ''}"></div>`).join('')}
-      <span class="stage-label">${drillStage === 0 ? 'Say the unlock phrase...' : drillStage === 1 ? 'Say the flow...' : drillStage === 2 ? 'Say the numbers...' : 'Done — advance to next beat'}</span>
-    </div>` : ''}
+      ${stageLabels.map((l, i) => `<div class="stage-dot ${i <= drillStage ? "done" : ""}"></div>`).join("")}
+      <span class="stage-label">${drillStage === 0 ? "Say the unlock phrase..." : drillStage === 1 ? "Say the flow..." : drillStage === 2 ? "Say the numbers..." : "Done — advance to next beat"}</span>
+    </div>`
+        : ""
+    }
 
     <div class="section-label">🔑 Unlock Phrase</div>
-    ${isDrill && drillStage === 0 ? `<button class="reveal-btn" onclick="advanceDrill()">↓ Reveal Unlock Phrase</button>` : ''}
-    <div class="unlock-box drillable ${unlockHidden ? 'hidden' : ''}" style="--beat-color: ${b.color}">
+    ${isDrill && drillStage === 0 ? `<button class="reveal-btn" onclick="advanceDrill()">↓ Reveal Unlock Phrase</button>` : ""}
+    <div class="unlock-box drillable ${unlockHidden ? "hidden" : ""}" style="--beat-color: ${b.color}">
       <span class="unlock-text">"${b.unlock}"</span>
     </div>
 
-    ${isDrill && drillStage === 1 ? `<button class="reveal-btn" onclick="advanceDrill()">↓ Reveal Flow & Logic</button>` : ''}
-    <div class="drillable ${detailHidden ? 'hidden' : ''}">
+    ${isDrill && drillStage === 1 ? `<button class="reveal-btn" onclick="advanceDrill()">↓ Reveal Flow & Logic</button>` : ""}
+    <div class="drillable ${detailHidden ? "hidden" : ""}">
       <div class="section-label" style="margin-top: 8px;">Logic</div>
       <div class="card">
         <div class="logic-text">${b.logic}</div>
@@ -745,7 +976,7 @@ function renderDetail() {
       <div class="section-label">Flow</div>
       <div class="card">
         <ul class="flow-list">
-          ${b.flow.map(f => `<li>${f}</li>`).join('')}
+          ${b.flow.map((f) => `<li>${f}</li>`).join("")}
         </ul>
       </div>
 
@@ -757,52 +988,77 @@ function renderDetail() {
       </details>
     </div>
 
-    ${isDrill && drillStage === 2 ? `<button class="reveal-btn" onclick="advanceDrill()">↓ Reveal Numbers</button>` : ''}
-    <div class="drillable ${numbersHidden ? 'hidden' : ''}">
+    ${isDrill && drillStage === 2 ? `<button class="reveal-btn" onclick="advanceDrill()">↓ Reveal Numbers</button>` : ""}
+    <div class="drillable ${numbersHidden ? "hidden" : ""}">
       <div class="section-label" style="margin-top: 16px;">Number Anchors</div>
       <div class="card">
         <div class="numbers-grid">
-          ${b.numbers.map(n => `
+          ${b.numbers
+            .map(
+              (n) => `
             <div class="num-chip" style="--beat-color: ${b.color}">
               <span class="num-val">${n.val}</span>
               <span class="num-desc">${n.desc}</span>
             </div>
-          `).join('')}
+          `,
+            )
+            .join("")}
         </div>
         <div class="trick-box"><span class="trick-label">Memory trick: </span>${b.trick}</div>
       </div>
     </div>
 
     <div class="beat-nav">
-      <button class="nav-btn" onclick="selectBeat(${currentBeat - 1})" ${currentBeat === 0 ? 'disabled' : ''}>
-        ← Beat ${currentBeat > 0 ? BEATS[currentBeat-1].num : ''} ${currentBeat > 0 ? BEATS[currentBeat-1].name : ''}
+      <button class="nav-btn" onclick="selectBeat(${currentBeat - 1})" ${currentBeat === 0 ? "disabled" : ""}>
+        ← Beat ${currentBeat > 0 ? BEATS[currentBeat - 1].num : ""} ${currentBeat > 0 ? BEATS[currentBeat - 1].name : ""}
       </button>
-      <button class="nav-btn primary" onclick="selectBeat(${currentBeat + 1})" ${currentBeat === BEATS.length - 1 ? 'disabled' : ''}>
-        Beat ${currentBeat < BEATS.length-1 ? BEATS[currentBeat+1].num : ''} ${currentBeat < BEATS.length-1 ? BEATS[currentBeat+1].name : ''} →
+      <button class="nav-btn primary" onclick="selectBeat(${currentBeat + 1})" ${currentBeat === BEATS.length - 1 ? "disabled" : ""}>
+        Beat ${currentBeat < BEATS.length - 1 ? BEATS[currentBeat + 1].num : ""} ${currentBeat < BEATS.length - 1 ? BEATS[currentBeat + 1].name : ""} →
       </button>
     </div>
   `;
-}
+      }
 
-function renderSidebar() {
-  const b = BEATS[currentBeat];
-  const sidebar = document.getElementById('sidebar');
+      function renderSidebar() {
+        const b = BEATS[currentBeat];
+        const sidebar = document.getElementById("sidebar");
 
-  const posterRegions = {
-    left: ['B1: HOOK\nIntroduction', 'B2: GAP\nFig 3 + Materials', ''],
-    center: ['B3: BIOMARKER\nBefore Stage 1', 'B4: CEILING\nStage 1 table', 'B5: PIVOT\nStage 2 table', 'B6: DISCOVERY\nFeature reduction', 'B7: HORIZON\nData Analysis'],
-    right: ['B8: RESULTS\nController table', 'B9: PRODUCT\nClinical Use', '']
-  };
+        const posterRegions = {
+          left: ["B1: HOOK\nIntroduction", "B2: GAP\nFig 3 + Materials", ""],
+          center: [
+            "B3: BIOMARKER\nBefore Stage 1",
+            "B4: CEILING\nStage 1 table",
+            "B5: PIVOT\nStage 2 table",
+            "B6: DISCOVERY\nFeature reduction",
+            "B7: HORIZON\nData Analysis",
+          ],
+          right: [
+            "B8: RESULTS\nController table",
+            "B9: PRODUCT\nClinical Use",
+            "",
+          ],
+        };
 
-  const beatToRegion = { 0:'left', 1:'left', 2:'center', 3:'center', 4:'center', 5:'center', 6:'center', 7:'right', 8:'right' };
-  const currentRegion = beatToRegion[currentBeat];
+        const beatToRegion = {
+          0: "left",
+          1: "left",
+          2: "center",
+          3: "center",
+          4: "center",
+          5: "center",
+          6: "center",
+          7: "right",
+          8: "right",
+        };
+        const currentRegion = beatToRegion[currentBeat];
 
-  sidebar.innerHTML = `
+        sidebar.innerHTML = `
     <div class="sidebar-section">
       <div class="sidebar-title">Spine at a glance</div>
       <div class="spine-summary">
-        ${BEATS.map((bb, i) => `
-          <div class="spine-row ${i === currentBeat ? 'active' : ''}"
+        ${BEATS.map(
+          (bb, i) => `
+          <div class="spine-row ${i === currentBeat ? "active" : ""}"
                style="--beat-color: ${bb.color}"
                onclick="selectBeat(${i})">
             <div class="spine-dot"></div>
@@ -811,7 +1067,8 @@ function renderSidebar() {
               <div class="spine-anchor">${bb.time} · ${bb.unlock.substring(0, 35)}…</div>
             </div>
           </div>
-        `).join('')}
+        `,
+        ).join("")}
       </div>
     </div>
 
@@ -822,15 +1079,15 @@ function renderSidebar() {
         <div class="poster-grid">
           <div class="poster-col">
             <div class="poster-col-label">Left</div>
-            <div class="poster-cell ${currentRegion === 'left' ? 'active' : ''}" style="--beat-color: ${b.color}">B1–2<br>Intro/Gap</div>
+            <div class="poster-cell ${currentRegion === "left" ? "active" : ""}" style="--beat-color: ${b.color}">B1–2<br>Intro/Gap</div>
           </div>
           <div class="poster-col">
             <div class="poster-col-label">Center</div>
-            <div class="poster-cell ${currentRegion === 'center' ? 'active' : ''}" style="--beat-color: ${b.color}">B3–7<br>Technical</div>
+            <div class="poster-cell ${currentRegion === "center" ? "active" : ""}" style="--beat-color: ${b.color}">B3–7<br>Technical</div>
           </div>
           <div class="poster-col">
             <div class="poster-col-label">Right</div>
-            <div class="poster-cell ${currentRegion === 'right' ? 'active' : ''}" style="--beat-color: ${b.color}">B8–9<br>Results</div>
+            <div class="poster-cell ${currentRegion === "right" ? "active" : ""}" style="--beat-color: ${b.color}">B8–9<br>Results</div>
           </div>
         </div>
       </div>
@@ -850,45 +1107,57 @@ function renderSidebar() {
       </div>
     </div>
   `;
-}
+      }
 
-function renderAll() {
-  renderSpineBar();
-  renderDetail();
-  renderSidebar();
-}
+      function renderAll() {
+        renderSpineBar();
+        renderDetail();
+        renderSidebar();
+      }
 
-function toggleTimer() {
-  timerRunning = !timerRunning;
-  const el = document.getElementById('timer');
-  if (timerRunning) {
-    el.classList.add('running');
-    timerInterval = setInterval(() => {
-      timerSeconds++;
-      const m = Math.floor(timerSeconds / 60);
-      const s = timerSeconds % 60;
-      el.textContent = `${m}:${s.toString().padStart(2,'0')}`;
-    }, 1000);
-  } else {
-    clearInterval(timerInterval);
-    el.classList.remove('running');
-    if (timerSeconds > 0) {
-      timerSeconds = 0;
-      el.textContent = '0:00';
-    }
-  }
-}
+      function toggleTimer() {
+        timerRunning = !timerRunning;
+        const el = document.getElementById("timer");
+        if (timerRunning) {
+          el.classList.add("running");
+          timerInterval = setInterval(() => {
+            timerSeconds++;
+            const m = Math.floor(timerSeconds / 60);
+            const s = timerSeconds % 60;
+            el.textContent = `${m}:${s.toString().padStart(2, "0")}`;
+          }, 1000);
+        } else {
+          clearInterval(timerInterval);
+          el.classList.remove("running");
+          if (timerSeconds > 0) {
+            timerSeconds = 0;
+            el.textContent = "0:00";
+          }
+        }
+      }
 
-document.addEventListener('keydown', e => {
-  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-  if (e.key === 'ArrowRight' && currentBeat < BEATS.length - 1) { selectBeat(currentBeat + 1); }
-  if (e.key === 'ArrowLeft' && currentBeat > 0) { selectBeat(currentBeat - 1); }
-  if (e.key === ' ' && mode === 'drill') { e.preventDefault(); advanceDrill(); }
-  if (e.key === 'd' || e.key === 'D') { setMode(mode === 'drill' ? 'explore' : 'drill'); }
-  if (e.key === 't' || e.key === 'T') { toggleTimer(); }
-});
+      document.addEventListener("keydown", (e) => {
+        if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")
+          return;
+        if (e.key === "ArrowRight" && currentBeat < BEATS.length - 1) {
+          selectBeat(currentBeat + 1);
+        }
+        if (e.key === "ArrowLeft" && currentBeat > 0) {
+          selectBeat(currentBeat - 1);
+        }
+        if (e.key === " " && mode === "drill") {
+          e.preventDefault();
+          advanceDrill();
+        }
+        if (e.key === "d" || e.key === "D") {
+          setMode(mode === "drill" ? "explore" : "drill");
+        }
+        if (e.key === "t" || e.key === "T") {
+          toggleTimer();
+        }
+      });
 
-renderAll();
-</script>
-</body>
+      renderAll();
+    </script>
+  </body>
 </html>

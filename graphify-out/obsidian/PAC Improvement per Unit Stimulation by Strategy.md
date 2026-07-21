@@ -9,6 +9,7 @@ tags:
 # PAC Improvement per Unit Stimulation by Strategy
 
 ## Connections
+
 - [[PAC by Strategy and Backend (FixedReactivePredictiveOracle)]] - `conceptually_related_to` [INFERRED]
 - [[Simulation Backend Comparison Original vs TRIBE V2-Enhanced Figure]] - `references` [EXTRACTED]
 

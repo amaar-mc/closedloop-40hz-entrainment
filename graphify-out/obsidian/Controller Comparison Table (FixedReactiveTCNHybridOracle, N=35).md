@@ -10,6 +10,7 @@ tags:
 # Controller Comparison Table (Fixed/Reactive/TCN/Hybrid/Oracle, N=35)
 
 ## Connections
+
 - [[Alignment Oracle Controller (theoretical upper bound)]] - `references` [EXTRACTED]
 - [[CSEF Results Slide R²=0.287 static ceiling, horizon sweep inflection at 3s, controller comparison chart N=35]] - `shares_data_with` [EXTRACTED]
 - [[Controller Comparison Table N=35 TCN 72.1% alignment, 82.6% low-PAC targeting, Oracle 91%]] - `shares_data_with` [EXTRACTED]
@@ -21,4 +22,4 @@ tags:
 - [[TCN Predictive vs Reactive Threshold Primary Result]] - `references` [EXTRACTED]
 - [[TCN vs Reactive Primary Statistics alignment g=1.31, low-PAC targeting g=4.47, PAC gap g=1.57, all p0.001]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

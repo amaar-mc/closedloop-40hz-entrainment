@@ -10,9 +10,10 @@ tags:
 # Bonus: register() rejects objects that don't satisfy TemporalModel Protocol.
 
 ## Connections
+
 - [[ModelRegistry]] - `uses` [INFERRED]
 - [[TCNTemporalModel]] - `uses` [INFERRED]
 - [[TemporalModel]] - `uses` [INFERRED]
 - [[test_registry_rejects_non_temporal_model()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

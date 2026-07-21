@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[FixedScheduleControl_3]] - `calls` [EXTRACTED]
 - [[OracleControl_2]] - `calls` [EXTRACTED]
 - [[PredictiveLookAheadControl_3]] - `calls` [EXTRACTED]
@@ -21,4 +22,4 @@ tags:
 - [[run_disease_sweep()]] - `calls` [EXTRACTED]
 - [[run_tribe_validation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -7,11 +7,12 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Make proactive stimulation decision using predicted PAC trajectory.          P
+# Make proactive stimulation decision using predicted PAC trajectory. P
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
 - [[_make_decision()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

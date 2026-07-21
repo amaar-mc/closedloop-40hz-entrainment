@@ -9,6 +9,7 @@ tags:
 # Scientific Defensibility Audit (STRONG rating)
 
 ## Connections
+
 - [[Content Accuracy Phase (Phase 2)]] - `references` [EXTRACTED]
 - [[EEGNet Not in Validation Loop Disclosure]] - `references` [EXTRACTED]
 - [[Offline Counterfactual Replay Limitation Disclosure]] - `references` [EXTRACTED]

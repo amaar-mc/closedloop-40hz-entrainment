@@ -10,6 +10,7 @@ tags:
 # MultiBiomarkerReactiveControl
 
 ## Connections
+
 - [[Multi-biomarker reactive controller.]] - `rationale_for` [EXTRACTED]
 - [[Multi-biomarker reactive controller.      Uses PAC + gamma power + theta power,]] - `rationale_for` [EXTRACTED]
 - [[__init__()_33]] - `method` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 - [[step()_5]] - `method` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

@@ -10,6 +10,7 @@ tags:
 # Test 6: Audit the temporal prediction code for common issues.
 
 ## Connections
+
 - [[audit_code()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_49

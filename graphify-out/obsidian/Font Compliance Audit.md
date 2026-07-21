@@ -9,6 +9,7 @@ tags:
 # Font Compliance Audit
 
 ## Connections
+
 - [[CSEF Compliance Phase (Phase 1)]] - `references` [EXTRACTED]
 - [[CSEF Font Requirements (14pt min, sans-serif recommended)]] - `references` [EXTRACTED]
 - [[Times New Roman Font Warning]] - `references` [EXTRACTED]

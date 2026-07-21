@@ -10,6 +10,7 @@ tags:
 # train_and_evaluate()
 
 ## Connections
+
 - [[Train a model variant and return evaluation metrics.      Args         model]] - `rationale_for` [EXTRACTED]
 - [[_corr()_7]] - `calls` [EXTRACTED]
 - [[_r2()_8]] - `calls` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[run_benchmark()]] - `calls` [EXTRACTED]
 - [[synthetic_benchmark.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

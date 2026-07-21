@@ -10,6 +10,7 @@ tags:
 # CSEF Display Prohibited Items (QR codes, handouts, AC power, school name)
 
 ## Connections
+
 - [[CSEF 2026 Day-of Logistics Checklist]] - `references` [INFERRED]
 
   #community/Community_117

@@ -10,6 +10,7 @@ tags:
 # add_heading()
 
 ## Connections
+
 - [[Bold heading paragraph — large space before, small after.]] - `rationale_for` [EXTRACTED]
 - [[_disable_bullet()]] - `calls` [EXTRACTED]
 - [[_set_para_spacing()]] - `calls` [EXTRACTED]

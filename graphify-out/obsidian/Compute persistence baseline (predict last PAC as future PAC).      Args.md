@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Compute persistence baseline (predict last PAC as future PAC).      Args:
+# Compute persistence baseline (predict last PAC as future PAC). Args:
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[ModelConfig_1]] - `uses` [INFERRED]
 - [[MultiTaskTCN]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[TransformerConfig]] - `uses` [INFERRED]
 - [[_persistence_baseline()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

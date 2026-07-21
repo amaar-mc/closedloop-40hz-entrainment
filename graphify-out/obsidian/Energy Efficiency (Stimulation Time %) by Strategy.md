@@ -9,6 +9,7 @@ tags:
 # Energy Efficiency (Stimulation Time %) by Strategy
 
 ## Connections
+
 - [[Simulation Backend Comparison Original vs TRIBE V2-Enhanced Figure]] - `references` [EXTRACTED]
 
   #community/Community_36

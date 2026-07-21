@@ -10,6 +10,7 @@ tags:
 # CSEF Presentation README: Active Working File Set
 
 ## Connections
+
 - [[9-Beat Presentation Spine (Hook→Gap→Biomarker→Ceiling→Pivot→Discovery→Horizon→Results→Product)]] - `references` [EXTRACTED]
 - [[Numbers Sheet v2 Key Metrics (disease, dataset, pivot story, main results, deployment)]] - `references` [EXTRACTED]
 

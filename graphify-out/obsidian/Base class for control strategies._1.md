@@ -10,10 +10,11 @@ tags:
 # Base class for control strategies.
 
 ## Connections
+
 - [[ControlMethodBase_1]] - `rationale_for` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

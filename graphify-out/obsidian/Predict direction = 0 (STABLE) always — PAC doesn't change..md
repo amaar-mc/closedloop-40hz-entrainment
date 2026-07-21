@@ -10,6 +10,7 @@ tags:
 # Predict direction = 0 (STABLE) always — PAC doesn't change.
 
 ## Connections
+
 - [[persistence_direction_baseline()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_83

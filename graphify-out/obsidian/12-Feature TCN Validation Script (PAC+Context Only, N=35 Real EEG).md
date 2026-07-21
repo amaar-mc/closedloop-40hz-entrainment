@@ -9,6 +9,7 @@ tags:
 # 12-Feature TCN Validation Script (PAC+Context Only, N=35 Real EEG)
 
 ## Connections
+
 - [[Alignment Score Metric (Low-PAC Stim + High-PAC Rest)  2]] - `implements` [EXTRACTED]
 - [[TCNTribe Model (TRIBE-trained Causal TCN)]] - `semantically_similar_to` [INFERRED]
 - [[run_replay()]] - `calls` [EXTRACTED]

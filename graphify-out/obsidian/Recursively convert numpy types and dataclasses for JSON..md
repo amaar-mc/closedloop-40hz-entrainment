@@ -10,9 +10,10 @@ tags:
 # Recursively convert numpy types and dataclasses for JSON.
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[_make_serializable()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

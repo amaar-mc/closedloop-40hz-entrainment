@@ -9,6 +9,7 @@ tags:
 # submission/paper/RESEARCH_PAPER.md
 
 ## Connections
+
 - [[Generate Paper PDF Script (v1)]] - `references` [EXTRACTED]
 - [[Generate Paper PDF v2 Script]] - `references` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # Results Gold Callout Boxes (72.1% / 82.6% / 35/35)
 
 ## Connections
+
 - [[Poster Board V7 (Audit-Clean, CSEF 2026)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

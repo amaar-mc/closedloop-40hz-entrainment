@@ -10,6 +10,7 @@ tags:
 # ref_line()
 
 ## Connections
+
 - [[PaperPDF]] - `method` [EXTRACTED]
 - [[generate()]] - `calls` [EXTRACTED]
 

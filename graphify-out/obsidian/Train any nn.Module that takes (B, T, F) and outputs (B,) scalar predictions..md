@@ -10,7 +10,8 @@ tags:
 # Train any nn.Module that takes (B, T, F) and outputs (B,) scalar predictions.
 
 ## Connections
+
 - [[SequenceDataset]] - `uses` [INFERRED]
 - [[train_pytorch_model()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

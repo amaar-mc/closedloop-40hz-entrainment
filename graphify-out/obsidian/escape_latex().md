@@ -10,6 +10,7 @@ tags:
 # escape_latex()
 
 ## Connections
+
 - [[Escape LaTeX special characters in body text, preserving existing     LaTeX com]] - `rationale_for` [EXTRACTED]
 - [[generate_latex()]] - `calls` [EXTRACTED]
 - [[generate_paper_latex.py]] - `contains` [EXTRACTED]

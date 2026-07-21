@@ -10,6 +10,7 @@ tags:
 # Fatigue Model Robustness Table (4 Models, All p<0.001)
 
 ## Connections
+
 - [[Poster Board V4 (Print-Ready, Audit-Corrected, Synopsys 2026)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

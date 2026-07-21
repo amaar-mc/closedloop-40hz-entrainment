@@ -10,6 +10,7 @@ tags:
 # ridge_global()
 
 ## Connections
+
 - [[Train a global Ridge on the full training split. Returns model.]] - `rationale_for` [EXTRACTED]
 - [[_flatten()]] - `calls` [EXTRACTED]
 - [[main()_27]] - `calls` [EXTRACTED]

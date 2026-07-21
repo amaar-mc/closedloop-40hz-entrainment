@@ -9,8 +9,9 @@ tags:
 # High Finding: No Cross-Validation (Single Seed 42 Split)
 
 ## Connections
+
 - [[Rigorous Pipeline Audit Report]] - `references` [EXTRACTED]
 - [[main()_66]] - `references` [EXTRACTED]
 - [[split_by_subject()]] - `implements` [INFERRED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

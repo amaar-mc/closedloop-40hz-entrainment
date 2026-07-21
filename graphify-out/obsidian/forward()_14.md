@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[AttentionModel]] - `method` [EXTRACTED]
 
   #community/Community_57

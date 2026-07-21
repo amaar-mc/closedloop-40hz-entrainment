@@ -8,6 +8,7 @@ members: 100
 **Members:** 100 nodes
 
 ## Members
+
 - [[Best combination experiments 1. Target smoothing (ts=5) + deep TCN architecture]] - rationale - archive/experimental/run_best_combo.py
 - [[Build dataset with given smoothing, train TCN, evaluate.]] - rationale - archive/experimental/run_target_smoothing.py
 - [[Causal Transformer encoder for sequence-to-scalar regression.]] - rationale - archive/experimental/run_experiments.py
@@ -117,10 +118,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 2 edges to [[_COMMUNITY_Multiscale TCN & Features]]
 - 1 edge to [[_COMMUNITY_Community 32]]
 
 ## Top bridge nodes
+
 - [[ImprovedTCN]] - degree 26, connects to 1 community
 - [[SeqDataset]] - degree 25, connects to 1 community
 - [[MixupSeqDataset]] - degree 19, connects to 1 community

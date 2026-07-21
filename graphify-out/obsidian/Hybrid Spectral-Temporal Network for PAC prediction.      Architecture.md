@@ -7,9 +7,10 @@ tags:
   - community/Archived_SpecTempNet_V3
 ---
 
-# Hybrid Spectral-Temporal Network for PAC prediction.      Architecture:
+# Hybrid Spectral-Temporal Network for PAC prediction. Architecture:
 
 ## Connections
+
 - [[SpecTempNet]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_SpecTempNet_V3

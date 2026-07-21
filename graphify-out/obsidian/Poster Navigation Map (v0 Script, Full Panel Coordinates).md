@@ -10,6 +10,7 @@ tags:
 # Poster Navigation Map (v0 Script, Full Panel Coordinates)
 
 ## Connections
+
 - [[Original Poster Presentation Script (v0, Synopsys Championship)]] - `references` [EXTRACTED]
 
   #community/Community_112

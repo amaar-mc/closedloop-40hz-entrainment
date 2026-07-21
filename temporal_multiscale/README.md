@@ -31,6 +31,7 @@ python temporal_multiscale/audit_multiscale_pipeline.py --dataset-dir data/proce
 - `batch_size=128`, `epochs=80`
 
 For denoised latent-state forecasting (recommended in this repo):
+
 - `horizon=1`
 - `target_smooth_window=5`
 

@@ -9,6 +9,7 @@ tags:
 # Per-Subject Alignment Scatter Plot (35/35 Favor TCN)
 
 ## Connections
+
 - [[Controller Comparison Table (Fixed  Reactive  TCN  Oracle)]] - `shares_data_with` [INFERRED]
 - [[Figure 8 Controller Comparison Bar Chart (N=35, OpenNeuro ds005048)]] - `conceptually_related_to` [INFERRED]
 - [[Per-Subject Results Across TrainValTest Splits]] - `references` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[TrainValTest Split Visualization (colored markers in scatter)]] - `references` [EXTRACTED]
 - [[Validation Split Subjects (squares) TCN utility ~0.69–0.74 vs Reactive ~0.59–0.67]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

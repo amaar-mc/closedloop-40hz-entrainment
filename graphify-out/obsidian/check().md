@@ -10,8 +10,9 @@ tags:
 # check()
 
 ## Connections
+
 - [[Print PASSFAIL and return the boolean result.]] - `rationale_for` [EXTRACTED]
 - [[run_tests()]] - `calls` [EXTRACTED]
 - [[test_simulated_session.py]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

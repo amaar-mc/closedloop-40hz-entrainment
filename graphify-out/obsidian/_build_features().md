@@ -7,9 +7,10 @@ tags:
   - community/TRIBE-TCN_Validation
 ---
 
-# _build_features()
+# \_build_features()
 
 ## Connections
+
 - [[Build single-step feature vector (12 dims).]] - `rationale_for` [EXTRACTED]
 - [[TCNTribeController]] - `method` [EXTRACTED]
 - [[step()_41]] - `calls` [EXTRACTED]

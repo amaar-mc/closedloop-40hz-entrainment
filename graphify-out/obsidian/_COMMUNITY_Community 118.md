@@ -8,6 +8,7 @@ members: 5
 **Members:** 5 nodes
 
 ## Members
+
 - [[Chan 2025 Cognito Therapeutics Phase II Trial]] - document - archive/context/literature_review.md
 - [[Glymphatic Clearance Pathway (40Hz Mechanism)]] - document - archive/context/literature_review.md
 - [[Iaccarino 2016 Landmark Study (40Hz Mice)]] - document - archive/context/motivation.md

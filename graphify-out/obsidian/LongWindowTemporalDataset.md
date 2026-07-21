@@ -10,6 +10,7 @@ tags:
 # LongWindowTemporalDataset
 
 ## Connections
+
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[Temporal dataset for 8-second windows with 4-second hop.      With 4-second ho]] - `rationale_for` [EXTRACTED]
 - [[TemporalPACPredictor]] - `uses` [INFERRED]

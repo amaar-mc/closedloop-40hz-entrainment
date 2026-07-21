@@ -8,6 +8,7 @@ members: 17
 **Members:** 17 nodes
 
 ## Members
+
 - [[40Hz Audio Stimulation Output (STIMULATE  REST  MAINTAIN)]] - image - archive/CSEF_Old/Research Paper/Figures/system_block_diagram.png
 - [[Actual PAC Signal Ground Truth (Sub-15 test set)]] - image - submission/figures/figure7.png
 - [[Causal TCN (31K params, 20s lookback)]] - image - archive/CSEF_Old/Research Paper/Figures/system_block_diagram.png

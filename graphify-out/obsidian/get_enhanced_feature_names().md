@@ -10,6 +10,7 @@ tags:
 # get_enhanced_feature_names()
 
 ## Connections
+
 - [[Return ordered feature names for n_channels.]] - `rationale_for` [EXTRACTED]
 - [[enhanced_features.py]] - `contains` [EXTRACTED]
 

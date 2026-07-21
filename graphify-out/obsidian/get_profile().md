@@ -10,6 +10,7 @@ tags:
 # get_profile()
 
 ## Connections
+
 - [[Get Alzheimer's profile by severity name.      Args         severity One of h]] - `rationale_for` [EXTRACTED]
 - [[alzheimer_model.py]] - `contains` [EXTRACTED]
 

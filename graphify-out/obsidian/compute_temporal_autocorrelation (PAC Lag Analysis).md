@@ -10,6 +10,7 @@ tags:
 # compute_temporal_autocorrelation (PAC Lag Analysis)
 
 ## Connections
+
 - [[TemporalPACDataset (PyTorch Dataset)]] - `shares_data_with` [INFERRED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

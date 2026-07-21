@@ -10,6 +10,7 @@ tags:
 # OracleControl
 
 ## Connections
+
 - [[ControlMethodBase]] - `inherits` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
@@ -20,4 +21,4 @@ tags:
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 - [[step()_53]] - `method` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

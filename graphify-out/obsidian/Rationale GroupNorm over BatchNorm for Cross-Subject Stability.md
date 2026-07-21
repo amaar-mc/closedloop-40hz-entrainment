@@ -10,6 +10,7 @@ tags:
 # Rationale: GroupNorm over BatchNorm for Cross-Subject Stability
 
 ## Connections
+
 - [[Multiscale Causal TCN Architecture Detail]] - `rationale_for` [EXTRACTED]
 
   #community/Community_39

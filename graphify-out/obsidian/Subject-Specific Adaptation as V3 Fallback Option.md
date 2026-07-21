@@ -9,6 +9,7 @@ tags:
 # Subject-Specific Adaptation as V3 Fallback Option
 
 ## Connections
+
 - [[SpecTempNet Architecture Design (3-Branch Raw EEG + Spectral + Phase-Amplitude)]] - `references` [EXTRACTED]
 
-  #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model*Ceiling*&\_Leakage_Audits

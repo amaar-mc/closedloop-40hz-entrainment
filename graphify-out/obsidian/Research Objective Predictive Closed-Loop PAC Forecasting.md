@@ -10,6 +10,7 @@ tags:
 # Research Objective: Predictive Closed-Loop PAC Forecasting
 
 ## Connections
+
 - [[EEGNet Static PAC Predictor (R²=0.287 ceiling)]] - `references` [EXTRACTED]
 - [[MultiscaleCausalTCN Temporal Forecaster]] - `references` [EXTRACTED]
 - [[OpenNeuro ds005048 Dataset (Lahijanian 2024, N=35)]] - `references` [EXTRACTED]

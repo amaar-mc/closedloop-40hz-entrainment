@@ -10,6 +10,7 @@ tags:
 # compute_multichannel_pac()
 
 ## Connections
+
 - [[Average PAC across channels. signals (n_channels, n_samples).]] - `rationale_for` [EXTRACTED]
 - [[compute_sliding_pac.py]] - `contains` [EXTRACTED]
 - [[compute_sliding_pac_for_segment()]] - `calls` [EXTRACTED]

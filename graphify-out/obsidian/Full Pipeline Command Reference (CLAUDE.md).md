@@ -10,6 +10,7 @@ tags:
 # Full Pipeline Command Reference (CLAUDE.md)
 
 ## Connections
+
 - [[Closed-Loop 40 Hz Gamma Entrainment System]] - `references` [EXTRACTED]
 
   #community/Community_39

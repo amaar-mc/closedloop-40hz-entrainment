@@ -7,10 +7,11 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[Initialize trainer.          Args             model PyTorch model]] - `rationale_for` [EXTRACTED]
 - [[ModelTrainer]] - `method` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

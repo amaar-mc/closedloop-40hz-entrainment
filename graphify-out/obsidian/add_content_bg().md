@@ -10,6 +10,7 @@ tags:
 # add_content_bg()
 
 ## Connections
+
 - [[Add light blue content background.]] - `rationale_for` [EXTRACTED]
 - [[add_rect()]] - `calls` [EXTRACTED]
 - [[v2_builder.py]] - `contains` [EXTRACTED]

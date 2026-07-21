@@ -10,7 +10,8 @@ tags:
 # HDF5+FDT File Format Discovery (h5py + numpy Fortran order fix)
 
 ## Connections
+
 - [[Lab Notebook VFINAL (Jan–Mar 2026 Research Log)]] - `references` [EXTRACTED]
 - [[Research Paper v3 (Full CSEF Submission Paper)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

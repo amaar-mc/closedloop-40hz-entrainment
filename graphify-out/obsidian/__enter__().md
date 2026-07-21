@@ -7,9 +7,10 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# __enter__()
+# **enter**()
 
 ## Connections
+
 - [[SimulatedEEGAdapter]] - `method` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

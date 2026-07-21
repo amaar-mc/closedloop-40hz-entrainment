@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Full preprocessing pipeline.          Pipeline:             1. Bandpass filte
+# Full preprocessing pipeline. Pipeline: 1. Bandpass filte
 
 ## Connections
+
 - [[preprocess()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

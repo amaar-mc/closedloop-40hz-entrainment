@@ -7,11 +7,12 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# __init__.py
+# **init**.py
 
 ## Connections
+
 - [[TRIBE V2 Integration Module for Closed-Loop 40Hz Entrainment  Integrates Meta's]] - `rationale_for` [EXTRACTED]
 - [[srcstreamingadapters.py (SimulatedEEGAdapter)]] - `imports_from` [EXTRACTED]
 - [[srcstreamingfeature_extractor.py (StreamingFeatureExtractor)]] - `imports_from` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

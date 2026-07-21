@@ -10,6 +10,7 @@ tags:
 # run_single_trial()
 
 ## Connections
+
 - [[Run one simulation trial and return metrics.      Args         method Contr_2]] - `rationale_for` [EXTRACTED]
 - [[TrialMetrics_1]] - `calls` [EXTRACTED]
 - [[reset()_56]] - `calls` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[step()_62]] - `calls` [EXTRACTED]
 - [[tcn_integrated_simulation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

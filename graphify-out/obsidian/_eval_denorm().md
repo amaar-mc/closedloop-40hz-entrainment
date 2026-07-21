@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _eval_denorm()
+# \_eval_denorm()
 
 ## Connections
+
 - [[Evaluate metrics on denormalized predictions in raw PAC units.]] - `rationale_for` [EXTRACTED]
 - [[comparison_models.py]] - `contains` [EXTRACTED]
 - [[train_pytorch_model()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

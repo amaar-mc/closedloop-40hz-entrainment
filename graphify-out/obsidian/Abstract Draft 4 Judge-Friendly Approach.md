@@ -9,6 +9,7 @@ tags:
 # Abstract Draft 4: Judge-Friendly Approach
 
 ## Connections
+
 - [[Abstract Round 2 Draft A Best Narrative]] - `references` [EXTRACTED]
 - [[Abstract Round 2 Draft C Impact-Driven]] - `references` [EXTRACTED]
 

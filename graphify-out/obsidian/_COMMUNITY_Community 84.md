@@ -8,6 +8,7 @@ members: 12
 **Members:** 12 nodes
 
 ## Members
+
 - [[FixedScheduleControl_2]] - code - scripts/pipeline/run_fatigue_sensitivity.py
 - [[PredictiveLookAheadControl_2]] - code - scripts/pipeline/run_fatigue_sensitivity.py
 - [[__init__()_84]] - code - scripts/pipeline/run_fatigue_sensitivity.py
@@ -29,9 +30,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 6 edges to [[_COMMUNITY_Closed-Loop Control & Simulator]]
 
 ## Top bridge nodes
+
 - [[PredictiveLookAheadControl_2]] - degree 8, connects to 1 community
 - [[FixedScheduleControl_2]] - degree 7, connects to 1 community
 - [[run_fatigue_sensitivity.py]] - degree 6, connects to 1 community

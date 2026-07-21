@@ -10,6 +10,7 @@ tags:
 # AttentionPool1D
 
 ## Connections
+
 - [[ImprovedTCN_2]] - `implements` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

@@ -10,7 +10,8 @@ tags:
 # forward()
 
 ## Connections
+
 - [[Args             x (batch, channels, seq_len)          Returns             ou]] - `rationale_for` [EXTRACTED]
 - [[SEBlock]] - `method` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

@@ -9,6 +9,7 @@ tags:
 # Poster Results Coherence Audit
 
 ## Connections
+
 - [[CSEF Era (12-Feature Ablated Model) — Poster Provenance]] - `references` [EXTRACTED]
 - [[Coherence Issue Controller Results Use Old 73-Feature Model]] - `references` [EXTRACTED]
 - [[Coherence Issue Fatigue Results Use No Neural Network (Heuristic Only)]] - `references` [EXTRACTED]

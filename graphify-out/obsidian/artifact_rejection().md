@@ -10,8 +10,9 @@ tags:
 # artifact_rejection()
 
 ## Connections
+
 - [[Detect and mark artifact samples using amplitude thresholding.          Marks]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `method` [EXTRACTED]
 - [[preprocess()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

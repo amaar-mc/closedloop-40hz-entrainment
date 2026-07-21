@@ -10,6 +10,7 @@ tags:
 # add_callout_box()
 
 ## Connections
+
 - [[Add a gold metric callout box.]] - `rationale_for` [EXTRACTED]
 - [[add_box()]] - `calls` [EXTRACTED]
 - [[add_text_box()]] - `calls` [EXTRACTED]

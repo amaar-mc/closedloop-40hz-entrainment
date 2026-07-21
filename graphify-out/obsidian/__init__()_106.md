@@ -7,9 +7,10 @@ tags:
   - community/TRIBE-TCN_Validation
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[TCNTribeController]] - `method` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

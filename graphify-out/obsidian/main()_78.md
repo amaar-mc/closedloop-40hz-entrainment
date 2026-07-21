@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[FixedScheduleControl_7]] - `calls` [EXTRACTED]
 - [[Main entry point for validation.]] - `rationale_for` [EXTRACTED]
 - [[OracleControl_6]] - `calls` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[statistical_comparison()]] - `calls` [EXTRACTED]
 - [[validation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

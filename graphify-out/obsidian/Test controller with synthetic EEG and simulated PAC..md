@@ -10,8 +10,9 @@ tags:
 # Test controller with synthetic EEG and simulated PAC.
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
 - [[test_controller()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

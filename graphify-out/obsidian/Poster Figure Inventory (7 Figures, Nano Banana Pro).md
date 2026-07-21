@@ -10,6 +10,7 @@ tags:
 # Poster Figure Inventory (7 Figures, Nano Banana Pro)
 
 ## Connections
+
 - [[Poster Board V7 (Audit-Clean, CSEF 2026)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

@@ -10,8 +10,9 @@ tags:
 # statistical_comparison()
 
 ## Connections
+
 - [[Compare methods using statistical tests on multi-trial data.          Uses acc]] - `rationale_for` [EXTRACTED]
 - [[SimulationValidator]] - `method` [EXTRACTED]
 - [[main()_78]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

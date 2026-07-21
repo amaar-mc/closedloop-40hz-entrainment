@@ -10,7 +10,8 @@ tags:
 # Return (n_windows, n_channels, 500) synthetic EEG windows.
 
 ## Connections
+
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[_make_windows()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

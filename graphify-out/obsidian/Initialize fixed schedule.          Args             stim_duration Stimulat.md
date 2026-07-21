@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Initialize fixed schedule.          Args:             stim_duration: Stimulat
+# Initialize fixed schedule. Args: stim_duration: Stimulat
 
 ## Connections
+
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
@@ -18,4 +19,4 @@ tags:
 - [[StimState]] - `uses` [INFERRED]
 - [[__init__()_159]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

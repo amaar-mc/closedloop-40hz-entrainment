@@ -7,9 +7,10 @@ tags:
   - community/Community_53
 ---
 
-# _normalize_with_train_stats()
+# \_normalize_with_train_stats()
 
 ## Connections
+
 - [[Fit scalers on TRAIN only and apply to all splits.]] - `rationale_for` [EXTRACTED]
 - [[build_multiscale_dataset()]] - `calls` [EXTRACTED]
 - [[build_multiscale_dataset.py]] - `contains` [EXTRACTED]

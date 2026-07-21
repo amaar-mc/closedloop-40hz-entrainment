@@ -10,6 +10,7 @@ tags:
 # Average PAC across channels. signals: (n_channels, n_samples).
 
 ## Connections
+
 - [[compute_multichannel_pac()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_52

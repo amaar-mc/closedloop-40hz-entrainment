@@ -10,6 +10,7 @@ tags:
 # Poster Memory Palace (9 Rooms, Left-to-Right Journey)
 
 ## Connections
+
 - [[Anticipated Judge Q&A Bank (12 Questions with Scripted Answers)]] - `semantically_similar_to` [INFERRED]
 - [[Blank Recovery Protocol (5-Step On-Stage Recovery)]] - `references` [EXTRACTED]
 - [[Emotional Anchoring Table (Feeling Per Room)]] - `references` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[Poster Board V5 (Condensed, Visual-Forward, Synopsys 2026)]] - `references` [EXTRACTED]
 - [[Presentation Chain Transitions (9 Room-to-Room Bridges)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

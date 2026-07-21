@@ -9,6 +9,7 @@ tags:
 # References Sheet PDF Generator Script
 
 ## Connections
+
 - [[12-Citation Reference List (CSEF Presentation)]] - `implements` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

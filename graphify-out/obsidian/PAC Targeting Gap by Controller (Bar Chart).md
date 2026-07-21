@@ -9,6 +9,7 @@ tags:
 # PAC Targeting Gap by Controller (Bar Chart)
 
 ## Connections
+
 - [[Fixed Controller - PAC Targeting (Negative Gap, Stimulates High-PAC States)]] - `references` [EXTRACTED]
 - [[Hybrid Controller - PAC Targeting Gap ~34 x10-6 (Highest)]] - `references` [EXTRACTED]
 - [[Oracle Controller - PAC Targeting Gap ~33 x10-6 (Upper Bound)]] - `references` [EXTRACTED]

@@ -10,10 +10,11 @@ tags:
 # One second of 40 Hz click-train, loopable WAV bytes for st.audio.
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[SimulatedEEGAdapter]] - `uses` [INFERRED]
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[TCNTemporalModel]] - `uses` [INFERRED]
 - [[make_40hz_wav()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # add_body_mixed()
 
 ## Connections
+
 - [[Body paragraph with mixed bolditalic runs.      segments list of (text, bold,]] - `rationale_for` [EXTRACTED]
 - [[_disable_bullet()]] - `calls` [EXTRACTED]
 - [[_set_para_spacing()]] - `calls` [EXTRACTED]

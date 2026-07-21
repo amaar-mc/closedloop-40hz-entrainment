@@ -10,6 +10,7 @@ tags:
 # Q&A Tier 5 Hard: R²=0.25 usefulness defense, offline vs live argument, sample size defense, novelty claims
 
 ## Connections
+
 - [[Project Limitations offline replay only, single dataset, short sessions (6-10 min), static PAC ceiling, heuristic thresholds]] - `conceptually_related_to` [INFERRED]
 - [[Rationale for Architecture Marathon 8 configs (1.5K–1.1M params) all converge at R²=0.287, proving data ceiling not model limitation]] - `references` [EXTRACTED]
 

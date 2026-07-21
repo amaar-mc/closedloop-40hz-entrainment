@@ -10,6 +10,7 @@ tags:
 # Simulation vs Real Data Validation Distinction
 
 ## Connections
+
 - [[Controller Comparison TCN 72.1% vs Reactive 64.5%, 91% Oracle, 3535 Subjects]] - `conceptually_related_to` [INFERRED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Ridge with alpha auto-scaled to input dimensionality.      alpha=1.0 overflows w
+# Ridge with alpha auto-scaled to input dimensionality. alpha=1.0 overflows w
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SequenceDataset]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[SimpleTransformer]] - `uses` [INFERRED]
 - [[_run_ridge()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

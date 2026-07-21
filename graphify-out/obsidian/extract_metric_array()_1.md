@@ -10,9 +10,10 @@ tags:
 # extract_metric_array()
 
 ## Connections
+
 - [[Extract a single metric from a list of TrialMetrics.]] - `rationale_for` [EXTRACTED]
 - [[compute_all_statistics()_1]] - `calls` [EXTRACTED]
 - [[compute_summary_stats()_1]] - `calls` [EXTRACTED]
 - [[tcn_integrated_simulation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

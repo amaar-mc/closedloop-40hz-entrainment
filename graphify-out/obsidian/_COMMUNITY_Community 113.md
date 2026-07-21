@@ -8,6 +8,7 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
+
 - [[EEG Demo Video Recommendation with Annotations]] - document - submission/reference/feedback-kushal.md
 - [[Kushal Khare Poster Feedback Meeting (March 4, 2026)]] - document - submission/reference/feedback-kushal.md
 - [[Lab Notebook Advice Consolidate with Dates, Place in Physical Folder]] - document - submission/reference/feedback-kushal.md

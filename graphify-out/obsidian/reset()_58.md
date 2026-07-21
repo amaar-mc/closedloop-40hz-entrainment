@@ -10,8 +10,9 @@ tags:
 # reset()
 
 ## Connections
+
 - [[PredictiveLookAheadController]] - `method` [EXTRACTED]
 - [[Reset controller and forecaster for a new session.]] - `rationale_for` [EXTRACTED]
 - [[reset()_57]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

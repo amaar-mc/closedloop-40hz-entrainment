@@ -1,4 +1,5 @@
 # Project P10 Research Log Notebook
+
 **Synopsys Science and Engineering Fair 2026**
 
 ## Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment to Optimize Theta-Gamma Phase-Amplitude Coupling in Alzheimer's Disease
@@ -6,7 +7,7 @@
 **Researcher:** Amaar Chughtai  
 **School:** Valley Christian High School  
 **Official Notebook Timeline:** January 15, 2026 - March 1, 2026  
-**Project Dataset:** OpenNeuro ds005048 - 35 dementia patients, 19 EEG channels, 250 Hz  
+**Project Dataset:** OpenNeuro ds005048 - 35 dementia patients, 19 EEG channels, 250 Hz
 
 ---
 
@@ -64,13 +65,13 @@ The biological motivation is strong. Alzheimer's disease is associated with disr
 
 **Results:** The official static comparison stabilizes at the following values:
 
-| Architecture | Parameters | Test R^2 | Interpretation |
-|---|---:|---:|---|
-| EEGNet (V1) | 1457 | 0.287 | Compact baseline and tied best |
-| SpecTempNet (V3) | 180K | 0.236 | Usable only after leakage removal |
-| ViT-TCNet (V4) | ~2M | 0.252 | Larger model, no real gain |
-| Ridge Regression (V5) | 135 coefs | 0.287 | Matches EEGNet exactly |
-| ATCNet (V8) | 25K | 0.075 | Underperforms badly |
+| Architecture          | Parameters | Test R^2 | Interpretation                    |
+| --------------------- | ---------: | -------: | --------------------------------- |
+| EEGNet (V1)           |       1457 |    0.287 | Compact baseline and tied best    |
+| SpecTempNet (V3)      |       180K |    0.236 | Usable only after leakage removal |
+| ViT-TCNet (V4)        |        ~2M |    0.252 | Larger model, no real gain        |
+| Ridge Regression (V5) |  135 coefs |    0.287 | Matches EEGNet exactly            |
+| ATCNet (V8)           |        25K |    0.075 | Underperforms badly               |
 
 An intermediate `R^2 = 0.69` appears when the spectral-temporal model is allowed to see Modulation Index features that already encode the target. The number looks exciting for a few minutes, but the feature audit makes the problem obvious: the model is reading PAC to predict PAC. I remove the circular features, rerun the model, and keep the corrected `R^2 = 0.236` instead.
 
@@ -90,11 +91,11 @@ The deeper lesson arrives when Ridge Regression ties EEGNet at `R^2 = 0.287`. A 
 
 **Procedure:** I redesign the problem as sequence forecasting. Each timestep now carries 73 causal features built from the recent history: 61 spectral features, 7 PAC-history features, and 5 stimulation-context features extracted from the BIDS event structure. I use a 20-second lookback window, a 5-second prediction horizon, and left-only causal padding so the model never sees future samples. The temporal model is a compact MultiscaleCausalTCN with dilations `[1, 2, 4, 8]`, a 31-step receptive field, and about 31,043 parameters.
 
-| Feature Group | Count | Role |
-|---|---:|---|
-| Spectral features | 61 | Current EEG state across frontal channels |
-| PAC-history features | 7 | Current value, moving averages, and trends |
-| Stimulation context | 5 | ON/OFF state, timing since switch, cycle position |
+| Feature Group        | Count | Role                                              |
+| -------------------- | ----: | ------------------------------------------------- |
+| Spectral features    |    61 | Current EEG state across frontal channels         |
+| PAC-history features |     7 | Current value, moving averages, and trends        |
+| Stimulation context  |     5 | ON/OFF state, timing since switch, cycle position |
 
 **Results:** The temporal formulation is immediately more promising from a control perspective than the static one. The new feature set lets the model see not just what the brain is doing now, but what the stimulation schedule has been doing to it over the last 20 seconds. The causal design also makes the final deployment story more believable because every feature is available online.
 
@@ -131,19 +132,19 @@ The deeper lesson arrives when Ridge Regression ties EEGNet at `R^2 = 0.287`. A 
 **Results:** The horizon sweep gives the clearest technical result in the project.
 
 | Horizon | Persistence R^2 | Ridge R^2 | TCN R^2 |
-|---|---:|---:|---:|
-| 1 s | 0.760 | 0.812 | 0.735 |
-| 5 s | -0.267 | -0.393 | 0.254 |
-| 10 s | -0.256 | -0.212 | 0.278 |
+| ------- | --------------: | --------: | ------: |
+| 1 s     |           0.760 |     0.812 |   0.735 |
+| 5 s     |          -0.267 |    -0.393 |   0.254 |
+| 10 s    |          -0.256 |    -0.212 |   0.278 |
 
 At 1 second, the simple baselines win. At 5-10 seconds, both baselines collapse below zero while the TCN stays positive around `R^2 ~ 0.25`. That is the value proposition. The model does not win by being universally better. It wins specifically at the medium horizons that matter for proactive control.
 
 The habituation check is equally important. There is no strong population-wide decline across the short sessions, but the subject-level spread is large:
 
-| Response Pattern | Count | Range |
-|---|---:|---|
-| Subjects declining across stimulation blocks | 17/35 (48.6%) | -66.8% to -5% |
-| Subjects stable or increasing | 18/35 (51.4%) | +5% to +149.1% |
+| Response Pattern                             |         Count | Range          |
+| -------------------------------------------- | ------------: | -------------- |
+| Subjects declining across stimulation blocks | 17/35 (48.6%) | -66.8% to -5%  |
+| Subjects stable or increasing                | 18/35 (51.4%) | +5% to +149.1% |
 
 The average hides the real story. Roughly half the cohort trends downward and half does not. That means a single fixed schedule is a poor fit for the group as a whole even if the population mean looks stable.
 
@@ -168,21 +169,21 @@ The controller path now has the right structure for testing: EEG-derived current
 **Fatigue severity sweep**
 
 | Fatigue Level | Fixed Efficiency | Adaptive Efficiency | Improvement |
-|---|---:|---:|---:|
-| None | 0.343 | 0.375 | +9.5% |
-| Mild | 0.341 | 0.375 | +10.0% |
-| Moderate | 0.335 | 0.366 | +9.0% |
-| High | 0.319 | 0.354 | +10.8% |
-| Severe | 0.316 | 0.352 | +11.2% |
+| ------------- | ---------------: | ------------------: | ----------: |
+| None          |            0.343 |               0.375 |       +9.5% |
+| Mild          |            0.341 |               0.375 |      +10.0% |
+| Moderate      |            0.335 |               0.366 |       +9.0% |
+| High          |            0.319 |               0.354 |      +10.8% |
+| Severe        |            0.316 |               0.352 |      +11.2% |
 
 **Fatigue-model robustness**
 
-| Fatigue Model | Advantage | P-value | Hedges' g |
-|---|---:|---:|---:|
-| Exponential Decay | +9.0% | 1.8 x 10^-15 | 2.31 |
-| Step Function | +6.9% | 4.4 x 10^-14 | 1.21 |
-| Heterogeneous (50/50) | +8.9% | 2.5 x 10^-14 | 1.71 |
-| Saturation (synaptic) | +19.0% | 1.8 x 10^-15 | 3.66 |
+| Fatigue Model         | Advantage |      P-value | Hedges' g |
+| --------------------- | --------: | -----------: | --------: |
+| Exponential Decay     |     +9.0% | 1.8 x 10^-15 |      2.31 |
+| Step Function         |     +6.9% | 4.4 x 10^-14 |      1.21 |
+| Heterogeneous (50/50) |     +8.9% | 2.5 x 10^-14 |      1.71 |
+| Saturation (synaptic) |    +19.0% | 1.8 x 10^-15 |      3.66 |
 
 These results tell me the adaptive advantage is not tied to one narrow simulator choice. The exact gain changes with the fatigue mechanism, but the sign of the effect does not flip.
 
@@ -208,12 +209,12 @@ I also use this rigor pass to check whether the static ceiling was caused by an 
 
 **Results:** The final controller table is strong and internally consistent.
 
-| Controller | Alignment | Low-PAC Targeting | PAC Gap (x10^-6) | Stim % |
-|---|---:|---:|---:|---:|
-| Fixed Schedule | 45.0% | 61.4% | -6.6 | 66.6% |
-| Reactive Threshold | 64.5% | 51.7% | +21.1 | 36.7% |
-| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** | **59.7%** |
-| Oracle | 100.0% | 100.0% | +33.3 | 48.3% |
+| Controller         | Alignment | Low-PAC Targeting | PAC Gap (x10^-6) |    Stim % |
+| ------------------ | --------: | ----------------: | ---------------: | --------: |
+| Fixed Schedule     |     45.0% |             61.4% |             -6.6 |     66.6% |
+| Reactive Threshold |     64.5% |             51.7% |            +21.1 |     36.7% |
+| **TCN Predictive** | **72.1%** |         **82.6%** |        **+30.5** | **59.7%** |
+| Oracle             |    100.0% |            100.0% |            +33.3 |     48.3% |
 
 Three points stand out immediately. First, the fixed schedule is not just weaker - its PAC gap points in the wrong direction, which means the timing is poorly aligned to need. Second, the TCN reaches about 92% of the oracle PAC-targeting gap (`30.5` versus `33.3`). Third, the TCN improves low-PAC targeting from `51.7%` to `82.6%`, and every one of the 35 subjects shows higher utility with the predictive controller than with the reactive one.
 
@@ -243,9 +244,9 @@ The pairwise statistics against the reactive controller are also strong: alignme
 
 ## References
 
-1. Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. *Nature*, 540(7632), 230-235.
-2. Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. *Cell*, 177(2), 256-271.
-3. Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. *Journal of Neurophysiology*, 104(2), 1195-1210.
-4. Lawhern, V. J., et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. *Journal of Neural Engineering*, 15(5), 056013.
-5. Lahijanian, M., et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. *Scientific Reports*, 14, 13153.
-6. Thompson, R. F., & Spencer, W. A. (1966). Habituation: a model phenomenon for the study of neuronal substrates of behavior. *Psychological Review*, 73(1), 16-43.
+1. Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. _Nature_, 540(7632), 230-235.
+2. Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. _Cell_, 177(2), 256-271.
+3. Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. _Journal of Neurophysiology_, 104(2), 1195-1210.
+4. Lawhern, V. J., et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. _Journal of Neural Engineering_, 15(5), 056013.
+5. Lahijanian, M., et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. _Scientific Reports_, 14, 13153.
+6. Thompson, R. F., & Spencer, W. A. (1966). Habituation: a model phenomenon for the study of neuronal substrates of behavior. _Psychological Review_, 73(1), 16-43.

@@ -10,6 +10,7 @@ tags:
 # Checklist for Adult Sponsor (1) — John Crandall Signed
 
 ## Connections
+
 - [[Adult Sponsor Mr. John Crandall (jcrandall@vcs.net)]] - `shares_data_with` [EXTRACTED]
 - [[No SRCIRBIACUC Pre-Approval Required (computational-only project)]] - `references` [EXTRACTED]
 - [[Required Forms Confirmed Adult Sponsor Checklist, Student Checklist 1A, Research Plan, Approval Form 1B]] - `references` [EXTRACTED]

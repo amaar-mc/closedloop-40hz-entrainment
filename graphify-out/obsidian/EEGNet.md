@@ -10,6 +10,7 @@ tags:
 # EEGNet
 
 ## Connections
+
 - [[EEGNet Compact CNN for EEG-based BCIs.      Original paper Lawhern et al. (201]] - `rationale_for` [EXTRACTED]
 - [[__init__()_15]] - `method` [EXTRACTED]
 - [[forward()_10]] - `method` [EXTRACTED]

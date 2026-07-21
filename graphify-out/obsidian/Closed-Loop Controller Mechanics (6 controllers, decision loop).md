@@ -10,7 +10,8 @@ tags:
 # Closed-Loop Controller Mechanics (6 controllers, decision loop)
 
 ## Connections
+
 - [[Controller Comparison Table (Fixed  Reactive  TCN  Oracle)]] - `references` [EXTRACTED]
 - [[Controller Logic (z-score ±0.5, 3s Hysteresis, STIMULATERESTMAINTAIN)]] - `semantically_similar_to` [INFERRED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

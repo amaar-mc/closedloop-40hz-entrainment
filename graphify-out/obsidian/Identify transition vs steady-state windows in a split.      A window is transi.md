@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Identify transition vs steady-state windows in a split.      A window is "transi
+# Identify transition vs steady-state windows in a split. A window is "transi
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[identify_transitions()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

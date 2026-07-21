@@ -10,6 +10,7 @@ tags:
 # Multi-biomarker reactive controller.
 
 ## Connections
+
 - [[MultiBiomarkerReactiveControl]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

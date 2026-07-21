@@ -9,6 +9,7 @@ tags:
 # FINDINGS: Spectral Features Cause Catastrophic Generalization Failure
 
 ## Connections
+
 - [[Approaches That Did NOT Work (architecture, mixup, heavy-reg on all 73)]] - `references` [EXTRACTED]
 - [[Feature Ablation Table (6 subsets all→-0.025, pac_stim→0.558)]] - `references` [EXTRACTED]
 - [[PAC+Stim Feature Discovery Audit Report]] - `semantically_similar_to` [INFERRED]

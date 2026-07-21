@@ -10,6 +10,7 @@ tags:
 # load_api_key()
 
 ## Connections
+
 - [[Load OpenRouter API key from ~.claudeapis.env]] - `rationale_for` [EXTRACTED]
 - [[generate_image()_1]] - `calls` [EXTRACTED]
 - [[generate_image.py]] - `contains` [EXTRACTED]

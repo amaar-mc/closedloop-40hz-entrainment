@@ -7,9 +7,10 @@ tags:
   - community/Community_70
 ---
 
-# Fit tau parameters across all subjects.      Groups sequences by subject, recons
+# Fit tau parameters across all subjects. Groups sequences by subject, recons
 
 ## Connections
+
 - [[fit_population_tau()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_70

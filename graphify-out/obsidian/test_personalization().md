@@ -10,6 +10,7 @@ tags:
 # test_personalization()
 
 ## Connections
+
 - [[MultiChannelPersonalization]] - `calls` [EXTRACTED]
 - [[PersonalizationModule]] - `calls` [EXTRACTED]
 - [[Test personalization module with synthetic PAC time series.]] - `rationale_for` [EXTRACTED]

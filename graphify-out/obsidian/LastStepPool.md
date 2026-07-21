@@ -10,6 +10,7 @@ tags:
 # LastStepPool
 
 ## Connections
+
 - [[Take last timestep from causal TCN output.      For a causal architecture the la]] - `rationale_for` [EXTRACTED]
 - [[__init__()_12]] - `calls` [EXTRACTED]
 - [[forward()_8]] - `method` [EXTRACTED]

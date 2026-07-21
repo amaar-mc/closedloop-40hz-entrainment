@@ -10,6 +10,7 @@ tags:
 # Z-score reactive with hysteresis.
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[ReactiveThresholdControl_2]] - `rationale_for` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[TribeEnhancedSimulator]] - `uses` [INFERRED]
 - [[TribeSimulatorConfig]] - `uses` [INFERRED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

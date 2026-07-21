@@ -43,31 +43,32 @@ that the TCN can learn?
 
 ### PAC Label Statistics
 
-| Metric                  | Epoch PAC      | Sliding PAC (5s) |
-|-------------------------|----------------|------------------|
-| Unique targets (test)   | 104            | 2,678            |
-| Adjacent same (test)    | 96.2%          | 0.0%             |
-| Mean PAC (test)         | 3.93e-05       | 3.53e-04         |
-| Std PAC (test)          | 3.56e-05       | 2.19e-04         |
-| Epoch-to-sliding corr   | --             | 0.200            |
+| Metric                | Epoch PAC | Sliding PAC (5s) |
+| --------------------- | --------- | ---------------- |
+| Unique targets (test) | 104       | 2,678            |
+| Adjacent same (test)  | 96.2%     | 0.0%             |
+| Mean PAC (test)       | 3.93e-05  | 3.53e-04         |
+| Std PAC (test)        | 3.56e-05  | 2.19e-04         |
+| Epoch-to-sliding corr | --        | 0.200            |
 
 Sliding-window PAC produces 25x more unique target values and completely
 eliminates the trivial same-epoch prediction shortcut. Values are ~9x larger
 (expected: shorter analysis windows produce noisier/higher MI estimates). The
-low correlation (r=0.20) between epoch and sliding PAC confirms these are
-measuring different aspects of the same underlying coupling.
+low correlation (r=0.20) between epoch and sliding PAC shows that they are
+different operational target definitions. It should not be read as proof that
+both measure different aspects of the same physiological coupling.
 
 ### Prediction Performance
 
-| Metric             | Epoch PAC | Sliding PAC (5s) |
-|--------------------|-----------|-------------------|
-| Persistence R2     | 0.104     | -0.897            |
-| Ridge R2           | 0.260     | 0.216             |
-| **TCN Test R2**    | **0.554** | **0.212**         |
-| TCN Test corr      | 0.746     | 0.464             |
-| TCN Test RMSE      | 2.42e-05  | 1.96e-04          |
-| Best val R2        | 0.825     | 0.202             |
-| Best epoch         | 30        | 38                |
+| Metric          | Epoch PAC | Sliding PAC (5s) |
+| --------------- | --------- | ---------------- |
+| Persistence R2  | 0.104     | -0.897           |
+| Ridge R2        | 0.260     | 0.216            |
+| **TCN Test R2** | **0.554** | **0.212**        |
+| TCN Test corr   | 0.746     | 0.464            |
+| TCN Test RMSE   | 2.42e-05  | 1.96e-04         |
+| Best val R2     | 0.825     | 0.202            |
+| Best epoch      | 30        | 38               |
 
 ### Interpretation
 
@@ -84,9 +85,9 @@ measuring different aspects of the same underlying coupling.
 
 3. **TCN drops from 0.55 to 0.21 on sliding PAC.** The TCN's epoch-PAC
    performance was partly inflated by learning the within-epoch constancy
-   pattern. On truly continuous targets, the TCN still outperforms both
-   baselines but with a much smaller margin over Ridge (0.21 vs 0.22 -- nearly
-   tied).
+   pattern. On backward-looking targets, the TCN remains positive but is
+   slightly below Ridge (0.212 vs 0.216), so the nonlinear advantage disappears
+   in this fixed-split, single-seed stress test.
 
 4. **Val-test gap narrows.** Epoch PAC shows 0.83 val vs 0.55 test
    (val-test gap of 0.28), suggesting cross-subject overfitting on the few
@@ -101,31 +102,33 @@ measuring different aspects of the same underlying coupling.
   prediction shortcut
 - The prediction task is genuinely harder and more meaningful
 - Val-test generalization improves dramatically (gap shrinks from 0.28 to 0.01)
-- The TCN still achieves positive R2 (0.21) on the harder task, confirming
-  it learns real temporal PAC dynamics, not just epoch-boundary patterns
+- The TCN still achieves positive R2 (0.21) on the harder task, supporting
+  predictable structure under the backward-looking target, but not a
+  TCN-specific advantage over Ridge
 
 ### The bad news
 
 - Absolute TCN performance drops significantly (0.55 to 0.21)
-- The TCN barely outperforms Ridge on sliding PAC targets (0.21 vs 0.22)
+- The TCN does not outperform Ridge on sliding PAC targets (0.212 vs 0.216)
 - The 5s analysis window may be too short for stable MI estimation, adding
   noise to targets that obscures learnable signal
 
 ### Verdict: worth pursuing, but needs refinement
 
-The sliding-window approach reveals that roughly half of the epoch-level TCN's
-R2=0.55 was from exploiting within-epoch target constancy. The remaining
-R2~0.21 represents genuine temporal PAC prediction ability. This is honest
-progress.
+The sliding-window approach shows that the epoch-level TCN result was partly
+driven by within-epoch target constancy. The remaining R2~0.21 indicates
+positive predictable structure under the backward-looking target, approximately
+tied with Ridge. This is honest progress, but not evidence of a nonlinear model
+advantage.
 
 **Recommended next steps:**
+
 - Try 8s and 10s context windows (more theta cycles = more stable MI)
 - Use target smoothing (causal 3-window MA) on sliding PAC to reduce noise
 - Consider computing PAC from only the highest-SNR frontal channel instead
   of averaging all 7, to reduce noise
-- Test whether the sliding-PAC TCN transfers better to the closed-loop
-  simulation (the actual downstream task), since it predicts genuine PAC
-  dynamics rather than epoch-level plateaus
+- Test whether the sliding-PAC target definition improves downstream controller
+  replay, while keeping Ridge and other simple baselines in the comparison
 
 ## Reproducibility
 

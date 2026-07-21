@@ -10,6 +10,7 @@ tags:
 # count_parameters()
 
 ## Connections
+
 - [[Count trainable parameters._3]] - `rationale_for` [EXTRACTED]
 - [[DeepDilationTCN]] - `method` [EXTRACTED]
 - [[_count_parameters()]] - `calls` [EXTRACTED]

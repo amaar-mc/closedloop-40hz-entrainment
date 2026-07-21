@@ -10,6 +10,7 @@ tags:
 # Returns dict mapping horizon → prediction.
 
 ## Connections
+
 - [[forward()_18]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Temporal_PAC_Predictor

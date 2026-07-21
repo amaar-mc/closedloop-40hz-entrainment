@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Return copy of current baseline buffer contents.          Returns:
+# Return copy of current baseline buffer contents. Returns:
 
 ## Connections
+
 - [[get_buffer_contents()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

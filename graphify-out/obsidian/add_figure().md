@@ -10,6 +10,7 @@ tags:
 # add_figure()
 
 ## Connections
+
 - [[Insert centred image. Returns bottom position (inches).]] - `rationale_for` [EXTRACTED]
 - [[add_body()]] - `calls` [EXTRACTED]
 - [[generate_csef_pptx.py]] - `contains` [EXTRACTED]

@@ -8,6 +8,7 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
+
 - [[Generate system architecture figure v7 with correct specs using matplotlib.]] - rationale - results/rigor_audit/gen_arch_figure.py
 - [[gen_arch_figure.py]] - code - results/rigor_audit/gen_arch_figure.py
 

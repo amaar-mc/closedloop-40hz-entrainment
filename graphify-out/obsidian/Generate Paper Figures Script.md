@@ -9,6 +9,7 @@ tags:
 # Generate Paper Figures Script
 
 ## Connections
+
 - [[Regenerate Paper Figures Script]] - `semantically_similar_to` [INFERRED]
 - [[generate_horizon_sweep()]] - `calls` [EXTRACTED]
 - [[generate_system_block_diagram()]] - `calls` [EXTRACTED]

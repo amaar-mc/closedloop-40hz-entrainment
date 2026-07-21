@@ -7,11 +7,12 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[TemporalBlock]] - `calls` [EXTRACTED]
 - [[TemporalConvolutionalNetwork]] - `method` [EXTRACTED]
 - [[__init__()_45]] - `calls` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

@@ -10,6 +10,7 @@ tags:
 # Microglial Activation Pathway (40Hz Mechanism)
 
 ## Connections
+
 - [[Glymphatic Clearance Pathway (40Hz Mechanism)]] - `conceptually_related_to` [INFERRED]
 - [[Iaccarino 2016 Optogenetic 40Hz Stimulation]] - `references` [EXTRACTED]
 

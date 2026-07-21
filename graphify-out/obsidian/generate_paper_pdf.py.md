@@ -10,6 +10,7 @@ tags:
 # generate_paper_pdf.py
 
 ## Connections
+
 - [[FPDF]] - `imports_from` [EXTRACTED]
 - [[ResearchPaperPDF]] - `contains` [EXTRACTED]
 - [[clean_markdown()]] - `contains` [EXTRACTED]

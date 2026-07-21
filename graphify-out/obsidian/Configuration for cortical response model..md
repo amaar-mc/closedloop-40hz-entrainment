@@ -10,6 +10,7 @@ tags:
 # Configuration for cortical response model.
 
 ## Connections
+
 - [[CorticalResponseConfig]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

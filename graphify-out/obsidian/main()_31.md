@@ -10,10 +10,11 @@ tags:
 # main()
 
 ## Connections
+
 - [[evaluate_subset()]] - `calls` [EXTRACTED]
 - [[get_predictions()]] - `calls` [EXTRACTED]
 - [[identify_transitions()]] - `calls` [EXTRACTED]
 - [[parse_args()_11]] - `calls` [EXTRACTED]
 - [[transition_analysis.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

@@ -10,6 +10,7 @@ tags:
 # Synopsys Era (73-Feature Model) — Poster Provenance
 
 ## Connections
+
 - [[Poster Results Coherence Audit]] - `references` [EXTRACTED]
 
   #community/Community_41

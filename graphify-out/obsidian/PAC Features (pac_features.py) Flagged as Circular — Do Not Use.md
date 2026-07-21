@@ -9,7 +9,8 @@ tags:
 # PAC Features (pac_features.py) Flagged as Circular — Do Not Use
 
 ## Connections
+
 - [[Circular Reasoning Constraint Cannot Use PAC to Predict PAC]] - `semantically_similar_to` [INFERRED]
 - [[Honest Baseline Ridge Regression R²=0.287 (135 spectral+wavelet features)]] - `references` [EXTRACTED]
 
-  #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model*Ceiling*&\_Leakage_Audits

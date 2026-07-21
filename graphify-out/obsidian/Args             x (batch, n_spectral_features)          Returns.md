@@ -7,9 +7,10 @@ tags:
   - community/Archived_SpecTempNet_V3
 ---
 
-# Args:             x: (batch, n_spectral_features)          Returns:
+# Args: x: (batch, n_spectral_features) Returns:
 
 ## Connections
+
 - [[forward()_26]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_SpecTempNet_V3

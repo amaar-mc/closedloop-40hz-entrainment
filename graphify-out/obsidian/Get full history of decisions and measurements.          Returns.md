@@ -7,11 +7,12 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Get full history of decisions and measurements.          Returns:
+# Get full history of decisions and measurements. Returns:
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
 - [[get_history()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

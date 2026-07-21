@@ -10,6 +10,7 @@ tags:
 # Replace all em-dashes with double hyphens.
 
 ## Connections
+
 - [[strip_emdashes()]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

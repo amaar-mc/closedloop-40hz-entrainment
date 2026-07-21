@@ -10,6 +10,7 @@ tags:
 # Research Hypotheses H1-H4 (PAC Prediction and Control Efficacy)
 
 ## Connections
+
 - [[Research Methodology Document GAT-Transformer Predictive Framework]] - `references` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

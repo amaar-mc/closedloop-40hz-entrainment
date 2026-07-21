@@ -10,6 +10,7 @@ tags:
 # 11pt italic caption in medium gray.
 
 ## Connections
+
 - [[caption()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

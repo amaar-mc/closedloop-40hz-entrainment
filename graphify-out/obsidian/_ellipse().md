@@ -7,9 +7,10 @@ tags:
   - community/Community_45
 ---
 
-# _ellipse()
+# \_ellipse()
 
 ## Connections
+
 - [[_id()]] - `calls` [EXTRACTED]
 - [[_seed()]] - `calls` [EXTRACTED]
 - [[generate_excalidraw.py]] - `contains` [EXTRACTED]

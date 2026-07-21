@@ -10,6 +10,7 @@ tags:
 # Lecanemab vs 40Hz: Cost and Mechanism Comparison ($26,500/yr vs $250 one-time)
 
 ## Connections
+
 - [[Amyloid Cascade Hypothesis and 40Hz Mechanism (Iaccarino + Murdock pathways)]] - `conceptually_related_to` [INFERRED]
 - [[FDA De Novo Classification Pathway for Novel Device]] - `conceptually_related_to` [INFERRED]
 

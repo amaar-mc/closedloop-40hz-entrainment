@@ -10,6 +10,7 @@ tags:
 # Run one trial with a controller on the realistic-noise simulator.
 
 ## Connections
+
 - [[run_trial()_5]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

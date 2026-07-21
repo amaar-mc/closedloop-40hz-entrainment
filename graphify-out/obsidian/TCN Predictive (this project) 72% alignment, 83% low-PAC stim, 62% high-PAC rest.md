@@ -9,8 +9,9 @@ tags:
 # TCN Predictive (this project): 72% alignment, 83% low-PAC stim, 62% high-PAC rest
 
 ## Connections
+
 - [[Figure 8 Controller Comparison Bar Chart (N=35, OpenNeuro ds005048)]] - `references` [EXTRACTED]
 - [[Per-Subject Alignment Scatter Plot (3535 Favor TCN)]] - `conceptually_related_to` [INFERRED]
 - [[TCN Controller ~60% Stim Rate, ~72% Alignment]] - `semantically_similar_to` [INFERRED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

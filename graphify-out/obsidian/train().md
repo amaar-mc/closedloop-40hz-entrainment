@@ -10,6 +10,7 @@ tags:
 # train()
 
 ## Connections
+
 - [[DataAugmentor]] - `calls` [EXTRACTED]
 - [[Full training loop with early stopping and checkpointing.          Args]] - `rationale_for` [EXTRACTED]
 - [[ModelTrainer]] - `method` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[train_epoch()_4]] - `calls` [EXTRACTED]
 - [[validate()_1]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

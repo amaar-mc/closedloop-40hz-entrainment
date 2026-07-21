@@ -9,4 +9,4 @@ tags:
 
 # 4-Channel vs 7-Channel Comparison (Muse-Compatible)
 
-  #community/Community_183
+#community/Community_183

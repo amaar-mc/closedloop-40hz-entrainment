@@ -10,6 +10,7 @@ tags:
 # Coherence Issue: Fatigue Results Use No Neural Network (Heuristic Only)
 
 ## Connections
+
 - [[Poster Results Coherence Audit]] - `references` [EXTRACTED]
 
   #community/Community_41

@@ -10,6 +10,7 @@ tags:
 # EEGAugmentation
 
 ## Connections
+
 - [[Complete augmentation pipeline for EEG data.]] - `rationale_for` [EXTRACTED]
 - [[Dataset with raw EEG, spectral features, and wavelet features.     Includes data]] - `uses` [INFERRED]
 - [[EEGDatasetV4]] - `uses` [INFERRED]
@@ -20,4 +21,4 @@ tags:
 - [[data_augmentation.py]] - `contains` [EXTRACTED]
 - [[test_augmentation()]] - `calls` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[ReactiveCtrl_2]] - `method` [EXTRACTED]
 
   #community/TVB_Alzheimer_Simulator

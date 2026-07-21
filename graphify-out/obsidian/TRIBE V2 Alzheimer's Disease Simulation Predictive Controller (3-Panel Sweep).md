@@ -9,6 +9,7 @@ tags:
 # TRIBE V2 Alzheimer's Disease Simulation: Predictive Controller (3-Panel Sweep)
 
 ## Connections
+
 - [[Five Disease Stages Healthy, Preclinical, Mild, Moderate, Severe]] - `references` [EXTRACTED]
 - [[PAC Dynamics by Disease Severity - Time Series Over 6 Minutes]] - `references` [EXTRACTED]
 - [[PAC Response vs Disease Severity - Predictive Controller Sweep]] - `references` [EXTRACTED]

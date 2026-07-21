@@ -10,6 +10,7 @@ tags:
 # generate_latex()
 
 ## Connections
+
 - [[Parse the markdown and produce LaTeX source.]] - `rationale_for` [EXTRACTED]
 - [[apply_unicode_replacements()]] - `calls` [EXTRACTED]
 - [[convert_inline_formatting()]] - `calls` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # simulate()
 
 ## Connections
+
 - [[Simulate neural mass dynamics and return EEG-rate output.          Generates a s]] - `rationale_for` [EXTRACTED]
 - [[WilsonCowanModel]] - `method` [EXTRACTED]
 - [[_sigmoid()]] - `calls` [EXTRACTED]

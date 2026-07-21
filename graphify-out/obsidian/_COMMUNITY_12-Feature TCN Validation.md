@@ -8,6 +8,7 @@ members: 73
 **Members:** 73 nodes
 
 ## Members
+
 - [[12-Feature TCN Validation Script (PAC+Context Only, N=35 Real EEG)]] - code - scripts/pipeline/run_12feat_validation.py
 - [[Alignment Score Metric (Low-PAC Stim + High-PAC Rest)  2]] - code - scripts/pipeline/run_tribe_alignment_validation.py
 - [[AlignmentOracleCtrl_1]] - code - scripts/pipeline/run_12feat_validation.py
@@ -90,11 +91,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 13 edges to [[_COMMUNITY_Multiscale TCN & Features]]
 - 10 edges to [[_COMMUNITY_Closed-Loop Control & Simulator]]
 - 2 edges to [[_COMMUNITY_TRIBE-TCN Validation]]
 
 ## Top bridge nodes
+
 - [[run_12feat_validation.py]] - degree 15, connects to 1 community
 - [[TCN12FeatCtrl]] - degree 11, connects to 1 community
 - [[run_tribe_alignment_validation.py]] - degree 10, connects to 1 community

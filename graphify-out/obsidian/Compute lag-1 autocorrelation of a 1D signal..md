@@ -10,6 +10,7 @@ tags:
 # Compute lag-1 autocorrelation of a 1D signal.
 
 ## Connections
+
 - [[lag1_autocorrelation()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_93

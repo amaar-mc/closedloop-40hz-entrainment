@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Paper Title Personalized Deep Learning for Closed-Loop 40 Hz Entrainment]] - document - submission/paper/RESEARCH_PAPER_v3.md
 
 ## Live Query (requires Dataview plugin)

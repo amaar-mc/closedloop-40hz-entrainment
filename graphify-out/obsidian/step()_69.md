@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[Make reactive decision based on current PAC.          Maintains current state]] - `rationale_for` [EXTRACTED]
 - [[ReactiveThresholdControl_6]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

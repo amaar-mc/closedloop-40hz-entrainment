@@ -10,6 +10,7 @@ tags:
 # Get full history of PAC and actions.
 
 ## Connections
+
 - [[get_history()_2]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

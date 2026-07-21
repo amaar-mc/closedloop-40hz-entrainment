@@ -10,6 +10,7 @@ tags:
 # Stage 1 Architecture Exploration Table (8 Models Tested)
 
 ## Connections
+
 - [[Poster Board V6 (PAC+Stim Feature Discovery Update)]] - `references` [INFERRED]
 - [[Poster Board V8 (CSEF 2026, 4-Column Layout)]] - `references` [EXTRACTED]
 

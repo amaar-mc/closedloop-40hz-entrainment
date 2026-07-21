@@ -7,11 +7,12 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Initialize BIDS data processor.          Args:             bids_root: Path to
+# Initialize BIDS data processor. Args: bids_root: Path to
 
 ## Connections
+
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
 - [[__init__()_150]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

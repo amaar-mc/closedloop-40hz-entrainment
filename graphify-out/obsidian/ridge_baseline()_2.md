@@ -10,6 +10,7 @@ tags:
 # ridge_baseline()
 
 ## Connections
+
 - [[Ridge regression on flattened feature sequences.]] - `rationale_for` [EXTRACTED]
 - [[_r2()_2]] - `calls` [EXTRACTED]
 - [[_rmse()_1]] - `calls` [EXTRACTED]

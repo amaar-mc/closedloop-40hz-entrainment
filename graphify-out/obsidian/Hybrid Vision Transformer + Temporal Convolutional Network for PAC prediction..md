@@ -10,6 +10,7 @@ tags:
 # Hybrid Vision Transformer + Temporal Convolutional Network for PAC prediction.
 
 ## Connections
+
 - [[ViTTCNet]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

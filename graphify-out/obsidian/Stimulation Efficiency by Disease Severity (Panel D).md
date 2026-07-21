@@ -10,6 +10,7 @@ tags:
 # Stimulation Efficiency by Disease Severity (Panel D)
 
 ## Connections
+
 - [[Stimulation Efficiency vs Severity - Healthy ~1.75, Severe ~0.25]] - `semantically_similar_to` [INFERRED]
 - [[TRIBE V2 Alzheimer's Disease Simulation Figure]] - `references` [EXTRACTED]
 

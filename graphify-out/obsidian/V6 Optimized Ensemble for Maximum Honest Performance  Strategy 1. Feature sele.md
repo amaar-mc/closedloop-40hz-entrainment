@@ -7,11 +7,12 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# V6: Optimized Ensemble for Maximum Honest Performance  Strategy: 1. Feature sele
+# V6: Optimized Ensemble for Maximum Honest Performance Strategy: 1. Feature sele
 
 ## Connections
+
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[WaveletFeatureExtractor]] - `uses` [INFERRED]
 - [[run_v6_optimized.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

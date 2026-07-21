@@ -10,8 +10,9 @@ tags:
 # estimate_snr()
 
 ## Connections
+
 - [[EEGPreprocessor]] - `method` [EXTRACTED]
 - [[Estimate signal-to-noise ratio.          Uses gamma band (38-42 Hz) as signal]] - `rationale_for` [EXTRACTED]
 - [[preprocess()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

@@ -10,6 +10,7 @@ tags:
 # ICA for EEG Artifact Removal (Infomax/FastICA)
 
 ## Connections
+
 - [[IEEE Research Paper Personalized Deep Learning for Closed-Loop 40Hz Entrainment]] - `conceptually_related_to` [INFERRED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

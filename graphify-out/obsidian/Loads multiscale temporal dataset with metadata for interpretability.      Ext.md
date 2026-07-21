@@ -7,12 +7,13 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Loads multiscale temporal dataset with metadata for interpretability.      Ext
+# Loads multiscale temporal dataset with metadata for interpretability. Ext
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[InterpretabilityDataset]] - `rationale_for` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

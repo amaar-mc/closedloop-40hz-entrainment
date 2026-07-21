@@ -10,9 +10,10 @@ tags:
 # load_profiles()
 
 ## Connections
+
 - [[Load patient profiles from JSON.  Cached until file changes.]] - `rationale_for` [EXTRACTED]
 - [[_get_patient_by_id()]] - `calls` [EXTRACTED]
 - [[caregiver_app.py]] - `contains` [EXTRACTED]
 - [[render_patient_select()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

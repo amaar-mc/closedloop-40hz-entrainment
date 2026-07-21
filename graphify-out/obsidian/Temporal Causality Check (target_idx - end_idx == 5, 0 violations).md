@@ -9,6 +9,7 @@ tags:
 # Temporal Causality Check (target_idx - end_idx == 5, 0 violations)
 
 ## Connections
+
 - [[Data Leakage Audit (77 checks pass, no leakage)]] - `references` [EXTRACTED]
 
   #community/Rigor_Audit_Reports

@@ -10,9 +10,10 @@ tags:
 # Run all methods for a scenario and print results.
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[run_scenario()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

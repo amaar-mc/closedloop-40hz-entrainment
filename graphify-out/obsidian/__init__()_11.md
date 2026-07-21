@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[AttentionPool1D]] - `method` [EXTRACTED]
 - [[__init__()_12]] - `calls` [EXTRACTED]
 

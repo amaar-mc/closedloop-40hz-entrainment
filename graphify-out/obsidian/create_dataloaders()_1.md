@@ -10,9 +10,10 @@ tags:
 # create_dataloaders()
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `method` [EXTRACTED]
 - [[Create PyTorch DataLoaders from splits.          Args             splits Di]] - `rationale_for` [EXTRACTED]
 - [[EEGWindowDataset]] - `calls` [EXTRACTED]
 - [[main()_76]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

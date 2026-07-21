@@ -10,8 +10,9 @@ tags:
 # V5 Changelog from V4 (Structural + Numerical Corrections)
 
 ## Connections
+
 - [[ATCNet R² Correction (0.287→0.075, V4 Critical Fix)]] - `conceptually_related_to` [INFERRED]
 - [[Poster Board V5 (Condensed, Visual-Forward, Synopsys 2026)]] - `references` [EXTRACTED]
 - [[TCN vs Reactive Trade-off Analysis (Stim% vs Targeting)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

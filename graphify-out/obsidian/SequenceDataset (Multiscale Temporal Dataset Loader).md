@@ -10,7 +10,8 @@ tags:
 # SequenceDataset (Multiscale Temporal Dataset Loader)
 
 ## Connections
+
 - [[SyntheticDataset (PyTorch Dataset for Synthetic Data)]] - `semantically_similar_to` [INFERRED]
 - [[run_single_experiment()]] - `shares_data_with` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

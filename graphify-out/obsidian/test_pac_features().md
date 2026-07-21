@@ -10,9 +10,10 @@ tags:
 # test_pac_features()
 
 ## Connections
+
 - [[PACFeatureExtractor]] - `calls` [EXTRACTED]
 - [[Test PAC feature extraction.]] - `rationale_for` [EXTRACTED]
 - [[extract()_1]] - `calls` [EXTRACTED]
 - [[pac_features.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

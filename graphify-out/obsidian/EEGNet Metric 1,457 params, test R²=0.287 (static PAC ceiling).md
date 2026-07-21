@@ -10,6 +10,7 @@ tags:
 # EEGNet Metric: 1,457 params, test R²=0.287 (static PAC ceiling)
 
 ## Connections
+
 - [[Research Paper Status Document]] - `references` [EXTRACTED]
 
   #community/Community_59

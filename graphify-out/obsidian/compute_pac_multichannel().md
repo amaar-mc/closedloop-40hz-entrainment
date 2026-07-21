@@ -10,9 +10,10 @@ tags:
 # compute_pac_multichannel()
 
 ## Connections
+
 - [[Compute PAC for multi-channel EEG.          Args             signals Multi-]] - `rationale_for` [EXTRACTED]
 - [[PACComputer]] - `method` [EXTRACTED]
 - [[compute_pac()]] - `calls` [EXTRACTED]
 - [[compute_pac_average()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

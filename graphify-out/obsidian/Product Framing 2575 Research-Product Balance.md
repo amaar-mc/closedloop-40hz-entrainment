@@ -10,6 +10,7 @@ tags:
 # Product Framing 25/75 Research-Product Balance
 
 ## Connections
+
 - [[Productization Roadmap (Muse 2 + Caregiver App + Pilot)]] - `rationale_for` [INFERRED]
 
   #community/Community_104

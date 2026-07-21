@@ -9,6 +9,7 @@ tags:
 # Fixed Schedule Controller: Alignment 45%, Low-PAC Stim 61.4%, High-PAC Rest 28.6%
 
 ## Connections
+
 - [[Figure 13 Controller Performance Comparison (N=35)]] - `references` [EXTRACTED]
 
   #community/Community_61

@@ -10,6 +10,7 @@ tags:
 # 40+ Q&A Bank (Technical, Process, Results, Creativity)
 
 ## Connections
+
 - [[Final Q&A Bank and Danger Zones (FINAL_04, Archived)]] - `references` [EXTRACTED]
 
   #community/Community_112

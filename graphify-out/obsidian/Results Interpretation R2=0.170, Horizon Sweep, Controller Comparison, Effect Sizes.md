@@ -10,6 +10,7 @@ tags:
 # Results Interpretation: R2=0.170, Horizon Sweep, Controller Comparison, Effect Sizes
 
 ## Connections
+
 - [[Rationale Raw Targets (ts=1) Over Smoothed (ts=5) for Honest Evaluation]] - `rationale_for` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

@@ -7,13 +7,14 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Run Wilcoxon signed-rank tests for all pairs of methods.      Args:         d
+# Run Wilcoxon signed-rank tests for all pairs of methods. Args: d
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[pairwise_wilcoxon()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

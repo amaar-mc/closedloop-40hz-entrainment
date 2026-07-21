@@ -10,6 +10,7 @@ tags:
 # add_body()
 
 ## Connections
+
 - [[Plain body paragraph.]] - `rationale_for` [EXTRACTED]
 - [[_disable_bullet()]] - `calls` [EXTRACTED]
 - [[_set_para_spacing()]] - `calls` [EXTRACTED]

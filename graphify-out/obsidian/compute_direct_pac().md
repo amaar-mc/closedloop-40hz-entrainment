@@ -10,8 +10,9 @@ tags:
 # compute_direct_pac()
 
 ## Connections
+
 - [[Compute Phase-Amplitude Coupling directly.      This is the Modulation Index (MI]] - `rationale_for` [EXTRACTED]
 - [[extract_pac_features()]] - `calls` [EXTRACTED]
 - [[pac_features.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

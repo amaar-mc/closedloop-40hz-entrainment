@@ -7,10 +7,11 @@ tags:
   - community/Control_Strategies_&_Validation
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[ReactiveThresholdControl_4]] - `method` [EXTRACTED]
 - [[__init__()_122]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

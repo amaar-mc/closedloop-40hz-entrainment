@@ -10,6 +10,7 @@ tags:
 # count_parameters()
 
 ## Connections
+
 - [[TinyTCN]] - `method` [EXTRACTED]
 - [[train_heavily_regularized()]] - `calls` [EXTRACTED]
 - [[train_with_feature_subset()]] - `calls` [EXTRACTED]

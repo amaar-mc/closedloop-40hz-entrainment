@@ -10,10 +10,11 @@ tags:
 # Entry point — configure page, init state, route to active page.
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[SimulatedEEGAdapter]] - `uses` [INFERRED]
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[TCNTemporalModel]] - `uses` [INFERRED]
 - [[main()_64]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

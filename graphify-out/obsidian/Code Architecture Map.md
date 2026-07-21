@@ -10,6 +10,7 @@ tags:
 # Code Architecture Map
 
 ## Connections
+
 - [[Documentation Index]] - `references` [EXTRACTED]
 - [[Methodology Documentation Directory]] - `conceptually_related_to` [INFERRED]
 

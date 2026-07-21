@@ -10,6 +10,7 @@ tags:
 # Clinical Relevance: Adaptive Scheduling for Alzheimer's Therapy
 
 ## Connections
+
 - [[Problem Statement Fixed-Schedule Stimulation Limitations]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_39

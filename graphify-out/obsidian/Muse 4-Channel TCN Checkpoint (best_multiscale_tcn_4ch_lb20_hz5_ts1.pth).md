@@ -10,6 +10,7 @@ tags:
 # Muse 4-Channel TCN Checkpoint (best_multiscale_tcn_4ch_lb20_hz5_ts1.pth)
 
 ## Connections
+
 - [[NeuroCare Caregiver Dashboard (Multi-page Streamlit)]] - `references` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

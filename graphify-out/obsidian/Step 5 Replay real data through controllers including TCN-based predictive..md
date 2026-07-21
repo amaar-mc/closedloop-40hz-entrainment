@@ -10,10 +10,11 @@ tags:
 # Step 5: Replay real data through controllers including TCN-based predictive.
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `uses` [INFERRED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[step_replay_with_tcn()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

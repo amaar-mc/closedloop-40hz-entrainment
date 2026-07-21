@@ -10,6 +10,7 @@ tags:
 # 73-Dimensional Causal Feature Vector (61 spectral + 7 PAC + 5 stim context)
 
 ## Connections
+
 - [[Research Paper v3 (Full CSEF Submission Paper)]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

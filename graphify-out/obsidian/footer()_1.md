@@ -10,6 +10,7 @@ tags:
 # footer()
 
 ## Connections
+
 - [[ResearchPaperPDF]] - `method` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

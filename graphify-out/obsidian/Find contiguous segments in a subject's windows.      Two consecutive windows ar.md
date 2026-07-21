@@ -7,9 +7,10 @@ tags:
   - community/Community_52
 ---
 
-# Find contiguous segments in a subject's windows.      Two consecutive windows ar
+# Find contiguous segments in a subject's windows. Two consecutive windows ar
 
 ## Connections
+
 - [[find_contiguous_segments()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_52

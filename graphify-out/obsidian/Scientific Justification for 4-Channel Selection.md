@@ -10,6 +10,7 @@ tags:
 # Scientific Justification for 4-Channel Selection
 
 ## Connections
+
 - [[Muse 2 to ds005048 Channel Mapping]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

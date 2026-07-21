@@ -7,9 +7,10 @@ tags:
   - community/Archived_ImprovedTCN_Experiments
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[TransformerPredictor]] - `method` [EXTRACTED]
 - [[__init__()_7]] - `calls` [EXTRACTED]
 

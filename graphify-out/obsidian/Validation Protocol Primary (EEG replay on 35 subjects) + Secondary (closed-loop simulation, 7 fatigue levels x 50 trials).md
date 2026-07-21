@@ -10,6 +10,7 @@ tags:
 # Validation Protocol: Primary (EEG replay on 35 subjects) + Secondary (closed-loop simulation, 7 fatigue levels x 50 trials)
 
 ## Connections
+
 - [[3535 Subjects Benefit from TCN Predictive vs Reactive (Figure 14)]] - `conceptually_related_to` [INFERRED]
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 

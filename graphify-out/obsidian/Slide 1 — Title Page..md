@@ -10,6 +10,7 @@ tags:
 # Slide 1 — Title Page.
 
 ## Connections
+
 - [[p01_title()_2]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

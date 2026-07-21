@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# Args:             X: EEG windows (n_samples, n_channels, n_timepoints)
+# Args: X: EEG windows (n_samples, n_channels, n_timepoints)
 
 ## Connections
+
 - [[__init__()_57]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_EEGNet_V2

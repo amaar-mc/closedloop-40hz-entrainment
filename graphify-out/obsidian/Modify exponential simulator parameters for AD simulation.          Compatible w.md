@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Modify exponential simulator parameters for AD simulation.          Compatible w
+# Modify exponential simulator parameters for AD simulation. Compatible w
 
 ## Connections
+
 - [[modify_simulator_params()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

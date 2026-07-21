@@ -9,6 +9,7 @@ tags:
 # Validation Protocol (Poster Figure)
 
 ## Connections
+
 - [[Model Approach Section (Poster)]] - `references` [EXTRACTED]
 
   #community/Community_51

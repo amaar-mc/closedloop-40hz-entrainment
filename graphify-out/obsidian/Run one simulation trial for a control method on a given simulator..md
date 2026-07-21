@@ -10,9 +10,10 @@ tags:
 # Run one simulation trial for a control method on a given simulator.
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[run_trial()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

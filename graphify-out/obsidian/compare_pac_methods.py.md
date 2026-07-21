@@ -10,6 +10,7 @@ tags:
 # compare_pac_methods.py
 
 ## Connections
+
 - [[Diagnostic compare epoch-level PAC vs per-window PAC.  For each subject, comput]] - `rationale_for` [EXTRACTED]
 - [[analyze_subject()]] - `contains` [EXTRACTED]
 - [[compute_within_epoch_variance()]] - `contains` [EXTRACTED]

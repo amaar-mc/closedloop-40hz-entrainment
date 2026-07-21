@@ -10,9 +10,10 @@ tags:
 # load_raw_data()
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `method` [EXTRACTED]
 - [[Load raw EEG data for a subject.          Handles MATLAB v7.3 (HDF5) .set file]] - `rationale_for` [EXTRACTED]
 - [[_load_hdf5_set()]] - `calls` [EXTRACTED]
 - [[process_dataset()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

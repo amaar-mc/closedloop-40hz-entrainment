@@ -10,6 +10,7 @@ tags:
 # run_tribe_validation.py
 
 ## Connections
+
 - [[FixedScheduleControl_3]] - `contains` [EXTRACTED]
 - [[OracleControl_2]] - `contains` [EXTRACTED]
 - [[PredictiveLookAheadControl_3]] - `contains` [EXTRACTED]
@@ -24,4 +25,4 @@ tags:
 - [[run_trial()_4]] - `contains` [EXTRACTED]
 - [[simulator.py]] - `imports_from` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

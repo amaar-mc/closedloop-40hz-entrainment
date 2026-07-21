@@ -10,6 +10,7 @@ tags:
 # Total feature vector length (spectral + PAC-derived + stim context).
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

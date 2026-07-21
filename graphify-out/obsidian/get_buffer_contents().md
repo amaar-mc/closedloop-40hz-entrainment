@@ -10,7 +10,8 @@ tags:
 # get_buffer_contents()
 
 ## Connections
+
 - [[PersonalizationModule]] - `method` [EXTRACTED]
 - [[Return copy of current baseline buffer contents.          Returns]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -10,6 +10,7 @@ tags:
 # ridge_direction()
 
 ## Connections
+
 - [[direction_classifier.py]] - `contains` [EXTRACTED]
 - [[eval_classifier()]] - `calls` [EXTRACTED]
 - [[main()_24]] - `calls` [EXTRACTED]

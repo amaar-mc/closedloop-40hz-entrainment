@@ -10,6 +10,7 @@ tags:
 # Poster Data and Story Section - System Flow and Open Neuro Dataset
 
 ## Connections
+
 - [[Synopsys Final Poster - Full Layout (Personalized Deep Learning for Closed-Loop 40 Hz Entrainment)]] - `references` [EXTRACTED]
 
   #community/Community_31

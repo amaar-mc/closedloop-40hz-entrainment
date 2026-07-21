@@ -10,6 +10,7 @@ tags:
 # ValidationMetrics
 
 ## Connections
+
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[Container for validation metrics.]] - `rationale_for` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
@@ -21,4 +22,4 @@ tags:
 - [[to_dict()_3]] - `method` [EXTRACTED]
 - [[validation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

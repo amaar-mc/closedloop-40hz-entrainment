@@ -10,6 +10,7 @@ tags:
 # MultiHorizonPredictor
 
 ## Connections
+
 - [[Extension Predict PAC at multiple future horizons simultaneously.      Shares]] - `rationale_for` [EXTRACTED]
 - [[__init__()_27]] - `method` [EXTRACTED]
 - [[forward()_18]] - `method` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # Habituation/Fatigue Analysis (17/35 habituate, 50/50 split)
 
 ## Connections
+
 - [[Fatigue Robustness Results (4 Model Types, All p0.001)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

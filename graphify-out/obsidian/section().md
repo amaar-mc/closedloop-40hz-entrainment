@@ -10,6 +10,7 @@ tags:
 # section()
 
 ## Connections
+
 - [[PaperPDF]] - `method` [EXTRACTED]
 - [[generate()]] - `calls` [EXTRACTED]
 

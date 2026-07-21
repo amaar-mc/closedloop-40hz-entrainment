@@ -10,6 +10,7 @@ tags:
 # fit_simulator_params.py
 
 ## Connections
+
 - [[Fit simulator tau parameters from real PAC transition data.  Extracts tau_rise a]] - `rationale_for` [EXTRACTED]
 - [[collapse_to_epochs()]] - `contains` [EXTRACTED]
 - [[fit_population_tau()]] - `contains` [EXTRACTED]

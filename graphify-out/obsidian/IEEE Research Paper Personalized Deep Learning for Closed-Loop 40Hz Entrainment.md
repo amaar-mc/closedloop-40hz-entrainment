@@ -9,6 +9,7 @@ tags:
 # IEEE Research Paper: Personalized Deep Learning for Closed-Loop 40Hz Entrainment
 
 ## Connections
+
 - [[EEGNet Architecture (IEEE Paper Specification)]] - `references` [EXTRACTED]
 - [[GENUS Gamma Entrainment Using Sensory Stimulation]] - `references` [EXTRACTED]
 - [[ICA for EEG Artifact Removal (InfomaxFastICA)]] - `conceptually_related_to` [INFERRED]
@@ -21,4 +22,4 @@ tags:
 - [[Personalization Module (IEEE Paper)]] - `references` [EXTRACTED]
 - [[Tort 2010 (J. Neurophysiol) Modulation Index PAC Method]] - `cites` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

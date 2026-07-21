@@ -9,6 +9,7 @@ tags:
 # Elevator Pitch Script (60 Seconds, CSEF + Facility Audiences)
 
 ## Connections
+
 - [[NeuroCare 40Hz Pilot Links (HuggingFace App and Feedback Form)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

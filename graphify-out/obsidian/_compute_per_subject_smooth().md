@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# _compute_per_subject_smooth()
+# \_compute_per_subject_smooth()
 
 ## Connections
+
 - [[__init__()_9]] - `calls` [EXTRACTED]
 - [[train_improved_tcn.py]] - `contains` [EXTRACTED]
 

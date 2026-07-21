@@ -10,7 +10,8 @@ tags:
 # forward()
 
 ## Connections
+
 - [[Forward pass.          Args             x_seq Input tensor of shape (B, T,_1]] - `rationale_for` [EXTRACTED]
 - [[MultiTaskTCN]] - `method` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

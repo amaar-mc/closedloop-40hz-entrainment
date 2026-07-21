@@ -10,6 +10,7 @@ tags:
 # MultiScaleTemporalCNN
 
 ## Connections
+
 - [[Multi-scale temporal CNN to capture oscillatory patterns at different frequencie]] - `rationale_for` [EXTRACTED]
 - [[__init__()_53]] - `method` [EXTRACTED]
 - [[__init__()_56]] - `calls` [EXTRACTED]

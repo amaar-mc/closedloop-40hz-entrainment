@@ -10,6 +10,7 @@ tags:
 # Contiguous Window Stitching for Continuous EEG Signal
 
 ## Connections
+
 - [[Sliding-Window PAC Computation (compute_sliding_pac.py)]] - `implements` [EXTRACTED]
 
   #community/Generalization-Gap_Experiments

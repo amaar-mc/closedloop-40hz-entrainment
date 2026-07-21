@@ -10,6 +10,7 @@ tags:
 # get_regional_a()
 
 ## Connections
+
 - [[Get the per-region A (excitatory gain) array.]] - `rationale_for` [EXTRACTED]
 - [[TVBAlzheimerSimulator]] - `method` [EXTRACTED]
 

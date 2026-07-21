@@ -10,6 +10,7 @@ tags:
 # test_temporal_sequence_logic()
 
 ## Connections
+
 - [[Temporal Causality — Sequences Must Not Cross Subject Boundaries]] - `implements` [EXTRACTED]
 - [[Test 1 Verify temporal sequence building logic.     Ensures sequences don't cr]] - `rationale_for` [EXTRACTED]
 - [[main()_59]] - `calls` [EXTRACTED]

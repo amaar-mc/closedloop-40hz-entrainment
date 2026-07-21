@@ -10,6 +10,7 @@ tags:
 # Three Key Scientific Moments (Ceiling Discovery, Feature Paradox, Horizon Inflection)
 
 ## Connections
+
 - [[9-Beat Presentation Spine (Hook→Gap→Biomarker→Ceiling→Pivot→Discovery→Horizon→Results→Product)]] - `references` [EXTRACTED]
 - [[EEGNet Static PAC Predictor (R²=0.287 ceiling)]] - `references` [EXTRACTED]
 - [[Horizon Sweep Finding (TCN R²=0.24–0.28 at 5–10s, baselines collapse)]] - `references` [EXTRACTED]

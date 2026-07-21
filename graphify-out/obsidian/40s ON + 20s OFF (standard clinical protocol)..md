@@ -10,9 +10,10 @@ tags:
 # 40s ON + 20s OFF (standard clinical protocol).
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[FixedScheduleControl_1]] - `rationale_for` [EXTRACTED]
 - [[StimAction]] - `uses` [INFERRED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

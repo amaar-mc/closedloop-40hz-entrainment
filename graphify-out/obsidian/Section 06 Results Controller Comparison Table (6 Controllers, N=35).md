@@ -10,6 +10,7 @@ tags:
 # Section 06 Results: Controller Comparison Table (6 Controllers, N=35)
 
 ## Connections
+
 - [[Controller Comparison Results (N=35 Real EEG, 6 Controllers)]] - `semantically_similar_to` [INFERRED]
 - [[Figure Per-Subject Alignment (3535 Subjects Favor TCN, Scatter Plot)]] - `references` [EXTRACTED]
 - [[Figure Real-Data Controller Timeline (sub-15, Test Set)]] - `references` [EXTRACTED]

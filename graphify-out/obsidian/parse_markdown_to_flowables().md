@@ -10,6 +10,7 @@ tags:
 # parse_markdown_to_flowables()
 
 ## Connections
+
 - [[Convert markdown text to a list of reportlab flowables.]] - `rationale_for` [EXTRACTED]
 - [[build_table_flowable()]] - `calls` [EXTRACTED]
 - [[generate_notebook_pdf.py]] - `contains` [EXTRACTED]

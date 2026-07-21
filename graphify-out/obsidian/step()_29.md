@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[PICtrl]] - `method` [EXTRACTED]
 - [[main()_42]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

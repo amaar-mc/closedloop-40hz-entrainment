@@ -10,6 +10,7 @@ tags:
 # Get PAC value at specific step.
 
 ## Connections
+
 - [[get_pac_at_step()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

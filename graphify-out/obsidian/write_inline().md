@@ -10,6 +10,7 @@ tags:
 # write_inline()
 
 ## Connections
+
 - [[SlideBuilder]] - `method` [EXTRACTED]
 - [[Write multiple styled runs in a single paragraph.          Each segment (text,]] - `rationale_for` [EXTRACTED]
 - [[_add_textbox()]] - `calls` [EXTRACTED]

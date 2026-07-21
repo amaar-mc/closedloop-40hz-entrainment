@@ -10,6 +10,7 @@ tags:
 # System Pipeline Diagram
 
 ## Connections
+
 - [[Paper Figures Source Directory]] - `references` [EXTRACTED]
 
   #community/Community_77

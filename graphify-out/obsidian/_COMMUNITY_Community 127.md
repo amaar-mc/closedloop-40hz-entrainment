@@ -8,6 +8,7 @@ members: 3
 **Members:** 3 nodes
 
 ## Members
+
 - [[Generate Figure 8 Controller Comparison bar chart from real data.]] - rationale - scripts/figures/generate_controller_comparison.py
 - [[add_bracket()]] - code - scripts/figures/generate_controller_comparison.py
 - [[generate_controller_comparison.py]] - code - scripts/figures/generate_controller_comparison.py

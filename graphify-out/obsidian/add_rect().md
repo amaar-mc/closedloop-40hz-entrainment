@@ -10,6 +10,7 @@ tags:
 # add_rect()
 
 ## Connections
+
 - [[Add a filled rectangle.]] - `rationale_for` [EXTRACTED]
 - [[add_callout()]] - `calls` [EXTRACTED]
 - [[add_content_bg()]] - `calls` [EXTRACTED]

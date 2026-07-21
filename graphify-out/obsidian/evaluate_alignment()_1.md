@@ -10,6 +10,7 @@ tags:
 # evaluate_alignment()
 
 ## Connections
+
 - [[run_oracle_trial()]] - `calls` [EXTRACTED]
 - [[run_trial()_3]] - `calls` [EXTRACTED]
 - [[run_tvb_alignment.py]] - `contains` [EXTRACTED]

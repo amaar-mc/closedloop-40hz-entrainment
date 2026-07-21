@@ -9,6 +9,7 @@ tags:
 # Closed-Loop Controller (PAC-forecast-driven stimulation)
 
 ## Connections
+
 - [[Alignment Result 72.1% (TCN) vs 64.5% (reactive), p0.001]] - `references` [EXTRACTED]
 - [[Causal Temporal Convolutional Network (TCN, ~31K params)]] - `implements` [EXTRACTED]
 - [[Fixed-Schedule Protocol Limitation (habituation ignored)]] - `rationale_for` [EXTRACTED]

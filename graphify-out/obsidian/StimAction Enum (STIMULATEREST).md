@@ -10,6 +10,7 @@ tags:
 # StimAction Enum (STIMULATE/REST)
 
 ## Connections
+
 - [[Fixed Schedule Controller (40s ON20s OFF)]] - `calls` [EXTRACTED]
 - [[Oracle Controller (perfect knowledge baseline)]] - `calls` [EXTRACTED]
 - [[Predictive Look-Ahead Controller (trend+hysteresis)]] - `calls` [EXTRACTED]

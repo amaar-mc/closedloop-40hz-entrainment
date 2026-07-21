@@ -10,9 +10,10 @@ tags:
 # extract_phase_amplitude()
 
 ## Connections
+
 - [[Extract phase from low-frequency and amplitude from high-frequency.          A]] - `rationale_for` [EXTRACTED]
 - [[PACComputer]] - `method` [EXTRACTED]
 - [[bandpass_filter()]] - `calls` [EXTRACTED]
 - [[compute_pac()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

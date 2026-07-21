@@ -9,8 +9,9 @@ tags:
 # ViT-TCNet V4 Design (Pre-trained ViT + TCN + SE Attention)
 
 ## Connections
+
 - [[135 Total Features (61 Spectral + 74 Wavelet) for V4]] - `references` [EXTRACTED]
 - [[V4 Wavelet Features 74 Features (35 CWT + 28 WPD + 11 Global)]] - `references` [EXTRACTED]
 - [[ViT-TCNet Architecture Plan (Pre-trained ViT + TCN Decoder)]] - `implements` [INFERRED]
 
-  #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model*Ceiling*&\_Leakage_Audits

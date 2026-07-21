@@ -9,6 +9,7 @@ tags:
 # Reactive Controller Strategy
 
 ## Connections
+
 - [[Predictive Controller Strategy]] - `conceptually_related_to` [EXTRACTED]
 - [[TRIBE V2 Alzheimer's Disease Simulation Figure]] - `references` [EXTRACTED]
 

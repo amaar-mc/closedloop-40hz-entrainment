@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[P10 Lab Notebook V3 PDF (Title Page, TOC, Body)]] - `references` [INFERRED]
 - [[Project P10 Research Log Notebook V3 (Synopsys Submission)]] - `references` [EXTRACTED]
 - [[ReportLab PDF Generation with Times New Roman and Markdown Parser]] - `implements` [EXTRACTED]

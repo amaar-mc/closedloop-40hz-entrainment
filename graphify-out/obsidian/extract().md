@@ -10,9 +10,10 @@ tags:
 # extract()
 
 ## Connections
+
 - [[Extract wavelet features for a batch of EEG windows.          Args]] - `rationale_for` [EXTRACTED]
 - [[WaveletFeatureExtractor]] - `method` [EXTRACTED]
 - [[extract_wavelet_features()]] - `calls` [EXTRACTED]
 - [[test_wavelet_features()]] - `calls` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

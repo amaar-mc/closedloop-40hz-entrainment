@@ -9,6 +9,7 @@ tags:
 # Ridge Regression Baseline (Collapses Below R²=0 at 5+ Seconds)
 
 ## Connections
+
 - [[Causal TCN R² at 5-10s Horizon (Operationally Useful Range)]] - `conceptually_related_to` [EXTRACTED]
 - [[Operationally Useful Region (5–10s Prediction Horizon)]] - `conceptually_related_to` [EXTRACTED]
 - [[PAC Forecasting Performance vs Prediction Horizon Chart]] - `references` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # Citation: Murdock et al. (2024) - Glymphatic Clearance of Amyloid
 
 ## Connections
+
 - [[Citation Iaccarino et al. (2016) - 40Hz gamma entrainment reduces amyloid]] - `conceptually_related_to` [INFERRED]
 
   #community/Lab_Notebook_PDF_Generation

@@ -10,7 +10,8 @@ tags:
 # LongWindowTemporalDataset (8-sec Window Dataset)
 
 ## Connections
+
 - [[TemporalPACDataset (PyTorch Dataset)]] - `semantically_similar_to` [INFERRED]
 - [[create_dataloaders (Long-Window DataLoader Factory)]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

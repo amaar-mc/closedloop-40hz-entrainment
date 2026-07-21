@@ -10,6 +10,7 @@ tags:
 # Multiscale Input Features (Spectral + PAC History + Stimulation Context)
 
 ## Connections
+
 - [[Causal Multiscale TCN Model]] - `references` [EXTRACTED]
 
   #community/Community_79

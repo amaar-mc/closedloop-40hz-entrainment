@@ -10,6 +10,7 @@ tags:
 # save()
 
 ## Connections
+
 - [[fig_controller_comparison()]] - `calls` [EXTRACTED]
 - [[fig_horizon_sweep()]] - `calls` [EXTRACTED]
 - [[fig_per_subject()]] - `calls` [EXTRACTED]

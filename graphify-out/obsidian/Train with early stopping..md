@@ -10,6 +10,7 @@ tags:
 # Train with early stopping.
 
 ## Connections
+
 - [[train_model()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Community_38

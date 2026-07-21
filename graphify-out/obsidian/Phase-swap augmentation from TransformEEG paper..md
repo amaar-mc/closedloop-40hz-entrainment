@@ -10,6 +10,7 @@ tags:
 # Phase-swap augmentation from TransformEEG paper.
 
 ## Connections
+
 - [[PhaseSwapAugmentation]] - `rationale_for` [EXTRACTED]
 
   #community/Community_38

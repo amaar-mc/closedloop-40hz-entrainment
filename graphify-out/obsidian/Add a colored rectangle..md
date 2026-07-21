@@ -10,6 +10,7 @@ tags:
 # Add a colored rectangle.
 
 ## Connections
+
 - [[add_box()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_75

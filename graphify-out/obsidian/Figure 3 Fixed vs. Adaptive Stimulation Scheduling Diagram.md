@@ -9,6 +9,7 @@ tags:
 # Figure 3: Fixed vs. Adaptive Stimulation Scheduling Diagram
 
 ## Connections
+
 - [[Adaptive Schedule TCN Predicts 3s Ahead, Targets Low-PAC Windows, 3s Hysteresis]] - `references` [EXTRACTED]
 - [[Fixed Schedule Treats Every Moment the Same, Wastes Stim During High PAC, Misses Low PAC]] - `references` [EXTRACTED]
 

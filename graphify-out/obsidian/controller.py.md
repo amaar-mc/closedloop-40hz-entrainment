@@ -10,6 +10,7 @@ tags:
 # controller.py
 
 ## Connections
+
 - [[Closed-Loop Controller for Real-Time PAC-Based Neuromodulation  Implements thr]] - `rationale_for` [EXTRACTED]
 - [[ClosedLoopController]] - `contains` [EXTRACTED]
 - [[PredictiveLookAheadController]] - `contains` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[test_controller()]] - `contains` [EXTRACTED]
 - [[validation.py]] - `imports_from` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

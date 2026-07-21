@@ -9,6 +9,7 @@ tags:
 # Protocol
 
 ## Connections
+
 - [[TemporalModel]] - `inherits` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

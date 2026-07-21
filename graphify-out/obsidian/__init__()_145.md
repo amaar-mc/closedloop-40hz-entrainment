@@ -7,10 +7,11 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[Initialize PAC computer.          Args             theta_band (low, high) f]] - `rationale_for` [EXTRACTED]
 - [[PACComputer]] - `method` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

@@ -10,6 +10,7 @@ tags:
 # Run a brief warmup to establish baseline PAC.
 
 ## Connections
+
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]

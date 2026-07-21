@@ -9,6 +9,7 @@ tags:
 # Project Limitations (Offline replay, Single dataset, Short sessions)
 
 ## Connections
+
 - [[Offline Replay Validation (real EEG, counterfactual decisions, 35 subjects)]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

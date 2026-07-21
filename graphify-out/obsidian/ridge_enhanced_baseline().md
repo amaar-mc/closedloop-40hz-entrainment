@@ -10,6 +10,7 @@ tags:
 # ridge_enhanced_baseline()
 
 ## Connections
+
 - [[Ridge with hand-crafted summary features instead of raw flattening.]] - `rationale_for` [EXTRACTED]
 - [[compute_metrics()]] - `calls` [EXTRACTED]
 - [[denorm()]] - `calls` [EXTRACTED]

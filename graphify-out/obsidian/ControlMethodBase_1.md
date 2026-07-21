@@ -10,6 +10,7 @@ tags:
 # ControlMethodBase
 
 ## Connections
+
 - [[Base class for control strategies._1]] - `rationale_for` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
@@ -24,4 +25,4 @@ tags:
 - [[step()_58]] - `method` [EXTRACTED]
 - [[tcn_integrated_simulation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

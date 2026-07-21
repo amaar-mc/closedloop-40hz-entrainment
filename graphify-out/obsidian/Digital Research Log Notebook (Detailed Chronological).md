@@ -9,6 +9,7 @@ tags:
 # Digital Research Log Notebook (Detailed Chronological)
 
 ## Connections
+
 - [[Controller Comparison Results (72.1% TCN vs 64.5% Reactive, N=35)]] - `references` [EXTRACTED]
 - [[Fatigue Model Robustness (4 fatigue models, all p0.001)]] - `references` [EXTRACTED]
 - [[Feature Leakage Discovery (MI features circular in static prediction)]] - `references` [EXTRACTED]

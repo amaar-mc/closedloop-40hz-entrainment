@@ -10,6 +10,7 @@ tags:
 # Project Limitations: offline replay only, single dataset, short sessions (6-10 min), static PAC ceiling, heuristic thresholds
 
 ## Connections
+
 - [[Discussion Slide spectral features encode anatomy, 3s inflection = PAC autocorrelation timescale, single-site limitation]] - `shares_data_with` [EXTRACTED]
 - [[Q&A Tier 5 Hard R²=0.25 usefulness defense, offline vs live argument, sample size defense, novelty claims]] - `conceptually_related_to` [INFERRED]
 

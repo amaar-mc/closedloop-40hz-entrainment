@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# PAC-Specific Feature Extraction  Direct computation of phase-amplitude coupling
+# PAC-Specific Feature Extraction Direct computation of phase-amplitude coupling
 
 ## Connections
+
 - [[pac_features.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

@@ -10,6 +10,7 @@ tags:
 # PAC Oracle Dependency (Deployment Risk)
 
 ## Connections
+
 - [[Comprehensive Submission Audit Report]] - `references` [EXTRACTED]
 - [[Deployment Realism Failure PAC Oracle Dependency]] - `semantically_similar_to` [INFERRED]
 - [[PAC-Zeroed Ablation (93% R² Collapse)]] - `conceptually_related_to` [INFERRED]

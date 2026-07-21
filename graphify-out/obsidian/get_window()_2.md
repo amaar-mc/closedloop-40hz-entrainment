@@ -10,6 +10,7 @@ tags:
 # get_window()
 
 ## Connections
+
 - [[RealEEGAdapter]] - `method` [EXTRACTED]
 - [[Sleep 2 seconds and return one (n_channels, 500) float32 EEG window.          Re]] - `rationale_for` [EXTRACTED]
 

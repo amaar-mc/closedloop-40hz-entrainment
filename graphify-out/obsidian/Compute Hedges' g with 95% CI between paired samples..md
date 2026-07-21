@@ -10,9 +10,10 @@ tags:
 # Compute Hedges' g with 95% CI between paired samples.
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[hedges_g()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

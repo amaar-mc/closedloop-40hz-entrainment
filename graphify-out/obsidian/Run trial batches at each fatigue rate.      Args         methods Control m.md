@@ -7,12 +7,13 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Run trial batches at each fatigue rate.      Args:         methods: Control m
+# Run trial batches at each fatigue rate. Args: methods: Control m
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[run_fatigue_sweep()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

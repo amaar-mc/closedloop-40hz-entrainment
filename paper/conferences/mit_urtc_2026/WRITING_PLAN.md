@@ -9,18 +9,18 @@ The manuscript should lead with the generalization result: a compact causal TCN 
 and stimulation-context features predicts future entrainment better than a larger candidate feature
 set that includes spectral inputs. The controller replay is a downstream diagnostic. It shows that
 strong forecasting does not automatically yield a better balanced controller objective: the final
-checkpoint improves low-PAC targeting but reduces high-PAC rest specificity.
+checkpoint improves low-PAC coverage but reduces the above-median-PAC rest rate.
 
 ## Proposed Page Budget
 
-| Content | Approximate space |
-|---|---|
-| Title, author block, abstract | 0.45 page |
-| Introduction and related work | 0.70 page |
-| Data, PAC computation, split strategy, and model | 1.35 pages |
-| Offline controller-replay methodology | 0.65 page |
-| Results with compact figures and table | 1.35 pages |
-| Limitations, conclusion, and references | 0.50 page |
+| Content                                          | Approximate space |
+| ------------------------------------------------ | ----------------- |
+| Title, author block, abstract                    | 0.45 page         |
+| Introduction and related work                    | 0.70 page         |
+| Data, PAC computation, split strategy, and model | 1.35 pages        |
+| Offline controller-replay methodology            | 0.65 page         |
+| Results with compact figures and table           | 1.35 pages        |
+| Limitations, conclusion, and references          | 0.50 page         |
 
 ## Drafting Order
 
@@ -38,5 +38,5 @@ The abstract should be self-contained and quantitative. It should state:
 
 - Why fixed stimulation schedules are a limitation.
 - What was evaluated: a causal 12-feature TCN and offline replay on 35 subjects.
-- The strongest generalization result and the controller targeting-specificity tradeoff.
+- The strongest generalization result and the controller low-PAC-coverage/high-PAC-rest tradeoff.
 - The key limitation: this is retrospective replay, not a clinical efficacy study.

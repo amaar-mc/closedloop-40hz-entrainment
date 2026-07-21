@@ -8,6 +8,7 @@ members: 115
 **Members:** 115 nodes
 
 ## Members
+
 - [[40 Hz Auditory Stimulus Generator for TRIBE V2 Integration  Generates auditory c]] - rationale - src/tribe_v2/stimulus_generator.py
 - [[Alzheimer's Disease Modeling Layer for TRIBE V2 Integration  Models the effects]] - rationale - src/tribe_v2/alzheimer_model.py
 - [[AlzheimerProfile]] - code - src/tribe_v2/alzheimer_model.py
@@ -59,7 +60,7 @@ members: 115
 - [[Simulate one time step of neural dynamics.          Pipeline             1. Get]] - rationale - src/tribe_v2/enhanced_simulator.py
 - [[StimAction_1]] - code - src/tribe_v2/enhanced_simulator.py
 - [[StimulusConfig]] - code - src/tribe_v2/stimulus_generator.py
-- [[TRIBE V2 Integration Module for Closed-Loop 40Hz Entrainment  Integrates Meta's]] - rationale - src/tribe_v2/__init__.py
+- [[TRIBE V2 Integration Module for Closed-Loop 40Hz Entrainment  Integrates Meta's]] - rationale - src/tribe_v2/**init**.py
 - [[TRIBE V2-Enhanced Brain Entrainment Simulator  Replaces the simple exponential P]] - rationale - src/tribe_v2/enhanced_simulator.py
 - [[TribeEnhancedSimulator]] - code - src/tribe_v2/enhanced_simulator.py
 - [[TribeSimulatorConfig]] - code - src/tribe_v2/enhanced_simulator.py
@@ -132,11 +133,13 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 26 edges to [[_COMMUNITY_Closed-Loop Control & Simulator]]
 - 3 edges to [[_COMMUNITY_Models, Streaming & Apps]]
 - 1 edge to [[_COMMUNITY_Community 32]]
 
 ## Top bridge nodes
+
 - [[TRIBE V2 Integration Module for Closed-Loop 40Hz Entrainment  Integrates Meta's]] - degree 9, connects to 2 communities
 - [[TribeEnhancedSimulator]] - degree 39, connects to 1 community
 - [[TribeSimulatorConfig]] - degree 29, connects to 1 community

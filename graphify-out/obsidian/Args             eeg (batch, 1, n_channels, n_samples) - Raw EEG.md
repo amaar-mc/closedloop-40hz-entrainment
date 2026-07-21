@@ -7,9 +7,10 @@ tags:
   - community/Archived_SpecTempNet_V3
 ---
 
-# Args:             eeg: (batch, 1, n_channels, n_samples) - Raw EEG
+# Args: eeg: (batch, 1, n_channels, n_samples) - Raw EEG
 
 ## Connections
+
 - [[forward()_28]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_SpecTempNet_V3

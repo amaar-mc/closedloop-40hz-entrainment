@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# Train ImprovedTCN on enhanced multiscale datasets.  Key differences from train_m
+# Train ImprovedTCN on enhanced multiscale datasets. Key differences from train_m
 
 ## Connections
+
 - [[ImprovedModelConfig]] - `uses` [INFERRED]
 - [[ImprovedTCN_1]] - `uses` [INFERRED]
 - [[train_improved_tcn.py]] - `rationale_for` [EXTRACTED]

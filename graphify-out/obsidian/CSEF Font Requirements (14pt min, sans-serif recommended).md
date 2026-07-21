@@ -9,6 +9,7 @@ tags:
 # CSEF Font Requirements (14pt min, sans-serif recommended)
 
 ## Connections
+
 - [[Font Compliance Audit]] - `references` [EXTRACTED]
 - [[Times New Roman Font Warning]] - `rationale_for` [EXTRACTED]
 

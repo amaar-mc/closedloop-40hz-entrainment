@@ -1,8 +1,9 @@
 # MIT URTC Submission Requirements
 
-**Verified:** 2026-05-31  
-**Target cycle:** Fall 2026  
-**Current limitation:** the official site still publishes 2025 dates, links, and guidelines.
+**Verified:** 2026-06-23
+**Target cycle:** Fall 2026
+**Current limitation:** the 2026 CMT route and conference dates are live, but MIT's public submission
+page still publishes the 2025 deadline and guideline PDF.
 
 ## What Is Confirmed From The Latest Official Material
 
@@ -52,13 +53,24 @@ submission.
 
 The public site currently displays these 2025 dates:
 
-| Milestone | Historical date |
-|---|---|
-| Paper submissions due | 2025-08-03 |
-| Author notifications | 2025-08-29 |
-| Conference | 2025-10-10 to 2025-10-12 |
+| Milestone             | Historical date          |
+| --------------------- | ------------------------ |
+| Paper submissions due | 2025-08-03               |
+| Author notifications  | 2025-08-29               |
+| Conference            | 2025-10-10 to 2025-10-12 |
 
-Do not reuse these dates for Fall 2026. Refresh the official site when the 2026 cycle is published.
+Do not reuse these dates for Fall 2026.
+
+## Confirmed 2026 Infrastructure
+
+- The CMT route <https://cmt3.research.microsoft.com/URTC2026> is live but requires authentication
+  before conference-specific author instructions are visible.
+- IEEE Boston lists URTC 2026 for 2026-10-09 through 2026-10-11.
+- MIT's public submission page still links the same Word template snapshot downloaded on 2026-05-31;
+  its SHA-256 remained `c8e86eabd52a42f4326fd87b9af0269624c6d72d11ea4adc5e6ac4c626b123ed`
+  on 2026-06-23.
+- The 2026 paper deadline, camera-ready deadline, presenter limit, and track list remain unverified
+  from public official materials.
 
 ## Official Sources
 
@@ -67,5 +79,7 @@ Do not reuse these dates for Fall 2026. Refresh the official site when the 2026 
 - FAQ: <https://urtc.mit.edu/faq>
 - Latest published paper guideline PDF: <https://urtc.mit.edu/paper_submission_2025.pdf>
 - Currently published Word template: <https://urtc.mit.edu/conference-template-letter.docx>
+- 2026 CMT route: <https://cmt3.research.microsoft.com/URTC2026>
+- IEEE Boston conference listing: <https://ieeeboston.org/conferences/>
 - Local guideline snapshot: [`guidelines/official_2025_paper_submission_guidelines.pdf`](guidelines/official_2025_paper_submission_guidelines.pdf)
 - Local template snapshot: [`guidelines/official_paper_template_letter.docx`](guidelines/official_paper_template_letter.docx)

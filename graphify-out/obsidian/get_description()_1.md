@@ -10,7 +10,8 @@ tags:
 # get_description()
 
 ## Connections
+
 - [[Return human-readable model description._1]] - `rationale_for` [EXTRACTED]
 - [[StepFunctionSimulator]] - `method` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

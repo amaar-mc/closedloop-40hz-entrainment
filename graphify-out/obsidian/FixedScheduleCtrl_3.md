@@ -10,6 +10,7 @@ tags:
 # FixedScheduleCtrl
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[__init__()_96]] - `method` [EXTRACTED]

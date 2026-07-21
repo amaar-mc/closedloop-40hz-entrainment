@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Predictive look-ahead control for proactive stimulation scheduling.      When
+# Predictive look-ahead control for proactive stimulation scheduling. When
 
 ## Connections
+
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
@@ -18,4 +19,4 @@ tags:
 - [[StimAction]] - `uses` [INFERRED]
 - [[StimState]] - `uses` [INFERRED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

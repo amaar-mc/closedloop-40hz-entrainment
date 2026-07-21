@@ -10,6 +10,7 @@ tags:
 # Limitation: Fatigue Simulator Not Empirically Validated
 
 ## Connections
+
 - [[Anticipated Reviewer Weaknesses]] - `references` [EXTRACTED]
 
   #community/Community_68

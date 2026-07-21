@@ -9,7 +9,8 @@ tags:
 # Stimulus/Rest Protocol: 40 Hz AM blocks (40s stim / 20s rest), 2s analysis windows
 
 ## Connections
+
 - [[Figure 8 Dataset Overview (EEG Channels, Protocol, Splits)]] - `references` [EXTRACTED]
 - [[Fixed Schedule Controller ~68% Stim Rate, ~45% Alignment (worst alignment)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

@@ -10,9 +10,10 @@ tags:
 # Test 3: registry.get('nonexistent') raises KeyError with available model list.
 
 ## Connections
+
 - [[ModelRegistry]] - `uses` [INFERRED]
 - [[TCNTemporalModel]] - `uses` [INFERRED]
 - [[TemporalModel]] - `uses` [INFERRED]
 - [[test_registry_get_nonexistent_raises_key_error()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # PAC Features (Circular — Never Used, R²=0.9999)
 
 ## Connections
+
 - [[Finding PAC Features Dominate (Zeroing PAC Features Collapses R² to 0.045)]] - `semantically_similar_to` [INFERRED]
 - [[R²=0.287 Static PAC Prediction Ceiling]] - `rationale_for` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # extract_wavelet_features()
 
 ## Connections
+
 - [[Extract comprehensive wavelet-based features for PAC prediction.      Args]] - `rationale_for` [EXTRACTED]
 - [[compute_cwt_features()]] - `calls` [EXTRACTED]
 - [[compute_phase_sync_index()]] - `calls` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[test_wavelet_features()]] - `calls` [EXTRACTED]
 - [[wavelet_features.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

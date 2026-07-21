@@ -10,6 +10,7 @@ tags:
 # sub()
 
 ## Connections
+
 - [[SlideBuilder]] - `method` [EXTRACTED]
 - [[Subsection heading -- 17pt bold.]] - `rationale_for` [EXTRACTED]
 - [[_add_textbox()]] - `calls` [EXTRACTED]

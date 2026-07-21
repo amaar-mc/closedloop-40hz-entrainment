@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Compute recent PAC slope over last *k* steps (trend fallback).          Uses o
+# Compute recent PAC slope over last _k_ steps (trend fallback). Uses o
 
 ## Connections
+
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
@@ -18,4 +19,4 @@ tags:
 - [[StimState]] - `uses` [INFERRED]
 - [[_pac_trend()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

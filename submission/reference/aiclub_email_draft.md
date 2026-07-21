@@ -23,6 +23,7 @@ Amaar
 ---
 
 **Attachments:**
+
 - [ ] RESEARCH_PAPER_v3.pdf
 - [ ] Poster board PDF or photos
 - [ ] Abstract PDF

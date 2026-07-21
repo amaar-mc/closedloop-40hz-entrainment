@@ -10,6 +10,7 @@ tags:
 # Key Literature Citations (Iaccarino, Martorell, Tort, Bai)
 
 ## Connections
+
 - [[Related Work Section Arc]] - `references` [EXTRACTED]
 
   #community/Community_130

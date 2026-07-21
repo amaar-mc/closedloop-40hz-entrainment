@@ -10,6 +10,7 @@ tags:
 # stimulus_generator.py
 
 ## Connections
+
 - [[40 Hz Auditory Stimulus Generator for TRIBE V2 Integration  Generates auditory c]] - `rationale_for` [EXTRACTED]
 - [[StimulusConfig]] - `contains` [EXTRACTED]
 - [[_apply_ramp()]] - `contains` [EXTRACTED]

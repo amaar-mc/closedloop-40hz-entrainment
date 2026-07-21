@@ -8,6 +8,7 @@ members: 12
 **Members:** 12 nodes
 
 ## Members
+
 - [[Alignment Metric (%) — TCN 72% vs Fixed 45%, g=1.31, p0.001]] - image - submission/paper/figures/controller_comparison_v2.png
 - [[Figure 8 Controller Comparison Bar Chart]] - image - submission/paper/figures/controller_comparison_v2.png
 - [[Fixed Schedule Controller (Clinical Standard Baseline)]] - image - submission/paper/figures/controller_comparison_v2.png

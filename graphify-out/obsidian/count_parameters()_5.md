@@ -10,6 +10,7 @@ tags:
 # count_parameters()
 
 ## Connections
+
 - [[ImprovedTCN_1]] - `method` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

@@ -10,6 +10,7 @@ tags:
 # stitch_segment()
 
 ## Connections
+
 - [[Stitch contiguous windows into continuous multi-channel signal.      Args]] - `rationale_for` [EXTRACTED]
 - [[compute_sliding_pac.py]] - `contains` [EXTRACTED]
 - [[compute_sliding_pac_for_split()]] - `calls` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # build_multiscale_dataset.py
 
 ## Connections
+
 - [[Build leakage-safe multiscale temporal datasets for PAC forecasting.  Core desig]] - `rationale_for` [EXTRACTED]
 - [[_build_split_samples()]] - `contains` [EXTRACTED]
 - [[_causal_moving_average()_1]] - `contains` [EXTRACTED]

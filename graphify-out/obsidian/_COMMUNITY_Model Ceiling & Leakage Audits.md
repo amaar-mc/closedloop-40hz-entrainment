@@ -8,6 +8,7 @@ members: 38
 **Members:** 38 nodes
 
 ## Members
+
 - [[135 Total Features (61 Spectral + 74 Wavelet) for V4]] - document - archive/docs_v1_v8/V4_VIT_TCNET.md
 - [[61-Feature Breakdown (7 Theta + 7 Gamma + 7 Alpha + 7 Beta + 7 Ratio + 21 PAC + 5 Global)]] - document - archive/docs_v1_v8/V3_CLEAN_NO_MI.md
 - [[Circular Reasoning Constraint Cannot Use PAC to Predict PAC]] - document - archive/docs_v1_v8/FINAL_VERDICT_MASTER_MODEL.md

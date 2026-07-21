@@ -10,6 +10,7 @@ tags:
 # build_section_3()
 
 ## Connections
+
 - [[_line()]] - `calls` [EXTRACTED]
 - [[_text()]] - `calls` [EXTRACTED]
 - [[box_with_text()]] - `calls` [EXTRACTED]

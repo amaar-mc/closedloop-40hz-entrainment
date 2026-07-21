@@ -10,6 +10,7 @@ tags:
 # Recommended Hyperparameters (lookback=20, horizon=5, dilations=1,2,4,8)
 
 ## Connections
+
 - [[Causal Multiscale TCN Model]] - `rationale_for` [EXTRACTED]
 
   #community/Community_79

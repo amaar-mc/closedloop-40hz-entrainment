@@ -10,6 +10,7 @@ tags:
 # Amyloid Cascade Hypothesis and 40Hz Mechanism (Iaccarino + Murdock pathways)
 
 ## Connections
+
 - [[Glymphatic Clearance via AQP4VIP Interneuron Pathway (Murdock 2024)]] - `references` [EXTRACTED]
 - [[Lecanemab vs 40Hz Cost and Mechanism Comparison ($26,500yr vs $250 one-time)]] - `conceptually_related_to` [INFERRED]
 

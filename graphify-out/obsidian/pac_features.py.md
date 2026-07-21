@@ -10,6 +10,7 @@ tags:
 # pac_features.py
 
 ## Connections
+
 - [[PAC-Specific Feature Extraction  Direct computation of phase-amplitude coupling]] - `rationale_for` [EXTRACTED]
 - [[PACFeatureExtractor]] - `contains` [EXTRACTED]
 - [[butter_bandpass_filter()]] - `contains` [EXTRACTED]
@@ -23,4 +24,4 @@ tags:
 - [[run_enhanced_features.py]] - `imports_from` [EXTRACTED]
 - [[test_pac_features()]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

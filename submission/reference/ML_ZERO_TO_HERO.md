@@ -1,4 +1,5 @@
 # Machine Learning: Zero to Hero
+
 ## From "What's a Neural Network?" to "Why I Built a Causal TCN for Brain Entrainment"
 
 > Read this top to bottom. Every term is introduced before it's used.
@@ -31,7 +32,6 @@ the EEG looks like X" because brain signals are incredibly noisy and vary betwee
 patients. Instead, we give the model thousands of examples of EEG windows paired
 with PAC values, and it learns the relationship.
 
-
 ### 1.2 What Is a Neuron (in ML)?
 
 A biological neuron receives signals, processes them, and fires (or doesn't).
@@ -48,6 +48,7 @@ x3 ---(*w3)---/
 ```
 
 Step by step:
+
 1. **Inputs** (x1, x2, x3): Numbers coming in. Could be pixel values, EEG voltages, anything.
 2. **Weights** (w1, w2, w3): How important each input is. These are the numbers the model LEARNS.
 3. **Bias** (b): A constant offset. Also learned.
@@ -58,7 +59,6 @@ Step by step:
 
 **Key idea:** A single neuron is just a weighted sum followed by a function. It's
 basically a fancy version of y = mx + b (a line). By itself, not very powerful.
-
 
 ### 1.3 Activation Functions: Why We Need Them
 
@@ -73,7 +73,7 @@ Common activation functions:
 
 ```
 ReLU (Rectified Linear Unit):        ELU:                    SiLU (Sigmoid Linear Unit):
-                                                    
+
 output                               output                  output
   |      /                             |      /                |       __/
   |     /                              |     /                 |     /
@@ -82,7 +82,7 @@ output                               output                  output
   |__/                              \__|  /                    |__/
   +----------input                  ---+----------input        +----------input
   0                                    0                       0
-                                                    
+
   If input > 0: output = input      Like ReLU but slightly   Smooth curve. x * sigmoid(x).
   If input < 0: output = 0          negative for input < 0.  No dead neurons. No hard cutoff.
   Simple. Fast. But "dead neurons"  Used in EEGNet.          Used in our TCN.
@@ -91,9 +91,9 @@ output                               output                  output
 ```
 
 **In this project:**
+
 - EEGNet uses **ELU** (smooth, slightly negative for negative inputs)
 - The Causal TCN uses **SiLU** (smooth, no dead neurons, better gradient flow)
-
 
 ### 1.4 What Is a Neural Network?
 
@@ -103,11 +103,11 @@ A neural network is just **layers of neurons connected together**.
 INPUT LAYER          HIDDEN LAYER 1        HIDDEN LAYER 2        OUTPUT LAYER
 (your data)          (learned features)    (higher features)     (prediction)
 
-  x1 ----\__________  h1 ----\__________   h4 ----\__________    
+  x1 ----\__________  h1 ----\__________   h4 ----\__________
           \________/  h2 ----/\________/   h5 ----/\________/   output
-  x2 ----/\________\  h3 ----\           / h6 ----/              
-          /________/                    /                       
-  x3 ----/                                                      
+  x2 ----/\________\  h3 ----\           / h6 ----/
+          /________/                    /
+  x3 ----/
 ```
 
 - **Input layer:** Your raw data (e.g., EEG voltages from 7 channels)
@@ -121,10 +121,10 @@ has 3*3 + 3*1 = 12 weights plus biases. That's what the model "learns."
 **More layers = ability to learn more complex patterns.** But also more risk
 of memorizing noise instead of learning real patterns (overfitting -- covered below).
 
-
 ### 1.5 What Is a "Parameter"?
 
 A **parameter** is any number the model learns during training. This includes:
+
 - All weights (the multipliers on connections between neurons)
 - All biases (the constant offsets)
 
@@ -136,13 +136,14 @@ When we say "the Causal TCN has 31,043 parameters," that's 31,043 adjustable num
 **More parameters = more capacity to learn complex patterns, but also more risk
 of overfitting when you don't have enough training data.**
 
-
 ### 1.6 How Does a Network Learn? (Training)
 
 Training has four steps, repeated thousands of times:
 
 #### Step 1: Forward Pass
+
 Feed an input through the network. Get a prediction.
+
 ```
 Input: EEG window from patient 7
 Prediction: PAC = 0.00032
@@ -150,6 +151,7 @@ Actual PAC: 0.00058
 ```
 
 #### Step 2: Compute Loss
+
 The **loss function** measures how wrong the prediction was.
 
 ```
@@ -166,6 +168,7 @@ The loss is a single number. Lower = better. The goal of training is to
 **minimize the loss across all training examples.**
 
 #### Step 3: Backward Pass (Backpropagation)
+
 This is the clever part. The network asks: "For each of my 31,043 parameters,
 if I nudge it slightly up or slightly down, does the loss get better or worse?"
 
@@ -177,6 +180,7 @@ You don't need to understand the calculus. Just know that backpropagation
 efficiently computes which direction to adjust every parameter.
 
 #### Step 4: Update Parameters
+
 Each parameter is nudged in the direction that reduces the loss:
 
 ```
@@ -184,13 +188,13 @@ new_weight = old_weight - learning_rate * gradient
 ```
 
 The **learning rate** controls how big the nudge is:
+
 - Too large: overshoots, bounces around, never converges
 - Too small: learns extremely slowly
 - Our project uses lr = 0.001 (a standard safe default)
 
 **One complete cycle of steps 1-4 across ALL training examples = one EPOCH.**
 Our TCN trains for about 53 epochs before stopping.
-
 
 ### 1.7 What Is an Optimizer?
 
@@ -199,16 +203,17 @@ Simple gradient descent does: `weight -= lr * gradient`. But smarter optimizers
 exist:
 
 **Adam** (used in EEGNet training):
+
 - Keeps a running average of past gradients (momentum)
 - Adapts the learning rate separately for each parameter
 - Parameters that rarely get large gradients get bigger updates
 - Standard choice, works well in most cases
 
 **AdamW** (used in TCN training):
+
 - Same as Adam but handles weight decay (regularization) more correctly
 - "W" stands for "decoupled Weight decay"
 - Better at preventing overfitting in practice
-
 
 ### 1.8 Overfitting vs. Underfitting
 
@@ -240,17 +245,18 @@ perfectly but fail on new patients. That's why:
 - The TCN has only 31,043 params (not 1,000,000)
 - We use regularization techniques (next section)
 
-
 ### 1.9 Fighting Overfitting: Regularization Techniques
 
 Several tools exist to prevent a model from memorizing noise:
 
 **Dropout:**
 During training, randomly set some neurons to zero (turn them off).
+
 ```
 Normal:    [h1=0.5] [h2=0.3] [h3=0.8] [h4=0.1]  --> all contribute
 Dropout:   [h1=0.5] [  0.0 ] [h3=0.8] [  0.0 ]  --> h2, h4 turned off
 ```
+
 Forces the network to be redundant -- it can't rely on any single neuron.
 Next training step, different neurons are dropped. The network learns
 robust features that work even when some neurons are missing.
@@ -260,9 +266,11 @@ robust features that work even when some neurons are missing.
 
 **Weight Decay (L2 Regularization):**
 Add a penalty to the loss for having large weights:
+
 ```
 total_loss = prediction_loss + weight_decay * sum(all_weights^2)
 ```
+
 This discourages the model from assigning huge importance to any single feature.
 Keeps weights small and predictions smooth.
 
@@ -291,7 +299,6 @@ Cap the magnitude of gradients during backpropagation. If a gradient is
 larger than max_norm (1.0 in our case), scale it down. Prevents one
 outlier sample from causing an explosive parameter update.
 
-
 ### 1.10 Train / Validation / Test Splits
 
 You NEVER evaluate a model on the same data it trained on. That would be
@@ -318,7 +325,6 @@ during training and "cheat" during testing. Every window from a given patient
 is in exactly one split. This is called **subject-level splitting** and is
 non-negotiable in medical ML.
 
-
 ### 1.11 What Is R-squared?
 
 R-squared (R2) is how we measure prediction quality. It answers:
@@ -329,17 +335,18 @@ R2 = 1 - (sum of squared prediction errors) / (sum of squared deviations from me
 ```
 
 Interpretation:
+
 - R2 = 1.0: Perfect. Every prediction exactly matches reality.
 - R2 = 0.5: Model explains 50% of the variance. Decent.
 - R2 = 0.0: Model is no better than just predicting the average every time.
 - R2 < 0.0 (negative): Model is WORSE than predicting the average.
-              Its predictions are actively misleading.
+  Its predictions are actively misleading.
 
 **In this project:**
+
 - EEGNet static PAC estimation: R2 = 0.287 (explains 28.7% of variance)
 - TCN at 5-second horizon: R2 = 0.254 (modest, but positive where all baselines are negative)
 - Persistence baseline at 5s: R2 = -0.267 (worse than predicting the mean)
-
 
 ### 1.12 Normalization: Why and How
 
@@ -348,6 +355,7 @@ around 0.0001, while patient B is around 0.0008. If we feed raw values to
 the model, it gets confused by the scale differences.
 
 **Z-score normalization:**
+
 ```
 normalized_value = (value - mean) / standard_deviation
 ```
@@ -362,7 +370,6 @@ something about test patients it shouldn't.
 
 Our project stores these statistics in `scalers.npz` and loads them during
 inference, ensuring no leakage.
-
 
 ---
 
@@ -403,6 +410,7 @@ ahead from the current value. It's a **change detector** -- the output is large
 when the signal changes rapidly.
 
 Different filters detect different things:
+
 - [1, 1, 1] / 3 = smoothing (moving average)
 - [1, 0, -1] = change detection
 - [-1, 2, -1] = peak detection
@@ -411,7 +419,6 @@ Different filters detect different things:
 **The key insight of CNNs:** Instead of hand-designing filters, we let the
 network LEARN what filters are useful. The filter values become parameters
 that are adjusted during training via backpropagation.
-
 
 ### 2.2 Convolution in 2D (Images and EEG)
 
@@ -426,7 +433,6 @@ Image patch:          Filter:           Output:
 For EEG, we have a 2D input too: (channels x time). A 2D convolution over
 EEG can detect patterns across both channels and time simultaneously.
 
-
 ### 2.3 What Is a CNN (Convolutional Neural Network)?
 
 A CNN stacks multiple convolutional layers:
@@ -437,8 +443,8 @@ INPUT          CONV LAYER 1        CONV LAYER 2         OUTPUT LAYER
 raw data        features)           features)            prediction
 
 EEG signal --> [edge detector ] --> [pattern        ] --> [Linear] --> PAC
-               [freq detector ]     [combiner       ]     
-               [peak detector ]     [rhythm detector]     
+               [freq detector ]     [combiner       ]
+               [peak detector ]     [rhythm detector]
                (8 learned          (16 learned           (weighted
                 filters)             filters)              sum)
 ```
@@ -448,6 +454,7 @@ Layer 2 combines those into complex features (rhythms, bursts, patterns).
 The output layer combines all features into a prediction.
 
 **Key properties of CNNs:**
+
 - **Weight sharing:** The same filter is applied at every position in the signal.
   A peak detector works the same way whether the peak is at the start or end.
   This drastically reduces the number of parameters.
@@ -455,7 +462,6 @@ The output layer combines all features into a prediction.
   A 64-sample filter doesn't care about what happened 400 samples ago.
 - **Translation invariance:** The network recognizes a pattern regardless
   of WHERE it occurs in the signal.
-
 
 ### 2.4 Pooling: Downsampling
 
@@ -471,16 +477,16 @@ After pooling:   [2, 2.5, 7, 4]               (4 values -- half the size)
 ```
 
 This does two things:
+
 1. Reduces computation (fewer numbers to process)
 2. Makes features more robust to small shifts in timing
 
 EEGNet uses AvgPool to go from 500 timepoints down to 125, then down to 15.
 
-
 ### 2.5 Depthwise Separable Convolution (Important for EEGNet)
 
 A standard convolution with C_in input channels, C_out output channels,
-and kernel size K has: C_in * C_out * K parameters.
+and kernel size K has: C_in _ C_out _ K parameters.
 
 A **depthwise separable** convolution splits this into two steps:
 
@@ -499,13 +505,13 @@ Parameters: C_in * C_out * K
 ```
 
 Example with 16 input channels, 16 output channels, kernel size 3:
-- Standard: 16 * 16 * 3 = 768 parameters
-- Depthwise separable: 16 * 3 + 16 * 16 = 48 + 256 = 304 parameters
+
+- Standard: 16 _ 16 _ 3 = 768 parameters
+- Depthwise separable: 16 _ 3 + 16 _ 16 = 48 + 256 = 304 parameters
 
 **2.5x fewer parameters for roughly the same expressive power.** When you have
 limited training data (like our 11,000 samples), fewer parameters means less
 overfitting. This is why both EEGNet and our TCN use depthwise separable convolutions.
-
 
 ### 2.6 EEGNet: A CNN Designed for Brain Signals
 
@@ -539,11 +545,11 @@ Total: 1,457 parameters. Tiny. That's the whole model.
 ```
 
 **Why EEGNet is elegant:**
+
 - Temporal conv captures frequency patterns (each filter learns a different rhythm)
 - Spatial conv captures channel relationships (which brain regions matter)
 - Separable conv reduces parameters
 - Only 1,457 params for 11,000 training samples = healthy 8:1 ratio
-
 
 ---
 
@@ -572,10 +578,10 @@ Sequence model (what we need):
 ```
 
 Three major approaches to sequence modeling:
+
 1. RNNs / LSTMs / GRUs (process one step at a time)
 2. Transformers (attend to all steps at once)
 3. TCNs (convolve across time)
-
 
 ### 3.2 RNN: Recurrent Neural Network (The Basic Idea)
 
@@ -595,8 +601,9 @@ x = input at each timestep
 ```
 
 At each step, the RNN:
-1. Takes the current input (x_t) and the previous hidden state (h_{t-1})
-2. Computes a new hidden state: h_t = f(W_x * x_t + W_h * h_{t-1} + b)
+
+1. Takes the current input (x*t) and the previous hidden state (h*{t-1})
+2. Computes a new hidden state: h*t = f(W_x * x_t + W_h * h*{t-1} + b)
 3. Passes h_t to the next step
 
 The final hidden state h5 theoretically contains a summary of the entire
@@ -608,7 +615,6 @@ processing steps. By the time you reach x20, the network has essentially
 "forgotten" x1. This is the **vanishing gradient problem** -- during
 backpropagation, gradients shrink exponentially as they flow backward
 through time, so early timesteps barely get updated.
-
 
 ### 3.3 LSTM: Long Short-Term Memory
 
@@ -657,7 +663,6 @@ through it without vanishing. This is what gives LSTMs long-range memory.
 **In this project:** An LSTM was tested in `temporal/temporal_model.py`.
 It worked, but didn't beat the TCN for our specific problem.
 
-
 ### 3.4 GRU: Gated Recurrent Unit
 
 GRUs (Cho et al., 2014) are a simplified version of LSTMs. Instead of three
@@ -685,19 +690,20 @@ faster to train. Neither was used in the final project -- but a judge
 might ask "why not GRU?" and the answer is: "TCNs are better for our
 specific requirements (causality, parallelism, multi-scale patterns)."
 
-
 ### 3.5 Problems with RNNs/LSTMs for Our Use Case
 
 Three issues made RNNs/LSTMs suboptimal for this project:
 
 **Problem 1: Sequential Processing**
+
 ```
 LSTM processes:     x1 --> x2 --> x3 --> x4 --> ... --> x20
                     (must finish x1 before starting x2)
-                    
+
 TCN processes:      x1, x2, x3, x4, ..., x20
                     (all at once, in parallel)
 ```
+
 LSTMs process one timestep at a time. You can't compute the output for
 timestep 5 until you've processed timesteps 1 through 4. TCNs process
 the entire sequence simultaneously using convolutions. Much faster.
@@ -718,7 +724,6 @@ impossible by design.
 Despite the LSTM's gating mechanism, very long sequences still suffer
 from gradient degradation. The TCN's residual connections provide a more
 direct gradient pathway.
-
 
 ---
 
@@ -743,10 +748,10 @@ Input sequence:    [t-19] [t-18] [t-17] [t-16] [t-15] ... [t-1] [t]
 Each convolutional filter learns a temporal pattern. A filter might learn:
 "PAC dropping steadily for 3 consecutive seconds = important signal."
 
-
 ### 4.2 Causal Convolution: No Peeking at the Future
 
 A standard convolution looks at neighbors on BOTH sides:
+
 ```
 Standard (kernel=3):    output[t] depends on input[t-1], input[t], input[t+1]
                                                                        ^^^^
@@ -754,6 +759,7 @@ Standard (kernel=3):    output[t] depends on input[t-1], input[t], input[t+1]
 ```
 
 A **causal** convolution only looks at the current and PAST values:
+
 ```
 Causal (kernel=3):      output[t] depends on input[t-2], input[t-1], input[t]
                                                  ^^^^     ^^^^        ^^^^
@@ -774,7 +780,6 @@ In PyTorch code, this is: `F.pad(input, (padding, 0))` -- pad left, not right.
 time t, we literally don't have data from time t+1 yet. A model that was
 trained with access to future data would perform well in testing but fail
 in the real world. Causal convolution prevents this by design.
-
 
 ### 4.3 Dilated Convolution: Seeing Far Without Many Parameters
 
@@ -814,15 +819,14 @@ Input:          [t-19] [t-18] ... [t-1] [t]
 ```
 
 **Receptive field** = how far back the network can see in total.
-Formula: RF = 1 + (kernel_size - 1) * sum(dilations)
-         RF = 1 + (3 - 1) * (1 + 2 + 4 + 8)
-         RF = 1 + 2 * 15
-         RF = 31 timesteps = 31 seconds
+Formula: RF = 1 + (kernel_size - 1) _ sum(dilations)
+RF = 1 + (3 - 1) _ (1 + 2 + 4 + 8)
+RF = 1 + 2 \* 15
+RF = 31 timesteps = 31 seconds
 
 With only 4 layers and kernel size 3, we see 31 seconds of history.
 An LSTM would need to process all 31 steps sequentially. The TCN
 processes them all in parallel.
-
 
 ### 4.4 Residual Connections: Helping Gradients Flow
 
@@ -842,24 +846,24 @@ pass the input through unchanged (via the shortcut). The network can never
 get WORSE by adding more layers. This makes deep networks much easier to
 train and helps gradients flow backward through many layers.
 
-
 ### 4.5 Normalization Layers
 
 **BatchNorm:** Normalizes across the BATCH dimension. Takes the mean and
 variance across all samples in a mini-batch and normalizes.
+
 - Problem: Different patients have different PAC baselines. A batch might
   mix patient A (high PAC) with patient B (low PAC). Averaging them
   destroys individual information.
 
 **GroupNorm(1, C) = Instance Norm:** Normalizes each SAMPLE independently.
 Every sample is normalized using its own statistics.
+
 - No dependency on other samples in the batch.
 - Preserves individual patient characteristics.
 - Stable even with batch size = 1 (important for real-time inference).
 
 Our TCN uses GroupNorm. EEGNet uses BatchNorm (which is fine for EEGNet
 because it's doing static estimation, not per-patient adaptation).
-
 
 ### 4.6 Attention Pooling
 
@@ -885,7 +889,6 @@ The attention scores are learned via a small Conv1d(64, 1, 1) followed by
 softmax. The network learns to pay more attention to certain timesteps --
 perhaps the moment when PAC started declining is more informative than
 the steady-state period before it.
-
 
 ### 4.7 Our TCN: The Complete Picture
 
@@ -927,11 +930,11 @@ TOTAL: 31,043 parameters
 ```
 
 Each TCN Block internally:
+
 ```
 Input --> Causal Pad --> Depthwise Conv1d (k=3, groups=64) --> Pointwise Conv1d (1x1)
       --> GroupNorm(1, 64) --> SiLU --> Dropout(0.1) --> + Input (residual) --> Output
 ```
-
 
 ---
 
@@ -959,7 +962,6 @@ Speed:   < 1 ms                          Speed:   < 3 ms
 Stage 1 runs every 2 seconds to estimate current brain state.
 Stage 2 runs every 1 second to predict future brain state.
 The controller uses both to decide: STIMULATE or REST.
-
 
 ### 5.2 Why TCN and Not LSTM?
 
@@ -999,7 +1001,6 @@ for fast inference. And its dilated architecture captures patterns from
 1 to 31 seconds simultaneously, while an LSTM compresses everything into
 a single hidden state."
 
-
 ### 5.3 Why Not a Transformer?
 
 Transformers (the architecture behind ChatGPT) use **attention** to let
@@ -1011,6 +1012,7 @@ Transformer attention:   t1 <--> t2 <--> t3 <--> t4 ... t20
 ```
 
 For our project:
+
 1. **Too many parameters:** ~85,000 (3x our TCN). With only 11,000 training
    samples, this overfits badly.
 2. **Quadratic cost:** Attention cost is O(T^2). For T=20 it's manageable,
@@ -1020,7 +1022,6 @@ For our project:
    to learn that 1-second and 8-second patterns are both relevant.
 4. **Tested it anyway:** In `rigor/experiments/tcn_variants.py`, a
    TransformerTCN variant was tested. It overfitted and didn't beat the TCN.
-
 
 ### 5.4 The Horizon Sweep: Why 5 Seconds?
 
@@ -1061,7 +1062,6 @@ the nonlinear dynamics of neural habituation.
 current value. At 5+ seconds, you DO need ML, and that's also the minimum lead
 time needed for the controller to smoothly transition between stimulation and rest.
 
-
 ### 5.5 The Controller Decision Loop
 
 Every second, the system runs this loop:
@@ -1075,10 +1075,10 @@ Every second, the system runs this loop:
 
    IF TCN predicts decline (delta < -0.3):
        --> STIMULATE (proactive: prevent the decline before it happens)
-   
+
    ELSE IF TCN predicts rise (delta > +0.3):
        --> REST (proactive: brain is recovering, don't waste stimulation)
-   
+
    ELSE (dead zone, delta between -0.3 and +0.3):
        --> Fall back to reactive z-score:
            z < -0.5: PAC is currently low --> STIMULATE
@@ -1088,10 +1088,10 @@ Every second, the system runs this loop:
          before switching, to prevent rapid oscillation.
 ```
 
-
 ### 5.6 Why the Results Are Meaningful
 
 The TCN predictive controller achieves:
+
 - 72.1% alignment (vs 64.5% reactive, vs 45.0% fixed schedule)
 - 82.6% of low-PAC windows correctly targeted (vs 51.7% reactive)
 - 35/35 patients benefited
@@ -1114,55 +1114,54 @@ counterargument to prepare for. Here's why it IS great:
 4. 35/35 patients benefited. The probability of this by chance (if the
    controller were actually random) is 2^-35 < 0.001. This is not luck.
 
-
 ---
 
 ## GLOSSARY OF KEY TERMS (Quick Reference)
 
-| Term | Definition |
-|------|-----------|
+| Term                    | Definition                                                                                          |
+| ----------------------- | --------------------------------------------------------------------------------------------------- |
 | **Activation function** | Nonlinear function applied after weighted sum. Makes networks capable of learning complex patterns. |
-| **Attention** | Mechanism that learns which parts of the input to focus on. |
-| **Backpropagation** | Algorithm to compute gradients for all parameters efficiently using the chain rule. |
-| **Batch** | A subset of training data processed together before updating parameters. |
-| **Bias** | A constant added to the weighted sum in a neuron. Learned during training. |
-| **Causal** | Model that only uses present and past data, never future data. |
-| **CNN** | Convolutional Neural Network. Uses sliding filters to detect local patterns. |
-| **Convolution** | Sliding a filter across data, computing weighted sums at each position. |
-| **Depthwise separable** | Factorized convolution: per-channel filtering + cross-channel mixing. Fewer params. |
-| **Dilation** | Gaps in a convolutional filter. Increases receptive field without adding parameters. |
-| **Dropout** | Randomly turning off neurons during training to prevent overfitting. |
-| **Early stopping** | Halting training when validation performance stops improving. |
-| **Epoch** | One complete pass through all training data. |
-| **Gradient** | Direction and magnitude of change to reduce loss. Computed via backpropagation. |
-| **Gradient clipping** | Capping gradient magnitude to prevent explosive updates. |
-| **GRU** | Gated Recurrent Unit. Simplified LSTM with 2 gates instead of 3. |
-| **Hidden state** | Internal memory of an RNN/LSTM, updated at each timestep. |
-| **Huber loss** | Loss function: quadratic for small errors, linear for large. Robust to outliers. |
-| **Layer** | A group of neurons that process data together at the same depth in the network. |
-| **Learning rate** | Size of parameter updates. Too high = unstable. Too low = slow. |
-| **Loss function** | Measures how wrong the model's prediction is. Training minimizes this. |
-| **LSTM** | Long Short-Term Memory. RNN variant with gates and cell state for long-range memory. |
-| **MSE** | Mean Squared Error. Average of (prediction - actual)^2. |
-| **Neuron** | Basic unit: weighted sum of inputs + activation function = output. |
-| **Normalization** | Scaling data to a standard range (e.g., z-score: mean=0, std=1). |
-| **Overfitting** | Model memorizes training data noise, fails on new data. |
-| **Parameter** | Any number learned during training (weights and biases). |
-| **Pooling** | Downsampling operation (e.g., average pool reduces size by half). |
-| **R-squared (R2)** | Fraction of variance explained. 1.0=perfect, 0=mean, negative=terrible. |
-| **Receptive field** | How far back in time the network can "see" from any output position. |
-| **Regularization** | Techniques to prevent overfitting (dropout, weight decay, early stopping). |
-| **Residual connection** | Shortcut that adds input directly to output of a layer. Helps gradient flow. |
-| **RNN** | Recurrent Neural Network. Processes sequences step by step with a hidden state. |
-| **TCN** | Temporal Convolutional Network. Processes sequences with dilated causal convolutions. |
-| **Transformer** | Architecture using attention to relate all positions in a sequence. Powerful but large. |
-| **Underfitting** | Model too simple to capture the real pattern. Bad on all data. |
-| **Validation set** | Data held out from training to monitor overfitting. |
-| **Weight** | Multiplier on a connection between neurons. Learned during training. |
-| **Weight decay** | Penalty on large weights to prevent overfitting (L2 regularization). |
+| **Attention**           | Mechanism that learns which parts of the input to focus on.                                         |
+| **Backpropagation**     | Algorithm to compute gradients for all parameters efficiently using the chain rule.                 |
+| **Batch**               | A subset of training data processed together before updating parameters.                            |
+| **Bias**                | A constant added to the weighted sum in a neuron. Learned during training.                          |
+| **Causal**              | Model that only uses present and past data, never future data.                                      |
+| **CNN**                 | Convolutional Neural Network. Uses sliding filters to detect local patterns.                        |
+| **Convolution**         | Sliding a filter across data, computing weighted sums at each position.                             |
+| **Depthwise separable** | Factorized convolution: per-channel filtering + cross-channel mixing. Fewer params.                 |
+| **Dilation**            | Gaps in a convolutional filter. Increases receptive field without adding parameters.                |
+| **Dropout**             | Randomly turning off neurons during training to prevent overfitting.                                |
+| **Early stopping**      | Halting training when validation performance stops improving.                                       |
+| **Epoch**               | One complete pass through all training data.                                                        |
+| **Gradient**            | Direction and magnitude of change to reduce loss. Computed via backpropagation.                     |
+| **Gradient clipping**   | Capping gradient magnitude to prevent explosive updates.                                            |
+| **GRU**                 | Gated Recurrent Unit. Simplified LSTM with 2 gates instead of 3.                                    |
+| **Hidden state**        | Internal memory of an RNN/LSTM, updated at each timestep.                                           |
+| **Huber loss**          | Loss function: quadratic for small errors, linear for large. Robust to outliers.                    |
+| **Layer**               | A group of neurons that process data together at the same depth in the network.                     |
+| **Learning rate**       | Size of parameter updates. Too high = unstable. Too low = slow.                                     |
+| **Loss function**       | Measures how wrong the model's prediction is. Training minimizes this.                              |
+| **LSTM**                | Long Short-Term Memory. RNN variant with gates and cell state for long-range memory.                |
+| **MSE**                 | Mean Squared Error. Average of (prediction - actual)^2.                                             |
+| **Neuron**              | Basic unit: weighted sum of inputs + activation function = output.                                  |
+| **Normalization**       | Scaling data to a standard range (e.g., z-score: mean=0, std=1).                                    |
+| **Overfitting**         | Model memorizes training data noise, fails on new data.                                             |
+| **Parameter**           | Any number learned during training (weights and biases).                                            |
+| **Pooling**             | Downsampling operation (e.g., average pool reduces size by half).                                   |
+| **R-squared (R2)**      | Fraction of variance explained. 1.0=perfect, 0=mean, negative=terrible.                             |
+| **Receptive field**     | How far back in time the network can "see" from any output position.                                |
+| **Regularization**      | Techniques to prevent overfitting (dropout, weight decay, early stopping).                          |
+| **Residual connection** | Shortcut that adds input directly to output of a layer. Helps gradient flow.                        |
+| **RNN**                 | Recurrent Neural Network. Processes sequences step by step with a hidden state.                     |
+| **TCN**                 | Temporal Convolutional Network. Processes sequences with dilated causal convolutions.               |
+| **Transformer**         | Architecture using attention to relate all positions in a sequence. Powerful but large.             |
+| **Underfitting**        | Model too simple to capture the real pattern. Bad on all data.                                      |
+| **Validation set**      | Data held out from training to monitor overfitting.                                                 |
+| **Weight**              | Multiplier on a connection between neurons. Learned during training.                                |
+| **Weight decay**        | Penalty on large weights to prevent overfitting (L2 regularization).                                |
 
 ---
 
-*This guide was written for the Synopsys 2026 Science Fair.
+_This guide was written for the Synopsys 2026 Science Fair.
 It covers every ML concept needed to understand and present the
-Closed-Loop 40 Hz Entrainment project.*
+Closed-Loop 40 Hz Entrainment project._

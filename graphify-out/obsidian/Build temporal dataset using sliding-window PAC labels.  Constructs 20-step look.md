@@ -7,9 +7,10 @@ tags:
   - community/Community_80
 ---
 
-# Build temporal dataset using sliding-window PAC labels.  Constructs 20-step look
+# Build temporal dataset using sliding-window PAC labels. Constructs 20-step look
 
 ## Connections
+
 - [[build_sliding_dataset.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_80

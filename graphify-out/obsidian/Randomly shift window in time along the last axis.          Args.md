@@ -7,11 +7,12 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Randomly shift window in time along the last axis.          Args:
+# Randomly shift window in time along the last axis. Args:
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
 - [[time_shift()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

@@ -10,6 +10,7 @@ tags:
 # In Silico Closed-Loop Validation Methodology
 
 ## Connections
+
 - [[Model Predictive Control (MPC) Framework for Stimulation Optimization]] - `references` [EXTRACTED]
 
   #community/Community_76

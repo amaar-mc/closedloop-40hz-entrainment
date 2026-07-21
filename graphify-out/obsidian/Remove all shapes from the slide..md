@@ -10,6 +10,7 @@ tags:
 # Remove all shapes from the slide.
 
 ## Connections
+
 - [[clear_slide()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_63

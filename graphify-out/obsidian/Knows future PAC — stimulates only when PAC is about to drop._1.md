@@ -10,6 +10,7 @@ tags:
 # Knows future PAC — stimulates only when PAC is about to drop.
 
 ## Connections
+
 - [[OracleControl]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

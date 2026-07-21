@@ -7,9 +7,10 @@ tags:
   - community/Community_56
 ---
 
-# _rmse()
+# \_rmse()
 
 ## Connections
+
 - [[evaluate_model()_1]] - `calls` [EXTRACTED]
 - [[persistence_baseline()_1]] - `calls` [EXTRACTED]
 - [[ridge_baseline()_1]] - `calls` [EXTRACTED]

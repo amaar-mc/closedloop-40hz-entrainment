@@ -10,6 +10,7 @@ tags:
 # Validate Alzheimer's disease profiles.
 
 ## Connections
+
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]
 - [[NeuralMassConfig]] - `uses` [INFERRED]

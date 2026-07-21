@@ -8,4 +8,4 @@ tags:
 
 # Synopsys VFinal Poster (PDF)
 
-  #community/Community_184
+#community/Community_184

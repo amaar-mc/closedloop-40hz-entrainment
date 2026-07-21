@@ -10,6 +10,7 @@ tags:
 # Citation: Meta AI (2026) - TRIBE V2 Brain Foundation Model
 
 ## Connections
+
 - [[TRIBE V2 Integration Attempt and Biophysical Workaround (April 8, 2026)]] - `cites` [EXTRACTED]
 
   #community/Community_109

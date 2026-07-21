@@ -10,6 +10,7 @@ tags:
 # Paper Draft Status: All sections in draft, none reviewed or finalized
 
 ## Connections
+
 - [[Research Paper Status Document]] - `references` [EXTRACTED]
 
   #community/Community_59

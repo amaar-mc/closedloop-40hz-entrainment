@@ -7,9 +7,10 @@ tags:
   - community/Community_74
 ---
 
-# _feature_group_indices()
+# \_feature_group_indices()
 
 ## Connections
+
 - [[_ablation_tests()]] - `calls` [EXTRACTED]
 - [[comprehensive_submission_audit.py]] - `contains` [EXTRACTED]
 

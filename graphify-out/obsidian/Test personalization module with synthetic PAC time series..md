@@ -10,6 +10,7 @@ tags:
 # Test personalization module with synthetic PAC time series.
 
 ## Connections
+
 - [[test_personalization()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_46

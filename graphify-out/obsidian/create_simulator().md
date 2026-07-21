@@ -10,6 +10,7 @@ tags:
 # create_simulator()
 
 ## Connections
+
 - [[ExponentialDecaySimulator]] - `calls` [EXTRACTED]
 - [[ExponentialDecaySimulator (Fatigue Model 1 Exponential Decay)]] - `calls` [EXTRACTED]
 - [[Factory function to create a simulator instance for a given fatigue model.]] - `rationale_for` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[fatigue_model_sensitivity.py]] - `contains` [EXTRACTED]
 - [[run_fatigue_model_experiment()]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

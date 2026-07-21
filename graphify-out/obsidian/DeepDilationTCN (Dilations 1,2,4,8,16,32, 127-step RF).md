@@ -10,6 +10,7 @@ tags:
 # DeepDilationTCN (Dilations [1,2,4,8,16,32], 127-step RF)
 
 ## Connections
+
 - [[AttentionPool1D (Temporal Attention Pooling)]] - `calls` [EXTRACTED]
 - [[CausalDSConvBlock (Residual Depthwise-Separable Causal Block)]] - `calls` [EXTRACTED]
 - [[DeepDilationTCN Hypothesis (Extended Receptive Field)]] - `rationale_for` [EXTRACTED]

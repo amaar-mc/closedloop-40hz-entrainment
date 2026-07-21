@@ -9,6 +9,7 @@ tags:
 # PAC Modulation Index (Tort 2010)
 
 ## Connections
+
 - [[Figure 2 Phase-Amplitude Coupling (PAC) Mechanism Diagram]] - `references` [EXTRACTED]
 - [[High PAC = 40Hz Therapy is Working (Entrainment State)]] - `conceptually_related_to` [EXTRACTED]
 

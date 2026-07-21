@@ -10,6 +10,7 @@ tags:
 # Key Result: 72% Targeting Accuracy vs 64% Reactive Baseline
 
 ## Connections
+
 - [[72% Targeting Accuracy (d=1.31, p0.001, N=35)]] - `semantically_similar_to` [EXTRACTED]
 - [[Key Result R² = 0.60 PAC Prediction 5s Ahead (5x improvement)]] - `conceptually_related_to` [INFERRED]
 - [[NeuroCare 40Hz Product Flyer]] - `references` [EXTRACTED]

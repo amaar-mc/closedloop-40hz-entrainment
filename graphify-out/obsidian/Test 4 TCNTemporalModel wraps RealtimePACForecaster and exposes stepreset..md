@@ -10,9 +10,10 @@ tags:
 # Test 4: TCNTemporalModel wraps RealtimePACForecaster and exposes step/reset.
 
 ## Connections
+
 - [[ModelRegistry]] - `uses` [INFERRED]
 - [[TCNTemporalModel]] - `uses` [INFERRED]
 - [[TemporalModel]] - `uses` [INFERRED]
 - [[test_tcn_temporal_model_wraps_forecaster()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

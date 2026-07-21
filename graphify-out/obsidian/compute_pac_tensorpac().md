@@ -10,7 +10,8 @@ tags:
 # compute_pac_tensorpac()
 
 ## Connections
+
 - [[Compute PAC using Tensorpac library (for validationcomparison).      Args]] - `rationale_for` [EXTRACTED]
 - [[pac_computation.py]] - `contains` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

@@ -9,4 +9,4 @@ tags:
 
 # Competitive Advantages at CSEF (Individual, Real Data, Rigor)
 
-  #community/Community_194
+#community/Community_194

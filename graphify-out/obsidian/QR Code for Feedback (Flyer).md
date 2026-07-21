@@ -9,6 +9,7 @@ tags:
 # QR Code for Feedback (Flyer)
 
 ## Connections
+
 - [[Figure 8 Controller Comparison Bar Chart]] - `semantically_similar_to` [AMBIGUOUS]
 
   #community/Community_86

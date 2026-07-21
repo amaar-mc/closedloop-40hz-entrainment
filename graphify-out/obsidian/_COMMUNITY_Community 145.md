@@ -8,6 +8,7 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
+
 - [[PAC Direction Classifier Results (3-class balanced acc Ridge=0.497)]] - document - logs/training_output.txt
 - [[PAC Direction Classifier Script (direction_classifier.py)]] - document - logs/training_output.txt
 

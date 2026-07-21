@@ -10,6 +10,7 @@ tags:
 # resolve_image_path()
 
 ## Connections
+
 - [[Resolve an image path relative to docspaper to an absolute path.]] - `rationale_for` [EXTRACTED]
 - [[generate_latex()]] - `calls` [EXTRACTED]
 - [[generate_paper_latex.py]] - `contains` [EXTRACTED]

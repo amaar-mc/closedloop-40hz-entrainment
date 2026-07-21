@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# _load_connectome()
+# \_load_connectome()
 
 ## Connections
+
 - [[Load and configure the TVB 76-region connectome.]] - `rationale_for` [EXTRACTED]
 - [[TVBAlzheimerSimulator]] - `method` [EXTRACTED]
 - [[__init__()_171]] - `calls` [EXTRACTED]

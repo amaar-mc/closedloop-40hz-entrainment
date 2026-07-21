@@ -10,6 +10,7 @@ tags:
 # CSEF Results Slide: R²=0.287 static ceiling, horizon sweep inflection at 3s, controller comparison chart N=35
 
 ## Connections
+
 - [[Controller Comparison Table (FixedReactiveTCNHybridOracle, N=35)]] - `shares_data_with` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

@@ -10,7 +10,8 @@ tags:
 # freeze_backbone()
 
 ## Connections
+
 - [[Freeze all layers except the future and delta regression heads.          Useful]] - `rationale_for` [EXTRACTED]
 - [[MultiscaleCausalTCN]] - `method` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

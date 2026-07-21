@@ -7,9 +7,10 @@ tags:
   - community/Replay_Analysis_&_Controllers
 ---
 
-# Multi-biomarker reactive controller.      Uses PAC + gamma power + theta power,
+# Multi-biomarker reactive controller. Uses PAC + gamma power + theta power,
 
 ## Connections
+
 - [[MultiBiomarkerReactiveControl]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

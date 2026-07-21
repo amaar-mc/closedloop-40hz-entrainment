@@ -9,6 +9,7 @@ tags:
 # FPDF
 
 ## Connections
+
 - [[CSEF]] - `inherits` [EXTRACTED]
 - [[PaperPDF]] - `inherits` [EXTRACTED]
 - [[ResearchPaperPDF]] - `inherits` [EXTRACTED]

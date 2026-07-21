@@ -9,7 +9,8 @@ tags:
 # 3-to-4 Minute Board Walk Script (v2)
 
 ## Connections
+
 - [[Main Presentation Script (4-5 Min, 01)]] - `conceptually_related_to` [INFERRED]
 - [[Poster Navigation Cues (v2 Script)]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

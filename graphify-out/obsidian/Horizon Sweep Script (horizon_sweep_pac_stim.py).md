@@ -10,6 +10,7 @@ tags:
 # Horizon Sweep Script (horizon_sweep_pac_stim.py)
 
 ## Connections
+
 - [[Horizon Sweep Figure]] - `implements` [EXTRACTED]
 
   #community/Community_77

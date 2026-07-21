@@ -10,8 +10,9 @@ tags:
 # print_attention_summary()
 
 ## Connections
+
 - [[Print attention weight analysis summary.]] - `rationale_for` [EXTRACTED]
 - [[main()_71]] - `calls` [EXTRACTED]
 - [[tcn_interpretability.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

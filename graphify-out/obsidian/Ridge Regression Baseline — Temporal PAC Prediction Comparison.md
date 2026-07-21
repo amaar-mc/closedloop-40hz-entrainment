@@ -10,6 +10,7 @@ tags:
 # Ridge Regression Baseline — Temporal PAC Prediction Comparison
 
 ## Connections
+
 - [[run_multi_horizon_baseline()]] - `implements` [EXTRACTED]
 - [[run_sklearn_temporal_baseline()]] - `implements` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # 35/35 Subjects Benefit from TCN Predictive vs Reactive (Figure 14)
 
 ## Connections
+
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 - [[Validation Protocol Primary (EEG replay on 35 subjects) + Secondary (closed-loop simulation, 7 fatigue levels x 50 trials)]] - `conceptually_related_to` [INFERRED]
 

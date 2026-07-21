@@ -10,6 +10,7 @@ tags:
 # majority_baseline()
 
 ## Connections
+
 - [[Predict most frequent class from training set.]] - `rationale_for` [EXTRACTED]
 - [[direction_classifier.py]] - `contains` [EXTRACTED]
 - [[eval_classifier()]] - `calls` [EXTRACTED]

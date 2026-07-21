@@ -10,6 +10,7 @@ tags:
 # validate()
 
 ## Connections
+
 - [[ModelTrainerV2]] - `method` [EXTRACTED]
 - [[Validate model.          Returns             val_loss, val_r2, val_mae, val_]] - `rationale_for` [EXTRACTED]
 - [[_r2_score()]] - `calls` [EXTRACTED]

@@ -10,7 +10,8 @@ tags:
 # OpenNeuro ds005048: 35 Elderly Subjects, 7 Frontal Channels, 40 Hz Protocol
 
 ## Connections
+
 - [[Methods Preprocessing Pipeline (Butterworth BP, Notch, Artifact Zeroing, CAR)]] - `references` [EXTRACTED]
 - [[Research Paper v3 (Full Manuscript)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

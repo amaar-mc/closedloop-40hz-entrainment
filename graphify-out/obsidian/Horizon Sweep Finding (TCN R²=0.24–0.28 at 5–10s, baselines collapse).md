@@ -10,6 +10,7 @@ tags:
 # Horizon Sweep Finding (TCN R²=0.24–0.28 at 5–10s, baselines collapse)
 
 ## Connections
+
 - [[MultiscaleCausalTCN Temporal Forecaster]] - `references` [EXTRACTED]
 - [[Three Key Scientific Moments (Ceiling Discovery, Feature Paradox, Horizon Inflection)]] - `references` [EXTRACTED]
 - [[v2 Full Technical 6-Minute Presentation Script]] - `references` [EXTRACTED]

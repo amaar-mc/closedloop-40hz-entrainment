@@ -10,6 +10,7 @@ tags:
 # build_sliding_dataset()
 
 ## Connections
+
 - [[Build temporal dataset with sliding-window PAC targets and features.      Return]] - `rationale_for` [EXTRACTED]
 - [[_pac_multiscale_features()]] - `calls` [EXTRACTED]
 - [[_stim_context_from_events()]] - `calls` [EXTRACTED]

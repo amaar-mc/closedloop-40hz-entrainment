@@ -34,6 +34,7 @@
 4. 7 frontal channels only (parietal/temporal coupling not captured)
 
 **Additional limitations that COULD be mentioned but are not:**
+
 - PAC labels are epoch-level (20-40s blocks), so all windows within an epoch share the same label. This means the TCN may be partially predicting which epoch a window belongs to, not truly predicting future neural dynamics.
 - The sample size (N=35) is small for clinical generalization claims.
 - The offline counterfactual replay assumes the brain would respond the same way regardless of when stimulation was delivered — an assumption that would not hold in vivo due to state-dependent neural dynamics.
@@ -47,6 +48,7 @@
 The narrative: "The bottleneck was in the features, not the architecture."
 
 Supporting evidence presented:
+
 1. 8 architectures (1,457 to 1.1M params) all converge to R² ≈ 0.287 on 73 features → architecture doesn't matter
 2. Feature ablation: same TCN (h=64), 73 features → R² = -0.025, 12 features → R² = 0.558 → features matter
 3. Val-test gap shrinks from 0.358 (73 feat) to 0.246 (12 feat) → spectral features cause overfitting
@@ -57,11 +59,11 @@ Supporting evidence presented:
 
 **Assessment of each comparison:**
 
-| Comparison | Fair? | Notes |
-|---|---|---|
-| Rosin et al. (2011) — closed-loop DBS analogy | **FAIR** | Presented as analogous, not equivalent. Both are adaptive stimulation systems. |
-| Portiloop (Lacroix 2022) — spindle detection extension | **FAIR** | Correctly notes this work extends from detection to forecasting. |
-| "First system targeting PAC dynamics" claim | **FAIR** | Qualified to "specifically for 40 Hz gamma entrainment optimization at 5–10 s horizons." Narrow enough to be defensible. |
+| Comparison                                             | Fair?    | Notes                                                                                                                    |
+| ------------------------------------------------------ | -------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Rosin et al. (2011) — closed-loop DBS analogy          | **FAIR** | Presented as analogous, not equivalent. Both are adaptive stimulation systems.                                           |
+| Portiloop (Lacroix 2022) — spindle detection extension | **FAIR** | Correctly notes this work extends from detection to forecasting.                                                         |
+| "First system targeting PAC dynamics" claim            | **FAIR** | Qualified to "specifically for 40 Hz gamma entrainment optimization at 5–10 s horizons." Narrow enough to be defensible. |
 
 **Verdict: PASS.** Comparisons are appropriately qualified and don't overclaim.
 

@@ -10,6 +10,7 @@ tags:
 # FixedSchedule
 
 ## Connections
+
 - [[StimAction]] - `uses` [INFERRED]
 - [[__init__()_77]] - `method` [EXTRACTED]
 - [[main()_39]] - `calls` [EXTRACTED]

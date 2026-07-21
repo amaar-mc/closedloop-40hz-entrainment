@@ -7,24 +7,24 @@
 
 ## Key Deadlines
 
-| Date | Action |
-|------|--------|
-| Feb 20, 2026 (8 PM) | Title, category, field of study changes due |
-| Feb 27, 2026 (8 PM) | Abstract upload deadline (250 words max, PDF) |
-| Mar 5, 2026 (11:59 PM) | Abstract posted for pre-judging review |
-| Mar 8, 2026 | Judge assignments and abstract access |
-| Mar 10, 2026 | Fair Day / Judging Day |
+| Date                   | Action                                        |
+| ---------------------- | --------------------------------------------- |
+| Feb 20, 2026 (8 PM)    | Title, category, field of study changes due   |
+| Feb 27, 2026 (8 PM)    | Abstract upload deadline (250 words max, PDF) |
+| Mar 5, 2026 (11:59 PM) | Abstract posted for pre-judging review        |
+| Mar 8, 2026            | Judge assignments and abstract access         |
+| Mar 10, 2026           | Fair Day / Judging Day                        |
 
 ---
 
 ## Judging Criteria (40 Points Total)
 
-| Category | Points | What Judges Evaluate |
-|----------|--------|---------------------|
-| Scientific Thought | 10 | Problem significance, clear hypothesis, controlled variables, sufficient literature, conclusions justified by data |
-| Creativity | 10 | Originality of topic or approach, novel methodology, student's direct contribution |
-| Independent Work / Skill | 10 | Student's execution, software competency, appropriate acknowledgment of help |
-| Thoroughness / Clarity | 10 | Data adequacy, replication, documentation completeness, clear communication |
+| Category                 | Points | What Judges Evaluate                                                                                               |
+| ------------------------ | ------ | ------------------------------------------------------------------------------------------------------------------ |
+| Scientific Thought       | 10     | Problem significance, clear hypothesis, controlled variables, sufficient literature, conclusions justified by data |
+| Creativity               | 10     | Originality of topic or approach, novel methodology, student's direct contribution                                 |
+| Independent Work / Skill | 10     | Student's execution, software competency, appropriate acknowledgment of help                                       |
+| Thoroughness / Clarity   | 10     | Data adequacy, replication, documentation completeness, clear communication                                        |
 
 ---
 
@@ -47,24 +47,24 @@
 
 All six must be addressed in the project:
 
-| # | Requirement | How We Address It |
-|---|-------------|-------------------|
-| 1 | **Data Source Traceability** | OpenNeuro ds005048 (Lahijanian et al. 2024), publicly available, de-identified |
-| 2 | **AI Rationale** | TCN chosen for causal temporal prediction; EEGNet for compact EEG processing. Both justified by data constraints (17K samples, 35 subjects) |
-| 3 | **Data Curation Plan** | Artifact zeroing at +/-100 uV, 7 frontal channels selected, subject-level splits, windows with NaN excluded |
-| 4 | **Unique Insights** | Horizon sweep (TCN predicts at 5-10s where baselines fail), habituation variability (49/51% split), adaptive efficiency gains |
-| 5 | **Model Development Plan** | Parameter counts sized for dataset (12 samples/param for EEGNet). Dilations [1,2,4,8] chosen for 31-step receptive field. 4 architectural variants tested |
-| 6 | **Validation Strategy** | Subject-level train/val/test splits (24/5/6 subjects). No subject appears in multiple splits. Shuffle-label sanity check R²=-0.332 |
+| #   | Requirement                  | How We Address It                                                                                                                                         |
+| --- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | **Data Source Traceability** | OpenNeuro ds005048 (Lahijanian et al. 2024), publicly available, de-identified                                                                            |
+| 2   | **AI Rationale**             | TCN chosen for causal temporal prediction; EEGNet for compact EEG processing. Both justified by data constraints (17K samples, 35 subjects)               |
+| 3   | **Data Curation Plan**       | Artifact zeroing at +/-100 uV, 7 frontal channels selected, subject-level splits, windows with NaN excluded                                               |
+| 4   | **Unique Insights**          | Horizon sweep (TCN predicts at 5-10s where baselines fail), habituation variability (49/51% split), adaptive efficiency gains                             |
+| 5   | **Model Development Plan**   | Parameter counts sized for dataset (12 samples/param for EEGNet). Dilations [1,2,4,8] chosen for 31-step receptive field. 4 architectural variants tested |
+| 6   | **Validation Strategy**      | Subject-level train/val/test splits (24/5/6 subjects). No subject appears in multiple splits. Shuffle-label sanity check R²=-0.332                        |
 
 ### Must Test At Least 2 of 5 Criteria
 
-| Criterion | Status | Evidence |
-|-----------|--------|----------|
-| **Accuracy** | TESTED | R², RMSE, correlation at 6 horizons. Horizon sweep with 3 baselines |
-| **Generalizability** | TESTED | 6 held-out test subjects never seen during training or model selection. Subject-level splits prevent data leakage |
-| **Interpretability** | TESTED | Ridge feature ablation: PAC features R²=0.859, spectral only R²=0.045. Shuffle-label test. TCN attention weight analysis (script ready) |
-| Fairness | N/A | Not a decision system affecting people |
-| Scalability | PARTIAL | 1,457 and 31,000 params enable embedded deployment. No formal latency benchmark |
+| Criterion            | Status  | Evidence                                                                                                                                |
+| -------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **Accuracy**         | TESTED  | R², RMSE, correlation at 6 horizons. Horizon sweep with 3 baselines                                                                     |
+| **Generalizability** | TESTED  | 6 held-out test subjects never seen during training or model selection. Subject-level splits prevent data leakage                       |
+| **Interpretability** | TESTED  | Ridge feature ablation: PAC features R²=0.859, spectral only R²=0.045. Shuffle-label test. TCN attention weight analysis (script ready) |
+| Fairness             | N/A     | Not a decision system affecting people                                                                                                  |
+| Scalability          | PARTIAL | 1,457 and 31,000 params enable embedded deployment. No formal latency benchmark                                                         |
 
 **We test 3 of 5 criteria: Accuracy, Generalizability, and Interpretability.**
 
@@ -99,6 +99,7 @@ All six must be addressed in the project:
 ## Category
 
 Our project falls under:
+
 - **Category:** Biological Science and Engineering
 - **Field:** Computational Biology and Bioinformatics (Project code 5)
 - **ISEF Subcategory:** Computational Neuroscience (NEU)
@@ -141,12 +142,12 @@ Our project falls under:
 
 ## Pre-Submission Checklist
 
-| Task | Deadline | Status |
-|------|----------|--------|
-| Title/category submitted | Feb 20 (passed) | Confirm done |
-| Abstract PDF upload (250 words max) | Feb 27, 8 PM | Text ready, needs PDF formatting |
-| Notebook 4-page PDF upload | Before fair day | Select first page, 2 middle pages, last page |
-| Physical poster board construction | Before Mar 10 | Text ready in POSTER_BOARD.md |
-| Software demo video (60-90 sec) | Before Mar 10 | Record: run_tcn_validation.py output + timeline_example.png figure |
-| Practice 1-2 min verbal summary | Before Mar 10 | Use questions above to prepare |
-| Print abstract for table | Before Mar 10 | From POSTER_BOARD.md abstract section |
+| Task                                | Deadline        | Status                                                             |
+| ----------------------------------- | --------------- | ------------------------------------------------------------------ |
+| Title/category submitted            | Feb 20 (passed) | Confirm done                                                       |
+| Abstract PDF upload (250 words max) | Feb 27, 8 PM    | Text ready, needs PDF formatting                                   |
+| Notebook 4-page PDF upload          | Before fair day | Select first page, 2 middle pages, last page                       |
+| Physical poster board construction  | Before Mar 10   | Text ready in POSTER_BOARD.md                                      |
+| Software demo video (60-90 sec)     | Before Mar 10   | Record: run_tcn_validation.py output + timeline_example.png figure |
+| Practice 1-2 min verbal summary     | Before Mar 10   | Use questions above to prepare                                     |
+| Print abstract for table            | Before Mar 10   | From POSTER_BOARD.md abstract section                              |

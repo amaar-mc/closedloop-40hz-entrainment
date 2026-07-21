@@ -3,6 +3,7 @@
 ## What to Bring
 
 ### Must Have
+
 - [ ] Printed poster (48x64 in) -- already done
 - [ ] Printed 13-page project presentation (judges may ask to see it at your table)
 - [ ] Lab notebook (even if not mandatory -- demonstrates rigor)
@@ -14,12 +15,14 @@
 - [ ] Snacks (protein bars, not candy)
 
 ### Should Have
+
 - [ ] Extra printed copy of the poster content (in case a judge wants to read something closely)
 - [ ] Sticky notes flagging key pages in your lab notebook
 - [ ] Pen (judges may ask you to sketch something)
 - [ ] Backup laptop charger or power bank
 
 ### Don't Bring
+
 - QR codes (prohibited on display)
 - Business cards or handouts (distribution to judges is prohibited)
 - Previous fair awards or medals
@@ -37,6 +40,7 @@
 ## Judging Day (Sunday April 12)
 
 ### Pre-Judging
+
 - Eat a real breakfast. Protein + complex carbs.
 - Arrive at least 30 minutes before judging starts.
 - Check your display. Nothing shifted overnight.
@@ -46,6 +50,7 @@
 - Use the bathroom before judging starts.
 
 ### During Judging (~12:45-4:30 PM, per CSEF 2026 schedule)
+
 - Stand when a judge approaches. Don't be sitting when they arrive.
 - Greet them warmly. Shake hands if offered.
 - Let them lead. Some will say "tell me about it." Others will jump to questions.
@@ -54,12 +59,14 @@
 - If no judge is at your booth, review your danger zones mentally.
 
 ### During the Break
+
 - Sit down. Rest your legs and voice.
 - Eat your snack.
 - Don't worry about which judges you've seen or haven't.
 - Quick mental review of any question you stumbled on -- prepare a better answer.
 
 ### After Judging
+
 - Stay at your display until officially dismissed.
 - If judges come by informally after judging ends, still be engaged.
 - Break down your display when instructed.
@@ -67,6 +74,7 @@
 ## What to Wear
 
 Business casual. Not a suit. Not a hoodie.
+
 - Button-down or nice polo. Dark pants or khakis. Clean shoes.
 - Comfortable enough to stand for 4+ hours.
 - No logos, no distracting patterns.

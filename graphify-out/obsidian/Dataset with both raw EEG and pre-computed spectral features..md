@@ -10,6 +10,7 @@ tags:
 # Dataset with both raw EEG and pre-computed spectral features.
 
 ## Connections
+
 - [[EEGDatasetV3]] - `rationale_for` [EXTRACTED]
 - [[SpecTempNet]] - `uses` [INFERRED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]

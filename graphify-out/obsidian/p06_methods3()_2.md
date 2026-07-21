@@ -10,6 +10,7 @@ tags:
 # p06_methods3()
 
 ## Connections
+
 - [[Slide 6 — Methods page 3 (controller, validation, system arch figure).]] - `rationale_for` [EXTRACTED]
 - [[add_bullet()]] - `calls` [EXTRACTED]
 - [[add_caption()]] - `calls` [EXTRACTED]

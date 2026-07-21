@@ -10,7 +10,8 @@ tags:
 # train_xgboost_model()
 
 ## Connections
+
 - [[Train XGBoost on flattened (N, TF) feature sequences.      Targets are RAW y_fu]] - `rationale_for` [EXTRACTED]
 - [[comparison_models.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

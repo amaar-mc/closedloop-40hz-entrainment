@@ -9,6 +9,7 @@ tags:
 # Figure 6: Prediction Horizon Sweep (Test R²)
 
 ## Connections
+
 - [[PAC+Stim TCN 4-channel Muse-compatible (Figure 6)]] - `references` [EXTRACTED]
 - [[PAC+Stim TCN 7-channel Line (Figure 6)]] - `references` [EXTRACTED]
 - [[Persistence Baseline (Prediction Horizon Sweep)]] - `references` [EXTRACTED]

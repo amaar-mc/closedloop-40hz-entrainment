@@ -10,6 +10,7 @@ tags:
 # realtime_inference.py (Closed-Loop Wrapper)
 
 ## Connections
+
 - [[1 Hz Closed-Loop Decision Loop]] - `implements` [EXTRACTED]
 - [[Multiscale Temporal PAC Module]] - `references` [EXTRACTED]
 

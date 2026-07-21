@@ -9,6 +9,7 @@ tags:
 # Simulation Update: <5s param TCN, Simul. PAC/EEG, Stim effects
 
 ## Connections
+
 - [[Audio Signal Generator (Adaptive) 40 Hz Audio Output to speaker]] - `references` [INFERRED]
 - [[EEGNet Block 1,457 params, temporal + spatial convolutions]] - `references` [INFERRED]
 - [[Figure 5 System Architecture Flowchart — Complete Closed-Loop Pipeline]] - `references` [EXTRACTED]

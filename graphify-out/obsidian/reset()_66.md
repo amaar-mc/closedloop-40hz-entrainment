@@ -10,8 +10,9 @@ tags:
 # reset()
 
 ## Connections
+
 - [[PredictiveLookAheadControl_6]] - `method` [EXTRACTED]
 - [[Reset state for a new trial._2]] - `rationale_for` [EXTRACTED]
 - [[run_simulation()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

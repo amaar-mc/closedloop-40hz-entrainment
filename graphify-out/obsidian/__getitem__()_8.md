@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# __getitem__()
+# **getitem**()
 
 ## Connections
+
 - [[TemporalPACDataset]] - `method` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

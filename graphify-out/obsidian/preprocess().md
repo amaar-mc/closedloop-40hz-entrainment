@@ -10,6 +10,7 @@ tags:
 # preprocess()
 
 ## Connections
+
 - [[EEGPreprocessor]] - `method` [EXTRACTED]
 - [[Full preprocessing pipeline.          Pipeline             1. Bandpass filte]] - `rationale_for` [EXTRACTED]
 - [[artifact_rejection()]] - `calls` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[notch_filter()]] - `calls` [EXTRACTED]
 - [[test_preprocessing()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

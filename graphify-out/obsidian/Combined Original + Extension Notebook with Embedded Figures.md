@@ -10,6 +10,7 @@ tags:
 # Combined Original + Extension Notebook with Embedded Figures
 
 ## Connections
+
 - [[main()_73]] - `implements` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

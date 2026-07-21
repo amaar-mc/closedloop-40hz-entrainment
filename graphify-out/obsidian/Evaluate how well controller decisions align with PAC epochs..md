@@ -10,9 +10,10 @@ tags:
 # Evaluate how well controller decisions align with PAC epochs.
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[evaluate_epoch_alignment()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

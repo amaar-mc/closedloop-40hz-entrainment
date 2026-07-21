@@ -10,6 +10,7 @@ tags:
 # Phase 1 Finding: 2-Second PAC Autocorrelation ~0 (r=0.018 at lag-1)
 
 ## Connections
+
 - [[Critical Finding Near-Zero PAC Temporal Autocorrelation in 2-Second Windows]] - `conceptually_related_to` [EXTRACTED]
 
   #community/Community_71

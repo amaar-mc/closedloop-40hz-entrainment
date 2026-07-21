@@ -10,6 +10,7 @@ tags:
 # Key Single Numbers (oracle 91%, 35/35 subjects, $250 hardware)
 
 ## Connections
+
 - [[Controller Comparison (FixedReactiveTCNHybridOracle, N=35)]] - `conceptually_related_to` [INFERRED]
 - [[Numbers Sheet (Old v1 Reference)]] - `references` [EXTRACTED]
 

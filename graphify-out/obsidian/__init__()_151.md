@@ -7,11 +7,12 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[EEGPreprocessor]] - `method` [EXTRACTED]
 - [[Initialize EEG preprocessor.          Args             fs Sampling frequenc]] - `rationale_for` [EXTRACTED]
 - [[_compute_filter_coefficients()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

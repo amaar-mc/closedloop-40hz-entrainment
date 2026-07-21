@@ -7,10 +7,11 @@ tags:
   - community/Replay_Analysis_&_Controllers
 ---
 
-# _trend()
+# \_trend()
 
 ## Connections
+
 - [[PredictiveLookAheadControl]] - `method` [EXTRACTED]
 - [[step()_2]] - `calls` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

@@ -9,6 +9,7 @@ tags:
 # Poster Board V3 (Print-Ready, Synopsys)
 
 ## Connections
+
 - [[Poster Board V2 (Print-Ready, Synopsys)]] - `references` [INFERRED]
 - [[Poster Board V5 (Condensed, Visual-Forward, Audit-Verified)]] - `references` [INFERRED]
 

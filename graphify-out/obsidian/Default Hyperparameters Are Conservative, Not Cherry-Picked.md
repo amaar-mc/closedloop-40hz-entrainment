@@ -9,6 +9,7 @@ tags:
 # Default Hyperparameters Are Conservative, Not Cherry-Picked
 
 ## Connections
+
 - [[Hyperparameter Sensitivity Audit (ROBUST verdict)]] - `references` [EXTRACTED]
 
   #community/Rigor_Audit_Reports

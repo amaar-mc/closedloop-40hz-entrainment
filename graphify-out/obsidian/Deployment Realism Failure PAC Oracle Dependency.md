@@ -10,6 +10,7 @@ tags:
 # Deployment Realism Failure: PAC Oracle Dependency
 
 ## Connections
+
 - [[PAC Oracle Dependency (Deployment Risk)]] - `semantically_similar_to` [INFERRED]
 - [[Pipeline Audit Report Multiscale Causal TCN (ts5_clean)]] - `references` [EXTRACTED]
 

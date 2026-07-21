@@ -9,7 +9,8 @@ tags:
 # Rationale: PAC is Theta-Gamma Frequency Coupling — Explicit Features Required
 
 ## Connections
+
 - [[Rationale Features  Architecture for Small EEG Datasets]] - `rationale_for` [INFERRED]
 - [[SpecTempNet Architecture Design (3-Branch Raw EEG + Spectral + Phase-Amplitude)]] - `rationale_for` [EXTRACTED]
 
-  #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model*Ceiling*&\_Leakage_Audits

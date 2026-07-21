@@ -7,9 +7,10 @@ tags:
   - community/Community_38
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[ATCNet]] - `method` [EXTRACTED]
 - [[__init__()_17]] - `calls` [EXTRACTED]
 - [[_make_tcn_block()]] - `calls` [EXTRACTED]

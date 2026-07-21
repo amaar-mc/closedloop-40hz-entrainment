@@ -10,6 +10,7 @@ tags:
 # Finding: Adaptive Stimulation Benefit Peaks at Mild-Moderate AD
 
 ## Connections
+
 - [[Alzheimer Simulation Script (Disease Severity × Strategy Matrix)]] - `rationale_for` [EXTRACTED]
 
   #community/12-Feature_TCN_Validation

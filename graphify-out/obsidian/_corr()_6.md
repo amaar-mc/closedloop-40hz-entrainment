@@ -7,9 +7,10 @@ tags:
   - community/12-Feature_TCN_Validation
 ---
 
-# _corr()
+# \_corr()
 
 ## Connections
+
 - [[run_12feat_validation.py]] - `contains` [EXTRACTED]
 
   #community/12-Feature_TCN_Validation

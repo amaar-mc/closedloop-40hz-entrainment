@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# _default_frontal_mixing_matrix()
+# \_default_frontal_mixing_matrix()
 
 ## Connections
+
 - [[Create a default frontal lead field approximation.      Based on typical volume]] - `rationale_for` [EXTRACTED]
 - [[neural_mass.py]] - `contains` [EXTRACTED]
 - [[simulate_multichannel()]] - `calls` [EXTRACTED]

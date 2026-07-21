@@ -10,6 +10,7 @@ tags:
 # body()
 
 ## Connections
+
 - [[PaperPDF]] - `method` [EXTRACTED]
 - [[figure()]] - `calls` [EXTRACTED]
 - [[generate()]] - `calls` [EXTRACTED]

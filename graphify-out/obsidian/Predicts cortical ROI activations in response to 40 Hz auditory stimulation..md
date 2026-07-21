@@ -10,6 +10,7 @@ tags:
 # Predicts cortical ROI activations in response to 40 Hz auditory stimulation.
 
 ## Connections
+
 - [[CorticalResponseModel]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

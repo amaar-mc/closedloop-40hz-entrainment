@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Causal multiscale TCN with two regression heads.      Input:         x_seq: (B,
+# Causal multiscale TCN with two regression heads. Input: x_seq: (B,
 
 ## Connections
+
 - [[MultiscaleCausalTCN]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

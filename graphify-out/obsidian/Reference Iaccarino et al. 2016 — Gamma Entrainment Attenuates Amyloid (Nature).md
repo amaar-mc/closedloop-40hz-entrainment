@@ -10,7 +10,8 @@ tags:
 # Reference: Iaccarino et al. 2016 — Gamma Entrainment Attenuates Amyloid (Nature)
 
 ## Connections
+
 - [[Literature Review Gamma Oscillation Disruption in AD and PV Interneuron Loss]] - `references` [EXTRACTED]
 - [[Research Paper v3 (Full Manuscript)]] - `cites` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

@@ -10,6 +10,7 @@ tags:
 # Rationale: Consensus Judging Favors Memorable Projects Over Rubric Gaming
 
 ## Connections
+
 - [[CSEF Consensus-Based Judging Process]] - `rationale_for` [EXTRACTED]
 
   #community/Community_69

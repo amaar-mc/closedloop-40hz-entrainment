@@ -10,6 +10,7 @@ tags:
 # Habituation/fatigue analysis: does PAC decline across repeated stimulation block
 
 ## Connections
+
 - [[fatigue_analysis.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_101

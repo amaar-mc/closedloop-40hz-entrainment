@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# Get full simulation history.          Returns dict with same keys as Entrainment
+# Get full simulation history. Returns dict with same keys as Entrainment
 
 ## Connections
+
 - [[get_history()_5]] - `rationale_for` [EXTRACTED]
 
   #community/TVB_Alzheimer_Simulator

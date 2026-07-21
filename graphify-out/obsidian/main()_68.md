@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[Entry point for the experiment runner.]] - `rationale_for` [EXTRACTED]
 - [[SequenceDataset_1]] - `calls` [EXTRACTED]
 - [[_persistence_baseline()_1]] - `calls` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[run_all_experiments.py]] - `contains` [EXTRACTED]
 - [[run_single_experiment()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

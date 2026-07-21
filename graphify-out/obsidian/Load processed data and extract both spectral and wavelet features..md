@@ -10,10 +10,11 @@ tags:
 # Load processed data and extract both spectral and wavelet features.
 
 ## Connections
+
 - [[EEGAugmentation]] - `uses` [INFERRED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[ViTTCNet]] - `uses` [INFERRED]
 - [[WaveletFeatureExtractor]] - `uses` [INFERRED]
 - [[load_and_preprocess_data()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

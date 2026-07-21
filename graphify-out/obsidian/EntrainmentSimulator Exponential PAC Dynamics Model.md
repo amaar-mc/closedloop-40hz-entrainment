@@ -10,6 +10,7 @@ tags:
 # EntrainmentSimulator: Exponential PAC Dynamics Model
 
 ## Connections
+
 - [[Comprehensive Methodology Document Step-by-Step Implementation]] - `references` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

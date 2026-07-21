@@ -9,6 +9,7 @@ tags:
 # EEGNet ML Model (1,457 params, MSE trained, <50ms inference)
 
 ## Connections
+
 - [[Feature Extraction (73 features 61+7+5)]] - `calls` [EXTRACTED]
 - [[Preprocessing Stage (BP 0.5-80 Hz, notch, CAR)]] - `calls` [EXTRACTED]
 

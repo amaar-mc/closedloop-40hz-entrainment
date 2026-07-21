@@ -10,6 +10,7 @@ tags:
 # TCNController
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[TCN-based predictive controller using the trained causal forecaster.      Uses t]] - `rationale_for` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[reset()_48]] - `method` [EXTRACTED]
 - [[step()_48]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

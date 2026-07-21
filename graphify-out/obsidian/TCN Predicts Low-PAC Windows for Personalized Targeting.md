@@ -9,6 +9,7 @@ tags:
 # TCN Predicts Low-PAC Windows for Personalized Targeting
 
 ## Connections
+
 - [[Adaptive Schedule (This Project) - 72% Alignment]] - `implements` [EXTRACTED]
 - [[Figure 1 Fixed vs. Adaptive Stimulation Scheduling Comparison]] - `references` [EXTRACTED]
 

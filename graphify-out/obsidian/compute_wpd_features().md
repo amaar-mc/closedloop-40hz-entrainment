@@ -10,8 +10,9 @@ tags:
 # compute_wpd_features()
 
 ## Connections
+
 - [[Compute Wavelet Packet Decomposition features.      WPD provides a complete deco]] - `rationale_for` [EXTRACTED]
 - [[extract_wavelet_features()]] - `calls` [EXTRACTED]
 - [[wavelet_features.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

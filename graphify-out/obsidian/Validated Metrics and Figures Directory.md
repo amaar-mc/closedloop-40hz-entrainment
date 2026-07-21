@@ -10,6 +10,7 @@ tags:
 # Validated Metrics and Figures Directory
 
 ## Connections
+
 - [[Documentation Index]] - `references` [EXTRACTED]
 
   #community/Community_67

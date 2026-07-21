@@ -10,6 +10,7 @@ tags:
 # AF7 → F7 Proxy (Inferior Frontal Left)
 
 ## Connections
+
 - [[Muse 2 to ds005048 Channel Mapping]] - `references` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

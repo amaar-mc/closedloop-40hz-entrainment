@@ -10,6 +10,7 @@ tags:
 # Horizon Sweep Results (TCN R2~0.25 at 5-10s, Baselines Collapse)
 
 ## Connections
+
 - [[Horizon Sweep and Controller Integration (February 19, 2026)]] - `references` [EXTRACTED]
 
   #community/Community_123

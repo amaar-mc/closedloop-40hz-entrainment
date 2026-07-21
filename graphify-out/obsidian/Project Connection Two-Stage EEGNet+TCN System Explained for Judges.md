@@ -10,7 +10,8 @@ tags:
 # Project Connection: Two-Stage EEGNet+TCN System Explained for Judges
 
 ## Connections
+
 - [[ML Zero to Hero Educational Guide (Foundations to Causal TCN)]] - `references` [EXTRACTED]
 - [[Research Question Layman and Technical Versions with Clinical Motivation]] - `semantically_similar_to` [INFERRED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

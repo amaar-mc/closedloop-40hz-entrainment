@@ -10,8 +10,9 @@ tags:
 # reset()
 
 ## Connections
+
 - [[Reset controller and forecaster for a new trial.]] - `rationale_for` [EXTRACTED]
 - [[TCNPredictiveControl]] - `method` [EXTRACTED]
 - [[run_single_trial()_2]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

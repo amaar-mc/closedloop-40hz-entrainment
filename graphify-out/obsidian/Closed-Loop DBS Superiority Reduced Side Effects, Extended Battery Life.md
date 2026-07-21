@@ -10,6 +10,7 @@ tags:
 # Closed-Loop DBS Superiority: Reduced Side Effects, Extended Battery Life
 
 ## Connections
+
 - [[Comprehensive Literature Review Closed-Loop 40Hz Gamma Entrainment for AD]] - `references` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Randomly drop (zero out) one or more channels.      This makes the model robust
+# Randomly drop (zero out) one or more channels. This makes the model robust
 
 ## Connections
+
 - [[ChannelDropout]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

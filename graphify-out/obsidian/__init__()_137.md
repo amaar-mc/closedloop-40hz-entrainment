@@ -7,9 +7,10 @@ tags:
   - community/TCN_Layer_Internals
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[AttentionPool1D_2]] - `calls` [EXTRACTED]
 - [[CausalSinusoidalPE]] - `calls` [EXTRACTED]
 - [[LastStepPool_2]] - `calls` [EXTRACTED]

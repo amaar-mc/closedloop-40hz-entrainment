@@ -10,6 +10,7 @@ tags:
 # Audit Integrity Checks (no leakage, causal indexing, shuffle-label sanity)
 
 ## Connections
+
 - [[12-Feature PAC+Stim Configuration (test R²=0.606)]] - `references` [EXTRACTED]
 
   #community/Community_30

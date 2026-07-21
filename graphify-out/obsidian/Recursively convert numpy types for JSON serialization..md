@@ -10,9 +10,10 @@ tags:
 # Recursively convert numpy types for JSON serialization.
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[_make_serializable()_2]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

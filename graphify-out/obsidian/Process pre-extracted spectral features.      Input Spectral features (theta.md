@@ -7,9 +7,10 @@ tags:
   - community/Archived_SpecTempNet_V3
 ---
 
-# Process pre-extracted spectral features.      Input: Spectral features (theta
+# Process pre-extracted spectral features. Input: Spectral features (theta
 
 ## Connections
+
 - [[SpectralBranch]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_SpecTempNet_V3

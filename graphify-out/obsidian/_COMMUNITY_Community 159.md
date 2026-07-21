@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Apply causal trailing mean within each subject block.          Causal (trailing)]] - rationale - archive/improved_tcn/train_improved_tcn.py
 
 ## Live Query (requires Dataview plugin)

@@ -10,7 +10,8 @@ tags:
 # Manual PAC Computation (Butterworth + Hilbert, compute_pac_manual)
 
 ## Connections
+
 - [[Comprehensive Methodology Document Step-by-Step Implementation]] - `references` [EXTRACTED]
 - [[Modulation Index (KL Divergence PAC Metric, Tort 2010)]] - `implements` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

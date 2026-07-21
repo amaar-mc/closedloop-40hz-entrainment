@@ -7,9 +7,10 @@ tags:
   - community/Community_83
 ---
 
-# PAC direction classifier: 3-class prediction of future PAC change.  Classes:
+# PAC direction classifier: 3-class prediction of future PAC change. Classes:
 
 ## Connections
+
 - [[direction_classifier.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_83

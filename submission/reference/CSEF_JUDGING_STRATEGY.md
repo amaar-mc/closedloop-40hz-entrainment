@@ -30,19 +30,19 @@ Judges examine your poster, abstract, and any submitted materials. This is a scr
 Judges enter your space. They've already seen your display. Some will cut off prepared presentations to ask targeted questions. This is where projects are won or lost. The interview is approximately 70% of the evaluation weight in practice.
 
 **Round 3 — Caucus (judges only):**
-All Category Judges meet to discuss and debate awards. They vote by consensus. The question each judge asks themselves: *"Which project did I walk away from thinking, 'That kid really understands something important'?"*
+All Category Judges meet to discuss and debate awards. They vote by consensus. The question each judge asks themselves: _"Which project did I walk away from thinking, 'That kid really understands something important'?"_
 
 ### What Judges Actually Ask (and Why)
 
-| Question | What They're Testing | Your Angle |
-|----------|---------------------|------------|
-| "What is your project about?" | Can you explain it clearly in 60 seconds? | Closed-loop adaptive 40Hz brain stimulation using a digital twin of the brain |
-| "Why did you choose this topic?" | Genuine motivation vs. resume padding | 6.9M Americans with Alzheimer's, existing treatments limited, personal connection if any |
-| "How did you design your experiment?" | Scientific/engineering thinking | Systematic pipeline: data → preprocessing → PAC computation → model comparison → TCN → controller → simulator → validation |
-| "What would you change?" | Critical reflection, maturity | "I'd test with real-time EEG hardware. I'd validate the TRIBE v2 bridge with clinical fMRI-EEG paired recordings" |
-| "What do your results mean?" | Depth of understanding | "TCN maintains R²=0.25 at 5-10s where ALL baselines collapse to negative R² — this is the operationally useful range for proactive control" |
-| "What are the limitations?" | Scientific honesty | Be specific: "At 1-2s horizons, simply guessing 'same as now' beats our model. Our advantage is exclusively at longer horizons." |
-| "What's next?" | Vision and ambition | "Clinical validation with real-time EEG, deploy as an app on existing hardware, partner with facilities" |
+| Question                              | What They're Testing                      | Your Angle                                                                                                                                  |
+| ------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| "What is your project about?"         | Can you explain it clearly in 60 seconds? | Closed-loop adaptive 40Hz brain stimulation using a digital twin of the brain                                                               |
+| "Why did you choose this topic?"      | Genuine motivation vs. resume padding     | 6.9M Americans with Alzheimer's, existing treatments limited, personal connection if any                                                    |
+| "How did you design your experiment?" | Scientific/engineering thinking           | Systematic pipeline: data → preprocessing → PAC computation → model comparison → TCN → controller → simulator → validation                  |
+| "What would you change?"              | Critical reflection, maturity             | "I'd test with real-time EEG hardware. I'd validate the TRIBE v2 bridge with clinical fMRI-EEG paired recordings"                           |
+| "What do your results mean?"          | Depth of understanding                    | "TCN maintains R²=0.25 at 5-10s where ALL baselines collapse to negative R² — this is the operationally useful range for proactive control" |
+| "What are the limitations?"           | Scientific honesty                        | Be specific: "At 1-2s horizons, simply guessing 'same as now' beats our model. Our advantage is exclusively at longer horizons."            |
+| "What's next?"                        | Vision and ambition                       | "Clinical validation with real-time EEG, deploy as an app on existing hardware, partner with facilities"                                    |
 
 ---
 
@@ -55,33 +55,38 @@ Even though CSEF doesn't use numerical scoring, judges think in terms of the ISE
 Your project should be classified as **Engineering**, not Science. Here's why: you built a system that solves a practical problem. You didn't just test a hypothesis — you designed, implemented, and validated a complete closed-loop control system.
 
 **I. Research Problem — 10 pts**
+
 - Description of a practical need or problem to be solved
 - Definition of criteria for proposed solution
 - Explanation of constraints
 
-*Your strengths:* Clear problem (Alzheimer's patients need personalized, adaptive 40Hz stimulation). Clear criteria (predict brain state 5-10s ahead to enable proactive control). Clear constraints (no clinical access, limited to computational validation, must work with existing hardware).
+_Your strengths:_ Clear problem (Alzheimer's patients need personalized, adaptive 40Hz stimulation). Clear criteria (predict brain state 5-10s ahead to enable proactive control). Clear constraints (no clinical access, limited to computational validation, must work with existing hardware).
 
 **II. Design and Methodology — 15 pts**
+
 - Exploration of alternatives to answer need or problem
 - Identification of a solution
 - Development of a prototype/model
 
-*Your strengths:* You tested **8 different model architectures** before finding the ceiling. You compared TCN against Ridge, persistence, and other baselines. You built a complete pipeline (preprocessing → feature extraction → prediction → control → simulation → validation). This is exceptionally thorough for any level.
+_Your strengths:_ You tested **8 different model architectures** before finding the ceiling. You compared TCN against Ridge, persistence, and other baselines. You built a complete pipeline (preprocessing → feature extraction → prediction → control → simulation → validation). This is exceptionally thorough for any level.
 
 **III. Execution: Construction and Testing — 20 pts**
+
 - Prototype demonstrates intended design
 - Prototype has been tested in multiple conditions/trials
 - Prototype demonstrates engineering skill and completeness
 
-*Your strengths:* Multi-seed validation, ablation studies, horizon sweeps (1-10s), fatigue sensitivity analysis, 35 real EEG subjects, subject-level cross-validation, leakage audits, comprehensive statistical testing (Cohen's d, p-values). The code audit trail alone is remarkable.
+_Your strengths:_ Multi-seed validation, ablation studies, horizon sweeps (1-10s), fatigue sensitivity analysis, 35 real EEG subjects, subject-level cross-validation, leakage audits, comprehensive statistical testing (Cohen's d, p-values). The code audit trail alone is remarkable.
 
 **IV. Creativity & Potential Impact — 20 pts**
+
 - "Project demonstrates significant creativity in one or more of the above criteria"
 - "Project has impact or potential impact in its field and/or in technology, economy, environment or society"
 
-*Your strengths:* **This is where you win.** No one else is using a brain foundation model (TRIBE v2) as a digital twin for closed-loop neurostimulation. No one else has built a predictive controller that beats all baselines at the operationally useful 5-10 second horizon. The potential impact is enormous: 6.9M Americans with Alzheimer's, deployable on existing consumer hardware.
+_Your strengths:_ **This is where you win.** No one else is using a brain foundation model (TRIBE v2) as a digital twin for closed-loop neurostimulation. No one else has built a predictive controller that beats all baselines at the operationally useful 5-10 second horizon. The potential impact is enormous: 6.9M Americans with Alzheimer's, deployable on existing consumer hardware.
 
 **V. Presentation — 35 pts (Poster 10 + Interview 25)**
+
 - Logical organization of material; clarity of graphics
 - Clear, concise, thoughtful responses to questions
 - Understanding of basic science relevant to project
@@ -90,7 +95,7 @@ Your project should be classified as **Engineering**, not Science. Here's why: y
 - Recognition of potential impact
 - Quality of ideas for further research
 
-*Your action items:* This is the single largest scoring category. See Section 5 for interview preparation.
+_Your action items:_ This is the single largest scoring category. See Section 5 for interview preparation.
 
 ### The Weight Distribution That Matters
 
@@ -133,6 +138,7 @@ Research Problem:                   10%  ← Your motivation
 ### Why This Is Unprecedented
 
 Nobody — in academia, industry, or any science fair — has used TRIBE v2 for:
+
 - Closed-loop stimulation systems
 - 40Hz gamma entrainment
 - Alzheimer's therapeutic applications
@@ -156,7 +162,7 @@ Your integration is already in progress — code exists in `src/tribe_v2/` on th
 
 ### Honest Technical Caveats (know these — judges will probe)
 
-1. **fMRI temporal resolution vs. oscillatory dynamics.** fMRI measures BOLD signal (hemodynamic response), not neural oscillations directly. BOLD integrates over ~5-6 seconds. TRIBE v2 predicts this slow signal, not millisecond-level gamma oscillations. **Your answer:** "TRIBE v2 tells us *where* and *how strongly* the brain activates. The Wilson-Cowan neural mass model layer generates the oscillatory dynamics — theta-gamma coupling — from those activation envelopes. They serve complementary roles."
+1. **fMRI temporal resolution vs. oscillatory dynamics.** fMRI measures BOLD signal (hemodynamic response), not neural oscillations directly. BOLD integrates over ~5-6 seconds. TRIBE v2 predicts this slow signal, not millisecond-level gamma oscillations. **Your answer:** "TRIBE v2 tells us _where_ and _how strongly_ the brain activates. The Wilson-Cowan neural mass model layer generates the oscillatory dynamics — theta-gamma coupling — from those activation envelopes. They serve complementary roles."
 
 2. **Training data mismatch.** TRIBE v2 was trained on naturalistic stimuli (movies, podcasts). 40Hz tone bursts are non-naturalistic. **Your answer:** "The auditory pathway (via Wav2Vec-BERT) is robustly captured. 40Hz falls within the frequency range of natural audio. We validate against known auditory steady-state response (ASSR) literature."
 
@@ -174,25 +180,25 @@ This is the term Meta themselves use. TRIBE v2 enables "in-silico neuroscience" 
 
 ### Brain Foundation Model Competitive Landscape (if asked "why TRIBE v2?")
 
-| Model | Modality | Scale | Direction | Year |
-|-------|----------|-------|-----------|------|
-| **TRIBE v2** (Meta) | fMRI (video+audio+text input) | 720 subjects, 70K voxels | Stimulus → Brain (encoding) | 2026 |
-| BrainLM | fMRI | 6,700 hrs | Brain state extrapolation | 2023 |
-| NeuroLM | EEG | 1.7B params, 25K hrs | EEG → Language (decoding) | 2025 |
-| LaBraM | EEG | 2,500 hrs | Masked EEG modeling | 2024 |
-| Brant | EEG | 6-second patches | EEG understanding | 2024 |
-| LEAD | EEG | 813 subjects | Alzheimer's detection from EEG | 2025 |
+| Model               | Modality                      | Scale                    | Direction                      | Year |
+| ------------------- | ----------------------------- | ------------------------ | ------------------------------ | ---- |
+| **TRIBE v2** (Meta) | fMRI (video+audio+text input) | 720 subjects, 70K voxels | Stimulus → Brain (encoding)    | 2026 |
+| BrainLM             | fMRI                          | 6,700 hrs                | Brain state extrapolation      | 2023 |
+| NeuroLM             | EEG                           | 1.7B params, 25K hrs     | EEG → Language (decoding)      | 2025 |
+| LaBraM              | EEG                           | 2,500 hrs                | Masked EEG modeling            | 2024 |
+| Brant               | EEG                           | 6-second patches         | EEG understanding              | 2024 |
+| LEAD                | EEG                           | 813 subjects             | Alzheimer's detection from EEG | 2025 |
 
-**Why TRIBE v2 is the only correct choice:** It is the only model that takes *stimuli as input* and predicts *brain responses as output*. All EEG models go the opposite direction. For simulating brain response to 40Hz stimulation, you need the encoding direction. TRIBE v2 also handles audio natively via Wav2Vec-BERT, which none of the EEG models do.
+**Why TRIBE v2 is the only correct choice:** It is the only model that takes _stimuli as input_ and predicts _brain responses as output_. All EEG models go the opposite direction. For simulating brain response to 40Hz stimulation, you need the encoding direction. TRIBE v2 also handles audio natively via Wav2Vec-BERT, which none of the EEG models do.
 
 ### The 40Hz Competitive Landscape (if asked about the field)
 
-| Entity | Approach | Your Advantage |
-|--------|----------|----------------|
-| Cognito Therapeutics | Fixed-schedule 40Hz via Spectris headset | Your system is adaptive, personalized, predicts ahead |
-| MIT Tsai Lab | Fixed protocols in lab settings | Your system is deployable on consumer hardware |
-| Lahijanian et al. (ds005048) | Recorded data, no adaptive control | You built the controller they didn't |
-| Consumer neuromod (Muse, NextSense) | EEG feedback for meditation/sleep | Not targeting Alzheimer's or 40Hz |
+| Entity                              | Approach                                 | Your Advantage                                        |
+| ----------------------------------- | ---------------------------------------- | ----------------------------------------------------- |
+| Cognito Therapeutics                | Fixed-schedule 40Hz via Spectris headset | Your system is adaptive, personalized, predicts ahead |
+| MIT Tsai Lab                        | Fixed protocols in lab settings          | Your system is deployable on consumer hardware        |
+| Lahijanian et al. (ds005048)        | Recorded data, no adaptive control       | You built the controller they didn't                  |
+| Consumer neuromod (Muse, NextSense) | EEG feedback for meditation/sleep        | Not targeting Alzheimer's or 40Hz                     |
 
 ### The Digital Twin Argument for Judges
 
@@ -223,19 +229,19 @@ Most health/AI projects at regional and state fairs fall into predictable tiers:
 
 ### What Most Science Fair Projects Look Like
 
-| Component | Typical Science Fair Project | Your Project |
-|-----------|------------------------------|--------------|
-| Problem formulation | Borrowed from Kaggle/literature | Original: identified closed-loop gap in 40Hz entrainment |
-| Data | Pre-existing benchmark | Real clinical EEG (35 subjects), custom preprocessing pipeline |
-| Signal processing | None (works with clean data) | Bandpass, notch, artifact rejection, CAR, PAC computation |
-| Architecture search | Train one model | 8 architectures tested, proved R²=0.287 is a data ceiling |
-| Validation | Train/test accuracy | Subject-level cross-validation, leakage audits, shuffle-label controls |
-| Baselines | None or weak | 5 baselines (Fixed, Reactive, PI, Oracle, Persistence/Ridge) |
-| Statistical rigor | t-test or none | Wilcoxon signed-rank, Hedges' g with 95% CI, binomial tests |
-| System integration | Model in isolation | Full closed-loop: predictor + personalizer + controller + simulator |
-| Robustness | Single run | 35/35 subjects benefit, threshold sweep, 4 fatigue assumptions |
-| Biological grounding | None | Wilson-Cowan neural mass model, TRIBE v2 brain foundation model |
-| Deployment path | Vague "could help doctors" | Consumer earbuds + smartphone, identified pilot facilities |
+| Component            | Typical Science Fair Project    | Your Project                                                           |
+| -------------------- | ------------------------------- | ---------------------------------------------------------------------- |
+| Problem formulation  | Borrowed from Kaggle/literature | Original: identified closed-loop gap in 40Hz entrainment               |
+| Data                 | Pre-existing benchmark          | Real clinical EEG (35 subjects), custom preprocessing pipeline         |
+| Signal processing    | None (works with clean data)    | Bandpass, notch, artifact rejection, CAR, PAC computation              |
+| Architecture search  | Train one model                 | 8 architectures tested, proved R²=0.287 is a data ceiling              |
+| Validation           | Train/test accuracy             | Subject-level cross-validation, leakage audits, shuffle-label controls |
+| Baselines            | None or weak                    | 5 baselines (Fixed, Reactive, PI, Oracle, Persistence/Ridge)           |
+| Statistical rigor    | t-test or none                  | Wilcoxon signed-rank, Hedges' g with 95% CI, binomial tests            |
+| System integration   | Model in isolation              | Full closed-loop: predictor + personalizer + controller + simulator    |
+| Robustness           | Single run                      | 35/35 subjects benefit, threshold sweep, 4 fatigue assumptions         |
+| Biological grounding | None                            | Wilson-Cowan neural mass model, TRIBE v2 brain foundation model        |
+| Deployment path      | Vague "could help doctors"      | Consumer earbuds + smartphone, identified pilot facilities             |
 
 ### The Five Things That Make Your Project Different From Every Other Project at CSEF
 
@@ -340,7 +346,7 @@ Judges will probe your validation depth. Prepare four levels of response, each d
 
 ## 6. The Poster — The 10-Point Silent Salesman
 
-Your poster must tell the complete story WITHOUT you there, because judges review it before the interview. 
+Your poster must tell the complete story WITHOUT you there, because judges review it before the interview.
 
 ### Critical Poster Elements for Computational Systems: Medical
 
@@ -348,7 +354,7 @@ Your poster must tell the complete story WITHOUT you there, because judges revie
    - WEAK: "Using AI to Help Alzheimer's Patients"
    - STRONG: "Closed-Loop 40Hz Gamma Entrainment with Brain Foundation Model-Driven Predictive Control"
 
-2. **Problem Statement Panel:** 
+2. **Problem Statement Panel:**
    - 6.9 million Americans with Alzheimer's
    - Current 40Hz stimulation is one-size-fits-all
    - No system predicts brain state to adapt stimulation in real-time
@@ -405,6 +411,7 @@ Approximately 3 projects from CSEF Senior Division advance to ISEF. Selection is
 ### What Differentiates ISEF Nominees from Category Winners
 
 At the ISEF level, judges expect:
+
 - **Consistency and reproducibility:** Multiple trials, statistical significance, error bars on everything
 - **Ablation studies:** Which components actually matter? Remove each piece and show impact
 - **Deep domain knowledge:** You should be able to discuss the neuroscience of theta-gamma coupling, not just the ML architecture
@@ -416,6 +423,7 @@ At the ISEF level, judges expect:
 **William Wakefield (Pine Crest School, FL):** Won Third Place Grand Award at ISEF 2024 and Second Place Grand Award at ISEF 2025 with "Variational Autoencoder Latent Space as a Robust Clinical Classification Tool for Neurodegenerative Diseases."
 
 This is the single most relevant comparison project:
+
 - Entirely computational — used existing brain scan datasets, no original clinical data
 - Alzheimer's/neurodegenerative disease focus
 - Deep learning architecture (VAE)
@@ -441,11 +449,11 @@ This is the single most relevant comparison project:
 ### Your ISEF Risks
 
 1. **No physical prototype:** Other top projects may have hardware demos
-   - *Mitigation:* Live software demo on tablet/laptop, QR code to app
+   - _Mitigation:_ Live software demo on tablet/laptop, QR code to app
 2. **No clinical data:** Some judges may be skeptical
-   - *Mitigation:* Digital twin framing, OpenNeuro real EEG validation, pharmaceutical industry comparison
+   - _Mitigation:_ Digital twin framing, OpenNeuro real EEG validation, pharmaceutical industry comparison
 3. **Dense technical content:** Risk of losing non-specialist judges
-   - *Mitigation:* Multiple explanation levels, strong analogies, clear visuals
+   - _Mitigation:_ Multiple explanation levels, strong analogies, clear visuals
 
 ---
 
@@ -454,6 +462,7 @@ This is the single most relevant comparison project:
 ### What You're Up Against in "Computational Systems: Medical"
 
 Based on 2024-2025 CSEF results, this category typically has 15-25 projects. Past winners include:
+
 - ML-based diagnostic tools (image classification, NLP on medical records)
 - Drug discovery computational pipelines
 - Epidemiological modeling
@@ -472,6 +481,7 @@ Most "Computational Systems: Medical" projects at CSEF are classifiers trained o
 ### Special Awards to Target
 
 Beyond category placement, CSEF offers special awards from sponsoring organizations. Look for:
+
 - Awards related to biomedical innovation
 - Computing/AI awards
 - Awards for societal impact
@@ -484,49 +494,54 @@ Beyond category placement, CSEF offers special awards from sponsoring organizati
 Judges remember stories. Here's your narrative:
 
 ### Act 1: The Problem
+
 "40Hz gamma entrainment is one of the most promising non-drug treatments for Alzheimer's disease. MIT's Tsai Lab has a decade of evidence. Cognito Therapeutics is in Phase III clinical trials. But every existing system delivers stimulation on a fixed schedule — same pattern for everyone, regardless of how their brain is actually responding. That's like prescribing the same dose of medication to every patient."
 
 ### Act 2: The Journey
+
 "I started by trying to predict brain state from EEG signals. I tested 8 different neural network architectures and they all hit the same ceiling — R²=0.287. Instead of giving up, I realized the problem wasn't the model, it was the question. Static prediction from a 2-second window has a fundamental limit. So I pivoted to temporal prediction — predicting what the brain will do 5-10 seconds from now. That's where I built the causal TCN, and that's where all baselines collapse but my model maintains R²=0.25."
 
 ### Act 3: The Breakthrough
+
 "But the TCN predicts numbers — it doesn't understand the brain. That's where TRIBE v2 comes in. Meta released the first brain foundation model — an AI trained on brain scans from 700+ people. I integrated it as a digital twin: instead of simulating the brain with a simple equation, I let TRIBE v2 predict how the brain actually responds to 40Hz stimulation. This is the first time anyone has used a brain foundation model inside a closed-loop therapeutic system."
 
 ### Act 4: The Impact
+
 "On real EEG data from 35 subjects, the predictive controller achieves 72.1% alignment — every single subject benefits. The system runs on standard hardware. It can be deployed on consumer earbuds and smartphones. I've identified pilot facilities ready to test it. This isn't theoretical — it's a product waiting for clinical validation."
 
 ---
 
 ## 10. Critical Numbers to Have Memorized
 
-| Metric | Value | Context |
-|--------|-------|---------|
-| TCN Predictive Alignment | 72.1% | vs. 64.5% reactive |
-| Cohen's d | 1.31 | Large effect size |
-| p-value | < 0.001 | Highly significant |
-| Low-PAC targeting | 82.6% | vs. 51.7% reactive |
-| PAC gap | 30.5 µV² | vs. 21.1 reactive (91% of oracle) |
-| Subjects benefiting | 35/35 | 100% |
-| TCN R² at 5-10s | 0.24-0.28 | Where baselines go negative |
-| Static prediction ceiling | R² = 0.287 | Found after 8 architectures |
-| Architectures tested | 8 | Before pivoting to temporal |
-| TCN parameters | ~31K | Lightweight, deployable |
-| EEGNet parameters | ~1,457 | Ultra-lightweight |
-| Dataset size | 17,283 windows | 35 subjects, OpenNeuro |
-| Training subjects | 24 | Validation: 5, Test: 6 |
-| TRIBE v2 training subjects | 700+ | Meta's dataset |
-| TRIBE v2 resolution improvement | 70x | Over previous SOTA |
-| US Alzheimer's patients | 7.2 million | 2025 Alzheimer's Association figure |
-| Annual AD costs | $384 billion | Projected $1T by 2050 |
-| HOPE trial size | 670 patients, 70 sites | Largest AD device pivotal trial ever |
-| TRIBE v2 release date | March 26, 2026 | 7 days before this doc |
-| Prediction horizon (operational) | 5-10 seconds | Where system provides value |
+| Metric                           | Value                  | Context                              |
+| -------------------------------- | ---------------------- | ------------------------------------ |
+| TCN Predictive Alignment         | 72.1%                  | vs. 64.5% reactive                   |
+| Cohen's d                        | 1.31                   | Large effect size                    |
+| p-value                          | < 0.001                | Highly significant                   |
+| Low-PAC targeting                | 82.6%                  | vs. 51.7% reactive                   |
+| PAC gap                          | 30.5 µV²               | vs. 21.1 reactive (91% of oracle)    |
+| Subjects benefiting              | 35/35                  | 100%                                 |
+| TCN R² at 5-10s                  | 0.24-0.28              | Where baselines go negative          |
+| Static prediction ceiling        | R² = 0.287             | Found after 8 architectures          |
+| Architectures tested             | 8                      | Before pivoting to temporal          |
+| TCN parameters                   | ~31K                   | Lightweight, deployable              |
+| EEGNet parameters                | ~1,457                 | Ultra-lightweight                    |
+| Dataset size                     | 17,283 windows         | 35 subjects, OpenNeuro               |
+| Training subjects                | 24                     | Validation: 5, Test: 6               |
+| TRIBE v2 training subjects       | 700+                   | Meta's dataset                       |
+| TRIBE v2 resolution improvement  | 70x                    | Over previous SOTA                   |
+| US Alzheimer's patients          | 7.2 million            | 2025 Alzheimer's Association figure  |
+| Annual AD costs                  | $384 billion           | Projected $1T by 2050                |
+| HOPE trial size                  | 670 patients, 70 sites | Largest AD device pivotal trial ever |
+| TRIBE v2 release date            | March 26, 2026         | 7 days before this doc               |
+| Prediction horizon (operational) | 5-10 seconds           | Where system provides value          |
 
 ---
 
 ## 11. Day-of Logistics and Tactics
 
 ### Before Judging
+
 - Arrive early, set up carefully, double-check poster is clean and aligned
 - Test any tech demos (laptop, QR codes) — have a backup plan
 - Have your lab notebook / code printouts organized and tabbed
@@ -534,6 +549,7 @@ Judges remember stories. Here's your narrative:
 - Dress professionally but comfortably — you'll be standing for hours
 
 ### During Interviews
+
 - Let the judge lead. Don't launch into a rehearsed speech.
 - Start with a 60-second overview ONLY if they ask "tell me about your project"
 - Point to your poster while explaining — use it as a visual aid
@@ -558,6 +574,7 @@ If asked "what would clinical deployment look like?" — mention the FDA Softwar
 This shows regulatory awareness that essentially zero high school projects demonstrate. It turns "no clinical data" into "we understand the full pathway from here to patients."
 
 ### Common Mistakes to Avoid
+
 - **Don't oversell TRIBE v2.** Don't claim it "solves Alzheimer's." Say it "provides a biologically grounded simulation framework."
 - **Don't hide your failures.** The 8 architectures that hit the ceiling IS the story. Own it.
 - **Don't memorize a script.** Judges can tell instantly. Understand the material deeply enough to explain it fresh each time.
@@ -570,6 +587,7 @@ This shows regulatory awareness that essentially zero high school projects demon
 ## 12. Key References to Know
 
 ### Papers You Should Be Able to Discuss
+
 1. **Iaccarino et al., 2016 (Nature):** Original 40Hz gamma entrainment in mice — reduced amyloid, tau
 2. **Adaikkan et al., 2019 (Neuron):** Multi-sensory 40Hz stimulation, microglia-mediated clearance
 3. **Nature, 2024 (Tsai Lab):** The mechanism paper — 40Hz stimulation induces VIP peptide release from interneurons, increases amyloid clearance via glymphatic system
@@ -581,6 +599,7 @@ This shows regulatory awareness that essentially zero high school projects demon
 9. **d'Ascoli et al., 2026 (Meta AI):** TRIBE v2 paper — brain foundation model, 70x resolution, zero-shot generalization, in-silico neuroscience
 
 ### Industry/Clinical Context
+
 - **Cognito Therapeutics:** FDA Breakthrough Device Designation (2021), Phase III HOPE trial (NCT05637801) — 670 patients across 70 sites, largest AD medical device pivotal trial ever. Enrolled mid-2025, results expected 2026. Spectris device.
 - **OpenNeuro ds005048:** Your EEG dataset (Lahijanian et al. 2024, Scientific Reports), 35 subjects, published and peer-reviewed
 - **FDA Status:** No 40Hz device has FDA clearance yet. FDA announced April 2025 decision to phase out mandatory animal testing in favor of in-silico methodologies — this legitimizes your computational approach.

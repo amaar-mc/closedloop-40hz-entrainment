@@ -10,6 +10,7 @@ tags:
 # Compute alignment metrics — exact same definitions as original study.
 
 ## Connections
+
 - [[StimAction]] - `uses` [INFERRED]
 - [[evaluate_alignment()]] - `rationale_for` [EXTRACTED]
 

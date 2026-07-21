@@ -10,6 +10,7 @@ tags:
 # write_subsection_header()
 
 ## Connections
+
 - [[ResearchPaperPDF]] - `method` [EXTRACTED]
 - [[Write a subsection header ( level).]] - `rationale_for` [EXTRACTED]
 - [[generate_pdf()]] - `calls` [EXTRACTED]

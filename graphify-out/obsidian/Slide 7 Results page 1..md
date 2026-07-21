@@ -10,6 +10,7 @@ tags:
 # Slide 7: Results page 1.
 
 ## Connections
+
 - [[p07_results1()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

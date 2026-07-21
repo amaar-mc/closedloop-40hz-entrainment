@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Simulate one time step of neural dynamics.          Pipeline:             1. Get
+# Simulate one time step of neural dynamics. Pipeline: 1. Get
 
 ## Connections
+
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]

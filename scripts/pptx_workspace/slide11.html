@@ -1,42 +1,113 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<style>
-html { background: #ffffff; }
-body {
-  width: 792pt; height: 612pt; margin: 0; padding: 0;
-  background: #ffffff; font-family: 'Times New Roman', Times, serif;
-  display: flex; flex-direction: column;
-}
-.content { margin: 43pt 54pt; flex: 1; }
-h1 { font-size: 22pt; color: #000; margin-bottom: 10pt; font-weight: bold; }
-h2 { font-size: 17pt; color: #000; margin-top: 12pt; margin-bottom: 4pt; font-weight: bold; }
-ul { font-size: 14pt; color: #000; line-height: 1.35; margin: 2pt 0; padding-left: 20pt; }
-li { margin: 2pt 0 3pt 0; }
-</style>
-</head>
-<body>
-<div class="content">
-  <h1>Scope of Work</h1>
+  <head>
+    <style>
+      html {
+        background: #ffffff;
+      }
+      body {
+        width: 792pt;
+        height: 612pt;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        font-family: "Times New Roman", Times, serif;
+        display: flex;
+        flex-direction: column;
+      }
+      .content {
+        margin: 43pt 54pt;
+        flex: 1;
+      }
+      h1 {
+        font-size: 22pt;
+        color: #000;
+        margin-bottom: 10pt;
+        font-weight: bold;
+      }
+      h2 {
+        font-size: 17pt;
+        color: #000;
+        margin-top: 12pt;
+        margin-bottom: 4pt;
+        font-weight: bold;
+      }
+      ul {
+        font-size: 14pt;
+        color: #000;
+        line-height: 1.35;
+        margin: 2pt 0;
+        padding-left: 20pt;
+      }
+      li {
+        margin: 2pt 0 3pt 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Scope of Work</h1>
 
-  <h2>New Work by Author</h2>
-  <ul>
-    <li>Independently identified the research gap (fixed-schedule limitation in 40 Hz entrainment) through literature review.</li>
-    <li>Designed and implemented the full computational pipeline: EEG preprocessing, PAC computation, architecture search across 8 neural network families, feature ablation study (73 &#8594; 12 PAC+Stim features), and MultiscaleCausalTCN design.</li>
-    <li>Discovered the R&#178; = 0.287 data ceiling through experimentation, the &#8776;3-second prediction horizon inflection point, and the feature selection breakthrough (12 PAC+Stim features raising R&#178; from &#8722;0.025 to 0.606) &#8212; all novel empirical findings.</li>
-    <li>Designed the closed-loop controller with personalization module, hysteresis logic, and multi-strategy comparison framework including alignment oracle upper bound.</li>
-    <li>Conducted all statistical analyses: Wilcoxon signed-rank tests, Hedges&#8217; g effect sizes with 95% bootstrap CIs, binomial sign tests, threshold sensitivity sweeps.</li>
-    <li>Validated the complete system on 35 real patient EEG recordings through offline counterfactual replay.</li>
-  </ul>
+      <h2>New Work by Author</h2>
+      <ul>
+        <li>
+          Independently identified the research gap (fixed-schedule limitation
+          in 40 Hz entrainment) through literature review.
+        </li>
+        <li>
+          Designed and implemented the full computational pipeline: EEG
+          preprocessing, PAC computation, architecture search across 8 neural
+          network families, feature ablation study (73 &#8594; 12 PAC+Stim
+          features), and MultiscaleCausalTCN design.
+        </li>
+        <li>
+          Discovered the R&#178; = 0.287 data ceiling through experimentation,
+          the &#8776;3-second prediction horizon inflection point, and the
+          feature selection breakthrough (12 PAC+Stim features raising R&#178;
+          from &#8722;0.025 to 0.606) &#8212; all novel empirical findings.
+        </li>
+        <li>
+          Designed the closed-loop controller with personalization module,
+          hysteresis logic, and multi-strategy comparison framework including
+          alignment oracle upper bound.
+        </li>
+        <li>
+          Conducted all statistical analyses: Wilcoxon signed-rank tests,
+          Hedges&#8217; g effect sizes with 95% bootstrap CIs, binomial sign
+          tests, threshold sensitivity sweeps.
+        </li>
+        <li>
+          Validated the complete system on 35 real patient EEG recordings
+          through offline counterfactual replay.
+        </li>
+      </ul>
 
-  <h2>Professional, Institutional, and Academic Resources and Support</h2>
-  <ul>
-    <li><b>Data:</b> OpenNeuro ds005048 &#8212; publicly available EEG dataset accessible to anyone at no cost.</li>
-    <li><b>Computing:</b> personal Apple Silicon MacBook; no institutional computing resources, GPU clusters, or specialized laboratory equipment were used.</li>
-    <li><b>Software:</b> open-source libraries (PyTorch, MNE-Python, SciPy, NumPy, Matplotlib) &#8212; all freely available.</li>
-    <li><b>AI-assisted development:</b> Claude Code (Anthropic) was used for code development assistance, debugging, and document preparation. All scientific decisions, research direction, experimental design, data analysis, and interpretation of results were performed by the author.</li>
-    <li>No institutional lab, university mentor, summer research program, or specialized equipment was used at any stage.</li>
-  </ul>
-</div>
-</body>
+      <h2>Professional, Institutional, and Academic Resources and Support</h2>
+      <ul>
+        <li>
+          <b>Data:</b> OpenNeuro ds005048 &#8212; publicly available EEG dataset
+          accessible to anyone at no cost.
+        </li>
+        <li>
+          <b>Computing:</b> personal Apple Silicon MacBook; no institutional
+          computing resources, GPU clusters, or specialized laboratory equipment
+          were used.
+        </li>
+        <li>
+          <b>Software:</b> open-source libraries (PyTorch, MNE-Python, SciPy,
+          NumPy, Matplotlib) &#8212; all freely available.
+        </li>
+        <li>
+          <b>AI-assisted development:</b> Claude Code (Anthropic) was used for
+          code development assistance, debugging, and document preparation. All
+          scientific decisions, research direction, experimental design, data
+          analysis, and interpretation of results were performed by the author.
+        </li>
+        <li>
+          No institutional lab, university mentor, summer research program, or
+          specialized equipment was used at any stage.
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>

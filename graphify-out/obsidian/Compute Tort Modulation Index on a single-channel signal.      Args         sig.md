@@ -7,9 +7,10 @@ tags:
   - community/Community_52
 ---
 
-# Compute Tort Modulation Index on a single-channel signal.      Args:         sig
+# Compute Tort Modulation Index on a single-channel signal. Args: sig
 
 ## Connections
+
 - [[compute_tort_mi()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_52

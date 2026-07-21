@@ -9,6 +9,7 @@ tags:
 # src/simulator.py (EntrainmentSimulator)
 
 ## Connections
+
 - [[Simulator Tau RiseDecay Parameters]] - `references` [EXTRACTED]
 
   #community/Community_131

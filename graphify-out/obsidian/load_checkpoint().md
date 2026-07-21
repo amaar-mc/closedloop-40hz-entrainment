@@ -10,7 +10,8 @@ tags:
 # load_checkpoint()
 
 ## Connections
+
 - [[Load model checkpoint.]] - `rationale_for` [EXTRACTED]
 - [[ModelTrainer]] - `method` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

@@ -10,6 +10,7 @@ tags:
 # compute_pac_modulation_index (8-sec Window MI)
 
 ## Connections
+
 - [[process_subject (Per-Subject Long-Window Extractor)]] - `calls` [EXTRACTED]
 
   #community/Community_129

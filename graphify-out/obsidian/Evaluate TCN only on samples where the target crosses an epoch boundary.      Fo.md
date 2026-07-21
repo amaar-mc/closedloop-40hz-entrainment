@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Evaluate TCN only on samples where the target crosses an epoch boundary.      Fo
+# Evaluate TCN only on samples where the target crosses an epoch boundary. Fo
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[analyze_cross_epoch_transitions()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

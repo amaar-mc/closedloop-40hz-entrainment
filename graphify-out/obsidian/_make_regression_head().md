@@ -7,9 +7,10 @@ tags:
   - community/TCN_Layer_Internals
 ---
 
-# _make_regression_head()
+# \_make_regression_head()
 
 ## Connections
+
 - [[Two-layer MLP head hidden - hidden - 1.]] - `rationale_for` [EXTRACTED]
 - [[__init__()_133]] - `calls` [EXTRACTED]
 - [[__init__()_134]] - `calls` [EXTRACTED]

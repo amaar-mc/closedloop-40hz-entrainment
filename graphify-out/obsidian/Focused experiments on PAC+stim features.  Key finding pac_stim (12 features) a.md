@@ -7,9 +7,10 @@ tags:
   - community/Archived_ImprovedTCN_Experiments
 ---
 
-# Focused experiments on PAC+stim features.  Key finding: pac_stim (12 features) a
+# Focused experiments on PAC+stim features. Key finding: pac_stim (12 features) a
 
 ## Connections
+
 - [[CausalConvBlock]] - `uses` [INFERRED]
 - [[ImprovedTCN]] - `uses` [INFERRED]
 - [[MixupSeqDataset]] - `uses` [INFERRED]

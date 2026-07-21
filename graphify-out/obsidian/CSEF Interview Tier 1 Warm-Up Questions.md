@@ -9,6 +9,7 @@ tags:
 # CSEF Interview Tier 1 Warm-Up Questions
 
 ## Connections
+
 - [[Tier 1 Basic Q&A (Every judge asks these)]] - `semantically_similar_to` [INFERRED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

@@ -7,9 +7,10 @@ tags:
   - community/Community_82
 ---
 
-# Process one subject with longer PAC windows.      Args:         subject_id: S
+# Process one subject with longer PAC windows. Args: subject_id: S
 
 ## Connections
+
 - [[process_subject()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_82

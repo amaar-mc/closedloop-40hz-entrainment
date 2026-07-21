@@ -7,9 +7,10 @@ tags:
   - community/Archived_ImprovedTCN_Experiments
 ---
 
-# Experiments targeting the val-test generalization gap.  The core problem: models
+# Experiments targeting the val-test generalization gap. The core problem: models
 
 ## Connections
+
 - [[CausalConvBlock]] - `uses` [INFERRED]
 - [[ImprovedTCN]] - `uses` [INFERRED]
 - [[SeqDataset]] - `uses` [INFERRED]

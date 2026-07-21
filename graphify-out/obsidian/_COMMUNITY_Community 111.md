@@ -8,6 +8,7 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
+
 - [[Body Language and Presentation Technique]] - document - submission/presentation/archive/v1_guide/judge_interaction.md
 - [[Caucus Retellable Sentence]] - document - submission/presentation/archive/v1_guide/judge_interaction.md
 - [[Five Judge Types (Warm, Cold, Skeptical, Expert, Confused)]] - document - submission/presentation/archive/v1_guide/judge_interaction.md

@@ -10,6 +10,7 @@ tags:
 # Awards Structure and ISEF Advancement Paths
 
 ## Connections
+
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 
   #community/Community_69

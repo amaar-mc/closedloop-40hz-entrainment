@@ -10,6 +10,7 @@ tags:
 # Overclaim Avoidance Phrases ('not a cure', 'adaptive therapy timing')
 
 ## Connections
+
 - [[Danger Zones v2 10 High-Risk Judge Questions with Prepared Answers]] - `references` [EXTRACTED]
 
   #community/Community_30

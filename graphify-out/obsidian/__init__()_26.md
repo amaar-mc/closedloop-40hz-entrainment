@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[Args             n_channels Number of EEG channels             n_samples Sa]] - `rationale_for` [EXTRACTED]
 - [[SpatialEncoder]] - `calls` [EXTRACTED]
 - [[TemporalPACPredictor]] - `method` [EXTRACTED]

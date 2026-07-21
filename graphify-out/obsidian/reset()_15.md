@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[FixedSchedule]] - `method` [EXTRACTED]
 
   #community/Community_62

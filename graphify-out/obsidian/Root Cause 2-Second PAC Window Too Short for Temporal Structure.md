@@ -10,6 +10,7 @@ tags:
 # Root Cause: 2-Second PAC Window Too Short for Temporal Structure
 
 ## Connections
+
 - [[Critical Finding Near-Zero PAC Temporal Autocorrelation in 2-Second Windows]] - `rationale_for` [EXTRACTED]
 - [[Key Insight Temporal PAC Prediction Fails Without Stimulation Context]] - `conceptually_related_to` [EXTRACTED]
 

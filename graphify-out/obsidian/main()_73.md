@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[Combined Original + Extension Notebook with Embedded Figures]] - `implements` [EXTRACTED]
 - [[Project P10 Research Log Notebook (VFINAL)]] - `references` [EXTRACTED]
 - [[add_figure()_1]] - `calls` [EXTRACTED]

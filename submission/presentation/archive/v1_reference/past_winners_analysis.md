@@ -7,18 +7,23 @@ Compiled from available sources. Some details are approximate.
 ## What CSEF/ISEF Winners Have in Common
 
 ### 1. They tell a story, not a report
+
 Winners don't present a list of methods and results. They present a narrative: I noticed a problem -> I had an insight -> I built something -> it worked -> here's what it means. Your narrative: fixed schedules are blind -> 8 architectures hit a ceiling -> I discovered the feature bottleneck -> adaptive control works on 35 patients.
 
 ### 2. They own their failures
+
 Every top winner has a "pivot story" -- a moment where something went wrong and they learned from it. Your 8-architecture convergence is a perfect pivot story. Frame it: "I spent three weeks failing. Then I realized the failure was the finding."
 
 ### 3. They can explain to anyone
+
 ISEF Grand Prize winners can explain their project to a physicist and to a 10-year-old. The depth adjusts, not the confidence. Practice your Level 1 and Level 3 answers with equal fluency.
 
 ### 4. They know their limitations cold
+
 Nothing impresses a judge more than a student who says "Here's the weakest part of my project, and here's why the work is still valuable." It shows scientific maturity beyond the student's age.
 
 ### 5. They have the "retellable sentence"
+
 During the caucus, one judge says to the others: "[Student name]'s project is the one where [one sentence]." Winners give judges that sentence. Yours: "He predicts when a patient's brain will lose response five seconds ahead, and it worked on all 35 patients."
 
 ---
@@ -46,10 +51,12 @@ Judges at CSEF (and ISEF) evaluate "Creativity & Potential Impact" as 20% of the
 However, the CSEF judging handbook emphasizes that **quality of the student's work** matters, not scope of ambition. A well-executed research project beats a poorly-executed product pitch.
 
 **Your strategy: 25% research depth, 75% product framing**
+
 - Research depth: the feature discovery, the statistical validation, the architectural convergence
 - Product framing: $200 hardware, home deployment, device-agnostic controller, clinical roadmap
 
 This balance works because:
+
 1. Your research IS strong enough to stand on its own
 2. The product angle differentiates you from pure-research competitors
 3. Medicine & Physiology judges appreciate clinical applicability
@@ -91,6 +98,7 @@ This balance works because:
 Academic literature documents implicit bias in science fair judging, though CSEF specifically works to mitigate this through consensus-based judging (multiple judges must agree, reducing individual bias impact).
 
 Practical implications:
+
 - **Your name may trigger assumptions.** Some judges may unconsciously expect less from or more from certain demographics. You can't control this.
 - **What you CAN control:** Confidence, preparation, and depth of knowledge. The best defense against any bias is being so clearly knowledgeable that there's no room for doubt.
 - **The consensus model helps you.** Even if one judge has bias, 4-5 others would need to agree. Focus on making 3+ judges strong advocates.

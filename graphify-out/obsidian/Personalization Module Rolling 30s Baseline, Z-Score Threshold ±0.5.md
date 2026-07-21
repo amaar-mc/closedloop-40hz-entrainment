@@ -10,6 +10,7 @@ tags:
 # Personalization Module: Rolling 30s Baseline, Z-Score Threshold ±0.5
 
 ## Connections
+
 - [[Controller Variants Fixed, Reactive, TCN Predictive, Hybrid, PI, Oracle]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

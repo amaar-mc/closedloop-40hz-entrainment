@@ -10,6 +10,7 @@ tags:
 # Bullet paragraph — uses native buChar + hanging indent.
 
 ## Connections
+
 - [[add_bullet()]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

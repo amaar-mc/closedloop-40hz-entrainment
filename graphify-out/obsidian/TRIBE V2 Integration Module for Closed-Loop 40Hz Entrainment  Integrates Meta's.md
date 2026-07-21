@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# TRIBE V2 Integration Module for Closed-Loop 40Hz Entrainment  Integrates Meta's
+# TRIBE V2 Integration Module for Closed-Loop 40Hz Entrainment Integrates Meta's
 
 ## Connections
+
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]
 - [[NeuralMassConfig]] - `uses` [INFERRED]

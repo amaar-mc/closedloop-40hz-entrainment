@@ -10,6 +10,7 @@ tags:
 # EEGNet Stage 1 Static PAC Estimator (1,457 params, R²=0.287)
 
 ## Connections
+
 - [[Numbers Sheet (Old v1 Reference)]] - `references` [EXTRACTED]
 - [[OpenNeuro ds005048 Dataset (35 Subjects)]] - `shares_data_with` [INFERRED]
 

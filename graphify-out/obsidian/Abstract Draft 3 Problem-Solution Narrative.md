@@ -9,6 +9,7 @@ tags:
 # Abstract Draft 3: Problem-Solution Narrative
 
 ## Connections
+
 - [[Abstract Round 2 Draft A Best Narrative]] - `references` [EXTRACTED]
 
   #community/Community_54

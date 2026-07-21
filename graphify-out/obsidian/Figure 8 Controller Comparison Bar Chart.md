@@ -9,6 +9,7 @@ tags:
 # Figure 8: Controller Comparison Bar Chart
 
 ## Connections
+
 - [[Alignment Metric (%) — TCN 72% vs Fixed 45%, g=1.31, p0.001]] - `references` [EXTRACTED]
 - [[Fixed Schedule Controller (Clinical Standard Baseline)]] - `references` [EXTRACTED]
 - [[High-PAC Rest Rate (%) — TCN 62% vs Fixed 29%]] - `references` [EXTRACTED]

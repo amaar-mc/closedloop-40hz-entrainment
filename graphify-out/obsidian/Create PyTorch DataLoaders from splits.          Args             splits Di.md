@@ -7,11 +7,12 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Create PyTorch DataLoaders from splits.          Args:             splits: Di
+# Create PyTorch DataLoaders from splits. Args: splits: Di
 
 ## Connections
+
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
 - [[create_dataloaders()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

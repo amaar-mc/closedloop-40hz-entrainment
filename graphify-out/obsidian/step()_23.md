@@ -10,6 +10,7 @@ tags:
 # step()
 
 ## Connections
+
 - [[PredictiveLookAheadControl_2]] - `method` [EXTRACTED]
 - [[_trend()_4]] - `calls` [EXTRACTED]
 - [[run_trial()_2]] - `calls` [EXTRACTED]

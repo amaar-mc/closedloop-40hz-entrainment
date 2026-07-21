@@ -10,6 +10,7 @@ tags:
 # SaturationModelSimulator (Fatigue Model 4: Synaptic Adaptation Ceiling Decay)
 
 ## Connections
+
 - [[create_simulator()]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

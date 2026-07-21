@@ -10,6 +10,7 @@ tags:
 # Muse 2 Product Demo Protocol (30-60 second booth demo)
 
 ## Connections
+
 - [[Demo Items Muse 2, Laptop, Poster (48x64 in)]] - `conceptually_related_to` [INFERRED]
 - [[Judge Interaction Flow Reading Engagement Signals]] - `references` [EXTRACTED]
 

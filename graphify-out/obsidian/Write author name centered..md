@@ -10,6 +10,7 @@ tags:
 # Write author name centered.
 
 ## Connections
+
 - [[write_author()]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

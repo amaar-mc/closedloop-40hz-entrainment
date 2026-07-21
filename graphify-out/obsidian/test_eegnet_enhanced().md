@@ -10,6 +10,7 @@ tags:
 # test_eegnet_enhanced()
 
 ## Connections
+
 - [[EEGNetEnhanced]] - `calls` [EXTRACTED]
 - [[Test EEGNetEnhanced with example input and print architecture details.]] - `rationale_for` [EXTRACTED]
 - [[_print_layer_params()]] - `calls` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[get_feature_maps()_1]] - `calls` [EXTRACTED]
 - [[test_all()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

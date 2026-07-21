@@ -9,6 +9,7 @@ tags:
 # Figure 11: Consumer Hardware for Clinical Deployment
 
 ## Connections
+
 - [[Closed-Loop Personalized Auditory Therapy for Alzheimer's (Deployment Vision)]] - `references` [EXTRACTED]
 - [[Muse 2 Headband (Consumer EEG Device)]] - `references` [EXTRACTED]
 

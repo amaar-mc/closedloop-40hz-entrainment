@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[Args             x (batch, n_channels, n_samples) single EEG window]] - `rationale_for` [EXTRACTED]
 - [[SpatialEncoder]] - `method` [EXTRACTED]
 

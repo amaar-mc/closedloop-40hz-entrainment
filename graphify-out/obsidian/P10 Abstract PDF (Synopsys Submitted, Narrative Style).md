@@ -9,6 +9,7 @@ tags:
 # P10 Abstract PDF (Synopsys Submitted, Narrative Style)
 
 ## Connections
+
 - [[Synopsys Championship Abstract Submission (Project P10)]] - `references` [EXTRACTED]
 
   #community/Community_54

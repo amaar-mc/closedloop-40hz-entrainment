@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[ReactiveCtrl_4]] - `method` [EXTRACTED]
 - [[run_trial()_5]] - `calls` [EXTRACTED]
 

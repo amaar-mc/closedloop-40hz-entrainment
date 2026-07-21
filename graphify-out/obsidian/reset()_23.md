@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[PredictiveLookAheadControl_2]] - `method` [EXTRACTED]
 - [[run_trial()_2]] - `calls` [EXTRACTED]
 

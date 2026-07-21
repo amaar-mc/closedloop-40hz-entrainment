@@ -10,9 +10,10 @@ tags:
 # pairwise_wilcoxon()
 
 ## Connections
+
 - [[Run Wilcoxon signed-rank tests for all pairs of methods.      Args         d]] - `rationale_for` [EXTRACTED]
 - [[compute_all_statistics()_1]] - `calls` [EXTRACTED]
 - [[hedges_g()_6]] - `calls` [EXTRACTED]
 - [[tcn_integrated_simulation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

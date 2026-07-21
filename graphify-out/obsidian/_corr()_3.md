@@ -7,9 +7,10 @@ tags:
   - community/Community_81
 ---
 
-# _corr()
+# \_corr()
 
 ## Connections
+
 - [[per_subject_adaptation.py]] - `contains` [EXTRACTED]
 - [[persistence_eval()]] - `calls` [EXTRACTED]
 

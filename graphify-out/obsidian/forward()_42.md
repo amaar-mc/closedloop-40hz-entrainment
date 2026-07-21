@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[DeepDilationTCN]] - `method` [EXTRACTED]
 - [[Forward pass.          Args             x_seq Input tensor of shape (B, T,]] - `rationale_for` [EXTRACTED]
 

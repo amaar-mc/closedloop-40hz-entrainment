@@ -10,6 +10,7 @@ tags:
 # hedges_g()
 
 ## Connections
+
 - [[Compute Hedges' g effect size.]] - `rationale_for` [EXTRACTED]
 - [[TRIBE V2 Alignment Validation Script (N=35 Simulated Subjects)]] - `calls` [EXTRACTED]
 - [[main()_38]] - `calls` [EXTRACTED]

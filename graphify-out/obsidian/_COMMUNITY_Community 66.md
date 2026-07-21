@@ -8,6 +8,7 @@ members: 16
 **Members:** 16 nodes
 
 ## Members
+
 - [[Bar chart of (mean PAC during rest - mean PAC during stim) per controller.]] - rationale - scripts/figures/generate_figures.py
 - [[Canonical display order for controllers.]] - rationale - scripts/figures/generate_figures.py
 - [[Grouped bar chart Alignment, Low-PAC Stim Rate, High-PAC Rest Rate.]] - rationale - scripts/figures/generate_figures.py

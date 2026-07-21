@@ -7,9 +7,10 @@ tags:
   - community/Community_66
 ---
 
-# _significance_stars()
+# \_significance_stars()
 
 ## Connections
+
 - [[Return significance stars based on p-value.]] - `rationale_for` [EXTRACTED]
 - [[fig_controller_comparison()_1]] - `calls` [EXTRACTED]
 - [[fig_pac_targeting_gap()]] - `calls` [EXTRACTED]

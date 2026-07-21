@@ -10,6 +10,7 @@ tags:
 # write_bold_paragraph()
 
 ## Connections
+
 - [[ResearchPaperPDF]] - `method` [EXTRACTED]
 - [[Write a paragraph starting with bold text.]] - `rationale_for` [EXTRACTED]
 - [[generate_pdf()]] - `calls` [EXTRACTED]

@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[TribeEnhancedSimulator]] - `method` [EXTRACTED]
 - [[_apply_disease_to_neural_mass()]] - `calls` [EXTRACTED]
 - [[_warmup()]] - `calls` [EXTRACTED]

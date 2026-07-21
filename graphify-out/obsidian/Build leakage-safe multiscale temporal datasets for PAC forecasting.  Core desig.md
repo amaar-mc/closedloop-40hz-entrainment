@@ -7,9 +7,10 @@ tags:
   - community/Community_53
 ---
 
-# Build leakage-safe multiscale temporal datasets for PAC forecasting.  Core desig
+# Build leakage-safe multiscale temporal datasets for PAC forecasting. Core desig
 
 ## Connections
+
 - [[build_multiscale_dataset.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_53

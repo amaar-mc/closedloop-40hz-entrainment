@@ -10,6 +10,7 @@ tags:
 # Reset all channel baselines.
 
 ## Connections
+
 - [[reset()_60]] - `rationale_for` [EXTRACTED]
 
   #community/Community_46

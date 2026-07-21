@@ -9,10 +9,11 @@ tags:
 # Research Methodology Document: GAT-Transformer Predictive Framework
 
 ## Connections
+
 - [[Graph Attention Network Module for EEG Spatial Processing]] - `references` [EXTRACTED]
 - [[Leave-One-Subject-Out Cross-Validation Strategy_1]] - `references` [EXTRACTED]
 - [[MPC Optimization Formulation (MIQP Binary Control)]] - `references` [EXTRACTED]
 - [[Research Hypotheses H1-H4 (PAC Prediction and Control Efficacy)]] - `references` [EXTRACTED]
 - [[Temporal Transformer Module for EEG Sequence Modeling]] - `references` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

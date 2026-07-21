@@ -10,8 +10,9 @@ tags:
 # evaluate_transition_anticipation()
 
 ## Connections
+
 - [[Evaluate how early the controller responds to PAC drop transitions.      For e]] - `rationale_for` [EXTRACTED]
 - [[main()_42]] - `calls` [EXTRACTED]
 - [[run_tcn_validation.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

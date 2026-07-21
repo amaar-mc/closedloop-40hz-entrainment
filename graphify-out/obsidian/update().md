@@ -10,7 +10,8 @@ tags:
 # update()
 
 ## Connections
+
 - [[Add new PAC value to the rolling baseline buffer.          Args]] - `rationale_for` [EXTRACTED]
 - [[PersonalizationModule]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

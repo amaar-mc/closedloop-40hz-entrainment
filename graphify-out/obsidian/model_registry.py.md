@@ -10,6 +10,7 @@ tags:
 # model_registry.py
 
 ## Connections
+
 - [[Model registry for hot-swapping temporal PAC prediction models by name.  Provide]] - `rationale_for` [EXTRACTED]
 - [[ModelRegistry]] - `contains` [EXTRACTED]
 - [[TCNTemporalModel]] - `contains` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[feature_dim()]] - `contains` [EXTRACTED]
 - [[lookback()]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

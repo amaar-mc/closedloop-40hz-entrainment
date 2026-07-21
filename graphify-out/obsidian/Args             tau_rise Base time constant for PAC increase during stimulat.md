@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Args:             tau_rise: Base time constant for PAC increase during stimulat
+# Args: tau_rise: Base time constant for PAC increase during stimulat
 
 ## Connections
+
 - [[__init__()_155]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

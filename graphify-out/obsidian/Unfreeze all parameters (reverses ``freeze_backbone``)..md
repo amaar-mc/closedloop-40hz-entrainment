@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Unfreeze all parameters (reverses ``freeze_backbone``).
+# Unfreeze all parameters (reverses `freeze_backbone`).
 
 ## Connections
+
 - [[unfreeze_all()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

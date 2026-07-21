@@ -1834,7 +1834,7 @@
             "method_b": "Predictive Look-Ahead",
             "metric": "late_session_pac",
             "statistic": 91.0,
-            "p_value": 4.057499225496031e-09,
+            "p_value": 4.057499225496031e-9,
             "hedges_g": 1.2157715832227673
           },
           {
@@ -3775,7 +3775,7 @@
             "method_b": "Predictive Look-Ahead",
             "metric": "stimulation_pct",
             "statistic": 142.0,
-            "p_value": 2.8626869489060248e-06,
+            "p_value": 2.8626869489060248e-6,
             "hedges_g": 1.1356694157221936
           },
           {
@@ -3859,7 +3859,7 @@
             "method_b": "Predictive Look-Ahead",
             "metric": "late_session_pac",
             "statistic": 123.0,
-            "p_value": 5.7649630846867694e-08,
+            "p_value": 5.7649630846867694e-8,
             "hedges_g": 1.26860531688851
           },
           {
@@ -5667,7 +5667,7 @@
             "method_b": "Oracle",
             "metric": "pac_mean",
             "statistic": 100.0,
-            "p_value": 8.970399534291573e-09,
+            "p_value": 8.970399534291573e-9,
             "hedges_g": 1.02324000108819
           },
           {
@@ -5691,7 +5691,7 @@
             "method_b": "Predictive Look-Ahead",
             "metric": "pac_mean",
             "statistic": 218.0,
-            "p_value": 2.191284211150446e-05,
+            "p_value": 2.191284211150446e-5,
             "hedges_g": 0.6199637064842952
           },
           {
@@ -5767,7 +5767,7 @@
             "method_b": "Oracle",
             "metric": "stimulation_pct",
             "statistic": 87.0,
-            "p_value": 1.0714993513184774e-07,
+            "p_value": 1.0714993513184774e-7,
             "hedges_g": 1.533329673487215
           },
           {
@@ -5817,7 +5817,7 @@
             "method_b": "Oracle",
             "metric": "efficiency_ratio",
             "statistic": 110.0,
-            "p_value": 2.070065541204258e-08,
+            "p_value": 2.070065541204258e-8,
             "hedges_g": -0.6924079346087374
           },
           {
@@ -5867,7 +5867,7 @@
             "method_b": "Oracle",
             "metric": "late_session_pac",
             "statistic": 119.0,
-            "p_value": 4.2364032282193875e-08,
+            "p_value": 4.2364032282193875e-8,
             "hedges_g": 0.9565550732042765
           },
           {
@@ -5875,7 +5875,7 @@
             "method_b": "Predictive Look-Ahead",
             "metric": "late_session_pac",
             "statistic": 118.0,
-            "p_value": 3.918623114884667e-08,
+            "p_value": 3.918623114884667e-8,
             "hedges_g": 0.880965263108722
           },
           {
@@ -6077,14 +6077,7 @@
     }
   },
   "fatigue_sweep": {
-    "fatigue_rates": [
-      0.0,
-      0.004,
-      0.008,
-      0.015,
-      0.025,
-      0.04
-    ],
+    "fatigue_rates": [0.0, 0.004, 0.008, 0.015, 0.025, 0.04],
     "levels": {
       "0.0": {
         "fatigue_rate": 0.0,
@@ -9881,7 +9874,7 @@
                 "method_b": "Predictive Look-Ahead",
                 "metric": "efficiency_ratio",
                 "statistic": 88.0,
-                "p_value": 3.0854181432005134e-09,
+                "p_value": 3.0854181432005134e-9,
                 "hedges_g": 0.8680494223657362
               },
               {
@@ -9915,7 +9908,7 @@
                 "method_b": "Predictive Look-Ahead",
                 "metric": "late_session_pac",
                 "statistic": 163.0,
-                "p_value": 9.364108866094512e-07,
+                "p_value": 9.364108866094512e-7,
                 "hedges_g": 1.0661084561820764
               },
               {
@@ -11846,7 +11839,7 @@
                 "method_b": "Predictive Look-Ahead",
                 "metric": "stimulation_pct",
                 "statistic": 179.0,
-                "p_value": 9.586936684885559e-06,
+                "p_value": 9.586936684885559e-6,
                 "hedges_g": 0.9468120036748672
               },
               {
@@ -11896,7 +11889,7 @@
                 "method_b": "Predictive Look-Ahead",
                 "metric": "efficiency_ratio",
                 "statistic": 184.0,
-                "p_value": 3.38235121510877e-06,
+                "p_value": 3.38235121510877e-6,
                 "hedges_g": 0.42419188103616723
               },
               {
@@ -11962,7 +11955,7 @@
                 "method_b": "Reactive Threshold",
                 "metric": "late_session_pac",
                 "statistic": 169.0,
-                "p_value": 1.3667570399888973e-06,
+                "p_value": 1.3667570399888973e-6,
                 "hedges_g": 1.0685145198018664
               }
             ]
@@ -13861,7 +13854,7 @@
                 "method_b": "Predictive Look-Ahead",
                 "metric": "stimulation_pct",
                 "statistic": 38.0,
-                "p_value": 7.1494208217060185e-09,
+                "p_value": 7.1494208217060185e-9,
                 "hedges_g": 1.7198274665134323
               },
               {
@@ -13911,7 +13904,7 @@
                 "method_b": "Predictive Look-Ahead",
                 "metric": "efficiency_ratio",
                 "statistic": 122.0,
-                "p_value": 5.3406212785489515e-08,
+                "p_value": 5.3406212785489515e-8,
                 "hedges_g": -0.49253228443214797
               },
               {
@@ -13937,7 +13930,7 @@
                 "method_b": "Oracle",
                 "metric": "late_session_pac",
                 "statistic": 81.0,
-                "p_value": 1.5961560961841315e-09,
+                "p_value": 1.5961560961841315e-9,
                 "hedges_g": 1.0480294190738775
               },
               {
@@ -13945,7 +13938,7 @@
                 "method_b": "Predictive Look-Ahead",
                 "metric": "late_session_pac",
                 "statistic": 179.0,
-                "p_value": 2.5156639491541455e-06,
+                "p_value": 2.5156639491541455e-6,
                 "hedges_g": 0.7909865891404341
               },
               {
@@ -13977,7 +13970,7 @@
                 "method_b": "Reactive Threshold",
                 "metric": "late_session_pac",
                 "statistic": 211.0,
-                "p_value": 1.5207189122179443e-05,
+                "p_value": 1.5207189122179443e-5,
                 "hedges_g": 0.7977820264166064
               }
             ]
@@ -15852,7 +15845,7 @@
                 "method_b": "Oracle",
                 "metric": "stimulation_pct",
                 "statistic": 16.0,
-                "p_value": 1.9693326649045244e-09,
+                "p_value": 1.9693326649045244e-9,
                 "hedges_g": 2.2838156270306103
               },
               {
@@ -15876,7 +15869,7 @@
                 "method_b": "Predictive Look-Ahead",
                 "metric": "stimulation_pct",
                 "statistic": 7.5,
-                "p_value": 1.187782209067165e-09,
+                "p_value": 1.187782209067165e-9,
                 "hedges_g": 2.691162351138006
               },
               {
@@ -15952,7 +15945,7 @@
                 "method_b": "Oracle",
                 "metric": "late_session_pac",
                 "statistic": 119.0,
-                "p_value": 4.2364032282193875e-08,
+                "p_value": 4.2364032282193875e-8,
                 "hedges_g": 0.9051920671110505
               },
               {
@@ -15992,7 +15985,7 @@
                 "method_b": "Reactive Threshold",
                 "metric": "late_session_pac",
                 "statistic": 177.0,
-                "p_value": 2.2310435863204248e-06,
+                "p_value": 2.2310435863204248e-6,
                 "hedges_g": 0.980599610525175
               }
             ]
@@ -17791,7 +17784,7 @@
                 "method_b": "Predictive Look-Ahead",
                 "metric": "pac_mean",
                 "statistic": 102.0,
-                "p_value": 1.0642100534141719e-08,
+                "p_value": 1.0642100534141719e-8,
                 "hedges_g": 1.1915601087478567
               },
               {
@@ -17867,7 +17860,7 @@
                 "method_b": "Oracle",
                 "metric": "stimulation_pct",
                 "statistic": 165.0,
-                "p_value": 5.076546496864379e-06,
+                "p_value": 5.076546496864379e-6,
                 "hedges_g": 1.1804536346672796
               },
               {
@@ -17975,7 +17968,7 @@
                 "method_b": "Predictive Look-Ahead",
                 "metric": "late_session_pac",
                 "statistic": 235.0,
-                "p_value": 5.121092026350027e-05,
+                "p_value": 5.121092026350027e-5,
                 "hedges_g": 0.6571980677406147
               },
               {
@@ -18007,7 +18000,7 @@
                 "method_b": "Reactive Threshold",
                 "metric": "late_session_pac",
                 "statistic": 101.0,
-                "p_value": 9.772863407420118e-09,
+                "p_value": 9.772863407420118e-9,
                 "hedges_g": 1.2302161599429102
               }
             ]

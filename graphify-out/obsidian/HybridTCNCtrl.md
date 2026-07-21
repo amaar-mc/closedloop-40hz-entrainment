@@ -10,6 +10,7 @@ tags:
 # HybridTCNCtrl
 
 ## Connections
+
 - [[Hybrid controller reactive base + TCN proactive override.      The reactive c]] - `rationale_for` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
@@ -22,4 +23,4 @@ tags:
 - [[run_tcn_validation.py]] - `contains` [EXTRACTED]
 - [[step()_27]] - `method` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

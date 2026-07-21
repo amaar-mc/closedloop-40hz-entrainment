@@ -7,10 +7,11 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[AddGaussianNoise]] - `method` [EXTRACTED]
 - [[Args             std Standard deviation of noise (relative to signal)]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

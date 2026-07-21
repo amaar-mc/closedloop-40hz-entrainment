@@ -7,9 +7,10 @@ tags:
   - community/Community_35
 ---
 
-# Save results dictionary to CSV file.      Args:         results: Results dict
+# Save results dictionary to CSV file. Args: results: Results dict
 
 ## Connections
+
 - [[save_results_csv()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_35

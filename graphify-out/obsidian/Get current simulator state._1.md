@@ -10,6 +10,7 @@ tags:
 # Get current simulator state.
 
 ## Connections
+
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]

@@ -10,6 +10,7 @@ tags:
 # Model Predictive Control (MPC) Framework for Stimulation Optimization
 
 ## Connections
+
 - [[In Silico Closed-Loop Validation Methodology]] - `references` [EXTRACTED]
 - [[Proposed GAT-Transformer Architecture for EEG PAC Prediction]] - `conceptually_related_to` [EXTRACTED]
 

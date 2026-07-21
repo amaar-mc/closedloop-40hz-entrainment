@@ -10,6 +10,7 @@ tags:
 # EEGDatasetV4
 
 ## Connections
+
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[Dataset with raw EEG, spectral features, and wavelet features.     Includes data]] - `rationale_for` [EXTRACTED]
 - [[EEGAugmentation]] - `uses` [INFERRED]
@@ -22,4 +23,4 @@ tags:
 - [[load_and_preprocess_data()_1]] - `calls` [EXTRACTED]
 - [[run_training_v4.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

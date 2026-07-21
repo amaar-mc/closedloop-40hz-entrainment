@@ -7,11 +7,12 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[Initialize oracle control.          Args             pac_target Target PAC]] - `rationale_for` [EXTRACTED]
 - [[OracleControl_6]] - `method` [EXTRACTED]
 - [[__init__()_163]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

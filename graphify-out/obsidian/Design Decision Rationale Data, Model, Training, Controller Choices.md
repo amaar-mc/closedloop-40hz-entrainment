@@ -10,6 +10,7 @@ tags:
 # Design Decision Rationale: Data, Model, Training, Controller Choices
 
 ## Connections
+
 - [[Rationale 12 PAC+Stim Features over 73-Feature Model (Spectral Features Overfit Subject Anatomy)]] - `references` [EXTRACTED]
 - [[Rationale 5-Second Prediction Horizon for Proactive Control Lead Time]] - `references` [EXTRACTED]
 - [[Rationale Epoch-Level PAC Labels Chosen for Stability — 2s window too short for reliable MI; creates static prediction ceiling]] - `references` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[Rationale Subject-Level TrainValTest Splits (Prevent Patient-Specific Memorization)]] - `references` [EXTRACTED]
 - [[Rationale TCN over LSTM (Causality by Design, Parallelism, Multi-scale Dilations)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

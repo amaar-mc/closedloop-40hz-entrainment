@@ -9,6 +9,7 @@ tags:
 # Rigor Audit Status Overview
 
 ## Connections
+
 - [[CSEF Compliance Phase (Phase 1)]] - `references` [EXTRACTED]
 - [[Content Accuracy Phase (Phase 2)]] - `references` [EXTRACTED]
 - [[Model Architecture Deep Dive Phase (Phase 3)]] - `references` [EXTRACTED]

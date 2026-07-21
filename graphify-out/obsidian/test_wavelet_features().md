@@ -10,10 +10,11 @@ tags:
 # test_wavelet_features()
 
 ## Connections
+
 - [[Test the wavelet feature extraction.]] - `rationale_for` [EXTRACTED]
 - [[WaveletFeatureExtractor]] - `calls` [EXTRACTED]
 - [[extract()]] - `calls` [EXTRACTED]
 - [[extract_wavelet_features()]] - `calls` [EXTRACTED]
 - [[wavelet_features.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

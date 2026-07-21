@@ -10,6 +10,7 @@ tags:
 # ClosedLoopController
 
 ## Connections
+
 - [[Abstract base class for all control strategies.      Subclasses must implement]] - `uses` [INFERRED]
 - [[Add control method to comparison.]] - `uses` [INFERRED]
 - [[Compare methods using statistical tests on multi-trial data.          Uses acc]] - `uses` [INFERRED]
@@ -61,4 +62,4 @@ tags:
 - [[step()_63]] - `method` [EXTRACTED]
 - [[test_controller()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

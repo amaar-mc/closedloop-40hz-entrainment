@@ -10,6 +10,7 @@ tags:
 # Leave-One-Subject-Out Cross-Validation Strategy
 
 ## Connections
+
 - [[Proposed GAT-Transformer Architecture for EEG PAC Prediction]] - `conceptually_related_to` [EXTRACTED]
 
   #community/Community_76

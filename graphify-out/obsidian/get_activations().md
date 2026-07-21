@@ -10,6 +10,7 @@ tags:
 # get_activations()
 
 ## Connections
+
 - [[CorticalResponseModel]] - `method` [EXTRACTED]
 - [[Get current ROI activations for the simulation step.          In parametric mode]] - `rationale_for` [EXTRACTED]
 

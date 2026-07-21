@@ -3,6 +3,7 @@
 ## What We Built
 
 A **Hybrid Spectral-Temporal Network** that combines:
+
 1. **Multi-scale temporal CNN** - Captures oscillatory patterns at different frequencies (16, 32, 64, 128 sample kernels)
 2. **Explicit spectral features** - Theta/gamma power, phase-amplitude coupling, band ratios (68 features)
 3. **Multi-head attention** - Learns which features are most predictive
@@ -11,18 +12,19 @@ A **Hybrid Spectral-Temporal Network** that combines:
 ## Why This Should Work Better
 
 ### Previous Failures:
+
 - **V1 (EEGNet)**: 1,457 params, R² = 0.0838 - Too simple
 - **V2 (Enhanced EEGNet)**: 25,185 params, R² = 0.0622 - ΔPAC prediction was predicting noise!
 
 ### V3 Improvements:
 
-| Issue | Previous Approach | V3 Solution |
-|-------|------------------|-------------|
-| **Low temporal correlation** (r=0.137) | Only raw EEG temporal features | + Spectral features (theta/gamma power) |
-| **Complex frequency coupling** | Learn frequency decomposition | Pre-compute theta/gamma features explicitly |
-| **Small PAC values** (~0.001) | Basic normalization | Better normalization + robust loss (SmoothL1) |
-| **Model too simple** | 1.4k-25k params | ~180k params (but with strong regularization) |
-| **Insufficient capacity** | Single-scale CNN | Multi-scale CNN + attention |
+| Issue                                  | Previous Approach              | V3 Solution                                   |
+| -------------------------------------- | ------------------------------ | --------------------------------------------- |
+| **Low temporal correlation** (r=0.137) | Only raw EEG temporal features | + Spectral features (theta/gamma power)       |
+| **Complex frequency coupling**         | Learn frequency decomposition  | Pre-compute theta/gamma features explicitly   |
+| **Small PAC values** (~0.001)          | Basic normalization            | Better normalization + robust loss (SmoothL1) |
+| **Model too simple**                   | 1.4k-25k params                | ~180k params (but with strong regularization) |
+| **Insufficient capacity**              | Single-scale CNN               | Multi-scale CNN + attention                   |
 
 ## Architecture Details
 
@@ -84,12 +86,12 @@ Augmentation: Time jitter, amplitude scaling, channel dropout
 
 ## Expected Performance
 
-| Metric | V1 (Baseline) | V2 (Failed) | V3 (Target) |
-|--------|---------------|-------------|-------------|
-| **R²** | 0.0838 | 0.0622 ❌ | **0.30-0.50** ✅ |
-| Val Loss | 0.9964 | 0.6347 | 0.40-0.50 |
-| MAE | 0.7499 | 1.0357 | 0.60-0.80 |
-| Correlation | +0.29 | +0.25 | +0.55-0.70 |
+| Metric      | V1 (Baseline) | V2 (Failed) | V3 (Target)      |
+| ----------- | ------------- | ----------- | ---------------- |
+| **R²**      | 0.0838        | 0.0622 ❌   | **0.30-0.50** ✅ |
+| Val Loss    | 0.9964        | 0.6347      | 0.40-0.50        |
+| MAE         | 0.7499        | 1.0357      | 0.60-0.80        |
+| Correlation | +0.29         | +0.25       | +0.55-0.70       |
 
 **Conservative estimate:** R² = 0.25-0.35
 **Realistic target:** R² = 0.30-0.45
@@ -120,6 +122,7 @@ python run_training_v3.py
 ```
 
 Press Enter when prompted. Training will:
+
 1. Load processed EEG data
 2. Extract spectral features (theta/gamma power, PAC features)
 3. Create model (~180k parameters)
@@ -129,6 +132,7 @@ Press Enter when prompted. Training will:
 ## What to Expect
 
 ### During Training:
+
 ```
 Epoch   1/200 | Time:   6.5s | LR: 0.000300
   Train Loss: 0.623456 | Val Loss: 0.678912
@@ -148,6 +152,7 @@ Epoch  65/200 | Time:   6.4s | LR: 0.000075
 ```
 
 ### Success Criteria:
+
 - ✅ **Target achieved:** Val R² > 0.30
 - ⚠️ **Acceptable:** Val R² > 0.25 (still 3-4× better than v1/v2)
 - ❌ **Failed:** Val R² < 0.20 (need different approach)
@@ -155,6 +160,7 @@ Epoch  65/200 | Time:   6.4s | LR: 0.000075
 ## If This Succeeds (R² > 0.30)
 
 **Next steps:**
+
 1. ✅ Document results in lab notebook
 2. ✅ Run closed-loop simulation with this model
 3. ✅ Compare control strategies (fixed, reactive, predictive, oracle)
@@ -167,20 +173,24 @@ Epoch  65/200 | Time:   6.4s | LR: 0.000075
 **Fallback options:**
 
 ### Option A: Subject-Specific Fine-Tuning
+
 - Train on all subjects globally
 - Fine-tune last 2 layers per-subject
 - Use leave-one-subject-out cross-validation
 
 ### Option B: Ensemble Model
+
 - Train 5 models with different random seeds
 - Average predictions
 - Reduces variance, typically improves R² by 0.05-0.10
 
 ### Option C: Multi-Task Learning
+
 - Predict PAC + theta power + gamma power simultaneously
 - Auxiliary tasks provide additional training signal
 
 ### Option D: Accept Current Performance
+
 - Use best available model (R² ~0.15-0.25)
 - Proceed with proof-of-concept closed-loop simulation
 - Discuss limitations honestly in paper
@@ -188,14 +198,14 @@ Epoch  65/200 | Time:   6.4s | LR: 0.000075
 
 ## Key Differences from V2
 
-| Aspect | V2 (Failed) | V3 (New) |
-|--------|-------------|----------|
-| **Target** | ΔPAC (change) ❌ | Absolute PAC ✅ |
-| **Features** | Raw EEG only | Raw EEG + spectral (68 features) ✅ |
-| **Architecture** | Single-scale CNN | Multi-scale CNN + attention ✅ |
-| **Parameters** | 25k | 180k ✅ |
-| **Loss** | Huber | SmoothL1 (more robust) ✅ |
-| **Batch size** | 64 | 32 (better gradients) ✅ |
+| Aspect           | V2 (Failed)      | V3 (New)                            |
+| ---------------- | ---------------- | ----------------------------------- |
+| **Target**       | ΔPAC (change) ❌ | Absolute PAC ✅                     |
+| **Features**     | Raw EEG only     | Raw EEG + spectral (68 features) ✅ |
+| **Architecture** | Single-scale CNN | Multi-scale CNN + attention ✅      |
+| **Parameters**   | 25k              | 180k ✅                             |
+| **Loss**         | Huber            | SmoothL1 (more robust) ✅           |
+| **Batch size**   | 64               | 32 (better gradients) ✅            |
 
 ## Why We're Confident This Will Work
 

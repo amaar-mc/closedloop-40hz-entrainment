@@ -8,6 +8,7 @@ members: 13
 **Members:** 13 nodes
 
 ## Members
+
 - [[Build causal stimulation-context features for each window.]] - rationale - archive/experimental/sliding_pac/build_sliding_dataset.py
 - [[Build temporal dataset using sliding-window PAC labels.  Constructs 20-step look]] - rationale - archive/experimental/sliding_pac/build_sliding_dataset.py
 - [[Build temporal dataset with sliding-window PAC targets and features.      Return]] - rationale - archive/experimental/sliding_pac/build_sliding_dataset.py

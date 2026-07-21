@@ -10,6 +10,7 @@ tags:
 # add_callout()
 
 ## Connections
+
 - [[Gold callout box with big number.]] - `rationale_for` [EXTRACTED]
 - [[add_rect()]] - `calls` [EXTRACTED]
 - [[add_text()]] - `calls` [EXTRACTED]

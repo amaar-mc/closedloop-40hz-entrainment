@@ -10,7 +10,8 @@ tags:
 # Rationale: Why Closed-Loop Outperforms Open-Loop for AD Entrainment
 
 ## Connections
+
 - [[MPC Decision Engine (IEEE Paper Formulation)]] - `rationale_for` [INFERRED]
 - [[Research Gaps No Personalization in Open-Loop Protocols]] - `rationale_for` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

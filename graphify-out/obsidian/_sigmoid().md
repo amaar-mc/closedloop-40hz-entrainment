@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# _sigmoid()
+# \_sigmoid()
 
 ## Connections
+
 - [[Sigmoidal activation function for population firing rate.]] - `rationale_for` [EXTRACTED]
 - [[WilsonCowanModel]] - `method` [EXTRACTED]
 - [[simulate()]] - `calls` [EXTRACTED]

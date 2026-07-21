@@ -10,6 +10,7 @@ tags:
 # build_toc()
 
 ## Connections
+
 - [[Create table of contents page.]] - `rationale_for` [EXTRACTED]
 - [[generate_notebook_pdf.py]] - `contains` [EXTRACTED]
 - [[main()_72]] - `calls` [EXTRACTED]

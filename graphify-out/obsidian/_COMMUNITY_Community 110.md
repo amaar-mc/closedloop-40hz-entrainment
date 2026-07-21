@@ -8,6 +8,7 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
+
 - [[CSEF 2026 Poster Board Blueprint (36x48 Cobalt Template)]] - document - submission/poster/archive/blueprint.md
 - [[Poster Builder v1 (python-pptx, 24x32 slide)]] - code - submission/poster/v1_builder.py
 - [[Poster Builder v2 (Cobalt Template, 36x48 slide)]] - code - submission/poster/v2_builder.py

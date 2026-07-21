@@ -10,6 +10,7 @@ tags:
 # Rationale: Drop Spectral Features (Indices 0-60) to Prevent Anatomy Overfitting
 
 ## Connections
+
 - [[FeatureMaskedDataset (73→12 Feature Slice Dataset)]] - `rationale_for` [EXTRACTED]
 - [[train_12feat_tcn()]] - `rationale_for` [EXTRACTED]
 

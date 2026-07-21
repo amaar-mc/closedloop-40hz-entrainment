@@ -10,6 +10,7 @@ tags:
 # Build single-step feature vector (12 dims).
 
 ## Connections
+
 - [[_build_features()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

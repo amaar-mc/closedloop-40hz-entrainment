@@ -10,6 +10,7 @@ tags:
 # Current Technical Methodology
 
 ## Connections
+
 - [[Documentation Index]] - `references` [EXTRACTED]
 - [[Methodology Documentation Directory]] - `conceptually_related_to` [INFERRED]
 - [[Source of Truth FINDINGS + RESULTS_REPORT + Methodology]] - `conceptually_related_to` [EXTRACTED]

@@ -14,22 +14,24 @@ Validated on all 35 subjects' real EEG, the predictive controller achieved 72.1%
 
 ---
 
-*Word count: 240 / 250 max*
-*Category: Biological Science and Engineering, Computational Biology and Bioinformatics*
-*Synopsys Championship — Santa Clara County, March 2026*
+_Word count: 240 / 250 max_
+_Category: Biological Science and Engineering, Computational Biology and Bioinformatics_
+_Synopsys Championship — Santa Clara County, March 2026_
 
 ## Why This Is the Final Version
 
 **Structure analysis:**
+
 1. **Hook (2 sentences):** Opens with the striking biological mechanism — 40 Hz sound activates immune cells to clear plaques. Immediately establishes clinical significance.
 2. **Problem (2 sentences):** Fixed schedules ignore individual responses. The habituation split (50/50) is a concrete, memorable detail.
 3. **Research question (1 sentence):** Direct, clear, and compelling.
 4. **Methods (2 sentences):** Concise technical description — PAC biomarker, TCN architecture, specific parameters.
-5. **Central finding (2 sentences):** The horizon sweep is the intellectual heart — explains *why* the TCN matters at the specific horizons that matter.
+5. **Central finding (2 sentences):** The horizon sweep is the intellectual heart — explains _why_ the TCN matters at the specific horizons that matter.
 6. **Validation results (3 sentences):** Real-data validation, specific effect sizes and p-values, oracle comparison, universal benefit.
 7. **Robustness (1 sentence):** Four fatigue models, six severity levels — addresses the "is this just one simulation?" concern.
 
 **Strengths over earlier drafts:**
+
 - Opens with biology (accessible), not statistics (intimidating)
 - "Sound pulses at 40 Hz" is concrete and evocative
 - "One-size-fits-all approach serves neither group" — clear problem motivation

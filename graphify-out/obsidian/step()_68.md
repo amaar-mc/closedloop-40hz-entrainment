@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[Determine action based on fixed schedule.          Args             pac_curr]] - `rationale_for` [EXTRACTED]
 - [[FixedScheduleControl_7]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -7,9 +7,10 @@ tags:
   - community/Community_65
 ---
 
-# _run_lstm()
+# \_run_lstm()
 
 ## Connections
+
 - [[main()_22]] - `calls` [EXTRACTED]
 - [[run_comparison_study.py]] - `contains` [EXTRACTED]
 

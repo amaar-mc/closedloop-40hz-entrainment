@@ -9,4 +9,4 @@ tags:
 
 # Rationale: Spectral Features Cause Generalization Failure (CLAUDE.md finding)
 
-  #community/Community_170
+#community/Community_170

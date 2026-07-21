@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[FixedScheduleControl_6]] - `calls` [EXTRACTED]
 - [[OracleControl_5]] - `calls` [EXTRACTED]
 - [[ReactiveThresholdControl_5]] - `calls` [EXTRACTED]
@@ -26,4 +27,4 @@ tags:
 - [[tcn_integrated_simulation.py]] - `contains` [EXTRACTED]
 - [[to_dict()_2]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

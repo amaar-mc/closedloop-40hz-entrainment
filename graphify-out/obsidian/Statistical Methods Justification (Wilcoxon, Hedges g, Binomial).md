@@ -10,6 +10,7 @@ tags:
 # Statistical Methods Justification (Wilcoxon, Hedges g, Binomial)
 
 ## Connections
+
 - [[Anticipated Judge Q&A Bank (12 Questions with Scripted Answers)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

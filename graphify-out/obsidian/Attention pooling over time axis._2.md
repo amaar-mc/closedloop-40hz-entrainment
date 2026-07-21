@@ -10,6 +10,7 @@ tags:
 # Attention pooling over time axis.
 
 ## Connections
+
 - [[AttentionPool1D_2]] - `rationale_for` [EXTRACTED]
 
   #community/TCN_Layer_Internals

@@ -10,6 +10,7 @@ tags:
 # Generate a clean PDF lab notebook combining original + extension. - Strips em-da
 
 ## Connections
+
 - [[generate_pdf.py]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

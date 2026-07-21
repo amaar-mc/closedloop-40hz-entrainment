@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[MultiChannelPersonalization]] - `method` [EXTRACTED]
 - [[Reset all channel baselines.]] - `rationale_for` [EXTRACTED]
 - [[test_personalization()]] - `calls` [EXTRACTED]

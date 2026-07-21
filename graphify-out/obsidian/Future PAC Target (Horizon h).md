@@ -10,6 +10,7 @@ tags:
 # Future PAC Target (Horizon h)
 
 ## Connections
+
 - [[Causal Multiscale TCN Model]] - `references` [EXTRACTED]
 - [[Target Smooth Window (Denoised Latent State vs Raw PAC)]] - `rationale_for` [EXTRACTED]
 

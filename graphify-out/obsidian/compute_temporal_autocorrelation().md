@@ -10,6 +10,7 @@ tags:
 # compute_temporal_autocorrelation()
 
 ## Connections
+
 - [[Compute PAC autocorrelation at various lags.      With 4-second hop size]] - `rationale_for` [EXTRACTED]
 - [[main()_14]] - `calls` [EXTRACTED]
 - [[reprocess_long_windows.py]] - `contains` [EXTRACTED]

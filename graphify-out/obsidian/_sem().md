@@ -7,9 +7,10 @@ tags:
   - community/Community_66
 ---
 
-# _sem()
+# \_sem()
 
 ## Connections
+
 - [[Standard error of the mean.]] - `rationale_for` [EXTRACTED]
 - [[fig_controller_comparison()_1]] - `calls` [EXTRACTED]
 - [[fig_pac_targeting_gap()]] - `calls` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # Simulate one time step with fatigue dynamics.
 
 ## Connections
+
 - [[step()_66]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -9,6 +9,7 @@ tags:
 # Permutation Test (shuffled R2=-0.004 vs real R2=0.734, genuine signal confirmed)
 
 ## Connections
+
 - [[Data Leakage Audit (77 checks pass, no leakage)]] - `references` [EXTRACTED]
 
   #community/Rigor_Audit_Reports

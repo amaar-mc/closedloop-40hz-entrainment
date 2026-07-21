@@ -10,6 +10,7 @@ tags:
 # write_keywords()
 
 ## Connections
+
 - [[ResearchPaperPDF]] - `method` [EXTRACTED]
 - [[generate_pdf()]] - `calls` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # write_title()
 
 ## Connections
+
 - [[ResearchPaperPDF]] - `method` [EXTRACTED]
 - [[Write the paper title centered.]] - `rationale_for` [EXTRACTED]
 - [[generate_pdf()]] - `calls` [EXTRACTED]

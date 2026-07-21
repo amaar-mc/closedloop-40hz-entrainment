@@ -10,7 +10,8 @@ tags:
 # PAC Targeting Gap Metric (PAC during rest minus PAC during stim)
 
 ## Connections
+
 - [[Controller Comparison Table (FixedReactiveTCNHybridOracle, N=35)]] - `references` [EXTRACTED]
 - [[PAC Targeting Quality by Controller]] - `implements` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

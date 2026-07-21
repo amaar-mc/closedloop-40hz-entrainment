@@ -10,10 +10,11 @@ tags:
 # Convert raw PAC to 0-100 Brain Sync Level for caregiver display.
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[SimulatedEEGAdapter]] - `uses` [INFERRED]
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[TCNTemporalModel]] - `uses` [INFERRED]
 - [[pac_to_display()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

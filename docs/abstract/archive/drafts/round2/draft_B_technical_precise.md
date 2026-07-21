@@ -14,4 +14,4 @@ Replaying the TCN controller on all 35 subjects' real EEG, it achieved 72.1% epo
 
 ---
 
-*Word count: 245 / 250 max*
+_Word count: 245 / 250 max_

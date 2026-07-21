@@ -29,14 +29,14 @@ This work also establishes the R²=0.287 ceiling for static PAC estimation from 
 Across 8 neural network architectures spanning 135 to 2 million parameters, all approaches converged to the same performance bound —
 confirming that the ceiling reflects the information content of the data (epoch-level PAC labels assigned to 2-second windows) rather than model capacity.
 This ceiling motivated the pivot from static estimation to temporal forecasting,
-which sidesteps the ceiling by asking a different question: rather than predicting the *current* PAC value with greater accuracy,
-predict the *direction and timing* of future PAC changes with sufficient reliability for proactive control decisions.
+which sidesteps the ceiling by asking a different question: rather than predicting the _current_ PAC value with greater accuracy,
+predict the _direction and timing_ of future PAC changes with sufficient reliability for proactive control decisions.
 
 It is important to state precisely what this work demonstrates and what it does not.
 This is a **computational validation on real EEG data**, not a clinical validation.
 The controller makes decisions on real brain recordings, but cannot observe the brain's response to those decisions.
 The 72.1% alignment figure measures counterfactual decision quality —
-how well the controller *would have* targeted stimulation — not realized therapeutic benefit in terms of PAC elevation or cognitive outcomes.
+how well the controller _would have_ targeted stimulation — not realized therapeutic benefit in terms of PAC elevation or cognitive outcomes.
 Confirming that proactive targeting translates to therapeutic benefit requires live closed-loop trials with human subjects under IRB oversight, as outlined in Section 8.
 
 Within these scope boundaries, the primary contributions of this work are:

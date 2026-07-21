@@ -10,6 +10,7 @@ tags:
 # Load BIDS events TSV for a subject.
 
 ## Connections
+
 - [[_subject_events()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_80

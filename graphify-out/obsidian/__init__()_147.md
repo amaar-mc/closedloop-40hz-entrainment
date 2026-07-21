@@ -7,10 +7,11 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[Initialize predictive look-ahead controller.          Args             forec]] - `rationale_for` [EXTRACTED]
 - [[PredictiveLookAheadController]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

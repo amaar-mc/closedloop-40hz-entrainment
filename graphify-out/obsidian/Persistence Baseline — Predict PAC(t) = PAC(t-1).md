@@ -10,6 +10,7 @@ tags:
 # Persistence Baseline — Predict PAC(t) = PAC(t-1)
 
 ## Connections
+
 - [[run_sklearn_temporal_baseline()]] - `references` [EXTRACTED]
 
   #community/Community_49

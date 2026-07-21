@@ -10,6 +10,7 @@ tags:
 # extract_enhanced_features_batch()
 
 ## Connections
+
 - [[Extract enhanced features for a batch of EEG windows.      Args         windows]] - `rationale_for` [EXTRACTED]
 - [[build_enhanced_dataset()]] - `calls` [EXTRACTED]
 - [[enhanced_features.py]] - `contains` [EXTRACTED]

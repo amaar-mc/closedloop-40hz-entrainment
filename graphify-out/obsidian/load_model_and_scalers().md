@@ -10,8 +10,9 @@ tags:
 # load_model_and_scalers()
 
 ## Connections
+
 - [[Load the trained TCN checkpoint.      Args         checkpoint_path Path to]] - `rationale_for` [EXTRACTED]
 - [[main()_71]] - `calls` [EXTRACTED]
 - [[tcn_interpretability.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

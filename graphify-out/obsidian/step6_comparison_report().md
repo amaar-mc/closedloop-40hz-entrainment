@@ -10,6 +10,7 @@ tags:
 # step6_comparison_report()
 
 ## Connections
+
 - [[4-Channel Deployment Limitations (spatial approx, dry electrodes, reference mismatch)]] - `references` [INFERRED]
 - [[4-Channel Muse 2 Retraining Pipeline]] - `calls` [EXTRACTED]
 - [[7-Channel Baseline Metrics (EEGNet R²=0.287, TCN val R²=0.411)]] - `references` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[main()_12]] - `calls` [EXTRACTED]
 - [[retrain_pipeline.py]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

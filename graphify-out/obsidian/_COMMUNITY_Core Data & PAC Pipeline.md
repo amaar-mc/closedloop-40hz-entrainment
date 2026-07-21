@@ -8,6 +8,7 @@ members: 119
 **Members:** 119 nodes
 
 ## Members
+
 - [[Add Gaussian noise at specified SNR.          Args             window EEG w]] - rationale - src/training.py
 - [[Applies data augmentation to EEG windows.      Augmentation strategies]] - rationale - src/training.py
 - [[Apply Butterworth bandpass filter to signal.          Args             signa]] - rationale - src/pac_computation.py
@@ -136,12 +137,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 17 edges to [[_COMMUNITY_Multiscale TCN & Features]]
 - 17 edges to [[_COMMUNITY_Models, Streaming & Apps]]
 - 1 edge to [[_COMMUNITY_Community 32]]
 - 1 edge to [[_COMMUNITY_Community 35]]
 
 ## Top bridge nodes
+
 - [[PACComputer]] - degree 34, connects to 2 communities
 - [[training.py]] - degree 6, connects to 2 communities
 - [[EEGPreprocessor]] - degree 34, connects to 1 community

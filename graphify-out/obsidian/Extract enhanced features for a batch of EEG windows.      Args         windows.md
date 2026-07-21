@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# Extract enhanced features for a batch of EEG windows.      Args:         windows
+# Extract enhanced features for a batch of EEG windows. Args: windows
 
 ## Connections
+
 - [[extract_enhanced_features_batch()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

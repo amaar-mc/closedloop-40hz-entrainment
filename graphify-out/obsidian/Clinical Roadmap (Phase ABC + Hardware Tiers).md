@@ -9,6 +9,7 @@ tags:
 # Clinical Roadmap (Phase A/B/C + Hardware Tiers)
 
 ## Connections
+
 - [[Clinical Testing Phases A, B, C (Observational to Comparative)]] - `references` [EXTRACTED]
 - [[FDA Regulatory Pathway (De Novo Class II, 2026-2030 Timeline)]] - `references` [EXTRACTED]
 - [[Hardware Scaling Tiers (Muse 2 → OpenBCI → 64-ch Clinical)]] - `references` [EXTRACTED]

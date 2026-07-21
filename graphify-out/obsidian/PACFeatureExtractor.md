@@ -10,6 +10,7 @@ tags:
 # PACFeatureExtractor
 
 ## Connections
+
 - [[Enhanced Features + Ridge Model (V5)  Combines original features (135) with PAC-]] - `uses` [INFERRED]
 - [[Extracts PAC-specific features from EEG data.      Total features 116 features]] - `rationale_for` [EXTRACTED]
 - [[__init__()_39]] - `method` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[pac_features.py]] - `contains` [EXTRACTED]
 - [[test_pac_features()]] - `calls` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

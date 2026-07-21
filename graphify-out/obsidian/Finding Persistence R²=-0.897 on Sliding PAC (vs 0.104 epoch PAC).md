@@ -10,6 +10,7 @@ tags:
 # Finding: Persistence R²=-0.897 on Sliding PAC (vs 0.104 epoch PAC)
 
 ## Connections
+
 - [[Epoch-Level PAC Caveat 82.2% Same-Epoch Samples]] - `rationale_for` [INFERRED]
 - [[Sliding-Window PAC Experiment Results (RESULTS.md)]] - `references` [EXTRACTED]
 

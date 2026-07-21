@@ -1,45 +1,128 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<style>
-html { background: #ffffff; }
-body {
-  width: 792pt; height: 612pt; margin: 0; padding: 0;
-  background: #ffffff; font-family: 'Times New Roman', Times, serif;
-  display: flex; flex-direction: column;
-}
-.content { margin: 36pt 54pt; flex: 1; }
-h1 { font-size: 22pt; color: #000; margin-bottom: 6pt; font-weight: bold; }
-h2 { font-size: 15pt; color: #000; margin-top: 6pt; margin-bottom: 2pt; font-weight: bold; }
-p { font-size: 12.5pt; color: #000; line-height: 1.25; margin: 1pt 0 3pt 0; }
-ul { font-size: 12.5pt; color: #000; line-height: 1.25; margin: 1pt 0; padding-left: 16pt; }
-li { margin: 1pt 0 1pt 0; }
-</style>
-</head>
-<body>
-<div class="content">
-  <h1>Conclusions</h1>
+  <head>
+    <style>
+      html {
+        background: #ffffff;
+      }
+      body {
+        width: 792pt;
+        height: 612pt;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        font-family: "Times New Roman", Times, serif;
+        display: flex;
+        flex-direction: column;
+      }
+      .content {
+        margin: 36pt 54pt;
+        flex: 1;
+      }
+      h1 {
+        font-size: 22pt;
+        color: #000;
+        margin-bottom: 6pt;
+        font-weight: bold;
+      }
+      h2 {
+        font-size: 15pt;
+        color: #000;
+        margin-top: 6pt;
+        margin-bottom: 2pt;
+        font-weight: bold;
+      }
+      p {
+        font-size: 12.5pt;
+        color: #000;
+        line-height: 1.25;
+        margin: 1pt 0 3pt 0;
+      }
+      ul {
+        font-size: 12.5pt;
+        color: #000;
+        line-height: 1.25;
+        margin: 1pt 0;
+        padding-left: 16pt;
+      }
+      li {
+        margin: 1pt 0 1pt 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Conclusions</h1>
 
-  <h2>Key Findings</h2>
-  <ul>
-    <li>Eight architectures (1,457 to 1.1 M parameters) all converge to R&#178; = 0.287 for static PAC prediction &#8212; a data-imposed ceiling proving the bottleneck is the feature representation, not the model.</li>
-    <li><b>Feature discovery:</b> replacing 73 spectral features with 12 PAC+Stim features raised temporal test R&#178; from &#8722;0.025 to 0.606 (5-seed mean; 4ch: 0.430). Feature selection mattered more than any architectural change.</li>
-    <li>The TCN maintains R&#178; = 0.37&#8211;0.67 at 3&#8211;10 s horizons where persistence collapses to negative R&#178;, defining the operationally actionable regime for proactive neuromodulation.</li>
-    <li>The predictive controller achieves 72.1% alignment, 82.6% low-PAC targeting, and 91% of the theoretical oracle bound (all p &lt; 0.001 vs. reactive; Hedges&#8217; g = 1.31&#8211;4.47).</li>
-    <li>Universal benefit across all 35 subjects, including 6 held-out test subjects never seen during training.</li>
-  </ul>
+      <h2>Key Findings</h2>
+      <ul>
+        <li>
+          Eight architectures (1,457 to 1.1 M parameters) all converge to
+          R&#178; = 0.287 for static PAC prediction &#8212; a data-imposed
+          ceiling proving the bottleneck is the feature representation, not the
+          model.
+        </li>
+        <li>
+          <b>Feature discovery:</b> replacing 73 spectral features with 12
+          PAC+Stim features raised temporal test R&#178; from &#8722;0.025 to
+          0.606 (5-seed mean; 4ch: 0.430). Feature selection mattered more than
+          any architectural change.
+        </li>
+        <li>
+          The TCN maintains R&#178; = 0.37&#8211;0.67 at 3&#8211;10 s horizons
+          where persistence collapses to negative R&#178;, defining the
+          operationally actionable regime for proactive neuromodulation.
+        </li>
+        <li>
+          The predictive controller achieves 72.1% alignment, 82.6% low-PAC
+          targeting, and 91% of the theoretical oracle bound (all p &lt; 0.001
+          vs. reactive; Hedges&#8217; g = 1.31&#8211;4.47).
+        </li>
+        <li>
+          Universal benefit across all 35 subjects, including 6 held-out test
+          subjects never seen during training.
+        </li>
+      </ul>
 
-  <h2>Context</h2>
-  <p>These results show that temporal PAC forecasting can drive proactive closed-loop control that outperforms both fixed-schedule and reactive protocols. No prior system has attempted PAC-specific temporal prediction for personalized gamma entrainment control. This work is a computational validation; live closed-loop trials are needed to confirm clinical translation.</p>
+      <h2>Context</h2>
+      <p>
+        These results show that temporal PAC forecasting can drive proactive
+        closed-loop control that outperforms both fixed-schedule and reactive
+        protocols. No prior system has attempted PAC-specific temporal
+        prediction for personalized gamma entrainment control. This work is a
+        computational validation; live closed-loop trials are needed to confirm
+        clinical translation.
+      </p>
 
-  <h2>Productization and Clinical Roadmap</h2>
-  <ul>
-    <li><b>Caregiver web application:</b> deployed on Hugging Face Spaces (Streamlit); PAC monitoring, real-time stimulation control, personalized session tracking &#8212; the basis for a consumer neuromodulation device.</li>
-    <li><b>Phase 1 &#8212; Observational (now):</b> collect real-world EEG + PAC data via app to characterize inter-session habituation patterns.</li>
-    <li><b>Phase 2 &#8212; Feasibility (12&#8211;18 mo):</b> IRB-approved within-subject pilot (N = 5&#8211;10) comparing adaptive TCN vs. fixed-schedule 40 Hz stimulation.</li>
-    <li><b>Phase 3 &#8212; Comparative (3&#8211;5 yr):</b> RCT in mild AD patients (N &#8776; 20) comparing personalized adaptive vs. fixed protocol. Primary endpoint: maintained entrainment at 12-week follow-up.</li>
-    <li><b>Near-term technical:</b> end-to-end validation (raw EEG &#8594; EEGNet &#8594; TCN &#8594; controller); per-subject online fine-tuning; 4-channel Muse-compatible deployment.</li>
-  </ul>
-</div>
-</body>
+      <h2>Productization and Clinical Roadmap</h2>
+      <ul>
+        <li>
+          <b>Caregiver web application:</b> deployed on Hugging Face Spaces
+          (Streamlit); PAC monitoring, real-time stimulation control,
+          personalized session tracking &#8212; the basis for a consumer
+          neuromodulation device.
+        </li>
+        <li>
+          <b>Phase 1 &#8212; Observational (now):</b> collect real-world EEG +
+          PAC data via app to characterize inter-session habituation patterns.
+        </li>
+        <li>
+          <b>Phase 2 &#8212; Feasibility (12&#8211;18 mo):</b> IRB-approved
+          within-subject pilot (N = 5&#8211;10) comparing adaptive TCN vs.
+          fixed-schedule 40 Hz stimulation.
+        </li>
+        <li>
+          <b>Phase 3 &#8212; Comparative (3&#8211;5 yr):</b> RCT in mild AD
+          patients (N &#8776; 20) comparing personalized adaptive vs. fixed
+          protocol. Primary endpoint: maintained entrainment at 12-week
+          follow-up.
+        </li>
+        <li>
+          <b>Near-term technical:</b> end-to-end validation (raw EEG &#8594;
+          EEGNet &#8594; TCN &#8594; controller); per-subject online
+          fine-tuning; 4-channel Muse-compatible deployment.
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>

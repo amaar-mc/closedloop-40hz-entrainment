@@ -10,6 +10,7 @@ tags:
 # Project Notebook / Lab Notebook Requirements
 
 ## Connections
+
 - [[CSEF Action Items and Preparation Checklist]] - `references` [EXTRACTED]
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 

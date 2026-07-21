@@ -9,8 +9,9 @@ tags:
 # Medicine & Physiology Hard Interview Questions
 
 ## Connections
+
 - [[CSEF Judging Process and Strategy]] - `references` [EXTRACTED]
 - [[Offline Replay Validation (real EEG, counterfactual decisions, 35 subjects)]] - `references` [EXTRACTED]
 - [[Phase-Amplitude Coupling (PAC) as Entrainment Biomarker_1]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

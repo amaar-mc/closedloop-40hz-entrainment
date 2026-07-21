@@ -8,6 +8,7 @@ members: 16
 **Members:** 16 nodes
 
 ## Members
+
 - [[13-Page Project Presentation PDF (CSEF Requirement)]] - document - submission/CSEF_vs_Synopsys_Rules.md
 - [[AI  Generative AI Use Policy (ISEF-based)]] - document - submission/CSEF_vs_Synopsys_Rules.md
 - [[Awards Structure and ISEF Advancement Paths]] - document - submission/CSEF_vs_Synopsys_Rules.md

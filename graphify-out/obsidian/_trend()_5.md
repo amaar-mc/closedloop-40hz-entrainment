@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# _trend()
+# \_trend()
 
 ## Connections
+
 - [[TrendPredictiveCtrl]] - `method` [EXTRACTED]
 - [[step()_32]] - `calls` [EXTRACTED]
 

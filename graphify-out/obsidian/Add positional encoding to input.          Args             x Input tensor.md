@@ -7,9 +7,10 @@ tags:
   - community/TCN_Layer_Internals
 ---
 
-# Add positional encoding to input.          Args:             x: Input tensor
+# Add positional encoding to input. Args: x: Input tensor
 
 ## Connections
+
 - [[forward()_45]] - `rationale_for` [EXTRACTED]
 
   #community/TCN_Layer_Internals

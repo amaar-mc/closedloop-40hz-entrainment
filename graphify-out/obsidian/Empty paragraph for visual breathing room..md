@@ -10,6 +10,7 @@ tags:
 # Empty paragraph for visual breathing room.
 
 ## Connections
+
 - [[add_spacer()]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

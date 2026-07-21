@@ -7,11 +7,12 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# BIDS Data Loader for Closed-Loop 40Hz Entrainment Research  Loads OpenNeuro ds
+# BIDS Data Loader for Closed-Loop 40Hz Entrainment Research Loads OpenNeuro ds
 
 ## Connections
+
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
 - [[data_loader.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

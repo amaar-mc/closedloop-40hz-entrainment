@@ -10,6 +10,7 @@ tags:
 # Consolidated Findings (FINDINGS.md)
 
 ## Connections
+
 - [[Documentation Index]] - `references` [EXTRACTED]
 - [[Source of Truth FINDINGS + RESULTS_REPORT + Methodology]] - `conceptually_related_to` [EXTRACTED]
 

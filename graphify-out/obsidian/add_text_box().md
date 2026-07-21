@@ -10,6 +10,7 @@ tags:
 # add_text_box()
 
 ## Connections
+
 - [[Add a text box with styled text.]] - `rationale_for` [EXTRACTED]
 - [[add_callout_box()]] - `calls` [EXTRACTED]
 - [[add_section_header()_1]] - `calls` [EXTRACTED]

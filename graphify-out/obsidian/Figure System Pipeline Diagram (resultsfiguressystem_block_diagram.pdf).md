@@ -10,6 +10,7 @@ tags:
 # Figure: System Pipeline Diagram (results/figures/system_block_diagram.pdf)
 
 ## Connections
+
 - [[Research Paper Status Document]] - `references` [EXTRACTED]
 
   #community/Community_59

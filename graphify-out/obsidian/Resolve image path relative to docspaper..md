@@ -10,6 +10,7 @@ tags:
 # Resolve image path relative to docs/paper/.
 
 ## Connections
+
 - [[resolve_img()]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

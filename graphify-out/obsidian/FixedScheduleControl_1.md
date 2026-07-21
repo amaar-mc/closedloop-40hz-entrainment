@@ -10,6 +10,7 @@ tags:
 # FixedScheduleControl
 
 ## Connections
+
 - [[40s ON + 20s OFF (standard clinical protocol).]] - `rationale_for` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
@@ -20,4 +21,4 @@ tags:
 - [[run_closed_loop_demo.py]] - `contains` [EXTRACTED]
 - [[step()_18]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

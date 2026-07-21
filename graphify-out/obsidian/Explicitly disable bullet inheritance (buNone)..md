@@ -10,6 +10,7 @@ tags:
 # Explicitly disable bullet inheritance (buNone).
 
 ## Connections
+
 - [[_disable_bullet()]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

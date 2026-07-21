@@ -10,6 +10,7 @@ tags:
 # Adaptive Stimulation Benefit: Predictive minus Fixed (Panel C)
 
 ## Connections
+
 - [[Largest Predictive Benefit at Healthy and Preclinical Stages]] - `references` [EXTRACTED]
 - [[PAC Ceiling  Diminishing Returns at Severe Alzheimer's Stages]] - `rationale_for` [INFERRED]
 - [[TRIBE V2 Alzheimer's Disease Simulation Figure]] - `references` [EXTRACTED]

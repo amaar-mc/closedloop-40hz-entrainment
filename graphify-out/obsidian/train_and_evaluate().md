@@ -10,6 +10,7 @@ tags:
 # train_and_evaluate()
 
 ## Connections
+
 - [[Train Ridge and MLP models, evaluate on test set.]] - `rationale_for` [EXTRACTED]
 - [[main()_15]] - `calls` [EXTRACTED]
 - [[train_sklearn_temporal.py]] - `contains` [EXTRACTED]

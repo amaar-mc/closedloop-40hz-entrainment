@@ -7,11 +7,12 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# _compute_stim_context()
+# \_compute_stim_context()
 
 ## Connections
+
 - [[Compute stimulation context features from action history.          Returns]] - `rationale_for` [EXTRACTED]
 - [[TCNPredictiveControl]] - `method` [EXTRACTED]
 - [[step()_61]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -10,6 +10,7 @@ tags:
 # fit_subject_tau()
 
 ## Connections
+
 - [[Fit tau_rise and tau_decay for a single subject at epoch level.      For consecu]] - `rationale_for` [EXTRACTED]
 - [[fit_population_tau()]] - `calls` [EXTRACTED]
 - [[fit_simulator_params.py]] - `contains` [EXTRACTED]

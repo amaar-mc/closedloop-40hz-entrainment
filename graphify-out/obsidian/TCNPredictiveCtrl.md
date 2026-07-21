@@ -10,6 +10,7 @@ tags:
 # TCNPredictiveCtrl
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[Pure TCN-based predictive controller using predicted delta for decisions.]] - `rationale_for` [EXTRACTED]
@@ -23,4 +24,4 @@ tags:
 - [[run_tcn_validation.py]] - `contains` [EXTRACTED]
 - [[step()_26]] - `method` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

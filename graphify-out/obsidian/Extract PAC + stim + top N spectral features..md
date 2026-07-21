@@ -10,6 +10,7 @@ tags:
 # Extract PAC + stim + top N spectral features.
 
 ## Connections
+
 - [[CausalConvBlock]] - `uses` [INFERRED]
 - [[ImprovedTCN]] - `uses` [INFERRED]
 - [[MixupSeqDataset]] - `uses` [INFERRED]

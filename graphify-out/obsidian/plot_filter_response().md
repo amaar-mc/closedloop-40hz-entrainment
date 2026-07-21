@@ -10,8 +10,9 @@ tags:
 # plot_filter_response()
 
 ## Connections
+
 - [[EEGPreprocessor]] - `method` [EXTRACTED]
 - [[Plot frequency response of bandpass and notch filters.          Args]] - `rationale_for` [EXTRACTED]
 - [[test_preprocessing()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

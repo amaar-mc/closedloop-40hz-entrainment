@@ -8,6 +8,7 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
+
 - [[Generate Paper LaTeX Script]] - code - scripts/tools/generate_paper_latex.py
 - [[submissionpaperRESEARCH_PAPER_v3.md]] - document - submission/paper/RESEARCH_PAPER_v3.md
 

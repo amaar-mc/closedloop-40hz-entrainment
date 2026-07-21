@@ -10,6 +10,7 @@ tags:
 # Rationale: PAC Labels Not Directly Comparable Across Channel Sets
 
 ## Connections
+
 - [[4-Channel Deployment Limitations (spatial approx, dry electrodes, reference mismatch)]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

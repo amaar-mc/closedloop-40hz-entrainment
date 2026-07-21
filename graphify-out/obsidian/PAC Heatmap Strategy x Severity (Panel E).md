@@ -10,6 +10,7 @@ tags:
 # PAC Heatmap: Strategy x Severity (Panel E)
 
 ## Connections
+
 - [[PAC Response by Disease Severity (Panel A)]] - `shares_data_with` [INFERRED]
 - [[TRIBE V2 Alzheimer's Disease Simulation Figure]] - `references` [EXTRACTED]
 

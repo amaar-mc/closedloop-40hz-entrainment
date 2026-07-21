@@ -10,6 +10,7 @@ tags:
 # Closed-Loop 40 Hz Gamma Entrainment System
 
 ## Connections
+
 - [[EEGNet Static PAC Estimator (Stage 1)]] - `references` [EXTRACTED]
 - [[Full Pipeline Command Reference (CLAUDE.md)]] - `references` [EXTRACTED]
 - [[Multiscale Causal TCN (Stage 2 Temporal Predictor)]] - `references` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # Feature Subset Ablation Study
 
 ## Connections
+
 - [[Feature Ablation Table (6 subsets all→-0.025, pac_stim→0.558)]] - `shares_data_with` [INFERRED]
 - [[Generalization Gap Experiments (run_generalization.py)]] - `implements` [EXTRACTED]
 

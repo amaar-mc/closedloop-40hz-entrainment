@@ -7,13 +7,14 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Make stimulation decision using TCN look-ahead prediction.          Args:
+# Make stimulation decision using TCN look-ahead prediction. Args:
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[step()_61]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

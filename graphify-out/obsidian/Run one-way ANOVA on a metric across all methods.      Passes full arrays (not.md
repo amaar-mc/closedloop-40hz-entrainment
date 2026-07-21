@@ -7,12 +7,13 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Run one-way ANOVA on a metric across all methods.      Passes full arrays (not
+# Run one-way ANOVA on a metric across all methods. Passes full arrays (not
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[compute_anova()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

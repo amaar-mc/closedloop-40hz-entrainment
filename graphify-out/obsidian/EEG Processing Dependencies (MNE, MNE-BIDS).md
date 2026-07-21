@@ -10,6 +10,7 @@ tags:
 # EEG Processing Dependencies (MNE, MNE-BIDS)
 
 ## Connections
+
 - [[Dataset Description ds005048 Processing Pipeline & Splits]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_39

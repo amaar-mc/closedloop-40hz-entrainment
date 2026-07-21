@@ -10,6 +10,7 @@ tags:
 # ImprovedModelConfig
 
 ## Connections
+
 - [[EnhancedSequenceDataset]] - `uses` [INFERRED]
 - [[Evaluate on future and delta heads only. smooth head is auxiliary  training-onl]] - `uses` [INFERRED]
 - [[Extract TCN test_r2 at a given horizon from a comparison table JSON.      Return]] - `uses` [INFERRED]

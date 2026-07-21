@@ -10,6 +10,7 @@ tags:
 # Main PDF generation function.
 
 ## Connections
+
 - [[generate_pdf()]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

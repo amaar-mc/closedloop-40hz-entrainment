@@ -8,6 +8,7 @@ members: 19
 **Members:** 19 nodes
 
 ## Members
+
 - [[Build causal stimulation-context features for each window.      Time reference f]] - rationale - temporal_multiscale/build_multiscale_dataset.py
 - [[Build leakage-safe multiscale temporal datasets for PAC forecasting.  Core desig]] - rationale - temporal_multiscale/build_multiscale_dataset.py
 - [[Causal PAC-derived features from pastcurrent values only._1]] - rationale - temporal_multiscale/build_multiscale_dataset.py

@@ -10,6 +10,7 @@ tags:
 # Theta-Gamma Phase-Amplitude Coupling (PAC)
 
 ## Connections
+
 - [[Two-Stage Predictive Closed-Loop System]] - `references` [EXTRACTED]
 
   #community/Community_72

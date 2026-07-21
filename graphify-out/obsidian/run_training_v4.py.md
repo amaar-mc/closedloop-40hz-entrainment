@@ -10,6 +10,7 @@ tags:
 # run_training_v4.py
 
 ## Connections
+
 - [[EEGDatasetV4]] - `contains` [EXTRACTED]
 - [[compute_r2()_1]] - `contains` [EXTRACTED]
 - [[data_augmentation.py]] - `imports_from` [EXTRACTED]
@@ -21,4 +22,4 @@ tags:
 - [[vit_tcnet.py]] - `imports_from` [EXTRACTED]
 - [[wavelet_features.py]] - `imports_from` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

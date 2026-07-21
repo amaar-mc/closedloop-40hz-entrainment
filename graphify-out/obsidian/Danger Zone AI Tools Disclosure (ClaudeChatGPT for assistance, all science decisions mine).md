@@ -10,6 +10,7 @@ tags:
 # Danger Zone: AI Tools Disclosure (Claude/ChatGPT for assistance, all science decisions mine)
 
 ## Connections
+
 - [[Q&A Tier 4 Process and Independence Questions (SpecTempNet leakage discovery, AI tool disclosure)]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_157

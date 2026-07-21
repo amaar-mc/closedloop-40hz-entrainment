@@ -10,8 +10,9 @@ tags:
 # register()
 
 ## Connections
+
 - [[ModelRegistry]] - `method` [EXTRACTED]
 - [[Register a model under a name.          Args             name Lookup key (e.g.]] - `rationale_for` [EXTRACTED]
 - [[build_default_registry()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

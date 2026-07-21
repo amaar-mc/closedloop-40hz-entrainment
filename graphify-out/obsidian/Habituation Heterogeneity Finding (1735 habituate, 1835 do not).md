@@ -10,6 +10,7 @@ tags:
 # Habituation Heterogeneity Finding (17/35 habituate, 18/35 do not)
 
 ## Connections
+
 - [[Closed-Loop Control Formulation (EEGNet→TCN→PersonalizationModule→Decision)]] - `rationale_for` [INFERRED]
 - [[Digital Research Log Notebook (Detailed Chronological)]] - `references` [EXTRACTED]
 

@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# Enhanced Training Script for EEGNetV2 (Version 2)  Key improvements over v1:
+# Enhanced Training Script for EEGNetV2 (Version 2) Key improvements over v1:
 
 ## Connections
+
 - [[EEGNetV2]] - `uses` [INFERRED]
 - [[training_v2.py]] - `rationale_for` [EXTRACTED]
 

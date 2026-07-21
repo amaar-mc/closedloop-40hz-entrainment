@@ -10,6 +10,7 @@ tags:
 # Approval-Era Chronology Anchor (Jan 15 as fair-facing start date)
 
 ## Connections
+
 - [[P10 Research Log Notebook V2 (Corrected Review Candidate)]] - `rationale_for` [EXTRACTED]
 
   #community/Community_95

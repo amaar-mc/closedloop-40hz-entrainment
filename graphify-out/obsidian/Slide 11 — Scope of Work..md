@@ -10,6 +10,7 @@ tags:
 # Slide 11 — Scope of Work.
 
 ## Connections
+
 - [[p11_scope()_2]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

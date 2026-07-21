@@ -10,6 +10,7 @@ tags:
 # Dual-Head Output (Future PAC + Delta PAC)
 
 ## Connections
+
 - [[MultiscaleCausalTCN Architecture]] - `implements` [EXTRACTED]
 
   #community/Community_34

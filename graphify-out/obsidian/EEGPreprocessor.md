@@ -10,6 +10,7 @@ tags:
 # EEGPreprocessor
 
 ## Connections
+
 - [[BIDS Data Loader for Closed-Loop 40Hz Entrainment Research  Loads OpenNeuro ds]] - `uses` [INFERRED]
 - [[BIDSDataProcessor]] - `uses` [INFERRED]
 - [[Create PyTorch DataLoaders from splits.          Args             splits Di]] - `uses` [INFERRED]
@@ -45,4 +46,4 @@ tags:
 - [[preprocessing.py]] - `contains` [EXTRACTED]
 - [[test_preprocessing()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

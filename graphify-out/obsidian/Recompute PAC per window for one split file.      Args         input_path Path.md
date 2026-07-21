@@ -7,10 +7,11 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Recompute PAC per window for one split file.      Args:         input_path: Path
+# Recompute PAC per window for one split file. Args: input_path: Path
 
 ## Connections
+
 - [[PACComputer]] - `uses` [INFERRED]
 - [[recompute_pac_for_split()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

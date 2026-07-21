@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[OracleCtrl]] - `method` [EXTRACTED]
 - [[run_subject_trial()]] - `calls` [EXTRACTED]
 

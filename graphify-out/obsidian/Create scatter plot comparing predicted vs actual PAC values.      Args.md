@@ -7,9 +7,10 @@ tags:
   - community/Community_35
 ---
 
-# Create scatter plot comparing predicted vs actual PAC values.      Args:
+# Create scatter plot comparing predicted vs actual PAC values. Args:
 
 ## Connections
+
 - [[plot_prediction_scatter()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_35

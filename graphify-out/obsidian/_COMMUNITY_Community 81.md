@@ -8,6 +8,7 @@ members: 13
 **Members:** 13 nodes
 
 ## Members
+
 - [[_corr()_3]] - code - temporal_multiscale/per_subject_adaptation.py
 - [[_flatten()]] - code - temporal_multiscale/per_subject_adaptation.py
 - [[_r2()_4]] - code - temporal_multiscale/per_subject_adaptation.py
@@ -30,9 +31,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 6 edges to [[_COMMUNITY_Multiscale TCN & Features]]
 
 ## Top bridge nodes
+
 - [[per_subject_adaptation.py]] - degree 13, connects to 1 community
 - [[ridge_per_subject()]] - degree 6, connects to 1 community
 - [[tcn_finetune()]] - degree 5, connects to 1 community

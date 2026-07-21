@@ -10,6 +10,7 @@ tags:
 # Introduction page 2: Continuation, Work by Others.
 
 ## Connections
+
 - [[p03_intro2()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

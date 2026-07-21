@@ -9,6 +9,7 @@ tags:
 # Clinical Roadmap (Research to Practice Pathway)
 
 ## Connections
+
 - [[FDA De Novo Classification Pathway for EEG-Guided Neuromodulation]] - `references` [EXTRACTED]
 - [[Facility Partners Mission Villa Memory Care + Valley Medical Center]] - `references` [EXTRACTED]
 - [[Hardware Scaling Path Muse 2 → OpenBCI Cyton → 64-ch Clinical Cap]] - `references` [EXTRACTED]
@@ -16,4 +17,4 @@ tags:
 - [[Phase B Feasibility (20 participants, IRB required, crossover RCT)]] - `references` [EXTRACTED]
 - [[Phase C Comparative Trial (50 participants, TCN vs Reactive, MMSE primary outcome)]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

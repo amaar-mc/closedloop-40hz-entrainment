@@ -7,9 +7,10 @@ tags:
   - community/Community_90
 ---
 
-# _rmse()
+# \_rmse()
 
 ## Connections
+
 - [[persistence_baseline()_2]] - `calls` [EXTRACTED]
 - [[ridge_baseline()_2]] - `calls` [EXTRACTED]
 - [[sweep_horizons.py]] - `contains` [EXTRACTED]

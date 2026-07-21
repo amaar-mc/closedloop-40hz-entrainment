@@ -9,6 +9,7 @@ tags:
 # Research Paper v3 (Full CSEF Submission Paper)
 
 ## Connections
+
 - [[73-Dimensional Causal Feature Vector (61 spectral + 7 PAC + 5 stim context)]] - `references` [EXTRACTED]
 - [[CSEF Old Project Abstract (247 words)]] - `semantically_similar_to` [INFERRED]
 - [[Contribution 1 Empirical R²=0.287 Ceiling Across 8 Architectures]] - `references` [EXTRACTED]
@@ -24,4 +25,4 @@ tags:
 - [[Personalization Module 30-second Rolling Baseline Z-score]] - `references` [EXTRACTED]
 - [[Research Paper Supplementary Materials]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

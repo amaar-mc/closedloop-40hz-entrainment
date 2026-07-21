@@ -10,6 +10,7 @@ tags:
 # Muse 4-Channel Support Flag (--muse-4ch)
 
 ## Connections
+
 - [[build_enhanced_dataset()]] - `implements` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

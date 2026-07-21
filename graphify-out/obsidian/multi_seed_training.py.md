@@ -10,6 +10,7 @@ tags:
 # multi_seed_training.py
 
 ## Connections
+
 - [[Multi-Seed Training for Robustness Evaluation  Trains EEGNet variants (origina]] - `rationale_for` [EXTRACTED]
 - [[compute_aggregate_stats()]] - `contains` [EXTRACTED]
 - [[create_model()]] - `contains` [EXTRACTED]
@@ -21,4 +22,4 @@ tags:
 - [[split_by_subject()]] - `contains` [EXTRACTED]
 - [[train_single_seed()]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

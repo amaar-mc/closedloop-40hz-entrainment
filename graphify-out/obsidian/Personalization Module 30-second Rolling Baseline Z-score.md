@@ -10,6 +10,7 @@ tags:
 # Personalization Module: 30-second Rolling Baseline Z-score
 
 ## Connections
+
 - [[Research Paper v3 (Full CSEF Submission Paper)]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

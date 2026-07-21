@@ -10,10 +10,11 @@ tags:
 # Full end-to-end pipeline: preprocess → spectral cache → temporal dataset → train
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `uses` [INFERRED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[run_full_pipeline.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

@@ -7,11 +7,12 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# 4-Channel Muse 2 Model Retraining Pipeline  Retrains the full EEGNet + TCN pipel
+# 4-Channel Muse 2 Model Retraining Pipeline Retrains the full EEGNet + TCN pipel
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `uses` [INFERRED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[retrain_pipeline.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

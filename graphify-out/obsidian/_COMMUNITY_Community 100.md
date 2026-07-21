@@ -8,6 +8,7 @@ members: 8
 **Members:** 8 nodes
 
 ## Members
+
 - [[Audio Signal Generator (Adaptive) 40 Hz Audio Output to speaker]] - image - submission/figures/figure5.png
 - [[Causal TCN 5,154 params, dilated causal convolutions (d=1,2,4,8)]] - image - submission/figures/figure5.png
 - [[Closed-Loop Controller STIMULATEMAINTAINREST decision with 30s baseline, 3-sec hysteresis]] - image - submission/figures/figure5.png

@@ -7,11 +7,12 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# _compute_filter_coefficients()
+# \_compute_filter_coefficients()
 
 ## Connections
+
 - [[EEGPreprocessor]] - `method` [EXTRACTED]
 - [[Precompute filter coefficients for efficiency.]] - `rationale_for` [EXTRACTED]
 - [[__init__()_151]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

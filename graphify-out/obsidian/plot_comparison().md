@@ -10,8 +10,9 @@ tags:
 # plot_comparison()
 
 ## Connections
+
 - [[Generate comparison plots.          Args             output_name Output fil]] - `rationale_for` [EXTRACTED]
 - [[SimulationValidator]] - `method` [EXTRACTED]
 - [[main()_78]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

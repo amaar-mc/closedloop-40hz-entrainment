@@ -7,9 +7,10 @@ tags:
   - community/CSEF_Presentation_Generator
 ---
 
-# _enable_bullet()
+# \_enable_bullet()
 
 ## Connections
+
 - [[Set native bullet via XML so Google Slides renders it correctly.]] - `rationale_for` [EXTRACTED]
 - [[generate_csef_pptx.py]] - `contains` [EXTRACTED]
 

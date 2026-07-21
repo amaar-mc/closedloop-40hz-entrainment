@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Audit script for TRIBE V2 integration module.  Validates:     1. All module impo
+# Audit script for TRIBE V2 integration module. Validates: 1. All module impo
 
 ## Connections
+
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]
 - [[NeuralMassConfig]] - `uses` [INFERRED]

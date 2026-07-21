@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Reset simulator to initial state.          Args:             initial_pac: Ini
+# Reset simulator to initial state. Args: initial_pac: Ini
 
 ## Connections
+
 - [[reset()_61]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

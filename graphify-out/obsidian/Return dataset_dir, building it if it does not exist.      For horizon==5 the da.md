@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Return dataset_dir, building it if it does not exist.      For horizon==5 the da
+# Return dataset_dir, building it if it does not exist. For horizon==5 the da
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SequenceDataset]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[SimpleTransformer]] - `uses` [INFERRED]
 - [[_ensure_dataset()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

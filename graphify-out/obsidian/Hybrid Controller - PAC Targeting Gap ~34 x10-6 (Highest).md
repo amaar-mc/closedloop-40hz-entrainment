@@ -10,6 +10,7 @@ tags:
 # Hybrid Controller - PAC Targeting Gap ~34 x10^-6 (Highest)
 
 ## Connections
+
 - [[PAC Targeting Gap by Controller (Bar Chart)]] - `references` [EXTRACTED]
 
   #community/Community_31

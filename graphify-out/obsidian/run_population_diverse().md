@@ -10,10 +10,11 @@ tags:
 # run_population_diverse()
 
 ## Connections
+
 - [[Run one trial per subject with randomized simulator parameters.      Args]] - `rationale_for` [EXTRACTED]
 - [[generate_subject_parameters()]] - `calls` [EXTRACTED]
 - [[main()_65]] - `calls` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 - [[run_single_trial()]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

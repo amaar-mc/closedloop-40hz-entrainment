@@ -10,6 +10,7 @@ tags:
 # EEGNetEnhanced
 
 ## Connections
+
 - [[Compute aggregate statistics across seeds for each metric.      Computes mean,]] - `uses` [INFERRED]
 - [[Create a DataLoader from numpy arrays.      Args         windows EEG window]] - `uses` [INFERRED]
 - [[Create trainvaltest splits by subject with a given random seed.      Ensures]] - `uses` [INFERRED]
@@ -27,4 +28,4 @@ tags:
 - [[test_all()]] - `calls` [EXTRACTED]
 - [[test_eegnet_enhanced()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[FixedScheduleControl_1]] - `calls` [EXTRACTED]
 - [[OracleControl_1]] - `calls` [EXTRACTED]
 - [[PredictiveLookAheadControl_1]] - `calls` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[run_closed_loop_demo.py]] - `contains` [EXTRACTED]
 - [[run_scenario()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -9,6 +9,7 @@ tags:
 # Research Paper v3 (Full Manuscript)
 
 ## Connections
+
 - [[73-Dimensional Causal Feature Vector (61 spectral + 7 PAC + 5 stim context)_1]] - `references` [EXTRACTED]
 - [[Abstract TCN achieves 72.1% vs 64.5% alignment, 91% oracle, 3535 subjects]] - `references` [EXTRACTED]
 - [[Architecture Search 8 Models, All Converge to R²≈0.287]] - `references` [EXTRACTED]
@@ -34,4 +35,4 @@ tags:
 - [[Reference Tort et al. 2010 — Modulation Index for PAC (J Neurophysiol)]] - `cites` [EXTRACTED]
 - [[v3_paper.md Full Compiled Paper (Matches RESEARCH_PAPER_v3)]] - `semantically_similar_to` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

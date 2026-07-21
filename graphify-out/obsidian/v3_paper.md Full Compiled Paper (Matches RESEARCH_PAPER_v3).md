@@ -9,6 +9,7 @@ tags:
 # v3_paper.md: Full Compiled Paper (Matches RESEARCH_PAPER_v3)
 
 ## Connections
+
 - [[Research Paper v3 (Full Manuscript)]] - `semantically_similar_to` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

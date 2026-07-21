@@ -9,6 +9,7 @@ tags:
 # Feature Ablation Discovery: 12-Feature vs 73-Feature Generalization
 
 ## Connections
+
 - [[Architecture Marathon 8-Model Static PAC Ceiling R2=0.287]] - `conceptually_related_to` [INFERRED]
 - [[CSEF Interview Tier 4 Hard Challenge Questions]] - `references` [EXTRACTED]
 - [[Causal TCN System (20s lookback, 5s forecast, 12-feature input)]] - `conceptually_related_to` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[SpecTempNet Leakage Incident (R2=0.69 inflated, dropped to 0.236 after fix)]] - `conceptually_related_to` [INFERRED]
 - [[Tier 5 Hard Challenge Q&A (Architecture, novelty, impact)]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

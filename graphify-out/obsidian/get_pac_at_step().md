@@ -10,7 +10,8 @@ tags:
 # get_pac_at_step()
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `method` [EXTRACTED]
 - [[Get PAC value at specific step.]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

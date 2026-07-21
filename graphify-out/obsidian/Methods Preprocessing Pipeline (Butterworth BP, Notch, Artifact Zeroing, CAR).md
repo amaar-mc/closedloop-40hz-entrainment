@@ -10,6 +10,7 @@ tags:
 # Methods: Preprocessing Pipeline (Butterworth BP, Notch, Artifact Zeroing, CAR)
 
 ## Connections
+
 - [[OpenNeuro ds005048 35 Elderly Subjects, 7 Frontal Channels, 40 Hz Protocol]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

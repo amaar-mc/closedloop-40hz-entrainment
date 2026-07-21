@@ -10,6 +10,7 @@ tags:
 # Apply disease modifications to neural mass parameters.
 
 ## Connections
+
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]

@@ -10,6 +10,7 @@ tags:
 # Two Oral Presentation Versions (Simple and Technical)
 
 ## Connections
+
 - [[Kushal Khare Poster Feedback Meeting (March 4, 2026)]] - `references` [EXTRACTED]
 
   #community/Community_113

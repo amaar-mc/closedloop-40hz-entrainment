@@ -8,6 +8,7 @@ members: 50
 **Members:** 50 nodes
 
 ## Members
+
 - [[Alzheimer's Disease Pathophysiology (Aβ, Tau, Neuroinflammation)]] - document - docs/research/01_Foundational_Concepts_40Hz_Entrainment_AD.txt
 - [[Annotated Bibliography 39 Sources for Gamma Entrainment Research]] - document - docs/research/05_Annotated_Bibliography_Sources.txt
 - [[Chan 2025 (Alzheimer's & Dementia) Phase II Extension Study pTau217 Reduction]] - document - docs/research/05_Annotated_Bibliography_Sources.txt

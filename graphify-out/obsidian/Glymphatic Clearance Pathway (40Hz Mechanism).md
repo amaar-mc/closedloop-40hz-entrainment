@@ -10,6 +10,7 @@ tags:
 # Glymphatic Clearance Pathway (40Hz Mechanism)
 
 ## Connections
+
 - [[Microglial Activation Pathway (40Hz Mechanism)]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_118

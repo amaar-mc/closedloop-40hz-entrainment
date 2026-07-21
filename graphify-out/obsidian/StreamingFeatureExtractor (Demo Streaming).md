@@ -10,7 +10,8 @@ tags:
 # StreamingFeatureExtractor (Demo Streaming)
 
 ## Connections
+
 - [[run_demo()]] - `calls` [EXTRACTED]
 - [[srcstreamingfeature_extractor.py (StreamingFeatureExtractor)]] - `references` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # update()
 
 ## Connections
+
 - [[MultiChannelPersonalization]] - `method` [EXTRACTED]
 - [[Update baseline for all channels.          Args             pac_values PAC]] - `rationale_for` [EXTRACTED]
 - [[test_personalization()]] - `calls` [EXTRACTED]

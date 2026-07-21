@@ -10,6 +10,7 @@ tags:
 # get_baseline_tcn_r2()
 
 ## Connections
+
 - [[Extract TCN test_r2 at a given horizon from a comparison table JSON.      Return]] - `rationale_for` [EXTRACTED]
 - [[main()_9]] - `calls` [EXTRACTED]
 - [[train_improved_tcn.py]] - `contains` [EXTRACTED]

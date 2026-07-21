@@ -10,6 +10,7 @@ tags:
 # CausalDSConvBlockNoNorm
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[CausalDSConvBlock_1]] - `uses` [INFERRED]
 - [[CausalDSConvBlock_2]] - `inherits` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[__init__()_65]] - `calls` [EXTRACTED]
 - [[run_ablation_study.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

@@ -8,6 +8,7 @@ members: 35
 **Members:** 35 nodes
 
 ## Members
+
 - [[12 PAC+Stim Features (Optimal Cross-Subject Feature Set)]] - document - submission/paper/v4_paper.md
 - [[Architecture Search Lessons (3 Key Takeaways)]] - document - submission/paper/sections/05-architecture-search.md
 - [[CR-01 Abstract Conflates ts=5 Horizon Sweep R² with Deployed Model (ts=1)]] - document - submission/paper/REVIEW_REPORT.md

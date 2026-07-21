@@ -7,12 +7,13 @@ tags:
   - community/Control_Strategies_&_Validation
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[OracleControl_4]] - `method` [EXTRACTED]
 - [[__init__()_119]] - `calls` [EXTRACTED]
 - [[__init__()_120]] - `calls` [EXTRACTED]
 - [[__init__()_121]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

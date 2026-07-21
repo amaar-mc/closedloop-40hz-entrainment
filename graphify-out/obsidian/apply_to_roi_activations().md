@@ -10,6 +10,7 @@ tags:
 # apply_to_roi_activations()
 
 ## Connections
+
 - [[AlzheimerProfile]] - `method` [EXTRACTED]
 - [[Apply region-specific disease modification to ROI activations.          Differen]] - `rationale_for` [EXTRACTED]
 

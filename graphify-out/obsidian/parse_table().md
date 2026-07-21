@@ -10,6 +10,7 @@ tags:
 # parse_table()
 
 ## Connections
+
 - [[Parse markdown table lines into (headers, rows).]] - `rationale_for` [EXTRACTED]
 - [[generate_latex()]] - `calls` [EXTRACTED]
 - [[generate_paper_latex.py]] - `contains` [EXTRACTED]

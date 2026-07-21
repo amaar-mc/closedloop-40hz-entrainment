@@ -10,6 +10,7 @@ tags:
 # Evaluate controller decisions against actual PAC trajectory.
 
 ## Connections
+
 - [[evaluate_decisions()]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

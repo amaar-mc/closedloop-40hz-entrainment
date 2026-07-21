@@ -10,6 +10,7 @@ tags:
 # Phase B: Feasibility (20 participants, IRB required, crossover RCT)
 
 ## Connections
+
 - [[Clinical Roadmap (Research to Practice Pathway)]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

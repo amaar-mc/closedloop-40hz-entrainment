@@ -10,6 +10,7 @@ tags:
 # regenerate_paper_figures.py
 
 ## Connections
+
 - [[fig_controller_comparison()]] - `contains` [EXTRACTED]
 - [[fig_horizon_sweep()]] - `contains` [EXTRACTED]
 - [[fig_per_subject()]] - `contains` [EXTRACTED]

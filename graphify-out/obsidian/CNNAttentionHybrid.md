@@ -10,6 +10,7 @@ tags:
 # CNNAttentionHybrid
 
 ## Connections
+
 - [[Hybrid CNN extracts features, Attention pools them.      Combines local pattern]] - `rationale_for` [EXTRACTED]
 - [[__init__()_21]] - `method` [EXTRACTED]
 - [[forward()_15]] - `method` [EXTRACTED]

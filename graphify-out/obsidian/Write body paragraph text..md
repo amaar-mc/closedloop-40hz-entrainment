@@ -10,6 +10,7 @@ tags:
 # Write body paragraph text.
 
 ## Connections
+
 - [[write_body_text()]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

@@ -7,10 +7,11 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# _make_decision()
+# \_make_decision()
 
 ## Connections
+
 - [[ClosedLoopController]] - `method` [EXTRACTED]
 - [[Make stimulation decision based on z-score.          Logic             - If]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

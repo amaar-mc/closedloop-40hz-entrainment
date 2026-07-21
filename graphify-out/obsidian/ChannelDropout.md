@@ -10,6 +10,7 @@ tags:
 # ChannelDropout
 
 ## Connections
+
 - [[Randomly drop (zero out) one or more channels.      This makes the model robust]] - `rationale_for` [EXTRACTED]
 - [[__call__()_5]] - `method` [EXTRACTED]
 - [[__init__()_50]] - `method` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[data_augmentation.py]] - `contains` [EXTRACTED]
 - [[test_augmentation()]] - `calls` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

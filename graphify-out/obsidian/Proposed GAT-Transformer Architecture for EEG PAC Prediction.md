@@ -10,6 +10,7 @@ tags:
 # Proposed GAT-Transformer Architecture for EEG PAC Prediction
 
 ## Connections
+
 - [[Graph Attention Network (GAT) Spatial Processing Module]] - `implements` [EXTRACTED]
 - [[Hypothesis GAT-Transformer Achieves R²0.80 for PAC Prediction 5-10s Ahead]] - `rationale_for` [EXTRACTED]
 - [[IEEE Draft Paper EEGNet Architecture for Real-Time PAC Prediction in AD]] - `semantically_similar_to` [INFERRED]

@@ -10,6 +10,7 @@ tags:
 # Analyze habituation patterns across subjects.
 
 ## Connections
+
 - [[analyze_fatigue()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_101

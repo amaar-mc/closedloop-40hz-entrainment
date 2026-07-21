@@ -7,9 +7,10 @@ tags:
   - community/Community_38
 ---
 
-# TransformEEG-inspired: Convolutional-Transformer for PAC.      Inspired by: "Sel
+# TransformEEG-inspired: Convolutional-Transformer for PAC. Inspired by: "Sel
 
 ## Connections
+
 - [[TransformEEG]] - `rationale_for` [EXTRACTED]
 
   #community/Community_38

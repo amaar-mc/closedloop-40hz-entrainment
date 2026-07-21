@@ -9,6 +9,7 @@ tags:
 # P10 Lab Notebook V1 (PDF)
 
 ## Connections
+
 - [[P10 Research Log Notebook V1 (Daily Format)]] - `references` [INFERRED]
 
   #community/Community_95

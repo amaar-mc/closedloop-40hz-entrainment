@@ -10,6 +10,7 @@ tags:
 # Discussion Slide: spectral features encode anatomy, 3s inflection = PAC autocorrelation timescale, single-site limitation
 
 ## Connections
+
 - [[Project Limitations offline replay only, single dataset, short sessions (6-10 min), static PAC ceiling, heuristic thresholds]] - `shares_data_with` [EXTRACTED]
 
   #community/Community_73

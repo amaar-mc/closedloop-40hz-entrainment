@@ -10,6 +10,7 @@ tags:
 # check_packaging (Notebook Finalization Verifier)
 
 ## Connections
+
 - [[Verify Notebook Finalization Script]] - `calls` [EXTRACTED]
 - [[submissionlab_notebookgenerate_notebook_pdf.py]] - `references` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # Why It Matters: Non-invasive, Personalized, Evidence-based, Proactive
 
 ## Connections
+
 - [[NeuroCare 40Hz Product Flyer]] - `references` [EXTRACTED]
 
   #community/Community_78

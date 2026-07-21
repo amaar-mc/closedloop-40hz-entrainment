@@ -7,10 +7,11 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `method` [EXTRACTED]
 - [[Initialize entrainment simulator.          Args             tau_rise Time c]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

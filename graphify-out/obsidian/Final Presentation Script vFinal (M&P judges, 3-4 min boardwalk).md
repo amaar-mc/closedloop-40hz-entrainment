@@ -9,6 +9,7 @@ tags:
 # Final Presentation Script vFinal (M&P judges, 3-4 min boardwalk)
 
 ## Connections
+
 - [[CSEF Judging Process and Strategy]] - `conceptually_related_to` [INFERRED]
 - [[Feature Ablation Discovery 12-Feature vs 73-Feature Generalization]] - `references` [EXTRACTED]
 - [[Horizon Sweep TCN Maintains R2=0.60 Where Baselines Collapse]] - `references` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[Murdock et al. 2024 (Glymphatic Clearance Mechanism)]] - `cites` [EXTRACTED]
 - [[Phase-Amplitude Coupling (PAC) as Entrainment Biomarker_1]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

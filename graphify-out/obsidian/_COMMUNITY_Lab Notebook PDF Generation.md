@@ -8,6 +8,7 @@ members: 80
 **Members:** 80 nodes
 
 ## Members
+
 - [[4-Channel vs 7-Channel Comparison (March 15-17, 2026)]] - document - submission/lab_notebook/vfinal_lab_notebook.md
 - [[5-Seed Benchmark for 12-Feature Model (0.606 ± 0.029 mean test R2)]] - document - submission/lab_notebook/extension.md
 - [[73-Dimensional Temporal Feature Representation]] - document - submission/lab_notebook/P10_Lab_Notebook_VFINAL.md

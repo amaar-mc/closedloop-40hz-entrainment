@@ -10,10 +10,11 @@ tags:
 # ReactiveThresholdControl
 
 ## Connections
+
 - [[__init__()_29]] - `method` [EXTRACTED]
 - [[replay_subject()]] - `calls` [EXTRACTED]
 - [[reset()_1]] - `method` [EXTRACTED]
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 - [[step()_1]] - `method` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

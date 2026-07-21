@@ -10,6 +10,7 @@ tags:
 # persistence_direction_baseline()
 
 ## Connections
+
 - [[Predict direction = 0 (STABLE) always — PAC doesn't change.]] - `rationale_for` [EXTRACTED]
 - [[direction_classifier.py]] - `contains` [EXTRACTED]
 - [[eval_classifier()]] - `calls` [EXTRACTED]

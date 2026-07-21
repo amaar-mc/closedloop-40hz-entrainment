@@ -9,6 +9,7 @@ tags:
 # Subject Median PAC Threshold for Stimulation Decision
 
 ## Connections
+
 - [[Figure 12 Metric Definitions (Low-PAC Stim Rate & High-PAC Rest Rate)]] - `references` [EXTRACTED]
 
   #community/Community_61

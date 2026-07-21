@@ -10,6 +10,7 @@ tags:
 # Horizon Sweep Figure
 
 ## Connections
+
 - [[Figure Style Guide]] - `conceptually_related_to` [INFERRED]
 - [[Horizon Sweep Script (horizon_sweep_pac_stim.py)]] - `implements` [EXTRACTED]
 - [[Paper Figures Source Directory]] - `references` [EXTRACTED]

@@ -142,7 +142,7 @@ The data was already preprocessed upstream by Makoto's EEGLAB pipeline. Light se
 3. Divide phase space [-pi, pi] into 18 bins (20 degrees each)
 4. Compute mean gamma amplitude within each phase bin
 5. Normalize to a probability distribution: P_i = A_i / sum(A)
-6. Compute KL divergence from uniform: KL = sum(P_i * log(P_i * n_bins))
+6. Compute KL divergence from uniform: KL = sum(P_i _ log(P_i _ n_bins))
 7. Normalize: MI = KL / log(n_bins)
 
 **Critical methodological note:** PAC was computed at the epoch level (full 20--40 second blocks) for measurement stability, then assigned uniformly to all constituent 2-second windows within that epoch. This means windows from the same epoch share identical PAC labels. This design choice ensures stable PAC estimates (short windows produce unreliable MI values) but limits the effective sample diversity for within-epoch prediction.
@@ -151,14 +151,14 @@ The data was already preprocessed upstream by Makoto's EEGLAB pipeline. Light se
 
 Splits were performed at the subject level to prevent within-subject leakage between train/validation/test sets (random seed = 42):
 
-| Split           | Subjects     | Windows          |
-| --------------- | ------------ | ---------------- |
-| Train           | 24           | 11,736           |
-| Validation      | 5            | 2,725            |
-| Test            | 6            | 2,822            |
-| **Total** | **35** | **17,283** |
+| Split      | Subjects | Windows    |
+| ---------- | -------- | ---------- |
+| Train      | 24       | 11,736     |
+| Validation | 5        | 2,725      |
+| Test       | 6        | 2,822      |
+| **Total**  | **35**   | **17,283** |
 
-Output format: {train,val,test}_data.npz with windows shape (n, 1, 7, 500) and pac shape (n,).
+Output format: {train,val,test}\_data.npz with windows shape (n, 1, 7, 500) and pac shape (n,).
 
 PAC label statistics: range [0.000006, 0.000701], mean approximately 0.000044, standard deviation approximately 2.2 x 10^-5.
 
@@ -309,21 +309,21 @@ An important methodological finding: target smoothing dramatically affects evalu
 
 **Input:** (batch, 20, 73) -- 20 timesteps, 73 features per step.
 
-| Component         | Layer Details                                                                                                           | Parameters       |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| Input projection  | Linear(73 -> 64) + LayerNorm(64) + SiLU                                                                                 | 4,864            |
-| TCN Block 1 (d=1) | Causal DepthwiseConv1d(64, k=3, d=1, g=64) + PointwiseConv1d(64->64) + GroupNorm(1,64) + SiLU + Dropout(0.1) + Residual | 4,608            |
-| TCN Block 2 (d=2) | Same structure, dilation=2                                                                                              | 4,608            |
-| TCN Block 3 (d=4) | Same structure, dilation=4                                                                                              | 4,608            |
-| TCN Block 4 (d=8) | Same structure, dilation=8                                                                                              | 4,608            |
-| Attention pooling | Conv1d(64->1, k=1) + softmax over time -> weighted sum                                                                  | 65               |
-| Future head       | Linear(64->64) + SiLU + Dropout + Linear(64->1)                                                                         | 4,225            |
-| Delta head        | Linear(64->64) + SiLU + Dropout + Linear(64->1)                                                                         | 4,225            |
-| **Total**   |                                                                                                                         | **31,043** |
+| Component         | Layer Details                                                                                                           | Parameters |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------- | ---------- |
+| Input projection  | Linear(73 -> 64) + LayerNorm(64) + SiLU                                                                                 | 4,864      |
+| TCN Block 1 (d=1) | Causal DepthwiseConv1d(64, k=3, d=1, g=64) + PointwiseConv1d(64->64) + GroupNorm(1,64) + SiLU + Dropout(0.1) + Residual | 4,608      |
+| TCN Block 2 (d=2) | Same structure, dilation=2                                                                                              | 4,608      |
+| TCN Block 3 (d=4) | Same structure, dilation=4                                                                                              | 4,608      |
+| TCN Block 4 (d=8) | Same structure, dilation=8                                                                                              | 4,608      |
+| Attention pooling | Conv1d(64->1, k=1) + softmax over time -> weighted sum                                                                  | 65         |
+| Future head       | Linear(64->64) + SiLU + Dropout + Linear(64->1)                                                                         | 4,225      |
+| Delta head        | Linear(64->64) + SiLU + Dropout + Linear(64->1)                                                                         | 4,225      |
+| **Total**         |                                                                                                                         | **31,043** |
 
 **Key design decisions:**
 
-1. **Causal padding:** Each depthwise convolution pads only on the left: F.pad(x, ((kernel_size-1)*dilation, 0)). The model cannot access future timesteps, which is essential for a real-time prediction system. This was verified by the audit pipeline.
+1. **Causal padding:** Each depthwise convolution pads only on the left: F.pad(x, ((kernel_size-1)\*dilation, 0)). The model cannot access future timesteps, which is essential for a real-time prediction system. This was verified by the audit pipeline.
 2. **Dilation pattern [1, 2, 4, 8]:** Receptive field = 1 + (3-1) x (1+2+4+8) = 31 timesteps, covering the full 20-step input sequence with margin.
 3. **GroupNorm(1, C) instead of BatchNorm:** Equivalent to instance normalization over channels. Chosen for stability with small batch sizes and cross-subject distribution shifts. Different patients have different PAC baselines; GroupNorm is invariant to batch composition.
 4. **Depthwise-separable convolutions:** Factorize spatial and channel mixing for parameter efficiency. The full TCN uses only 31,043 parameters vs hundreds of thousands for standard convolutions with equivalent receptive field.
@@ -372,14 +372,14 @@ All models in the sweep used target_smooth_window = 5 to ensure fair comparison 
 
 ### 5.2 Complete Horizon Results
 
-| Horizon      | TCN R^2         | Persistence R^2  | Ridge R^2        | TCN Margin over Persistence      |
-| ------------ | --------------- | ---------------- | ---------------- | -------------------------------- |
-| 1s           | 0.735           | 0.760            | 0.812            | -0.025 (baselines win)           |
-| 2s           | 0.470           | 0.488            | 0.542            | -0.018 (baselines win)           |
-| 3s           | 0.277           | 0.234            | 0.253            | +0.043 (TCN wins)                |
-| **5s** | **0.254** | **-0.267** | **-0.393** | **+0.521 (TCN dominates)** |
-| 8s           | 0.240           | -0.276           | -0.211           | +0.516 (TCN dominates)           |
-| 10s          | 0.278           | -0.256           | -0.212           | +0.534 (TCN dominates)           |
+| Horizon | TCN R^2   | Persistence R^2 | Ridge R^2  | TCN Margin over Persistence |
+| ------- | --------- | --------------- | ---------- | --------------------------- |
+| 1s      | 0.735     | 0.760           | 0.812      | -0.025 (baselines win)      |
+| 2s      | 0.470     | 0.488           | 0.542      | -0.018 (baselines win)      |
+| 3s      | 0.277     | 0.234           | 0.253      | +0.043 (TCN wins)           |
+| **5s**  | **0.254** | **-0.267**      | **-0.393** | **+0.521 (TCN dominates)**  |
+| 8s      | 0.240     | -0.276          | -0.211     | +0.516 (TCN dominates)      |
+| 10s     | 0.278     | -0.256          | -0.212     | +0.534 (TCN dominates)      |
 
 Source: models/sweep_horizons_results.json (verified against all reported values).
 
@@ -395,7 +395,7 @@ The 5--10 second range is operationally relevant because a closed-loop controlle
 
 ### 5.4 Why Baselines Fail at Long Horizons
 
-PAC computed from 2-second windows has near-zero temporal autocorrelation beyond a few seconds. The persistence baseline assumes y_{t+h} = y_t, which works when h is small relative to the autocorrelation timescale. When h exceeds this timescale, persistence predictions become uncorrelated with actual values, yielding R^2 < 0 (higher variance than the mean predictor). Ridge regression suffers the same fundamental limitation: linear extrapolation from current features cannot capture the nonlinear temporal dynamics that govern PAC evolution over 5--10 seconds.
+PAC computed from 2-second windows has near-zero temporal autocorrelation beyond a few seconds. The persistence baseline assumes y\_{t+h} = y_t, which works when h is small relative to the autocorrelation timescale. When h exceeds this timescale, persistence predictions become uncorrelated with actual values, yielding R^2 < 0 (higher variance than the mean predictor). Ridge regression suffers the same fundamental limitation: linear extrapolation from current features cannot capture the nonlinear temporal dynamics that govern PAC evolution over 5--10 seconds.
 
 The TCN succeeds because its dilated causal convolutions with receptive field of 31 timesteps can learn temporal patterns across multiple timescales (1, 2, 4, and 8 seconds via dilation), capturing longer-range dependencies that linear models miss.
 
@@ -465,14 +465,14 @@ All 35 subjects' EEG recordings were replayed through each controller in an offl
 
 ### 6.5 Controller Comparison Results (N = 35 Subjects, Real EEG)
 
-| Controller               | Alignment       | Low-PAC Stim    | High-PAC Rest   | Stim %          | PAC Gap (x10^-6) |
-| ------------------------ | --------------- | --------------- | --------------- | --------------- | ---------------- |
-| Fixed Schedule           | 45.0%           | 61.4%           | 28.6%           | 66.6%           | -6.6             |
-| Reactive Threshold       | 64.5%           | 51.7%           | 77.3%           | 36.7%           | +21.1            |
-| **TCN Predictive** | **72.1%** | **82.6%** | **61.6%** | **59.7%** | **+30.5**  |
-| Hybrid TCN+Reactive      | 73.8%           | 85.3%           | 62.2%           | 60.8%           | +34.0            |
-| PI Controller            | 66.1%           | 38.6%           | 93.6%           | 22.0%           | +27.2            |
-| Alignment Oracle         | 100.0%          | 100.0%          | 100.0%          | 48.3%           | +33.3            |
+| Controller          | Alignment | Low-PAC Stim | High-PAC Rest | Stim %    | PAC Gap (x10^-6) |
+| ------------------- | --------- | ------------ | ------------- | --------- | ---------------- |
+| Fixed Schedule      | 45.0%     | 61.4%        | 28.6%         | 66.6%     | -6.6             |
+| Reactive Threshold  | 64.5%     | 51.7%        | 77.3%         | 36.7%     | +21.1            |
+| **TCN Predictive**  | **72.1%** | **82.6%**    | **61.6%**     | **59.7%** | **+30.5**        |
+| Hybrid TCN+Reactive | 73.8%     | 85.3%        | 62.2%         | 60.8%     | +34.0            |
+| PI Controller       | 66.1%     | 38.6%        | 93.6%         | 22.0%     | +27.2            |
+| Alignment Oracle    | 100.0%    | 100.0%       | 100.0%        | 48.3%     | +33.3            |
 
 Source: results/metrics/tcn_validation_results.json (all values verified).
 
@@ -565,16 +565,16 @@ All p < 0.001 across all fatigue model assumptions. The advantage holds regardle
 
 The TCN controller's delta-z threshold was swept from 0.1 to 1.0 to verify that results are not artifacts of threshold tuning:
 
-| Delta-z               | Alignment | Low-PAC Stim | PAC Gap (x10^-6) |
-| --------------------- | --------- | ------------ | ---------------- |
-| 0.1                   | 59.6%     | 51.2%        | 12.4             |
-| 0.2                   | 68.5%     | 72.9%        | 26.3             |
-| 0.3                   | 73.7%     | 84.9%        | 32.4             |
-| 0.4                   | 73.9%     | 85.3%        | 33.7             |
-| 0.5                   | 73.7%     | 85.3%        | 33.8             |
-| 0.8                   | 73.8%     | 85.3%        | 34.0             |
-| 1.0                   | 73.8%     | 85.3%        | 34.0             |
-| *Reactive baseline* | *64.5%* | *51.7%*    | *21.1*         |
+| Delta-z             | Alignment | Low-PAC Stim | PAC Gap (x10^-6) |
+| ------------------- | --------- | ------------ | ---------------- |
+| 0.1                 | 59.6%     | 51.2%        | 12.4             |
+| 0.2                 | 68.5%     | 72.9%        | 26.3             |
+| 0.3                 | 73.7%     | 84.9%        | 32.4             |
+| 0.4                 | 73.9%     | 85.3%        | 33.7             |
+| 0.5                 | 73.7%     | 85.3%        | 33.8             |
+| 0.8                 | 73.8%     | 85.3%        | 34.0             |
+| 1.0                 | 73.8%     | 85.3%        | 34.0             |
+| _Reactive baseline_ | _64.5%_   | _51.7%_      | _21.1_           |
 
 Source: results/metrics/threshold_sweep.json.
 
@@ -670,13 +670,13 @@ Six controllers were compared, and six metrics were computed for each comparison
 
 ## References
 
-1. Iaccarino, H.F., et al. "Gamma frequency entrainment attenuates amyloid load and modifies microglia." *Nature* 540, 230--235 (2016).
-2. Tort, A.B., et al. "Measuring phase-amplitude coupling between neuronal oscillations of different frequencies." *J. Neurophysiol.* 104(2), 1195--1210 (2010).
-3. Lawhern, V.J., et al. "EEGNet: a compact convolutional neural network for EEG-based brain-computer interfaces." *J. Neural Eng.* 15(5), 056013 (2018).
-4. Lahijanian, B., et al. "Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients." *Scientific Reports* 14, 13153 (2024).
-5. Canolty, R.T. & Knight, R.T. "The functional role of cross-frequency coupling." *Trends Cogn. Sci.* 14(11), 506--515 (2010).
-6. Martorell, A.J., et al. "Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition." *Cell* 177(2), 256--271 (2019).
-7. Chan, D., et al. "Gamma sensory stimulation in mild Alzheimer's dementia." *Alzheimer's & Dementia* (2025).
-8. Thompson, R.F. & Spencer, W.A. "Habituation: a model phenomenon for the study of neuronal substrates of behavior." *Psychol. Rev.* 73(1), 16--43 (1966).
-9. "Multisensory gamma stimulation promotes glymphatic clearance of amyloid." *Nature* (2024).
-10. "Long-term effects of forty-hertz auditory stimulation as a treatment of Alzheimer's disease: Insights from an aged monkey model study." *PNAS* (2025).
+1. Iaccarino, H.F., et al. "Gamma frequency entrainment attenuates amyloid load and modifies microglia." _Nature_ 540, 230--235 (2016).
+2. Tort, A.B., et al. "Measuring phase-amplitude coupling between neuronal oscillations of different frequencies." _J. Neurophysiol._ 104(2), 1195--1210 (2010).
+3. Lawhern, V.J., et al. "EEGNet: a compact convolutional neural network for EEG-based brain-computer interfaces." _J. Neural Eng._ 15(5), 056013 (2018).
+4. Lahijanian, B., et al. "Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients." _Scientific Reports_ 14, 13153 (2024).
+5. Canolty, R.T. & Knight, R.T. "The functional role of cross-frequency coupling." _Trends Cogn. Sci._ 14(11), 506--515 (2010).
+6. Martorell, A.J., et al. "Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition." _Cell_ 177(2), 256--271 (2019).
+7. Chan, D., et al. "Gamma sensory stimulation in mild Alzheimer's dementia." _Alzheimer's & Dementia_ (2025).
+8. Thompson, R.F. & Spencer, W.A. "Habituation: a model phenomenon for the study of neuronal substrates of behavior." _Psychol. Rev._ 73(1), 16--43 (1966).
+9. "Multisensory gamma stimulation promotes glymphatic clearance of amyloid." _Nature_ (2024).
+10. "Long-term effects of forty-hertz auditory stimulation as a treatment of Alzheimer's disease: Insights from an aged monkey model study." _PNAS_ (2025).

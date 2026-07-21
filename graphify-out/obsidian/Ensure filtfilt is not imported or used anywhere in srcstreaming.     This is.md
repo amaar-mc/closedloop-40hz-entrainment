@@ -7,10 +7,11 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Ensure filtfilt is not imported or used anywhere in src/streaming/.     This is
+# Ensure filtfilt is not imported or used anywhere in src/streaming/. This is
 
 ## Connections
+
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[test_no_filtfilt_in_streaming()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

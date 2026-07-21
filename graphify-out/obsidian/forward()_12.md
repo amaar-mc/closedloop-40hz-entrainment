@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[TransformEEG]] - `method` [EXTRACTED]
 
   #community/Community_38

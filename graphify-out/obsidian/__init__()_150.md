@@ -7,10 +7,11 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `method` [EXTRACTED]
 - [[Initialize BIDS data processor.          Args             bids_root Path to]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

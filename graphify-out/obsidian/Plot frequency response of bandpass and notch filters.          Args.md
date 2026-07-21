@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Plot frequency response of bandpass and notch filters.          Args:
+# Plot frequency response of bandpass and notch filters. Args:
 
 ## Connections
+
 - [[plot_filter_response()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

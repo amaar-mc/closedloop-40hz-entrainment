@@ -10,6 +10,7 @@ tags:
 # AlignmentOracleCtrl
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[Oracle that perfectly allocates stim to lowest-PAC windows.      Given full PA]] - `rationale_for` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[run_tcn_validation.py]] - `contains` [EXTRACTED]
 - [[step()_28]] - `method` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

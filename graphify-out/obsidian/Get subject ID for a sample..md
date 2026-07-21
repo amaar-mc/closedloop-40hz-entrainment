@@ -10,8 +10,9 @@ tags:
 # Get subject ID for a sample.
 
 ## Connections
+
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
 - [[get_subject_id()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

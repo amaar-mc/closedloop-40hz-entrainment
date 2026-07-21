@@ -7,9 +7,10 @@ tags:
   - community/12-Feature_TCN_Validation
 ---
 
-# _trend()
+# \_trend()
 
 ## Connections
+
 - [[PredictiveCtrl]] - `method` [EXTRACTED]
 - [[step()_13]] - `calls` [EXTRACTED]
 

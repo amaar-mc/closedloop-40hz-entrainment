@@ -10,6 +10,7 @@ tags:
 # compute_sliding_pac_for_segment()
 
 ## Connections
+
 - [[Compute backward-looking sliding-window PAC for each window in a segment.      F]] - `rationale_for` [EXTRACTED]
 - [[compute_multichannel_pac()]] - `calls` [EXTRACTED]
 - [[compute_sliding_pac.py]] - `contains` [EXTRACTED]

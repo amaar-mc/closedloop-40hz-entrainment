@@ -10,7 +10,8 @@ tags:
 # Literature Review: Gamma Oscillation Disruption in AD and PV Interneuron Loss
 
 ## Connections
+
 - [[Introduction AD Clinical Burden and Fixed-Schedule Protocol Limitations]] - `conceptually_related_to` [INFERRED]
 - [[Reference Iaccarino et al. 2016 — Gamma Entrainment Attenuates Amyloid (Nature)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

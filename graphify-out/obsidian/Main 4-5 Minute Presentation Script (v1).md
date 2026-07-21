@@ -9,6 +9,7 @@ tags:
 # Main 4-5 Minute Presentation Script (v1)
 
 ## Connections
+
 - [[Architecture Marathon 8-Model Static PAC Ceiling R2=0.287]] - `references` [EXTRACTED]
 - [[Causal TCN System (20s lookback, 5s forecast, 12-feature input)]] - `references` [EXTRACTED]
 - [[Feature Ablation Discovery 12-Feature vs 73-Feature Generalization]] - `references` [EXTRACTED]
@@ -16,4 +17,4 @@ tags:
 - [[Iaccarino et al. 2016 (MIT 40Hz landmark paper)]] - `cites` [EXTRACTED]
 - [[Presentation Timing Map (8-section breakdown)]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

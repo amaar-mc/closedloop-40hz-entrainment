@@ -10,6 +10,7 @@ tags:
 # run_all_experiments.py
 
 ## Connections
+
 - [[Run All TCN Architecture Experiments on Real Data.  Trains all TCN variants (b]] - `rationale_for` [EXTRACTED]
 - [[SequenceDataset_1]] - `contains` [EXTRACTED]
 - [[_corr()_8]] - `contains` [EXTRACTED]
@@ -23,4 +24,4 @@ tags:
 - [[run_single_experiment()]] - `contains` [EXTRACTED]
 - [[train_one_epoch()_6]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

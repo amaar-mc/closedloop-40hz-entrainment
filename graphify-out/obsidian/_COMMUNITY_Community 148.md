@@ -8,6 +8,7 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
+
 - [[Clinical Motivation Alzheimer's Scale + No Cure]] - document - paper/ideas/narrative.md
 - [[Introduction Section Arc]] - document - paper/ideas/narrative.md
 

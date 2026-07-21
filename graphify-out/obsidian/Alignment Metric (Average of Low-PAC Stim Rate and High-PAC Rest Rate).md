@@ -9,6 +9,7 @@ tags:
 # Alignment Metric (Average of Low-PAC Stim Rate and High-PAC Rest Rate)
 
 ## Connections
+
 - [[High-PAC Rest Rate Metric]] - `conceptually_related_to` [EXTRACTED]
 - [[Low-PAC Stimulation Rate Metric]] - `conceptually_related_to` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # Synthetic Benchmark Results (All Variants PASS)
 
 ## Connections
+
 - [[TCN Architecture Experiment Design]] - `references` [EXTRACTED]
 
   #community/Community_60

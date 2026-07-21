@@ -10,7 +10,8 @@ tags:
 # 12-Citation Reference List (CSEF Presentation)
 
 ## Connections
+
 - [[Key Citations Reference Sheet (v1, Old)]] - `semantically_similar_to` [INFERRED]
 - [[References Sheet PDF Generator Script]] - `implements` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

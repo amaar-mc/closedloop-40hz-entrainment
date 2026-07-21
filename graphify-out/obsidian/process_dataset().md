@@ -10,6 +10,7 @@ tags:
 # process_dataset()
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `method` [EXTRACTED]
 - [[Process entire BIDS dataset.          Pipeline per subject             1. Lo]] - `rationale_for` [EXTRACTED]
 - [[extract_stimulus_windows()]] - `calls` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[main()_76]] - `calls` [EXTRACTED]
 - [[select_frontal_channels()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

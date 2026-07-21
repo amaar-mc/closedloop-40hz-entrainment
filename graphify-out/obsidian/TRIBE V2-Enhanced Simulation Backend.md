@@ -9,6 +9,7 @@ tags:
 # TRIBE V2-Enhanced Simulation Backend
 
 ## Connections
+
 - [[Closed-Loop 40Hz Entrainment System Architecture Figure]] - `semantically_similar_to` [INFERRED]
 - [[Original (Exponential) Simulation Backend]] - `conceptually_related_to` [EXTRACTED]
 - [[Simulation Backend Comparison Original vs TRIBE V2-Enhanced Figure]] - `references` [EXTRACTED]

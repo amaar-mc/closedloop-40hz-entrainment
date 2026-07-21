@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Simulates brain PAC dynamics in response to stimulation.      Uses exponential
+# Simulates brain PAC dynamics in response to stimulation. Uses exponential
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

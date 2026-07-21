@@ -9,7 +9,8 @@ tags:
 # IntEnum
 
 ## Connections
+
 - [[StimAction]] - `inherits` [EXTRACTED]
 - [[StimState]] - `inherits` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

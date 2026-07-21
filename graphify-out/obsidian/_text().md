@@ -7,9 +7,10 @@ tags:
   - community/Community_45
 ---
 
-# _text()
+# \_text()
 
 ## Connections
+
 - [[_id()]] - `calls` [EXTRACTED]
 - [[_seed()]] - `calls` [EXTRACTED]
 - [[box_with_text()]] - `calls` [EXTRACTED]

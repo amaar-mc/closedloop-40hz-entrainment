@@ -10,6 +10,7 @@ tags:
 # GNN for EEG: Spatial Topology and Functional Connectivity
 
 ## Connections
+
 - [[Graph Attention Network Module for EEG Spatial Processing]] - `conceptually_related_to` [INFERRED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

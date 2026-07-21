@@ -10,6 +10,7 @@ tags:
 # ML Foundations: Neurons, Backprop, Training Loop, Overfitting, R-squared
 
 ## Connections
+
 - [[ML Zero to Hero Educational Guide (Foundations to Causal TCN)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

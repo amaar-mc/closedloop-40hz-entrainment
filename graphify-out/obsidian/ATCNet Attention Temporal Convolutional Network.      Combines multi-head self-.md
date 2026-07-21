@@ -7,9 +7,10 @@ tags:
   - community/Community_38
 ---
 
-# ATCNet: Attention Temporal Convolutional Network.      Combines multi-head self-
+# ATCNet: Attention Temporal Convolutional Network. Combines multi-head self-
 
 ## Connections
+
 - [[ATCNet]] - `rationale_for` [EXTRACTED]
 
   #community/Community_38

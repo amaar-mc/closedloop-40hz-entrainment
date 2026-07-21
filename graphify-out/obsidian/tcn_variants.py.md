@@ -10,6 +10,7 @@ tags:
 # tcn_variants.py
 
 ## Connections
+
 - [[AttentionPool1D_2]] - `contains` [EXTRACTED]
 - [[CausalDSConvBlock_3]] - `contains` [EXTRACTED]
 - [[CausalSinusoidalPE]] - `contains` [EXTRACTED]
@@ -25,4 +26,4 @@ tags:
 - [[_make_regression_head()]] - `contains` [EXTRACTED]
 - [[build_variant()]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

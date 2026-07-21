@@ -23,6 +23,7 @@
 ### **Best Architecture: ViT-TCNet (Vision Transformer + Temporal Convolutional Network)**
 
 **Paper:** "Fusing Pretrained ViTs with TCNet for Enhanced EEG Regression" (2024)
+
 - **Designed for EEG regression** (not classification!)
 - Reduced RMSE by 7% on EEGEyeNet regression task
 - Pre-trained ViT (ImageNet) + TCN decoder
@@ -37,9 +38,11 @@
 ### 🚀 **PHASE 1: Quick Wins (1-2 days, +0.08-0.12 R²)**
 
 #### 1A. Add Wavelet Features (CRITICAL!)
+
 **Why:** Spectral power misses phase-amplitude relationships. Wavelets capture time-frequency coupling directly.
 
 **Implementation:**
+
 ```python
 from scipy import signal
 
@@ -60,6 +63,7 @@ wp = pywt.WaveletPacket(eeg, 'db4', maxlevel=5)
 **Expected:** +0.05-0.08 R²
 
 #### 1B. Better Loss Function
+
 **Current:** SmoothL1
 **Change to:** **Huber Loss with dynamic δ** or **Pinball Loss**
 
@@ -74,8 +78,10 @@ criterion = PinballLoss(quantile=0.5)  # Median instead of mean
 **Expected:** +0.03-0.05 R²
 
 #### 1C. Aggressive Regularization
+
 **Current:** Dropout 0.3-0.4, weight decay 0.0005
 **Change to:**
+
 - Progressive dropout: 0.2 → 0.3 → 0.4 → 0.5 (increase with depth)
 - Weight decay: 0.001 (2× current)
 - Batch norm momentum: 0.9
@@ -222,18 +228,19 @@ pac_pred = mean([model(x) for model in models])
 
 ## REALISTIC TARGETS BY PHASE
 
-| Phase | Changes | Training Time | Expected R² | vs Baseline |
-|-------|---------|---------------|-------------|-------------|
-| Current | V3-Clean | 2 min | 0.236 | 2.8× |
-| **Phase 1** | Wavelet + Loss + Reg | 5-10 min | **0.34-0.41** | **4.1-4.9×** |
-| **Phase 2** | ViT-TCNet + Augment | 30-60 min | **0.46-0.60** | **5.5-7.1×** |
-| **Phase 3** | Meta + Multi-task + Ensemble | 2-4 hours | **0.51-0.65** | **6.1-7.7×** |
+| Phase       | Changes                      | Training Time | Expected R²   | vs Baseline  |
+| ----------- | ---------------------------- | ------------- | ------------- | ------------ |
+| Current     | V3-Clean                     | 2 min         | 0.236         | 2.8×         |
+| **Phase 1** | Wavelet + Loss + Reg         | 5-10 min      | **0.34-0.41** | **4.1-4.9×** |
+| **Phase 2** | ViT-TCNet + Augment          | 30-60 min     | **0.46-0.60** | **5.5-7.1×** |
+| **Phase 3** | Meta + Multi-task + Ensemble | 2-4 hours     | **0.51-0.65** | **6.1-7.7×** |
 
 ---
 
 ## MY RECOMMENDATION: Phase 1 + 2A (Realistic, Achievable)
 
 **What to implement:**
+
 1. ✅ Add wavelet features (CWT + WPD) → +30-40 features
 2. ✅ Huber loss with δ=0.3 → robust to PAC outliers
 3. ✅ Progressive dropout (0.2-0.5) + higher weight decay
@@ -274,6 +281,7 @@ I can implement Phase 1 + 2A for you:
 **Your R² = 0.24 is NOT bad** - it's honest and realistic for PAC prediction.
 
 **But we can do better:**
+
 - Phase 1 (easy): → R² = 0.35-0.40 (30 minutes)
 - Phase 1+2 (recommended): → R² = 0.46-0.55 (1 hour)
 - Phase 1+2+3 (ambitious): → R² = 0.51-0.65 (3-4 hours)
@@ -283,6 +291,7 @@ I can implement Phase 1 + 2A for you:
 ---
 
 **Sources:**
+
 - [ViT-TCNet for EEG Regression](https://arxiv.org/abs/2404.15311)
 - [EEG-TCNet Architecture](https://arxiv.org/pdf/2006.00622)
 - [Wavelet Features for EEG](https://www.sciencedirect.com/science/article/abs/pii/S1746809423002446)

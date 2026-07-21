@@ -10,6 +10,7 @@ tags:
 # Introduction page 1: Research Question, Project Origin.
 
 ## Connections
+
 - [[p02_intro1()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

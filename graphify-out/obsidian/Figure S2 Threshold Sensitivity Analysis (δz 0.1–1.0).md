@@ -10,6 +10,7 @@ tags:
 # Figure S2: Threshold Sensitivity Analysis (δz 0.1–1.0)
 
 ## Connections
+
 - [[Research Paper Supplementary Materials]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

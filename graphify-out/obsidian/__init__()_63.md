@@ -7,10 +7,11 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[SimpleTransformer]] - `method` [EXTRACTED]
 - [[__init__()_62]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

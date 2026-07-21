@@ -8,6 +8,7 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
+
 - [[P10 Daily Research Notebook (v2 daily log draft)]] - document - archive/notebooks/v2_daily_log_draft.md
 - [[P10 Daily Research Notebook V2 (PDF render)]] - document - archive/notebooks/v2_daily_log_draft.pdf
 

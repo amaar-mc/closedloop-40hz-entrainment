@@ -10,6 +10,7 @@ tags:
 # close()
 
 ## Connections
+
 - [[RealEEGAdapter]] - `method` [EXTRACTED]
 - [[Stop stream and release BrainFlow session._1]] - `rationale_for` [EXTRACTED]
 - [[__exit__()]] - `calls` [EXTRACTED]

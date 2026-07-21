@@ -7,9 +7,10 @@ tags:
   - community/Archived_ImprovedTCN_Experiments
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[TinyTCN]] - `method` [EXTRACTED]
 
   #community/Archived_ImprovedTCN_Experiments

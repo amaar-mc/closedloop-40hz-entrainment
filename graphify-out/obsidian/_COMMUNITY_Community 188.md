@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Poster Example (Reference PDF)]] - document - submission/poster/reference/Poster Example.pdf
 
 ## Live Query (requires Dataview plugin)

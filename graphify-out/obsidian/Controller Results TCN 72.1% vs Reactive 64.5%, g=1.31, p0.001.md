@@ -10,6 +10,7 @@ tags:
 # Controller Results: TCN 72.1% vs Reactive 64.5%, g=1.31, p<0.001
 
 ## Connections
+
 - [[Conclusion Horizon Inflection + 72.1% Alignment + 91.6% Oracle Bound]] - `references` [EXTRACTED]
 - [[Discussion Proactive vs Reactive Decomposition (Timing 0.8s vs 0.2s, Targeting 82.6% vs 51.7%)]] - `references` [EXTRACTED]
 - [[Figure Controller Comparison Bar Chart (AlignmentLow-PAC-StimHigh-PAC-Rest, N=35, TCN=72%83%62%)]] - `references` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[Supplementary Table S2 Complete Pairwise Controller Effect Sizes]] - `references` [EXTRACTED]
 - [[Supplementary Table S3 Fatigue Sensitivity Results (6 Severity Levels)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[TCNPredictiveCtrl]] - `method` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

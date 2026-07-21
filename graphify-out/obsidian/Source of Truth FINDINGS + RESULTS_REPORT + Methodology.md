@@ -10,6 +10,7 @@ tags:
 # Source of Truth: FINDINGS + RESULTS_REPORT + Methodology
 
 ## Connections
+
 - [[Complete Validated Results Report]] - `conceptually_related_to` [EXTRACTED]
 - [[Consolidated Findings (FINDINGS.md)]] - `conceptually_related_to` [EXTRACTED]
 - [[Current Technical Methodology]] - `conceptually_related_to` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # Same alignment metrics as the real-data validation.
 
 ## Connections
+
 - [[evaluate_alignment()_2]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

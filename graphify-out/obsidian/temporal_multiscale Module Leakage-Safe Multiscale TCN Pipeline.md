@@ -10,6 +10,7 @@ tags:
 # temporal_multiscale/ Module: Leakage-Safe Multiscale TCN Pipeline
 
 ## Connections
+
 - [[Architecture Decision Causal Multiscale TCN + Stim Context Chosen Over LSTMTransformer]] - `rationale_for` [EXTRACTED]
 - [[Recommendation Deploy Reactive Ridge Model (R²=0.287) for Closed-Loop Control]] - `conceptually_related_to` [INFERRED]
 

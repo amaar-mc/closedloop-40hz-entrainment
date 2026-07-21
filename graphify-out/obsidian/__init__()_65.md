@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[CausalDSConvBlockNoNorm]] - `calls` [EXTRACTED]
 - [[MultiscaleCausalTCNNoNorm]] - `method` [EXTRACTED]
 - [[__init__()_64]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

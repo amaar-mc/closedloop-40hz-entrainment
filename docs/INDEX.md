@@ -4,15 +4,15 @@
 
 ## Start Here
 
-| Need | File |
-|---|---|
-| Project overview and commands | [`../README.md`](../README.md) |
-| Consolidated findings | [`../FINDINGS.md`](../FINDINGS.md) |
-| Complete validated results report | [`../results/RESULTS_REPORT.md`](../results/RESULTS_REPORT.md) |
-| Current technical methodology | [`methodology/CURRENT_METHODOLOGY.md`](methodology/CURRENT_METHODOLOGY.md) |
-| Code architecture map | [`methodology/CODE_MAP.md`](methodology/CODE_MAP.md) |
-| MIT URTC 2026 planning workspace | [`../paper/conferences/mit_urtc_2026/README.md`](../paper/conferences/mit_urtc_2026/README.md) |
-| Completed CSEF 2026 submission archive | [`../submission/README.md`](../submission/README.md) |
+| Need                                   | File                                                                                           |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Project overview and commands          | [`../README.md`](../README.md)                                                                 |
+| Consolidated findings                  | [`../FINDINGS.md`](../FINDINGS.md)                                                             |
+| Complete validated results report      | [`../results/RESULTS_REPORT.md`](../results/RESULTS_REPORT.md)                                 |
+| Current technical methodology          | [`methodology/CURRENT_METHODOLOGY.md`](methodology/CURRENT_METHODOLOGY.md)                     |
+| Code architecture map                  | [`methodology/CODE_MAP.md`](methodology/CODE_MAP.md)                                           |
+| MIT URTC 2026 planning workspace       | [`../paper/conferences/mit_urtc_2026/README.md`](../paper/conferences/mit_urtc_2026/README.md) |
+| Completed CSEF 2026 submission archive | [`../submission/README.md`](../submission/README.md)                                           |
 
 ## Current Documentation
 

@@ -10,8 +10,9 @@ tags:
 # stop()
 
 ## Connections
+
 - [[_NoOpAudioEngine]] - `method` [EXTRACTED]
 - [[main()_63]] - `calls` [EXTRACTED]
 - [[stop()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

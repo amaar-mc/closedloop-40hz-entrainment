@@ -10,6 +10,7 @@ tags:
 # process_subject (Per-Subject Long-Window Extractor)
 
 ## Connections
+
 - [[Rationale 8-sec Windows for Temporal Structure (vs 2-sec R²=-0.05)]] - `rationale_for` [EXTRACTED]
 - [[compute_pac_modulation_index (8-sec Window MI)]] - `calls` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # Causal TCN Stage 2 Temporal PAC Forecaster (22,914 params, h=5s)
 
 ## Connections
+
 - [[12 PAC+Stim Features (pac_current, pac_ma, pac_diff, stim context)]] - `shares_data_with` [EXTRACTED]
 - [[Horizon Sweep Results (TCN vs Persistence, 1–10s)]] - `conceptually_related_to` [EXTRACTED]
 - [[Multi-Seed Validation (5 seeds, mean test R²=0.606±0.032)]] - `conceptually_related_to` [EXTRACTED]

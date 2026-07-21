@@ -10,6 +10,7 @@ tags:
 # CorticalResponseConfig Biophysical Model (ASSR-calibrated)
 
 ## Connections
+
 - [[TRIBE V2 Integration Attempt and Biophysical Workaround (April 8, 2026)]] - `references` [EXTRACTED]
 
   #community/Community_109

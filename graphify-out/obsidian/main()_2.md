@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[extract_pac_stim()]] - `calls` [EXTRACTED]
 - [[ridge_on_subset()]] - `calls` [EXTRACTED]
 - [[run_pac_stim_focused.py]] - `contains` [EXTRACTED]

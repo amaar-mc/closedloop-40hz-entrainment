@@ -9,6 +9,7 @@ tags:
 # Rationale for Final Abstract Selection: Structure Analysis and Strengths
 
 ## Connections
+
 - [[Final Abstract Round 3 (Selected Version)]] - `rationale_for` [EXTRACTED]
 
   #community/Community_54

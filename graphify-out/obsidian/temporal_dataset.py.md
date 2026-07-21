@@ -10,10 +10,11 @@ tags:
 # temporal_dataset.py
 
 ## Connections
+
 - [[Temporal Dataset Preparation for Future PAC Prediction  Creates sequential (lo]] - `rationale_for` [EXTRACTED]
 - [[TemporalPACDataset]] - `contains` [EXTRACTED]
 - [[prepare_temporal_data()]] - `contains` [EXTRACTED]
 - [[test_temporal_dataset()]] - `contains` [EXTRACTED]
 - [[train_temporal.py]] - `imports_from` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

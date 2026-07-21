@@ -14,4 +14,4 @@ The TCN-based controller, validated by replaying real EEG from all 35 subjects, 
 
 ---
 
-*Word count: 243 / 250 max*
+_Word count: 243 / 250 max_

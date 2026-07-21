@@ -9,6 +9,7 @@ tags:
 # Original Poster Presentation Script (v0, Synopsys Championship)
 
 ## Connections
+
 - [[Poster Navigation Map (v0 Script, Full Panel Coordinates)]] - `references` [EXTRACTED]
 - [[Top 5 Danger Zone Questions (v0 Script)]] - `references` [EXTRACTED]
 

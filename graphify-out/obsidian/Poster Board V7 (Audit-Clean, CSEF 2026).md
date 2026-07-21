@@ -9,6 +9,7 @@ tags:
 # Poster Board V7 (Audit-Clean, CSEF 2026)
 
 ## Connections
+
 - [[CSEF 2026 Compliance Checklist]] - `references` [EXTRACTED]
 - [[Global Figure Style Specification (TealNavyGold Palette)]] - `references` [EXTRACTED]
 - [[Hysteresis Correction Note (3s override vs 5s config default)]] - `references` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[Results Gold Callout Boxes (72.1%  82.6%  3535)]] - `references` [EXTRACTED]
 - [[vFinal Poster PDF (CSEF 2026 Submission Print)]] - `implements` [INFERRED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

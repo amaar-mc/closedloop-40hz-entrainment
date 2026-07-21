@@ -7,9 +7,10 @@ tags:
   - community/Archived_SpecTempNet_V3
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[MultiHeadFeatureAttention]] - `calls` [EXTRACTED]
 - [[MultiScaleTemporalCNN]] - `calls` [EXTRACTED]
 - [[SpecTempNet]] - `method` [EXTRACTED]

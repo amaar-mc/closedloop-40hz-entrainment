@@ -9,6 +9,7 @@ tags:
 # Train Split Subjects (circles): TCN clinical utility ~0.63–0.73 vs Reactive ~0.58–0.65
 
 ## Connections
+
 - [[Per-Subject Alignment Scatter Plot (3535 Favor TCN)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

@@ -10,8 +10,9 @@ tags:
 # Main entry point for training pipeline.
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
 - [[main()_77]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

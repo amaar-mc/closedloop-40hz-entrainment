@@ -10,6 +10,7 @@ tags:
 # Spectral Feature Overfitting Discovery (73→12 features)
 
 ## Connections
+
 - [[1-Minute Project of the Year Synopsis (POTY Script)]] - `references` [EXTRACTED]
 - [[12-Feature PAC+Stim Configuration (test R²=0.606)]] - `rationale_for` [EXTRACTED]
 - [[Critical Lab Notebook Entries (turning points ceiling, feature discovery)]] - `references` [EXTRACTED]

@@ -10,7 +10,8 @@ tags:
 # get_state()
 
 ## Connections
+
 - [[ClosedLoopController]] - `method` [EXTRACTED]
 - [[Get current controller state.          Returns             state Dictionary]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

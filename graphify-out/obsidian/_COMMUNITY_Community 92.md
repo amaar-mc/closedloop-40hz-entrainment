@@ -8,6 +8,7 @@ members: 9
 **Members:** 9 nodes
 
 ## Members
+
 - [[Create flat feature vector from temporal sequence.      Args         windows]] - rationale - archive/temporal_legacy/train_sklearn_temporal.py
 - [[Create temporal dataset for sklearn.      Returns         X_train, y_train,]] - rationale - archive/temporal_legacy/train_sklearn_temporal.py
 - [[Lightweight sklearn-based temporal PAC predictor for 8-second windows.  This v]] - rationale - archive/temporal_legacy/train_sklearn_temporal.py

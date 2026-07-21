@@ -10,6 +10,7 @@ tags:
 # create_simulator()
 
 ## Connections
+
 - [[Factory function for creating a configured TRIBE V2-enhanced simulator.      Arg]] - `rationale_for` [EXTRACTED]
 - [[TribeEnhancedSimulator]] - `calls` [EXTRACTED]
 - [[TribeSimulatorConfig]] - `calls` [EXTRACTED]

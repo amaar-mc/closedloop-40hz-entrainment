@@ -10,6 +10,7 @@ tags:
 # Load fsaverage5 atlas labels and build ROI vertex index map.
 
 ## Connections
+
 - [[_load_roi_indices()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

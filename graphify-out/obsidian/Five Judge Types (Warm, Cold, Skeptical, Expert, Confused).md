@@ -10,6 +10,7 @@ tags:
 # Five Judge Types (Warm, Cold, Skeptical, Expert, Confused)
 
 ## Connections
+
 - [[Judge Interaction Guide]] - `references` [EXTRACTED]
 
   #community/Community_111

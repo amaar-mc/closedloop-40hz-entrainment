@@ -8,6 +8,7 @@ members: 65
 **Members:** 65 nodes
 
 ## Members
+
 - [[CUSUM change-detection controller (Page 1954).]] - rationale - archive/perwindow_pac/run_replay_analysis.py
 - [[CUSUM change-detection controller (Page 1954).      Detects sustained PAC drop]] - rationale - scripts/pipeline/run_replay_analysis.py
 - [[CUSUMControl]] - code - scripts/pipeline/run_replay_analysis.py

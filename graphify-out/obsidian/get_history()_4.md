@@ -10,6 +10,7 @@ tags:
 # get_history()
 
 ## Connections
+
 - [[Get full simulation history. Compatible with EntrainmentSimulator.          Retu]] - `rationale_for` [EXTRACTED]
 - [[TribeEnhancedSimulator]] - `method` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # write_author()
 
 ## Connections
+
 - [[ResearchPaperPDF]] - `method` [EXTRACTED]
 - [[Write author name centered.]] - `rationale_for` [EXTRACTED]
 - [[generate_pdf()]] - `calls` [EXTRACTED]

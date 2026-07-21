@@ -10,6 +10,7 @@ tags:
 # Tracks vertical cursor and builds content on a slide.
 
 ## Connections
+
 - [[SlideBuilder]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

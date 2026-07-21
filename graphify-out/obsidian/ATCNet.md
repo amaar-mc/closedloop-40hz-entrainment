@@ -10,6 +10,7 @@ tags:
 # ATCNet
 
 ## Connections
+
 - [[ATCNet Attention Temporal Convolutional Network.      Combines multi-head self-]] - `rationale_for` [EXTRACTED]
 - [[__init__()_16]] - `method` [EXTRACTED]
 - [[_make_tcn_block()]] - `method` [EXTRACTED]

@@ -10,8 +10,9 @@ tags:
 # ClosedLoopController Implementation with Hysteresis
 
 ## Connections
+
 - [[Comprehensive Methodology Document Step-by-Step Implementation]] - `references` [EXTRACTED]
 - [[EEGNet PyTorch Implementation (7-channel, 500 samples)]] - `calls` [EXTRACTED]
 - [[PersonalizationModule Rolling 30s PAC Baseline with Z-Score]] - `calls` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

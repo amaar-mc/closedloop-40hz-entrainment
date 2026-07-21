@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Hyperparameter sensitivity sweep for MultiscaleCausalTCN.  Tests whether the TCN
+# Hyperparameter sensitivity sweep for MultiscaleCausalTCN. Tests whether the TCN
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[run_hyperparam_sensitivity.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

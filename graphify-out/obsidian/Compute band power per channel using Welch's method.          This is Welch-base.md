@@ -7,9 +7,10 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Compute band power per channel using Welch's method.          This is Welch-base
+# Compute band power per channel using Welch's method. This is Welch-base
 
 ## Connections
+
 - [[_welch_band()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

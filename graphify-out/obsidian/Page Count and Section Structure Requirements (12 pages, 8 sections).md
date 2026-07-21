@@ -9,6 +9,7 @@ tags:
 # Page Count and Section Structure Requirements (12 pages, 8 sections)
 
 ## Connections
+
 - [[CSEF Presentation Compliance Checklist (1818 PASS)]] - `references` [EXTRACTED]
 
   #community/Rigor_Audit_Reports

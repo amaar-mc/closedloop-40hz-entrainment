@@ -10,6 +10,7 @@ tags:
 # Quick Reference Card: Key Numbers and Judge Q&A
 
 ## Connections
+
 - [[Project Achievement Report (Feb 2026) What Was Achieved, Notable, Could Be Better]] - `semantically_similar_to` [INFERRED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

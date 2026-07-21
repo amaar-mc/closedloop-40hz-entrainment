@@ -10,6 +10,7 @@ tags:
 # Rationale: Subject-Level Train/Val/Test Splits (Prevent Patient-Specific Memorization)
 
 ## Connections
+
 - [[Design Decision Rationale Data, Model, Training, Controller Choices]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

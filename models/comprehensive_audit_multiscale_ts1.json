@@ -37,13 +37,7 @@
       "sub-33",
       "sub-34"
     ],
-    "val_subjects": [
-      "sub-11",
-      "sub-19",
-      "sub-23",
-      "sub-26",
-      "sub-32"
-    ],
+    "val_subjects": ["sub-11", "sub-19", "sub-23", "sub-26", "sub-32"],
     "test_subjects": [
       "sub-07",
       "sub-08",

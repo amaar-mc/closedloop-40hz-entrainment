@@ -10,6 +10,7 @@ tags:
 # compute_tort_mi()
 
 ## Connections
+
 - [[Compute Tort Modulation Index on a single-channel signal.      Args         sig]] - `rationale_for` [EXTRACTED]
 - [[_bandpass_filter()]] - `calls` [EXTRACTED]
 - [[compute_multichannel_pac()]] - `calls` [EXTRACTED]

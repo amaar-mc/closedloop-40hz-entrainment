@@ -10,6 +10,7 @@ tags:
 # step()
 
 ## Connections
+
 - [[FixedScheduleControl_5]] - `method` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

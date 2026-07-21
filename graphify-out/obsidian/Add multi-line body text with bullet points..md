@@ -10,6 +10,7 @@ tags:
 # Add multi-line body text with bullet points.
 
 ## Connections
+
 - [[add_body_text()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_75

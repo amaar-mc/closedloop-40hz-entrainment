@@ -16,12 +16,14 @@
 **Goal:** Get basic data loading working and understand the dataset structure.
 
 **What I Did:**
+
 - Downloaded OpenNeuro ds005048 dataset (847 MB) - "40 Hz Auditory Entrainment in Dementia"
 - Set up Python environment with PyTorch, MNE-Python, h5py
 - Initial attempt at data loading failed - MATLAB v7.3 files not readable with standard MNE tools
 - Discovered dataset uses HDF5 format (.set files) with companion binary data (.fdt files)
 
 **Results:**
+
 - Dataset confirmed: 35 elderly dementia patients, 19 EEG channels @ 250 Hz
 - Stimulation protocol: 40s ON / 20s OFF auditory pulses (40 Hz, 5 kHz carrier)
 - Data loading blocked - need custom loader
@@ -37,12 +39,14 @@
 **Goal:** Successfully load EEG data and extract epoch boundaries.
 
 **What I Did:**
+
 - Developed custom loader using h5py for .set metadata + numpy for .fdt binary data
 - **Critical discovery:** MATLAB stores matrices in Fortran order (column-major)
 - Used `order='F'` in reshape - without this, data was silently transposed
 - Extracted stimulus/rest boundaries from BIDS events.tsv files
 
 **Code snippet:**
+
 ```python
 # Read .set HDF5 metadata
 with h5py.File(set_path, 'r') as f:
@@ -55,6 +59,7 @@ data = data.reshape((n_channels, n_samples), order='F')
 ```
 
 **Results:**
+
 - Successfully loaded all 35 subjects
 - Total windows: 17,283 (2-second windows, 50% overlap)
 - Channel selection: 7 frontal channels (Fp1, Fp2, F7, F3, Fz, F4, F8)
@@ -68,11 +73,13 @@ data = data.reshape((n_channels, n_samples), order='F')
 **Goal:** Extract PAC labels from EEG data for each 2-second window.
 
 **What I Did:**
+
 - Implemented Modulation Index (Tort et al. 2010): theta phase (4-8 Hz) × gamma amplitude (38-42 Hz)
 - Applied light preprocessing: 0.5-80 Hz bandpass, 50 Hz notch, ±100 μV artifact rejection
 - Computed PAC at epoch level (20-40s blocks), then assigned to constituent windows
 
 **PAC Algorithm:**
+
 1. Bandpass filter: theta (4-8 Hz), gamma (38-42 Hz)
 2. Hilbert transform → phase/amplitude
 3. Bin phase space into 18 bins (20° each)
@@ -96,6 +103,7 @@ data = data.reshape((n_channels, n_samples), order='F')
 **Goal:** Establish baseline performance for static PAC prediction.
 
 **What I Did:**
+
 - Adapted Lawhern et al. (2018) EEGNet from classification to regression
 - Architecture: temporal conv → depthwise spatial conv → separable conv → FC head
 - Training: MSE loss, Adam optimizer, z-score normalized PAC targets
@@ -110,6 +118,7 @@ data = data.reshape((n_channels, n_samples), order='F')
 | Head | Flatten + Linear | (B, 1) |
 
 **Results:**
+
 - **Test R² = 0.287**
 - Parameters: 1,457
 - Inference time: <1 ms on Apple Silicon
@@ -125,6 +134,7 @@ This became our static PAC predictor baseline.
 **Goal:** Find if model capacity is the bottleneck.
 
 **What I Did:**
+
 - V2: EEGNetV2 for delta-PAC prediction → R² = 0.06 (failed)
 - V3: SpecTempNet (180k params) → initially R² = 0.69 (suspicious!)
 - Discovered feature leakage: PAC-derived features in input were circular
@@ -155,6 +165,7 @@ Ridge analysis: PAC features carried 96.6% of model weight = data leakage!
 **Goal:** Predict future PAC from sequences instead of improving instantaneous prediction.
 
 **What I Did:**
+
 - Reframed problem: predict PAC 5-10 seconds ahead from 20-second history
 - Built 73-dimensional feature vectors per timestep:
   - 61 spectral features (5 bands × 7 channels + coherence)
@@ -162,6 +173,7 @@ Ridge analysis: PAC features carried 96.6% of model weight = data leakage!
   - 5 stimulation context features (state, timing, cycle phase)
 
 **Feature Engineering:**
+
 ```python
 # Strictly causal PAC features - safe for temporal prediction
 pac_ma2 = causal_moving_average(pac_current, window=2)
@@ -170,6 +182,7 @@ time_since_switch = seconds_since_stim_change
 ```
 
 **Results:**
+
 - Sequences: (batch, 20_timesteps, 73_features)
 - Target: PAC at t+5 seconds
 - Safe from leakage: predicting future PAC, not current
@@ -183,6 +196,7 @@ time_since_switch = seconds_since_stim_change
 **Goal:** Outperform persistence and linear baselines at 5+ second horizons.
 
 **What I Did:**
+
 - Built MultiscaleCausalTCN with causal depthwise-separable convolutions
 - Dilation pattern [1, 2, 4, 8] → receptive field = 31 timesteps
 - GroupNorm for cross-subject stability, attention pooling, dual-head output
@@ -197,11 +211,13 @@ time_since_switch = seconds_since_stim_change
 | **Total** | | **31,043** |
 
 **Critical Design:**
+
 - Causal padding: `F.pad(x, ((kernel_size-1)*dilation, 0))`
 - No future leakage: model cannot access t+1, t+2, etc.
 - GroupNorm vs BatchNorm: stable across different patient baselines
 
 **Training:**
+
 - Loss: Huber (delta=1.0) for outlier robustness
 - Optimizer: AdamW (lr=0.001, weight_decay=0.001)
 - Early stopping: patience=20 epochs on validation R²
@@ -215,6 +231,7 @@ time_since_switch = seconds_since_stim_change
 **Goal:** Find where TCN provides value over simpler baselines.
 
 **What I Did:**
+
 - Trained separate models for each horizon (1s, 2s, 3s, 5s, 8s, 10s)
 - Compared against persistence (y_future = y_current) and Ridge regression
 - Used target_smooth_window=5 for fair comparison across all models
@@ -230,6 +247,7 @@ time_since_switch = seconds_since_stim_change
 | 10s | 0.278 | -0.256 | -0.212 | +0.534 |
 
 **Key Finding:**
+
 - At 1-2s: PAC changes slowly, persistence works well
 - At 3s: Crossover point where TCN starts winning
 - **At 5-10s: Baselines collapse (negative R²), TCN maintains R² ≈ 0.25**
@@ -246,11 +264,13 @@ This is the TCN's value proposition!
 **Goal:** Build complete closed-loop system with personalization.
 
 **What I Did:**
+
 - Built two-stage pipeline: EEGNet (current PAC) → TCN (future PAC)
 - Added PersonalizationModule: 30-second rolling baseline for z-score normalization
 - Implemented decision logic with hysteresis (5-second minimum state duration)
 
 **System Architecture:**
+
 ```
 EEG window → EEGNet → current PAC → feature extraction (73D) →
 TCN → predicted future PAC → PersonalizationModule → z-score →
@@ -265,6 +285,7 @@ decision logic → STIMULATE/REST/MAINTAIN
 | -0.5 ≤ z ≤ +0.5 | MAINTAIN | Stay in current state |
 
 **TCN Predictive Extension:**
+
 - If predicted delta-PAC < -0.3 → STIMULATE (proactive)
 - If predicted delta-PAC > +0.3 → REST (proactive)
 - Otherwise → fall back to reactive z-score logic
@@ -278,6 +299,7 @@ decision logic → STIMULATE/REST/MAINTAIN
 **Goal:** Quantify TCN controller advantage on real EEG recordings.
 
 **What I Did:**
+
 - Offline replay analysis: each controller makes decisions on real EEG windows
 - Compared 6 strategies: Fixed Schedule, Reactive, TCN Predictive, Hybrid, PI, Oracle
 - Computed alignment metrics: sensitivity, specificity, PAC targeting gap
@@ -291,11 +313,13 @@ decision logic → STIMULATE/REST/MAINTAIN
 | Oracle (theoretical) | 100.0% | 100.0% | 100.0% | +33.3 |
 
 **Statistical Significance (TCN vs Reactive):**
+
 - Alignment: g = 1.31, p < 0.001 (large effect)
 - Low-PAC targeting: g = 4.47, p < 0.001 (very large effect)
 - PAC gap: g = 1.57, p < 0.001 (large effect)
 
 **Key Results:**
+
 1. **TCN achieved 72.1% vs 64.5% alignment** (8-point improvement)
 2. **82.6% vs 51.7% therapeutic targeting** (60% improvement)
 3. **92% of theoretical oracle performance** (30.5/33.3 PAC gap ratio)
@@ -310,6 +334,7 @@ decision logic → STIMULATE/REST/MAINTAIN
 **Goal:** Validate the core motivation for adaptive control.
 
 **What I Did:**
+
 - Analyzed PAC trajectories across stimulation blocks for all 35 subjects
 - Compared first vs last stimulation block PAC levels
 - Computed within-block habituation rates
@@ -335,6 +360,7 @@ No population-level trend because cohort splits equally between habituators/faci
 **Goal:** Ensure results aren't artifacts of specific habituation models.
 
 **What I Did:**
+
 - Built EntrainmentSimulator with 4 fatigue models: exponential, step, heterogeneous, saturation
 - Ran 360-second simulations with 10 trials per condition
 - Swept fatigue rates from 0.000 (no fatigue) to 0.040 (severe)
@@ -364,6 +390,7 @@ No population-level trend because cohort splits equally between habituators/faci
 **Goal:** Verify results aren't artifacts of parameter tuning or data splits.
 
 **What I Did:**
+
 - Threshold sweep: delta-z from 0.1 to 1.0
 - Data integrity checks: leakage audits, causality verification
 - Cross-validation stability analysis
@@ -393,18 +420,21 @@ No population-level trend because cohort splits equally between habituators/faci
 **Goal:** Complete research notebook, poster board, and abstract.
 
 **What I Did:**
+
 - Compiled 22-page formal research notebook
 - Created poster board for Synopsys fair
 - Generated publication-quality figures
 - Wrote 247-word abstract (within 250-word limit)
 
 **Final Project Statistics:**
+
 - **Codebase:** ~6,000 lines of Python
 - **Models trained:** 20+ architectures tested
 - **Data processed:** 35 subjects, 17,283 windows
 - **Key result:** 72.1% vs 64.5% alignment, universal benefit across subjects
 
 **Submission Package:**
+
 1. Research notebook (22 pages)
 2. Poster board (48×56″)
 3. Abstract (247 words)
@@ -417,6 +447,7 @@ No population-level trend because cohort splits equally between habituators/faci
 **Project Completed Successfully**
 
 **Key Achievements:**
+
 1. ✅ **Temporal prediction breakthrough:** TCN maintains R² = 0.24-0.28 at 5-10s horizons where baselines fail (+0.5 R² margin)
 2. ✅ **Real-data clinical validation:** 72.1% alignment vs 64.5% reactive control across all 35 subjects
 3. ✅ **Therapeutic precision:** 82.6% vs 51.7% low-PAC targeting (60% improvement)
@@ -425,12 +456,14 @@ No population-level trend because cohort splits equally between habituators/faci
 6. ✅ **Robust across assumptions:** Holds for all fatigue models and threshold parameters
 
 **Technical Innovation:**
+
 - First predictive closed-loop controller for 40 Hz entrainment
 - MultiscaleCausalTCN: 31k parameter efficient architecture
 - Personalized z-score adaptation with rolling baselines
 - Leakage-safe temporal feature engineering
 
 **Clinical Impact:**
+
 - Addresses 30% non-responder rate in current trials
 - Reduces wasted stimulation while improving therapeutic targeting
 - Validated on real EEG from dementia patients
@@ -448,10 +481,12 @@ The project is now ready for submission to Synopsys Science Fair 2026.
 ## Equipment and Software Used
 
 **Hardware:**
+
 - MacBook Pro (Apple M1 Pro, 16GB RAM)
 - Internet connection for dataset download
 
 **Software:**
+
 - Python 3.13.3
 - PyTorch (MPS backend)
 - NumPy, SciPy, scikit-learn
@@ -459,6 +494,7 @@ The project is now ready for submission to Synopsys Science Fair 2026.
 - Git version control
 
 **Dataset:**
+
 - OpenNeuro ds005048 v1.0.1
 - 35 elderly dementia patients
 - Tehran Memory Clinic, Iran
@@ -468,4 +504,4 @@ The project is now ready for submission to Synopsys Science Fair 2026.
 
 ---
 
-*"The best way to predict the future is to create it."* - This project created a future where 40 Hz therapy adapts to each patient's unique neural dynamics.
+_"The best way to predict the future is to create it."_ - This project created a future where 40 Hz therapy adapts to each patient's unique neural dynamics.

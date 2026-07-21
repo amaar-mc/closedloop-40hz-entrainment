@@ -10,7 +10,8 @@ tags:
 # Critical Finding: Validation Does Not Test Trained TCN
 
 ## Connections
+
 - [[Clarification Predictive Look-Ahead is Trend-Based Not TCN]] - `rationale_for` [EXTRACTED]
 - [[Rigorous Pipeline Audit Report]] - `references` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

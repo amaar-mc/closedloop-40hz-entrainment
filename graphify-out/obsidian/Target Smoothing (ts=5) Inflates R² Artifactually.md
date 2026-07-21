@@ -10,6 +10,7 @@ tags:
 # Target Smoothing (ts=5) Inflates R² Artifactually
 
 ## Connections
+
 - [[Phase 3 Multiscale Causal TCN (Feb 17 2026)]] - `references` [EXTRACTED]
 - [[Resolved Target Smoothing (ts=5) Inflated R² — Retrained on Raw Targets (ts=1)]] - `semantically_similar_to` [INFERRED]
 

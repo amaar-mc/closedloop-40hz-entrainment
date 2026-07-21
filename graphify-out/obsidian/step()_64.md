@@ -10,9 +10,10 @@ tags:
 # step()
 
 ## Connections
+
 - [[Execute one control step with look-ahead prediction.          Args]] - `rationale_for` [EXTRACTED]
 - [[PredictiveLookAheadController]] - `method` [EXTRACTED]
 - [[_make_decision()_1]] - `calls` [EXTRACTED]
 - [[test_controller()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -10,6 +10,7 @@ tags:
 # TCN Predictive Controller
 
 ## Connections
+
 - [[MultiscaleCausalTCN Architecture]] - `calls` [EXTRACTED]
 - [[Reactive Threshold Controller]] - `references` [EXTRACTED]
 

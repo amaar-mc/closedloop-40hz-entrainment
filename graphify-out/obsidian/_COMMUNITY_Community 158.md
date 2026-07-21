@@ -8,6 +8,7 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
+
 - [[Poster Board Layout (48x56 tri-fold)]] - document - archive/context/poster_board.md
 - [[Poster Figure Set (6 figures)]] - document - archive/context/poster_board.md
 

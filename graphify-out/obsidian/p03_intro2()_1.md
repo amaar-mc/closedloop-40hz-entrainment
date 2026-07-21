@@ -10,6 +10,7 @@ tags:
 # p03_intro2()
 
 ## Connections
+
 - [[Introduction page 2 Continuation, Work by Others.]] - `rationale_for` [EXTRACTED]
 - [[body()_1]] - `calls` [EXTRACTED]
 - [[bullet()_1]] - `calls` [EXTRACTED]

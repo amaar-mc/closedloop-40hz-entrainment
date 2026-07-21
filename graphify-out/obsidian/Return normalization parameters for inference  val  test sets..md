@@ -10,7 +10,8 @@ tags:
 # Return normalization parameters for inference / val / test sets.
 
 ## Connections
+
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[get_normalization_stats()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

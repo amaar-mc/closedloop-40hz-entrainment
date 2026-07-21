@@ -10,6 +10,7 @@ tags:
 # Set content of the first (existing) paragraph in the text frame.
 
 ## Connections
+
 - [[_first_paragraph()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

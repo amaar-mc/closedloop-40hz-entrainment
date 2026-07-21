@@ -10,6 +10,7 @@ tags:
 # Proportional-Integral (PI) controller for PAC maintenance.
 
 ## Connections
+
 - [[PIControl]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

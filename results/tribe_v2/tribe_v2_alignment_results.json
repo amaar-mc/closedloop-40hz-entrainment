@@ -2916,7 +2916,7 @@
         "low_pac_stim_rate": 0.653333,
         "high_pac_rest_rate": 0.32,
         "stim_pct": 66.666667,
-        "pac_gap": -4.7e-05,
+        "pac_gap": -4.7e-5,
         "mean_pac_stim": 0.05862,
         "mean_pac_rest": 0.058573,
         "clinical_utility": 0.343333
@@ -2946,7 +2946,7 @@
         "low_pac_stim_rate": 0.676667,
         "high_pac_rest_rate": 0.343333,
         "stim_pct": 66.666667,
-        "pac_gap": 2.5e-05,
+        "pac_gap": 2.5e-5,
         "mean_pac_stim": 0.060474,
         "mean_pac_rest": 0.060499,
         "clinical_utility": 0.355494
@@ -3036,7 +3036,7 @@
         "low_pac_stim_rate": 0.66,
         "high_pac_rest_rate": 0.326667,
         "stim_pct": 66.666667,
-        "pac_gap": 9.5e-05,
+        "pac_gap": 9.5e-5,
         "mean_pac_stim": 0.060562,
         "mean_pac_rest": 0.060657,
         "clinical_utility": 0.348707
@@ -4376,7 +4376,7 @@
         "low_pac_stim_rate": 0.696667,
         "high_pac_rest_rate": 0.363333,
         "stim_pct": 66.666667,
-        "pac_gap": -7e-06,
+        "pac_gap": -7e-6,
         "mean_pac_stim": 0.055807,
         "mean_pac_rest": 0.0558,
         "clinical_utility": 0.365
@@ -4516,7 +4516,7 @@
         "low_pac_stim_rate": 0.703333,
         "high_pac_rest_rate": 0.37,
         "stim_pct": 66.666667,
-        "pac_gap": 8.1e-05,
+        "pac_gap": 8.1e-5,
         "mean_pac_stim": 0.05679,
         "mean_pac_rest": 0.05687,
         "clinical_utility": 0.370117

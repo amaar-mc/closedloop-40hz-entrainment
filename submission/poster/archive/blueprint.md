@@ -54,45 +54,45 @@
 **Template:** Cobalt (conceptualizingcobalt_36x48)
 **Fonts:** Amaranth (headers), Titillium Web (body)
 
-| Element | In PowerPoint | Prints As (133%) | Font | Weight |
-|---------|--------------|-----------------|------|--------|
-| Title | 32 pt | ~43 pt | Amaranth | Bold |
-| Author name | 18 pt | ~24 pt | Titillium Web | Regular |
-| Subtitle line | 11 pt | ~15 pt | Titillium Web | Regular |
-| Section headers | 20 pt | ~27 pt | Amaranth | Bold, White |
-| Subheaders | 13 pt | ~17 pt | Amaranth | Bold, Dark Blue |
-| Body text | 10.5 pt | ~14 pt | Titillium Web | Regular |
-| Bullet text | 10 pt | ~13 pt | Titillium Web | Regular |
-| Figure captions | 8.5 pt | ~11 pt | Titillium Web | Italic |
-| Callout numbers | 24 pt | ~32 pt | Amaranth | Bold |
-| Callout labels | 10 pt | ~13 pt | Titillium Web | Bold |
-| Callout sublabels | 8 pt | ~11 pt | Titillium Web | Regular |
-| Stat lines | 9 pt | ~12 pt | Titillium Web | Bold |
-| Small text / refs | 8 pt | ~11 pt | Titillium Web | Regular |
+| Element           | In PowerPoint | Prints As (133%) | Font          | Weight          |
+| ----------------- | ------------- | ---------------- | ------------- | --------------- |
+| Title             | 32 pt         | ~43 pt           | Amaranth      | Bold            |
+| Author name       | 18 pt         | ~24 pt           | Titillium Web | Regular         |
+| Subtitle line     | 11 pt         | ~15 pt           | Titillium Web | Regular         |
+| Section headers   | 20 pt         | ~27 pt           | Amaranth      | Bold, White     |
+| Subheaders        | 13 pt         | ~17 pt           | Amaranth      | Bold, Dark Blue |
+| Body text         | 10.5 pt       | ~14 pt           | Titillium Web | Regular         |
+| Bullet text       | 10 pt         | ~13 pt           | Titillium Web | Regular         |
+| Figure captions   | 8.5 pt        | ~11 pt           | Titillium Web | Italic          |
+| Callout numbers   | 24 pt         | ~32 pt           | Amaranth      | Bold            |
+| Callout labels    | 10 pt         | ~13 pt           | Titillium Web | Bold            |
+| Callout sublabels | 8 pt          | ~11 pt           | Titillium Web | Regular         |
+| Stat lines        | 9 pt          | ~12 pt           | Titillium Web | Bold            |
+| Small text / refs | 8 pt          | ~11 pt           | Titillium Web | Regular         |
 
 **Color palette (from template):**
 
-| Use | Hex |
-|-----|-----|
-| Title/footer gradient start | #235078 |
-| Title/footer gradient end | #1482A5 |
-| Section header bars | #1482A5 |
-| Content area backgrounds | #B4D3E2 |
+| Use                           | Hex     |
+| ----------------------------- | ------- |
+| Title/footer gradient start   | #235078 |
+| Title/footer gradient end     | #1482A5 |
+| Section header bars           | #1482A5 |
+| Content area backgrounds      | #B4D3E2 |
 | Callout boxes / key discovery | #D4A843 |
-| Subheader / callout text | #235078 |
-| Body text | #000000 |
-| Header bar text | #FFFFFF |
+| Subheader / callout text      | #235078 |
+| Body text                     | #000000 |
+| Header bar text               | #FFFFFF |
 
 ---
 
 ## Column Dimensions (working size, 36" x 48")
 
-| Column | X | Width | Content starts Y |
-|--------|---|-------|-----------------|
-| Left | 0.6" | 8.6" | 5.4" |
-| Center | 9.5" | 17.0" | 5.4" |
-| Right | 26.8" | 8.6" | 5.4" |
-| All columns end Y | — | — | ~46.5" |
+| Column            | X     | Width | Content starts Y |
+| ----------------- | ----- | ----- | ---------------- |
+| Left              | 0.6"  | 8.6"  | 5.4"             |
+| Center            | 9.5"  | 17.0" | 5.4"             |
+| Right             | 26.8" | 8.6"  | 5.4"             |
+| All columns end Y | —     | —     | ~46.5"           |
 
 Gap between columns: 0.3"
 Header bar height: 0.7"
@@ -162,7 +162,7 @@ Use results/figures/system_block_diagram.png or the presentation's Figure 1.
 
 Pipeline: EEG (7ch) → Preprocessing → EEGNet (1,457 params) → PAC Estimate → 12-Feature Extraction → Causal TCN (22,914 params, 5s horizon) → Controller (z-score ±0.5, 5s hysteresis) → STIMULATE / REST / MAINTAIN → 40 Hz Audio → [feedback]
 
-*Figure 1. Closed-loop 40 Hz entrainment system. Raw EEG flows through PAC estimation, 12-feature encoding, and causal TCN forecasting (<50 ms inference). The controller personalizes decisions via rolling z-score baseline with 5-second hysteresis. Author-generated diagram.*
+_Figure 1. Closed-loop 40 Hz entrainment system. Raw EEG flows through PAC estimation, 12-feature encoding, and causal TCN forecasting (<50 ms inference). The controller personalizes decisions via rolling z-score baseline with 5-second hysteresis. Author-generated diagram._
 
 ---
 
@@ -175,13 +175,13 @@ Pipeline: EEG (7ch) → Preprocessing → EEGNet (1,457 params) → PAC Estimate
 Use results/figures/controller_comparison.png
 Shows 6 controllers across Alignment, Low-PAC Stim Rate, High-PAC Rest Rate.
 
-*Figure 2. Controller comparison (N=35). TCN achieves 72.1% alignment vs 64.5% reactive (g = 1.31, p < 0.001) and targets 82.6% of low-PAC windows vs 51.7% (g = 4.47, p < 0.001).*
+_Figure 2. Controller comparison (N=35). TCN achieves 72.1% alignment vs 64.5% reactive (g = 1.31, p < 0.001) and targets 82.6% of low-PAC windows vs 51.7% (g = 4.47, p < 0.001)._
 
 **[FIGURE 3: Horizon Sweep, ~7.8" x 4"] + [FIGURE 4: Per-Subject Scatter, ~7.8" x 4"]**
 Side by side below Figure 2.
 
-*Figure 3. Horizon sweep: TCN maintains R² = 0.37–0.67 at 3–10s where baselines collapse.*
-*Figure 4. All 35/35 subjects above diagonal (binomial p < 0.001).*
+_Figure 3. Horizon sweep: TCN maintains R² = 0.37–0.67 at 3–10s where baselines collapse._
+_Figure 4. All 35/35 subjects above diagonal (binomial p < 0.001)._
 
 ---
 
@@ -189,11 +189,11 @@ Side by side below Figure 2.
 
 Three gold callout boxes side by side (~5.2" x 2.5" each):
 
-| 72.1% | 82.6% | 35 / 35 |
-|-------|-------|---------|
-| Alignment | Low-PAC Targeting | Subjects Benefited |
+| 72.1%             | 82.6%             | 35 / 35            |
+| ----------------- | ----------------- | ------------------ |
+| Alignment         | Low-PAC Targeting | Subjects Benefited |
 | vs 64.5% reactive | vs 51.7% reactive | binomial p < 0.001 |
-| g = 1.31 | g = 4.47 | 91% of oracle |
+| g = 1.31          | g = 4.47          | 91% of oracle      |
 
 ---
 
@@ -315,15 +315,15 @@ Data: OpenNeuro ds005048, open access. All diagrams by the author.
 
 ## FIGURES CHECKLIST
 
-| # | Figure | Source | Size in PPT | Panel |
-|---|--------|--------|------------|-------|
-| 1 | Fixed vs Adaptive | Create or ai_generated/ | ~8" x 3" | Left: Introduction |
-| 2 | System architecture | system_block_diagram.png | ~16" x 7" | Center: Architecture |
-| 3 | Controller comparison | controller_comparison.png | ~16" x 5" | Center: Results |
-| 4 | Horizon sweep | horizon_sweep.png | ~7.8" x 4" | Center: Results |
-| 5 | Per-subject scatter | per_subject_utility.png | ~7.8" x 4" | Center: Results |
-| - | 3 callout boxes | Built in PPT (gold) | ~5.2" x 2.5" ea | Center: Key Findings |
-| - | Key Discovery box | Built in PPT (gold) | ~16" x 5" | Center: Key Discovery |
+| #   | Figure                | Source                    | Size in PPT     | Panel                 |
+| --- | --------------------- | ------------------------- | --------------- | --------------------- |
+| 1   | Fixed vs Adaptive     | Create or ai_generated/   | ~8" x 3"        | Left: Introduction    |
+| 2   | System architecture   | system_block_diagram.png  | ~16" x 7"       | Center: Architecture  |
+| 3   | Controller comparison | controller_comparison.png | ~16" x 5"       | Center: Results       |
+| 4   | Horizon sweep         | horizon_sweep.png         | ~7.8" x 4"      | Center: Results       |
+| 5   | Per-subject scatter   | per_subject_utility.png   | ~7.8" x 4"      | Center: Results       |
+| -   | 3 callout boxes       | Built in PPT (gold)       | ~5.2" x 2.5" ea | Center: Key Findings  |
+| -   | Key Discovery box     | Built in PPT (gold)       | ~16" x 5"       | Center: Key Discovery |
 
 ---
 

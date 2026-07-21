@@ -10,6 +10,7 @@ tags:
 # evaluate_model()
 
 ## Connections
+
 - [[Evaluate and return metrics.]] - `rationale_for` [EXTRACTED]
 - [[run_v8_specialized_eeg.py]] - `contains` [EXTRACTED]
 

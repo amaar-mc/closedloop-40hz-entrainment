@@ -10,6 +10,7 @@ tags:
 # strip_emdashes()
 
 ## Connections
+
 - [[Replace all em-dashes with double hyphens.]] - `rationale_for` [EXTRACTED]
 - [[generate_pdf.py]] - `contains` [EXTRACTED]
 - [[process_md()]] - `calls` [EXTRACTED]

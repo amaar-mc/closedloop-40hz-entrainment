@@ -10,6 +10,7 @@ tags:
 # get_raw_pac_history()
 
 ## Connections
+
 - [[Get unscaled raw MI values for diagnostics.]] - `rationale_for` [EXTRACTED]
 - [[TVBAlzheimerSimulator]] - `method` [EXTRACTED]
 

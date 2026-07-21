@@ -10,6 +10,7 @@ tags:
 # ImprovedTCN
 
 ## Connections
+
 - [[Best combination experiments 1. Target smoothing (ts=5) + deep TCN architecture]] - `uses` [INFERRED]
 - [[Build dataset with given smoothing, train TCN, evaluate.]] - `uses` [INFERRED]
 - [[Compute persistence R2 per subject.]] - `uses` [INFERRED]

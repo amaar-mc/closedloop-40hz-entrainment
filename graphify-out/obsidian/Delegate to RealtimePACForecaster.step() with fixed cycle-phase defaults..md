@@ -10,7 +10,8 @@ tags:
 # Delegate to RealtimePACForecaster.step() with fixed cycle-phase defaults.
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[step()_10]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

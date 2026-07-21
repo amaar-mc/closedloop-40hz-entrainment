@@ -7,9 +7,10 @@ tags:
   - community/Control_Strategies_&_Validation
 ---
 
-# Fatigue Model 4: Saturation / Synaptic Adaptation.      Models long-term synap
+# Fatigue Model 4: Saturation / Synaptic Adaptation. Models long-term synap
 
 ## Connections
+
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
 - [[PredictiveLookAheadControl_5]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[StimAction]] - `uses` [INFERRED]
 - [[TrialMetrics]] - `uses` [INFERRED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

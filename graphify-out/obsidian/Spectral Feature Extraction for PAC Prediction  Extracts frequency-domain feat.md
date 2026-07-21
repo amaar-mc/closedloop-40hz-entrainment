@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Spectral Feature Extraction for PAC Prediction  Extracts frequency-domain feat
+# Spectral Feature Extraction for PAC Prediction Extracts frequency-domain feat
 
 ## Connections
+
 - [[spectral_features.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

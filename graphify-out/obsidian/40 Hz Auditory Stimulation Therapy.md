@@ -9,6 +9,7 @@ tags:
 # 40 Hz Auditory Stimulation Therapy
 
 ## Connections
+
 - [[Alzheimer's Disease Motivation (55M affected, amyloid-β clearance)]] - `conceptually_related_to` [EXTRACTED]
 - [[Fixed-Schedule Protocol Limitation (habituation ignored)]] - `conceptually_related_to` [EXTRACTED]
 

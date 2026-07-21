@@ -7,9 +7,10 @@ tags:
   - community/Community_46
 ---
 
-# Update baseline for all channels.          Args:             pac_values: PAC
+# Update baseline for all channels. Args: pac_values: PAC
 
 ## Connections
+
 - [[update()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Community_46

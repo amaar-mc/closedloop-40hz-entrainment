@@ -7,10 +7,11 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Args:             windows:  (N, 1, 7, 500) raw EEG windows             pac:
+# Args: windows: (N, 1, 7, 500) raw EEG windows pac:
 
 ## Connections
+
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[__init__()_24]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

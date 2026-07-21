@@ -9,6 +9,7 @@ tags:
 # Figure 2: Phase-Amplitude Coupling (PAC) Mechanism Diagram
 
 ## Connections
+
 - [[Figure 1 Fixed vs. Adaptive Stimulation Scheduling Comparison]] - `conceptually_related_to` [INFERRED]
 - [[Gamma Oscillations (38-42 Hz) Amplitude Signal]] - `references` [EXTRACTED]
 - [[PAC Modulation Index (Tort 2010)]] - `references` [EXTRACTED]

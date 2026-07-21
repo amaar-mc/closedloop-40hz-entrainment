@@ -9,6 +9,7 @@ tags:
 # P10 Research Log Notebook V2 (Corrected Review Candidate)
 
 ## Connections
+
 - [[Approval-Era Chronology Anchor (Jan 15 as fair-facing start date)]] - `rationale_for` [EXTRACTED]
 - [[P10 Lab Notebook V2 (PDF render)]] - `references` [INFERRED]
 - [[P10 Research Log Notebook V1 (Daily Format)]] - `references` [EXTRACTED]

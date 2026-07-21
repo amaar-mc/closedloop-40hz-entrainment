@@ -10,6 +10,7 @@ tags:
 # Test PAC feature extraction.
 
 ## Connections
+
 - [[test_pac_features()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

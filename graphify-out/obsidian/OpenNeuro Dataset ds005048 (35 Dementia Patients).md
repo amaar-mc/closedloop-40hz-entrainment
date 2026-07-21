@@ -10,6 +10,7 @@ tags:
 # OpenNeuro Dataset ds005048 (35 Dementia Patients)
 
 ## Connections
+
 - [[Closed-Loop 40 Hz Gamma Entrainment System]] - `references` [EXTRACTED]
 - [[Dataset Description ds005048 Processing Pipeline & Splits]] - `references` [EXTRACTED]
 

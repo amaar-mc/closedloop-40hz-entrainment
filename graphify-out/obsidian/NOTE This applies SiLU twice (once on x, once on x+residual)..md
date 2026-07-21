@@ -10,6 +10,7 @@ tags:
 # # NOTE: This applies SiLU twice (once on x, once on x+residual).
 
 ## Connections
+
 - [[multiscale_tcn.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

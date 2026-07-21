@@ -10,6 +10,7 @@ tags:
 # Transition Analysis Results (transition vs steady-state windows)
 
 ## Connections
+
 - [[Transition Analysis Script (transition_analysis.py)]] - `implements` [EXTRACTED]
 
   #community/Community_144

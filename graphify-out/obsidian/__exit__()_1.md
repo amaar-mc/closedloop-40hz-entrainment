@@ -7,9 +7,10 @@ tags:
   - community/Community_32
 ---
 
-# __exit__()
+# **exit**()
 
 ## Connections
+
 - [[_NumpySimulatedAdapter]] - `method` [EXTRACTED]
 
   #community/Community_32

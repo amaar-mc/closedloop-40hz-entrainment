@@ -10,6 +10,7 @@ tags:
 # Temporal Causality — Sequences Must Not Cross Subject Boundaries
 
 ## Connections
+
 - [[Validate Leakage Audit Script]] - `conceptually_related_to` [EXTRACTED]
 - [[test_pac_autocorrelation()]] - `conceptually_related_to` [INFERRED]
 - [[test_temporal_sequence_logic()]] - `implements` [EXTRACTED]

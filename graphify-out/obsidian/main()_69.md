@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[FatigueModelConfig]] - `calls` [EXTRACTED]
 - [[Run the fatigue model sensitivity experiment.]] - `rationale_for` [EXTRACTED]
 - [[fatigue_model_sensitivity.py]] - `contains` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[print_summary_table()_1]] - `calls` [EXTRACTED]
 - [[run_fatigue_model_experiment()]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

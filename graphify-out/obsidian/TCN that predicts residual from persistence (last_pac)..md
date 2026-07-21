@@ -10,6 +10,7 @@ tags:
 # TCN that predicts residual from persistence (last_pac).
 
 ## Connections
+
 - [[ResidualTCN]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_ImprovedTCN_Experiments

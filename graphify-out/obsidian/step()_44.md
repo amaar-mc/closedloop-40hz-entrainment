@@ -10,6 +10,7 @@ tags:
 # step()
 
 ## Connections
+
 - [[FixedScheduleControl_4]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

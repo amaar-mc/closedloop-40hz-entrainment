@@ -10,6 +10,7 @@ tags:
 # ImprovedTCN
 
 ## Connections
+
 - [[Causal TCN with temporal multi-head self-attention and three regression heads.]] - `rationale_for` [EXTRACTED]
 - [[EnhancedSequenceDataset]] - `uses` [INFERRED]
 - [[Evaluate on future and delta heads only. smooth head is auxiliary  training-onl]] - `uses` [INFERRED]

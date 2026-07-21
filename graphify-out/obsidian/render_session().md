@@ -10,6 +10,7 @@ tags:
 # render_session()
 
 ## Connections
+
 - [[EEGNet (4-channel, caregiver app)]] - `calls` [EXTRACTED]
 - [[Live therapy session with 40 Hz audio, PAC trend, and warmup indicator.      Run]] - `rationale_for` [EXTRACTED]
 - [[NeuroCare Caregiver Dashboard (Multi-page Streamlit)]] - `calls` [EXTRACTED]
@@ -24,4 +25,4 @@ tags:
 - [[navigate()]] - `calls` [EXTRACTED]
 - [[pac_to_display()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # CUSUMControl
 
 ## Connections
+
 - [[CUSUM change-detection controller (Page 1954).]] - `rationale_for` [EXTRACTED]
 - [[CUSUM change-detection controller (Page 1954).      Detects sustained PAC drop]] - `rationale_for` [EXTRACTED]
 - [[__init__()_32]] - `method` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 - [[step()_4]] - `method` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

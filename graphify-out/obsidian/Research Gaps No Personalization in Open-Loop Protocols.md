@@ -10,7 +10,8 @@ tags:
 # Research Gaps: No Personalization in Open-Loop Protocols
 
 ## Connections
+
 - [[Comprehensive Literature Review Closed-Loop 40Hz Gamma Entrainment for AD]] - `references` [EXTRACTED]
 - [[Rationale Why Closed-Loop Outperforms Open-Loop for AD Entrainment]] - `rationale_for` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

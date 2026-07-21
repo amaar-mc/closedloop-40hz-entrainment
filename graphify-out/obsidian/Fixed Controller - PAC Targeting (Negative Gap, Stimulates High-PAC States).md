@@ -10,6 +10,7 @@ tags:
 # Fixed Controller - PAC Targeting (Negative Gap, Stimulates High-PAC States)
 
 ## Connections
+
 - [[PAC Targeting Gap Metric (rest minus stim PAC)]] - `references` [EXTRACTED]
 - [[PAC Targeting Gap by Controller (Bar Chart)]] - `references` [EXTRACTED]
 

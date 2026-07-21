@@ -9,6 +9,7 @@ tags:
 # Fixed Controller PAC Gap (negative)
 
 ## Connections
+
 - [[PAC Targeting Gap by Controller Figure]] - `references` [EXTRACTED]
 
   #community/Community_36

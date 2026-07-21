@@ -10,6 +10,7 @@ tags:
 # run_replay_analysis.py
 
 ## Connections
+
 - [[CUSUMControl]] - `contains` [EXTRACTED]
 - [[FixedScheduleControl]] - `contains` [EXTRACTED]
 - [[MultiBiomarkerReactiveControl]] - `contains` [EXTRACTED]
@@ -27,4 +28,4 @@ tags:
 - [[print_comparison()]] - `contains` [EXTRACTED]
 - [[replay_subject()]] - `contains` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

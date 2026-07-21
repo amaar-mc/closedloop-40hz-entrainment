@@ -10,6 +10,7 @@ tags:
 # TCNPredictiveControl (Neural Network Look-Ahead Controller)
 
 ## Connections
+
 - [[FixedScheduleControl (40s ON  20s OFF Fixed Protocol)]] - `semantically_similar_to` [INFERRED]
 - [[OracleControl (Perfect PAC Knowledge Upper Bound)]] - `references` [INFERRED]
 - [[ReactiveThresholdControl (Z-Score Rolling Baseline Controller)]] - `semantically_similar_to` [INFERRED]

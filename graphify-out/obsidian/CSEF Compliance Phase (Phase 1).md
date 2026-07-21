@@ -9,6 +9,7 @@ tags:
 # CSEF Compliance Phase (Phase 1)
 
 ## Connections
+
 - [[CSEF Presentation Compliance Checklist (1818 PASS)]] - `references` [EXTRACTED]
 - [[Figure and Visual Compliance Audit]] - `references` [EXTRACTED]
 - [[Font Compliance Audit]] - `references` [EXTRACTED]

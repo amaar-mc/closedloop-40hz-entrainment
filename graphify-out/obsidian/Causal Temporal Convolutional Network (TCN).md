@@ -10,6 +10,7 @@ tags:
 # Causal Temporal Convolutional Network (TCN)
 
 ## Connections
+
 - [[Horizon Sweep Result (R²=0.577–0.669 at 3–10s)]] - `references` [EXTRACTED]
 - [[Two-Stage Predictive Closed-Loop System]] - `implements` [EXTRACTED]
 

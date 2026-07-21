@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `calls` [EXTRACTED]
 - [[CausalDSConvBlock_1]] - `calls` [EXTRACTED]
 - [[LastStepPool_1]] - `calls` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[__init__()_59]] - `calls` [EXTRACTED]
 - [[__init__()_60]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

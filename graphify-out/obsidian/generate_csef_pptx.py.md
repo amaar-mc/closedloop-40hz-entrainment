@@ -10,6 +10,7 @@ tags:
 # generate_csef_pptx.py
 
 ## Connections
+
 - [[_disable_bullet()]] - `contains` [EXTRACTED]
 - [[_enable_bullet()]] - `contains` [EXTRACTED]
 - [[_parse_bold()]] - `contains` [EXTRACTED]

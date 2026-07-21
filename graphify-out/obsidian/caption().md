@@ -10,6 +10,7 @@ tags:
 # caption()
 
 ## Connections
+
 - [[11pt italic caption in medium gray.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `method` [EXTRACTED]
 - [[_add_textbox()]] - `calls` [EXTRACTED]

@@ -9,6 +9,7 @@ tags:
 # Research Paper v3 PDF (Published/Formatted Version)
 
 ## Connections
+
 - [[Research Paper v2 Full 26-Page Markdown (73-Feature, Pre-Ablation)]] - `references` [INFERRED]
 
   #community/Community_33

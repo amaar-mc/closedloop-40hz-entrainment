@@ -10,6 +10,7 @@ tags:
 # Closed-loop controller using TCN-TRIBE for proactive decisions.
 
 ## Connections
+
 - [[TCNTribeController]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

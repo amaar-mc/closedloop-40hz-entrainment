@@ -10,6 +10,7 @@ tags:
 # CNN1D
 
 ## Connections
+
 - [[1D CNN for EEG time series.      Learns spectro-temporal filters from raw EEG.]] - `rationale_for` [EXTRACTED]
 - [[__init__()_19]] - `method` [EXTRACTED]
 - [[forward()_13]] - `method` [EXTRACTED]

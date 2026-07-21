@@ -10,6 +10,7 @@ tags:
 # Q&A Tier 5: Hard Skeptical Questions (architecture marathon, controller decisions, limitations)
 
 ## Connections
+
 - [[Danger Zones v2 10 High-Risk Judge Questions with Prepared Answers]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_30

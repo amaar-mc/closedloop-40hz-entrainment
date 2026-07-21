@@ -10,7 +10,8 @@ tags:
 # PAC Computation Pipeline (IEEE Paper)
 
 ## Connections
+
 - [[IEEE Research Paper Personalized Deep Learning for Closed-Loop 40Hz Entrainment]] - `references` [EXTRACTED]
 - [[Modulation Index (KL Divergence PAC Metric, Tort 2010)]] - `implements` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

@@ -10,6 +10,7 @@ tags:
 # Caucus Retellable Sentence
 
 ## Connections
+
 - [[Judge Interaction Guide]] - `references` [EXTRACTED]
 - [[Winner Narrative vs Report Framing Strategy]] - `conceptually_related_to` [INFERRED]
 

@@ -10,8 +10,9 @@ tags:
 # available()
 
 ## Connections
+
 - [[ModelRegistry]] - `method` [EXTRACTED]
 - [[Return sorted list of registered model names.]] - `rationale_for` [EXTRACTED]
 - [[get()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

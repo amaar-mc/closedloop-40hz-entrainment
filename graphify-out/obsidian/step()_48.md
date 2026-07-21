@@ -10,8 +10,9 @@ tags:
 # step()
 
 ## Connections
+
 - [[Make a control decision using TCN forecast.]] - `rationale_for` [EXTRACTED]
 - [[TCNController]] - `method` [EXTRACTED]
 - [[main()_63]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

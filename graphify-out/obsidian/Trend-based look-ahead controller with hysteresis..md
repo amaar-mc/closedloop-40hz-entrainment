@@ -10,9 +10,10 @@ tags:
 # Trend-based look-ahead controller with hysteresis.
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[PredictiveLookAheadControl_1]] - `rationale_for` [EXTRACTED]
 - [[StimAction]] - `uses` [INFERRED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

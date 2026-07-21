@@ -9,7 +9,8 @@ tags:
 # Judge Q&A Bank and Danger Zones (Synopsys Oral Prep)
 
 ## Connections
+
 - [[Synopsys Championship Winning Analysis (Feb 27, 2026)]] - `conceptually_related_to` [INFERRED]
 - [[Synopsys Judging Rubric (40 pts Scientific Thought, Creativity, Independent Work, Thoroughness)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

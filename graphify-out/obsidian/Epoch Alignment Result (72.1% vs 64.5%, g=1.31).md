@@ -10,6 +10,7 @@ tags:
 # Epoch Alignment Result (72.1% vs 64.5%, g=1.31)
 
 ## Connections
+
 - [[Two-Stage Predictive Closed-Loop System]] - `references` [EXTRACTED]
 
   #community/Community_72

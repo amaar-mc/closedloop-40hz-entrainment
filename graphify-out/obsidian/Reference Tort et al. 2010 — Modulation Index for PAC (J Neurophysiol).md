@@ -10,8 +10,9 @@ tags:
 # Reference: Tort et al. 2010 — Modulation Index for PAC (J Neurophysiol)
 
 ## Connections
+
 - [[Methods PAC via Modulation Index (KL-divergence, 18 theta phase bins)]] - `cites` [EXTRACTED]
 - [[PAC Computation Modulation Index (Tort 2010), Theta-Gamma, Epoch-Level Labels]] - `cites` [EXTRACTED]
 - [[Research Paper v3 (Full Manuscript)]] - `cites` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

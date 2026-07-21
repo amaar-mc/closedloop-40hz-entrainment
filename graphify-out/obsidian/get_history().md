@@ -10,7 +10,8 @@ tags:
 # get_history()
 
 ## Connections
+
 - [[ClosedLoopController]] - `method` [EXTRACTED]
 - [[Get full history of decisions and measurements.          Returns]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -10,6 +10,7 @@ tags:
 # Full pipeline for processing a line of body text.
 
 ## Connections
+
 - [[process_line()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_44

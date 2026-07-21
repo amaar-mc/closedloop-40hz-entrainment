@@ -10,9 +10,10 @@ tags:
 # train_epoch()
 
 ## Connections
+
 - [[ModelTrainer]] - `method` [EXTRACTED]
 - [[Train for one epoch.          Args             train_loader Training DataLo]] - `rationale_for` [EXTRACTED]
 - [[augment()]] - `calls` [EXTRACTED]
 - [[train()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

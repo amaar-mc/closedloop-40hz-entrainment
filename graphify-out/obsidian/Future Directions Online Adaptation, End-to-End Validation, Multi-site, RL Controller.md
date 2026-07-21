@@ -10,6 +10,7 @@ tags:
 # Future Directions: Online Adaptation, End-to-End Validation, Multi-site, RL Controller
 
 ## Connections
+
 - [[Discussion 5 Key Limitations (offline replay, EEGNet not in loop, single site, channel selection, label granularity)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

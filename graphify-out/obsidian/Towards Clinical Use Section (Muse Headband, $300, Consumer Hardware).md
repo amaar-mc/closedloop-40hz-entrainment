@@ -9,6 +9,7 @@ tags:
 # Towards Clinical Use Section (Muse Headband, <$300, Consumer Hardware)
 
 ## Connections
+
 - [[vFinal Poster PDF (CSEF 2026 Submission Print)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

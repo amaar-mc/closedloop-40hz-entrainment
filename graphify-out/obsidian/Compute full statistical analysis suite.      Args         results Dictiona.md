@@ -7,13 +7,14 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Compute full statistical analysis suite.      Args:         results: Dictiona
+# Compute full statistical analysis suite. Args: results: Dictiona
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[compute_all_statistics()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

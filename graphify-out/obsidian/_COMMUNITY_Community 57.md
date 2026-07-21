@@ -8,6 +8,7 @@ members: 18
 **Members:** 18 nodes
 
 ## Members
+
 - [[1D CNN for EEG time series.      Learns spectro-temporal filters from raw EEG.]] - rationale - archive/v1_v8_attempts/run_v7_raw_eeg_models.py
 - [[AttentionModel]] - code - archive/v1_v8_attempts/run_v7_raw_eeg_models.py
 - [[CNN1D]] - code - archive/v1_v8_attempts/run_v7_raw_eeg_models.py

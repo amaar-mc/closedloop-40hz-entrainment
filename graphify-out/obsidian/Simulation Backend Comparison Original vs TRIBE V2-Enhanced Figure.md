@@ -9,6 +9,7 @@ tags:
 # Simulation Backend Comparison: Original vs TRIBE V2-Enhanced Figure
 
 ## Connections
+
 - [[Energy Efficiency (Stimulation Time %) by Strategy]] - `references` [EXTRACTED]
 - [[Original (Exponential) Simulation Backend]] - `references` [EXTRACTED]
 - [[PAC Improvement per Unit Stimulation by Strategy]] - `references` [EXTRACTED]

@@ -7,10 +7,11 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[PredictiveLookAheadControl_6]] - `method` [EXTRACTED]
 - [[__init__()_163]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

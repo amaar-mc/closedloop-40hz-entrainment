@@ -9,6 +9,7 @@ tags:
 # Rigorous Pipeline Audit Report
 
 ## Connections
+
 - [[Critical Finding ANOVA on n=1 Samples]] - `references` [EXTRACTED]
 - [[Critical Finding Validation Does Not Test Trained TCN]] - `references` [EXTRACTED]
 - [[EEGNetEnhanced (~35K params, 24x original)]] - `references` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[main()_65]] - `references` [EXTRACTED]
 - [[main()_66]] - `references` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

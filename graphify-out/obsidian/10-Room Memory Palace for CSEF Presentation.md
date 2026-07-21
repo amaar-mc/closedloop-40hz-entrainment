@@ -10,6 +10,7 @@ tags:
 # 10-Room Memory Palace for CSEF Presentation
 
 ## Connections
+
 - [[Memorization Guide v1 (10 Rooms, Emotional Anchoring)]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

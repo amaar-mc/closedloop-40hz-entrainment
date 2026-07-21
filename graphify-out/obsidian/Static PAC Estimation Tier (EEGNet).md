@@ -9,6 +9,7 @@ tags:
 # Static PAC Estimation Tier (EEGNet)
 
 ## Connections
+
 - [[EEGNet Static PAC Predictor]] - `conceptually_related_to` [INFERRED]
 - [[Two-Tier Predictive System Solution]] - `implements` [EXTRACTED]
 

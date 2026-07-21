@@ -10,6 +10,7 @@ tags:
 # TVBAlzheimerSimulator
 
 ## Connections
+
 - [[FixedScheduleCtrl_2]] - `uses` [INFERRED]
 - [[ReactiveCtrl_2]] - `uses` [INFERRED]
 - [[TVB Jansen-Rit Alignment Evaluation Closed-Loop Controller Comparison  Runs Fix]] - `uses` [INFERRED]

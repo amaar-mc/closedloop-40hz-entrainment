@@ -10,6 +10,7 @@ tags:
 # Config YAML Hysteresis Bug Fix (3.0s vs 5.0s hold_time_sec)
 
 ## Connections
+
 - [[Two-Stage EEGNet+TCN Controller Pipeline]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_123

@@ -9,6 +9,7 @@ tags:
 # LightTransformer Model (test R2=0.651, best performer)
 
 ## Connections
+
 - [[Architecture Exploration Comparison (10 models, 5-seed)]] - `references` [EXTRACTED]
 
   #community/Rigor_Audit_Reports

@@ -10,6 +10,7 @@ tags:
 # PAC Epoch-Level Assignment Design (epoch PAC assigned to 2s windows)
 
 ## Connections
+
 - [[Static PAC Prediction Ceiling R²=0.287]] - `rationale_for` [INFERRED]
 
   #community/Community_43

@@ -10,6 +10,7 @@ tags:
 # Citation: Lawhern et al. (2018) - EEGNet
 
 ## Connections
+
 - [[First End-to-End Pipeline Build (February 6, 2026)]] - `cites` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

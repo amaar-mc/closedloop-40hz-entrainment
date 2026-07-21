@@ -10,8 +10,9 @@ tags:
 # realtime_inference.py
 
 ## Connections
+
 - [[Realtime inference wrapper for the multiscale causal TCN.  This utility keeps ro]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `contains` [EXTRACTED]
 - [[step()_8]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

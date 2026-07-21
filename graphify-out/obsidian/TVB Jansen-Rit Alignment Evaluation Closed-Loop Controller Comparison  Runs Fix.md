@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# TVB Jansen-Rit Alignment Evaluation: Closed-Loop Controller Comparison  Runs Fix
+# TVB Jansen-Rit Alignment Evaluation: Closed-Loop Controller Comparison Runs Fix
 
 ## Connections
+
 - [[TVBAlzheimerSimulator]] - `uses` [INFERRED]
 - [[run_tvb_alignment.py]] - `rationale_for` [EXTRACTED]
 

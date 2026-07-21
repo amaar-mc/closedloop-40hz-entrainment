@@ -10,6 +10,7 @@ tags:
 # Personalization Module (Rolling 30s Baseline Z-Score)
 
 ## Connections
+
 - [[Closed-Loop Controller (Z-Score Threshold, Hysteresis 3s)]] - `shares_data_with` [EXTRACTED]
 - [[Current Methodology Closed-Loop 40Hz Entrainment via Temporal PAC Forecasting]] - `references` [EXTRACTED]
 

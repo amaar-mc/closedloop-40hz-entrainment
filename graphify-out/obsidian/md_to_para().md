@@ -10,6 +10,7 @@ tags:
 # md_to_para()
 
 ## Connections
+
 - [[escape_xml()]] - `calls` [EXTRACTED]
 - [[generate_pdf.py]] - `contains` [EXTRACTED]
 - [[main()_73]] - `calls` [EXTRACTED]

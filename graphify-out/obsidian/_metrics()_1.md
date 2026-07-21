@@ -7,9 +7,10 @@ tags:
   - community/Community_94
 ---
 
-# _metrics()
+# \_metrics()
 
 ## Connections
+
 - [[_corr()_5]] - `calls` [EXTRACTED]
 - [[_r2()_6]] - `calls` [EXTRACTED]
 - [[evaluate()_5]] - `calls` [EXTRACTED]

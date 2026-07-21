@@ -10,6 +10,7 @@ tags:
 # PIControl
 
 ## Connections
+
 - [[Proportional-Integral (PI) controller for PAC maintenance.]] - `rationale_for` [EXTRACTED]
 - [[Proportional-Integral (PI) controller for PAC maintenance.      Error e(t) = ro]] - `rationale_for` [EXTRACTED]
 - [[__init__()_35]] - `method` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 - [[step()_7]] - `method` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

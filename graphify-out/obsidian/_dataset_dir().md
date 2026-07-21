@@ -7,9 +7,10 @@ tags:
   - community/Community_65
 ---
 
-# _dataset_dir()
+# \_dataset_dir()
 
 ## Connections
+
 - [[Return the pre-built or to-be-built dataset directory for a given config.]] - `rationale_for` [EXTRACTED]
 - [[_dataset_base_4ch()]] - `calls` [EXTRACTED]
 - [[_dataset_base_7ch()]] - `calls` [EXTRACTED]

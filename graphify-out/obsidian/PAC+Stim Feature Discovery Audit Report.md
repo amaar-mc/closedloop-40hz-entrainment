@@ -9,6 +9,7 @@ tags:
 # PAC+Stim Feature Discovery Audit Report
 
 ## Connections
+
 - [[Epoch-Level PAC Caveat 82.2% Same-Epoch Samples]] - `references` [EXTRACTED]
 - [[FINDINGS Spectral Features Cause Catastrophic Generalization Failure]] - `semantically_similar_to` [INFERRED]
 - [[ImprovedTCN Architecture (6338 params, 12-feature input)]] - `references` [EXTRACTED]

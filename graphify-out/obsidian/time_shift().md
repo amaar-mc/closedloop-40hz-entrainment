@@ -10,8 +10,9 @@ tags:
 # time_shift()
 
 ## Connections
+
 - [[DataAugmentor]] - `method` [EXTRACTED]
 - [[Randomly shift window in time along the last axis.          Args]] - `rationale_for` [EXTRACTED]
 - [[augment()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

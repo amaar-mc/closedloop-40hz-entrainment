@@ -10,6 +10,7 @@ tags:
 # ViT-TCNet V4 Requirements
 
 ## Connections
+
 - [[Matplotlib (=3.7.0)]] - `references` [EXTRACTED]
 - [[NumPy (=1.24.0)]] - `references` [EXTRACTED]
 - [[PyTorch (=2.0.0)]] - `references` [EXTRACTED]

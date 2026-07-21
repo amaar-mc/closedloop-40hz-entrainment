@@ -10,6 +10,7 @@ tags:
 # tbl()
 
 ## Connections
+
 - [[Add a real PowerPoint table.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `method` [EXTRACTED]
 - [[_set_font()]] - `calls` [EXTRACTED]

@@ -17,6 +17,7 @@ When tested on all 35 patients' real brain recordings, the predictive controller
 ## Word count: ~172 words = ~69 seconds at 150 wpm
 
 ## What this hits (POTY criteria from handbook p.14)
+
 - **Original thought:** First system to predict brain entrainment loss before it happens
 - **Scientific impact:** Feature ablation discovery, architectural convergence proof, horizon sweep methodology
 - **Societal impact:** 55M Alzheimer's patients globally, deployable on consumer hardware

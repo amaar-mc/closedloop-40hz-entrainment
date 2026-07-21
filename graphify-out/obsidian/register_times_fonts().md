@@ -10,6 +10,7 @@ tags:
 # register_times_fonts()
 
 ## Connections
+
 - [[Register Times New Roman fonts, falling back to built-in Times if needed.]] - `rationale_for` [EXTRACTED]
 - [[generate_notebook_pdf.py]] - `contains` [EXTRACTED]
 

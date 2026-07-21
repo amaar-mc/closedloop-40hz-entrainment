@@ -10,6 +10,7 @@ tags:
 # Danger Zone: Spectral Feature Drop Not In Presentation (timeline defense)
 
 ## Connections
+
 - [[Spectral Feature Overfitting Discovery (73→12 features)]] - `references` [EXTRACTED]
 
   #community/Community_30

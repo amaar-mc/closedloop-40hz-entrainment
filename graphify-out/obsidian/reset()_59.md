@@ -10,7 +10,8 @@ tags:
 # reset()
 
 ## Connections
+
 - [[Clear baseline buffer and statistics cache.          Use this when         -]] - `rationale_for` [EXTRACTED]
 - [[PersonalizationModule]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

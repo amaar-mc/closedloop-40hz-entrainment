@@ -10,6 +10,7 @@ tags:
 # Insert centred image. Returns bottom position (inches).
 
 ## Connections
+
 - [[add_figure()]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

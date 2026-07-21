@@ -9,6 +9,7 @@ tags:
 # PAC+Stim Focused Experiments (run_pac_stim_focused.py)
 
 ## Connections
+
 - [[Architecture Search on PAC+Stim Features (8 configs)]] - `implements` [EXTRACTED]
 - [[ML Experiment Framework (run_experiments.py)]] - `references` [EXTRACTED]
 - [[MixupSeqDataset (mixup augmentation for EEG sequences)]] - `references` [EXTRACTED]

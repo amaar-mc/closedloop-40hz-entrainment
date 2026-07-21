@@ -7,10 +7,11 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Large EEGNet with ~141K parameters for capacity ceiling experiments.      Key
+# Large EEGNet with ~141K parameters for capacity ceiling experiments. Key
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGNetLarge]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # step()
 
 ## Connections
+
 - [[Simulate one time step of neural dynamics.          Runs a TVB Jansen-Rit simula]] - `rationale_for` [EXTRACTED]
 - [[TVBAlzheimerSimulator]] - `method` [EXTRACTED]
 - [[_compute_pac()]] - `calls` [EXTRACTED]

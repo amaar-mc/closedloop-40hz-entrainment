@@ -9,6 +9,7 @@ tags:
 # Stimulation Efficiency vs Alignment Trade-off (CSEF Old Archive)
 
 ## Connections
+
 - [[Fixed Schedule Controller ~68% Stim Rate, ~45% Alignment (worst alignment)]] - `references` [EXTRACTED]
 - [[Hybrid Controller ~60% Stim Rate, ~74% Alignment]] - `references` [EXTRACTED]
 - [[Oracle Controller ~48% Stim Rate, 100% Alignment (Pareto frontier)]] - `references` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[Reactive Controller ~38% Stim Rate, ~65% Alignment]] - `references` [EXTRACTED]
 - [[TCN Controller ~60% Stim Rate, ~72% Alignment]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

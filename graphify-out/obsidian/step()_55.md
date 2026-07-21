@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[Simulate one time step with step-function fatigue.]] - `rationale_for` [EXTRACTED]
 - [[StepFunctionSimulator]] - `method` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

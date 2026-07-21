@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# LSTM-based temporal predictor for future PAC values.      Takes a sequence of
+# LSTM-based temporal predictor for future PAC values. Takes a sequence of
 
 ## Connections
+
 - [[TemporalPACPredictor]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Temporal_PAC_Predictor

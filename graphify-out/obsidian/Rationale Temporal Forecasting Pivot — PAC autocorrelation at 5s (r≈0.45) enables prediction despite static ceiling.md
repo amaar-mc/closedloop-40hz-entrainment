@@ -10,6 +10,7 @@ tags:
 # Rationale: Temporal Forecasting Pivot — PAC autocorrelation at 5s (r≈0.45) enables prediction despite static ceiling
 
 ## Connections
+
 - [[Contribution 2 Causal TCN for 5-10s PAC Forecasting (+0.5 R² margin)]] - `rationale_for` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

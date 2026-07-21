@@ -9,6 +9,7 @@ tags:
 # Alzheimer Simulation Script (Disease Severity × Strategy Matrix)
 
 ## Connections
+
 - [[Finding Adaptive Stimulation Benefit Peaks at Mild-Moderate AD]] - `rationale_for` [EXTRACTED]
 - [[FixedSchedule Controller (Alzheimer Sim)]] - `implements` [EXTRACTED]
 - [[Predictive (Trend-Based) Controller (Alzheimer Sim)]] - `implements` [EXTRACTED]

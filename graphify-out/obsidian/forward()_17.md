@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[Args             batch Dictionary with keys                 'eeg']] - `rationale_for` [EXTRACTED]
 - [[TemporalPACPredictor]] - `method` [EXTRACTED]
 

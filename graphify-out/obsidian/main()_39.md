@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[FixedSchedule]] - `calls` [EXTRACTED]
 - [[Predictive]] - `calls` [EXTRACTED]
 - [[Reactive]] - `calls` [EXTRACTED]

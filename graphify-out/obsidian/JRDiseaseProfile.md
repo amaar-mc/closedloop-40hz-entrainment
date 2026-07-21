@@ -10,6 +10,7 @@ tags:
 # JRDiseaseProfile
 
 ## Connections
+
 - [[Jansen-Rit parameter modifications for Alzheimer's disease.      A (excitatory g]] - `rationale_for` [EXTRACTED]
 - [[tvb_simulator.py]] - `contains` [EXTRACTED]
 

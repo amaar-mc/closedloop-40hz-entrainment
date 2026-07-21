@@ -10,7 +10,8 @@ tags:
 # resolve_dataset_dir()
 
 ## Connections
+
 - [[main()_25]] - `calls` [EXTRACTED]
 - [[run_multiseed_study.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

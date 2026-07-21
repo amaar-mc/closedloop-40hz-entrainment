@@ -10,6 +10,7 @@ tags:
 # InterpretabilityDataset (Test Dataset with Metadata)
 
 ## Connections
+
 - [[analyze_stimulation_conditional()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

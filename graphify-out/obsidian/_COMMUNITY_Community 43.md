@@ -8,6 +8,7 @@ members: 23
 **Members:** 23 nodes
 
 ## Members
+
 - [[Architecture Capacity Analysis (samplesparameter ratio explains ceiling)]] - document - archive/notebooks/v1_research_paper_format.md
 - [[Causal Padding Rationale (left-only padding prevents future leakage)]] - document - archive/notebooks/v1_research_paper_format.md
 - [[Closed-Loop Control Formulation (EEGNet→TCN→PersonalizationModule→Decision)]] - document - archive/notebooks/v2_daily_log_draft.md

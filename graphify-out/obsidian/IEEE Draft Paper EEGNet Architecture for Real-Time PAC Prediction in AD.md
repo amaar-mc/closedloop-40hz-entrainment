@@ -10,6 +10,7 @@ tags:
 # IEEE Draft Paper: EEGNet Architecture for Real-Time PAC Prediction in AD
 
 ## Connections
+
 - [[PAC as Strongest Predictor of Entrainment Response (Beta=0.693, p0.001)]] - `rationale_for` [EXTRACTED]
 - [[Proposed GAT-Transformer Architecture for EEG PAC Prediction]] - `semantically_similar_to` [INFERRED]
 - [[code_drafts_v2 Complete 10-Module Pipeline (4159 lines)]] - `conceptually_related_to` [INFERRED]

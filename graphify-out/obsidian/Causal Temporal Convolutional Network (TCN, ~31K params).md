@@ -9,6 +9,7 @@ tags:
 # Causal Temporal Convolutional Network (TCN, ~31K params)
 
 ## Connections
+
 - [[12-Feature PAC+Stim TCN (CSEF vfinal model)]] - `semantically_similar_to` [INFERRED]
 - [[73 Causal Features (spectral + PAC-history + stim-context)]] - `shares_data_with` [EXTRACTED]
 - [[Closed-Loop Controller (PAC-forecast-driven stimulation)]] - `implements` [EXTRACTED]

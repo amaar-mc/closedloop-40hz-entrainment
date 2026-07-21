@@ -10,6 +10,7 @@ tags:
 # Zero-phase bandpass filter.
 
 ## Connections
+
 - [[_bandpass_filter()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_52

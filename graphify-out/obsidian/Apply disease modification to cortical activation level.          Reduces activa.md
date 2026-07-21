@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Apply disease modification to cortical activation level.          Reduces activa
+# Apply disease modification to cortical activation level. Reduces activa
 
 ## Connections
+
 - [[apply_to_activation()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

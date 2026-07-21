@@ -10,6 +10,7 @@ tags:
 # p08_results2()
 
 ## Connections
+
 - [[Results page 2 Controller Comparison + Statistics.]] - `rationale_for` [EXTRACTED]
 - [[body()_1]] - `calls` [EXTRACTED]
 - [[bullet()_1]] - `calls` [EXTRACTED]

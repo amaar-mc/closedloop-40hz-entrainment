@@ -10,6 +10,7 @@ tags:
 # Write a paragraph starting with bold text.
 
 ## Connections
+
 - [[write_bold_paragraph()]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

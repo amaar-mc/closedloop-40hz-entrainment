@@ -10,6 +10,7 @@ tags:
 # Supplementary Table S1: ts=1 vs ts=5 Target Smoothing Comparison
 
 ## Connections
+
 - [[MultiscaleCausalTCN Architecture (31,043 params, dilations 1,2,4,8)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

@@ -7,11 +7,12 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Simple Diagnostic Analysis - No external ML libraries required  Investigates why
+# Simple Diagnostic Analysis - No external ML libraries required Investigates why
 
 ## Connections
+
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[WaveletFeatureExtractor]] - `uses` [INFERRED]
 - [[simple_diagnostic.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

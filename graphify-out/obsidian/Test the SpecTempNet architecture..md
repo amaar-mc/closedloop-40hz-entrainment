@@ -10,6 +10,7 @@ tags:
 # Test the SpecTempNet architecture.
 
 ## Connections
+
 - [[test_spectempnet()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_SpecTempNet_V3

@@ -10,6 +10,7 @@ tags:
 # add_caption()
 
 ## Connections
+
 - [[11pt italic gray caption paragraph.]] - `rationale_for` [EXTRACTED]
 - [[_disable_bullet()]] - `calls` [EXTRACTED]
 - [[_set_para_spacing()]] - `calls` [EXTRACTED]

@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[EEGNetV2]] - `method` [EXTRACTED]
 
   #community/Archived_EEGNet_V2

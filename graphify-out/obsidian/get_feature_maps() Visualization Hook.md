@@ -10,7 +10,8 @@ tags:
 # get_feature_maps() Visualization Hook
 
 ## Connections
+
 - [[EEGNetEnhanced (~35K params, 24x original)]] - `implements` [EXTRACTED]
 - [[EEGNetLarge (~141K params, 97x original)]] - `implements` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -7,9 +7,10 @@ tags:
   - community/Community_52
 ---
 
-# Compute sliding-window PAC for an entire split.      Args:         windows: (N,
+# Compute sliding-window PAC for an entire split. Args: windows: (N,
 
 ## Connections
+
 - [[compute_sliding_pac_for_split()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_52

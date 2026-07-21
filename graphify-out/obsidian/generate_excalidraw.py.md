@@ -10,6 +10,7 @@ tags:
 # generate_excalidraw.py
 
 ## Connections
+
 - [[_arrow()]] - `contains` [EXTRACTED]
 - [[_diamond()]] - `contains` [EXTRACTED]
 - [[_ellipse()]] - `contains` [EXTRACTED]

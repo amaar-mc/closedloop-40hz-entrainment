@@ -10,7 +10,8 @@ tags:
 # reset()
 
 ## Connections
+
 - [[ControlMethodBase_2]] - `method` [EXTRACTED]
 - [[Reset method state for a new trial.]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

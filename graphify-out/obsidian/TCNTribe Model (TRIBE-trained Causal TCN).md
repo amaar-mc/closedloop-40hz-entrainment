@@ -10,6 +10,7 @@ tags:
 # TCNTribe Model (TRIBE-trained Causal TCN)
 
 ## Connections
+
 - [[12-Feature TCN Validation Script (PAC+Context Only, N=35 Real EEG)]] - `semantically_similar_to` [INFERRED]
 - [[CausalConv1dBlock (Dilated Residual Conv Block)]] - `implements` [EXTRACTED]
 - [[Rationale Domain Mismatch Between Real EEG TCN and TRIBE Simulator]] - `rationale_for` [EXTRACTED]

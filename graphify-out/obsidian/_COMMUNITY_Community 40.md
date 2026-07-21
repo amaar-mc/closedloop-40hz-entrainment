@@ -8,6 +8,7 @@ members: 27
 **Members:** 27 nodes
 
 ## Members
+
 - [[Audit Integrity Checks (No Subject Leakage, Temporal Causality, Shuffle-Label Sanity)]] - document - docs/methodology/CURRENT_METHODOLOGY.md
 - [[Brain Response Simulation (Exponential PAC Approach Model)]] - document - docs/methodology/CURRENT_METHODOLOGY.md
 - [[Clinical Implication Proactive Stimulation Lead Time for Adaptive Music Therapy]] - document - docs/methodology/CURRENT_METHODOLOGY.md

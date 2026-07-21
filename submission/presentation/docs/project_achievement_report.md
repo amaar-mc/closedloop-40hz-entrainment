@@ -17,11 +17,11 @@ This project developed and validated a deep learning system for personalized clo
 
 **The single most important result** is the horizon sweep demonstrating that the causal TCN is the only method providing useful predictions at 5-10 second horizons:
 
-| Horizon | Persistence R² | Ridge R² | TCN R² (12 feat) | TCN Advantage |
-|---------|---------------|---------|-----------------|---------------|
-| 1s | 0.760 | 0.812 | 0.725 | -0.087 (baselines win) |
-| 5s | -0.267 | -0.393 | 0.577 | **+0.844** |
-| 10s | -0.256 | -0.212 | 0.669 | **+0.925** |
+| Horizon | Persistence R² | Ridge R² | TCN R² (12 feat) | TCN Advantage          |
+| ------- | -------------- | -------- | ---------------- | ---------------------- |
+| 1s      | 0.760          | 0.812    | 0.725            | -0.087 (baselines win) |
+| 5s      | -0.267         | -0.393   | 0.577            | **+0.844**             |
+| 10s     | -0.256         | -0.212   | 0.669            | **+0.925**             |
 
 This is not incremental improvement — it's the difference between "useful prediction" and "worse than guessing the mean."
 
@@ -29,13 +29,14 @@ This is not incremental improvement — it's the difference between "useful pred
 
 The TCN controller was replayed on all 35 subjects' actual EEG recordings (not simulation):
 
-| Metric | Fixed | Reactive | TCN | Oracle |
-|--------|-------|----------|-----|--------|
-| Alignment | 45.0% | 64.5% | **72.1%** | 100% |
-| Low-PAC Targeting | 61.4% | 51.7% | **82.6%** | 100% |
-| PAC Gap (×10⁻⁶ MI) | -6.6 | +21.1 | **+30.5** | +33.3 |
+| Metric             | Fixed | Reactive | TCN       | Oracle |
+| ------------------ | ----- | -------- | --------- | ------ |
+| Alignment          | 45.0% | 64.5%    | **72.1%** | 100%   |
+| Low-PAC Targeting  | 61.4% | 51.7%    | **82.6%** | 100%   |
+| PAC Gap (×10⁻⁶ MI) | -6.6  | +21.1    | **+30.5** | +33.3  |
 
 Key statistics (TCN vs Reactive):
+
 - Alignment: Hedges' g = 1.31, p < 0.001 (large effect)
 - Low-PAC Targeting: Hedges' g = 4.47, p < 0.001 (very large effect)
 - PAC Gap: Hedges' g = 1.57, p < 0.001 (large effect)
@@ -45,6 +46,7 @@ Key statistics (TCN vs Reactive):
 ### 1.3 Robustness Validation
 
 Results are not artifacts of a single assumption:
+
 - Robust across delta-z thresholds 0.2-1.0
 - Robust across 4 fatigue model types (exponential, step, heterogeneous, saturation)
 - Gains +6.9% to +19.0% (all p < 10^-13)
@@ -53,6 +55,7 @@ Results are not artifacts of a single assumption:
 ### 1.4 Complete End-to-End Pipeline
 
 Built from raw BIDS data to real-time inference:
+
 1. Data loading from HDF5 .set/.fdt files
 2. Preprocessing (bandpass, notch, artifact rejection, CAR)
 3. PAC computation (Modulation Index, Tort 2010)
@@ -67,6 +70,7 @@ Built from raw BIDS data to real-time inference:
 ### 1.5 Data Integrity
 
 Every audit passes:
+
 - No future leakage in dataset construction
 - Subject-level train/val/test splits (24/5/6)
 - Shuffle-label test: R² = -0.332 (model learns real patterns)
@@ -80,6 +84,7 @@ Every audit passes:
 ### 2.1 TCN Beats ALL Non-ML Methods at 5-10s
 
 At the horizons that matter for proactive control:
+
 - **Persistence (just repeat last value):** Negative R² — useless
 - **Ridge regression (linear ML):** Negative R² — useless
 - **TCN (our method):** R² ≈ 0.25 — positive, actionable signal
@@ -100,7 +105,7 @@ The TCN controller reaches 91% of what you could achieve with perfect future kno
 
 ### 2.5 Fixed Schedule Goes WRONG Direction
 
-The standard clinical protocol (Fixed Schedule) actually stimulates *more* during high-PAC windows than low-PAC windows (PAC gap = -6.6 ×10⁻⁶ MI). It's actively counterproductive at targeting therapy to need.
+The standard clinical protocol (Fixed Schedule) actually stimulates _more_ during high-PAC windows than low-PAC windows (PAC gap = -6.6 ×10⁻⁶ MI). It's actively counterproductive at targeting therapy to need.
 
 ---
 
@@ -109,6 +114,7 @@ The standard clinical protocol (Fixed Schedule) actually stimulates *more* durin
 ### 3.1 Real-Time Deployment Not Tested
 
 The system was validated by replaying recorded EEG data through the controller, not by streaming live EEG. Real-time challenges include:
+
 - Hardware latency (EEG amplifier → processing → decision → stimulus onset)
 - Online PAC estimation accuracy under noisy conditions
 - Motion artifacts in clinical settings
@@ -116,10 +122,11 @@ The system was validated by replaying recorded EEG data through the controller, 
 ### 3.2 Single Dataset
 
 All results come from one OpenNeuro dataset (ds005048, 35 subjects, Iranian cohort). Generalization to:
+
 - Different populations (age, ethnicity, disease severity)
 - Different stimulation modalities (visual, combined audio-visual)
 - Different recording setups (dry electrodes, fewer channels)
-remains unvalidated.
+  remains unvalidated.
 
 ### 3.3 Short Sessions
 
@@ -161,14 +168,14 @@ The closed-loop controller uses hand-tuned z-score thresholds (-0.5 for stimulat
 
 ## 5. Project Strengths Summary
 
-| Dimension | Assessment |
-|-----------|-----------|
-| Scientific Rigor | Strong — proper statistics (Wilcoxon, Hedges' g, 95% CIs via large-sample normal approximation), data integrity audits, shuffle-label validation |
-| Innovation | Strong — novel application of causal TCN to entrainment prediction; horizon sweep demonstrates unique value |
-| Completeness | Strong — end-to-end pipeline from raw BIDS data to controller validation |
-| Reproducibility | Strong — all code open-source, deterministic seeds, OpenNeuro public dataset |
-| Real-World Impact | Moderate — validated on real data but not deployed in real-time |
-| Documentation | Excellent — comprehensive docs, findings report, results, figures |
+| Dimension         | Assessment                                                                                                                                       |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Scientific Rigor  | Strong — proper statistics (Wilcoxon, Hedges' g, 95% CIs via large-sample normal approximation), data integrity audits, shuffle-label validation |
+| Innovation        | Strong — novel application of causal TCN to entrainment prediction; horizon sweep demonstrates unique value                                      |
+| Completeness      | Strong — end-to-end pipeline from raw BIDS data to controller validation                                                                         |
+| Reproducibility   | Strong — all code open-source, deterministic seeds, OpenNeuro public dataset                                                                     |
+| Real-World Impact | Moderate — validated on real data but not deployed in real-time                                                                                  |
+| Documentation     | Excellent — comprehensive docs, findings report, results, figures                                                                                |
 
 ---
 
@@ -189,4 +196,4 @@ The closed-loop controller uses hand-tuned z-score thresholds (-0.5 for stimulat
 
 ---
 
-*Report generated February 27, 2026*
+_Report generated February 27, 2026_

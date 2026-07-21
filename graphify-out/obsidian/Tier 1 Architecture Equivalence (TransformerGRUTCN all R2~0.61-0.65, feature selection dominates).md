@@ -9,6 +9,7 @@ tags:
 # Tier 1 Architecture Equivalence (Transformer/GRU/TCN all R2~0.61-0.65, feature selection dominates)
 
 ## Connections
+
 - [[Architecture Exploration Comparison (10 models, 5-seed)]] - `references` [EXTRACTED]
 - [[Feature Ablation Validation (pac_stim  pac  all  spectral confirmed)]] - `conceptually_related_to` [INFERRED]
 

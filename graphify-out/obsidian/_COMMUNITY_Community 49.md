@@ -8,6 +8,7 @@ members: 21
 **Members:** 21 nodes
 
 ## Members
+
 - [[Code Validation & Audit Script (runs without PyTorch)  Validates the temporal]] - rationale - scripts/audit/validate_leakage.py
 - [[Persistence Baseline — Predict PAC(t) = PAC(t-1)]] - code - scripts/audit/validate_leakage.py
 - [[Ridge Regression Baseline — Temporal PAC Prediction Comparison]] - code - scripts/audit/validate_leakage.py

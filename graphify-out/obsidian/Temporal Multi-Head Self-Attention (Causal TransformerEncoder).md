@@ -10,6 +10,7 @@ tags:
 # Temporal Multi-Head Self-Attention (Causal TransformerEncoder)
 
 ## Connections
+
 - [[ImprovedTCN_2]] - `implements` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

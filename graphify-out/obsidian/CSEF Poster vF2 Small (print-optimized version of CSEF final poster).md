@@ -9,6 +9,7 @@ tags:
 # CSEF Poster vF2 Small (print-optimized version of CSEF final poster)
 
 ## Connections
+
 - [[CSEF Final Poster (CSEF_FINAL.pdf) Complete CSEF 2026 submission poster]] - `references` [INFERRED]
 
   #community/Community_135

@@ -10,6 +10,7 @@ tags:
 # MagnitudeWarp
 
 ## Connections
+
 - [[Warp the magnitude (amplitude) of the signal smoothly over time.      This simul]] - `rationale_for` [EXTRACTED]
 - [[__call__()_2]] - `method` [EXTRACTED]
 - [[__init__()_47]] - `method` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[data_augmentation.py]] - `contains` [EXTRACTED]
 - [[test_augmentation()]] - `calls` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

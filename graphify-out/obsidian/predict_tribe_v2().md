@@ -10,6 +10,7 @@ tags:
 # predict_tribe_v2()
 
 ## Connections
+
 - [[CorticalResponseModel]] - `method` [EXTRACTED]
 - [[Predict ROI activations using TRIBE V2 model.          Note TRIBE V2 requires n]] - `rationale_for` [EXTRACTED]
 - [[_load_roi_indices()]] - `calls` [EXTRACTED]

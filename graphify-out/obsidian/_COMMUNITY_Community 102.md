@@ -8,6 +8,7 @@ members: 7
 **Members:** 7 nodes
 
 ## Members
+
 - [[Audit script for multiscale temporal dataset and training artifacts.  Checks 1)]] - rationale - temporal_multiscale/audit_multiscale_pipeline.py
 - [[_finite_check()]] - code - temporal_multiscale/audit_multiscale_pipeline.py
 - [[_load_npz()]] - code - temporal_multiscale/audit_multiscale_pipeline.py

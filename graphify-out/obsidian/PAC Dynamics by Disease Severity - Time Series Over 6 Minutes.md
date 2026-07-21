@@ -10,6 +10,7 @@ tags:
 # PAC Dynamics by Disease Severity - Time Series Over 6 Minutes
 
 ## Connections
+
 - [[TRIBE V2 Alzheimer's Disease Simulation Predictive Controller (3-Panel Sweep)]] - `references` [EXTRACTED]
 
   #community/Community_31

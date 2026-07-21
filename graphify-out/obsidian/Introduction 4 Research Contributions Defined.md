@@ -10,9 +10,10 @@ tags:
 # Introduction: 4 Research Contributions Defined
 
 ## Connections
+
 - [[Contribution 1 R²=0.287 Static PAC Ceiling (8 architectures converge)]] - `references` [EXTRACTED]
 - [[Contribution 2 Causal TCN for 5-10s PAC Forecasting (+0.5 R² margin)]] - `references` [EXTRACTED]
 - [[Contribution 3 Closed-Loop Controller Validated on 35 EEG Subjects]] - `references` [EXTRACTED]
 - [[Contribution 4 Prediction Horizon Inflection Point (~3 seconds)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

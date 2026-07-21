@@ -9,6 +9,7 @@ tags:
 # Poster V6 Board Content (duplicate of POSTER_BOARD_V6)
 
 ## Connections
+
 - [[Poster Board V6 (PAC+Stim Feature Discovery Update)]] - `semantically_similar_to` [EXTRACTED]
 
   #community/Community_41

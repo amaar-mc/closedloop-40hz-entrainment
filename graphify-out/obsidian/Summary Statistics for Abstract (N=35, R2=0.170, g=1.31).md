@@ -10,7 +10,8 @@ tags:
 # Summary Statistics for Abstract (N=35, R2=0.170, g=1.31)
 
 ## Connections
+
 - [[OpenNeuro ds005048 Dataset (35 subjects, 7ch frontal EEG, 250Hz)]] - `references` [EXTRACTED]
 - [[TCN Predictive vs Reactive Threshold Primary Result]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

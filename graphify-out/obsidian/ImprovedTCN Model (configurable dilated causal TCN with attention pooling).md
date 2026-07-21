@@ -10,6 +10,7 @@ tags:
 # ImprovedTCN Model (configurable dilated causal TCN with attention pooling)
 
 ## Connections
+
 - [[CausalConvBlock (residual depthwise-separable causal conv)]] - `implements` [EXTRACTED]
 - [[ImprovedTCN Architecture (6338 params, 12-feature input)]] - `conceptually_related_to` [INFERRED]
 - [[ML Experiment Framework (run_experiments.py)]] - `implements` [EXTRACTED]

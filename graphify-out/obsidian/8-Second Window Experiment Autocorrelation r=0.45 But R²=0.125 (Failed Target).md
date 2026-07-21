@@ -10,6 +10,7 @@ tags:
 # 8-Second Window Experiment: Autocorrelation r=0.45 But R²=0.125 (Failed Target)
 
 ## Connections
+
 - [[Phase 2 Finding 8-Second Windows Autocorr r=0.45 But Prediction R²=0.125]] - `references` [EXTRACTED]
 
   #community/Community_71

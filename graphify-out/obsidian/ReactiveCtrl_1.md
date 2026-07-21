@@ -10,6 +10,7 @@ tags:
 # ReactiveCtrl
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[Reactive z-score threshold controller on rolling PAC baseline.]] - `rationale_for` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[run_tcn_validation.py]] - `contains` [EXTRACTED]
 - [[step()_25]] - `method` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

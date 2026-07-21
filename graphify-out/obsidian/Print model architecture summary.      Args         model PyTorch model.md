@@ -7,9 +7,10 @@ tags:
   - community/Community_35
 ---
 
-# Print model architecture summary.      Args:         model: PyTorch model
+# Print model architecture summary. Args: model: PyTorch model
 
 ## Connections
+
 - [[print_model_summary()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_35

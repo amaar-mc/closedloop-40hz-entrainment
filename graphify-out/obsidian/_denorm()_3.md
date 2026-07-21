@@ -7,12 +7,13 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _denorm()
+# \_denorm()
 
 ## Connections
+
 - [[Denormalize z-scored predictions.]] - `rationale_for` [EXTRACTED]
 - [[_persistence_baseline()_1]] - `calls` [EXTRACTED]
 - [[evaluate()_8]] - `calls` [EXTRACTED]
 - [[run_all_experiments.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

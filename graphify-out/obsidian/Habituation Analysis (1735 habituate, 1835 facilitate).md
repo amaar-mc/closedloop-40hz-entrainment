@@ -10,6 +10,7 @@ tags:
 # Habituation Analysis (17/35 habituate, 18/35 facilitate)
 
 ## Connections
+
 - [[Fatigue Sensitivity Results (6 severity levels)]] - `references` [INFERRED]
 - [[Individual Variability in 40Hz Response (30% non-responders)]] - `conceptually_related_to` [INFERRED]
 

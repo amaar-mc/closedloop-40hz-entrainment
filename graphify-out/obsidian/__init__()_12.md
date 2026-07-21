@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[AttentionPool1D]] - `calls` [EXTRACTED]
 - [[CausalDSConvBlock]] - `calls` [EXTRACTED]
 - [[ImprovedTCN_1]] - `method` [EXTRACTED]

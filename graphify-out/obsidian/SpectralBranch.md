@@ -10,6 +10,7 @@ tags:
 # SpectralBranch
 
 ## Connections
+
 - [[Process pre-extracted spectral features.      Input Spectral features (theta]] - `rationale_for` [EXTRACTED]
 - [[__init__()_54]] - `method` [EXTRACTED]
 - [[__init__()_56]] - `calls` [EXTRACTED]

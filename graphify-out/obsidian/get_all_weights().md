@@ -10,8 +10,9 @@ tags:
 # get_all_weights()
 
 ## Connections
+
 - [[AttentionWeightCapture]] - `method` [EXTRACTED]
 - [[Concatenate all captured weights into (N, T) array.]] - `rationale_for` [EXTRACTED]
 - [[analyze_attention_weights()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

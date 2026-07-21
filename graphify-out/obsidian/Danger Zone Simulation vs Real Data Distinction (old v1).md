@@ -10,6 +10,7 @@ tags:
 # Danger Zone: Simulation vs Real Data Distinction (old v1)
 
 ## Connections
+
 - [[Offline Replay Limitation Framing (not live closed-loop, next step is crossover study)]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_30

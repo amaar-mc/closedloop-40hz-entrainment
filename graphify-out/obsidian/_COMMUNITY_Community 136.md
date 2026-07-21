@@ -8,6 +8,7 @@ members: 3
 **Members:** 3 nodes
 
 ## Members
+
 - [[Hedges' g Effect Size]] - document - archive/context/methodology.md
 - [[Statistical Analysis Framework]] - document - archive/context/methodology.md
 - [[Wilcoxon Signed-Rank Test]] - document - archive/context/methodology.md

@@ -10,10 +10,11 @@ tags:
 # run_trial_batch()
 
 ## Connections
+
 - [[Run n_trials for each method, accumulating all results.      Each trial uses a]] - `rationale_for` [EXTRACTED]
 - [[main()_65]] - `calls` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 - [[run_fatigue_sweep()]] - `calls` [EXTRACTED]
 - [[run_single_trial()]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# Args:             lookback: Number of windows to look back (5 windows = 20 seco
+# Args: lookback: Number of windows to look back (5 windows = 20 seco
 
 ## Connections
+
 - [[TemporalPACPredictor]] - `uses` [INFERRED]
 - [[__init__()_23]] - `rationale_for` [EXTRACTED]
 

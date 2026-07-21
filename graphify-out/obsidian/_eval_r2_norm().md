@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _eval_r2_norm()
+# \_eval_r2_norm()
 
 ## Connections
+
 - [[Evaluate R² on normalized targets (for early stopping).]] - `rationale_for` [EXTRACTED]
 - [[comparison_models.py]] - `contains` [EXTRACTED]
 - [[train_pytorch_model()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

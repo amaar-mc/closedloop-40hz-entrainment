@@ -10,6 +10,7 @@ tags:
 # Horizon Sweep Result (R²=0.577–0.669 at 3–10s)
 
 ## Connections
+
 - [[Causal Temporal Convolutional Network (TCN)]] - `references` [EXTRACTED]
 
   #community/Community_72

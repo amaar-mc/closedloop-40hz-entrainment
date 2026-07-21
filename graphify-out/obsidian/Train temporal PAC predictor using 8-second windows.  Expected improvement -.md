@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# Train temporal PAC predictor using 8-second windows.  Expected improvement: -
+# Train temporal PAC predictor using 8-second windows. Expected improvement: -
 
 ## Connections
+
 - [[TemporalPACPredictor]] - `uses` [INFERRED]
 - [[train_temporal_long_windows.py]] - `rationale_for` [EXTRACTED]
 

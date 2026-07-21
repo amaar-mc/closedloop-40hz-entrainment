@@ -10,6 +10,7 @@ tags:
 # PAC Computation (Modulation Index)
 
 ## Connections
+
 - [[EEG Preprocessing Pipeline]] - `references` [EXTRACTED]
 - [[EEGNet Static PAC Predictor]] - `shares_data_with` [EXTRACTED]
 - [[PAC as Biomarker for Alzheimer's Disease]] - `conceptually_related_to` [INFERRED]

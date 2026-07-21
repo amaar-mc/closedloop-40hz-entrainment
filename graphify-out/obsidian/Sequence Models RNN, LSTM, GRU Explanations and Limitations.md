@@ -10,6 +10,7 @@ tags:
 # Sequence Models: RNN, LSTM, GRU Explanations and Limitations
 
 ## Connections
+
 - [[ML Zero to Hero Educational Guide (Foundations to Causal TCN)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

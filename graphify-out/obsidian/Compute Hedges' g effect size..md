@@ -10,6 +10,7 @@ tags:
 # Compute Hedges' g effect size.
 
 ## Connections
+
 - [[StimAction]] - `uses` [INFERRED]
 - [[hedges_g()]] - `rationale_for` [EXTRACTED]
 

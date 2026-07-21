@@ -10,6 +10,7 @@ tags:
 # ImprovedTCN: Causal TCN with temporal multi-head self-attention and three-head o
 
 ## Connections
+
 - [[improved_tcn_model.py]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

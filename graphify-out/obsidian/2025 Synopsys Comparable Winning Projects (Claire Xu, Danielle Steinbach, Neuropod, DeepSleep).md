@@ -10,7 +10,8 @@ tags:
 # 2025 Synopsys Comparable Winning Projects (Claire Xu, Danielle Steinbach, Neuropod, DeepSleep)
 
 ## Connections
+
 - [[Synopsys Championship Winning Analysis (Feb 27, 2026)]] - `references` [EXTRACTED]
 - [[Synopsys Judging Criteria (40 pts Scientific Thought, Creativity, Independent Work, Thoroughness)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

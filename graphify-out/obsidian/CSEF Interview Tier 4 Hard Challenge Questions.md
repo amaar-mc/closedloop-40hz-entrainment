@@ -9,7 +9,8 @@ tags:
 # CSEF Interview Tier 4 Hard Challenge Questions
 
 ## Connections
+
 - [[Feature Ablation Discovery 12-Feature vs 73-Feature Generalization]] - `references` [EXTRACTED]
 - [[Offline Replay Validation (real EEG, counterfactual decisions, 35 subjects)]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

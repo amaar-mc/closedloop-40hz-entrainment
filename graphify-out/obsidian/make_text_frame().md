@@ -10,6 +10,7 @@ tags:
 # make_text_frame()
 
 ## Connections
+
 - [[Add a text box and return its text frame with word-wrap on.]] - `rationale_for` [EXTRACTED]
 - [[add_figure()]] - `calls` [EXTRACTED]
 - [[generate_csef_pptx.py]] - `contains` [EXTRACTED]

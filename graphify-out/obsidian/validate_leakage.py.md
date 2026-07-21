@@ -10,6 +10,7 @@ tags:
 # validate_leakage.py
 
 ## Connections
+
 - [[Code Validation & Audit Script (runs without PyTorch)  Validates the temporal]] - `rationale_for` [EXTRACTED]
 - [[audit_code()]] - `contains` [EXTRACTED]
 - [[load_data()]] - `contains` [EXTRACTED]

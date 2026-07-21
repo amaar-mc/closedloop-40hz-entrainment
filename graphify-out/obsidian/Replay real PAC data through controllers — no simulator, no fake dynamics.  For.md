@@ -7,9 +7,10 @@ tags:
   - community/Replay_Analysis_&_Controllers
 ---
 
-# Replay real PAC data through controllers — no simulator, no fake dynamics.  For
+# Replay real PAC data through controllers — no simulator, no fake dynamics. For
 
 ## Connections
+
 - [[run_replay_analysis.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

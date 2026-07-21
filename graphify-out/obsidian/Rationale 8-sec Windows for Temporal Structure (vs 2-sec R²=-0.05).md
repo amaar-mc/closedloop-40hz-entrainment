@@ -10,6 +10,7 @@ tags:
 # Rationale: 8-sec Windows for Temporal Structure (vs 2-sec R²=-0.05)
 
 ## Connections
+
 - [[process_subject (Per-Subject Long-Window Extractor)]] - `rationale_for` [EXTRACTED]
 
   #community/Community_129

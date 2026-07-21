@@ -10,6 +10,7 @@ tags:
 # Add a teal header bar with white text.
 
 ## Connections
+
 - [[add_section_header()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Community_75

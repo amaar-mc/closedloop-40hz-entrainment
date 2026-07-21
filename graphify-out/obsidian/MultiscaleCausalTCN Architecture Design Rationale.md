@@ -10,6 +10,7 @@ tags:
 # MultiscaleCausalTCN Architecture Design Rationale
 
 ## Connections
+
 - [[Causal Padding Rationale (left-only padding prevents future leakage)]] - `rationale_for` [EXTRACTED]
 - [[GroupNorm vs BatchNorm Rationale (cross-subject stability)]] - `rationale_for` [EXTRACTED]
 - [[Target Smoothing Investigation (ts=5 inflates R² to 0.764, ts=1 = 0.067)]] - `rationale_for` [INFERRED]

@@ -10,6 +10,7 @@ tags:
 # HeterogeneousPopulationSimulator (Fatigue Model 3: 50% No-Fatigue / 50% High-Fatigue)
 
 ## Connections
+
 - [[create_simulator()]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

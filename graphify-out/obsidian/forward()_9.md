@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[ImprovedTCN_1]] - `method` [EXTRACTED]
 - [[_make_causal_mask()]] - `calls` [EXTRACTED]
 

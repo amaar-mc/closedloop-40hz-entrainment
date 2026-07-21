@@ -9,6 +9,7 @@ tags:
 # CSEF Poster Print Version (Slide1_print.png)
 
 ## Connections
+
 - [[Model Approach Section (Poster)]] - `references` [EXTRACTED]
 - [[Prediction Horizon Sweep (Poster Figure 5)]] - `references` [EXTRACTED]
 - [[System Architecture Flowchart (Poster Figure 6)]] - `references` [EXTRACTED]

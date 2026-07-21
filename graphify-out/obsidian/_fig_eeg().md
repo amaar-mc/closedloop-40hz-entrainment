@@ -7,9 +7,10 @@ tags:
   - community/Community_32
 ---
 
-# _fig_eeg()
+# \_fig_eeg()
 
 ## Connections
+
 - [[main()_62]] - `calls` [EXTRACTED]
 - [[neurocare_live.py]] - `contains` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # strip_fenced_code_blocks()
 
 ## Connections
+
 - [[check_chronology()]] - `calls` [EXTRACTED]
 - [[verify_notebook_finalization.py]] - `contains` [EXTRACTED]
 

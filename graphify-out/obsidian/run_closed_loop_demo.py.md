@@ -10,6 +10,7 @@ tags:
 # run_closed_loop_demo.py
 
 ## Connections
+
 - [[End-to-end closed-loop demo compare control strategies with and without fatigue]] - `rationale_for` [EXTRACTED]
 - [[FixedScheduleControl_1]] - `contains` [EXTRACTED]
 - [[OracleControl_1]] - `contains` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[run_trial()_1]] - `contains` [EXTRACTED]
 - [[simulator.py]] - `imports_from` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -7,9 +7,10 @@ tags:
   - community/Community_57
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[AttentionModel]] - `method` [EXTRACTED]
 - [[__init__()_21]] - `calls` [EXTRACTED]
 

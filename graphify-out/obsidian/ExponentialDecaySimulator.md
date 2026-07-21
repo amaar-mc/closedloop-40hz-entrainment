@@ -10,6 +10,7 @@ tags:
 # ExponentialDecaySimulator
 
 ## Connections
+
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[Fatigue Model 1 Exponential Decay (current baseline model).      Responsivene]] - `rationale_for` [EXTRACTED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
@@ -22,4 +23,4 @@ tags:
 - [[get_description()]] - `method` [EXTRACTED]
 - [[step()_54]] - `method` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

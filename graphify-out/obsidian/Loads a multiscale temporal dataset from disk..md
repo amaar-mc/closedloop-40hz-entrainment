@@ -10,6 +10,7 @@ tags:
 # Loads a multiscale temporal dataset from disk.
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[ModelConfig_1]] - `uses` [INFERRED]
 - [[MultiTaskTCN]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[SequenceDataset_1]] - `rationale_for` [EXTRACTED]
 - [[TransformerConfig]] - `uses` [INFERRED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

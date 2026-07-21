@@ -10,6 +10,7 @@ tags:
 # LastStepPool
 
 ## Connections
+
 - [[AblationVariant]] - `uses` [INFERRED]
 - [[CausalDSConvBlock with GroupNorm replaced by Identity (ablation).]] - `uses` [INFERRED]
 - [[CausalDSConvBlockNoNorm]] - `uses` [INFERRED]
@@ -22,4 +23,4 @@ tags:
 - [[forward()_31]] - `method` [EXTRACTED]
 - [[multiscale_tcn.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

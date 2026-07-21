@@ -8,6 +8,7 @@ members: 7
 **Members:** 7 nodes
 
 ## Members
+
 - [[Analyze habituation patterns across subjects.]] - rationale - temporal_multiscale/fatigue_analysis.py
 - [[Habituationfatigue analysis does PAC decline across repeated stimulation block]] - rationale - temporal_multiscale/fatigue_analysis.py
 - [[Load PAC values and align with BIDS events for each subject.]] - rationale - temporal_multiscale/fatigue_analysis.py

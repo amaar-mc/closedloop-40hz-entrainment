@@ -10,6 +10,7 @@ tags:
 # QR Code: Live Demo (Caregiver App)
 
 ## Connections
+
 - [[NeuroCare 40Hz Product Flyer]] - `references` [EXTRACTED]
 - [[QR Code Feedback Form]] - `conceptually_related_to` [EXTRACTED]
 

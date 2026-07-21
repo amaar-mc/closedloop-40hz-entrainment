@@ -10,6 +10,7 @@ tags:
 # training.py
 
 ## Connections
+
 - [[DataAugmentor]] - `contains` [EXTRACTED]
 - [[ModelTrainer]] - `contains` [EXTRACTED]
 - [[Training Pipeline for EEGNet PAC Prediction Model  Implements model training w]] - `rationale_for` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[main()_77]] - `contains` [EXTRACTED]
 - [[utils.py]] - `imports_from` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

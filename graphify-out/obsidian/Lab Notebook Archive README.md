@@ -9,6 +9,7 @@ tags:
 # Lab Notebook Archive README
 
 ## Connections
+
 - [[Project P10 Research Log Notebook (VFINAL)]] - `references` [EXTRACTED]
 - [[Project P10 Research Log Notebook V3 (Synopsys Submission)]] - `references` [EXTRACTED]
 

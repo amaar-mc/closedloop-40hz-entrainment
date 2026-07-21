@@ -10,6 +10,7 @@ tags:
 # Rationale: LSTM for Model Predictive Control of 40Hz Entrainment
 
 ## Connections
+
 - [[TemporalPACPredictor (LSTMGRU Model)]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Temporal_PAC_Predictor

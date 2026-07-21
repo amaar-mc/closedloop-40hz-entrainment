@@ -9,6 +9,7 @@ tags:
 # Causal TCN (31K params, 20s lookback)
 
 ## Connections
+
 - [[Closed-Loop Controller (z-score ±0.5, 5s hysteresis)]] - `calls` [EXTRACTED]
 - [[Feature Extraction (73 features 61+7+5)]] - `calls` [EXTRACTED]
 - [[TCN Predictive Controller Decisions (Sub-15, 5s ahead)]] - `conceptually_related_to` [INFERRED]

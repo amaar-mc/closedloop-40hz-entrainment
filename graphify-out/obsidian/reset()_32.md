@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[TrendPredictiveCtrl]] - `method` [EXTRACTED]
 - [[run_trial()_3]] - `calls` [EXTRACTED]
 

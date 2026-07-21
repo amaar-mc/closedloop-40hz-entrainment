@@ -7,12 +7,13 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Evaluate how early the controller responds to PAC drop transitions.      For e
+# Evaluate how early the controller responds to PAC drop transitions. For e
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[evaluate_transition_anticipation()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

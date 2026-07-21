@@ -8,6 +8,7 @@ members: 36
 **Members:** 36 nodes
 
 ## Members
+
 - [[Attempt to open a Muse 2 BLE session.          Args             mac_address Bl]] - rationale - src/streaming/adapters.py
 - [[Hardware-agnostic EEG adapters for closed-loop inference.  Provides two adapters]] - rationale - src/streaming/adapters.py
 - [[Muse 2 BLE adapter — NOT VIABLE on macOS Darwin 25.4.0.      Attempted 2026-03-]] - rationale - src/streaming/adapters.py
@@ -53,12 +54,14 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 2 edges to [[_COMMUNITY_Models, Streaming & Apps]]
 - 1 edge to [[_COMMUNITY_Archived ImprovedTCN Experiments]]
 - 1 edge to [[_COMMUNITY_TRIBE Neural-Mass Simulator]]
 - 1 edge to [[_COMMUNITY_Core Data & PAC Pipeline]]
 
 ## Top bridge nodes
+
 - [[NeuroCare 40Hz -- Live Mission Control v5  Uses st.empty() placeholders for flic]] - degree 4, connects to 2 communities
 - [[RealEEGAdapter]] - degree 9, connects to 1 community
 - [[adapters.py]] - degree 4, connects to 1 community

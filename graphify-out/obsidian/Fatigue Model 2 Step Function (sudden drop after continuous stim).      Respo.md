@@ -7,9 +7,10 @@ tags:
   - community/Control_Strategies_&_Validation
 ---
 
-# Fatigue Model 2: Step Function (sudden drop after continuous stim).      Respo
+# Fatigue Model 2: Step Function (sudden drop after continuous stim). Respo
 
 ## Connections
+
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
 - [[PredictiveLookAheadControl_5]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[StimAction]] - `uses` [INFERRED]
 - [[TrialMetrics]] - `uses` [INFERRED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

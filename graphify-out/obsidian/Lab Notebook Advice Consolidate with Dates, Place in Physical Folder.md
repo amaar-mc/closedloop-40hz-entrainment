@@ -10,6 +10,7 @@ tags:
 # Lab Notebook Advice: Consolidate with Dates, Place in Physical Folder
 
 ## Connections
+
 - [[Kushal Khare Poster Feedback Meeting (March 4, 2026)]] - `references` [EXTRACTED]
 - [[Lab Notebook Requirements Guidelines (Rice University Standard Protocol)]] - `semantically_similar_to` [INFERRED]
 

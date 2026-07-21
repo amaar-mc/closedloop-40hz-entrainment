@@ -10,7 +10,8 @@ tags:
 # get_description()
 
 ## Connections
+
 - [[ExponentialDecaySimulator]] - `method` [EXTRACTED]
 - [[Return human-readable model description.]] - `rationale_for` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

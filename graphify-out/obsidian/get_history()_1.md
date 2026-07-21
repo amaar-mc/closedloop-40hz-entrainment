@@ -10,8 +10,9 @@ tags:
 # get_history()
 
 ## Connections
+
 - [[Get full history of decisions, measurements, and predictions.]] - `rationale_for` [EXTRACTED]
 - [[PredictiveLookAheadController]] - `method` [EXTRACTED]
 - [[test_controller()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

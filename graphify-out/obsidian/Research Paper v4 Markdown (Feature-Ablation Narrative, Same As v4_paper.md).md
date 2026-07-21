@@ -9,6 +9,7 @@ tags:
 # Research Paper v4 Markdown (Feature-Ablation Narrative, Same As v4_paper.md)
 
 ## Connections
+
 - [[Research Paper v4 (Full Paper, Feature-Ablation Version)]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_33

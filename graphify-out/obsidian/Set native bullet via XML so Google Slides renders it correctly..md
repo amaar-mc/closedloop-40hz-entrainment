@@ -10,6 +10,7 @@ tags:
 # Set native bullet via XML so Google Slides renders it correctly.
 
 ## Connections
+
 - [[_enable_bullet()]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

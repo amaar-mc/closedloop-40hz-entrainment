@@ -10,6 +10,7 @@ tags:
 # Wilson-Cowan neural mass model producing theta-gamma coupled oscillations.
 
 ## Connections
+
 - [[WilsonCowanModel]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

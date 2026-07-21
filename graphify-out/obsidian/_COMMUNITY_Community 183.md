@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[4-Channel vs 7-Channel Comparison (Muse-Compatible)]] - document - submission/paper/v4_paper.md
 
 ## Live Query (requires Dataview plugin)

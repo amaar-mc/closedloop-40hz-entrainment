@@ -10,8 +10,9 @@ tags:
 # print_conditional_summary()
 
 ## Connections
+
 - [[Print stimulation-conditional performance summary.]] - `rationale_for` [EXTRACTED]
 - [[main()_71]] - `calls` [EXTRACTED]
 - [[tcn_interpretability.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

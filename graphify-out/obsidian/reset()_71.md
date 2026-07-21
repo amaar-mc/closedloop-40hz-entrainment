@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[Reset simulator to initial state.          Args             initial_pac Overri]] - `rationale_for` [EXTRACTED]
 - [[TVBAlzheimerSimulator]] - `method` [EXTRACTED]
 - [[_warmup()_1]] - `calls` [EXTRACTED]

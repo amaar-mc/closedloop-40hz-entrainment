@@ -10,6 +10,7 @@ tags:
 # Replay all controllers on one subject's real PAC data.
 
 ## Connections
+
 - [[replay_subject()]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

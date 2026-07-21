@@ -9,6 +9,7 @@ tags:
 # Current Methodology: Closed-Loop 40Hz Entrainment via Temporal PAC Forecasting
 
 ## Connections
+
 - [[Audit Integrity Checks (No Subject Leakage, Temporal Causality, Shuffle-Label Sanity)]] - `references` [EXTRACTED]
 - [[Brain Response Simulation (Exponential PAC Approach Model)]] - `references` [EXTRACTED]
 - [[Clinical Implication Proactive Stimulation Lead Time for Adaptive Music Therapy]] - `references` [EXTRACTED]

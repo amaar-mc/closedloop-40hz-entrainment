@@ -10,6 +10,7 @@ tags:
 # Convert markdown inline formatting to LaTeX.
 
 ## Connections
+
 - [[convert_inline_formatting()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_44

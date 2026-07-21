@@ -10,6 +10,7 @@ tags:
 # Streamlit Interactive Demo Dependency
 
 ## Connections
+
 - [[Closed-Loop 40 Hz Gamma Entrainment System]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_39

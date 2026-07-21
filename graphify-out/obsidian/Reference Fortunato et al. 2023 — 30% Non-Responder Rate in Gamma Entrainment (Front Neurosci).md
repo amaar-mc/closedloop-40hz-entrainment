@@ -10,6 +10,7 @@ tags:
 # Reference: Fortunato et al. 2023 — 30% Non-Responder Rate in Gamma Entrainment (Front Neurosci)
 
 ## Connections
+
 - [[Research Paper v3 (Full Manuscript)]] - `cites` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

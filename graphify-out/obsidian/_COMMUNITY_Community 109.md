@@ -8,6 +8,7 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
+
 - [[Alzheimer Severity Profiles (Healthy, Mild AD, Severe AD)]] - document - submission/lab_notebook/extension.md
 - [[Citation Meta AI (2026) - TRIBE V2 Brain Foundation Model]] - document - submission/lab_notebook/extension.md
 - [[Citation Soula et al. (2023) - 40Hz Light Doesn't Entrain Native Gamma in AD Mice]] - document - submission/lab_notebook/extension.md

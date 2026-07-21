@@ -7,6 +7,6 @@ tags:
   - community/Community_159
 ---
 
-# Apply causal trailing mean within each subject block.          Causal (trailing)
+# Apply causal trailing mean within each subject block. Causal (trailing)
 
-  #community/Community_159
+#community/Community_159

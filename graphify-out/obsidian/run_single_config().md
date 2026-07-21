@@ -10,6 +10,7 @@ tags:
 # run_single_config()
 
 ## Connections
+
 - [[MaskedSequenceDataset_1]] - `calls` [EXTRACTED]
 - [[Train and evaluate a single configuration.]] - `rationale_for` [EXTRACTED]
 - [[evaluate()_7]] - `calls` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[run_hyperparam_sensitivity.py]] - `contains` [EXTRACTED]
 - [[train_one_epoch()_5]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

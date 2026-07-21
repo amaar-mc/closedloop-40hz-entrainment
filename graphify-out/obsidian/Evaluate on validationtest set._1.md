@@ -10,10 +10,11 @@ tags:
 # Evaluate on validation/test set.
 
 ## Connections
+
 - [[EEGAugmentation]] - `uses` [INFERRED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[ViTTCNet]] - `uses` [INFERRED]
 - [[WaveletFeatureExtractor]] - `uses` [INFERRED]
 - [[evaluate()_2]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

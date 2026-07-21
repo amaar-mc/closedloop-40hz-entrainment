@@ -10,7 +10,8 @@ tags:
 # System Architecture Flowchart on Poster (EEGNet→Features→TCN→Controller)
 
 ## Connections
+
 - [[CSEF Poster V3 (Final Print-Ready Poster)]] - `references` [EXTRACTED]
 - [[Two-Stage Predictive Pipeline (EEGNet → Feature Extraction → Causal TCN)]] - `references` [INFERRED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

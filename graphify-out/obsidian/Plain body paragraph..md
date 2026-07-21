@@ -10,6 +10,7 @@ tags:
 # Plain body paragraph.
 
 ## Connections
+
 - [[add_body()]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

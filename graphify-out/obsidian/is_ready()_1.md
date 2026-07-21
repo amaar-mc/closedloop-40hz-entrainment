@@ -10,6 +10,7 @@ tags:
 # is_ready()
 
 ## Connections
+
 - [[Check if at least one channel has sufficient baseline data.]] - `rationale_for` [EXTRACTED]
 - [[MultiChannelPersonalization]] - `method` [EXTRACTED]
 - [[test_personalization()]] - `calls` [EXTRACTED]

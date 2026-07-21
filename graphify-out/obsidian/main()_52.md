@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[generate_ai_figures.py]] - `contains` [EXTRACTED]
 - [[generate_image()]] - `calls` [EXTRACTED]
 

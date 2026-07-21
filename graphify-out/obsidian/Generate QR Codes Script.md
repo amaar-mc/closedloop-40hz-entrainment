@@ -9,6 +9,7 @@ tags:
 # Generate QR Codes Script
 
 ## Connections
+
 - [[Generate Flyer PDF Script]] - `shares_data_with` [INFERRED]
 - [[make_qr()]] - `calls` [EXTRACTED]
 - [[submissionflyer (QR Code Output Directory)]] - `references` [EXTRACTED]

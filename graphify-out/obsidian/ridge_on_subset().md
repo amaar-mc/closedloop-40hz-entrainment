@@ -10,6 +10,7 @@ tags:
 # ridge_on_subset()
 
 ## Connections
+
 - [[Ridge regression on feature subset.]] - `rationale_for` [EXTRACTED]
 - [[main()_2]] - `calls` [EXTRACTED]
 - [[run_pac_stim_focused.py]] - `contains` [EXTRACTED]

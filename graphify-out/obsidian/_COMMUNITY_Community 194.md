@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Competitive Advantages at CSEF (Individual, Real Data, Rigor)]] - document - submission/presentation/archive/v1_reference/past_winners_analysis.md
 
 ## Live Query (requires Dataview plugin)

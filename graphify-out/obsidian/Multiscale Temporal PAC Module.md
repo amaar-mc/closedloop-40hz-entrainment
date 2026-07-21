@@ -10,6 +10,7 @@ tags:
 # Multiscale Temporal PAC Module
 
 ## Connections
+
 - [[Causal Multiscale TCN Model]] - `references` [EXTRACTED]
 - [[Leakage-Safe Temporal Pipeline Design]] - `rationale_for` [EXTRACTED]
 - [[audit_multiscale_pipeline.py_1]] - `references` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # Stim Context Feature Builder from BIDS Events
 
 ## Connections
+
 - [[Build Sliding-PAC Temporal Dataset (build_sliding_dataset.py)]] - `implements` [EXTRACTED]
 
   #community/Generalization-Gap_Experiments

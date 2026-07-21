@@ -10,8 +10,9 @@ tags:
 # print_tcn_vs_others()
 
 ## Connections
+
 - [[Print Hedges' g for TCN-Predictive vs all other methods.]] - `rationale_for` [EXTRACTED]
 - [[main()_70]] - `calls` [EXTRACTED]
 - [[tcn_integrated_simulation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

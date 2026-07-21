@@ -10,6 +10,7 @@ tags:
 # Parse **bold** markers into segments of (text, is_bold).
 
 ## Connections
+
 - [[_parse_bold_segments()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

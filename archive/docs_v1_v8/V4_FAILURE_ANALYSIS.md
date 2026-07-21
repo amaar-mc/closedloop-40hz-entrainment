@@ -19,6 +19,7 @@ The V4 ViT-TCNet architecture failed to deliver the expected improvement (target
 ### 1. ❌ SEVERE OVERPARAMETERIZATION
 
 **The Problem:**
+
 - Model: 1,119,063 parameters
 - Training samples: 11,736
 - **Ratio: 0.01 samples per parameter**
@@ -28,6 +29,7 @@ The V4 ViT-TCNet architecture failed to deliver the expected improvement (target
 The model is **100x too complex** for the dataset size. This is like using a deep neural network to fit 10 data points - it will perfectly fit the training data but completely fail to generalize.
 
 **Evidence:**
+
 ```
 Model comparison:
   V3 baseline: ~50,000 parameters (0.2 samples/param)
@@ -39,6 +41,7 @@ Rule of thumb: 10-50 samples per parameter
 ### 2. ❌ OVERFITTING CONFIRMED
 
 **Training Dynamics:**
+
 ```
 Epoch | Train Loss | Val Loss | Val R²
 ------|-----------|----------|--------
@@ -49,6 +52,7 @@ Epoch | Train Loss | Val Loss | Val R²
 ```
 
 **Key Metrics:**
+
 - Train loss decreased: **-19.3%**
 - Val loss decreased: **-4.6%** (plateau)
 - Val R² peaked at epoch 24, then **declined**
@@ -58,6 +62,7 @@ Epoch | Train Loss | Val Loss | Val R²
 ### 3. ⚠️ POSSIBLE PERFORMANCE CEILING
 
 **Signal-to-Noise Analysis:**
+
 - Achieved R² = 0.252
 - Signal variance: 0.000000041
 - Noise variance: 0.000000123
@@ -69,6 +74,7 @@ The low SNR suggests that EEG noise may fundamentally limit performance. R² = 0
 ### 4. ⚠️ DISTRIBUTION SHIFT DETECTED
 
 **KL Divergence (lower = more similar):**
+
 ```
 Train vs Val:  709.23
 Train vs Test: 816.13
@@ -82,14 +88,15 @@ High KL divergence indicates significant heterogeneity between data splits. This
 
 ## Performance Comparison
 
-| Version | R² | Improvement | Note |
-|---------|-----|-------------|------|
-| V1 (with MI leak) | 0.690 | +192.4% | Data leakage |
-| V3-clean | 0.236 | baseline | Honest baseline |
-| **V4 ViT-TCNet (val)** | **0.207** | **-12.3%** | Best validation |
-| **V4 ViT-TCNet (test)** | **0.252** | **+6.8%** | Test performance |
+| Version                 | R²        | Improvement | Note             |
+| ----------------------- | --------- | ----------- | ---------------- |
+| V1 (with MI leak)       | 0.690     | +192.4%     | Data leakage     |
+| V3-clean                | 0.236     | baseline    | Honest baseline  |
+| **V4 ViT-TCNet (val)**  | **0.207** | **-12.3%**  | Best validation  |
+| **V4 ViT-TCNet (test)** | **0.252** | **+6.8%**   | Test performance |
 
 **Progress toward target:**
+
 - Baseline R²: 0.236
 - Current R²: 0.252
 - Target R²: 0.460
@@ -104,11 +111,13 @@ High KL divergence indicates significant heterogeneity between data splits. This
 ### The ViT (Vision Transformer) Component
 
 **Why it was expected to help:**
+
 - Pre-trained on ImageNet (1.2M images)
 - Excellent at capturing spatial patterns
 - Transfer learning should provide good initialization
 
 **Why it actually failed:**
+
 1. **Domain mismatch**: ImageNet contains natural images (cats, cars, etc.), not EEG time-series
 2. **Feature incompatibility**: Pre-trained weights expect RGB images (224x224), not EEG spectrograms
 3. **Frozen weights don't transfer**: Patterns that recognize cats don't help recognize PAC
@@ -117,10 +126,12 @@ High KL divergence indicates significant heterogeneity between data splits. This
 ### The TCN (Temporal Convolutional Network) Component
 
 **Why it was expected to help:**
+
 - Exponential dilation captures long-range dependencies
 - Proven effective on time-series tasks
 
 **Why it didn't help much:**
+
 1. **Already have temporal info**: Wavelet and spectral features capture time-frequency dynamics
 2. **Added complexity**: TCN added more parameters without adding predictive power
 3. **Feature extraction already done**: Raw EEG → features → TCN is redundant
@@ -132,6 +143,7 @@ High KL divergence indicates significant heterogeneity between data splits. This
 ### 1. Features Matter More Than Model Architecture
 
 The diagnostic analysis showed:
+
 - Best single feature correlation: ~0.3-0.4
 - Only moderate predictive signal
 - Complex models can't create signal that isn't there
@@ -141,23 +153,27 @@ The diagnostic analysis showed:
 ### 2. Dataset Size Limits Model Complexity
 
 **Rule of thumb:**
+
 - 10+ samples/param: Good
 - 5-10 samples/param: Risky (high overfitting risk)
 - <5 samples/param: Bad (will overfit)
 - <1 samples/param: Terrible (ViT-TCNet = 0.01!)
 
 **For 11k samples:**
+
 - Maximum reasonable params: ~1,000-5,000
 - V4 used: 1,100,000 (220x too many!)
 
 ### 3. Transfer Learning Doesn't Always Work
 
 Transfer learning works when:
+
 - Source and target domains are similar
 - Pre-trained features are relevant
 - Fine-tuning can adapt features
 
 Transfer learning fails when:
+
 - Domains are very different (images vs EEG)
 - Pre-trained features are irrelevant
 - Dataset is too small to fine-tune effectively
@@ -169,15 +185,18 @@ Transfer learning fails when:
 ### Critical Experiment: Test Simple Baselines
 
 **Hypothesis Test:**
+
 - If simple models (Ridge, Lasso) match/beat V4 → features are good, model was too complex
 - If simple models also fail (R² < 0.30) → features are weak, need better feature engineering
 
 **Run this:**
+
 ```bash
 python run_simple_baselines.py
 ```
 
 **This script tests:**
+
 1. Ridge Regression (L2 regularization)
 2. Lasso Regression (L1 + feature selection)
 3. Elastic Net (L1 + L2)
@@ -188,13 +207,17 @@ python run_simple_baselines.py
 **Expected outcomes:**
 
 #### Scenario A: Simple Models Win (R² > 0.35)
+
 ✅ **Features are good!**
+
 - V4 failed due to overparameterization, not poor features
 - **Action**: Use simple models or shallow neural nets (<10k params)
 - **Next**: Try 2-3 layer MLP with strong regularization
 
 #### Scenario B: Simple Models Match (R² ≈ 0.25-0.30)
+
 ~ **Features are okay**
+
 - Moderate predictive signal
 - **Action**: Add domain-specific PAC features:
   - Direct theta phase extraction (Hilbert transform)
@@ -204,7 +227,9 @@ python run_simple_baselines.py
 - **Next**: Feature engineering before model complexity
 
 #### Scenario C: All Models Fail (R² < 0.25)
+
 ❌ **Features are weak**
+
 - Current features don't capture PAC dynamics
 - **Action**: Major feature engineering overhaul:
   - Hilbert transform for instantaneous phase/amplitude
@@ -258,6 +283,7 @@ class ViTTCNet(nn.Module):
 ### Data Augmentation
 
 Applied to raw EEG windows:
+
 1. TimeWarp (temporal distortion)
 2. MagnitudeWarp (amplitude scaling)
 3. TimeShift (temporal shift)
@@ -273,6 +299,7 @@ Applied to raw EEG windows:
 ### Immediate Actions
 
 #### 1. ⭐⭐⭐ Test Simple Baselines (CRITICAL)
+
 ```bash
 # Install requirements
 pip install scikit-learn
@@ -333,11 +360,13 @@ class ShallowMLP(nn.Module):
 #### 1. Investigate Target Quality
 
 **Questions to ask:**
+
 - Are the PAC values reliable?
 - Was PAC computed correctly (no data leakage)?
 - Is there actually a predictable PAC signal in the data?
 
 **Check:**
+
 ```python
 # Load original PAC computation code
 # Verify no future information is used
@@ -347,6 +376,7 @@ class ShallowMLP(nn.Module):
 #### 2. Consider Multi-Task Learning
 
 Instead of predicting PAC directly:
+
 ```python
 # Joint prediction of related quantities
 targets = {
@@ -360,6 +390,7 @@ targets = {
 #### 3. Accept Performance Limitations
 
 If R² = 0.25 is the ceiling:
+
 - EEG is extremely noisy
 - PAC may have low SNR
 - Current methods may be near optimal
@@ -378,6 +409,7 @@ If R² = 0.25 is the ceiling:
 ### 2. Features > Architecture
 
 **The hierarchy:**
+
 1. Good features + simple model = Good performance
 2. Good features + complex model = Risk of overfitting
 3. Bad features + simple model = Poor performance
@@ -386,11 +418,13 @@ If R² = 0.25 is the ceiling:
 ### 3. Transfer Learning Requires Domain Similarity
 
 ImageNet pre-training helps with:
+
 - Natural images
 - Object recognition
 - Image classification
 
 ImageNet pre-training doesn't help with:
+
 - EEG signals
 - Time-series forecasting
 - Physiological signals
@@ -398,6 +432,7 @@ ImageNet pre-training doesn't help with:
 ### 4. Always Start Simple
 
 **Recommended workflow:**
+
 1. Start with Ridge/Lasso
 2. Try Random Forest if non-linearity matters
 3. Try shallow MLP (2-3 layers) if needed

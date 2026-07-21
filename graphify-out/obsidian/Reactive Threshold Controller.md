@@ -10,6 +10,7 @@ tags:
 # Reactive Threshold Controller
 
 ## Connections
+
 - [[TCN Predictive Controller]] - `references` [EXTRACTED]
 
   #community/Community_34

@@ -7,9 +7,10 @@ tags:
   - community/Community_62
 ---
 
-# Alzheimer's Disease Simulation with TRIBE V2-Enhanced Closed-Loop Control  Demon
+# Alzheimer's Disease Simulation with TRIBE V2-Enhanced Closed-Loop Control Demon
 
 ## Connections
+
 - [[StimAction]] - `uses` [INFERRED]
 - [[run_alzheimer_simulation.py]] - `rationale_for` [EXTRACTED]
 

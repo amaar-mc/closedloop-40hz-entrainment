@@ -10,6 +10,7 @@ tags:
 # OpenNeuro ds005048 Dataset Technical Details
 
 ## Connections
+
 - [[Judge 90-Second Verbal Summary Script]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

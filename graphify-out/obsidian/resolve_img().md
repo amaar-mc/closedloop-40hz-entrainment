@@ -10,6 +10,7 @@ tags:
 # resolve_img()
 
 ## Connections
+
 - [[Resolve image path relative to docspaper.]] - `rationale_for` [EXTRACTED]
 - [[generate()]] - `calls` [EXTRACTED]
 - [[generate_paper_pdf_v2.py]] - `contains` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # Real EEG Adapter (Muse 2 BLE)
 
 ## Connections
+
 - [[NeuroCare 40Hz Live Mission Control v5]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,7 +10,8 @@ tags:
 # Winning Abstract Structure (results 32–40% dominant section)
 
 ## Connections
+
 - [[MLAI Mandatory Requirements for Synopsys 2026 (6 requirements, all PASS)]] - `references` [EXTRACTED]
 - [[Synopsys Championship Winning Analysis (Feb 27, 2026)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

@@ -10,6 +10,7 @@ tags:
 # Rationale: Spectral Features Cause Subject-Specific Overfitting
 
 ## Connections
+
 - [[Approaches That Did NOT Work (architecture, mixup, heavy-reg on all 73)]] - `rationale_for` [INFERRED]
 - [[PAC+Stim Feature Discovery Audit Report]] - `rationale_for` [EXTRACTED]
 

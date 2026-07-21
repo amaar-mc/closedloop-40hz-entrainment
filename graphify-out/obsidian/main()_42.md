@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[AlignmentOracleCtrl]] - `calls` [EXTRACTED]
 - [[FixedScheduleCtrl_1]] - `calls` [EXTRACTED]
 - [[HybridTCNCtrl]] - `calls` [EXTRACTED]
@@ -28,4 +29,4 @@ tags:
 - [[run_tcn_validation.py]] - `contains` [EXTRACTED]
 - [[step()_29]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

@@ -10,6 +10,7 @@ tags:
 # EntrainmentSimulator
 
 ## Connections
+
 - [[40s ON + 20s OFF (standard clinical protocol).]] - `uses` [INFERRED]
 - [[Abstract base class for all control strategies.      Subclasses must implement]] - `uses` [INFERRED]
 - [[Add control method to comparison.]] - `uses` [INFERRED]
@@ -153,4 +154,4 @@ tags:
 - [[step()_65]] - `method` [EXTRACTED]
 - [[validate_simulator_dynamics()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

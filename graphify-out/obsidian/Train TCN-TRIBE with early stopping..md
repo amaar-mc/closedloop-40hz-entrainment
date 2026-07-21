@@ -10,6 +10,7 @@ tags:
 # Train TCN-TRIBE with early stopping.
 
 ## Connections
+
 - [[train_tcn_tribe()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

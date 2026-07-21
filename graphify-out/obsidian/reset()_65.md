@@ -10,7 +10,8 @@ tags:
 # reset()
 
 ## Connections
+
 - [[ReactiveThresholdControl_6]] - `method` [EXTRACTED]
 - [[Reset baseline buffer and state.]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

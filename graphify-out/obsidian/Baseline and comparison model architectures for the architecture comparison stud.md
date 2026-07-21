@@ -10,7 +10,8 @@ tags:
 # Baseline and comparison model architectures for the architecture comparison stud
 
 ## Connections
+
 - [[SequenceDataset]] - `uses` [INFERRED]
 - [[comparison_models.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

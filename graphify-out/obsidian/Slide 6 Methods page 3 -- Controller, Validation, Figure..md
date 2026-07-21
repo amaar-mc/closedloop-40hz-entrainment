@@ -10,6 +10,7 @@ tags:
 # Slide 6: Methods page 3 -- Controller, Validation, Figure.
 
 ## Connections
+
 - [[p06_methods3()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

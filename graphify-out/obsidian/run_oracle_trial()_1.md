@@ -10,6 +10,7 @@ tags:
 # run_oracle_trial()
 
 ## Connections
+
 - [[Oracle two-pass — collect PAC, then decide with perfect info.]] - `rationale_for` [EXTRACTED]
 - [[evaluate_alignment()_2]] - `calls` [EXTRACTED]
 - [[main()_48]] - `calls` [EXTRACTED]

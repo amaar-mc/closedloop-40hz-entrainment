@@ -10,6 +10,7 @@ tags:
 # step()
 
 ## Connections
+
 - [[OracleControl]] - `method` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

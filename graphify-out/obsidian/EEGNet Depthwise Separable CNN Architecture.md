@@ -10,6 +10,7 @@ tags:
 # EEGNet Depthwise Separable CNN Architecture
 
 ## Connections
+
 - [[EEGNet Architecture (IEEE Paper Specification)]] - `references` [INFERRED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

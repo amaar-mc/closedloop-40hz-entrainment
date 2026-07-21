@@ -10,9 +10,10 @@ tags:
 # bootstrap_ci()
 
 ## Connections
+
 - [[Compute bootstrap confidence interval.      Args         data 1-D array of]] - `rationale_for` [EXTRACTED]
 - [[compute_summary_stats()]] - `calls` [EXTRACTED]
 - [[main()_65]] - `calls` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

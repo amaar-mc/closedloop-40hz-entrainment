@@ -10,6 +10,7 @@ tags:
 # Danger Zone: R²=0.60 Clinical Sufficiency (controller results prove downstream value)
 
 ## Connections
+
 - [[TCN vs Reactive Controller Results (72.1% vs 64.5% alignment, 3535 subjects)]] - `references` [EXTRACTED]
 
   #community/Community_30

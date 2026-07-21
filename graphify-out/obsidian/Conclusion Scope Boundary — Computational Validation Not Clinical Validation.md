@@ -9,6 +9,7 @@ tags:
 # Conclusion: Scope Boundary — Computational Validation Not Clinical Validation
 
 ## Connections
+
 - [[Offline Counterfactual Replay Validation on 35 Subjects]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

@@ -8,6 +8,7 @@ members: 30
 **Members:** 30 nodes
 
 ## Members
+
 - [[Compute regression evaluation metrics.      Args         y_true Ground trut]] - rationale - src/utils.py
 - [[Configure logging for the project.      Args         log_file Path to log f]] - rationale - src/utils.py
 - [[Count trainable parameters in a PyTorch model.      Args         model PyTo]] - rationale - src/utils.py
@@ -47,8 +48,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 1 edge to [[_COMMUNITY_Core Data & PAC Pipeline]]
 - 1 edge to [[_COMMUNITY_Closed-Loop Control & Simulator]]
 
 ## Top bridge nodes
+
 - [[utils.py]] - degree 17, connects to 2 communities

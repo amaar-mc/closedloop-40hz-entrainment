@@ -7,9 +7,10 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Extract intermediate feature maps for visualization.          Args:
+# Extract intermediate feature maps for visualization. Args:
 
 ## Connections
+
 - [[get_feature_maps()_2]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

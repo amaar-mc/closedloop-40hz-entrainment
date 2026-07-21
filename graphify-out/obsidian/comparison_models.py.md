@@ -10,6 +10,7 @@ tags:
 # comparison_models.py
 
 ## Connections
+
 - [[Baseline and comparison model architectures for the architecture comparison stud]] - `rationale_for` [EXTRACTED]
 - [[SimpleLSTM]] - `contains` [EXTRACTED]
 - [[SimpleTransformer]] - `contains` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[train_pytorch_model()]] - `contains` [EXTRACTED]
 - [[train_xgboost_model()]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

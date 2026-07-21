@@ -10,6 +10,7 @@ tags:
 # TemporalPACPredictor (LSTM/GRU Model)
 
 ## Connections
+
 - [[MultiHorizonPredictor (Multi-Head LSTM)]] - `conceptually_related_to` [INFERRED]
 - [[Rationale LSTM for Model Predictive Control of 40Hz Entrainment]] - `rationale_for` [EXTRACTED]
 - [[SpatialEncoder (CNN Window Encoder)]] - `calls` [EXTRACTED]

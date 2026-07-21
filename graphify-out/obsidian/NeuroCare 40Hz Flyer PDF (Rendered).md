@@ -9,6 +9,7 @@ tags:
 # NeuroCare 40Hz Flyer PDF (Rendered)
 
 ## Connections
+
 - [[NeuroCare 40Hz Product Flyer]] - `implements` [EXTRACTED]
 
   #community/Community_78

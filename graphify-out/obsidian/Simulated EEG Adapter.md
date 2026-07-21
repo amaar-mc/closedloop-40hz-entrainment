@@ -10,7 +10,8 @@ tags:
 # Simulated EEG Adapter
 
 ## Connections
+
 - [[NeuroCare Caregiver Dashboard (Multi-page Streamlit)]] - `calls` [EXTRACTED]
 - [[render_session()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

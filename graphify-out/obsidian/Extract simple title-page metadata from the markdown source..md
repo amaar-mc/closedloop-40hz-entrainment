@@ -10,6 +10,7 @@ tags:
 # Extract simple title-page metadata from the markdown source.
 
 ## Connections
+
 - [[extract_metadata()]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

@@ -10,6 +10,7 @@ tags:
 # compute_pac_modulation_index()
 
 ## Connections
+
 - [[Compute Phase-Amplitude Coupling using Modulation Index (MI).      Args]] - `rationale_for` [EXTRACTED]
 - [[process_subject()]] - `calls` [EXTRACTED]
 - [[reprocess_long_windows.py]] - `contains` [EXTRACTED]

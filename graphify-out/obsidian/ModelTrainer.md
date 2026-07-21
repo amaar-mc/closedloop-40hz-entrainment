@@ -10,6 +10,7 @@ tags:
 # ModelTrainer
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
 - [[Handles model training, validation, and checkpointing.      Features]] - `rationale_for` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[training.py]] - `contains` [EXTRACTED]
 - [[validate()_1]] - `method` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

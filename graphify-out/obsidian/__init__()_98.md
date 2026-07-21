@@ -7,9 +7,10 @@ tags:
   - community/12-Feature_TCN_Validation
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[TCN12FeatCtrl]] - `method` [EXTRACTED]
 
   #community/12-Feature_TCN_Validation

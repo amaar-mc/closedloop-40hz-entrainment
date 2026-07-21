@@ -10,6 +10,7 @@ tags:
 # AttentionPool1D
 
 ## Connections
+
 - [[Attention pooling over time axis._2]] - `rationale_for` [EXTRACTED]
 - [[__init__()_132]] - `method` [EXTRACTED]
 - [[__init__()_133]] - `calls` [EXTRACTED]

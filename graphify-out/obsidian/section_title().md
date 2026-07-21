@@ -10,6 +10,7 @@ tags:
 # section_title()
 
 ## Connections
+
 - [[Create a large section title.]] - `rationale_for` [EXTRACTED]
 - [[_text()]] - `calls` [EXTRACTED]
 - [[build_section_11()]] - `calls` [EXTRACTED]

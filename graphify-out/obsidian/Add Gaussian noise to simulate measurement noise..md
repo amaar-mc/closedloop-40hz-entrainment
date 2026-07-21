@@ -10,6 +10,7 @@ tags:
 # Add Gaussian noise to simulate measurement noise.
 
 ## Connections
+
 - [[AddGaussianNoise]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

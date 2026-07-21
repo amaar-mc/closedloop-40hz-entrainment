@@ -9,6 +9,7 @@ tags:
 # V2 Data Augmentation (Time Jitter, Amplitude Scaling, Gaussian Noise, Channel Dropout)
 
 ## Connections
+
 - [[V2 Improvements ΔPAC Target + Data Augmentation + EEGNetV2]] - `references` [EXTRACTED]
 
-  #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model*Ceiling*&\_Leakage_Audits

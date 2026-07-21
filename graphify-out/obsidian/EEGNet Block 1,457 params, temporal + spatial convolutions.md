@@ -9,6 +9,7 @@ tags:
 # EEGNet Block: 1,457 params, temporal + spatial convolutions
 
 ## Connections
+
 - [[Feature Extraction 12 features (spectral PAC features removed — encodes anatomydynamics)]] - `references` [EXTRACTED]
 - [[Figure 5 System Architecture Flowchart — Complete Closed-Loop Pipeline]] - `references` [EXTRACTED]
 - [[Raw EEG Input Patient with EEG headset, 7 frontal channels]] - `references` [EXTRACTED]

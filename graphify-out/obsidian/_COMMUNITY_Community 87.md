@@ -8,6 +8,7 @@ members: 11
 **Members:** 11 nodes
 
 ## Members
+
 - [[check_chronology()]] - code - scripts/tools/verify_notebook_finalization.py
 - [[check_packaging()]] - code - scripts/tools/verify_notebook_finalization.py
 - [[check_preservation()]] - code - scripts/tools/verify_notebook_finalization.py

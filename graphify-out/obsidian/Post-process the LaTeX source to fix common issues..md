@@ -10,6 +10,7 @@ tags:
 # Post-process the LaTeX source to fix common issues.
 
 ## Connections
+
 - [[fix_common_issues()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_44

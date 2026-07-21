@@ -10,6 +10,7 @@ tags:
 # Create table of contents page.
 
 ## Connections
+
 - [[build_toc()]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

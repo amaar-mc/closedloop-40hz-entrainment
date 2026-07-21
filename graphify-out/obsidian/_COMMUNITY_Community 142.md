@@ -8,6 +8,7 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
+
 - [[Status Report v1 Project Status Feb 2026 (Duplicate of v2)]] - document - docs/archive/STATUS_REPORT_Synopsys_Readiness.md
 - [[Status Report Project ~45% Complete Toward Synopsys Submission (Feb 2026)]] - document - docs/archive/STATUS_REPORT_Synopsys_Readiness_v2.md
 

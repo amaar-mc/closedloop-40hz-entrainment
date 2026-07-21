@@ -10,8 +10,9 @@ tags:
 # Load multiscale dataset with optional feature column selection.
 
 ## Connections
+
 - [[MaskedSequenceDataset_1]] - `rationale_for` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

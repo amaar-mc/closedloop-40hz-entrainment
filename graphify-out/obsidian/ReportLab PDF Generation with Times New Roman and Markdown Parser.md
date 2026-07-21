@@ -10,6 +10,7 @@ tags:
 # ReportLab PDF Generation with Times New Roman and Markdown Parser
 
 ## Connections
+
 - [[main()_72]] - `implements` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

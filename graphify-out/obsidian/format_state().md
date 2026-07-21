@@ -10,7 +10,8 @@ tags:
 # format_state()
 
 ## Connections
+
 - [[demo_streaming.py]] - `contains` [EXTRACTED]
 - [[run_demo()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

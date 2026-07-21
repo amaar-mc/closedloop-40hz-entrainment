@@ -66,23 +66,23 @@ Think of it like HRV analysis but for the brain. In cardiology, you look at the 
 
 ## Key Medical Terms to Know Cold
 
-| Term | Definition (your words) |
-|------|------------------------|
-| Phase-amplitude coupling (PAC) | How tightly fast gamma locks to slow theta phase |
-| Modulation Index (MI) | Tort's KL-divergence measure of PAC strength |
-| Gamma oscillations | 30-100 Hz brain rhythms, 40 Hz is the entrainment target |
-| Theta oscillations | 4-8 Hz brain rhythms involved in memory |
-| Microglia | Brain's immune cells. Activated by 40 Hz to phagocytose amyloid |
-| Glymphatic system | Brain's waste clearance pathway using CSF flow along blood vessels |
-| Aquaporin-4 (AQP4) | Water channels on astrocyte endfeet enabling glymphatic flow |
-| VIP interneurons | Neurons that translate neural activity to vascular pulsatility |
-| Amyloid-beta (Abeta) | Toxic protein aggregating into plaques in Alzheimer's |
-| Tau tangles | Neurofibrillary tangles, second hallmark of Alzheimer's |
-| APOE4 | Genetic variant conferring highest Alzheimer's risk |
-| SSVEP | Steady-state visually evoked potential -- the Soula critique |
-| Default mode network | Brain network disrupted in Alzheimer's, affected by entrainment |
-| ARIA | Amyloid-related imaging abnormalities -- antibody side effect |
-| De Novo classification | FDA pathway for novel devices without predicates |
-| Habituation | Brain tuning out repeated stimulus over time |
-| Entrainment | Brain oscillations locking to external stimulus frequency |
-| Closed-loop | System that adapts based on measured brain state |
+| Term                           | Definition (your words)                                            |
+| ------------------------------ | ------------------------------------------------------------------ |
+| Phase-amplitude coupling (PAC) | How tightly fast gamma locks to slow theta phase                   |
+| Modulation Index (MI)          | Tort's KL-divergence measure of PAC strength                       |
+| Gamma oscillations             | 30-100 Hz brain rhythms, 40 Hz is the entrainment target           |
+| Theta oscillations             | 4-8 Hz brain rhythms involved in memory                            |
+| Microglia                      | Brain's immune cells. Activated by 40 Hz to phagocytose amyloid    |
+| Glymphatic system              | Brain's waste clearance pathway using CSF flow along blood vessels |
+| Aquaporin-4 (AQP4)             | Water channels on astrocyte endfeet enabling glymphatic flow       |
+| VIP interneurons               | Neurons that translate neural activity to vascular pulsatility     |
+| Amyloid-beta (Abeta)           | Toxic protein aggregating into plaques in Alzheimer's              |
+| Tau tangles                    | Neurofibrillary tangles, second hallmark of Alzheimer's            |
+| APOE4                          | Genetic variant conferring highest Alzheimer's risk                |
+| SSVEP                          | Steady-state visually evoked potential -- the Soula critique       |
+| Default mode network           | Brain network disrupted in Alzheimer's, affected by entrainment    |
+| ARIA                           | Amyloid-related imaging abnormalities -- antibody side effect      |
+| De Novo classification         | FDA pathway for novel devices without predicates                   |
+| Habituation                    | Brain tuning out repeated stimulus over time                       |
+| Entrainment                    | Brain oscillations locking to external stimulus frequency          |
+| Closed-loop                    | System that adapts based on measured brain state                   |

@@ -7,9 +7,10 @@ tags:
   - community/Community_32
 ---
 
-# _NumpySimulatedAdapter
+# \_NumpySimulatedAdapter
 
 ## Connections
+
 - [[Pure-numpy fallback when brainflow is not installed (e.g. cloud deploy).      Ge]] - `rationale_for` [EXTRACTED]
 - [[__enter__()_1]] - `method` [EXTRACTED]
 - [[__exit__()_1]] - `method` [EXTRACTED]

@@ -10,8 +10,9 @@ tags:
 # compute_aggregate_stats()
 
 ## Connections
+
 - [[Compute aggregate statistics across seeds for each metric.      Computes mean,]] - `rationale_for` [EXTRACTED]
 - [[main()_66]] - `calls` [EXTRACTED]
 - [[multi_seed_training.py]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

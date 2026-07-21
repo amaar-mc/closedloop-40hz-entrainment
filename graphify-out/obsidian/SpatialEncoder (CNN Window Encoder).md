@@ -10,6 +10,7 @@ tags:
 # SpatialEncoder (CNN Window Encoder)
 
 ## Connections
+
 - [[MultiHorizonPredictor (Multi-Head LSTM)]] - `calls` [EXTRACTED]
 - [[TemporalPACPredictor (LSTMGRU Model)]] - `calls` [EXTRACTED]
 

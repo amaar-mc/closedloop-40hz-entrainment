@@ -9,7 +9,8 @@ tags:
 # ΔPAC Prediction Target (Change vs Absolute PAC)
 
 ## Connections
+
 - [[Task Distinction Future PAC Prediction (R²=0.80 target) vs Static Window PAC (R²=0.29)]] - `semantically_similar_to` [INFERRED]
 - [[V2 Improvements ΔPAC Target + Data Augmentation + EEGNetV2]] - `references` [EXTRACTED]
 
-  #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model*Ceiling*&\_Leakage_Audits

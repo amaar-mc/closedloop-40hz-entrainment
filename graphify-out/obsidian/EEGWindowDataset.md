@@ -10,6 +10,7 @@ tags:
 # EEGWindowDataset
 
 ## Connections
+
 - [[Add Gaussian noise at specified SNR.          Args             window EEG w]] - `uses` [INFERRED]
 - [[Applies data augmentation to EEG windows.      Augmentation strategies]] - `uses` [INFERRED]
 - [[Apply random augmentations.          Args             window Input window]] - `uses` [INFERRED]
@@ -38,4 +39,4 @@ tags:
 - [[get_session_id()]] - `method` [EXTRACTED]
 - [[get_subject_id()]] - `method` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

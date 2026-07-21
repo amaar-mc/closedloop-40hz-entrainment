@@ -10,6 +10,7 @@ tags:
 # TribeEnhancedSimulator
 
 ## Connections
+
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[Audit script for TRIBE V2 integration module.  Validates     1. All module impo]] - `uses` [INFERRED]
 - [[Biophysically grounded brain entrainment simulator.      This simulator replaces]] - `rationale_for` [EXTRACTED]

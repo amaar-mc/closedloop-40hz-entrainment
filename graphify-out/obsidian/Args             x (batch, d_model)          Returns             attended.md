@@ -7,9 +7,10 @@ tags:
   - community/Archived_SpecTempNet_V3
 ---
 
-# Args:             x: (batch, d_model)          Returns:             attended
+# Args: x: (batch, d_model) Returns: attended
 
 ## Connections
+
 - [[forward()_27]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_SpecTempNet_V3

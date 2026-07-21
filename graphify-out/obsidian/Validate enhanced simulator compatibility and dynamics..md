@@ -10,6 +10,7 @@ tags:
 # Validate enhanced simulator compatibility and dynamics.
 
 ## Connections
+
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]
 - [[NeuralMassConfig]] - `uses` [INFERRED]

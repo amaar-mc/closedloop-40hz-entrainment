@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Paper Title Candidates]] - document - paper/ideas/BRAINSTORM.md
 
 ## Live Query (requires Dataview plugin)

@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[CSEF Preparation File Reorganization and Outreach Flyer (March 24, 2026)]] - document - submission/lab_notebook/extension.md
 
 ## Live Query (requires Dataview plugin)

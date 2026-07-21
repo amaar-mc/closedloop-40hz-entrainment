@@ -9,4 +9,4 @@ tags:
 
 # Paper Title: Personalized Deep Learning for Closed-Loop 40 Hz Entrainment
 
-  #community/Community_182
+#community/Community_182

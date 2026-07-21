@@ -10,6 +10,7 @@ tags:
 # CausalConvBlock
 
 ## Connections
+
 - [[Compute persistence R2 per subject.]] - `uses` [INFERRED]
 - [[Define feature subsets to test which features help generalization.]] - `uses` [INFERRED]
 - [[Evaluate model per subject.]] - `uses` [INFERRED]

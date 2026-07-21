@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# __len__()
+# **len**()
 
 ## Connections
+
 - [[EEGDatasetV2]] - `method` [EXTRACTED]
 
   #community/Archived_EEGNet_V2

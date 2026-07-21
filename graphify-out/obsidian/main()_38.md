@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[FixedScheduleCtrl]] - `calls` [EXTRACTED]
 - [[OracleCtrl]] - `calls` [EXTRACTED]
 - [[PredictiveCtrl]] - `calls` [EXTRACTED]

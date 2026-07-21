@@ -9,6 +9,7 @@ tags:
 # Generate Closed-Loop vs Fixed v3 Figure Script
 
 ## Connections
+
 - [[Demo Streaming Inference Script]] - `semantically_similar_to` [INFERRED]
 - [[resultsfigures (Publication Figure Output Directory)]] - `references` [EXTRACTED]
 

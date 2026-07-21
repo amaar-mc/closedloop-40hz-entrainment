@@ -1,0 +1,1231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Submission tracker — EEG/PAC 40 Hz entrainment</title>
+    <style>
+      :root {
+        --page: #ffffff;
+        --card: #ffffff;
+        --hover: #fbfbfa;
+        --sunk: #f7f6f4;
+        --ink: #37352f;
+        --ink2: rgba(55, 53, 47, 0.65);
+        --ink3: rgba(55, 53, 47, 0.45);
+        --line: rgba(55, 53, 47, 0.09);
+        --line2: rgba(55, 53, 47, 0.16);
+        --line3: rgba(55, 53, 47, 0.28);
+        --accent: #2383e2;
+        --accent-soft: #e7f1fb;
+        /* soft Notion tag palette */
+        --green-bg: #dbeee4;
+        --green-ink: #1c6b4d;
+        --yellow-bg: #faf0d3;
+        --yellow-ink: #7a5b1e;
+        --blue-bg: #dcecf5;
+        --blue-ink: #1f5673;
+        --red-bg: #fbe4e1;
+        --red-ink: #8f2c25;
+        --purple-bg: #ece5f5;
+        --purple-ink: #513a70;
+        --gray-bg: #f1f0ee;
+        --gray-ink: #5a5852;
+        --brown-bg: #f2e9e2;
+        --brown-ink: #8a5a35;
+        /* gate segment fills */
+        --g-done: #4aa585;
+        --g-prog: #e0a53a;
+        --g-todo: #e9e8e5;
+        --g-blocked: #e0736a;
+        --g-na: #f0efec;
+        --radius: 7px;
+        --font:
+          "Inter", "-apple-system", BlinkMacSystemFont, "Segoe UI",
+          "Helvetica Neue", Arial, sans-serif;
+        --mono:
+          "SF Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--ink);
+        font-family: var(--font);
+        font-size: 15px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        font-feature-settings:
+          "cv02",
+          "cv03",
+          "cv11",
+          "ss01",
+          "liga" 1,
+          "calt" 1;
+      }
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .mono {
+        font-family: var(--mono);
+        font-size: 12.5px;
+      }
+      .wrap {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 40px 28px 96px;
+      }
+
+      /* ---- header ---- */
+      header.top {
+        margin-bottom: 26px;
+      }
+      header.top h1 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin: 0;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+      header.top .sub {
+        color: var(--ink2);
+        font-size: 15px;
+        margin-top: 6px;
+      }
+      header.top .meta {
+        color: var(--ink3);
+        font-size: 13px;
+        margin-top: 10px;
+      }
+      header.top .meta .mono {
+        color: var(--ink3);
+      }
+
+      /* ---- stat row ---- */
+      .stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 22px 0 8px;
+      }
+      .stat {
+        flex: 1 1 150px;
+        min-width: 140px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 13px 15px;
+      }
+      .stat .n {
+        font-size: 22px;
+        font-weight: 650;
+        letter-spacing: -0.01em;
+        line-height: 1.15;
+      }
+      .stat .l {
+        color: var(--ink3);
+        font-size: 12.5px;
+        margin-top: 3px;
+      }
+      .stat .n.small {
+        font-size: 15px;
+        font-weight: 600;
+        padding-top: 3px;
+      }
+      .stat.alarm .n {
+        color: #c2453d;
+      }
+      .stat.good .n {
+        color: #1c8a5f;
+      }
+
+      /* ---- toolbar ---- */
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 8px 16px;
+        padding: 12px 4px;
+        margin: 14px 0 6px;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .toolbar .grp {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+      }
+      .toolbar label {
+        color: var(--ink2);
+        font-size: 13px;
+      }
+      select,
+      input[type="search"] {
+        background: var(--card);
+        color: var(--ink);
+        border: 1px solid var(--line2);
+        border-radius: 6px;
+        padding: 5px 9px;
+        font-family: var(--font);
+        font-size: 13.5px;
+        outline: none;
+      }
+      select:hover,
+      input:hover {
+        border-color: var(--line3);
+      }
+      select:focus,
+      input:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 2px var(--accent-soft);
+      }
+      input[type="search"] {
+        min-width: 210px;
+      }
+      .seg-ctl {
+        display: inline-flex;
+        background: var(--sunk);
+        border-radius: 7px;
+        padding: 2px;
+        gap: 2px;
+      }
+      .seg-ctl .opt {
+        cursor: pointer;
+        user-select: none;
+        border-radius: 5px;
+        padding: 4px 10px;
+        font-size: 13px;
+        color: var(--ink2);
+      }
+      .seg-ctl .opt:hover {
+        color: var(--ink);
+      }
+      .seg-ctl .opt.on {
+        background: var(--card);
+        color: var(--ink);
+        font-weight: 550;
+        box-shadow: 0 1px 2px rgba(15, 15, 15, 0.08);
+      }
+      .spacer {
+        flex: 1;
+      }
+      .txtbtn {
+        cursor: pointer;
+        user-select: none;
+        color: var(--ink2);
+        font-size: 13px;
+        padding: 5px 8px;
+        border-radius: 6px;
+      }
+      .txtbtn:hover {
+        background: var(--sunk);
+        color: var(--ink);
+      }
+      .countline {
+        color: var(--ink3);
+        font-size: 12.5px;
+        margin: 12px 2px 16px;
+      }
+
+      /* ---- group section ---- */
+      .group {
+        margin-top: 26px;
+      }
+      .group:first-child {
+        margin-top: 6px;
+      }
+      .group-hd {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        padding: 0 2px 9px;
+        margin-bottom: 2px;
+      }
+      .group-hd .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--ink3);
+      }
+      .group-hd .gname {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--ink);
+      }
+      .group-hd .gcount {
+        font-size: 12.5px;
+        color: var(--ink3);
+      }
+
+      /* ---- venue card ---- */
+      .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+        transition:
+          border-color 0.12s,
+          background 0.12s;
+        border-left: 3px solid var(--line2);
+      }
+      .card:hover {
+        background: var(--hover);
+        border-color: var(--line2);
+      }
+      .card.open {
+        background: var(--card);
+        border-color: var(--line2);
+      }
+      /* subtle eligibility accent on the left edge (pill carries the label) */
+      .card.elig-ok {
+        border-left-color: var(--green-ink);
+      }
+      .card.elig-conditional {
+        border-left-color: var(--yellow-ink);
+      }
+      .card.elig-monitor {
+        border-left-color: var(--blue-ink);
+      }
+      .card.elig-blocked {
+        border-left-color: var(--red-ink);
+      }
+      .card .hd {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding: 14px 16px;
+        cursor: pointer;
+      }
+      .card .rank {
+        font-size: 13px;
+        color: var(--ink3);
+        font-weight: 600;
+        min-width: 24px;
+        font-variant-numeric: tabular-nums;
+      }
+      .card .namewrap {
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+      }
+      .card .name {
+        font-size: 15.5px;
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        color: var(--ink);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .card .track {
+        color: var(--ink3);
+        font-size: 12.5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .card .hd .right {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        flex-shrink: 0;
+      }
+      .card .chev {
+        color: var(--ink3);
+        font-size: 11px;
+        margin-left: 2px;
+        transition: transform 0.15s;
+      }
+      .card.open .chev {
+        transform: rotate(90deg);
+      }
+
+      /* pills */
+      .pill {
+        font-size: 12px;
+        padding: 2px 9px;
+        border-radius: 5px;
+        white-space: nowrap;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+      .pill.gray {
+        background: var(--gray-bg);
+        color: var(--gray-ink);
+      }
+      .pill.green {
+        background: var(--green-bg);
+        color: var(--green-ink);
+      }
+      .pill.yellow {
+        background: var(--yellow-bg);
+        color: var(--yellow-ink);
+      }
+      .pill.blue {
+        background: var(--blue-bg);
+        color: var(--blue-ink);
+      }
+      .pill.red {
+        background: var(--red-bg);
+        color: var(--red-ink);
+      }
+      .pill.purple {
+        background: var(--purple-bg);
+        color: var(--purple-ink);
+      }
+      .pill.brown {
+        background: var(--brown-bg);
+        color: var(--brown-ink);
+      }
+      .pill.gate {
+        font-family: var(--mono);
+        font-size: 11.5px;
+        background: var(--gray-bg);
+        color: var(--gray-ink);
+      }
+      .pill.dl {
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* progress */
+      .prog {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 16px 14px;
+      }
+      .segs {
+        display: flex;
+        gap: 3px;
+        flex: 1;
+      }
+      .seg {
+        height: 7px;
+        border-radius: 3px;
+        flex: 1;
+        background: var(--g-todo);
+      }
+      .seg.done {
+        background: var(--g-done);
+      }
+      .seg.in_progress {
+        background: var(--g-prog);
+      }
+      .seg.blocked {
+        background: var(--g-blocked);
+      }
+      .seg.na {
+        background: var(--g-na);
+      }
+      .seg.todo {
+        background: var(--g-todo);
+      }
+      .prog .cg {
+        font-size: 12.5px;
+        color: var(--ink3);
+        min-width: 132px;
+      }
+      .prog .cg b {
+        color: var(--ink2);
+        font-weight: 600;
+      }
+      .prog .pct {
+        font-size: 13.5px;
+        font-weight: 650;
+        min-width: 40px;
+        text-align: right;
+        font-variant-numeric: tabular-nums;
+      }
+
+      /* detail */
+      .detail {
+        display: none;
+        padding: 2px 16px 18px;
+      }
+      .card.open .detail {
+        display: block;
+        border-top: 1px solid var(--line);
+        padding-top: 14px;
+        margin-top: 2px;
+      }
+      .scorebar {
+        display: flex;
+        gap: 8px 16px;
+        flex-wrap: wrap;
+        font-size: 12.5px;
+        color: var(--ink2);
+        margin-bottom: 14px;
+      }
+      .scorebar b {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .scorebar .lead {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px 22px;
+        margin: 6px 0 4px;
+      }
+      .kv .k {
+        color: var(--ink3);
+        font-size: 12px;
+        margin-bottom: 2px;
+      }
+      .kv .v {
+        color: var(--ink);
+        font-size: 13.5px;
+      }
+      .block {
+        margin-top: 14px;
+      }
+      .block .k {
+        color: var(--ink3);
+        font-size: 12px;
+        margin-bottom: 5px;
+      }
+      .block ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+      .block li {
+        margin: 3px 0;
+        font-size: 13.5px;
+      }
+      .isig li {
+        color: #2c3e4d;
+      }
+      .tlev li {
+        color: #274a3a;
+      }
+      .blockers li {
+        color: #8f2c25;
+      }
+      .notes {
+        background: var(--sunk);
+        border-radius: var(--radius);
+        padding: 11px 13px;
+        color: var(--ink2);
+        font-size: 13.5px;
+        margin-top: 14px;
+      }
+      .files {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 16px;
+        margin-top: 5px;
+      }
+      .files a {
+        font-size: 13.5px;
+      }
+      .files .canon {
+        color: var(--ink3);
+        font-size: 12px;
+        margin-left: 4px;
+      }
+      .conf {
+        font-size: 11px;
+        padding: 1px 7px;
+        border-radius: 5px;
+        margin-left: 7px;
+        font-weight: 500;
+      }
+      .conf-high {
+        background: var(--green-bg);
+        color: var(--green-ink);
+      }
+      .conf-medium {
+        background: var(--yellow-bg);
+        color: var(--yellow-ink);
+      }
+      .conf-low {
+        background: var(--red-bg);
+        color: var(--red-ink);
+      }
+
+      /* gate table */
+      .gtab {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 14px;
+        font-size: 13px;
+      }
+      .gtab th,
+      .gtab td {
+        text-align: left;
+        padding: 7px 10px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      .gtab th {
+        color: var(--ink3);
+        font-weight: 500;
+        font-size: 12px;
+      }
+      .gtab td.mono {
+        color: var(--ink2);
+      }
+      .st {
+        font-weight: 600;
+        font-size: 12.5px;
+      }
+      .st.done {
+        color: #1c8a5f;
+      }
+      .st.in_progress {
+        color: #b5822a;
+      }
+      .st.todo {
+        color: var(--ink3);
+      }
+      .st.blocked {
+        color: #c2453d;
+      }
+      .st.na {
+        color: var(--ink3);
+      }
+
+      /* legends */
+      details.legend {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 2px 16px;
+        margin-top: 12px;
+        background: var(--card);
+      }
+      details.legend summary {
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 12px 0;
+        color: var(--ink);
+        list-style: none;
+      }
+      details.legend summary::-webkit-details-marker {
+        display: none;
+      }
+      details.legend summary::before {
+        content: "›";
+        display: inline-block;
+        margin-right: 8px;
+        color: var(--ink3);
+        transition: transform 0.15s;
+      }
+      details.legend[open] summary::before {
+        transform: rotate(90deg);
+      }
+      details.legend table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        margin: 6px 0 14px;
+      }
+      details.legend th,
+      details.legend td {
+        text-align: left;
+        padding: 6px 10px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      details.legend th {
+        color: var(--ink3);
+        font-size: 12px;
+        font-weight: 500;
+      }
+      .boundaries {
+        margin: 6px 0 14px;
+        padding-left: 18px;
+      }
+      .boundaries li {
+        margin: 5px 0;
+        color: var(--ink2);
+        font-size: 13.5px;
+      }
+      .swatch {
+        display: inline-block;
+        width: 9px;
+        height: 9px;
+        border-radius: 2px;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+      .foot {
+        color: var(--ink3);
+        font-size: 12.5px;
+        margin-top: 34px;
+        border-top: 1px solid var(--line);
+        padding-top: 16px;
+      }
+      .empty {
+        text-align: center;
+        color: var(--ink3);
+        padding: 48px;
+        font-size: 14px;
+      }
+      @media (max-width: 640px) {
+        .wrap {
+          padding: 26px 16px 72px;
+        }
+        header.top h1 {
+          font-size: 25px;
+        }
+        .card .track {
+          display: none;
+        }
+        .prog .cg {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="top">
+        <h1>Submission tracker</h1>
+        <div class="sub" id="projName"></div>
+        <div class="meta" id="metaBox"></div>
+      </header>
+
+      <div class="stats" id="stats"></div>
+
+      <div class="toolbar" id="toolbar">
+        <div class="grp">
+          <label>Group</label>
+          <span class="seg-ctl" id="groupCtl">
+            <span class="opt on" data-group="none">None</span>
+            <span class="opt" data-group="eligibility">Eligibility</span>
+            <span class="opt" data-group="deadline">Deadline</span>
+          </span>
+        </div>
+        <div class="grp">
+          <label for="sortSel">Sort</label>
+          <select id="sortSel">
+            <option value="priority">Priority</option>
+            <option value="deadline">Deadline (soonest)</option>
+            <option value="progress">Progress (most)</option>
+            <option value="progress_asc">Progress (least)</option>
+            <option value="raw">Raw desirability</option>
+          </select>
+        </div>
+        <div class="grp">
+          <label for="eligSel">Show</label>
+          <select id="eligSel">
+            <option value="all">All eligibility</option>
+            <option value="ok">Eligible</option>
+            <option value="conditional">Conditional</option>
+            <option value="monitor">Monitor</option>
+            <option value="blocked">Blocked</option>
+          </select>
+        </div>
+        <div class="grp">
+          <label for="dlSel">Deadline</label>
+          <select id="dlSel">
+            <option value="all">Any</option>
+            <option value="upcoming">Upcoming only</option>
+            <option value="60">Within 60 days</option>
+            <option value="30">Within 30 days</option>
+          </select>
+        </div>
+        <div class="spacer"></div>
+        <div class="grp">
+          <input
+            type="search"
+            id="searchBox"
+            placeholder="Search venues and notes…"
+          />
+        </div>
+        <span class="txtbtn" id="expandAll">Expand all</span>
+      </div>
+      <div class="countline" id="countLine"></div>
+
+      <div id="cards"></div>
+
+      <details class="legend" id="workflowLegend">
+        <summary>Workflow gates (G0 → G10)</summary>
+        <div id="wfBody"></div>
+      </details>
+      <details class="legend" id="boundLegend">
+        <summary>Claim boundaries and priority formula</summary>
+        <div id="boundBody"></div>
+      </details>
+
+      <div class="foot" id="foot"></div>
+    </div>
+
+    <script id="trackerData" type="application/json">
+      /*__TRACKER_DATA__*/ null
+    </script>
+    <script>
+      "use strict";
+      const DATA = JSON.parse(
+        document.getElementById("trackerData").textContent,
+      );
+      const GATES = DATA.workflow.gates;
+      const WORK = DATA.workflow.work_gates;
+      const GATE_BY_ID = Object.fromEntries(GATES.map((g) => [g.id, g]));
+      const VENUES = DATA.venues;
+      const REBUILT = DATA.rebuilt || DATA.generated;
+
+      // ---- date helpers (recompute countdown live from today) ----
+      function today() {
+        const d = new Date();
+        return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+      }
+      function daysUntil(iso) {
+        if (!iso) return null;
+        const p = iso.split("-").map(Number);
+        const t = new Date(p[0], p[1] - 1, p[2]);
+        return Math.round((t - today()) / 86400000);
+      }
+      const MON = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      function prettyDate(iso) {
+        if (!iso) return "";
+        const p = iso.split("-").map(Number);
+        return MON[p[1] - 1] + " " + p[2];
+      }
+      function dlColor(d) {
+        if (d === null) return "gray";
+        if (d < 0) return "brown";
+        if (d <= 14) return "red";
+        if (d <= 45) return "yellow";
+        return "gray";
+      }
+      function dlText(iso) {
+        const d = daysUntil(iso);
+        if (!iso || d === null) return "No date";
+        if (d < 0) return prettyDate(iso) + " · passed";
+        if (d === 0) return prettyDate(iso) + " · today";
+        return prettyDate(iso) + " · " + d + "d";
+      }
+
+      const ELIG = {
+        ok: ["green", "Eligible"],
+        conditional: ["yellow", "Conditional"],
+        monitor: ["blue", "Monitor"],
+        blocked: ["red", "Blocked"],
+      };
+      function esc(s) {
+        return String(s == null ? "" : s).replace(
+          /[&<>"]/g,
+          (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c],
+        );
+      }
+      function pill(text, cls) {
+        return `<span class="pill ${cls}">${esc(text)}</span>`;
+      }
+
+      // ---- header + stats ----
+      document.getElementById("projName").textContent = DATA.project.name;
+      document.getElementById("metaBox").innerHTML =
+        VENUES.length +
+        " venue tracks · rebuilt " +
+        esc(REBUILT) +
+        " · single source of truth: <span class='mono'>submission_tracker.json</span>";
+
+      function stats() {
+        const soon = VENUES.filter((v) => {
+          const d = daysUntil(v.deadline);
+          return d !== null && d >= 0 && d <= 30;
+        });
+        const ok = VENUES.filter((v) => v.eligibility_status === "ok");
+        const submitted = VENUES.filter((v) => v.gates.G9 === "done");
+        const avg = Math.round(
+          VENUES.reduce((a, v) => a + v.progress.pct, 0) / VENUES.length,
+        );
+        // soonest upcoming
+        let next = null;
+        VENUES.forEach((v) => {
+          const d = daysUntil(v.deadline);
+          if (d !== null && d >= 0 && (next === null || d < next.d))
+            next = { d, v };
+        });
+        const nextTxt = next
+          ? `${next.v.venue_name.split(" ").slice(0, 2).join(" ")} · ${prettyDate(next.v.deadline)}`
+          : "—";
+        const items = [
+          ["", VENUES.length, "venue tracks", false],
+          ["good", ok.length, "eligible now", false],
+          ["alarm", soon.length, "deadlines within 30 days", false],
+          ["", nextTxt, "next deadline", true],
+          ["", avg + "%", "average progress", false],
+          ["", submitted.length, "submitted", false],
+        ];
+        document.getElementById("stats").innerHTML = items
+          .map(
+            ([c, n, l, sm]) =>
+              `<div class="stat ${c}"><div class="n ${sm ? "small" : ""}">${esc(n)}</div><div class="l">${esc(l)}</div></div>`,
+          )
+          .join("");
+      }
+
+      // ---- venue card ----
+      function segMarkup(v) {
+        return WORK.map((g) => {
+          const st = v.gates[g] || "todo";
+          return `<div class="seg ${st}" title="${g} · ${esc(GATE_BY_ID[g].name)} — ${st.replace("_", " ")}"></div>`;
+        }).join("");
+      }
+      function gateTable(v) {
+        return (
+          `<table class="gtab"><tr><th>Gate</th><th>Name</th><th>Status</th><th>Pass criterion</th></tr>` +
+          GATES.map((g) => {
+            const st = v.gates[g.id] || "todo";
+            return (
+              `<tr><td class="mono">${g.id}</td><td>${esc(g.name)}</td>` +
+              `<td class="st ${st}">${st.replace("_", " ")}</td><td style="color:var(--ink3)">${esc(g.pass)}</td></tr>`
+            );
+          }).join("") +
+          `</table>`
+        );
+      }
+      function card(v) {
+        const d = daysUntil(v.deadline);
+        const [ecls, elbl] = ELIG[v.eligibility_status] || [
+          "gray",
+          v.eligibility_status,
+        ];
+        const cg = v.progress.current_gate;
+        const cgName = cg && GATE_BY_ID[cg] ? GATE_BY_ID[cg].name : "—";
+        const flags = (v.integrity_flags || [])
+          .map((f) => pill("⚑ " + f, "purple"))
+          .join("");
+        const blk = (v.blockers || [])
+          .map((b) => `<li>${esc(b)}</li>`)
+          .join("");
+        const clink = v.canonical_link || v.canonical_file,
+          elinks = v.extra_links || v.extra_files || [];
+        const files = [
+          `<a href="${esc(clink)}" title="${esc(v.canonical_file)}">${esc(v.canonical_file.split("/").pop())}<span class="canon">canonical</span></a>`,
+        ]
+          .concat(
+            (v.extra_files || []).map(
+              (f, i) =>
+                `<a href="${esc(elinks[i] || f)}" title="${esc(f)}">${esc(f.split("/").pop())}</a>`,
+            ),
+          )
+          .join("");
+        const s = v.scores;
+        return `<div class="card elig-${esc(v.eligibility_status)}" data-id="${esc(v.id)}">
+    <div class="hd" onclick="toggle(this)">
+      <span class="rank">${v.priority_rank}</span>
+      <span class="namewrap"><span class="name">${esc(v.venue_name)}</span><span class="track">${esc(v.track)}</span></span>
+      <span class="right">
+        ${flags}
+        ${pill(dlText(v.deadline), "dl " + dlColor(d))}
+        ${pill(elbl, ecls)}
+        ${pill(cg || "—", "gate")}
+        <span class="chev">▶</span>
+      </span>
+    </div>
+    <div class="prog">
+      <div class="segs">${segMarkup(v)}</div>
+      <span class="cg"><b>${esc(cg || "—")}</b> ${esc(cgName)}</span>
+      <span class="pct">${v.progress.pct}%</span>
+    </div>
+    <div class="detail">
+      <div class="scorebar">
+        <span class="lead">Priority ${s.effective}</span>
+        <span>raw ${s.composite} × actionability ${s.actionability}</span>
+        <span>urgency <b>${s.urgency}</b></span><span>fit <b>${s.fit}</b></span>
+        <span>college <b>${s.college_value}</b></span><span>feasibility <b>${s.feasibility}</b></span>
+      </div>
+      <div class="grid">
+        <div class="kv"><div class="k">Full name</div><div class="v">${esc(v.long_name)}</div></div>
+        <div class="kv"><div class="k">Best track</div><div class="v">${esc(v.track)} · ${esc(v.tier)}</div></div>
+        <div class="kv"><div class="k">Status</div><div class="v">${esc(v.status_label)}</div></div>
+        <div class="kv"><div class="k">Timeline</div><div class="v">${esc(v.deadline || "no date")}${v.notification ? " · notify " + esc(v.notification) : ""}${v.event_date ? " · event " + esc(v.event_date) : ""}</div></div>
+      </div>
+      ${v.deadline_note ? `<div class="kv block"><div class="k">Deadline note</div><div class="v">${esc(v.deadline_note)}</div></div>` : ""}
+      <div class="kv block"><div class="k">Eligibility — ${esc(elbl)}</div><div class="v">${esc(v.eligibility_note)}</div></div>
+      ${blk ? `<div class="block"><div class="k">Blockers</div><ul class="blockers">${blk}</ul></div>` : ""}
+      ${v.acceptance_signals && v.acceptance_signals.length ? `<div class="block"><div class="k">What gets in${v.confidence ? `<span class="conf conf-${esc(v.confidence)}">${esc(v.confidence)} confidence</span>` : ""}</div><ul class="isig">${v.acceptance_signals.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
+      ${v.tailoring && v.tailoring.length ? `<div class="block"><div class="k">Tailoring levers for this project</div><ul class="tlev">${v.tailoring.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
+      <div class="block"><div class="k">Files</div><div class="files">${files}</div></div>
+      ${v.notes ? `<div class="notes">${esc(v.notes)}</div>` : ""}
+      ${gateTable(v)}
+    </div>
+  </div>`;
+      }
+      window.toggle = (el) => el.closest(".card").classList.toggle("open");
+
+      // ---- filter + sort + group ----
+      const state = {
+        elig: "all",
+        dl: "all",
+        sort: "priority",
+        q: "",
+        group: "none",
+      };
+      function filtered() {
+        let vs = VENUES.slice();
+        if (state.elig !== "all")
+          vs = vs.filter((v) => v.eligibility_status === state.elig);
+        if (state.dl === "upcoming")
+          vs = vs.filter((v) => {
+            const d = daysUntil(v.deadline);
+            return d !== null && d >= 0;
+          });
+        if (state.dl === "60")
+          vs = vs.filter((v) => {
+            const d = daysUntil(v.deadline);
+            return d !== null && d >= 0 && d <= 60;
+          });
+        if (state.dl === "30")
+          vs = vs.filter((v) => {
+            const d = daysUntil(v.deadline);
+            return d !== null && d >= 0 && d <= 30;
+          });
+        if (state.q) {
+          const q = state.q.toLowerCase();
+          vs = vs.filter((v) =>
+            (
+              v.venue_name +
+              " " +
+              v.long_name +
+              " " +
+              (v.notes || "") +
+              " " +
+              v.tier +
+              " " +
+              (v.blockers || []).join(" ") +
+              " " +
+              (v.tailoring || []).join(" ")
+            )
+              .toLowerCase()
+              .includes(q),
+          );
+        }
+        const big = 1e9;
+        const key = {
+          priority: (v) => -v.scores.effective,
+          raw: (v) => -v.scores.composite,
+          progress: (v) => -v.progress.pct,
+          progress_asc: (v) => v.progress.pct,
+          deadline: (v) => {
+            const d = daysUntil(v.deadline);
+            return d === null ? big : d < 0 ? big - 1 - d * 1e-6 : d;
+          },
+        }[state.sort];
+        vs.sort((a, b) => {
+          const ka = key(a),
+            kb = key(b);
+          return ka < kb ? -1 : ka > kb ? 1 : a.priority_rank - b.priority_rank;
+        });
+        return vs;
+      }
+      function groupsOf(vs) {
+        if (state.group === "eligibility") {
+          return [
+            ["ok", "Eligible"],
+            ["conditional", "Conditional"],
+            ["monitor", "Monitor"],
+            ["blocked", "Blocked"],
+          ]
+            .map(([k, l]) => [
+              l,
+              ELIG[k][0],
+              vs.filter((v) => v.eligibility_status === k),
+            ])
+            .filter((g) => g[2].length);
+        }
+        if (state.group === "deadline") {
+          const B = [
+            [
+              "Passed",
+              "brown",
+              (v) => {
+                const d = daysUntil(v.deadline);
+                return d !== null && d < 0;
+              },
+            ],
+            [
+              "Next 14 days",
+              "red",
+              (v) => {
+                const d = daysUntil(v.deadline);
+                return d !== null && d >= 0 && d <= 14;
+              },
+            ],
+            [
+              "Within 30 days",
+              "yellow",
+              (v) => {
+                const d = daysUntil(v.deadline);
+                return d !== null && d > 14 && d <= 30;
+              },
+            ],
+            [
+              "Within 60 days",
+              "yellow",
+              (v) => {
+                const d = daysUntil(v.deadline);
+                return d !== null && d > 30 && d <= 60;
+              },
+            ],
+            [
+              "Later",
+              "gray",
+              (v) => {
+                const d = daysUntil(v.deadline);
+                return d !== null && d > 60;
+              },
+            ],
+            ["No date set", "gray", (v) => daysUntil(v.deadline) === null],
+          ];
+          return B.map(([l, c, fn]) => [l, c, vs.filter(fn)]).filter(
+            (g) => g[2].length,
+          );
+        }
+        return [["", "", vs]];
+      }
+      const DOTCOL = {
+        green: "var(--green-ink)",
+        yellow: "var(--yellow-ink)",
+        blue: "var(--blue-ink)",
+        red: "var(--red-ink)",
+        brown: "var(--brown-ink)",
+        gray: "var(--ink3)",
+      };
+      function render() {
+        const vs = filtered();
+        const groups = groupsOf(vs);
+        const host = document.getElementById("cards");
+        if (!vs.length) {
+          host.innerHTML = `<div class="empty">No venues match these filters.</div>`;
+        } else if (state.group === "none") {
+          host.innerHTML = `<div class="cards">${vs.map(card).join("")}</div>`;
+        } else {
+          host.innerHTML = groups
+            .map(
+              ([name, col, list]) =>
+                `<div class="group"><div class="group-hd"><span class="dot" style="background:${DOTCOL[col] || "var(--ink3)"}"></span>` +
+                `<span class="gname">${esc(name)}</span><span class="gcount">${list.length}</span></div>` +
+                `<div class="cards">${list.map(card).join("")}</div></div>`,
+            )
+            .join("");
+        }
+        const sortTxt = document
+          .getElementById("sortSel")
+          .selectedOptions[0].text.toLowerCase();
+        document.getElementById("countLine").textContent =
+          `Showing ${vs.length} of ${VENUES.length} venues · sorted by ${sortTxt}` +
+          (state.group !== "none" ? ` · grouped by ${state.group}` : "");
+        if (expanded)
+          document
+            .querySelectorAll(".card")
+            .forEach((c) => c.classList.add("open"));
+      }
+
+      // ---- wire controls ----
+      document.querySelectorAll("#groupCtl .opt").forEach(
+        (o) =>
+          (o.onclick = () => {
+            document
+              .querySelectorAll("#groupCtl .opt")
+              .forEach((x) => x.classList.remove("on"));
+            o.classList.add("on");
+            state.group = o.dataset.group;
+            render();
+          }),
+      );
+      document.getElementById("sortSel").onchange = (e) => {
+        state.sort = e.target.value;
+        render();
+      };
+      document.getElementById("eligSel").onchange = (e) => {
+        state.elig = e.target.value;
+        render();
+      };
+      document.getElementById("dlSel").onchange = (e) => {
+        state.dl = e.target.value;
+        render();
+      };
+      document.getElementById("searchBox").oninput = (e) => {
+        state.q = e.target.value;
+        render();
+      };
+      let expanded = false;
+      document.getElementById("expandAll").onclick = function () {
+        expanded = !expanded;
+        document
+          .querySelectorAll(".card")
+          .forEach((c) => c.classList.toggle("open", expanded));
+        this.textContent = expanded ? "Collapse all" : "Expand all";
+      };
+
+      // ---- legends ----
+      document.getElementById("wfBody").innerHTML =
+        `<p style="color:var(--ink2);font-size:13.5px">${esc(DATA.workflow.model_name)}. ` +
+        `<span class="swatch" style="background:var(--g-done)"></span>done · ` +
+        `<span class="swatch" style="background:var(--g-prog)"></span>in progress · ` +
+        `<span class="swatch" style="background:var(--g-todo)"></span>to do · ` +
+        `<span class="swatch" style="background:var(--g-blocked)"></span>blocked · ` +
+        `<span class="swatch" style="background:var(--g-na)"></span>n/a. ` +
+        `Progress counts G0–G8, with in-progress at half credit.</p>` +
+        `<table><tr><th>Gate</th><th>Name</th><th>What happens</th><th>Pass criterion</th></tr>` +
+        GATES.map(
+          (g) =>
+            `<tr><td class="mono">${g.id}</td><td>${esc(g.name)}</td><td style="color:var(--ink2)">${esc(g.desc)}</td><td style="color:var(--ink3)">${esc(g.pass)}</td></tr>`,
+        ).join("") +
+        `</table>`;
+
+      const pf = DATA.workflow.priority_formula;
+      document.getElementById("boundBody").innerHTML =
+        `<p style="color:var(--ink2);font-size:13.5px"><b style="color:var(--ink)">Priority.</b> ${esc(pf.description)}</p>` +
+        `<p style="color:var(--ink3);font-size:12.5px">weights — ` +
+        Object.entries(pf.weights)
+          .map(([k, w]) => `${k} ${w}`)
+          .join(" · ") +
+        `; actionability — ` +
+        Object.entries(pf.actionability_multiplier)
+          .map(([k, w]) => `${k} ×${w}`)
+          .join(", ") +
+        `</p>` +
+        `<p style="color:var(--ink2);font-size:13.5px;margin-top:14px"><b style="color:var(--ink)">Claim boundaries</b> (enforced at gates G3 and G5):</p>` +
+        `<ul class="boundaries">` +
+        DATA.project.claim_boundaries
+          .map((c) => `<li>${esc(c)}</li>`)
+          .join("") +
+        `</ul>` +
+        `<p style="color:var(--ink3);font-size:12.5px">Source of truth for claims: <span class="mono">${esc(DATA.project.source_of_truth_claims)}</span></p>`;
+
+      document.getElementById("foot").innerHTML =
+        `Generated from <span class="mono">submission_tracker.json</span> by <span class="mono">tracker_tools/build_tracker.py</span>. ` +
+        `Edit the JSON and re-run the build script to regenerate. Countdowns recompute from your system clock on load. Rebuilt ${esc(REBUILT)}.`;
+
+      stats();
+      render();
+    </script>
+  </body>
+</html>

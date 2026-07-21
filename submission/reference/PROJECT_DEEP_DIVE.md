@@ -42,7 +42,7 @@ This glossary defines every technical term used in the project. If a judge uses 
 
 **Dilation:** A technique that inserts gaps between filter elements, allowing a convolution to "see" further back in time without adding parameters. Our TCN uses dilations [1, 2, 4, 8]. A kernel of size 3 with dilation 1 sees 3 consecutive timesteps. With dilation 2, it sees timesteps 1, 3, 5 (skipping every other one). With dilation 4, it sees timesteps 1, 5, 9 (skipping 3 between each). Stacking dilated layers gives exponential receptive field growth.
 
-**Receptive Field:** The total span of past timesteps that a given output can "see" through the network. With kernel size 3 and dilations [1, 2, 4, 8], each layer adds `(kernel_size - 1) * dilation` = `2 * dilation` steps. Total: 2*(1+2+4+8) = 30, plus the initial step = 31 timesteps. This means the TCN's prediction at time T is influenced by data from times T-30 through T. Since each timestep represents 1 second, this covers the entire 20-second lookback window with room to spare.
+**Receptive Field:** The total span of past timesteps that a given output can "see" through the network. With kernel size 3 and dilations [1, 2, 4, 8], each layer adds `(kernel_size - 1) * dilation` = `2 * dilation` steps. Total: 2\*(1+2+4+8) = 30, plus the initial step = 31 timesteps. This means the TCN's prediction at time T is influenced by data from times T-30 through T. Since each timestep represents 1 second, this covers the entire 20-second lookback window with room to spare.
 
 **Attention Pooling:** A mechanism where the network learns which timesteps in a sequence are most important, rather than treating all timesteps equally. Our `AttentionPool1D` computes a score for each timestep (using a 1x1 convolution), normalizes scores with softmax to get weights that sum to 1, and takes a weighted average. If the model learns that the most recent 3 timesteps are most informative for predicting future PAC, those timesteps will get the highest attention weights.
 
@@ -94,7 +94,7 @@ We built a system that reads the patient's brainwaves in real time, predicts whe
 
 **Why This Matters Clinically:**
 
-1. **Adaptive music therapy.** The most promising clinical application of 40 Hz entrainment uses rhythmic music modulated at 40 Hz rather than harsh click trains. Smooth transitions between therapeutic content (40 Hz modulated) and ambient content require 2-5 seconds of preparation time. A reactive controller that responds *after* detecting PAC decline provides only ~0.2 seconds of lead time -- not enough. Our TCN controller provides ~0.8 seconds of lead time, approaching the minimum needed for seamless audio transitions.
+1. **Adaptive music therapy.** The most promising clinical application of 40 Hz entrainment uses rhythmic music modulated at 40 Hz rather than harsh click trains. Smooth transitions between therapeutic content (40 Hz modulated) and ambient content require 2-5 seconds of preparation time. A reactive controller that responds _after_ detecting PAC decline provides only ~0.2 seconds of lead time -- not enough. Our TCN controller provides ~0.8 seconds of lead time, approaching the minimum needed for seamless audio transitions.
 
 2. **Reduced habituation.** Half of the patients in our dataset (17/35) show evidence of habituation -- the brain progressively "tunes out" the repetitive stimulus, producing weaker gamma oscillations over successive stimulation blocks. Adaptive scheduling with strategic rest breaks allows the brain to recover, potentially maintaining entrainment quality over longer clinical sessions. Our simulation shows the adaptive advantage increases from +9% to +11% as fatigue severity grows.
 
@@ -118,18 +118,18 @@ The original goal was straightforward: given a 2-second EEG window (7 channels, 
 
 **February 16, 2026 -- The Architecture Marathon:** 13 commits in a single day, testing 8+ architectures. This is where the real learning happened:
 
-| Attempt | Architecture | Parameters | R2 | Key Lesson |
-|---------|-------------|-----------|-----|------------|
-| V1 | EEGNet | 1,457 | ~0.08 | Baseline; no spectral features |
-| V2 | EEGNetV2 (delta-PAC) | ~2K | ~0.06 | Predicting noisy differences is harder, not easier |
-| V3 | SpecTempNet with MI features | 180K | 0.69 | **DATA LEAKAGE** -- MI features ARE PAC |
-| V3-clean | SpecTempNet without MI | 180K | 0.236 | First honest result with spectral features |
-| V4 | ViT-TCNet (ImageNet pretrained) | 1.1M | 0.252 | Massive overfitting; ImageNet weights useless for EEG |
-| V5 | Ridge Regression | 135 coefficients | **0.287** | Simple linear model wins |
-| V5-enh | Ridge with PAC features | 135+7 | 0.999 | **LEAKAGE AGAIN** -- caught in 30 seconds this time |
-| V6 | Temporal features + ensemble | 540 features | 0.287 | Zero improvement; 93% of features rejected by Lasso |
-| V7 | Raw EEG deep learning (1D CNN, attention, hybrid) | 19K-68K | -0.08 to 0.113 | Complete failure; end-to-end learning cannot work at this scale |
-| V8 | Specialized EEG architectures (ATCNet, TransformEEG) | 26K-122K | 0.075-0.199 | Classification architectures do not transfer to regression |
+| Attempt  | Architecture                                         | Parameters       | R2             | Key Lesson                                                      |
+| -------- | ---------------------------------------------------- | ---------------- | -------------- | --------------------------------------------------------------- |
+| V1       | EEGNet                                               | 1,457            | ~0.08          | Baseline; no spectral features                                  |
+| V2       | EEGNetV2 (delta-PAC)                                 | ~2K              | ~0.06          | Predicting noisy differences is harder, not easier              |
+| V3       | SpecTempNet with MI features                         | 180K             | 0.69           | **DATA LEAKAGE** -- MI features ARE PAC                         |
+| V3-clean | SpecTempNet without MI                               | 180K             | 0.236          | First honest result with spectral features                      |
+| V4       | ViT-TCNet (ImageNet pretrained)                      | 1.1M             | 0.252          | Massive overfitting; ImageNet weights useless for EEG           |
+| V5       | Ridge Regression                                     | 135 coefficients | **0.287**      | Simple linear model wins                                        |
+| V5-enh   | Ridge with PAC features                              | 135+7            | 0.999          | **LEAKAGE AGAIN** -- caught in 30 seconds this time             |
+| V6       | Temporal features + ensemble                         | 540 features     | 0.287          | Zero improvement; 93% of features rejected by Lasso             |
+| V7       | Raw EEG deep learning (1D CNN, attention, hybrid)    | 19K-68K          | -0.08 to 0.113 | Complete failure; end-to-end learning cannot work at this scale |
+| V8       | Specialized EEG architectures (ATCNet, TransformEEG) | 26K-122K         | 0.075-0.199    | Classification architectures do not transfer to regression      |
 
 **The leakage stories deserve emphasis.** The first leakage (V3, R2=0.69) took 30 minutes to detect -- by examining which features the model weighted most, all 7 Modulation Index features were at the top. Using PAC as an input feature to predict PAC is circular. The second leakage (V5-enh, R2=0.999) was caught in 30 seconds because by that point, any PAC-related feature was treated as guilty until proven innocent.
 
@@ -154,6 +154,7 @@ The original goal was straightforward: given a 2-second EEG window (7 channels, 
 This was the most important coding session of the project. Four innovations addressed every limitation identified so far:
 
 **Innovation 1: Stimulation context features.** Five features extracted from the BIDS events.tsv files:
+
 - `stim_state`: binary (is stimulation currently on?)
 - `time_since_switch`: how long since the last transition
 - `stim_frac_20s`: what fraction of the last 20 seconds was stimulation
@@ -164,12 +165,13 @@ This was the most important coding session of the project. Four innovations addr
 **Innovation 3: 73-feature temporal sequences.** Each timestep has 61 spectral features + 7 PAC-derived features + 5 stimulation context features = 73 total. The model receives 20 timesteps of history (20 seconds) and predicts PAC 5 seconds into the future.
 
 **Innovation 4: The TCN architecture itself.**
+
 - Why not LSTM/GRU? Causal convolutions are trivially verifiable (just check the padding direction), while recurrent hidden states could theoretically encode future information through data loading mistakes. TCNs also have faster inference -- critical for real-time control.
 - Why depthwise-separable convolutions? Parameter efficiency. Standard convolutions with 64 channels would have 64x64 = 4,096 weights per layer. Depthwise-separable: 64 depthwise + 64x64 pointwise = 64 + 4,096 = 4,160, but with better regularization because the depthwise step cannot mix information across channels.
 - Why dilations [1, 2, 4, 8]? Exponential receptive field growth. Four layers with kernel size 3 and these dilations produce a 31-step receptive field -- enough to cover the entire 20-second lookback window. Adding dilations [16, 32] was tested (DeepDilationTCN) but did not improve results.
 - Why GroupNorm, not BatchNorm? BatchNorm computes running mean/variance across the batch during training. When different subjects have different EEG amplitude distributions, BatchNorm statistics become unreliable at test time. GroupNorm(1, channels) normalizes each sample independently -- it does not care who the subject is.
 - Why attention pooling? After the TCN processes the sequence, we need to reduce it to a single vector for the regression heads. Simple approaches: take the last timestep (works because of causality), or average all timesteps (wastes positional information). Attention pooling learns which timesteps matter most. The model can discover, for example, that the most recent 3-5 timesteps are most predictive of future PAC.
-- Why dual heads (future PAC + delta PAC)? The delta head predicts the *change* in PAC. Even if the delta prediction is not used directly, training both heads provides a form of consistency regularization -- the model is penalized if its future prediction and delta prediction are inconsistent.
+- Why dual heads (future PAC + delta PAC)? The delta head predicts the _change_ in PAC. Even if the delta prediction is not used directly, training both heads provides a form of consistency regularization -- the model is penalized if its future prediction and delta prediction are inconsistent.
 - Why the "double SiLU"? In `CausalDSConvBlock`, SiLU activation is applied both after the norm step and again after the residual addition: `return F.silu(x + residual)`. Standard practice would apply activation only once. This was unintentional -- a bug that was discovered after training. The model was validated with this double-SiLU pattern, and changing it would require full retraining. It works, but it is not a deliberate design choice.
 
 ---
@@ -179,51 +181,62 @@ This was the most important coding session of the project. Four innovations addr
 ### Data and Preprocessing Decisions
 
 **7 frontal channels (Fp1, Fp2, F7, F3, Fz, F4, F8), not all 19 channels.**
-- *Why:* Frontal cortex is the primary target for gamma entrainment via auditory stimulation. The 40 Hz stimulus enters through the auditory cortex but entrainment effects are measured frontally. The dataset's associated paper confirms strongest entrainment in frontal regions.
-- *Trade-off:* Whole-head EEG might capture additional spatial patterns, but with only 35 subjects, adding more channels risks overfitting without adding useful signal. Seven channels keep the input manageable.
+
+- _Why:_ Frontal cortex is the primary target for gamma entrainment via auditory stimulation. The 40 Hz stimulus enters through the auditory cortex but entrainment effects are measured frontally. The dataset's associated paper confirms strongest entrainment in frontal regions.
+- _Trade-off:_ Whole-head EEG might capture additional spatial patterns, but with only 35 subjects, adding more channels risks overfitting without adding useful signal. Seven channels keep the input manageable.
 
 **2-second windows (500 samples at 250 Hz).**
-- *Why:* Balance between temporal resolution and PAC estimation stability. A controller needs decisions at least every few seconds for real-time control. Two seconds contains 8-16 theta cycles (at 4-8 Hz), which is the minimum for a meaningful PAC estimate.
-- *Trade-off:* Shorter windows (0.5-1s) would give faster decisions but extremely noisy PAC. Longer windows (5-10s) would give more stable PAC but too slow for control. Two seconds was the Goldilocks zone.
+
+- _Why:_ Balance between temporal resolution and PAC estimation stability. A controller needs decisions at least every few seconds for real-time control. Two seconds contains 8-16 theta cycles (at 4-8 Hz), which is the minimum for a meaningful PAC estimate.
+- _Trade-off:_ Shorter windows (0.5-1s) would give faster decisions but extremely noisy PAC. Longer windows (5-10s) would give more stable PAC but too slow for control. Two seconds was the Goldilocks zone.
 
 **Epoch-level PAC labels assigned to all constituent windows.**
-- *Why:* Computing PAC from a 2-second window is extremely noisy (this is why the LSTM failed -- autocorrelation was r=0.018). Computing PAC from a full 20-40 second epoch is much more stable. The compromise: compute PAC at the epoch level and assign that label to every 2-second window within the epoch.
-- *Trade-off:* This means all windows from the same epoch share the same target value. The model cannot learn about within-epoch PAC dynamics from the labels alone. This is a known limitation but was necessary for label quality.
+
+- _Why:_ Computing PAC from a 2-second window is extremely noisy (this is why the LSTM failed -- autocorrelation was r=0.018). Computing PAC from a full 20-40 second epoch is much more stable. The compromise: compute PAC at the epoch level and assign that label to every 2-second window within the epoch.
+- _Trade-off:_ This means all windows from the same epoch share the same target value. The model cannot learn about within-epoch PAC dynamics from the labels alone. This is a known limitation but was necessary for label quality.
 
 **Subject-level train/val/test splits (24 train / 5 val / 6 test).**
-- *Why:* Prevents data leakage. EEG signals from the same person are highly correlated -- the same brain produces similar patterns. If Subject 12's windows appear in both training and testing, the model can memorize subject-specific patterns and appear to generalize when it has not.
-- *How verified:* Audit confirms zero subject overlap between splits. Random seed=42 for reproducibility.
+
+- _Why:_ Prevents data leakage. EEG signals from the same person are highly correlated -- the same brain produces similar patterns. If Subject 12's windows appear in both training and testing, the model can memorize subject-specific patterns and appear to generalize when it has not.
+- _How verified:_ Audit confirms zero subject overlap between splits. Random seed=42 for reproducibility.
 
 ### Temporal Dataset Decisions
 
 **20-step lookback (20 seconds of history).**
-- *Why:* One full stimulation cycle is 60 seconds (40s stim + 20s rest). A 20-second lookback covers one-third of a cycle, enough to observe the current stimulation/rest state, see the PAC trajectory, and detect trends. The TCN's 31-step receptive field covers the entire lookback with margin.
-- *Trade-off:* Longer lookback (40-60 steps) was tested via the DeepDilationTCN variant -- it did not improve performance, suggesting 20 steps captures the useful temporal information.
+
+- _Why:_ One full stimulation cycle is 60 seconds (40s stim + 20s rest). A 20-second lookback covers one-third of a cycle, enough to observe the current stimulation/rest state, see the PAC trajectory, and detect trends. The TCN's 31-step receptive field covers the entire lookback with margin.
+- _Trade-off:_ Longer lookback (40-60 steps) was tested via the DeepDilationTCN variant -- it did not improve performance, suggesting 20 steps captures the useful temporal information.
 
 **5-second prediction horizon.**
-- *Why:* This is the operationally relevant horizon for proactive control. It takes the brain several seconds to respond to stimulation changes. A controller needs to predict at least 3-5 seconds ahead to act proactively rather than reactively. The horizon sweep (the central finding of the project) shows the TCN's advantage is specifically at 5-10 second horizons.
-- *Trade-off:* Shorter horizons (1-2s) are easier to predict but not useful -- simple baselines already work fine there. Longer horizons (15-20s) might be too far ahead for reliable prediction.
+
+- _Why:_ This is the operationally relevant horizon for proactive control. It takes the brain several seconds to respond to stimulation changes. A controller needs to predict at least 3-5 seconds ahead to act proactively rather than reactively. The horizon sweep (the central finding of the project) shows the TCN's advantage is specifically at 5-10 second horizons.
+- _Trade-off:_ Shorter horizons (1-2s) are easier to predict but not useful -- simple baselines already work fine there. Longer horizons (15-20s) might be too far ahead for reliable prediction.
 
 **Z-score normalization of PAC targets.**
-- *Why:* Raw PAC values are tiny -- on the order of 0.00004. Neural network gradients scale with the magnitude of the loss, and with targets this small, gradients would be minuscule, causing training to stall or become numerically unstable. Z-scoring maps them to a standard distribution (mean 0, std 1), making gradients meaningful.
-- *Implementation:* Mean and std computed from training data only. Saved in checkpoint for inverse transformation during inference.
+
+- _Why:_ Raw PAC values are tiny -- on the order of 0.00004. Neural network gradients scale with the magnitude of the loss, and with targets this small, gradients would be minuscule, causing training to stall or become numerically unstable. Z-scoring maps them to a standard distribution (mean 0, std 1), making gradients meaningful.
+- _Implementation:_ Mean and std computed from training data only. Saved in checkpoint for inverse transformation during inference.
 
 **Raw targets (ts=1), NOT smoothed targets.**
-- *Why:* Earlier experiments used target smoothing (ts=5), which inflated R2 from 0.067 to 0.764. The smoothed target shares 4/5 of its data points with adjacent targets, so even a naive predictor ("future = present") achieves R2=0.760. All final results use raw, unsmoothed PAC targets (ts=1) for honest evaluation. The cost: R2 drops from 0.764 to 0.170. The gain: the numbers are real.
+
+- _Why:_ Earlier experiments used target smoothing (ts=5), which inflated R2 from 0.067 to 0.764. The smoothed target shares 4/5 of its data points with adjacent targets, so even a naive predictor ("future = present") achieves R2=0.760. All final results use raw, unsmoothed PAC targets (ts=1) for honest evaluation. The cost: R2 drops from 0.764 to 0.170. The gain: the numbers are real.
 
 ### Model Training Decisions
 
 **Huber loss, not MSE.**
-- *Why:* EEG is noisy, producing occasional extreme PAC values. MSE squares the error, so a single outlier with error=10 contributes 100 to the loss, dominating training. Huber loss transitions from quadratic (MSE-like) for small errors to linear (MAE-like) for large errors, preventing outlier domination.
-- *Note:* The EEGNet (static predictor) uses MSE loss, not Huber. Only the TCN (temporal predictor) uses Huber loss.
+
+- _Why:_ EEG is noisy, producing occasional extreme PAC values. MSE squares the error, so a single outlier with error=10 contributes 100 to the loss, dominating training. Huber loss transitions from quadratic (MSE-like) for small errors to linear (MAE-like) for large errors, preventing outlier domination.
+- _Note:_ The EEGNet (static predictor) uses MSE loss, not Huber. Only the TCN (temporal predictor) uses Huber loss.
 
 **AdamW, not Adam.**
-- *Why:* Weight decay is a regularization technique that penalizes large weights. Standard Adam implementation couples weight decay with the adaptive learning rate, which reduces the effective regularization for parameters with large gradients. AdamW applies weight decay separately (decoupled), providing consistent regularization regardless of gradient magnitude. With a small dataset (11,160 training sequences), proper regularization is critical.
-- *Note:* The EEGNet uses standard Adam, not AdamW. The TCN uses AdamW.
+
+- _Why:_ Weight decay is a regularization technique that penalizes large weights. Standard Adam implementation couples weight decay with the adaptive learning rate, which reduces the effective regularization for parameters with large gradients. AdamW applies weight decay separately (decoupled), providing consistent regularization regardless of gradient magnitude. With a small dataset (11,160 training sequences), proper regularization is critical.
+- _Note:_ The EEGNet uses standard Adam, not AdamW. The TCN uses AdamW.
 
 **3-second hysteresis in the controller.**
-- *Why:* Without hysteresis, the controller can oscillate between STIMULATE and REST every second if PAC hovers near the threshold. This produces a "chattering" signal that is clinically useless -- you cannot meaningfully stimulate for 1 second, rest for 1 second, stimulate again. The 3-second hold time ensures each decision persists long enough for the brain to respond and for the controller to observe the effect.
-- *Implementation detail:* The TCN validation script (`run_tcn_validation.py`) uses a 3-second hysteresis for the TCN controller. `src/controller.py` defaults to 5-second, but the reported results use the 3-second value from `run_tcn_validation.py`.
+
+- _Why:_ Without hysteresis, the controller can oscillate between STIMULATE and REST every second if PAC hovers near the threshold. This produces a "chattering" signal that is clinically useless -- you cannot meaningfully stimulate for 1 second, rest for 1 second, stimulate again. The 3-second hold time ensures each decision persists long enough for the brain to respond and for the controller to observe the effect.
+- _Implementation detail:_ The TCN validation script (`run_tcn_validation.py`) uses a 3-second hysteresis for the TCN controller. `src/controller.py` defaults to 5-second, but the reported results use the 3-second value from `run_tcn_validation.py`.
 
 ---
 
@@ -233,9 +246,9 @@ This was the most important coding session of the project. Four innovations addr
 
 At first glance, an R2 of 0.170 looks poor. It means the model explains only 17% of the variance in future PAC. But context changes the interpretation completely:
 
-1. **The static ceiling is 0.287.** Eight different architectures all converge here for *current* PAC prediction from a single window. Predicting PAC *5 seconds into the future* is inherently harder than predicting it right now. Getting 0.170 at 5s horizon when the instantaneous ceiling is 0.287 means the model retains about 59% of the theoretical maximum.
+1. **The static ceiling is 0.287.** Eight different architectures all converge here for _current_ PAC prediction from a single window. Predicting PAC _5 seconds into the future_ is inherently harder than predicting it right now. Getting 0.170 at 5s horizon when the instantaneous ceiling is 0.287 means the model retains about 59% of the theoretical maximum.
 
-2. **All baselines are negative at this horizon.** Persistence (just repeat the current value) achieves R2 = -0.267 at 5-second horizon. Ridge regression achieves R2 = -0.393. Negative R2 means these methods are *worse than guessing the mean*. The TCN's R2 = 0.170 represents a +0.44 to +0.56 margin over baselines. It is the only method with any predictive signal.
+2. **All baselines are negative at this horizon.** Persistence (just repeat the current value) achieves R2 = -0.267 at 5-second horizon. Ridge regression achieves R2 = -0.393. Negative R2 means these methods are _worse than guessing the mean_. The TCN's R2 = 0.170 represents a +0.44 to +0.56 margin over baselines. It is the only method with any predictive signal.
 
 3. **What matters for control is directional accuracy, not precise prediction.** The controller does not need to know that PAC will be 0.0000437 in 5 seconds. It needs to know: "will PAC go up or down?" The Pearson correlation of r = 0.433 confirms that the TCN's predictions are moderately correlated with actual outcomes -- enough to make correct directional decisions most of the time.
 
@@ -243,14 +256,14 @@ At first glance, an R2 of 0.170 looks poor. It means the model explains only 17%
 
 This is the single most important experiment. It compares three methods across prediction horizons from 1 to 10 seconds:
 
-| Horizon (s) | Persistence R2 | Ridge R2 | TCN R2 | TCN Margin |
-|------------|----------------|----------|--------|------------|
-| 1 | 0.760 | 0.812 | 0.735 | -0.025 (TCN loses) |
-| 2 | 0.488 | 0.542 | 0.470 | -0.018 (TCN loses) |
-| 3 | 0.234 | 0.254 | 0.277 | +0.043 (TCN wins) |
-| 5 | -0.267 | -0.393 | 0.254 | +0.521 (TCN dominates) |
-| 8 | -0.276 | -0.211 | 0.240 | +0.515 (TCN dominates) |
-| 10 | -0.256 | -0.212 | 0.278 | +0.534 (TCN dominates) |
+| Horizon (s) | Persistence R2 | Ridge R2 | TCN R2 | TCN Margin             |
+| ----------- | -------------- | -------- | ------ | ---------------------- |
+| 1           | 0.760          | 0.812    | 0.735  | -0.025 (TCN loses)     |
+| 2           | 0.488          | 0.542    | 0.470  | -0.018 (TCN loses)     |
+| 3           | 0.234          | 0.254    | 0.277  | +0.043 (TCN wins)      |
+| 5           | -0.267         | -0.393   | 0.254  | +0.521 (TCN dominates) |
+| 8           | -0.276         | -0.211   | 0.240  | +0.515 (TCN dominates) |
+| 10          | -0.256         | -0.212   | 0.278  | +0.534 (TCN dominates) |
 
 **Why baselines fail at longer horizons:** Persistence ("future = present") works at 1-2 seconds because PAC changes slowly -- it is still roughly the same 1-2 seconds later. But PAC does change over 5-10 seconds, especially around stim/rest transitions. Predicting "nothing will change" becomes increasingly wrong. Ridge regression fails because the future depends on nonlinear interactions (e.g., "if stimulation has been on for 30 seconds AND PAC has been high, it will start declining") that a linear model cannot represent.
 
@@ -260,14 +273,14 @@ This is the single most important experiment. It compares three methods across p
 
 ### Controller Comparison Table
 
-| Controller | Alignment | Low-PAC Targeting | PAC Gap (×10⁻⁶ MI) | Stim % |
-|-----------|-----------|-------------------|--------------------|--------|
-| Fixed Schedule | 45.0% | 61.4% | -6.6 (wrong) | 66.6% |
-| Reactive Threshold | 64.5% | 51.7% | +21.1 | 36.7% |
-| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** | 59.7% |
-| Hybrid TCN+Reactive | 73.8% | 85.3% | +34.0 | 60.8% |
-| PI Controller | 66.1% | 38.6% | +27.2 | 22.0% |
-| Alignment Oracle | 100.0% | 100.0% | +33.3 | 48.3% |
+| Controller          | Alignment | Low-PAC Targeting | PAC Gap (×10⁻⁶ MI) | Stim % |
+| ------------------- | --------- | ----------------- | ------------------ | ------ |
+| Fixed Schedule      | 45.0%     | 61.4%             | -6.6 (wrong)       | 66.6%  |
+| Reactive Threshold  | 64.5%     | 51.7%             | +21.1              | 36.7%  |
+| **TCN Predictive**  | **72.1%** | **82.6%**         | **+30.5**          | 59.7%  |
+| Hybrid TCN+Reactive | 73.8%     | 85.3%             | +34.0              | 60.8%  |
+| PI Controller       | 66.1%     | 38.6%             | +27.2              | 22.0%  |
+| Alignment Oracle    | 100.0%    | 100.0%            | +33.3              | 48.3%  |
 
 **What each metric means:**
 
@@ -285,15 +298,16 @@ This is the single most important experiment. It compares three methods across p
 
 ### Effect Sizes
 
-| Metric | TCN vs Reactive | Hedges' g | Interpretation |
-|--------|----------------|-----------|---------------|
-| Alignment | 72.1% vs 64.5% | +1.31 | Large |
-| Low-PAC Targeting | 82.6% vs 51.7% | +4.47 | Very large |
-| PAC Gap | 30.5 vs 21.1 | +1.57 | Large |
-| Lead Time | 0.8s vs 0.2s | +0.75 | Medium |
-| Clinical Utility | 0.681 vs 0.591 | +0.95 | Large |
+| Metric            | TCN vs Reactive | Hedges' g | Interpretation |
+| ----------------- | --------------- | --------- | -------------- |
+| Alignment         | 72.1% vs 64.5%  | +1.31     | Large          |
+| Low-PAC Targeting | 82.6% vs 51.7%  | +4.47     | Very large     |
+| PAC Gap           | 30.5 vs 21.1    | +1.57     | Large          |
+| Lead Time         | 0.8s vs 0.2s    | +0.75     | Medium         |
+| Clinical Utility  | 0.681 vs 0.591  | +0.95     | Large          |
 
 **What Hedges' g means practically:**
+
 - g = 1.31 (alignment): if you picked a random patient and applied both controllers, there is about an 82% chance the TCN gives better alignment. The distributions overlap, but the TCN is consistently better.
 - g = 4.47 (low-PAC targeting): this is an enormous effect size. The two distributions barely overlap at all. For virtually every patient, the TCN catches far more low-PAC windows.
 - g = 1.57 (PAC gap): a strong effect. The TCN consistently achieves a larger gap between PAC during rest and PAC during stimulation, meaning better targeting.
@@ -312,11 +326,11 @@ The Alignment Oracle has perfect knowledge of future PAC and achieves a PAC gap 
 
 ### The Stimulation Budget Trade-off
 
-| Controller | Stim % | Low-PAC Targeting | Interpretation |
-|-----------|--------|-------------------|---------------|
-| Fixed Schedule | 66.6% | 61.4% | Lots of stimulation, poorly targeted |
-| Reactive | 36.7% | 51.7% | Very conservative, misses half the need |
-| TCN | 59.7% | 82.6% | Moderate stimulation, well targeted |
+| Controller     | Stim % | Low-PAC Targeting | Interpretation                          |
+| -------------- | ------ | ----------------- | --------------------------------------- |
+| Fixed Schedule | 66.6%  | 61.4%             | Lots of stimulation, poorly targeted    |
+| Reactive       | 36.7%  | 51.7%             | Very conservative, misses half the need |
+| TCN            | 59.7%  | 82.6%             | Moderate stimulation, well targeted     |
 
 The TCN uses 10% less stimulation than Fixed Schedule (59.7% vs 66.6%) while achieving 82.6% vs 61.4% low-PAC targeting. It uses more stimulation than Reactive (59.7% vs 36.7%), but the extra stimulation is almost entirely directed at periods of genuine therapeutic need. In music therapy, "stimulation" means playing 40 Hz-modulated therapeutic content versus neutral background music -- more therapeutic content is clinically desirable when properly targeted.
 
@@ -327,30 +341,39 @@ The TCN uses 10% less stimulation than Fixed Schedule (59.7% vs 66.6%) while ach
 This section is intentionally blunt. Knowing the limitations is as important as knowing the results. A judge who finds a limitation you did not mention will be more skeptical than a judge who sees you already identified it.
 
 ### R2 = 0.170 is low in absolute terms.
+
 The TCN explains only 17% of the variance in future PAC. 83% of the variance is unexplained -- mostly measurement noise from 2-second PAC estimates and cross-subject variability. This number is NOT impressive in isolation. It only becomes meaningful relative to the baselines (which are negative) and in terms of its downstream effect on controller performance (which is statistically significant). If a judge says "your R2 is low," the response is: "Yes, and I expected that. What matters is that at this horizon, it is the only method with any signal, and that signal translates to significantly better control."
 
 ### Epoch-level PAC labels are a known compromise.
+
 PAC is computed from full 20-40 second epochs and assigned to all constituent 2-second windows. This means the model sees ~10-20 identical labels in a row, then a step change at the epoch boundary. The model cannot learn about gradual within-epoch PAC evolution from these labels -- it can only learn about epoch-to-epoch transitions. If window-level PAC could be computed reliably (requiring longer windows or denoising), the temporal model might perform better.
 
 ### Only 7 frontal channels.
+
 The dataset has 19 channels, but only 7 frontal channels are used. Whole-head EEG might capture additional spatial patterns (e.g., occipital-frontal phase gradients, temporal cortex activity) that correlate with PAC. However, adding more channels increases the risk of overfitting with only 35 subjects. The 7-channel restriction was a deliberate trade-off favoring robustness over potential performance.
 
 ### Simulation vs. real clinical deployment.
+
 The closed-loop simulation (`run_closed_loop_demo.py`) uses a simplified brain response model (exponential approach to target PAC values). Real brains are vastly more complex. The simulation results should be interpreted as proof-of-concept, not clinical evidence. However, the primary results (those cited on the poster) come from real-data replay (`run_tcn_validation.py`), which uses actual patient EEG -- not simulation.
 
 ### N = 35 is a modest sample size.
+
 Thirty-five subjects from a single memory clinic in Tehran. The demographic may not represent the global Alzheimer's population. Cross-cultural and cross-site generalization is unconfirmed. However, within this cohort, the effect is consistent (35/35 subjects benefit), and the dataset is the largest publicly available 40 Hz auditory entrainment EEG dataset.
 
 ### No longitudinal data.
+
 Each patient contributed a single recording session of 6-10 minutes. Clinical 40 Hz entrainment sessions typically run 30-60 minutes daily for weeks. Habituation effects observed in our short sessions may not predict long-session or multi-session behavior. The 49/51% habituation split (17 habituators vs 18 facilitators) was measured over short sessions only.
 
 ### Counterfactual validation, not real-time deployment.
-The real-data validation replays recorded EEG and evaluates what each controller *would have decided*. It cannot observe how the brain would have *responded* to those decisions. If the TCN decides to stimulate during a rest period in the recording, it cannot observe the brain's actual response to that counterfactual stimulation. This is an inherent limitation of offline replay analysis. True validation requires live closed-loop experiments with real patients.
+
+The real-data validation replays recorded EEG and evaluates what each controller _would have decided_. It cannot observe how the brain would have _responded_ to those decisions. If the TCN decides to stimulate during a rest period in the recording, it cannot observe the brain's actual response to that counterfactual stimulation. This is an inherent limitation of offline replay analysis. True validation requires live closed-loop experiments with real patients.
 
 ### Double SiLU activation was unintentional.
-In the `CausalDSConvBlock`, the residual is added and then SiLU is applied *again* (`return F.silu(x + residual)`), creating a double activation. Standard residual blocks typically use a single activation. This was discovered after the model was already trained and validated. The trained model works well, and the results are valid for this specific architecture, but it is a non-standard design quirk.
+
+In the `CausalDSConvBlock`, the residual is added and then SiLU is applied _again_ (`return F.silu(x + residual)`), creating a double activation. Standard residual blocks typically use a single activation. This was discovered after the model was already trained and validated. The trained model works well, and the results are valid for this specific architecture, but it is a non-standard design quirk.
 
 ### The model is primarily autoregressive on PAC.
+
 A Ridge regression feature ablation shows: with PAC features, R2 = 0.812. Without PAC features, R2 = 0.045. The model relies heavily on PAC history to predict future PAC. In real deployment, the PAC input would come from a noisy real-time estimator (EEGNet, R2 = 0.287), not ground truth. This noise propagation could degrade performance, though the exact impact has not been quantified.
 
 ---
@@ -364,19 +387,21 @@ This section clarifies the distinction between simulation and real data, because
 **1. `run_closed_loop_demo.py` -- Simulation**
 
 This script uses the `EntrainmentSimulator` to model brain dynamics:
+
 - When stimulation is ON: `PAC(t+1) = PAC(t) + 0.15 * (0.3 - PAC(t)) + noise`
   - PAC approaches a target of 0.3 with time constant 0.15
 - When stimulation is OFF: `PAC(t+1) = PAC(t) + 0.10 * (0.05 - PAC(t)) + noise`
   - PAC decays toward 0.05 with time constant 0.10
 - Noise: Gaussian, sigma = 0.02
 
-The "Predictive Look-Ahead" controller in the simulation uses a simple linear trend heuristic (linear regression on the last 5 PAC values), **NOT the trained TCN**. The simulation tests the *concept* of predictive control (does looking ahead help?) rather than the specific TCN model.
+The "Predictive Look-Ahead" controller in the simulation uses a simple linear trend heuristic (linear regression on the last 5 PAC values), **NOT the trained TCN**. The simulation tests the _concept_ of predictive control (does looking ahead help?) rather than the specific TCN model.
 
 An optional `FatigueAwareSimulator` adds progressive response degradation under continuous stimulation, with recovery during rest. The fatigue sensitivity sweep uses this simulator. Four different fatigue model types were tested (exponential decay, step function, heterogeneous population, saturation), and the adaptive advantage held under all four (Hedges' g = 1.21 to 3.66).
 
 **2. `run_tcn_validation.py` -- Real Data Replay**
 
 This is the primary validation and the source of all reported results. It:
+
 - Loads all 35 subjects' actual EEG data from `data/processed/`
 - Loads the trained TCN checkpoint from `models/best_multiscale_tcn_lb20_hz5_ts1.pth`
 - Extracts spectral features from the real EEG windows
@@ -426,11 +451,13 @@ This is the primary validation and the source of all reported results. It:
 ### Compared to Existing Work: What is Novel vs. Incremental
 
 **Novel contributions:**
+
 - No prior work predicts future PAC for proactive control of 40 Hz entrainment. The literature on closed-loop neurostimulation primarily targets epilepsy seizure detection (Neuropace) or Parkinson's tremor (adaptive DBS), not Alzheimer's gamma entrainment.
 - The horizon sweep analysis (showing TCN advantage specifically at 5-10 second horizons where baselines fail) is a new experimental finding.
 - The 35-subject real-data controller comparison with proper statistical testing (Wilcoxon, Hedges' g, binomial) has not been published for this application.
 
 **Incremental aspects:**
+
 - EEGNet and TCN architectures are not novel -- they are established in the literature. The contribution is in their application to this specific problem and dataset.
 - The closed-loop controller is relatively simple (threshold + hysteresis + z-score). More sophisticated control strategies (reinforcement learning, MPC optimization) are possible but were not implemented.
 - PAC computation uses the standard Modulation Index (Tort 2010) -- no methodological innovation in the biomarker itself.
@@ -441,31 +468,31 @@ This is the primary validation and the source of all reported results. It:
 
 ### Key Numbers to Memorize
 
-| Metric | Value | Context |
-|--------|-------|---------|
-| Dataset | 35 subjects, 7 channels, 250 Hz | OpenNeuro ds005048 |
-| Total windows | 17,283 | Train: 11,736, Val: 2,725, Test: 2,822 |
-| EEGNet params | 1,457 | Static PAC prediction |
-| EEGNet R2 | 0.287 | Ceiling for static prediction |
-| TCN params | 31,043 | Temporal PAC prediction |
-| TCN test R2 | 0.170 | At 5-second horizon, raw targets |
-| TCN Pearson r | 0.433 | Moderate directional correlation |
-| Persistence R2 at 5s | -0.267 | Baseline fails |
-| Ridge R2 at 5s | -0.393 | Baseline fails |
-| TCN margin at 5-10s | +0.5 R2 | The key finding |
-| Architectures tested | 8+ | All converge to R2 = 0.287 |
-| TCN alignment | 72.1% | vs Reactive 64.5% |
-| Low-PAC targeting | 82.6% | vs Reactive 51.7% |
-| PAC gap | 30.5 ×10⁻⁶ MI | vs Reactive 21.1 ×10⁻⁶ MI |
-| Hedges' g (alignment) | 1.31 | Large effect |
-| Hedges' g (targeting) | 4.47 | Very large effect |
-| Hedges' g (PAC gap) | 1.57 | Large effect |
-| Subjects benefiting | 35/35 | Binomial p < 0.001 |
-| Oracle ceiling reached | 91% | 30.5 / 33.3 |
-| Lead time | 0.8s vs 0.2s | TCN vs Reactive |
-| Stim budget | 59.7% | Less than Fixed (66.6%) |
-| Best TCN epoch | 53 | val R2 = 0.411 |
-| TCN receptive field | 31 steps | From dilations [1,2,4,8] |
+| Metric                 | Value                           | Context                                |
+| ---------------------- | ------------------------------- | -------------------------------------- |
+| Dataset                | 35 subjects, 7 channels, 250 Hz | OpenNeuro ds005048                     |
+| Total windows          | 17,283                          | Train: 11,736, Val: 2,725, Test: 2,822 |
+| EEGNet params          | 1,457                           | Static PAC prediction                  |
+| EEGNet R2              | 0.287                           | Ceiling for static prediction          |
+| TCN params             | 31,043                          | Temporal PAC prediction                |
+| TCN test R2            | 0.170                           | At 5-second horizon, raw targets       |
+| TCN Pearson r          | 0.433                           | Moderate directional correlation       |
+| Persistence R2 at 5s   | -0.267                          | Baseline fails                         |
+| Ridge R2 at 5s         | -0.393                          | Baseline fails                         |
+| TCN margin at 5-10s    | +0.5 R2                         | The key finding                        |
+| Architectures tested   | 8+                              | All converge to R2 = 0.287             |
+| TCN alignment          | 72.1%                           | vs Reactive 64.5%                      |
+| Low-PAC targeting      | 82.6%                           | vs Reactive 51.7%                      |
+| PAC gap                | 30.5 ×10⁻⁶ MI                   | vs Reactive 21.1 ×10⁻⁶ MI              |
+| Hedges' g (alignment)  | 1.31                            | Large effect                           |
+| Hedges' g (targeting)  | 4.47                            | Very large effect                      |
+| Hedges' g (PAC gap)    | 1.57                            | Large effect                           |
+| Subjects benefiting    | 35/35                           | Binomial p < 0.001                     |
+| Oracle ceiling reached | 91%                             | 30.5 / 33.3                            |
+| Lead time              | 0.8s vs 0.2s                    | TCN vs Reactive                        |
+| Stim budget            | 59.7%                           | Less than Fixed (66.6%)                |
+| Best TCN epoch         | 53                              | val R2 = 0.411                         |
+| TCN receptive field    | 31 steps                        | From dilations [1,2,4,8]               |
 
 ### Common Judge Questions with Suggested Answers
 
@@ -515,4 +542,4 @@ The system is small enough for a wearable device and could enable personalized a
 
 ---
 
-*This document consolidates information from: CLAUDE.md (architecture overview), docs/CURRENT_METHODOLOGY.md (methodology), results/RESULTS_REPORT.md (all results and statistics), docs/POSTER_BOARD_V3.md (poster content), docs/LOG_NOTEBOOK.md (research chronology), temporal_multiscale/multiscale_tcn.py (TCN code), src/eegnet.py (EEGNet code), and run_tcn_validation.py (validation script).*
+_This document consolidates information from: CLAUDE.md (architecture overview), docs/CURRENT_METHODOLOGY.md (methodology), results/RESULTS_REPORT.md (all results and statistics), docs/POSTER_BOARD_V3.md (poster content), docs/LOG_NOTEBOOK.md (research chronology), temporal_multiscale/multiscale_tcn.py (TCN code), src/eegnet.py (EEGNet code), and run_tcn_validation.py (validation script)._

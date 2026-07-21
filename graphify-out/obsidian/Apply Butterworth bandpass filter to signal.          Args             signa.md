@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Apply Butterworth bandpass filter to signal.          Args:             signa
+# Apply Butterworth bandpass filter to signal. Args: signa
 
 ## Connections
+
 - [[bandpass_filter()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

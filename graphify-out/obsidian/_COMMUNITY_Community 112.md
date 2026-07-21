@@ -8,6 +8,7 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
+
 - [[40+ Q&A Bank (Technical, Process, Results, Creativity)]] - document - submission/presentation/archive/FINAL_04_qa_bank_and_danger_zones.md
 - [[5 Danger Zone Answers (AI Code, R2 Low, Simulation, N=35, vs Reactive)]] - document - submission/presentation/archive/FINAL_04_qa_bank_and_danger_zones.md
 - [[Final Q&A Bank and Danger Zones (FINAL_04, Archived)]] - document - submission/presentation/archive/FINAL_04_qa_bank_and_danger_zones.md

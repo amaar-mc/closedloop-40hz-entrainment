@@ -10,6 +10,7 @@ tags:
 # Stimulation Efficiency Ratio by Disease Severity (Panel D)
 
 ## Connections
+
 - [[Fixed Stimulation Strategy (baseline)]] - `references` [EXTRACTED]
 - [[Predictive Stimulation Strategy (TCN-based)]] - `references` [EXTRACTED]
 - [[Reactive Stimulation Strategy]] - `references` [EXTRACTED]

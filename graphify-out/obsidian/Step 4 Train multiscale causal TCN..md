@@ -10,10 +10,11 @@ tags:
 # Step 4: Train multiscale causal TCN.
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `uses` [INFERRED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[step_train_tcn()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

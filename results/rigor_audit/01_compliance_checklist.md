@@ -13,76 +13,76 @@ Requirements extracted from CSEF Project Presentation Requirements (csef.usc.edu
 
 ## Page Count
 
-| Requirement | Status | Evidence |
-|---|---|---|
+| Requirement  | Status   | Evidence                                                             |
+| ------------ | -------- | -------------------------------------------------------------------- |
 | Max 13 pages | **PASS** | 12 pages generated (p01_title through p12_references, lines 183-854) |
 
 ## Required Sections and Ordering
 
-| # | Required Section | Present? | Page(s) | Generator Function | Status |
-|---|---|---|---|---|---|
-| 1 | Title Page | Yes | 1 | `p01_title` (line 183) | **PASS** |
-| 2 | Introduction | Yes | 2-3 | `p02_intro1` (line 224), `p03_intro2` (line 272) | **PASS** |
-| 2a | — Research Question | Yes | 2 | line 229 | **PASS** |
-| 2b | — Project Origin | Yes | 2 | line 249 | **PASS** |
-| 2c | — Continuation | Yes | 3 | line 276 | **PASS** |
-| 2d | — Work by Others | Yes | 3 | line 281 | **PASS** |
-| 3 | Methods | Yes | 4-6 | `p04_methods1` (line 324), `p05_methods2` (line 377), `p06_methods3` (line 444) | **PASS** |
-| 4 | Results | Yes | 7-8 | `p07_results1` (line 491), `p08_results2` (line 535) | **PASS** |
-| 5 | Discussion | Yes | 9 | `p09_discussion` (line 604) | **PASS** |
-| 6 | Conclusions | Yes | 10 | `p10_conclusions` (line 663) | **PASS** |
-| 7 | Scope of Work | Yes | 11 | `p11_scope` (line 725) | **PASS** |
-| 7a | — New Work by Author | Yes | 11 | line 730 | **PASS** |
-| 7b | — Resources and Support | Yes | 11 | line 756 | **PASS** |
-| 8 | References/Supplemental | Yes | 12 | `p12_references` (line 777) | **PASS** |
+| #   | Required Section        | Present? | Page(s) | Generator Function                                                              | Status   |
+| --- | ----------------------- | -------- | ------- | ------------------------------------------------------------------------------- | -------- |
+| 1   | Title Page              | Yes      | 1       | `p01_title` (line 183)                                                          | **PASS** |
+| 2   | Introduction            | Yes      | 2-3     | `p02_intro1` (line 224), `p03_intro2` (line 272)                                | **PASS** |
+| 2a  | — Research Question     | Yes      | 2       | line 229                                                                        | **PASS** |
+| 2b  | — Project Origin        | Yes      | 2       | line 249                                                                        | **PASS** |
+| 2c  | — Continuation          | Yes      | 3       | line 276                                                                        | **PASS** |
+| 2d  | — Work by Others        | Yes      | 3       | line 281                                                                        | **PASS** |
+| 3   | Methods                 | Yes      | 4-6     | `p04_methods1` (line 324), `p05_methods2` (line 377), `p06_methods3` (line 444) | **PASS** |
+| 4   | Results                 | Yes      | 7-8     | `p07_results1` (line 491), `p08_results2` (line 535)                            | **PASS** |
+| 5   | Discussion              | Yes      | 9       | `p09_discussion` (line 604)                                                     | **PASS** |
+| 6   | Conclusions             | Yes      | 10      | `p10_conclusions` (line 663)                                                    | **PASS** |
+| 7   | Scope of Work           | Yes      | 11      | `p11_scope` (line 725)                                                          | **PASS** |
+| 7a  | — New Work by Author    | Yes      | 11      | line 730                                                                        | **PASS** |
+| 7b  | — Resources and Support | Yes      | 11      | line 756                                                                        | **PASS** |
+| 8   | References/Supplemental | Yes      | 12      | `p12_references` (line 777)                                                     | **PASS** |
 
 ## Each Major Section Starts on Its Own Page
 
-| Section | Starts new page? | Evidence | Status |
-|---|---|---|---|
-| Title Page | Yes | `p.add_page()` at line 185 | **PASS** |
-| Introduction | Yes | `p.add_page()` at line 226 | **PASS** |
-| Methods | Yes | `p.add_page()` at line 326 | **PASS** |
-| Results | Yes | `p.add_page()` at line 493 | **PASS** |
-| Discussion | Yes | `p.add_page()` at line 606 | **PASS** |
-| Conclusions | Yes | `p.add_page()` at line 665 | **PASS** |
-| Scope of Work | Yes | `p.add_page()` at line 727 | **PASS** |
-| References | Yes | `p.add_page()` at line 779 | **PASS** |
+| Section       | Starts new page? | Evidence                   | Status   |
+| ------------- | ---------------- | -------------------------- | -------- |
+| Title Page    | Yes              | `p.add_page()` at line 185 | **PASS** |
+| Introduction  | Yes              | `p.add_page()` at line 226 | **PASS** |
+| Methods       | Yes              | `p.add_page()` at line 326 | **PASS** |
+| Results       | Yes              | `p.add_page()` at line 493 | **PASS** |
+| Discussion    | Yes              | `p.add_page()` at line 606 | **PASS** |
+| Conclusions   | Yes              | `p.add_page()` at line 665 | **PASS** |
+| Scope of Work | Yes              | `p.add_page()` at line 727 | **PASS** |
+| References    | Yes              | `p.add_page()` at line 779 | **PASS** |
 
 ## Project Summary Word Count (150-word limit)
 
-| Requirement | Status | Evidence |
-|---|---|---|
-| ≤150 words | **PASS** | Programmatic count: **142 words** (lines 204-221 of generator script). 8 words under limit. |
+| Requirement | Status   | Evidence                                                                                    |
+| ----------- | -------- | ------------------------------------------------------------------------------------------- |
+| ≤150 words  | **PASS** | Programmatic count: **142 words** (lines 204-221 of generator script). 8 words under limit. |
 
 Word count method: `text.split()` on the full summary string from the generator script.
 
 ## Title Page Requirements
 
-| Requirement | Status | Evidence |
-|---|---|---|
+| Requirement                     | Status   | Evidence                                                                                                     |
+| ------------------------------- | -------- | ------------------------------------------------------------------------------------------------------------ |
 | No project number on title page | **PASS** | Title page (lines 183-221) contains only title, author name, and project summary. No project number present. |
-| Project title present | **PASS** | Line 189-193: full title rendered at 26pt bold |
-| Author name present | **PASS** | Line 196: "Amaar Chughtai" at 18pt |
+| Project title present           | **PASS** | Line 189-193: full title rendered at 26pt bold                                                               |
+| Author name present             | **PASS** | Line 196: "Amaar Chughtai" at 18pt                                                                           |
 
 ## Hyperlinks
 
-| Requirement | Status | Evidence |
-|---|---|---|
+| Requirement                            | Status   | Evidence                                                                                                                                              |
+| -------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | No active hyperlinks except final page | **PASS** | Only hyperlink in the entire document is on page 12 (final page): `https://openneuro.org/datasets/ds005048` at line 818 via `p.write(0.24, url, url)` |
 
 ## Prohibited Elements
 
-| Requirement | Status | Evidence |
-|---|---|---|
-| No animations | **PASS** | Static PDF generated by fpdf2 — no animation capability |
-| No transitions | **PASS** | Static PDF — no transitions possible |
-| No embedded videos | **PASS** | Only static text, tables, and PNG images |
+| Requirement        | Status   | Evidence                                                |
+| ------------------ | -------- | ------------------------------------------------------- |
+| No animations      | **PASS** | Static PDF generated by fpdf2 — no animation capability |
+| No transitions     | **PASS** | Static PDF — no transitions possible                    |
+| No embedded videos | **PASS** | Only static text, tables, and PNG images                |
 
 ## Background and Colors
 
-| Requirement | Status | Evidence |
-|---|---|---|
+| Requirement                     | Status   | Evidence                                                                                                                                                                                                             |
+| ------------------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Light background with dark text | **PASS** | White background (default), black text throughout (lines 25-31 define BLACK=(0,0,0), all text set to BLACK). Table headers use dark gray fill (40,40,40) with white text — standard table formatting, not body text. |
 
 ## Overall Phase 1A Summary

@@ -10,6 +10,7 @@ tags:
 # Closed-Loop Controller (threshold-based, z-score hysteresis)
 
 ## Connections
+
 - [[PAC as HRV Analogy for Cardiologist Judges]] - `conceptually_related_to` [INFERRED]
 - [[TCN vs Reactive Controller Results (72.1% vs 64.5% alignment, 3535 subjects)]] - `references` [EXTRACTED]
 

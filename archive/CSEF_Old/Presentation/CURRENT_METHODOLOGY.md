@@ -19,16 +19,17 @@ Develop a personalized closed-loop system that predicts theta-gamma phase-amplit
 
 **Source:** OpenNeuro ds005048 v1.0.1 — "40Hz Auditory Entrainment" (Lahijanian et al., 2024)
 
-| Property | Value |
-|----------|-------|
-| Subjects | 35 (elderly subjects from memory clinic in Tehran) |
-| EEG channels | 19 monopolar (10/20 system) |
-| Sampling rate | 250 Hz |
-| File format | BIDS-compliant; .set files are MATLAB v7.3 (HDF5); actual data in companion .fdt files (float32, Fortran/column-major order) |
-| Protocol | 40 Hz pulse train: 40s stimulation + 20s rest per trial (6 short-session, 10 long-session) |
-| Preprocessing | Already applied by Makoto's pipeline: 1 Hz HP, 50 Hz notch, ICA, CAR |
+| Property      | Value                                                                                                                        |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Subjects      | 35 (elderly subjects from memory clinic in Tehran)                                                                           |
+| EEG channels  | 19 monopolar (10/20 system)                                                                                                  |
+| Sampling rate | 250 Hz                                                                                                                       |
+| File format   | BIDS-compliant; .set files are MATLAB v7.3 (HDF5); actual data in companion .fdt files (float32, Fortran/column-major order) |
+| Protocol      | 40 Hz pulse train: 40s stimulation + 20s rest per trial (6 short-session, 10 long-session)                                   |
+| Preprocessing | Already applied by Makoto's pipeline: 1 Hz HP, 50 Hz notch, ICA, CAR                                                         |
 
 **Important data facts:**
+
 - The .set HDF5 files have fields at the **top level** (no `EEG` wrapper group).
 - The `data` field contains a filename reference (uint16 chars), not actual EEG.
 - Actual data is read from .fdt files with `np.fromfile(dtype=float32)` and reshaped with `order='F'`.
@@ -48,6 +49,7 @@ Develop a personalized closed-loop system that predicts theta-gamma phase-amplit
 7. Assign epoch-level PAC to all constituent windows.
 
 **Output:** `data/processed/{train,val,test}_data.npz`
+
 - Windows: `(n, 1, 7, 500)` in microvolts
 - PAC labels: scalar per window, range [0.000006, 0.000701], mean ~0.000044
 - Subject-level splits: 24 train / 5 val / 6 test (seed=42, no subject leakage)
@@ -56,6 +58,7 @@ Develop a personalized closed-loop system that predicts theta-gamma phase-amplit
 ### 3.2 Spectral Feature Extraction (`temporal/temporal_dataset.py`)
 
 Per-window spectral features (61 dimensions) computed independently per split:
+
 - Band power in 4 frequency bands (theta, alpha, beta, gamma) across 7 channels = 28 features (no delta band)
 - 7 theta/gamma power ratio features (one per channel)
 - PAC-structure features (inter-channel PAC-derived) = 21 features
@@ -67,11 +70,13 @@ Per-window spectral features (61 dimensions) computed independently per split:
 Constructs causal temporal sequences for forecasting:
 
 **Features per timestep (73 total):**
+
 - 61 spectral features (per-window, from cache)
 - 7 PAC-derived features: `pac_current`, `pac_ma2`, `pac_ma4`, `pac_ma8`, `pac_ma16`, `pac_diff1`, `pac_diff4`
 - 5 stimulation context features: `stim_state`, `time_since_switch_60s`, `stim_frac_20s`, `cycle_phase_sin`, `cycle_phase_cos`
 
 **Sequence construction:**
+
 - Lookback = 20 steps (20 seconds of history)
 - Horizon = 5 steps (5 seconds ahead)
 - Target smoothing: None (raw PAC, ts=1). Earlier versions used ts=5 which inflated R^2; see Section 6.3
@@ -79,6 +84,7 @@ Constructs causal temporal sequences for forecasting:
 - y_delta = y_future - y_current (change prediction)
 
 **Normalization:** Z-score normalization with **train-only** statistics:
+
 - Feature-wise mean/std computed from flattened train sequences
 - y_future and y_delta mean/std from train targets
 - Applied to all splits
@@ -100,7 +106,7 @@ Constructs causal temporal sequences for forecasting:
 
 - Input: `(batch, T=20, F=73)` → Output: future PAC + delta PAC
 - Input projection: Linear(73→64) + LayerNorm + SiLU
-- 4x CausalDSConvBlock: depthwise separable conv (kernel=3, dilation=[1,2,4,8]), GroupNorm, SiLU, residual connections. Receptive field = (1+2+4+8)*(3-1)+1 = 31 steps, covering the full 20-step lookback window with margin.
+- 4x CausalDSConvBlock: depthwise separable conv (kernel=3, dilation=[1,2,4,8]), GroupNorm, SiLU, residual connections. Receptive field = (1+2+4+8)\*(3-1)+1 = 31 steps, covering the full 20-step lookback window with margin.
 - Causal padding: `F.pad(x, (pad, 0))` ensures no future information
 - AttentionPool1D: learned attention weights over time axis
 - Note: The CausalDSConvBlock applies SiLU activation twice (once after normalization, once after residual addition). This is an architectural quirk — standard practice uses a single activation. The model was trained and validated with this pattern; all reported results include this double activation.
@@ -110,15 +116,15 @@ Constructs causal temporal sequences for forecasting:
 
 ### 4.3 Training Configuration
 
-| Parameter | Value |
-|-----------|-------|
-| Loss | Huber (delta=1.0) — single-task loss on future PAC prediction. Multi-task delta and consistency penalties are architecturally supported (lambda_delta, lambda_consistency) but disabled (set to 0.0) for the best checkpoint. |
-| Optimizer | AdamW (lr=1e-3, weight_decay=1e-3) |
-| Scheduler | ReduceLROnPlateau (mode=max, factor=0.5, patience=5) |
-| Gradient clipping | max_norm=1.0 |
-| Early stopping | patience=20 on val_future_r^2 |
-| Batch size | 128 |
-| Best epoch | 53 (val R²=0.411) |
+| Parameter         | Value                                                                                                                                                                                                                         |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Loss              | Huber (delta=1.0) — single-task loss on future PAC prediction. Multi-task delta and consistency penalties are architecturally supported (lambda_delta, lambda_consistency) but disabled (set to 0.0) for the best checkpoint. |
+| Optimizer         | AdamW (lr=1e-3, weight_decay=1e-3)                                                                                                                                                                                            |
+| Scheduler         | ReduceLROnPlateau (mode=max, factor=0.5, patience=5)                                                                                                                                                                          |
+| Gradient clipping | max_norm=1.0                                                                                                                                                                                                                  |
+| Early stopping    | patience=20 on val_future_r^2                                                                                                                                                                                                 |
+| Batch size        | 128                                                                                                                                                                                                                           |
+| Best epoch        | 53 (val R²=0.411)                                                                                                                                                                                                             |
 
 ---
 
@@ -128,23 +134,25 @@ Constructs causal temporal sequences for forecasting:
 
 Threshold-based decision engine with hysteresis:
 
-| Condition | Action | Rationale |
-|-----------|--------|-----------|
-| z < -0.5 | STIMULATE | PAC below baseline, boost gamma |
-| z > +0.5 | REST | PAC above baseline, prevent habituation |
-| else | MAINTAIN | Stable coupling |
+| Condition | Action    | Rationale                               |
+| --------- | --------- | --------------------------------------- |
+| z < -0.5  | STIMULATE | PAC below baseline, boost gamma         |
+| z > +0.5  | REST      | PAC above baseline, prevent habituation |
+| else      | MAINTAIN  | Stable coupling                         |
 
 Hysteresis: 3-second minimum hold time prevents oscillation.
 
 ### 5.2 Personalization (`src/personalization.py`)
 
 Rolling 30-second circular buffer for subject-specific baseline:
+
 - z-score: `z = (PAC_current - mean) / std`
 - Minimum 10 samples before computing z-scores
 
 ### 5.3 Simulation (`src/simulator.py`)
 
 Brain response model (exponential approach):
+
 - Stimulation: `PAC(t+1) = PAC(t) + 0.15 * (0.3 - PAC(t)) + noise`
 - Rest: `PAC(t+1) = PAC(t) + 0.10 * (0.05 - PAC(t)) + noise`
 - Gaussian noise sigma = 0.02
@@ -160,30 +168,31 @@ Statistical analysis: Wilcoxon signed-rank tests (non-parametric, paired), Hedge
 
 ### 6.1 Prediction Results (Raw Targets, ts=1)
 
-| Metric | Value | Source |
-|--------|-------|--------|
-| Static EEGNet test R^2 | 0.287 | `src/training.py` |
-| TCN test R^2 (5s horizon, ts=1) | 0.170 | `results/RESULTS_REPORT.md` |
-| TCN test Pearson r | 0.433 | Same |
-| TCN R^2 at 5-10s horizons | 0.24-0.28 | `sweep_horizons.py` |
-| Persistence R^2 at 5-10s | -0.26 to -0.27 | Same |
-| Ridge R^2 at 5-10s | -0.21 to -0.39 | Same |
-| TCN with PAC zeroed R^2 | 0.045 | Feature ablation |
-| Shuffle-label sanity R^2 | -0.332 | Same |
+| Metric                          | Value          | Source                      |
+| ------------------------------- | -------------- | --------------------------- |
+| Static EEGNet test R^2          | 0.287          | `src/training.py`           |
+| TCN test R^2 (5s horizon, ts=1) | 0.170          | `results/RESULTS_REPORT.md` |
+| TCN test Pearson r              | 0.433          | Same                        |
+| TCN R^2 at 5-10s horizons       | 0.24-0.28      | `sweep_horizons.py`         |
+| Persistence R^2 at 5-10s        | -0.26 to -0.27 | Same                        |
+| Ridge R^2 at 5-10s              | -0.21 to -0.39 | Same                        |
+| TCN with PAC zeroed R^2         | 0.045          | Feature ablation            |
+| Shuffle-label sanity R^2        | -0.332         | Same                        |
 
 ### 6.2 Real-Data Closed-Loop Validation (N=35 subjects)
 
 The trained TCN was integrated into a predictive controller and replayed on all 35 subjects' real EEG data (`run_tcn_validation.py`). No simulation — only real measurements and counterfactual decision-making.
 
-| Controller | Alignment | Low-PAC Targeting | PAC Gap (×10⁻⁶ MI) |
-|-----------|-----------|-------------------|--------------------|
-| Fixed Schedule | 45.0% | 61.4% | -6.6 (wrong direction) |
-| Reactive Threshold | 64.5% | 51.7% | +21.1 |
-| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** |
-| Hybrid TCN+Reactive | 73.8% | 85.3% | +34.0 |
-| Alignment Oracle | 100.0% | 100.0% | +33.3 |
+| Controller          | Alignment | Low-PAC Targeting | PAC Gap (×10⁻⁶ MI)     |
+| ------------------- | --------- | ----------------- | ---------------------- |
+| Fixed Schedule      | 45.0%     | 61.4%             | -6.6 (wrong direction) |
+| Reactive Threshold  | 64.5%     | 51.7%             | +21.1                  |
+| **TCN Predictive**  | **72.1%** | **82.6%**         | **+30.5**              |
+| Hybrid TCN+Reactive | 73.8%     | 85.3%             | +34.0                  |
+| Alignment Oracle    | 100.0%    | 100.0%            | +33.3                  |
 
 **TCN vs Reactive (Wilcoxon signed-rank, all p < 0.001):**
+
 - Alignment: g = +1.31 [+0.75, +1.87]
 - Low-PAC targeting: g = +4.47 [+3.33, +5.62]
 - PAC gap: g = +1.57 [+0.98, +2.17]
@@ -238,21 +247,21 @@ The real-data closed-loop validation confirms this: TCN-based predictions transl
 
 ## 8. File Map
 
-| File | Purpose |
-|------|---------|
-| `src/data_loader.py` | BIDS loading, windowing, subject-level splitting |
-| `src/preprocessing.py` | Bandpass, notch, artifact rejection, CAR |
-| `src/pac_computation.py` | Modulation Index (Tort 2010) |
-| `src/eegnet.py` | Static PAC prediction model |
-| `src/training.py` | EEGNet training loop |
-| `src/controller.py` | Threshold-based closed-loop controller |
-| `src/personalization.py` | Rolling baseline z-score |
-| `src/simulator.py` | Brain response simulation |
-| `src/validation.py` | Strategy comparison framework |
-| `temporal_multiscale/build_multiscale_dataset.py` | Causal sequence construction |
-| `temporal_multiscale/multiscale_tcn.py` | Causal TCN architecture |
-| `temporal_multiscale/train_multiscale_tcn.py` | TCN training loop |
-| `temporal_multiscale/audit_multiscale_pipeline.py` | Dataset integrity audit |
-| `temporal_multiscale/comprehensive_submission_audit.py` | Submission-grade audit |
-| `temporal_multiscale/checkpoint_deployment_audit.py` | Deployment realism audit |
-| `config.yaml` | Centralized runtime parameters |
+| File                                                    | Purpose                                          |
+| ------------------------------------------------------- | ------------------------------------------------ |
+| `src/data_loader.py`                                    | BIDS loading, windowing, subject-level splitting |
+| `src/preprocessing.py`                                  | Bandpass, notch, artifact rejection, CAR         |
+| `src/pac_computation.py`                                | Modulation Index (Tort 2010)                     |
+| `src/eegnet.py`                                         | Static PAC prediction model                      |
+| `src/training.py`                                       | EEGNet training loop                             |
+| `src/controller.py`                                     | Threshold-based closed-loop controller           |
+| `src/personalization.py`                                | Rolling baseline z-score                         |
+| `src/simulator.py`                                      | Brain response simulation                        |
+| `src/validation.py`                                     | Strategy comparison framework                    |
+| `temporal_multiscale/build_multiscale_dataset.py`       | Causal sequence construction                     |
+| `temporal_multiscale/multiscale_tcn.py`                 | Causal TCN architecture                          |
+| `temporal_multiscale/train_multiscale_tcn.py`           | TCN training loop                                |
+| `temporal_multiscale/audit_multiscale_pipeline.py`      | Dataset integrity audit                          |
+| `temporal_multiscale/comprehensive_submission_audit.py` | Submission-grade audit                           |
+| `temporal_multiscale/checkpoint_deployment_audit.py`    | Deployment realism audit                         |
+| `config.yaml`                                           | Centralized runtime parameters                   |

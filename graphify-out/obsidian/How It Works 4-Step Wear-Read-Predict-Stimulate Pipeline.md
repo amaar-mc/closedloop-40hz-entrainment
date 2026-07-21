@@ -10,6 +10,7 @@ tags:
 # How It Works: 4-Step Wear-Read-Predict-Stimulate Pipeline
 
 ## Connections
+
 - [[4-Step Clinical Workflow Wear EEG, Read Activity, Predict 5-10s Ahead, Stimulate]] - `semantically_similar_to` [INFERRED]
 - [[NeuroCare 40Hz Product Flyer]] - `references` [EXTRACTED]
 

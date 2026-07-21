@@ -9,6 +9,7 @@ tags:
 # P10 Research Notebook V1 (Research Paper Format)
 
 ## Connections
+
 - [[Laboratory Research Notebook (Structured Study Format)]] - `semantically_similar_to` [INFERRED]
 - [[P10 Research Notebook V1 Paper Format (PDF render)]] - `references` [EXTRACTED]
 

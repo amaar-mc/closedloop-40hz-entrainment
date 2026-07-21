@@ -10,8 +10,9 @@ tags:
 # load_models()
 
 ## Connections
+
 - [[Load 4-channel EEGNet + TCNTemporalModel. Cached across reruns.      Returns (ee]] - `rationale_for` [EXTRACTED]
 - [[caregiver_app.py]] - `contains` [EXTRACTED]
 - [[render_session()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

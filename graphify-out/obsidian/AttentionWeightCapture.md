@@ -10,6 +10,7 @@ tags:
 # AttentionWeightCapture
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[Hook-based capture of AttentionPool1D attention weights.      Registers a forw]] - `rationale_for` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
@@ -21,4 +22,4 @@ tags:
 - [[remove()]] - `method` [EXTRACTED]
 - [[tcn_interpretability.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

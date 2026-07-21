@@ -10,7 +10,8 @@ tags:
 # get_history()
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `method` [EXTRACTED]
 - [[Get full history of PAC and actions.]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

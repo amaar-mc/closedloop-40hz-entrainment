@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _find_stim_state_index()
+# \_find_stim_state_index()
 
 ## Connections
+
 - [[Find the index of the stim_state feature.      Args         feature_names L]] - `rationale_for` [EXTRACTED]
 - [[analyze_stimulation_conditional()]] - `calls` [EXTRACTED]
 - [[tcn_interpretability.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

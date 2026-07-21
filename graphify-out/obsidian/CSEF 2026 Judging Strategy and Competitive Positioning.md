@@ -9,7 +9,8 @@ tags:
 # CSEF 2026 Judging Strategy and Competitive Positioning
 
 ## Connections
+
 - [[CSEF Judging Process Two-Round (Display Review + Interview) + Caucus]] - `references` [EXTRACTED]
 - [[Synopsys Judging Criteria (40 Points Scientific Thought, Creativity, Independent Work, Thoroughness)]] - `semantically_similar_to` [INFERRED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

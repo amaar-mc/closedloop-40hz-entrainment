@@ -10,6 +10,7 @@ tags:
 # TCN vs Persistence Baseline Comparison (R² Failure)
 
 ## Connections
+
 - [[Pipeline Audit Report Multiscale Causal TCN (ts5_clean)]] - `references` [EXTRACTED]
 
   #community/Community_47

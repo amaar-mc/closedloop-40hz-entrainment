@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Simulate multi-channel EEG from multiple ROI activations.          Each ROI driv
+# Simulate multi-channel EEG from multiple ROI activations. Each ROI driv
 
 ## Connections
+
 - [[simulate_multichannel()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

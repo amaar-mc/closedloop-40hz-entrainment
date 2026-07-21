@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Temporal Convolutional Block with exponential dilation.      Uses residual conne
+# Temporal Convolutional Block with exponential dilation. Uses residual conne
 
 ## Connections
+
 - [[TemporalBlock]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

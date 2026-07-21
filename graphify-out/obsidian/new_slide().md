@@ -10,6 +10,7 @@ tags:
 # new_slide()
 
 ## Connections
+
 - [[Add a blank slide and return it.]] - `rationale_for` [EXTRACTED]
 - [[generate_csef_pptx.py]] - `contains` [EXTRACTED]
 - [[p01_title()_2]] - `calls` [EXTRACTED]

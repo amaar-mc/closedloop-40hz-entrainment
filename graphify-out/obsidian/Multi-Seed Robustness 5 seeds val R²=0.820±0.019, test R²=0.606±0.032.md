@@ -10,6 +10,7 @@ tags:
 # Multi-Seed Robustness: 5 seeds val R²=0.820±0.019, test R²=0.606±0.032
 
 ## Connections
+
 - [[12-Feature PAC+Stim TCN Test R²=0.606±0.032 (5 seeds)]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

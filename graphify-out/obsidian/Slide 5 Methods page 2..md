@@ -10,6 +10,7 @@ tags:
 # Slide 5: Methods page 2.
 
 ## Connections
+
 - [[p05_methods2()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

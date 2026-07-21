@@ -10,10 +10,11 @@ tags:
 # test_eegnet()
 
 ## Connections
+
 - [[EEGNet_1]] - `calls` [EXTRACTED]
 - [[Test EEGNet with example input.]] - `rationale_for` [EXTRACTED]
 - [[count_parameters()_16]] - `calls` [EXTRACTED]
 - [[eegnet.py]] - `contains` [EXTRACTED]
 - [[get_feature_maps()_2]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # Student Checklist (1A) — Project Registration Form
 
 ## Connections
+
 - [[Adult Sponsor Mr. John Crandall (jcrandall@vcs.net)]] - `references` [EXTRACTED]
 - [[Checklist for Adult Sponsor (1) — John Crandall Signed]] - `references` [EXTRACTED]
 - [[Data Source OpenNeuro ds005048 (external dataset)]] - `references` [EXTRACTED]

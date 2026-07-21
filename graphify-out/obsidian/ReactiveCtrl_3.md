@@ -10,6 +10,7 @@ tags:
 # ReactiveCtrl
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[__init__()_97]] - `method` [EXTRACTED]

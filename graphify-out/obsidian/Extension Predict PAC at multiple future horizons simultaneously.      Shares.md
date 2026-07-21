@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# Extension: Predict PAC at multiple future horizons simultaneously.      Shares
+# Extension: Predict PAC at multiple future horizons simultaneously. Shares
 
 ## Connections
+
 - [[MultiHorizonPredictor]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Temporal_PAC_Predictor

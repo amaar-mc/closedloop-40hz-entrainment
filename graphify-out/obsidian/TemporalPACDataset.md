@@ -10,6 +10,7 @@ tags:
 # TemporalPACDataset
 
 ## Connections
+
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[PyTorch Dataset that creates temporal sequences from contiguous EEG windows.]] - `rationale_for` [EXTRACTED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
@@ -22,4 +23,4 @@ tags:
 - [[temporal_dataset.py]] - `contains` [EXTRACTED]
 - [[test_temporal_dataset()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

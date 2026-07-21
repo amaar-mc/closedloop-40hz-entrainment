@@ -10,6 +10,7 @@ tags:
 # per_subject_persistence()
 
 ## Connections
+
 - [[Compute persistence R2 per subject.]] - `rationale_for` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]
 - [[run_generalization.py]] - `contains` [EXTRACTED]

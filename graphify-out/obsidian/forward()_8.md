@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[LastStepPool]] - `method` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

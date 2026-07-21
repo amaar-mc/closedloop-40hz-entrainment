@@ -9,6 +9,7 @@ tags:
 # CausalDSConvBlock
 
 ## Connections
+
 - [[CausalDSConvBlockNoNorm]] - `inherits` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

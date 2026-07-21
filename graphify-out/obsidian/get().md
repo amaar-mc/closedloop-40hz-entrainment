@@ -10,8 +10,9 @@ tags:
 # get()
 
 ## Connections
+
 - [[ModelRegistry]] - `method` [EXTRACTED]
 - [[Retrieve a registered model by name.          Args             name The regist]] - `rationale_for` [EXTRACTED]
 - [[available()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

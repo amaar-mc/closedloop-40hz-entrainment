@@ -10,6 +10,7 @@ tags:
 # Parse markdown table lines into headers and data rows.
 
 ## Connections
+
 - [[parse_table()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

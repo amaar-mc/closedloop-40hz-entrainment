@@ -10,6 +10,7 @@ tags:
 # Citation: Martorell et al. (2019) - Multi-sensory gamma stimulation reduces tau
 
 ## Connections
+
 - [[Literature Review Entry (January 15, 2026)]] - `cites` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

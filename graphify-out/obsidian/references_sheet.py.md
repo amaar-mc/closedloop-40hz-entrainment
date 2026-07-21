@@ -10,6 +10,7 @@ tags:
 # references_sheet.py
 
 ## Connections
+
 - [[Generate a standalone References Sheet PDF to bring to CSEF. Print this and keep]] - `rationale_for` [EXTRACTED]
 - [[main()_74]] - `contains` [EXTRACTED]
 

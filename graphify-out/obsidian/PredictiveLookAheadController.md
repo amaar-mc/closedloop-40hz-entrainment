@@ -10,6 +10,7 @@ tags:
 # PredictiveLookAheadController
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
 - [[Predictive closed-loop controller using a trained TCN to forecast     future PA]] - `rationale_for` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[reset()_58]] - `method` [EXTRACTED]
 - [[step()_64]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

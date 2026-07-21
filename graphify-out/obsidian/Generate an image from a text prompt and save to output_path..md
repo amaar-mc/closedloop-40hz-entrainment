@@ -10,6 +10,7 @@ tags:
 # Generate an image from a text prompt and save to output_path.
 
 ## Connections
+
 - [[generate_image()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Community_105

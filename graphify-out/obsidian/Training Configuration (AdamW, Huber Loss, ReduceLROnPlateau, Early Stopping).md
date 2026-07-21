@@ -10,6 +10,7 @@ tags:
 # Training Configuration (AdamW, Huber Loss, ReduceLROnPlateau, Early Stopping)
 
 ## Connections
+
 - [[Current Methodology Closed-Loop 40Hz Entrainment via Temporal PAC Forecasting]] - `references` [EXTRACTED]
 - [[MultiscaleCausalTCN Architecture (31K params, Causal Dilation 1,2,4,8)]] - `conceptually_related_to` [EXTRACTED]
 

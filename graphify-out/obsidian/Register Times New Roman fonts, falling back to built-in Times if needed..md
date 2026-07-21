@@ -10,6 +10,7 @@ tags:
 # Register Times New Roman fonts, falling back to built-in Times if needed.
 
 ## Connections
+
 - [[register_times_fonts()]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

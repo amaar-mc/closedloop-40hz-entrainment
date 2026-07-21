@@ -10,6 +10,7 @@ tags:
 # count_parameters()
 
 ## Connections
+
 - [[Count trainable parameters in a PyTorch model.      Args         model PyTo]] - `rationale_for` [EXTRACTED]
 - [[print_model_summary()]] - `calls` [EXTRACTED]
 - [[utils.py]] - `contains` [EXTRACTED]

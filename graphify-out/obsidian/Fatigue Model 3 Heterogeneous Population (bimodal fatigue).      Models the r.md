@@ -7,9 +7,10 @@ tags:
   - community/Control_Strategies_&_Validation
 ---
 
-# Fatigue Model 3: Heterogeneous Population (bimodal fatigue).      Models the r
+# Fatigue Model 3: Heterogeneous Population (bimodal fatigue). Models the r
 
 ## Connections
+
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
 - [[HeterogeneousPopulationSimulator]] - `rationale_for` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[StimAction]] - `uses` [INFERRED]
 - [[TrialMetrics]] - `uses` [INFERRED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

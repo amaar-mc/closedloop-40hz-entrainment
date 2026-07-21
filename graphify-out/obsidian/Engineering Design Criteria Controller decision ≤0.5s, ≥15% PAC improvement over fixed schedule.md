@@ -10,6 +10,7 @@ tags:
 # Engineering Design Criteria: Controller decision ≤0.5s, ≥15% PAC improvement over fixed schedule
 
 ## Connections
+
 - [[ISEF Form 1A Student Checklist (Amaar Chughtai, Grade 11, Valley Christian)]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

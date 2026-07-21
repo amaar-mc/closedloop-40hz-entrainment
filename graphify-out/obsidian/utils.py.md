@@ -10,6 +10,7 @@ tags:
 # utils.py
 
 ## Connections
+
 - [[Utility Functions for Closed-Loop 40Hz Entrainment Project  This module provid]] - `rationale_for` [EXTRACTED]
 - [[compute_regression_metrics()]] - `contains` [EXTRACTED]
 - [[count_parameters()_17]] - `contains` [EXTRACTED]

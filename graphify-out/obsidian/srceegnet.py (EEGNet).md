@@ -9,6 +9,7 @@ tags:
 # src/eegnet.py (EEGNet)
 
 ## Connections
+
 - [[run_demo()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

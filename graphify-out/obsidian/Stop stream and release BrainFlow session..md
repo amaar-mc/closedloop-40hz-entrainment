@@ -10,6 +10,7 @@ tags:
 # Stop stream and release BrainFlow session.
 
 ## Connections
+
 - [[close()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

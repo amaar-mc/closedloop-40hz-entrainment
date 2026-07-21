@@ -14,7 +14,7 @@ In a comparative horizon sweep (smoothed target evaluation), all baselines colla
 
 These results demonstrate that forecasting PAC can support a computational framework for personalized 40 Hz therapy that outperforms fixed and reactive protocols, offering a path toward more efficient treatment for Alzheimer's disease.
 
-*Word count: ~247 / 250 max*
+_Word count: ~247 / 250 max_
 
-*Category: Biological Science and Engineering, Computational Biology and Bioinformatics*
-*Synopsys Championship — Santa Clara County, March 2026*
+_Category: Biological Science and Engineering, Computational Biology and Bioinformatics_
+_Synopsys Championship — Santa Clara County, March 2026_

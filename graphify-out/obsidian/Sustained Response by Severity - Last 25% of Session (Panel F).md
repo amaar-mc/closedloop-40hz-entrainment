@@ -10,6 +10,7 @@ tags:
 # Sustained Response by Severity - Last 25% of Session (Panel F)
 
 ## Connections
+
 - [[TRIBE V2 Alzheimer's Disease Simulation Figure]] - `references` [EXTRACTED]
 
   #community/Community_31

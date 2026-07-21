@@ -10,10 +10,11 @@ tags:
 # Append a session record to the given patient and clear cache.
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[SimulatedEEGAdapter]] - `uses` [INFERRED]
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[TCNTemporalModel]] - `uses` [INFERRED]
 - [[save_session()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

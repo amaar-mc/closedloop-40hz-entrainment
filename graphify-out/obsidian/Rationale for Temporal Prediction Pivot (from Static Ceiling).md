@@ -10,6 +10,7 @@ tags:
 # Rationale for Temporal Prediction Pivot (from Static Ceiling)
 
 ## Connections
+
 - [[MultiscaleCausalTCN (12-Feature, h=64, 22914 Params)]] - `rationale_for` [EXTRACTED]
 - [[Static PAC Prediction Ceiling (R²=0.287, 8 Architectures)]] - `rationale_for` [EXTRACTED]
 

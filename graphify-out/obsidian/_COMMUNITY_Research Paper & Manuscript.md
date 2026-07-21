@@ -8,6 +8,7 @@ members: 117
 **Members:** 117 nodes
 
 ## Members
+
 - [[04 QA Bank Judge Strategy Brief and Danger Zones]] - document - submission/presentation/04_qa_bank_and_danger_zones.md
 - [[2025 Synopsys Comparable Winning Projects (Claire Xu, Danielle Steinbach, Neuropod, DeepSleep)]] - document - submission/presentation/docs/synopsys_winning_analysis.md
 - [[73-Dimensional Causal Feature Vector (61 spectral + 7 PAC + 5 stim context)_1]] - document - submission/paper/RESEARCH_PAPER_v3.md
@@ -134,7 +135,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 1 edge to [[_COMMUNITY_Community 30]]
 
 ## Top bridge nodes
+
 - [[Unique Differentiator Temporal Prediction for Proactive Control (vs Classification Tasks)]] - degree 3, connects to 1 community

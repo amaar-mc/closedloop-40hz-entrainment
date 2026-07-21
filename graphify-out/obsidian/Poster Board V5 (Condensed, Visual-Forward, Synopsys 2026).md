@@ -9,6 +9,7 @@ tags:
 # Poster Board V5 (Condensed, Visual-Forward, Synopsys 2026)
 
 ## Connections
+
 - [[Architecture Exploration (8 Configurations, R²=0.287 Ceiling)]] - `references` [EXTRACTED]
 - [[Architecture Exploration Table (8 Models, R²=0.287 Ceiling)]] - `references` [EXTRACTED]
 - [[CSEF Poster V3 (Final Print-Ready Poster)]] - `semantically_similar_to` [INFERRED]
@@ -25,4 +26,4 @@ tags:
 - [[Two-Stage Predictive Pipeline (EEGNet → Feature Extraction → Causal TCN)]] - `references` [EXTRACTED]
 - [[V5 Changelog from V4 (Structural + Numerical Corrections)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

@@ -10,6 +10,7 @@ tags:
 # Train for one epoch. Returns average loss.
 
 ## Connections
+
 - [[TemporalPACPredictor]] - `uses` [INFERRED]
 - [[train_one_epoch()_2]] - `rationale_for` [EXTRACTED]
 

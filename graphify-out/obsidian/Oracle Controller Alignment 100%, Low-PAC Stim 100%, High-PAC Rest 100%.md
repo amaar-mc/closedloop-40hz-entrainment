@@ -9,6 +9,7 @@ tags:
 # Oracle Controller: Alignment 100%, Low-PAC Stim 100%, High-PAC Rest 100%
 
 ## Connections
+
 - [[Figure 13 Controller Performance Comparison (N=35)]] - `references` [EXTRACTED]
 
   #community/Community_61

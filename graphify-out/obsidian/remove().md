@@ -10,8 +10,9 @@ tags:
 # remove()
 
 ## Connections
+
 - [[AttentionWeightCapture]] - `method` [EXTRACTED]
 - [[Remove the forward hook.]] - `rationale_for` [EXTRACTED]
 - [[analyze_attention_weights()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

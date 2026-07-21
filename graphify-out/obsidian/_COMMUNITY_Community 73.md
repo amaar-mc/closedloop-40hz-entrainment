@@ -8,6 +8,7 @@ members: 15
 **Members:** 15 nodes
 
 ## Members
+
 - [[73-Feature Breakdown 61 spectral (28 band power + 7 thetagamma ratio + 21 PAC-structure + 5 global) + 7 PAC-derived + 5 stim context]] - document - archive/CSEF_Old/Presentation/CURRENT_METHODOLOGY.md
 - [[Active src Modules data_loader, preprocessing, pac_computation, eegnet, training, controller, personalization, simulator, validation, utils, spectral_features]] - document - archive/CSEF_Old/Presentation/CODE_MAP.md
 - [[Architecture Timeline Phase 1 (V1-V8 static, Feb 5-16), Phase 2 (temporal LSTM, Feb 16-17), Phase 3 (multiscale TCN, Feb 17)]] - document - archive/CSEF_Old/Presentation/CODE_MAP.md

@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Take last timestep from causal TCN output.      For a causal architecture the la
+# Take last timestep from causal TCN output. For a causal architecture the la
 
 ## Connections
+
 - [[LastStepPool_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

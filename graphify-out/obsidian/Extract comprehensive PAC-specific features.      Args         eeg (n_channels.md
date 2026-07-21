@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Extract comprehensive PAC-specific features.      Args:         eeg: (n_channels
+# Extract comprehensive PAC-specific features. Args: eeg: (n_channels
 
 ## Connections
+
 - [[extract_pac_features()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

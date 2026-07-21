@@ -10,8 +10,9 @@ tags:
 # Train TCN on 4-channel multiscale temporal dataset.
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `uses` [INFERRED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[step5_train_tcn()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

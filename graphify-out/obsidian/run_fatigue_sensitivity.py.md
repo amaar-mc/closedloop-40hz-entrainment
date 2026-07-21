@@ -10,6 +10,7 @@ tags:
 # run_fatigue_sensitivity.py
 
 ## Connections
+
 - [[Fatigue sensitivity sweep how does the advantage of adaptive scheduling grow as]] - `rationale_for` [EXTRACTED]
 - [[FixedScheduleControl_2]] - `contains` [EXTRACTED]
 - [[PredictiveLookAheadControl_2]] - `contains` [EXTRACTED]

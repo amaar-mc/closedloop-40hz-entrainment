@@ -7,9 +7,10 @@ tags:
   - community/Community_35
 ---
 
-# Save configuration to YAML file.      Args:         config: Configuration dic
+# Save configuration to YAML file. Args: config: Configuration dic
 
 ## Connections
+
 - [[save_config()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_35

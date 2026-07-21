@@ -10,6 +10,7 @@ tags:
 # Add a filled rectangle.
 
 ## Connections
+
 - [[add_rect()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_63

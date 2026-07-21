@@ -10,6 +10,7 @@ tags:
 # generate_pac_sequences()
 
 ## Connections
+
 - [[Generate PAC time series from TRIBE V2 simulator with realistic noise.      Uses]] - `rationale_for` [EXTRACTED]
 - [[TRIBE TCN Validation Pipeline Script]] - `calls` [EXTRACTED]
 - [[main()_48]] - `calls` [EXTRACTED]

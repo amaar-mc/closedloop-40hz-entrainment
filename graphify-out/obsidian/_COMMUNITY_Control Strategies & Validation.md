@@ -8,6 +8,7 @@ members: 97
 **Members:** 97 nodes
 
 ## Members
+
 - [[Configuration for a fatigue model experiment.]] - rationale - validation/experiments/fatigue_model_sensitivity.py
 - [[ControlMethodBase]] - code - validation/rigorous_validation.py
 - [[Convert to serializable dict.]] - rationale - validation/experiments/fatigue_model_sensitivity.py
@@ -114,10 +115,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 76 edges to [[_COMMUNITY_Closed-Loop Control & Simulator]]
 - 4 edges to [[_COMMUNITY_Models, Streaming & Apps]]
 
 ## Top bridge nodes
+
 - [[main()_65]] - degree 28, connects to 2 communities
 - [[hedges_g()_5]] - degree 6, connects to 2 communities
 - [[ControlMethodBase]] - degree 40, connects to 1 community

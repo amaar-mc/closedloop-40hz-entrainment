@@ -10,6 +10,7 @@ tags:
 # p08_results2()
 
 ## Connections
+
 - [[Slide 8 — Results page 2 (two tables + stat bullets).]] - `rationale_for` [EXTRACTED]
 - [[add_bullet()]] - `calls` [EXTRACTED]
 - [[add_caption()]] - `calls` [EXTRACTED]

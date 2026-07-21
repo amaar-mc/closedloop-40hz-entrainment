@@ -9,6 +9,7 @@ tags:
 # Reference Poster Example 2 (Kushal Khare, eDNA Metabarcoding)
 
 ## Connections
+
 - [[Reference Poster Layout Style (3-Panel, Figure-Dense, Synopsys Format)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

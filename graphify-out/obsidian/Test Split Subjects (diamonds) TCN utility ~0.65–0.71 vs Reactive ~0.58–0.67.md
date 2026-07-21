@@ -9,6 +9,7 @@ tags:
 # Test Split Subjects (diamonds): TCN utility ~0.65–0.71 vs Reactive ~0.58–0.67
 
 ## Connections
+
 - [[Per-Subject Alignment Scatter Plot (3535 Favor TCN)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

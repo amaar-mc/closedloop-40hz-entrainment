@@ -10,6 +10,7 @@ tags:
 # TrendPredictiveCtrl
 
 ## Connections
+
 - [[TVBAlzheimerSimulator]] - `uses` [INFERRED]
 - [[__init__()_94]] - `method` [EXTRACTED]
 - [[_trend()_5]] - `method` [EXTRACTED]

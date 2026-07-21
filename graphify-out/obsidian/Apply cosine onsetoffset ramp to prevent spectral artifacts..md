@@ -10,6 +10,7 @@ tags:
 # Apply cosine onset/offset ramp to prevent spectral artifacts.
 
 ## Connections
+
 - [[_apply_ramp()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

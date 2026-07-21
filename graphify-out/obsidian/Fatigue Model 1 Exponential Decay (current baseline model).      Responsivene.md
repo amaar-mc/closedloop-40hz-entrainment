@@ -7,9 +7,10 @@ tags:
   - community/Control_Strategies_&_Validation
 ---
 
-# Fatigue Model 1: Exponential Decay (current baseline model).      Responsivene
+# Fatigue Model 1: Exponential Decay (current baseline model). Responsivene
 
 ## Connections
+
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[ExponentialDecaySimulator]] - `rationale_for` [EXTRACTED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[StimAction]] - `uses` [INFERRED]
 - [[TrialMetrics]] - `uses` [INFERRED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

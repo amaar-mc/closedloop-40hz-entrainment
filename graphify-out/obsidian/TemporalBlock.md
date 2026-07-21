@@ -10,10 +10,11 @@ tags:
 # TemporalBlock
 
 ## Connections
+
 - [[Temporal Convolutional Block with exponential dilation.      Uses residual conne]] - `rationale_for` [EXTRACTED]
 - [[__init__()_41]] - `method` [EXTRACTED]
 - [[__init__()_42]] - `calls` [EXTRACTED]
 - [[forward()_20]] - `method` [EXTRACTED]
 - [[vit_tcnet.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

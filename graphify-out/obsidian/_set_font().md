@@ -7,9 +7,10 @@ tags:
   - community/PPTX_Slide_Builder
 ---
 
-# _set_font()
+# \_set_font()
 
 ## Connections
+
 - [[Apply font formatting to a run.]] - `rationale_for` [EXTRACTED]
 - [[_add_paragraph()]] - `calls` [EXTRACTED]
 - [[_first_paragraph()]] - `calls` [EXTRACTED]

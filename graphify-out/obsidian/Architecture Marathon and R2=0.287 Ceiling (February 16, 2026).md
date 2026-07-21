@@ -10,6 +10,7 @@ tags:
 # Architecture Marathon and R2=0.287 Ceiling (February 16, 2026)
 
 ## Connections
+
 - [[Project P10 Research Log Notebook (VFINAL)]] - `references` [EXTRACTED]
 - [[R2=0.287 Data Ceiling Finding (All Architectures Converge)]] - `references` [EXTRACTED]
 - [[SpecTempNet Feature Leakage Discovery (R2=0.69 was circular)]] - `references` [EXTRACTED]

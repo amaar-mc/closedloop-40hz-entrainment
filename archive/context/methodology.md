@@ -45,12 +45,12 @@ Applied on top of upstream Makoto pipeline:
 
 Random seed 42, subject-level (no within-subject leakage):
 
-| Split | Subjects | Windows |
-|-------|----------|---------|
-| Train | 24 | 11,736 |
-| Validation | 5 | 2,725 |
-| Test | 6 | 2,822 |
-| **Total** | **35** | **17,283** |
+| Split      | Subjects | Windows    |
+| ---------- | -------- | ---------- |
+| Train      | 24       | 11,736     |
+| Validation | 5        | 2,725      |
+| Test       | 6        | 2,822      |
+| **Total**  | **35**   | **17,283** |
 
 Output: `{train,val,test}_data.npz` with `windows` shape (n, 1, 7, 500) and `pac` shape (n,)
 
@@ -61,6 +61,7 @@ PAC label range: [0.000006, 0.000701], mean approximately 0.000044.
 ### Method: Modulation Index (Tort et al., 2010)
 
 **Frequency bands:**
+
 - Phase signal: theta, 4–8 Hz
 - Amplitude signal: gamma, 38–42 Hz (centered on 40 Hz entrainment frequency)
 
@@ -86,27 +87,28 @@ Based on Lawhern et al. (2018), adapted for regression.
 
 **Input:** (batch, 1, 7, 500) — 1 feature map, 7 channels, 500 timepoints
 
-| Block | Layer | Details | Output Shape |
-|-------|-------|---------|-------------|
-| **Block 1** | Conv2d (temporal) | 8 filters, kernel (1, 64), padding (0, 32) | (B, 8, 7, 500) |
-| | BatchNorm2d | 8 features | (B, 8, 7, 500) |
-| | Conv2d (depthwise spatial) | 16 filters (D=2), kernel (7, 1), groups=8 | (B, 16, 1, 500) |
-| | BatchNorm2d | 16 features | (B, 16, 1, 500) |
-| | ELU activation | | (B, 16, 1, 500) |
-| | AvgPool2d | kernel (1, 4) | (B, 16, 1, 125) |
-| | Dropout | p = 0.5 | (B, 16, 1, 125) |
-| **Block 2** | Conv2d (depthwise) | 16 filters, kernel (1, 16), padding (0, 8), groups=16 | (B, 16, 1, 125) |
-| | Conv2d (pointwise) | 16 filters, kernel (1, 1) | (B, 16, 1, 125) |
-| | BatchNorm2d | 16 features | (B, 16, 1, 125) |
-| | ELU activation | | (B, 16, 1, 125) |
-| | AvgPool2d | kernel (1, 8) | (B, 16, 1, 15) |
-| | Dropout | p = 0.5 | (B, 16, 1, 15) |
-| **Head** | Flatten | | (B, 240) |
-| | Linear | 240 → 1 | (B, 1) |
+| Block       | Layer                      | Details                                               | Output Shape    |
+| ----------- | -------------------------- | ----------------------------------------------------- | --------------- |
+| **Block 1** | Conv2d (temporal)          | 8 filters, kernel (1, 64), padding (0, 32)            | (B, 8, 7, 500)  |
+|             | BatchNorm2d                | 8 features                                            | (B, 8, 7, 500)  |
+|             | Conv2d (depthwise spatial) | 16 filters (D=2), kernel (7, 1), groups=8             | (B, 16, 1, 500) |
+|             | BatchNorm2d                | 16 features                                           | (B, 16, 1, 500) |
+|             | ELU activation             |                                                       | (B, 16, 1, 500) |
+|             | AvgPool2d                  | kernel (1, 4)                                         | (B, 16, 1, 125) |
+|             | Dropout                    | p = 0.5                                               | (B, 16, 1, 125) |
+| **Block 2** | Conv2d (depthwise)         | 16 filters, kernel (1, 16), padding (0, 8), groups=16 | (B, 16, 1, 125) |
+|             | Conv2d (pointwise)         | 16 filters, kernel (1, 1)                             | (B, 16, 1, 125) |
+|             | BatchNorm2d                | 16 features                                           | (B, 16, 1, 125) |
+|             | ELU activation             |                                                       | (B, 16, 1, 125) |
+|             | AvgPool2d                  | kernel (1, 8)                                         | (B, 16, 1, 15)  |
+|             | Dropout                    | p = 0.5                                               | (B, 16, 1, 15)  |
+| **Head**    | Flatten                    |                                                       | (B, 240)        |
+|             | Linear                     | 240 → 1                                               | (B, 1)          |
 
 **Total parameters:** ~1,457
 
 **Training:**
+
 - Loss: Mean Squared Error (MSE) on z-scored PAC targets (mean/std computed from training set, saved in checkpoint)
 - Optimizer: Adam (lr = 1e-3, weight_decay = 1e-4)
 - Scheduler: ReduceLROnPlateau (factor = 0.5, patience = 5, monitoring val_loss)
@@ -121,12 +123,14 @@ Based on Lawhern et al. (2018), adapted for regression.
 Each 2-second window produces a 73-dimensional feature vector:
 
 ### Spectral Features (61 dimensions)
+
 - Band power in 5 frequency bands: delta (0.5–4 Hz), theta (4–8 Hz), alpha (8–12 Hz), beta (12–30 Hz), gamma (30–42 Hz)
 - Computed independently for each of 7 channels: 5 × 7 = 35 features
 - Cross-channel spectral coherence measures: 26 additional features
 - Extracted via FFT-based power spectral density estimation
 
 ### PAC-Derived Features (7 dimensions)
+
 - `pac_current`: Current epoch-level PAC value
 - `pac_ma2`, `pac_ma4`, `pac_ma8`, `pac_ma16`: Causal moving averages over 2, 4, 8, and 16 timesteps
 - `pac_diff1`: PAC difference from t-1 to t (first derivative)
@@ -135,6 +139,7 @@ Each 2-second window produces a 73-dimensional feature vector:
 All moving averages are strictly causal (use only past and current values).
 
 ### Stimulation Context Features (5 dimensions)
+
 - `stim_state`: Binary indicator (0 = rest, 1 = stimulation), from BIDS events.tsv
 - `time_since_switch_60s`: Seconds since last stimulation/rest transition, capped at 60s
 - `stim_frac_20s`: Fraction of time spent in stimulation over the preceding 20 seconds
@@ -144,6 +149,7 @@ All moving averages are strictly causal (use only past and current values).
 ### Sequence Construction
 
 Sequences are built per-subject to prevent cross-subject contamination:
+
 - Lookback window: T = 20 timesteps (20 seconds of history)
 - Prediction horizon: h = 5 timesteps (5 seconds ahead)
 - Target: raw PAC at t+h (no smoothing; target_smooth_window = 1)
@@ -159,28 +165,28 @@ Feature normalization: z-score computed from training data only, applied to all 
 
 **Input:** (batch, 20, 73) — 20 timesteps, 73 features per step
 
-| Component | Layer | Details | Parameters |
-|-----------|-------|---------|-----------|
-| **Input projection** | Linear | 73 → 64 | 4,736 |
-| | LayerNorm | 64 | 128 |
-| | SiLU activation | | 0 |
-| **TCN Block 1** | Causal Conv1d (depthwise) | 64 channels, kernel 3, dilation 1, groups=64 | 192 |
-| | Conv1d (pointwise) | 64 → 64, kernel 1 | 4,096 |
-| | GroupNorm(1, 64) | | 128 |
-| | SiLU + residual + Dropout(0.1) | | 0 |
-| **TCN Block 2** | Causal Conv1d (depthwise) | kernel 3, dilation 2 | 192 |
-| | Conv1d (pointwise) | 64 → 64 | 4,096 |
-| | GroupNorm(1, 64) + SiLU + residual | | 128 |
-| **TCN Block 3** | Causal Conv1d (depthwise) | kernel 3, dilation 4 | 192 |
-| | Conv1d (pointwise) | 64 → 64 | 4,096 |
-| | GroupNorm(1, 64) + SiLU + residual | | 128 |
-| **TCN Block 4** | Causal Conv1d (depthwise) | kernel 3, dilation 8 | 192 |
-| | Conv1d (pointwise) | 64 → 64 | 4,096 |
-| | GroupNorm(1, 64) + SiLU + residual | | 128 |
-| **Attention pooling** | Conv1d | 64 → 1, kernel 1 | 65 |
-| | Softmax over time → weighted sum | | 0 |
-| **Future head** | Linear → SiLU → Dropout → Linear | 64 → 64 → 1 | 4,225 |
-| **Delta head** | Linear → SiLU → Dropout → Linear | 64 → 64 → 1 | 4,225 |
+| Component             | Layer                              | Details                                      | Parameters |
+| --------------------- | ---------------------------------- | -------------------------------------------- | ---------- |
+| **Input projection**  | Linear                             | 73 → 64                                      | 4,736      |
+|                       | LayerNorm                          | 64                                           | 128        |
+|                       | SiLU activation                    |                                              | 0          |
+| **TCN Block 1**       | Causal Conv1d (depthwise)          | 64 channels, kernel 3, dilation 1, groups=64 | 192        |
+|                       | Conv1d (pointwise)                 | 64 → 64, kernel 1                            | 4,096      |
+|                       | GroupNorm(1, 64)                   |                                              | 128        |
+|                       | SiLU + residual + Dropout(0.1)     |                                              | 0          |
+| **TCN Block 2**       | Causal Conv1d (depthwise)          | kernel 3, dilation 2                         | 192        |
+|                       | Conv1d (pointwise)                 | 64 → 64                                      | 4,096      |
+|                       | GroupNorm(1, 64) + SiLU + residual |                                              | 128        |
+| **TCN Block 3**       | Causal Conv1d (depthwise)          | kernel 3, dilation 4                         | 192        |
+|                       | Conv1d (pointwise)                 | 64 → 64                                      | 4,096      |
+|                       | GroupNorm(1, 64) + SiLU + residual |                                              | 128        |
+| **TCN Block 4**       | Causal Conv1d (depthwise)          | kernel 3, dilation 8                         | 192        |
+|                       | Conv1d (pointwise)                 | 64 → 64                                      | 4,096      |
+|                       | GroupNorm(1, 64) + SiLU + residual |                                              | 128        |
+| **Attention pooling** | Conv1d                             | 64 → 1, kernel 1                             | 65         |
+|                       | Softmax over time → weighted sum   |                                              | 0          |
+| **Future head**       | Linear → SiLU → Dropout → Linear   | 64 → 64 → 1                                  | 4,225      |
+| **Delta head**        | Linear → SiLU → Dropout → Linear   | 64 → 64 → 1                                  | 4,225      |
 
 **Total parameters:** 31,043
 
@@ -206,12 +212,12 @@ Feature normalization: z-score computed from training data only, applied to all 
 
 ### Performance
 
-| Metric | Value |
-|--------|-------|
-| Validation R² | 0.411 |
-| Test R² | 0.170 |
-| Test RMSE | 3.3 × 10⁻⁵ |
-| Test Pearson r | 0.433 |
+| Metric         | Value      |
+| -------------- | ---------- |
+| Validation R²  | 0.411      |
+| Test R²        | 0.170      |
+| Test RMSE      | 3.3 × 10⁻⁵ |
+| Test Pearson r | 0.433      |
 
 At the 5-second prediction horizon, persistence baseline achieves R² = −0.267 and Ridge regression achieves R² = −0.393. The TCN's R² = 0.254 represents a +0.52 margin — the only model with useful predictions at this timescale.
 
@@ -239,11 +245,11 @@ Requires a minimum of 10 samples before producing z-scores. Statistics recompute
 
 Decision logic per 1-second cycle:
 
-| Condition | Action |
-|-----------|--------|
-| z < −0.5 | **STIMULATE** — PAC below baseline, coupling is weak |
-| z > +0.5 | **REST** — PAC above baseline, coupling is strong |
-| −0.5 ≤ z ≤ +0.5 | **MAINTAIN** current state |
+| Condition       | Action                                               |
+| --------------- | ---------------------------------------------------- |
+| z < −0.5        | **STIMULATE** — PAC below baseline, coupling is weak |
+| z > +0.5        | **REST** — PAC above baseline, coupling is strong    |
+| −0.5 ≤ z ≤ +0.5 | **MAINTAIN** current state                           |
 
 **Hysteresis:** Minimum 5 seconds in any state before transitioning. Prevents rapid oscillation between stimulate and rest.
 
@@ -264,6 +270,7 @@ This enables the controller to initiate stimulation before entrainment degrades,
 All 35 subjects' EEG recordings are replayed through each controller. At each 2-second window, the controller makes a stimulate/rest decision based on its strategy. The decision is compared against the true PAC state to compute alignment metrics.
 
 **Controllers compared:**
+
 1. Fixed Schedule (clinical standard): 40s ON / 20s OFF
 2. Reactive Threshold: z-score decisions on current PAC
 3. TCN Predictive: z-score + 5-second lookahead
@@ -283,14 +290,14 @@ All controller comparisons use paired (within-subject) designs on N = 35 subject
 
 ### Metrics
 
-| Metric | Definition |
-|--------|-----------|
-| Epoch alignment | Fraction of epochs where the controller's decision matches the optimal action (stimulate during low-PAC, rest during high-PAC) |
-| Low-PAC stimulation rate | Fraction of low-PAC windows that receive stimulation |
-| High-PAC rest rate | Fraction of high-PAC windows that receive rest |
-| PAC targeting gap | Mean PAC during rest minus mean PAC during stimulation (positive = correct targeting direction) |
-| Clinical utility | Composite score combining alignment, targeting, and efficiency |
-| Mean lead time | Average seconds of advance warning before PAC state change |
+| Metric                   | Definition                                                                                                                     |
+| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| Epoch alignment          | Fraction of epochs where the controller's decision matches the optimal action (stimulate during low-PAC, rest during high-PAC) |
+| Low-PAC stimulation rate | Fraction of low-PAC windows that receive stimulation                                                                           |
+| High-PAC rest rate       | Fraction of high-PAC windows that receive rest                                                                                 |
+| PAC targeting gap        | Mean PAC during rest minus mean PAC during stimulation (positive = correct targeting direction)                                |
+| Clinical utility         | Composite score combining alignment, targeting, and efficiency                                                                 |
+| Mean lead time           | Average seconds of advance warning before PAC state change                                                                     |
 
 ### Robustness Checks
 

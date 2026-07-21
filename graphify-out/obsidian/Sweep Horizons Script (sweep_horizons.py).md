@@ -10,6 +10,7 @@ tags:
 # Sweep Horizons Script (sweep_horizons.py)
 
 ## Connections
+
 - [[Horizon Sweep Summary Table (TCN advantage at 5-10s horizons)]] - `implements` [EXTRACTED]
 - [[TCN Horizon=1 Training Result (test R2=0.7352, val R2=0.7659)]] - `references` [EXTRACTED]
 - [[TCN Horizon=10 Training Result (test R2=0.2783, persistence R2=-0.2558)]] - `references` [EXTRACTED]

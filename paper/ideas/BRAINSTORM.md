@@ -3,18 +3,21 @@
 ## Core narrative options
 
 ### Framing A: "Feature selection > architecture"
+
 The headline finding: removing 61 spectral features (which encode subject anatomy) raised test R² from −0.025 to 0.606. This is a generalizable ML lesson — spectral features are not portable across subjects. Lead with this, use the controller validation as downstream proof.
 
 **Strength:** Novel, counterintuitive, clean lesson for ML audience.
 **Weakness:** May read as "we made a mistake and fixed it" rather than "we discovered something."
 
 ### Framing B: "Proactive vs reactive neurostimulation"
+
 Lead with the clinical gap: existing closed-loop systems are reactive. We show a proactive approach (5-10s prediction) that outperforms reactive by Hedges' g=1.31. Feature discovery is a methods subsection.
 
 **Strength:** Clinically motivating, strong real-data validation story.
 **Weakness:** Harder to differentiate from prior closed-loop BCI literature.
 
 ### Framing C: "Horizon-dependent generalization in PAC forecasting"
+
 The horizon sweep is striking: persistence and Ridge beat TCN at 1-2s, TCN dominates at 3-10s. This + the feature ablation = a characterization of what's predictable in gamma entrainment.
 
 **Strength:** Novel characterization contribution. Works for ML and neuroscience venues.

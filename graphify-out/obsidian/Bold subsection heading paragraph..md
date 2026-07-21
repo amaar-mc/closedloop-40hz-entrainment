@@ -10,6 +10,7 @@ tags:
 # Bold subsection heading paragraph.
 
 ## Connections
+
 - [[add_subheading()]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

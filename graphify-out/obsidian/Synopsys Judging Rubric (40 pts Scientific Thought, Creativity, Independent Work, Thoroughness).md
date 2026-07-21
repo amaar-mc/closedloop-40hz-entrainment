@@ -10,6 +10,7 @@ tags:
 # Synopsys Judging Rubric (40 pts: Scientific Thought, Creativity, Independent Work, Thoroughness)
 
 ## Connections
+
 - [[Judge Q&A Bank and Danger Zones (Synopsys Oral Prep)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

@@ -9,6 +9,7 @@ tags:
 # RESULTS_REPORT.md Still Describes 73-Feature Model Issue
 
 ## Connections
+
 - [[Cross-Document Consistency Audit (1212 core values consistent)]] - `references` [EXTRACTED]
 
   #community/Rigor_Audit_Reports

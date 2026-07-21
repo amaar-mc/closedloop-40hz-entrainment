@@ -10,8 +10,9 @@ tags:
 # step3_build_multiscale_dataset()
 
 ## Connections
+
 - [[Build causal temporal sequences for TCN training.]] - `rationale_for` [EXTRACTED]
 - [[main()_12]] - `calls` [EXTRACTED]
 - [[retrain_pipeline.py]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

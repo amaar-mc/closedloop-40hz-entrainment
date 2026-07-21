@@ -10,6 +10,7 @@ tags:
 # tcn_interpretability.py
 
 ## Connections
+
 - [[AttentionWeightCapture]] - `contains` [EXTRACTED]
 - [[InterpretabilityDataset]] - `contains` [EXTRACTED]
 - [[TCN Interpretability Analysis for Multiscale Causal TCN.  Performs three inter]] - `rationale_for` [EXTRACTED]
@@ -30,4 +31,4 @@ tags:
 - [[print_conditional_summary()]] - `contains` [EXTRACTED]
 - [[run_ablation_experiment()]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

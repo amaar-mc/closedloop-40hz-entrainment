@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# _load_tribe_model()
+# \_load_tribe_model()
 
 ## Connections
+
 - [[CorticalResponseModel]] - `method` [EXTRACTED]
 - [[Load TRIBE V2 model from HuggingFace Hub.]] - `rationale_for` [EXTRACTED]
 - [[__init__()_170]] - `calls` [EXTRACTED]

@@ -9,6 +9,7 @@ tags:
 # Iaccarino 2016 Landmark Study (40Hz Mice)
 
 ## Connections
+
 - [[Iaccarino 2016 Optogenetic 40Hz Stimulation]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_118

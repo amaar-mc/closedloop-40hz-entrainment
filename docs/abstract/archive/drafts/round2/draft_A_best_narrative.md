@@ -14,4 +14,4 @@ Validated on all 35 subjects' real EEG, the predictive controller achieved 72.1%
 
 ---
 
-*Word count: 240 / 250 max*
+_Word count: 240 / 250 max_

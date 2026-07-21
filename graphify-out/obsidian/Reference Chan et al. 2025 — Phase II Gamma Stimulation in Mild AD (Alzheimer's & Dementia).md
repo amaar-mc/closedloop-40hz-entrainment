@@ -10,7 +10,8 @@ tags:
 # Reference: Chan et al. 2025 — Phase II Gamma Stimulation in Mild AD (Alzheimer's & Dementia)
 
 ## Connections
+
 - [[Introduction AD Clinical Burden and Fixed-Schedule Protocol Limitations]] - `references` [EXTRACTED]
 - [[Research Paper v3 (Full Manuscript)]] - `cites` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

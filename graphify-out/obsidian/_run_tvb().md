@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# _run_tvb()
+# \_run_tvb()
 
 ## Connections
+
 - [[Run a TVB simulation chunk and return EEG proxy signal.          Args]] - `rationale_for` [EXTRACTED]
 - [[TVBAlzheimerSimulator]] - `method` [EXTRACTED]
 - [[_create_simulator()]] - `calls` [EXTRACTED]

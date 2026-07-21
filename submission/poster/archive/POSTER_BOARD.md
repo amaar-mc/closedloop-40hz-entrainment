@@ -17,7 +17,7 @@ The central prediction finding is a horizon sweep: at 1-2 second horizons, simpl
 
 When integrated into a closed-loop controller and replayed on all 35 subjects' real EEG, the TCN achieved 72.1% epoch alignment versus 64.5% for reactive control (Hedges' g = 1.31, p < 0.001, Wilcoxon signed-rank). It targeted 82.6% of low-PAC windows for stimulation versus 51.7% reactive (g = 4.47, p < 0.001), reaching 91% of the theoretical oracle bound. All 35 subjects benefited (binomial p < 0.001). In simulation, adaptive scheduling efficiency increased with fatigue severity (+9.0% to +11.2%, all p < 0.001), and the advantage held across four different fatigue model assumptions (+6.9% to +19.0%, all p < 10^-13). Half of subjects habituate while half do not, validating the need for personalized control.
 
-*Word count: 247*
+_Word count: 247_
 
 ---
 
@@ -90,16 +90,19 @@ Suggested visual: Two-panel schematic. Left side shows a fixed schedule waveform
 ### METHODS / EXPERIMENTAL DESIGN (48-72pt header)
 
 **Data Pipeline:**
+
 - Extracted 17,283 EEG windows (2 seconds each) from 35 subjects across 7 frontal channels
 - Subject-level train/validation/test splits (24/5/6 subjects) to prevent data leakage
 - Computed PAC using the Modulation Index method (theta phase crossed with gamma amplitude)
 
 **Two Neural Networks (sized for 17,283-sample dataset to avoid overfitting):**
+
 - EEGNet: 1,457 parameters (12 samples/param), estimates PAC from raw EEG in real time (Lawhern et al., 2018)
 - Causal TCN: 31,000 parameters, predicts future PAC from 20-step history with dilated causal convolutions and 44-second receptive field
 - Larger models (120K-1.1M params) tested; all overfit or converged at same R-squared, confirming data ceiling
 
 **Closed-Loop Simulation:**
+
 - Compared four control strategies: Fixed Schedule, Reactive, Predictive (trend-based), and Oracle (perfect knowledge)
 - Modeled neural fatigue at six severity levels to test robustness
 - 50 trials per condition, 600 seconds each, Wilcoxon signed-rank tests, bootstrap 95% CIs, Hedges' g effect sizes
@@ -135,12 +138,12 @@ Suggested visual: Line graph with prediction horizon (1, 2, 3, 5, 8, 10 seconds)
 **[FIGURE 4: Bar chart with error bars]**
 Suggested visual: Grouped bar chart. X-axis: fatigue severity (None, Mild, Moderate, Mod-High, High, Severe). Two bars per group: Fixed Schedule efficiency (blue) and Adaptive efficiency (green). Y-axis: stimulation efficiency (PAC mean / stimulation fraction). Add asterisks for significance. Data (n = 50 trials each, rigorous validation):
 
-- None (rate=0.000): Fixed 0.343, Adaptive 0.375 (+9.5%, p < 0.001**)
-- Mild (rate=0.004): Fixed 0.341, Adaptive 0.375 (+10.0%, p < 0.001**)
-- Moderate (rate=0.008): Fixed 0.335, Adaptive 0.366 (+9.0%, p < 0.001**)
-- Mod-High (rate=0.015): Fixed 0.329, Adaptive 0.361 (+9.7%, p < 0.001**)
-- High (rate=0.025): Fixed 0.319, Adaptive 0.354 (+10.8%, p < 0.001**)
-- Severe (rate=0.040): Fixed 0.316, Adaptive 0.352 (+11.2%, p < 0.001**)
+- None (rate=0.000): Fixed 0.343, Adaptive 0.375 (+9.5%, p < 0.001\*\*)
+- Mild (rate=0.004): Fixed 0.341, Adaptive 0.375 (+10.0%, p < 0.001\*\*)
+- Moderate (rate=0.008): Fixed 0.335, Adaptive 0.366 (+9.0%, p < 0.001\*\*)
+- Mod-High (rate=0.015): Fixed 0.329, Adaptive 0.361 (+9.7%, p < 0.001\*\*)
+- High (rate=0.025): Fixed 0.319, Adaptive 0.354 (+10.8%, p < 0.001\*\*)
+- Severe (rate=0.040): Fixed 0.316, Adaptive 0.352 (+11.2%, p < 0.001\*\*)
 
 **Interpretation:** At all fatigue levels (6/6), adaptive scheduling is significantly more efficient (all p < 0.001, Wilcoxon signed-rank, large effect sizes with Hedges' g = 1.7-2.4). The advantage generally increases from +9.0% to +11.2% with fatigue severity.
 
@@ -165,16 +168,17 @@ Adaptive advantage tested under 4 different fatigue model assumptions (n = 50 tr
 
 TCN predictive controller replayed on all 35 subjects' real EEG data (no simulation):
 
-| Controller | Alignment | Low-PAC Targeting | PAC Gap (µV²) |
-|-----------|-----------|-------------------|---------------|
-| Fixed Schedule | 45.0% | 61.4% | −6.6 (wrong direction) |
-| Reactive | 64.5% | 51.7% | +21.1 |
-| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** |
-| Oracle | 100.0% | 100.0% | +33.3 |
+| Controller         | Alignment | Low-PAC Targeting | PAC Gap (µV²)          |
+| ------------------ | --------- | ----------------- | ---------------------- |
+| Fixed Schedule     | 45.0%     | 61.4%             | −6.6 (wrong direction) |
+| Reactive           | 64.5%     | 51.7%             | +21.1                  |
+| **TCN Predictive** | **72.1%** | **82.6%**         | **+30.5**              |
+| Oracle             | 100.0%    | 100.0%            | +33.3                  |
 
 TCN vs Reactive (n=35): Alignment g=+1.31, Low-PAC targeting g=+4.47, PAC gap g=+1.57 (all p<0.001). TCN reaches 91% of oracle bound. 35/35 subjects benefit (binomial p<0.001). Robust across thresholds 0.2-1.0.
 
 **Data Integrity and Model Validation:**
+
 - Subject-level splits: 6 held-out test subjects never seen during training or model selection (generalizability)
 - Shuffle-label test: R-squared = -0.332 (model learns real signal, not artifacts)
 - Causal dataset construction verified (no future information leakage)
@@ -214,12 +218,12 @@ TCN vs Reactive (n=35): Alignment g=+1.31, Low-PAC targeting g=+4.47, PAC gap g=
 
 ### REFERENCES (48-72pt header, 24pt body)
 
-1. Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. *Nature*, 540(7632), 230-235.
-2. Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. *Cell*, 177(2), 256-271.
-3. Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. *Journal of Neurophysiology*, 104(2), 1195-1210.
-4. Lawhern, V. J., et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. *Journal of Neural Engineering*, 15(5), 056013.
-5. Lahijanian, M., et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. *Scientific Reports*, 14, 13153.
-6. Thompson, R. F., & Spencer, W. A. (1966). Habituation: A model phenomenon for the study of neuronal substrates of behavior. *Psychological Review*, 73(1), 16-43.
+1. Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. _Nature_, 540(7632), 230-235.
+2. Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. _Cell_, 177(2), 256-271.
+3. Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. _Journal of Neurophysiology_, 104(2), 1195-1210.
+4. Lawhern, V. J., et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. _Journal of Neural Engineering_, 15(5), 056013.
+5. Lahijanian, M., et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. _Scientific Reports_, 14, 13153.
+6. Thompson, R. F., & Spencer, W. A. (1966). Habituation: A model phenomenon for the study of neuronal substrates of behavior. _Psychological Review_, 73(1), 16-43.
 
 **AI Disclosure:** AI coding assistant (Claude Code) used for code development. All experimental design, data analysis, and scientific interpretation are the student's own work.
 
@@ -244,18 +248,19 @@ Within acceptable range. If further trimming needed, reduce Methods data pipelin
 
 ## FIGURE PRODUCTION CHECKLIST
 
-| Figure | Type | Status | Placement |
-|--------|------|--------|-----------|
-| Fig 1: Fixed vs Adaptive Concept | Schematic diagram | TO CREATE (manual/design tool) | Left panel, below Introduction |
-| Fig 2: System Architecture | Flowchart | TO CREATE (manual/design tool) | Center panel, below Methods |
-| Fig 3: Horizon Sweep | Line graph (3 lines) | DATA READY (see data points in Results text) | Center panel, below Results header |
-| Fig 4: Fatigue Sensitivity | Grouped bar chart | DATA READY | Right panel, Result 2 |
-| Fig 5: Individual Habituation | Dot/lollipop chart | DATA READY | Right panel, Result 3 |
-| Fig 6: Controller Comparison | Grouped bar chart | GENERATED: `results/figures/controller_comparison.png` | Right panel, Result 5 |
-| Fig 7: Timeline Example | 3-panel timeline | GENERATED: `results/figures/timeline_example.png` | Center panel or Right panel |
-| Fig 8: Threshold Sensitivity | Line+bar dual axis | GENERATED: `results/figures/threshold_sensitivity.png` | Right panel, robustness |
+| Figure                           | Type                 | Status                                                 | Placement                          |
+| -------------------------------- | -------------------- | ------------------------------------------------------ | ---------------------------------- |
+| Fig 1: Fixed vs Adaptive Concept | Schematic diagram    | TO CREATE (manual/design tool)                         | Left panel, below Introduction     |
+| Fig 2: System Architecture       | Flowchart            | TO CREATE (manual/design tool)                         | Center panel, below Methods        |
+| Fig 3: Horizon Sweep             | Line graph (3 lines) | DATA READY (see data points in Results text)           | Center panel, below Results header |
+| Fig 4: Fatigue Sensitivity       | Grouped bar chart    | DATA READY                                             | Right panel, Result 2              |
+| Fig 5: Individual Habituation    | Dot/lollipop chart   | DATA READY                                             | Right panel, Result 3              |
+| Fig 6: Controller Comparison     | Grouped bar chart    | GENERATED: `results/figures/controller_comparison.png` | Right panel, Result 5              |
+| Fig 7: Timeline Example          | 3-panel timeline     | GENERATED: `results/figures/timeline_example.png`      | Center panel or Right panel        |
+| Fig 8: Threshold Sensitivity     | Line+bar dual axis   | GENERATED: `results/figures/threshold_sensitivity.png` | Right panel, robustness            |
 
 **Generated figures** (in `results/figures/`, 300 DPI PNG + vector PDF):
+
 - `controller_comparison.png` — 6 controllers, 3 metrics
 - `pac_targeting_gap.png` — PAC during stim vs rest by controller
 - `per_subject_utility.png` — 35-subject scatter (TCN vs Reactive)

@@ -10,9 +10,10 @@ tags:
 # Test 6: isinstance(tcn_model, TemporalModel) returns True.
 
 ## Connections
+
 - [[ModelRegistry]] - `uses` [INFERRED]
 - [[TCNTemporalModel]] - `uses` [INFERRED]
 - [[TemporalModel]] - `uses` [INFERRED]
 - [[test_isinstance_temporal_model_protocol()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

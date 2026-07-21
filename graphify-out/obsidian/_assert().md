@@ -7,9 +7,10 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# _assert()
+# \_assert()
 
 ## Connections
+
 - [[test_build_default_registry()]] - `calls` [EXTRACTED]
 - [[test_isinstance_temporal_model_protocol()]] - `calls` [EXTRACTED]
 - [[test_model_registry.py]] - `contains` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[test_tcn_step_returns_none_then_dict()]] - `calls` [EXTRACTED]
 - [[test_tcn_temporal_model_wraps_forecaster()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

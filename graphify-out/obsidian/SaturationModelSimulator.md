@@ -10,6 +10,7 @@ tags:
 # SaturationModelSimulator
 
 ## Connections
+
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[Fatigue Model 4 Saturation  Synaptic Adaptation.      Models long-term synap]] - `rationale_for` [EXTRACTED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
@@ -22,4 +23,4 @@ tags:
 - [[get_description()_3]] - `method` [EXTRACTED]
 - [[step()_57]] - `method` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

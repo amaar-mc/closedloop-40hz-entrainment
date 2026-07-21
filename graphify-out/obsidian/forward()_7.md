@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[AttentionPool1D]] - `method` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

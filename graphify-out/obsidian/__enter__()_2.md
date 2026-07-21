@@ -7,9 +7,10 @@ tags:
   - community/Community_32
 ---
 
-# __enter__()
+# **enter**()
 
 ## Connections
+
 - [[RealEEGAdapter]] - `method` [EXTRACTED]
 
   #community/Community_32

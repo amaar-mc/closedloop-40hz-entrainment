@@ -10,6 +10,7 @@ tags:
 # Sustained Late-Session PAC Response by Severity (Panel F)
 
 ## Connections
+
 - [[Fixed Stimulation Strategy (baseline)]] - `references` [EXTRACTED]
 - [[Predictive Stimulation Strategy (TCN-based)]] - `references` [EXTRACTED]
 - [[Reactive Stimulation Strategy]] - `references` [EXTRACTED]

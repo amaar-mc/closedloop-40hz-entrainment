@@ -7,9 +7,10 @@ tags:
   - community/Community_70
 ---
 
-# Fit simulator tau parameters from real PAC transition data.  Extracts tau_rise a
+# Fit simulator tau parameters from real PAC transition data. Extracts tau_rise a
 
 ## Connections
+
 - [[fit_simulator_params.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_70

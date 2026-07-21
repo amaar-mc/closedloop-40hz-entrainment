@@ -10,6 +10,7 @@ tags:
 # V6 Horizon Sweep Updated to PAC+Stim Values (h=5: 0.577)
 
 ## Connections
+
 - [[Poster Board V6 (PAC+Stim Feature Discovery Update)]] - `references` [EXTRACTED]
 
   #community/Community_41

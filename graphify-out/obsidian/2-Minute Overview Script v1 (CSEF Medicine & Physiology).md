@@ -9,6 +9,7 @@ tags:
 # 2-Minute Overview Script v1 (CSEF Medicine & Physiology)
 
 ## Connections
+
 - [[Short Accessible Presentation Script (02, Elevator-Expandable)]] - `semantically_similar_to` [INFERRED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

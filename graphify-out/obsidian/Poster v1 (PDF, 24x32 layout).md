@@ -9,6 +9,7 @@ tags:
 # Poster v1 (PDF, 24x32 layout)
 
 ## Connections
+
 - [[Poster Builder v1 (python-pptx, 24x32 slide)]] - `implements` [INFERRED]
 
   #community/Community_110

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a visually inspectable PDF proof from the audited MIT URTC manuscript."""
+"""Build a fallback ReportLab proof from the audited MIT URTC manuscript."""
 
 from __future__ import annotations
 
@@ -30,7 +30,7 @@ from PIL import Image as PILImage
 
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / "paper/conferences/mit_urtc_2026/draft/MANUSCRIPT.md"
-OUTPUT = ROOT / "paper/conferences/mit_urtc_2026/draft/MIT_URTC_MANUSCRIPT.pdf"
+OUTPUT = ROOT / "paper/conferences/mit_urtc_2026/draft/MIT_URTC_MANUSCRIPT_REPORTLAB_PROOF.pdf"
 
 PAGE_W, PAGE_H = letter
 LEFT = 0.62 * inch
@@ -40,7 +40,9 @@ BOTTOM = 1.0 * inch
 GAP = 0.25 * inch
 USABLE_W = PAGE_W - LEFT - RIGHT
 COLUMN_W = (USABLE_W - GAP) / 2
-TITLE_H = 3.70 * inch
+TITLE_H = 3.78 * inch
+
+FRAME_PADDING = 0
 
 
 def inline(text: str) -> str:
@@ -101,8 +103,8 @@ def make_styles():
             "Title",
             parent=styles["Normal"],
             fontName="Times-Bold",
-            fontSize=18,
-            leading=20,
+            fontSize=24,
+            leading=26,
             alignment=TA_CENTER,
             spaceAfter=6,
         ),
@@ -121,6 +123,17 @@ def make_styles():
             fontSize=10,
             leading=10.0,
             alignment=TA_JUSTIFY,
+            spaceAfter=0.5,
+        ),
+        "body_list": ParagraphStyle(
+            "BodyList",
+            parent=styles["Normal"],
+            fontName="Times-Roman",
+            fontSize=10,
+            leading=10.0,
+            alignment=TA_JUSTIFY,
+            leftIndent=13,
+            firstLineIndent=-13,
             spaceAfter=0.5,
         ),
         "h1": ParagraphStyle(
@@ -184,17 +197,55 @@ def make_doc(title: str, author: str, keywords: str) -> BaseDocTemplate:
         USABLE_W,
         TITLE_H,
         id="first_title",
+        leftPadding=FRAME_PADDING,
+        rightPadding=FRAME_PADDING,
+        topPadding=FRAME_PADDING,
+        bottomPadding=FRAME_PADDING,
     )
-    first_left = Frame(LEFT, BOTTOM, COLUMN_W, PAGE_H - TOP - BOTTOM - TITLE_H, id="first_left")
+    first_left = Frame(
+        LEFT,
+        BOTTOM,
+        COLUMN_W,
+        PAGE_H - TOP - BOTTOM - TITLE_H,
+        id="first_left",
+        leftPadding=FRAME_PADDING,
+        rightPadding=FRAME_PADDING,
+        topPadding=FRAME_PADDING,
+        bottomPadding=FRAME_PADDING,
+    )
     first_right = Frame(
         LEFT + COLUMN_W + GAP,
         BOTTOM,
         COLUMN_W,
         PAGE_H - TOP - BOTTOM - TITLE_H,
         id="first_right",
+        leftPadding=FRAME_PADDING,
+        rightPadding=FRAME_PADDING,
+        topPadding=FRAME_PADDING,
+        bottomPadding=FRAME_PADDING,
     )
-    left = Frame(LEFT, BOTTOM, COLUMN_W, PAGE_H - TOP - BOTTOM, id="left")
-    right = Frame(LEFT + COLUMN_W + GAP, BOTTOM, COLUMN_W, PAGE_H - TOP - BOTTOM, id="right")
+    left = Frame(
+        LEFT,
+        BOTTOM,
+        COLUMN_W,
+        PAGE_H - TOP - BOTTOM,
+        id="left",
+        leftPadding=FRAME_PADDING,
+        rightPadding=FRAME_PADDING,
+        topPadding=FRAME_PADDING,
+        bottomPadding=FRAME_PADDING,
+    )
+    right = Frame(
+        LEFT + COLUMN_W + GAP,
+        BOTTOM,
+        COLUMN_W,
+        PAGE_H - TOP - BOTTOM,
+        id="right",
+        leftPadding=FRAME_PADDING,
+        rightPadding=FRAME_PADDING,
+        topPadding=FRAME_PADDING,
+        bottomPadding=FRAME_PADDING,
+    )
     doc.addPageTemplates(
         [
             PageTemplate(
@@ -315,15 +366,15 @@ def build() -> None:
             i += 1
         elif re.match(r"^\d+\.\s+", line):
             flush()
-            items = []
             while i < len(body_lines) and re.match(r"^\d+\.\s+", body_lines[i]):
-                text = re.sub(r"^\d+\.\s+", "", body_lines[i]).strip()
+                match = re.match(r"^(\d+)\.\s+(.+)$", body_lines[i])
+                number = match.group(1)
+                text = match.group(2).strip()
                 i += 1
                 while i < len(body_lines) and body_lines[i].startswith("   "):
                     text += " " + body_lines[i].strip()
                     i += 1
-                items.append(ListItem(Paragraph(inline(text), styles["body"])))
-            story.append(ListFlowable(items, bulletType="1", leftIndent=13, bulletFontSize=10))
+                story.append(Paragraph(f"{number}. {inline(text)}", styles["body_list"]))
         elif line.startswith("- "):
             flush()
             items = []

@@ -10,6 +10,7 @@ tags:
 # Run comprehensive simulator tests.
 
 ## Connections
+
 - [[test_simulator()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

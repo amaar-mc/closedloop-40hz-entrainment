@@ -10,6 +10,7 @@ tags:
 # Spectral EEG Feature Generalization Failure
 
 ## Connections
+
 - [[12-Feature PAC+Stim Model (test R²=0.606)]] - `conceptually_related_to` [EXTRACTED]
 - [[Key Methodological Finding Feature Ablation]] - `references` [EXTRACTED]
 

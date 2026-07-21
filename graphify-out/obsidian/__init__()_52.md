@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[AddGaussianNoise]] - `calls` [EXTRACTED]
 - [[Args             time_warp Enable time warping             magnitude_warp Ena]] - `rationale_for` [EXTRACTED]
 - [[ChannelDropout]] - `calls` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[TimeShift]] - `calls` [EXTRACTED]
 - [[TimeWarp]] - `calls` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

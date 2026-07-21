@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Args:             std: Standard deviation of noise (relative to signal)
+# Args: std: Standard deviation of noise (relative to signal)
 
 ## Connections
+
 - [[__init__()_49]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

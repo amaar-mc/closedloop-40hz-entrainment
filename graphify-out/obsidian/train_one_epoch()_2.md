@@ -10,6 +10,7 @@ tags:
 # train_one_epoch()
 
 ## Connections
+
 - [[Train for one epoch. Returns average loss.]] - `rationale_for` [EXTRACTED]
 - [[train_temporal.py]] - `contains` [EXTRACTED]
 - [[train_temporal_predictor()]] - `calls` [EXTRACTED]

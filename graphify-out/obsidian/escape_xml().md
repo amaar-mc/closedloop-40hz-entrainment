@@ -10,6 +10,7 @@ tags:
 # escape_xml()
 
 ## Connections
+
 - [[generate_pdf.py]] - `contains` [EXTRACTED]
 - [[md_to_para()]] - `calls` [EXTRACTED]
 - [[parse_table()_4]] - `calls` [EXTRACTED]

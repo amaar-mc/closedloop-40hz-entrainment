@@ -10,6 +10,7 @@ tags:
 # Recommended Combined Framing A+B
 
 ## Connections
+
 - [[Framing A Feature Selection  Architecture]] - `conceptually_related_to` [EXTRACTED]
 - [[Framing B Proactive vs Reactive Neurostimulation]] - `conceptually_related_to` [EXTRACTED]
 

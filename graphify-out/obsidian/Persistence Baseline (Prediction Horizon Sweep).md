@@ -9,6 +9,7 @@ tags:
 # Persistence Baseline (Prediction Horizon Sweep)
 
 ## Connections
+
 - [[Figure 6 Prediction Horizon Sweep (Test R²)]] - `references` [EXTRACTED]
 
   #community/Community_51

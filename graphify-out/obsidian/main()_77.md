@@ -10,9 +10,10 @@ tags:
 # main()
 
 ## Connections
+
 - [[Main entry point for training pipeline.]] - `rationale_for` [EXTRACTED]
 - [[ModelTrainer]] - `calls` [EXTRACTED]
 - [[train()]] - `calls` [EXTRACTED]
 - [[training.py]] - `contains` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

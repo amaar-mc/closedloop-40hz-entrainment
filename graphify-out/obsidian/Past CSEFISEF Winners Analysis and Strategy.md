@@ -9,6 +9,7 @@ tags:
 # Past CSEF/ISEF Winners Analysis and Strategy
 
 ## Connections
+
 - [[Judge Interaction Guide]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_111

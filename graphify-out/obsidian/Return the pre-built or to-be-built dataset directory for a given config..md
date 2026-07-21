@@ -10,6 +10,7 @@ tags:
 # Return the pre-built or to-be-built dataset directory for a given config.
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SequenceDataset]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[SimpleTransformer]] - `uses` [INFERRED]
 - [[_dataset_dir()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

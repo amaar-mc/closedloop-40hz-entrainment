@@ -10,6 +10,7 @@ tags:
 # p12_references()
 
 ## Connections
+
 - [[Slide 12 References  Supplemental Information.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `calls` [EXTRACTED]
 - [[_add_textbox()]] - `calls` [EXTRACTED]

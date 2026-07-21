@@ -7,9 +7,10 @@ tags:
   - community/Archived_SpecTempNet_V3
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[SpectralBranch]] - `method` [EXTRACTED]
 - [[__init__()_56]] - `calls` [EXTRACTED]
 

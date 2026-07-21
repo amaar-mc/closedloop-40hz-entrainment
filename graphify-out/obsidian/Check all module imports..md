@@ -10,6 +10,7 @@ tags:
 # Check all module imports.
 
 ## Connections
+
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]
 - [[NeuralMassConfig]] - `uses` [INFERRED]

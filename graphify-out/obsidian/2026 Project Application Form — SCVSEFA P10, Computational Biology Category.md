@@ -10,6 +10,7 @@ tags:
 # 2026 Project Application Form — SCVSEFA P10, Computational Biology Category
 
 ## Connections
+
 - [[ISEF Affiliation Acknowledgment (Synopsys Championship → CSEF)]] - `conceptually_related_to` [INFERRED]
 - [[Project Category Biological Science and Engineering  Computational Biology and Bioinformatics]] - `references` [EXTRACTED]
 - [[Project Title Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment to Optimize Theta-Gamma Coupling in Alzheimer's]] - `references` [EXTRACTED]

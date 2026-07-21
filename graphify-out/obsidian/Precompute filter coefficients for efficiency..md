@@ -10,6 +10,7 @@ tags:
 # Precompute filter coefficients for efficiency.
 
 ## Connections
+
 - [[_compute_filter_coefficients()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

@@ -12,21 +12,21 @@
 
 ## 1. TCN Model Performance
 
-| Metric | Value |
-|--------|-------|
-| Architecture | MultiscaleCausalTCN (causal depthwise-separable, dilations [1,2,4,8]) |
-| Parameters | 31,043 |
-| Input features | 12 (7 PAC-derived + 5 stim context; spectral dropped after ablation study) |
-| Lookback window | 20 steps (20 seconds) |
-| Prediction horizon | 5 seconds |
-| Target smoothing | None (raw PAC, ts=1) |
-| Training data | 11,160 sequences (24 subjects) |
-| Validation data | 2,605 sequences (5 subjects) |
-| Test data | 2,678 sequences (6 subjects) |
-| Best val R² | 0.820 ± 0.019 (mean across 5 seeds) |
-| Test R² | 0.606 ± 0.032 (mean across 5 seeds) |
-| Test RMSE | ~3.3 × 10⁻⁵ |
-| Test Pearson r | ~0.80 |
+| Metric             | Value                                                                      |
+| ------------------ | -------------------------------------------------------------------------- |
+| Architecture       | MultiscaleCausalTCN (causal depthwise-separable, dilations [1,2,4,8])      |
+| Parameters         | 31,043                                                                     |
+| Input features     | 12 (7 PAC-derived + 5 stim context; spectral dropped after ablation study) |
+| Lookback window    | 20 steps (20 seconds)                                                      |
+| Prediction horizon | 5 seconds                                                                  |
+| Target smoothing   | None (raw PAC, ts=1)                                                       |
+| Training data      | 11,160 sequences (24 subjects)                                             |
+| Validation data    | 2,605 sequences (5 subjects)                                               |
+| Test data          | 2,678 sequences (6 subjects)                                               |
+| Best val R²        | 0.820 ± 0.019 (mean across 5 seeds)                                        |
+| Test R²            | 0.606 ± 0.032 (mean across 5 seeds)                                        |
+| Test RMSE          | ~3.3 × 10⁻⁵                                                                |
+| Test Pearson r     | ~0.80                                                                      |
 
 **Note on R²**: The PAC+Stim (12-feature) model achieves test R² = 0.606 ± 0.032 at a 5-second horizon — a 5x improvement over the initial 73-feature model (R² = -0.025 on same test set). At 5-second horizons, persistence and Ridge baselines collapse to negative R² (−0.27), while the TCN maintains R² ≈ 0.577–0.606. The feature ablation study (March 2026) identified spectral features as the primary source of cross-subject overfitting.
 
@@ -34,16 +34,17 @@
 
 ## 2. Controller Comparison (N = 35 Subjects, Real EEG Data)
 
-| Controller | Alignment | Low-PAC Stim | High-PAC Rest | Stim % | PAC Gap (×10⁻⁶ MI) |
-|-----------|-----------|-------------|--------------|--------|---------------|
-| Fixed Schedule | 45.0% | 61.4% | 28.6% | 66.6% | −6.6 |
-| Reactive Threshold | 64.5% | 51.7% | 77.3% | 36.7% | +21.1 |
-| **TCN Predictive** | **72.1%** | **82.6%** | 61.6% | 59.7% | **+30.5** |
-| Hybrid TCN+Reactive | 73.8% | 85.3% | 62.2% | 60.8% | +34.0 |
-| PI Controller | 66.1% | 38.6% | 93.6% | 22.0% | +27.4 |
-| Alignment Oracle | 100.0% | 100.0% | 100.0% | 48.3% | +33.3 |
+| Controller          | Alignment | Low-PAC Stim | High-PAC Rest | Stim % | PAC Gap (×10⁻⁶ MI) |
+| ------------------- | --------- | ------------ | ------------- | ------ | ------------------ |
+| Fixed Schedule      | 45.0%     | 61.4%        | 28.6%         | 66.6%  | −6.6               |
+| Reactive Threshold  | 64.5%     | 51.7%        | 77.3%         | 36.7%  | +21.1              |
+| **TCN Predictive**  | **72.1%** | **82.6%**    | 61.6%         | 59.7%  | **+30.5**          |
+| Hybrid TCN+Reactive | 73.8%     | 85.3%        | 62.2%         | 60.8%  | +34.0              |
+| PI Controller       | 66.1%     | 38.6%        | 93.6%         | 22.0%  | +27.4              |
+| Alignment Oracle    | 100.0%    | 100.0%       | 100.0%        | 48.3%  | +33.3              |
 
 **Definitions**:
+
 - **Alignment**: (Low-PAC Stim Rate + High-PAC Rest Rate) / 2 — how well controller targets stimulation to periods of need
 - **Low-PAC Stim**: fraction of below-median PAC windows that receive stimulation (recall of therapeutic need)
 - **High-PAC Rest**: fraction of above-median PAC windows where controller rests (specificity)
@@ -53,14 +54,14 @@
 
 ## 3. Primary Result: TCN Predictive vs Reactive Threshold
 
-| Metric | TCN | Reactive | Hedges' g [95% CI] | p-value | Interpretation |
-|--------|-----|----------|-------------------|---------|---------------|
-| Epoch Alignment | 72.1% | 64.5% | +1.31 [+0.75, +1.87] | < 0.001 | Large |
-| Low-PAC Stim Rate | 82.6% | 51.7% | +4.47 [+3.33, +5.62] | < 0.001 | Very large |
-| High-PAC Rest Rate | 61.6% | 77.3% | −2.41 [−3.14, −1.68] | < 0.001 | Large (Reactive wins) |
-| PAC Target Gap | 30.5 ×10⁻⁶ MI | 21.1 ×10⁻⁶ MI | +1.57 [+0.98, +2.17] | < 0.001 | Large |
-| Lead Time | 0.8s | 0.2s | +0.75 [+0.25, +1.26] | < 0.001 | Medium |
-| Clinical Utility | 0.681 | 0.591 | +0.95 [+0.43, +1.47] | < 0.001 | Large |
+| Metric             | TCN           | Reactive      | Hedges' g [95% CI]   | p-value | Interpretation        |
+| ------------------ | ------------- | ------------- | -------------------- | ------- | --------------------- |
+| Epoch Alignment    | 72.1%         | 64.5%         | +1.31 [+0.75, +1.87] | < 0.001 | Large                 |
+| Low-PAC Stim Rate  | 82.6%         | 51.7%         | +4.47 [+3.33, +5.62] | < 0.001 | Very large            |
+| High-PAC Rest Rate | 61.6%         | 77.3%         | −2.41 [−3.14, −1.68] | < 0.001 | Large (Reactive wins) |
+| PAC Target Gap     | 30.5 ×10⁻⁶ MI | 21.1 ×10⁻⁶ MI | +1.57 [+0.98, +2.17] | < 0.001 | Large                 |
+| Lead Time          | 0.8s          | 0.2s          | +0.75 [+0.25, +1.26] | < 0.001 | Medium                |
+| Clinical Utility   | 0.681         | 0.591         | +0.95 [+0.43, +1.47] | < 0.001 | Large                 |
 
 **Key finding**: The TCN predictive controller achieves significantly better alignment between stimulation decisions and PAC state (g = +1.31, p < 0.001), with dramatically improved targeting of low-PAC windows (82.6% vs 51.7%, g = +4.47). The TCN directs stimulation to periods of genuine therapeutic need — a 60% increase in low-PAC targeting recall compared to reactive control.
 
@@ -72,13 +73,13 @@
 
 The PAC targeting gap (mean PAC during rest − mean PAC during stim) is the most clinically meaningful metric: a positive gap means the controller correctly concentrates stimulation during low-PAC periods and rests during high-PAC periods.
 
-| Controller | PAC during Stim | PAC during Rest | Gap | Direction |
-|-----------|----------------|----------------|-----|-----------|
-| Fixed Schedule | 4.4 × 10⁻⁵ | 3.8 × 10⁻⁵ | −6.6 × 10⁻⁶ | WRONG |
-| Reactive Threshold | 2.9 × 10⁻⁵ | 5.0 × 10⁻⁵ | +2.1 × 10⁻⁵ | Correct |
-| **TCN Predictive** | **2.9 × 10⁻⁵** | **6.0 × 10⁻⁵** | **+3.1 × 10⁻⁵** | **Correct** |
-| Hybrid TCN+Reactive | 2.9 × 10⁻⁵ | 6.3 × 10⁻⁵ | +3.4 × 10⁻⁵ | Correct |
-| Alignment Oracle | 2.5 × 10⁻⁵ | 5.8 × 10⁻⁵ | +3.3 × 10⁻⁵ | Correct |
+| Controller          | PAC during Stim | PAC during Rest | Gap             | Direction   |
+| ------------------- | --------------- | --------------- | --------------- | ----------- |
+| Fixed Schedule      | 4.4 × 10⁻⁵      | 3.8 × 10⁻⁵      | −6.6 × 10⁻⁶     | WRONG       |
+| Reactive Threshold  | 2.9 × 10⁻⁵      | 5.0 × 10⁻⁵      | +2.1 × 10⁻⁵     | Correct     |
+| **TCN Predictive**  | **2.9 × 10⁻⁵**  | **6.0 × 10⁻⁵**  | **+3.1 × 10⁻⁵** | **Correct** |
+| Hybrid TCN+Reactive | 2.9 × 10⁻⁵      | 6.3 × 10⁻⁵      | +3.4 × 10⁻⁵     | Correct     |
+| Alignment Oracle    | 2.5 × 10⁻⁵      | 5.8 × 10⁻⁵      | +3.3 × 10⁻⁵     | Correct     |
 
 The TCN Predictive controller achieves a PAC targeting gap of +30.5 ×10⁻⁶ MI units, comparable to the theoretical Alignment Oracle (+33.3 ×10⁻⁶ MI units) and 45% larger than the reactive controller (+21.1 ×10⁻⁶ MI units). This gap is statistically significant (g = +1.57, p < 0.001).
 
@@ -88,16 +89,16 @@ The TCN Predictive controller achieves a PAC targeting gap of +30.5 ×10⁻⁶ M
 
 The TCN controller's advantage is robust across a range of prediction confidence thresholds (δz):
 
-| δz Threshold | Alignment | Low-PAC Stim | Stim % | PAC Gap (×10⁻⁶ MI) |
-|-------------|-----------|-------------|--------|---------------|
-| 0.1 | 59.6% | 51.2% | 41.3% | 12.4 |
-| 0.2 | 68.5% | 72.9% | 53.7% | 26.3 |
-| **0.3 (selected)** | **73.7%** | **84.9%** | **60.5%** | **32.4** |
-| 0.4 | 73.9% | 85.3% | 60.7% | 33.7 |
-| 0.5 | 73.7% | 85.3% | 60.8% | 33.8 |
-| 0.8 | 73.8% | 85.3% | 60.8% | 34.0 |
-| 1.0 | 73.8% | 85.3% | 60.8% | 34.0 |
-| *Reactive baseline* | *64.5%* | *51.7%* | *36.7%* | *21.1* |
+| δz Threshold        | Alignment | Low-PAC Stim | Stim %    | PAC Gap (×10⁻⁶ MI) |
+| ------------------- | --------- | ------------ | --------- | ------------------ |
+| 0.1                 | 59.6%     | 51.2%        | 41.3%     | 12.4               |
+| 0.2                 | 68.5%     | 72.9%        | 53.7%     | 26.3               |
+| **0.3 (selected)**  | **73.7%** | **84.9%**    | **60.5%** | **32.4**           |
+| 0.4                 | 73.9%     | 85.3%        | 60.7%     | 33.7               |
+| 0.5                 | 73.7%     | 85.3%        | 60.8%     | 33.8               |
+| 0.8                 | 73.8%     | 85.3%        | 60.8%     | 34.0               |
+| 1.0                 | 73.8%     | 85.3%        | 60.8%     | 34.0               |
+| _Reactive baseline_ | _64.5%_   | _51.7%_      | _36.7%_   | _21.1_             |
 
 The TCN outperforms the reactive controller at all thresholds ≥ 0.2, with performance plateauing at δz ≥ 0.3. This stability indicates the result is not an artifact of threshold tuning.
 
@@ -129,6 +130,7 @@ In adaptive music therapy for 40 Hz gamma entrainment:
 ### Stimulation Budget Interpretation
 
 The TCN uses 59.7% stimulation vs the reactive's 36.7%. This is intentional and beneficial:
+
 - The original experimental protocol used 66.6% stimulation with only 45.0% alignment (poor targeting)
 - The TCN achieves 72.1% alignment with 59.7% stimulation — substantially better targeting at lower cost than the original protocol
 - In music therapy, "stimulation" means playing 40 Hz-modulated therapeutic content vs ambient background — a higher proportion of therapeutic content is often clinically desirable when properly targeted
@@ -139,14 +141,14 @@ The TCN uses 59.7% stimulation vs the reactive's 36.7%. This is intentional and 
 
 A fatigue sensitivity sweep was conducted in simulation to assess whether the TCN advantage holds under neural habituation. Six habituation severity levels were tested (fatigue rate 0.0 to 0.040), with 50 trials of 600 seconds each per level.
 
-| Fatigue Rate | Fatigue Level | Fixed Efficiency | Adaptive Efficiency | Advantage | p-value |
-|---|---|---|---|---|---|
-| 0.000 | None | — | — | +0.4% | 0.49 (n.s.) |
-| 0.008 | Very Low | — | — | +1.2% | 0.12 |
-| 0.016 | Low | — | — | +2.5% | 0.03 |
-| 0.024 | Moderate | — | — | +3.8% | 0.008 |
-| 0.032 | High | — | — | +4.9% | 0.003 |
-| 0.040 | Very High | — | — | +5.7% | 0.01 |
+| Fatigue Rate | Fatigue Level | Fixed Efficiency | Adaptive Efficiency | Advantage | p-value     |
+| ------------ | ------------- | ---------------- | ------------------- | --------- | ----------- |
+| 0.000        | None          | —                | —                   | +0.4%     | 0.49 (n.s.) |
+| 0.008        | Very Low      | —                | —                   | +1.2%     | 0.12        |
+| 0.016        | Low           | —                | —                   | +2.5%     | 0.03        |
+| 0.024        | Moderate      | —                | —                   | +3.8%     | 0.008       |
+| 0.032        | High          | —                | —                   | +4.9%     | 0.003       |
+| 0.040        | Very High     | —                | —                   | +5.7%     | 0.01        |
 
 The efficiency advantage of adaptive control increases monotonically with fatigue severity. At zero fatigue the advantage is not significant (+0.4%, p=0.49), which is expected — when there is no habituation, fixed and adaptive schedules perform similarly. As fatigue increases, the adaptive advantage grows and becomes statistically significant.
 
@@ -173,4 +175,4 @@ The efficiency advantage of adaptive control increases monotonically with fatigu
 
 ---
 
-*Report generated from real-data replay validation on OpenNeuro ds005048. All statistics are computed from N = 35 subjects using subject-level cross-validation splits. No simulation data. Raw PAC targets (no smoothing). AI-assisted analysis disclosed.*
+_Report generated from real-data replay validation on OpenNeuro ds005048. All statistics are computed from N = 35 subjects using subject-level cross-validation splits. No simulation data. Raw PAC targets (no smoothing). AI-assisted analysis disclosed._

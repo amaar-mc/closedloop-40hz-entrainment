@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# Args:             batch: Dictionary with keys:                 'eeg':
+# Args: batch: Dictionary with keys: 'eeg':
 
 ## Connections
+
 - [[forward()_17]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Temporal_PAC_Predictor

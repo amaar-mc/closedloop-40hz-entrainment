@@ -10,7 +10,8 @@ tags:
 # PredictiveLookAheadControl – Trend-Based Hysteresis Controller
 
 ## Connections
+
 - [[Clarification Predictive Look-Ahead is Trend-Based Not TCN]] - `implements` [INFERRED]
 - [[main()_65]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

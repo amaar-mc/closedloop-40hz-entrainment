@@ -9,6 +9,7 @@ tags:
 # Judge Interview Prep: 90-Second Summary, Data Deep-Dive, Model Q&A
 
 ## Connections
+
 - [[Reference Package Index (Submission Package, Abstract Drafts, Reports, Audit)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

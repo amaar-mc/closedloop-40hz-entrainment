@@ -9,6 +9,7 @@ tags:
 # Abstract Draft 5: Concise High-Impact
 
 ## Connections
+
 - [[Abstract Round 2 Draft B Technical Precision]] - `references` [EXTRACTED]
 
   #community/Community_54

@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Apply region-specific disease modification to ROI activations.          Differen
+# Apply region-specific disease modification to ROI activations. Differen
 
 ## Connections
+
 - [[apply_to_roi_activations()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

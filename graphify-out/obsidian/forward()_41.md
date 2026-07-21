@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[LastStepPool_2]] - `method` [EXTRACTED]
 
   #community/TCN_Layer_Internals

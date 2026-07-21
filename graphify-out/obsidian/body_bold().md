@@ -10,6 +10,7 @@ tags:
 # body_bold()
 
 ## Connections
+
 - [[Bold body text paragraph.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `method` [EXTRACTED]
 - [[_add_textbox()]] - `calls` [EXTRACTED]

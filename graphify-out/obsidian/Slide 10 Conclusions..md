@@ -10,6 +10,7 @@ tags:
 # Slide 10: Conclusions.
 
 ## Connections
+
 - [[p10_conclusions()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

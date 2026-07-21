@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[Args             x (batch, n_spectral_features)          Returns]] - `rationale_for` [EXTRACTED]
 - [[SpectralBranch]] - `method` [EXTRACTED]
 

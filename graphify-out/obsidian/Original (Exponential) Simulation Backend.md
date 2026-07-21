@@ -9,6 +9,7 @@ tags:
 # Original (Exponential) Simulation Backend
 
 ## Connections
+
 - [[Simulation Backend Comparison Original vs TRIBE V2-Enhanced Figure]] - `references` [EXTRACTED]
 - [[TRIBE V2-Enhanced Simulation Backend]] - `conceptually_related_to` [EXTRACTED]
 

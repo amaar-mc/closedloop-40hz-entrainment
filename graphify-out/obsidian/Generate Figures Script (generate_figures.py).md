@@ -10,6 +10,7 @@ tags:
 # Generate Figures Script (generate_figures.py)
 
 ## Connections
+
 - [[Controller Comparison Figure]] - `implements` [EXTRACTED]
 - [[PAC Targeting Gap Figure]] - `implements` [EXTRACTED]
 - [[Per-Subject Utility Figure]] - `implements` [EXTRACTED]

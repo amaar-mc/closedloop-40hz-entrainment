@@ -12,6 +12,6 @@ I analyzed EEG from 35 elderly subjects (OpenNeuro ds005048) and computed phase-
 
 At five-to-ten-second horizons all baselines collapsed to negative R-squared while the TCN maintained 0.37-0.67. The controller directed stimulation to 82.6% of low-PAC windows versus 51.7% for reactive control (g = 4.47, p < 0.001) and achieved 72.1% alignment versus 64.5% (g = 1.31, p < 0.001), reaching 91% of the oracle's targeting gap. All 35 subjects benefited (p < 0.001). These results demonstrate that PAC forecasting enables personalized 40 Hz therapy outperforming fixed and reactive protocols, advancing treatment for Alzheimer's disease.
 
-*Word count: 250 / 250 max | Characters: 1,790 / 1,800 max*
+_Word count: 250 / 250 max | Characters: 1,790 / 1,800 max_
 
-*California Science and Engineering Fair (CSEF) — April 2026*
+_California Science and Engineering Fair (CSEF) — April 2026_

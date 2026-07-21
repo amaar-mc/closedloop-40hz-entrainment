@@ -7,9 +7,10 @@ tags:
   - community/Community_49
 ---
 
-# Test 3: Characterize PAC temporal autocorrelation per subject.     This determi
+# Test 3: Characterize PAC temporal autocorrelation per subject. This determi
 
 ## Connections
+
 - [[test_pac_autocorrelation()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_49

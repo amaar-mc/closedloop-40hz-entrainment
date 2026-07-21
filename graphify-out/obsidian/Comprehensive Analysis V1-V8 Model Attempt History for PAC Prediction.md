@@ -9,6 +9,7 @@ tags:
 # Comprehensive Analysis: V1-V8 Model Attempt History for PAC Prediction
 
 ## Connections
+
 - [[V5 Verdict Ridge Regression R²=0.287 is Honest Ceiling for This Dataset]] - `references` [EXTRACTED]
 
   #community/Community_71

@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Configuration shared across all TCN variants.      Attributes:         n_feat
+# Configuration shared across all TCN variants. Attributes: n_feat
 
 ## Connections
+
 - [[ModelConfig_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

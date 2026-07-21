@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[Args             x (batch, 1, n_channels, n_samples)          Returns_1]] - `rationale_for` [EXTRACTED]
 - [[MultiScaleTemporalCNN]] - `method` [EXTRACTED]
 

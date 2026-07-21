@@ -10,6 +10,7 @@ tags:
 # box_with_text()
 
 ## Connections
+
 - [[Create a rectangle with a title and body text inside.]] - `rationale_for` [EXTRACTED]
 - [[_rect()]] - `calls` [EXTRACTED]
 - [[_text()]] - `calls` [EXTRACTED]

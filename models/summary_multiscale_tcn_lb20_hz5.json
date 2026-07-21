@@ -23,12 +23,7 @@
     "stim_history_sec": 20,
     "hidden": 64,
     "kernel_size": 3,
-    "dilations": [
-      1,
-      2,
-      4,
-      8
-    ],
+    "dilations": [1, 2, 4, 8],
     "dropout": 0.1,
     "batch_size": 128,
     "lr": 0.001,

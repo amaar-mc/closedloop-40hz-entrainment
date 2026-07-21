@@ -7,9 +7,10 @@ tags:
   - community/Community_80
 ---
 
-# Build temporal dataset with sliding-window PAC targets and features.      Return
+# Build temporal dataset with sliding-window PAC targets and features. Return
 
 ## Connections
+
 - [[build_sliding_dataset()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_80

@@ -10,8 +10,9 @@ tags:
 # print_summary_table()
 
 ## Connections
+
 - [[Print a formatted summary table across all fatigue models.      Args]] - `rationale_for` [EXTRACTED]
 - [[fatigue_model_sensitivity.py]] - `contains` [EXTRACTED]
 - [[main()_69]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

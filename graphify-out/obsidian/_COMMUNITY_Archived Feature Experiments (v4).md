@@ -8,6 +8,7 @@ members: 167
 **Members:** 167 nodes
 
 ## Members
+
 - [[Add Gaussian noise to simulate measurement noise.]] - rationale - archive/experimental_models/data_augmentation.py
 - [[Add rolling mean and std features.]] - rationale - archive/v1_v8_attempts/run_v6_optimized.py
 - [[AddGaussianNoise]] - code - archive/experimental_models/data_augmentation.py
@@ -184,10 +185,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 17 edges to [[_COMMUNITY_Multiscale TCN & Features]]
 - 1 edge to [[_COMMUNITY_Archived SpecTempNet V3]]
 
 ## Top bridge nodes
+
 - [[spectral_features.py]] - degree 15, connects to 2 communities
 - [[EEGDatasetV4]] - degree 11, connects to 1 community
 - [[Dataset with raw EEG, spectral features, and wavelet features.     Includes data]] - degree 5, connects to 1 community

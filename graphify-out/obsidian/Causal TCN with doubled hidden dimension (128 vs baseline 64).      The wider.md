@@ -7,9 +7,10 @@ tags:
   - community/TCN_Layer_Internals
 ---
 
-# Causal TCN with doubled hidden dimension (128 vs baseline 64).      The wider
+# Causal TCN with doubled hidden dimension (128 vs baseline 64). The wider
 
 ## Connections
+
 - [[WiderTCN]] - `rationale_for` [EXTRACTED]
 
   #community/TCN_Layer_Internals

@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# Compute PAC from TVB EEG signal using a hybrid approach.          The Jansen-Rit
+# Compute PAC from TVB EEG signal using a hybrid approach. The Jansen-Rit
 
 ## Connections
+
 - [[_compute_pac()]] - `rationale_for` [EXTRACTED]
 
   #community/TVB_Alzheimer_Simulator

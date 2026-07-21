@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[ControlMethodBase]] - `method` [EXTRACTED]
 - [[Return 0 (REST) or 1 (STIMULATE).]] - `rationale_for` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

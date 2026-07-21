@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[TrendPredictiveCtrl]] - `method` [EXTRACTED]
 
   #community/TVB_Alzheimer_Simulator

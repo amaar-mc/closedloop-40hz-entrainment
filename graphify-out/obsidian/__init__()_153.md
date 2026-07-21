@@ -7,9 +7,10 @@ tags:
   - community/Community_46
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[Initialize multi-channel personalization.          Args             n_channe]] - `rationale_for` [EXTRACTED]
 - [[MultiChannelPersonalization]] - `method` [EXTRACTED]
 - [[PersonalizationModule]] - `calls` [EXTRACTED]

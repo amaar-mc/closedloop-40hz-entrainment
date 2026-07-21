@@ -187,11 +187,11 @@ Predicts future PAC (5s horizon) from a 20-second causal history. Main contribut
 
 **Feature ablation (key result):**
 
-| Feature Subset | # Features | Val R² | Test R² |
-|---|---|---|---|
-| All features (73) | 73 | 0.333 | −0.025 |
-| Spectral only (61) | 61 | −0.044 | −0.420 |
-| **PAC + Stim context** | **12** | **0.804** | **0.558** |
+| Feature Subset         | # Features | Val R²    | Test R²   |
+| ---------------------- | ---------- | --------- | --------- |
+| All features (73)      | 73         | 0.333     | −0.025    |
+| Spectral only (61)     | 61         | −0.044    | −0.420    |
+| **PAC + Stim context** | **12**     | **0.804** | **0.558** |
 
 Spectral features (indices 0–60) encode subject-specific anatomy that does not generalize. Removing them is the core scientific finding.
 
@@ -199,32 +199,32 @@ Spectral features (indices 0–60) encode subject-specific anatomy that does not
 
 ### Horizon Sweep (12-feat PAC+Stim TCN)
 
-| Horizon | Persistence R² | Ridge R² | TCN R² |
-|---------|----------------|----------|--------|
-| 1 sec | ~0.76 | ~0.81 | ~0.74 |
-| 3 sec | −0.081 | negative | **0.577** |
-| 5 sec | negative | negative | **0.606** |
-| 10 sec | negative | negative | **0.669** |
+| Horizon | Persistence R² | Ridge R² | TCN R²    |
+| ------- | -------------- | -------- | --------- |
+| 1 sec   | ~0.76          | ~0.81    | ~0.74     |
+| 3 sec   | −0.081         | negative | **0.577** |
+| 5 sec   | negative       | negative | **0.606** |
+| 10 sec  | negative       | negative | **0.669** |
 
 At 3–10 seconds — the operationally relevant range for proactive control — only the TCN provides useful predictions (+0.47 R² margin over persistence at collapse).
 
 ### Real-Data Closed-Loop Validation (N=35 subjects)
 
-| Controller | Alignment | Low-PAC Targeting | PAC Gap (uV^2) |
-|-----------|-----------|-------------------|----------------|
-| Fixed Schedule | 45.0% | 61.4% | -6.6 (wrong direction) |
-| Reactive | 64.5% | 51.7% | +21.1 |
-| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** |
-| Oracle | 100.0% | 100.0% | +33.3 |
+| Controller         | Alignment | Low-PAC Targeting | PAC Gap (uV^2)         |
+| ------------------ | --------- | ----------------- | ---------------------- |
+| Fixed Schedule     | 45.0%     | 61.4%             | -6.6 (wrong direction) |
+| Reactive           | 64.5%     | 51.7%             | +21.1                  |
+| **TCN Predictive** | **72.1%** | **82.6%**         | **+30.5**              |
+| Oracle             | 100.0%    | 100.0%            | +33.3                  |
 
 TCN vs Reactive (Wilcoxon signed-rank, all p < 0.001): Alignment g = +1.31, Low-PAC targeting g = +4.47, PAC gap g = +1.57. TCN reaches 91% of oracle bound. 35/35 subjects benefit.
 
 ### Adaptive Scheduling Efficiency
 
-| Fatigue Level | Fixed Efficiency | Adaptive Efficiency | Gain | p-value |
-|---------------|-----------------|--------------------|----- |---------|
-| None | 0.343 | 0.375 | +9.5% | < 0.001 |
-| Severe | 0.316 | 0.352 | +11.2% | < 0.001 |
+| Fatigue Level | Fixed Efficiency | Adaptive Efficiency | Gain   | p-value |
+| ------------- | ---------------- | ------------------- | ------ | ------- |
+| None          | 0.343            | 0.375               | +9.5%  | < 0.001 |
+| Severe        | 0.316            | 0.352               | +11.2% | < 0.001 |
 
 Advantage holds across all 6 fatigue levels and 4 different fatigue model assumptions (+6.9% to +19.0%, all p < 10^-13).
 
@@ -241,10 +241,10 @@ Full results: [`FINDINGS.md`](FINDINGS.md) | [`results/RESULTS_REPORT.md`](resul
 
 ## Citations
 
-1. Iaccarino et al. (2016). Gamma frequency entrainment attenuates amyloid load. *Nature*, 540, 230-235.
-2. Tort et al. (2010). Measuring phase-amplitude coupling. *J Neurophysiology*, 104(2), 1195-1210.
-3. Lawhern et al. (2018). EEGNet: compact CNN for EEG-based BCIs. *J Neural Engineering*, 15(5), 056013.
-4. Lahijanian et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. *Scientific Reports*, 14, 13153.
+1. Iaccarino et al. (2016). Gamma frequency entrainment attenuates amyloid load. _Nature_, 540, 230-235.
+2. Tort et al. (2010). Measuring phase-amplitude coupling. _J Neurophysiology_, 104(2), 1195-1210.
+3. Lawhern et al. (2018). EEGNet: compact CNN for EEG-based BCIs. _J Neural Engineering_, 15(5), 056013.
+4. Lahijanian et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. _Scientific Reports_, 14, 13153.
 
 ## Author
 

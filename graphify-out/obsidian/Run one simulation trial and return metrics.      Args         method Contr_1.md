@@ -7,9 +7,10 @@ tags:
   - community/Control_Strategies_&_Validation
 ---
 
-# Run one simulation trial and return metrics.      Args:         method: Contr
+# Run one simulation trial and return metrics. Args: method: Contr
 
 ## Connections
+
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
 - [[PredictiveLookAheadControl_5]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[TrialMetrics]] - `uses` [INFERRED]
 - [[run_single_trial()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

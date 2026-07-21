@@ -9,6 +9,7 @@ tags:
 # NeuroCare 40Hz Facility Flyer Markdown Source
 
 ## Connections
+
 - [[NeuroCare 40Hz Product Flyer]] - `semantically_similar_to` [EXTRACTED]
 
   #community/Community_78

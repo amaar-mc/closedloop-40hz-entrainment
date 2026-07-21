@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Warp the time axis by changing the speed of the signal.      This simulates natu
+# Warp the time axis by changing the speed of the signal. This simulates natu
 
 ## Connections
+
 - [[TimeWarp]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

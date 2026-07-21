@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Processes BIDS-compliant EEG dataset into training windows.      Pipeline:
+# Processes BIDS-compliant EEG dataset into training windows. Pipeline:
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

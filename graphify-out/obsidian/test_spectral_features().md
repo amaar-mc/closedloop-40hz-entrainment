@@ -10,10 +10,11 @@ tags:
 # test_spectral_features()
 
 ## Connections
+
 - [[SpectralFeatureExtractor]] - `calls` [EXTRACTED]
 - [[Test the spectral feature extraction.]] - `rationale_for` [EXTRACTED]
 - [[extract()_2]] - `calls` [EXTRACTED]
 - [[extract_spectral_features()_1]] - `calls` [EXTRACTED]
 - [[spectral_features.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

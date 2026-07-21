@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# Create train/val/test dataloaders with temporal split.      Args:         dat
+# Create train/val/test dataloaders with temporal split. Args: dat
 
 ## Connections
+
 - [[TemporalPACPredictor]] - `uses` [INFERRED]
 - [[create_dataloaders()]] - `rationale_for` [EXTRACTED]
 

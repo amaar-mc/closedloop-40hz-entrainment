@@ -10,6 +10,7 @@ tags:
 # test_all()
 
 ## Connections
+
 - [[EEGNetEnhanced]] - `calls` [EXTRACTED]
 - [[EEGNetLarge]] - `calls` [EXTRACTED]
 - [[Run all architecture tests and print comparative summary.]] - `rationale_for` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[test_eegnet_enhanced()]] - `calls` [EXTRACTED]
 - [[test_eegnet_large()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

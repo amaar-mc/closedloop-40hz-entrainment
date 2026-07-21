@@ -10,6 +10,7 @@ tags:
 # Extract level-2 headings from the notebook body for a simple TOC.
 
 ## Connections
+
 - [[extract_toc_headings()]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

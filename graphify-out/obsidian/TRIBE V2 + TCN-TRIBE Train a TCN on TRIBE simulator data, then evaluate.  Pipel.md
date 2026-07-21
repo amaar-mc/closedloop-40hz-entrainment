@@ -7,9 +7,10 @@ tags:
   - community/TRIBE-TCN_Validation
 ---
 
-# TRIBE V2 + TCN-TRIBE: Train a TCN on TRIBE simulator data, then evaluate.  Pipel
+# TRIBE V2 + TCN-TRIBE: Train a TCN on TRIBE simulator data, then evaluate. Pipel
 
 ## Connections
+
 - [[run_tribe_tcn_validation.py]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

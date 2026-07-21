@@ -10,6 +10,7 @@ tags:
 # temporal_model.py
 
 ## Connections
+
 - [[MultiHorizonPredictor]] - `contains` [EXTRACTED]
 - [[SpatialEncoder]] - `contains` [EXTRACTED]
 - [[Temporal PAC Prediction Models  LSTM and GRU architectures for predicting futu]] - `rationale_for` [EXTRACTED]

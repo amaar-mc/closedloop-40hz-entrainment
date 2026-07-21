@@ -10,6 +10,7 @@ tags:
 # Add a rectangle with gradient fill matching template header.
 
 ## Connections
+
 - [[add_gradient_rect()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_63

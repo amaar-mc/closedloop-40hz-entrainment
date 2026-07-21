@@ -10,6 +10,7 @@ tags:
 # write_abstract()
 
 ## Connections
+
 - [[ResearchPaperPDF]] - `method` [EXTRACTED]
 - [[Write abstract in single column, indented, with italic label.]] - `rationale_for` [EXTRACTED]
 - [[generate_pdf()]] - `calls` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # extract_spectral_features()
 
 ## Connections
+
 - [[Extract spectral features from EEG window for model input.      Returns]] - `rationale_for` [EXTRACTED]
 - [[process_subject()]] - `calls` [EXTRACTED]
 - [[reprocess_long_windows.py]] - `contains` [EXTRACTED]

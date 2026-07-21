@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[WilsonCowanModel]] - `method` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

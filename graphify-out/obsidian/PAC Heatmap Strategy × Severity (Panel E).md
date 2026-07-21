@@ -10,6 +10,7 @@ tags:
 # PAC Heatmap: Strategy × Severity (Panel E)
 
 ## Connections
+
 - [[Disease Severity Gradient (healthy→preclinical→mild→moderate→severe)]] - `references` [EXTRACTED]
 - [[Fixed Stimulation Strategy (baseline)]] - `references` [EXTRACTED]
 - [[Predictive Stimulation Strategy (TCN-based)]] - `references` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # CausalDSConvBlock
 
 ## Connections
+
 - [[Residual depthwise-separable causal temporal block.]] - `rationale_for` [EXTRACTED]
 - [[__init__()_10]] - `method` [EXTRACTED]
 - [[__init__()_12]] - `calls` [EXTRACTED]

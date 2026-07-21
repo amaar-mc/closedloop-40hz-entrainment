@@ -10,6 +10,7 @@ tags:
 # run_benchmark()
 
 ## Connections
+
 - [[Run the full synthetic benchmark across all variants.      Returns         D]] - `rationale_for` [EXTRACTED]
 - [[SyntheticDataset]] - `calls` [EXTRACTED]
 - [[VARIANT_REGISTRY (Model Variant Registry Dict)]] - `references` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[synthetic_benchmark.py]] - `contains` [EXTRACTED]
 - [[train_and_evaluate()_1]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

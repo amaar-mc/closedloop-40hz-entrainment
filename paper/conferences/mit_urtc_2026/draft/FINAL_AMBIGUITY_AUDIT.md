@@ -1,6 +1,6 @@
 # MIT URTC Final Ambiguity Audit
 
-**Audited:** 2026-05-31  
+**Audited:** 2026-06-23
 **Standard:** wording should survive a skeptical technical reviewer without relying on charitable
 interpretation
 
@@ -25,18 +25,20 @@ causally in a live stream. That interpretation is not supportable. The revised m
 
 ## High-Priority Clarifications Applied
 
-| Ambiguous wording or omission | Reviewer risk | Revision |
-|---|---|---|
-| Title suggested an adaptive system had been evaluated | Could be read as prospective closed-loop validation | Title now names cross-participant forecasting and offline controller replay |
-| Abstract used "persistence" without definition | Baseline comparison was not self-contained | Defined it as a last-value persistence baseline at the same five-second horizon |
-| Abstract did not state replay includes non-test trajectories | Full-cohort replay could be mistaken for independent validation | Added that replay includes training and validation trajectories |
-| Local artifact masking omitted its threshold and order | Preprocessing was not reproducible from the paper | Added `100 uV`, zero masking, and masking before rereferencing |
-| Reactive controller lacked its numerical settings | Replay could not be reconstructed from manuscript text | Added 10-sample warm-up, 30-sample rolling baseline, and `-0.5` z-score trigger |
-| Predictive controller lacked its decision thresholds | Decision logic was underspecified | Added normalized forecast-change thresholds `-0.3` and `+0.3`, fallback, and three-step hold |
-| Oracle median was not explicitly retrospective | Oracle could sound deployable | Stated that it uses each full recorded trajectory and is neither causal nor deployable |
-| Horizon sweep caution was generic | Non-monotonic ten-second result could look cherry-picked | Named the non-monotonic result and retained the replication warning |
-| Table III abbreviated alignment without expansion | Metric name could be misread | Expanded the header to balanced alignment |
-| Leakage paragraph used "causal indexing" broadly | Could overstate end-to-end causality | Replaced with future-index ordering and separated it from online availability |
+| Ambiguous wording or omission                             | Reviewer risk                                                 | Revision                                                                                     |
+| --------------------------------------------------------- | ------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Title suggested an adaptive system had been evaluated     | Could be read as prospective closed-loop validation           | Title now names cross-participant PAC forecasts during auditory stimulation                  |
+| Abstract used "persistence" without definition            | Baseline comparison was not self-contained                    | Defined it as a last-value persistence baseline at the same five-second horizon              |
+| Replay scope could be mistaken for independent validation | Full-cohort replay could be mistaken for a second test        | Methods state that replay includes training, validation, and test trajectories               |
+| Local artifact masking omitted its threshold and order    | Preprocessing was not reproducible from the paper             | Added `100 uV`, zero masking, and masking before rereferencing                               |
+| Reactive controller lacked its numerical settings         | Replay could not be reconstructed from manuscript text        | Added 10-sample warm-up, 30-sample rolling baseline, and `-0.5` z-score trigger              |
+| Predictive controller lacked its decision thresholds      | Decision logic was underspecified                             | Added normalized forecast-change thresholds `-0.3` and `+0.3`, fallback, and three-step hold |
+| Oracle median was not explicitly retrospective            | Oracle could sound deployable                                 | Stated that it uses each full recorded trajectory and is neither causal nor deployable       |
+| Horizon sweep was secondary and single-seed               | Could distract from the corrected target result               | Removed it from the final manuscript                                                         |
+| Benchmark table duplicated Figure 1                       | Violated the guideline against duplicative tables and figures | Removed the table and retained exact values in prose and figure                              |
+| Controller table abbreviates balanced alignment           | Metric name could be misread                                  | Defined balanced alignment immediately before the table                                      |
+| Leakage paragraph used "causal indexing" broadly          | Could overstate end-to-end causality                          | Replaced with future-index ordering and separated it from online availability                |
+| Gamma-band artifact warning lacked a citation             | Physiological limitation was asserted without support         | Added Hipp and Siegel's primary EEG artifact study                                           |
 
 ## Residual Scientific Risks
 

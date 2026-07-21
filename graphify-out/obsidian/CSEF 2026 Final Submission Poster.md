@@ -9,6 +9,7 @@ tags:
 # CSEF 2026 Final Submission Poster
 
 ## Connections
+
 - [[3535 Subjects Benefit from TCN Predictive vs Reactive (Figure 14)]] - `references` [EXTRACTED]
 - [[Causal TCN Temporal PAC Forecaster — 5,154 params, 12 PAC+Stim features, 5s horizon]] - `references` [EXTRACTED]
 - [[Controller Comparison Table Fixed Schedule, Reactive, TCN Predictive, Oracle (Figure 13)]] - `references` [EXTRACTED]

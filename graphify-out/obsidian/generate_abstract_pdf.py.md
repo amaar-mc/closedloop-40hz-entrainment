@@ -10,6 +10,7 @@ tags:
 # generate_abstract_pdf.py
 
 ## Connections
+
 - [[FPDF]] - `imports_from` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

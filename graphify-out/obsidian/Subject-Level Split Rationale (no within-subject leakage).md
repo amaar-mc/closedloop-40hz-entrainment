@@ -10,6 +10,7 @@ tags:
 # Subject-Level Split Rationale (no within-subject leakage)
 
 ## Connections
+
 - [[Controller Comparison Results (72.1% TCN vs 64.5% Reactive, N=35)]] - `rationale_for` [INFERRED]
 
   #community/Community_43

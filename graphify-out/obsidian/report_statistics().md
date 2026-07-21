@@ -10,6 +10,7 @@ tags:
 # report_statistics()
 
 ## Connections
+
 - [[Print and return comparison statistics.]] - `rationale_for` [EXTRACTED]
 - [[compute_sliding_pac.py]] - `contains` [EXTRACTED]
 - [[main()_5]] - `calls` [EXTRACTED]

@@ -10,7 +10,8 @@ tags:
 # Fatigue Robustness Results (4 Model Types, All p<0.001)
 
 ## Connections
+
 - [[HabituationFatigue Analysis (1735 habituate, 5050 split)]] - `references` [EXTRACTED]
 - [[Poster Board V5 (Condensed, Visual-Forward, Synopsys 2026)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

@@ -10,6 +10,7 @@ tags:
 # WaveletFeatureExtractor
 
 ## Connections
+
 - [[Add rolling mean and std features.]] - `uses` [INFERRED]
 - [[Batch processor for wavelet feature extraction.]] - `rationale_for` [EXTRACTED]
 - [[Dataset with raw EEG, spectral features, and wavelet features.     Includes data]] - `uses` [INFERRED]
@@ -27,4 +28,4 @@ tags:
 - [[test_wavelet_features()]] - `calls` [EXTRACTED]
 - [[wavelet_features.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

@@ -7,11 +7,12 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Randomly scale amplitude.          Args:             window: EEG window
+# Randomly scale amplitude. Args: window: EEG window
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
 - [[amplitude_scaling()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

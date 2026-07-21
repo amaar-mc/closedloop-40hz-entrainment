@@ -10,6 +10,7 @@ tags:
 # Clinical Motivation: Alzheimer's Scale + No Cure
 
 ## Connections
+
 - [[Introduction Section Arc]] - `references` [EXTRACTED]
 
   #community/Community_148

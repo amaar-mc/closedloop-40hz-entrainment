@@ -9,6 +9,7 @@ tags:
 # Demo Streaming Inference Script
 
 ## Connections
+
 - [[Generate Closed-Loop vs Fixed v3 Figure Script]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_37

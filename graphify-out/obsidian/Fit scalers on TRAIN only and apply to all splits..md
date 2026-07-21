@@ -10,6 +10,7 @@ tags:
 # Fit scalers on TRAIN only and apply to all splits.
 
 ## Connections
+
 - [[_normalize_with_train_stats()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_53

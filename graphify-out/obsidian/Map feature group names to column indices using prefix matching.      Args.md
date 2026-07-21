@@ -7,12 +7,13 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Map feature group names to column indices using prefix matching.      Args:
+# Map feature group names to column indices using prefix matching. Args:
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[_resolve_feature_groups()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

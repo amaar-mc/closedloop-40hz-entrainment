@@ -10,9 +10,10 @@ tags:
 # Z-score reactive controller with hysteresis — maintains state in dead zone.
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[ReactiveThresholdControl_1]] - `rationale_for` [EXTRACTED]
 - [[StimAction]] - `uses` [INFERRED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

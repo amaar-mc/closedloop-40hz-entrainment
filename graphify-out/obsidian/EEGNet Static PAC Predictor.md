@@ -10,6 +10,7 @@ tags:
 # EEGNet Static PAC Predictor
 
 ## Connections
+
 - [[Architecture Exploration Table (6 models)]] - `references` [EXTRACTED]
 - [[Closed-Loop Controller Architecture]] - `calls` [EXTRACTED]
 - [[PAC Computation (Modulation Index)]] - `shares_data_with` [EXTRACTED]

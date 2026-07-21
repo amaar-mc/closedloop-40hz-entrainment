@@ -7,10 +7,11 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Recompute PAC per 2-second window instead of per epoch.  The original pipeline c
+# Recompute PAC per 2-second window instead of per epoch. The original pipeline c
 
 ## Connections
+
 - [[PACComputer]] - `uses` [INFERRED]
 - [[recompute_pac.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

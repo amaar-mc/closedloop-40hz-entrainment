@@ -10,6 +10,7 @@ tags:
 # PAC as Strongest Predictor of Entrainment Response (Beta=0.693, p<0.001)
 
 ## Connections
+
 - [[30% Non-Responder Problem Inter-Individual Variability in 40Hz Entrainment]] - `rationale_for` [EXTRACTED]
 - [[IEEE Draft Paper EEGNet Architecture for Real-Time PAC Prediction in AD]] - `rationale_for` [EXTRACTED]
 

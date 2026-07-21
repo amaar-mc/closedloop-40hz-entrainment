@@ -8,6 +8,7 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
+
 - [[Closed-Loop Demo Script (run_closed_loop_demo.py)]] - document - logs/training_output.txt
 - [[Closed-Loop Strategy Comparison (FixedReactivePredictiveOracle)]] - document - logs/training_output.txt
 - [[Fixed Schedule Strategy (PAC=0.2299, stim=66.7%, eff=5.398)]] - document - logs/training_output.txt

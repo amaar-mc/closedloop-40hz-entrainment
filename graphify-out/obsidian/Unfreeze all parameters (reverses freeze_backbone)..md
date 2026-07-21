@@ -10,6 +10,7 @@ tags:
 # Unfreeze all parameters (reverses freeze_backbone).
 
 ## Connections
+
 - [[unfreeze_all()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

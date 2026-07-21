@@ -7,9 +7,10 @@ tags:
   - community/Community_82
 ---
 
-# Extract spectral features from EEG window for model input.      Returns:
+# Extract spectral features from EEG window for model input. Returns:
 
 ## Connections
+
 - [[extract_spectral_features()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_82

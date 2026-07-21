@@ -10,6 +10,7 @@ tags:
 # Test 5: How does prediction quality change with horizon?
 
 ## Connections
+
 - [[run_multi_horizon_baseline()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_49

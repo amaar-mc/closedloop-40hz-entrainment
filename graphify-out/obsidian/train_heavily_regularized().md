@@ -10,6 +10,7 @@ tags:
 # train_heavily_regularized()
 
 ## Connections
+
 - [[TinyTCN]] - `calls` [EXTRACTED]
 - [[count_parameters()]] - `calls` [EXTRACTED]
 - [[main()_1]] - `calls` [EXTRACTED]

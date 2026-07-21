@@ -10,6 +10,7 @@ tags:
 # Residual depthwise-separable causal temporal block.
 
 ## Connections
+
 - [[CausalDSConvBlock]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

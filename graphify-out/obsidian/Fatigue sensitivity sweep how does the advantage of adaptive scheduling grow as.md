@@ -10,8 +10,9 @@ tags:
 # Fatigue sensitivity sweep: how does the advantage of adaptive scheduling grow as
 
 ## Connections
+
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[run_fatigue_sensitivity.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

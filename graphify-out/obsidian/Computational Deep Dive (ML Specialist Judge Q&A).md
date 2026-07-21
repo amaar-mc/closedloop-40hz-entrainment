@@ -9,8 +9,9 @@ tags:
 # Computational Deep Dive (ML Specialist Judge Q&A)
 
 ## Connections
+
 - [[Causal Convolutions Rationale (Why Not LSTMTransformer)]] - `references` [EXTRACTED]
 - [[Inference Latency Breakdown (Feature 5ms + TCN 2ms)]] - `references` [EXTRACTED]
 - [[Judge Interview Prep Guide (Complete Technical Deep-Dive)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

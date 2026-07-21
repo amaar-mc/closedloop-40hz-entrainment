@@ -9,6 +9,7 @@ tags:
 # Abstract Framing Strategy: Engineering-First (System Design Focus)
 
 ## Connections
+
 - [[Abstract Framing Strategy Clinical Hook (Disease Impact First)]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_54

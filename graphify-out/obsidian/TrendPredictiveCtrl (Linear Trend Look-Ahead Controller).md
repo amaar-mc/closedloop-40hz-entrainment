@@ -10,6 +10,7 @@ tags:
 # TrendPredictiveCtrl (Linear Trend Look-Ahead Controller)
 
 ## Connections
+
 - [[PredictiveCtrl (Trend + Z-score with Hysteresis)]] - `semantically_similar_to` [INFERRED]
 - [[TVB Jansen-Rit Alignment Evaluation Script]] - `implements` [EXTRACTED]
 

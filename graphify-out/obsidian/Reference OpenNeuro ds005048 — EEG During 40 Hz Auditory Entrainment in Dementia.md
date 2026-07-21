@@ -10,6 +10,7 @@ tags:
 # Reference: OpenNeuro ds005048 — EEG During 40 Hz Auditory Entrainment in Dementia
 
 ## Connections
+
 - [[Research Paper v3 (Full Manuscript)]] - `cites` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

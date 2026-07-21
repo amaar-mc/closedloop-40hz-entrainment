@@ -9,6 +9,7 @@ tags:
 # Sliding-Window PAC Computation (compute_sliding_pac.py)
 
 ## Connections
+
 - [[Build Sliding-PAC Temporal Dataset (build_sliding_dataset.py)]] - `references` [EXTRACTED]
 - [[Contiguous Window Stitching for Continuous EEG Signal]] - `implements` [EXTRACTED]
 - [[Sliding-Window PAC Experiment Results (RESULTS.md)]] - `references` [EXTRACTED]

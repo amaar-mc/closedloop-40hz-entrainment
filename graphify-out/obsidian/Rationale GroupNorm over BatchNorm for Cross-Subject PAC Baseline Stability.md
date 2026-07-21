@@ -10,6 +10,7 @@ tags:
 # Rationale: GroupNorm over BatchNorm for Cross-Subject PAC Baseline Stability
 
 ## Connections
+
 - [[MultiscaleCausalTCN Design (31K params, dilations 1,2,4,8)]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

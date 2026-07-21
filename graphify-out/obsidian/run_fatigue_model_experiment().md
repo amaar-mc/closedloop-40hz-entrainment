@@ -10,6 +10,7 @@ tags:
 # run_fatigue_model_experiment()
 
 ## Connections
+
 - [[PairwiseResult]] - `calls` [EXTRACTED]
 - [[Run a full experiment for one fatigue model.      Compares Fixed Schedule vs P]] - `rationale_for` [EXTRACTED]
 - [[create_simulator()]] - `calls` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[run_single_trial()_1]] - `calls` [EXTRACTED]
 - [[to_dict()_1]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

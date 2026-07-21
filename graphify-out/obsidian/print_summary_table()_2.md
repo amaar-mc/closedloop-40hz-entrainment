@@ -10,9 +10,10 @@ tags:
 # print_summary_table()
 
 ## Connections
+
 - [[Print a formatted summary table to stdout.]] - `rationale_for` [EXTRACTED]
 - [[_fmt_ci()_1]] - `calls` [EXTRACTED]
 - [[main()_70]] - `calls` [EXTRACTED]
 - [[tcn_integrated_simulation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

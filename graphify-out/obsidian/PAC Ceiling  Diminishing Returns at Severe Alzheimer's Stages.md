@@ -10,6 +10,7 @@ tags:
 # PAC Ceiling / Diminishing Returns at Severe Alzheimer's Stages
 
 ## Connections
+
 - [[Adaptive Stimulation Benefit Predictive minus Fixed (Panel C)]] - `rationale_for` [INFERRED]
 - [[Disease Severity Gradient (healthy→preclinical→mild→moderate→severe)]] - `conceptually_related_to` [INFERRED]
 

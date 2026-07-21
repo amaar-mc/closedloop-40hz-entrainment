@@ -10,6 +10,7 @@ tags:
 # add_body_block()
 
 ## Connections
+
 - [[Add structured body text. sections is a list of tuples     ('subheader', 'text']] - `rationale_for` [EXTRACTED]
 - [[v2_builder.py]] - `contains` [EXTRACTED]
 

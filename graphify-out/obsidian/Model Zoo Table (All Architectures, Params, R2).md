@@ -9,6 +9,7 @@ tags:
 # Model Zoo Table (All Architectures, Params, R2)
 
 ## Connections
+
 - [[Causal TCN System (20s lookback, 5s forecast, 12-feature input)]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

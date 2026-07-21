@@ -10,6 +10,7 @@ tags:
 # TinyTCN
 
 ## Connections
+
 - [[CausalConvBlock]] - `uses` [INFERRED]
 - [[ImprovedTCN]] - `uses` [INFERRED]
 - [[Minimalist TCN to test if smaller = better generalization.]] - `rationale_for` [EXTRACTED]

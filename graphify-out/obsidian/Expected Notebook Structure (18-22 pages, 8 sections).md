@@ -10,6 +10,7 @@ tags:
 # Expected Notebook Structure (18-22 pages, 8 sections)
 
 ## Connections
+
 - [[Research Notebook Enhancement Prompt (FormattingContent Guidelines)]] - `references` [EXTRACTED]
 
   #community/Community_95

@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# Initialize TVB Alzheimer simulator.          Args:             severity: Disease
+# Initialize TVB Alzheimer simulator. Args: severity: Disease
 
 ## Connections
+
 - [[__init__()_171]] - `rationale_for` [EXTRACTED]
 
   #community/TVB_Alzheimer_Simulator

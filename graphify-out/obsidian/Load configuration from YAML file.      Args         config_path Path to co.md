@@ -7,9 +7,10 @@ tags:
   - community/Community_35
 ---
 
-# Load configuration from YAML file.      Args:         config_path: Path to co
+# Load configuration from YAML file. Args: config_path: Path to co
 
 ## Connections
+
 - [[load_config()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_35

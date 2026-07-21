@@ -7,12 +7,13 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Generate randomized simulator parameters for diverse subjects.      Varies tau
+# Generate randomized simulator parameters for diverse subjects. Varies tau
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[generate_subject_parameters()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

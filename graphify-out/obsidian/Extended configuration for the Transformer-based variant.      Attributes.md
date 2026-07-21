@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Extended configuration for the Transformer-based variant.      Attributes:
+# Extended configuration for the Transformer-based variant. Attributes:
 
 ## Connections
+
 - [[TransformerConfig]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

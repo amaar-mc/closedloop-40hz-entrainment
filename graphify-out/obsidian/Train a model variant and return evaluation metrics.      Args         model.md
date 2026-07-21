@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Train a model variant and return evaluation metrics.      Args:         model
+# Train a model variant and return evaluation metrics. Args: model
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[ModelConfig_1]] - `uses` [INFERRED]
 - [[MultiTaskTCN]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[TransformerConfig]] - `uses` [INFERRED]
 - [[train_and_evaluate()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

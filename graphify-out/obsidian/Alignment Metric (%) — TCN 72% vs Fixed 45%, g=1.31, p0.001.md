@@ -9,6 +9,7 @@ tags:
 # Alignment Metric (%) — TCN 72% vs Fixed 45%, g=1.31, p<0.001
 
 ## Connections
+
 - [[Figure 8 Controller Comparison Bar Chart]] - `references` [EXTRACTED]
 - [[TCN Predictive Controller (This Project)]] - `shares_data_with` [EXTRACTED]
 

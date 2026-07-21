@@ -10,8 +10,9 @@ tags:
 # step()
 
 ## Connections
+
 - [[TCNPredictiveCtrl]] - `method` [EXTRACTED]
 - [[_build_feature()]] - `calls` [EXTRACTED]
 - [[_predict()_1]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

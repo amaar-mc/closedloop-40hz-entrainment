@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# Compute zero-crossing rate: fraction of samples where sign changes.      Args:
+# Compute zero-crossing rate: fraction of samples where sign changes. Args:
 
 ## Connections
+
 - [[compute_zero_crossing_rate()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

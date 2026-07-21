@@ -10,6 +10,7 @@ tags:
 # PAC via Tort Modulation Index (18-bin KL divergence)
 
 ## Connections
+
 - [[Lab Notebook VFINAL (Jan–Mar 2026 Research Log)]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

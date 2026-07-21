@@ -9,7 +9,8 @@ tags:
 # Fortunato et al. (Non-Responders to Fixed 40Hz)
 
 ## Connections
+
 - [[Core Literature Citations for Presentation]] - `references` [EXTRACTED]
 - [[Habituation vs Facilitation Finding (~50% each in 35-patient cohort)]] - `conceptually_related_to` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

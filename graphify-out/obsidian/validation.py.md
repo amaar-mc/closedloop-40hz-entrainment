@@ -10,6 +10,7 @@ tags:
 # validation.py
 
 ## Connections
+
 - [[ControlMethodBase_2]] - `contains` [EXTRACTED]
 - [[FixedScheduleControl_7]] - `contains` [EXTRACTED]
 - [[OracleControl_6]] - `contains` [EXTRACTED]
@@ -24,4 +25,4 @@ tags:
 - [[simulator.py]] - `imports_from` [EXTRACTED]
 - [[utils.py]] - `imports_from` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

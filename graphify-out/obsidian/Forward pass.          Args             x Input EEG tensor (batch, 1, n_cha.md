@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# Forward pass.          Args:             x: Input EEG tensor (batch, 1, n_cha
+# Forward pass. Args: x: Input EEG tensor (batch, 1, n_cha
 
 ## Connections
+
 - [[forward()_19]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_EEGNet_V2

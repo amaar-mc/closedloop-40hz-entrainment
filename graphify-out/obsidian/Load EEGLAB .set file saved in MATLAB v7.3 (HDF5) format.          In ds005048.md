@@ -7,11 +7,12 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Load EEGLAB .set file saved in MATLAB v7.3 (HDF5) format.          In ds005048
+# Load EEGLAB .set file saved in MATLAB v7.3 (HDF5) format. In ds005048
 
 ## Connections
+
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
 - [[_load_hdf5_set()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

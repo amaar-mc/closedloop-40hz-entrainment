@@ -7,9 +7,10 @@ tags:
   - community/Community_32
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[Attempt to open a Muse 2 BLE session.          Args             mac_address Bl]] - `rationale_for` [EXTRACTED]
 - [[RealEEGAdapter]] - `method` [EXTRACTED]
 

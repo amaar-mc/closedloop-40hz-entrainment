@@ -10,7 +10,8 @@ tags:
 # reset()
 
 ## Connections
+
 - [[ControlMethodBase]] - `method` [EXTRACTED]
 - [[Reset state for a new trial.]] - `rationale_for` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

@@ -10,6 +10,7 @@ tags:
 # OracleControl
 
 ## Connections
+
 - [[Perfect knowledge — stimulate when below target._1]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
@@ -19,4 +20,4 @@ tags:
 - [[reset()_47]] - `method` [EXTRACTED]
 - [[step()_47]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

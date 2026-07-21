@@ -10,6 +10,7 @@ tags:
 # Problem Statement: Fixed-Schedule Stimulation Limitations
 
 ## Connections
+
 - [[Clinical Relevance Adaptive Scheduling for Alzheimer's Therapy]] - `conceptually_related_to` [INFERRED]
 - [[Closed-Loop 40 Hz Gamma Entrainment System]] - `references` [EXTRACTED]
 - [[Key References (Iaccarino 2016, Tort 2010, Lawhern 2018, etc.)]] - `references` [EXTRACTED]

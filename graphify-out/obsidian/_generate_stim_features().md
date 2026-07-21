@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _generate_stim_features()
+# \_generate_stim_features()
 
 ## Connections
+
 - [[Generate stimulation-context features.      Mimics the real features binary s]] - `rationale_for` [EXTRACTED]
 - [[generate_synthetic_dataset()]] - `calls` [EXTRACTED]
 - [[synthetic_benchmark.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

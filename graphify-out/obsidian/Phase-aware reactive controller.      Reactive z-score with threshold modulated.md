@@ -7,9 +7,10 @@ tags:
   - community/Replay_Analysis_&_Controllers
 ---
 
-# Phase-aware reactive controller.      Reactive z-score with threshold modulated
+# Phase-aware reactive controller. Reactive z-score with threshold modulated
 
 ## Connections
+
 - [[PhaseAwareReactiveControl]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

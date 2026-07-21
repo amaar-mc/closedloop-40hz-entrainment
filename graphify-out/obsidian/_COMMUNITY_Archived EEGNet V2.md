@@ -8,6 +8,7 @@ members: 40
 **Members:** 40 nodes
 
 ## Members
+
 - [[Apply data augmentation to EEG window.          Techniques         1. Time j]] - rationale - archive/experimental_models/data_loader_v2.py
 - [[Args             X EEG windows (n_samples, n_channels, n_timepoints)]] - rationale - archive/experimental_models/data_loader_v2.py
 - [[Args             model EEGNetV2 model             device 'cuda' or 'cpu']] - rationale - archive/experimental_models/training_v2.py
@@ -57,7 +58,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 1 edge to [[_COMMUNITY_Multiscale TCN & Features]]
 
 ## Top bridge nodes
+
 - [[EEGDatasetV2]] - degree 8, connects to 1 community

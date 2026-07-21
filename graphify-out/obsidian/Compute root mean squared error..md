@@ -10,6 +10,7 @@ tags:
 # Compute root mean squared error.
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[ModelConfig_1]] - `uses` [INFERRED]
 - [[MultiTaskTCN]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[TransformerConfig]] - `uses` [INFERRED]
 - [[_rmse()_5]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

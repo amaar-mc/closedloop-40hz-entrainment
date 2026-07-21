@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# TVB-based brain simulator with Alzheimer's disease modeling.      Uses the Janse
+# TVB-based brain simulator with Alzheimer's disease modeling. Uses the Janse
 
 ## Connections
+
 - [[TVBAlzheimerSimulator]] - `rationale_for` [EXTRACTED]
 
   #community/TVB_Alzheimer_Simulator

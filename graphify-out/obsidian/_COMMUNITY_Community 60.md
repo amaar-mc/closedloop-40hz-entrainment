@@ -8,6 +8,7 @@ members: 18
 **Members:** 18 nodes
 
 ## Members
+
 - [[AttentionPool1D (Temporal Attention Pooling)]] - code - validation/experiments/tcn_variants.py
 - [[AttentionWeightCapture (Hook-Based Attention Weight Capture)]] - code - validation/experiments/tcn_interpretability.py
 - [[CausalDSConvBlock (Residual Depthwise-Separable Causal Block)]] - code - validation/experiments/tcn_variants.py
@@ -35,9 +36,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 4 edges to [[_COMMUNITY_Multiscale TCN & Features]]
 
 ## Top bridge nodes
+
 - [[VARIANT_REGISTRY (Model Variant Registry Dict)]] - degree 6, connects to 1 community
 - [[MultiTaskTCN (lambda_delta=0.3, lambda_consistency=0.1)]] - degree 4, connects to 1 community
 - [[AttentionWeightCapture (Hook-Based Attention Weight Capture)]] - degree 2, connects to 1 community

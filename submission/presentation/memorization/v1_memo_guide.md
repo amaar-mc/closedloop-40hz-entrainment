@@ -55,18 +55,18 @@ Say these out loud 5 times. This is what makes the story flow.
 
 ## EMOTIONAL ANCHORING
 
-| Room | Feeling | Inner thought |
-|---|---|---|
-| 1. GREETING | Warm, open | "I'm glad you're here." |
-| 2. WHY THIS EXISTS | Personal, then wonder | "This is real to me. And the science blew my mind." |
-| 3. THE GAP | Frustration | "How is nobody doing this? It's so obviously broken." |
-| 4. MEASURE + WALL | Surprise → insight | "I expected one model to win. They all tied. That *was* the discovery." |
-| 5. THE PIVOT | Direction found | "Now I know what I need to build." |
-| 6. BREAKTHROUGH | Genuine surprise | "I was not expecting the spectral features to be the problem. But the data was clear." |
-| 7. KEY CHART | Pride, conviction | "This is my best figure. The intellectual heart." |
-| 8. PROOF | Let the data speak | "The numbers back everything up." |
-| 9. EVERY PATIENT | Quiet awe | "35 out of 35. That's the one that gets people." |
-| 10. HONESTY | Maturity | "I know what this doesn't prove yet. That's strength." |
+| Room               | Feeling               | Inner thought                                                                          |
+| ------------------ | --------------------- | -------------------------------------------------------------------------------------- |
+| 1. GREETING        | Warm, open            | "I'm glad you're here."                                                                |
+| 2. WHY THIS EXISTS | Personal, then wonder | "This is real to me. And the science blew my mind."                                    |
+| 3. THE GAP         | Frustration           | "How is nobody doing this? It's so obviously broken."                                  |
+| 4. MEASURE + WALL  | Surprise → insight    | "I expected one model to win. They all tied. That _was_ the discovery."                |
+| 5. THE PIVOT       | Direction found       | "Now I know what I need to build."                                                     |
+| 6. BREAKTHROUGH    | Genuine surprise      | "I was not expecting the spectral features to be the problem. But the data was clear." |
+| 7. KEY CHART       | Pride, conviction     | "This is my best figure. The intellectual heart."                                      |
+| 8. PROOF           | Let the data speak    | "The numbers back everything up."                                                      |
+| 9. EVERY PATIENT   | Quiet awe             | "35 out of 35. That's the one that gets people."                                       |
+| 10. HONESTY        | Maturity              | "I know what this doesn't prove yet. That's strength."                                 |
 
 ---
 

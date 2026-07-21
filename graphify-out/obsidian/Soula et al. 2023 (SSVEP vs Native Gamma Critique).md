@@ -9,6 +9,7 @@ tags:
 # Soula et al. 2023 (SSVEP vs Native Gamma Critique)
 
 ## Connections
+
 - [[Core Literature Citations for Presentation]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

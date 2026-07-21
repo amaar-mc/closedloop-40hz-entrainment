@@ -10,6 +10,7 @@ tags:
 # SimpleTransformer
 
 ## Connections
+
 - [[Architecture comparison study train and evaluate all models across horizons.  R]] - `uses` [INFERRED]
 - [[Causal Transformer encoder for sequence-to-scalar PAC prediction.      A causal]] - `rationale_for` [EXTRACTED]
 - [[Return dataset_dir, building it if it does not exist.      For horizon==5 the da]] - `uses` [INFERRED]
@@ -20,4 +21,4 @@ tags:
 - [[comparison_models.py]] - `contains` [EXTRACTED]
 - [[forward()_34]] - `method` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

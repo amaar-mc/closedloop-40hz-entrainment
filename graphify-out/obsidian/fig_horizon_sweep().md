@@ -10,6 +10,7 @@ tags:
 # fig_horizon_sweep()
 
 ## Connections
+
 - [[Regenerate Paper Figures Script]] - `calls` [EXTRACTED]
 - [[modelssweep_horizons_results.json]] - `references` [EXTRACTED]
 - [[regenerate_paper_figures.py]] - `contains` [EXTRACTED]

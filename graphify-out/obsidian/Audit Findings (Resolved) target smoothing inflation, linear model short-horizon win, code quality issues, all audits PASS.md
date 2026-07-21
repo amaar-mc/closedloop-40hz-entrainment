@@ -10,6 +10,7 @@ tags:
 # Audit Findings (Resolved): target smoothing inflation, linear model short-horizon win, code quality issues, all audits PASS
 
 ## Connections
+
 - [[MultiscaleCausalTCN Model Performance (73-feature, 31K params)]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

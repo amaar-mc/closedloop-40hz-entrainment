@@ -7,9 +7,10 @@ tags:
   - community/TRIBE-TCN_Validation
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[FixedScheduleCtrl_4]] - `method` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

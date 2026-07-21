@@ -7,10 +7,11 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[ClosedLoopController]] - `method` [EXTRACTED]
 - [[Initialize closed-loop controller.          Args             model_path Pat]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

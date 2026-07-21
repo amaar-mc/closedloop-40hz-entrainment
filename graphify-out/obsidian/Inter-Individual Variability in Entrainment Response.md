@@ -10,7 +10,8 @@ tags:
 # Inter-Individual Variability in Entrainment Response
 
 ## Connections
+
 - [[IEEE Research Paper Personalized Deep Learning for Closed-Loop 40Hz Entrainment]] - `references` [EXTRACTED]
 - [[Personalization Module (IEEE Paper)]] - `rationale_for` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

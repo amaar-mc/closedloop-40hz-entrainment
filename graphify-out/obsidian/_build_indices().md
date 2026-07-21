@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _build_indices()
+# \_build_indices()
 
 ## Connections
+
 - [[Build list of (sequence_start, target_idx) pairs.          For each subject bl]] - `rationale_for` [EXTRACTED]
 - [[TemporalPACDataset]] - `method` [EXTRACTED]
 - [[__init__()_24]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

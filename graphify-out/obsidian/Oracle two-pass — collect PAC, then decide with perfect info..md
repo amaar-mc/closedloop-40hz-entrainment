@@ -10,6 +10,7 @@ tags:
 # Oracle: two-pass — collect PAC, then decide with perfect info.
 
 ## Connections
+
 - [[run_oracle_trial()_1]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

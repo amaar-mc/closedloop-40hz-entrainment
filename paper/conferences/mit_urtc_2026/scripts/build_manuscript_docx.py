@@ -19,6 +19,10 @@ from docx.shared import Inches, Pt
 ROOT = Path(__file__).resolve().parents[4]
 SOURCE = ROOT / "paper/conferences/mit_urtc_2026/draft/MANUSCRIPT.md"
 OUTPUT = ROOT / "paper/conferences/mit_urtc_2026/draft/MIT_URTC_MANUSCRIPT.docx"
+TEMPLATE = (
+    ROOT
+    / "paper/conferences/mit_urtc_2026/guidelines/official_paper_template_letter_transitional.docx"
+)
 
 FONT = "Times New Roman"
 BODY_PT = 10
@@ -51,6 +55,10 @@ def keep_with_next(paragraph) -> None:
     paragraph._p.get_or_add_pPr().append(OxmlElement("w:keepNext"))
 
 
+def keep_together(paragraph) -> None:
+    paragraph._p.get_or_add_pPr().append(OxmlElement("w:keepLines"))
+
+
 def set_columns(section, count: int) -> None:
     sect_pr = section._sectPr
     cols = sect_pr.find(qn("w:cols"))
@@ -58,7 +66,7 @@ def set_columns(section, count: int) -> None:
         cols = OxmlElement("w:cols")
         sect_pr.append(cols)
     cols.set(qn("w:num"), str(count))
-    cols.set(qn("w:space"), "360")
+    cols.set(qn("w:space"), "360" if count == 2 else "720")
 
 
 def configure_section(section, *, columns: int) -> None:
@@ -66,21 +74,60 @@ def configure_section(section, *, columns: int) -> None:
     section.page_height = Inches(11)
     section.top_margin = Inches(0.75)
     section.bottom_margin = Inches(1.0)
-    section.left_margin = Inches(0.62)
-    section.right_margin = Inches(0.62)
-    section.header_distance = Inches(0.3)
+    section.left_margin = Inches(0.63)
+    section.right_margin = Inches(0.63)
+    section.header_distance = Inches(0.5)
     section.footer_distance = Inches(0.5)
     set_columns(section, columns)
 
 
+def clear_template_body(doc: Document) -> None:
+    body = doc._element.body
+    for child in list(body):
+        if child.tag != qn("w:sectPr"):
+            body.remove(child)
+
+
 def configure_styles(doc: Document) -> None:
-    normal = doc.styles["Normal"]
-    normal.font.name = FONT
-    normal._element.rPr.rFonts.set(qn("w:ascii"), FONT)
-    normal._element.rPr.rFonts.set(qn("w:hAnsi"), FONT)
-    normal.font.size = Pt(BODY_PT)
-    normal.paragraph_format.space_after = Pt(0)
-    normal.paragraph_format.line_spacing_rule = WD_LINE_SPACING.SINGLE
+    for style_name in (
+        "Normal",
+        "paper title",
+        "Author",
+        "Affiliation",
+        "Abstract",
+        "Keywords",
+        "Heading 1",
+        "Heading 2",
+        "Heading 5",
+        "Body Text",
+        "figure caption",
+        "references",
+    ):
+        style = doc.styles[style_name]
+        style.font.name = FONT
+        r_pr = style._element.get_or_add_rPr()
+        r_fonts = r_pr.get_or_add_rFonts()
+        r_fonts.set(qn("w:ascii"), FONT)
+        r_fonts.set(qn("w:hAnsi"), FONT)
+
+    doc.styles["Normal"].font.size = Pt(BODY_PT)
+    doc.styles["paper title"].font.size = Pt(24)
+    doc.styles["Author"].font.size = Pt(11)
+    doc.styles["Affiliation"].font.size = Pt(BODY_PT)
+    for style_name in ("Abstract", "Keywords", "figure caption", "references"):
+        doc.styles[style_name].font.size = Pt(BODY_PT)
+
+    body = doc.styles["Body Text"]
+    body.font.size = Pt(BODY_PT)
+    body.paragraph_format.first_line_indent = Inches(0.2)
+    body.paragraph_format.space_after = Pt(0.5)
+    body.paragraph_format.line_spacing_rule = WD_LINE_SPACING.SINGLE
+
+    references = doc.styles["references"]
+    references.paragraph_format.left_indent = Inches(0.18)
+    references.paragraph_format.first_line_indent = Inches(-0.18)
+    references.paragraph_format.space_after = Pt(1)
+    references.paragraph_format.line_spacing_rule = WD_LINE_SPACING.SINGLE
 
 
 def add_inline(paragraph, text: str, *, size: float = BODY_PT) -> None:
@@ -162,30 +209,37 @@ def set_table_borders(table) -> None:
 
 
 def add_title_block(doc: Document, title: str, author: str, affiliation: str, contact: str) -> None:
-    p = doc.add_paragraph()
-    format_paragraph(p, align=WD_ALIGN_PARAGRAPH.CENTER, after=5)
-    set_run_font(p.add_run(title), 18, bold=True)
-    for value, bold in ((author, True), (affiliation, False), (contact, False)):
-        p = doc.add_paragraph()
-        format_paragraph(p, align=WD_ALIGN_PARAGRAPH.CENTER)
-        set_run_font(p.add_run(value), 10, bold=bold)
+    p = doc.add_paragraph(style="paper title")
+    format_paragraph(p, align=WD_ALIGN_PARAGRAPH.CENTER, after=6)
+    set_run_font(p.add_run(title), 24)
+
+    p = doc.add_paragraph(style="Author")
+    set_run_font(p.add_run(author), 11)
+    for value in (affiliation, contact):
+        p = doc.add_paragraph(style="Affiliation")
+        set_run_font(p.add_run(value), BODY_PT)
 
 
 def add_labeled_paragraph(doc: Document, label: str, text: str) -> None:
-    p = doc.add_paragraph()
-    format_paragraph(p, after=3)
+    style_name = "Abstract" if label.startswith("Abstract") else "Keywords"
+    p = doc.add_paragraph(style=style_name)
+    format_paragraph(p, after=4)
     set_run_font(p.add_run(label), 10, bold=True, italic=True)
     add_inline(p, text)
 
 
 def add_heading(doc: Document, text: str, level: int) -> None:
-    p = doc.add_paragraph()
     if level == 2:
+        style_name = "Heading 5" if text == "References" else "Heading 1"
+        clean_text = re.sub(r"^[IVX]+\.\s+", "", text)
+        p = doc.add_paragraph(style=style_name)
         format_paragraph(p, align=WD_ALIGN_PARAGRAPH.CENTER, before=5, after=1)
-        set_run_font(p.add_run(text.upper()), 10)
+        set_run_font(p.add_run(clean_text), 10)
     else:
+        clean_text = re.sub(r"^[A-Z]\.\s+", "", text)
+        p = doc.add_paragraph(style="Heading 2")
         format_paragraph(p, align=WD_ALIGN_PARAGRAPH.LEFT, before=3)
-        set_run_font(p.add_run(text), 10, italic=True)
+        set_run_font(p.add_run(clean_text), 10, italic=True)
     keep_with_next(p)
 
 
@@ -193,18 +247,37 @@ def add_body_paragraph(doc: Document, lines: Iterable[str]) -> None:
     text = " ".join(line.strip() for line in lines).strip()
     if not text:
         return
-    p = doc.add_paragraph()
+    p = doc.add_paragraph(style="Body Text")
     format_paragraph(p)
+    p.paragraph_format.first_line_indent = Inches(0.2)
+    p.paragraph_format.space_after = Pt(0.5)
     add_inline(p, text)
 
 
 def add_list(doc: Document, items: list[str], *, ordered: bool) -> None:
-    for item in items:
-        p = doc.add_paragraph(style="List Number" if ordered else "List Bullet")
+    for index, item in enumerate(items, start=1):
+        p = doc.add_paragraph(style="Body Text")
         format_paragraph(p)
         p.paragraph_format.left_indent = Inches(0.18)
-        p.paragraph_format.first_line_indent = Inches(-0.12)
+        p.paragraph_format.first_line_indent = Inches(-0.18)
+        prefix = f"{index}. " if ordered else "- "
+        set_run_font(p.add_run(prefix), BODY_PT)
         add_inline(p, item)
+        if len(items) <= 4 and index < len(items):
+            keep_with_next(p)
+
+
+def add_reference_paragraph(doc: Document, lines: Iterable[str]) -> None:
+    text = " ".join(line.strip() for line in lines).strip()
+    if not text:
+        return
+    text = re.sub(r"^\[\d+\]\s*", "", text)
+    p = doc.add_paragraph(style="references")
+    format_paragraph(p)
+    p.paragraph_format.left_indent = Inches(0.18)
+    p.paragraph_format.first_line_indent = Inches(-0.18)
+    p.paragraph_format.space_after = Pt(1)
+    add_inline(p, text)
 
 
 def add_table(doc: Document, caption: str, lines: list[str]) -> None:
@@ -217,7 +290,7 @@ def add_table(doc: Document, caption: str, lines: list[str]) -> None:
     header, body = rows[0], rows[2:]
     table = doc.add_table(rows=1, cols=len(header))
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
-    widths = [1.85, 0.62, 0.83] if len(header) == 3 else [1.15, 0.50, 0.55, 0.55, 0.55]
+    widths = [1.85, 0.62, 0.83] if len(header) == 3 else [1.24, 0.49, 0.49, 0.49, 0.59]
     set_table_geometry(table, widths)
     set_table_borders(table)
 
@@ -240,6 +313,9 @@ def add_table(doc: Document, caption: str, lines: list[str]) -> None:
             p = cell.paragraphs[0]
             format_paragraph(p, align=WD_ALIGN_PARAGRAPH.LEFT if col == 0 else WD_ALIGN_PARAGRAPH.CENTER)
             add_inline(p, value.replace("**", ""))
+    for row in table.rows:
+        row_pr = row._tr.get_or_add_trPr()
+        row_pr.append(OxmlElement("w:cantSplit"))
     doc.add_paragraph()
 
 
@@ -248,9 +324,11 @@ def add_image(doc: Document, alt: str, relative_path: str) -> None:
     p = doc.add_paragraph()
     format_paragraph(p, align=WD_ALIGN_PARAGRAPH.CENTER, before=2)
     p.add_run().add_picture(str(image_path), width=Inches(COLUMN_WIDTH_IN))
-    p = doc.add_paragraph()
+    keep_with_next(p)
+    p = doc.add_paragraph(style="figure caption")
     format_paragraph(p, align=WD_ALIGN_PARAGRAPH.CENTER, after=2)
-    set_run_font(p.add_run(f"Figure 1. {alt}"), 10, italic=True)
+    set_run_font(p.add_run(alt), 10, italic=True)
+    keep_together(p)
 
 
 def collect_section(lines: list[str], heading: str) -> list[str]:
@@ -293,7 +371,10 @@ def build() -> None:
     title, author, affiliation, contact = parse_metadata(lines)
     abstract, keywords = parse_abstract(lines)
 
-    doc = Document()
+    if not TEMPLATE.exists():
+        raise FileNotFoundError(f"Missing MIT URTC template working copy: {TEMPLATE}")
+    doc = Document(TEMPLATE)
+    clear_template_body(doc)
     configure_styles(doc)
     configure_section(doc.sections[0], columns=1)
     add_title_block(doc, title, author, affiliation, contact)
@@ -304,18 +385,24 @@ def build() -> None:
     body_lines = lines[lines.index("## I. Introduction") :]
     pending: list[str] = []
     pending_caption = ""
+    in_references = False
     i = 0
 
     def flush() -> None:
         nonlocal pending
-        add_body_paragraph(doc, pending)
+        if in_references:
+            add_reference_paragraph(doc, pending)
+        else:
+            add_body_paragraph(doc, pending)
         pending = []
 
     while i < len(body_lines):
         line = body_lines[i]
         if line.startswith("## "):
             flush()
-            add_heading(doc, line[3:].strip(), 2)
+            heading_text = line[3:].strip()
+            in_references = heading_text == "References"
+            add_heading(doc, heading_text, 2)
             i += 1
         elif line.startswith("### "):
             flush()

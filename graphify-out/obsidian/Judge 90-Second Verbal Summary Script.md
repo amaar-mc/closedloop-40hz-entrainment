@@ -10,8 +10,9 @@ tags:
 # Judge 90-Second Verbal Summary Script
 
 ## Connections
+
 - [[Horizon Sweep Explanation for Judges (Intellectual Centerpiece)]] - `references` [EXTRACTED]
 - [[OpenNeuro ds005048 Dataset Technical Details]] - `references` [EXTRACTED]
 - [[PAC Biomarker Deep Explanation (Modulation Index, Tort 2010)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

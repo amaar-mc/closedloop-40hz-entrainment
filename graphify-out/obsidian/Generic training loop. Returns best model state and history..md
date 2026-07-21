@@ -10,6 +10,7 @@ tags:
 # Generic training loop. Returns best model state and history.
 
 ## Connections
+
 - [[train_model()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_ImprovedTCN_Experiments

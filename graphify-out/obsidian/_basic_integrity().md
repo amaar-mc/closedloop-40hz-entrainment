@@ -7,9 +7,10 @@ tags:
   - community/Community_74
 ---
 
-# _basic_integrity()
+# \_basic_integrity()
 
 ## Connections
+
 - [[comprehensive_submission_audit.py]] - `contains` [EXTRACTED]
 - [[run_audit()_2]] - `calls` [EXTRACTED]
 

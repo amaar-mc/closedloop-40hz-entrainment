@@ -10,6 +10,7 @@ tags:
 # ControlMethodBase
 
 ## Connections
+
 - [[Base class for control strategies.]] - `rationale_for` [EXTRACTED]
 - [[Configuration for a fatigue model experiment.]] - `uses` [INFERRED]
 - [[Convert to serializable dict.]] - `uses` [INFERRED]
@@ -51,4 +52,4 @@ tags:
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 - [[step()_49]] - `method` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

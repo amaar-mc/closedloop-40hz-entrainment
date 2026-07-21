@@ -7,9 +7,10 @@ tags:
   - community/Community_32
 ---
 
-# _fig_stim()
+# \_fig_stim()
 
 ## Connections
+
 - [[main()_62]] - `calls` [EXTRACTED]
 - [[neurocare_live.py]] - `contains` [EXTRACTED]
 

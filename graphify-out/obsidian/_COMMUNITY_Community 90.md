@@ -8,6 +8,7 @@ members: 10
 **Members:** 10 nodes
 
 ## Members
+
 - [[Horizon sweep evaluate persistence, Ridge and TCN baselines at multiple predict]] - rationale - temporal_multiscale/sweep_horizons.py
 - [[Persistence baseline predict future PAC = current PAC (last_pac).]] - rationale - temporal_multiscale/sweep_horizons.py
 - [[Ridge regression on flattened feature sequences.]] - rationale - temporal_multiscale/sweep_horizons.py

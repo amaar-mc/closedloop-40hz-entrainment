@@ -10,6 +10,7 @@ tags:
 # FDA De Novo Classification Pathway for Novel Device
 
 ## Connections
+
 - [[Lecanemab vs 40Hz Cost and Mechanism Comparison ($26,500yr vs $250 one-time)]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_124

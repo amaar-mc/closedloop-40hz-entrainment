@@ -10,6 +10,7 @@ tags:
 # Facility Partners: Mission Villa Memory Care + Valley Medical Center
 
 ## Connections
+
 - [[Clinical Roadmap (Research to Practice Pathway)]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

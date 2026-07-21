@@ -10,9 +10,10 @@ tags:
 # build_variant()
 
 ## Connections
+
 - [[Instantiate a model variant by name.      Args         name One of the keys]] - `rationale_for` [EXTRACTED]
 - [[VARIANT_REGISTRY (Model Variant Registry Dict)]] - `calls` [EXTRACTED]
 - [[run_single_experiment()]] - `calls` [EXTRACTED]
 - [[tcn_variants.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

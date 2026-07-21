@@ -10,6 +10,7 @@ tags:
 # Timeline Example Figure
 
 ## Connections
+
 - [[Generate Timeline Figure Script (generate_timeline_figure.py)]] - `implements` [EXTRACTED]
 - [[Paper Figures Source Directory]] - `references` [EXTRACTED]
 

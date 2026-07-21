@@ -7,10 +7,11 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[EEGNetLarge]] - `method` [EXTRACTED]
 - [[__init__()_123]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

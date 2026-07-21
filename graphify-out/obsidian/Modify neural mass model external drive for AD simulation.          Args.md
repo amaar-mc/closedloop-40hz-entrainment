@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Modify neural mass model external drive for AD simulation.          Args:
+# Modify neural mass model external drive for AD simulation. Args:
 
 ## Connections
+
 - [[modify_neural_mass_drive()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

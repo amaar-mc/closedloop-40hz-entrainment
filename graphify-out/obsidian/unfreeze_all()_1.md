@@ -10,7 +10,8 @@ tags:
 # unfreeze_all()
 
 ## Connections
+
 - [[MultiscaleCausalTCN]] - `method` [EXTRACTED]
 - [[Unfreeze all parameters (reverses ``freeze_backbone``).]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

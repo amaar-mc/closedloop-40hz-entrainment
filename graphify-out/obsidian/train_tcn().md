@@ -10,6 +10,7 @@ tags:
 # train_tcn()
 
 ## Connections
+
 - [[SeqDataset_1]] - `calls` [EXTRACTED]
 - [[Train TCN on a dataset and return results.]] - `rationale_for` [EXTRACTED]
 - [[evaluate_model()_1]] - `calls` [EXTRACTED]

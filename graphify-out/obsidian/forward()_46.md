@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[Forward pass.          Args             x_seq Input tensor of shape (B, T,_3]] - `rationale_for` [EXTRACTED]
 - [[TransformerTCN]] - `method` [EXTRACTED]
 - [[_generate_causal_mask()]] - `calls` [EXTRACTED]

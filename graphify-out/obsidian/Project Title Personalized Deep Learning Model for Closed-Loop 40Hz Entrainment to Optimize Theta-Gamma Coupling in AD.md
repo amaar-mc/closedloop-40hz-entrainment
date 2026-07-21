@@ -10,6 +10,7 @@ tags:
 # Project Title: Personalized Deep Learning Model for Closed-Loop 40Hz Entrainment to Optimize Theta-Gamma Coupling in AD
 
 ## Connections
+
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 
   #community/Community_50

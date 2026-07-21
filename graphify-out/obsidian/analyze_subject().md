@@ -10,6 +10,7 @@ tags:
 # analyze_subject()
 
 ## Connections
+
 - [[Compute diagnostics for one subject.]] - `rationale_for` [EXTRACTED]
 - [[compare_pac_methods.py]] - `contains` [EXTRACTED]
 - [[compute_within_epoch_variance()]] - `calls` [EXTRACTED]

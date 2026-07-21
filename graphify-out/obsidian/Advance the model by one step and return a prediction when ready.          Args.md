@@ -7,10 +7,11 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Advance the model by one step and return a prediction when ready.          Args:
+# Advance the model by one step and return a prediction when ready. Args:
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[step()_9]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # Gold callout box with big number.
 
 ## Connections
+
 - [[add_callout()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_63

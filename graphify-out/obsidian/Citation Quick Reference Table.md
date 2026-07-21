@@ -9,8 +9,9 @@ tags:
 # Citation Quick Reference Table
 
 ## Connections
+
 - [[Iaccarino et al. 2016 (MIT 40Hz landmark paper)]] - `references` [EXTRACTED]
 - [[Murdock et al. 2024 (Glymphatic Clearance Mechanism)]] - `references` [EXTRACTED]
 - [[Tort et al. 2010 (Modulation Index PAC Method)]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

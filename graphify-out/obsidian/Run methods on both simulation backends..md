@@ -10,6 +10,7 @@ tags:
 # Run methods on both simulation backends.
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[TribeSimulatorConfig]] - `uses` [INFERRED]
 - [[run_comparison()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

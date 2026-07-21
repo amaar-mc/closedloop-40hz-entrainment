@@ -10,6 +10,7 @@ tags:
 # close()
 
 ## Connections
+
 - [[_NumpySimulatedAdapter]] - `method` [EXTRACTED]
 
   #community/Community_32

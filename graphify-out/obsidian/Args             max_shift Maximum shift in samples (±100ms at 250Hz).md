@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Args:             max_shift: Maximum shift in samples (±100ms at 250Hz)
+# Args: max_shift: Maximum shift in samples (±100ms at 250Hz)
 
 ## Connections
+
 - [[__init__()_48]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

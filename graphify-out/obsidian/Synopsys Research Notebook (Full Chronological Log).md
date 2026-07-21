@@ -9,6 +9,7 @@ tags:
 # Synopsys Research Notebook (Full Chronological Log)
 
 ## Connections
+
 - [[Digital Research Log Notebook (Detailed Chronological)]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_43

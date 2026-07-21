@@ -10,6 +10,7 @@ tags:
 # FixedScheduleCtrl
 
 ## Connections
+
 - [[StimAction]] - `uses` [INFERRED]
 - [[__init__()_73]] - `method` [EXTRACTED]
 - [[main()_38]] - `calls` [EXTRACTED]

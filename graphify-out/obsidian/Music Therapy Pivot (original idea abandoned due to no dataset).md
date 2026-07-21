@@ -10,6 +10,7 @@ tags:
 # Music Therapy Pivot (original idea abandoned due to no dataset)
 
 ## Connections
+
 - [[Iaccarino 2016 Discovery (40Hz entrainment concept)]] - `rationale_for` [EXTRACTED]
 
   #community/Community_43

@@ -9,6 +9,7 @@ tags:
 # P10 Research Notebook V1 Paper Format (PDF render)
 
 ## Connections
+
 - [[P10 Research Notebook V1 (Research Paper Format)]] - `references` [EXTRACTED]
 
   #community/Community_122

@@ -10,6 +10,7 @@ tags:
 # Build sequence samples with enhanced features concatenated after spectral.
 
 ## Connections
+
 - [[_build_split_samples_enhanced()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

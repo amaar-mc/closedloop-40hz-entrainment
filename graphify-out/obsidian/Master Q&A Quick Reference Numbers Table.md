@@ -9,6 +9,7 @@ tags:
 # Master Q&A Quick Reference Numbers Table
 
 ## Connections
+
 - [[Quick-Reference Numbers for CSEF Interview]] - `semantically_similar_to` [INFERRED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

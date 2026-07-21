@@ -10,8 +10,9 @@ tags:
 # PersonalizationModule: Rolling 30s PAC Baseline with Z-Score
 
 ## Connections
+
 - [[ClosedLoopController Implementation with Hysteresis]] - `calls` [EXTRACTED]
 - [[Comprehensive Methodology Document Step-by-Step Implementation]] - `references` [EXTRACTED]
 - [[Personalization Module (IEEE Paper)]] - `semantically_similar_to` [INFERRED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

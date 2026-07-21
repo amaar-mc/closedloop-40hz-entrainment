@@ -10,7 +10,8 @@ tags:
 # get_state()
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `method` [EXTRACTED]
 - [[Get current simulator state.]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

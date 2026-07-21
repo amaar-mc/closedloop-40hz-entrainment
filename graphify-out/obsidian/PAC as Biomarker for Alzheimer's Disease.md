@@ -10,6 +10,7 @@ tags:
 # PAC as Biomarker for Alzheimer's Disease
 
 ## Connections
+
 - [[EEGNet Static PAC Predictor]] - `shares_data_with` [INFERRED]
 - [[Gamma Oscillations and Alzheimer's Disease]] - `references` [EXTRACTED]
 - [[PAC Computation (Modulation Index)]] - `conceptually_related_to` [INFERRED]

@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Compute PAC for multi-channel EEG.          Args:             signals: Multi-
+# Compute PAC for multi-channel EEG. Args: signals: Multi-
 
 ## Connections
+
 - [[compute_pac_multichannel()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

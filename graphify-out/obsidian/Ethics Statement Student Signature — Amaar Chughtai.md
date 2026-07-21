@@ -10,6 +10,7 @@ tags:
 # Ethics Statement Student Signature — Amaar Chughtai
 
 ## Connections
+
 - [[SRC Ethics Statement (ISEF Rules)]] - `references` [EXTRACTED]
 
   #community/Community_108

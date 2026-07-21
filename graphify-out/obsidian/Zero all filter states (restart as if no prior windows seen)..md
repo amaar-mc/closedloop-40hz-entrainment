@@ -10,6 +10,7 @@ tags:
 # Zero all filter states (restart as if no prior windows seen).
 
 ## Connections
+
 - [[reset()_67]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

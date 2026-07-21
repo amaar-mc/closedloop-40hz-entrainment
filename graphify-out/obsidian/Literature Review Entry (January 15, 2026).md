@@ -10,6 +10,7 @@ tags:
 # Literature Review Entry (January 15, 2026)
 
 ## Connections
+
 - [[Citation Iaccarino et al. (2016) - 40Hz gamma entrainment reduces amyloid]] - `cites` [EXTRACTED]
 - [[Citation Lahijanian et al. (2024) - OpenNeuro ds005048 Dataset]] - `cites` [EXTRACTED]
 - [[Citation Martorell et al. (2019) - Multi-sensory gamma stimulation reduces tau]] - `cites` [EXTRACTED]

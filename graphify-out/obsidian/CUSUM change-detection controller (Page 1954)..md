@@ -10,6 +10,7 @@ tags:
 # CUSUM change-detection controller (Page 1954).
 
 ## Connections
+
 - [[CUSUMControl]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

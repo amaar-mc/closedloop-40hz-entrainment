@@ -7,9 +7,10 @@ tags:
   - community/Community_94
 ---
 
-# _denorm()
+# \_denorm()
 
 ## Connections
+
 - [[evaluate()_5]] - `calls` [EXTRACTED]
 - [[train_multiscale_tcn.py]] - `contains` [EXTRACTED]
 

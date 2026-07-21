@@ -10,6 +10,7 @@ tags:
 # audit_neural_mass()
 
 ## Connections
+
 - [[Validate neural mass model PAC generation.]] - `rationale_for` [EXTRACTED]
 - [[audit_tribe_integration.py]] - `contains` [EXTRACTED]
 - [[check()_1]] - `calls` [EXTRACTED]

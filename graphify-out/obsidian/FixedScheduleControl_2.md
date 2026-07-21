@@ -10,6 +10,7 @@ tags:
 # FixedScheduleControl
 
 ## Connections
+
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[__init__()_84]] - `method` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # Research Plan/Project Summary Instructions (ISEF Form Requirements)
 
 ## Connections
+
 - [[Student Checklist (1A) — Project Registration Form]] - `references` [EXTRACTED]
 
   #community/Community_48

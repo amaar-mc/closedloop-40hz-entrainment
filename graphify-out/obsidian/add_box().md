@@ -10,6 +10,7 @@ tags:
 # add_box()
 
 ## Connections
+
 - [[Add a colored rectangle.]] - `rationale_for` [EXTRACTED]
 - [[add_callout_box()]] - `calls` [EXTRACTED]
 - [[add_content_bg()_1]] - `calls` [EXTRACTED]

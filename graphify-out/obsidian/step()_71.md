@@ -10,9 +10,10 @@ tags:
 # step()
 
 ## Connections
+
 - [[Make optimal decision based on perfect information.          Args]] - `rationale_for` [EXTRACTED]
 - [[OracleControl_6]] - `method` [EXTRACTED]
 - [[run_simulation()]] - `calls` [EXTRACTED]
 - [[step()_70]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

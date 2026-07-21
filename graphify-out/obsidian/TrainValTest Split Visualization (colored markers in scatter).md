@@ -10,6 +10,7 @@ tags:
 # Train/Val/Test Split Visualization (colored markers in scatter)
 
 ## Connections
+
 - [[Per-Subject Alignment Scatter Plot (3535 Favor TCN)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

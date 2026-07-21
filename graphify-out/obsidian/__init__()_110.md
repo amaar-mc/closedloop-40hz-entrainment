@@ -7,9 +7,10 @@ tags:
   - community/Paper/Presentation_PDF_Builders
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[PaperPDF]] - `method` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

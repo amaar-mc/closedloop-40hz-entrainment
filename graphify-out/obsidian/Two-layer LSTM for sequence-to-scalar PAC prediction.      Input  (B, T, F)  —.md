@@ -7,10 +7,11 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Two-layer LSTM for sequence-to-scalar PAC prediction.      Input:  (B, T, F)  —
+# Two-layer LSTM for sequence-to-scalar PAC prediction. Input: (B, T, F) —
 
 ## Connections
+
 - [[SequenceDataset]] - `uses` [INFERRED]
 - [[SimpleLSTM]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

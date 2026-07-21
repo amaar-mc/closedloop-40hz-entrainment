@@ -10,7 +10,8 @@ tags:
 # Alignment Oracle Controller (theoretical upper bound)
 
 ## Connections
+
 - [[Controller Comparison Table (FixedReactiveTCNHybridOracle, N=35)]] - `references` [EXTRACTED]
 - [[PAC Targeting Quality by Controller]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

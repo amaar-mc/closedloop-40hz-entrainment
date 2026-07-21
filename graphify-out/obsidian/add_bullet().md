@@ -10,6 +10,7 @@ tags:
 # add_bullet()
 
 ## Connections
+
 - [[Bullet paragraph — uses native buChar + hanging indent.]] - `rationale_for` [EXTRACTED]
 - [[_parse_bold()]] - `calls` [EXTRACTED]
 - [[_set_para_spacing()]] - `calls` [EXTRACTED]

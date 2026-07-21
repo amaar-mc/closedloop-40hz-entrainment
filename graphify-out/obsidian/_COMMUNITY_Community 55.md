@@ -8,6 +8,7 @@ members: 19
 **Members:** 19 nodes
 
 ## Members
+
 - [[12-Feature PAC+Stim TCN (CSEF vfinal model)]] - document - submission/abstract/v2_abstract.md
 - [[40 Hz Auditory Stimulation Therapy]] - document - submission/abstract/ABSTRACT.md
 - [[73 Causal Features (spectral + PAC-history + stim-context)]] - document - submission/abstract/ABSTRACT.md

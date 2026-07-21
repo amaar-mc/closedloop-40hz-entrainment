@@ -10,8 +10,9 @@ tags:
 # extract_stimulus_windows()
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `method` [EXTRACTED]
 - [[Extract 2-second sliding windows segmented by stimulusrest events,         wit]] - `rationale_for` [EXTRACTED]
 - [[process_dataset()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

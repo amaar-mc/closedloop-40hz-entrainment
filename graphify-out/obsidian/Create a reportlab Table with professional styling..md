@@ -10,6 +10,7 @@ tags:
 # Create a reportlab Table with professional styling.
 
 ## Connections
+
 - [[build_table_flowable()]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

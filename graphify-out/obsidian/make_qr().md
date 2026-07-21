@@ -10,6 +10,7 @@ tags:
 # make_qr()
 
 ## Connections
+
 - [[Generate QR Codes Script]] - `calls` [EXTRACTED]
 - [[generate_qr_codes.py]] - `contains` [EXTRACTED]
 - [[main()_56]] - `calls` [EXTRACTED]

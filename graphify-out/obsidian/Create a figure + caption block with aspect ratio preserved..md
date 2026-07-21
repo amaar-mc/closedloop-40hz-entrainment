@@ -10,6 +10,7 @@ tags:
 # Create a figure + caption block with aspect ratio preserved.
 
 ## Connections
+
 - [[add_figure()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

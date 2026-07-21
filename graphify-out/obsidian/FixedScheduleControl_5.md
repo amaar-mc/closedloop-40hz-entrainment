@@ -10,6 +10,7 @@ tags:
 # FixedScheduleControl
 
 ## Connections
+
 - [[Configuration for a fatigue model experiment.]] - `uses` [INFERRED]
 - [[ControlMethodBase]] - `inherits` [EXTRACTED]
 - [[Convert to serializable dict.]] - `uses` [INFERRED]
@@ -49,4 +50,4 @@ tags:
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 - [[step()_50]] - `method` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

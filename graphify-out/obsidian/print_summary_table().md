@@ -10,9 +10,10 @@ tags:
 # print_summary_table()
 
 ## Connections
+
 - [[Print a nicely formatted summary table to stdout.]] - `rationale_for` [EXTRACTED]
 - [[_fmt_ci()]] - `calls` [EXTRACTED]
 - [[main()_65]] - `calls` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

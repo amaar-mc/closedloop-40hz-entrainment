@@ -10,8 +10,9 @@ tags:
 # get_baseline_stats()
 
 ## Connections
+
 - [[ClosedLoopController]] - `method` [EXTRACTED]
 - [[Get personalization baseline statistics.          Returns             stats]] - `rationale_for` [EXTRACTED]
 - [[test_controller()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

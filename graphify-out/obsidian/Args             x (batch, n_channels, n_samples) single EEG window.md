@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# Args:             x: (batch, n_channels, n_samples) single EEG window
+# Args: x: (batch, n_channels, n_samples) single EEG window
 
 ## Connections
+
 - [[forward()_16]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Temporal_PAC_Predictor

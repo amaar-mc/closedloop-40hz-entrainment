@@ -10,6 +10,7 @@ tags:
 # TVBAlzheimerSimulator (Jansen-Rit Biophysical Brain Simulator)
 
 ## Connections
+
 - [[TVB Jansen-Rit Alignment Evaluation Script]] - `calls` [EXTRACTED]
 
   #community/12-Feature_TCN_Validation

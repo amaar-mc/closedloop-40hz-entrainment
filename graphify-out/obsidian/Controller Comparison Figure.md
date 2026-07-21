@@ -10,6 +10,7 @@ tags:
 # Controller Comparison Figure
 
 ## Connections
+
 - [[Generate Figures Script (generate_figures.py)]] - `implements` [EXTRACTED]
 - [[Paper Figures Source Directory]] - `references` [EXTRACTED]
 

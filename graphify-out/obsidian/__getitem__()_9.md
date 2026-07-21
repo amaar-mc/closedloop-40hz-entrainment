@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# __getitem__()
+# **getitem**()
 
 ## Connections
+
 - [[EEGDatasetV2]] - `method` [EXTRACTED]
 - [[_augment()]] - `calls` [EXTRACTED]
 

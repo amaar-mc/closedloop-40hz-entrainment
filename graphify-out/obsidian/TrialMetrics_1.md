@@ -10,6 +10,7 @@ tags:
 # TrialMetrics
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[Metrics extracted from a single simulation trial._1]] - `rationale_for` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[tcn_integrated_simulation.py]] - `contains` [EXTRACTED]
 - [[to_dict()_2]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

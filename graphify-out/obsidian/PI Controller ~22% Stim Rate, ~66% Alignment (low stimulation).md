@@ -9,7 +9,8 @@ tags:
 # PI Controller: ~22% Stim Rate, ~66% Alignment (low stimulation)
 
 ## Connections
+
 - [[Stimulation Efficiency vs Alignment Trade-off (CSEF Old Archive)]] - `references` [EXTRACTED]
 - [[Stimulation Efficiency vs Alignment Trade-off Scatter Plot]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

@@ -9,9 +9,10 @@ tags:
 # src/streaming/adapters.py (SimulatedEEGAdapter)
 
 ## Connections
+
 - [[SimulatedEEGAdapter (Demo Streaming)]] - `references` [EXTRACTED]
 - [[__init__.py]] - `imports_from` [EXTRACTED]
 - [[demo_streaming.py]] - `imports_from` [EXTRACTED]
 - [[test_simulated_session.py]] - `imports_from` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

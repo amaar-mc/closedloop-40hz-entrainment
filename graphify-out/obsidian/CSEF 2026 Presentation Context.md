@@ -10,6 +10,7 @@ tags:
 # CSEF 2026 Presentation Context
 
 ## Connections
+
 - [[NeuroCare 40Hz Product Flyer]] - `references` [EXTRACTED]
 
   #community/Community_78

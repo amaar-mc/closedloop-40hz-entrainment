@@ -1,43 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<style>
-html { background: #ffffff; }
-body {
-  width: 792pt; height: 612pt; margin: 0; padding: 0;
-  background: #ffffff; font-family: 'Times New Roman', Times, serif;
-  display: flex; flex-direction: column;
-}
-.content { margin: 34pt 54pt; flex: 1; }
-h2 { font-size: 15pt; color: #000; margin-top: 6pt; margin-bottom: 2pt; font-weight: bold; }
-p { font-size: 12pt; color: #000; line-height: 1.25; margin: 1pt 0 3pt 0; }
-ul { font-size: 12pt; color: #000; line-height: 1.25; margin: 1pt 0; padding-left: 16pt; }
-li { margin: 1pt 0 1pt 0; }
-.caption { font-size: 10pt; color: #646464; font-style: italic; margin: 1pt 0; }
-.placeholder { background: #f0f0f0; }
-</style>
-</head>
-<body>
-<div class="content">
-  <h2>Controller Comparison (N = 35 Subjects, Real EEG)</h2>
+  <head>
+    <style>
+      html {
+        background: #ffffff;
+      }
+      body {
+        width: 792pt;
+        height: 612pt;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        font-family: "Times New Roman", Times, serif;
+        display: flex;
+        flex-direction: column;
+      }
+      .content {
+        margin: 34pt 54pt;
+        flex: 1;
+      }
+      h2 {
+        font-size: 15pt;
+        color: #000;
+        margin-top: 6pt;
+        margin-bottom: 2pt;
+        font-weight: bold;
+      }
+      p {
+        font-size: 12pt;
+        color: #000;
+        line-height: 1.25;
+        margin: 1pt 0 3pt 0;
+      }
+      ul {
+        font-size: 12pt;
+        color: #000;
+        line-height: 1.25;
+        margin: 1pt 0;
+        padding-left: 16pt;
+      }
+      li {
+        margin: 1pt 0 1pt 0;
+      }
+      .caption {
+        font-size: 10pt;
+        color: #646464;
+        font-style: italic;
+        margin: 1pt 0;
+      }
+      .placeholder {
+        background: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h2>Controller Comparison (N = 35 Subjects, Real EEG)</h2>
 
-  <div class="placeholder" id="table-controller" style="width: 684pt; height: 120pt;"></div>
+      <div
+        class="placeholder"
+        id="table-controller"
+        style="width: 684pt; height: 120pt"
+      ></div>
 
-  <p class="caption">Table 2. Controller comparison on 35 subjects&#8217; real EEG. PAC Gap in x10^-6 MI units. TCN Predictive reaches 91% of oracle.</p>
+      <p class="caption">
+        Table 2. Controller comparison on 35 subjects&#8217; real EEG. PAC Gap
+        in x10^-6 MI units. TCN Predictive reaches 91% of oracle.
+      </p>
 
-  <h2>Multi-Seed Robustness (7ch, horizon = 5 s)</h2>
-  <p>Validated across 5 random seeds (h = 64 TCN, PAC+Stim features):</p>
+      <h2>Multi-Seed Robustness (7ch, horizon = 5 s)</h2>
+      <p>Validated across 5 random seeds (h = 64 TCN, PAC+Stim features):</p>
 
-  <div class="placeholder" id="table-seeds" style="width: 504pt; height: 160pt;"></div>
+      <div
+        class="placeholder"
+        id="table-seeds"
+        style="width: 504pt; height: 160pt"
+      ></div>
 
-  <h2>Statistical Significance (TCN vs. Reactive Threshold)</h2>
-  <ul>
-    <li><b>Alignment:</b> 72.1% vs. 64.5% &#8212; g = +1.31 [0.75, 1.87], p &lt; 0.001 (large effect)</li>
-    <li><b>Low-PAC Stim Rate:</b> 82.6% vs. 51.7% &#8212; g = +4.47 [3.33, 5.62], p &lt; 0.001 (very large)</li>
-    <li><b>PAC Targeting Gap:</b> 30.5 vs. 21.1 &#8212; g = +1.57 [0.98, 2.17], p &lt; 0.001 (large effect)</li>
-    <li><b>Universal benefit:</b> 35/35 subjects showed higher alignment with TCN (binomial p &lt; 0.001)</li>
-    <li><b>Threshold robustness:</b> TCN outperforms reactive at all z-score thresholds 0.2&#8211;1.0</li>
-  </ul>
-</div>
-</body>
+      <h2>Statistical Significance (TCN vs. Reactive Threshold)</h2>
+      <ul>
+        <li>
+          <b>Alignment:</b> 72.1% vs. 64.5% &#8212; g = +1.31 [0.75, 1.87], p
+          &lt; 0.001 (large effect)
+        </li>
+        <li>
+          <b>Low-PAC Stim Rate:</b> 82.6% vs. 51.7% &#8212; g = +4.47 [3.33,
+          5.62], p &lt; 0.001 (very large)
+        </li>
+        <li>
+          <b>PAC Targeting Gap:</b> 30.5 vs. 21.1 &#8212; g = +1.57 [0.98,
+          2.17], p &lt; 0.001 (large effect)
+        </li>
+        <li>
+          <b>Universal benefit:</b> 35/35 subjects showed higher alignment with
+          TCN (binomial p &lt; 0.001)
+        </li>
+        <li>
+          <b>Threshold robustness:</b> TCN outperforms reactive at all z-score
+          thresholds 0.2&#8211;1.0
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>

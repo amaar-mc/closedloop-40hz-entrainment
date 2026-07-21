@@ -10,6 +10,7 @@ tags:
 # p01_title()
 
 ## Connections
+
 - [[Slide 1 — Title Page.]] - `rationale_for` [EXTRACTED]
 - [[_disable_bullet()]] - `calls` [EXTRACTED]
 - [[_set_para_spacing()]] - `calls` [EXTRACTED]

@@ -8,6 +8,7 @@ members: 11
 **Members:** 11 nodes
 
 ## Members
+
 - [[91% of Theoretical Oracle Bound]] - document - archive/context/overview.md
 - [[Controller Comparison Results (N=35 Real EEG)]] - document - archive/context/results.md
 - [[Controller Comparison Table (Poster)]] - document - archive/context/poster_board.md

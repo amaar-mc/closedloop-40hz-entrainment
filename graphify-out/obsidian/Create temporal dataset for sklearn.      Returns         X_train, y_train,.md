@@ -7,9 +7,10 @@ tags:
   - community/Community_92
 ---
 
-# Create temporal dataset for sklearn.      Returns:         X_train, y_train,
+# Create temporal dataset for sklearn. Returns: X_train, y_train,
 
 ## Connections
+
 - [[create_dataset()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_92

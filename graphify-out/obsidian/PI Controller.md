@@ -9,6 +9,7 @@ tags:
 # PI Controller
 
 ## Connections
+
 - [[Figure 8 Controller Comparison Bar Chart]] - `references` [EXTRACTED]
 
   #community/Community_86

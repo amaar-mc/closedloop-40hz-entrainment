@@ -23,6 +23,7 @@ The significance extends beyond the numbers. The complete system runs on a $200 
 ## Word count: ~430 words = ~2:52 at 150 wpm
 
 ## Key differences from 1-minute version
+
 - Explains the mechanism (glymphatic clearance) -- accessible to biologists and chemists
 - Includes the 8-architecture convergence story -- resonates with engineers
 - Explains WHY the feature discovery matters -- transfers across disciplines

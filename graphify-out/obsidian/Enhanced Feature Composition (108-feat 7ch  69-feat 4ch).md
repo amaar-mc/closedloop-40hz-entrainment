@@ -10,6 +10,7 @@ tags:
 # Enhanced Feature Composition (108-feat 7ch / 69-feat 4ch)
 
 ## Connections
+
 - [[_build_split_samples_enhanced()]] - `implements` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

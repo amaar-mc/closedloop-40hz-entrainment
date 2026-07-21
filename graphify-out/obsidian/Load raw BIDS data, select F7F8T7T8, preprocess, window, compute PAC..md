@@ -10,8 +10,9 @@ tags:
 # Load raw BIDS data, select F7/F8/T7/T8, preprocess, window, compute PAC.
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `uses` [INFERRED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[step1_process_data()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

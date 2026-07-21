@@ -9,6 +9,7 @@ tags:
 # Phase Modulates Amplitude Relationship
 
 ## Connections
+
 - [[Gamma Oscillations (38-42 Hz) Amplitude Signal]] - `conceptually_related_to` [EXTRACTED]
 - [[Theta Rhythm (4-8 Hz) Phase Signal]] - `implements` [EXTRACTED]
 

@@ -9,6 +9,7 @@ tags:
 # Fixed-Schedule Protocol Limitation (habituation ignored)
 
 ## Connections
+
 - [[40 Hz Auditory Stimulation Therapy]] - `conceptually_related_to` [EXTRACTED]
 - [[Closed-Loop Controller (PAC-forecast-driven stimulation)]] - `rationale_for` [EXTRACTED]
 

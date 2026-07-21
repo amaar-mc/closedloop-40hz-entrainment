@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# Build a per-region A (excitatory gain) array from a disease profile.      Return
+# Build a per-region A (excitatory gain) array from a disease profile. Return
 
 ## Connections
+
 - [[_build_regional_a()]] - `rationale_for` [EXTRACTED]
 
   #community/TVB_Alzheimer_Simulator

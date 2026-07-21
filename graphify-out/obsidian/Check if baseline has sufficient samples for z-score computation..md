@@ -10,6 +10,7 @@ tags:
 # Check if baseline has sufficient samples for z-score computation.
 
 ## Connections
+
 - [[is_ready()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

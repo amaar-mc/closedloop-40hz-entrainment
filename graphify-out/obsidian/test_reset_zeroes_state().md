@@ -10,7 +10,8 @@ tags:
 # test_reset_zeroes_state()
 
 ## Connections
+
 - [[reset() zeroes filter state so subsequent call matches a fresh instance.]] - `rationale_for` [EXTRACTED]
 - [[test_streaming_parity.py]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

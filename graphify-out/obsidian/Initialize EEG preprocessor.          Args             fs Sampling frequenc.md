@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Initialize EEG preprocessor.          Args:             fs: Sampling frequenc
+# Initialize EEG preprocessor. Args: fs: Sampling frequenc
 
 ## Connections
+
 - [[__init__()_151]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

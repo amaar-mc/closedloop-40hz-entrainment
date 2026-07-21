@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Extract comprehensive spectral features for PAC prediction.      Args:
+# Extract comprehensive spectral features for PAC prediction. Args:
 
 ## Connections
+
 - [[extract_spectral_features()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

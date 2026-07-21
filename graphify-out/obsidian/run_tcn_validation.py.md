@@ -10,6 +10,7 @@ tags:
 # run_tcn_validation.py
 
 ## Connections
+
 - [[AlignmentOracleCtrl]] - `contains` [EXTRACTED]
 - [[Comprehensive TCN-integrated real-data validation with epoch-level evaluation.]] - `rationale_for` [EXTRACTED]
 - [[FixedScheduleCtrl_1]] - `contains` [EXTRACTED]
@@ -27,4 +28,4 @@ tags:
 - [[main()_42]] - `contains` [EXTRACTED]
 - [[paired_wilcoxon()]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

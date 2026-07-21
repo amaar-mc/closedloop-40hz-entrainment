@@ -10,6 +10,7 @@ tags:
 # PAC Biomarker Deep Explanation (Modulation Index, Tort 2010)
 
 ## Connections
+
 - [[Judge 90-Second Verbal Summary Script]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

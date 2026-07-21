@@ -10,8 +10,9 @@ tags:
 # Train MultiscaleCausalTCN with 12 features, save checkpoint, return path.
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[train_12feat_tcn()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

@@ -10,6 +10,7 @@ tags:
 # audit_alzheimer_model()
 
 ## Connections
+
 - [[Validate Alzheimer's disease profiles.]] - `rationale_for` [EXTRACTED]
 - [[audit_tribe_integration.py]] - `contains` [EXTRACTED]
 - [[check()_1]] - `calls` [EXTRACTED]

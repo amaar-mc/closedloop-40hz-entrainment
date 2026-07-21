@@ -10,6 +10,7 @@ tags:
 # get_state()
 
 ## Connections
+
 - [[Get current simulator state._2]] - `rationale_for` [EXTRACTED]
 - [[TVBAlzheimerSimulator]] - `method` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # Phase 1: Static PAC Prediction (V1–V8, Feb 5–16 2026)
 
 ## Connections
+
 - [[EEGNet Static PAC Model (srceegnet.py, 1457 params)]] - `references` [EXTRACTED]
 - [[Repository Organization & Approach History]] - `references` [EXTRACTED]
 - [[Ridge Regression Best Static Baseline (R²=0.287)]] - `references` [EXTRACTED]

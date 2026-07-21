@@ -10,6 +10,7 @@ tags:
 # WiderTCN
 
 ## Connections
+
 - [[Causal TCN with doubled hidden dimension (128 vs baseline 64).      The wider]] - `rationale_for` [EXTRACTED]
 - [[__init__()_135]] - `method` [EXTRACTED]
 - [[count_parameters()_14]] - `method` [EXTRACTED]

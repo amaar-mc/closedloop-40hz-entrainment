@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# _make_causal_mask()
+# \_make_causal_mask()
 
 ## Connections
+
 - [[ImprovedTCN_1]] - `method` [EXTRACTED]
 - [[Upper-triangular boolean mask True = masked (no attending to future).]] - `rationale_for` [EXTRACTED]
 - [[forward()_9]] - `calls` [EXTRACTED]

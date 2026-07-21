@@ -10,6 +10,7 @@ tags:
 # simulate_multichannel()
 
 ## Connections
+
 - [[Simulate multi-channel EEG from multiple ROI activations.          Each ROI driv]] - `rationale_for` [EXTRACTED]
 - [[WilsonCowanModel]] - `calls` [EXTRACTED]
 - [[_default_frontal_mixing_matrix()]] - `calls` [EXTRACTED]

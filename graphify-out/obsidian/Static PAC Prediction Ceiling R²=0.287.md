@@ -10,6 +10,7 @@ tags:
 # Static PAC Prediction Ceiling R²=0.287
 
 ## Connections
+
 - [[Architecture Capacity Analysis (samplesparameter ratio explains ceiling)]] - `conceptually_related_to` [INFERRED]
 - [[Digital Research Log Notebook (Detailed Chronological)]] - `references` [EXTRACTED]
 - [[Feature Leakage Discovery (MI features circular in static prediction)]] - `rationale_for` [EXTRACTED]

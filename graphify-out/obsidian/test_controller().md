@@ -10,6 +10,7 @@ tags:
 # test_controller()
 
 ## Connections
+
 - [[ClosedLoopController]] - `calls` [EXTRACTED]
 - [[Test controller with synthetic EEG and simulated PAC.]] - `rationale_for` [EXTRACTED]
 - [[controller.py]] - `contains` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[get_history()_1]] - `calls` [EXTRACTED]
 - [[step()_64]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

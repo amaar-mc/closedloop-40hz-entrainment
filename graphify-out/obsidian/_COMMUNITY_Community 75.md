@@ -8,6 +8,7 @@ members: 14
 **Members:** 14 nodes
 
 ## Members
+
 - [[Add a colored rectangle.]] - rationale - submission/poster/v1_builder.py
 - [[Add a gold metric callout box.]] - rationale - submission/poster/v1_builder.py
 - [[Add a teal header bar with white text.]] - rationale - submission/poster/v1_builder.py

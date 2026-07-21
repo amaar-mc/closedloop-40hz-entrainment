@@ -10,6 +10,7 @@ tags:
 # PaperPDF
 
 ## Connections
+
 - [[FPDF]] - `inherits` [EXTRACTED]
 - [[__init__()_110]] - `method` [EXTRACTED]
 - [[abstract_block()]] - `method` [EXTRACTED]

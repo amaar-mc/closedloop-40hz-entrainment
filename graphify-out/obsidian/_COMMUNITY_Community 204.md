@@ -8,7 +8,8 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
-- [[improved_tcn Package]] - code - archive/improved_tcn/__init__.py
+
+- [[improved_tcn Package]] - code - archive/improved_tcn/**init**.py
 
 ## Live Query (requires Dataview plugin)
 

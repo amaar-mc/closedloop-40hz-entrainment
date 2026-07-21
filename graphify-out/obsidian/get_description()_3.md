@@ -10,7 +10,8 @@ tags:
 # get_description()
 
 ## Connections
+
 - [[Return human-readable model description._3]] - `rationale_for` [EXTRACTED]
 - [[SaturationModelSimulator]] - `method` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

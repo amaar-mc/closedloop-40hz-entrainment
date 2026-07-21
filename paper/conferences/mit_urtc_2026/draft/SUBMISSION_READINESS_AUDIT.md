@@ -1,12 +1,14 @@
 # MIT URTC Submission-Readiness Audit
 
-**Audited:** 2026-05-31  
-**Artifact reviewed:** revised [`MANUSCRIPT.md`](MANUSCRIPT.md), generated Word manuscript, PDF proof, latest poster PDFs, repository evidence, and archived experimental artifacts  
+**Audited:** 2026-05-31
+**Updated:** 2026-06-25
+**Artifact reviewed:** revised [`MANUSCRIPT.md`](MANUSCRIPT.md), regenerated Word manuscript,
+current text-proof PDF, latest poster PDFs, repository evidence, and archived experimental artifacts
 **Decision standard:** competitive MIT URTC paper submission by a high-school author
 
 ## Direct Verdict
 
-The revised manuscript is rigorous enough to submit as a competitive MIT URTC paper if the
+The revised manuscript source and DOCX are rigorous enough to submit as a competitive MIT URTC paper if the
 high-school eligibility requirement is satisfied. Acceptance is not predictable, but the paper now
 has a defensible and distinctive contribution: it stress-tests an apparently strong retrospective
 forecasting pipeline and shows exactly where its conclusion weakens as PAC labels move closer to
@@ -22,11 +24,11 @@ The archived experiment in
 five-second backward-looking window. The revised manuscript now reports this stress test directly.
 In the more meaningful task:
 
-| Model | Epoch-summary PAC target | Backward-looking sliding PAC target |
-|---|---:|---:|
-| Persistence | 0.104 | -0.897 |
-| Ridge | 0.260 | **0.216** |
-| TCN | **0.554** | 0.212 |
+| Model       | Epoch-summary PAC target | Backward-looking sliding PAC target |
+| ----------- | -----------------------: | ----------------------------------: |
+| Persistence |                    0.104 |                              -0.897 |
+| Ridge       |                    0.260 |                           **0.216** |
+| TCN         |                **0.554** |                               0.212 |
 
 The TCN remains positively predictive on the harder target, but it no longer outperforms Ridge. This
 is scientifically useful. The paper's contribution is now the target-definition audit, compact
@@ -85,18 +87,18 @@ toward a poster or lightning talk instead of a paper presentation.
 
 ## Reviewer Scorecard
 
-| Dimension | Assessment | Rationale |
-|---|---|---|
-| Originality and theme fit | Strong | The combination of PAC forecasting, cross-participant evaluation, and controller replay is relevant and ambitious. |
-| Writing and polish | Strong | The manuscript is concise, bounded, professional, and free of inflated clinical claims. |
-| Reference hygiene | Strong | The six citations are primary or appropriate sources, and the dataset is formally cited. |
-| Participant-split hygiene | Strong | The stored dataset uses disjoint 24/5/6 participant splits and train-only normalization. |
-| Central forecasting rigor | Strongly bounded | The revised paper reports both the event-summary benchmark and the backward-looking PAC stress test instead of hiding the availability limitation. |
-| Causal-model evidence | Preliminary but useful | The backward-looking PAC experiment retains positive held-out signal, but its TCN is approximately tied with Ridge and needs replication. |
-| Controller evidence | Bounded but preliminary | Replay is diagnostic only, uses all 35 trajectories, uses nominal recorded context, and does not model physiological response to counterfactual actions. |
-| Statistical robustness | Partial | Five seeds address initialization variance, not participant-split sensitivity. A single held-out split is too narrow for a strong generalization claim. |
-| Presentation | Strong | The four-page proof is clean, within the limit, and includes a compact figure explaining the target-definition stress test. |
-| Paper eligibility | Unresolved | The required university relationship is not visible in the paper. |
+| Dimension                 | Assessment              | Rationale                                                                                                                                                                                                           |
+| ------------------------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Originality and theme fit | Strong                  | The combination of PAC forecasting, cross-participant evaluation, and controller replay is relevant and ambitious.                                                                                                  |
+| Writing and polish        | Strong                  | The manuscript is concise, bounded, professional, and free of inflated clinical claims.                                                                                                                             |
+| Reference hygiene         | Strong                  | The eight citations are primary or appropriate sources, and the dataset is formally cited.                                                                                                                          |
+| Participant-split hygiene | Strong                  | The stored dataset uses disjoint 24/5/6 participant splits and train-only normalization.                                                                                                                            |
+| Central forecasting rigor | Strongly bounded        | The revised paper reports both the event-summary benchmark and the backward-looking PAC stress test instead of hiding the availability limitation.                                                                  |
+| Causal-model evidence     | Preliminary but useful  | The backward-looking PAC experiment retains positive held-out signal, but its TCN is approximately tied with Ridge and needs replication.                                                                           |
+| Controller evidence       | Bounded but preliminary | Replay is diagnostic only, uses all 35 trajectories, uses nominal recorded context, and does not model physiological response to counterfactual actions.                                                            |
+| Statistical robustness    | Partial                 | Five seeds address initialization variance, not participant-split sensitivity. A single held-out split is too narrow for a strong generalization claim.                                                             |
+| Presentation              | Re-export needed        | The current DOCX uses MIT's linked template and the current text proof stays within five pages. The Microsoft Word PDF predates the 2026-06-25 manuscript-level revision and must be regenerated before submission. |
+| Paper eligibility         | Unresolved              | The required university relationship is not visible in the paper.                                                                                                                                                   |
 
 ## Remaining Gates and Next Experiments
 
@@ -142,9 +144,9 @@ report a transition-specific TCN comparison for its selected checkpoint.
 ### 6. Keep replay subordinate to forecasting validation
 
 The replay is useful only as an engineering diagnostic. The predictive policy increases low-PAC
-targeting but reduces high-PAC rest specificity and lowers balanced alignment from `64.5%` to `62.2%`
-relative to the reactive baseline. Retain this as an honest negative or mixed result. Do not frame it
-as evidence that a predictive controller improves stimulation.
+coverage but reduces the above-median-PAC rest rate and lowers balanced alignment from `64.5%` to
+`62.2%` relative to the reactive baseline. Retain this as an honest negative or mixed result. Do not
+frame it as evidence that a predictive controller improves stimulation.
 
 ## Strong Recommended Improvements
 
@@ -156,15 +158,16 @@ as evidence that a predictive controller improves stimulation.
    definition.
 4. State explicitly that stimulation-context features may encode the recorded schedule. Separate
    schedule prediction from biomarker prediction with component ablations.
-5. Confirm MIT's Fall 2026 template when posted. The current linked Word template and the older
-   guideline PDF do not agree on first-page structure.
+5. Confirm the 2026 deadline and author rules in CMT. The manuscript already uses MIT's currently
+   linked Word template; the public detailed guideline PDF remains 2025-labeled.
 
 ## What Is Already Working
 
 The manuscript has several qualities worth preserving:
 
 - It distinguishes held-out forecasting from all-trajectory replay.
-- It reports the controller tradeoff instead of hiding the weaker balanced-alignment result.
+- It reports the controller calibration problem instead of hiding the weaker balanced-alignment
+  result.
 - It discloses the complete-event PAC limitation directly.
 - It avoids therapeutic-efficacy claims.
 - It uses participant-level splits and train-only normalization.

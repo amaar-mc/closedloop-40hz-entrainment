@@ -9,7 +9,8 @@ tags:
 # Multi-Head Attention Fusion (4 Heads, 192 dims)
 
 ## Connections
+
 - [[Multi-Task Learning Plan (PAC + Theta + Gamma Joint Prediction)]] - `conceptually_related_to` [INFERRED]
 - [[SpecTempNet V3 Hybrid Spectral-Temporal Network (~180k params)]] - `references` [EXTRACTED]
 
-  #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model*Ceiling*&\_Leakage_Audits

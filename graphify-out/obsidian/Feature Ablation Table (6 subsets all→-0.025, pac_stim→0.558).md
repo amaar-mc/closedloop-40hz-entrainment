@@ -10,6 +10,7 @@ tags:
 # Feature Ablation Table (6 subsets: all→-0.025, pac_stim→0.558)
 
 ## Connections
+
 - [[FINDINGS Spectral Features Cause Catastrophic Generalization Failure]] - `references` [EXTRACTED]
 - [[Feature Subset Ablation Study]] - `shares_data_with` [INFERRED]
 

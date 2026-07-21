@@ -10,6 +10,7 @@ tags:
 # plot_comparison_bars()
 
 ## Connections
+
 - [[Create bar plot comparing multiple methods.      Args         metrics_dict]] - `rationale_for` [EXTRACTED]
 - [[utils.py]] - `contains` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # analyze_fatigue()
 
 ## Connections
+
 - [[Analyze habituation patterns across subjects.]] - `rationale_for` [EXTRACTED]
 - [[fatigue_analysis.py]] - `contains` [EXTRACTED]
 - [[main()_29]] - `calls` [EXTRACTED]

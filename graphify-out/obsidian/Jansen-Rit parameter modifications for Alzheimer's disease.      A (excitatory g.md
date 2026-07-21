@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# Jansen-Rit parameter modifications for Alzheimer's disease.      A (excitatory g
+# Jansen-Rit parameter modifications for Alzheimer's disease. A (excitatory g
 
 ## Connections
+
 - [[JRDiseaseProfile]] - `rationale_for` [EXTRACTED]
 
   #community/TVB_Alzheimer_Simulator

@@ -8,6 +8,7 @@ members: 37
 **Members:** 37 nodes
 
 ## Members
+
 - [[05 QA Complete PAC Computation and EEGNet Methodology Answers]] - document - submission/presentation/05_qa_complete.md
 - [[1-Minute Project of the Year Synopsis (POTY Script)]] - document - submission/presentation/archive/v1_scripts/project_of_year_1min.md
 - [[12-Feature PAC+Stim Configuration (test R²=0.606)]] - document - submission/presentation/docs/current_methodology.md
@@ -54,7 +55,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 1 edge to [[_COMMUNITY_Research Paper & Manuscript]]
 
 ## Top bridge nodes
+
 - [[Research Objective Predictive Closed-Loop PAC Forecasting]] - degree 4, connects to 1 community

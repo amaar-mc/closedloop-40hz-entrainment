@@ -10,6 +10,7 @@ tags:
 # Discussion: 3-Second Inflection Point Mechanistic Interpretation
 
 ## Connections
+
 - [[Contribution 4 Prediction Horizon Inflection Point (~3 seconds)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

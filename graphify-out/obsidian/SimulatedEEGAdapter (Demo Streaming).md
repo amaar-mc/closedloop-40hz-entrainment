@@ -10,7 +10,8 @@ tags:
 # SimulatedEEGAdapter (Demo Streaming)
 
 ## Connections
+
 - [[run_demo()]] - `calls` [EXTRACTED]
 - [[srcstreamingadapters.py (SimulatedEEGAdapter)]] - `references` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

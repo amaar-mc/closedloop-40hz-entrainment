@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Extract phase from low-frequency and amplitude from high-frequency.          A
+# Extract phase from low-frequency and amplitude from high-frequency. A
 
 ## Connections
+
 - [[extract_phase_amplitude()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

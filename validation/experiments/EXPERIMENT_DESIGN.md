@@ -10,11 +10,11 @@
 
 The current MultiscaleCausalTCN (31K parameters) achieves:
 
-| Metric | Value | Context |
-|--------|-------|---------|
-| R^2 at horizon=1, ts=5 | 0.764 | But persistence baseline gets 0.760 |
-| R^2 at 5-10s horizons | 0.25-0.28 | Where persistence/Ridge collapse to negative R^2 |
-| Delta-PAC R^2 | ~0.0 | The delta head is **never trained** (lambda_delta=0.0) |
+| Metric                 | Value     | Context                                                |
+| ---------------------- | --------- | ------------------------------------------------------ |
+| R^2 at horizon=1, ts=5 | 0.764     | But persistence baseline gets 0.760                    |
+| R^2 at 5-10s horizons  | 0.25-0.28 | Where persistence/Ridge collapse to negative R^2       |
+| Delta-PAC R^2          | ~0.0      | The delta head is **never trained** (lambda_delta=0.0) |
 
 The core scientific contribution is the +0.5 R^2 margin over persistence at long horizons. These experiments test whether this margin can be widened through architectural improvements, or whether it represents a fundamental data limitation.
 
@@ -94,6 +94,7 @@ The trade-off is: (a) higher computational cost per step, (b) potentially harder
 ### 3.1 Controlled Comparison
 
 All variants are trained with identical:
+
 - Data splits (same train/val/test subjects)
 - Random seed (42)
 - Optimizer (AdamW, lr=1e-3, weight_decay=1e-3)
@@ -111,6 +112,7 @@ The only controlled variable is the architecture (and lambda values for MultiTas
 **Primary metric:** Test set R^2 for future PAC prediction.
 
 **Secondary metrics:**
+
 - Pearson correlation (more robust to scale mismatch)
 - MAE and RMSE (in raw PAC units)
 - Delta-PAC R^2 (diagnostic for the multi-task variant)
@@ -124,6 +126,7 @@ The only controlled variable is the architecture (and lambda values for MultiTas
 ### 3.4 Synthetic Validation
 
 Before running on real data, `synthetic_benchmark.py` verifies that all architectures:
+
 1. Forward-pass without errors (correct shapes, no NaN)
 2. Converge on a known nonlinear function
 3. Report sensible parameter counts
@@ -136,6 +139,7 @@ Before running on real data, `synthetic_benchmark.py` verifies that all architec
 ### 4.1 If a variant improves R^2 significantly (> 0.05 gain):
 
 This suggests the baseline has an architectural bottleneck that the variant addresses. The improvement should be validated with:
+
 - Multiple seeds (3-5) to confirm it is not a lucky initialization
 - Learning curves to check for overfitting vs genuine improvement
 - Horizon sweep to confirm the gain is at useful horizons (5-10s), not just h=1
@@ -143,6 +147,7 @@ This suggests the baseline has an architectural bottleneck that the variant addr
 ### 4.2 If all variants perform similarly:
 
 This provides evidence that the performance ceiling (~0.25-0.28 R^2 at long horizons) is a **fundamental data limitation**, not an architectural one. Possible causes:
+
 - Epoch-level PAC labels limit within-epoch prediction granularity
 - 35 subjects provide limited inter-subject diversity
 - PAC at 5-10s horizons is inherently stochastic (irreducible noise)
@@ -172,13 +177,13 @@ This produces `rigor/experiments/synthetic_benchmark_results.json` and confirms 
 
 **Synthetic benchmark results (seed=42, 30 epochs, CPU):**
 
-| Variant | Params | Train Loss | Val Loss | Test R^2 | NaN | Time (s) |
-|---------|--------|-----------|----------|----------|-----|----------|
-| Baseline | 31,043 | 8.85e-5 | 8.30e-5 | -0.388 | No | 241 |
-| Deep Dilation | 39,875 | 6.81e-5 | 6.65e-5 | -0.354 | No | 383 |
-| Multi-task | 31,043 | 9.26e-5 | 9.61e-5 | -0.648 | No | 246 |
-| Wider | 111,235 | 6.28e-5 | 8.39e-5 | -0.471 | No | 385 |
-| Transformer | 213,315 | 1.34e-4 | 7.50e-5 | -0.505 | No | 14 |
+| Variant       | Params  | Train Loss | Val Loss | Test R^2 | NaN | Time (s) |
+| ------------- | ------- | ---------- | -------- | -------- | --- | -------- |
+| Baseline      | 31,043  | 8.85e-5    | 8.30e-5  | -0.388   | No  | 241      |
+| Deep Dilation | 39,875  | 6.81e-5    | 6.65e-5  | -0.354   | No  | 383      |
+| Multi-task    | 31,043  | 9.26e-5    | 9.61e-5  | -0.648   | No  | 246      |
+| Wider         | 111,235 | 6.28e-5    | 8.39e-5  | -0.471   | No  | 385      |
+| Transformer   | 213,315 | 1.34e-4    | 7.50e-5  | -0.505   | No  | 14       |
 
 All variants: PASS on convergence, no NaN/Inf, expected parameter counts.
 
@@ -209,14 +214,14 @@ This produces `rigor/experiments/experiment_results.json` and per-variant traini
 
 ## 6. File Index
 
-| File | Purpose |
-|------|---------|
-| `tcn_variants.py` | Model definitions for all 4 variants + variant registry |
-| `synthetic_benchmark.py` | Self-contained synthetic data benchmark (runnable now) |
-| `run_all_experiments.py` | Full experiment runner for real data (requires dataset) |
-| `EXPERIMENT_DESIGN.md` | This document |
-| `synthetic_benchmark_results.json` | Output of synthetic benchmark |
-| `experiment_results.json` | Output of real data experiments |
+| File                               | Purpose                                                 |
+| ---------------------------------- | ------------------------------------------------------- |
+| `tcn_variants.py`                  | Model definitions for all 4 variants + variant registry |
+| `synthetic_benchmark.py`           | Self-contained synthetic data benchmark (runnable now)  |
+| `run_all_experiments.py`           | Full experiment runner for real data (requires dataset) |
+| `EXPERIMENT_DESIGN.md`             | This document                                           |
+| `synthetic_benchmark_results.json` | Output of synthetic benchmark                           |
+| `experiment_results.json`          | Output of real data experiments                         |
 
 ---
 

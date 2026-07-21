@@ -8,6 +8,7 @@ members: 40
 **Members:** 40 nodes
 
 ## Members
+
 - [[73-Dimensional Causal Feature Vector (61 spectral + 7 PAC + 5 stim context)]] - paper - archive/CSEF_Old/Research Paper/RESEARCH_PAPER_v3.md
 - [[CSEF Old Project Abstract (247 words)]] - document - archive/CSEF_Old/Abstract/ABSTRACT.md
 - [[Clinical Roadmap (Research to Practice Pathway)]] - document - archive/CSEF_Old/Presentation/CLINICAL_ROADMAP.md

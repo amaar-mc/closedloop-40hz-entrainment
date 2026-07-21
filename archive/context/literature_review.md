@@ -65,23 +65,23 @@ However, no existing system applies closed-loop adaptive control to 40 Hz gamma 
 
 The literature converges on a clear gap:
 
-| What exists | What is missing |
-|-------------|-----------------|
-| 40 Hz entrainment reduces amyloid and restores connectivity | Stimulation timing is not optimized to individual brain states |
-| PAC is a validated, sensitive biomarker for AD and entrainment quality | No system predicts future PAC to enable proactive intervention |
-| 30% of patients are non-responders; 50% habituate over time | Fixed schedules cannot adapt to individual response trajectories |
-| Closed-loop neuromodulation improves outcomes in DBS | No closed-loop system exists for 40 Hz entrainment |
-| Deep learning can predict brain states from EEG in real time | This capability has not been applied to PAC forecasting for entrainment |
+| What exists                                                            | What is missing                                                         |
+| ---------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| 40 Hz entrainment reduces amyloid and restores connectivity            | Stimulation timing is not optimized to individual brain states          |
+| PAC is a validated, sensitive biomarker for AD and entrainment quality | No system predicts future PAC to enable proactive intervention          |
+| 30% of patients are non-responders; 50% habituate over time            | Fixed schedules cannot adapt to individual response trajectories        |
+| Closed-loop neuromodulation improves outcomes in DBS                   | No closed-loop system exists for 40 Hz entrainment                      |
+| Deep learning can predict brain states from EEG in real time           | This capability has not been applied to PAC forecasting for entrainment |
 
 This project addresses the gap by building a predictive closed-loop system that forecasts PAC 5-10 seconds ahead and uses those predictions to deliver stimulation only when it is most needed — personalized to each patient's neural dynamics.
 
 ## Key References
 
-1. Iaccarino, H.F., et al. "Gamma frequency entrainment attenuates amyloid load and modifies microglia." *Nature* 540, 230-235 (2016).
-2. Tort, A.B., et al. "Measuring phase-amplitude coupling between neuronal oscillations of different frequencies." *J. Neurophysiol.* 104(2), 1195-1210 (2010).
-3. Lawhern, V.J., et al. "EEGNet: a compact convolutional neural network for EEG-based brain-computer interfaces." *J. Neural Eng.* 15(5), 056013 (2018).
-4. Lahijanian, B., et al. "Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients." *Scientific Reports* 14, 13153 (2024).
-5. Canolty, R.T. & Knight, R.T. "The functional role of cross-frequency coupling." *Trends Cogn. Sci.* 14(11), 506-515 (2010).
-6. Chan, D., et al. "Gamma sensory stimulation in mild Alzheimer's dementia: An open-label extension study." *Alzheimer's & Dementia* (2025).
-7. "Multisensory gamma stimulation promotes glymphatic clearance of amyloid." *Nature* (2024).
-8. "Long-term effects of forty-hertz auditory stimulation as a treatment of Alzheimer's disease: Insights from an aged monkey model study." *PNAS* (2025).
+1. Iaccarino, H.F., et al. "Gamma frequency entrainment attenuates amyloid load and modifies microglia." _Nature_ 540, 230-235 (2016).
+2. Tort, A.B., et al. "Measuring phase-amplitude coupling between neuronal oscillations of different frequencies." _J. Neurophysiol._ 104(2), 1195-1210 (2010).
+3. Lawhern, V.J., et al. "EEGNet: a compact convolutional neural network for EEG-based brain-computer interfaces." _J. Neural Eng._ 15(5), 056013 (2018).
+4. Lahijanian, B., et al. "Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients." _Scientific Reports_ 14, 13153 (2024).
+5. Canolty, R.T. & Knight, R.T. "The functional role of cross-frequency coupling." _Trends Cogn. Sci._ 14(11), 506-515 (2010).
+6. Chan, D., et al. "Gamma sensory stimulation in mild Alzheimer's dementia: An open-label extension study." _Alzheimer's & Dementia_ (2025).
+7. "Multisensory gamma stimulation promotes glymphatic clearance of amyloid." _Nature_ (2024).
+8. "Long-term effects of forty-hertz auditory stimulation as a treatment of Alzheimer's disease: Insights from an aged monkey model study." _PNAS_ (2025).

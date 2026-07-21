@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Validate PAC computation using synthetic signals.      Creates three test case
+# Validate PAC computation using synthetic signals. Creates three test case
 
 ## Connections
+
 - [[validate_pac_computation()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

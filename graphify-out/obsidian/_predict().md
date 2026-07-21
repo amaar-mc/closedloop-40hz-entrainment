@@ -7,10 +7,11 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _predict()
+# \_predict()
 
 ## Connections
+
 - [[Run TCN inference, return (delta_z, future_raw, delta_raw) or None.]] - `rationale_for` [EXTRACTED]
 - [[TCNPredictiveCtrl]] - `method` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

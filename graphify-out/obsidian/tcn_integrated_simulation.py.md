@@ -10,6 +10,7 @@ tags:
 # tcn_integrated_simulation.py
 
 ## Connections
+
 - [[ControlMethodBase_1]] - `contains` [EXTRACTED]
 - [[FixedScheduleControl_6]] - `contains` [EXTRACTED]
 - [[OracleControl_5]] - `contains` [EXTRACTED]
@@ -36,4 +37,4 @@ tags:
 - [[run_trial_batch()_1]] - `contains` [EXTRACTED]
 - [[simulator.py]] - `imports_from` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

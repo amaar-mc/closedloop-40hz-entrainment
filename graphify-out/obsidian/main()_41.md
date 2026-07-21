@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[FixedScheduleControl_2]] - `calls` [EXTRACTED]
 - [[PredictiveLookAheadControl_2]] - `calls` [EXTRACTED]
 - [[run_fatigue_sensitivity.py]] - `contains` [EXTRACTED]

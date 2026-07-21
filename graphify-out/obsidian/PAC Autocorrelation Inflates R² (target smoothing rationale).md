@@ -10,6 +10,7 @@ tags:
 # PAC Autocorrelation Inflates R² (target smoothing rationale)
 
 ## Connections
+
 - [[Pipeline Audit Report Multiscale Causal TCN (ts5_clean)]] - `references` [EXTRACTED]
 - [[Target Smoothing Effect on R² (ts1ts5ts15)]] - `semantically_similar_to` [INFERRED]
 

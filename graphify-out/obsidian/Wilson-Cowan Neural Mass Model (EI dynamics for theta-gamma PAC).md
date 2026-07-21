@@ -10,6 +10,7 @@ tags:
 # Wilson-Cowan Neural Mass Model (E/I dynamics for theta-gamma PAC)
 
 ## Connections
+
 - [[TRIBE V2 Integration Attempt and Biophysical Workaround (April 8, 2026)]] - `references` [EXTRACTED]
 
   #community/Community_109

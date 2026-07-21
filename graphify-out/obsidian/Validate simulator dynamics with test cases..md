@@ -10,6 +10,7 @@ tags:
 # Validate simulator dynamics with test cases.
 
 ## Connections
+
 - [[validate_simulator_dynamics()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

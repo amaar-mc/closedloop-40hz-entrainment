@@ -10,6 +10,7 @@ tags:
 # ModelConfig Dataclass (TCN Variant Configuration)
 
 ## Connections
+
 - [[DeepDilationTCN (Dilations 1,2,4,8,16,32, 127-step RF)]] - `shares_data_with` [EXTRACTED]
 
   #community/Community_60

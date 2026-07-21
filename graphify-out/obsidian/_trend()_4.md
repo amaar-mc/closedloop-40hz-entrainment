@@ -7,9 +7,10 @@ tags:
   - community/Community_84
 ---
 
-# _trend()
+# \_trend()
 
 ## Connections
+
 - [[PredictiveLookAheadControl_2]] - `method` [EXTRACTED]
 - [[step()_23]] - `calls` [EXTRACTED]
 

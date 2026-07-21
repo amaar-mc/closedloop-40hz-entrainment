@@ -8,6 +8,7 @@ members: 52
 **Members:** 52 nodes
 
 ## Members
+
 - [[Build a per-region A (excitatory gain) array from a disease profile.      Return]] - rationale - src/tribe_v2/tvb_simulator.py
 - [[Compute PAC from TVB EEG signal using a hybrid approach.          The Jansen-Rit]] - rationale - src/tribe_v2/tvb_simulator.py
 - [[Create a configured TVB simulator instance.          Args             mu_value]] - rationale - src/tribe_v2/tvb_simulator.py

@@ -7,9 +7,10 @@ tags:
   - community/Community_57
 ---
 
-# V7: Lightweight Deep Learning on Raw EEG  Different approach: Learn features dir
+# V7: Lightweight Deep Learning on Raw EEG Different approach: Learn features dir
 
 ## Connections
+
 - [[run_v7_raw_eeg_models.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_57

@@ -13,7 +13,7 @@ dataset:
   url: "https://openneuro.org/datasets/ds005048/versions/1.0.1"
   n_subjects: 35
   n_channels: 19
-  sampling_rate: 250  # Hz
+  sampling_rate: 250 # Hz
 
 # ============================================================================
 # CHANNEL SELECTION
@@ -34,22 +34,22 @@ channels:
 # SIGNAL PROCESSING
 # ============================================================================
 preprocessing:
-  sampling_rate: 250  # Hz
+  sampling_rate: 250 # Hz
 
   # Bandpass filter
   bandpass:
-    highpass: 0.5    # Hz
-    lowpass: 80.0    # Hz
-    order: 4         # 4th-order Butterworth
-    method: "filtfilt"  # Zero-phase filtering
+    highpass: 0.5 # Hz
+    lowpass: 80.0 # Hz
+    order: 4 # 4th-order Butterworth
+    method: "filtfilt" # Zero-phase filtering
 
   # Notch filter (powerline interference)
   notch:
-    frequency: 50    # Hz (50 Hz Europe/Asia, use 60 for North America)
-    q_factor: 30     # Quality factor
+    frequency: 50 # Hz (50 Hz Europe/Asia, use 60 for North America)
+    q_factor: 30 # Quality factor
 
   # Artifact rejection
-  artifact_threshold: 100  # µV (±100 µV amplitude)
+  artifact_threshold: 100 # µV (±100 µV amplitude)
 
   # Common average reference
   common_average_ref: true
@@ -58,9 +58,9 @@ preprocessing:
 # WINDOWING CONFIGURATION
 # ============================================================================
 windowing:
-  window_duration: 2.0   # seconds
-  window_samples: 500    # @ 250 Hz = 2 seconds
-  hop_duration: 1.0      # seconds (50% overlap)
+  window_duration: 2.0 # seconds
+  window_samples: 500 # @ 250 Hz = 2 seconds
+  hop_duration: 1.0 # seconds (50% overlap)
   hop_samples: 250
   overlap_percent: 50
 
@@ -68,20 +68,20 @@ windowing:
 # PHASE-AMPLITUDE COUPLING (PAC) COMPUTATION
 # ============================================================================
 pac:
-  method: "Modulation Index"  # Tort et al. (2010)
+  method: "Modulation Index" # Tort et al. (2010)
 
   # Phase extraction (theta)
   theta_band:
-    low: 4.0    # Hz
-    high: 8.0   # Hz
+    low: 4.0 # Hz
+    high: 8.0 # Hz
 
   # Amplitude extraction (gamma @ 40 Hz)
   gamma_band:
-    low: 38.0   # Hz
-    high: 42.0  # Hz
+    low: 38.0 # Hz
+    high: 42.0 # Hz
 
   # Phase binning
-  n_phase_bins: 18  # 360° / 18 = 20° per bin
+  n_phase_bins: 18 # 360° / 18 = 20° per bin
 
   # Filter order
   filter_order: 4
@@ -92,22 +92,22 @@ pac:
 model:
   architecture: "EEGNet"
   input_shape:
-    batch: null  # Variable batch size
-    channels_in: 1  # Feature channel
-    n_channels: 7   # 7 frontal channels
-    n_samples: 500  # 2 seconds @ 250 Hz
+    batch: null # Variable batch size
+    channels_in: 1 # Feature channel
+    n_channels: 7 # 7 frontal channels
+    n_samples: 500 # 2 seconds @ 250 Hz
 
-  output: "PAC"  # Regression: single scalar PAC prediction
+  output: "PAC" # Regression: single scalar PAC prediction
 
   # EEGNet hyperparameters
   eegnet:
-    F1: 8           # Temporal filters in Block 1
-    D: 2            # Depth multiplier for spatial filters
-    F2: 16          # Pointwise filters in Block 2
-    dropout: 0.5    # Dropout rate
-    kernel_length: 64  # Temporal convolution kernel
-    pool_size_1: 4  # Average pooling after Block 1
-    pool_size_2: 8  # Average pooling after Block 2
+    F1: 8 # Temporal filters in Block 1
+    D: 2 # Depth multiplier for spatial filters
+    F2: 16 # Pointwise filters in Block 2
+    dropout: 0.5 # Dropout rate
+    kernel_length: 64 # Temporal convolution kernel
+    pool_size_1: 4 # Average pooling after Block 1
+    pool_size_2: 8 # Average pooling after Block 2
 
   # Total parameters: ~2000 (prevents overfitting with limited data)
   total_parameters: 2000
@@ -119,7 +119,7 @@ training:
   # Optimizer
   optimizer: "Adam"
   learning_rate: 0.001
-  weight_decay: 0.0001  # L2 regularization
+  weight_decay: 0.0001 # L2 regularization
 
   # Learning rate scheduling
   scheduler: "ReduceLROnPlateau"
@@ -136,12 +136,12 @@ training:
   pin_memory: true
 
   # Loss function
-  loss: "MSE"  # Mean Squared Error
+  loss: "MSE" # Mean Squared Error
 
   # Early stopping
   early_stopping:
     enabled: true
-    patience: 15  # Epochs without improvement
+    patience: 15 # Epochs without improvement
     metric: "val_loss"
 
   # Model checkpointing
@@ -152,18 +152,18 @@ training:
   # Data augmentation
   augmentation:
     enabled: true
-    time_shift_ms_range: [100, 500]  # ±100-500 ms shift
-    amplitude_scale_range: [0.8, 1.2]  # 0.8x - 1.2x scaling
-    gaussian_noise_snr_db: [20, 30]    # SNR 20-30 dB
+    time_shift_ms_range: [100, 500] # ±100-500 ms shift
+    amplitude_scale_range: [0.8, 1.2] # 0.8x - 1.2x scaling
+    gaussian_noise_snr_db: [20, 30] # SNR 20-30 dB
 
 # ============================================================================
 # DATA SPLIT CONFIGURATION
 # ============================================================================
 data_split:
   method: "leave-subject-out"
-  train_ratio: 0.70  # 70% subjects for training
-  val_ratio: 0.15   # 15% subjects for validation
-  test_ratio: 0.15  # 15% subjects for testing
+  train_ratio: 0.70 # 70% subjects for training
+  val_ratio: 0.15 # 15% subjects for validation
+  test_ratio: 0.15 # 15% subjects for testing
   random_seed: 42
 
 # ============================================================================
@@ -174,84 +174,84 @@ controller:
 
   # Decision thresholds
   z_score:
-    low: -0.5   # Weak coupling threshold: STIMULATE
-    high: 0.5   # Strong coupling threshold: REST
+    low: -0.5 # Weak coupling threshold: STIMULATE
+    high: 0.5 # Strong coupling threshold: REST
 
   # Hysteresis (prevents rapid state switching)
-  hold_time_sec: 5.0  # Minimum time in state before transition (matches controller.py default)
-  decision_rate_hz: 1.0  # 1 decision per second
+  hold_time_sec: 5.0 # Minimum time in state before transition (matches controller.py default)
+  decision_rate_hz: 1.0 # 1 decision per second
 
   # Personalization baseline
   baseline:
-    window_size_sec: 30  # 30-second rolling window
-    min_samples: 10      # Need 10 samples before computing z-scores
-    update_rate_hz: 1.0  # Update baseline @ 1 Hz
+    window_size_sec: 30 # 30-second rolling window
+    min_samples: 10 # Need 10 samples before computing z-scores
+    update_rate_hz: 1.0 # Update baseline @ 1 Hz
 
 # ============================================================================
 # STIMULATION PROTOCOL
 # ============================================================================
 stimulation:
-  frequency: 40  # Hz (gamma band)
-  duration_open_loop: 40  # seconds (fixed schedule)
-  rest_duration: 20  # seconds (fixed schedule)
-  cycle: 60  # seconds (40s ON + 20s OFF)
+  frequency: 40 # Hz (gamma band)
+  duration_open_loop: 40 # seconds (fixed schedule)
+  rest_duration: 20 # seconds (fixed schedule)
+  cycle: 60 # seconds (40s ON + 20s OFF)
 
   # Modulation
-  amplitude_init: 1.0  # Normalized (0-1)
-  phase_shift: 0.0  # degrees
+  amplitude_init: 1.0 # Normalized (0-1)
+  phase_shift: 0.0 # degrees
 
 # ============================================================================
 # SIMULATOR CONFIGURATION
 # ============================================================================
 simulator:
   # Brain response dynamics
-  tau_rise: 0.15    # PAC increase rate during stimulation
-  tau_decay: 0.10   # PAC decrease rate during rest
-  pac_max: 0.3      # Maximum achievable PAC
-  pac_min: 0.05     # Minimum PAC baseline
+  tau_rise: 0.15 # PAC increase rate during stimulation
+  tau_decay: 0.10 # PAC decrease rate during rest
+  pac_max: 0.3 # Maximum achievable PAC
+  pac_min: 0.05 # Minimum PAC baseline
 
   # Noise
-  noise_std: 0.02   # Gaussian noise standard deviation
+  noise_std: 0.02 # Gaussian noise standard deviation
 
   # Time constants extraction
-  extraction_method: "heuristic"  # Literature-informed estimates (see simulator.py docstring)
+  extraction_method: "heuristic" # Literature-informed estimates (see simulator.py docstring)
 
   # Simulation parameters
-  simulation_duration_sec: 360  # 6 minutes per trial
-  decision_rate_hz: 1.0  # 1 decision per second
+  simulation_duration_sec: 360 # 6 minutes per trial
+  decision_rate_hz: 1.0 # 1 decision per second
 
 # ============================================================================
 # TRIBE V2-ENHANCED SIMULATOR
 # ============================================================================
 tribe_v2:
   # Model settings
-  use_tribe_v2: true         # Use TRIBE V2 cortical model (falls back to parametric)
+  use_tribe_v2: true # Use TRIBE V2 cortical model (falls back to parametric)
   cache_dir: "./cache/tribe_v2"
-  device: "auto"             # "auto", "cpu", "mps", "cuda"
+  device: "auto" # "auto", "cpu", "mps", "cuda"
 
   # Cortical response model (parametric fallback)
   cortical:
-    stim_activations: [6.5, 6.5, 4.5, 4.5, 4.0, 3.8]  # [Aud_L, Aud_R, IFG_L, IFG_R, MFG, MedF]
+    stim_activations: [6.5, 6.5, 4.5, 4.5, 4.0, 3.8] # [Aud_L, Aud_R, IFG_L, IFG_R, MFG, MedF]
     rest_activations: [3.0, 3.0, 3.0, 3.0, 3.0, 3.0]
-    onset_tau_sec: 1.5       # ASSR onset time constant
-    offset_tau_sec: 2.0      # ASSR offset time constant
-    habituation_rate: 0.005  # Per-second habituation during stimulation
+    onset_tau_sec: 1.5 # ASSR onset time constant
+    offset_tau_sec: 2.0 # ASSR offset time constant
+    habituation_rate: 0.005 # Per-second habituation during stimulation
 
   # Neural mass model (Wilson-Cowan)
   neural_mass:
-    tau_e: 0.004             # Excitatory time constant (gamma range)
-    tau_i: 0.008             # Inhibitory time constant
-    theta_freq_hz: 6.0       # Theta rhythm frequency
-    theta_amplitude: 1.5     # Theta modulation depth
-    noise_std: 0.3           # Process noise
+    tau_e: 0.004 # Excitatory time constant (gamma range)
+    tau_i: 0.008 # Inhibitory time constant
+    theta_freq_hz: 6.0 # Theta rhythm frequency
+    theta_amplitude: 1.5 # Theta modulation depth
+    noise_std: 0.3 # Process noise
 
   # Alzheimer's disease modeling
   alzheimer:
-    default_severity: "healthy"  # healthy, preclinical, mild, moderate, severe
+    default_severity: "healthy" # healthy, preclinical, mild, moderate, severe
     # See src/tribe_v2/alzheimer_model.py for per-severity parameter profiles
 
   # Simulation
-  step_duration_sec: 1.0     # Time step for simulation loop
+  step_duration_sec: 1.0 # Time step for simulation loop
   pac_max: 0.3
   pac_min: 0.05
   noise_std: 0.015
@@ -262,24 +262,24 @@ tribe_v2:
 validation:
   # Comparison methods
   methods:
-    - "Fixed Schedule"     # Control: 40s ON / 20s OFF
+    - "Fixed Schedule" # Control: 40s ON / 20s OFF
     - "Reactive Threshold" # Current PAC-based
-    - "Predictive MPC"     # Trained model + personalization
-    - "Oracle"            # Perfect information (upper bound)
+    - "Predictive MPC" # Trained model + personalization
+    - "Oracle" # Perfect information (upper bound)
 
   # Simulation settings
-  duration_sec: 360  # 6-minute trials
+  duration_sec: 360 # 6-minute trials
   n_trials: 3
 
   # Metrics to compute
   metrics:
     - "pac_mean"
     - "pac_std"
-    - "pac_improvement"    # % vs. baseline
+    - "pac_improvement" # % vs. baseline
     - "pac_variance_ratio"
-    - "stimulation_time"   # % of time ON
-    - "efficiency_ratio"   # PAC improvement per unit stim
-    - "r2_score"          # Prediction accuracy
+    - "stimulation_time" # % of time ON
+    - "efficiency_ratio" # PAC improvement per unit stim
+    - "r2_score" # Prediction accuracy
 
   # Statistical tests
   statistics:
@@ -313,7 +313,7 @@ plotting:
 # LOGGING CONFIGURATION
 # ============================================================================
 logging:
-  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  level: "INFO" # DEBUG, INFO, WARNING, ERROR
   format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
   file: "logs/experiment.log"
   console: true
@@ -322,7 +322,7 @@ logging:
 # COMPUTATIONAL RESOURCES
 # ============================================================================
 resources:
-  device: "cuda"  # "cuda" or "cpu"
+  device: "cuda" # "cuda" or "cpu"
   gpu_id: 0
   max_memory_mb: 8000
 
@@ -337,9 +337,9 @@ resources:
 # EXPECTED PERFORMANCE TARGETS
 # ============================================================================
 targets:
-  pac_improvement_percent: 15  # % vs. baseline
+  pac_improvement_percent: 15 # % vs. baseline
   prediction_r2: 0.80
-  stimulation_efficiency: 0.30  # 30-40% time for equivalent efficacy
+  stimulation_efficiency: 0.30 # 30-40% time for equivalent efficacy
   model_parameters: 2000
   inference_latency_ms: 50
 

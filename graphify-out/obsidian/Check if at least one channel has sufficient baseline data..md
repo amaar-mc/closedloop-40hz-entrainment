@@ -10,6 +10,7 @@ tags:
 # Check if at least one channel has sufficient baseline data.
 
 ## Connections
+
 - [[is_ready()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Community_46

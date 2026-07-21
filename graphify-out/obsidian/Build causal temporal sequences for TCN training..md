@@ -10,8 +10,9 @@ tags:
 # Build causal temporal sequences for TCN training.
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `uses` [INFERRED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[step3_build_multiscale_dataset()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

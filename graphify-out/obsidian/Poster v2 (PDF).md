@@ -9,6 +9,7 @@ tags:
 # Poster v2 (PDF)
 
 ## Connections
+
 - [[Poster Builder v2 (Cobalt Template, 36x48 slide)]] - `implements` [INFERRED]
 
   #community/Community_110

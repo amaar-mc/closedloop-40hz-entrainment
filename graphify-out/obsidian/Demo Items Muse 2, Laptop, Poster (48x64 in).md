@@ -10,6 +10,7 @@ tags:
 # Demo Items: Muse 2, Laptop, Poster (48x64 in)
 
 ## Connections
+
 - [[CSEF 2026 Day-of Logistics Checklist]] - `references` [EXTRACTED]
 - [[Muse 2 Product Demo Protocol (30-60 second booth demo)]] - `conceptually_related_to` [INFERRED]
 

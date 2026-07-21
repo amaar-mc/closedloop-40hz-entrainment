@@ -10,6 +10,7 @@ tags:
 # ImprovedTCN
 
 ## Connections
+
 - [[AttentionPool1D_3]] - `implements` [EXTRACTED]
 - [[CausalDSConvBlock_4]] - `conceptually_related_to` [INFERRED]
 - [[ImprovedModelConfig_1]] - `references` [EXTRACTED]

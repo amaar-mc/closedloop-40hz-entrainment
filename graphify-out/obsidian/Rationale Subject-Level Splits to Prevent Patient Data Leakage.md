@@ -10,6 +10,7 @@ tags:
 # Rationale: Subject-Level Splits to Prevent Patient Data Leakage
 
 ## Connections
+
 - [[First End-to-End Pipeline Build (February 6, 2026)]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

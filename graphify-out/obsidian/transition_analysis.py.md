@@ -10,6 +10,7 @@ tags:
 # transition_analysis.py
 
 ## Connections
+
 - [[Transition analysis compare model accuracy at stimrest state transitions vs st]] - `rationale_for` [EXTRACTED]
 - [[_mae()]] - `contains` [EXTRACTED]
 - [[_r2()_5]] - `contains` [EXTRACTED]
@@ -21,4 +22,4 @@ tags:
 - [[main()_31]] - `contains` [EXTRACTED]
 - [[parse_args()_11]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

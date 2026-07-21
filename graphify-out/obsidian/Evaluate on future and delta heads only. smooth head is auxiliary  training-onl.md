@@ -10,6 +10,7 @@ tags:
 # Evaluate on future and delta heads only. smooth head is auxiliary / training-onl
 
 ## Connections
+
 - [[ImprovedModelConfig]] - `uses` [INFERRED]
 - [[ImprovedTCN_1]] - `uses` [INFERRED]
 - [[evaluate()]] - `rationale_for` [EXTRACTED]

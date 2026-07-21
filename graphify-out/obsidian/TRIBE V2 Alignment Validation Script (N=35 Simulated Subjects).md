@@ -9,6 +9,7 @@ tags:
 # TRIBE V2 Alignment Validation Script (N=35 Simulated Subjects)
 
 ## Connections
+
 - [[OracleCtrl (Perfect-Knowledge Two-Pass Oracle)]] - `implements` [EXTRACTED]
 - [[PredictiveCtrl (Trend + Z-score with Hysteresis)]] - `implements` [EXTRACTED]
 - [[evaluate_alignment()]] - `calls` [EXTRACTED]

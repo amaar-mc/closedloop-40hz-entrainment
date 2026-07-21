@@ -10,6 +10,7 @@ tags:
 # Create a rectangle with a title and body text inside.
 
 ## Connections
+
 - [[box_with_text()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_45

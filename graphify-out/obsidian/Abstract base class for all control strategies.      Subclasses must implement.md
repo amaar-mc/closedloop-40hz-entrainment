@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Abstract base class for all control strategies.      Subclasses must implement
+# Abstract base class for all control strategies. Subclasses must implement
 
 ## Connections
+
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[ControlMethodBase_2]] - `rationale_for` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
@@ -18,4 +19,4 @@ tags:
 - [[StimAction]] - `uses` [INFERRED]
 - [[StimState]] - `uses` [INFERRED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -9,6 +9,7 @@ tags:
 # Per-Subject Utility Scatter Plot on vFinal Poster (35/35 above diagonal)
 
 ## Connections
+
 - [[vFinal Poster PDF (CSEF 2026 Submission Print)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

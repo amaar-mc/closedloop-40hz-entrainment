@@ -10,6 +10,7 @@ tags:
 # clear_slide()
 
 ## Connections
+
 - [[Remove all shapes from the slide.]] - `rationale_for` [EXTRACTED]
 - [[v2_builder.py]] - `contains` [EXTRACTED]
 

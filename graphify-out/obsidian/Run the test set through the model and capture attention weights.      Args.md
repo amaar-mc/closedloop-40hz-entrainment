@@ -7,12 +7,13 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Run the test set through the model and capture attention weights.      Args:
+# Run the test set through the model and capture attention weights. Args:
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[analyze_attention_weights()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

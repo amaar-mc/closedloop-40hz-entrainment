@@ -7,9 +7,10 @@ tags:
   - community/Community_38
 ---
 
-# V8: Specialized EEG Architectures from Research  Based on recent literature (202
+# V8: Specialized EEG Architectures from Research Based on recent literature (202
 
 ## Connections
+
 - [[run_v8_specialized_eeg.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_38

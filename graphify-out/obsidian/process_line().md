@@ -10,6 +10,7 @@ tags:
 # process_line()
 
 ## Connections
+
 - [[Full pipeline for processing a line of body text.]] - `rationale_for` [EXTRACTED]
 - [[apply_unicode_replacements()]] - `calls` [EXTRACTED]
 - [[convert_citations()]] - `calls` [EXTRACTED]

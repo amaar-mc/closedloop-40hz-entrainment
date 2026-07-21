@@ -9,6 +9,7 @@ tags:
 # Project P10 Research Log Notebook (vfinal, CSEF 2026 version)
 
 ## Connections
+
 - [[4-Channel vs 7-Channel Comparison (March 15-17, 2026)]] - `references` [EXTRACTED]
 - [[CSEF Materials Update Feature Ablation Discovery Front and Center (March 21-22, 2026)]] - `references` [EXTRACTED]
 - [[Demo Apps Caregiver App and Neurocare Live (March 18-20, 2026)]] - `references` [EXTRACTED]

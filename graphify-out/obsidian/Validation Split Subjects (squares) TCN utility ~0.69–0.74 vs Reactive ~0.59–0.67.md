@@ -9,6 +9,7 @@ tags:
 # Validation Split Subjects (squares): TCN utility ~0.69–0.74 vs Reactive ~0.59–0.67
 
 ## Connections
+
 - [[Per-Subject Alignment Scatter Plot (3535 Favor TCN)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

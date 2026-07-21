@@ -10,8 +10,9 @@ tags:
 # count_parameters()
 
 ## Connections
+
 - [[Count trainable parameters._1]] - `rationale_for` [EXTRACTED]
 - [[test_vit_tcnet()]] - `calls` [EXTRACTED]
 - [[vit_tcnet.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

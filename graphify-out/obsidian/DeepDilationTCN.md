@@ -10,6 +10,7 @@ tags:
 # DeepDilationTCN
 
 ## Connections
+
 - [[Causal TCN with extended dilation stack for larger receptive field.      Defau]] - `rationale_for` [EXTRACTED]
 - [[__init__()_133]] - `method` [EXTRACTED]
 - [[count_parameters()_12]] - `method` [EXTRACTED]

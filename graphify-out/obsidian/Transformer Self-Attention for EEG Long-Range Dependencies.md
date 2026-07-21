@@ -10,6 +10,7 @@ tags:
 # Transformer Self-Attention for EEG Long-Range Dependencies
 
 ## Connections
+
 - [[Temporal Transformer Module for EEG Sequence Modeling]] - `conceptually_related_to` [INFERRED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

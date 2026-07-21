@@ -9,6 +9,7 @@ tags:
 # Predictive Controller Strategy
 
 ## Connections
+
 - [[Fixed Schedule Controller Strategy]] - `conceptually_related_to` [EXTRACTED]
 - [[Reactive Controller Strategy]] - `conceptually_related_to` [EXTRACTED]
 - [[TRIBE V2 Alzheimer's Disease Simulation Figure]] - `references` [EXTRACTED]

@@ -7,9 +7,10 @@ tags:
   - community/Community_38
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[PhaseSwapAugmentation]] - `method` [EXTRACTED]
 
   #community/Community_38

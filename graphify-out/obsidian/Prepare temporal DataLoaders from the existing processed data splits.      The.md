@@ -7,10 +7,11 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Prepare temporal DataLoaders from the existing processed data splits.      The
+# Prepare temporal DataLoaders from the existing processed data splits. The
 
 ## Connections
+
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[prepare_temporal_data()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

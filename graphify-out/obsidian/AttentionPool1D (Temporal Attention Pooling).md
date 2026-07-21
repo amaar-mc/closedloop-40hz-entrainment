@@ -10,6 +10,7 @@ tags:
 # AttentionPool1D (Temporal Attention Pooling)
 
 ## Connections
+
 - [[AttentionWeightCapture (Hook-Based Attention Weight Capture)]] - `references` [EXTRACTED]
 - [[DeepDilationTCN (Dilations 1,2,4,8,16,32, 127-step RF)]] - `calls` [EXTRACTED]
 - [[TransformerTCN (4-layer Causal Transformer Encoder, ~85K params)]] - `calls` [EXTRACTED]

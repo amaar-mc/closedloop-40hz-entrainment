@@ -10,6 +10,7 @@ tags:
 # Closed-Loop DBS for Parkinson's (Precedent)
 
 ## Connections
+
 - [[Research Gap Table (What Exists vs Missing)]] - `references` [EXTRACTED]
 
   #community/Community_34

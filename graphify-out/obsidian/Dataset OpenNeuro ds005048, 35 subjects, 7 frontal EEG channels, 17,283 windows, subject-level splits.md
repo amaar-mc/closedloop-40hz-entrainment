@@ -10,6 +10,7 @@ tags:
 # Dataset: OpenNeuro ds005048, 35 subjects, 7 frontal EEG channels, 17,283 windows, subject-level splits
 
 ## Connections
+
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 
   #community/Community_50

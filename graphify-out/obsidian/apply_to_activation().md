@@ -10,6 +10,7 @@ tags:
 # apply_to_activation()
 
 ## Connections
+
 - [[AlzheimerProfile]] - `method` [EXTRACTED]
 - [[Apply disease modification to cortical activation level.          Reduces activa]] - `rationale_for` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # Methods: Wilcoxon Signed-Rank, Hedges' g, BCa Bootstrap CIs
 
 ## Connections
+
 - [[Methods Offline Counterfactual Replay + AlignmentPAC-Gap Metrics]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Baseline TCN architecture with multi-task training enabled.      Architectural
+# Baseline TCN architecture with multi-task training enabled. Architectural
 
 ## Connections
+
 - [[MultiTaskTCN]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

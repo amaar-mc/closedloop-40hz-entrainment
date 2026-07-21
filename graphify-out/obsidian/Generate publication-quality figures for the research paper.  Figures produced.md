@@ -7,9 +7,10 @@ tags:
   - community/Community_37
 ---
 
-# Generate publication-quality figures for the research paper.  Figures produced
+# Generate publication-quality figures for the research paper. Figures produced
 
 ## Connections
+
 - [[generate_paper_figures.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_37

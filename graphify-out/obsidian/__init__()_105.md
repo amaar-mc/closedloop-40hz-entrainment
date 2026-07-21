@@ -7,9 +7,10 @@ tags:
   - community/TRIBE-TCN_Validation
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[CausalConv1dBlock]] - `calls` [EXTRACTED]
 - [[TCNTribe]] - `method` [EXTRACTED]
 - [[__init__()_108]] - `calls` [EXTRACTED]

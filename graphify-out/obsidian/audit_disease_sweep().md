@@ -10,6 +10,7 @@ tags:
 # audit_disease_sweep()
 
 ## Connections
+
 - [[Validate disease severity produces monotonic PAC degradation.]] - `rationale_for` [EXTRACTED]
 - [[audit_tribe_integration.py]] - `contains` [EXTRACTED]
 - [[check()_1]] - `calls` [EXTRACTED]

@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# TCN Architecture Variants for Temporal PAC Prediction Experiments.  Tests four
+# TCN Architecture Variants for Temporal PAC Prediction Experiments. Tests four
 
 ## Connections
+
 - [[tcn_variants.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

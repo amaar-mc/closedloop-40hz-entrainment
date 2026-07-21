@@ -14,4 +14,4 @@ I integrated the TCN into a closed-loop controller and replayed it on all 35 sub
 
 ---
 
-*Word count: 244 / 250 max*
+_Word count: 244 / 250 max_

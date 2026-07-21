@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[generate_image()_1]] - `calls` [EXTRACTED]
 - [[generate_image.py]] - `contains` [EXTRACTED]
 

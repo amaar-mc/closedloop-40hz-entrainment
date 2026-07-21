@@ -7,9 +7,10 @@ tags:
   - community/Community_119
 ---
 
-# Extract 12 PAC+Stim features and re-normalize from scratch.      This ensures th
+# Extract 12 PAC+Stim features and re-normalize from scratch. This ensures th
 
 ## Connections
+
 - [[build_original_12feat()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_119

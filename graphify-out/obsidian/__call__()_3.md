@@ -7,10 +7,11 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# __call__()
+# **call**()
 
 ## Connections
+
 - [[Args             x EEG data (n_channels, n_samples)          Returns_2]] - `rationale_for` [EXTRACTED]
 - [[TimeShift]] - `method` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

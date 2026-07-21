@@ -10,6 +10,7 @@ tags:
 # PAC Dynamics: Predictive Controller Over Time (Panel B)
 
 ## Connections
+
 - [[Predictive Stimulation Strategy (TCN-based)]] - `references` [INFERRED]
 - [[TRIBE V2 Alzheimer's Disease Simulation Figure]] - `references` [EXTRACTED]
 

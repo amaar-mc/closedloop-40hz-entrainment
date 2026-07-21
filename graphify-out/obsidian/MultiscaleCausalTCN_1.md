@@ -9,7 +9,8 @@ tags:
 # MultiscaleCausalTCN
 
 ## Connections
+
 - [[MultiscaleCausalTCNNoNorm]] - `inherits` [EXTRACTED]
 - [[build_model()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

@@ -7,9 +7,10 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# _get_patient_by_id()
+# \_get_patient_by_id()
 
 ## Connections
+
 - [[Look up a patient by ID from the cached profiles.]] - `rationale_for` [EXTRACTED]
 - [[caregiver_app.py]] - `contains` [EXTRACTED]
 - [[load_profiles()]] - `calls` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[render_session()]] - `calls` [EXTRACTED]
 - [[render_summary()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

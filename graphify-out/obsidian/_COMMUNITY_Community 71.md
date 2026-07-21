@@ -8,6 +8,7 @@ members: 15
 **Members:** 15 nodes
 
 ## Members
+
 - [[8-Second Window Experiment Autocorrelation r=0.45 But R²=0.125 (Failed Target)]] - document - docs/archive/reports/SUMMARY_FOR_USER.md
 - [[Architecture Decision Causal Multiscale TCN + Stim Context Chosen Over LSTMTransformer]] - document - docs/archive/reports/TEMPORAL_PREDICTION_DEEP_DIVE.md
 - [[Comprehensive Analysis V1-V8 Model Attempt History for PAC Prediction]] - document - docs/archive/reports/COMPREHENSIVE_ANALYSIS_ALL_ATTEMPTS.md

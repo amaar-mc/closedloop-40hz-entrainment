@@ -10,6 +10,7 @@ tags:
 # fit_population_tau()
 
 ## Connections
+
 - [[Fit Simulator Params Script]] - `calls` [EXTRACTED]
 - [[Fit tau parameters across all subjects.      Groups sequences by subject, recons]] - `rationale_for` [EXTRACTED]
 - [[collapse_to_epochs()]] - `calls` [EXTRACTED]

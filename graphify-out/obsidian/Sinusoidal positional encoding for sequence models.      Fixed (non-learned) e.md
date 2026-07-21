@@ -7,9 +7,10 @@ tags:
   - community/TCN_Layer_Internals
 ---
 
-# Sinusoidal positional encoding for sequence models.      Fixed (non-learned) e
+# Sinusoidal positional encoding for sequence models. Fixed (non-learned) e
 
 ## Connections
+
 - [[CausalSinusoidalPE]] - `rationale_for` [EXTRACTED]
 
   #community/TCN_Layer_Internals

@@ -10,7 +10,8 @@ tags:
 # to_dict()
 
 ## Connections
+
 - [[Convert to dictionary.]] - `rationale_for` [EXTRACTED]
 - [[ValidationMetrics]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

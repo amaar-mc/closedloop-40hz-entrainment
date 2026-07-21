@@ -10,6 +10,7 @@ tags:
 # ReactiveThresholdControl
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
@@ -22,4 +23,4 @@ tags:
 - [[run_tribe_validation.py]] - `contains` [EXTRACTED]
 - [[step()_38]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

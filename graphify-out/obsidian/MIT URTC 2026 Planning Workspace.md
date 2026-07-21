@@ -10,6 +10,7 @@ tags:
 # MIT URTC 2026 Planning Workspace
 
 ## Connections
+
 - [[Active Conference Paper Workspace]] - `conceptually_related_to` [INFERRED]
 - [[Documentation Index]] - `references` [EXTRACTED]
 

@@ -1,3 +1,17 @@
+<!-- SUBMISSION-STATUS:START (auto-managed; edit paper/conferences/_tracker/submission_tracker.json, not this block) -->
+
+> ### 📋 MIT URTC 2026 (paper) · priority #9
+>
+> **Doc status:** REFERENCE — supporting material (layout/plan/script/checklist)  
+> **Artifact type:** supporting document · **Canonical:** no (supporting file)  
+> **Venue phase:** gate G8 · 89% to submission · **eligibility:** conditional · label: `conditional-eligibility`  
+> **Deadline:** no date posted  
+> ⚑ **Integrity:** no-fabricated-affiliation  
+> **Source of truth for claims:** `paper/data/key_results.md` · **Tracker:** `paper/conferences/_tracker/submission_dashboard.html`  
+> **Last labeled:** 2026-07-17 (auto — do not hand-edit this block)
+
+<!-- SUBMISSION-STATUS:END -->
+
 # MIT URTC Evidence Map
 
 Use this map as the source-of-truth boundary for manuscript claims. The repository contains multiple
@@ -5,29 +19,29 @@ model generations. Do not combine metrics across generations unless the distinct
 
 ## Primary Manuscript Sources
 
-| Claim area | Primary source |
-|---|---|
-| Raw dataset identity and local participant table | [`../../../data/raw/ds005048/dataset_description.json`](../../../data/raw/ds005048/dataset_description.json), [`../../../data/raw/ds005048/participants.tsv`](../../../data/raw/ds005048/participants.tsv) |
-| PAC computation | [`../../../src/pac_computation.py`](../../../src/pac_computation.py) |
-| Epoch labeling, window extraction, and subject splits | [`../../../src/data_loader.py`](../../../src/data_loader.py) |
-| Causal feature construction and normalization | [`../../../temporal_multiscale/build_multiscale_dataset.py`](../../../temporal_multiscale/build_multiscale_dataset.py) |
-| Sequence counts and 24/5/6 split | [`../../../data/processed/multiscale_temporal_lb20_hz5_ts1/metadata.json`](../../../data/processed/multiscale_temporal_lb20_hz5_ts1/metadata.json) |
-| Current temporal architecture | [`../../../temporal_multiscale/multiscale_tcn.py`](../../../temporal_multiscale/multiscale_tcn.py) |
-| Feature ablation | [`../../../archive/experimental/results/generalization_7ch.json`](../../../archive/experimental/results/generalization_7ch.json) |
-| Five-seed PAC+Stim forecasting experiment | [`../../../archive/experimental/results/pac_stim_focused.json`](../../../archive/experimental/results/pac_stim_focused.json) |
-| Single-seed horizon sweep | [`../../../archive/experimental/results/horizon_sweep_pac_stim.json`](../../../archive/experimental/results/horizon_sweep_pac_stim.json) |
-| Backward-looking PAC stress test | [`../../../archive/experimental/sliding_pac/RESULTS.md`](../../../archive/experimental/sliding_pac/RESULTS.md), [`../../../archive/experimental/sliding_pac/results/comparison_results.json`](../../../archive/experimental/sliding_pac/results/comparison_results.json), [`../../../archive/experimental/sliding_pac/compute_sliding_pac.py`](../../../archive/experimental/sliding_pac/compute_sliding_pac.py) |
-| Independent leakage audit and caveats | [`../../../results/rigor_audit/07_leakage_audit.md`](../../../results/rigor_audit/07_leakage_audit.md) |
-| Current 12-feature controller integration logic | [`../../../scripts/pipeline/run_12feat_validation.py`](../../../scripts/pipeline/run_12feat_validation.py) |
-| Current 12-feature controller replay summary | [`../../../results/metrics/controller_comparison_12feat.json`](../../../results/metrics/controller_comparison_12feat.json) |
+| Claim area                                            | Primary source                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Raw dataset identity and local participant table      | [`../../../data/raw/ds005048/dataset_description.json`](../../../data/raw/ds005048/dataset_description.json), [`../../../data/raw/ds005048/participants.tsv`](../../../data/raw/ds005048/participants.tsv)                                                                                                                                                                                                       |
+| PAC computation                                       | [`../../../src/pac_computation.py`](../../../src/pac_computation.py)                                                                                                                                                                                                                                                                                                                                             |
+| Epoch labeling, window extraction, and subject splits | [`../../../src/data_loader.py`](../../../src/data_loader.py)                                                                                                                                                                                                                                                                                                                                                     |
+| Causal feature construction and normalization         | [`../../../temporal_multiscale/build_multiscale_dataset.py`](../../../temporal_multiscale/build_multiscale_dataset.py)                                                                                                                                                                                                                                                                                           |
+| Sequence counts and 24/5/6 split                      | [`../../../data/processed/multiscale_temporal_lb20_hz5_ts1/metadata.json`](../../../data/processed/multiscale_temporal_lb20_hz5_ts1/metadata.json)                                                                                                                                                                                                                                                               |
+| Current temporal architecture                         | [`../../../temporal_multiscale/multiscale_tcn.py`](../../../temporal_multiscale/multiscale_tcn.py)                                                                                                                                                                                                                                                                                                               |
+| Feature ablation                                      | [`../../../archive/experimental/results/generalization_7ch.json`](../../../archive/experimental/results/generalization_7ch.json)                                                                                                                                                                                                                                                                                 |
+| Five-seed PAC+Stim forecasting experiment             | [`../../../archive/experimental/results/pac_stim_focused.json`](../../../archive/experimental/results/pac_stim_focused.json)                                                                                                                                                                                                                                                                                     |
+| Single-seed horizon sweep                             | [`../../../archive/experimental/results/horizon_sweep_pac_stim.json`](../../../archive/experimental/results/horizon_sweep_pac_stim.json)                                                                                                                                                                                                                                                                         |
+| Backward-looking PAC stress test                      | [`../../../archive/experimental/sliding_pac/RESULTS.md`](../../../archive/experimental/sliding_pac/RESULTS.md), [`../../../archive/experimental/sliding_pac/results/comparison_results.json`](../../../archive/experimental/sliding_pac/results/comparison_results.json), [`../../../archive/experimental/sliding_pac/compute_sliding_pac.py`](../../../archive/experimental/sliding_pac/compute_sliding_pac.py) |
+| Independent leakage audit and caveats                 | [`../../../results/rigor_audit/07_leakage_audit.md`](../../../results/rigor_audit/07_leakage_audit.md)                                                                                                                                                                                                                                                                                                           |
+| Current 12-feature controller integration logic       | [`../../../scripts/pipeline/run_12feat_validation.py`](../../../scripts/pipeline/run_12feat_validation.py)                                                                                                                                                                                                                                                                                                       |
+| Current 12-feature controller replay summary          | [`../../../results/metrics/controller_comparison_12feat.json`](../../../results/metrics/controller_comparison_12feat.json)                                                                                                                                                                                                                                                                                       |
 
 ## Historical Sources
 
-| Claim area | Source | Usage rule |
-|---|---|---|
+| Claim area                         | Source                                                                                                         | Usage rule                                                                                                                            |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Older 73-feature controller replay | [`../../../results/metrics/tcn_validation_results.json`](../../../results/metrics/tcn_validation_results.json) | Historical context only. Do not present its 72.1% alignment or 82.6% low-PAC targeting as results of the final 12-feature checkpoint. |
-| Older consolidated report | [`../../../results/RESULTS_REPORT.md`](../../../results/RESULTS_REPORT.md) | Historical context only. It predates the final 12-feature replay. |
-| Older broad methodology narrative | [`../../../docs/methodology/CURRENT_METHODOLOGY.md`](../../../docs/methodology/CURRENT_METHODOLOGY.md) | Use code and machine-readable artifacts when this document conflicts with the current checkpoint. |
+| Older consolidated report          | [`../../../results/RESULTS_REPORT.md`](../../../results/RESULTS_REPORT.md)                                     | Historical context only. It predates the final 12-feature replay.                                                                     |
+| Older broad methodology narrative  | [`../../../docs/methodology/CURRENT_METHODOLOGY.md`](../../../docs/methodology/CURRENT_METHODOLOGY.md)         | Use code and machine-readable artifacts when this document conflicts with the current checkpoint.                                     |
 
 ## Claim Boundaries
 

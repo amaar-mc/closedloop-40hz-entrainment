@@ -9,6 +9,7 @@ tags:
 # P10 Daily Research Notebook (v2 daily log draft)
 
 ## Connections
+
 - [[P10 Daily Research Notebook V2 (PDF render)]] - `references` [EXTRACTED]
 
   #community/Community_141

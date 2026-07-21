@@ -10,6 +10,7 @@ tags:
 # make_label()
 
 ## Connections
+
 - [[Create a LaTeX label from text.]] - `rationale_for` [EXTRACTED]
 - [[generate_latex()]] - `calls` [EXTRACTED]
 - [[generate_paper_latex.py]] - `contains` [EXTRACTED]

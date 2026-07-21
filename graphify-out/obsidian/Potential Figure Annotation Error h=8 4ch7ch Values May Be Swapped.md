@@ -10,6 +10,7 @@ tags:
 # Potential Figure Annotation Error: h=8 4ch/7ch Values May Be Swapped
 
 ## Connections
+
 - [[Poster Results Coherence Audit]] - `references` [EXTRACTED]
 
   #community/Community_41

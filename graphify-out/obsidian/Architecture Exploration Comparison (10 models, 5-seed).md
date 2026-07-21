@@ -9,6 +9,7 @@ tags:
 # Architecture Exploration Comparison (10 models, 5-seed)
 
 ## Connections
+
 - [[GRU Model (test R2=0.633, high variance)]] - `references` [EXTRACTED]
 - [[LightTransformer Model (test R2=0.651, best performer)]] - `references` [EXTRACTED]
 - [[Model Architecture Deep Dive Phase (Phase 3)]] - `references` [EXTRACTED]

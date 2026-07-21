@@ -10,8 +10,9 @@ tags:
 # test_temporal_dataset()
 
 ## Connections
+
 - [[TemporalPACDataset]] - `calls` [EXTRACTED]
 - [[Test the temporal dataset creation.]] - `rationale_for` [EXTRACTED]
 - [[temporal_dataset.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

@@ -10,6 +10,7 @@ tags:
 # run_demo()
 
 ## Connections
+
 - [[SimulatedEEGAdapter (Demo Streaming)]] - `calls` [EXTRACTED]
 - [[StreamingFeatureExtractor (Demo Streaming)]] - `calls` [EXTRACTED]
 - [[auto_device()]] - `calls` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[srcpersonalization.py (PersonalizationModule)]] - `calls` [EXTRACTED]
 - [[temporal_multiscalemodel_registry.py (build_default_registry)]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

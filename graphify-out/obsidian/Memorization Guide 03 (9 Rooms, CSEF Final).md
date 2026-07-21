@@ -9,7 +9,8 @@ tags:
 # Memorization Guide 03 (9 Rooms, CSEF Final)
 
 ## Connections
+
 - [[Main Presentation Script (4-5 Min, 01)]] - `references` [EXTRACTED]
 - [[Pocket Card (Screenshot Reference for Phone)]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

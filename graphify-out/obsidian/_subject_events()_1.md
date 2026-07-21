@@ -7,9 +7,10 @@ tags:
   - community/Community_53
 ---
 
-# _subject_events()
+# \_subject_events()
 
 ## Connections
+
 - [[_build_split_samples()]] - `calls` [EXTRACTED]
 - [[build_multiscale_dataset.py]] - `contains` [EXTRACTED]
 

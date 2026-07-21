@@ -10,6 +10,7 @@ tags:
 # Limitation: Offline Replay Not Live Closed-Loop
 
 ## Connections
+
 - [[Anticipated Reviewer Weaknesses]] - `references` [EXTRACTED]
 - [[Discussion Section Arc]] - `references` [INFERRED]
 

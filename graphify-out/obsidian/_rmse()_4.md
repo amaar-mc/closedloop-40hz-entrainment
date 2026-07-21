@@ -7,10 +7,11 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _rmse()
+# \_rmse()
 
 ## Connections
+
 - [[evaluate_subset()]] - `calls` [EXTRACTED]
 - [[transition_analysis.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

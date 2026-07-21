@@ -10,6 +10,7 @@ tags:
 # generate_paper_latex.py
 
 ## Connections
+
 - [[apply_unicode_replacements()]] - `contains` [EXTRACTED]
 - [[convert_citations()]] - `contains` [EXTRACTED]
 - [[convert_inline_formatting()]] - `contains` [EXTRACTED]

@@ -9,6 +9,7 @@ tags:
 # ISEF Grand Award Dimensions (5-dimensional rubric)
 
 ## Connections
+
 - [[CSEF Judging Process and Strategy]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

@@ -10,6 +10,7 @@ tags:
 # persistence_baseline()
 
 ## Connections
+
 - [[Persistence baseline predict future PAC = current PAC (last_pac).]] - `rationale_for` [EXTRACTED]
 - [[_r2()_2]] - `calls` [EXTRACTED]
 - [[_rmse()_1]] - `calls` [EXTRACTED]

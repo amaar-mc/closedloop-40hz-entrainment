@@ -8,6 +8,7 @@ members: 44
 **Members:** 44 nodes
 
 ## Members
+
 - [[Build causal feature sequences and future PAC targets.      Features per step (1]] - rationale - scripts/pipeline/run_tribe_tcn_validation.py
 - [[Build single-step feature vector (12 dims).]] - rationale - scripts/pipeline/run_tribe_tcn_validation.py
 - [[CausalConv1dBlock]] - code - scripts/pipeline/run_tribe_tcn_validation.py
@@ -61,8 +62,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 2 edges to [[_COMMUNITY_12-Feature TCN Validation]]
 
 ## Top bridge nodes
+
 - [[evaluate_alignment()_2]] - degree 6, connects to 1 community
 - [[TCNTribe Model (TRIBE-trained Causal TCN)]] - degree 6, connects to 1 community

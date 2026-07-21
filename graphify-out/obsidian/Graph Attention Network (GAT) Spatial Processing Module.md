@@ -10,6 +10,7 @@ tags:
 # Graph Attention Network (GAT) Spatial Processing Module
 
 ## Connections
+
 - [[Proposed GAT-Transformer Architecture for EEG PAC Prediction]] - `implements` [EXTRACTED]
 
   #community/Community_76

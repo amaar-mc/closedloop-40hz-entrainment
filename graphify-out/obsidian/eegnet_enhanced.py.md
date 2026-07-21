@@ -10,6 +10,7 @@ tags:
 # eegnet_enhanced.py
 
 ## Connections
+
 - [[EEGNetEnhanced]] - `contains` [EXTRACTED]
 - [[EEGNetLarge]] - `contains` [EXTRACTED]
 - [[Enhanced EEGNet Architectures for PAC Prediction Capacity Experiments  Tests w]] - `rationale_for` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[test_eegnet_enhanced()]] - `contains` [EXTRACTED]
 - [[test_eegnet_large()]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

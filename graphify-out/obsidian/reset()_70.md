@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[CorticalResponseModel]] - `method` [EXTRACTED]
 - [[Reset to initial resting state.]] - `rationale_for` [EXTRACTED]
 

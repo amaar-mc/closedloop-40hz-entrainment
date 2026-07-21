@@ -10,6 +10,7 @@ tags:
 # step()
 
 ## Connections
+
 - [[PredictiveCtrl]] - `method` [EXTRACTED]
 - [[_trend()_1]] - `calls` [EXTRACTED]
 

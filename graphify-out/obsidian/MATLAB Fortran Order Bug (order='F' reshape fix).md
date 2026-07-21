@@ -10,6 +10,7 @@ tags:
 # MATLAB Fortran Order Bug (order='F' reshape fix)
 
 ## Connections
+
 - [[Digital Research Log Notebook (Detailed Chronological)]] - `references` [EXTRACTED]
 
   #community/Community_43

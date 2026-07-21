@@ -10,6 +10,7 @@ tags:
 # v1_builder.py
 
 ## Connections
+
 - [[Generate CSEF 2026 poster board PPTX — 24x32 inches (prints at 200% → 48x64).]] - `rationale_for` [EXTRACTED]
 - [[add_body_text()]] - `contains` [EXTRACTED]
 - [[add_box()]] - `contains` [EXTRACTED]

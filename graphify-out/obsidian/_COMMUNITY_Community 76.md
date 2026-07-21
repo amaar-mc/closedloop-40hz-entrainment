@@ -8,6 +8,7 @@ members: 14
 **Members:** 14 nodes
 
 ## Members
+
 - [[30% Non-Responder Problem Inter-Individual Variability in 40Hz Entrainment]] - document - docs/archive/AD_40Hz_Entrainment_Research_Paper_IEEE.txt
 - [[Comprehensive Methodology 7-Phase Implementation Plan for Closed-Loop 40Hz System]] - document - docs/archive/Comprehensive_Methodology_Closed_Loop_40Hz_Entrainment.txt
 - [[Graph Attention Network (GAT) Spatial Processing Module]] - document - docs/archive/04_Research_Methodology_Proposed_Approach.txt

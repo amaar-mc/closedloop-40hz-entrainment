@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Compute average PAC across all channels.          Args:             signals:
+# Compute average PAC across all channels. Args: signals:
 
 ## Connections
+
 - [[compute_pac_average()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

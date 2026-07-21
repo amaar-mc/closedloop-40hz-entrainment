@@ -9,6 +9,7 @@ tags:
 # Gamma Oscillations (38-42 Hz) Amplitude Signal
 
 ## Connections
+
 - [[Figure 2 Phase-Amplitude Coupling (PAC) Mechanism Diagram]] - `references` [EXTRACTED]
 - [[Phase Modulates Amplitude Relationship]] - `conceptually_related_to` [EXTRACTED]
 - [[Theta Rhythm (4-8 Hz) Phase Signal]] - `conceptually_related_to` [EXTRACTED]

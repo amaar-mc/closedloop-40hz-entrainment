@@ -10,7 +10,8 @@ tags:
 # test_output_shape_4ch()
 
 ## Connections
+
 - [[StreamingFeatureExtractor(n_channels=4) produces (37,) output.]] - `rationale_for` [EXTRACTED]
 - [[test_streaming_parity.py]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -7,12 +7,13 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Compute aggregate statistics across seeds for each metric.      Computes mean,
+# Compute aggregate statistics across seeds for each metric. Computes mean,
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGNetEnhanced]] - `uses` [INFERRED]
 - [[EEGNetLarge]] - `uses` [INFERRED]
 - [[compute_aggregate_stats()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

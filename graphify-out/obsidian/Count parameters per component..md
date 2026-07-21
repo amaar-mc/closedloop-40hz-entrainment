@@ -10,6 +10,7 @@ tags:
 # Count parameters per component.
 
 ## Connections
+
 - [[count_parameters_by_component()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Temporal_PAC_Predictor

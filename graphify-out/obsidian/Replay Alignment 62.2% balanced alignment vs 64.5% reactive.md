@@ -10,6 +10,7 @@ tags:
 # Replay Alignment: 62.2% balanced alignment vs 64.5% reactive
 
 ## Connections
+
 - [[Research Paper Status Document]] - `references` [EXTRACTED]
 - [[Targeting-Specificity Tradeoff Controller must be calibrated before live testing]] - `conceptually_related_to` [INFERRED]
 

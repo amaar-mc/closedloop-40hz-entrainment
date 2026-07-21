@@ -10,6 +10,7 @@ tags:
 # 11pt italic gray caption paragraph.
 
 ## Connections
+
 - [[add_caption()]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

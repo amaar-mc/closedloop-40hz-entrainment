@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `method` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

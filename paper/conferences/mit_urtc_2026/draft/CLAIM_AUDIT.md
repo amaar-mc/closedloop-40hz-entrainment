@@ -1,3 +1,17 @@
+<!-- SUBMISSION-STATUS:START (auto-managed; edit paper/conferences/_tracker/submission_tracker.json, not this block) -->
+
+> ### 📋 MIT URTC 2026 (paper) · priority #9
+>
+> **Doc status:** REFERENCE — supporting material (layout/plan/script/checklist)  
+> **Artifact type:** supporting document · **Canonical:** no (supporting file)  
+> **Venue phase:** gate G8 · 89% to submission · **eligibility:** conditional · label: `conditional-eligibility`  
+> **Deadline:** no date posted  
+> ⚑ **Integrity:** no-fabricated-affiliation  
+> **Source of truth for claims:** `paper/data/key_results.md` · **Tracker:** `paper/conferences/_tracker/submission_dashboard.html`  
+> **Last labeled:** 2026-07-17 (auto — do not hand-edit this block)
+
+<!-- SUBMISSION-STATUS:END -->
+
 # MIT URTC Draft Claim Audit
 
 This file records which result generation supports each manuscript claim. It exists because older
@@ -17,6 +31,9 @@ Use this generation for:
   `R^2 = 0.558`.
 - The five-seed 12-feature forecasting result: mean `R^2 = 0.606`, range `0.558-0.647`.
 - The single-seed horizon sweep and persistence comparison.
+
+The final manuscript omits the horizon sweep so the weaker complete-event target does not dominate
+the corrected-target contribution.
 
 The archived experiment reports `22,914` parameters for its hidden-64 TCN implementation.
 Its prose summary reports `+/- 0.032`, but the raw five values produce population SD `0.0291` and
@@ -46,18 +63,21 @@ The current integrated checkpoint has:
 - 20-step lookback
 - 5-step forecast horizon
 - `27,139` trainable parameters
-- checkpoint metadata test `R^2 = 0.5844`
+
+The validation command prints checkpoint metadata `test_r2=0.5844`, but the manuscript reports the
+architecture parameter count only. Forecasting-study, stress-test, and controller-replay metrics come
+from distinct generation paths and should not be collapsed into one checkpoint-performance claim.
 
 Its retrospective replay summary is:
 
-| Strategy | Alignment | Low-PAC Stim | High-PAC Rest | PAC Gap |
-|---|---:|---:|---:|---:|
-| Fixed schedule | 45.01% | 61.43% | 28.59% | -6.55 x 10^-6 |
-| Reactive threshold | 64.49% | 51.67% | 77.30% | 21.09 x 10^-6 |
-| TCN predictive (12-feat) | 62.23% | 73.77% | 50.68% | 21.02 x 10^-6 |
-| Alignment oracle | 100.00% | 100.00% | 100.00% | 33.36 x 10^-6 |
+| Strategy                 | Alignment | Low-PAC Stim | High-PAC Rest |       PAC Gap |
+| ------------------------ | --------: | -----------: | ------------: | ------------: |
+| Fixed schedule           |    45.01% |       61.43% |        28.59% | -6.55 x 10^-6 |
+| Reactive threshold       |    64.49% |       51.67% |        77.30% | 21.09 x 10^-6 |
+| TCN predictive (12-feat) |    62.23% |       73.77% |        50.68% | 21.02 x 10^-6 |
+| Alignment oracle         |   100.00% |      100.00% |       100.00% | 33.36 x 10^-6 |
 
-The TCN improves low-PAC targeting but reduces high-PAC rest specificity. Its balanced alignment is
+The TCN improves low-PAC coverage but reduces the above-median-PAC rest rate. Its balanced alignment is
 lower than the reactive controller's alignment. This is a mixed result and must be stated as such.
 The replay includes trajectories from all 35 participants across the training, validation, and test
 splits. It is a full-cohort integration diagnostic, not an additional held-out forecasting test.

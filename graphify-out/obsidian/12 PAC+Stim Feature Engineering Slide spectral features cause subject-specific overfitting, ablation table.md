@@ -10,6 +10,7 @@ tags:
 # 12 PAC+Stim Feature Engineering Slide: spectral features cause subject-specific overfitting, ablation table
 
 ## Connections
+
 - [[Feature Ablation 73-feature test R²=−0.025 vs 12-feature R²=0.606 (spectral features cause generalization failure)]] - `shares_data_with` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

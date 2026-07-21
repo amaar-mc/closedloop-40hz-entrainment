@@ -10,6 +10,7 @@ tags:
 # Train a single variant and return its result dict.
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[CausalDSConvBlock_1]] - `uses` [INFERRED]
 - [[LastStepPool_1]] - `uses` [INFERRED]
@@ -18,4 +19,4 @@ tags:
 - [[SequenceDataset]] - `uses` [INFERRED]
 - [[train_variant()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

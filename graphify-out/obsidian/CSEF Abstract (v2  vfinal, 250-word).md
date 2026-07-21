@@ -9,6 +9,7 @@ tags:
 # CSEF Abstract (v2 / vfinal, 250-word)
 
 ## Connections
+
 - [[Alignment Result 72.1% (TCN) vs 64.5% (reactive), p0.001]] - `references` [EXTRACTED]
 - [[CSEF Submission (California Science and Engineering Fair, April 2026)]] - `references` [EXTRACTED]
 - [[Feature Ablation Finding 12-feat (R²=0.606) vs 73-feat (R²=-0.025)]] - `references` [EXTRACTED]

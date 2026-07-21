@@ -10,6 +10,7 @@ tags:
 # EEGNet Static PAC Model (src/eegnet.py, 1457 params)
 
 ## Connections
+
 - [[EEGNet Architecture (Static PAC, ~1457 params, R²=0.287)]] - `semantically_similar_to` [EXTRACTED]
 - [[Phase 1 Static PAC Prediction (V1–V8, Feb 5–16 2026)]] - `references` [EXTRACTED]
 - [[R²=0.287 Static PAC Prediction Ceiling]] - `conceptually_related_to` [EXTRACTED]

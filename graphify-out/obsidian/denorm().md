@@ -10,6 +10,7 @@ tags:
 # denorm()
 
 ## Connections
+
 - [[evaluate_model()]] - `calls` [EXTRACTED]
 - [[ridge_baseline()]] - `calls` [EXTRACTED]
 - [[ridge_enhanced_baseline()]] - `calls` [EXTRACTED]

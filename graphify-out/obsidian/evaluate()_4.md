@@ -10,6 +10,7 @@ tags:
 # evaluate()
 
 ## Connections
+
 - [[Evaluate model on a data split.      Returns metrics in ORIGINAL PAC scale (de]] - `rationale_for` [EXTRACTED]
 - [[compute_metrics()_1]] - `calls` [EXTRACTED]
 - [[train_temporal.py]] - `contains` [EXTRACTED]

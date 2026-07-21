@@ -10,6 +10,7 @@ tags:
 # Replace Unicode symbols with LaTeX equivalents.
 
 ## Connections
+
 - [[apply_unicode_replacements()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_44

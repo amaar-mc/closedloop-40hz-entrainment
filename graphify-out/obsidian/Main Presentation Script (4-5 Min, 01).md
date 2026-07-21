@@ -9,6 +9,7 @@ tags:
 # Main Presentation Script (4-5 Min, 01)
 
 ## Connections
+
 - [[3-to-4 Minute Board Walk Script (v2)]] - `conceptually_related_to` [INFERRED]
 - [[Cut Content Table (What to Have Ready if Asked)]] - `references` [EXTRACTED]
 - [[Elevator Pitch Script (1 Minute, ClinicalJudge Framing)]] - `conceptually_related_to` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[Presentation Timing Map 6 sections mapped to poster locations, total ~4 min 10 sec]] - `references` [EXTRACTED]
 - [[Short Accessible Presentation Script (02, Elevator-Expandable)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

@@ -7,9 +7,10 @@ tags:
   - community/Community_114
 ---
 
-# Pure NumPy Diagnostic - No dependencies except NumPy  Analyzes why V4 ViT-TCNet
+# Pure NumPy Diagnostic - No dependencies except NumPy Analyzes why V4 ViT-TCNet
 
 ## Connections
+
 - [[pure_numpy_diagnostic.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_114

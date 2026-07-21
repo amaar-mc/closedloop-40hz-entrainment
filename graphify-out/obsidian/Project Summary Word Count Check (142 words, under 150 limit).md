@@ -9,6 +9,7 @@ tags:
 # Project Summary Word Count Check (142 words, under 150 limit)
 
 ## Connections
+
 - [[CSEF Presentation Compliance Checklist (1818 PASS)]] - `references` [EXTRACTED]
 
   #community/Rigor_Audit_Reports

@@ -10,6 +10,7 @@ tags:
 # Rationale: Empirical Tau Fitting for Simulator Defense (RSRCH-04)
 
 ## Connections
+
 - [[Simulator Tau RiseDecay Parameters]] - `rationale_for` [EXTRACTED]
 
   #community/Community_131

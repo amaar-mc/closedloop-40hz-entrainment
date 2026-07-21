@@ -10,6 +10,7 @@ tags:
 # run_sklearn_temporal_baseline()
 
 ## Connections
+
 - [[Persistence Baseline — Predict PAC(t) = PAC(t-1)]] - `references` [EXTRACTED]
 - [[Ridge Regression Baseline — Temporal PAC Prediction Comparison]] - `implements` [EXTRACTED]
 - [[Test 4 Sklearn Ridge baseline for temporal prediction.     Uses PAC history +]] - `rationale_for` [EXTRACTED]

@@ -10,8 +10,9 @@ tags:
 # compute_preferred_phase()
 
 ## Connections
+
 - [[Compute the preferred theta phase for maximum gamma amplitude.      Args]] - `rationale_for` [EXTRACTED]
 - [[extract_pac_features()]] - `calls` [EXTRACTED]
 - [[pac_features.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

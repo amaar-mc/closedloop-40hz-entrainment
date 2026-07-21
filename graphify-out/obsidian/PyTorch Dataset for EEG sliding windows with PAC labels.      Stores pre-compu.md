@@ -7,11 +7,12 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# PyTorch Dataset for EEG sliding windows with PAC labels.      Stores pre-compu
+# PyTorch Dataset for EEG sliding windows with PAC labels. Stores pre-compu
 
 ## Connections
+
 - [[EEGPreprocessor]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `rationale_for` [EXTRACTED]
 - [[PACComputer]] - `uses` [INFERRED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

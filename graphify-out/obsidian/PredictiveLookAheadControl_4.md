@@ -10,6 +10,7 @@ tags:
 # PredictiveLookAheadControl
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[Trend-based look-ahead controller with hysteresis._1]] - `rationale_for` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[reset()_46]] - `method` [EXTRACTED]
 - [[step()_46]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

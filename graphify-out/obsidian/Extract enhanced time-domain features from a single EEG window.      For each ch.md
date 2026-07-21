@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# Extract enhanced time-domain features from a single EEG window.      For each ch
+# Extract enhanced time-domain features from a single EEG window. For each ch
 
 ## Connections
+
 - [[extract_enhanced_features()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

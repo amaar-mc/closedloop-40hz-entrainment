@@ -7,9 +7,10 @@ tags:
   - community/PPTX_Slide_Builder
 ---
 
-# Write multiple styled runs in a single paragraph.          Each segment: (text,
+# Write multiple styled runs in a single paragraph. Each segment: (text,
 
 ## Connections
+
 - [[write_inline()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# 40 Hz Auditory Stimulus Generator for TRIBE V2 Integration  Generates auditory c
+# 40 Hz Auditory Stimulus Generator for TRIBE V2 Integration Generates auditory c
 
 ## Connections
+
 - [[stimulus_generator.py]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

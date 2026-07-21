@@ -7,11 +7,12 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# _causal_phase_amplitude()
+# \_causal_phase_amplitude()
 
 ## Connections
+
 - [[Extract theta instantaneous phase and gamma amplitude envelope         using cau]] - `rationale_for` [EXTRACTED]
 - [[StreamingFeatureExtractor]] - `method` [EXTRACTED]
 - [[process_window()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

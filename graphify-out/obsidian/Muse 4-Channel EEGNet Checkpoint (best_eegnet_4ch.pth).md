@@ -10,6 +10,7 @@ tags:
 # Muse 4-Channel EEGNet Checkpoint (best_eegnet_4ch.pth)
 
 ## Connections
+
 - [[NeuroCare Caregiver Dashboard (Multi-page Streamlit)]] - `references` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

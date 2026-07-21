@@ -10,6 +10,7 @@ tags:
 # enhanced_features.py
 
 ## Connections
+
 - [[Enhanced time-domain feature extraction from raw EEG windows.  Adds Hjorth param]] - `rationale_for` [EXTRACTED]
 - [[compute_hjorth_params()]] - `contains` [EXTRACTED]
 - [[compute_sample_entropy()]] - `contains` [EXTRACTED]

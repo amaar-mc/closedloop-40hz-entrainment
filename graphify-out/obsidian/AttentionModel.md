@@ -10,6 +10,7 @@ tags:
 # AttentionModel
 
 ## Connections
+
 - [[Multi-head attention over time points.      Learns which time points are importa]] - `rationale_for` [EXTRACTED]
 - [[__init__()_20]] - `method` [EXTRACTED]
 - [[forward()_14]] - `method` [EXTRACTED]

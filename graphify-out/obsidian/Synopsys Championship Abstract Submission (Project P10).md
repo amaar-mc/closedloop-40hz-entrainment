@@ -9,6 +9,7 @@ tags:
 # Synopsys Championship Abstract Submission (Project P10)
 
 ## Connections
+
 - [[P10 Abstract PDF (Synopsys Official Form Layout, Final)]] - `references` [EXTRACTED]
 - [[P10 Abstract PDF (Synopsys Submitted, Narrative Style)]] - `references` [EXTRACTED]
 

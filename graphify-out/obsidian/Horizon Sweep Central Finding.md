@@ -9,6 +9,7 @@ tags:
 # Horizon Sweep Central Finding
 
 ## Connections
+
 - [[Horizon Sweep Results Table (1-10s)]] - `conceptually_related_to` [INFERRED]
 - [[TCN Closed-Loop Validation Result (247-word Abstract)]] - `references` [EXTRACTED]
 

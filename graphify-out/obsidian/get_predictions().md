@@ -10,8 +10,9 @@ tags:
 # get_predictions()
 
 ## Connections
+
 - [[Get TCN, Ridge, and persistence predictions on a split.      Returns         y_]] - `rationale_for` [EXTRACTED]
 - [[main()_31]] - `calls` [EXTRACTED]
 - [[transition_analysis.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

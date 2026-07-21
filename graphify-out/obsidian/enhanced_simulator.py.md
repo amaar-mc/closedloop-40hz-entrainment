@@ -10,6 +10,7 @@ tags:
 # enhanced_simulator.py
 
 ## Connections
+
 - [[StimAction_1]] - `contains` [EXTRACTED]
 - [[TRIBE V2-Enhanced Brain Entrainment Simulator  Replaces the simple exponential P]] - `rationale_for` [EXTRACTED]
 - [[TribeEnhancedSimulator]] - `contains` [EXTRACTED]

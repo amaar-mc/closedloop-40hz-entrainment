@@ -8,6 +8,7 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
+
 - [[FixedScheduleControl (40s ON  20s OFF Fixed Protocol)]] - code - validation/experiments/tcn_integrated_simulation.py
 - [[OracleControl (Perfect PAC Knowledge Upper Bound)]] - code - validation/experiments/tcn_integrated_simulation.py
 - [[ReactiveThresholdControl (Z-Score Rolling Baseline Controller)]] - code - validation/experiments/tcn_integrated_simulation.py

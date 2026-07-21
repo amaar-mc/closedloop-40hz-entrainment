@@ -7,9 +7,10 @@ tags:
   - community/Community_56
 ---
 
-# __getitem__()
+# **getitem**()
 
 ## Connections
+
 - [[SeqDataset_1]] - `method` [EXTRACTED]
 
   #community/Community_56

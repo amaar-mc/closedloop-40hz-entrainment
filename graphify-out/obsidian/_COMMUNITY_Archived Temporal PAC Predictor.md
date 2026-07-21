@@ -8,6 +8,7 @@ members: 56
 **Members:** 56 nodes
 
 ## Members
+
 - [[Args             batch Dictionary with keys                 'eeg']] - rationale - archive/temporal_legacy/temporal_model.py
 - [[Args             lookback Number of windows to look back (5 windows = 20 seco]] - rationale - archive/temporal_legacy/train_temporal_long_windows.py
 - [[Args             n_channels Number of EEG channels             n_samples Sa]] - rationale - archive/temporal_legacy/temporal_model.py
@@ -25,7 +26,7 @@ members: 56
 - [[LongWindowTemporalDataset]] - code - archive/temporal_legacy/train_temporal_long_windows.py
 - [[MultiHorizonPredictor]] - code - archive/temporal_legacy/temporal_model.py
 - [[MultiHorizonPredictor (Multi-Head LSTM)]] - code - archive/temporal_legacy/temporal_model.py
-- [[Rationale LSTM for Model Predictive Control of 40Hz Entrainment]] - document - archive/temporal_legacy/__init__.py
+- [[Rationale LSTM for Model Predictive Control of 40Hz Entrainment]] - document - archive/temporal_legacy/**init**.py
 - [[Returns dict mapping horizon → prediction.]] - rationale - archive/temporal_legacy/temporal_model.py
 - [[SpatialEncoder]] - code - archive/temporal_legacy/temporal_model.py
 - [[SpatialEncoder (CNN Window Encoder)]] - code - archive/temporal_legacy/temporal_model.py
@@ -73,9 +74,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 3 edges to [[_COMMUNITY_Multiscale TCN & Features]]
 
 ## Top bridge nodes
+
 - [[LongWindowTemporalDataset]] - degree 8, connects to 1 community
 - [[train_temporal.py]] - degree 8, connects to 1 community
 - [[train_temporal_predictor()]] - degree 8, connects to 1 community

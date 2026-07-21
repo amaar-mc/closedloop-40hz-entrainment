@@ -10,6 +10,7 @@ tags:
 # NeuroCare Caregiver Dashboard (Multi-page Streamlit)
 
 ## Connections
+
 - [[EEGNet (4-channel, caregiver app)]] - `calls` [EXTRACTED]
 - [[Muse 4-Channel EEGNet Checkpoint (best_eegnet_4ch.pth)]] - `references` [EXTRACTED]
 - [[Muse 4-Channel TCN Checkpoint (best_multiscale_tcn_4ch_lb20_hz5_ts1.pth)]] - `references` [EXTRACTED]
@@ -21,4 +22,4 @@ tags:
 - [[render_session()]] - `calls` [EXTRACTED]
 - [[render_summary()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

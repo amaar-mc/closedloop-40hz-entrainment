@@ -10,6 +10,7 @@ tags:
 # p11_scope()
 
 ## Connections
+
 - [[Slide 11 Scope of Work.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `calls` [EXTRACTED]
 - [[build_pptx.py]] - `contains` [EXTRACTED]

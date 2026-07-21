@@ -10,6 +10,7 @@ tags:
 # Cognito Therapeutics (Phase 3 HOPE Trial)
 
 ## Connections
+
 - [[Key Citations Reference Sheet (v1, Old)]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

@@ -10,6 +10,7 @@ tags:
 # CNN and Convolution Concepts: Depthwise Separable, EEGNet Architecture
 
 ## Connections
+
 - [[ML Zero to Hero Educational Guide (Foundations to Causal TCN)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

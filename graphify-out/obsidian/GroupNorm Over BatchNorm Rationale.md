@@ -10,6 +10,7 @@ tags:
 # GroupNorm Over BatchNorm Rationale
 
 ## Connections
+
 - [[MultiscaleCausalTCN Architecture]] - `implements` [EXTRACTED]
 - [[Subject-Level Data Split (No Leakage)]] - `rationale_for` [EXTRACTED]
 

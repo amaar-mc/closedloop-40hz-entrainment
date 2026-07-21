@@ -10,6 +10,7 @@ tags:
 # Fair Schedule and Logistics Comparison
 
 ## Connections
+
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 
   #community/Community_69

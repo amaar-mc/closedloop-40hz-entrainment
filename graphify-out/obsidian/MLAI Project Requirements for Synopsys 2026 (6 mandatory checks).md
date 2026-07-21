@@ -10,6 +10,7 @@ tags:
 # ML/AI Project Requirements for Synopsys 2026 (6 mandatory checks)
 
 ## Connections
+
 - [[Synopsys Championship Winning Analysis (Feb 27, 2026)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

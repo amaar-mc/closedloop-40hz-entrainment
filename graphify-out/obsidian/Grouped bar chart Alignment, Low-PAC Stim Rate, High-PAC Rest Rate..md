@@ -10,6 +10,7 @@ tags:
 # Grouped bar chart: Alignment, Low-PAC Stim Rate, High-PAC Rest Rate.
 
 ## Connections
+
 - [[fig_controller_comparison()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Community_66

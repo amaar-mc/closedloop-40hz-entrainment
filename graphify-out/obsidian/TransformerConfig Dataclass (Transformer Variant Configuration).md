@@ -10,6 +10,7 @@ tags:
 # TransformerConfig Dataclass (Transformer Variant Configuration)
 
 ## Connections
+
 - [[TransformerTCN (4-layer Causal Transformer Encoder, ~85K params)]] - `shares_data_with` [EXTRACTED]
 
   #community/Community_60

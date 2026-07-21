@@ -35,24 +35,24 @@ Source: `temporal_multiscale/build_multiscale_dataset.py`
 
 ### Single-Seed Feature Ablation
 
-| Feature subset | Features | Test R^2 |
-|---|---:|---:|
-| Spectral only | 61 | -0.420 |
-| All candidate features | 73 | -0.025 |
-| PAC trajectory only | 7 | 0.344 |
-| PAC trajectory + stimulation context | 12 | **0.558** |
+| Feature subset                       | Features |  Test R^2 |
+| ------------------------------------ | -------: | --------: |
+| Spectral only                        |       61 |    -0.420 |
+| All candidate features               |       73 |    -0.025 |
+| PAC trajectory only                  |        7 |     0.344 |
+| PAC trajectory + stimulation context |       12 | **0.558** |
 
 Source: `archive/experimental/results/generalization_7ch.json`
 
 ### Five-Seed Forecasting Experiment
 
-| Seed | Test R^2 |
-|---:|---:|
-| 42 | 0.558 |
-| 123 | 0.620 |
-| 456 | 0.597 |
-| 789 | 0.608 |
-| 2024 | 0.647 |
+|     Seed |  Test R^2 |
+| -------: | --------: |
+|       42 |     0.558 |
+|      123 |     0.620 |
+|      456 |     0.597 |
+|      789 |     0.608 |
+|     2024 |     0.647 |
 | **Mean** | **0.606** |
 
 Range: `0.558-0.647`.
@@ -65,12 +65,12 @@ Source: `archive/experimental/results/pac_stim_focused.json`
 ### Single-Seed Horizon Sweep
 
 | Horizon | TCN Test R^2 | Persistence R^2 |
-|---:|---:|---:|
-| 1 s | 0.725 | 0.726 |
-| 3 s | 0.607 | 0.178 |
-| 5 s | 0.577 | 0.104 |
-| 8 s | 0.370 | -0.007 |
-| 10 s | 0.669 | -0.081 |
+| ------: | -----------: | --------------: |
+|     1 s |        0.725 |           0.726 |
+|     3 s |        0.607 |           0.178 |
+|     5 s |        0.577 |           0.104 |
+|     8 s |        0.370 |          -0.007 |
+|    10 s |        0.669 |          -0.081 |
 
 The 10-second value is a single-seed result and should be replicated before it is treated as a
 stable estimate.
@@ -85,16 +85,20 @@ Current checkpoint: `models/best_12feat_tcn_lb20_hz5_ts1.pth`
 - Lookback: 20 steps
 - Horizon: 5 steps
 - Trainable parameters: 27,139
-- Checkpoint metadata held-out test `R^2 = 0.5844`
+
+The manuscript reports the architecture parameter count here but keeps forecasting-study,
+target-definition stress-test, and controller-replay metrics separate because they come from
+different generation paths. The validation command prints checkpoint metadata `test_r2=0.5844`, but
+that value is not used as a standalone manuscript result.
 
 ### Retrospective Replay on 35 Recorded PAC Trajectories
 
-| Strategy | Alignment | Low-PAC Stim | High-PAC Rest | PAC Gap |
-|---|---:|---:|---:|---:|
-| Fixed schedule | 45.0% | 61.4% | 28.6% | -6.55 x 10^-6 |
-| Reactive threshold | **64.5%** | 51.7% | **77.3%** | **21.09 x 10^-6** |
-| TCN predictive (12-feature) | 62.2% | **73.8%** | 50.7% | 21.02 x 10^-6 |
-| Alignment oracle | 100.0% | 100.0% | 100.0% | 33.36 x 10^-6 |
+| Strategy                    | Alignment | Low-PAC Stim | High-PAC Rest |           PAC Gap |
+| --------------------------- | --------: | -----------: | ------------: | ----------------: |
+| Fixed schedule              |     45.0% |        61.4% |         28.6% |     -6.55 x 10^-6 |
+| Reactive threshold          | **64.5%** |        51.7% |     **77.3%** | **21.09 x 10^-6** |
+| TCN predictive (12-feature) |     62.2% |    **73.8%** |         50.7% |     21.02 x 10^-6 |
+| Alignment oracle            |    100.0% |       100.0% |        100.0% |     33.36 x 10^-6 |
 
 The current TCN improves low-PAC targeting but reduces high-PAC rest specificity. Its balanced
 alignment is lower than reactive thresholding. This is a mixed offline result, not evidence of

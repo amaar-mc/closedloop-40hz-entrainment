@@ -10,6 +10,7 @@ tags:
 # Source-of-Truth Edit Workflow (Markdown → PDF)
 
 ## Connections
+
 - [[CSEF Old Repository Guidelines]] - `references` [EXTRACTED]
 
   #community/Community_149

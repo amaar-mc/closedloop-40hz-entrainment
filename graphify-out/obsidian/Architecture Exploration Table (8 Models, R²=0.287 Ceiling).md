@@ -10,7 +10,8 @@ tags:
 # Architecture Exploration Table (8 Models, R²=0.287 Ceiling)
 
 ## Connections
+
 - [[Key Discovery Feature Selection Over Architecture (73→12 Features)]] - `conceptually_related_to` [INFERRED]
 - [[Poster Board V5 (Condensed, Visual-Forward, Synopsys 2026)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

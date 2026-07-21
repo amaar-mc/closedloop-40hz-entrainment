@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `method` [EXTRACTED]
 - [[Simulate one time step of neural dynamics.          Updates PAC based on actio]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

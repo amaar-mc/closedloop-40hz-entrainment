@@ -10,6 +10,7 @@ tags:
 # CausalDSConvBlock with GroupNorm replaced by Identity (ablation).
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[CausalDSConvBlock_1]] - `uses` [INFERRED]
 - [[CausalDSConvBlockNoNorm]] - `rationale_for` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SequenceDataset]] - `uses` [INFERRED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

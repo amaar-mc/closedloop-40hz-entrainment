@@ -10,8 +10,9 @@ tags:
 # main()
 
 ## Connections
+
 - [[Entry point for the synthetic benchmark.]] - `rationale_for` [EXTRACTED]
 - [[run_benchmark()]] - `calls` [EXTRACTED]
 - [[synthetic_benchmark.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

@@ -10,6 +10,7 @@ tags:
 # Spectral Feature Generalization Failure Finding
 
 ## Connections
+
 - [[Anatomy Hypothesis Why Spectral Features Fail Cross-Subject]] - `semantically_similar_to` [INFERRED]
 - [[Differentiators vs Prior Work]] - `references` [EXTRACTED]
 - [[Framing A Feature Selection  Architecture]] - `conceptually_related_to` [EXTRACTED]

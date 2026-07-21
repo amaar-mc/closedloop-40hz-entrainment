@@ -7,9 +7,10 @@ tags:
   - community/TCN_Layer_Internals
 ---
 
-# Causal Transformer encoder for temporal PAC prediction.      Replaces the dila
+# Causal Transformer encoder for temporal PAC prediction. Replaces the dila
 
 ## Connections
+
 - [[TransformerTCN]] - `rationale_for` [EXTRACTED]
 
   #community/TCN_Layer_Internals

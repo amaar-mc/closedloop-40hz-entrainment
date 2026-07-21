@@ -10,7 +10,8 @@ tags:
 # forward()
 
 ## Connections
+
 - [[Args             x (batch, 1, n_channels, n_samples)          Returns]] - `rationale_for` [EXTRACTED]
 - [[EEGToImage]] - `method` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

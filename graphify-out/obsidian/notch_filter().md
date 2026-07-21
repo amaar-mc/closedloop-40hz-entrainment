@@ -10,8 +10,9 @@ tags:
 # notch_filter()
 
 ## Connections
+
 - [[Apply notch filter to remove powerline interference.          Removes 50 Hz (E]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `method` [EXTRACTED]
 - [[preprocess()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

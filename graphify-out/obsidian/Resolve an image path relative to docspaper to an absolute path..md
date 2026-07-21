@@ -10,6 +10,7 @@ tags:
 # Resolve an image path relative to docs/paper/ to an absolute path.
 
 ## Connections
+
 - [[resolve_image_path()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_44

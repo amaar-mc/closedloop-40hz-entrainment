@@ -10,6 +10,7 @@ tags:
 # Alignment Score Metric (Low-PAC Stim + High-PAC Rest) / 2
 
 ## Connections
+
 - [[12-Feature TCN Validation Script (PAC+Context Only, N=35 Real EEG)]] - `implements` [EXTRACTED]
 - [[TVB Jansen-Rit Alignment Evaluation Script]] - `implements` [EXTRACTED]
 - [[evaluate_alignment()]] - `implements` [EXTRACTED]

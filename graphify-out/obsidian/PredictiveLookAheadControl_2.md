@@ -10,6 +10,7 @@ tags:
 # PredictiveLookAheadControl
 
 ## Connections
+
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[__init__()_85]] - `method` [EXTRACTED]

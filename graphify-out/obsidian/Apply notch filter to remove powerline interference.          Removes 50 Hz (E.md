@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Apply notch filter to remove powerline interference.          Removes 50 Hz (E
+# Apply notch filter to remove powerline interference. Removes 50 Hz (E
 
 ## Connections
+
 - [[notch_filter()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

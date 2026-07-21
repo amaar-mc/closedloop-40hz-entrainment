@@ -8,6 +8,7 @@ members: 30
 **Members:** 30 nodes
 
 ## Members
+
 - [[40Hz Audio Stimulation Output (STIMULATERESTMAINTAIN)]] - image - submission/paper/figures/system_block_diagram.png
 - [[Causal TCN Block (31K params, 20s lookback)]] - image - submission/paper/figures/system_block_diagram.png
 - [[Closed-Loop 40Hz Entrainment System Architecture Figure]] - image - submission/paper/figures/system_block_diagram.png

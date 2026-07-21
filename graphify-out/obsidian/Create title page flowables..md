@@ -10,6 +10,7 @@ tags:
 # Create title page flowables.
 
 ## Connections
+
 - [[build_title_page()]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

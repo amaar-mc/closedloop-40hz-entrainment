@@ -322,26 +322,26 @@ Even if the Phase 3 results are negative for 40 Hz specifically, the closed-loop
 
 ## QUICK-REFERENCE: Numbers You Must Know Cold
 
-| Metric | Value |
-|--------|-------|
-| Dataset | OpenNeuro ds005048, 35 subjects, 7 frontal channels, 250 Hz |
-| Splits | 24 train / 5 val / 6 test (subject-level, no leakage) |
-| Windows | 17,283 total (2s windows, 1s hop) |
-| Static ceiling | R-squared = 0.287 (8 architectures, 1,457 to 1.1M params) |
-| TCN params | 22,914 (h=64), 12 PAC+Stim features, 20-step lookback |
-| TCN R-squared (5s horizon) | 0.606 +/- 0.032 (5 seeds, range 0.558-0.647) |
-| TCN R-squared (10s horizon) | 0.669 (single seed) |
-| Persistence R-squared (5s) | 0.104 |
-| Persistence R-squared (10s) | -0.081 |
-| Alignment: TCN vs Reactive | 72.1% vs 64.5%, g=1.31, p<0.001 |
-| Low-PAC targeting | 82.6% vs 51.7%, g=4.47, p<0.001 |
-| PAC Gap | 30.5 vs 21.1, g=1.57, p<0.001 |
-| Oracle alignment | 100% (perfect hindsight upper bound) |
-| PAC Gap % of oracle | 91% (30.5/33.3) |
-| Subjects benefiting | 35/35 (binomial p<0.001) |
-| Inference time | <50 ms |
-| Hardware cost | Under $250 (Muse 2 ~$200 + headphones) |
-| Cognito Phase 3 | HOPE trial, 670 patients, results mid-2026 |
+| Metric                      | Value                                                       |
+| --------------------------- | ----------------------------------------------------------- |
+| Dataset                     | OpenNeuro ds005048, 35 subjects, 7 frontal channels, 250 Hz |
+| Splits                      | 24 train / 5 val / 6 test (subject-level, no leakage)       |
+| Windows                     | 17,283 total (2s windows, 1s hop)                           |
+| Static ceiling              | R-squared = 0.287 (8 architectures, 1,457 to 1.1M params)   |
+| TCN params                  | 22,914 (h=64), 12 PAC+Stim features, 20-step lookback       |
+| TCN R-squared (5s horizon)  | 0.606 +/- 0.032 (5 seeds, range 0.558-0.647)                |
+| TCN R-squared (10s horizon) | 0.669 (single seed)                                         |
+| Persistence R-squared (5s)  | 0.104                                                       |
+| Persistence R-squared (10s) | -0.081                                                      |
+| Alignment: TCN vs Reactive  | 72.1% vs 64.5%, g=1.31, p<0.001                             |
+| Low-PAC targeting           | 82.6% vs 51.7%, g=4.47, p<0.001                             |
+| PAC Gap                     | 30.5 vs 21.1, g=1.57, p<0.001                               |
+| Oracle alignment            | 100% (perfect hindsight upper bound)                        |
+| PAC Gap % of oracle         | 91% (30.5/33.3)                                             |
+| Subjects benefiting         | 35/35 (binomial p<0.001)                                    |
+| Inference time              | <50 ms                                                      |
+| Hardware cost               | Under $250 (Muse 2 ~$200 + headphones)                      |
+| Cognito Phase 3             | HOPE trial, 670 patients, results mid-2026                  |
 
 ---
 

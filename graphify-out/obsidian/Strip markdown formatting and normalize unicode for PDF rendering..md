@@ -10,6 +10,7 @@ tags:
 # Strip markdown formatting and normalize unicode for PDF rendering.
 
 ## Connections
+
 - [[clean()]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

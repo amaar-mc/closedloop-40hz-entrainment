@@ -10,6 +10,7 @@ tags:
 # run_trial()
 
 ## Connections
+
 - [[Run one simulation trial.]] - `rationale_for` [EXTRACTED]
 - [[reset()_40]] - `calls` [EXTRACTED]
 - [[run_comparison()]] - `calls` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[run_tribe_validation.py]] - `contains` [EXTRACTED]
 - [[step()_40]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

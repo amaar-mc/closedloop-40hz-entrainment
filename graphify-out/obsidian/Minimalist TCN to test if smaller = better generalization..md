@@ -10,6 +10,7 @@ tags:
 # Minimalist TCN to test if smaller = better generalization.
 
 ## Connections
+
 - [[CausalConvBlock]] - `uses` [INFERRED]
 - [[ImprovedTCN]] - `uses` [INFERRED]
 - [[SeqDataset]] - `uses` [INFERRED]

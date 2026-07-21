@@ -10,7 +10,8 @@ tags:
 # Horizon Sweep Results: TCN +0.521 R² margin over persistence at 5s
 
 ## Connections
+
 - [[Contribution 4 Prediction Horizon Inflection Point (~3 seconds)]] - `references` [EXTRACTED]
 - [[Research Paper v3 (Full Manuscript)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

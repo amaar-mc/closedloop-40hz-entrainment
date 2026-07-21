@@ -9,4 +9,4 @@ tags:
 
 # Q&A Tier 4 Process & Independence: progression from hypothesis to results, SpecTempNet leakage discovery, AI tool use disclosure
 
-  #community/Community_192
+#community/Community_192

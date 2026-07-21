@@ -8,6 +8,7 @@ members: 26
 **Members:** 26 nodes
 
 ## Members
+
 - [[4-Column Poster Layout (V8 Structure)]] - document - submission/poster/POSTER_BOARD_V8.md
 - [[4ch vs 7ch Channel Configuration Table (Muse Compatibility)]] - document - submission/poster/POSTER_BOARD_V6.md
 - [[CSEF Era (12-Feature Ablated Model) — Poster Provenance]] - document - submission/poster/POSTER_COHERENCE_AUDIT.md

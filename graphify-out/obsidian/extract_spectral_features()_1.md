@@ -10,6 +10,7 @@ tags:
 # extract_spectral_features()
 
 ## Connections
+
 - [[Extract comprehensive spectral features for PAC prediction.      Args]] - `rationale_for` [EXTRACTED]
 - [[compute_pac_features()]] - `calls` [EXTRACTED]
 - [[extract()_2]] - `calls` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[spectral_features.py]] - `contains` [EXTRACTED]
 - [[test_spectral_features()]] - `calls` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

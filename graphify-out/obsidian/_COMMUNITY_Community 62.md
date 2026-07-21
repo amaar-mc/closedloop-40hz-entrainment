@@ -8,6 +8,7 @@ members: 17
 **Members:** 17 nodes
 
 ## Members
+
 - [[Alzheimer's Disease Simulation with TRIBE V2-Enhanced Closed-Loop Control  Demon]] - rationale - scripts/pipeline/run_alzheimer_simulation.py
 - [[FixedSchedule]] - code - scripts/pipeline/run_alzheimer_simulation.py
 - [[Predictive]] - code - scripts/pipeline/run_alzheimer_simulation.py
@@ -34,9 +35,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 5 edges to [[_COMMUNITY_Closed-Loop Control & Simulator]]
 
 ## Top bridge nodes
+
 - [[run_alzheimer_simulation.py]] - degree 7, connects to 1 community
 - [[Predictive]] - degree 7, connects to 1 community
 - [[FixedSchedule]] - degree 6, connects to 1 community

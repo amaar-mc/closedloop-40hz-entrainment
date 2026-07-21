@@ -10,6 +10,7 @@ tags:
 # 4ch vs 7ch Channel Configuration Table (Muse Compatibility)
 
 ## Connections
+
 - [[Poster Board V6 (PAC+Stim Feature Discovery Update)]] - `references` [EXTRACTED]
 - [[Toward Clinical Use Muse 2 + Headphones ($300 Total Cost)]] - `conceptually_related_to` [INFERRED]
 

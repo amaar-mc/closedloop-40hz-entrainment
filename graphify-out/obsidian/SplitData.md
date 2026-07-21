@@ -10,6 +10,7 @@ tags:
 # SplitData
 
 ## Connections
+
 - [[Best combination experiments 1. Target smoothing (ts=5) + deep TCN architecture]] - `uses` [INFERRED]
 - [[Compute persistence R2 per subject.]] - `uses` [INFERRED]
 - [[Define feature subsets to test which features help generalization.]] - `uses` [INFERRED]

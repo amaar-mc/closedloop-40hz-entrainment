@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# Args:             n_channels: Number of EEG channels             n_samples: Sa
+# Args: n_channels: Number of EEG channels n_samples: Sa
 
 ## Connections
+
 - [[__init__()_26]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Temporal_PAC_Predictor

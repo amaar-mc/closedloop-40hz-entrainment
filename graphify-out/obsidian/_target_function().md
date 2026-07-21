@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _target_function()
+# \_target_function()
 
 ## Connections
+
 - [[Compute synthetic targets from a known nonlinear function.      The target mim]] - `rationale_for` [EXTRACTED]
 - [[generate_synthetic_dataset()]] - `calls` [EXTRACTED]
 - [[synthetic_benchmark.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

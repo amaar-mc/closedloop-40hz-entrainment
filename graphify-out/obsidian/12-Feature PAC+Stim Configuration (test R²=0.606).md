@@ -10,6 +10,7 @@ tags:
 # 12-Feature PAC+Stim Configuration (test R²=0.606)
 
 ## Connections
+
 - [[Audit Integrity Checks (no leakage, causal indexing, shuffle-label sanity)]] - `references` [EXTRACTED]
 - [[MultiscaleCausalTCN Temporal Forecaster]] - `implements` [EXTRACTED]
 - [[Q&A Tier 2 Methodology Questions (PAC computation, EEGNet, TCN, causal design, 12 features)]] - `references` [EXTRACTED]

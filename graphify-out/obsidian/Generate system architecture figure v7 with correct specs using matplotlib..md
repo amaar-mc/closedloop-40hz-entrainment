@@ -10,6 +10,7 @@ tags:
 # Generate system architecture figure v7 with correct specs using matplotlib.
 
 ## Connections
+
 - [[gen_arch_figure.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_138

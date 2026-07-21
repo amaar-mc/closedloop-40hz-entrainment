@@ -10,6 +10,7 @@ tags:
 # Parse **bold** markers and return segment list.
 
 ## Connections
+
 - [[_parse_bold()]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

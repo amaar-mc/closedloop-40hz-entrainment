@@ -10,6 +10,7 @@ tags:
 # count_parameters()
 
 ## Connections
+
 - [[Count trainable parameters._4]] - `rationale_for` [EXTRACTED]
 - [[MultiTaskTCN]] - `method` [EXTRACTED]
 - [[_count_parameters()]] - `calls` [EXTRACTED]

@@ -10,8 +10,9 @@ tags:
 # count_parameters()
 
 ## Connections
+
 - [[Count number of trainable parameters in model.      Args         model PyTo_1]] - `rationale_for` [EXTRACTED]
 - [[eegnet.py]] - `contains` [EXTRACTED]
 - [[test_eegnet()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

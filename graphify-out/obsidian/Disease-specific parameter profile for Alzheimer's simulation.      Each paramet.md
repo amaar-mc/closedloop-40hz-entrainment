@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Disease-specific parameter profile for Alzheimer's simulation.      Each paramet
+# Disease-specific parameter profile for Alzheimer's simulation. Each paramet
 
 ## Connections
+
 - [[AlzheimerProfile]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

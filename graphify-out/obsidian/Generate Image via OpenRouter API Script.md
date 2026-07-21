@@ -9,6 +9,7 @@ tags:
 # Generate Image via OpenRouter API Script
 
 ## Connections
+
 - [[OpenRouter API (Image Generation)]] - `calls` [EXTRACTED]
 
   #community/Community_37

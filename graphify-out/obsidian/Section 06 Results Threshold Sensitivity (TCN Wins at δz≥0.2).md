@@ -10,6 +10,7 @@ tags:
 # Section 06 Results: Threshold Sensitivity (TCN Wins at δz≥0.2)
 
 ## Connections
+
 - [[Figure TCN Robustness — Threshold Sensitivity Analysis]] - `references` [EXTRACTED]
 
   #community/Community_33

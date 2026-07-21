@@ -9,6 +9,7 @@ tags:
 # models/sweep_horizons_results.json
 
 ## Connections
+
 - [[fig_horizon_sweep()]] - `references` [EXTRACTED]
 - [[generate_horizon_sweep()]] - `references` [EXTRACTED]
 

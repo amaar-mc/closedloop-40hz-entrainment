@@ -10,6 +10,7 @@ tags:
 # Result 3: Fatigue Sensitivity Table (6 Severity Levels)
 
 ## Connections
+
 - [[Poster Board V8 (CSEF 2026, 4-Column Layout)]] - `references` [EXTRACTED]
 
   #community/Community_41

@@ -10,7 +10,8 @@ tags:
 # close()
 
 ## Connections
+
 - [[SimulatedEEGAdapter]] - `method` [EXTRACTED]
 - [[Stop stream and release BrainFlow session.]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

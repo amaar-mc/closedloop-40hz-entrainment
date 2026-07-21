@@ -9,7 +9,8 @@ tags:
 # High Finding: EEGNet Under-Parameterized (~1457 params)
 
 ## Connections
+
 - [[Rationale R²=0.287 Is Data Limitation Not Model Bottleneck]] - `rationale_for` [EXTRACTED]
 - [[Rigorous Pipeline Audit Report]] - `references` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

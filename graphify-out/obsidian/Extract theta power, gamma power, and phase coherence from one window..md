@@ -10,6 +10,7 @@ tags:
 # Extract theta power, gamma power, and phase coherence from one window.
 
 ## Connections
+
 - [[_extract_biomarkers_single()]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

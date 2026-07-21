@@ -9,7 +9,8 @@ tags:
 # Per-Subject Results Across Train/Val/Test Splits
 
 ## Connections
+
 - [[Per-Subject Alignment Scatter Plot (3535 Favor TCN)]] - `references` [EXTRACTED]
 - [[Subject-Level TrainValTest Split 2456 subjects, 17,283 total windows]] - `conceptually_related_to` [INFERRED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

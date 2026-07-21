@@ -10,6 +10,7 @@ tags:
 # CSEF 2026 Rules: Judging Format and Criteria (no rubric, consensus, 5 criteria)
 
 ## Connections
+
 - [[Synopsys Judging Criteria (40 pts Scientific Thought, Creativity, Independent Work, Thoroughness)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

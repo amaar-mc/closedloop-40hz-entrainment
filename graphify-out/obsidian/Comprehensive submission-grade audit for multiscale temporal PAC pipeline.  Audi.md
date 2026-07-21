@@ -7,9 +7,10 @@ tags:
   - community/Community_74
 ---
 
-# Comprehensive submission-grade audit for multiscale temporal PAC pipeline.  Audi
+# Comprehensive submission-grade audit for multiscale temporal PAC pipeline. Audi
 
 ## Connections
+
 - [[comprehensive_submission_audit.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_74

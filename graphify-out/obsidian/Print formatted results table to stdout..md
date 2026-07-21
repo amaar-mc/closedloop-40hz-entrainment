@@ -10,6 +10,7 @@ tags:
 # Print formatted results table to stdout.
 
 ## Connections
+
 - [[print_results()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Community_70

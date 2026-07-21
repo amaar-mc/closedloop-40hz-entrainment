@@ -10,6 +10,7 @@ tags:
 # compute_sliding_pac.py
 
 ## Connections
+
 - [[Compute sliding-window PAC labels for all processed EEG windows.  Instead of the]] - `rationale_for` [EXTRACTED]
 - [[_bandpass_filter()]] - `contains` [EXTRACTED]
 - [[compute_multichannel_pac()]] - `contains` [EXTRACTED]

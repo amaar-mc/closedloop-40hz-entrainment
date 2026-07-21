@@ -10,6 +10,7 @@ tags:
 # Scatter: Reactive utility (x) vs TCN utility (y), colored by split.
 
 ## Connections
+
 - [[fig_per_subject_utility()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_66

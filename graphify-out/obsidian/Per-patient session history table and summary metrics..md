@@ -10,10 +10,11 @@ tags:
 # Per-patient session history table and summary metrics.
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[SimulatedEEGAdapter]] - `uses` [INFERRED]
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[TCNTemporalModel]] - `uses` [INFERRED]
 - [[render_patient_history()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

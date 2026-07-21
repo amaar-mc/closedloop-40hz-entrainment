@@ -10,6 +10,7 @@ tags:
 # compute_within_epoch_variance()
 
 ## Connections
+
 - [[Compute mean within-epoch variance of per-window PAC.      Windows sharing the s]] - `rationale_for` [EXTRACTED]
 - [[analyze_subject()]] - `calls` [EXTRACTED]
 - [[compare_pac_methods.py]] - `contains` [EXTRACTED]

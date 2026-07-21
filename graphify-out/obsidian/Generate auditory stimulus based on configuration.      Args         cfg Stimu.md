@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Generate auditory stimulus based on configuration.      Args:         cfg: Stimu
+# Generate auditory stimulus based on configuration. Args: cfg: Stimu
 
 ## Connections
+
 - [[generate_stimulus()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

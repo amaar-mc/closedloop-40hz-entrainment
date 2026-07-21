@@ -10,6 +10,7 @@ tags:
 # Inference Latency Breakdown (Feature 5ms + TCN 2ms)
 
 ## Connections
+
 - [[Computational Deep Dive (ML Specialist Judge Q&A)]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

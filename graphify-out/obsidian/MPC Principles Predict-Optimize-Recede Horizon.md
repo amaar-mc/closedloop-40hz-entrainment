@@ -10,7 +10,8 @@ tags:
 # MPC Principles: Predict-Optimize-Recede Horizon
 
 ## Connections
+
 - [[Foundational Concepts Document 40Hz Entrainment in AD]] - `references` [EXTRACTED]
 - [[MPC Optimization Formulation (MIQP Binary Control)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

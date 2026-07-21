@@ -10,10 +10,11 @@ tags:
 # Offline Counterfactual Replay Validation on 35 Subjects
 
 ## Connections
+
 - [[Conclusion Scope Boundary — Computational Validation Not Clinical Validation]] - `references` [EXTRACTED]
 - [[Discussion 5 Key Limitations (offline replay, EEGNet not in loop, single site, channel selection, label granularity)]] - `conceptually_related_to` [EXTRACTED]
 - [[Methods Offline Counterfactual Replay + AlignmentPAC-Gap Metrics]] - `references` [EXTRACTED]
 - [[Rationale Offline Replay Used Because Live Closed-Loop Requires IRB — Measures counterfactual decision quality not therapeutic benefit]] - `rationale_for` [EXTRACTED]
 - [[Research Paper v3 (Full Manuscript)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

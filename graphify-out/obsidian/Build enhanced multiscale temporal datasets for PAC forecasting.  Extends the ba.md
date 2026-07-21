@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# Build enhanced multiscale temporal datasets for PAC forecasting.  Extends the ba
+# Build enhanced multiscale temporal datasets for PAC forecasting. Extends the ba
 
 ## Connections
+
 - [[build_enhanced_dataset.py]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

@@ -10,7 +10,8 @@ tags:
 # get_description()
 
 ## Connections
+
 - [[HeterogeneousPopulationSimulator]] - `method` [EXTRACTED]
 - [[Return human-readable model description._2]] - `rationale_for` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

@@ -10,6 +10,7 @@ tags:
 # run_ablation_experiment()
 
 ## Connections
+
 - [[FEATURE_GROUP_PREFIXES (PAC History  Spectral  Stim Context Groups)]] - `references` [INFERRED]
 - [[Zero-ablation experiment zero out each feature group and measure R2 drop.]] - `rationale_for` [EXTRACTED]
 - [[_denorm()_4]] - `calls` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[main()_71]] - `calls` [EXTRACTED]
 - [[tcn_interpretability.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

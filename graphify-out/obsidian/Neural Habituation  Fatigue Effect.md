@@ -10,6 +10,7 @@ tags:
 # Neural Habituation / Fatigue Effect
 
 ## Connections
+
 - [[12-Feature PAC+Stim Model (test R²=0.606)]] - `conceptually_related_to` [INFERRED]
 - [[Two-Stage Predictive Closed-Loop System]] - `references` [EXTRACTED]
 

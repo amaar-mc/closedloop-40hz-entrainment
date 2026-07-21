@@ -10,6 +10,7 @@ tags:
 # SimulatedEEGAdapter
 
 ## Connections
+
 - [[Append a session record to the given patient and clear cache.]] - `uses` [INFERRED]
 - [[Automated end-to-end test for the simulated streaming session.  Runs 25 steps of]] - `uses` [INFERRED]
 - [[Convert raw PAC to 0-100 Brain Sync Level for caregiver display.]] - `uses` [INFERRED]
@@ -45,4 +46,4 @@ tags:
 - [[close()]] - `method` [EXTRACTED]
 - [[get_window()]] - `method` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # prepare_temporal_data()
 
 ## Connections
+
 - [[Prepare temporal DataLoaders from the existing processed data splits.      The]] - `rationale_for` [EXTRACTED]
 - [[TemporalPACDataset]] - `calls` [EXTRACTED]
 - [[TemporalPACDataset (PyTorch Dataset)]] - `calls` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[temporal_dataset.py]] - `contains` [EXTRACTED]
 - [[train_temporal_predictor()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

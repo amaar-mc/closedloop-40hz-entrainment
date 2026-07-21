@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# _r2_score()
+# \_r2_score()
 
 ## Connections
+
 - [[ModelTrainerV2]] - `method` [EXTRACTED]
 - [[validate()]] - `calls` [EXTRACTED]
 

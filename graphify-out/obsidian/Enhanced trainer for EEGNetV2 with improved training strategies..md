@@ -10,6 +10,7 @@ tags:
 # Enhanced trainer for EEGNetV2 with improved training strategies.
 
 ## Connections
+
 - [[EEGNetV2]] - `uses` [INFERRED]
 - [[ModelTrainerV2]] - `rationale_for` [EXTRACTED]
 

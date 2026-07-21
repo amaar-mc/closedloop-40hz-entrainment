@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Forward pass.          Args:             x_seq: Input tensor of shape (B, T,
+# Forward pass. Args: x_seq: Input tensor of shape (B, T,
 
 ## Connections
+
 - [[forward()_43]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

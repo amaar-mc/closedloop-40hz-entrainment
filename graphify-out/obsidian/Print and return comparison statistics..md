@@ -10,6 +10,7 @@ tags:
 # Print and return comparison statistics.
 
 ## Connections
+
 - [[report_statistics()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_52

@@ -10,6 +10,7 @@ tags:
 # Architecture Search Lessons (3 Key Takeaways)
 
 ## Connections
+
 - [[SpecTempNet V3 Leakage Discovery (R²=0.69→0.236 After Fix)]] - `rationale_for` [EXTRACTED]
 
   #community/Community_33

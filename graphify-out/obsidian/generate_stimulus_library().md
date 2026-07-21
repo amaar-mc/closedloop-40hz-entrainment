@@ -10,6 +10,7 @@ tags:
 # generate_stimulus_library()
 
 ## Connections
+
 - [[Pre-generate a library of stimuli at various durations.      Creates both click]] - `rationale_for` [EXTRACTED]
 - [[StimulusConfig]] - `calls` [EXTRACTED]
 - [[generate_silence()]] - `calls` [EXTRACTED]

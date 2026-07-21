@@ -10,6 +10,7 @@ tags:
 # Add a text box and return its text frame with word-wrap on.
 
 ## Connections
+
 - [[make_text_frame()]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

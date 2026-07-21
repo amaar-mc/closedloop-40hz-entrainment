@@ -1,15 +1,18 @@
-# Graph Report - .  (2026-05-31)
+# Graph Report - . (2026-05-31)
 
 ## Corpus Check
+
 - 519 files · ~1,812,656 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
+
 - 4465 nodes · 7906 edges · 205 communities detected
 - Extraction: 72% EXTRACTED · 28% INFERRED · 0% AMBIGUOUS · INFERRED: 2247 edges (avg confidence: 0.56)
 - Token cost: 0 input · 0 output
 
 ## God Nodes (most connected - your core abstractions)
+
 1. `StimAction` - 197 edges
 2. `EntrainmentSimulator` - 142 edges
 3. `FatigueAwareSimulator` - 142 edges
@@ -22,18 +25,20 @@
 10. `StreamingFeatureExtractor` - 47 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Generate CSEF Presentation PPTX Script` --semantically_similar_to--> `submission/presentation/CSEF_2026_Presentation.pdf`  [INFERRED] [semantically similar]
+
+- `Generate CSEF Presentation PPTX Script` --semantically_similar_to--> `submission/presentation/CSEF_2026_Presentation.pdf` [INFERRED] [semantically similar]
   scripts/tools/generate_csef_pptx.py → submission/presentation/CSEF_2026_Presentation.pdf
-- `CSEF Poster V3 (Final Print-Ready Poster)` --semantically_similar_to--> `Poster Board V5 (Condensed, Visual-Forward, Synopsys 2026)`  [INFERRED] [semantically similar]
+- `CSEF Poster V3 (Final Print-Ready Poster)` --semantically_similar_to--> `Poster Board V5 (Condensed, Visual-Forward, Synopsys 2026)` [INFERRED] [semantically similar]
   archive/CSEF_Old/Poster_FINAL/CSEF_poster_v3.pdf → submission/poster/POSTER_BOARD_V5.md
-- `QR Code for Feedback (Flyer)` --semantically_similar_to--> `Figure 8: Controller Comparison Bar Chart`  [AMBIGUOUS] [semantically similar]
+- `QR Code for Feedback (Flyer)` --semantically_similar_to--> `Figure 8: Controller Comparison Bar Chart` [AMBIGUOUS] [semantically similar]
   archive/CSEF_Old/Flyer/qr_feedback.png → submission/paper/figures/controller_comparison_v2.png
-- `PAC Response by Disease Severity (Panel A)` --semantically_similar_to--> `PAC Response vs Disease Severity - Predictive Controller Sweep`  [INFERRED] [semantically similar]
+- `PAC Response by Disease Severity (Panel A)` --semantically_similar_to--> `PAC Response vs Disease Severity - Predictive Controller Sweep` [INFERRED] [semantically similar]
   results/tribe_v2/alzheimer_simulation.pdf → results/tribe_v2/tribe_v2_alzheimer_sweep.png
-- `Reference Poster Layout Style (3-Panel, Figure-Dense, Synopsys Format)` --semantically_similar_to--> `Poster Board V5 (Condensed, Visual-Forward, Synopsys 2026)`  [INFERRED] [semantically similar]
+- `Reference Poster Layout Style (3-Panel, Figure-Dense, Synopsys Format)` --semantically_similar_to--> `Poster Board V5 (Condensed, Visual-Forward, Synopsys 2026)` [INFERRED] [semantically similar]
   submission/poster/reference/Poster Example 2.pdf → submission/poster/POSTER_BOARD_V5.md
 
 ## Hyperedges (group relationships)
+
 - **Two-Stage PAC Prediction Pipeline (EEGNet → TCN → Controller)** — README_eegnet_stage1, README_multiscale_tcn_stage2, README_closed_loop_validation [EXTRACTED 1.00]
 - **Feature Ablation as Core Scientific Finding (Spectral vs PAC+Stim)** — README_feature_ablation, CLAUDE_spectral_feature_gotcha, CLAUDE_12feat_description [EXTRACTED 1.00]
 - **Closed-Loop Validation Evidence Chain (Simulation → Fatigue Sweep → Real-Data)** — FINDINGS_simulation_comparison, FINDINGS_fatigue_model_sensitivity, FINDINGS_real_data_validation [INFERRED 0.85]
@@ -177,832 +182,1039 @@
 ## Communities
 
 ### Community 0 - "Closed-Loop Control & Simulator"
+
 Cohesion: 0.02
-Nodes (240): ClosedLoopController, PredictiveLookAheadController, Closed-Loop Controller for Real-Time PAC-Based Neuromodulation  Implements thr, Execute one control step.          Processes incoming EEG window and makes sti, Make stimulation decision based on z-score.          Logic:             - If, Reset controller for new session.          Clears all state, baseline, and his, Get current controller state.          Returns:             state: Dictionary, Get full history of decisions and measurements.          Returns: (+232 more)
+Nodes (240): ClosedLoopController, PredictiveLookAheadController, Closed-Loop Controller for Real-Time PAC-Based Neuromodulation Implements thr, Execute one control step. Processes incoming EEG window and makes sti, Make stimulation decision based on z-score. Logic: - If, Reset controller for new session. Clears all state, baseline, and his, Get current controller state. Returns: state: Dictionary, Get full history of decisions and measurements. Returns: (+232 more)
 
 ### Community 1 - "Multiscale TCN & Features"
+
 Cohesion: 0.01
-Nodes (272): CausalDSConvBlock, Checkpoint deployment realism audit.  Evaluates a trained checkpoint under multi, SeqDataset, _eval_denorm(), _eval_r2_norm(), Baseline and comparison model architectures for the architecture comparison stud, Causal Transformer encoder for sequence-to-scalar PAC prediction.      A causal, Train any nn.Module that takes (B, T, F) and outputs (B,) scalar predictions. (+264 more)
+Nodes (272): CausalDSConvBlock, Checkpoint deployment realism audit. Evaluates a trained checkpoint under multi, SeqDataset, \_eval_denorm(), \_eval_r2_norm(), Baseline and comparison model architectures for the architecture comparison stud, Causal Transformer encoder for sequence-to-scalar PAC prediction. A causal, Train any nn.Module that takes (B, T, F) and outputs (B,) scalar predictions. (+264 more)
 
 ### Community 2 - "Models, Streaming & Apps"
+
 Cohesion: 0.02
 Nodes (227): Critical Finding: Validation Does Not Test Trained TCN, High Finding: Cohen's d Mathematically Wrong, High Finding: EEGNet Under-Parameterized (~1457 params), High Finding: No Cross-Validation (Single Seed 42 Split), Key Result: TCN R²=0.25 at 5-10s Horizons vs Negative Persistence, Rigorous Pipeline Audit Report, Clarification: Predictive Look-Ahead is Trend-Based Not TCN, Rationale: R²=0.287 Is Data Limitation Not Model Bottleneck (+219 more)
 
 ### Community 3 - "Archived Feature Experiments (v4)"
+
 Cohesion: 0.02
-Nodes (117): Critical audit: Check if spectral features include target PAC, AddGaussianNoise, ChannelDropout, Compose, EEGAugmentation, MagnitudeWarp, Time-Series Data Augmentation for EEG  Implements augmentation techniques specif, Shift the signal in time (circular shift).      This makes the model robust to t (+109 more)
+Nodes (117): Critical audit: Check if spectral features include target PAC, AddGaussianNoise, ChannelDropout, Compose, EEGAugmentation, MagnitudeWarp, Time-Series Data Augmentation for EEG Implements augmentation techniques specif, Shift the signal in time (circular shift). This makes the model robust to t (+109 more)
 
 ### Community 4 - "Core Data & PAC Pipeline"
+
 Cohesion: 0.03
-Nodes (71): EEGWindowDataset, main(), BIDS Data Loader for Closed-Loop 40Hz Entrainment Research  Loads OpenNeuro ds, Get subject ID for a sample., Get session ID for a sample., Initialize BIDS data processor.          Args:             bids_root: Path to, Get list of subjects in BIDS dataset.          Returns:             subjects:, Load raw EEG data for a subject.          Handles MATLAB v7.3 (HDF5) .set file (+63 more)
+Nodes (71): EEGWindowDataset, main(), BIDS Data Loader for Closed-Loop 40Hz Entrainment Research Loads OpenNeuro ds, Get subject ID for a sample., Get session ID for a sample., Initialize BIDS data processor. Args: bids_root: Path to, Get list of subjects in BIDS dataset. Returns: subjects:, Load raw EEG data for a subject. Handles MATLAB v7.3 (HDF5) .set file (+63 more)
 
 ### Community 5 - "Research Paper & Manuscript"
+
 Cohesion: 0.02
 Nodes (117): 04 QA Bank: Judge Strategy Brief and Danger Zones, 73-Dimensional Causal Feature Vector (61 spectral + 7 PAC + 5 stim context), Abstract: TCN achieves 72.1% vs 64.5% alignment, 91% oracle, 35/35 subjects, Architecture Search: 8 Models, All Converge to R²≈0.287, Contribution 1: R²=0.287 Static PAC Ceiling (8 architectures converge), Contribution 2: Causal TCN for 5-10s PAC Forecasting (+0.5 R² margin), Contribution 3: Closed-Loop Controller Validated on 35 EEG Subjects, Contribution 4: Prediction Horizon Inflection Point (~3 seconds) (+109 more)
 
 ### Community 6 - "TRIBE Neural-Mass Simulator"
+
 Cohesion: 0.04
-Nodes (84): AlzheimerProfile, get_profile(), interpolate_profile(), Alzheimer's Disease Modeling Layer for TRIBE V2 Integration  Models the effects, Apply region-specific disease modification to ROI activations.          Differen, Modify neural mass model external drive for AD simulation.          Args:, Modify exponential simulator parameters for AD simulation.          Compatible w, Get Alzheimer's profile by severity name.      Args:         severity: One of "h (+76 more)
+Nodes (84): AlzheimerProfile, get_profile(), interpolate_profile(), Alzheimer's Disease Modeling Layer for TRIBE V2 Integration Models the effects, Apply region-specific disease modification to ROI activations. Differen, Modify neural mass model external drive for AD simulation. Args:, Modify exponential simulator parameters for AD simulation. Compatible w, Get Alzheimer's profile by severity name. Args: severity: One of "h (+76 more)
 
 ### Community 7 - "Archived ImprovedTCN Experiments"
+
 Cohesion: 0.05
 Nodes (72): ensemble_evaluate(), main(), Best combination experiments: 1. Target smoothing (ts=5) + deep TCN architecture, Evaluate ensemble of models by averaging predictions., Train model and evaluate., train_and_eval(), CausalConvBlock, compute_metrics() (+64 more)
 
 ### Community 8 - "Paper/Presentation PDF Builders"
+
 Cohesion: 0.04
 Nodes (54): FPDF, CSEF, main(), p01_title(), p02_intro1(), p03_intro2(), p04_methods1(), p05_methods2() (+46 more)
 
 ### Community 9 - "Control Strategies & Validation"
+
 Cohesion: 0.06
 Nodes (68): Critical Finding: ANOVA on n=1 Samples, ExponentialDecaySimulator (Fatigue Model 1: Exponential Decay), HeterogeneousPopulationSimulator (Fatigue Model 3: 50% No-Fatigue / 50% High-Fatigue), SaturationModelSimulator (Fatigue Model 4: Synaptic Adaptation Ceiling Decay), StepFunctionSimulator (Fatigue Model 2: Sudden Threshold Drop), create_simulator(), ExponentialDecaySimulator, FatigueModelConfig (+60 more)
 
 ### Community 10 - "Poster Boards & Figures"
+
 Cohesion: 0.03
 Nodes (89): Presentation Chain Transitions (9 Room-to-Room Bridges), Emotional Anchoring Table (Feeling Per Room), Key Number Clusters for Memorization (6 Groups), Blank Recovery Protocol (5-Step On-Stage Recovery), Poster Memory Palace (9 Rooms, Left-to-Right Journey), Feature Ablation Figure on Poster (73 vs 12 features, R² comparison), CSEF Poster V3 (Final Print-Ready Poster), System Architecture Flowchart on Poster (EEGNet→Features→TCN→Controller) (+81 more)
 
 ### Community 11 - "Archived Enhanced-Feature TCN"
+
 Cohesion: 0.04
-Nodes (62): build_enhanced_dataset(), _build_split_samples_enhanced(), Enhanced Feature Composition (108-feat 7ch / 69-feat 4ch), main(), Muse 4-Channel Support Flag (--muse-4ch), parse_args(), Build enhanced multiscale temporal datasets for PAC forecasting.  Extends the ba, Build an enhanced multiscale temporal dataset.      Loads existing spectral cach (+54 more)
+Nodes (62): build_enhanced_dataset(), \_build_split_samples_enhanced(), Enhanced Feature Composition (108-feat 7ch / 69-feat 4ch), main(), Muse 4-Channel Support Flag (--muse-4ch), parse_args(), Build enhanced multiscale temporal datasets for PAC forecasting. Extends the ba, Build an enhanced multiscale temporal dataset. Loads existing spectral cach (+54 more)
 
 ### Community 12 - "Controller Results & Judge Prep"
+
 Cohesion: 0.03
 Nodes (80): 4ch vs 7ch Evaluation Caveats (proxy comparison, Muse 2 noise, overfit), CSEF Defense Narrative: Temporal Context Compensates for Spatial Reduction, EEGNet Static PAC Prediction: 7ch R2=0.287 vs 4ch R2=0.016, Rationale: Why Static Gap Larger Than Temporal Gap, Hardware Configuration: 7ch Research-Grade vs 4ch Muse 2 Proxy, Muse 2 Consumer Headset as Proxy for 4-Channel Configuration, 4-Channel vs 7-Channel EEG Performance Gap Report, Source Files: model checkpoints, metrics JSONs for 4ch and 7ch (+72 more)
 
 ### Community 13 - "Lab Notebook PDF Generation"
+
 Cohesion: 0.03
 Nodes (75): P10 Lab Notebook V3 PDF (Title Page, TOC, Body), Project P10 Research Log Notebook V3 (Synopsys Submission), 73-Dimensional Temporal Feature Representation, Architecture Marathon and R2=0.287 Ceiling (February 16, 2026), MultiscaleCausalTCN Design (31K params, dilations [1,2,4,8]), Citation: Iaccarino et al. (2016) - 40Hz gamma entrainment reduces amyloid, Citation: Lahijanian et al. (2024) - OpenNeuro ds005048 Dataset, Citation: Lawhern et al. (2018) - EEGNet (+67 more)
 
 ### Community 14 - "12-Feature TCN Validation"
+
 Cohesion: 0.04
 Nodes (41): Alignment Score Metric (Low-PAC Stim + High-PAC Rest) / 2, PAC Gap Metric (Mean PAC Rest − Mean PAC Stim), FeatureMaskedDataset (73→12 Feature Slice Dataset), TCN12FeatCtrl (12-Feature Predictive Controller for Replay), AlignmentOracleCtrl, evaluate_epoch_alignment(), Rationale: Drop Spectral Features (Indices 0-60) to Prevent Anatomy Overfitting, FixedScheduleCtrl (+33 more)
 
 ### Community 15 - "Replay Analysis & Controllers"
+
 Cohesion: 0.04
-Nodes (39): CUSUMControl, evaluate_decisions(), _extract_biomarkers_single(), FixedScheduleControl, load_subjects(), main(), MultiBiomarkerReactiveControl, OracleControl (+31 more)
+Nodes (39): CUSUMControl, evaluate_decisions(), \_extract_biomarkers_single(), FixedScheduleControl, load_subjects(), main(), MultiBiomarkerReactiveControl, OracleControl (+31 more)
 
 ### Community 16 - "PPTX Slide Builder"
+
 Cohesion: 0.1
-Nodes (43): _add_paragraph(), _add_textbox(), _first_paragraph(), main(), p01_title(), p02_intro1(), p03_intro2(), p04_methods1() (+35 more)
+Nodes (43): \_add_paragraph(), \_add_textbox(), \_first_paragraph(), main(), p01_title(), p02_intro1(), p03_intro2(), p04_methods1() (+35 more)
 
 ### Community 17 - "Archived Temporal PAC Predictor"
+
 Cohesion: 0.05
-Nodes (42): Rationale: LSTM for Model Predictive Control of 40Hz Entrainment, MultiHorizonPredictor (Multi-Head LSTM), SpatialEncoder (CNN Window Encoder), TemporalPACPredictor (LSTM/GRU Model), MultiHorizonPredictor, Temporal PAC Prediction Models  LSTM and GRU architectures for predicting futu, Args:             n_channels: Number of EEG channels             n_samples: Sa, Args:             batch: Dictionary with keys:                 'eeg': (+34 more)
+Nodes (42): Rationale: LSTM for Model Predictive Control of 40Hz Entrainment, MultiHorizonPredictor (Multi-Head LSTM), SpatialEncoder (CNN Window Encoder), TemporalPACPredictor (LSTM/GRU Model), MultiHorizonPredictor, Temporal PAC Prediction Models LSTM and GRU architectures for predicting futu, Args: n_channels: Number of EEG channels n_samples: Sa, Args: batch: Dictionary with keys: 'eeg': (+34 more)
 
 ### Community 18 - "CSEF Presentation Generator"
+
 Cohesion: 0.11
 Nodes (55): add_body(), add_body_mixed(), add_bullet(), add_caption(), add_figure(), add_heading(), add_spacer(), add_subheading() (+47 more)
 
 ### Community 19 - "TVB Alzheimer Simulator"
+
 Cohesion: 0.06
-Nodes (28): evaluate_alignment(), FixedScheduleCtrl, hedges_g(), main(), TVB Jansen-Rit Alignment Evaluation: Closed-Loop Controller Comparison  Runs Fix, ReactiveCtrl, run_oracle_trial(), run_trial() (+20 more)
+Nodes (28): evaluate_alignment(), FixedScheduleCtrl, hedges_g(), main(), TVB Jansen-Rit Alignment Evaluation: Closed-Loop Controller Comparison Runs Fix, ReactiveCtrl, run_oracle_trial(), run_trial() (+20 more)
 
 ### Community 20 - "Literature Review & Methodology Docs"
+
 Cohesion: 0.05
 Nodes (50): OpenNeuro ds005048 Dataset (IEEE Paper Reference), EEGNet Architecture (IEEE Paper Specification), GENUS: Gamma Entrainment Using Sensory Stimulation, Inter-Individual Variability in Entrainment Response, MPC Decision Engine (IEEE Paper Formulation), PAC Computation Pipeline (IEEE Paper), IEEE Research Paper: Personalized Deep Learning for Closed-Loop 40Hz Entrainment, Personalization Module (IEEE Paper) (+42 more)
 
 ### Community 21 - "TCN Layer Internals"
+
 Cohesion: 0.06
-Nodes (27): AttentionPool1D, CausalDSConvBlock, CausalSinusoidalPE, _count_parameters(), DeepDilationTCN, LastStepPool, _make_regression_head(), Take last timestep from causal output.      For a causal architecture the last (+19 more)
+Nodes (27): AttentionPool1D, CausalDSConvBlock, CausalSinusoidalPE, \_count_parameters(), DeepDilationTCN, LastStepPool, \_make_regression_head(), Take last timestep from causal output. For a causal architecture the last (+19 more)
 
 ### Community 22 - "Rigor Audit Reports"
+
 Cohesion: 0.06
 Nodes (46): CSEF Presentation Compliance Checklist (18/18 PASS), Page Count and Section Structure Requirements (12 pages, 8 sections), Project Summary Word Count Check (142 words, under 150 limit), CSEF Font Requirements (14pt min, sans-serif recommended), Font Compliance Audit, Times New Roman Font Warning, Figure and Visual Compliance Audit, System Architecture Figure Outdated Specs Warning (73-feat/31K shown vs 12-feat/22914) (+38 more)
 
 ### Community 23 - "Presentation Scripts & Citations"
+
 Cohesion: 0.07
 Nodes (45): Tier 1 Basic Q&A (Every judge asks these), Tier 5 Hard Challenge Q&A (Architecture, novelty, impact), Architecture Marathon: 8-Model Static PAC Ceiling R2=0.287, Causal TCN System (20s lookback, 5s forecast, 12-feature input), Closed-Loop Controller (z-score thresholds, hysteresis, personalization), Model Zoo Table (All Architectures, Params, R2), Code Map: Phase 1-3 Approach Timeline, Quick-Reference Numbers for CSEF Interview (+37 more)
 
 ### Community 24 - "TRIBE-TCN Validation"
+
 Cohesion: 0.07
 Nodes (29): CausalConv1dBlock (Dilated Residual Conv Block), TCNTribe Model (TRIBE-trained Causal TCN), TCNTribeController (Proactive Closed-Loop Controller), build_features_from_sequence(), CausalConv1dBlock, Rationale: Domain Mismatch Between Real EEG TCN and TRIBE Simulator, evaluate_alignment(), FixedScheduleCtrl (+21 more)
 
 ### Community 25 - "Generalization-Gap Experiments"
+
 Cohesion: 0.06
 Nodes (41): Epoch-Level PAC Caveat: 82.2% Same-Epoch Samples, ImprovedTCN Architecture (6338 params, 12-feature input), PAC+Stim Feature Discovery Audit Report, Rationale: Spectral Features Cause Subject-Specific Overfitting, Known Bug: Stim Context hop_sec Mismatch (1s vs 2s window), Approaches That Did NOT Work (architecture, mixup, heavy-reg on all 73), Feature Ablation Table (6 subsets: all→-0.025, pac_stim→0.558), FINDINGS: Spectral Features Cause Catastrophic Generalization Failure (+33 more)
 
 ### Community 26 - "Archived EEGNet V2"
+
 Cohesion: 0.07
-Nodes (25): EEGDatasetV2, load_processed_data_v2(), Enhanced Data Loader for ΔPAC Prediction (Version 2)  Key improvements over v1, Load preprocessed data and compute ΔPAC labels.      Args:         data_dir:, PyTorch Dataset for EEG windows with ΔPAC labels.      Changes from v1:     -, Test the v2 data loader., Args:             X: EEG windows (n_samples, n_channels, n_timepoints), Apply data augmentation to EEG window.          Techniques:         1. Time j (+17 more)
+Nodes (25): EEGDatasetV2, load_processed_data_v2(), Enhanced Data Loader for ΔPAC Prediction (Version 2) Key improvements over v1, Load preprocessed data and compute ΔPAC labels. Args: data_dir:, PyTorch Dataset for EEG windows with ΔPAC labels. Changes from v1: -, Test the v2 data loader., Args: X: EEG windows (n_samples, n_channels, n_timepoints), Apply data augmentation to EEG window. Techniques: 1. Time j (+17 more)
 
 ### Community 27 - "Archived CSEF Paper & Abstract"
+
 Cohesion: 0.06
 Nodes (40): Controller Alignment: 72.1% Predictive vs 64.5% Reactive (p<0.001), CSEF Old Project Abstract (247 words), Low-PAC Targeting: 82.6% vs 51.7% Reactive (p<0.001), TCN Reaches 91% of Theoretical Oracle Performance, PAC as Real-Time Entrainment Biomarker, TCN +0.5 R² Margin Over Baselines at 5-10s Horizon, Clinical Roadmap (Research to Practice Pathway), Facility Partners: Mission Villa Memory Care + Valley Medical Center (+32 more)
 
 ### Community 28 - "Archived SpecTempNet V3"
+
 Cohesion: 0.07
 Nodes (26): compute_r2(), EEGDatasetV3, evaluate(), load_and_preprocess_data(), main(), Evaluate on validation/test set., Dataset with both raw EEG and pre-computed spectral features., Load processed data and extract spectral features. (+18 more)
 
 ### Community 29 - "Model Ceiling & Leakage Audits"
+
 Cohesion: 0.06
 Nodes (38): Rationale: PAC is Theta-Gamma Frequency Coupling — Explicit Features Required, SpecTempNet Architecture Design (3-Branch: Raw EEG + Spectral + Phase-Amplitude), Subject-Specific Adaptation as V3 Fallback Option, MI Formula in Features Identical to Target PAC Formula (KL Divergence), Data Split Audit Passed: 24 Train / 5 Val / 6 Test Subjects (No Overlap), V3 Audit: MI Feature Leakage Identified (R²=0.69 Inflated), Rationale: Features > Architecture for Small EEG Datasets, Honest Baseline: Ridge Regression R²=0.287 (135 spectral+wavelet features) (+30 more)
 
 ### Community 30 - "Community 30"
+
 Cohesion: 0.06
 Nodes (37): 05 QA Complete: PAC Computation and EEGNet Methodology Answers, Archive Memorization Guide: 12-Room Poster Memory Palace, Archive Main Script: 4-5 Minute Full Presentation, CSEF Presentation README: Active Working File Set, 12-Feature PAC+Stim Configuration (test R²=0.606), Audit Integrity Checks (no leakage, causal indexing, shuffle-label sanity), Closed-Loop Controller (threshold-based, z-score hysteresis), OpenNeuro ds005048 Dataset (Lahijanian 2024, N=35) (+29 more)
 
 ### Community 31 - "Community 31"
+
 Cohesion: 0.08
 Nodes (37): Adaptive Stimulation Benefit by Severity (Panel C), Adaptive Stimulation Benefit: Predictive minus Fixed (Panel C), Disease Severity Gradient (healthy→preclinical→mild→moderate→severe), Fixed Schedule Controller Strategy, Fixed Stimulation Strategy (baseline), Largest Predictive Benefit at Healthy and Preclinical Stages, PAC Ceiling / Diminishing Returns at Severe Alzheimer's Stages, PAC Dynamics: Predictive Controller Over Time (Panel B) (+29 more)
 
 ### Community 32 - "Community 32"
+
 Cohesion: 0.08
-Nodes (23): _NumpySimulatedAdapter, Hardware-agnostic EEG adapters for closed-loop inference.  Provides two adapters, Pure-numpy fallback when brainflow is not installed (e.g. cloud deploy).      Ge, Muse 2 BLE adapter — NOT VIABLE on macOS Darwin 25.4.0.      Attempted: 2026-03-, Attempt to open a Muse 2 BLE session.          Args:             mac_address: Bl, Sleep 2 seconds and return one (n_channels, 500) float32 EEG window.          Re, Stop stream and release BrainFlow session., RealEEGAdapter (+15 more)
+Nodes (23): \_NumpySimulatedAdapter, Hardware-agnostic EEG adapters for closed-loop inference. Provides two adapters, Pure-numpy fallback when brainflow is not installed (e.g. cloud deploy). Ge, Muse 2 BLE adapter — NOT VIABLE on macOS Darwin 25.4.0. Attempted: 2026-03-, Attempt to open a Muse 2 BLE session. Args: mac_address: Bl, Sleep 2 seconds and return one (n_channels, 500) float32 EEG window. Re, Stop stream and release BrainFlow session., RealEEGAdapter (+15 more)
 
 ### Community 33 - "Community 33"
+
 Cohesion: 0.07
 Nodes (35): EEGNet V1 (1457 Params, R²=0.287 Static Baseline), Architecture Search Lessons (3 Key Takeaways), Ridge Regression V5 (135 Coefficients, Matches EEGNet), SpecTempNet V3 Leakage Discovery (R²=0.69→0.236 After Fix), Static PAC Prediction Ceiling (R²=0.287, 8 Architectures), Rationale for Temporal Prediction Pivot (from Static Ceiling), ViT-TCNet V4 (1.1M Params, Overfits N=35), Figure: PAC Forecasting Performance vs Prediction Horizon (TCN vs Baselines) (+27 more)
 
 ### Community 34 - "Community 34"
+
 Cohesion: 0.06
 Nodes (35): Closed-Loop DBS for Parkinson's (Precedent), Gamma Oscillations and Alzheimer's Disease, Individual Variability in 40Hz Response (30% non-responders), Lahijanian 2024 Auditory Entrainment DMN Study, PAC as Biomarker for Alzheimer's Disease, Research Gap Table (What Exists vs Missing), Tort 2010 Modulation Index Method, Causal Padding Design Decision (+27 more)
 
 ### Community 35 - "Community 35"
+
 Cohesion: 0.07
 Nodes (29): compute_regression_metrics(), count_parameters(), ensure_dir(), get_device(), load_config(), plot_comparison_bars(), plot_pac_timeseries(), plot_prediction_scatter() (+21 more)
 
 ### Community 36 - "Community 36"
+
 Cohesion: 0.1
 Nodes (30): Effect Size g=1.57 (TCN vs Reactive PAC Gap), Fixed Controller PAC Gap (negative), Hybrid Controller PAC Gap (~34e-6, best non-oracle), Oracle Controller PAC Gap (~33e-6), PAC Targeting Gap by Controller Figure, PI Controller PAC Gap (~27.5e-6), Reactive Controller PAC Gap (~21e-6), TCN Controller PAC Gap (~30.5e-6, g=1.57 vs Reactive) (+22 more)
 
 ### Community 37 - "Community 37"
+
 Cohesion: 0.1
 Nodes (26): Demo Streaming Inference Script, Generate AI Figures via OpenRouter Script, Generate Closed-Loop vs Fixed v3 Figure Script, Generate CSEF Presentation PPTX Script, Generate CSEF Presentation PDF Script, Generate Image via OpenRouter API Script, generate_horizon_sweep(), generate_system_block_diagram() (+18 more)
 
 ### Community 38 - "Community 38"
+
 Cohesion: 0.08
-Nodes (14): ATCNet, AugmentedDataset, EEGNet, evaluate_model(), PhaseSwapAugmentation, V8: Specialized EEG Architectures from Research  Based on recent literature (202, EEGNet: Compact CNN for EEG-based BCIs.      Original paper: Lawhern et al. (201, ATCNet: Attention Temporal Convolutional Network.      Combines multi-head self- (+6 more)
+Nodes (14): ATCNet, AugmentedDataset, EEGNet, evaluate_model(), PhaseSwapAugmentation, V8: Specialized EEG Architectures from Research Based on recent literature (202, EEGNet: Compact CNN for EEG-based BCIs. Original paper: Lawhern et al. (201, ATCNet: Attention Temporal Convolutional Network. Combines multi-head self- (+6 more)
 
 ### Community 39 - "Community 39"
+
 Cohesion: 0.07
 Nodes (27): 12 PAC+Stim Feature Set Description (indices 61–72), Full Pipeline Command Reference (CLAUDE.md), Critical Gotcha: Spectral Features Cause Generalization Failure, Rationale: Causal Convolutions to Prevent Future Leakage, Clinical Relevance: Adaptive Scheduling for Alzheimer's Therapy, Data Integrity Audit (No Leakage, Shuffle-Label Sanity), Dataset Description: ds005048 Processing Pipeline & Splits, EEGNet Architecture Detail (Block 1 + Block 2 + FC Head) (+19 more)
 
 ### Community 40 - "Community 40"
+
 Cohesion: 0.11
 Nodes (27): EEGNet Static PAC Model (src/eegnet.py, 1457 params), MultiscaleCausalTCN (temporal_multiscale/multiscale_tcn.py, 31K params), PAC Features (Circular — Never Used, R²=0.9999), Phase 1: Static PAC Prediction (V1–V8, Feb 5–16 2026), Phase 2: Temporal PAC Prediction (Feb 16–17 2026), Phase 3: Multiscale Causal TCN (Feb 17 2026), R²=0.287 Static PAC Prediction Ceiling, Repository Organization & Approach History (+19 more)
 
 ### Community 41 - "Community 41"
+
 Cohesion: 0.1
 Nodes (26): Poster Board V1 (Original, Synopsys), Poster Board V2 (Print-Ready, Synopsys), Poster Board V3 (Print-Ready, Synopsys), Poster Board V5 (Condensed, Visual-Forward, Audit-Verified), V6 Key Change: 12-Feature PAC+Stim Discovery Narrative, 4ch vs 7ch Channel Configuration Table (Muse Compatibility), Controller Comparison Result: 72.1% vs 64.5% Alignment, Poster Board V6 (PAC+Stim Feature Discovery Update) (+18 more)
 
 ### Community 42 - "Community 42"
+
 Cohesion: 0.12
 Nodes (24): Clinical Vision: Multi-biomarker PAC+connectivity control, IRB Crossover Trial, At-home Wearable Therapy, Figure 10: Future Directions Roadmap, Next Steps: Live Closed-Loop EEG Streaming, 30-60 min Sessions, Reinforcement Learning Controller, This Project Summary (Offline EEG, N=35, TCN R²=0.606, Muse 2 prototype), Binomial p < 0.001 (35/35 Subjects Favor TCN), Figure 14: Per-Subject Clinical Utility (35/35 Favor TCN), Reactive vs Predictive Clinical Utility Scatter (Normalized), TCN Advantage Region (All 35/35 Subjects Above y=x Line) (+16 more)
 
 ### Community 43 - "Community 43"
+
 Cohesion: 0.1
 Nodes (23): Controller Table Correction (Fixed alignment definition, oracle 100%), TCN Validation Date Correction (Feb 26, not Feb 21), PAC Gap Unit Correction (dimensionless x10⁻⁶, not µV²), Controller Comparison Results (72.1% TCN vs 64.5% Reactive, N=35), Fatigue Model Robustness (4 fatigue models, all p<0.001), Feature Leakage Discovery (MI features circular in static prediction), Habituation Heterogeneity Finding (17/35 habituate, 18/35 do not), Horizon Sweep Experiment (TCN vs Persistence vs Ridge across 1–10s) (+15 more)
 
 ### Community 44 - "Community 44"
+
 Cohesion: 0.15
 Nodes (21): apply_unicode_replacements(), convert_citations(), convert_inline_formatting(), escape_latex(), fix_common_issues(), generate_latex(), main(), make_label() (+13 more)
 
 ### Community 45 - "Community 45"
+
 Cohesion: 0.3
-Nodes (21): _arrow(), box_with_text(), build_section_11(), build_section_15(), build_section_19(), build_section_2(), build_section_3(), build_section_6() (+13 more)
+Nodes (21): \_arrow(), box_with_text(), build_section_11(), build_section_15(), build_section_19(), build_section_2(), build_section_3(), build_section_6() (+13 more)
 
 ### Community 46 - "Community 46"
+
 Cohesion: 0.13
-Nodes (13): MultiChannelPersonalization, Compute z-score of current PAC relative to rolling baseline.          Z-score, Return current number of samples in baseline buffer., Personalization module for multi-channel PAC with separate baselines.      Mai, Initialize multi-channel personalization.          Args:             n_channe, Update baseline for all channels.          Args:             pac_values: PAC, Compute z-scores for all channels.          Args:             pac_values: Cur, Compute average z-score across all channels (ignoring NaN).          Args: (+5 more)
+Nodes (13): MultiChannelPersonalization, Compute z-score of current PAC relative to rolling baseline. Z-score, Return current number of samples in baseline buffer., Personalization module for multi-channel PAC with separate baselines. Mai, Initialize multi-channel personalization. Args: n_channe, Update baseline for all channels. Args: pac_values: PAC, Compute z-scores for all channels. Args: pac_values: Cur, Compute average z-score across all channels (ignoring NaN). Args: (+5 more)
 
 ### Community 47 - "Community 47"
+
 Cohesion: 0.12
 Nodes (22): Comprehensive Submission Audit Report, Label-Shuffle Sanity Check, Metadata Mismatch Guard (train_multiscale_tcn.py), Normalization Leakage Check, PAC Oracle Dependency (Deployment Risk), Subject Split Leakage Check, Target Smoothing Effect on R² (ts1/ts5/ts15), Temporal Causality Leakage Check (+14 more)
 
 ### Community 48 - "Community 48"
+
 Cohesion: 0.11
 Nodes (22): Checklist for Adult Sponsor (1) — John Crandall Signed, No SRC/IRB/IACUC Pre-Approval Required (computational-only project), Required Forms Confirmed: Adult Sponsor Checklist, Student Checklist 1A, Research Plan, Approval Form 1B, Adult Sponsor: Mr. John Crandall (jcrandall@vcs.net), Data Source: OpenNeuro ds005048 (external dataset), Experimentation Dates: 01/12/26 – 02/15/26 (home-based), Project Title: Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment to Optimize Theta-Gamma Coupling in Alzheimer's, Research Plan/Project Summary Instructions (ISEF Form Requirements) (+14 more)
 
 ### Community 49 - "Community 49"
+
 Cohesion: 0.15
-Nodes (20): audit_code(), load_data(), main(), Persistence Baseline — Predict PAC(t) = PAC(t-1), Code Validation & Audit Script (runs without PyTorch)  Validates the temporal, Test 2: Verify no subject appears in multiple splits., Test 3: Characterize PAC temporal autocorrelation per subject.     This determi, Test 4: Sklearn Ridge baseline for temporal prediction.     Uses PAC history + (+12 more)
+Nodes (20): audit_code(), load_data(), main(), Persistence Baseline — Predict PAC(t) = PAC(t-1), Code Validation & Audit Script (runs without PyTorch) Validates the temporal, Test 2: Verify no subject appears in multiple splits., Test 3: Characterize PAC temporal autocorrelation per subject. This determi, Test 4: Sklearn Ridge baseline for temporal prediction. Uses PAC history + (+12 more)
 
 ### Community 50 - "Community 50"
+
 Cohesion: 0.12
 Nodes (21): 12 TCN Input Features: PAC trajectory (7) + stimulation context (5), 35/35 Subjects Benefit from TCN Predictive vs Reactive (Figure 14), Causal TCN Temporal PAC Forecaster — 5,154 params, 12 PAC+Stim features, 5s horizon, Towards Clinical Use: Muse 2 headband, <$300 total, no GPU, 40Hz audio delivery, Controller Comparison Table: Fixed Schedule, Reactive, TCN Predictive, Oracle (Figure 13), Dataset: OpenNeuro ds005048, 35 subjects, 7 frontal EEG channels, 17,283 windows, subject-level splits, EEGNet (V4) Static PAC Predictor — 1,457 params, R²=0.287, Feature Ablation Finding: 73-feature model R²=−0.025; 12 PAC+Stim features R²=0.606 (+13 more)
 
 ### Community 51 - "Community 51"
+
 Cohesion: 0.11
 Nodes (20): Model 2: Causal TCN (Poster Figure), CSEF Poster Print Version (Slide1_print.png), Model 1: EEGNet (Poster Figure), Model Approach Section (Poster), Prediction Horizon Sweep (Poster Figure 5), System Architecture Flowchart (Poster Figure 6), TCN Predictive Control Result (72.1% vs 64.5% alignment), Validation Protocol (Poster Figure) (+12 more)
 
 ### Community 52 - "Community 52"
+
 Cohesion: 0.15
-Nodes (18): _bandpass_filter(), compute_multichannel_pac(), compute_sliding_pac_for_segment(), compute_sliding_pac_for_split(), compute_tort_mi(), find_contiguous_segments(), main(), Compute sliding-window PAC labels for all processed EEG windows.  Instead of the (+10 more)
+Nodes (18): \_bandpass_filter(), compute_multichannel_pac(), compute_sliding_pac_for_segment(), compute_sliding_pac_for_split(), compute_tort_mi(), find_contiguous_segments(), main(), Compute sliding-window PAC labels for all processed EEG windows. Instead of the (+10 more)
 
 ### Community 53 - "Community 53"
+
 Cohesion: 0.18
-Nodes (18): build_multiscale_dataset(), _build_split_samples(), _causal_moving_average(), _causal_target_smooth(), _load_spectral_cache(), _load_split(), main(), _normalize_with_train_stats() (+10 more)
+Nodes (18): build_multiscale_dataset(), \_build_split_samples(), \_causal_moving_average(), \_causal_target_smooth(), \_load_spectral_cache(), \_load_split(), main(), \_normalize_with_train_stats() (+10 more)
 
 ### Community 54 - "Community 54"
+
 Cohesion: 0.12
 Nodes (19): Core Claim: PAC Targeting 82.6% vs 51.7% Reactive, 91% of Oracle, Core Claim: Predictive Controller 72.1% vs Reactive 64.5% Alignment, Core Claim: TCN Maintains R²=0.25 at 5-10s Horizons Where Baselines Fail, Abstract Framing Strategy: Clinical Hook (Disease Impact First), Abstract Framing Strategy: Engineering-First (System Design Focus), Abstract Framing Strategy: Judge-Friendly (Biology Hook then AI), Rationale for Final Abstract Selection: Structure Analysis and Strengths, Abstract Draft 1: Clinical Hook Approach (+11 more)
 
 ### Community 55 - "Community 55"
+
 Cohesion: 0.13
 Nodes (19): 40 Hz Auditory Stimulation Therapy, 73 Causal Features (spectral + PAC-history + stim-context), Alignment Result: 72.1% (TCN) vs 64.5% (reactive), p<0.001, Alzheimer's Disease Motivation (55M affected, amyloid-β clearance), Closed-Loop Controller (PAC-forecast-driven stimulation), Fixed-Schedule Protocol Limitation (habituation ignored), Horizon Sweep: Baselines collapse at 5-10s, TCN R²≈0.25, Low-PAC Window Targeting: 82.6% vs 51.7%, 91% of Oracle (+11 more)
 
 ### Community 56 - "Community 56"
+
 Cohesion: 0.25
-Nodes (14): analyze_cross_epoch_transitions(), _corr(), _denorm(), evaluate_model(), get_device(), main(), persistence_baseline(), _r2() (+6 more)
+Nodes (14): analyze_cross_epoch_transitions(), \_corr(), \_denorm(), evaluate_model(), get_device(), main(), persistence_baseline(), \_r2() (+6 more)
 
 ### Community 57 - "Community 57"
+
 Cohesion: 0.12
-Nodes (11): AttentionModel, CNN1D, CNNAttentionHybrid, evaluate_model(), V7: Lightweight Deep Learning on Raw EEG  Different approach: Learn features dir, Multi-head attention over time points.      Learns which time points are importa, Hybrid: CNN extracts features, Attention pools them.      Combines local pattern, Train model with early stopping. (+3 more)
+Nodes (11): AttentionModel, CNN1D, CNNAttentionHybrid, evaluate_model(), V7: Lightweight Deep Learning on Raw EEG Different approach: Learn features dir, Multi-head attention over time points. Learns which time points are importa, Hybrid: CNN extracts features, Attention pools them. Combines local pattern, Train model with early stopping. (+3 more)
 
 ### Community 58 - "Community 58"
+
 Cohesion: 0.13
 Nodes (18): Build Multiscale Dataset Script (build_multiscale_dataset.py), Comprehensive Submission Audit Script (comprehensive_submission_audit.py), 73-Feature Multiscale Dataset (lookback=20, 73 features, train/val/test splits), Horizon Sweep Summary Table (TCN advantage at 5-10s horizons), Per-Subject Adaptation Script (per_subject_adaptation.py), Per-Subject Adaptation Results (TCN adapted vs persistence, 6 test subjects), NVIDIA GeForce RTX 3080 GPU (Training Hardware), Submission Audit Result (PASS - ablation: pac_only R2=0.8589, spectral_only R2=0.0551) (+10 more)
 
 ### Community 59 - "Community 59"
+
 Cohesion: 0.14
 Nodes (18): 12 PAC+Stim Features: PAC trajectory + stimulation context, Causal TCN with 12 PAC-Trajectory and Stimulation-Context Features, Paper Draft Status: All sections in draft, none reviewed or finalized, EEGNet Metric: 1,457 params, test R²=0.287 (static PAC ceiling), Feature Ablation: 73-feature R²=−0.025 vs 12 PAC+Stim R²=0.558, Figure: Controller Comparison v2 (results/figures/controller_comparison_v2.pdf), Figure: Horizon Sweep (results/figures/horizon_sweep.pdf), Figure: PAC Targeting Gap (results/figures/pac_targeting_gap.pdf) (+10 more)
 
 ### Community 60 - "Community 60"
+
 Cohesion: 0.15
 Nodes (18): Data Limitation as Performance Ceiling Rationale, DeepDilationTCN Hypothesis (Extended Receptive Field), MultiTaskTCN Hypothesis (Delta Head Regularization), Synthetic Benchmark Results (All Variants PASS), TCN Architecture Experiment Design, TransformerTCN Hypothesis (Self-Attention vs Fixed Dilation), WiderTCN Hypothesis (64-dim Bottleneck Limit), AttentionWeightCapture (Hook-Based Attention Weight Capture) (+10 more)
 
 ### Community 61 - "Community 61"
+
 Cohesion: 0.14
 Nodes (18): Alignment Metric (Average of Low-PAC Stim Rate and High-PAC Rest Rate), High-PAC Rest Rate Metric, Low-PAC Stimulation Rate Metric, Figure 12: Metric Definitions (Low-PAC Stim Rate & High-PAC Rest Rate), Subject Median PAC Threshold for Stimulation Decision, Figure 13: Controller Performance Comparison (N=35), Effect Size g=1.31 (TCN vs Reactive Alignment, p<0.001), Effect Size g=4.47 (TCN vs Reactive Low-PAC Stim Rate, p<0.001) (+10 more)
 
 ### Community 62 - "Community 62"
+
 Cohesion: 0.17
-Nodes (6): FixedSchedule, main(), Predictive, Alzheimer's Disease Simulation with TRIBE V2-Enhanced Closed-Loop Control  Demon, Reactive, run_trial()
+Nodes (6): FixedSchedule, main(), Predictive, Alzheimer's Disease Simulation with TRIBE V2-Enhanced Closed-Loop Control Demon, Reactive, run_trial()
 
 ### Community 63 - "Community 63"
+
 Cohesion: 0.15
 Nodes (16): add_body_block(), add_callout(), add_content_bg(), add_gradient_rect(), add_rect(), add_section_header(), add_text(), clear_slide() (+8 more)
 
 ### Community 64 - "Community 64"
+
 Cohesion: 0.15
 Nodes (17): Figure 7: Real-Data Controller Timeline — Sub-15 (Test Set), Actual PAC Signal Ground Truth (Sub-15 test set), Reactive Controller Stimulation Decisions (Sub-15), TCN Catches PAC Decline Early and Avoids Wasted Stimulation, TCN Predictive Controller Decisions (Sub-15, 5s ahead), 40Hz Audio Stimulation Output (STIMULATE / REST / MAINTAIN), Causal TCN (31K params, 20s lookback), Closed-Loop 40Hz Entrainment System Architecture Diagram (+9 more)
 
 ### Community 65 - "Community 65"
+
 Cohesion: 0.27
-Nodes (15): _dataset_base_4ch(), _dataset_base_7ch(), _dataset_dir(), _device(), _ensure_dataset(), main(), _n_features(), parse_args() (+7 more)
+Nodes (15): \_dataset_base_4ch(), \_dataset_base_7ch(), \_dataset_dir(), \_device(), \_ensure_dataset(), main(), \_n_features(), parse_args() (+7 more)
 
 ### Community 66 - "Community 66"
+
 Cohesion: 0.22
-Nodes (15): _controller_order(), fig_controller_comparison(), fig_pac_targeting_gap(), fig_per_subject_utility(), fig_stim_vs_alignment(), main(), Bar chart of (mean PAC during rest - mean PAC during stim) per controller., Scatter: Reactive utility (x) vs TCN utility (y), colored by split. (+7 more)
+Nodes (15): \_controller_order(), fig_controller_comparison(), fig_pac_targeting_gap(), fig_per_subject_utility(), fig_stim_vs_alignment(), main(), Bar chart of (mean PAC during rest - mean PAC during stim) per controller., Scatter: Reactive utility (x) vs TCN utility (y), colored by split. (+7 more)
 
 ### Community 67 - "Community 67"
+
 Cohesion: 0.18
 Nodes (16): Abstract Archive (Historical CSEF Drafts), Superseded Implementation Archive, Audits Documentation Directory, Code Architecture Map, CSEF 2026 Submission Archive, Current Technical Methodology, Documentation Index, Consolidated Findings (FINDINGS.md) (+8 more)
 
 ### Community 68 - "Community 68"
+
 Cohesion: 0.12
 Nodes (16): Limitation: Dataset Size (N=35), Differentiators vs Prior Work, Framing A: Feature Selection > Architecture, Limitation: No Comparison to Prior Closed-Loop BCI Systems, Limitation: Offline Replay Not Live Closed-Loop, Open Questions Before Submission, Limitation: PAC Label Granularity (Epoch-Level), Framing B: Proactive vs Reactive Neurostimulation (+8 more)
 
 ### Community 69 - "Community 69"
+
 Cohesion: 0.17
 Nodes (16): 13-Page Project Presentation PDF (CSEF Requirement), CSEF Action Items and Preparation Checklist, AI / Generative AI Use Policy (ISEF-based), Awards Structure and ISEF Advancement Paths, Conduct and Disqualification Rules, California State Science Fair (CSEF), CSEF Consensus-Based Judging Process, Display Board Dimension and Content Rules (+8 more)
 
 ### Community 70 - "Community 70"
+
 Cohesion: 0.19
-Nodes (14): collapse_to_epochs(), fit_population_tau(), fit_subject_tau(), load_all_splits(), main(), print_results(), Fit simulator tau parameters from real PAC transition data.  Extracts tau_rise a, Fit tau_rise and tau_decay for a single subject at epoch level.      For consecu (+6 more)
+Nodes (14): collapse_to_epochs(), fit_population_tau(), fit_subject_tau(), load_all_splits(), main(), print_results(), Fit simulator tau parameters from real PAC transition data. Extracts tau_rise a, Fit tau_rise and tau_decay for a single subject at epoch level. For consecu (+6 more)
 
 ### Community 71 - "Community 71"
+
 Cohesion: 0.13
 Nodes (15): PAC SNR=-4.73dB: Noise 3x Signal, Maximum Achievable R²~0.25-0.35, V1 Data Leakage: MI Features Used to Predict PAC (R²=0.69, Circular), Comprehensive Analysis: V1-V8 Model Attempt History for PAC Prediction, V5 Verdict: Ridge Regression R²=0.287 is Honest Ceiling for This Dataset, 8-Second Window Experiment: Autocorrelation r=0.45 But R²=0.125 (Failed Target), Key Insight: Temporal PAC Prediction Fails Without Stimulation Context, Architecture Decision: Causal Multiscale TCN + Stim Context Chosen Over LSTM/Transformer, Target Smoothing: Causal Denoised PAC State Achieves R²=0.75 vs Raw R²=0.07 (+7 more)
 
 ### Community 72 - "Community 72"
+
 Cohesion: 0.16
 Nodes (15): 12-Feature PAC+Stim Model (test R²=0.606), Causal Temporal Convolutional Network (TCN), Epoch Alignment Result (72.1% vs 64.5%, g=1.31), Fixed-Schedule 40Hz Auditory Entrainment Protocol, Horizon Sweep Result (R²=0.577–0.669 at 3–10s), Low-PAC Window Targeting (82.6% vs 51.7%, g=4.47), Key Methodological Finding: Feature Ablation, Neural Habituation / Fatigue Effect (+7 more)
 
 ### Community 73 - "Community 73"
+
 Cohesion: 0.13
-Nodes (15): Project Limitations: offline replay only, single dataset, short sessions (6-10 min), static PAC ceiling, heuristic thresholds, Active src/ Modules: data_loader, preprocessing, pac_computation, eegnet, training, controller, personalization, simulator, validation, utils, spectral_features, Feature Engineering Summary: raw EEG (1,7,500), spectral 61-dim, wavelet 74-dim, PAC features 116-dim (circular), multiscale 73-dim, Model Zoo: EEGNet R²=0.287, EEGNetV2 R²=0.06, SpecTempNet R²=0.236, ViT-TCNet R²=0.252, LSTM R²=−0.05, MultiscaleCausalTCN R²=0.74*, Architecture Timeline: Phase 1 (V1-V8 static, Feb 5-16), Phase 2 (temporal LSTM, Feb 16-17), Phase 3 (multiscale TCN, Feb 17), Closed-Loop Controller Design Slide: z-score thresholds ±0.5, 5s hysteresis, offline counterfactual replay validation, Discussion Slide: spectral features encode anatomy, 3s inflection = PAC autocorrelation timescale, single-site limitation, 73-Feature Breakdown: 61 spectral (28 band power + 7 theta/gamma ratio + 21 PAC-structure + 5 global) + 7 PAC-derived + 5 stim context (+7 more)
+Nodes (15): Project Limitations: offline replay only, single dataset, short sessions (6-10 min), static PAC ceiling, heuristic thresholds, Active src/ Modules: data_loader, preprocessing, pac_computation, eegnet, training, controller, personalization, simulator, validation, utils, spectral_features, Feature Engineering Summary: raw EEG (1,7,500), spectral 61-dim, wavelet 74-dim, PAC features 116-dim (circular), multiscale 73-dim, Model Zoo: EEGNet R²=0.287, EEGNetV2 R²=0.06, SpecTempNet R²=0.236, ViT-TCNet R²=0.252, LSTM R²=−0.05, MultiscaleCausalTCN R²=0.74\*, Architecture Timeline: Phase 1 (V1-V8 static, Feb 5-16), Phase 2 (temporal LSTM, Feb 16-17), Phase 3 (multiscale TCN, Feb 17), Closed-Loop Controller Design Slide: z-score thresholds ±0.5, 5s hysteresis, offline counterfactual replay validation, Discussion Slide: spectral features encode anatomy, 3s inflection = PAC autocorrelation timescale, single-site limitation, 73-Feature Breakdown: 61 spectral (28 band power + 7 theta/gamma ratio + 21 PAC-structure + 5 global) + 7 PAC-derived + 5 stim context (+7 more)
 
 ### Community 74 - "Community 74"
+
 Cohesion: 0.29
-Nodes (13): _ablation_tests(), _basic_integrity(), _corr(), _feature_group_indices(), _fit_ridge(), _load(), main(), parse_args() (+5 more)
+Nodes (13): \_ablation_tests(), \_basic_integrity(), \_corr(), \_feature_group_indices(), \_fit_ridge(), \_load(), main(), parse_args() (+5 more)
 
 ### Community 75 - "Community 75"
+
 Cohesion: 0.2
 Nodes (13): add_body_text(), add_box(), add_callout_box(), add_content_bg(), add_section_header(), add_text_box(), Generate CSEF 2026 poster board PPTX — 24x32 inches (prints at 200% → 48x64)., Add a gold metric callout box. (+5 more)
 
 ### Community 76 - "Community 76"
+
 Cohesion: 0.14
 Nodes (14): Graph Attention Network (GAT) Spatial Processing Module, Hypothesis: GAT-Transformer Achieves R²>0.80 for PAC Prediction 5-10s Ahead, In Silico Closed-Loop Validation Methodology, Leave-One-Subject-Out Cross-Validation Strategy, Model Predictive Control (MPC) Framework for Stimulation Optimization, Proposed GAT-Transformer Architecture for EEG PAC Prediction, Temporal Transformer Encoder for EEG Sequence Modeling, 30% Non-Responder Problem: Inter-Individual Variability in 40Hz Entrainment (+6 more)
 
 ### Community 77 - "Community 77"
+
 Cohesion: 0.19
 Nodes (14): Architecture Search Comparison Figure (TODO), Controller Comparison Figure, Feature Ablation Bar Chart (TODO), Figure Style Guide, Paper Figures Source Directory, Generate Figures Script (generate_figures.py), Generate Timeline Figure Script (generate_timeline_figure.py), Horizon Sweep Figure (+6 more)
 
 ### Community 78 - "Community 78"
+
 Cohesion: 0.19
 Nodes (14): 72% Targeting Accuracy (d=1.31, p<0.001, N=35), Key Result: R² = 0.60 PAC Prediction 5s Ahead (5x improvement), NeuroCare 40Hz Facility Flyer Markdown Source, NeuroCare 40Hz Facility Flyer (Enhanced Layout), 4-Step Clinical Workflow: Wear EEG, Read Activity, Predict 5-10s Ahead, Stimulate, CSEF 2026 Presentation Context, How It Works: 4-Step Wear-Read-Predict-Stimulate Pipeline, Key Result: 72% Targeting Accuracy vs 64% Reactive Baseline (+6 more)
 
 ### Community 79 - "Community 79"
+
 Cohesion: 0.18
 Nodes (14): audit_multiscale_pipeline.py, build_multiscale_dataset.py, Causal Multiscale TCN Model, 1 Hz Closed-Loop Decision Loop, Delta PAC Target (PAC[t+h] - PAC[t]), Future PAC Target (Horizon h), Leakage-Safe Temporal Pipeline Design, Multiscale Input Features (Spectral + PAC History + Stimulation Context) (+6 more)
 
 ### Community 80 - "Community 80"
+
 Cohesion: 0.23
-Nodes (12): build_sliding_dataset(), _causal_moving_average(), main(), _pac_multiscale_features(), Build temporal dataset using sliding-window PAC labels.  Constructs 20-step look, Build temporal dataset with sliding-window PAC targets and features.      Return, Causal trailing average including the current sample., Causal PAC-derived features from past/current values only. (+4 more)
+Nodes (12): build_sliding_dataset(), \_causal_moving_average(), main(), \_pac_multiscale_features(), Build temporal dataset using sliding-window PAC labels. Constructs 20-step look, Build temporal dataset with sliding-window PAC targets and features. Return, Causal trailing average including the current sample., Causal PAC-derived features from past/current values only. (+4 more)
 
 ### Community 81 - "Community 81"
+
 Cohesion: 0.36
-Nodes (12): _corr(), _flatten(), load_test_by_subject(), main(), parse_args(), persistence_eval(), _r2(), ridge_global() (+4 more)
+Nodes (12): \_corr(), \_flatten(), load_test_by_subject(), main(), parse_args(), persistence_eval(), \_r2(), ridge_global() (+4 more)
 
 ### Community 82 - "Community 82"
+
 Cohesion: 0.23
-Nodes (11): compute_pac_modulation_index(), compute_temporal_autocorrelation(), extract_spectral_features(), main(), process_subject(), Reprocess OpenNeuro ds005048 with longer PAC windows for temporal prediction., Process one subject with longer PAC windows.      Args:         subject_id: S, Compute PAC autocorrelation at various lags.      With 4-second hop size: (+3 more)
+Nodes (11): compute_pac_modulation_index(), compute_temporal_autocorrelation(), extract_spectral_features(), main(), process_subject(), Reprocess OpenNeuro ds005048 with longer PAC windows for temporal prediction., Process one subject with longer PAC windows. Args: subject_id: S, Compute PAC autocorrelation at various lags. With 4-second hop size: (+3 more)
 
 ### Community 83 - "Community 83"
+
 Cohesion: 0.3
-Nodes (11): eval_classifier(), main(), majority_baseline(), make_direction_labels(), parse_args(), persistence_direction_baseline(), PAC direction classifier: 3-class prediction of future PAC change.  Classes:, Predict direction = 0 (STABLE) always — PAC doesn't change. (+3 more)
+Nodes (11): eval_classifier(), main(), majority_baseline(), make_direction_labels(), parse_args(), persistence_direction_baseline(), PAC direction classifier: 3-class prediction of future PAC change. Classes:, Predict direction = 0 (STABLE) always — PAC doesn't change. (+3 more)
 
 ### Community 84 - "Community 84"
+
 Cohesion: 0.26
 Nodes (4): FixedScheduleControl, main(), PredictiveLookAheadControl, run_trial()
 
 ### Community 85 - "Community 85"
+
 Cohesion: 0.23
 Nodes (12): Adaptive Schedule (This Project) - 72% Alignment, Fixed Schedule (Current Approach) - 45% Alignment, Figure 1: Fixed vs. Adaptive Stimulation Scheduling Comparison, Missed Stimulation Opportunity (Fixed Schedule Waste), TCN Predicts Low-PAC Windows for Personalized Targeting, Gamma Oscillations (38-42 Hz) Amplitude Signal, High PAC = 40Hz Therapy is Working (Entrainment State), Figure 2: Phase-Amplitude Coupling (PAC) Mechanism Diagram (+4 more)
 
 ### Community 86 - "Community 86"
+
 Cohesion: 0.23
 Nodes (12): Alignment Metric (%) — TCN 72% vs Fixed 45%, g=1.31, p<0.001, Figure 8: Controller Comparison Bar Chart, Fixed Schedule Controller (Clinical Standard Baseline), High-PAC Rest Rate (%) — TCN 62% vs Fixed 29%, Hybrid TCN+Reactive Controller, Low-PAC Stimulation Rate (%) — TCN 83% vs Fixed 61%, g=4.47, p<0.001, Oracle Controller (Upper Bound, 100% All Metrics), PI Controller (+4 more)
 
 ### Community 87 - "Community 87"
+
 Cohesion: 0.33
 Nodes (9): check_chronology(), check_packaging(), check_preservation(), main(), parse_args(), read_text(), report(), run_selected_checks() (+1 more)
 
 ### Community 88 - "Community 88"
+
 Cohesion: 0.33
 Nodes (11): 12 PAC+Stim Features (pac_current, pac_ma*, pac_diff*, stim context), Controller Comparison (Fixed/Reactive/TCN/Hybrid/Oracle, N=35), OpenNeuro ds005048 Dataset (35 Subjects), Numbers Sheet (Old v1 Reference), EEGNet Stage 1 Static PAC Estimator (1,457 params, R²=0.287), Feature Ablation Results (73-feat: -0.025, 12-feat: 0.558), Horizon Sweep Results (TCN vs Persistence, 1–10s), Key Single Numbers (oracle 91%, 35/35 subjects, $250 hardware) (+3 more)
 
 ### Community 89 - "Community 89"
+
 Cohesion: 0.18
 Nodes (11): Horizon Sweep Central Finding, Project: Personalized DL for Closed-Loop 40Hz Entrainment, TCN Closed-Loop Validation Result (247-word Abstract), Core Finding: TCN Advantage at 5-10s Horizons, 91% of Theoretical Oracle Bound, Controller Comparison Table (Poster), Controller Comparison Results (N=35 Real EEG), Horizon Sweep Results Table (1-10s) (+3 more)
 
 ### Community 90 - "Community 90"
+
 Cohesion: 0.36
-Nodes (9): main(), parse_args(), persistence_baseline(), _r2(), Horizon sweep: evaluate persistence, Ridge and TCN baselines at multiple predict, Persistence baseline: predict future PAC = current PAC (last_pac)., Ridge regression on flattened feature sequences., ridge_baseline() (+1 more)
+Nodes (9): main(), parse_args(), persistence_baseline(), \_r2(), Horizon sweep: evaluate persistence, Ridge and TCN baselines at multiple predict, Persistence baseline: predict future PAC = current PAC (last_pac)., Ridge regression on flattened feature sequences., ridge_baseline() (+1 more)
 
 ### Community 91 - "Community 91"
+
 Cohesion: 0.31
 Nodes (10): Audio Engine (40 Hz click-train via sounddevice), Closed-Loop 40Hz Entrainment Demo (Real EEG Replay), Fixed Schedule Controller (40s ON/20s OFF), Oracle Controller (perfect knowledge baseline), Predictive Look-Ahead Controller (trend+hysteresis), Reactive Threshold Controller (Z-score), RealtimePACForecaster (temporal_multiscale), StimAction Enum (STIMULATE/REST) (+2 more)
 
 ### Community 92 - "Community 92"
+
 Cohesion: 0.31
-Nodes (8): create_dataset(), create_temporal_features(), main(), Lightweight sklearn-based temporal PAC predictor for 8-second windows.  This v, Train Ridge and MLP models, evaluate on test set., Create flat feature vector from temporal sequence.      Args:         windows, Create temporal dataset for sklearn.      Returns:         X_train, y_train,, train_and_evaluate()
+Nodes (8): create_dataset(), create_temporal_features(), main(), Lightweight sklearn-based temporal PAC predictor for 8-second windows. This v, Train Ridge and MLP models, evaluate on test set., Create flat feature vector from temporal sequence. Args: windows, Create temporal dataset for sklearn. Returns: X_train, y_train,, train_and_evaluate()
 
 ### Community 93 - "Community 93"
+
 Cohesion: 0.31
-Nodes (8): analyze_subject(), compute_within_epoch_variance(), lag1_autocorrelation(), main(), Diagnostic: compare epoch-level PAC vs per-window PAC.  For each subject, comput, Compute lag-1 autocorrelation of a 1D signal., Compute mean within-epoch variance of per-window PAC.      Windows sharing the s, Compute diagnostics for one subject.
+Nodes (8): analyze_subject(), compute_within_epoch_variance(), lag1_autocorrelation(), main(), Diagnostic: compare epoch-level PAC vs per-window PAC. For each subject, comput, Compute lag-1 autocorrelation of a 1D signal., Compute mean within-epoch variance of per-window PAC. Windows sharing the s, Compute diagnostics for one subject.
 
 ### Community 94 - "Community 94"
+
 Cohesion: 0.42
-Nodes (8): _corr(), _denorm(), evaluate(), main(), _metrics(), parse_args(), _r2(), train_one_epoch()
+Nodes (8): \_corr(), \_denorm(), evaluate(), main(), \_metrics(), parse_args(), \_r2(), train_one_epoch()
 
 ### Community 95 - "Community 95"
+
 Cohesion: 0.22
 Nodes (9): P10 Research Log Notebook V1 (Daily Format), P10 Lab Notebook V1 (PDF), Approval-Era Chronology Anchor (Jan 15 as fair-facing start date), P10 Research Log Notebook V2 (Corrected Review Candidate), P10 Lab Notebook V2 (PDF render), P10 Research Log Notebook V3 Early (Jan 15 - Mar 1 2026), P10 Research Log Notebook V3 Early (PDF render), Research Notebook Enhancement Prompt (Formatting/Content Guidelines) (+1 more)
 
 ### Community 96 - "Community 96"
+
 Cohesion: 0.31
 Nodes (9): 4-Page + 1-Page References Format Constraint, Double-Blind Review Process, IEEE EMBC Conference, IEEEtran LaTeX Template, ICLR Workshop — Tier 1 Target, IEEE EMBC — Tier 1 Target, MIT URTC 2026 — Selected Primary Target, NeurIPS Workshop — Tier 1 Target (+1 more)
 
 ### Community 97 - "Community 97"
+
 Cohesion: 0.46
-Nodes (7): _corr(), _eval(), main(), parse_args(), print_summary(), _r2(), run_audit()
+Nodes (7): \_corr(), \_eval(), main(), parse_args(), print_summary(), \_r2(), run_audit()
 
 ### Community 98 - "Community 98"
+
 Cohesion: 0.46
 Nodes (7): corr_score(), denorm(), evaluate(), main(), r2_score(), train_one_epoch(), train_subset()
 
 ### Community 99 - "Community 99"
+
 Cohesion: 0.25
 Nodes (8): h5py (>=3.8.0), Matplotlib (>=3.7.0), NumPy (>=1.24.0), PyWavelets (>=1.4.1), SciPy (>=1.10.0), PyTorch (>=2.0.0), tqdm (>=4.65.0), ViT-TCNet V4 Requirements
 
 ### Community 100 - "Community 100"
+
 Cohesion: 0.5
 Nodes (8): Audio Signal Generator (Adaptive): 40 Hz Audio Output to speaker, Causal TCN: 5,154 params, dilated causal convolutions (d=1,2,4,8), Closed-Loop Controller: STIMULATE/MAINTAIN/REST decision with 30s baseline, 3-sec hysteresis, EEGNet Block: 1,457 params, temporal + spatial convolutions, Feature Extraction: 12 features (spectral PAC features removed — encodes anatomy/dynamics), Raw EEG Input: Patient with EEG headset, 7 frontal channels, Simulation Update: <5s param TCN, Simul. PAC/EEG, Stim effects, Figure 5: System Architecture Flowchart — Complete Closed-Loop Pipeline
 
 ### Community 101 - "Community 101"
+
 Cohesion: 0.38
 Nodes (6): analyze_fatigue(), load_subject_pac_and_events(), main(), Habituation/fatigue analysis: does PAC decline across repeated stimulation block, Analyze habituation patterns across subjects., Load PAC values and align with BIDS events for each subject.
 
 ### Community 102 - "Community 102"
+
 Cohesion: 0.48
-Nodes (6): _finite_check(), _load_npz(), main(), parse_args(), Audit script for multiscale temporal dataset and training artifacts.  Checks: 1), run_audit()
+Nodes (6): \_finite_check(), \_load_npz(), main(), parse_args(), Audit script for multiscale temporal dataset and training artifacts. Checks: 1), run_audit()
 
 ### Community 103 - "Community 103"
+
 Cohesion: 0.29
 Nodes (7): archive/notebooks/P10_Lab_Notebook_V1.md (Original Notebook), submission/lab_notebook/generate_notebook_pdf.py, submission/lab_notebook/P10_Lab_Notebook_V3.md, check_chronology (Notebook Finalization Verifier), check_packaging (Notebook Finalization Verifier), check_preservation (Notebook Finalization Verifier), Verify Notebook Finalization Script
 
 ### Community 104 - "Community 104"
+
 Cohesion: 0.33
 Nodes (7): Clinical Roadmap (Phase A/B/C + Hardware Tiers), FDA Regulatory Pathway (De Novo Class II, 2026-2030 Timeline), Hardware Scaling Tiers (Muse 2 → OpenBCI → 64-ch Clinical), Clinical Testing Phases A, B, C (Observational to Comparative), Remote Monitoring Architecture (Cloud Dashboard + Clinician Portal), Product Framing 25/75 Research-Product Balance, Productization Roadmap (Muse 2 + Caregiver App + Pilot)
 
 ### Community 105 - "Community 105"
+
 Cohesion: 0.47
 Nodes (5): generate_image(), load_api_key(), main(), Load OpenRouter API key from ~/.claude/apis.env, Generate an image from a text prompt and save to output_path.
 
 ### Community 106 - "Community 106"
+
 Cohesion: 0.4
 Nodes (5): Generate Flyer PDF Script, main(), make_qr(), Generate QR Codes Script, submission/flyer/ (QR Code Output Directory)
 
 ### Community 107 - "Community 107"
+
 Cohesion: 0.33
 Nodes (6): Closed-Loop Demo Script (run_closed_loop_demo.py), Closed-Loop Strategy Comparison (Fixed/Reactive/Predictive/Oracle), Fixed Schedule Strategy (PAC=0.2299, stim=66.7%, eff=5.398), Oracle Strategy (PAC=0.2000, stim=49.1%, eff=6.108), Predictive Look-Ahead Strategy (PAC=0.1878, stim=52.1%, eff=5.302), Reactive Threshold Strategy (PAC=0.1361, stim=25.4%, eff=6.779)
 
 ### Community 108 - "Community 108"
+
 Cohesion: 0.33
 Nodes (6): Approval Form (1B) — Student Acknowledgment, Amaar Chughtai, Approval Form (1B) — Parent Approval, Irfan Chughtai, Final ISEF Affiliated Fair SRC Approval — Required, Pending Signature, SRC Ethics Statement (ISEF Rules), SCVSEFA Rule #2 — Scientific Fraud and Misconduct Prohibition, Ethics Statement Student Signature — Amaar Chughtai
 
 ### Community 109 - "Community 109"
+
 Cohesion: 0.33
 Nodes (6): Alzheimer Severity Profiles (Healthy, Mild AD, Severe AD), Citation: Soula et al. (2023) - 40Hz Light Doesn't Entrain Native Gamma in AD Mice, Citation: Meta AI (2026) - TRIBE V2 Brain Foundation Model, CorticalResponseConfig Biophysical Model (ASSR-calibrated), TRIBE V2 Integration Attempt and Biophysical Workaround (April 8, 2026), Wilson-Cowan Neural Mass Model (E/I dynamics for theta-gamma PAC)
 
 ### Community 110 - "Community 110"
+
 Cohesion: 0.33
 Nodes (6): CSEF 2026 Poster Board Blueprint (36x48 Cobalt Template), PowerPoint Box Dimensions Spec (24x32 → prints 48x64), Poster Builder v1 (python-pptx, 24x32 slide), Poster v1 (PDF, 24x32 layout), Poster Builder v2 (Cobalt Template, 36x48 slide), Poster v2 (PDF)
 
 ### Community 111 - "Community 111"
+
 Cohesion: 0.33
 Nodes (6): Body Language and Presentation Technique, Caucus Retellable Sentence, Five Judge Types (Warm, Cold, Skeptical, Expert, Confused), Judge Interaction Guide, Past CSEF/ISEF Winners Analysis and Strategy, Winner Narrative vs Report Framing Strategy
 
 ### Community 112 - "Community 112"
+
 Cohesion: 0.33
 Nodes (6): 5 Danger Zone Answers (AI Code, R2 Low, Simulation, N=35, vs Reactive), Final Q&A Bank and Danger Zones (FINAL_04, Archived), 40+ Q&A Bank (Technical, Process, Results, Creativity), Original Poster Presentation Script (v0, Synopsys Championship), Top 5 Danger Zone Questions (v0 Script), Poster Navigation Map (v0 Script, Full Panel Coordinates)
 
 ### Community 113 - "Community 113"
+
 Cohesion: 0.33
 Nodes (6): EEG Demo Video Recommendation with Annotations, Lab Notebook Advice: Consolidate with Dates, Place in Physical Folder, Kushal Khare Poster Feedback Meeting (March 4, 2026), Two Oral Presentation Versions (Simple and Technical), Poster Design Advice: Reduce Text, Enlarge Figures, Lab Notebook Requirements Guidelines (Rice University Standard Protocol)
 
 ### Community 114 - "Community 114"
+
 Cohesion: 0.4
-Nodes (3): kl_divergence_approx(), Pure NumPy Diagnostic - No dependencies except NumPy  Analyzes why V4 ViT-TCNet, Approximate KL divergence using histograms
+Nodes (3): kl_divergence_approx(), Pure NumPy Diagnostic - No dependencies except NumPy Analyzes why V4 ViT-TCNet, Approximate KL divergence using histograms
 
 ### Community 115 - "Community 115"
+
 Cohesion: 0.6
-Nodes (4): main(), parse_args(), Small sweep utility for lookback/horizon settings.  Example:     python temporal, run_cmd()
+Nodes (4): main(), parse_args(), Small sweep utility for lookback/horizon settings. Example: python temporal, run_cmd()
 
 ### Community 116 - "Community 116"
+
 Cohesion: 0.4
 Nodes (5): Fatigue Model Sensitivity: 4 Mechanisms Compared, Fatigue Sensitivity Sweep (6 Levels, Adaptive vs Fixed), Real-Data Habituation / Fatigue Analysis (N=35), Rigorous Re-Evaluation: N=50 Trials, Bootstrap CIs, Hedges g, Closed-Loop Simulation: 4 Controller Strategies Compared
 
 ### Community 117 - "Community 117"
+
 Cohesion: 0.4
 Nodes (5): CSEF Display Prohibited Items (QR codes, handouts, AC power, school name), CSEF 2026 Day-of Logistics Checklist, Demo Items: Muse 2, Laptop, Poster (48x64 in), Judge Interaction Flow: Reading Engagement Signals, Muse 2 Product Demo Protocol (30-60 second booth demo)
 
 ### Community 118 - "Community 118"
+
 Cohesion: 0.4
 Nodes (5): Chan 2025 Cognito Therapeutics Phase II Trial, Glymphatic Clearance Pathway (40Hz Mechanism), Iaccarino 2016 Optogenetic 40Hz Stimulation, Microglial Activation Pathway (40Hz Mechanism), Iaccarino 2016 Landmark Study (40Hz Mice)
 
 ### Community 119 - "Community 119"
+
 Cohesion: 0.5
-Nodes (3): build_original_12feat(), Extract 12 PAC+Stim features from the existing 73-feature multiscale dataset to, Extract 12 PAC+Stim features and re-normalize from scratch.      This ensures th
+Nodes (3): build_original_12feat(), Extract 12 PAC+Stim features from the existing 73-feature multiscale dataset to, Extract 12 PAC+Stim features and re-normalize from scratch. This ensures th
 
 ### Community 120 - "Community 120"
+
 Cohesion: 0.67
 Nodes (3): generate_image(), main(), Generate an image using a chat-based image model on OpenRouter.
 
 ### Community 121 - "Community 121"
+
 Cohesion: 0.83
 Nodes (3): cell(), hdr(), main()
 
 ### Community 122 - "Community 122"
+
 Cohesion: 0.5
 Nodes (4): Lab Notebook Errata (Corrections to LAB_NOTEBOOK.md), Laboratory Research Notebook (Structured Study Format), P10 Research Notebook V1 (Research Paper Format), P10 Research Notebook V1 Paper Format (PDF render)
 
 ### Community 123 - "Community 123"
+
 Cohesion: 0.5
 Nodes (4): Horizon Sweep and Controller Integration (February 19, 2026), Horizon Sweep Results (TCN R2~0.25 at 5-10s, Baselines Collapse), Two-Stage EEGNet+TCN Controller Pipeline, Config YAML Hysteresis Bug Fix (3.0s vs 5.0s hold_time_sec)
 
 ### Community 124 - "Community 124"
+
 Cohesion: 0.5
 Nodes (4): Amyloid Cascade Hypothesis and 40Hz Mechanism (Iaccarino + Murdock pathways), FDA De Novo Classification Pathway for Novel Device, Glymphatic Clearance via AQP4/VIP Interneuron Pathway (Murdock 2024), Lecanemab vs 40Hz: Cost and Mechanism Comparison ($26,500/yr vs $250 one-time)
 
 ### Community 125 - "Community 125"
+
 Cohesion: 0.5
 Nodes (4): FixedScheduleControl (40s ON / 20s OFF Fixed Protocol), OracleControl (Perfect PAC Knowledge Upper Bound), ReactiveThresholdControl (Z-Score Rolling Baseline Controller), TCNPredictiveControl (Neural Network Look-Ahead Controller)
 
 ### Community 126 - "Community 126"
+
 Cohesion: 1.0
 Nodes (2): build_pdf(), main()
 
 ### Community 127 - "Community 127"
+
 Cohesion: 0.67
 Nodes (1): Generate Figure 8: Controller Comparison bar chart from real data.
 
 ### Community 128 - "Community 128"
+
 Cohesion: 0.67
 Nodes (1): Generate a standalone References Sheet PDF to bring to CSEF. Print this and keep
 
 ### Community 129 - "Community 129"
+
 Cohesion: 0.67
 Nodes (3): compute_pac_modulation_index (8-sec Window MI), process_subject (Per-Subject Long-Window Extractor), Rationale: 8-sec Windows for Temporal Structure (vs 2-sec R²=-0.05)
 
 ### Community 130 - "Community 130"
+
 Cohesion: 0.67
 Nodes (3): Key Literature Citations (Iaccarino, Martorell, Tort, Bai), Related Work Section Arc, Paper Tone Guidance (ML + Neuroscience Dual Audience)
 
 ### Community 131 - "Community 131"
+
 Cohesion: 0.67
 Nodes (3): Rationale: Empirical Tau Fitting for Simulator Defense (RSRCH-04), Simulator Tau Rise/Decay Parameters, src/simulator.py (EntrainmentSimulator)
 
 ### Community 132 - "Community 132"
+
 Cohesion: 0.67
 Nodes (3): Research Plan Bibliography: 5 References (Shakya 2026, Martorell 2019, Lahijanian 2024, Tort 2010, Yang 2025), Citation: Martorell et al. 2019 — Multi-sensory Gamma Stimulation Ameliorates AD Pathology (Cell), Citation: Tort et al. 2010 — Measuring Phase-Amplitude Coupling (J Neurophysiol)
 
 ### Community 133 - "Community 133"
+
 Cohesion: 0.67
 Nodes (3): Fatigue Sensitivity Results (+9-11% adaptive advantage, all fatigue models), Replay Framework and Robustness (February 21, 2026), Threshold Sensitivity Analysis (delta-z 0.1 to 1.0)
 
 ### Community 134 - "Community 134"
+
 Cohesion: 0.67
 Nodes (3): Achievement: TCN Only Useful Method at 5-10s Horizons (Persistence and Ridge collapse to negative R²), Horizon Sweep Table: PAC+Stim TCN R²=0.37-0.67 at 3-10s while persistence collapses, Figure: PAC Forecasting Performance vs Prediction Horizon — TCN maintains R²≈0.25 while Persistence and Ridge collapse below 0 at 5-10s
 
 ### Community 135 - "Community 135"
+
 Cohesion: 0.67
 Nodes (3): CSEF Final Poster (CSEF_FINAL.pdf): Complete CSEF 2026 submission poster, Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment (CSEF Poster v2), CSEF Poster vF2 Small (print-optimized version of CSEF final poster)
 
 ### Community 136 - "Community 136"
+
 Cohesion: 0.67
 Nodes (3): Hedges' g Effect Size, Statistical Analysis Framework, Wilcoxon Signed-Rank Test
 
 ### Community 137 - "Community 137"
+
 Cohesion: 1.0
-Nodes (1): Debug Data Leakage  Identify which features are causing R² = 0.9999 perfect pred
+Nodes (1): Debug Data Leakage Identify which features are causing R² = 0.9999 perfect pred
 
 ### Community 138 - "Community 138"
+
 Cohesion: 1.0
 Nodes (1): Generate system architecture figure v7 with correct specs using matplotlib.
 
 ### Community 139 - "Community 139"
+
 Cohesion: 1.0
-Nodes (0): 
+Nodes (0):
 
 ### Community 140 - "Community 140"
+
 Cohesion: 1.0
 Nodes (2): Architecture Overview: Data Flow (CLAUDE.md), Repository Directory Structure
 
 ### Community 141 - "Community 141"
+
 Cohesion: 1.0
 Nodes (2): P10 Daily Research Notebook (v2 daily log draft), P10 Daily Research Notebook V2 (PDF render)
 
 ### Community 142 - "Community 142"
+
 Cohesion: 1.0
 Nodes (2): Status Report v1: Project Status Feb 2026 (Duplicate of v2), Status Report: Project ~45% Complete Toward Synopsys Submission (Feb 2026)
 
 ### Community 143 - "Community 143"
+
 Cohesion: 1.0
 Nodes (2): Multiscale Temporal Features (73 dims: 61 spectral + 7 PAC-derived + 5 stim context), Spectral Features (61 dims, src/spectral_features.py)
 
 ### Community 144 - "Community 144"
+
 Cohesion: 1.0
 Nodes (2): Transition Analysis Script (transition_analysis.py), Transition Analysis Results (transition vs steady-state windows)
 
 ### Community 145 - "Community 145"
+
 Cohesion: 1.0
 Nodes (2): PAC Direction Classifier Script (direction_classifier.py), PAC Direction Classifier Results (3-class: balanced acc Ridge=0.497)
 
 ### Community 146 - "Community 146"
+
 Cohesion: 1.0
 Nodes (2): Audit Multiscale Pipeline Script (audit_multiscale_pipeline.py), Pipeline Audit Result (PASS - no subject overlap, temporal causality valid)
 
 ### Community 147 - "Community 147"
+
 Cohesion: 1.0
 Nodes (2): Framing C: Horizon-Dependent Generalization in PAC Forecasting, Results Section Arc
 
 ### Community 148 - "Community 148"
+
 Cohesion: 1.0
 Nodes (2): Clinical Motivation: Alzheimer's Scale + No Cure, Introduction Section Arc
 
 ### Community 149 - "Community 149"
+
 Cohesion: 1.0
 Nodes (2): CSEF Old Repository Guidelines, Source-of-Truth Edit Workflow (Markdown → PDF)
 
 ### Community 150 - "Community 150"
+
 Cohesion: 1.0
 Nodes (2): Generate System Architecture v4 Script, Generate System Architecture v5 Script
 
 ### Community 151 - "Community 151"
+
 Cohesion: 1.0
 Nodes (2): Generate Paper LaTeX Script, submission/paper/RESEARCH_PAPER_v3.md
 
 ### Community 152 - "Community 152"
+
 Cohesion: 1.0
 Nodes (2): Media Release Parent Consent — Irfan Chughtai (granted permission), Photo/Video/Website/Media Release Form
 
 ### Community 153 - "Community 153"
+
 Cohesion: 1.0
 Nodes (2): Audit and Methodology Hardening (February 18, 2026), Habituation Pattern Analysis (17/35 habituators, 18/35 facilitators)
 
 ### Community 154 - "Community 154"
+
 Cohesion: 1.0
 Nodes (2): Synopsys Poster Final Flat (Text Extraction from PDF), Synopsys Poster Final (Print PDF)
 
 ### Community 155 - "Community 155"
+
 Cohesion: 1.0
 Nodes (2): CSEF Presentation Methods: Dataset breakdown (AD n=17, MCI n=6, controls n=10), preprocessing, PAC computation, Current Methodology Dataset: OpenNeuro ds005048, 35 subjects, BIDS HDF5/FDT format, 250Hz, 40s ON/20s OFF
 
 ### Community 156 - "Community 156"
+
 Cohesion: 1.0
 Nodes (2): Project Achievement Report Executive Summary, Project Summary Final (one-paragraph submission summary)
 
 ### Community 157 - "Community 157"
+
 Cohesion: 1.0
 Nodes (2): Danger Zone: AI Tools Disclosure (Claude/ChatGPT for assistance, all science decisions mine), Q&A Tier 4: Process and Independence Questions (SpecTempNet leakage discovery, AI tool disclosure)
 
 ### Community 158 - "Community 158"
+
 Cohesion: 1.0
 Nodes (2): Poster Figure Set (6 figures), Poster Board Layout (48x56 tri-fold)
 
 ### Community 159 - "Community 159"
+
 Cohesion: 1.0
-Nodes (1): Apply causal trailing mean within each subject block.          Causal (trailing)
+Nodes (1): Apply causal trailing mean within each subject block. Causal (trailing)
 
 ### Community 160 - "Community 160"
+
 Cohesion: 1.0
-Nodes (0): 
+Nodes (0):
 
 ### Community 161 - "Community 161"
+
 Cohesion: 1.0
-Nodes (0): 
+Nodes (0):
 
 ### Community 162 - "Community 162"
+
 Cohesion: 1.0
-Nodes (0): 
+Nodes (0):
 
 ### Community 163 - "Community 163"
+
 Cohesion: 1.0
-Nodes (1): Total number of output features: 8 * n_channels + 5.
+Nodes (1): Total number of output features: 8 \* n_channels + 5.
 
 ### Community 164 - "Community 164"
+
 Cohesion: 1.0
 Nodes (1): Per-Subject Adaptation via Head Fine-Tuning
 
 ### Community 165 - "Community 165"
+
 Cohesion: 1.0
 Nodes (1): ML Libraries (scikit-learn, xgboost, optuna, captum)
 
 ### Community 166 - "Community 166"
+
 Cohesion: 1.0
 Nodes (1): BrainFlow Real-Time EEG Streaming Dependency
 
 ### Community 167 - "Community 167"
+
 Cohesion: 1.0
 Nodes (1): Temporal Legacy Package (Option B LSTM)
 
 ### Community 168 - "Community 168"
+
 Cohesion: 1.0
 Nodes (1): Technical Methods: EEG Signal Processing and Deep Learning
 
 ### Community 169 - "Community 169"
+
 Cohesion: 1.0
 Nodes (1): LSTM/GRU for EEG Temporal Sequence Modeling
 
 ### Community 170 - "Community 170"
+
 Cohesion: 1.0
 Nodes (1): Rationale: Spectral Features Cause Generalization Failure (CLAUDE.md finding)
 
 ### Community 171 - "Community 171"
+
 Cohesion: 1.0
 Nodes (1): PRNI — Pattern Recognition in NeuroImaging (Tier 2)
 
 ### Community 172 - "Community 172"
+
 Cohesion: 1.0
 Nodes (1): AIME — Artificial Intelligence in Medicine (Tier 2)
 
 ### Community 173 - "Community 173"
+
 Cohesion: 1.0
 Nodes (1): IEEE TNSRE Journal (Tier 2)
 
 ### Community 174 - "Community 174"
+
 Cohesion: 1.0
 Nodes (1): Paper Title Candidates
 
 ### Community 175 - "Community 175"
+
 Cohesion: 1.0
 Nodes (1): Methods Section Arc
 
 ### Community 176 - "Community 176"
+
 Cohesion: 1.0
 Nodes (1): Conclusion Section Arc
 
 ### Community 177 - "Community 177"
+
 Cohesion: 1.0
 Nodes (1): PaperPDF Class (fpdf2-based PDF generator)
 
 ### Community 178 - "Community 178"
+
 Cohesion: 1.0
 Nodes (1): CSEF PDF Class (12-page landscape generator)
 
 ### Community 179 - "Community 179"
+
 Cohesion: 1.0
 Nodes (1): Documentation Freeze and Synopsys Submission (March 1, 2026)
 
 ### Community 180 - "Community 180"
+
 Cohesion: 1.0
 Nodes (1): CSEF Preparation: File Reorganization and Outreach Flyer (March 24, 2026)
 
 ### Community 181 - "Community 181"
+
 Cohesion: 1.0
 Nodes (1): Poster V8 and Coherence Audit (April 7-8, 2026)
 
 ### Community 182 - "Community 182"
+
 Cohesion: 1.0
 Nodes (1): Paper Title: Personalized Deep Learning for Closed-Loop 40 Hz Entrainment
 
 ### Community 183 - "Community 183"
+
 Cohesion: 1.0
 Nodes (1): 4-Channel vs 7-Channel Comparison (Muse-Compatible)
 
 ### Community 184 - "Community 184"
+
 Cohesion: 1.0
 Nodes (1): Synopsys VFinal Poster (PDF)
 
 ### Community 185 - "Community 185"
+
 Cohesion: 1.0
 Nodes (1): Poster Board V5 (PDF Archive)
 
 ### Community 186 - "Community 186"
+
 Cohesion: 1.0
 Nodes (1): Synopsys VFinal Poster EDB (PDF)
 
 ### Community 187 - "Community 187"
+
 Cohesion: 1.0
 Nodes (1): Synopsys Poster Final EDB (PDF)
 
 ### Community 188 - "Community 188"
+
 Cohesion: 1.0
 Nodes (1): Poster Example (Reference PDF)
 
 ### Community 189 - "Community 189"
+
 Cohesion: 1.0
 Nodes (1): Poster Exports Slide1 Print PNG
 
 ### Community 190 - "Community 190"
+
 Cohesion: 1.0
 Nodes (1): CSEF 2026 Presentation: Research Question and Hypothesis (PAC forecasting 5-10s ahead)
 
 ### Community 191 - "Community 191"
+
 Cohesion: 1.0
 Nodes (1): Q&A Tier 1 Basic: Project overview, hypothesis, data, timeline (~4 months)
 
 ### Community 192 - "Community 192"
+
 Cohesion: 1.0
 Nodes (1): Q&A Tier 4 Process & Independence: progression from hypothesis to results, SpecTempNet leakage discovery, AI tool use disclosure
 
 ### Community 193 - "Community 193"
+
 Cohesion: 1.0
 Nodes (1): 4-5 Minute Full Presentation Script (v1 archive)
 
 ### Community 194 - "Community 194"
+
 Cohesion: 1.0
 Nodes (1): Competitive Advantages at CSEF (Individual, Real Data, Rigor)
 
 ### Community 195 - "Community 195"
+
 Cohesion: 1.0
 Nodes (1): Q&A Tier 1: Basic Judge Questions (project summary, hypothesis, data)
 
 ### Community 196 - "Community 196"
+
 Cohesion: 1.0
 Nodes (1): Honest Limitations: Low R2, Epoch Labels, Offline Replay, N=35, No Clinical Data
 
 ### Community 197 - "Community 197"
+
 Cohesion: 1.0
 Nodes (1): Adaptive Closed-Loop 40Hz Presentation Script (Slide-by-Slide)
 
 ### Community 198 - "Community 198"
+
 Cohesion: 1.0
 Nodes (1): LastStepPool (Last Timestep Pooling)
 
 ### Community 199 - "Community 199"
+
 Cohesion: 1.0
 Nodes (1): Per-Subject Circuit Utility (Poster Figure 8)
 
 ### Community 200 - "Community 200"
+
 Cohesion: 1.0
 Nodes (1): QR Code: Feedback Link (Submission Flyer)
 
 ### Community 201 - "Community 201"
+
 Cohesion: 1.0
 Nodes (1): CSEF Poster Compliance Checklist
 
 ### Community 202 - "Community 202"
+
 Cohesion: 1.0
 Nodes (1): Personal Motivation (Grandmother + Piano)
 
 ### Community 203 - "Community 203"
+
 Cohesion: 1.0
 Nodes (1): Alzheimer's Disease Global Scale ($300B, 55M patients)
 
 ### Community 204 - "Community 204"
+
 Cohesion: 1.0
 Nodes (1): improved_tcn Package
 
 ## Ambiguous Edges - Review These
-- `Adaptive Schedule (This Project) - 72% Alignment` → `QR Code for App (Flyer)`  [AMBIGUOUS]
+
+- `Adaptive Schedule (This Project) - 72% Alignment` → `QR Code for App (Flyer)` [AMBIGUOUS]
   submission/flyer/qr_app.png · relation: conceptually_related_to
-- `QR Code for Feedback (Flyer)` → `Figure 8: Controller Comparison Bar Chart`  [AMBIGUOUS]
+- `QR Code for Feedback (Flyer)` → `Figure 8: Controller Comparison Bar Chart` [AMBIGUOUS]
   archive/CSEF_Old/Flyer/qr_feedback.png · relation: semantically_similar_to
 
 ## Knowledge Gaps
+
 - **1241 isolated node(s):** `Experimental ML research for improving temporal PAC prediction.  Approaches test`, `Residual causal depthwise-separable conv block.`, `Improved TCN with configurable width/depth and GELU activation.`, `Causal Transformer encoder for sequence-to-scalar regression.`, `TCN that predicts residual from persistence (last_pac).` (+1236 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **Thin community `Community 137`** (2 nodes): `debug_leakage.py`, `Debug Data Leakage  Identify which features are causing R² = 0.9999 perfect pred`
@@ -1143,6 +1355,7 @@ Nodes (1): improved_tcn Package
   Too small to be a meaningful cluster - may be noise or needs more connections extracted.
 
 ## Suggested Questions
+
 _Questions this graph is uniquely positioned to answer:_
 
 - **What is the exact relationship between `Adaptive Schedule (This Project) - 72% Alignment` and `QR Code for App (Flyer)`?**

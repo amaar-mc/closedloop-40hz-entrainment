@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[Critical Finding ANOVA on n=1 Samples]] - `references` [EXTRACTED]
 - [[FixedScheduleControl_5]] - `calls` [EXTRACTED]
 - [[FixedScheduleControl – 40s ON  20s OFF Baseline]] - `calls` [EXTRACTED]
@@ -39,4 +40,4 @@ tags:
 - [[run_trial_batch()]] - `calls` [EXTRACTED]
 - [[to_dict()]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

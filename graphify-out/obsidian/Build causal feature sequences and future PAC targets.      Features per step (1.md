@@ -7,9 +7,10 @@ tags:
   - community/TRIBE-TCN_Validation
 ---
 
-# Build causal feature sequences and future PAC targets.      Features per step (1
+# Build causal feature sequences and future PAC targets. Features per step (1
 
 ## Connections
+
 - [[build_features_from_sequence()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

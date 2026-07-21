@@ -10,6 +10,7 @@ tags:
 # Parent/Guardian Irfan Chughtai — Signature and Approval
 
 ## Connections
+
 - [[Student Permission and Hold Harmless Agreement]] - `implements` [EXTRACTED]
 
   #community/Community_48

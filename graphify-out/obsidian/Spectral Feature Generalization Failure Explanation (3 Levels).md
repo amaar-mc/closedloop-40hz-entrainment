@@ -10,7 +10,8 @@ tags:
 # Spectral Feature Generalization Failure Explanation (3 Levels)
 
 ## Connections
+
 - [[Answer Depth Guide (20 Key Questions, 3 Levels)]] - `references` [EXTRACTED]
 - [[MultiscaleCausalTCN Architecture Details (Interview Prep)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

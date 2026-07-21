@@ -10,6 +10,7 @@ tags:
 # EEGNet 4-Channel Checkpoint (best_eegnet_4ch.pth)
 
 ## Connections
+
 - [[step4_train_eegnet()]] - `implements` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

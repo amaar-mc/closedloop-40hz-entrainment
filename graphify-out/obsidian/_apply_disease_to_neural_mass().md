@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# _apply_disease_to_neural_mass()
+# \_apply_disease_to_neural_mass()
 
 ## Connections
+
 - [[Apply disease modifications to neural mass parameters.]] - `rationale_for` [EXTRACTED]
 - [[TribeEnhancedSimulator]] - `method` [EXTRACTED]
 - [[__init__()_169]] - `calls` [EXTRACTED]

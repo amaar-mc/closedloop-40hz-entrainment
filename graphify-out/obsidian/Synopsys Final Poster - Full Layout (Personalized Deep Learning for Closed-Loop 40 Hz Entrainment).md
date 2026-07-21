@@ -9,6 +9,7 @@ tags:
 # Synopsys Final Poster - Full Layout (Personalized Deep Learning for Closed-Loop 40 Hz Entrainment)
 
 ## Connections
+
 - [[Poster Data and Story Section - System Flow and Open Neuro Dataset]] - `references` [EXTRACTED]
 - [[Poster Model Approach Section - EEGNet + TCN Architecture Diagram]] - `references` [EXTRACTED]
 - [[Poster Results and Findings Section - Bar Charts and Key Metrics]] - `references` [EXTRACTED]

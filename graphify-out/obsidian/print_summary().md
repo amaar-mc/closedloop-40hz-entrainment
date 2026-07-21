@@ -10,6 +10,7 @@ tags:
 # print_summary()
 
 ## Connections
+
 - [[checkpoint_deployment_audit.py]] - `contains` [EXTRACTED]
 - [[main()_23]] - `calls` [EXTRACTED]
 

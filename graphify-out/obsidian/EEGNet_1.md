@@ -10,6 +10,7 @@ tags:
 # EEGNet
 
 ## Connections
+
 - [[4-Channel Muse 2 Model Retraining Pipeline  Retrains the full EEGNet + TCN pipel]] - `uses` [INFERRED]
 - [[Add Gaussian noise at specified SNR.          Args             window EEG w]] - `uses` [INFERRED]
 - [[Append a session record to the given patient and clear cache.]] - `uses` [INFERRED]
@@ -108,4 +109,4 @@ tags:
 - [[get_feature_maps()_2]] - `method` [EXTRACTED]
 - [[test_eegnet()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

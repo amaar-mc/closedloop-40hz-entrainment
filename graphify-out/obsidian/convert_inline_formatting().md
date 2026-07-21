@@ -10,6 +10,7 @@ tags:
 # convert_inline_formatting()
 
 ## Connections
+
 - [[Convert markdown inline formatting to LaTeX.]] - `rationale_for` [EXTRACTED]
 - [[generate_latex()]] - `calls` [EXTRACTED]
 - [[generate_paper_latex.py]] - `contains` [EXTRACTED]

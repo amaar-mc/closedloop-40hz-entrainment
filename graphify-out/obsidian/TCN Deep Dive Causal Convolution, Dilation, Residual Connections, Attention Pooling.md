@@ -10,7 +10,8 @@ tags:
 # TCN Deep Dive: Causal Convolution, Dilation, Residual Connections, Attention Pooling
 
 ## Connections
+
 - [[ML Zero to Hero Educational Guide (Foundations to Causal TCN)]] - `references` [EXTRACTED]
 - [[Rationale TCN over LSTM (Causality by Design, Parallelism, Multi-scale Dilations)]] - `rationale_for` [INFERRED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

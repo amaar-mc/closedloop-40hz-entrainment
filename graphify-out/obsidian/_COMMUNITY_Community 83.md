@@ -8,6 +8,7 @@ members: 12
 **Members:** 12 nodes
 
 ## Members
+
 - [[Convert continuous delta to 3-class labels.]] - rationale - temporal_multiscale/direction_classifier.py
 - [[PAC direction classifier 3-class prediction of future PAC change.  Classes]] - rationale - temporal_multiscale/direction_classifier.py
 - [[Predict direction = 0 (STABLE) always — PAC doesn't change.]] - rationale - temporal_multiscale/direction_classifier.py

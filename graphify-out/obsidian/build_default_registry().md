@@ -10,10 +10,11 @@ tags:
 # build_default_registry()
 
 ## Connections
+
 - [[Factory that returns a ModelRegistry with the 4-channel TCN pre-registered.]] - `rationale_for` [EXTRACTED]
 - [[ModelRegistry]] - `calls` [EXTRACTED]
 - [[TCNTemporalModel]] - `calls` [EXTRACTED]
 - [[model_registry.py]] - `contains` [EXTRACTED]
 - [[register()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

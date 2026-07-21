@@ -10,6 +10,7 @@ tags:
 # Rationale: Domain Mismatch Between Real EEG TCN and TRIBE Simulator
 
 ## Connections
+
 - [[TCNTribe Model (TRIBE-trained Causal TCN)]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

@@ -10,6 +10,7 @@ tags:
 # 7-Channel Baseline Metrics (EEGNet R²=0.287, TCN val R²=0.411)
 
 ## Connections
+
 - [[step6_comparison_report()]] - `references` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

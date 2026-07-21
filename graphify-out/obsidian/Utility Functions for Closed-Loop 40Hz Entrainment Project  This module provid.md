@@ -7,9 +7,10 @@ tags:
   - community/Community_35
 ---
 
-# Utility Functions for Closed-Loop 40Hz Entrainment Project  This module provid
+# Utility Functions for Closed-Loop 40Hz Entrainment Project This module provid
 
 ## Connections
+
 - [[utils.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_35

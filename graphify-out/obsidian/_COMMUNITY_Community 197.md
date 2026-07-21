@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Adaptive Closed-Loop 40Hz Presentation Script (Slide-by-Slide)]] - document - submission/reference/PRESENTATION.md
 
 ## Live Query (requires Dataview plugin)

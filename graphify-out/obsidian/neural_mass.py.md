@@ -10,6 +10,7 @@ tags:
 # neural_mass.py
 
 ## Connections
+
 - [[NeuralMassConfig]] - `contains` [EXTRACTED]
 - [[Wilson-Cowan Neural Mass Model for Theta-Gamma Oscillatory Dynamics  Converts co]] - `rationale_for` [EXTRACTED]
 - [[WilsonCowanModel]] - `contains` [EXTRACTED]

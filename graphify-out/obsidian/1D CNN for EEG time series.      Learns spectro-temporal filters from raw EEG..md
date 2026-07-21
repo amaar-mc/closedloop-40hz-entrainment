@@ -7,9 +7,10 @@ tags:
   - community/Community_57
 ---
 
-# 1D CNN for EEG time series.      Learns spectro-temporal filters from raw EEG.
+# 1D CNN for EEG time series. Learns spectro-temporal filters from raw EEG.
 
 ## Connections
+
 - [[CNN1D]] - `rationale_for` [EXTRACTED]
 
   #community/Community_57

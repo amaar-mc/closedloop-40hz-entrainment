@@ -7,11 +7,12 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Simple Baseline Models for PAC Prediction  Tests if features are predictive usin
+# Simple Baseline Models for PAC Prediction Tests if features are predictive usin
 
 ## Connections
+
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[WaveletFeatureExtractor]] - `uses` [INFERRED]
 - [[run_simple_baselines.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

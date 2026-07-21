@@ -10,6 +10,7 @@ tags:
 # Return human-readable model description.
 
 ## Connections
+
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
 - [[PredictiveLookAheadControl_5]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[TrialMetrics]] - `uses` [INFERRED]
 - [[get_description()]] - `rationale_for` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

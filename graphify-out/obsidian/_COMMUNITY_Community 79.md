@@ -8,6 +8,7 @@ members: 14
 **Members:** 14 nodes
 
 ## Members
+
 - [[1 Hz Closed-Loop Decision Loop]] - document - temporal_multiscale/README.md
 - [[Causal Multiscale TCN Model]] - document - temporal_multiscale/README.md
 - [[Delta PAC Target (PACt+h - PACt)]] - document - temporal_multiscale/README.md

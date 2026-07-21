@@ -7,13 +7,14 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Predictive control using the trained MultiscaleCausalTCN.      Wraps the Realt
+# Predictive control using the trained MultiscaleCausalTCN. Wraps the Realt
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[TCNPredictiveControl]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

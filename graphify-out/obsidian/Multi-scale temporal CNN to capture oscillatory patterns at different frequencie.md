@@ -10,6 +10,7 @@ tags:
 # Multi-scale temporal CNN to capture oscillatory patterns at different frequencie
 
 ## Connections
+
 - [[MultiScaleTemporalCNN]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_SpecTempNet_V3

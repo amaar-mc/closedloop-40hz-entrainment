@@ -10,6 +10,7 @@ tags:
 # PAC as HRV Analogy for Cardiologist Judges
 
 ## Connections
+
 - [[Closed-Loop Controller (threshold-based, z-score hysteresis)]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_30

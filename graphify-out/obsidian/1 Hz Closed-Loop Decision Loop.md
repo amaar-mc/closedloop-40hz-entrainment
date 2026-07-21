@@ -10,6 +10,7 @@ tags:
 # 1 Hz Closed-Loop Decision Loop
 
 ## Connections
+
 - [[Causal Multiscale TCN Model]] - `references` [EXTRACTED]
 - [[realtime_inference.py (Closed-Loop Wrapper)]] - `implements` [EXTRACTED]
 

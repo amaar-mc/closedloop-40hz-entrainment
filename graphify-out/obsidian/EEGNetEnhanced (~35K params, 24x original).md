@@ -10,6 +10,7 @@ tags:
 # EEGNetEnhanced (~35K params, 24x original)
 
 ## Connections
+
 - [[MODEL_REGISTRY – originalenhancedlarge Variants]] - `references` [EXTRACTED]
 - [[Rationale Capacity Scaling to Test Performance Ceiling Hypothesis]] - `implements` [EXTRACTED]
 - [[Rigorous Pipeline Audit Report]] - `references` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[get_feature_maps() Visualization Hook]] - `implements` [EXTRACTED]
 - [[main()_66]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

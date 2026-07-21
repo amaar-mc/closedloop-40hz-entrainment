@@ -9,6 +9,7 @@ tags:
 # Generate Paper PDF Script (v1)
 
 ## Connections
+
 - [[Generate Paper PDF v2 Script]] - `semantically_similar_to` [INFERRED]
 - [[submissionpaperRESEARCH_PAPER.md]] - `references` [EXTRACTED]
 

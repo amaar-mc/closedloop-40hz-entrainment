@@ -10,6 +10,7 @@ tags:
 # plot_training_curves()
 
 ## Connections
+
 - [[Plot training and validation loss curves.      Args         train_losses Tr]] - `rationale_for` [EXTRACTED]
 - [[utils.py]] - `contains` [EXTRACTED]
 

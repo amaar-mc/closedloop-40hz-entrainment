@@ -10,6 +10,7 @@ tags:
 # Controller Decision Logic Explanation (3 Levels)
 
 ## Connections
+
 - [[Answer Depth Guide (20 Key Questions, 3 Levels)]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

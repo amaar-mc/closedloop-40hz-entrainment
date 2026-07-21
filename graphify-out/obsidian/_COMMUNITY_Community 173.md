@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[IEEE TNSRE Journal (Tier 2)]] - document - paper/conferences/targets.md
 
 ## Live Query (requires Dataview plugin)

@@ -9,6 +9,7 @@ tags:
 # Presentation Timing Map (8-section breakdown)
 
 ## Connections
+
 - [[Main 4-5 Minute Presentation Script (v1)]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

@@ -9,6 +9,7 @@ tags:
 # src/personalization.py (PersonalizationModule)
 
 ## Connections
+
 - [[run_demo()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # run_trial()
 
 ## Connections
+
 - [[main()_39]] - `calls` [EXTRACTED]
 - [[reset()_17]] - `calls` [EXTRACTED]
 - [[run_alzheimer_simulation.py]] - `contains` [EXTRACTED]

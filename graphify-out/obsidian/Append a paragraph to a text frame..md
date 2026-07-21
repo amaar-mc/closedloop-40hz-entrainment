@@ -10,6 +10,7 @@ tags:
 # Append a paragraph to a text frame.
 
 ## Connections
+
 - [[_add_paragraph()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

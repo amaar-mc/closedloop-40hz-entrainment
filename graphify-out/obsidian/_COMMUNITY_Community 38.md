@@ -8,6 +8,7 @@ members: 27
 **Members:** 27 nodes
 
 ## Members
+
 - [[ATCNet]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py
 - [[ATCNet Attention Temporal Convolutional Network.      Combines multi-head self-]] - rationale - archive/v1_v8_attempts/run_v8_specialized_eeg.py
 - [[AugmentedDataset]] - code - archive/v1_v8_attempts/run_v8_specialized_eeg.py

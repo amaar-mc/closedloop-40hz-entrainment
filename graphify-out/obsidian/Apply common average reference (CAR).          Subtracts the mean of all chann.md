@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Apply common average reference (CAR).          Subtracts the mean of all chann
+# Apply common average reference (CAR). Subtracts the mean of all chann
 
 ## Connections
+
 - [[common_average_reference()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

@@ -10,8 +10,9 @@ tags:
 # step_train_tcn()
 
 ## Connections
+
 - [[Step 4 Train multiscale causal TCN.]] - `rationale_for` [EXTRACTED]
 - [[main()_47]] - `calls` [EXTRACTED]
 - [[run_full_pipeline.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

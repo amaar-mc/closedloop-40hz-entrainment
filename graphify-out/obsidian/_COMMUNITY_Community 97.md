@@ -8,6 +8,7 @@ members: 8
 **Members:** 8 nodes
 
 ## Members
+
 - [[_corr()_2]] - code - temporal_multiscale/checkpoint_deployment_audit.py
 - [[_eval()]] - code - temporal_multiscale/checkpoint_deployment_audit.py
 - [[_r2()_3]] - code - temporal_multiscale/checkpoint_deployment_audit.py
@@ -25,7 +26,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 2 edges to [[_COMMUNITY_Multiscale TCN & Features]]
 
 ## Top bridge nodes
+
 - [[checkpoint_deployment_audit.py]] - degree 9, connects to 1 community

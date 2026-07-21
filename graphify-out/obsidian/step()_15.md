@@ -10,6 +10,7 @@ tags:
 # step()
 
 ## Connections
+
 - [[FixedSchedule]] - `method` [EXTRACTED]
 
   #community/Community_62

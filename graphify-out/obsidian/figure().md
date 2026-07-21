@@ -10,6 +10,7 @@ tags:
 # figure()
 
 ## Connections
+
 - [[PaperPDF]] - `method` [EXTRACTED]
 - [[body()_2]] - `calls` [EXTRACTED]
 - [[generate()]] - `calls` [EXTRACTED]

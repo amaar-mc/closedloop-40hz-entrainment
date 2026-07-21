@@ -10,6 +10,7 @@ tags:
 # Temporal Prediction Pivot (static ceiling → future PAC forecasting)
 
 ## Connections
+
 - [[Digital Research Log Notebook (Detailed Chronological)]] - `references` [EXTRACTED]
 - [[Static PAC Prediction Ceiling R²=0.287]] - `rationale_for` [EXTRACTED]
 

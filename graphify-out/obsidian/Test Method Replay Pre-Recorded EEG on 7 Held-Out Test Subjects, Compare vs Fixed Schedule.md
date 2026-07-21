@@ -10,6 +10,7 @@ tags:
 # Test Method: Replay Pre-Recorded EEG on 7 Held-Out Test Subjects, Compare vs Fixed Schedule
 
 ## Connections
+
 - [[Design Criteria Real-Time PAC Prediction, 0.5s Inference, 5s Hysteresis, ≥15% PAC Improvement]] - `references` [EXTRACTED]
 
   #community/Community_48

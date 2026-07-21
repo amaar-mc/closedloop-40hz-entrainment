@@ -10,6 +10,7 @@ tags:
 # TransformerTCN (4-layer Causal Transformer Encoder, ~85K params)
 
 ## Connections
+
 - [[AttentionPool1D (Temporal Attention Pooling)]] - `calls` [EXTRACTED]
 - [[CausalSinusoidalPE (Sinusoidal Positional Encoding for Transformer)]] - `calls` [EXTRACTED]
 - [[TransformerConfig Dataclass (Transformer Variant Configuration)]] - `shares_data_with` [EXTRACTED]

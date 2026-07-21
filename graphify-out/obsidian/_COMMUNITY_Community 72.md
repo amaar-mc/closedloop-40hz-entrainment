@@ -8,6 +8,7 @@ members: 15
 **Members:** 15 nodes
 
 ## Members
+
 - [[12-Feature PAC+Stim Model (test R²=0.606)]] - document - paper/draft/sections/00_abstract.md
 - [[Causal Temporal Convolutional Network (TCN)]] - document - paper/draft/sections/00_abstract.md
 - [[Epoch Alignment Result (72.1% vs 64.5%, g=1.31)]] - document - paper/draft/sections/00_abstract.md

@@ -10,6 +10,7 @@ tags:
 # CausalDSConvBlock (Residual Depthwise-Separable Causal Block)
 
 ## Connections
+
 - [[DeepDilationTCN (Dilations 1,2,4,8,16,32, 127-step RF)]] - `calls` [EXTRACTED]
 - [[MultiTaskTCN (lambda_delta=0.3, lambda_consistency=0.1)]] - `calls` [EXTRACTED]
 - [[WiderTCN (hidden=128, ~120K params)]] - `calls` [EXTRACTED]

@@ -8,6 +8,7 @@ members: 3
 **Members:** 3 nodes
 
 ## Members
+
 - [[Key Literature Citations (Iaccarino, Martorell, Tort, Bai)]] - document - paper/ideas/narrative.md
 - [[Paper Tone Guidance (ML + Neuroscience Dual Audience)]] - document - paper/ideas/narrative.md
 - [[Related Work Section Arc]] - document - paper/ideas/narrative.md

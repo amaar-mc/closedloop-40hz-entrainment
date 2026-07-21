@@ -10,6 +10,7 @@ tags:
 # Replays the actual fixed schedule from BIDS events.
 
 ## Connections
+
 - [[FixedScheduleControl]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

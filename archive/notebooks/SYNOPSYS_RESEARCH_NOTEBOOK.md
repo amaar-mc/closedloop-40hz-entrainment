@@ -18,6 +18,7 @@ Today I began planning my Synopsys project. I wanted to work with brain signals 
 **Key question:** Should I focus on Alzheimer's Disease or Parkinson's Disease?
 
 **Alzheimer's Disease (AD):**
+
 - Primary symptom: Memory loss, cognitive decline
 - Pathology: Amyloid-beta plaques, tau tangles in brain
 - Prevalence: ~6.7 million Americans (2023)
@@ -25,6 +26,7 @@ Today I began planning my Synopsys project. I wanted to work with brain signals 
 - Treatment gap: Current medications have limited efficacy
 
 **Parkinson's Disease (PD):**
+
 - Primary symptom: Movement problems (tremor, rigidity)
 - Pathology: Loss of dopamine neurons in substantia nigra
 - Prevalence: ~1 million Americans
@@ -55,6 +57,7 @@ Today I began planning my Synopsys project. I wanted to work with brain signals 
 **Breakthrough discovery:** Found Iaccarino et al. (2016) Nature paper: "Gamma frequency entrainment attenuates amyloid load and modifies microglia."
 
 **Key findings from this paper:**
+
 - MIT researchers exposed AD mice to 40 Hz flickering light
 - Light drove brain to oscillate at gamma frequency (entrainment)
 - Triggered microglia to clear amyloid-beta plaques by 40-50%
@@ -70,6 +73,7 @@ Today I began planning my Synopsys project. I wanted to work with brain signals 
 **Research question:** Can a machine learning model predict theta-gamma phase-amplitude coupling (PAC) from real-time EEG, and can this prediction optimize 40 Hz auditory entrainment timing for Alzheimer's patients?
 
 **Hypotheses:**
+
 1. Deep learning can predict PAC from EEG with R² > 0.80
 2. Stimulating during predicted low-PAC periods increases effectiveness vs random timing
 3. Closed-loop control will outperform fixed-schedule protocols
@@ -81,6 +85,7 @@ Today I began planning my Synopsys project. I wanted to work with brain signals 
 **Found OpenNeuro ds005048:** "40 Hz Auditory Entrainment in Dementia" (Lahijanian et al., 2024)
 
 **Dataset specifications:**
+
 - 35 elderly subjects from memory clinic in Tehran
 - 19 EEG channels (10/20 system), 250 Hz sampling
 - Protocol: 40 Hz amplitude-modulated auditory pulses
@@ -96,6 +101,7 @@ Perfect match for the project objectives.
 ### January 3, 2025 - Dataset Download and BIDS Format Investigation
 
 Downloaded 847 MB dataset from OpenNeuro. Initial exploration revealed:
+
 - Data in EEGLAB .set format (MATLAB v7.3 HDF5)
 - Actual EEG data stored in companion .fdt files (float32, Fortran order)
 - Standard MNE-Python readers failed on v7.3 format
@@ -106,12 +112,14 @@ Downloaded 847 MB dataset from OpenNeuro. Initial exploration revealed:
 **Major technical hurdle:** EEGLAB .set files use MATLAB v7.3 format with HDF5 backend. Standard Python tools (MNE, EEGLAB readers) failed to load properly.
 
 **Solution developed:**
+
 1. Read .set HDF5 files directly with h5py
 2. Extract metadata from top-level fields (no EEG wrapper group)
 3. Read actual data from .fdt files using numpy.fromfile()
 4. Critical: Reshape with order='F' (Fortran/column-major) due to MATLAB storage format
 
 **Code implementation:**
+
 ```python
 # Custom loader for MATLAB v7.3 .set files
 with h5py.File(set_path, 'r') as f:
@@ -128,6 +136,7 @@ data = data.reshape((n_channels, n_samples), order='F')  # Fortran order critica
 **48-hour intensive development period.** Built complete preprocessing and model training pipeline.
 
 **Commit 1 (February 5):** Initial pipeline - 29 files, 5,419 lines of code
+
 - Data loader with custom HDF5/FDT reader
 - Preprocessing: bandpass filtering, artifact rejection, common average reference
 - PAC computation using Modulation Index (Tort et al., 2010)
@@ -135,11 +144,13 @@ data = data.reshape((n_channels, n_samples), order='F')  # Fortran order critica
 - Training loop with early stopping
 
 **Commits 2-3 (February 6):** Critical fixes
+
 - BIDS path handling for events.tsv
 - Subject-level train/validation/test splits (no data leakage)
 - Channel selection: 7 frontal channels (Fp1, Fp2, F7, F3, Fz, F4, F8)
 
 **Data processing pipeline:**
+
 1. Load .set/.fdt pairs for 35 subjects
 2. Extract 7 frontal channels most relevant to gamma entrainment
 3. Apply preprocessing: bandpass 0.5-80 Hz, 50 Hz notch, artifact rejection (±100 μV)
@@ -149,6 +160,7 @@ data = data.reshape((n_channels, n_samples), order='F')  # Fortran order critica
 7. Assign epoch-level PAC to constituent windows
 
 **Final dataset:**
+
 - 17,283 total windows: Train 11,736 (24 subjects), Val 2,725 (5), Test 2,822 (6)
 - Windows: (n, 1, 7, 500) shape - 7 channels × 2 seconds at 250 Hz
 - PAC labels: Range [0.000006, 0.000701], mean ~0.000044 μV²
@@ -162,16 +174,19 @@ data = data.reshape((n_channels, n_samples), order='F')  # Fortran order critica
 **Goal:** Find optimal architecture for PAC prediction from 2-second EEG windows.
 
 **V1 - EEGNet Baseline (Morning):**
+
 - Based on Lawhern et al. (2018) - proven architecture for EEG classification
 - ~1,457 parameters: temporal convolution → depthwise spatial → separable convolution → FC
 - **Result: R² = 0.287** on test set
 
 **V2 - Delta-PAC Features (Late Morning):**
+
 - Added temporal difference features (PAC_t - PAC_t-1)
 - Rationale: Changes might be more predictable than absolute values
 - Result: Marginal improvement, R² = 0.291
 
 **V3 - SpecTempNet (Early Afternoon):**
+
 - Combined spectral features with temporal convolution
 - Extracted band powers across frequency ranges
 - **CRITICAL DISCOVERY: Feature leakage detected**
@@ -179,6 +194,7 @@ data = data.reshape((n_channels, n_samples), order='F')  # Fortran order critica
 - Inflated R² to 0.999 - completely invalid
 
 **Leakage audit implemented:**
+
 ```python
 # Check correlation between features and targets
 correlations = np.corrcoef(features.flatten(), targets.flatten())[0, 1]
@@ -187,30 +203,33 @@ if abs(correlations) > 0.9:
 ```
 
 **V4 - ViT-TCNet (Afternoon):**
+
 - Vision Transformer approach with temporal patches
 - ~1.1M parameters - much larger than needed
 - Result: Overfitting, poor generalization
 
 **V5 - Ridge Regression (Late Afternoon):**
+
 - Simple linear model on spectral features
 - Sometimes simple approaches work best
 - Result: R² = 0.315 - competitive with complex models
 
 **V6-V8, LSTM attempts (Evening):**
+
 - Various architectural modifications
 - LSTM for temporal dependencies
 - None substantially improved upon EEGNet baseline
 
 **End-of-day summary table:**
 
-| Model | Parameters | Test R² | Notes |
-|-------|-----------|---------|-------|
-| EEGNet | 1,457 | 0.287 | Baseline architecture |
-| Delta-PAC | 1,457 | 0.291 | Added temporal differences |
-| SpecTempNet | ~10K | 0.999* | *Feature leakage - invalid |
-| ViT-TCNet | ~1.1M | 0.201 | Overfitting |
-| Ridge | 427 | 0.315 | Simple linear model |
-| EEGNet-LSTM | ~15K | 0.265 | Added temporal memory |
+| Model       | Parameters | Test R² | Notes                       |
+| ----------- | ---------- | ------- | --------------------------- |
+| EEGNet      | 1,457      | 0.287   | Baseline architecture       |
+| Delta-PAC   | 1,457      | 0.291   | Added temporal differences  |
+| SpecTempNet | ~10K       | 0.999\* | \*Feature leakage - invalid |
+| ViT-TCNet   | ~1.1M      | 0.201   | Overfitting                 |
+| Ridge       | 427        | 0.315   | Simple linear model         |
+| EEGNet-LSTM | ~15K       | 0.265   | Added temporal memory       |
 
 **Key insight:** For static PAC prediction from 7 frontal channels, the ceiling appears to be R² ≈ 0.30. This limitation led to the next major development.
 
@@ -223,11 +242,13 @@ if abs(correlations) > 0.9:
 **Breakthrough realization:** Instead of predicting instantaneous PAC, predict future PAC states. This enables proactive control rather than reactive control.
 
 **New approach: Temporal forecasting**
+
 - Build sequences of historical EEG features and PAC values
 - Predict PAC 5-10 seconds into the future
 - Use predictions to make stimulation decisions before brain state degrades
 
 **Multiscale dataset construction:**
+
 - Lookback window: 20 steps (20 seconds of history)
 - Prediction horizon: 5 steps (5 seconds ahead)
 - Features per timestep (73 total):
@@ -236,10 +257,12 @@ if abs(correlations) > 0.9:
   - 5 stimulation context features (stim state, timing, cycle phase)
 
 **Critical methodological decision:** Target smoothing = 1 (raw PAC)
+
 - Earlier experiments used ts=5 (5-point smoothing) which inflated R² to 0.74
 - Raw PAC (ts=1) more challenging but clinically relevant
 
 **MultiscaleCausalTCN Architecture:**
+
 - Input: (batch, T=20, F=73) → Output: future PAC + delta PAC
 - Causal depthwise-separable convolutions (no future information)
 - Dilation pattern [1,2,4,8] captures multiscale temporal dependencies
@@ -249,6 +272,7 @@ if abs(correlations) > 0.9:
 - Parameters: ~31,000
 
 **Training innovations:**
+
 1. **Huber loss** for robustness to PAC outliers
 2. **Multi-task learning** (future PAC + delta PAC)
 3. **Consistency penalty** for stable predictions
@@ -258,14 +282,15 @@ if abs(correlations) > 0.9:
 
 **Key finding:** Target smoothing dramatically affects evaluation:
 
-| Target Type | Test R² | RMSE | Interpretation |
-|-------------|---------|------|----------------|
-| Smoothed (ts=5) | 0.74 | 1.8×10⁻⁵ | Predicting denoised state |
-| Raw (ts=1) | 0.17 | 3.3×10⁻⁵ | Predicting actual PAC |
+| Target Type     | Test R² | RMSE     | Interpretation            |
+| --------------- | ------- | -------- | ------------------------- |
+| Smoothed (ts=5) | 0.74    | 1.8×10⁻⁵ | Predicting denoised state |
+| Raw (ts=1)      | 0.17    | 3.3×10⁻⁵ | Predicting actual PAC     |
 
 **Decision:** Use raw PAC (ts=1) for clinical relevance. Real-world control systems must handle noisy signals, not idealized smooth targets.
 
 **Model performance (raw PAC):**
+
 - Test R² = 0.170
 - Test RMSE = 3.3×10⁻⁵
 - Pearson correlation = 0.433
@@ -280,16 +305,16 @@ if abs(correlations) > 0.9:
 
 **Results:**
 
-| Horizon | TCN R² | Persistence R² | Ridge R² | TCN Advantage |
-|---------|--------|---------------|----------|--------------|
-| 1s | 0.52 | 0.71 | 0.64 | Baselines win |
-| 2s | 0.38 | 0.42 | 0.41 | Competitive |
-| 3s | 0.31 | 0.15 | 0.18 | +0.13 to +0.16 |
-| 4s | 0.28 | 0.04 | 0.08 | +0.20 to +0.24 |
-| **5s** | **0.25** | **-0.09** | **-0.27** | **+0.34 to +0.52** |
-| 6s | 0.24 | -0.18 | -0.41 | +0.42 to +0.65 |
-| 7s | 0.26 | -0.23 | -0.48 | +0.49 to +0.74 |
-| 8s | 0.28 | -0.27 | -0.52 | +0.55 to +0.80 |
+| Horizon | TCN R²   | Persistence R² | Ridge R²  | TCN Advantage      |
+| ------- | -------- | -------------- | --------- | ------------------ |
+| 1s      | 0.52     | 0.71           | 0.64      | Baselines win      |
+| 2s      | 0.38     | 0.42           | 0.41      | Competitive        |
+| 3s      | 0.31     | 0.15           | 0.18      | +0.13 to +0.16     |
+| 4s      | 0.28     | 0.04           | 0.08      | +0.20 to +0.24     |
+| **5s**  | **0.25** | **-0.09**      | **-0.27** | **+0.34 to +0.52** |
+| 6s      | 0.24     | -0.18          | -0.41     | +0.42 to +0.65     |
+| 7s      | 0.26     | -0.23          | -0.48     | +0.49 to +0.74     |
+| 8s      | 0.28     | -0.27          | -0.52     | +0.55 to +0.80     |
 
 [**FIGURE PLACEMENT:** Insert horizon sweep graph here showing R² vs prediction horizon for TCN, Persistence, and Ridge models]
 
@@ -298,6 +323,7 @@ if abs(correlations) > 0.9:
 ### February 19, 2025 - Closed-Loop Controller Integration
 
 **Controller design:**
+
 1. **EEGNet static predictor:** Real-time PAC estimation from current 2s window
 2. **PersonalizationModule:** 30-second rolling baseline, z-score normalization
 3. **Decision logic:** z < -0.5 → STIMULATE, z > +0.5 → REST, else MAINTAIN
@@ -308,16 +334,17 @@ if abs(correlations) > 0.9:
 
 **Controller comparison on real EEG data:**
 
-| Controller | Epoch Alignment | Low-PAC Stimulation | PAC Targeting Gap |
-|-----------|----------------|-------------------|------------------|
-| Fixed Schedule | 45.0% | 61.4% | -6.6 μV² |
-| Reactive Threshold | 64.5% | 51.7% | +21.1 μV² |
-| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5 μV²** |
-| Alignment Oracle | 100.0% | 100.0% | +33.3 μV² |
+| Controller         | Epoch Alignment | Low-PAC Stimulation | PAC Targeting Gap |
+| ------------------ | --------------- | ------------------- | ----------------- |
+| Fixed Schedule     | 45.0%           | 61.4%               | -6.6 μV²          |
+| Reactive Threshold | 64.5%           | 51.7%               | +21.1 μV²         |
+| **TCN Predictive** | **72.1%**       | **82.6%**           | **+30.5 μV²**     |
+| Alignment Oracle   | 100.0%          | 100.0%              | +33.3 μV²         |
 
 [**FIGURE PLACEMENT:** Insert controller comparison bar chart here]
 
 **Statistical significance:**
+
 - TCN vs Reactive alignment: 72.1% vs 64.5% (Hedges' g = 1.31, p < 0.001)
 - Low-PAC targeting: 82.6% vs 51.7% (g = 4.47, p < 0.001)
 - All 35 subjects benefited from TCN controller (binomial p < 0.001)
@@ -333,6 +360,7 @@ if abs(correlations) > 0.9:
 **Method:** Analyze PAC trajectories during long stimulation blocks in real EEG data.
 
 **Findings:**
+
 - 17/35 subjects show significant habituation (PAC decline during stimulation)
 - 18/35 subjects show stable or increasing PAC (no habituation)
 - Strong individual differences support personalized control approach
@@ -343,20 +371,20 @@ if abs(correlations) > 0.9:
 
 **Real-data TCN validation results:**
 
-| Metric | TCN Predictive | Reactive Control | Hedges' g | p-value |
-|--------|---------------|-----------------|-----------|---------|
-| Epoch Alignment | 72.1% | 64.5% | +1.31 | < 0.001 |
-| Low-PAC Targeting | 82.6% | 51.7% | +4.47 | < 0.001 |
-| Clinical Utility | 0.681 | 0.591 | +0.95 | < 0.001 |
+| Metric            | TCN Predictive | Reactive Control | Hedges' g | p-value |
+| ----------------- | -------------- | ---------------- | --------- | ------- |
+| Epoch Alignment   | 72.1%          | 64.5%            | +1.31     | < 0.001 |
+| Low-PAC Targeting | 82.6%          | 51.7%            | +4.47     | < 0.001 |
+| Clinical Utility  | 0.681          | 0.591            | +0.95     | < 0.001 |
 
 **Fatigue sensitivity analysis:** Tested controller performance under different fatigue assumptions using exponential decay models.
 
-| Fatigue Model | TCN Improvement | p-value |
-|--------------|----------------|---------|
-| Linear decay | +9.0% | < 0.001 |
-| Exponential (τ=30s) | +11.2% | < 0.001 |
-| Exponential (τ=60s) | +8.7% | < 0.001 |
-| Power law | +10.1% | < 0.001 |
+| Fatigue Model       | TCN Improvement | p-value |
+| ------------------- | --------------- | ------- |
+| Linear decay        | +9.0%           | < 0.001 |
+| Exponential (τ=30s) | +11.2%          | < 0.001 |
+| Exponential (τ=60s) | +8.7%           | < 0.001 |
+| Power law           | +10.1%          | < 0.001 |
 
 **Robustness testing:** Added Gaussian noise to EEG signals (5-20 dB SNR) - controller maintained >65% alignment across noise levels.
 
@@ -378,11 +406,11 @@ if abs(correlations) > 0.9:
 
 ### Statistical Results Table
 
-| Comparison | TCN | Control | Effect Size (g) | p-value | N |
-|-----------|-----|---------|----------------|---------|---|
-| Epoch Alignment | 72.1% | 64.5% | +1.31 [+0.75, +1.87] | < 0.001 | 35 |
-| Low-PAC Targeting | 82.6% | 51.7% | +4.47 [+3.33, +5.62] | < 0.001 | 35 |
-| PAC Gap | 30.5 | 21.1 | +1.57 [+0.98, +2.17] | < 0.001 | 35 |
+| Comparison        | TCN   | Control | Effect Size (g)      | p-value | N   |
+| ----------------- | ----- | ------- | -------------------- | ------- | --- |
+| Epoch Alignment   | 72.1% | 64.5%   | +1.31 [+0.75, +1.87] | < 0.001 | 35  |
+| Low-PAC Targeting | 82.6% | 51.7%   | +4.47 [+3.33, +5.62] | < 0.001 | 35  |
+| PAC Gap           | 30.5  | 21.1    | +1.57 [+0.98, +2.17] | < 0.001 | 35  |
 
 All effect sizes represent large clinical significance (g > 0.8).
 
@@ -428,15 +456,15 @@ The results support advancement to clinical trials comparing adaptive vs fixed 4
 
 ## References
 
-1. Iaccarino, H.F., et al. "Gamma frequency entrainment attenuates amyloid load and modifies microglia." *Nature* 540, 230-235 (2016).
+1. Iaccarino, H.F., et al. "Gamma frequency entrainment attenuates amyloid load and modifies microglia." _Nature_ 540, 230-235 (2016).
 
-2. Tort, A.B., et al. "Measuring phase-amplitude coupling between neuronal oscillations of different frequencies." *J. Neurophysiol.* 104(2), 1195-1210 (2010).
+2. Tort, A.B., et al. "Measuring phase-amplitude coupling between neuronal oscillations of different frequencies." _J. Neurophysiol._ 104(2), 1195-1210 (2010).
 
-3. Lawhern, V.J., et al. "EEGNet: a compact convolutional neural network for EEG-based brain-computer interfaces." *J. Neural Eng.* 15(5), 056013 (2018).
+3. Lawhern, V.J., et al. "EEGNet: a compact convolutional neural network for EEG-based brain-computer interfaces." _J. Neural Eng._ 15(5), 056013 (2018).
 
 4. Lahijanian, B., et al. "40Hz Auditory Entrainment" OpenNeuro ds005048 v1.0.1 (2024).
 
-5. Canolty, R.T. & Knight, R.T. "The functional role of cross-frequency coupling." *Trends Cogn. Sci.* 14(11), 506-515 (2010).
+5. Canolty, R.T. & Knight, R.T. "The functional role of cross-frequency coupling." _Trends Cogn. Sci._ 14(11), 506-515 (2010).
 
 ---
 

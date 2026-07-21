@@ -10,6 +10,7 @@ tags:
 # ensure_dir()
 
 ## Connections
+
 - [[Create directory if it doesn't exist.      Args         directory Path to d]] - `rationale_for` [EXTRACTED]
 - [[utils.py]] - `contains` [EXTRACTED]
 

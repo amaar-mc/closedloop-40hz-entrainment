@@ -10,6 +10,7 @@ tags:
 # Predictive Look-Ahead Controller (trend+hysteresis)
 
 ## Connections
+
 - [[Closed-Loop 40Hz Entrainment Demo (Real EEG Replay)]] - `calls` [EXTRACTED]
 - [[StimAction Enum (STIMULATEREST)]] - `calls` [EXTRACTED]
 

@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# Create a configured TVB simulator instance.          Args:             mu_value:
+# Create a configured TVB simulator instance. Args: mu_value:
 
 ## Connections
+
 - [[_create_simulator()]] - `rationale_for` [EXTRACTED]
 
   #community/TVB_Alzheimer_Simulator

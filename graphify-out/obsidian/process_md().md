@@ -10,6 +10,7 @@ tags:
 # process_md()
 
 ## Connections
+
 - [[Convert markdown to flowables, stripping em-dashes.]] - `rationale_for` [EXTRACTED]
 - [[clean_md()]] - `calls` [EXTRACTED]
 - [[escape_xml()]] - `calls` [EXTRACTED]

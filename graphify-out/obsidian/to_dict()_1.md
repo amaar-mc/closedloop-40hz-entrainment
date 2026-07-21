@@ -10,8 +10,9 @@ tags:
 # to_dict()
 
 ## Connections
+
 - [[Convert to serializable dict.]] - `rationale_for` [EXTRACTED]
 - [[PairwiseResult]] - `method` [EXTRACTED]
 - [[run_fatigue_model_experiment()]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

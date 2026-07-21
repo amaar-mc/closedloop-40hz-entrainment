@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[generate_timeline_figure.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

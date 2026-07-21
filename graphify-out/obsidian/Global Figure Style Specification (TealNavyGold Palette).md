@@ -10,6 +10,7 @@ tags:
 # Global Figure Style Specification (Teal/Navy/Gold Palette)
 
 ## Connections
+
 - [[Poster Board V7 (Audit-Clean, CSEF 2026)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

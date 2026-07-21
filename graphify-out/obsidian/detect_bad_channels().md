@@ -10,8 +10,9 @@ tags:
 # detect_bad_channels()
 
 ## Connections
+
 - [[Detect badnoisy channels using standard deviation criterion.          Channel]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `method` [EXTRACTED]
 - [[preprocess()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

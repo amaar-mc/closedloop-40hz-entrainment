@@ -10,8 +10,9 @@ tags:
 # Produces 40 Hz click-train audio during stimulation periods.
 
 ## Connections
+
 - [[AudioEngine]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -10,6 +10,7 @@ tags:
 # Test the ViT-TCNet architecture.
 
 ## Connections
+
 - [[test_vit_tcnet()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

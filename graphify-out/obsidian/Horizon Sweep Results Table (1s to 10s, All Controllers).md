@@ -10,7 +10,8 @@ tags:
 # Horizon Sweep Results Table (1s to 10s, All Controllers)
 
 ## Connections
+
 - [[Judge Interview Prep Guide (Complete Technical Deep-Dive)]] - `references` [EXTRACTED]
 - [[Why 5-Second Horizon Matters Explanation (3 Levels)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Compute Wavelet Packet Decomposition features.      WPD provides a complete deco
+# Compute Wavelet Packet Decomposition features. WPD provides a complete deco
 
 ## Connections
+
 - [[compute_wpd_features()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

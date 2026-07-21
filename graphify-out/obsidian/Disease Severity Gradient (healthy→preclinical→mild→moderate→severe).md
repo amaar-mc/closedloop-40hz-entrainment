@@ -10,6 +10,7 @@ tags:
 # Disease Severity Gradient (healthy→preclinical→mild→moderate→severe)
 
 ## Connections
+
 - [[PAC Ceiling  Diminishing Returns at Severe Alzheimer's Stages]] - `conceptually_related_to` [INFERRED]
 - [[PAC Heatmap Strategy × Severity (Panel E)]] - `references` [EXTRACTED]
 - [[PAC Response by Disease Severity (Panel A)]] - `references` [EXTRACTED]

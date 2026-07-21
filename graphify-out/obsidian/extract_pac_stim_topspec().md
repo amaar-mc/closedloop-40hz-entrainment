@@ -10,6 +10,7 @@ tags:
 # extract_pac_stim_topspec()
 
 ## Connections
+
 - [[Extract PAC + stim + top N spectral features.]] - `rationale_for` [EXTRACTED]
 - [[run_pac_stim_focused.py]] - `contains` [EXTRACTED]
 

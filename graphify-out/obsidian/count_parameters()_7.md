@@ -10,6 +10,7 @@ tags:
 # count_parameters()
 
 ## Connections
+
 - [[Count trainable parameters.]] - `rationale_for` [EXTRACTED]
 - [[eegnet_v2.py]] - `contains` [EXTRACTED]
 - [[test_eegnet_v2()]] - `calls` [EXTRACTED]

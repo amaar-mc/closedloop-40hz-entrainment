@@ -8,6 +8,7 @@ members: 22
 **Members:** 22 nodes
 
 ## Members
+
 - [[Check if at least one channel has sufficient baseline data.]] - rationale - src/personalization.py
 - [[Compute average z-score across all channels (ignoring NaN).          Args]] - rationale - src/personalization.py
 - [[Compute mean and standard deviation of baseline PAC values.          Returns]] - rationale - src/personalization.py
@@ -39,9 +40,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 7 edges to [[_COMMUNITY_Closed-Loop Control & Simulator]]
 
 ## Top bridge nodes
+
 - [[test_personalization()]] - degree 12, connects to 1 community
 - [[MultiChannelPersonalization]] - degree 9, connects to 1 community
 - [[compute_zscore()]] - degree 5, connects to 1 community

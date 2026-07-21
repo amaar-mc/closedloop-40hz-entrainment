@@ -7,9 +7,10 @@ tags:
   - community/Community_38
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[EEGNet]] - `method` [EXTRACTED]
 - [[__init__()_17]] - `calls` [EXTRACTED]
 

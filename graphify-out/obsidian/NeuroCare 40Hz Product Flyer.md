@@ -9,6 +9,7 @@ tags:
 # NeuroCare 40Hz Product Flyer
 
 ## Connections
+
 - [[CSEF 2026 Presentation Context]] - `references` [EXTRACTED]
 - [[How It Works 4-Step Wear-Read-Predict-Stimulate Pipeline]] - `references` [EXTRACTED]
 - [[Key Result 72% Targeting Accuracy vs 64% Reactive Baseline]] - `references` [EXTRACTED]

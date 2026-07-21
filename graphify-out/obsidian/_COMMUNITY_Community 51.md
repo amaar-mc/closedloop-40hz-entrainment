@@ -8,6 +8,7 @@ members: 20
 **Members:** 20 nodes
 
 ## Members
+
 - [[CSEF Poster Print Version (Slide1_print.png)]] - image - submission/poster/exports/Slide1_print.png
 - [[Closed-Loop Personalized Auditory Therapy for Alzheimer's (Deployment Vision)]] - image - submission/figures/figure11.png
 - [[Figure 11 Consumer Hardware for Clinical Deployment]] - image - submission/figures/figure11.png

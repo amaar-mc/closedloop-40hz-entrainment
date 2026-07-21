@@ -10,6 +10,7 @@ tags:
 # Experimentation Dates: 01/12/26 – 02/15/26 (home-based)
 
 ## Connections
+
 - [[Student Checklist (1A) — Project Registration Form]] - `references` [EXTRACTED]
 
   #community/Community_48

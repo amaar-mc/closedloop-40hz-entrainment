@@ -7,9 +7,10 @@ tags:
   - community/12-Feature_TCN_Validation
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[AlignmentOracleCtrl_1]] - `method` [EXTRACTED]
 
   #community/12-Feature_TCN_Validation

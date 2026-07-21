@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Compute Phase-Locking Value (PLV) between two phase time series.      PLV measur
+# Compute Phase-Locking Value (PLV) between two phase time series. PLV measur
 
 ## Connections
+
 - [[compute_phase_locking_value()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

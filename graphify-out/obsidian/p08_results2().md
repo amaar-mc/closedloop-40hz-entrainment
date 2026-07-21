@@ -10,6 +10,7 @@ tags:
 # p08_results2()
 
 ## Connections
+
 - [[Slide 8 Results page 2.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `calls` [EXTRACTED]
 - [[body()]] - `calls` [EXTRACTED]

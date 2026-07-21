@@ -10,6 +10,7 @@ tags:
 # demo_streaming.py
 
 ## Connections
+
 - [[End-to-end streaming inference demo for closed-loop 40 Hz entrainment.  Runs the]] - `rationale_for` [EXTRACTED]
 - [[auto_device()]] - `contains` [EXTRACTED]
 - [[eegnet.py]] - `imports_from` [EXTRACTED]
@@ -24,4 +25,4 @@ tags:
 - [[srcstreamingfeature_extractor.py (StreamingFeatureExtractor)]] - `imports_from` [EXTRACTED]
 - [[temporal_multiscalemodel_registry.py (build_default_registry)]] - `imports_from` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

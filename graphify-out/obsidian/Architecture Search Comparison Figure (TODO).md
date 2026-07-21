@@ -10,6 +10,7 @@ tags:
 # Architecture Search Comparison Figure (TODO)
 
 ## Connections
+
 - [[Feature Ablation Bar Chart (TODO)]] - `conceptually_related_to` [INFERRED]
 - [[Paper Figures Source Directory]] - `references` [EXTRACTED]
 

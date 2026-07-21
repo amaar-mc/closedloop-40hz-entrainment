@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Compute Modulation Index from phase and amplitude time series.          MI mea
+# Compute Modulation Index from phase and amplitude time series. MI mea
 
 ## Connections
+
 - [[compute_modulation_index()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

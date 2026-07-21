@@ -10,6 +10,7 @@ tags:
 # CSEF Presentation Methods: Dataset breakdown (AD n=17, MCI n=6, controls n=10), preprocessing, PAC computation
 
 ## Connections
+
 - [[Current Methodology Dataset OpenNeuro ds005048, 35 subjects, BIDS HDF5FDT format, 250Hz, 40s ON20s OFF]] - `shares_data_with` [EXTRACTED]
 
   #community/Community_155

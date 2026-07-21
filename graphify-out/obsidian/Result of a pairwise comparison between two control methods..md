@@ -10,6 +10,7 @@ tags:
 # Result of a pairwise comparison between two control methods.
 
 ## Connections
+
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
 - [[PairwiseResult]] - `rationale_for` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[StimAction]] - `uses` [INFERRED]
 - [[TrialMetrics]] - `uses` [INFERRED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

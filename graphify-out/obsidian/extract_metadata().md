@@ -10,6 +10,7 @@ tags:
 # extract_metadata()
 
 ## Connections
+
 - [[Extract simple title-page metadata from the markdown source.]] - `rationale_for` [EXTRACTED]
 - [[generate_notebook_pdf.py]] - `contains` [EXTRACTED]
 - [[main()_72]] - `calls` [EXTRACTED]

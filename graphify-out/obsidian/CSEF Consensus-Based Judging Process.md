@@ -10,6 +10,7 @@ tags:
 # CSEF Consensus-Based Judging Process
 
 ## Connections
+
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 - [[Rationale Consensus Judging Favors Memorable Projects Over Rubric Gaming]] - `rationale_for` [EXTRACTED]
 - [[Synopsys 40-Point Numerical Judging Rubric]] - `conceptually_related_to` [EXTRACTED]

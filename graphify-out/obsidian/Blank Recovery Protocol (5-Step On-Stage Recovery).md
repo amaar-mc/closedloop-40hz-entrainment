@@ -10,6 +10,7 @@ tags:
 # Blank Recovery Protocol (5-Step On-Stage Recovery)
 
 ## Connections
+
 - [[Poster Memory Palace (9 Rooms, Left-to-Right Journey)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

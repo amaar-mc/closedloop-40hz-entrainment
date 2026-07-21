@@ -10,9 +10,10 @@ tags:
 # Test 1: ModelRegistry registers and retrieves a TCN model by name.
 
 ## Connections
+
 - [[ModelRegistry]] - `uses` [INFERRED]
 - [[TCNTemporalModel]] - `uses` [INFERRED]
 - [[TemporalModel]] - `uses` [INFERRED]
 - [[test_registry_register_and_get()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

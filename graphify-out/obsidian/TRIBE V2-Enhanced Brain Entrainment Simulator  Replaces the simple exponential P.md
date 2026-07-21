@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# TRIBE V2-Enhanced Brain Entrainment Simulator  Replaces the simple exponential P
+# TRIBE V2-Enhanced Brain Entrainment Simulator Replaces the simple exponential P
 
 ## Connections
+
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]

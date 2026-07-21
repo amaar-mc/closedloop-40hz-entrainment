@@ -10,6 +10,7 @@ tags:
 # Parse markdown table lines into a list of lists.
 
 ## Connections
+
 - [[parse_table()_3]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

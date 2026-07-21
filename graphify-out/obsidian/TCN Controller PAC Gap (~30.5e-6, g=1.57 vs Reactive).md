@@ -9,6 +9,7 @@ tags:
 # TCN Controller PAC Gap (~30.5e-6, g=1.57 vs Reactive)
 
 ## Connections
+
 - [[Causal TCN Block (31K params, 20s lookback)]] - `implements` [INFERRED]
 - [[Effect Size g=1.57 (TCN vs Reactive PAC Gap)]] - `references` [EXTRACTED]
 - [[PAC Targeting Gap by Controller Figure]] - `references` [EXTRACTED]

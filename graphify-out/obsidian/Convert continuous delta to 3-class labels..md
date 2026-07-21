@@ -10,6 +10,7 @@ tags:
 # Convert continuous delta to 3-class labels.
 
 ## Connections
+
 - [[make_direction_labels()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_83

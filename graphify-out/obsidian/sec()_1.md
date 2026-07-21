@@ -10,6 +10,7 @@ tags:
 # sec()
 
 ## Connections
+
 - [[CSEF]] - `method` [EXTRACTED]
 - [[Major section heading — 22 pt bold, thin rule.]] - `rationale_for` [EXTRACTED]
 - [[p02_intro1()_1]] - `calls` [EXTRACTED]

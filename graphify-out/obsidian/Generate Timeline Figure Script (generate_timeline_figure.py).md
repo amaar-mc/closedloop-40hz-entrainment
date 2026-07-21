@@ -10,6 +10,7 @@ tags:
 # Generate Timeline Figure Script (generate_timeline_figure.py)
 
 ## Connections
+
 - [[Timeline Example Figure]] - `implements` [EXTRACTED]
 
   #community/Community_77

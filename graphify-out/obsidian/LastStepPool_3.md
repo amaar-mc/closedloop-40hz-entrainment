@@ -10,6 +10,7 @@ tags:
 # LastStepPool
 
 ## Connections
+
 - [[ImprovedTCN_2]] - `implements` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

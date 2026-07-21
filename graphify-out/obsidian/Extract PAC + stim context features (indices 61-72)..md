@@ -10,6 +10,7 @@ tags:
 # Extract PAC + stim context features (indices 61-72).
 
 ## Connections
+
 - [[CausalConvBlock]] - `uses` [INFERRED]
 - [[ImprovedTCN]] - `uses` [INFERRED]
 - [[MixupSeqDataset]] - `uses` [INFERRED]

@@ -10,6 +10,7 @@ tags:
 # freeze_backbone (per-subject fine-tuning support)
 
 ## Connections
+
 - [[ImprovedTCN_2]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

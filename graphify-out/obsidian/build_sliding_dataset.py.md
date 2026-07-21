@@ -10,6 +10,7 @@ tags:
 # build_sliding_dataset.py
 
 ## Connections
+
 - [[Build temporal dataset using sliding-window PAC labels.  Constructs 20-step look]] - `rationale_for` [EXTRACTED]
 - [[_causal_moving_average()]] - `contains` [EXTRACTED]
 - [[_pac_multiscale_features()]] - `contains` [EXTRACTED]

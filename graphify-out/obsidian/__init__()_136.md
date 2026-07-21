@@ -7,9 +7,10 @@ tags:
   - community/TCN_Layer_Internals
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[CausalSinusoidalPE]] - `method` [EXTRACTED]
 - [[__init__()_137]] - `calls` [EXTRACTED]
 

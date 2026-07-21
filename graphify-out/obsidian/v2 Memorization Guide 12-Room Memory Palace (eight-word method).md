@@ -9,6 +9,7 @@ tags:
 # v2 Memorization Guide: 12-Room Memory Palace (eight-word method)
 
 ## Connections
+
 - [[Archive Memorization Guide 12-Room Poster Memory Palace]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_30

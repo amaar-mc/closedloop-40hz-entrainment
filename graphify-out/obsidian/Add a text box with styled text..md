@@ -10,6 +10,7 @@ tags:
 # Add a text box with styled text.
 
 ## Connections
+
 - [[add_text_box()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_75

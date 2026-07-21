@@ -10,6 +10,7 @@ tags:
 # compute_hjorth_params()
 
 ## Connections
+
 - [[Compute Hjorth activity, mobility, and complexity for a 1D signal.      Args]] - `rationale_for` [EXTRACTED]
 - [[Hjorth Parameters (Activity, Mobility, Complexity)]] - `implements` [EXTRACTED]
 - [[enhanced_features.py]] - `contains` [EXTRACTED]

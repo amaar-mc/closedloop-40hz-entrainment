@@ -7,9 +7,10 @@ tags:
   - community/Community_82
 ---
 
-# Compute PAC autocorrelation at various lags.      With 4-second hop size:
+# Compute PAC autocorrelation at various lags. With 4-second hop size:
 
 ## Connections
+
 - [[compute_temporal_autocorrelation()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_82

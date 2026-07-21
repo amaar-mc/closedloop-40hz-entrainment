@@ -10,6 +10,7 @@ tags:
 # CausalSinusoidalPE
 
 ## Connections
+
 - [[Sinusoidal positional encoding for sequence models.      Fixed (non-learned) e]] - `rationale_for` [EXTRACTED]
 - [[__init__()_136]] - `method` [EXTRACTED]
 - [[__init__()_137]] - `calls` [EXTRACTED]

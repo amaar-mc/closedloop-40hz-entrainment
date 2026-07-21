@@ -9,6 +9,7 @@ tags:
 # Offline Counterfactual Replay Limitation Disclosure
 
 ## Connections
+
 - [[EEGNet Not in Validation Loop Disclosure]] - `conceptually_related_to` [INFERRED]
 - [[Scientific Defensibility Audit (STRONG rating)]] - `references` [EXTRACTED]
 

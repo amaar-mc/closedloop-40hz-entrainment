@@ -7,10 +7,11 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# __len__()
+# **len**()
 
 ## Connections
+
 - [[EEGWindowDataset]] - `method` [EXTRACTED]
 - [[Return number of samples.]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

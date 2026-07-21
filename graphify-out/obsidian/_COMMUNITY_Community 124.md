@@ -8,6 +8,7 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
+
 - [[Amyloid Cascade Hypothesis and 40Hz Mechanism (Iaccarino + Murdock pathways)]] - document - submission/presentation/archive/v1_interview/medical_deep_dive_old.md
 - [[FDA De Novo Classification Pathway for Novel Device]] - document - submission/presentation/archive/v1_interview/medical_deep_dive_old.md
 - [[Glymphatic Clearance via AQP4VIP Interneuron Pathway (Murdock 2024)]] - document - submission/presentation/archive/v1_interview/medical_deep_dive_old.md

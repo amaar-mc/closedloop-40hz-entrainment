@@ -10,6 +10,7 @@ tags:
 # Slide 2: Introduction page 1.
 
 ## Connections
+
 - [[p02_intro1()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

@@ -9,6 +9,7 @@ tags:
 # Times New Roman Font Warning
 
 ## Connections
+
 - [[CSEF Font Requirements (14pt min, sans-serif recommended)]] - `rationale_for` [EXTRACTED]
 - [[Font Compliance Audit]] - `references` [EXTRACTED]
 

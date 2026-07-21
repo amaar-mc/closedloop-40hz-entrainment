@@ -10,6 +10,7 @@ tags:
 # Figure: Controller Comparison v2 (results/figures/controller_comparison_v2.pdf)
 
 ## Connections
+
 - [[Research Paper Status Document]] - `references` [EXTRACTED]
 
   #community/Community_59

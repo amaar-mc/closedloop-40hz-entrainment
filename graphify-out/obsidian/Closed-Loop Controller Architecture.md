@@ -10,6 +10,7 @@ tags:
 # Closed-Loop Controller Architecture
 
 ## Connections
+
 - [[EEGNet Static PAC Predictor]] - `calls` [EXTRACTED]
 - [[PersonalizationModule (Rolling Z-Score)]] - `calls` [EXTRACTED]
 

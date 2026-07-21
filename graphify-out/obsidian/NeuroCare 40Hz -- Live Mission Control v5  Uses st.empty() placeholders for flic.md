@@ -7,9 +7,10 @@ tags:
   - community/Community_32
 ---
 
-# NeuroCare 40Hz -- Live Mission Control v5  Uses st.empty() placeholders for flic
+# NeuroCare 40Hz -- Live Mission Control v5 Uses st.empty() placeholders for flic
 
 ## Connections
+
 - [[ImprovedTCN]] - `uses` [INFERRED]
 - [[PACComputer]] - `uses` [INFERRED]
 - [[RealEEGAdapter]] - `uses` [INFERRED]

@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Per-Subject Circuit Utility (Poster Figure 8)]] - image - submission/poster/exports/Slide1_print.png
 
 ## Live Query (requires Dataview plugin)

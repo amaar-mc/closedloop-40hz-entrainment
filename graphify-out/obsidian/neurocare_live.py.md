@@ -10,6 +10,7 @@ tags:
 # neurocare_live.py
 
 ## Connections
+
 - [[NeuroCare 40Hz -- Live Mission Control v5  Uses st.empty() placeholders for flic]] - `rationale_for` [EXTRACTED]
 - [[_bp()]] - `contains` [EXTRACTED]
 - [[_bpow()]] - `contains` [EXTRACTED]

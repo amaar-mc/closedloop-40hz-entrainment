@@ -10,7 +10,8 @@ tags:
 # Causal Convolutions Rationale (Why Not LSTM/Transformer)
 
 ## Connections
+
 - [[Computational Deep Dive (ML Specialist Judge Q&A)]] - `references` [EXTRACTED]
 - [[MultiscaleCausalTCN Architecture Details (Interview Prep)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

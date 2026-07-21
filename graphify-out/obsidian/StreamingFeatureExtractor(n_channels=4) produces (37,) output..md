@@ -10,7 +10,8 @@ tags:
 # StreamingFeatureExtractor(n_channels=4) produces (37,) output.
 
 ## Connections
+
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[test_output_shape_4ch()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

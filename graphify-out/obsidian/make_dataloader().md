@@ -10,8 +10,9 @@ tags:
 # make_dataloader()
 
 ## Connections
+
 - [[Create a DataLoader from numpy arrays.      Args         windows EEG window]] - `rationale_for` [EXTRACTED]
 - [[multi_seed_training.py]] - `contains` [EXTRACTED]
 - [[train_single_seed()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

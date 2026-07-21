@@ -19,17 +19,18 @@ This project asks: **can we predict when a person's brain is about to lose entra
 
 **Source:** OpenNeuro ds005048 (BIDS-compliant)
 
-| Property | Value |
-|----------|-------|
-| Subjects | 35 |
-| EEG channels | 19 (10/20 montage), 7 frontal selected (Fp1, Fp2, F7, F3, Fz, F4, F8) |
-| Sampling rate | 250 Hz |
-| File format | MATLAB v7.3 HDF5 (.set) + float32 binary (.fdt, Fortran column-major order) |
+| Property      | Value                                                                                                           |
+| ------------- | --------------------------------------------------------------------------------------------------------------- |
+| Subjects      | 35                                                                                                              |
+| EEG channels  | 19 (10/20 montage), 7 frontal selected (Fp1, Fp2, F7, F3, Fz, F4, F8)                                           |
+| Sampling rate | 250 Hz                                                                                                          |
+| File format   | MATLAB v7.3 HDF5 (.set) + float32 binary (.fdt, Fortran column-major order)                                     |
 | Preprocessing | Already applied: 1 Hz highpass, 50 Hz notch, ICA artifact removal, common average reference (Makoto's pipeline) |
-| Paradigm | Alternating blocks of 40 Hz auditory stimulation (40s) and rest (20s) |
-| Sessions | Short (6 stim + 6 rest blocks) and long (10 stim + 10 rest blocks) |
+| Paradigm      | Alternating blocks of 40 Hz auditory stimulation (40s) and rest (20s)                                           |
+| Sessions      | Short (6 stim + 6 rest blocks) and long (10 stim + 10 rest blocks)                                              |
 
 **Processing pipeline applied:**
+
 1. Light additional filtering: bandpass 0.5-80 Hz (4th-order Butterworth), 50 Hz notch (Q=30)
 2. Artifact rejection: windows with any channel exceeding +/-100 uV removed
 3. Windowing: 2-second non-overlapping windows aligned to BIDS events.tsv (Stimulus/Rest segmentation)
@@ -37,12 +38,12 @@ This project asks: **can we predict when a person's brain is about to lose entra
 
 **Final dataset:**
 
-| Split | Subjects | Windows |
-|-------|----------|---------|
-| Train | 24 | 11,736 |
-| Validation | 5 | 2,725 |
-| Test | 6 | 2,822 |
-| **Total** | **35** | **17,283** |
+| Split      | Subjects | Windows    |
+| ---------- | -------- | ---------- |
+| Train      | 24       | 11,736     |
+| Validation | 5        | 2,725      |
+| Test       | 6        | 2,822      |
+| **Total**  | **35**   | **17,283** |
 
 Window shape: `(n, 1, 7, 500)` -- 7 frontal channels, 500 samples (2s at 250 Hz).
 PAC labels: range [0.0002, 0.0046], mean ~0.001, stored in microvolts.
@@ -56,6 +57,7 @@ PAC labels: range [0.0002, 0.0046], mean ~0.001, stored in microvolts.
 A lightweight EEGNet adapted for regression (Lawhern et al., 2018). Predicts PAC from a single 2-second EEG window.
 
 **Architecture:**
+
 ```
 Input: (batch, 1, 7, 500)
 
@@ -90,6 +92,7 @@ The moderate R^2 reflects fundamental limitations: PAC is a noisy, low-amplitude
 Predicts **future** PAC values from a sequence of past observations. This is the core innovation -- forecasting entrainment state to enable proactive control.
 
 **Architecture:**
+
 ```
 Input: (batch, sequence_length, n_features)
        n_features = PAC + stimulation context features from BIDS events
@@ -114,6 +117,7 @@ Output: {"future": predicted PAC, "delta": predicted PAC change}
 ```
 
 **Key design choices:**
+
 - **GroupNorm instead of BatchNorm:** BatchNorm statistics shift across subjects. GroupNorm(1, channels) is equivalent to LayerNorm and gives stable normalization regardless of who the subject is.
 - **Causal convolutions:** No future information leaks into predictions. Padding is applied only to the left (past) side.
 - **Dilated stack [1,2,4,8]:** Receptive field spans 22 time steps (44 seconds at 2s windows) without excessive parameters.
@@ -127,10 +131,10 @@ Output: {"future": predicted PAC, "delta": predicted PAC change}
 
 ### 4.1 Static PAC Prediction
 
-| Metric | Value |
-|--------|-------|
-| Test R^2 | 0.287 |
-| Purpose | Real-time PAC estimation from raw EEG in closed-loop controller |
+| Metric   | Value                                                           |
+| -------- | --------------------------------------------------------------- |
+| Test R^2 | 0.287                                                           |
+| Purpose  | Real-time PAC estimation from raw EEG in closed-loop controller |
 
 This is a supporting component, not the main contribution.
 
@@ -138,27 +142,28 @@ This is a supporting component, not the main contribution.
 
 #### 4.2.1 Single-Horizon Training (Horizon = 1 step = 2 seconds ahead)
 
-| Metric | Value |
-|--------|-------|
-| Best validation R^2 | 0.764 |
-| Test R^2 | 0.764 |
-| Test correlation | 0.880 |
-| Test MAE | 0.000082 |
+| Metric              | Value    |
+| ------------------- | -------- |
+| Best validation R^2 | 0.764    |
+| Test R^2            | 0.764    |
+| Test correlation    | 0.880    |
+| Test MAE            | 0.000082 |
 
 #### 4.2.2 Horizon Sweep: Where the Model Adds Value
 
 This is the central result. We compare three methods across prediction horizons from 1 to 10 seconds:
 
 | Horizon (s) | Persistence R^2 | Ridge R^2 | TCN R^2 | TCN Margin vs Persistence |
-|-------------|----------------|-----------|---------|---------------------------|
-| 1 | 0.760 | 0.812 | 0.735 | -0.025 |
-| 2 | 0.488 | 0.542 | 0.470 | -0.018 |
-| 3 | 0.234 | 0.254 | 0.277 | **+0.043** |
-| 5 | -0.267 | -0.393 | 0.254 | **+0.521** |
-| 8 | -0.276 | -0.211 | 0.240 | **+0.515** |
-| 10 | -0.256 | -0.212 | 0.278 | **+0.534** |
+| ----------- | --------------- | --------- | ------- | ------------------------- |
+| 1           | 0.760           | 0.812     | 0.735   | -0.025                    |
+| 2           | 0.488           | 0.542     | 0.470   | -0.018                    |
+| 3           | 0.234           | 0.254     | 0.277   | **+0.043**                |
+| 5           | -0.267          | -0.393    | 0.254   | **+0.521**                |
+| 8           | -0.276          | -0.211    | 0.240   | **+0.515**                |
+| 10          | -0.256          | -0.212    | 0.278   | **+0.534**                |
 
 **Interpretation:**
+
 - At 1-2 second horizons, the simplest baseline ("PAC won't change") works well. All methods are competitive, and Ridge regression actually wins. The TCN's complexity is not justified here.
 - **At 3+ second horizons, the picture reverses completely.** Persistence and Ridge collapse to negative R^2 (worse than predicting the mean), while the TCN maintains R^2 ~ 0.25-0.28. This represents a **massive margin of +0.5 R^2 units**.
 - The 5-10 second horizon range is exactly where a controller needs predictions: far enough ahead to make proactive decisions, but not so far that prediction is impossible.
@@ -170,44 +175,44 @@ The TCN's value is not in short-term prediction (where simple methods suffice) b
 Fine-tuning the TCN on subject-specific calibration data (freezing the backbone, updating only regression heads):
 
 | Calibration Windows | Persistence R^2 | TCN Base R^2 | TCN Adapted R^2 |
-|--------------------|-----------------|-------------|-----------------|
-| 30 | 0.617 | 0.589 | 0.589 |
-| 60 | 0.621 | 0.612 | 0.622 |
-| 120 | 0.605 | 0.622 | 0.637 |
+| ------------------- | --------------- | ------------ | --------------- |
+| 30                  | 0.617           | 0.589        | 0.589           |
+| 60                  | 0.621           | 0.612        | 0.622           |
+| 120                 | 0.605           | 0.622        | 0.637           |
 
 Adaptation provides marginal gains (+0.01 R^2). The model generalizes reasonably across subjects without fine-tuning, likely because the frontal gamma response to 40 Hz stimulation is relatively consistent across individuals. The main inter-subject variability is in PAC magnitude, which z-score normalization already handles.
 
 #### 4.2.4 Data Integrity Audit
 
-| Check | Result |
-|-------|--------|
-| No future leakage in dataset construction | PASS |
-| Shuffle-label sanity check | R^2 = -0.332 (model learns real patterns, not artifacts) |
-| Subject-level splits (no data leakage between train/val/test) | PASS |
-| Baseline persistence matches expected | PASS (R^2 = 0.760) |
+| Check                                                         | Result                                                   |
+| ------------------------------------------------------------- | -------------------------------------------------------- |
+| No future leakage in dataset construction                     | PASS                                                     |
+| Shuffle-label sanity check                                    | R^2 = -0.332 (model learns real patterns, not artifacts) |
+| Subject-level splits (no data leakage between train/val/test) | PASS                                                     |
+| Baseline persistence matches expected                         | PASS (R^2 = 0.760)                                       |
 
 ### 4.3 Habituation / Fatigue Analysis (Real Data)
 
 We analyzed whether continuous 40 Hz stimulation leads to declining PAC across successive stimulation blocks within a session.
 
-| Metric | Value |
-|--------|-------|
-| Subjects analyzed | 35 |
-| First block mean PAC | 0.000996 |
-| Last block mean PAC | 0.001040 |
-| Paired t-test | t = -0.616, p = 0.542 |
-| Subjects showing decline | 17 / 35 (49%) |
+| Metric                       | Value                        |
+| ---------------------------- | ---------------------------- |
+| Subjects analyzed            | 35                           |
+| First block mean PAC         | 0.000996                     |
+| Last block mean PAC          | 0.001040                     |
+| Paired t-test                | t = -0.616, p = 0.542        |
+| Subjects showing decline     | 17 / 35 (49%)                |
 | Mean PAC slope across blocks | +2.3e-06 (slightly positive) |
 
 **Individual variability is large:**
 
-| Subject | PAC Change Across Blocks |
-|---------|--------------------------|
-| sub-35 | -66.8% (strong habituation) |
-| sub-19 | -57.0% |
-| sub-25 | -44.6% |
-| sub-27 | +149.1% (strong facilitation) |
-| sub-20 | +93.0% |
+| Subject | PAC Change Across Blocks      |
+| ------- | ----------------------------- |
+| sub-35  | -66.8% (strong habituation)   |
+| sub-19  | -57.0%                        |
+| sub-25  | -44.6%                        |
+| sub-27  | +149.1% (strong facilitation) |
+| sub-20  | +93.0%                        |
 
 **Interpretation:** The aggregate population does not show statistically significant habituation (p = 0.54). However, roughly half the subjects do habituate, some dramatically. This is consistent with the neuroscience literature: neural habituation to repetitive sensory stimulation is well-documented but varies substantially across individuals (Thompson & Spencer, 1966; Rankin et al., 2009). The high inter-subject variability actually **strengthens the case for adaptive scheduling** -- a fixed protocol cannot accommodate the fact that some subjects habituate rapidly while others don't.
 
@@ -224,12 +229,12 @@ We compared four control strategies in simulation:
 
 10 trials, 600 seconds each.
 
-| Method | Mean PAC | Stim % | Efficiency | Late-Session PAC |
-|--------|----------|--------|------------|-----------------|
-| Fixed Schedule | 0.229 +/- 0.005 | 66.7% | 5.38 | 0.230 |
-| Reactive Threshold | 0.145 +/- 0.006 | 28.4% | 6.68 | 0.161 |
-| Predictive Look-Ahead | 0.184 +/- 0.008 | 49.5% | 5.40 | 0.183 |
-| Oracle | 0.200 +/- 0.001 | 49.0% | 6.12 | 0.202 |
+| Method                | Mean PAC        | Stim % | Efficiency | Late-Session PAC |
+| --------------------- | --------------- | ------ | ---------- | ---------------- |
+| Fixed Schedule        | 0.229 +/- 0.005 | 66.7%  | 5.38       | 0.230            |
+| Reactive Threshold    | 0.145 +/- 0.006 | 28.4%  | 6.68       | 0.161            |
+| Predictive Look-Ahead | 0.184 +/- 0.008 | 49.5%  | 5.40       | 0.183            |
+| Oracle                | 0.200 +/- 0.001 | 49.0%  | 6.12       | 0.202            |
 
 Without fatigue, Fixed Schedule achieves the highest mean PAC by simply stimulating the most (67% of the time). Efficiency (improvement per unit of stimulation) is comparable across methods.
 
@@ -237,14 +242,15 @@ Without fatigue, Fixed Schedule achieves the highest mean PAC by simply stimulat
 
 Same configuration, but the simulator now models neural habituation: continuous stimulation progressively reduces effectiveness, rest periods allow recovery.
 
-| Method | Mean PAC | Stim % | Efficiency | Late-Session PAC |
-|--------|----------|--------|------------|-----------------|
-| Fixed Schedule | 0.224 +/- 0.006 | 66.7% | 5.22 | 0.225 |
-| Reactive Threshold | 0.140 +/- 0.006 | 28.4% | 6.36 | 0.154 |
-| Predictive Look-Ahead | 0.181 +/- 0.007 | 49.1% | 5.33 | 0.185 |
-| Oracle | 0.198 +/- 0.001 | 52.8% | 5.60 | 0.199 |
+| Method                | Mean PAC        | Stim % | Efficiency | Late-Session PAC |
+| --------------------- | --------------- | ------ | ---------- | ---------------- |
+| Fixed Schedule        | 0.224 +/- 0.006 | 66.7%  | 5.22       | 0.225            |
+| Reactive Threshold    | 0.140 +/- 0.006 | 28.4%  | 6.36       | 0.154            |
+| Predictive Look-Ahead | 0.181 +/- 0.007 | 49.1%  | 5.33       | 0.185            |
+| Oracle                | 0.198 +/- 0.001 | 52.8%  | 5.60       | 0.199            |
 
 **Wilcoxon signed-rank tests (Predictive vs Fixed):**
+
 - Efficiency: p = 0.0098 (significant)
 - Late-session PAC: p = 0.0020 (significant)
 
@@ -254,14 +260,14 @@ With fatigue present, the Predictive Look-Ahead controller is **significantly mo
 
 How does the adaptive advantage scale with habituation severity?
 
-| Fatigue Rate | Fixed Efficiency | Predictive Efficiency | Gain | Wilcoxon p |
-|-------------|-----------------|----------------------|------|-----------|
-| 0.000 (none) | 5.38 | 5.40 | +0.4% | 0.492 (n.s.) |
-| 0.004 (mild) | 5.29 | 5.36 | +1.3% | 0.020 * |
-| 0.008 (moderate) | 5.22 | 5.33 | +2.1% | 0.010 ** |
-| 0.015 (moderate-high) | 5.10 | 5.23 | +2.6% | 0.010 ** |
-| 0.025 (high) | 4.97 | 5.18 | +4.3% | 0.002 ** |
-| 0.040 (severe) | 4.82 | 5.09 | +5.7% | 0.010 ** |
+| Fatigue Rate          | Fixed Efficiency | Predictive Efficiency | Gain  | Wilcoxon p   |
+| --------------------- | ---------------- | --------------------- | ----- | ------------ |
+| 0.000 (none)          | 5.38             | 5.40                  | +0.4% | 0.492 (n.s.) |
+| 0.004 (mild)          | 5.29             | 5.36                  | +1.3% | 0.020 \*     |
+| 0.008 (moderate)      | 5.22             | 5.33                  | +2.1% | 0.010 \*\*   |
+| 0.015 (moderate-high) | 5.10             | 5.23                  | +2.6% | 0.010 \*\*   |
+| 0.025 (high)          | 4.97             | 5.18                  | +4.3% | 0.002 \*\*   |
+| 0.040 (severe)        | 4.82             | 5.09                  | +5.7% | 0.010 \*\*   |
 
 **At every non-zero fatigue level (5/5), adaptive scheduling is significantly more efficient than fixed scheduling (all p < 0.05).** The advantage grows monotonically with fatigue severity: from +1.3% at mild fatigue to +5.7% at severe fatigue.
 
@@ -269,11 +275,11 @@ How does the adaptive advantage scale with habituation severity?
 
 The results above (Sections 4.4.1-4.4.3) were generated with n=10 trials. A statistically rigorous reanalysis using `rigor/rigorous_validation.py` with n=50 trials per condition, 600s each, bootstrap 95% CIs, and proper Hedges' g effect sizes produces stronger results:
 
-| Condition | Fixed Efficiency | Predictive Efficiency | Gain | Wilcoxon p | Hedges' g |
-|-----------|-----------------|----------------------|------|-----------|-----------|
-| Standard (no fatigue) | 0.343 [0.340, 0.345] | 0.371 [0.367, 0.375] | +8.2% | < 0.001 | 2.28 |
-| Fatigue (default) | 0.333 [0.330, 0.336] | 0.363 [0.359, 0.367] | +8.9% | < 0.001 | 2.37 |
-| Population-diverse | 0.350 [0.331, 0.368] | 0.381 [0.361, 0.399] | +8.8% | < 0.001 | 0.44 |
+| Condition             | Fixed Efficiency     | Predictive Efficiency | Gain  | Wilcoxon p | Hedges' g |
+| --------------------- | -------------------- | --------------------- | ----- | ---------- | --------- |
+| Standard (no fatigue) | 0.343 [0.340, 0.345] | 0.371 [0.367, 0.375]  | +8.2% | < 0.001    | 2.28      |
+| Fatigue (default)     | 0.333 [0.330, 0.336] | 0.363 [0.359, 0.367]  | +8.9% | < 0.001    | 2.37      |
+| Population-diverse    | 0.350 [0.331, 0.368] | 0.381 [0.361, 0.399]  | +8.8% | < 0.001    | 0.44      |
 
 Fatigue sweep (n=50 per level): gains range from +9.0% to +11.2%, all p < 0.001.
 
@@ -285,12 +291,12 @@ Full results: `rigor/rigorous_validation_results.json`
 
 A critical robustness question: does the adaptive scheduling advantage depend on the specific fatigue model used? To test this, we implemented four fundamentally different fatigue mechanisms and ran the full comparison (n=50 trials, 600s each) under each:
 
-| Fatigue Model | Fixed Eff. | Adaptive Eff. | Gain | p-value | Hedges' g |
-|---------------|-----------|---------------|------|---------|-----------|
-| Exponential Decay (original) | 0.335 | 0.365 | +9.0% | 1.8e-15 | 2.31 |
-| Step Function (threshold) | 0.329 | 0.352 | +6.9% | 4.4e-14 | 1.21 |
-| Heterogeneous Population (50/50 split) | 0.333 | 0.363 | +8.9% | 2.5e-14 | 1.71 |
-| Saturation Model (synaptic depletion) | 0.267 | 0.317 | +19.0% | 1.8e-15 | 3.66 |
+| Fatigue Model                          | Fixed Eff. | Adaptive Eff. | Gain   | p-value | Hedges' g |
+| -------------------------------------- | ---------- | ------------- | ------ | ------- | --------- |
+| Exponential Decay (original)           | 0.335      | 0.365         | +9.0%  | 1.8e-15 | 2.31      |
+| Step Function (threshold)              | 0.329      | 0.352         | +6.9%  | 4.4e-14 | 1.21      |
+| Heterogeneous Population (50/50 split) | 0.333      | 0.363         | +8.9%  | 2.5e-14 | 1.71      |
+| Saturation Model (synaptic depletion)  | 0.267      | 0.317         | +19.0% | 1.8e-15 | 3.66      |
 
 The adaptive advantage is robust across all four fatigue model types (all p < 10^-13, all Hedges' g > 1.0). The Saturation Model produces the largest gain (+19.0%, g=3.66) because fixed scheduling wastes the most stimulation when the PAC ceiling itself depletes. The Step Function produces the smallest gain (+6.9%, g=1.21) because the threshold mechanism creates less opportunity for gradual optimization.
 
@@ -322,7 +328,7 @@ Full results: `rigor/experiments/fatigue_model_sensitivity_results.json`
 
 4. **Predictive achieves lower absolute PAC than Fixed Schedule.** Fixed Schedule (67% stim) gets PAC = 0.224; Predictive (49% stim) gets PAC = 0.181. The win is efficiency, not raw entrainment magnitude.
 
-5. **The closed-loop simulation uses a simplified brain model.** The exponential-approach dynamics (PAC(t+1) = PAC(t) + tau * (target - PAC(t)) + noise) are a reasonable first approximation but do not capture the full complexity of neural entrainment dynamics.
+5. **The closed-loop simulation uses a simplified brain model.** The exponential-approach dynamics (PAC(t+1) = PAC(t) + tau \* (target - PAC(t)) + noise) are a reasonable first approximation but do not capture the full complexity of neural entrainment dynamics.
 
 ---
 
@@ -434,38 +440,39 @@ Results are saved to `results/` and `models/`. All random seeds are fixed for de
 
 ### 10.1 TCN Model (Retrained on Raw Targets)
 
-| Metric | Value |
-|--------|-------|
-| Architecture | MultiscaleCausalTCN (31,043 params) |
-| Best val R² | 0.411 (raw PAC, ts=1) |
-| Test R² | 0.170 (6 held-out subjects) |
-| Test Pearson r | 0.433 |
-| Prediction horizon | 5 seconds |
+| Metric             | Value                               |
+| ------------------ | ----------------------------------- |
+| Architecture       | MultiscaleCausalTCN (31,043 params) |
+| Best val R²        | 0.411 (raw PAC, ts=1)               |
+| Test R²            | 0.170 (6 held-out subjects)         |
+| Test Pearson r     | 0.433                               |
+| Prediction horizon | 5 seconds                           |
 
 ### 10.2 Closed-Loop Controller Comparison (Real EEG Replay)
 
-| Controller | Alignment | Low-PAC Stim | High-PAC Rest | Stim % | PAC Gap (µV²) |
-|-----------|-----------|-------------|--------------|--------|---------------|
-| Fixed Schedule | 45.0% | 61.4% | 28.6% | 66.6% | −6.6 |
-| Reactive Threshold | 64.5% | 51.7% | 77.3% | 36.7% | +21.1 |
-| **TCN Predictive** | **72.1%** | **82.6%** | 61.6% | 59.7% | **+30.5** |
-| Hybrid TCN+Reactive | 73.8% | 85.3% | 62.2% | 60.8% | +34.0 |
-| Alignment Oracle | 100.0% | 100.0% | 100.0% | 48.3% | +33.3 |
+| Controller          | Alignment | Low-PAC Stim | High-PAC Rest | Stim % | PAC Gap (µV²) |
+| ------------------- | --------- | ------------ | ------------- | ------ | ------------- |
+| Fixed Schedule      | 45.0%     | 61.4%        | 28.6%         | 66.6%  | −6.6          |
+| Reactive Threshold  | 64.5%     | 51.7%        | 77.3%         | 36.7%  | +21.1         |
+| **TCN Predictive**  | **72.1%** | **82.6%**    | 61.6%         | 59.7%  | **+30.5**     |
+| Hybrid TCN+Reactive | 73.8%     | 85.3%        | 62.2%         | 60.8%  | +34.0         |
+| Alignment Oracle    | 100.0%    | 100.0%       | 100.0%        | 48.3%  | +33.3         |
 
 ### 10.3 Statistical Significance (TCN vs Reactive, n=35)
 
-| Metric | Hedges' g [95% CI] | p-value |
-|--------|-------------------|---------|
-| Epoch Alignment | +1.31 [+0.75, +1.87] | < 0.001 |
+| Metric            | Hedges' g [95% CI]   | p-value |
+| ----------------- | -------------------- | ------- |
+| Epoch Alignment   | +1.31 [+0.75, +1.87] | < 0.001 |
 | Low-PAC Stim Rate | +4.47 [+3.33, +5.62] | < 0.001 |
-| PAC Target Gap | +1.57 [+0.98, +2.17] | < 0.001 |
-| Clinical Utility | +0.95 [+0.43, +1.47] | < 0.001 |
+| PAC Target Gap    | +1.57 [+0.98, +2.17] | < 0.001 |
+| Clinical Utility  | +0.95 [+0.43, +1.47] | < 0.001 |
 
 All 35/35 subjects (100%) show improved clinical utility with TCN-based control (binomial p < 0.001). Results are robust across delta-z thresholds 0.2–1.0.
 
 ### 10.4 Figures
 
 See `results/figures/` for publication-quality visualizations:
+
 - `controller_comparison.png` — Grouped bar chart with significance brackets
 - `pac_targeting_gap.png` — PAC targeting quality (Fixed Schedule goes WRONG direction)
 - `per_subject_utility.png` — Per-subject scatter (35/35 above diagonal)
@@ -479,9 +486,9 @@ Full statistical details: `results/RESULTS_REPORT.md` and `results/metrics/tcn_v
 
 ## 11. References
 
-- Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. *Nature*, 540(7632), 230-235.
-- Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. *Cell*, 177(2), 256-271.
-- Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. *Journal of Neurophysiology*, 104(2), 1195-1210.
-- Lawhern, V. J., et al. (2018). EEGNet: a compact convolutional neural network for EEG-based brain-computer interfaces. *Journal of Neural Engineering*, 15(5), 056013.
-- Thompson, R. F., & Spencer, W. A. (1966). Habituation: a model phenomenon for the study of neuronal substrates of behavior. *Psychological Review*, 73(1), 16-43.
-- Rankin, C. H., et al. (2009). Habituation revisited: an updated and revised description of the behavioral characteristics of habituation. *Neurobiology of Learning and Memory*, 92(2), 135-138.
+- Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. _Nature_, 540(7632), 230-235.
+- Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. _Cell_, 177(2), 256-271.
+- Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. _Journal of Neurophysiology_, 104(2), 1195-1210.
+- Lawhern, V. J., et al. (2018). EEGNet: a compact convolutional neural network for EEG-based brain-computer interfaces. _Journal of Neural Engineering_, 15(5), 056013.
+- Thompson, R. F., & Spencer, W. A. (1966). Habituation: a model phenomenon for the study of neuronal substrates of behavior. _Psychological Review_, 73(1), 16-43.
+- Rankin, C. H., et al. (2009). Habituation revisited: an updated and revised description of the behavioral characteristics of habituation. _Neurobiology of Learning and Memory_, 92(2), 135-138.

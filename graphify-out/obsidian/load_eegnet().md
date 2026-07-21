@@ -10,8 +10,9 @@ tags:
 # load_eegnet()
 
 ## Connections
+
 - [[Load 4-channel EEGNet from checkpoint.      Returns         model EEGNet in ev]] - `rationale_for` [EXTRACTED]
 - [[demo_streaming.py]] - `contains` [EXTRACTED]
 - [[run_demo()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

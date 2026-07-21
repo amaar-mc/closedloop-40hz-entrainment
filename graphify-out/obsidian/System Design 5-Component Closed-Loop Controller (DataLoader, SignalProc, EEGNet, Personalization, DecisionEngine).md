@@ -10,6 +10,7 @@ tags:
 # System Design: 5-Component Closed-Loop Controller (DataLoader, SignalProc, EEGNet, Personalization, DecisionEngine)
 
 ## Connections
+
 - [[Engineering Goal Closed-Loop EEG Controller to Maximize Theta-Gamma PAC]] - `implements` [EXTRACTED]
 - [[System Flowchart BIDS Load → 2s Window → EEGNet → PAC Predict → Z-Score → Decision (StimulateRestMaintain)]] - `references` [EXTRACTED]
 

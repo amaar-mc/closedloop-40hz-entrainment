@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Per-Subject Adaptation via Head Fine-Tuning]] - document - FINDINGS.md
 
 ## Live Query (requires Dataview plugin)

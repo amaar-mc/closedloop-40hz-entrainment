@@ -10,6 +10,7 @@ tags:
 # fig_stim_vs_alignment()
 
 ## Connections
+
 - [[Labeled scatter x = Stim %, y = Alignment %, one point per controller.]] - `rationale_for` [EXTRACTED]
 - [[_controller_order()]] - `calls` [EXTRACTED]
 - [[generate_figures.py]] - `contains` [EXTRACTED]

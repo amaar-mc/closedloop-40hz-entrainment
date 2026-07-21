@@ -9,6 +9,7 @@ tags:
 # Numbers Sheet (Old v1 Reference)
 
 ## Connections
+
 - [[12 PAC+Stim Features (pac_current, pac_ma, pac_diff, stim context)]] - `references` [EXTRACTED]
 - [[Causal TCN Stage 2 Temporal PAC Forecaster (22,914 params, h=5s)]] - `references` [EXTRACTED]
 - [[Controller Comparison (FixedReactiveTCNHybridOracle, N=35)]] - `references` [EXTRACTED]

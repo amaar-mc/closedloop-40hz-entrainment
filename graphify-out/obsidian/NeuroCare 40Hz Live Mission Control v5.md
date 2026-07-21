@@ -10,6 +10,7 @@ tags:
 # NeuroCare 40Hz Live Mission Control v5
 
 ## Connections
+
 - [[40 Hz Click-Train Audio Generator]] - `calls` [EXTRACTED]
 - [[Closed-Loop Stimulation Decision Logic]] - `implements` [EXTRACTED]
 - [[ImprovedTCN (4ch PAC+Stim model)]] - `calls` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[PAC Computer (Tort 2010 MI)]] - `calls` [EXTRACTED]
 - [[Real EEG Adapter (Muse 2 BLE)]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

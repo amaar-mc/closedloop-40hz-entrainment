@@ -9,9 +9,11 @@ Current 40 Hz auditory entrainment protocols for Alzheimer's disease use fixed s
 ## Section-by-section arc
 
 ### Abstract
+
 Problem → gap → our approach → headline numbers (R²=0.606, 72.1% vs 64.5%, 91% oracle).
 
 ### Introduction
+
 1. Alzheimer's — scale of problem, no cure
 2. 40 Hz entrainment — evidence, mechanism (PAC)
 3. Why fixed schedules fail (inter-patient variability + habituation)
@@ -20,6 +22,7 @@ Problem → gap → our approach → headline numbers (R²=0.606, 72.1% vs 64.5%
 6. Preview of key findings
 
 ### Related Work
+
 - 40 Hz entrainment literature (Iaccarino 2016, Martorell 2019, Lahijanian 2024)
 - PAC as entrainment biomarker (Tort 2010)
 - EEG-based neural state prediction (BCI literature)
@@ -27,6 +30,7 @@ Problem → gap → our approach → headline numbers (R²=0.606, 72.1% vs 64.5%
 - TCN for time series (Bai 2018) — justify architectural choice
 
 ### Methods
+
 - Dataset (ds005048, 35 subjects, 7 channels)
 - Stage 1: static PAC estimation (EEGNet, architecture search)
 - Stage 2: temporal prediction (feature design → ablation → causal TCN)
@@ -35,6 +39,7 @@ Problem → gap → our approach → headline numbers (R²=0.606, 72.1% vs 64.5%
 - Statistical analysis (Hedges' g, Wilcoxon signed-rank, Bonferroni)
 
 ### Results
+
 1. Architecture search: R²=0.287 ceiling, model size irrelevant
 2. Feature ablation: spectral → generalization failure; PAC+Stim → R²=0.606
 3. Horizon sweep: TCN maintains R²=0.577-0.669 at 3-10s where baselines collapse
@@ -42,6 +47,7 @@ Problem → gap → our approach → headline numbers (R²=0.606, 72.1% vs 64.5%
 5. Fatigue robustness: advantage grows with habituation severity
 
 ### Discussion
+
 - Feature generalization failure: WHY spectral features fail (anatomy hypothesis)
 - Horizon sweet spot: why short horizons favor persistence (autocorrelation)
 - Clinical interpretation: 91% oracle = near-maximal with imperfect prediction
@@ -49,6 +55,7 @@ Problem → gap → our approach → headline numbers (R²=0.606, 72.1% vs 64.5%
 - Broader applicability: TMS, tDCS, other repetitive neurostimulation
 
 ### Conclusion
+
 - Feature selection > architecture for cross-subject generalization
 - Proactive control is achievable and clinically meaningful
 - Path to deployment: live EEG streaming, RL controller, multi-biomarker

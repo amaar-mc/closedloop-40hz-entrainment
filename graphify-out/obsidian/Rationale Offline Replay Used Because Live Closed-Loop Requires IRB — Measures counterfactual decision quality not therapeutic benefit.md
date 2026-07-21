@@ -10,6 +10,7 @@ tags:
 # Rationale: Offline Replay Used Because Live Closed-Loop Requires IRB — Measures counterfactual decision quality not therapeutic benefit
 
 ## Connections
+
 - [[Offline Counterfactual Replay Validation on 35 Subjects]] - `rationale_for` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

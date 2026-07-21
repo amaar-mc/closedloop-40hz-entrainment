@@ -10,6 +10,7 @@ tags:
 # sec()
 
 ## Connections
+
 - [[Major section heading -- 22pt bold, thin rule underneath.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `method` [EXTRACTED]
 - [[_add_textbox()]] - `calls` [EXTRACTED]

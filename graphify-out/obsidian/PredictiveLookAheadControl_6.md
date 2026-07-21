@@ -10,6 +10,7 @@ tags:
 # PredictiveLookAheadControl
 
 ## Connections
+
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[ControlMethodBase_2]] - `inherits` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
@@ -25,4 +26,4 @@ tags:
 - [[step()_70]] - `method` [EXTRACTED]
 - [[validation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

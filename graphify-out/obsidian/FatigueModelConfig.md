@@ -10,6 +10,7 @@ tags:
 # FatigueModelConfig
 
 ## Connections
+
 - [[Configuration for a fatigue model experiment.]] - `rationale_for` [EXTRACTED]
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
@@ -19,4 +20,4 @@ tags:
 - [[fatigue_model_sensitivity.py]] - `contains` [EXTRACTED]
 - [[main()_69]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

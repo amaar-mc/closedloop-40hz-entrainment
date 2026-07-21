@@ -10,6 +10,7 @@ tags:
 # apply_unicode_replacements()
 
 ## Connections
+
 - [[Replace Unicode symbols with LaTeX equivalents.]] - `rationale_for` [EXTRACTED]
 - [[generate_latex()]] - `calls` [EXTRACTED]
 - [[generate_paper_latex.py]] - `contains` [EXTRACTED]

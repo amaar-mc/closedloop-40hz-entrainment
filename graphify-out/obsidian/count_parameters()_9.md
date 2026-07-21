@@ -10,6 +10,7 @@ tags:
 # count_parameters()
 
 ## Connections
+
 - [[Count trainable parameters._2]] - `rationale_for` [EXTRACTED]
 - [[spectempnet.py]] - `contains` [EXTRACTED]
 - [[test_spectempnet()]] - `calls` [EXTRACTED]

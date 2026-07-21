@@ -10,6 +10,7 @@ tags:
 # Count trainable parameters.
 
 ## Connections
+
 - [[count_parameters()_7]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_EEGNet_V2

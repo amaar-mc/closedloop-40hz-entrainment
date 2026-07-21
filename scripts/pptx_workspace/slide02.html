@@ -1,32 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<style>
-html { background: #ffffff; }
-body {
-  width: 792pt; height: 612pt; margin: 0; padding: 0;
-  background: #ffffff; font-family: 'Times New Roman', Times, serif;
-  display: flex; flex-direction: column;
-}
-.content { margin: 43pt 54pt; flex: 1; }
-h1 { font-size: 22pt; color: #000; margin-bottom: 10pt; font-weight: bold; }
-h2 { font-size: 17pt; color: #000; margin-top: 12pt; margin-bottom: 4pt; font-weight: bold; }
-p { font-size: 14pt; color: #000; line-height: 1.35; margin: 3pt 0 6pt 0; }
-</style>
-</head>
-<body>
-<div class="content">
-  <h1>Introduction</h1>
+  <head>
+    <style>
+      html {
+        background: #ffffff;
+      }
+      body {
+        width: 792pt;
+        height: 612pt;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        font-family: "Times New Roman", Times, serif;
+        display: flex;
+        flex-direction: column;
+      }
+      .content {
+        margin: 43pt 54pt;
+        flex: 1;
+      }
+      h1 {
+        font-size: 22pt;
+        color: #000;
+        margin-bottom: 10pt;
+        font-weight: bold;
+      }
+      h2 {
+        font-size: 17pt;
+        color: #000;
+        margin-top: 12pt;
+        margin-bottom: 4pt;
+        font-weight: bold;
+      }
+      p {
+        font-size: 14pt;
+        color: #000;
+        line-height: 1.35;
+        margin: 3pt 0 6pt 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Introduction</h1>
 
-  <h2>Research Question</h2>
-  <p>Can deep learning models trained on EEG-derived features forecast theta&#8211;gamma phase-amplitude coupling (PAC) dynamics 5&#8211;10 seconds into the future, and does integrating such forecasts into a closed-loop controller produce measurable improvements in personalized 40 Hz entrainment therapy for Alzheimer&#8217;s disease?</p>
+      <h2>Research Question</h2>
+      <p>
+        Can deep learning models trained on EEG-derived features forecast
+        theta&#8211;gamma phase-amplitude coupling (PAC) dynamics 5&#8211;10
+        seconds into the future, and does integrating such forecasts into a
+        closed-loop controller produce measurable improvements in personalized
+        40 Hz entrainment therapy for Alzheimer&#8217;s disease?
+      </p>
 
-  <p><b>Hypothesis:</b> A Temporal Convolutional Network trained on 12 causal PAC-derived and stimulation context features &#8212; rather than 73 spectral features &#8212; can predict future PAC at horizons where simpler baselines fail (beyond &#8776;3 seconds), enabling a predictive controller that outperforms reactive threshold control and approaches the theoretical oracle bound.</p>
+      <p>
+        <b>Hypothesis:</b> A Temporal Convolutional Network trained on 12 causal
+        PAC-derived and stimulation context features &#8212; rather than 73
+        spectral features &#8212; can predict future PAC at horizons where
+        simpler baselines fail (beyond &#8776;3 seconds), enabling a predictive
+        controller that outperforms reactive threshold control and approaches
+        the theoretical oracle bound.
+      </p>
 
-  <h2>Project Origin</h2>
-  <p>I became interested in computational approaches to Alzheimer&#8217;s therapy after reading about the landmark Iaccarino et al. (2016) Nature study showing that 40 Hz sensory stimulation reduced amyloid-beta plaques in AD mouse models by up to 50%. Looking into human clinical translation, I noticed a gap: all existing protocols deliver stimulation on rigid fixed schedules that ignore individual neural responses. Approximately 30% of patients are non-responders (Fortunato et al., 2023), and habituation degrades entrainment within sessions &#8212; yet fixed protocols cannot detect or adapt to these dynamics.</p>
+      <h2>Project Origin</h2>
+      <p>
+        I became interested in computational approaches to Alzheimer&#8217;s
+        therapy after reading about the landmark Iaccarino et al. (2016) Nature
+        study showing that 40 Hz sensory stimulation reduced amyloid-beta
+        plaques in AD mouse models by up to 50%. Looking into human clinical
+        translation, I noticed a gap: all existing protocols deliver stimulation
+        on rigid fixed schedules that ignore individual neural responses.
+        Approximately 30% of patients are non-responders (Fortunato et al.,
+        2023), and habituation degrades entrainment within sessions &#8212; yet
+        fixed protocols cannot detect or adapt to these dynamics.
+      </p>
 
-  <p>This observation led to my central question: could machine learning predict when a patient&#8217;s brain will lose entrainment, enabling proactive intervention? I began this project in early 2026 using the publicly available OpenNeuro ds005048 EEG dataset. The project concept originated from my independent literature review and was not assigned as part of any class or institutional program.</p>
-</div>
-</body>
+      <p>
+        This observation led to my central question: could machine learning
+        predict when a patient&#8217;s brain will lose entrainment, enabling
+        proactive intervention? I began this project in early 2026 using the
+        publicly available OpenNeuro ds005048 EEG dataset. The project concept
+        originated from my independent literature review and was not assigned as
+        part of any class or institutional program.
+      </p>
+    </div>
+  </body>
 </html>

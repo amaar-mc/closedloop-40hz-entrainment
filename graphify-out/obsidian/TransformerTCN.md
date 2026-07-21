@@ -10,6 +10,7 @@ tags:
 # TransformerTCN
 
 ## Connections
+
 - [[Causal Transformer encoder for temporal PAC prediction.      Replaces the dila]] - `rationale_for` [EXTRACTED]
 - [[__init__()_137]] - `method` [EXTRACTED]
 - [[_generate_causal_mask()]] - `method` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # FixedScheduleControl (40s ON / 20s OFF Fixed Protocol)
 
 ## Connections
+
 - [[TCNPredictiveControl (Neural Network Look-Ahead Controller)]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_125

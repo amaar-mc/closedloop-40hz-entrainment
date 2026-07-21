@@ -10,6 +10,7 @@ tags:
 # Lab Notebook Tab Organization System for CSEF Judging
 
 ## Connections
+
 - [[Critical Lab Notebook Entries (turning points ceiling, feature discovery)]] - `references` [EXTRACTED]
 
   #community/Community_30

@@ -9,6 +9,7 @@ tags:
 # IEEEtran LaTeX Template
 
 ## Connections
+
 - [[IEEE EMBC Conference]] - `references` [EXTRACTED]
 
   #community/Community_96

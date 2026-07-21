@@ -10,7 +10,8 @@ tags:
 # Test EEGNetEnhanced with example input and print architecture details.
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[test_eegnet_enhanced()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

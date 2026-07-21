@@ -7,10 +7,11 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[DataAugmentor]] - `method` [EXTRACTED]
 - [[Initialize augmentor.          Args             fs Sampling frequency (Hz)]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

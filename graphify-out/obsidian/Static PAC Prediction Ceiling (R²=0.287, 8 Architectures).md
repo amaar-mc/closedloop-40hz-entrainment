@@ -10,6 +10,7 @@ tags:
 # Static PAC Prediction Ceiling (R²=0.287, 8 Architectures)
 
 ## Connections
+
 - [[EEGNet V1 (1457 Params, R²=0.287 Static Baseline)]] - `references` [EXTRACTED]
 - [[Rationale for Temporal Prediction Pivot (from Static Ceiling)]] - `rationale_for` [EXTRACTED]
 - [[Research Paper v4 (Full Paper, Feature-Ablation Version)]] - `references` [EXTRACTED]

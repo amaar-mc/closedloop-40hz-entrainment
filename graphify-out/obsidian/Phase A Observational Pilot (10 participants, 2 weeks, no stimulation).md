@@ -10,6 +10,7 @@ tags:
 # Phase A: Observational Pilot (10 participants, 2 weeks, no stimulation)
 
 ## Connections
+
 - [[Clinical Roadmap (Research to Practice Pathway)]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

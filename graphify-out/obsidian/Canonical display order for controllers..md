@@ -10,6 +10,7 @@ tags:
 # Canonical display order for controllers.
 
 ## Connections
+
 - [[_controller_order()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_66

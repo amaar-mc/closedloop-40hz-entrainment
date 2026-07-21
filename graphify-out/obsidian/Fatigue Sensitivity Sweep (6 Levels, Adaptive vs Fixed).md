@@ -10,6 +10,7 @@ tags:
 # Fatigue Sensitivity Sweep (6 Levels, Adaptive vs Fixed)
 
 ## Connections
+
 - [[Closed-Loop Simulation 4 Controller Strategies Compared]] - `references` [EXTRACTED]
 - [[Real-Data Habituation  Fatigue Analysis (N=35)]] - `conceptually_related_to` [INFERRED]
 

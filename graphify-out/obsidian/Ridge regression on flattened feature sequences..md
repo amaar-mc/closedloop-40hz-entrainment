@@ -10,6 +10,7 @@ tags:
 # Ridge regression on flattened feature sequences.
 
 ## Connections
+
 - [[ridge_baseline()_2]] - `rationale_for` [EXTRACTED]
 
   #community/Community_90

@@ -8,4 +8,4 @@ tags:
 
 # Poster Example (Reference PDF)
 
-  #community/Community_188
+#community/Community_188

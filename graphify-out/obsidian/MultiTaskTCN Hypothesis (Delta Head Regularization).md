@@ -10,6 +10,7 @@ tags:
 # MultiTaskTCN Hypothesis (Delta Head Regularization)
 
 ## Connections
+
 - [[MultiTaskTCN (lambda_delta=0.3, lambda_consistency=0.1)]] - `rationale_for` [EXTRACTED]
 - [[TCN Architecture Experiment Design]] - `references` [EXTRACTED]
 

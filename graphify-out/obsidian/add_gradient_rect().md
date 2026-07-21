@@ -10,6 +10,7 @@ tags:
 # add_gradient_rect()
 
 ## Connections
+
 - [[Add a rectangle with gradient fill matching template header.]] - `rationale_for` [EXTRACTED]
 - [[v2_builder.py]] - `contains` [EXTRACTED]
 

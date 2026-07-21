@@ -10,6 +10,7 @@ tags:
 # Judging Criteria Coverage Map (02 Short Script)
 
 ## Connections
+
 - [[Short Accessible Presentation Script (02, Elevator-Expandable)]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

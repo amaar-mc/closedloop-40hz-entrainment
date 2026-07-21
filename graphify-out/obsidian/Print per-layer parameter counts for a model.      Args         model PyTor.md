@@ -7,10 +7,11 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Print per-layer parameter counts for a model.      Args:         model: PyTor
+# Print per-layer parameter counts for a model. Args: model: PyTor
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[_print_layer_params()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

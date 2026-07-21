@@ -9,6 +9,7 @@ tags:
 # Model Architecture Deep Dive Phase (Phase 3)
 
 ## Connections
+
 - [[Architecture Exploration Comparison (10 models, 5-seed)]] - `references` [EXTRACTED]
 - [[Data Leakage Audit (77 checks pass, no leakage)]] - `references` [EXTRACTED]
 - [[Feature Ablation Validation (pac_stim  pac  all  spectral confirmed)]] - `references` [EXTRACTED]

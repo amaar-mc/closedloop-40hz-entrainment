@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _make_serializable()
+# \_make_serializable()
 
 ## Connections
+
 - [[Recursively convert numpy types for JSON serialization.]] - `rationale_for` [EXTRACTED]
 - [[main()_71]] - `calls` [EXTRACTED]
 - [[tcn_interpretability.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

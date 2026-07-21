@@ -10,6 +10,7 @@ tags:
 # TRIBE V2 Alzheimer's Disease Simulation Figure
 
 ## Connections
+
 - [[Adaptive Stimulation Benefit by Severity (Panel C)]] - `references` [EXTRACTED]
 - [[Adaptive Stimulation Benefit Predictive minus Fixed (Panel C)]] - `references` [EXTRACTED]
 - [[Fixed Schedule Controller Strategy]] - `references` [EXTRACTED]

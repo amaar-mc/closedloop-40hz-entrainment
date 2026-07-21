@@ -9,6 +9,7 @@ tags:
 # TCN Architecture Experiment Design
 
 ## Connections
+
 - [[Data Limitation as Performance Ceiling Rationale]] - `rationale_for` [EXTRACTED]
 - [[DeepDilationTCN Hypothesis (Extended Receptive Field)]] - `references` [EXTRACTED]
 - [[MultiTaskTCN Hypothesis (Delta Head Regularization)]] - `references` [EXTRACTED]

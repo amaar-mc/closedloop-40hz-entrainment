@@ -10,8 +10,9 @@ tags:
 # EEGNet PyTorch Implementation (7-channel, 500 samples)
 
 ## Connections
+
 - [[ClosedLoopController Implementation with Hysteresis]] - `calls` [EXTRACTED]
 - [[Comprehensive Methodology Document Step-by-Step Implementation]] - `references` [EXTRACTED]
 - [[EEGNet Architecture (IEEE Paper Specification)]] - `semantically_similar_to` [INFERRED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

@@ -9,7 +9,8 @@ tags:
 # Task Distinction: Future PAC Prediction (R²=0.80 target) vs Static Window PAC (R²=0.29)
 
 ## Connections
+
 - [[Master Model Verdict R² ≈ 0.29 Ceiling]] - `references` [EXTRACTED]
 - [[ΔPAC Prediction Target (Change vs Absolute PAC)]] - `semantically_similar_to` [INFERRED]
 
-  #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model*Ceiling*&\_Leakage_Audits

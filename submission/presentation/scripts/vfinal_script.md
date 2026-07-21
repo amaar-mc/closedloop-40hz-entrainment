@@ -74,18 +74,18 @@ What would you like me to go deeper on?
 
 ## Timing map
 
-| Beat | Section | Time | Poster location |
-|---|---|---|---|
-| 1 | Greeting + disease + 40 Hz mechanism + citations | 45 sec | Introduction + Background |
-| 2 | Fixed schedule gap + habituation + dataset | 40 sec | Fig 3 + Materials |
-| 3 | PAC biomarker — what it is, why it's the signal | 30 sec | System Arch (before Stage 1) |
-| 4 | Stage 1 + 8-architecture ceiling + data ceiling insight | 40 sec | Stage 1 table |
-| 5 | Stage 2 TCN + causal constraint | 25 sec | Stage 2 table |
-| 6 | Feature ablation discovery + 5-seed validation | 35 sec | Feature reduction visual |
-| 7 | Horizon sweep + 5s operational range | 25 sec | Data Analysis |
-| 8 | Controller results + 35/35 + fatigue | 40 sec | Results column |
-| 9 | Product demo + limitation + next steps + closer | 30 sec | Towards Clinical Use + step back |
-| | **Total** | **~4:10** | |
+| Beat | Section                                                 | Time      | Poster location                  |
+| ---- | ------------------------------------------------------- | --------- | -------------------------------- |
+| 1    | Greeting + disease + 40 Hz mechanism + citations        | 45 sec    | Introduction + Background        |
+| 2    | Fixed schedule gap + habituation + dataset              | 40 sec    | Fig 3 + Materials                |
+| 3    | PAC biomarker — what it is, why it's the signal         | 30 sec    | System Arch (before Stage 1)     |
+| 4    | Stage 1 + 8-architecture ceiling + data ceiling insight | 40 sec    | Stage 1 table                    |
+| 5    | Stage 2 TCN + causal constraint                         | 25 sec    | Stage 2 table                    |
+| 6    | Feature ablation discovery + 5-seed validation          | 35 sec    | Feature reduction visual         |
+| 7    | Horizon sweep + 5s operational range                    | 25 sec    | Data Analysis                    |
+| 8    | Controller results + 35/35 + fatigue                    | 40 sec    | Results column                   |
+| 9    | Product demo + limitation + next steps + closer         | 30 sec    | Towards Clinical Use + step back |
+|      | **Total**                                               | **~4:10** |                                  |
 
 ---
 
@@ -104,6 +104,7 @@ What would you like me to go deeper on?
 ## What stays in this script vs what moves to Q&A
 
 **In-script (scientific rigor signal):**
+
 - Tsai lab / Iaccarino 2016 / MIT context
 - Murdock 2024 glymphatic mechanism
 - Chan 2025 long-term safety
@@ -117,6 +118,7 @@ What would you like me to go deeper on?
 - Muse 2 $249 + under $300 total
 
 **Held for Q&A (detail on demand):**
+
 - Tort 2010 Modulation Index implementation
 - Depthwise separable convolutions and dilation factors
 - Exact 12-feature list (pac_ma2, pac_ma4, etc.)

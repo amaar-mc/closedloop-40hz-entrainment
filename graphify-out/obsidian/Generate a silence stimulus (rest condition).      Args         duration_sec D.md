@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Generate a silence stimulus (rest condition).      Args:         duration_sec: D
+# Generate a silence stimulus (rest condition). Args: duration_sec: D
 
 ## Connections
+
 - [[generate_silence()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

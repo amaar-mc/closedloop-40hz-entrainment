@@ -10,7 +10,8 @@ tags:
 # Chan 2025 (Alzheimer's & Dementia): Phase II Extension Study pTau217 Reduction
 
 ## Connections
+
 - [[Annotated Bibliography 39 Sources for Gamma Entrainment Research]] - `references` [EXTRACTED]
 - [[Comprehensive Literature Review Closed-Loop 40Hz Gamma Entrainment for AD]] - `cites` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

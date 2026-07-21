@@ -10,6 +10,7 @@ tags:
 # Bold body text paragraph.
 
 ## Connections
+
 - [[body_bold()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

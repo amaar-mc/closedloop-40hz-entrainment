@@ -10,6 +10,7 @@ tags:
 # Low-PAC Targeting: 82.6% vs 51.7% Reactive (p<0.001)
 
 ## Connections
+
 - [[CSEF Old Project Abstract (247 words)]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

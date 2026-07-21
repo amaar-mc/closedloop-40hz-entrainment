@@ -10,6 +10,7 @@ tags:
 # generate_horizon_sweep()
 
 ## Connections
+
 - [[Generate Paper Figures Script]] - `calls` [EXTRACTED]
 - [[Line graph showing R² vs. prediction horizon for three models     - Persistenc]] - `rationale_for` [EXTRACTED]
 - [[generate_paper_figures.py]] - `contains` [EXTRACTED]

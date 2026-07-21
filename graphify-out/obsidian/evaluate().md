@@ -10,6 +10,7 @@ tags:
 # evaluate()
 
 ## Connections
+
 - [[Evaluate on future and delta heads only. smooth head is auxiliary  training-onl]] - `rationale_for` [EXTRACTED]
 - [[_denorm()_1]] - `calls` [EXTRACTED]
 - [[_metrics()]] - `calls` [EXTRACTED]

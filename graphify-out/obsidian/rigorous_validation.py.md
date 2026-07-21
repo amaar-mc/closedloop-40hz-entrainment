@@ -10,6 +10,7 @@ tags:
 # rigorous_validation.py
 
 ## Connections
+
 - [[ControlMethodBase]] - `contains` [EXTRACTED]
 - [[FixedScheduleControl_5]] - `contains` [EXTRACTED]
 - [[OracleControl_4]] - `contains` [EXTRACTED]
@@ -39,4 +40,4 @@ tags:
 - [[run_trial_batch()]] - `contains` [EXTRACTED]
 - [[simulator.py]] - `imports_from` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

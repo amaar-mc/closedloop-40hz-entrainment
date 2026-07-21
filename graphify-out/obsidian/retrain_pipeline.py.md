@@ -10,6 +10,7 @@ tags:
 # retrain_pipeline.py
 
 ## Connections
+
 - [[4-Channel Muse 2 Model Retraining Pipeline  Retrains the full EEGNet + TCN pipel]] - `rationale_for` [EXTRACTED]
 - [[main()_12]] - `contains` [EXTRACTED]
 - [[step1_process_data()]] - `contains` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[step5_train_tcn()]] - `contains` [EXTRACTED]
 - [[step6_comparison_report()]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # Temporal Transformer Encoder for EEG Sequence Modeling
 
 ## Connections
+
 - [[Proposed GAT-Transformer Architecture for EEG PAC Prediction]] - `implements` [EXTRACTED]
 
   #community/Community_76

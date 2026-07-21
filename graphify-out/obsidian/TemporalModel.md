@@ -10,6 +10,7 @@ tags:
 # TemporalModel
 
 ## Connections
+
 - [[Bonus register() rejects objects that don't satisfy TemporalModel Protocol.]] - `uses` [INFERRED]
 - [[Protocol]] - `inherits` [EXTRACTED]
 - [[Protocol that every temporal PAC predictor must satisfy.      All methods are ca]] - `rationale_for` [EXTRACTED]
@@ -26,4 +27,4 @@ tags:
 - [[reset()_9]] - `method` [EXTRACTED]
 - [[step()_9]] - `method` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

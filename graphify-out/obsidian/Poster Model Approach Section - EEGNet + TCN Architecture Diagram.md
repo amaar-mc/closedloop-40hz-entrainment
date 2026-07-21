@@ -10,6 +10,7 @@ tags:
 # Poster Model Approach Section - EEGNet + TCN Architecture Diagram
 
 ## Connections
+
 - [[Synopsys Final Poster - Full Layout (Personalized Deep Learning for Closed-Loop 40 Hz Entrainment)]] - `references` [EXTRACTED]
 
   #community/Community_31

@@ -10,6 +10,7 @@ tags:
 # replay_subject()
 
 ## Connections
+
 - [[CUSUMControl]] - `calls` [EXTRACTED]
 - [[FixedScheduleControl]] - `calls` [EXTRACTED]
 - [[MultiBiomarkerReactiveControl]] - `calls` [EXTRACTED]
@@ -26,4 +27,4 @@ tags:
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 - [[step()_7]] - `calls` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

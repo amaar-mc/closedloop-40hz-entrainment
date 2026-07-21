@@ -7,9 +7,10 @@ tags:
   - community/CSEF_Presentation_Generator
 ---
 
-# _parse_bold()
+# \_parse_bold()
 
 ## Connections
+
 - [[Parse bold markers and return segment list.]] - `rationale_for` [EXTRACTED]
 - [[add_bullet()]] - `calls` [EXTRACTED]
 - [[generate_csef_pptx.py]] - `contains` [EXTRACTED]

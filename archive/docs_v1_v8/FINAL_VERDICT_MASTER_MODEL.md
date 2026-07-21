@@ -10,6 +10,7 @@
 **TL;DR: A "master model" won't work. R² ≈ 0.29 is the realistic ceiling for this dataset and task.**
 
 After comprehensive analysis of:
+
 - 8 major experimental attempts (V1-V8)
 - 10+ different architectures (ViT-TCNet, EEGNet, ATCNet, TransformEEG, etc.)
 - Complete dataset documentation and research methodology
@@ -24,9 +25,11 @@ After comprehensive analysis of:
 ### The Research Methodology's Target (R² = 0.80)
 
 **From the research methodology document:**
+
 > "H1: Graph Attention Networks combined with Transformer temporal modeling will achieve prediction accuracy >0.80 correlation (R²) for theta-gamma PAC values **5-10 seconds ahead**"
 
 **This is a DIFFERENT task:**
+
 - **Input**: Current EEG state (window at time t)
 - **Output**: FUTURE PAC values (at time t+5 to t+10 seconds)
 - **Use case**: Model Predictive Control (MPC) for closed-loop neuromodulation
@@ -36,6 +39,7 @@ After comprehensive analysis of:
 ### Our Task (R² = 0.29)
 
 **What we're actually doing:**
+
 - **Input**: EEG window (2 seconds, 500 timepoints)
 - **Output**: PAC value FOR THE SAME WINDOW (not future)
 - **Challenge**: Predict PAC without computing PAC (circular reasoning problem)
@@ -76,11 +80,13 @@ After comprehensive analysis of:
 ### 1. No Temporal Autocorrelation
 
 We're predicting PAC from features extracted from THE SAME window:
+
 - **Input**: Spectral power at time t
 - **Output**: PAC at time t
 - **Problem**: Both computed from identical EEG data
 
 There's no "looking into the future" advantage. We're asking:
+
 > "What features of this EEG window (that aren't PAC) correlate with its PAC?"
 
 ### 2. The Circular Reasoning Constraint
@@ -88,12 +94,14 @@ There's no "looking into the future" advantage. We're asking:
 **Features that predict PAC best ARE PAC metrics!**
 
 ❌ **Can't use** (circular):
+
 - Direct theta-gamma coupling (Modulation Index)
 - Phase-amplitude correlation
 - Theta-gamma phase-locking value
 - Any cross-frequency coupling between theta and gamma
 
 ✅ **Can use** (non-circular):
+
 - Spectral power in individual bands
 - Wavelet decomposition
 - Spatial patterns across channels
@@ -110,6 +118,7 @@ Needed for "big model": 100,000+ samples (50+ subjects)
 ```
 
 **Evidence**: Every complex model overfitted:
+
 - ViT-TCNet (1.1M params): R² = 0.252 (worse than Ridge!)
 - EEGNet (5k params): R² = 0.199
 - ATCNet (26k params): R² = 0.075
@@ -131,11 +140,13 @@ SNR = -4.73 dB
 ### 5. Feature Information Saturation
 
 **Lasso experiment proved this:**
+
 - Started with 540 features (135 base + temporal features)
 - Lasso selected only 40 (7% useful!)
 - **93% of features were noise/redundant**
 
 **All models plateau at R² ≈ 0.28-0.29:**
+
 - Ridge: 0.287
 - Lasso: 0.286
 - ElasticNet: 0.286
@@ -153,26 +164,28 @@ SNR = -4.73 dB
 > "Create one, master model, that has been trained a lot, is big, but can infer relatively fast and is super accurate"
 
 **This assumes:**
+
 - ✗ More parameters → better performance
 - ✗ Longer training → better generalization
 - ✗ Bigger model → more signal extraction
 
 **Reality:**
+
 - ✓ More parameters → overfitting (with small data)
 - ✓ Longer training → memorization (not learning)
 - ✓ Bigger model → worse generalization
 
 ### Proof: We Already Tried This
 
-| Model | Parameters | Training | Test R² | Result |
-|-------|-----------|----------|---------|--------|
-| Ridge | ~200 | <1 min | 0.287 | ✓ Best |
-| ViT-TCNet | 1,119,063 | 10 min | 0.252 | ✗ Overfit |
-| EEGNet | 5,024 | 2 min | 0.199 | ✗ Overfit |
-| ATCNet | 26,112 | 3 min | 0.075 | ✗ Overfit |
-| TransformEEG | 122,034 | 5 min | 0.178 | ✗ Overfit |
+| Model        | Parameters | Training | Test R² | Result    |
+| ------------ | ---------- | -------- | ------- | --------- |
+| Ridge        | ~200       | <1 min   | 0.287   | ✓ Best    |
+| ViT-TCNet    | 1,119,063  | 10 min   | 0.252   | ✗ Overfit |
+| EEGNet       | 5,024      | 2 min    | 0.199   | ✗ Overfit |
+| ATCNet       | 26,112     | 3 min    | 0.075   | ✗ Overfit |
+| TransformEEG | 122,034    | 5 min    | 0.178   | ✗ Overfit |
 
-**Pattern**: As parameters ↑, performance ↓**
+**Pattern**: As parameters ↑, performance ↓\*\*
 
 ### Why Bigger Models Fail
 
@@ -186,11 +199,13 @@ Epoch 30: Train Loss ↓    Val Loss ↑    (Memorizing training data)
 ```
 
 **With 11,736 samples:**
+
 - Simple model (200 params): 58 samples/parameter ✓ Healthy ratio
 - EEGNet (5k params): 2.3 samples/parameter ✗ Underpowered
 - ViT-TCNet (1.1M params): 0.01 samples/parameter ✗✗ Severe overfitting
 
 **Rule of thumb**: Need 10+ samples per parameter
+
 - Max reasonable params: ~1,000-5,000
 - Ridge achieves this ✓
 - All deep models violate this ✗
@@ -221,6 +236,7 @@ Remaining variance: 71% (noise)
 ### Overly Optimistic Assumptions
 
 The methodology document assumed:
+
 1. **20-40 subjects** → Actually: 13 subjects ✗
 2. **64-128 channels** → Actually: 7 frontal channels ✗
 3. **500-1000 Hz sampling** → Actually: 250 Hz ✗
@@ -252,14 +268,15 @@ The methodology document assumed:
 
 **Analysis:**
 
-| Samples | Subjects | Expected R² | Reasoning |
-|---------|----------|-------------|-----------|
-| 11,736 (current) | 13 | 0.29 | Information limit reached |
-| 50,000 | 50 | 0.32-0.35 | Enable deeper models, slight gain |
-| 200,000 | 200 | 0.35-0.40 | Population-level patterns, better generalization |
-| 1,000,000 | 1000+ | 0.38-0.45 | Maybe approach 0.46 with optimal architecture |
+| Samples          | Subjects | Expected R² | Reasoning                                        |
+| ---------------- | -------- | ----------- | ------------------------------------------------ |
+| 11,736 (current) | 13       | 0.29        | Information limit reached                        |
+| 50,000           | 50       | 0.32-0.35   | Enable deeper models, slight gain                |
+| 200,000          | 200      | 0.35-0.40   | Population-level patterns, better generalization |
+| 1,000,000        | 1000+    | 0.38-0.45   | Maybe approach 0.46 with optimal architecture    |
 
 **But we'd also need:**
+
 - ✓ 64+ channels (not 7)
 - ✓ High-density EEG (not basic frontal montage)
 - ✓ Longer windows (5-10 sec, not 2 sec)
@@ -292,19 +309,20 @@ Our R² = 0.287 > 0.25 (we're actually beating the theoretical limit!)
 
 ### Published EEG Prediction R² Values
 
-| Study | Task | R² | Note |
-|-------|------|-----|------|
-| Motor imagery BCI | Classify hand movement | 0.20-0.40 | Classification easier than regression |
-| Attention prediction | Continuous attention state | 0.15-0.35 | Similar low SNR challenges |
-| Emotion recognition | Valence/arousal prediction | 0.25-0.45 | Multi-modal helps (EEG + physiological) |
-| P300 detection | Event-related potential | 0.50-0.70 | High SNR, time-locked signal |
-| **Our study** | **PAC from power features** | **0.29** | **Typical for EEG regression** |
+| Study                | Task                        | R²        | Note                                    |
+| -------------------- | --------------------------- | --------- | --------------------------------------- |
+| Motor imagery BCI    | Classify hand movement      | 0.20-0.40 | Classification easier than regression   |
+| Attention prediction | Continuous attention state  | 0.15-0.35 | Similar low SNR challenges              |
+| Emotion recognition  | Valence/arousal prediction  | 0.25-0.45 | Multi-modal helps (EEG + physiological) |
+| P300 detection       | Event-related potential     | 0.50-0.70 | High SNR, time-locked signal            |
+| **Our study**        | **PAC from power features** | **0.29**  | **Typical for EEG regression**          |
 
 **Our R² = 0.287 is NORMAL and respectable for EEG prediction.**
 
 ### Why P300 Studies Achieve R² = 0.70
 
 **Event-related potentials benefit from:**
+
 1. **Time-locking**: Exact timing of stimulus known
 2. **Averaging**: Multiple trials improve SNR
 3. **Large amplitude**: P300 is 5-10 μV (10x larger than PAC-related changes)
@@ -333,6 +351,7 @@ Our R² = 0.287 > 0.25 (we're actually beating the theoretical limit!)
    - **Option C**: Online PAC computation (not prediction, direct measurement)
 
 3. **Architecture** (with adequate data):
+
    ```
    Input: Multi-channel EEG (64 channels × 2500 timepoints @ 1000 Hz)
    ├─ Spatial Feature Extraction
@@ -391,6 +410,7 @@ Our R² = 0.287 > 0.25 (we're actually beating the theoretical limit!)
    - Clinical effect size > statistical R²
 
 **Rationale:**
+
 - R² = 0.29 captures real signal
 - Correlation r = 0.54 (moderate predictive power)
 - **Better than random, sufficient for decision-making**
@@ -443,6 +463,7 @@ Our R² = 0.287 > 0.25 (we're actually beating the theoretical limit!)
 ### What We Learned After 8 Attempts
 
 **Tried everything:**
+
 - ✓ Simple linear models (Ridge, Lasso, ElasticNet)
 - ✓ Nonlinear models (Random Forest, Gradient Boosting)
 - ✓ Deep learning on features (MLP, autoencoders)
@@ -474,6 +495,7 @@ ViT-TCNet (1.1M params):
 ```
 
 **More epochs don't fix fundamental problems:**
+
 - ❌ Doesn't increase dataset size
 - ❌ Doesn't improve signal quality
 - ❌ Doesn't add new information
@@ -515,6 +537,7 @@ With SNR = -4.73 dB:
 - More training epochs → overfitting, not better generalization
 
 **Analogy**:
+
 > Asking a model to train longer to exceed the information limit is like asking a student to study the same textbook for 100 hours instead of 10 hours to learn material that's not in the book.
 
 ### "...is big, but can infer relatively fast?"
@@ -548,6 +571,7 @@ With SNR = -4.73 dB:
    - All converge to R² ≈ 0.29
 
 **Higher R² requires either:**
+
 - Different task (predict future, not current)
 - More data (50+ subjects, 64+ channels)
 - Better signal quality (invasive EEG)
@@ -562,6 +586,7 @@ With SNR = -4.73 dB:
 **Accept R² = 0.287 and deploy Ridge Regression model.**
 
 **Reasoning:**
+
 1. ✓ Honest, validated performance
 2. ✓ No data leakage or circular reasoning
 3. ✓ Generalizes to test set
@@ -570,12 +595,14 @@ With SNR = -4.73 dB:
 6. ✓ Proven stable across experiments
 
 **This model will:**
+
 - Predict PAC better than random (r = 0.54)
 - Capture 29% of PAC variance
 - Work in real-time closed-loop system
 - Provide consistent, reliable predictions
 
 **It won't:**
+
 - Achieve R² = 0.46 (unrealistic for this data)
 - Predict PAC perfectly (impossible with 75% noise)
 - Match temporal prediction performance (different task)
@@ -583,6 +610,7 @@ With SNR = -4.73 dB:
 ### For Future Work
 
 **If you want higher R²:**
+
 1. Collect new dataset (50+ subjects, 64+ channels)
 2. Use longer windows (5-10 seconds)
 3. OR reformulate as classification problem
@@ -600,6 +628,7 @@ With SNR = -4.73 dB:
 **A: No. R² ≈ 0.29 is the ceiling for this dataset.**
 
 **Evidence:**
+
 - ✓ Tried 10+ architectures → all plateau at ~0.29
 - ✓ Bigger models perform WORSE (overfitting)
 - ✓ SNR limits maximum R² to ~0.30-0.35
@@ -610,9 +639,11 @@ With SNR = -4.73 dB:
 Deploy Ridge model (R² = 0.287) and validate clinical utility rather than chasing higher R² that this dataset cannot support.
 
 **The right question isn't:**
+
 > "How do I get R² = 0.46?"
 
 **The right question is:**
+
 > "Is R² = 0.29 sufficient for effective closed-loop control?"
 
 **Answer: Likely yes.** Moderate correlation (r = 0.54) provides useful signal for decision-making, even if it doesn't explain most variance.

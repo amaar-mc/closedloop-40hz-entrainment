@@ -10,6 +10,7 @@ tags:
 # TCNPredictiveControl
 
 ## Connections
+
 - [[ControlMethodBase_1]] - `inherits` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
@@ -23,4 +24,4 @@ tags:
 - [[step()_61]] - `method` [EXTRACTED]
 - [[tcn_integrated_simulation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

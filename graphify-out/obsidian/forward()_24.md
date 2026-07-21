@@ -10,7 +10,8 @@ tags:
 # forward()
 
 ## Connections
+
 - [[Args             eeg (batch, 1, n_channels, n_samples) - Raw EEG             s]] - `rationale_for` [EXTRACTED]
 - [[ViTTCNet]] - `method` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

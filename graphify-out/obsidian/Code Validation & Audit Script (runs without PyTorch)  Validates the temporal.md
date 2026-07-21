@@ -7,9 +7,10 @@ tags:
   - community/Community_49
 ---
 
-# Code Validation & Audit Script (runs without PyTorch)  Validates the temporal
+# Code Validation & Audit Script (runs without PyTorch) Validates the temporal
 
 ## Connections
+
 - [[validate_leakage.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_49

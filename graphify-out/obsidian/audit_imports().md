@@ -10,6 +10,7 @@ tags:
 # audit_imports()
 
 ## Connections
+
 - [[Check all module imports.]] - `rationale_for` [EXTRACTED]
 - [[audit_tribe_integration.py]] - `contains` [EXTRACTED]
 - [[check()_1]] - `calls` [EXTRACTED]

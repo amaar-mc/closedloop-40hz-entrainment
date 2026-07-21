@@ -10,6 +10,7 @@ tags:
 # step2_spectral_caches()
 
 ## Connections
+
 - [[4-Channel Muse 2 Retraining Pipeline]] - `calls` [EXTRACTED]
 - [[Compute spectral features (37-dim) for each window in each split.]] - `rationale_for` [EXTRACTED]
 - [[Feature Dimension Table (7-ch 73 features, 4-ch 49 features)]] - `references` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[main()_12]] - `calls` [EXTRACTED]
 - [[retrain_pipeline.py]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

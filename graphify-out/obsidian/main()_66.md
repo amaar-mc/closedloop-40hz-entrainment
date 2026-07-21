@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[EEGNetEnhanced (~35K params, 24x original)]] - `calls` [EXTRACTED]
 - [[EEGNetLarge (~141K params, 97x original)]] - `calls` [EXTRACTED]
 - [[High Finding No Cross-Validation (Single Seed 42 Split)]] - `references` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[split_by_subject()]] - `calls` [EXTRACTED]
 - [[train_single_seed()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # Surrogate Data Methods for PAC Statistical Validation
 
 ## Connections
+
 - [[Leave-One-Subject-Out Cross-Validation Strategy_1]] - `semantically_similar_to` [INFERRED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

@@ -10,6 +10,7 @@ tags:
 # MultiscaleCausalTCN Architecture
 
 ## Connections
+
 - [[73-Dimensional Feature Engineering]] - `references` [EXTRACTED]
 - [[Causal Padding Design Decision]] - `implements` [EXTRACTED]
 - [[Dual-Head Output (Future PAC + Delta PAC)]] - `implements` [EXTRACTED]

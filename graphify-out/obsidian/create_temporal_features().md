@@ -10,6 +10,7 @@ tags:
 # create_temporal_features()
 
 ## Connections
+
 - [[Create flat feature vector from temporal sequence.      Args         windows]] - `rationale_for` [EXTRACTED]
 - [[create_dataset()]] - `calls` [EXTRACTED]
 - [[train_sklearn_temporal.py]] - `contains` [EXTRACTED]

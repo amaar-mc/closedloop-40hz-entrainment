@@ -8,4 +8,4 @@ tags:
 
 # Synopsys Poster Final EDB (PDF)
 
-  #community/Community_187
+#community/Community_187

@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[EnhancedSequenceDataset]] - `method` [EXTRACTED]
 - [[_compute_per_subject_smooth()]] - `calls` [EXTRACTED]
 

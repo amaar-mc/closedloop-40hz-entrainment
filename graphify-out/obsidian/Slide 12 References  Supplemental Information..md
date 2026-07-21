@@ -10,6 +10,7 @@ tags:
 # Slide 12: References / Supplemental Information.
 
 ## Connections
+
 - [[p12_references()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

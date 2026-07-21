@@ -10,6 +10,7 @@ tags:
 # per_subject_adaptation.py
 
 ## Connections
+
 - [[Per-subject adaptation via calibration windows.  For each test subject   1. Use]] - `rationale_for` [EXTRACTED]
 - [[_corr()_3]] - `contains` [EXTRACTED]
 - [[_flatten()]] - `contains` [EXTRACTED]

@@ -9,6 +9,7 @@ tags:
 # TCN Predictive Controller: Alignment 72.1%, Low-PAC Stim 77.3%, High-PAC Rest 61.6%
 
 ## Connections
+
 - [[Figure 13 Controller Performance Comparison (N=35)]] - `references` [EXTRACTED]
 - [[High-PAC Rest Rate Metric]] - `conceptually_related_to` [INFERRED]
 - [[Low-PAC Stimulation Rate Metric]] - `conceptually_related_to` [INFERRED]

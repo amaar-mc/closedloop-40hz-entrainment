@@ -9,6 +9,7 @@ tags:
 # Causal TCN System (20s lookback, 5s forecast, 12-feature input)
 
 ## Connections
+
 - [[Closed-Loop Controller (z-score thresholds, hysteresis, personalization)]] - `conceptually_related_to` [EXTRACTED]
 - [[Deep Technical Presentation Script (~4.5 min, for engineersscientists)]] - `references` [EXTRACTED]
 - [[Feature Ablation Discovery 12-Feature vs 73-Feature Generalization]] - `conceptually_related_to` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[Quick-Reference Numbers for CSEF Interview]] - `references` [EXTRACTED]
 - [[Simplified Presentation Script (~3.5 min, non-technical judges)]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

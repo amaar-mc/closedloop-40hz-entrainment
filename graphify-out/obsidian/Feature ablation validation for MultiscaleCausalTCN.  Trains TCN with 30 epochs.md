@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Feature ablation validation for MultiscaleCausalTCN.  Trains TCN with 30 epochs
+# Feature ablation validation for MultiscaleCausalTCN. Trains TCN with 30 epochs
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[run_feature_ablation.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

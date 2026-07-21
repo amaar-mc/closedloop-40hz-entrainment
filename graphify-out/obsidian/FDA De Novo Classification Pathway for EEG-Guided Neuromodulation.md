@@ -10,6 +10,7 @@ tags:
 # FDA De Novo Classification Pathway for EEG-Guided Neuromodulation
 
 ## Connections
+
 - [[Clinical Roadmap (Research to Practice Pathway)]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

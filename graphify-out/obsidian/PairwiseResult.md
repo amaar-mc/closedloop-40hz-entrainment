@@ -10,6 +10,7 @@ tags:
 # PairwiseResult
 
 ## Connections
+
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
 - [[PredictiveLookAheadControl_5]] - `uses` [INFERRED]
@@ -20,4 +21,4 @@ tags:
 - [[run_fatigue_model_experiment()]] - `calls` [EXTRACTED]
 - [[to_dict()_1]] - `method` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

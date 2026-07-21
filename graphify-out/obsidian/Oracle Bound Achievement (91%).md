@@ -10,6 +10,7 @@ tags:
 # Oracle Bound Achievement (91%)
 
 ## Connections
+
 - [[Two-Stage Predictive Closed-Loop System]] - `references` [EXTRACTED]
 
   #community/Community_72

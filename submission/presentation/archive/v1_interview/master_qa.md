@@ -6,29 +6,29 @@
 
 ## Quick Reference Numbers
 
-| Metric | Value |
-|--------|-------|
-| Subjects | 35 elderly (17 AD, 6 MCI, 10 HC, 2 unspec) |
-| Channels | 7 frontal (Fp1, Fp2, F7, F3, Fz, F4, F8) |
-| Sampling rate | 250 Hz |
-| Windows | 17,283 (2s each, 1s hop) |
-| Splits | 24 train / 5 val / 6 test (subject-level) |
-| EEGNet params | 1,457 |
-| EEGNet R2 | 0.287 (8 architectures converge here) |
-| TCN params | 22,914 |
-| TCN features | 12 (7 PAC + 5 stim context) |
-| Lookback | 20 steps (20 seconds) |
-| Dilations | [1, 2, 4, 8] -> 31-step receptive field |
-| TCN R2 (5s, 5-seed) | 0.606 +/- 0.032 |
-| Persistence R2 (5s) | 0.104 |
-| Alignment | 72.1% (TCN) vs 64.5% (Reactive) |
-| Low-PAC targeting | 82.6% vs 51.7% |
-| Effect size (alignment) | g = 1.31, p < 0.001 |
-| Effect size (low-PAC) | g = 4.47, p < 0.001 |
-| Oracle proximity | 91% of theoretical max |
-| Subjects benefiting | 35/35 (binomial p < 0.001) |
-| Inference time | < 50 ms |
-| Hardware cost | ~ $250 (Muse 2 + headphones) |
+| Metric                  | Value                                      |
+| ----------------------- | ------------------------------------------ |
+| Subjects                | 35 elderly (17 AD, 6 MCI, 10 HC, 2 unspec) |
+| Channels                | 7 frontal (Fp1, Fp2, F7, F3, Fz, F4, F8)   |
+| Sampling rate           | 250 Hz                                     |
+| Windows                 | 17,283 (2s each, 1s hop)                   |
+| Splits                  | 24 train / 5 val / 6 test (subject-level)  |
+| EEGNet params           | 1,457                                      |
+| EEGNet R2               | 0.287 (8 architectures converge here)      |
+| TCN params              | 22,914                                     |
+| TCN features            | 12 (7 PAC + 5 stim context)                |
+| Lookback                | 20 steps (20 seconds)                      |
+| Dilations               | [1, 2, 4, 8] -> 31-step receptive field    |
+| TCN R2 (5s, 5-seed)     | 0.606 +/- 0.032                            |
+| Persistence R2 (5s)     | 0.104                                      |
+| Alignment               | 72.1% (TCN) vs 64.5% (Reactive)            |
+| Low-PAC targeting       | 82.6% vs 51.7%                             |
+| Effect size (alignment) | g = 1.31, p < 0.001                        |
+| Effect size (low-PAC)   | g = 4.47, p < 0.001                        |
+| Oracle proximity        | 91% of theoretical max                     |
+| Subjects benefiting     | 35/35 (binomial p < 0.001)                 |
+| Inference time          | < 50 ms                                    |
+| Hardware cost           | ~ $250 (Muse 2 + headphones)               |
 
 ---
 

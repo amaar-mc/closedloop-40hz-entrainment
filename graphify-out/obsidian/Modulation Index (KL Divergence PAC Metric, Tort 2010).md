@@ -10,8 +10,9 @@ tags:
 # Modulation Index (KL Divergence PAC Metric, Tort 2010)
 
 ## Connections
+
 - [[Manual PAC Computation (Butterworth + Hilbert, compute_pac_manual)]] - `implements` [EXTRACTED]
 - [[PAC Computation Pipeline (IEEE Paper)]] - `implements` [EXTRACTED]
 - [[Tort 2010 (J. Neurophysiol) Modulation Index PAC Method]] - `references` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

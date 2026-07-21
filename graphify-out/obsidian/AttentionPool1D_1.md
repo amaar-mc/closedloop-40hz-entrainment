@@ -10,6 +10,7 @@ tags:
 # AttentionPool1D
 
 ## Connections
+
 - [[AblationVariant]] - `uses` [INFERRED]
 - [[Attention pooling over time axis._1]] - `rationale_for` [EXTRACTED]
 - [[AttentionWeightCapture]] - `uses` [INFERRED]
@@ -47,4 +48,4 @@ tags:
 - [[forward()_30]] - `method` [EXTRACTED]
 - [[multiscale_tcn.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

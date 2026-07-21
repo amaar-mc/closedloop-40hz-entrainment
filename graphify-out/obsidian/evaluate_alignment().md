@@ -10,6 +10,7 @@ tags:
 # evaluate_alignment()
 
 ## Connections
+
 - [[Alignment Score Metric (Low-PAC Stim + High-PAC Rest)  2]] - `implements` [EXTRACTED]
 - [[Compute alignment metrics — exact same definitions as original study.]] - `rationale_for` [EXTRACTED]
 - [[PAC Gap Metric (Mean PAC Rest − Mean PAC Stim)]] - `implements` [EXTRACTED]

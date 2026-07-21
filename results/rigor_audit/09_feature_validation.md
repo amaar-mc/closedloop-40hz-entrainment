@@ -14,12 +14,12 @@ Validate the central feature ablation claim: the 12 PAC+Stim features outperform
 
 Trained the same MultiscaleCausalTCN architecture (hidden=64, dilations=[1,2,4,8], attention pooling, Huber loss, AdamW lr=1e-3) on four feature subsets selected by column index from the pre-built dataset at `data/processed/multiscale_temporal_lb20_hz5_ts1/`:
 
-| Subset | Indices | Count | Description |
-|---|---|---|---|
-| all | 0-72 | 73 | Full feature set (spectral + PAC + stim) |
-| spectral | 0-60 | 61 | Band-power spectral features only |
-| pac | 61-67 | 7 | PAC-derived causal features (current, ma2/4/8/16, diff1/4) |
-| pac_stim | 61-72 | 12 | PAC features + stimulation context (stim_state, time_since_switch, stim_frac, cycle_phase_sin/cos) |
+| Subset   | Indices | Count | Description                                                                                        |
+| -------- | ------- | ----- | -------------------------------------------------------------------------------------------------- |
+| all      | 0-72    | 73    | Full feature set (spectral + PAC + stim)                                                           |
+| spectral | 0-60    | 61    | Band-power spectral features only                                                                  |
+| pac      | 61-67   | 7     | PAC-derived causal features (current, ma2/4/8/16, diff1/4)                                         |
+| pac_stim | 61-72   | 12    | PAC features + stimulation context (stim_state, time_since_switch, stim_frac, cycle_phase_sin/cos) |
 
 Dataset: train=11,160 / val=2,605 / test=2,678 sequences (subject-level split, lookback=20, horizon=5).
 
@@ -27,21 +27,21 @@ Normalization scalers were fit on the full 73-feature training set. For subset r
 
 ## Results
 
-| Subset | N features | Params | Best Epoch | Val R2 | Test R2 | Test corr | Test RMSE |
-|---|---|---|---|---|---|---|---|
-| all | 73 | 31,043 | 17 | 0.352 | 0.094 | 0.413 | 3.45e-05 |
-| spectral | 61 | 30,275 | 3 | -0.046 | -0.510 | -0.086 | 4.46e-05 |
-| pac | 7 | 26,819 | 23 | 0.413 | 0.338 | 0.584 | 2.95e-05 |
-| pac_stim | 12 | 27,139 | 21 | 0.817 | 0.568 | 0.754 | 2.38e-05 |
+| Subset   | N features | Params | Best Epoch | Val R2 | Test R2 | Test corr | Test RMSE |
+| -------- | ---------- | ------ | ---------- | ------ | ------- | --------- | --------- |
+| all      | 73         | 31,043 | 17         | 0.352  | 0.094   | 0.413     | 3.45e-05  |
+| spectral | 61         | 30,275 | 3          | -0.046 | -0.510  | -0.086    | 4.46e-05  |
+| pac      | 7          | 26,819 | 23         | 0.413  | 0.338   | 0.584     | 2.95e-05  |
+| pac_stim | 12         | 27,139 | 21         | 0.817  | 0.568   | 0.754     | 2.38e-05  |
 
 ## Comparison to Expected Values
 
-| Subset | Expected Test R2 | Observed Test R2 | Delta | Status |
-|---|---|---|---|---|
-| all (73) | -0.025 | 0.094 | +0.119 | Close (same order, weakly positive) |
-| spectral (61) | -0.420 | -0.510 | -0.090 | Consistent (both negative, same ballpark) |
-| pac (7) | 0.344 | 0.338 | -0.006 | Match |
-| pac_stim (12) | 0.558 | 0.568 | +0.010 | Match |
+| Subset        | Expected Test R2 | Observed Test R2 | Delta  | Status                                    |
+| ------------- | ---------------- | ---------------- | ------ | ----------------------------------------- |
+| all (73)      | -0.025           | 0.094            | +0.119 | Close (same order, weakly positive)       |
+| spectral (61) | -0.420           | -0.510           | -0.090 | Consistent (both negative, same ballpark) |
+| pac (7)       | 0.344            | 0.338            | -0.006 | Match                                     |
+| pac_stim (12) | 0.558            | 0.568            | +0.010 | Match                                     |
 
 The PAC-only and PAC+Stim results match expected values within 1 percentage point. The spectral-only result is directionally consistent (strongly negative R2). The all-features result is slightly higher than expected but still demonstrates the same pattern: full features underperform the PAC+Stim subset by a wide margin.
 
@@ -60,6 +60,7 @@ The PAC-only and PAC+Stim results match expected values within 1 percentage poin
 ## Interpretation
 
 The feature hierarchy `pac_stim > pac > all >> spectral` confirms that:
+
 - Future PAC state is primarily predicted by past PAC dynamics (autoregressive signal)
 - Stimulation context (on/off state, timing within protocol cycle) adds predictive value
 - Raw spectral features from 7 frontal channels add noise that degrades generalization

@@ -7,9 +7,10 @@ tags:
   - community/Community_32
 ---
 
-# Pure-numpy fallback when brainflow is not installed (e.g. cloud deploy).      Ge
+# Pure-numpy fallback when brainflow is not installed (e.g. cloud deploy). Ge
 
 ## Connections
+
 - [[_NumpySimulatedAdapter]] - `rationale_for` [EXTRACTED]
 
   #community/Community_32

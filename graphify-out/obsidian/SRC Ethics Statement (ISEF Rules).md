@@ -10,6 +10,7 @@ tags:
 # SRC Ethics Statement (ISEF Rules)
 
 ## Connections
+
 - [[Approval Form (1B) — Student Acknowledgment, Amaar Chughtai]] - `semantically_similar_to` [INFERRED]
 - [[Ethics Statement Student Signature — Amaar Chughtai]] - `references` [EXTRACTED]
 - [[SCVSEFA Rule 2 — Scientific Fraud and Misconduct Prohibition]] - `references` [EXTRACTED]

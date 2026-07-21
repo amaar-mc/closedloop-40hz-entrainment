@@ -7,9 +7,10 @@ tags:
   - community/Community_52
 ---
 
-# Stitch contiguous windows into continuous multi-channel signal.      Args:
+# Stitch contiguous windows into continuous multi-channel signal. Args:
 
 ## Connections
+
 - [[stitch_segment()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_52

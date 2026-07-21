@@ -8,6 +8,7 @@ members: 18
 **Members:** 18 nodes
 
 ## Members
+
 - [[Alignment Metric (Average of Low-PAC Stim Rate and High-PAC Rest Rate)]] - image - submission/figures/figure12.png
 - [[Effect Size g=1.31 (TCN vs Reactive Alignment, p0.001)]] - image - submission/figures/figure13.png
 - [[Effect Size g=4.47 (TCN vs Reactive Low-PAC Stim Rate, p0.001)]] - image - submission/figures/figure13.png

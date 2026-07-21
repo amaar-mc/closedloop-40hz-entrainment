@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _metrics()
+# \_metrics()
 
 ## Connections
+
 - [[Compute regression metrics.]] - `rationale_for` [EXTRACTED]
 - [[_corr()_8]] - `calls` [EXTRACTED]
 - [[_persistence_baseline()_1]] - `calls` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[evaluate()_8]] - `calls` [EXTRACTED]
 - [[run_all_experiments.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

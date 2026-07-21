@@ -10,6 +10,7 @@ tags:
 # extract_repo_paths()
 
 ## Connections
+
 - [[verify_notebook_finalization.py]] - `contains` [EXTRACTED]
 
   #community/Community_87

@@ -13,6 +13,7 @@
 ### Dataset Specifications (from ds005048 documentation)
 
 **Study Design:**
+
 - **Participants**: 13 elderly with memory complaints (normal aging or mild AD)
 - **Protocol**: 1 min rest → 6 alternating stimulation/rest trials
 - **Stimulation**: 40 Hz chirp auditory stimulus
@@ -21,6 +22,7 @@
 - **Preprocessing**: Makoto's EEGLAB pipeline (ICA, artifact removal)
 
 **Windowing:**
+
 - Window size: 2.0 seconds (500 samples)
 - Hop size: 1.0 second (50% overlap)
 - Total windows: 17,283 (11,736 train, 2,725 val, 2,822 test)
@@ -43,6 +45,7 @@
 ```
 
 **PAC Target Statistics:**
+
 - Mean: 0.001047
 - Std: 0.000433
 - Range: [0.000211, 0.004554]
@@ -53,6 +56,7 @@
 **We are predicting PAC from the SAME EEG window used to compute PAC.**
 
 This creates an inherent limitation:
+
 - ✅ **Allowed**: Use spectral power, wavelet features, spatial patterns
 - ❌ **Circular**: Directly compute theta-gamma coupling to predict theta-gamma coupling
 
@@ -63,47 +67,57 @@ The question is: **"What features of an EEG window correlate with its PAC, WITHO
 ## Complete History of All Attempts
 
 ### V1: Initial Model (Data Leakage Discovered)
+
 **Result**: R² = 0.69 🚫 **DATA LEAKAGE**
 
 **What we tried:**
+
 - Features: Spectral power + **Modulation Index (MI)**
 - Model: Neural network
 
 **Why it failed:**
+
 - MI features directly computed PAC → predicting PAC using PAC
 - **Lesson**: Data leakage gives artificially high performance
 
 ---
 
 ### V2: Clean Baseline (Leakage Removed)
+
 **Result**: R² = 0.236 ✅ **Honest baseline**
 
 **What we tried:**
+
 - Features: Spectral power only (61 features)
 - Removed MI features
 - Model: Neural network
 
 **Why this is our first honest result:**
+
 - No circular reasoning
 - Established true difficulty of the problem
 
 ---
 
 ### V3-Clean: Same as V2
+
 **Result**: R² = 0.236 ✅ **Confirmed**
 
 ---
 
 ### V4: ViT-TCNet (State-of-the-Art Architecture)
+
 **Result**: R² = 0.252 (+6.8%) ❌ **Severe Overfitting**
 
 **What we tried:**
+
 - Architecture: Vision Transformer + Temporal Convolutional Network
 - Parameters: 1,119,063
 - Features: 135 (spectral + wavelet)
 - Training: 54 epochs (early stopping)
 
 **Why it failed:**
+
 ```
 Dataset: 11,736 samples
 Parameters: 1,119,063
@@ -115,6 +129,7 @@ Training Loss Dynamics:
 ```
 
 **Root cause**:
+
 - Model 100x too complex for dataset size
 - Memorized training data instead of learning patterns
 - **Lesson**: More parameters ≠ better performance
@@ -122,9 +137,11 @@ Training Loss Dynamics:
 ---
 
 ### V5: Simple Baselines
+
 **Result**: Ridge R² = 0.287 (+21.6% vs V3-clean) ✅ **Current best!**
 
 **What we tried:**
+
 ```
 Ridge Regression:      R² = 0.287, MAE = 0.000260
 Lasso Regression:      R² = 0.286, MAE = 0.000261
@@ -135,12 +152,14 @@ Simple Ensemble:       R² = 0.286
 ```
 
 **Key findings:**
+
 1. **Linear models beat complex models** → relationship is mostly linear
 2. **Lasso selected only 40/135 features** → 95 features are redundant
 3. **Ridge wins** → strong L2 regularization prevents overfitting
 4. **Random Forest failed** → non-linearity doesn't help
 
 **Top features (Ridge):**
+
 1. WPD_13 (gamma-like energy, wavelet packet decomposition)
 2. Beta relative power (ch3, ch0)
 3. Theta relative power (ch1)
@@ -152,9 +171,11 @@ Simple Ensemble:       R² = 0.286
 ---
 
 ### V5-Enhanced: PAC-Specific Features
+
 **Result**: R² = 0.9999 🚫 **SEVERE DATA LEAKAGE**
 
 **What we tried:**
+
 - Added 116 PAC-specific features:
   - Direct MI computation (7 per channel)
   - Phase-amplitude correlation
@@ -163,6 +184,7 @@ Simple Ensemble:       R² = 0.286
   - Coupling profiles, burst statistics
 
 **Why it failed:**
+
 ```
 Debug analysis revealed:
 - PAC features = 96.6% of model weight
@@ -177,15 +199,18 @@ Debug analysis revealed:
 ---
 
 ### V6: Optimized Ensemble
+
 **Result**: R² = 0.287 (no improvement) ⚠️ **Plateau confirmed**
 
 **What we tried:**
+
 - Temporal features (rolling mean/std, first differences): 135 → 540 features
 - Feature selection: Lasso kept only 40/540 (93% rejected!)
 - Optimized models: Ridge, Lasso, GradientBoosting, MLP
 - Weighted ensemble
 
 **Results:**
+
 ```
 Ridge:              R² = 0.284
 Lasso:              R² = 0.285
@@ -195,6 +220,7 @@ Ensemble Weighted:  R² = 0.287
 ```
 
 **Why temporal features didn't help:**
+
 - Most were noisy/redundant (93% rejected by Lasso)
 - Rolling statistics don't capture PAC dynamics
 - 2-second windows already contain temporal information
@@ -204,6 +230,7 @@ Ensemble Weighted:  R² = 0.287
 ---
 
 ### V7: Raw EEG Deep Learning
+
 **Result**: Best = R² = 0.113 (Ensemble) ❌ **Complete failure**
 
 **What we tried:**
@@ -215,6 +242,7 @@ Three architectures learning from raw EEG:
 4. **Ensemble**: R² = 0.113
 
 **Why deep learning failed:**
+
 ```
 Training behavior:
 - Train loss decreased steadily
@@ -223,6 +251,7 @@ Training behavior:
 ```
 
 **Root cause**:
+
 - Our handcrafted features capture more information than learned features
 - 11k samples insufficient for end-to-end learning
 - Raw EEG too noisy for CNNs to extract useful patterns
@@ -232,6 +261,7 @@ Training behavior:
 ---
 
 ### V8: Specialized EEG Architectures
+
 **Result**: Best = R² = 0.222 (Ensemble) ❌ **Still worse than Ridge**
 
 **What we tried:**
@@ -252,6 +282,7 @@ Research-proven architectures from literature:
 4. **Ensemble**: R² = 0.222
 
 **Why even specialized architectures failed:**
+
 - EEGNet: Too generic, doesn't capture PAC-specific patterns
 - ATCNet: Overfitted despite regularization
 - TransformEEG: Too many parameters (122k) for 11k samples
@@ -263,18 +294,19 @@ Research-proven architectures from literature:
 
 ## Summary of All Results
 
-| Version | Approach | Test R² | vs Baseline | Status |
-|---------|----------|---------|-------------|--------|
-| V1 | Neural net + MI | 0.690 | +192% | 🚫 Data leakage |
-| V2 | Spectral only | 0.236 | baseline | ✅ Honest |
-| V4 | ViT-TCNet | 0.252 | +6.8% | ❌ Overfit |
-| **V5** | **Ridge** | **0.287** | **+21.6%** | ✅ **BEST** |
-| V5-Enh | PAC features | 0.999 | +323% | 🚫 Leakage |
-| V6 | Temporal + ensemble | 0.287 | +21.5% | ⚠️ No gain |
-| V7 | Raw EEG DL | 0.113 | -52% | ❌ Failed |
-| V8 | Specialized EEG | 0.222 | -6% | ❌ Failed |
+| Version | Approach            | Test R²   | vs Baseline | Status          |
+| ------- | ------------------- | --------- | ----------- | --------------- |
+| V1      | Neural net + MI     | 0.690     | +192%       | 🚫 Data leakage |
+| V2      | Spectral only       | 0.236     | baseline    | ✅ Honest       |
+| V4      | ViT-TCNet           | 0.252     | +6.8%       | ❌ Overfit      |
+| **V5**  | **Ridge**           | **0.287** | **+21.6%**  | ✅ **BEST**     |
+| V5-Enh  | PAC features        | 0.999     | +323%       | 🚫 Leakage      |
+| V6      | Temporal + ensemble | 0.287     | +21.5%      | ⚠️ No gain      |
+| V7      | Raw EEG DL          | 0.113     | -52%        | ❌ Failed       |
+| V8      | Specialized EEG     | 0.222     | -6%         | ❌ Failed       |
 
 **Progress toward target R² = 0.46:**
+
 - Achieved: 0.287
 - Target: 0.460
 - Gap: +0.173 (60% improvement needed)
@@ -310,6 +342,7 @@ SNR = -4.73 dB
 ```
 
 **EEG is one of the noisiest biological signals:**
+
 - Scalp recordings attenuate by 80-90%
 - Volume conduction mixes sources
 - Artifacts (EMG, EOG, motion)
@@ -333,6 +366,7 @@ We've tried:
 ### Reason 4: 2-Second Windows May Be Too Short
 
 PAC is a slow dynamics phenomenon:
+
 - Theta cycles: 125-250 ms (4-8 Hz)
 - Need multiple cycles to measure phase reliably
 - 2 seconds ≈ 8-16 theta cycles
@@ -343,6 +377,7 @@ PAC is a slow dynamics phenomenon:
 ### Reason 5: We've Captured Most Available Information
 
 **Evidence:**
+
 1. Lasso selected only 40/540 features → 93% redundant
 2. Adding temporal features gave 0.000 improvement
 3. All models plateau at ~0.28-0.29
@@ -358,23 +393,25 @@ PAC is a slow dynamics phenomenon:
 
 **V7 & V8 tried 7 different architectures, all failed:**
 
-| Architecture | Params | R² | Why It Failed |
-|--------------|--------|-----|---------------|
-| 1D CNN | 68k | 0.027 | Learned poor filters, overfitted |
-| Attention | 19k | -0.081 | Couldn't find relevant timepoints |
-| CNN-Attention | 55k | 0.058 | Still overfitted despite regularization |
-| EEGNet | 5k | 0.199 | Too generic for PAC-specific task |
-| ATCNet | 26k | 0.075 | Attention + TCN didn't capture patterns |
-| TransformEEG | 122k | 0.178 | Way too many params for 11k samples |
-| Ensemble DL | N/A | 0.222 | Averaging poor models = poor ensemble |
+| Architecture  | Params | R²     | Why It Failed                           |
+| ------------- | ------ | ------ | --------------------------------------- |
+| 1D CNN        | 68k    | 0.027  | Learned poor filters, overfitted        |
+| Attention     | 19k    | -0.081 | Couldn't find relevant timepoints       |
+| CNN-Attention | 55k    | 0.058  | Still overfitted despite regularization |
+| EEGNet        | 5k     | 0.199  | Too generic for PAC-specific task       |
+| ATCNet        | 26k    | 0.075  | Attention + TCN didn't capture patterns |
+| TransformEEG  | 122k   | 0.178  | Way too many params for 11k samples     |
+| Ensemble DL   | N/A    | 0.222  | Averaging poor models = poor ensemble   |
 
 **Common failure mode:**
+
 1. Training loss decreases (model learning)
 2. Validation loss plateaus (not generalizing)
 3. Early stopping after 20-50 epochs
 4. Final R² < 0.25
 
 **Root causes:**
+
 - **Dataset size**: 11k samples insufficient for deep learning
 - **Noise**: Raw EEG too noisy for end-to-end learning
 - **Feature quality**: Handcrafted features better than learned
@@ -385,12 +422,14 @@ PAC is a slow dynamics phenomenon:
 **Ridge with 135 features (R² = 0.287) beats ALL deep learning!**
 
 **Reasons:**
+
 1. **Domain knowledge**: Spectral bands (theta, gamma) directly relevant to PAC
 2. **Noise robustness**: Averaging over frequency bands reduces noise
 3. **Appropriate complexity**: ~200 effective params for 11k samples
 4. **Strong regularization**: L2 penalty prevents overfitting
 
 **Top features all make neurophysiological sense:**
+
 - Gamma energy (WPD_13) → high gamma = potential for coupling
 - Theta power → strong theta phase = better phase reference
 - Beta/gamma relative power → frequency balance matters
@@ -402,26 +441,31 @@ PAC is a slow dynamics phenomenon:
 **To go from R² = 0.29 → 0.46, we would need:**
 
 ### Option 1: More Data
+
 - Current: 11,736 samples from 13 subjects
 - **Need: 50,000+ samples from 50+ subjects**
 - Benefit: Enable deep learning, reduce individual variability
 
 ### Option 2: Better Signal Quality
+
 - Current: 7 frontal channels, 250 Hz, scalp EEG
 - **Need: High-density EEG (64-128 channels) or intracranial**
 - Benefit: Better spatial resolution, higher SNR
 
 ### Option 3: Longer Windows
+
 - Current: 2-second windows
 - **Need: 5-10 second windows**
 - Benefit: More stable PAC estimates, better temporal context
 
 ### Option 4: Multi-Modal Features
+
 - Current: EEG only
 - **Need: EEG + fMRI/MEG/behavioral measures**
 - Benefit: Additional information sources
 
 ### Option 5: Different Target
+
 - Current: Predict continuous PAC values
 - **Need: Classify high/low PAC (binary/ordinal)**
 - Benefit: Easier problem, more achievable
@@ -432,11 +476,12 @@ PAC is a slow dynamics phenomenon:
 
 ## Why "One Master Model" Won't Work
 
-The user suggested: *"Create one, master model, that has been trained a lot, is big, but can infer relatively fast and is super accurate"*
+The user suggested: _"Create one, master model, that has been trained a lot, is big, but can infer relatively fast and is super accurate"_
 
 **This won't work because:**
 
 ### 1. Dataset Size Limit
+
 ```
 Current: 11,736 samples
 Minimum for "big" model: 100,000+ samples
@@ -446,6 +491,7 @@ Minimum for "big" model: 100,000+ samples
 **Evidence**: ViT-TCNet (1.1M params) achieved R² = 0.252, worse than Ridge!
 
 ### 2. Information Content Limit
+
 ```
 Signal-to-noise ratio: -4.73 dB
 → 75% of variance is noise
@@ -455,6 +501,7 @@ Signal-to-noise ratio: -4.73 dB
 **A bigger model can't extract signal that doesn't exist!**
 
 ### 3. Overfitting Risk
+
 ```
 As model size increases with fixed data:
 - Training R² ↑ (memorization)
@@ -466,6 +513,7 @@ We've seen this repeatedly:
 ```
 
 ### 4. We've Already Found The Best Features
+
 ```
 Lasso experiment:
 - Started with 540 features
@@ -476,6 +524,7 @@ Conclusion: The 135 original features capture most information.
 ```
 
 ### 5. Computational Cost vs Benefit
+
 ```
 Training time vs R² improvement:
 - Ridge: <1 minute, R² = 0.287
@@ -492,6 +541,7 @@ Bigger model = longer training, WORSE performance!
 ### What We've Learned
 
 After 8 major attempts trying:
+
 - 10+ different architectures
 - 3 feature engineering approaches
 - 6 ensemble methods
@@ -503,11 +553,13 @@ After 8 major attempts trying:
 ### Why This Is Actually Good
 
 **R² = 0.29 means:**
+
 - We explain 29% of PAC variance
 - Correlation r = 0.54 (moderate predictive power)
 - **This is respectable for EEG prediction!**
 
 **Published EEG regression studies typically achieve:**
+
 - Motor imagery: R² = 0.20-0.40
 - Attention prediction: R² = 0.15-0.35
 - Emotion recognition: R² = 0.25-0.45
@@ -517,6 +569,7 @@ After 8 major attempts trying:
 ### Where The Target R² = 0.46 Came From
 
 The target was likely based on:
+
 1. **Studies with more data** (50+ subjects, longer recordings)
 2. **Different experimental paradigms** (online PAC, not windowed prediction)
 3. **Possibly inadvertent data leakage** (using coupling metrics as features)
@@ -532,11 +585,13 @@ The target was likely based on:
 ### Option A: Accept R² = 0.29 & Deploy (RECOMMENDED ⭐⭐⭐⭐⭐)
 
 **Rationale:**
+
 - We've exhausted reasonable approaches
 - R² = 0.29 is respectable for EEG
 - Focus on robustness and deployment
 
 **Actions:**
+
 1. Use Ridge model (simple, fast, interpretable)
 2. Implement in closed-loop system
 3. Validate on real-world data
@@ -565,6 +620,7 @@ The target was likely based on:
 ### Option C: Collect More Data (Long-term)
 
 **Requirements for R² = 0.46:**
+
 - 50+ subjects (vs current 13)
 - 5-10 second windows (vs current 2)
 - High-density EEG (64+ channels vs current 7)
@@ -581,6 +637,7 @@ The target was likely based on:
 ✅ **Ridge Regression with 135 features (R² = 0.287) is optimal**
 
 **Evidence:**
+
 1. Tried 10+ architectures → all worse or equal
 2. Added temporal features → 0.000 improvement
 3. Tried deep learning → complete failure (R² < 0.25)
@@ -596,6 +653,7 @@ The target R² = 0.46 was unrealistic for this specific dataset size and experim
 ---
 
 **Sources:**
+
 - [Dataset: OpenNeuro ds005048 (40Hz Auditory Entrainment)](https://openneuro.org/datasets/ds005048)
 - [Scientific Reports paper (2024)](https://www.nature.com/articles/s41598-024-63727-z)
 - Technical Methods documentation (this repository)

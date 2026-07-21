@@ -10,6 +10,7 @@ tags:
 # P10 Lab Notebook V3 PDF (Title Page, TOC, Body)
 
 ## Connections
+
 - [[main()_72]] - `references` [INFERRED]
 
   #community/Lab_Notebook_PDF_Generation

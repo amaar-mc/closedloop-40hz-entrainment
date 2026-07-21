@@ -10,6 +10,7 @@ tags:
 # What It Does: 40Hz Gamma Brainwave Restoration
 
 ## Connections
+
 - [[NeuroCare 40Hz Product Flyer]] - `references` [EXTRACTED]
 
   #community/Community_78

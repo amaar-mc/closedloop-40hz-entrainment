@@ -7,9 +7,10 @@ tags:
   - community/Community_102
 ---
 
-# _finite_check()
+# \_finite_check()
 
 ## Connections
+
 - [[audit_multiscale_pipeline.py]] - `contains` [EXTRACTED]
 - [[run_audit()_1]] - `calls` [EXTRACTED]
 

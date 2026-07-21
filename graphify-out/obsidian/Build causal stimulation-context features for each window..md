@@ -10,6 +10,7 @@ tags:
 # Build causal stimulation-context features for each window.
 
 ## Connections
+
 - [[_stim_context_from_events()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_80

@@ -10,6 +10,7 @@ tags:
 # Convert [N] citation patterns to LaTeX cite-style.
 
 ## Connections
+
 - [[convert_citations()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_44

@@ -20,6 +20,7 @@ I used this point to formalize the project around a closed-loop question instead
 **Repository basis:** `archive/notebooks/LOG_NOTEBOOK.md`, `notebooks/P10_Lab_Notebook_V1.md`, `.planning/phases/04-finalize-lab-notebook/04-CONTEXT.md`
 
 **Working decisions at this stage:**
+
 - Keep the notebook anchored to the approval-era timeline rather than the earlier private-prep chronology.
 - Treat PAC as the control biomarker, with the understanding that the metric would need careful implementation and auditing.
 - Plan the software in clear stages: data loading, preprocessing, PAC computation, model training, and controller logic.
@@ -39,6 +40,7 @@ The most important technical lesson was low-level and unglamorous: the `.fdt` fi
 **Repository basis:** `git log` entries `f93c70e`, `9d00715`, `81638ae`; `archive/notebooks/LOG_NOTEBOOK.md`
 
 **What became stable on this day:**
+
 - Subject-level splitting as a non-negotiable rule.
 - A 7-frontal-channel, 2-second-window representation for the static PAC task.
 - A complete raw-data-to-controller software path that could be audited and improved later.
@@ -54,6 +56,7 @@ After removing the circular features, the flattering result disappeared. That wa
 **Repository basis:** `archive/notebooks/LOG_NOTEBOOK.md`; `notebooks/P10_Lab_Notebook_V1.md`; `docs/submission/reports/PROJECT_ACHIEVEMENT_REPORT.md`; 2026-02-16 commit cluster in `git log`
 
 **Key takeaways:**
+
 - Leaked intermediate results were dropped from the notebook as achievements and kept only as debugging lessons.
 - `R^2 = 0.287` became the honest static reference point.
 - The project needed a better question than "how do I squeeze more static accuracy out of the same 2-second window?"
@@ -71,6 +74,7 @@ What mattered most was not complexity for its own sake. Every major design choic
 **Repository basis:** `archive/notebooks/LOG_NOTEBOOK.md`; `docs/submission/reports/PROJECT_ACHIEVEMENT_REPORT.md`; `docs/reference/PROJECT_DEEP_DIVE.md`; commits `d9213c9`, `a7299ad`, `48c60ad`
 
 **Why this day was pivotal:**
+
 - The problem statement shifted from better instantaneous decoding to usable look-ahead prediction.
 - The feature representation became explicitly causal and sequence-based.
 - The final project architecture started to look like a controller pipeline rather than a one-off predictor.
@@ -86,6 +90,7 @@ This work mattered because the temporal model could easily be oversold. Smoothed
 **Repository basis:** `archive/notebooks/LOG_NOTEBOOK.md`; commits `d1a7609`, `9945e3b`, `2699c6b`, `8ba48d7`
 
 **What was reinforced:**
+
 - Subject boundaries remained intact.
 - Temporal targets stayed strictly after the input sequence.
 - Train-only normalization and leak-free interpretation had to be part of the story, not just implementation details hidden in code.
@@ -99,10 +104,10 @@ This was the day the temporal model stopped being merely interesting and started
 The validated horizon summary preserved in the project report is the version I keep here:
 
 | Horizon | Persistence R^2 | Ridge R^2 | TCN R^2 |
-| --- | ---: | ---: | ---: |
-| 1 s | 0.760 | 0.812 | 0.735 |
-| 5 s | -0.267 | -0.393 | 0.254 |
-| 10 s | -0.256 | -0.212 | 0.278 |
+| ------- | --------------: | --------: | ------: |
+| 1 s     |           0.760 |     0.812 |   0.735 |
+| 5 s     |          -0.267 |    -0.393 |   0.254 |
+| 10 s    |          -0.256 |    -0.212 |   0.278 |
 
 The practical meaning was clear. If the controller only needed a 1-second look-ahead, sophisticated temporal modeling was not justified. But at 5-10 seconds, the TCN was the only model still carrying usable signal. That made closed-loop integration worth pursuing because it matched the operational timescale where stimulation timing could actually be adjusted proactively.
 
@@ -112,7 +117,7 @@ The practical meaning was clear. If the controller only needed a 1-second look-a
 
 ## February 21, 2026: Replay Framework and Robustness Setup
 
-The corrected notebook keeps this day, but narrows its scope. The repository clearly shows that February 21 was a major validation-framework day: replay-analysis tooling, rigorous-validation scripts, and robustness-oriented documentation all landed here. What it does *not* support is claiming that the final TCN replay result was already locked on this date.
+The corrected notebook keeps this day, but narrows its scope. The repository clearly shows that February 21 was a major validation-framework day: replay-analysis tooling, rigorous-validation scripts, and robustness-oriented documentation all landed here. What it does _not_ support is claiming that the final TCN replay result was already locked on this date.
 
 That distinction matters because earlier notebook versions blurred framework construction with the later final controller output. I keep this day focused on the infrastructure that made the final comparison possible: setting up replay analysis, formalizing robustness checks, and preparing the project for a controller-level comparison on real EEG.
 
@@ -130,12 +135,12 @@ This is the corrected home for the final controller result. The errata file and 
 
 The final comparison that I keep in the corrected notebook is the validated controller table preserved in the project report:
 
-| Controller | Alignment | Low-PAC Targeting | PAC Gap (x10^-6) |
-| --- | ---: | ---: | ---: |
-| Fixed | 45.0% | 61.4% | -6.6 |
-| Reactive | 64.5% | 51.7% | +21.1 |
-| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** |
-| Oracle | 100.0% | 100.0% | +33.3 |
+| Controller         | Alignment | Low-PAC Targeting | PAC Gap (x10^-6) |
+| ------------------ | --------: | ----------------: | ---------------: |
+| Fixed              |     45.0% |             61.4% |             -6.6 |
+| Reactive           |     64.5% |             51.7% |            +21.1 |
+| **TCN Predictive** | **72.1%** |         **82.6%** |        **+30.5** |
+| Oracle             |    100.0% |            100.0% |            +33.3 |
 
 Two details were especially important to preserve accurately. First, the fixed controller was not merely weaker; its PAC gap went in the wrong direction, which meant fixed timing was poorly aligned with actual need. Second, the PAC-gap values are dimensionless `x10^-6` quantities, not `uV^2`. Earlier notebook wording used the wrong units, so I corrected the label instead of carrying it forward.
 
@@ -143,7 +148,7 @@ The controller comparison figure was also mature enough to include here because 
 
 ![Controller comparison on all 35 subjects](../results/figures/controller_comparison_v2.png)
 
-*Figure: Final real-data controller comparison preserved from `results/figures/controller_comparison_v2.png`. I limited the corrected notebook to this one embedded figure so the review candidate stays sparse and chronology-first.*
+_Figure: Final real-data controller comparison preserved from `results/figures/controller_comparison_v2.png`. I limited the corrected notebook to this one embedded figure so the review candidate stays sparse and chronology-first._
 
 **Repository basis:** `archive/notebooks/LAB_NOTEBOOK_ERRATA.md`; `docs/submission/reports/PROJECT_ACHIEVEMENT_REPORT.md`; `results/figures/controller_comparison_v2.png`; commits `6e575d3`, `34c3ac2`, `beeddf7`, `0c8d063`, `b14afde`, `bbe6248`, `dfb0c16`, `1598e7b`
 
@@ -153,7 +158,7 @@ The controller comparison figure was also mature enough to include here because 
 
 By early March the main scientific work was finished, so the emphasis shifted to packaging, consistency, and presentation. The corrected notebook keeps this stage concise on purpose. I was no longer changing the scientific story; I was consolidating it into a fair-ready set of documents that judges could read quickly.
 
-The most important packaging choice was narrative discipline. The final materials could now legitimately say that the TCN controller achieved `72.1%` alignment, targeted `82.6%` of low-PAC windows, and was summarized in the project report as reaching `91%` of oracle performance. What I did *not* want to do was turn the notebook back into a polished retrospective paper. The point of this final stage was to preserve the build-debug-validate arc while tightening wording, tables, and figures for external review.
+The most important packaging choice was narrative discipline. The final materials could now legitimately say that the TCN controller achieved `72.1%` alignment, targeted `82.6%` of low-PAC windows, and was summarized in the project report as reaching `91%` of oracle performance. What I did _not_ want to do was turn the notebook back into a polished retrospective paper. The point of this final stage was to preserve the build-debug-validate arc while tightening wording, tables, and figures for external review.
 
 **Repository basis:** `notebooks/P10_Lab_Notebook_V1.md`; `docs/submission/reports/PROJECT_ACHIEVEMENT_REPORT.md`
 

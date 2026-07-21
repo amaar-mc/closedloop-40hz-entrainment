@@ -10,6 +10,7 @@ tags:
 # p06_methods3()
 
 ## Connections
+
 - [[Slide 6 Methods page 3 -- Controller, Validation, Figure.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `calls` [EXTRACTED]
 - [[build_pptx.py]] - `contains` [EXTRACTED]

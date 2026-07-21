@@ -10,6 +10,7 @@ tags:
 # train_temporal_predictor()
 
 ## Connections
+
 - [[Full training pipeline for temporal PAC prediction.]] - `rationale_for` [EXTRACTED]
 - [[TemporalPACPredictor (LSTMGRU Model)]] - `calls` [EXTRACTED]
 - [[evaluate()_4]] - `calls` [EXTRACTED]

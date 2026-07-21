@@ -14,4 +14,4 @@ Validated on all 35 subjects' real brain recordings, the predictive controller a
 
 ---
 
-*Word count: 241 / 250 max*
+_Word count: 241 / 250 max_

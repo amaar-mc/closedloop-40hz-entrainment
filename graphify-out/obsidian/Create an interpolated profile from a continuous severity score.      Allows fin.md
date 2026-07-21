@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Create an interpolated profile from a continuous severity score.      Allows fin
+# Create an interpolated profile from a continuous severity score. Allows fin
 
 ## Connections
+
 - [[interpolate_profile()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

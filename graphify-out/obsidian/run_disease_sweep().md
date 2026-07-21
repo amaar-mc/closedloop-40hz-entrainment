@@ -10,10 +10,11 @@ tags:
 # run_disease_sweep()
 
 ## Connections
+
 - [[PredictiveLookAheadControl_3]] - `calls` [EXTRACTED]
 - [[Run Predictive controller across all disease severities.]] - `rationale_for` [EXTRACTED]
 - [[main()_46]] - `calls` [EXTRACTED]
 - [[run_trial()_4]] - `calls` [EXTRACTED]
 - [[run_tribe_validation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

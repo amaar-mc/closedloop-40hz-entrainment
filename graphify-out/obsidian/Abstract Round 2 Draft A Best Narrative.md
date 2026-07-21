@@ -9,6 +9,7 @@ tags:
 # Abstract Round 2 Draft A: Best Narrative
 
 ## Connections
+
 - [[Abstract Draft 1 Clinical Hook Approach]] - `references` [EXTRACTED]
 - [[Abstract Draft 3 Problem-Solution Narrative]] - `references` [EXTRACTED]
 - [[Abstract Draft 4 Judge-Friendly Approach]] - `references` [EXTRACTED]

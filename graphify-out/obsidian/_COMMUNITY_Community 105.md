@@ -8,6 +8,7 @@ members: 6
 **Members:** 6 nodes
 
 ## Members
+
 - [[Generate an image from a text prompt and save to output_path.]] - rationale - scripts/tools/generate_image.py
 - [[Load OpenRouter API key from ~.claudeapis.env]] - rationale - scripts/tools/generate_image.py
 - [[generate_image()_1]] - code - scripts/tools/generate_image.py

@@ -10,7 +10,8 @@ tags:
 # 12-Feature PAC+Stim TCN Test R²=0.606±0.032 (5 seeds)
 
 ## Connections
+
 - [[Feature Ablation 73-feature test R²=−0.025 vs 12-feature R²=0.606 (spectral features cause generalization failure)]] - `references` [EXTRACTED]
 - [[Multi-Seed Robustness 5 seeds val R²=0.820±0.019, test R²=0.606±0.032]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

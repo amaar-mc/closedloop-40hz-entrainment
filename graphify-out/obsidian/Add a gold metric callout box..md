@@ -10,6 +10,7 @@ tags:
 # Add a gold metric callout box.
 
 ## Connections
+
 - [[add_callout_box()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_75

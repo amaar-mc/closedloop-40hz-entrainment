@@ -10,6 +10,7 @@ tags:
 # Rationale: 12-Feature (PAC+Stim) Model Preferred — Spectral features encode subject anatomy causing generalization failure
 
 ## Connections
+
 - [[Results Report 12-Feature TCN Test R²=0.606±0.032 (5 Seeds, PAC+Stim Only)]] - `rationale_for` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

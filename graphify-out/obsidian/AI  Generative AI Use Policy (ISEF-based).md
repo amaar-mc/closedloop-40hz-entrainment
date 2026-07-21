@@ -10,6 +10,7 @@ tags:
 # AI / Generative AI Use Policy (ISEF-based)
 
 ## Connections
+
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 - [[International Science and Engineering Fair (ISEF)]] - `references` [EXTRACTED]
 

@@ -7,9 +7,10 @@ tags:
   - community/Community_80
 ---
 
-# _causal_moving_average()
+# \_causal_moving_average()
 
 ## Connections
+
 - [[Causal trailing average including the current sample.]] - `rationale_for` [EXTRACTED]
 - [[_pac_multiscale_features()]] - `calls` [EXTRACTED]
 - [[_stim_context_from_events()]] - `calls` [EXTRACTED]

@@ -9,6 +9,7 @@ tags:
 # Figure 13: Controller Performance Comparison (N=35)
 
 ## Connections
+
 - [[Effect Size g=1.31 (TCN vs Reactive Alignment, p0.001)]] - `references` [EXTRACTED]
 - [[Effect Size g=4.47 (TCN vs Reactive Low-PAC Stim Rate, p0.001)]] - `references` [EXTRACTED]
 - [[Figure 12 Metric Definitions (Low-PAC Stim Rate & High-PAC Rest Rate)]] - `conceptually_related_to` [INFERRED]

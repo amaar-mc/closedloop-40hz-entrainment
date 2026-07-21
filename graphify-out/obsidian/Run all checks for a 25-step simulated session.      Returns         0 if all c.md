@@ -7,12 +7,13 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Run all checks for a 25-step simulated session.      Returns:         0 if all c
+# Run all checks for a 25-step simulated session. Returns: 0 if all c
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[SimulatedEEGAdapter]] - `uses` [INFERRED]
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[run_tests()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

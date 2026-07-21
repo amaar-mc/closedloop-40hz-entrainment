@@ -10,6 +10,7 @@ tags:
 # MultiscaleCausalTCN Design (31K params, dilations [1,2,4,8])
 
 ## Connections
+
 - [[Rationale GroupNorm over BatchNorm for Cross-Subject PAC Baseline Stability]] - `rationale_for` [EXTRACTED]
 - [[Rationale Huber Loss over MSE for PAC Outlier Robustness]] - `rationale_for` [EXTRACTED]
 - [[Temporal Forecasting Pivot and Causal TCN Design (February 17, 2026)]] - `references` [EXTRACTED]

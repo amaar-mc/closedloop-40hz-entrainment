@@ -7,10 +7,11 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Train XGBoost on flattened (N, T*F) feature sequences.      Targets are RAW y_fu
+# Train XGBoost on flattened (N, T\*F) feature sequences. Targets are RAW y_fu
 
 ## Connections
+
 - [[SequenceDataset]] - `uses` [INFERRED]
 - [[train_xgboost_model()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

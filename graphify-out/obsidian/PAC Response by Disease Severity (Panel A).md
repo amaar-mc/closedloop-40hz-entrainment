@@ -10,6 +10,7 @@ tags:
 # PAC Response by Disease Severity (Panel A)
 
 ## Connections
+
 - [[Disease Severity Gradient (healthy→preclinical→mild→moderate→severe)]] - `references` [EXTRACTED]
 - [[Fixed Stimulation Strategy (baseline)]] - `references` [EXTRACTED]
 - [[PAC Heatmap Strategy x Severity (Panel E)]] - `shares_data_with` [INFERRED]

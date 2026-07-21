@@ -9,6 +9,7 @@ tags:
 # Project: Personalized DL for Closed-Loop 40Hz Entrainment
 
 ## Connections
+
 - [[TCN Closed-Loop Validation Result (247-word Abstract)]] - `references` [EXTRACTED]
 
   #community/Community_89

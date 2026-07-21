@@ -10,6 +10,7 @@ tags:
 # Persistence baseline: predict future PAC = current PAC (last_pac).
 
 ## Connections
+
 - [[persistence_baseline()_2]] - `rationale_for` [EXTRACTED]
 
   #community/Community_90

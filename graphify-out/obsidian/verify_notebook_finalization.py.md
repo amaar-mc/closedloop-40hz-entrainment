@@ -10,6 +10,7 @@ tags:
 # verify_notebook_finalization.py
 
 ## Connections
+
 - [[check_chronology()]] - `contains` [EXTRACTED]
 - [[check_packaging()]] - `contains` [EXTRACTED]
 - [[check_preservation()]] - `contains` [EXTRACTED]

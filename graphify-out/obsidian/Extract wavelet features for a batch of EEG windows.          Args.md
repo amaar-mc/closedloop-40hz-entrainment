@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Extract wavelet features for a batch of EEG windows.          Args:
+# Extract wavelet features for a batch of EEG windows. Args:
 
 ## Connections
+
 - [[extract()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

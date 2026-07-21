@@ -9,6 +9,7 @@ tags:
 # Predictive Controller PAC Dynamics Over Time (6 min)
 
 ## Connections
+
 - [[Simulation Backend Comparison Original vs TRIBE V2-Enhanced Figure]] - `references` [EXTRACTED]
 
   #community/Community_36

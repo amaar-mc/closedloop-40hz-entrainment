@@ -10,6 +10,7 @@ tags:
 # Full configuration for TRIBE V2-enhanced simulator.
 
 ## Connections
+
 - [[AlzheimerProfile]] - `uses` [INFERRED]
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]

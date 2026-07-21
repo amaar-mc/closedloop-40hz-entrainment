@@ -10,6 +10,7 @@ tags:
 # p05_methods2()
 
 ## Connections
+
 - [[Slide 5 — Methods page 2 (has feature ablation table).]] - `rationale_for` [EXTRACTED]
 - [[add_body()]] - `calls` [EXTRACTED]
 - [[add_bullet()]] - `calls` [EXTRACTED]

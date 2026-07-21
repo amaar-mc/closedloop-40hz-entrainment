@@ -10,7 +10,8 @@ tags:
 # PredictiveLookAheadControl (Trend-Based Controller)
 
 ## Connections
+
 - [[PredictiveCtrl (Trend + Z-score with Hysteresis)]] - `semantically_similar_to` [INFERRED]
 - [[run_comparison()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

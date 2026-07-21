@@ -7,12 +7,13 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Enhanced Features + Ridge Model (V5)  Combines original features (135) with PAC-
+# Enhanced Features + Ridge Model (V5) Combines original features (135) with PAC-
 
 ## Connections
+
 - [[PACFeatureExtractor]] - `uses` [INFERRED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[WaveletFeatureExtractor]] - `uses` [INFERRED]
 - [[run_enhanced_features.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

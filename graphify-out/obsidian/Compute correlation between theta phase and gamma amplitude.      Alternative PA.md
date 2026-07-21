@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Compute correlation between theta phase and gamma amplitude.      Alternative PA
+# Compute correlation between theta phase and gamma amplitude. Alternative PA
 
 ## Connections
+
 - [[compute_phase_amplitude_correlation()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

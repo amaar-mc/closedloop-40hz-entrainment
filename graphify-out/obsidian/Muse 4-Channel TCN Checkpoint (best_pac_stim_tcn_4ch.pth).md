@@ -10,6 +10,7 @@ tags:
 # Muse 4-Channel TCN Checkpoint (best_pac_stim_tcn_4ch.pth)
 
 ## Connections
+
 - [[NeuroCare 40Hz Live Mission Control v5]] - `references` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

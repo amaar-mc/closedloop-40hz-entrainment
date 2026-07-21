@@ -10,6 +10,7 @@ tags:
 # clean_markdown()
 
 ## Connections
+
 - [[Remove markdown formatting for plain text output.]] - `rationale_for` [EXTRACTED]
 - [[generate_paper_pdf.py]] - `contains` [EXTRACTED]
 - [[generate_pdf()]] - `calls` [EXTRACTED]

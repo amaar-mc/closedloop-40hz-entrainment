@@ -10,6 +10,7 @@ tags:
 # add_body_text()
 
 ## Connections
+
 - [[Add multi-line body text with bullet points.]] - `rationale_for` [EXTRACTED]
 - [[v1_builder.py]] - `contains` [EXTRACTED]
 

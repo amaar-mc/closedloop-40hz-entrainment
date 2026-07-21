@@ -7,12 +7,13 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Create train/val/test splits by subject with a given random seed.      Ensures
+# Create train/val/test splits by subject with a given random seed. Ensures
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGNetEnhanced]] - `uses` [INFERRED]
 - [[EEGNetLarge]] - `uses` [INFERRED]
 - [[split_by_subject()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

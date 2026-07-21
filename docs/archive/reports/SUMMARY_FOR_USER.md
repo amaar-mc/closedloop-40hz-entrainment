@@ -5,6 +5,7 @@
 **Goal:** Test if longer PAC windows (8 seconds vs 2 seconds) enable temporal prediction with R² > 0.6
 
 **Implementation:**
+
 1. Reprocessed all 35 subjects from OpenNeuro ds005048
 2. Computed PAC with 8-second windows, 4-second hop (50% overlap)
 3. Created ~4,630 windows with strong temporal autocorrelation
@@ -15,6 +16,7 @@
 ## Critical Results
 
 ### Temporal Autocorrelation (HUGE IMPROVEMENT)
+
 ```
 2-second windows:  r = 0.06 (no structure) ✗
 8-second windows:  r = 0.45 (strong structure!) ✓
@@ -23,6 +25,7 @@
 **This proves longer windows create temporal continuity.**
 
 ### Temporal Prediction Performance (DISAPPOINTING)
+
 ```
 Target:            R² > 0.6
 8-sec MLP:         R² = 0.125 ✗
@@ -40,6 +43,7 @@ Current-window:    R² = 0.287 ✓ (still best)
 **Short answer:** Autocorrelation ≠ Predictability
 
 **Longer answer:**
+
 1. **Cross-subject variability:** Each person has unique PAC dynamics
 2. **Missing causal driver:** No stimulation context in features
 3. **Fundamental noise:** 8-second PAC still captures rapid fluctuations
@@ -52,11 +56,13 @@ Current-window:    R² = 0.287 ✓ (still best)
 ## What This Means For Your Research
 
 ### The Bad News
+
 ❌ Cannot achieve R² > 0.6 for temporal prediction with this dataset
 ❌ Proactive Model Predictive Control not feasible without stimulation context
 ❌ Papers claiming R² = 0.80 used stimulation as primary feature (we don't have that)
 
 ### The Good News
+
 ✓ Current-window Ridge (R²=0.287) is a **solid, honest baseline**
 ✓ You've conducted **rigorous scientific investigation** with negative results
 ✓ Negative results are publishable: "Limits of Temporal PAC Prediction"
@@ -67,6 +73,7 @@ Current-window:    R² = 0.287 ✓ (still best)
 ## Recommendations for Synopsys Presentation
 
 ### Narrative Arc (Honest Science)
+
 1. **Motivation:** MPC requires predicting future brain states
 2. **Hypothesis:** Longer PAC windows enable temporal prediction
 3. **Method:** Reprocessed 35 subjects with 8-second windows
@@ -75,9 +82,11 @@ Current-window:    R² = 0.287 ✓ (still best)
 6. **Solution:** Deploy reactive Ridge model (R²=0.287) for real-time control
 
 ### Key Message
+
 > "We discovered that spontaneous PAC dynamics lack sufficient structure for accurate temporal prediction (R²=0.12 vs target 0.6). However, current-window prediction (R²=0.287) provides a robust foundation for reactive control. This rigorous investigation revealed fundamental data limitations and delivered a pragmatic, deployable solution."
 
 ### Why This Is Good Science
+
 - Shows systematic hypothesis testing
 - Demonstrates understanding of limitations
 - Delivers honest, achievable solution
@@ -88,6 +97,7 @@ Current-window:    R² = 0.287 ✓ (still best)
 ## Three Paths Forward
 
 ### Path 1: Deploy Current-Window Model (RECOMMENDED)
+
 **What:** Use Ridge (R²=0.287) for reactive PAC estimation
 **How:** Continuously monitor EEG → predict current PAC → trigger stimulation when low
 **Pros:** Proven, honest, deployable
@@ -98,6 +108,7 @@ Current-window:    R² = 0.287 ✓ (still best)
 ---
 
 ### Path 2: Investigate Stimulation Context
+
 **What:** Check if ds005048 includes stimulation timing metadata
 **How:** Parse dataset for `stim_on/off` events → add to features → retrain
 **Expected:** Could reach R²=0.5-0.7 if stimulation drives PAC
@@ -108,6 +119,7 @@ Current-window:    R² = 0.287 ✓ (still best)
 ---
 
 ### Path 3: Accept Reactive Control
+
 **What:** Abandon temporal prediction, optimize reactive control
 **How:** Ultra-fast current-window estimation (1-second windows)
 **Pros:** Pragmatic, clinically meaningful (sub-second response)
@@ -120,18 +132,22 @@ Current-window:    R² = 0.287 ✓ (still best)
 ## What I've Delivered
 
 ### Code
+
 - `temporal/reprocess_long_windows.py` - 8-second PAC reprocessing
 - `temporal/train_sklearn_temporal.py` - Lightweight MLP/Ridge baseline
 - `temporal/train_temporal_long_windows.py` - PyTorch LSTM (needs install)
 
 ### Data
+
 - `data/processed/long_windows/` - 4,630 windows, 35 subjects, 8-second PAC
 
 ### Documentation
+
 - `TEMPORAL_PREDICTION_FINAL_REPORT.md` - Comprehensive findings & recommendations
 - `SUMMARY_FOR_USER.md` - **THIS FILE**
 
 ### Results
+
 - `temporal/results_sklearn_baseline/results.json` - Performance metrics
 - `temporal/sklearn_results.log` - Training logs
 
@@ -165,6 +181,6 @@ Current-window:    R² = 0.287 ✓ (still best)
 
 ---
 
-*Generated: 2026-02-17*
-*Status: Investigation complete, recommendations provided*
-*Best model: sklearn MLP (R²=0.125) for temporal, Ridge (R²=0.287) for current-window*
+_Generated: 2026-02-17_
+_Status: Investigation complete, recommendations provided_
+_Best model: sklearn MLP (R²=0.125) for temporal, Ridge (R²=0.287) for current-window_

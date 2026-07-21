@@ -15,12 +15,12 @@
 
 ### What Judges Are Scoring (40 points total)
 
-| Category (10 pts each) | What they want to see | Your strongest evidence |
-|---|---|---|
-| **Scientific Thought** | Significant problem, clear hypothesis, controls, justified conclusions, awareness of further research | 55M patients, $300B burden, clear gap (fixed vs adaptive), 6 controller comparisons as controls, honest limitations, future work section |
-| **Creativity** | Original approach, novel hypothesis checking, YOUR contributions | Nobody has built a predictive closed-loop controller for 40 Hz therapy before. Architecture marathon (8 models) to prove data limitation. SpecTempNet leakage discovery. PAC+Stim feature discovery (5x improvement by dropping spectral features). Horizon sweep as novel evaluation |
-| **Independent Work/Skill** | Did YOU do it? Understanding appropriate for grade? Programming/analytical skills | You wrote every line of Python, you can explain PAC computation, causal convolutions, dilated receptive fields, why spectral features overfit. Show notebook |
-| **Thoroughness/Clarity** | Adequate data, replications, claims supported, notebook, clear answers | 35 subjects, all 35 showed improved alignment, Wilcoxon signed-rank, Hedges' g, 6 integrity checks, 4 fatigue models, threshold robustness sweep, 5-seed multi-seed validation |
+| Category (10 pts each)     | What they want to see                                                                                 | Your strongest evidence                                                                                                                                                                                                                                                               |
+| -------------------------- | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Scientific Thought**     | Significant problem, clear hypothesis, controls, justified conclusions, awareness of further research | 55M patients, $300B burden, clear gap (fixed vs adaptive), 6 controller comparisons as controls, honest limitations, future work section                                                                                                                                              |
+| **Creativity**             | Original approach, novel hypothesis checking, YOUR contributions                                      | Nobody has built a predictive closed-loop controller for 40 Hz therapy before. Architecture marathon (8 models) to prove data limitation. SpecTempNet leakage discovery. PAC+Stim feature discovery (5x improvement by dropping spectral features). Horizon sweep as novel evaluation |
+| **Independent Work/Skill** | Did YOU do it? Understanding appropriate for grade? Programming/analytical skills                     | You wrote every line of Python, you can explain PAC computation, causal convolutions, dilated receptive fields, why spectral features overfit. Show notebook                                                                                                                          |
+| **Thoroughness/Clarity**   | Adequate data, replications, claims supported, notebook, clear answers                                | 35 subjects, all 35 showed improved alignment, Wilcoxon signed-rank, Hedges' g, 6 integrity checks, 4 fatigue models, threshold robustness sweep, 5-seed multi-seed validation                                                                                                        |
 
 ### Your Core Narrative Arc (What Judges Should Walk Away Remembering)
 
@@ -46,7 +46,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 > My grandmother had dementia. I watched her lose the ability to recognize her own family -- to carry a conversation, to remember what she'd said moments earlier. That experience is what started this project.
 >
-> *(beat -- 1 second pause. Make eye contact.)*
+> _(beat -- 1 second pause. Make eye contact.)_
 >
 > Alzheimer's disease affects over 55 million people worldwide. It's the leading cause of dementia. There's no cure. And it costs over 300 billion dollars a year in the US alone.
 
@@ -56,7 +56,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Part 2: The Science -- Why 40 Hz Matters (45 seconds)
 
-> *(gesture toward background section of poster)*
+> _(gesture toward background section of poster)_
 >
 > But in 2016, a team at MIT discovered something remarkable. When they exposed Alzheimer's model mice to flickering light at 40 hertz -- the gamma frequency -- it triggered the brain's immune cells, called microglia, to clear amyloid-beta plaques. The toxic protein buildups that cause Alzheimer's. They saw 40 to 50 percent plaque reduction.
 >
@@ -70,13 +70,13 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Part 3: The Gap -- Why Current Protocols Fail (45 seconds)
 
-> *(gesture toward the problem/gap section of poster)*
+> _(gesture toward the problem/gap section of poster)_
 >
 > Right now, every clinical protocol delivers 40 hertz stimulation the same way: 40 seconds of sound on, 20 seconds off, repeated for an hour. Every patient, same schedule, same timing.
 >
 > But brains are different. When I analyzed the EEG data from 35 elderly subjects, I found that about half of them -- 48.6 percent -- habituate. Their brain's response to the stimulus fades over time. But the other half -- 51.4 percent -- actually facilitate. Their response gets stronger. And at the population level, there's no net trend. The p-value is 0.542 -- not significant.
 >
-> *(gesture toward habituation figure if on poster)*
+> _(gesture toward habituation figure if on poster)_
 >
 > So you have half your patients going one direction and half going the other. A fixed schedule can't adapt to that. It stimulates when the brain doesn't need it and misses windows when it does. That gap -- between a therapy with real disease-modifying potential and a delivery system that ignores individual brain responses -- is what this project addresses.
 
@@ -86,7 +86,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Part 4: What I Built (90 seconds)
 
-> *(gesture toward methods/architecture section)*
+> _(gesture toward methods/architecture section)_
 >
 > So I built a system that adapts. The core idea is: instead of using a timer, use the brain itself to decide when to stimulate.
 >
@@ -110,7 +110,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Part 5: Why 5 Seconds Matters -- The Horizon Sweep (40 seconds)
 
-> *(point to the horizon sweep figure -- this is your most important visual)*
+> _(point to the horizon sweep figure -- this is your most important visual)_
 >
 > Before I show the controller results, I want to show why the TCN matters. I trained separate models to predict PAC at horizons from 1 second to 10 seconds. At short horizons -- 1 to 2 seconds -- PAC changes so slowly that a trivial baseline works. Just repeat the last value. Persistence gets R-squared of 0.76 at 1 second.
 >
@@ -124,17 +124,17 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Part 6: Results (60 seconds)
 
-> *(gesture toward results / controller comparison)*
+> _(gesture toward results / controller comparison)_
 >
 > I replayed the TCN controller on all 35 patients' real EEG recordings, alongside five other control strategies: fixed schedule, reactive threshold, PI controller, a hybrid system, and a theoretical oracle with perfect knowledge of the future.
 >
-> *(point to the controller comparison chart)*
+> _(point to the controller comparison chart)_
 >
 > The TCN achieved 72.1 percent alignment -- meaning 72 percent of the time, the controller made the correct decision. That's versus 64.5 percent for reactive control. More importantly, when I look specifically at the windows where the brain actually needed stimulation -- low PAC moments -- the TCN caught 82.6 percent of them. Reactive only caught 51.7 percent. That's a 60 percent improvement in therapeutic precision.
 >
 > All of this is statistically significant. Wilcoxon signed-rank test, p below 0.001. Hedges' g of 1.31 for alignment -- that's a large effect size. And for the low-PAC targeting rate, Hedges' g is 4.47 -- a very large effect.
 >
-> *(point to per-subject scatter plot)*
+> _(point to per-subject scatter plot)_
 >
 > But the number I'm most proud of: all 35 out of 35 patients showed higher clinical utility with the TCN controller than with reactive control. Every single one. The probability of that by chance is less than one in 34 billion. And the TCN reaches 91 percent of the theoretical oracle's performance -- meaning we're already close to the ceiling of what's possible.
 
@@ -144,7 +144,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Part 7: Significance and What's Next (30 seconds)
 
-> *(make eye contact, slow down)*
+> _(make eye contact, slow down)_
 >
 > No one had built a predictive closed-loop controller for 40 hertz entrainment before. This project shows that predictive control is feasible, that it meaningfully outperforms current methods, and that every patient tested showed improved alignment. I've deployed a live caregiver app at huggingface.co/spaces/amaarc/neurocare-40hz where you can see the system running in real time.
 >
@@ -156,16 +156,16 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Timing Breakdown
 
-| Section | Target time |
-|---|---|
-| Part 1: Hook (grandmother + problem scale) | 30 sec |
-| Part 2: Why 40 Hz matters (MIT, clinical trials) | 45 sec |
-| Part 3: The gap (fixed schedule + habituation) | 45 sec |
-| Part 4: What I built (PAC + TCN + feature discovery) | 90 sec |
-| Part 5: Horizon sweep (why 5 seconds) | 40 sec |
-| Part 6: Results (controller comparison + stats) | 60 sec |
-| Part 7: Significance + next steps | 30 sec |
-| **Total** | **~5.5 min** |
+| Section                                              | Target time  |
+| ---------------------------------------------------- | ------------ |
+| Part 1: Hook (grandmother + problem scale)           | 30 sec       |
+| Part 2: Why 40 Hz matters (MIT, clinical trials)     | 45 sec       |
+| Part 3: The gap (fixed schedule + habituation)       | 45 sec       |
+| Part 4: What I built (PAC + TCN + feature discovery) | 90 sec       |
+| Part 5: Horizon sweep (why 5 seconds)                | 40 sec       |
+| Part 6: Results (controller comparison + stats)      | 60 sec       |
+| Part 7: Significance + next steps                    | 30 sec       |
+| **Total**                                            | **~5.5 min** |
 
 ### If You Get Interrupted
 
@@ -225,7 +225,7 @@ Answers are written in first person, as you would naturally say them. Practice s
 
 **Q: Why did you drop the spectral features?**
 
-> I noticed a large val-test gap: validation R-squared was 0.33 but test was negative 0.03 with all 73 features. That's a sign of overfitting to the training distribution. When I investigated, I found the 61 spectral features were the culprit -- they encode subject-specific EEG anatomy: skull thickness, electrode impedance, individual neural oscillation profiles. Things that differ dramatically across patients. The PAC-derived features, by contrast, track the *dynamics* of coupling -- how entrainment rises, falls, and responds to stimulation -- which are more universal because they reflect the underlying protocol structure rather than individual anatomy. Dropping spectral features reduced the val-test gap from 0.358 to 0.246 and raised test R-squared from below zero to 0.558 (mean across seeds: 0.606).
+> I noticed a large val-test gap: validation R-squared was 0.33 but test was negative 0.03 with all 73 features. That's a sign of overfitting to the training distribution. When I investigated, I found the 61 spectral features were the culprit -- they encode subject-specific EEG anatomy: skull thickness, electrode impedance, individual neural oscillation profiles. Things that differ dramatically across patients. The PAC-derived features, by contrast, track the _dynamics_ of coupling -- how entrainment rises, falls, and responds to stimulation -- which are more universal because they reflect the underlying protocol structure rather than individual anatomy. Dropping spectral features reduced the val-test gap from 0.358 to 0.246 and raised test R-squared from below zero to 0.558 (mean across seeds: 0.606).
 
 **Q: What are the 12 PAC+Stim features?**
 
@@ -350,6 +350,7 @@ These are the moments that could cost you points. Have answers ready.
 **What they're probing for:** Independent Work / Skill (10 points)
 
 **Your answer:**
+
 > I used AI as a learning tool, the same way someone would use Stack Overflow, a textbook, or a professor's office hours. I'd ask it to explain a concept like dilated convolutions, or help me debug an error message. But I made every design decision -- which model to try, how to compute PAC, when to pivot from static to temporal, when to investigate the val-test gap. The feature discovery is a good example: no tool told me that spectral features were causing overfitting. I noticed the gap between val and test R-squared, formed a hypothesis, ran systematic ablations across feature subsets, and confirmed it experimentally. That's the kind of scientific reasoning that matters.
 
 **Key:** Don't be defensive. Frame it as a tool. Then immediately pivot to a concrete example of YOUR independent reasoning.
@@ -357,21 +358,25 @@ These are the moments that could cost you points. Have answers ready.
 ### Danger Zone 2: "R-squared of 0.60 -- how do you know that's real and not overfitting?"
 
 **Your answer:**
+
 > I validated it across 5 random seeds -- mean 0.606, standard deviation 0.032, range 0.558 to 0.647. The result is reproducible. I also ran a shuffle-label sanity check: when I randomly scrambled the PAC labels, the model got R-squared of negative 0.33 -- confirming it's learning real temporal patterns. And critically, the val-test gap dropped from 0.358 (with all 73 features) to 0.246 (with 12 features), which is exactly what you'd expect if you removed the overfitting features.
 
 ### Danger Zone 3: "This is just a simulation, not a real system"
 
 **Your answer:**
+
 > That's correct -- it's offline replay, not live deployment, and I'm explicit about that as a limitation. But the replay uses real patient EEG, real timing, and the model only sees data that would be available in real time. It's the standard validation approach in BCI research before moving to live systems. The results demonstrate feasibility and quantify the advantage. I've also deployed a live caregiver app at huggingface.co/spaces/amaarc/neurocare-40hz showing the system running in real time -- with simulated EEG, honest framing -- so judges can interact with it directly.
 
 ### Danger Zone 4: "35 patients isn't enough data"
 
 **Your answer:**
+
 > It's a real limitation, and I acknowledge it. But three things give me confidence. First, the effect sizes are very large -- Hedges' g of 1.31 for alignment -- so the differences are detectable even with 35 subjects. Second, all 35 of 35 subjects showed improvement, not just the average. Third, I used non-parametric statistics that are appropriate for small samples. This is also the largest publicly available EEG dataset with this protocol during 40 Hz stimulation, so it's the best data currently accessible.
 
 ### Danger Zone 5: "How is this different from just a reactive controller?"
 
 **Your answer:**
+
 > Reactive controllers respond after the brain has already lost entrainment. By the time PAC drops and you detect it, you've already missed the therapeutic window. My system predicts the drop 5 seconds in advance, so it can start stimulation before the brain loses synchronization. That's the difference between a smoke detector that goes off during the fire and one that goes off before the fire starts. The numbers show the difference: the TCN targets 83% of low-PAC windows while reactive only catches 52%.
 
 ### Danger Zone 6: "The live demo uses real Muse 2 EEG?"
@@ -379,6 +384,7 @@ These are the moments that could cost you points. Have answers ready.
 **IMPORTANT -- do NOT claim the live demo uses real Muse 2 EEG on this laptop.**
 
 **The honest framing:**
+
 > The demo at huggingface.co/spaces/amaarc/neurocare-40hz uses simulated EEG. The same code supports real Muse 2 hardware via Bluetooth -- the hardware adapters are fully implemented -- but BLE is not functional on my current macOS version (Darwin 25.x). For the demo, simulated signals are used, which run through the same signal processing and controller logic as real EEG. I'm transparent about this in the app itself. The scientific validation is on real EEG from 35 subjects; the demo is for illustration.
 
 **Why this matters:** Judges can test the demo. If you claim real EEG and they see "simulated" in the UI, it destroys trust. Honest framing first, always.
@@ -386,6 +392,7 @@ These are the moments that could cost you points. Have answers ready.
 ### Danger Zone 7: "Why 12 features? Could you do better with fewer or more?"
 
 **Your answer:**
+
 > I systematically tested feature subsets. PAC-only (7 features) gives test R-squared of 0.344 -- good but below the 0.606 with all 12. Adding stimulation context (the 5 protocol features) adds meaningful signal because the brain's response depends on where it is in the stimulation cycle. Going back to spectral features makes it worse -- even adding just 10 spectral features to the 12 PAC+Stim features drops test R-squared from 0.558 to 0.496. The 12-feature set is a local optimum. I could try other PAC-derived features or more complex protocol encodings, but the current set is well-motivated and empirically validated.
 
 ---
@@ -393,23 +400,27 @@ These are the moments that could cost you points. Have answers ready.
 ## 5. Delivery Tips
 
 ### Pacing
+
 - Speak at about 70% of your normal conversational speed. Judges are processing technical content.
 - Pause after every key number. "Seventy-two percent alignment... (beat) ...versus sixty-five for reactive."
 - If you catch yourself speeding up, take a breath. It's okay to pause.
 
 ### Body Language
+
 - Stand slightly to one side of your poster, not directly in front of it. Judges need to see the board.
 - Face the judges, not the poster. Glance at the board only when pointing to something specific.
 - Open palm gestures toward the poster. Never point with one finger -- it looks aggressive.
 - Keep your hands visible. Don't fold arms or put hands in pockets.
 
 ### Answering Questions
+
 - If you don't know the answer, say: "That's a great question -- I'm not sure about that specific aspect, but here's what I do know..." Then pivot to related knowledge.
 - Never bluff. Judges can tell. Honesty about limitations scores higher than a fabricated answer.
 - If a question is ambiguous, ask for clarification: "When you say X, do you mean A or B?" This shows analytical thinking.
 - After answering, stop. Don't keep talking to fill silence. Let the judge process.
 
 ### Common Mistakes to Avoid
+
 - Don't read from notes or your poster. You should know this cold.
 - Don't use filler words: "like," "um," "basically," "so yeah." Practice eliminating them.
 - Don't apologize for your work or hedge excessively. State results confidently with appropriate caveats.
@@ -418,6 +429,7 @@ These are the moments that could cost you points. Have answers ready.
 - Don't say "I just" or "It's just." Those words minimize your work.
 
 ### The Night Before
+
 - Read through this script 3 times aloud. Time yourself.
 - Pick 5 Q&A answers you feel weakest on and practice those aloud.
 - Get your notebook ready, tabbed to key sections (data integrity checks, habituation analysis, architecture comparison, feature ablation).

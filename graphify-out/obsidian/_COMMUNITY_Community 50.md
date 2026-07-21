@@ -8,6 +8,7 @@ members: 21
 **Members:** 21 nodes
 
 ## Members
+
 - [[12 TCN Input Features PAC trajectory (7) + stimulation context (5)]] - document - submission/submission/vfinal_submission.pdf
 - [[3535 Subjects Benefit from TCN Predictive vs Reactive (Figure 14)]] - document - submission/submission/vfinal_submission.pdf
 - [[CSEF 2026 Final Submission Poster]] - document - submission/submission/vfinal_submission.pdf

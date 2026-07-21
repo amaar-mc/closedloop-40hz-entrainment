@@ -10,6 +10,7 @@ tags:
 # Create a large section title.
 
 ## Connections
+
 - [[section_title()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_45

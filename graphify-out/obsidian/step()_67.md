@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[ControlMethodBase_2]] - `method` [EXTRACTED]
 - [[Make a stimulation decision.          Args             pac_current Current]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

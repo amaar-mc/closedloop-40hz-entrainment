@@ -8,6 +8,7 @@ members: 17
 **Members:** 17 nodes
 
 ## Members
+
 - [[Add a filled rectangle.]] - rationale - submission/poster/v2_builder.py
 - [[Add a rectangle with gradient fill matching template header.]] - rationale - submission/poster/v2_builder.py
 - [[Add a teal section header bar with white Amaranth text.]] - rationale - submission/poster/v2_builder.py

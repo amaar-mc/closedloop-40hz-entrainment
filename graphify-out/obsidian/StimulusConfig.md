@@ -10,6 +10,7 @@ tags:
 # StimulusConfig
 
 ## Connections
+
 - [[Audit script for TRIBE V2 integration module.  Validates     1. All module impo]] - `uses` [INFERRED]
 - [[Check all module imports.]] - `uses` [INFERRED]
 - [[Configuration for 40 Hz auditory stimulus generation.]] - `rationale_for` [EXTRACTED]

@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Args:             p: Probability of dropping each channel
+# Args: p: Probability of dropping each channel
 
 ## Connections
+
 - [[__init__()_50]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

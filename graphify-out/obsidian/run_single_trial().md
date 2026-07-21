@@ -10,6 +10,7 @@ tags:
 # run_single_trial()
 
 ## Connections
+
 - [[Run one simulation trial and return metrics.      Args         method Contr]] - `rationale_for` [EXTRACTED]
 - [[TrialMetrics]] - `calls` [EXTRACTED]
 - [[reset()_52]] - `calls` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[run_trial_batch()]] - `calls` [EXTRACTED]
 - [[step()_53]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

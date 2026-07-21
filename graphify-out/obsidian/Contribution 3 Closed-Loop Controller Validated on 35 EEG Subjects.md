@@ -10,7 +10,8 @@ tags:
 # Contribution 3: Closed-Loop Controller Validated on 35 EEG Subjects
 
 ## Connections
+
 - [[Introduction 4 Research Contributions Defined]] - `references` [EXTRACTED]
 - [[Research Paper v3 (Full Manuscript)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

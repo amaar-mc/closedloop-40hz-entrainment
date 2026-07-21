@@ -10,6 +10,7 @@ tags:
 # 04 QA Bank: Judge Strategy Brief and Danger Zones
 
 ## Connections
+
 - [[v1 Q&A Bank Synopsys Strategy Brief (rubric mapping, core narrative arc)]] - `semantically_similar_to` [INFERRED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

@@ -10,6 +10,7 @@ tags:
 # ensemble_evaluate()
 
 ## Connections
+
 - [[Evaluate ensemble of models by averaging predictions.]] - `rationale_for` [EXTRACTED]
 - [[run_best_combo.py]] - `contains` [EXTRACTED]
 

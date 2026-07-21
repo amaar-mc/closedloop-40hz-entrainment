@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Maintains patient-specific baseline statistics and computes z-scores.      The
+# Maintains patient-specific baseline statistics and computes z-scores. The
 
 ## Connections
+
 - [[PersonalizationModule]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

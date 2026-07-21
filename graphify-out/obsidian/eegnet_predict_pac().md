@@ -10,8 +10,9 @@ tags:
 # eegnet_predict_pac()
 
 ## Connections
+
 - [[Run EEGNet on one window and return denormalised PAC.]] - `rationale_for` [EXTRACTED]
 - [[run_tests()]] - `calls` [EXTRACTED]
 - [[test_simulated_session.py]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

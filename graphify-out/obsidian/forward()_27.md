@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[Args             x (batch, d_model)          Returns             attended]] - `rationale_for` [EXTRACTED]
 - [[MultiHeadFeatureAttention]] - `method` [EXTRACTED]
 

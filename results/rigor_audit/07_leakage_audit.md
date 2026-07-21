@@ -26,13 +26,13 @@ forecasting until an online PAC estimator is evaluated.
 
 **Command:** `python3 temporal/validate_code.py`
 
-| Test | Result |
-|---|---|
-| Temporal sequence logic (147,056 sequences) | PASS - no boundary violations |
-| Subject leakage between splits | PASS - zero overlap (24 train / 5 val / 6 test) |
-| PAC temporal autocorrelation | Lag-5 r=0.398 (moderate), lag-10 r=0.181 (weak) |
-| Ridge temporal baseline (horizon=5) | Test R-squared = 0.122, persistence R-squared = 0.110 |
-| Code audit (5 modules) | PASS - all 18 checks clean |
+| Test                                        | Result                                                |
+| ------------------------------------------- | ----------------------------------------------------- |
+| Temporal sequence logic (147,056 sequences) | PASS - no boundary violations                         |
+| Subject leakage between splits              | PASS - zero overlap (24 train / 5 val / 6 test)       |
+| PAC temporal autocorrelation                | Lag-5 r=0.398 (moderate), lag-10 r=0.181 (weak)       |
+| Ridge temporal baseline (horizon=5)         | Test R-squared = 0.122, persistence R-squared = 0.110 |
+| Code audit (5 modules)                      | PASS - all 18 checks clean                            |
 
 ## 2. Leakage Check Script
 
@@ -52,10 +52,10 @@ forecasting until an online PAC estimator is evaluated.
 Every sample in all splits has `target_idx - end_idx == 5`, matching the configured horizon. Zero violations across 16,443 total samples.
 
 | Split | Samples | Gap range | Violations |
-|---|---|---|---|
-| train | 11,160 | [5, 5] | 0 |
-| val | 2,605 | [5, 5] | 0 |
-| test | 2,678 | [5, 5] | 0 |
+| ----- | ------- | --------- | ---------- |
+| train | 11,160  | [5, 5]    | 0          |
+| val   | 2,605   | [5, 5]    | 0          |
+| test  | 2,678   | [5, 5]    | 0          |
 
 - **Result: PASS**
 
@@ -76,10 +76,10 @@ Recomputed feature means and standard deviations from the (de-normalized) traini
 PAC is computed at the epoch level (20-40s blocks) and assigned to all constituent 2s windows within each epoch. With a 5-window horizon (5s at 1s hop), most sequence-target pairs remain within the same epoch and naturally share the same PAC value. The diagnostic that matters is persistence R-squared:
 
 | Split | Same-epoch pairs | Cross-epoch pairs | Persistence R-squared (all) | Persistence R-squared (cross-epoch) |
-|---|---|---|---|---|
-| train | 82.2% | 17.8% | 0.201 | -0.370 |
-| val | 82.1% | 17.9% | 0.103 | -0.448 |
-| test | 82.2% | 17.8% | 0.104 | -0.272 |
+| ----- | ---------------- | ----------------- | --------------------------- | ----------------------------------- |
+| train | 82.2%            | 17.8%             | 0.201                       | -0.370                              |
+| val   | 82.1%            | 17.9%             | 0.103                       | -0.448                              |
+| test  | 82.2%            | 17.8%             | 0.104                       | -0.272                              |
 
 Persistence R-squared is far below 1.0. On cross-epoch samples (the ones that actually change), persistence is strongly negative, confirming the target is genuinely hard to predict from current PAC alone.
 
@@ -89,15 +89,15 @@ Persistence R-squared is far below 1.0. On cross-epoch samples (the ones that ac
 
 Individual PAC-derived features at the last timestep were correlated against the test target:
 
-| Feature | Correlation with target | R-squared as single predictor |
-|---|---|---|
-| pac_current | 0.381 | 0.104 |
-| pac_ma2 | 0.370 | 0.095 |
-| pac_ma4 | 0.346 | 0.072 |
-| pac_ma8 | 0.292 | 0.025 |
-| pac_ma16 | 0.177 | -0.066 |
-| pac_diff1 | 0.095 | -1.221 |
-| pac_diff4 | 0.190 | -1.221 |
+| Feature     | Correlation with target | R-squared as single predictor |
+| ----------- | ----------------------- | ----------------------------- |
+| pac_current | 0.381                   | 0.104                         |
+| pac_ma2     | 0.370                   | 0.095                         |
+| pac_ma4     | 0.346                   | 0.072                         |
+| pac_ma8     | 0.292                   | 0.025                         |
+| pac_ma16    | 0.177                   | -0.066                        |
+| pac_diff1   | 0.095                   | -1.221                        |
+| pac_diff4   | 0.190                   | -1.221                        |
 
 No feature has correlation > 0.99 (the circular leakage signature). The best single feature (pac_current) achieves R-squared = 0.104, matching the persistence baseline. The model's R-squared of 0.606+ on PAC+Stim features requires learning temporal patterns across the 20-step lookback, not just copying a single input feature.
 
@@ -106,9 +106,9 @@ No feature has correlation > 0.99 (the circular leakage signature). The best sin
 ### Check 6: Within-Epoch PAC Label Sharing
 
 | Split | Unique target values | Total samples | Ratio |
-|---|---|---|---|
-| train | 432 | 11,160 | 0.039 |
-| test | 104 | 2,678 | 0.039 |
+| ----- | -------------------- | ------------- | ----- |
+| train | 432                  | 11,160        | 0.039 |
+| test  | 104                  | 2,678         | 0.039 |
 
 Only ~4% of target values are unique (each epoch-level PAC value is shared across ~26 windows). This is the expected structure documented in CLAUDE.md. It does not constitute leakage because the model must still generalize to unseen subjects and predict which PAC level will occur at the target time.
 
@@ -121,16 +121,16 @@ Only ~4% of target values are unique (each epoch-level PAC value is shared acros
 
 Trained a reduced MultiscaleCausalTCN (hidden=32, ~8K params) on the 12 PAC+Stim features for 20 epochs, then repeated with 5 independent label permutations.
 
-| Condition | Best Val R-squared |
-|---|---|
-| Real labels | 0.734 |
-| Permutation 1 | -0.003 |
-| Permutation 2 | -0.005 |
-| Permutation 3 | -0.006 |
-| Permutation 4 | -0.003 |
-| Permutation 5 | -0.005 |
-| **Shuffled mean** | **-0.004** |
-| **Shuffled max** | **-0.003** |
+| Condition         | Best Val R-squared |
+| ----------------- | ------------------ |
+| Real labels       | 0.734              |
+| Permutation 1     | -0.003             |
+| Permutation 2     | -0.005             |
+| Permutation 3     | -0.006             |
+| Permutation 4     | -0.003             |
+| Permutation 5     | -0.005             |
+| **Shuffled mean** | **-0.004**         |
+| **Shuffled max**  | **-0.003**         |
 
 The gap between real and shuffled is 0.738 R-squared units. Shuffled models converge to near-zero R-squared in all 5 permutations, confirming the learned signal is genuine and not an artifact of data structure, feature engineering, or normalization.
 
@@ -138,15 +138,15 @@ The gap between real and shuffled is 0.738 R-squared units. Shuffled models conv
 
 ## 4. Summary
 
-| Audit Check | Status |
-|---|---|
-| Pre-existing validation gate (validate_code.py) | PASS |
-| Subject-level split disjointness | PASS |
-| Temporal causality (target strictly in future) | PASS |
-| Z-score scalers fit on train only | PASS |
-| pac_current not circularly equal to target | PASS |
-| No single PAC feature has leaky correlation | PASS |
-| Permutation test (shuffled R-squared near zero) | PASS |
+| Audit Check                                     | Status |
+| ----------------------------------------------- | ------ |
+| Pre-existing validation gate (validate_code.py) | PASS   |
+| Subject-level split disjointness                | PASS   |
+| Temporal causality (target strictly in future)  | PASS   |
+| Z-score scalers fit on train only               | PASS   |
+| pac_current not circularly equal to target      | PASS   |
+| No single PAC feature has leaky correlation     | PASS   |
+| Permutation test (shuffled R-squared near zero) | PASS   |
 
 **Verdict: NO SPLIT OR NORMALIZATION LEAKAGE DETECTED. ONLINE FEATURE AVAILABILITY IS NOT
 ESTABLISHED.**

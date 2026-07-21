@@ -7,9 +7,10 @@ tags:
   - community/Archived_ImprovedTCN_Experiments
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[CausalConvBlock]] - `calls` [EXTRACTED]
 - [[SubjectAdaptiveTCN]] - `method` [EXTRACTED]
 - [[__init__()_3]] - `calls` [EXTRACTED]

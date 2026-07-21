@@ -9,6 +9,7 @@ tags:
 # Spectral Features Uninformative for PAC Forecasting (test R2=-0.510)
 
 ## Connections
+
 - [[Feature Ablation Validation (pac_stim  pac  all  spectral confirmed)]] - `references` [EXTRACTED]
 
   #community/Rigor_Audit_Reports

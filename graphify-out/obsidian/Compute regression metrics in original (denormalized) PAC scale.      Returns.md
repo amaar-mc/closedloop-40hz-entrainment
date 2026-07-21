@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# Compute regression metrics in original (denormalized) PAC scale.      Returns:
+# Compute regression metrics in original (denormalized) PAC scale. Returns:
 
 ## Connections
+
 - [[TemporalPACPredictor]] - `uses` [INFERRED]
 - [[compute_metrics()_1]] - `rationale_for` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # Convert markdown to flowables, stripping em-dashes.
 
 ## Connections
+
 - [[process_md()]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

@@ -10,6 +10,7 @@ tags:
 # per_subject_evaluate()
 
 ## Connections
+
 - [[Evaluate model per subject.]] - `rationale_for` [EXTRACTED]
 - [[run_generalization.py]] - `contains` [EXTRACTED]
 

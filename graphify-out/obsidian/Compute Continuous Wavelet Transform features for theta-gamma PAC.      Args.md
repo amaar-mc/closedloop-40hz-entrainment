@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Compute Continuous Wavelet Transform features for theta-gamma PAC.      Args:
+# Compute Continuous Wavelet Transform features for theta-gamma PAC. Args:
 
 ## Connections
+
 - [[compute_cwt_features()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

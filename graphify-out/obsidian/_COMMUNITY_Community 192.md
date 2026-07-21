@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Q&A Tier 4 Process & Independence progression from hypothesis to results, SpecTempNet leakage discovery, AI tool use disclosure]] - document - archive/CSEF_Old/Presentation/05_qa_complete.md
 
 ## Live Query (requires Dataview plugin)

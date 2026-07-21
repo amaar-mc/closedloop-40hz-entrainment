@@ -10,6 +10,7 @@ tags:
 # Target Smooth Window (Denoised Latent State vs Raw PAC)
 
 ## Connections
+
 - [[Future PAC Target (Horizon h)]] - `rationale_for` [EXTRACTED]
 
   #community/Community_79

@@ -10,6 +10,7 @@ tags:
 # compute_average_zscore()
 
 ## Connections
+
 - [[Compute average z-score across all channels (ignoring NaN).          Args]] - `rationale_for` [EXTRACTED]
 - [[MultiChannelPersonalization]] - `method` [EXTRACTED]
 - [[compute_zscores()]] - `calls` [EXTRACTED]

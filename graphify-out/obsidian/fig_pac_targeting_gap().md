@@ -10,6 +10,7 @@ tags:
 # fig_pac_targeting_gap()
 
 ## Connections
+
 - [[Bar chart of (mean PAC during rest - mean PAC during stim) per controller.]] - `rationale_for` [EXTRACTED]
 - [[_controller_order()]] - `calls` [EXTRACTED]
 - [[_sem()]] - `calls` [EXTRACTED]

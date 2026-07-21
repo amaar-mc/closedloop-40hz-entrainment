@@ -9,6 +9,7 @@ tags:
 # EEGNetV2 Architecture (F1=12, F2=24, ~3200 params)
 
 ## Connections
+
 - [[V2 Improvements ΔPAC Target + Data Augmentation + EEGNetV2]] - `references` [EXTRACTED]
 
-  #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model*Ceiling*&\_Leakage_Audits

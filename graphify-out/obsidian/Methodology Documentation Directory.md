@@ -10,6 +10,7 @@ tags:
 # Methodology Documentation Directory
 
 ## Connections
+
 - [[Code Architecture Map]] - `conceptually_related_to` [INFERRED]
 - [[Current Technical Methodology]] - `conceptually_related_to` [INFERRED]
 - [[Documentation Index]] - `references` [EXTRACTED]

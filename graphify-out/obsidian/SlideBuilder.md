@@ -10,6 +10,7 @@ tags:
 # SlideBuilder
 
 ## Connections
+
 - [[Tracks vertical cursor and builds content on a slide.]] - `rationale_for` [EXTRACTED]
 - [[__init__()_72]] - `method` [EXTRACTED]
 - [[_parse_bold_segments()]] - `method` [EXTRACTED]

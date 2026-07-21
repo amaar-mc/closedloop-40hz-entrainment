@@ -10,6 +10,7 @@ tags:
 # Discussion: Comparison to Portiloop, Scalable Framework, DBS Literature
 
 ## Connections
+
 - [[Reference Bergey et al. 2019 — Closed-Loop Neuromodulation Review (Front Neurosci)]] - `cites` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

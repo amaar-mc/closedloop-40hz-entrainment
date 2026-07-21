@@ -10,6 +10,7 @@ tags:
 # build_table_flowable()
 
 ## Connections
+
 - [[Create a reportlab Table with professional styling.]] - `rationale_for` [EXTRACTED]
 - [[generate_notebook_pdf.py]] - `contains` [EXTRACTED]
 - [[md_inline()]] - `calls` [EXTRACTED]

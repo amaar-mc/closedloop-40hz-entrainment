@@ -9,6 +9,7 @@ tags:
 # PAC+Stim TCN 7-channel Line (Figure 6)
 
 ## Connections
+
 - [[Figure 6 Prediction Horizon Sweep (Test R²)]] - `references` [EXTRACTED]
 
   #community/Community_51

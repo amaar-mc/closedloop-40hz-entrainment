@@ -10,6 +10,7 @@ tags:
 # Rigorous Re-Evaluation: N=50 Trials, Bootstrap CIs, Hedges g
 
 ## Connections
+
 - [[Closed-Loop Simulation 4 Controller Strategies Compared]] - `references` [EXTRACTED]
 
   #community/Community_116

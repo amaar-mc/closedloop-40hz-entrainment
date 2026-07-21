@@ -10,6 +10,7 @@ tags:
 # Real-Data Closed-Loop Validation (N=35 Subjects)
 
 ## Connections
+
 - [[Closed-Loop 40 Hz Gamma Entrainment System]] - `references` [EXTRACTED]
 - [[Real-Data Closed-Loop Validation Update (Feb 26 2026)]] - `conceptually_related_to` [INFERRED]
 

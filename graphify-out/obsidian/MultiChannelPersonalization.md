@@ -10,6 +10,7 @@ tags:
 # MultiChannelPersonalization
 
 ## Connections
+
 - [[Personalization module for multi-channel PAC with separate baselines.      Mai]] - `rationale_for` [EXTRACTED]
 - [[__init__()_153]] - `method` [EXTRACTED]
 - [[compute_average_zscore()]] - `method` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # MultiscaleCausalTCN (12-Feature, h=64, 22914 Params)
 
 ## Connections
+
 - [[12 PAC+Stim Features (Optimal Cross-Subject Feature Set)]] - `references` [EXTRACTED]
 - [[Closed-Loop Controller (TCN Predictive, 5-Second Horizon)]] - `references` [EXTRACTED]
 - [[Horizon Sweep Results — 12-Feature PAC+Stim (1–10s)]] - `references` [EXTRACTED]

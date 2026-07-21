@@ -10,8 +10,9 @@ tags:
 # test_filter_state_persists()
 
 ## Connections
+
 - [[Calling process_window() twice with the same input produces different     PAC-st]] - `rationale_for` [EXTRACTED]
 - [[_feature_slices()]] - `calls` [EXTRACTED]
 - [[test_streaming_parity.py]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -15,12 +15,12 @@
 
 ### What Judges Are Scoring (40 points total)
 
-| Category (10 pts each) | What they want to see | Your strongest evidence |
-|---|---|---|
-| **Scientific Thought** | Significant problem, clear hypothesis, controls, justified conclusions, awareness of further research | 55M patients, $300B burden, clear gap (fixed vs adaptive), 6 controller comparisons as controls, honest limitations, future work section |
-| **Creativity** | Original approach, novel hypothesis checking, YOUR contributions | Nobody has built a predictive closed-loop controller for 40 Hz therapy before. Architecture marathon (8 models) to prove data limitation. SpecTempNet leakage discovery. Horizon sweep as novel evaluation |
-| **Independent Work/Skill** | Did YOU do it? Understanding appropriate for grade? Programming/analytical skills | You wrote every line of Python, you can explain PAC computation, causal convolutions, dilated receptive fields, why Ridge fails at 5s. Show notebook |
-| **Thoroughness/Clarity** | Adequate data, replications, claims supported, notebook, clear answers | 35 subjects, all 35 benefit, Wilcoxon signed-rank, Hedges' g, 6 integrity checks, 4 fatigue models, threshold robustness sweep |
+| Category (10 pts each)     | What they want to see                                                                                 | Your strongest evidence                                                                                                                                                                                    |
+| -------------------------- | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Scientific Thought**     | Significant problem, clear hypothesis, controls, justified conclusions, awareness of further research | 55M patients, $300B burden, clear gap (fixed vs adaptive), 6 controller comparisons as controls, honest limitations, future work section                                                                   |
+| **Creativity**             | Original approach, novel hypothesis checking, YOUR contributions                                      | Nobody has built a predictive closed-loop controller for 40 Hz therapy before. Architecture marathon (8 models) to prove data limitation. SpecTempNet leakage discovery. Horizon sweep as novel evaluation |
+| **Independent Work/Skill** | Did YOU do it? Understanding appropriate for grade? Programming/analytical skills                     | You wrote every line of Python, you can explain PAC computation, causal convolutions, dilated receptive fields, why Ridge fails at 5s. Show notebook                                                       |
+| **Thoroughness/Clarity**   | Adequate data, replications, claims supported, notebook, clear answers                                | 35 subjects, all 35 benefit, Wilcoxon signed-rank, Hedges' g, 6 integrity checks, 4 fatigue models, threshold robustness sweep                                                                             |
 
 ### Your Core Narrative Arc (What Judges Should Walk Away Remembering)
 
@@ -46,7 +46,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 > My grandmother had dementia. I watched her lose the ability to recognize her own family -- to carry a conversation, to remember what she'd said moments earlier. That experience is what started this project.
 >
-> *(beat -- 1 second pause. Make eye contact.)*
+> _(beat -- 1 second pause. Make eye contact.)_
 >
 > Alzheimer's disease affects over 55 million people worldwide. It's the leading cause of dementia. There's no cure. And it costs over 300 billion dollars a year in the US alone.
 
@@ -56,7 +56,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Part 2: The Science -- Why 40 Hz Matters (45 seconds)
 
-> *(gesture toward background section of poster)*
+> _(gesture toward background section of poster)_
 >
 > But in 2016, a team at MIT discovered something remarkable. When they exposed Alzheimer's model mice to flickering light at 40 hertz -- the gamma frequency -- it triggered the brain's immune cells, called microglia, to clear amyloid-beta plaques. The toxic protein buildups that cause Alzheimer's. They saw 40 to 50 percent plaque reduction.
 >
@@ -70,13 +70,13 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Part 3: The Gap -- Why Current Protocols Fail (45 seconds)
 
-> *(gesture toward the problem/gap section of poster)*
+> _(gesture toward the problem/gap section of poster)_
 >
 > Right now, every clinical protocol delivers 40 hertz stimulation the same way: 40 seconds of sound on, 20 seconds off, repeated for an hour. Every patient, same schedule, same timing.
 >
 > But brains are different. When I analyzed the EEG data from 35 dementia patients, I found that about half of them -- 48.6 percent -- habituate. Their brain's response to the stimulus fades over time. But the other half -- 51.4 percent -- actually facilitate. Their response gets stronger. And at the population level, there's no net trend. The p-value is 0.542 -- not significant.
 >
-> *(gesture toward habituation figure if on poster)*
+> _(gesture toward habituation figure if on poster)_
 >
 > So you have half your patients going one direction and half going the other. A fixed schedule can't adapt to that. It stimulates when the brain doesn't need it and misses windows when it does. That gap -- between a therapy with real disease-modifying potential and a delivery system that ignores individual brain responses -- is what this project addresses.
 
@@ -86,7 +86,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Part 4: What I Built (75 seconds)
 
-> *(gesture toward methods/architecture section)*
+> _(gesture toward methods/architecture section)_
 >
 > So I built a system that adapts. The core idea is: instead of using a timer, use the brain itself to decide when to stimulate.
 >
@@ -106,7 +106,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Part 5: Why 5 Seconds Matters -- The Horizon Sweep (45 seconds)
 
-> *(point to the horizon sweep figure -- this is your most important visual)*
+> _(point to the horizon sweep figure -- this is your most important visual)_
 >
 > Before I show the controller results, I want to show why the TCN matters. I trained separate models to predict PAC at horizons from 1 second to 10 seconds ahead. At short horizons -- 1 to 2 seconds -- PAC changes so slowly that a trivial baseline works. Just repeat the last value. Persistence gets R-squared of 0.76 at 1 second.
 >
@@ -120,17 +120,17 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Part 6: Results (60 seconds)
 
-> *(gesture toward results / controller comparison)*
+> _(gesture toward results / controller comparison)_
 >
 > I replayed the TCN controller on all 35 patients' real EEG recordings, alongside five other control strategies: fixed schedule, reactive threshold, PI controller, a hybrid system, and a theoretical oracle with perfect knowledge of the future.
 >
-> *(point to the controller comparison chart)*
+> _(point to the controller comparison chart)_
 >
 > The TCN achieved 72.1 percent alignment -- meaning 72 percent of the time, the controller made the correct decision. That's versus 64.5 percent for reactive control. More importantly, when I look specifically at the windows where the brain actually needed stimulation -- low PAC moments -- the TCN caught 82.6 percent of them. Reactive only caught 51.7 percent. That's a 60 percent improvement in therapeutic precision.
 >
 > All of this is statistically significant. Wilcoxon signed-rank test, p below 0.001. Hedges' g of 1.31 for alignment -- that's a large effect size. And for the low-PAC targeting rate, Hedges' g is 4.47 -- a very large effect.
 >
-> *(point to per-subject scatter plot)*
+> _(point to per-subject scatter plot)_
 >
 > But the number I'm most proud of: all 35 out of 35 patients showed higher clinical utility with the TCN controller than with reactive control. Every single one. The probability of that by chance is less than one in 34 billion. And the TCN reaches 91 percent of the theoretical oracle's performance -- meaning we're already close to the ceiling of what's possible.
 
@@ -140,7 +140,7 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Part 7: Significance and What's Next (30 seconds)
 
-> *(make eye contact, slow down)*
+> _(make eye contact, slow down)_
 >
 > No one had built a predictive closed-loop controller for 40 hertz entrainment before. Existing approaches are either fixed-schedule or reactive at best. This project shows that predictive control is feasible, that it meaningfully outperforms current methods, and that it benefits every patient tested.
 >
@@ -152,16 +152,16 @@ This is NOT a script to memorize word-for-word. It's the content and flow to int
 
 ### Timing Breakdown
 
-| Section | Target time |
-|---|---|
-| Part 1: Hook (grandmother + problem scale) | 30 sec |
-| Part 2: Why 40 Hz matters (MIT, clinical trials) | 45 sec |
-| Part 3: The gap (fixed schedule + habituation) | 45 sec |
-| Part 4: What I built (PAC + TCN + controller) | 75 sec |
-| Part 5: Horizon sweep (why 5 seconds) | 45 sec |
-| Part 6: Results (controller comparison + stats) | 60 sec |
-| Part 7: Significance + next steps | 30 sec |
-| **Total** | **~5.5 min** |
+| Section                                          | Target time  |
+| ------------------------------------------------ | ------------ |
+| Part 1: Hook (grandmother + problem scale)       | 30 sec       |
+| Part 2: Why 40 Hz matters (MIT, clinical trials) | 45 sec       |
+| Part 3: The gap (fixed schedule + habituation)   | 45 sec       |
+| Part 4: What I built (PAC + TCN + controller)    | 75 sec       |
+| Part 5: Horizon sweep (why 5 seconds)            | 45 sec       |
+| Part 6: Results (controller comparison + stats)  | 60 sec       |
+| Part 7: Significance + next steps                | 30 sec       |
+| **Total**                                        | **~5.5 min** |
 
 ### If You Get Interrupted
 
@@ -334,6 +334,7 @@ These are the moments that could cost you points. Have answers ready.
 **What they're probing for:** Independent Work / Skill (10 points)
 
 **Your answer:**
+
 > I used AI as a learning tool, the same way someone would use Stack Overflow, a textbook, or a professor's office hours. I'd ask it to explain a concept like dilated convolutions, or help me debug an error message. But I made every design decision -- which model to try, how to compute PAC, when to pivot from static to temporal -- and I wrote the implementation. The SpecTempNet leakage discovery is a good example: no tool told me the R-squared was suspiciously high. I noticed it, traced it to PAC features in the input, and fixed it. That's the kind of scientific reasoning that matters.
 
 **Key:** Don't be defensive. Frame it as a tool. Then immediately pivot to a concrete example of YOUR independent reasoning.
@@ -341,21 +342,25 @@ These are the moments that could cost you points. Have answers ready.
 ### Danger Zone 2: "R-squared of 0.25 doesn't seem very good"
 
 **Your answer:**
+
 > You're right to push on that -- I pushed on it too. The key insight is that the downstream controller doesn't need perfect prediction. It needs directional accuracy: is PAC going up or down? An R-squared of 0.25 at 5 seconds ahead provides enough signal for the controller to target 83% of low-PAC windows, compared to 52% for reactive. The proof that 0.25 is useful isn't the number itself -- it's the 72% alignment and the fact that all 35 patients benefited.
 
 ### Danger Zone 3: "This is just a simulation, not a real system"
 
 **Your answer:**
+
 > That's correct -- it's offline replay, not live deployment, and I'm explicit about that as a limitation. But the replay uses real patient EEG, real timing, and the model only sees data that would be available in real time. It's the standard validation approach in BCI research before moving to live systems. The results demonstrate feasibility and quantify the advantage. Clinical deployment would be the natural next step, and the model's 2-millisecond inference time suggests real-time operation is feasible.
 
 ### Danger Zone 4: "35 patients isn't enough data"
 
 **Your answer:**
+
 > It's a real limitation, and I acknowledge it. But three things give me confidence. First, the effect sizes are very large -- Hedges' g of 1.31 for alignment -- so the differences are detectable even with 35 subjects. Second, all 35 of 35 subjects showed improvement, not just the average. Third, I used non-parametric statistics that are appropriate for small samples. This is also the largest publicly available dataset of dementia patients during 40 Hz stimulation, so it's the best data currently accessible.
 
 ### Danger Zone 5: "How is this different from just a reactive controller?"
 
 **Your answer:**
+
 > Reactive controllers respond after the brain has already lost entrainment. By the time PAC drops and you detect it, you've already missed the therapeutic window. My system predicts the drop 5 seconds in advance, so it can start stimulation before the brain loses synchronization. That's the difference between a smoke detector that goes off during the fire and one that goes off before the fire starts. The numbers show the difference: the TCN targets 83% of low-PAC windows while reactive only catches 52%.
 
 ---
@@ -363,23 +368,27 @@ These are the moments that could cost you points. Have answers ready.
 ## 5. Delivery Tips
 
 ### Pacing
+
 - Speak at about 70% of your normal conversational speed. Judges are processing technical content.
 - Pause after every key number. "Seventy-two percent alignment... (beat) ...versus sixty-five for reactive."
 - If you catch yourself speeding up, take a breath. It's okay to pause.
 
 ### Body Language
+
 - Stand slightly to one side of your poster, not directly in front of it. Judges need to see the board.
 - Face the judges, not the poster. Glance at the board only when pointing to something specific.
 - Open palm gestures toward the poster. Never point with one finger -- it looks aggressive.
 - Keep your hands visible. Don't fold arms or put hands in pockets.
 
 ### Answering Questions
+
 - If you don't know the answer, say: "That's a great question -- I'm not sure about that specific aspect, but here's what I do know..." Then pivot to related knowledge.
 - Never bluff. Judges can tell. Honesty about limitations scores higher than a fabricated answer.
 - If a question is ambiguous, ask for clarification: "When you say X, do you mean A or B?" This shows analytical thinking.
 - After answering, stop. Don't keep talking to fill silence. Let the judge process.
 
 ### Common Mistakes to Avoid
+
 - Don't read from notes or your poster. You should know this cold.
 - Don't use filler words: "like," "um," "basically," "so yeah." Practice eliminating them.
 - Don't apologize for your work or hedge excessively. State results confidently with appropriate caveats.
@@ -388,6 +397,7 @@ These are the moments that could cost you points. Have answers ready.
 - Don't say "I just" or "It's just." Those words minimize your work.
 
 ### The Night Before
+
 - Read through this script 3 times aloud. Time yourself.
 - Pick 5 Q&A answers you feel weakest on and practice those aloud.
 - Get your notebook ready, tabbed to key sections (data integrity checks, habituation analysis, architecture comparison).

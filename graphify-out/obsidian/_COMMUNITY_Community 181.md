@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Poster V8 and Coherence Audit (April 7-8, 2026)]] - document - submission/lab_notebook/extension.md
 
 ## Live Query (requires Dataview plugin)

@@ -10,6 +10,7 @@ tags:
 # Project Deep Dive: Complete Terminology Glossary (PAC, EEG, TCN, LSTM, etc.)
 
 ## Connections
+
 - [[ML Glossary (Judge Reference Activation, Backprop, Causal, CNN, etc.)]] - `semantically_similar_to` [INFERRED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

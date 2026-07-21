@@ -7,9 +7,10 @@ tags:
   - community/Community_57
 ---
 
-# Multi-head attention over time points.      Learns which time points are importa
+# Multi-head attention over time points. Learns which time points are importa
 
 ## Connections
+
 - [[AttentionModel]] - `rationale_for` [EXTRACTED]
 
   #community/Community_57

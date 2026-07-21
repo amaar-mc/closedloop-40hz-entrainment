@@ -10,6 +10,7 @@ tags:
 # Hjorth Parameters (Activity, Mobility, Complexity)
 
 ## Connections
+
 - [[Sample Entropy (SampEn) Feature]] - `semantically_similar_to` [INFERRED]
 - [[compute_hjorth_params()]] - `implements` [EXTRACTED]
 

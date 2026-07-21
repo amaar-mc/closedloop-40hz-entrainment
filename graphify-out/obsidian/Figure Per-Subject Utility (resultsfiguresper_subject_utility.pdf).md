@@ -10,6 +10,7 @@ tags:
 # Figure: Per-Subject Utility (results/figures/per_subject_utility.pdf)
 
 ## Connections
+
 - [[Research Paper Status Document]] - `references` [EXTRACTED]
 
   #community/Community_59

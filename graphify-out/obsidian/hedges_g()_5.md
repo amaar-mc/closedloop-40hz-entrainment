@@ -10,6 +10,7 @@ tags:
 # hedges_g()
 
 ## Connections
+
 - [[Compute Hedges' g (bias-corrected Cohen's d).      Uses pooled standard deviat]] - `rationale_for` [EXTRACTED]
 - [[High Finding Cohen's d Mathematically Wrong]] - `implements` [INFERRED]
 - [[compute_all_statistics()]] - `calls` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[pairwise_wilcoxon()]] - `calls` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

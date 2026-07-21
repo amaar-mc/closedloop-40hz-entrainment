@@ -10,6 +10,7 @@ tags:
 # Run initial warmup to let TVB settle from transients.
 
 ## Connections
+
 - [[_warmup()_1]] - `rationale_for` [EXTRACTED]
 
   #community/TVB_Alzheimer_Simulator

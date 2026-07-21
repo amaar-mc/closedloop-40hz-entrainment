@@ -10,6 +10,7 @@ tags:
 # TP9 → T7 Proxy (Temporal Left / Auditory Cortex)
 
 ## Connections
+
 - [[Muse 2 to ds005048 Channel Mapping]] - `references` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

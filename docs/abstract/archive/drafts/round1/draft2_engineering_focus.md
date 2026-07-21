@@ -14,4 +14,4 @@ A horizon sweep across 1-10 seconds revealed the TCN's unique value: at 1-2 seco
 
 ---
 
-*Word count: 248 / 250 max*
+_Word count: 248 / 250 max_

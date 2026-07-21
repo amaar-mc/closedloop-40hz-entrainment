@@ -10,6 +10,7 @@ tags:
 # Discussion Section Arc
 
 ## Connections
+
 - [[Anatomy Hypothesis Why Spectral Features Fail Cross-Subject]] - `references` [EXTRACTED]
 - [[Limitation Offline Replay Not Live Closed-Loop]] - `references` [INFERRED]
 

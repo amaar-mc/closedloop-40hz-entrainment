@@ -9,6 +9,7 @@ tags:
 # 73 Causal Features (spectral + PAC-history + stim-context)
 
 ## Connections
+
 - [[Causal Temporal Convolutional Network (TCN, ~31K params)]] - `shares_data_with` [EXTRACTED]
 - [[Phase-Amplitude Coupling (PAC) as Entrainment Biomarker]] - `conceptually_related_to` [EXTRACTED]
 

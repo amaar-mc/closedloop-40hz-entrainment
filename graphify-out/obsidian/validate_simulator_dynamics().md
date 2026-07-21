@@ -10,6 +10,7 @@ tags:
 # validate_simulator_dynamics()
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `calls` [EXTRACTED]
 - [[Validate simulator dynamics with test cases.]] - `rationale_for` [EXTRACTED]
 - [[extract_tau_parameters_from_data()]] - `calls` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[step()_66]] - `calls` [EXTRACTED]
 - [[test_simulator()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

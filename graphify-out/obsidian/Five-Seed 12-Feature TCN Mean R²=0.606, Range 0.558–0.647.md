@@ -10,6 +10,7 @@ tags:
 # Five-Seed 12-Feature TCN: Mean R²=0.606, Range 0.558–0.647
 
 ## Connections
+
 - [[Causal TCN with 12 PAC-Trajectory and Stimulation-Context Features]] - `references` [EXTRACTED]
 - [[Research Paper Status Document]] - `references` [EXTRACTED]
 

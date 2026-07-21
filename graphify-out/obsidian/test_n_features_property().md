@@ -10,7 +10,8 @@ tags:
 # test_n_features_property()
 
 ## Connections
+
 - [[n_features property returns 8n_channels + 5.]] - `rationale_for` [EXTRACTED]
 - [[test_streaming_parity.py]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

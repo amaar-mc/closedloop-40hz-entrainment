@@ -10,6 +10,7 @@ tags:
 # Methods page 2: Features, Model Architectures.
 
 ## Connections
+
 - [[p05_methods2()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

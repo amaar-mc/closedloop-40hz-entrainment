@@ -9,6 +9,7 @@ tags:
 # CSEF 2026 Day-of Logistics Checklist
 
 ## Connections
+
 - [[CSEF Display Prohibited Items (QR codes, handouts, AC power, school name)]] - `references` [INFERRED]
 - [[Demo Items Muse 2, Laptop, Poster (48x64 in)]] - `references` [EXTRACTED]
 

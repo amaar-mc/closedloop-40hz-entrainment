@@ -22,12 +22,12 @@ Swept three hyperparameter axes independently (one at a time, others at default)
 
 ### Sweep 1: Hidden Size (PAC+Stim, 12 features)
 
-| Hidden | Params  | Best Epoch | Val R2 | Test R2 | Test Corr | Test RMSE |
-|--------|---------|------------|--------|---------|-----------|-----------|
-| 16     | 2,179   | 29         | 0.449  | 0.341   | 0.587     | 2.95e-05  |
-| 32     | 7,427   | 29         | 0.737  | 0.484   | 0.696     | 2.61e-05  |
-| **64** | **27,139** | **21** | **0.817** | **0.568** | **0.754** | **2.38e-05** |
-| 128    | 103,427 | 27         | 0.859  | 0.610   | 0.781     | 2.27e-05  |
+| Hidden | Params     | Best Epoch | Val R2    | Test R2   | Test Corr | Test RMSE    |
+| ------ | ---------- | ---------- | --------- | --------- | --------- | ------------ |
+| 16     | 2,179      | 29         | 0.449     | 0.341     | 0.587     | 2.95e-05     |
+| 32     | 7,427      | 29         | 0.737     | 0.484     | 0.696     | 2.61e-05     |
+| **64** | **27,139** | **21**     | **0.817** | **0.568** | **0.754** | **2.38e-05** |
+| 128    | 103,427    | 27         | 0.859     | 0.610     | 0.781     | 2.27e-05     |
 
 **Range:** Test R2 spans 0.341 to 0.610 (0.269 spread).
 **Trend:** Monotonically increasing with hidden size. Larger models generalize better here because the 12-feature input is low-dimensional and not prone to overfitting. Hidden=128 actually achieves the best test R2 (0.610), slightly exceeding hidden=64 (0.568).
@@ -35,12 +35,12 @@ Swept three hyperparameter axes independently (one at a time, others at default)
 
 ### Sweep 2: Dropout Rate (PAC+Stim, 12 features, hidden=64)
 
-| Dropout | Best Epoch | Val R2 | Test R2 | Test Corr | Test RMSE |
-|---------|------------|--------|---------|-----------|-----------|
-| 0.1     | 16         | 0.862  | 0.537   | 0.733     | 2.47e-05  |
+| Dropout | Best Epoch | Val R2    | Test R2   | Test Corr | Test RMSE    |
+| ------- | ---------- | --------- | --------- | --------- | ------------ |
+| 0.1     | 16         | 0.862     | 0.537     | 0.733     | 2.47e-05     |
 | **0.2** | **21**     | **0.817** | **0.568** | **0.754** | **2.38e-05** |
-| 0.3     | 20         | 0.834  | 0.638   | 0.799     | 2.18e-05  |
-| 0.4     | 28         | 0.767  | 0.606   | 0.787     | 2.28e-05  |
+| 0.3     | 20         | 0.834     | 0.638     | 0.799     | 2.18e-05     |
+| 0.4     | 28         | 0.767     | 0.606     | 0.787     | 2.28e-05     |
 
 **Range:** Test R2 spans 0.537 to 0.638 (0.101 spread).
 **Trend:** Higher dropout improves generalization. Dropout=0.3 achieves the best test R2 (0.638), while dropout=0.1 is worst (0.537). The val-test gap narrows with higher dropout (0.325 at 0.1 vs 0.161 at 0.4), consistent with a regularization effect.
@@ -48,11 +48,11 @@ Swept three hyperparameter axes independently (one at a time, others at default)
 
 ### Sweep 3: Learning Rate (PAC+Stim, 12 features, hidden=64)
 
-| LR   | Best Epoch | Val R2 | Test R2 | Test Corr | Test RMSE |
-|------|------------|--------|---------|-----------|-----------|
-| 5e-4 | 29         | 0.816  | 0.589   | 0.767     | 2.33e-05  |
-| **1e-3** | **21** | **0.817** | **0.568** | **0.754** | **2.38e-05** |
-| 2e-3 | 28         | 0.836  | 0.650   | 0.807     | 2.15e-05  |
+| LR       | Best Epoch | Val R2    | Test R2   | Test Corr | Test RMSE    |
+| -------- | ---------- | --------- | --------- | --------- | ------------ |
+| 5e-4     | 29         | 0.816     | 0.589     | 0.767     | 2.33e-05     |
+| **1e-3** | **21**     | **0.817** | **0.568** | **0.754** | **2.38e-05** |
+| 2e-3     | 28         | 0.836     | 0.650     | 0.807     | 2.15e-05     |
 
 **Range:** Test R2 spans 0.568 to 0.650 (0.082 spread).
 **Trend:** Higher learning rate improves test R2 within this range. lr=2e-3 achieves the best test R2 (0.650). All three produce strong results. The model converges at all rates; lr=5e-4 needs more epochs (best at 29) while lr=1e-3 converges earlier (best at 21).
@@ -61,7 +61,7 @@ Swept three hyperparameter axes independently (one at a time, others at default)
 ### Sweep 4: Hidden Size (All 73 features, comparison)
 
 | Hidden | Params  | Best Epoch | Val R2 | Test R2 | Test Corr |
-|--------|---------|------------|--------|---------|-----------|
+| ------ | ------- | ---------- | ------ | ------- | --------- |
 | 16     | 3,155   | 30         | 0.330  | 0.028   | 0.344     |
 | 32     | 9,379   | 19         | 0.324  | 0.188   | 0.447     |
 | 64     | 31,043  | 17         | 0.352  | 0.094   | 0.413     |
@@ -73,20 +73,21 @@ Swept three hyperparameter axes independently (one at a time, others at default)
 
 ## Cross-Sweep Summary
 
-| Configuration                         | Test R2   | vs Default (0.568) | vs Persistence (0.104) |
-|---------------------------------------|-----------|--------------------|-----------------------|
-| Best overall: pac_stim, lr=2e-3       | **0.650** | +0.082             | +0.546                |
-| Best dropout: pac_stim, drop=0.3      | 0.638     | +0.070             | +0.534                |
-| Best hidden: pac_stim, h=128          | 0.610     | +0.042             | +0.506                |
-| **Default: pac_stim, h=64/d=0.2/lr=1e-3** | **0.568** | **baseline**   | **+0.464**            |
-| Worst PAC+Stim: h=16                  | 0.341     | -0.227             | +0.237                |
-| Best all-features: h=32               | 0.188     | -0.380             | +0.084                |
-| Worst all-features: h=16              | 0.028     | -0.540             | -0.076                |
-| Persistence baseline                  | 0.104     | -0.464             | --                    |
+| Configuration                             | Test R2   | vs Default (0.568) | vs Persistence (0.104) |
+| ----------------------------------------- | --------- | ------------------ | ---------------------- |
+| Best overall: pac_stim, lr=2e-3           | **0.650** | +0.082             | +0.546                 |
+| Best dropout: pac_stim, drop=0.3          | 0.638     | +0.070             | +0.534                 |
+| Best hidden: pac_stim, h=128              | 0.610     | +0.042             | +0.506                 |
+| **Default: pac_stim, h=64/d=0.2/lr=1e-3** | **0.568** | **baseline**       | **+0.464**             |
+| Worst PAC+Stim: h=16                      | 0.341     | -0.227             | +0.237                 |
+| Best all-features: h=32                   | 0.188     | -0.380             | +0.084                 |
+| Worst all-features: h=16                  | 0.028     | -0.540             | -0.076                 |
+| Persistence baseline                      | 0.104     | -0.464             | --                     |
 
 ## Statistical Characterization
 
 Across 9 unique PAC+Stim configurations (the default h=64/d=0.2/lr=1e-3 appears in all three sweeps with identical R2=0.568 due to deterministic seeding):
+
 - **Mean test R2:** 0.558
 - **Std test R2:** 0.091
 - **Min test R2:** 0.341 (hidden=16)
@@ -94,6 +95,7 @@ Across 9 unique PAC+Stim configurations (the default h=64/d=0.2/lr=1e-3 appears 
 - **All 9 configurations beat persistence** (R2=0.104) by at least +0.237
 
 Excluding the capacity-limited hidden=16 (8 configs):
+
 - **Mean test R2:** 0.585
 - **Std test R2:** 0.051
 - **Min test R2:** 0.484 (hidden=32)
@@ -104,14 +106,14 @@ Excluding the capacity-limited hidden=16 (8 configs):
 
 Earlier experiments (`experimental/run_pac_stim_focused.py`, 80 epochs, different architecture variant) provide additional evidence:
 
-| Variant                | Test R2 | Notes                         |
-|------------------------|---------|-------------------------------|
-| h=32 standard          | 0.562   | dropout=0.2, wd=1e-3          |
-| h=32 high-reg          | 0.613   | dropout=0.3, wd=5e-3          |
-| h=64 standard          | 0.558   | dropout=0.2, wd=1e-3          |
-| h=64 high-reg          | 0.598   | dropout=0.3, wd=5e-3          |
-| h=64 deep (6 blocks)   | 0.524   | diminishing returns from depth |
-| h=128                  | 0.645   | standard                      |
+| Variant              | Test R2 | Notes                          |
+| -------------------- | ------- | ------------------------------ |
+| h=32 standard        | 0.562   | dropout=0.2, wd=1e-3           |
+| h=32 high-reg        | 0.613   | dropout=0.3, wd=5e-3           |
+| h=64 standard        | 0.558   | dropout=0.2, wd=1e-3           |
+| h=64 high-reg        | 0.598   | dropout=0.3, wd=5e-3           |
+| h=64 deep (6 blocks) | 0.524   | diminishing returns from depth |
+| h=128                | 0.645   | standard                       |
 
 Multi-seed validation at h=64 standard: 0.558, 0.620, 0.597, 0.608, 0.647 (mean 0.606 +/- 0.032).
 

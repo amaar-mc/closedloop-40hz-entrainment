@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Pre-generate a library of stimuli at various durations.      Creates both click
+# Pre-generate a library of stimuli at various durations. Creates both click
 
 ## Connections
+
 - [[generate_stimulus_library()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

@@ -10,6 +10,7 @@ tags:
 # Reactive Controller (Alzheimer Sim)
 
 ## Connections
+
 - [[Alzheimer Simulation Script (Disease Severity × Strategy Matrix)]] - `implements` [EXTRACTED]
 
   #community/12-Feature_TCN_Validation

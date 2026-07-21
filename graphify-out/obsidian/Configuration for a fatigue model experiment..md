@@ -10,6 +10,7 @@ tags:
 # Configuration for a fatigue model experiment.
 
 ## Connections
+
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[FatigueModelConfig]] - `rationale_for` [EXTRACTED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[StimAction]] - `uses` [INFERRED]
 - [[TrialMetrics]] - `uses` [INFERRED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

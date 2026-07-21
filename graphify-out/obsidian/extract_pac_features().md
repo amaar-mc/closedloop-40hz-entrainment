@@ -10,6 +10,7 @@ tags:
 # extract_pac_features()
 
 ## Connections
+
 - [[Extract comprehensive PAC-specific features.      Args         eeg (n_channels]] - `rationale_for` [EXTRACTED]
 - [[butter_bandpass_filter()]] - `calls` [EXTRACTED]
 - [[compute_cross_channel_plv()]] - `calls` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[extract()_1]] - `calls` [EXTRACTED]
 - [[pac_features.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

@@ -10,6 +10,7 @@ tags:
 # Causal Transformer encoder for sequence-to-scalar regression.
 
 ## Connections
+
 - [[TransformerPredictor]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_ImprovedTCN_Experiments

@@ -10,6 +10,7 @@ tags:
 # BIDSDataProcessor
 
 ## Connections
+
 - [[4-Channel Muse 2 Model Retraining Pipeline  Retrains the full EEGNet + TCN pipel]] - `uses` [INFERRED]
 - [[Build causal temporal sequences for TCN training.]] - `uses` [INFERRED]
 - [[Compute spectral features (37-dim) for each window in each split.]] - `uses` [INFERRED]
@@ -40,4 +41,4 @@ tags:
 - [[save_splits()]] - `method` [EXTRACTED]
 - [[select_frontal_channels()]] - `method` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

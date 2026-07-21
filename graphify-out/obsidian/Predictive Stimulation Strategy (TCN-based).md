@@ -10,6 +10,7 @@ tags:
 # Predictive Stimulation Strategy (TCN-based)
 
 ## Connections
+
 - [[Largest Predictive Benefit at Healthy and Preclinical Stages]] - `conceptually_related_to` [INFERRED]
 - [[PAC Dynamics Predictive Controller Over Time (Panel B)]] - `references` [INFERRED]
 - [[PAC Heatmap Strategy × Severity (Panel E)]] - `references` [EXTRACTED]

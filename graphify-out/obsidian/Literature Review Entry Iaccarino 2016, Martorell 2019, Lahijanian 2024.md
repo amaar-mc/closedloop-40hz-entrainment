@@ -10,7 +10,8 @@ tags:
 # Literature Review Entry: Iaccarino 2016, Martorell 2019, Lahijanian 2024
 
 ## Connections
+
 - [[Lab Notebook VFINAL (Jan–Mar 2026 Research Log)]] - `references` [EXTRACTED]
 - [[Research Paper v3 (Full CSEF Submission Paper)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

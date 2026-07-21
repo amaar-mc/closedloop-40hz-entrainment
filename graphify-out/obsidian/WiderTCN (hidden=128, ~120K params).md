@@ -10,6 +10,7 @@ tags:
 # WiderTCN (hidden=128, ~120K params)
 
 ## Connections
+
 - [[CausalDSConvBlock (Residual Depthwise-Separable Causal Block)]] - `calls` [EXTRACTED]
 - [[VARIANT_REGISTRY (Model Variant Registry Dict)]] - `references` [EXTRACTED]
 - [[WiderTCN Hypothesis (64-dim Bottleneck Limit)]] - `rationale_for` [EXTRACTED]

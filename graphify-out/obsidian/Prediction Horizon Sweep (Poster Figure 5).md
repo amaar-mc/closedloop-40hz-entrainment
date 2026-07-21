@@ -9,6 +9,7 @@ tags:
 # Prediction Horizon Sweep (Poster Figure 5)
 
 ## Connections
+
 - [[CSEF Poster Print Version (Slide1_print.png)]] - `references` [EXTRACTED]
 - [[Figure 6 Prediction Horizon Sweep (Test R²)]] - `semantically_similar_to` [INFERRED]
 

@@ -10,6 +10,7 @@ tags:
 # Leakage-Safe Temporal Pipeline Design
 
 ## Connections
+
 - [[Multiscale Temporal PAC Module]] - `rationale_for` [EXTRACTED]
 - [[audit_multiscale_pipeline.py_1]] - `implements` [EXTRACTED]
 

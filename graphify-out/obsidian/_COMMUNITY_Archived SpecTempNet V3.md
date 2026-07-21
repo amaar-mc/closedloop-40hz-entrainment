@@ -8,6 +8,7 @@ members: 39
 **Members:** 39 nodes
 
 ## Members
+
 - [[Args             eeg (batch, 1, n_channels, n_samples) - Raw EEG]] - rationale - archive/experimental_models/spectempnet.py
 - [[Args             x (batch, 1, n_channels, n_samples)          Returns_1]] - rationale - archive/experimental_models/spectempnet.py
 - [[Args             x (batch, d_model)          Returns             attended]] - rationale - archive/experimental_models/spectempnet.py
@@ -56,10 +57,12 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 5 edges to [[_COMMUNITY_Multiscale TCN & Features]]
 - 1 edge to [[_COMMUNITY_Archived Feature Experiments (v4)]]
 
 ## Top bridge nodes
+
 - [[EEGDatasetV3]] - degree 9, connects to 1 community
 - [[run_training_v3.py]] - degree 8, connects to 1 community
 - [[Dataset with both raw EEG and pre-computed spectral features.]] - degree 3, connects to 1 community

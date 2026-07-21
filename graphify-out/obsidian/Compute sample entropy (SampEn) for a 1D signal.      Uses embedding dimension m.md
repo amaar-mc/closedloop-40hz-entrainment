@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# Compute sample entropy (SampEn) for a 1D signal.      Uses embedding dimension m
+# Compute sample entropy (SampEn) for a 1D signal. Uses embedding dimension m
 
 ## Connections
+
 - [[compute_sample_entropy()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

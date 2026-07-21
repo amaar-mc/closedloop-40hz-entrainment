@@ -9,6 +9,7 @@ tags:
 # TCN Deployment Rationale (causal architecture, parallel inference, fixed receptive field)
 
 ## Connections
+
 - [[MultiscaleCausalTCN Architecture Baseline (R2=0.606, deployment advantages)]] - `rationale_for` [EXTRACTED]
 
   #community/Rigor_Audit_Reports

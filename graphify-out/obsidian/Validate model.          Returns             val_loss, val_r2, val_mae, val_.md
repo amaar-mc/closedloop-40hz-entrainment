@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# Validate model.          Returns:             val_loss, val_r2, val_mae, val_
+# Validate model. Returns: val*loss, val_r2, val_mae, val*
 
 ## Connections
+
 - [[EEGNetV2]] - `uses` [INFERRED]
 - [[validate()]] - `rationale_for` [EXTRACTED]
 

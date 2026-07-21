@@ -10,6 +10,7 @@ tags:
 # Write a formatted table.
 
 ## Connections
+
 - [[write_table()]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

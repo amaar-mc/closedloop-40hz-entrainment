@@ -10,6 +10,7 @@ tags:
 # Controller Variants: Fixed / Reactive / TCN Predictive / Hybrid / PI / Oracle
 
 ## Connections
+
 - [[Research Paper v3 (Full CSEF Submission Paper)]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

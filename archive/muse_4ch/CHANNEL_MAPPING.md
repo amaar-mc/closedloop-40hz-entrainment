@@ -2,12 +2,12 @@
 
 ## Mapping
 
-| Muse 2 Position | 10-10 System | ds005048 Proxy | 10-20 System | Rationale |
-|-----------------|-------------|----------------|-------------|-----------|
-| AF7 | Anterior-frontal L | **F7** | Inferior frontal L | AF7 is midpoint between Fp1 and F7 on the left circumferential arc. F7 (BA45, IFG pars triangularis) is functionally closer than Fp1 (BA10, frontal pole). Both are lateral prefrontal. |
-| AF8 | Anterior-frontal R | **F8** | Inferior frontal R | Mirror of AF7/F7. Both project to lateral prefrontal cortex. |
-| TP9 | Temporal-parietal L | **T7** | Temporal L | TP9 is below/behind T7, near the mastoid. T7 (BA21/42, posterior STG) is the nearest 10-20 electrode. T7 overlies auditory cortex, relevant for 40 Hz ASSR. |
-| TP10 | Temporal-parietal R | **T8** | Temporal R | Mirror of TP9/T7. T8 (BA22, posterior STG) covers auditory cortex. |
+| Muse 2 Position | 10-10 System        | ds005048 Proxy | 10-20 System       | Rationale                                                                                                                                                                               |
+| --------------- | ------------------- | -------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AF7             | Anterior-frontal L  | **F7**         | Inferior frontal L | AF7 is midpoint between Fp1 and F7 on the left circumferential arc. F7 (BA45, IFG pars triangularis) is functionally closer than Fp1 (BA10, frontal pole). Both are lateral prefrontal. |
+| AF8             | Anterior-frontal R  | **F8**         | Inferior frontal R | Mirror of AF7/F7. Both project to lateral prefrontal cortex.                                                                                                                            |
+| TP9             | Temporal-parietal L | **T7**         | Temporal L         | TP9 is below/behind T7, near the mastoid. T7 (BA21/42, posterior STG) is the nearest 10-20 electrode. T7 overlies auditory cortex, relevant for 40 Hz ASSR.                             |
+| TP10            | Temporal-parietal R | **T8**         | Temporal R         | Mirror of TP9/T7. T8 (BA22, posterior STG) covers auditory cortex.                                                                                                                      |
 
 ## 4-Channel Subset from ds005048
 
@@ -32,13 +32,13 @@
 
 ## Feature Dimensions
 
-| Component | 7-channel | 4-channel | Formula |
-|-----------|-----------|-----------|---------|
-| Band powers (4 bands) | 28 | 16 | 4 * n_channels |
-| Theta/gamma ratios | 7 | 4 | n_channels |
-| PAC-structure features | 21 | 12 | 3 * n_channels |
-| Cross-channel stats | 5 | 5 | Fixed |
-| **Spectral total** | **61** | **37** | 8 * n_ch + 5 |
-| PAC-derived (causal) | 7 | 7 | Fixed |
-| Stim context | 5 | 5 | Fixed |
-| **TCN input total** | **73** | **49** | spectral + 12 |
+| Component              | 7-channel | 4-channel | Formula         |
+| ---------------------- | --------- | --------- | --------------- |
+| Band powers (4 bands)  | 28        | 16        | 4 \* n_channels |
+| Theta/gamma ratios     | 7         | 4         | n_channels      |
+| PAC-structure features | 21        | 12        | 3 \* n_channels |
+| Cross-channel stats    | 5         | 5         | Fixed           |
+| **Spectral total**     | **61**    | **37**    | 8 \* n_ch + 5   |
+| PAC-derived (causal)   | 7         | 7         | Fixed           |
+| Stim context           | 5         | 5         | Fixed           |
+| **TCN input total**    | **73**    | **49**    | spectral + 12   |

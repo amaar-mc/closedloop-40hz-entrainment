@@ -10,6 +10,7 @@ tags:
 # build_features_from_sequence()
 
 ## Connections
+
 - [[Build causal feature sequences and future PAC targets.      Features per step (1]] - `rationale_for` [EXTRACTED]
 - [[TCNTribe Model (TRIBE-trained Causal TCN)]] - `shares_data_with` [INFERRED]
 - [[TRIBE TCN Validation Pipeline Script]] - `calls` [EXTRACTED]

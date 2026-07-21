@@ -10,6 +10,7 @@ tags:
 # TRIBE V2 Integration Attempt and Biophysical Workaround (April 8, 2026)
 
 ## Connections
+
 - [[Alzheimer Severity Profiles (Healthy, Mild AD, Severe AD)]] - `references` [EXTRACTED]
 - [[Citation Meta AI (2026) - TRIBE V2 Brain Foundation Model]] - `cites` [EXTRACTED]
 - [[Citation Soula et al. (2023) - 40Hz Light Doesn't Entrain Native Gamma in AD Mice]] - `conceptually_related_to` [INFERRED]

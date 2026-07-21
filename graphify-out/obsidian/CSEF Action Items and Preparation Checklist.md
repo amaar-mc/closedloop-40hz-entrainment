@@ -10,6 +10,7 @@ tags:
 # CSEF Action Items and Preparation Checklist
 
 ## Connections
+
 - [[13-Page Project Presentation PDF (CSEF Requirement)]] - `references` [EXTRACTED]
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 - [[Project Notebook  Lab Notebook Requirements]] - `references` [EXTRACTED]

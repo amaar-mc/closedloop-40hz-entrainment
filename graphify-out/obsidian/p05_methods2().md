@@ -10,6 +10,7 @@ tags:
 # p05_methods2()
 
 ## Connections
+
 - [[Slide 5 Methods page 2.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `calls` [EXTRACTED]
 - [[body()]] - `calls` [EXTRACTED]

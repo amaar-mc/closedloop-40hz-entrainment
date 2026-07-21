@@ -11,7 +11,7 @@
     "best_val_future_r2": -0.006296333330922499,
     "test_future_r2": 0.06448934572549525,
     "test_future_corr": 0.2671258068920422,
-    "test_delta_r2": 3.6149676352792426e-05
+    "test_delta_r2": 3.6149676352792426e-5
   },
   {
     "run_name": "multiscale_tcn_lb20_hz5",

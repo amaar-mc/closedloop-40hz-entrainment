@@ -8,6 +8,7 @@ members: 8
 **Members:** 8 nodes
 
 ## Members
+
 - [[corr_score()]] - code - results/rigor_audit/run_feature_ablation.py
 - [[denorm()_1]] - code - results/rigor_audit/run_feature_ablation.py
 - [[evaluate()_6]] - code - results/rigor_audit/run_feature_ablation.py
@@ -25,8 +26,10 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 3 edges to [[_COMMUNITY_Multiscale TCN & Features]]
 
 ## Top bridge nodes
+
 - [[run_feature_ablation.py]] - degree 9, connects to 1 community
 - [[train_subset()]] - degree 5, connects to 1 community

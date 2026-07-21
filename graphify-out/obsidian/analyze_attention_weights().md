@@ -10,6 +10,7 @@ tags:
 # analyze_attention_weights()
 
 ## Connections
+
 - [[AttentionWeightCapture]] - `calls` [EXTRACTED]
 - [[AttentionWeightCapture (Hook-Based Attention Weight Capture)]] - `calls` [EXTRACTED]
 - [[Run the test set through the model and capture attention weights.      Args]] - `rationale_for` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[remove()]] - `calls` [EXTRACTED]
 - [[tcn_interpretability.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

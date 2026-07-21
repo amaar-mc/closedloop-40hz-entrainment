@@ -10,6 +10,7 @@ tags:
 # Glymphatic Clearance via AQP4/VIP Interneuron Pathway (Murdock 2024)
 
 ## Connections
+
 - [[Amyloid Cascade Hypothesis and 40Hz Mechanism (Iaccarino + Murdock pathways)]] - `references` [EXTRACTED]
 
   #community/Community_124

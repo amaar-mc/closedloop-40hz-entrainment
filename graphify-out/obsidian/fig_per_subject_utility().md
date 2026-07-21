@@ -10,6 +10,7 @@ tags:
 # fig_per_subject_utility()
 
 ## Connections
+
 - [[Scatter Reactive utility (x) vs TCN utility (y), colored by split.]] - `rationale_for` [EXTRACTED]
 - [[generate_figures.py]] - `contains` [EXTRACTED]
 - [[main()_61]] - `calls` [EXTRACTED]

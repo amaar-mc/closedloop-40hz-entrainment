@@ -9,6 +9,7 @@ tags:
 # P10 Research Log Notebook V3 Early (PDF render)
 
 ## Connections
+
 - [[P10 Research Log Notebook V3 Early (Jan 15 - Mar 1 2026)]] - `references` [EXTRACTED]
 
   #community/Community_95

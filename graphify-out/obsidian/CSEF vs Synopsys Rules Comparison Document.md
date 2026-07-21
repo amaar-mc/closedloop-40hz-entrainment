@@ -9,6 +9,7 @@ tags:
 # CSEF vs Synopsys Rules Comparison Document
 
 ## Connections
+
 - [[13-Page Project Presentation PDF (CSEF Requirement)]] - `references` [EXTRACTED]
 - [[AI  Generative AI Use Policy (ISEF-based)]] - `references` [EXTRACTED]
 - [[Awards Structure and ISEF Advancement Paths]] - `references` [EXTRACTED]

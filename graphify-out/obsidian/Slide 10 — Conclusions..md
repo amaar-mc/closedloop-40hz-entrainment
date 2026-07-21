@@ -10,6 +10,7 @@ tags:
 # Slide 10 — Conclusions.
 
 ## Connections
+
 - [[p10_conclusions()_2]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[QR Code Feedback Link (Submission Flyer)]] - image - submission/flyer/qr_feedback.png
 
 ## Live Query (requires Dataview plugin)

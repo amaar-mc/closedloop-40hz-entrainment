@@ -10,6 +10,7 @@ tags:
 # StimAction
 
 ## Connections
+
 - [[40s ON + 20s OFF (standard clinical protocol).]] - `uses` [INFERRED]
 - [[40s ON + 20s OFF (standard clinical protocol)._1]] - `uses` [INFERRED]
 - [[Abstract base class for all control strategies.      Subclasses must implement]] - `uses` [INFERRED]
@@ -208,4 +209,4 @@ tags:
 - [[_NoOpAudioEngine]] - `uses` [INFERRED]
 - [[simulator.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

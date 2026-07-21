@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Compute PAC for a single-channel EEG signal.          This is the main user-fa
+# Compute PAC for a single-channel EEG signal. This is the main user-fa
 
 ## Connections
+
 - [[compute_pac()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

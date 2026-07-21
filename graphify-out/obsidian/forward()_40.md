@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[AttentionPool1D_2]] - `method` [EXTRACTED]
 
   #community/TCN_Layer_Internals

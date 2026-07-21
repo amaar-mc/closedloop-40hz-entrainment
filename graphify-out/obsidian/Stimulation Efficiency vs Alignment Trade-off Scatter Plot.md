@@ -9,6 +9,7 @@ tags:
 # Stimulation Efficiency vs Alignment Trade-off Scatter Plot
 
 ## Connections
+
 - [[Figure 8 Controller Comparison Bar Chart (N=35, OpenNeuro ds005048)]] - `semantically_similar_to` [INFERRED]
 - [[Fixed Schedule Controller (~65% stim rate, ~45% alignment)]] - `references` [EXTRACTED]
 - [[Hybrid Controller ~60% Stim Rate, ~74% Alignment]] - `references` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[Reactive Controller ~38% Stim Rate, ~65% Alignment]] - `references` [EXTRACTED]
 - [[TCN Controller ~60% Stim Rate, ~72% Alignment]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

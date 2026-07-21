@@ -10,6 +10,7 @@ tags:
 # parse_table()
 
 ## Connections
+
 - [[Parse markdown table lines into a list of lists.]] - `rationale_for` [EXTRACTED]
 - [[generate_notebook_pdf.py]] - `contains` [EXTRACTED]
 - [[parse_markdown_to_flowables()]] - `calls` [EXTRACTED]

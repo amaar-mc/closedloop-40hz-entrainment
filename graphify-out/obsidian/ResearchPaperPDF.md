@@ -10,6 +10,7 @@ tags:
 # ResearchPaperPDF
 
 ## Connections
+
 - [[FPDF]] - `inherits` [EXTRACTED]
 - [[Publication-grade research paper PDF generator.]] - `rationale_for` [EXTRACTED]
 - [[__init__()_111]] - `method` [EXTRACTED]

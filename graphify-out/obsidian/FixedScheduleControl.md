@@ -10,6 +10,7 @@ tags:
 # FixedScheduleControl
 
 ## Connections
+
 - [[Replays the actual fixed schedule from BIDS events.]] - `rationale_for` [EXTRACTED]
 - [[Replays the actual fixed schedule from BIDS events._1]] - `rationale_for` [EXTRACTED]
 - [[__init__()_28]] - `method` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 - [[step()]] - `method` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

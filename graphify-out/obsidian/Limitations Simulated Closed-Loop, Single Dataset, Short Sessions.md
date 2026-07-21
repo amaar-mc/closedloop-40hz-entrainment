@@ -10,6 +10,7 @@ tags:
 # Limitations: Simulated Closed-Loop, Single Dataset, Short Sessions
 
 ## Connections
+
 - [[Real-Data Closed-Loop Validation Update (Feb 26 2026)]] - `references` [INFERRED]
 
   #community/Community_39

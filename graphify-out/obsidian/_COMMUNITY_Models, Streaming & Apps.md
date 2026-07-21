@@ -8,6 +8,7 @@ members: 272
 **Members:** 272 nodes
 
 ## Members
+
 - [[4-Channel Deployment Limitations (spatial approx, dry electrodes, reference mismatch)]] - document - archive/muse_4ch/CHANNEL_MAPPING.md
 - [[4-Channel Muse 2 Model Retraining Pipeline  Retrains the full EEGNet + TCN pipel]] - rationale - archive/muse_4ch/retrain_pipeline.py
 - [[4-Channel Muse 2 Retraining Pipeline]] - code - archive/muse_4ch/retrain_pipeline.py
@@ -167,7 +168,7 @@ members: 272
 - [[__init__()_148]] - code - src/eegnet.py
 - [[__init__()_164]] - code - src/streaming/feature_extractor.py
 - [[__init__()_165]] - code - src/streaming/adapters.py
-- [[__init__.py]] - code - src/tribe_v2/__init__.py
+- [[__init__.py]] - code - src/tribe_v2/**init**.py
 - [[_assert()]] - code - tests/test_model_registry.py
 - [[_causal_phase_amplitude()]] - code - src/streaming/feature_extractor.py
 - [[_compute_pac_features()]] - code - src/streaming/feature_extractor.py
@@ -289,6 +290,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 43 edges to [[_COMMUNITY_Closed-Loop Control & Simulator]]
 - 17 edges to [[_COMMUNITY_Core Data & PAC Pipeline]]
 - 7 edges to [[_COMMUNITY_Multiscale TCN & Features]]
@@ -298,6 +300,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Community 91]]
 
 ## Top bridge nodes
+
 - [[EEGNet_1]] - degree 97, connects to 2 communities
 - [[SimulatedEEGAdapter]] - degree 34, connects to 2 communities
 - [[eegnet.py]] - degree 9, connects to 2 communities

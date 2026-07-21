@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[TCNTribeController]] - `method` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

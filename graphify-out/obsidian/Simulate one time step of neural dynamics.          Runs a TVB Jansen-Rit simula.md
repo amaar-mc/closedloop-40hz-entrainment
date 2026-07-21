@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# Simulate one time step of neural dynamics.          Runs a TVB Jansen-Rit simula
+# Simulate one time step of neural dynamics. Runs a TVB Jansen-Rit simula
 
 ## Connections
+
 - [[step()_73]] - `rationale_for` [EXTRACTED]
 
   #community/TVB_Alzheimer_Simulator

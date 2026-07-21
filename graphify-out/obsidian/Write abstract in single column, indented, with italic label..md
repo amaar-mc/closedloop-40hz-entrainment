@@ -10,6 +10,7 @@ tags:
 # Write abstract in single column, indented, with italic label.
 
 ## Connections
+
 - [[write_abstract()]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

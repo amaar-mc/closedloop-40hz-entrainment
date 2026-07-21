@@ -10,6 +10,7 @@ tags:
 # run_tribe_alignment_validation.py
 
 ## Connections
+
 - [[FixedScheduleCtrl]] - `contains` [EXTRACTED]
 - [[OracleCtrl]] - `contains` [EXTRACTED]
 - [[PredictiveCtrl]] - `contains` [EXTRACTED]

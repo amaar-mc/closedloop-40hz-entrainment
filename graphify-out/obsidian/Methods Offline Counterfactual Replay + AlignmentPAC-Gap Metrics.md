@@ -10,7 +10,8 @@ tags:
 # Methods: Offline Counterfactual Replay + Alignment/PAC-Gap Metrics
 
 ## Connections
+
 - [[Methods Wilcoxon Signed-Rank, Hedges' g, BCa Bootstrap CIs]] - `references` [EXTRACTED]
 - [[Offline Counterfactual Replay Validation on 35 Subjects]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

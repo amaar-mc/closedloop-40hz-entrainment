@@ -10,6 +10,7 @@ tags:
 # FEATURE_GROUP_PREFIXES (PAC History / Spectral / Stim Context Groups)
 
 ## Connections
+
 - [[run_ablation_experiment()]] - `references` [INFERRED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

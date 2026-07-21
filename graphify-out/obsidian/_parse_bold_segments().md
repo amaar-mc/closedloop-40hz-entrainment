@@ -7,9 +7,10 @@ tags:
   - community/PPTX_Slide_Builder
 ---
 
-# _parse_bold_segments()
+# \_parse_bold_segments()
 
 ## Connections
+
 - [[Parse bold markers into segments of (text, is_bold).]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `method` [EXTRACTED]
 - [[bullet()]] - `calls` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # fig()
 
 ## Connections
+
 - [[Embed a figure centered, with optional caption.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `method` [EXTRACTED]
 - [[body()]] - `calls` [EXTRACTED]

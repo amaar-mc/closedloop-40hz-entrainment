@@ -10,6 +10,7 @@ tags:
 # V5 Verdict: Ridge Regression R²=0.287 is Honest Ceiling for This Dataset
 
 ## Connections
+
 - [[Comprehensive Analysis V1-V8 Model Attempt History for PAC Prediction]] - `references` [EXTRACTED]
 - [[PAC SNR=-4.73dB Noise 3x Signal, Maximum Achievable R²~0.25-0.35]] - `rationale_for` [EXTRACTED]
 - [[Recommendation Deploy Reactive Ridge Model (R²=0.287) for Closed-Loop Control]] - `conceptually_related_to` [EXTRACTED]

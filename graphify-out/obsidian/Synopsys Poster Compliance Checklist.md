@@ -10,6 +10,7 @@ tags:
 # Synopsys Poster Compliance Checklist
 
 ## Connections
+
 - [[Poster Board V5 (Condensed, Visual-Forward, Synopsys 2026)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

@@ -10,6 +10,7 @@ tags:
 # load_test_by_subject()
 
 ## Connections
+
 - [[Load test split and group by subject.]] - `rationale_for` [EXTRACTED]
 - [[main()_27]] - `calls` [EXTRACTED]
 - [[per_subject_adaptation.py]] - `contains` [EXTRACTED]

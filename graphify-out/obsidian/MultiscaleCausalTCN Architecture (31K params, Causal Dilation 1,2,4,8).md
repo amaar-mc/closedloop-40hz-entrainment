@@ -10,6 +10,7 @@ tags:
 # MultiscaleCausalTCN Architecture (31K params, Causal Dilation [1,2,4,8])
 
 ## Connections
+
 - [[Closed-Loop Controller (Z-Score Threshold, Hysteresis 3s)]] - `conceptually_related_to` [EXTRACTED]
 - [[Current Methodology Closed-Loop 40Hz Entrainment via Temporal PAC Forecasting]] - `references` [EXTRACTED]
 - [[MultiscaleCausalTCN (temporal_multiscalemultiscale_tcn.py, 31K params)]] - `semantically_similar_to` [EXTRACTED]

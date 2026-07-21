@@ -10,6 +10,7 @@ tags:
 # PAC Gap Metric (Mean PAC Rest − Mean PAC Stim)
 
 ## Connections
+
 - [[evaluate_alignment()]] - `implements` [EXTRACTED]
 
   #community/12-Feature_TCN_Validation

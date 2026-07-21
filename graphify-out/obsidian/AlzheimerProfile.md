@@ -10,6 +10,7 @@ tags:
 # AlzheimerProfile
 
 ## Connections
+
 - [[Apply disease modifications to neural mass parameters.]] - `uses` [INFERRED]
 - [[Biophysically grounded brain entrainment simulator.      This simulator replaces]] - `uses` [INFERRED]
 - [[Compute average PAC across channels from multi-channel EEG.          Args]] - `uses` [INFERRED]

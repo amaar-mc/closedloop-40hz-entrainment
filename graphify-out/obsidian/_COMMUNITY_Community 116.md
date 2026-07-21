@@ -8,6 +8,7 @@ members: 5
 **Members:** 5 nodes
 
 ## Members
+
 - [[Closed-Loop Simulation 4 Controller Strategies Compared]] - document - FINDINGS.md
 - [[Fatigue Model Sensitivity 4 Mechanisms Compared]] - document - FINDINGS.md
 - [[Fatigue Sensitivity Sweep (6 Levels, Adaptive vs Fixed)]] - document - FINDINGS.md

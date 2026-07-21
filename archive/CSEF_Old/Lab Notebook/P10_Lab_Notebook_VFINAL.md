@@ -24,8 +24,7 @@ EEG dataset on OpenNeuro (ds005048).
 
 Current trials use a rigid fixed schedule (40 seconds of 40 Hz auditory stimulation followed by 20 seconds
 of silence), cycling for one hour regardless of how the patient's brain responds. Some patients maintain
-strong coupling throughout; others lose it within seconds. Neural habituation (Thompson & Spencer,
-1966) means the brain progressively tunes out a repeated identical stimulus, so coupling degrades over
+strong coupling throughout; others lose it within seconds. Neural habituation (Thompson & Spencer, 1966) means the brain progressively tunes out a repeated identical stimulus, so coupling degrades over
 time. The fixed schedule wastes stimulation during periods of strong coupling and misses opportunities
 during periods of fading coupling.
 
@@ -197,7 +196,7 @@ seconds ahead. Raw PAC targets, no smoothing, for realism.
 Part 2: build it. I designed a MultiscaleCausalTCN with four temporal convolution blocks at increasing
 dilations:
 dilations = [1, 2, 4, 8
-F.pad(x, ((kernel_size-1)*dilation, 0)) -> left-only, so no future leakage
+F.pad(x, ((kernel_size-1)\*dilation, 0)) -> left-only, so no future leakage
 
 RF calculation: kernel size 3, dilations [1, 2, 4, 8], RF = 1 + (3-1) x (1+2+4+8) = 31 timesteps. That
 covers the full 20-step input with margin. Output goes through learned attention pooling over the time
@@ -352,7 +351,7 @@ High 0.319 0.354 +10.8% *
 Severe 0.316 0.352 +11.2% *
 ```
 
-_*_ p < 0.001, Hedges' g = 1.7-2.4 (large to very large effects). As fatigue worsens the advantage grows!
+_\*_ p < 0.001, Hedges' g = 1.7-2.4 (large to very large effects). As fatigue worsens the advantage grows!
 With no fatigue at all, adaptive control helps by +9.5%, suggesting benefits beyond fatigue mitigation
 (targeting natural PAC fluctuations).
 Fatigue model (4 different mathematical models, n = 50 trials each):

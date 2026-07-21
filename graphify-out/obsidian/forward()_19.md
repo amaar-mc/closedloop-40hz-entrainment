@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[EEGNetV2]] - `method` [EXTRACTED]
 - [[Forward pass.          Args             x Input EEG tensor (batch, 1, n_cha]] - `rationale_for` [EXTRACTED]
 

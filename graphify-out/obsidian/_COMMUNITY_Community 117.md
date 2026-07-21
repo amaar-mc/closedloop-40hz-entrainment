@@ -8,6 +8,7 @@ members: 5
 **Members:** 5 nodes
 
 ## Members
+
 - [[CSEF 2026 Day-of Logistics Checklist]] - document - submission/presentation/archive/v1_guide/day_of_checklist.md
 - [[CSEF Display Prohibited Items (QR codes, handouts, AC power, school name)]] - document - submission/presentation/archive/v1_reference/csef_rules_cheatsheet.md
 - [[Demo Items Muse 2, Laptop, Poster (48x64 in)]] - document - submission/presentation/archive/v1_guide/day_of_checklist.md

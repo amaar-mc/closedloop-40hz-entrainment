@@ -10,6 +10,7 @@ tags:
 # SpecTempNet
 
 ## Connections
+
 - [[Dataset with both raw EEG and pre-computed spectral features.]] - `uses` [INFERRED]
 - [[EEGDatasetV3]] - `uses` [INFERRED]
 - [[Evaluate on validationtest set.]] - `uses` [INFERRED]

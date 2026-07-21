@@ -10,9 +10,10 @@ tags:
 # evaluate_decisions()
 
 ## Connections
+
 - [[Evaluate controller decisions against actual PAC trajectory.]] - `rationale_for` [EXTRACTED]
 - [[Evaluate how good a controller's decisions were given what actually happened.]] - `rationale_for` [EXTRACTED]
 - [[replay_subject()]] - `calls` [EXTRACTED]
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

@@ -9,6 +9,7 @@ tags:
 # P10 Lab Notebook V2 (PDF render)
 
 ## Connections
+
 - [[P10 Research Log Notebook V2 (Corrected Review Candidate)]] - `references` [INFERRED]
 
   #community/Community_95

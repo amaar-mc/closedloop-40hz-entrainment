@@ -10,6 +10,7 @@ tags:
 # lag1_autocorrelation()
 
 ## Connections
+
 - [[Compute lag-1 autocorrelation of a 1D signal.]] - `rationale_for` [EXTRACTED]
 - [[analyze_subject()]] - `calls` [EXTRACTED]
 - [[compare_pac_methods.py]] - `contains` [EXTRACTED]

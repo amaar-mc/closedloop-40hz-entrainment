@@ -9,6 +9,7 @@ tags:
 # High PAC = 40Hz Therapy is Working (Entrainment State)
 
 ## Connections
+
 - [[Adaptive Schedule (This Project) - 72% Alignment]] - `semantically_similar_to` [INFERRED]
 - [[PAC Modulation Index (Tort 2010)]] - `conceptually_related_to` [EXTRACTED]
 

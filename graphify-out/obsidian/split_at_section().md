@@ -10,6 +10,7 @@ tags:
 # split_at_section()
 
 ## Connections
+
 - [[Split flowables into (before, section_content) at a heading containing section_n]] - `rationale_for` [EXTRACTED]
 - [[generate_pdf.py]] - `contains` [EXTRACTED]
 

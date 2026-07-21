@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Clear baseline buffer and statistics cache.          Use this when:         -
+# Clear baseline buffer and statistics cache. Use this when: -
 
 ## Connections
+
 - [[reset()_59]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

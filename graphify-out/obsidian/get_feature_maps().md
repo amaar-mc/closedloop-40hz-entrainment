@@ -10,7 +10,8 @@ tags:
 # get_feature_maps()
 
 ## Connections
+
 - [[EEGNetEnhanced]] - `method` [EXTRACTED]
 - [[Extract intermediate feature maps for visualization.          Args]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

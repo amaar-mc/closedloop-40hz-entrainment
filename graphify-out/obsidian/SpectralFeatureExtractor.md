@@ -10,6 +10,7 @@ tags:
 # SpectralFeatureExtractor
 
 ## Connections
+
 - [[Add rolling mean and std features.]] - `uses` [INFERRED]
 - [[AlignmentOracleCtrl]] - `uses` [INFERRED]
 - [[Args             windows  (N, 1, 7, 500) raw EEG windows             pac]] - `uses` [INFERRED]
@@ -70,4 +71,4 @@ tags:
 - [[spectral_features.py]] - `contains` [EXTRACTED]
 - [[test_spectral_features()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

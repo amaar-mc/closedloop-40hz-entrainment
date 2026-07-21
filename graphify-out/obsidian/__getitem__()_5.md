@@ -7,9 +7,10 @@ tags:
   - community/Archived_SpecTempNet_V3
 ---
 
-# __getitem__()
+# **getitem**()
 
 ## Connections
+
 - [[EEGDatasetV3]] - `method` [EXTRACTED]
 
   #community/Archived_SpecTempNet_V3

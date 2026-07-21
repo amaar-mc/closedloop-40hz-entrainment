@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[ExponentialDecaySimulator]] - `method` [EXTRACTED]
 - [[Simulate one time step with exponential fatigue dynamics.]] - `rationale_for` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

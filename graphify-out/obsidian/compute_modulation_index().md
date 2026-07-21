@@ -10,8 +10,9 @@ tags:
 # compute_modulation_index()
 
 ## Connections
+
 - [[Compute Modulation Index from phase and amplitude time series.          MI mea]] - `rationale_for` [EXTRACTED]
 - [[PACComputer]] - `method` [EXTRACTED]
 - [[compute_pac()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

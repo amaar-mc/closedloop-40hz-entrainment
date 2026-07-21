@@ -10,10 +10,11 @@ tags:
 # main()
 
 ## Connections
+
 - [[compute_summary()]] - `calls` [EXTRACTED]
 - [[parse_args()_6]] - `calls` [EXTRACTED]
 - [[resolve_dataset_dir()]] - `calls` [EXTRACTED]
 - [[run_multiseed_study.py]] - `contains` [EXTRACTED]
 - [[train_one_seed()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

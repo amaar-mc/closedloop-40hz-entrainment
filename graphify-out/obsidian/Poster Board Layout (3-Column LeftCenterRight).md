@@ -10,6 +10,7 @@ tags:
 # Poster Board Layout (3-Column: Left/Center/Right)
 
 ## Connections
+
 - [[Poster Board V7 (Audit-Clean, CSEF 2026)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

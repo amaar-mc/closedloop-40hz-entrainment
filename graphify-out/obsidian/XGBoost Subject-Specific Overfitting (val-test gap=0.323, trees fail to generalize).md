@@ -9,6 +9,7 @@ tags:
 # XGBoost Subject-Specific Overfitting (val-test gap=0.323, trees fail to generalize)
 
 ## Connections
+
 - [[Architecture Exploration Comparison (10 models, 5-seed)]] - `references` [EXTRACTED]
 
   #community/Rigor_Audit_Reports

@@ -9,6 +9,7 @@ tags:
 # P10 Research Log Notebook V1 (Daily Format)
 
 ## Connections
+
 - [[P10 Lab Notebook V1 (PDF)]] - `references` [INFERRED]
 - [[P10 Research Log Notebook V2 (Corrected Review Candidate)]] - `references` [EXTRACTED]
 - [[Research Notebook Enhancement Prompt (FormattingContent Guidelines)]] - `references` [EXTRACTED]

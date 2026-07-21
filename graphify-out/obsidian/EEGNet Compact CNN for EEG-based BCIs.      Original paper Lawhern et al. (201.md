@@ -7,9 +7,10 @@ tags:
   - community/Community_38
 ---
 
-# EEGNet: Compact CNN for EEG-based BCIs.      Original paper: Lawhern et al. (201
+# EEGNet: Compact CNN for EEG-based BCIs. Original paper: Lawhern et al. (201
 
 ## Connections
+
 - [[EEGNet]] - `rationale_for` [EXTRACTED]
 
   #community/Community_38

@@ -8,7 +8,7 @@ This guide gives you **the architecture of the script in your head** so that eve
 
 ## THE POSTER IS YOUR MEMORY PALACE
 
-You're not memorizing a script on a page. You're walking through your poster left to right, and each physical location on the poster is a room in your mind. When you point at a section, you know what to say because you're *standing in that room*.
+You're not memorizing a script on a page. You're walking through your poster left to right, and each physical location on the poster is a room in your mind. When you point at a section, you know what to say because you're _standing in that room_.
 
 ```
 YOUR POSTER, LEFT TO RIGHT:
@@ -54,7 +54,7 @@ These are your anchors. If you ever lose your place, find which room you're in, 
 
 ## THE CHAIN: HOW EACH BLOCK LEADS TO THE NEXT
 
-The script isn't 12 disconnected blocks. It's a chain where the last thought of each block *becomes* the first thought of the next. This is the connective tissue. Memorize the transitions, not the paragraphs.
+The script isn't 12 disconnected blocks. It's a chain where the last thought of each block _becomes_ the first thought of the next. This is the connective tissue. Memorize the transitions, not the paragraphs.
 
 ```
 GREETING → THE SCIENCE
@@ -102,20 +102,20 @@ Practice saying ONLY the transitions. Just the bridge sentences. Do it 5 times. 
 
 Each room has a feeling. You lived this project. These aren't facts you're reciting; they're experiences you had. When you're in each room, feel it.
 
-| Room | Feeling | What you're thinking as you speak |
-|---|---|---|
-| 1. GREETING | Warm, confident | "I'm glad you're here. I'm excited to share this." |
-| 2. THE SCIENCE | Wonder, respect | "This discovery blew my mind when I first read it." |
-| 3. THE GAP | Frustration, disbelief | "How is nobody doing this? This is so obviously broken." |
-| 4. HYPOTHESIS | Determination | "I knew exactly what I wanted to prove." |
-| 5. MEASURING | Precision, craftsmanship | "I need to explain this clearly because PAC is the foundation." |
-| 6. THE WALL | Surprise, then insight | "I expected one model to win. They all tied. That was the discovery." |
-| 7. THE PIVOT | Excitement, breakthrough | "This is where the whole project changed direction." |
-| 8. THE KEY CHART | Pride, conviction | "This is my best figure. This is the intellectual heart." |
-| 9. PROOF | Confidence, data speaks | "The numbers back everything up. Let me show you." |
-| 10. EVERY PATIENT | Awe, the mic-drop | "35 out of 35. That's the one that gets people." |
-| 11. FATIGUE | Thoroughness | "I didn't stop at one test. I stress-tested it." |
-| 12. HONESTY | Maturity, self-awareness | "I know what this doesn't prove yet. That's strength, not weakness." |
+| Room              | Feeling                  | What you're thinking as you speak                                     |
+| ----------------- | ------------------------ | --------------------------------------------------------------------- |
+| 1. GREETING       | Warm, confident          | "I'm glad you're here. I'm excited to share this."                    |
+| 2. THE SCIENCE    | Wonder, respect          | "This discovery blew my mind when I first read it."                   |
+| 3. THE GAP        | Frustration, disbelief   | "How is nobody doing this? This is so obviously broken."              |
+| 4. HYPOTHESIS     | Determination            | "I knew exactly what I wanted to prove."                              |
+| 5. MEASURING      | Precision, craftsmanship | "I need to explain this clearly because PAC is the foundation."       |
+| 6. THE WALL       | Surprise, then insight   | "I expected one model to win. They all tied. That was the discovery." |
+| 7. THE PIVOT      | Excitement, breakthrough | "This is where the whole project changed direction."                  |
+| 8. THE KEY CHART  | Pride, conviction        | "This is my best figure. This is the intellectual heart."             |
+| 9. PROOF          | Confidence, data speaks  | "The numbers back everything up. Let me show you."                    |
+| 10. EVERY PATIENT | Awe, the mic-drop        | "35 out of 35. That's the one that gets people."                      |
+| 11. FATIGUE       | Thoroughness             | "I didn't stop at one test. I stress-tested it."                      |
+| 12. HONESTY       | Maturity, self-awareness | "I know what this doesn't prove yet. That's strength, not weakness."  |
 
 When you practice, don't just say the words. Put yourself back in the moment you discovered each thing. The Wall felt like a wall. The Pivot felt like a breakthrough. The 35/35 result felt like disbelief. Channel that.
 
@@ -126,24 +126,28 @@ When you practice, don't just say the words. Put yourself back in the moment you
 Don't memorize numbers as isolated facts. They live in clusters of 3, tied to meaning.
 
 **Cluster 1: The Data**
+
 ```
 35 patients, 7 channels, 250 hertz
   (who you studied, what you measured, how fast)
 ```
 
 **Cluster 2: The Wall**
+
 ```
 6 architectures, 1457 to 2 million params, all R² = 0.287
   (how many you tried, the range, what they all hit)
 ```
 
 **Cluster 3: The TCN**
+
 ```
 73 features, 20 seconds of history, 5 seconds ahead
   (what goes in, how far back, how far forward)
 ```
 
 **Cluster 4: The Horizon Sweep**
+
 ```
 At 1 second: 0.81 (trivial, don't need DL)
 At 5 seconds: baselines negative, TCN = 0.25
@@ -151,6 +155,7 @@ The margin: +0.5 (the value proposition)
 ```
 
 **Cluster 5: The Controller**
+
 ```
 Fixed:    45% alignment, PAC gap negative (wrong direction)
 Reactive: 64.5% alignment, catches 52% of low-PAC
@@ -158,6 +163,7 @@ TCN:      72.1% alignment, catches 83% of low-PAC, 92% of oracle
 ```
 
 **Cluster 6: The Universality**
+
 ```
 35/35 patients, including 6 unseen test subjects
 Fatigue advantage: +9% to +11.2%, g = 1.7 to 2.4
@@ -173,18 +179,23 @@ Practice each cluster as a group. Say the cluster label, then rattle off the thr
 Don't read the script 10 times robotically. Use these 5 passes, each with a different purpose.
 
 ### Pass 1: "Read and Absorb" (15 min)
+
 Read the full script out loud, slowly. Don't try to memorize. Just listen to yourself say it. Notice where the story feels natural and where it feels forced. Mark the transitions that feel awkward.
 
 ### Pass 2: "Rooms Only" (5 min)
+
 Close the script. Walk through the 12 rooms using only the 8-word anchors. Point at an imaginary poster. Say the anchor sentence for each room, then try to say 2-3 sentences expanding it. If you get stuck, open the script, read just that room, close it, and try again.
 
 ### Pass 3: "Transitions Only" (5 min)
-Close the script. Say only the 12 chain transitions out loud. Just the bridge sentences. The goal is to make these automatic -- so that finishing one block *pulls* you into the next without thinking.
+
+Close the script. Say only the 12 chain transitions out loud. Just the bridge sentences. The goal is to make these automatic -- so that finishing one block _pulls_ you into the next without thinking.
 
 ### Pass 4: "Full Run, No Script" (6 min)
+
 Put the script face-down. Stand up. Point at an imaginary poster. Do the whole thing start to finish. When you blank, pause for 3 seconds and try to recall which room you're in and what the anchor is. If you still can't, glance at the anchor list (not the full script) and keep going. Time yourself.
 
 ### Pass 5: "Full Run, Record Yourself" (6 min)
+
 Use your phone voice recorder. Do the full presentation standing up, pointing at your poster (or a photo of it on a screen). Listen back. You'll immediately hear where you sound natural and where you sound robotic. The robotic parts are where you're reciting memorized words instead of explaining from understanding. Fix those by going back to the room's emotional anchor and the 8-word summary, and re-derive your own phrasing.
 
 ---

@@ -8,6 +8,7 @@ members: 12
 **Members:** 12 nodes
 
 ## Members
+
 - [[Compute PAC autocorrelation at various lags.      With 4-second hop size]] - rationale - archive/temporal_legacy/reprocess_long_windows.py
 - [[Compute Phase-Amplitude Coupling using Modulation Index (MI).      Args]] - rationale - archive/temporal_legacy/reprocess_long_windows.py
 - [[Extract spectral features from EEG window for model input.      Returns]] - rationale - archive/temporal_legacy/reprocess_long_windows.py

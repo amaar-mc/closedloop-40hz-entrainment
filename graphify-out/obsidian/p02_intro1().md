@@ -10,6 +10,7 @@ tags:
 # p02_intro1()
 
 ## Connections
+
 - [[Slide 2 Introduction page 1.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `calls` [EXTRACTED]
 - [[body()]] - `calls` [EXTRACTED]

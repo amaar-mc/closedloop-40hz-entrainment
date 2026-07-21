@@ -9,6 +9,7 @@ tags:
 # Critical Gotcha: Spectral Features Cause Generalization Failure
 
 ## Connections
+
 - [[Feature Ablation PAC+Stim vs Spectral Features]] - `rationale_for` [EXTRACTED]
 
   #community/Community_39

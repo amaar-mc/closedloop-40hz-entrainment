@@ -10,7 +10,8 @@ tags:
 # reset()
 
 ## Connections
+
 - [[Clear the rolling buffer in the underlying forecaster.]] - `rationale_for` [EXTRACTED]
 - [[TCNTemporalModel]] - `method` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

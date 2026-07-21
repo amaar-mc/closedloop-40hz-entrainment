@@ -10,6 +10,7 @@ tags:
 # personalization.py
 
 ## Connections
+
 - [[MultiChannelPersonalization]] - `contains` [EXTRACTED]
 - [[Personalization Module for Adaptive Baseline Tracking  Implements rolling wind]] - `rationale_for` [EXTRACTED]
 - [[PersonalizationModule]] - `contains` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[demo_streaming.py]] - `imports_from` [EXTRACTED]
 - [[test_personalization()]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

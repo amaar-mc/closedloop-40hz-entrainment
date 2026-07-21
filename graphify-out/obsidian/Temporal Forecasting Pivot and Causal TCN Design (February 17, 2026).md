@@ -10,6 +10,7 @@ tags:
 # Temporal Forecasting Pivot and Causal TCN Design (February 17, 2026)
 
 ## Connections
+
 - [[73-Dimensional Temporal Feature Representation]] - `references` [EXTRACTED]
 - [[MultiscaleCausalTCN Design (31K params, dilations 1,2,4,8)]] - `references` [EXTRACTED]
 - [[Project P10 Research Log Notebook (VFINAL)]] - `references` [EXTRACTED]

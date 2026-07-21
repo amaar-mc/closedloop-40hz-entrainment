@@ -9,6 +9,7 @@ tags:
 # Poster Board V6 (PAC+Stim Feature Discovery Update)
 
 ## Connections
+
 - [[4ch vs 7ch Channel Configuration Table (Muse Compatibility)]] - `references` [EXTRACTED]
 - [[Controller Comparison Result 72.1% vs 64.5% Alignment]] - `references` [EXTRACTED]
 - [[Poster Board V5 (Condensed, Visual-Forward, Audit-Verified)]] - `references` [EXTRACTED]

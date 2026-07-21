@@ -9,6 +9,7 @@ tags:
 # Foundational Concepts Document: 40Hz Entrainment in AD
 
 ## Connections
+
 - [[Alzheimer's Disease Pathophysiology (Aβ, Tau, Neuroinflammation)]] - `references` [EXTRACTED]
 - [[MPC Principles Predict-Optimize-Recede Horizon]] - `references` [EXTRACTED]
 - [[Neural Oscillation Frequency Bands (DeltaThetaAlphaBetaGamma)]] - `references` [EXTRACTED]
@@ -16,4 +17,4 @@ tags:
 - [[PING Mechanism Pyramidal-Interneuron Network Gamma]] - `references` [EXTRACTED]
 - [[Theta-Gamma PAC Computational Significance and Working Memory]] - `references` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

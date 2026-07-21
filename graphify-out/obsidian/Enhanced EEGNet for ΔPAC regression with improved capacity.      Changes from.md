@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# Enhanced EEGNet for ΔPAC regression with improved capacity.      Changes from
+# Enhanced EEGNet for ΔPAC regression with improved capacity. Changes from
 
 ## Connections
+
 - [[EEGNetV2]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_EEGNet_V2

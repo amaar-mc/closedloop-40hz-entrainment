@@ -9,6 +9,7 @@ tags:
 # Hidden Size Sweep (h=16-128, R2=0.341-0.610, all beat persistence)
 
 ## Connections
+
 - [[Hyperparameter Sensitivity Audit (ROBUST verdict)]] - `references` [EXTRACTED]
 
   #community/Rigor_Audit_Reports

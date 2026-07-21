@@ -9,9 +9,10 @@ tags:
 # Improvement Plan: V3 R²=0.236 → Target R²=0.45-0.55
 
 ## Connections
+
 - [[Meta-Learning Plan (MAML for Subject-Independent Transfer)]] - `references` [EXTRACTED]
 - [[Multi-Task Learning Plan (PAC + Theta + Gamma Joint Prediction)]] - `references` [EXTRACTED]
 - [[ViT-TCNet Architecture Plan (Pre-trained ViT + TCN Decoder)]] - `references` [EXTRACTED]
 - [[Wavelet Features Plan (CWT + WPD, +30-40 features)]] - `references` [EXTRACTED]
 
-  #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model*Ceiling*&\_Leakage_Audits

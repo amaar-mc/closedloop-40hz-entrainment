@@ -10,6 +10,7 @@ tags:
 # MultiscaleCausalTCNNoNorm
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[CausalDSConvBlock_1]] - `uses` [INFERRED]
 - [[LastStepPool_1]] - `uses` [INFERRED]
@@ -22,4 +23,4 @@ tags:
 - [[build_model()]] - `calls` [EXTRACTED]
 - [[run_ablation_study.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

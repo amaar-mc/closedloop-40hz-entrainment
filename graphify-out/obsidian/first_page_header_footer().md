@@ -10,6 +10,7 @@ tags:
 # first_page_header_footer()
 
 ## Connections
+
 - [[No header on title page, just page number.]] - `rationale_for` [EXTRACTED]
 - [[generate_notebook_pdf.py]] - `contains` [EXTRACTED]
 

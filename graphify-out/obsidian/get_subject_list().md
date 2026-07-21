@@ -10,8 +10,9 @@ tags:
 # get_subject_list()
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `method` [EXTRACTED]
 - [[Get list of subjects in BIDS dataset.          Returns             subjects]] - `rationale_for` [EXTRACTED]
 - [[process_dataset()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

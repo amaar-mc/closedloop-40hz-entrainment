@@ -9,6 +9,7 @@ tags:
 # Multi-Scale Temporal CNN (Kernel Sizes 16/32/64/128)
 
 ## Connections
+
 - [[SpecTempNet V3 Hybrid Spectral-Temporal Network (~180k params)]] - `references` [EXTRACTED]
 
-  #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model*Ceiling*&\_Leakage_Audits

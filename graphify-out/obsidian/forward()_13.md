@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[CNN1D]] - `method` [EXTRACTED]
 
   #community/Community_57

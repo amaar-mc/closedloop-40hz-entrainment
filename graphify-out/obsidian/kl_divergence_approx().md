@@ -10,6 +10,7 @@ tags:
 # kl_divergence_approx()
 
 ## Connections
+
 - [[Approximate KL divergence using histograms]] - `rationale_for` [EXTRACTED]
 - [[pure_numpy_diagnostic.py]] - `contains` [EXTRACTED]
 

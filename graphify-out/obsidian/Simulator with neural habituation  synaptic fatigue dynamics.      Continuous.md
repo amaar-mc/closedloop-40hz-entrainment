@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Simulator with neural habituation / synaptic fatigue dynamics.      Continuous
+# Simulator with neural habituation / synaptic fatigue dynamics. Continuous
 
 ## Connections
+
 - [[FatigueAwareSimulator]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

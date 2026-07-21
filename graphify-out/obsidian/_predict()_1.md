@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _predict()
+# \_predict()
 
 ## Connections
+
 - [[HybridTCNCtrl]] - `method` [EXTRACTED]
 - [[step()_26]] - `calls` [EXTRACTED]
 - [[step()_27]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

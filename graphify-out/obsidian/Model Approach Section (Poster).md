@@ -9,6 +9,7 @@ tags:
 # Model Approach Section (Poster)
 
 ## Connections
+
 - [[CSEF Poster Print Version (Slide1_print.png)]] - `references` [EXTRACTED]
 - [[Model 1 EEGNet (Poster Figure)]] - `references` [EXTRACTED]
 - [[Model 2 Causal TCN (Poster Figure)]] - `references` [EXTRACTED]

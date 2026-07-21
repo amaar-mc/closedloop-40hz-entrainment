@@ -7,9 +7,10 @@ tags:
   - community/Community_35
 ---
 
-# Plot training and validation loss curves.      Args:         train_losses: Tr
+# Plot training and validation loss curves. Args: train_losses: Tr
 
 ## Connections
+
 - [[plot_training_curves()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_35

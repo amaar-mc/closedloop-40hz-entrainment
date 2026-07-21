@@ -10,6 +10,7 @@ tags:
 # Count total trainable parameters.
 
 ## Connections
+
 - [[count_parameters()_6]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Temporal_PAC_Predictor

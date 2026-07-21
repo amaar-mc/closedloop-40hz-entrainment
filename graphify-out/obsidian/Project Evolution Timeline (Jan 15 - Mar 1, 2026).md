@@ -10,6 +10,7 @@ tags:
 # Project Evolution Timeline (Jan 15 - Mar 1, 2026)
 
 ## Connections
+
 - [[Comprehensive Project Map with Mermaid Diagrams (All Decisions, Architectures, Results)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

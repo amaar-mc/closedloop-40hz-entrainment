@@ -10,6 +10,7 @@ tags:
 # Predict most frequent class from training set.
 
 ## Connections
+
 - [[majority_baseline()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_83

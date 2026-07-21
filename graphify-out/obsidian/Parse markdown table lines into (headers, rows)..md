@@ -10,6 +10,7 @@ tags:
 # Parse markdown table lines into (headers, rows).
 
 ## Connections
+
 - [[parse_table()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_44

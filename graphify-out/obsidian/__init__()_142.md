@@ -7,12 +7,13 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[OracleControl_5]] - `method` [EXTRACTED]
 - [[__init__()_139]] - `calls` [EXTRACTED]
 - [[__init__()_140]] - `calls` [EXTRACTED]
 - [[__init__()_141]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

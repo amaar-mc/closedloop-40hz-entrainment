@@ -10,6 +10,7 @@ tags:
 # collapse_to_epochs()
 
 ## Connections
+
 - [[Collapse window-level data to epoch-level.      PAC is computed at the epoch lev]] - `rationale_for` [EXTRACTED]
 - [[fit_population_tau()]] - `calls` [EXTRACTED]
 - [[fit_simulator_params.py]] - `contains` [EXTRACTED]

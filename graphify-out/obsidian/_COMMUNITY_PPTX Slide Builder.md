@@ -8,6 +8,7 @@ members: 57
 **Members:** 57 nodes
 
 ## Members
+
 - [[11pt italic caption in medium gray.]] - rationale - results/rigor_audit/build_pptx.py
 - [[Add a real PowerPoint table.]] - rationale - results/rigor_audit/build_pptx.py
 - [[Add a textbox and return the shape. Dimensions in inches.]] - rationale - results/rigor_audit/build_pptx.py

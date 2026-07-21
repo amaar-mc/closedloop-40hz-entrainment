@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# Enhanced EEGNet Architecture for ΔPAC Prediction (Version 2)  Key improvements
+# Enhanced EEGNet Architecture for ΔPAC Prediction (Version 2) Key improvements
 
 ## Connections
+
 - [[eegnet_v2.py]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_EEGNet_V2

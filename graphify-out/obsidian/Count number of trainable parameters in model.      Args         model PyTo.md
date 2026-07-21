@@ -7,10 +7,11 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Count number of trainable parameters in model.      Args:         model: PyTo
+# Count number of trainable parameters in model. Args: model: PyTo
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[count_parameters()_11]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

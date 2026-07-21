@@ -9,6 +9,7 @@ tags:
 # QR Code for App (Flyer)
 
 ## Connections
+
 - [[Adaptive Schedule (This Project) - 72% Alignment]] - `conceptually_related_to` [AMBIGUOUS]
 
   #community/Community_85

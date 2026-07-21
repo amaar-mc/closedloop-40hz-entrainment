@@ -8,6 +8,7 @@ members: 15
 **Members:** 15 nodes
 
 ## Members
+
 - [[Collapse window-level data to epoch-level.      PAC is computed at the epoch lev]] - rationale - scripts/tools/fit_simulator_params.py
 - [[Fit Simulator Params Script]] - code - scripts/tools/fit_simulator_params.py
 - [[Fit simulator tau parameters from real PAC transition data.  Extracts tau_rise a]] - rationale - scripts/tools/fit_simulator_params.py

@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# PyTorch Dataset for EEG windows with ΔPAC labels.      Changes from v1:     -
+# PyTorch Dataset for EEG windows with ΔPAC labels. Changes from v1: -
 
 ## Connections
+
 - [[EEGDatasetV2]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_EEGNet_V2

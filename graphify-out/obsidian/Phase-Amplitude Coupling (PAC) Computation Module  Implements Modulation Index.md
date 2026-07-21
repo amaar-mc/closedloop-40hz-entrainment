@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Phase-Amplitude Coupling (PAC) Computation Module  Implements Modulation Index
+# Phase-Amplitude Coupling (PAC) Computation Module Implements Modulation Index
 
 ## Connections
+
 - [[pac_computation.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

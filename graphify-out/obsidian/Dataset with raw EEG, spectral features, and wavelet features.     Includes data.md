@@ -7,13 +7,14 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Dataset with raw EEG, spectral features, and wavelet features.     Includes data
+# Dataset with raw EEG, spectral features, and wavelet features. Includes data
 
 ## Connections
+
 - [[EEGAugmentation]] - `uses` [INFERRED]
 - [[EEGDatasetV4]] - `rationale_for` [EXTRACTED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 - [[ViTTCNet]] - `uses` [INFERRED]
 - [[WaveletFeatureExtractor]] - `uses` [INFERRED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

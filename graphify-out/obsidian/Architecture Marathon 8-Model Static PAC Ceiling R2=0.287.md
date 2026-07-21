@@ -9,6 +9,7 @@ tags:
 # Architecture Marathon: 8-Model Static PAC Ceiling R2=0.287
 
 ## Connections
+
 - [[2-Minute Presentation Memorization Map Seven Beats]] - `references` [EXTRACTED]
 - [[CSEF Interview Tier 5 GotchaIntellectual Honesty Questions]] - `references` [EXTRACTED]
 - [[Code Map Phase 1-3 Approach Timeline]] - `references` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[Main 4-5 Minute Presentation Script (v1)]] - `references` [EXTRACTED]
 - [[Tier 5 Hard Challenge Q&A (Architecture, novelty, impact)]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

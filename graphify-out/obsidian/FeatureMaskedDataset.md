@@ -10,6 +10,7 @@ tags:
 # FeatureMaskedDataset
 
 ## Connections
+
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[Load multiscale npz, slice features to PAC+context only.]] - `rationale_for` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
@@ -20,4 +21,4 @@ tags:
 - [[run_12feat_validation.py]] - `contains` [EXTRACTED]
 - [[train_12feat_tcn()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

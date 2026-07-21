@@ -10,6 +10,7 @@ tags:
 # train_tcn_tribe()
 
 ## Connections
+
 - [[TCNTribe]] - `calls` [EXTRACTED]
 - [[TCNTribe Model (TRIBE-trained Causal TCN)]] - `calls` [EXTRACTED]
 - [[TRIBE TCN Validation Pipeline Script]] - `calls` [EXTRACTED]

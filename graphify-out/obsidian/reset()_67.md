@@ -10,7 +10,8 @@ tags:
 # reset()
 
 ## Connections
+
 - [[StreamingFeatureExtractor]] - `method` [EXTRACTED]
 - [[Zero all filter states (restart as if no prior windows seen).]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

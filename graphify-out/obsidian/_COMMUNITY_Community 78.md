@@ -8,6 +8,7 @@ members: 14
 **Members:** 14 nodes
 
 ## Members
+
 - [[4-Step Clinical Workflow Wear EEG, Read Activity, Predict 5-10s Ahead, Stimulate]] - document - submission/flyer/facility_flyer.pdf
 - [[72% Targeting Accuracy (d=1.31, p0.001, N=35)]] - document - submission/flyer/facility_flyer.pdf
 - [[CSEF 2026 Presentation Context]] - document - submission/flyer/flyer.md

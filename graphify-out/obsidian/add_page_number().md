@@ -10,6 +10,7 @@ tags:
 # add_page_number()
 
 ## Connections
+
 - [[generate_pdf.py]] - `contains` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

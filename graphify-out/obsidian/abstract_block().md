@@ -10,6 +10,7 @@ tags:
 # abstract_block()
 
 ## Connections
+
 - [[PaperPDF]] - `method` [EXTRACTED]
 - [[generate()]] - `calls` [EXTRACTED]
 

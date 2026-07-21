@@ -9,6 +9,7 @@ tags:
 # EEGNet Not in Validation Loop Disclosure
 
 ## Connections
+
 - [[Offline Counterfactual Replay Limitation Disclosure]] - `conceptually_related_to` [INFERRED]
 - [[Scientific Defensibility Audit (STRONG rating)]] - `references` [EXTRACTED]
 

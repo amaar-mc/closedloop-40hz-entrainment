@@ -10,6 +10,7 @@ tags:
 # run_tvb_alignment.py
 
 ## Connections
+
 - [[FixedScheduleCtrl_2]] - `contains` [EXTRACTED]
 - [[ReactiveCtrl_2]] - `contains` [EXTRACTED]
 - [[TVB Jansen-Rit Alignment Evaluation Closed-Loop Controller Comparison  Runs Fix]] - `rationale_for` [EXTRACTED]

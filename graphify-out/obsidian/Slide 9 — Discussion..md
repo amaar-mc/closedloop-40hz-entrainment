@@ -10,6 +10,7 @@ tags:
 # Slide 9 — Discussion.
 
 ## Connections
+
 - [[p09_discussion()_2]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

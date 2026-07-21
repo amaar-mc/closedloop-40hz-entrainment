@@ -9,6 +9,7 @@ tags:
 # Adaptive Schedule (This Project) - 72% Alignment
 
 ## Connections
+
 - [[Figure 1 Fixed vs. Adaptive Stimulation Scheduling Comparison]] - `references` [EXTRACTED]
 - [[High PAC = 40Hz Therapy is Working (Entrainment State)]] - `semantically_similar_to` [INFERRED]
 - [[QR Code for App (Flyer)_1]] - `conceptually_related_to` [AMBIGUOUS]

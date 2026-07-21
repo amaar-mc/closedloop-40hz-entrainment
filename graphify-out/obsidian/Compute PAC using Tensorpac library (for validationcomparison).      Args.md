@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Compute PAC using Tensorpac library (for validation/comparison).      Args:
+# Compute PAC using Tensorpac library (for validation/comparison). Args:
 
 ## Connections
+
 - [[compute_pac_tensorpac()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

@@ -10,6 +10,7 @@ tags:
 # Hypothesis: Causal TCN trained on PAC trajectory features can forecast coupling dynamics 5-10s ahead for proactive closed-loop control
 
 ## Connections
+
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 
   #community/Community_50

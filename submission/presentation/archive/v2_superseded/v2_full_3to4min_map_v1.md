@@ -24,50 +24,62 @@ Do not memorize paragraphs. Memorize locations and one job per location.
 ## What To Say At Each Stop
 
 ### 1. Introduction
+
 Job: disease burden and therapy context
 Anchor: "55 million, 40 Hz auditory stimulation, synchronization and clearance"
 
 ### 2. Fixed vs Adaptive figure
+
 Job: define the problem
 Anchor: "fixed 40 on / 20 off is too blunt"
 
 ### 3. Materials
+
 Job: establish the data
 Anchor: "35 subjects, 7 frontal channels, 250 Hz"
 
 ### 4. Stage 1 static PAC table
+
 Job: show the first wall
 Anchor: "8 architectures, same ceiling, R^2 = 0.287"
 
 ### 5. Stage 2 temporal model
+
 Job: explain the shift
 Anchor: "20 seconds of history, 5 seconds ahead"
 
 ### 6. Feature reduction visuals
+
 Job: state the key discovery
 Anchor: "drop 61 spectral, keep 12 useful features, R^2 to 0.606"
 
 ### 7. Data Analysis horizon figure
+
 Job: explain why prediction matters
 Anchor: "short horizons are easy, longer horizons need forecasting"
 
 ### 8. Results table
+
 Job: land the main win
 Anchor: "72.1 vs 64.5, 82.6 vs 51.7, 91% oracle"
 
 ### 9. Per-patient scatter
+
 Job: show consistency
 Anchor: "35 out of 35 benefited"
 
 ### 10. Fatigue table
+
 Job: show where personalization matters most
 Anchor: "advantage grows with fatigue"
 
 ### 11. Summary and conclusion
+
 Job: state the significance
 Anchor: "fixed timer to physiology-guided therapy"
 
 ### 12. Future directions
+
 Job: end honestly
 Anchor: "offline replay now, live crossover next"
 

@@ -8,6 +8,7 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
+
 - [[draw_stim_bar()]] - code - scripts/tools/generate_closedloop_vs_fixed_v3.py
 - [[generate_closedloop_vs_fixed_v3.py]] - code - scripts/tools/generate_closedloop_vs_fixed_v3.py
 

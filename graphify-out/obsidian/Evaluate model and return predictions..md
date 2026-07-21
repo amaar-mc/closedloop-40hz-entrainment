@@ -10,6 +10,7 @@ tags:
 # Evaluate model and return predictions.
 
 ## Connections
+
 - [[evaluate_model()_3]] - `rationale_for` [EXTRACTED]
 
   #community/Community_57

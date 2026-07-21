@@ -10,6 +10,7 @@ tags:
 # test_simulated_session.py
 
 ## Connections
+
 - [[Automated end-to-end test for the simulated streaming session.  Runs 25 steps of]] - `rationale_for` [EXTRACTED]
 - [[check()]] - `contains` [EXTRACTED]
 - [[eegnet.py]] - `imports_from` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[srcstreamingfeature_extractor.py (StreamingFeatureExtractor)]] - `imports_from` [EXTRACTED]
 - [[temporal_multiscalemodel_registry.py (build_default_registry)]] - `imports_from` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

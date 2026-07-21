@@ -7,6 +7,6 @@ tags:
   - community/Community_163
 ---
 
-# Total number of output features: 8 * n_channels + 5.
+# Total number of output features: 8 \* n_channels + 5.
 
-  #community/Community_163
+#community/Community_163

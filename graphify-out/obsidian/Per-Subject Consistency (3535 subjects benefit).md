@@ -10,7 +10,8 @@ tags:
 # Per-Subject Consistency (35/35 subjects benefit)
 
 ## Connections
+
 - [[OpenNeuro ds005048 Dataset (35 subjects, 7ch frontal EEG, 250Hz)]] - `references` [EXTRACTED]
 - [[PAC Targeting Quality by Controller]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Extract features for a batch of EEG windows.          Args:             eeg_b
+# Extract features for a batch of EEG windows. Args: eeg_b
 
 ## Connections
+
 - [[extract()_2]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

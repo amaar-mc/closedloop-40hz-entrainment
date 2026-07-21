@@ -10,6 +10,7 @@ tags:
 # Fatigue Sensitivity Results (6 severity levels)
 
 ## Connections
+
 - [[Habituation Analysis (1735 habituate, 1835 facilitate)]] - `references` [INFERRED]
 
   #community/Community_34

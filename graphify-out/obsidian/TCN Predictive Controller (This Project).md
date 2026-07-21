@@ -9,6 +9,7 @@ tags:
 # TCN Predictive Controller (This Project)
 
 ## Connections
+
 - [[Alignment Metric (%) — TCN 72% vs Fixed 45%, g=1.31, p0.001]] - `shares_data_with` [EXTRACTED]
 - [[Figure 8 Controller Comparison Bar Chart]] - `references` [EXTRACTED]
 - [[Fixed Schedule Controller (Clinical Standard Baseline)]] - `conceptually_related_to` [EXTRACTED]

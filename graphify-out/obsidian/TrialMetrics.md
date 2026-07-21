@@ -10,6 +10,7 @@ tags:
 # TrialMetrics
 
 ## Connections
+
 - [[Configuration for a fatigue model experiment.]] - `uses` [INFERRED]
 - [[Convert to serializable dict.]] - `uses` [INFERRED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
@@ -46,4 +47,4 @@ tags:
 - [[run_single_trial()]] - `calls` [EXTRACTED]
 - [[to_dict()]] - `method` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[PredictiveLookAheadControl]] - `method` [EXTRACTED]
 - [[_trend()]] - `calls` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

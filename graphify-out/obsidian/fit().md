@@ -10,6 +10,7 @@ tags:
 # fit()
 
 ## Connections
+
 - [[ModelTrainerV2]] - `method` [EXTRACTED]
 - [[Train model with early stopping.          Returns             training_histo]] - `rationale_for` [EXTRACTED]
 - [[main()_19]] - `calls` [EXTRACTED]

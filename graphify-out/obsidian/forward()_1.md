@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[CausalConvBlock]] - `method` [EXTRACTED]
 
   #community/Archived_ImprovedTCN_Experiments

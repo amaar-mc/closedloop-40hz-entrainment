@@ -10,6 +10,7 @@ tags:
 # p07_results1()
 
 ## Connections
+
 - [[Slide 7 Results page 1.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `calls` [EXTRACTED]
 - [[body()]] - `calls` [EXTRACTED]

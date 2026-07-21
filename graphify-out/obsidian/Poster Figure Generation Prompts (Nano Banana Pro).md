@@ -10,6 +10,7 @@ tags:
 # Poster Figure Generation Prompts (Nano Banana Pro)
 
 ## Connections
+
 - [[Global Figure Style Specification (Color Palette and Typography)]] - `references` [EXTRACTED]
 - [[Poster Board V8 (CSEF 2026, 4-Column Layout)]] - `references` [EXTRACTED]
 

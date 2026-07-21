@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Detect and mark artifact samples using amplitude thresholding.          Marks
+# Detect and mark artifact samples using amplitude thresholding. Marks
 
 ## Connections
+
 - [[artifact_rejection()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

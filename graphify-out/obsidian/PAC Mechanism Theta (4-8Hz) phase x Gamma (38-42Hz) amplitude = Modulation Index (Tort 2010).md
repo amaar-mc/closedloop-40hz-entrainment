@@ -10,6 +10,7 @@ tags:
 # PAC Mechanism: Theta (4-8Hz) phase x Gamma (38-42Hz) amplitude = Modulation Index (Tort 2010)
 
 ## Connections
+
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 
   #community/Community_50

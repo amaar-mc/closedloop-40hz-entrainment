@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Configuration for Wilson-Cowan neural mass model.      Default parameters tuned
+# Configuration for Wilson-Cowan neural mass model. Default parameters tuned
 
 ## Connections
+
 - [[NeuralMassConfig]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

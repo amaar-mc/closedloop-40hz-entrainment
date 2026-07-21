@@ -10,6 +10,7 @@ tags:
 # Run one simulation trial.
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[TribeSimulatorConfig]] - `uses` [INFERRED]
 - [[run_trial()_4]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

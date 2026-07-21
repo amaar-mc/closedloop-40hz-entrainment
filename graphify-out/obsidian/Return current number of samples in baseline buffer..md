@@ -10,6 +10,7 @@ tags:
 # Return current number of samples in baseline buffer.
 
 ## Connections
+
 - [[get_buffer_size()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_46

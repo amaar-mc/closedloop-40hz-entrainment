@@ -10,6 +10,7 @@ tags:
 # Research Paper Status Document
 
 ## Connections
+
 - [[Current 12-Feature Replay Checkpoint 27,139 params, test R²=0.5844]] - `references` [EXTRACTED]
 - [[EEGNet Metric 1,457 params, test R²=0.287 (static PAC ceiling)]] - `references` [EXTRACTED]
 - [[Feature Ablation 73-feature R²=−0.025 vs 12 PAC+Stim R²=0.558]] - `references` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # Phase-aware reactive controller.
 
 ## Connections
+
 - [[PhaseAwareReactiveControl]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

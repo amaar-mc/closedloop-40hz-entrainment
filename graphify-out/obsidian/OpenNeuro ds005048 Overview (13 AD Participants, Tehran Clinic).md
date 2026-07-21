@@ -10,7 +10,8 @@ tags:
 # OpenNeuro ds005048 Overview (13 AD Participants, Tehran Clinic)
 
 ## Connections
+
 - [[Foundational Concepts Document 40Hz Entrainment in AD]] - `references` [EXTRACTED]
 - [[Lahijanian 2024 (Scientific Reports) ds005048 DMN Connectivity Study]] - `conceptually_related_to` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

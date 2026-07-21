@@ -10,8 +10,9 @@ tags:
 # 4-Channel Deployment Limitations (spatial approx, dry electrodes, reference mismatch)
 
 ## Connections
+
 - [[Rationale Domain Gap Between Lab and Consumer EEG]] - `rationale_for` [EXTRACTED]
 - [[Rationale PAC Labels Not Directly Comparable Across Channel Sets]] - `rationale_for` [EXTRACTED]
 - [[step6_comparison_report()]] - `references` [INFERRED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

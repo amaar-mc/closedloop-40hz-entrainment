@@ -10,6 +10,7 @@ tags:
 # Two-Stage EEGNet+TCN Controller Pipeline
 
 ## Connections
+
 - [[Config YAML Hysteresis Bug Fix (3.0s vs 5.0s hold_time_sec)]] - `conceptually_related_to` [INFERRED]
 - [[Horizon Sweep and Controller Integration (February 19, 2026)]] - `references` [EXTRACTED]
 

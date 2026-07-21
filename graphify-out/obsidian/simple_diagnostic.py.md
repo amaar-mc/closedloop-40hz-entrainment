@@ -10,9 +10,10 @@ tags:
 # simple_diagnostic.py
 
 ## Connections
+
 - [[Simple Diagnostic Analysis - No external ML libraries required  Investigates why]] - `rationale_for` [EXTRACTED]
 - [[extract_all_features()_3]] - `contains` [EXTRACTED]
 - [[spectral_features.py]] - `imports_from` [EXTRACTED]
 - [[wavelet_features.py]] - `imports_from` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

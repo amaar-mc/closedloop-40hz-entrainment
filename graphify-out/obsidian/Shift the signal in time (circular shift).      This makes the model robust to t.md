@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Shift the signal in time (circular shift).      This makes the model robust to t
+# Shift the signal in time (circular shift). This makes the model robust to t
 
 ## Connections
+
 - [[TimeShift]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

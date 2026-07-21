@@ -7,9 +7,10 @@ tags:
   - community/Community_115
 ---
 
-# Small sweep utility for lookback/horizon settings.  Example:     python temporal
+# Small sweep utility for lookback/horizon settings. Example: python temporal
 
 ## Connections
+
 - [[sweep_multiscale_configs.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_115

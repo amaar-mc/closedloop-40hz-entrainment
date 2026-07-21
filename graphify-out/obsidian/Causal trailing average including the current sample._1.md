@@ -10,6 +10,7 @@ tags:
 # Causal trailing average including the current sample.
 
 ## Connections
+
 - [[_causal_moving_average()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Community_53

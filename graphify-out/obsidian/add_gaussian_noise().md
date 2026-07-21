@@ -10,8 +10,9 @@ tags:
 # add_gaussian_noise()
 
 ## Connections
+
 - [[Add Gaussian noise at specified SNR.          Args             window EEG w]] - `rationale_for` [EXTRACTED]
 - [[DataAugmentor]] - `method` [EXTRACTED]
 - [[augment()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

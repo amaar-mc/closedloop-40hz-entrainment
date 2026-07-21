@@ -10,6 +10,7 @@ tags:
 # ML/AI Mandatory Requirements for Synopsys 2026 (6 requirements, all PASS)
 
 ## Connections
+
 - [[Winning Abstract Structure (results 32–40% dominant section)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

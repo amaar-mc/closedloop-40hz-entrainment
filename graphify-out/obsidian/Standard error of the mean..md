@@ -10,6 +10,7 @@ tags:
 # Standard error of the mean.
 
 ## Connections
+
 - [[_sem()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_66

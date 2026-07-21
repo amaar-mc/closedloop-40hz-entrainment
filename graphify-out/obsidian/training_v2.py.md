@@ -10,6 +10,7 @@ tags:
 # training_v2.py
 
 ## Connections
+
 - [[Enhanced Training Script for EEGNetV2 (Version 2)  Key improvements over v1]] - `rationale_for` [EXTRACTED]
 - [[ModelTrainerV2]] - `contains` [EXTRACTED]
 - [[data_loader_v2.py]] - `imports_from` [EXTRACTED]

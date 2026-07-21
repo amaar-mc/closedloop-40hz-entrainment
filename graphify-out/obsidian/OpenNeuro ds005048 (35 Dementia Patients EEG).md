@@ -10,6 +10,7 @@ tags:
 # OpenNeuro ds005048 (35 Dementia Patients EEG)
 
 ## Connections
+
 - [[Two-Stage Predictive Closed-Loop System]] - `references` [EXTRACTED]
 
   #community/Community_72

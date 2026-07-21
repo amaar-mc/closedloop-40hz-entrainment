@@ -9,6 +9,7 @@ tags:
 # Real-Data Controller Timeline — sub-15 (test set)
 
 ## Connections
+
 - [[High-PAC Epochs (can rest, shaded blue)]] - `references` [EXTRACTED]
 - [[Low-PAC Epochs (need stimulation, shaded orangebeige)]] - `references` [EXTRACTED]
 - [[PAC Time Series Trace (sub-15, test set)]] - `references` [EXTRACTED]

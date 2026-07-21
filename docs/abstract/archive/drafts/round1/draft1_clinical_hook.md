@@ -14,4 +14,4 @@ The central finding: at 5-10 second prediction horizons—the range needed for p
 
 ---
 
-*Word count: 242 / 250 max*
+_Word count: 242 / 250 max_

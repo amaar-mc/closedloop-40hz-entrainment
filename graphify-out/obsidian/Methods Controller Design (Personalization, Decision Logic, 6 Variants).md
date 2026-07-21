@@ -10,6 +10,7 @@ tags:
 # Methods: Controller Design (Personalization, Decision Logic, 6 Variants)
 
 ## Connections
+
 - [[Controller Variants Fixed, Reactive, TCN Predictive, Hybrid, PI, Oracle]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

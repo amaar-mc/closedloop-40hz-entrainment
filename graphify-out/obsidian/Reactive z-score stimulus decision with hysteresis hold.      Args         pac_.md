@@ -7,13 +7,14 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Reactive z-score stimulus decision with hysteresis hold.      Args:         pac_
+# Reactive z-score stimulus decision with hysteresis hold. Args: pac\_
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
 - [[SimulatedEEGAdapter]] - `uses` [INFERRED]
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[make_decision()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

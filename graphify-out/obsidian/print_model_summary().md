@@ -10,6 +10,7 @@ tags:
 # print_model_summary()
 
 ## Connections
+
 - [[Print model architecture summary.      Args         model PyTorch model]] - `rationale_for` [EXTRACTED]
 - [[count_parameters()_17]] - `calls` [EXTRACTED]
 - [[utils.py]] - `contains` [EXTRACTED]

@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# EEG Preprocessing Pipeline for Closed-Loop 40Hz Entrainment  Implements signal
+# EEG Preprocessing Pipeline for Closed-Loop 40Hz Entrainment Implements signal
 
 ## Connections
+
 - [[preprocessing.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

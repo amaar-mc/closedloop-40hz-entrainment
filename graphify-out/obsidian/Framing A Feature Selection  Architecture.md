@@ -10,6 +10,7 @@ tags:
 # Framing A: Feature Selection > Architecture
 
 ## Connections
+
 - [[Recommended Combined Framing A+B]] - `conceptually_related_to` [EXTRACTED]
 - [[Spectral Feature Generalization Failure Finding]] - `conceptually_related_to` [EXTRACTED]
 

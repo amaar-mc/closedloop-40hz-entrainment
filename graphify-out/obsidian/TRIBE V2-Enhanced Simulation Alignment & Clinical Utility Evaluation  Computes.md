@@ -7,9 +7,10 @@ tags:
   - community/12-Feature_TCN_Validation
 ---
 
-# TRIBE V2-Enhanced Simulation: Alignment & Clinical Utility Evaluation  Computes
+# TRIBE V2-Enhanced Simulation: Alignment & Clinical Utility Evaluation Computes
 
 ## Connections
+
 - [[StimAction]] - `uses` [INFERRED]
 - [[run_tribe_alignment_validation.py]] - `rationale_for` [EXTRACTED]
 

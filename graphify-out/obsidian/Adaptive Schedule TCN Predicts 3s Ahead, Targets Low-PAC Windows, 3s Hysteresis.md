@@ -9,6 +9,7 @@ tags:
 # Adaptive Schedule: TCN Predicts 3s Ahead, Targets Low-PAC Windows, 3s Hysteresis
 
 ## Connections
+
 - [[Causal TCN R² at 5-10s Horizon (Operationally Useful Range)]] - `semantically_similar_to` [INFERRED]
 - [[Figure 3 Fixed vs. Adaptive Stimulation Scheduling Diagram]] - `references` [EXTRACTED]
 - [[Fixed Schedule Treats Every Moment the Same, Wastes Stim During High PAC, Misses Low PAC]] - `conceptually_related_to` [EXTRACTED]

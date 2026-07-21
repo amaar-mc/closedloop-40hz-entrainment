@@ -7,9 +7,10 @@ tags:
   - community/Replay_Analysis_&_Controllers
 ---
 
-# Proportional-Integral (PI) controller for PAC maintenance.      Error: e(t) = ro
+# Proportional-Integral (PI) controller for PAC maintenance. Error: e(t) = ro
 
 ## Connections
+
 - [[PIControl]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

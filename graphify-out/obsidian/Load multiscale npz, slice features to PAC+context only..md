@@ -10,8 +10,9 @@ tags:
 # Load multiscale npz, slice features to PAC+context only.
 
 ## Connections
+
 - [[FeatureMaskedDataset]] - `rationale_for` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

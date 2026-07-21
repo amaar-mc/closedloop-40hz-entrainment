@@ -10,6 +10,7 @@ tags:
 # Generate a standalone References Sheet PDF to bring to CSEF. Print this and keep
 
 ## Connections
+
 - [[references_sheet.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_128

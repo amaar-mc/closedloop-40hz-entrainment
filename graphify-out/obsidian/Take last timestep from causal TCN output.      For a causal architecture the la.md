@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# Take last timestep from causal TCN output.      For a causal architecture the la
+# Take last timestep from causal TCN output. For a causal architecture the la
 
 ## Connections
+
 - [[LastStepPool]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

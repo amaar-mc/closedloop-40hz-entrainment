@@ -7,9 +7,10 @@ tags:
   - community/Community_35
 ---
 
-# Create directory if it doesn't exist.      Args:         directory: Path to d
+# Create directory if it doesn't exist. Args: directory: Path to d
 
 ## Connections
+
 - [[ensure_dir()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_35

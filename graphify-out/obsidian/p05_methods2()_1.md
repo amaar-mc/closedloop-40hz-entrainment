@@ -10,6 +10,7 @@ tags:
 # p05_methods2()
 
 ## Connections
+
 - [[Methods page 2 Features, Model Architectures.]] - `rationale_for` [EXTRACTED]
 - [[body()_1]] - `calls` [EXTRACTED]
 - [[bullet()_1]] - `calls` [EXTRACTED]

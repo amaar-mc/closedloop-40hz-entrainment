@@ -10,6 +10,7 @@ tags:
 # body()
 
 ## Connections
+
 - [[SlideBuilder]] - `method` [EXTRACTED]
 - [[_add_textbox()]] - `calls` [EXTRACTED]
 - [[_first_paragraph()]] - `calls` [EXTRACTED]

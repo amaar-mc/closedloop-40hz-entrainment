@@ -10,6 +10,7 @@ tags:
 # Spectral Feature Generalization Failure Risk (Legacy)
 
 ## Connections
+
 - [[TemporalPACDataset (PyTorch Dataset)]] - `rationale_for` [INFERRED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

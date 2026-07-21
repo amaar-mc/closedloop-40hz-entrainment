@@ -7,11 +7,12 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Real-Time Closed-Loop 40 Hz Entrainment Demo — Real EEG Data  Interactive Stream
+# Real-Time Closed-Loop 40 Hz Entrainment Demo — Real EEG Data Interactive Stream
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[demo.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

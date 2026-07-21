@@ -7,9 +7,10 @@ tags:
   - community/Community_93
 ---
 
-# Diagnostic: compare epoch-level PAC vs per-window PAC.  For each subject, comput
+# Diagnostic: compare epoch-level PAC vs per-window PAC. For each subject, comput
 
 ## Connections
+
 - [[compare_pac_methods.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_93

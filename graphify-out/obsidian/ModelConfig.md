@@ -10,6 +10,7 @@ tags:
 # ModelConfig
 
 ## Connections
+
 - [[AblationVariant]] - `uses` [INFERRED]
 - [[Add one new observation and return prediction when ready.]] - `uses` [INFERRED]
 - [[AlignmentOracleCtrl]] - `uses` [INFERRED]
@@ -147,4 +148,4 @@ tags:
 - [[__post_init__()]] - `method` [EXTRACTED]
 - [[multiscale_tcn.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

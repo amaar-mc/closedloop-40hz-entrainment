@@ -10,6 +10,7 @@ tags:
 # modify_neural_mass_drive()
 
 ## Connections
+
 - [[AlzheimerProfile]] - `method` [EXTRACTED]
 - [[Modify neural mass model external drive for AD simulation.          Args]] - `rationale_for` [EXTRACTED]
 

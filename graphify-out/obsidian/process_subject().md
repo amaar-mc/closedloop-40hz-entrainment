@@ -10,6 +10,7 @@ tags:
 # process_subject()
 
 ## Connections
+
 - [[Process one subject with longer PAC windows.      Args         subject_id S]] - `rationale_for` [EXTRACTED]
 - [[compute_pac_modulation_index()]] - `calls` [EXTRACTED]
 - [[extract_spectral_features()]] - `calls` [EXTRACTED]

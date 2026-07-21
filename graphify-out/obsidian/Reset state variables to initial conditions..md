@@ -10,6 +10,7 @@ tags:
 # Reset state variables to initial conditions.
 
 ## Connections
+
 - [[reset()_68]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

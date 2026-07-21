@@ -8,4 +8,4 @@ tags:
 
 # AIME — Artificial Intelligence in Medicine (Tier 2)
 
-  #community/Community_172
+#community/Community_172

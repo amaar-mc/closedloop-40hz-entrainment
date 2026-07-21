@@ -10,6 +10,7 @@ tags:
 # OracleControl
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[Perfect knowledge oracle.]] - `rationale_for` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[run_tribe_validation.py]] - `contains` [EXTRACTED]
 - [[step()_40]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

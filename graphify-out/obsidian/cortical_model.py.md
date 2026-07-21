@@ -10,6 +10,7 @@ tags:
 # cortical_model.py
 
 ## Connections
+
 - [[Cortical Response Model — TRIBE V2 Integration with Biophysical Fallback  Wraps]] - `rationale_for` [EXTRACTED]
 - [[CorticalResponseConfig]] - `contains` [EXTRACTED]
 - [[CorticalResponseModel]] - `contains` [EXTRACTED]

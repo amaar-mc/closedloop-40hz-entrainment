@@ -10,6 +10,7 @@ tags:
 # table()
 
 ## Connections
+
 - [[PaperPDF]] - `method` [EXTRACTED]
 - [[clean()]] - `calls` [EXTRACTED]
 - [[generate()]] - `calls` [EXTRACTED]

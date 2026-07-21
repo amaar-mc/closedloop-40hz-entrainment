@@ -9,6 +9,7 @@ tags:
 # International Science and Engineering Fair (ISEF)
 
 ## Connections
+
 - [[AI  Generative AI Use Policy (ISEF-based)]] - `references` [EXTRACTED]
 - [[California State Science Fair (CSEF)]] - `references` [EXTRACTED]
 - [[Synopsys Silicon Valley Science & Technology Championship (SCVSEF)]] - `references` [EXTRACTED]

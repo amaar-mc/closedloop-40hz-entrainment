@@ -9,6 +9,7 @@ tags:
 # System Architecture Flowchart (Poster Figure 6)
 
 ## Connections
+
 - [[CSEF Poster Print Version (Slide1_print.png)]] - `references` [EXTRACTED]
 
   #community/Community_51

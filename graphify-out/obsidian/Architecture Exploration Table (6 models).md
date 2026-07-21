@@ -9,6 +9,7 @@ tags:
 # Architecture Exploration Table (6 models)
 
 ## Connections
+
 - [[EEGNet Static PAC Predictor]] - `references` [EXTRACTED]
 - [[Poster V5 Changelog and Corrections]] - `references` [EXTRACTED]
 

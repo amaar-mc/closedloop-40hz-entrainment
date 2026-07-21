@@ -10,6 +10,7 @@ tags:
 # PACComputer
 
 ## Connections
+
 - [[BIDS Data Loader for Closed-Loop 40Hz Entrainment Research  Loads OpenNeuro ds]] - `uses` [INFERRED]
 - [[BIDSDataProcessor]] - `uses` [INFERRED]
 - [[Computes Phase-Amplitude Coupling using Modulation Index method.      The Modu]] - `rationale_for` [EXTRACTED]
@@ -45,4 +46,4 @@ tags:
 - [[pac_computation.py]] - `contains` [EXTRACTED]
 - [[validate_pac_computation()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

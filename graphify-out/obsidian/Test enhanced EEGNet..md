@@ -10,6 +10,7 @@ tags:
 # Test enhanced EEGNet.
 
 ## Connections
+
 - [[test_eegnet_v2()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_EEGNet_V2

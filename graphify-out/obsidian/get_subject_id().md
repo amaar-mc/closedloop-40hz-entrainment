@@ -10,7 +10,8 @@ tags:
 # get_subject_id()
 
 ## Connections
+
 - [[EEGWindowDataset]] - `method` [EXTRACTED]
 - [[Get subject ID for a sample.]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

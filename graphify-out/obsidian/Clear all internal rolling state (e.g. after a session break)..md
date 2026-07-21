@@ -10,7 +10,8 @@ tags:
 # Clear all internal rolling state (e.g. after a session break).
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[reset()_9]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

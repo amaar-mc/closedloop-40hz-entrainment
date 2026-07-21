@@ -9,6 +9,7 @@ tags:
 # Abstract Framing Strategy: Clinical Hook (Disease Impact First)
 
 ## Connections
+
 - [[Abstract Framing Strategy Engineering-First (System Design Focus)]] - `semantically_similar_to` [INFERRED]
 - [[Abstract Framing Strategy Judge-Friendly (Biology Hook then AI)]] - `semantically_similar_to` [INFERRED]
 

@@ -10,8 +10,9 @@ tags:
 # compute_phase_amplitude_correlation()
 
 ## Connections
+
 - [[Compute correlation between theta phase and gamma amplitude.      Alternative PA]] - `rationale_for` [EXTRACTED]
 - [[extract_pac_features()]] - `calls` [EXTRACTED]
 - [[pac_features.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

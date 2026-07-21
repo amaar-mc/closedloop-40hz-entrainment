@@ -10,6 +10,7 @@ tags:
 # Compute diagnostics for one subject.
 
 ## Connections
+
 - [[analyze_subject()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_93

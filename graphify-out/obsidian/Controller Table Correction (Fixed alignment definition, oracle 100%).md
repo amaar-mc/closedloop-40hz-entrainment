@@ -10,6 +10,7 @@ tags:
 # Controller Table Correction (Fixed alignment definition, oracle 100%)
 
 ## Connections
+
 - [[Controller Comparison Results (72.1% TCN vs 64.5% Reactive, N=35)]] - `rationale_for` [EXTRACTED]
 
   #community/Community_43

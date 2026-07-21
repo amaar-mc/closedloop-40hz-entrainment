@@ -10,8 +10,9 @@ tags:
 # train_one_epoch()
 
 ## Connections
+
 - [[Train for one epoch.      Args         model Model to train.         loade]] - `rationale_for` [EXTRACTED]
 - [[run_all_experiments.py]] - `contains` [EXTRACTED]
 - [[run_single_experiment()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

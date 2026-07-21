@@ -10,6 +10,7 @@ tags:
 # Adult Sponsor: Mr. John Crandall (jcrandall@vcs.net)
 
 ## Connections
+
 - [[Checklist for Adult Sponsor (1) — John Crandall Signed]] - `shares_data_with` [EXTRACTED]
 - [[Student Checklist (1A) — Project Registration Form]] - `references` [EXTRACTED]
 - [[TeacherSponsor Mr. John Crandall, Valley Christian High School]] - `shares_data_with` [EXTRACTED]

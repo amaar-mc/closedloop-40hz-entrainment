@@ -10,8 +10,9 @@ tags:
 # save_splits()
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `method` [EXTRACTED]
 - [[Save trainvaltest splits to npz files.          Args             splits D]] - `rationale_for` [EXTRACTED]
 - [[main()_76]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

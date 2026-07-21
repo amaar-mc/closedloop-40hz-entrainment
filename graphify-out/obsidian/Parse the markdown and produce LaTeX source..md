@@ -10,6 +10,7 @@ tags:
 # Parse the markdown and produce LaTeX source.
 
 ## Connections
+
 - [[generate_latex()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_44

@@ -10,7 +10,8 @@ tags:
 # get_window()
 
 ## Connections
+
 - [[SimulatedEEGAdapter]] - `method` [EXTRACTED]
 - [[Sleep 2 seconds and return one (n_channels, 500) float32 EEG window.          Sl]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,8 +10,9 @@ tags:
 # step()
 
 ## Connections
+
 - [[OracleControl_5]] - `method` [EXTRACTED]
 - [[run_single_trial()_2]] - `calls` [EXTRACTED]
 - [[step()_61]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

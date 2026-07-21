@@ -7,9 +7,10 @@ tags:
   - community/PPTX_Slide_Builder
 ---
 
-# _first_paragraph()
+# \_first_paragraph()
 
 ## Connections
+
 - [[Set content of the first (existing) paragraph in the text frame.]] - `rationale_for` [EXTRACTED]
 - [[_set_font()]] - `calls` [EXTRACTED]
 - [[body()]] - `calls` [EXTRACTED]

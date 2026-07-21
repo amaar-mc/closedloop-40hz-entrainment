@@ -47,8 +47,8 @@ Official sources:
 - Reworked the title to foreground the verified contribution: cross-participant PAC forecasting
   for offline evaluation of adaptive auditory entrainment.
 - Added a standalone OpenNeuro dataset citation for `ds005048` version `1.0.1`.
-- Replaced generic or overly polished phrases such as "bounded questions," "negative but
-  actionable," and "operationally interesting."
+- Replaced generic or overly polished phrases with direct technical wording tied to the repository
+  evidence.
 - Rewrote the preprocessing paragraph to distinguish the source study's Makoto pipeline, the
   released-file metadata, and the repository's additional local conditioning stage.
 - Clarified that controller replay uses all 35 trajectories across the full cohort. It is an

@@ -10,8 +10,9 @@ tags:
 # print_comparison()
 
 ## Connections
+
 - [[Print side-by-side delta table vs epoch-level results.]] - `rationale_for` [EXTRACTED]
 - [[main()_17]] - `calls` [EXTRACTED]
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

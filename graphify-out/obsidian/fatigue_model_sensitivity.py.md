@@ -10,6 +10,7 @@ tags:
 # fatigue_model_sensitivity.py
 
 ## Connections
+
 - [[ExponentialDecaySimulator]] - `contains` [EXTRACTED]
 - [[Fatigue Model Sensitivity Analysis for Closed-Loop 40Hz Entrainment  Addresses]] - `rationale_for` [EXTRACTED]
 - [[FatigueModelConfig]] - `contains` [EXTRACTED]
@@ -26,4 +27,4 @@ tags:
 - [[run_single_trial()_1]] - `contains` [EXTRACTED]
 - [[simulator.py]] - `imports_from` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

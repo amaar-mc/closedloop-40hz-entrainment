@@ -9,6 +9,7 @@ tags:
 # Project Summary Final (one-paragraph submission summary)
 
 ## Connections
+
 - [[Project Achievement Report Executive Summary]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_156

@@ -10,6 +10,7 @@ tags:
 # InterpretabilityDataset
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `uses` [INFERRED]
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[Loads multiscale temporal dataset with metadata for interpretability.      Ext]] - `rationale_for` [EXTRACTED]
@@ -21,4 +22,4 @@ tags:
 - [[main()_71]] - `calls` [EXTRACTED]
 - [[tcn_interpretability.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

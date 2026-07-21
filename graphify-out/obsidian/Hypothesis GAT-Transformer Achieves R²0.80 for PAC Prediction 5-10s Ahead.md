@@ -10,6 +10,7 @@ tags:
 # Hypothesis: GAT-Transformer Achieves R²>0.80 for PAC Prediction 5-10s Ahead
 
 ## Connections
+
 - [[Proposed GAT-Transformer Architecture for EEG PAC Prediction]] - `rationale_for` [EXTRACTED]
 
   #community/Community_76

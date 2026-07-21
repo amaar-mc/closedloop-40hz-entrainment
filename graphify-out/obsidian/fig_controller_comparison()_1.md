@@ -10,6 +10,7 @@ tags:
 # fig_controller_comparison()
 
 ## Connections
+
 - [[Grouped bar chart Alignment, Low-PAC Stim Rate, High-PAC Rest Rate.]] - `rationale_for` [EXTRACTED]
 - [[_controller_order()]] - `calls` [EXTRACTED]
 - [[_sem()]] - `calls` [EXTRACTED]

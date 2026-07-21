@@ -8,4 +8,4 @@ tags:
 
 # Alzheimer's Disease Global Scale ($300B, 55M patients)
 
-  #community/Community_203
+#community/Community_203

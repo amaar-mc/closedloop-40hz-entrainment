@@ -10,6 +10,7 @@ tags:
 # Train Ridge and MLP models, evaluate on test set.
 
 ## Connections
+
 - [[train_and_evaluate()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_92

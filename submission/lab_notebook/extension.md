@@ -129,11 +129,11 @@ End-to-end chain: stim on/off -> cortical activation -> E/I dynamics -> theta-ga
 
 Built three Alzheimer severity profiles in `alzheimer_model.py`. The real `AlzheimerProfile` dataclass has a bunch of fields -- here are the four that matter most for the simulation:
 
-| Profile | Cortical Atrophy | Gamma Efficacy | Baseline PAC | Fatigue Mult |
-|---|---|---|---|---|
-| Healthy | 1.00 | 1.00 | 1.00 | 1.00 |
-| Mild AD | 0.80 | 0.70 | 0.80 | 1.30 |
-| Severe AD | 0.35 | 0.30 | 0.40 | 2.00 |
+| Profile   | Cortical Atrophy | Gamma Efficacy | Baseline PAC | Fatigue Mult |
+| --------- | ---------------- | -------------- | ------------ | ------------ |
+| Healthy   | 1.00             | 1.00           | 1.00         | 1.00         |
+| Mild AD   | 0.80             | 0.70           | 0.80         | 1.30         |
+| Severe AD | 0.35             | 0.30           | 0.40         | 2.00         |
 
 Mild profile = lower gamma efficacy + faster fatigue. Matches what the amyloid papers say. Severe AD basically can't make gamma at all.
 
@@ -170,10 +170,10 @@ Big limitation, still: real-data validation uses offline replay on recorded EEG,
 
 ## Additional References (Extension Period)
 
-Murdock, M. H., et al. (2024). Multisensory gamma stimulation promotes glymphatic clearance of amyloid. *Nature*, 627, 149-156.
+Murdock, M. H., et al. (2024). Multisensory gamma stimulation promotes glymphatic clearance of amyloid. _Nature_, 627, 149-156.
 
-Chan, D., et al. (2025). Long-term safety of 40 Hz sensory stimulation. *Alzheimer's & Dementia*, 21(10), e70792.
+Chan, D., et al. (2025). Long-term safety of 40 Hz sensory stimulation. _Alzheimer's & Dementia_, 21(10), e70792.
 
-Soula, M., et al. (2023). Forty-hertz light stimulation does not entrain native gamma oscillations in Alzheimer's disease model mice. *Nature Neuroscience*, 26, 570-578.
+Soula, M., et al. (2023). Forty-hertz light stimulation does not entrain native gamma oscillations in Alzheimer's disease model mice. _Nature Neuroscience_, 26, 570-578.
 
 Meta AI. (2026). TRIBE V2: A Predictive Foundation Model for Brain Encoding. HuggingFace: facebook/tribev2.

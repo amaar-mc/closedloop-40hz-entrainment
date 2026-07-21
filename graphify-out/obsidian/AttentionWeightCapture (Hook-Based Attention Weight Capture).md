@@ -10,6 +10,7 @@ tags:
 # AttentionWeightCapture (Hook-Based Attention Weight Capture)
 
 ## Connections
+
 - [[AttentionPool1D (Temporal Attention Pooling)]] - `references` [EXTRACTED]
 - [[analyze_attention_weights()]] - `calls` [EXTRACTED]
 

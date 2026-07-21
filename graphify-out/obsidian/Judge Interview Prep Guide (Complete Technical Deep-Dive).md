@@ -9,6 +9,7 @@ tags:
 # Judge Interview Prep Guide (Complete Technical Deep-Dive)
 
 ## Connections
+
 - [[10 Anticipated Judge Q&A Pairs (Interview Prep)]] - `references` [EXTRACTED]
 - [[90-Second Verbal Summary (Judge Interview)]] - `references` [EXTRACTED]
 - [[Answer Depth Guide (20 Key Questions, 3 Levels)]] - `semantically_similar_to` [INFERRED]
@@ -19,4 +20,4 @@ tags:
 - [[MultiscaleCausalTCN Architecture Details (Interview Prep)]] - `references` [EXTRACTED]
 - [[Statistical Methods Rationale (Wilcoxon, Hedges g, BCa)]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

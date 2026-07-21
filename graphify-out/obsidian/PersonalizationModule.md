@@ -10,6 +10,7 @@ tags:
 # PersonalizationModule
 
 ## Connections
+
 - [[Closed-Loop Controller for Real-Time PAC-Based Neuromodulation  Implements thr]] - `uses` [INFERRED]
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[End-to-end streaming inference demo for closed-loop 40 Hz entrainment.  Runs the]] - `uses` [INFERRED]
@@ -48,4 +49,4 @@ tags:
 - [[test_personalization()]] - `calls` [EXTRACTED]
 - [[update()]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

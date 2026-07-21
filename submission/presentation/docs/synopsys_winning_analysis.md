@@ -19,12 +19,12 @@ The Synopsys Silicon Valley Science and Technology Championship is a regional IS
 
 ## 2. Judging Criteria (40 Points)
 
-| Dimension | Points | Key Factors |
-|-----------|--------|-------------|
-| Scientific Thought | 10 | Problem significance, clear hypothesis, controlled variables, conclusions justified by data |
-| Creativity | 10 | Uniqueness of topic/approach, novel methodology, YOUR contribution |
-| Independent Work/Skill | 10 | What YOU did vs mentoring, technical proficiency, programming skill |
-| Thoroughness/Clarity | 10 | Data adequacy, replication, documentation, clear communication |
+| Dimension              | Points | Key Factors                                                                                 |
+| ---------------------- | ------ | ------------------------------------------------------------------------------------------- |
+| Scientific Thought     | 10     | Problem significance, clear hypothesis, controlled variables, conclusions justified by data |
+| Creativity             | 10     | Uniqueness of topic/approach, novel methodology, YOUR contribution                          |
+| Independent Work/Skill | 10     | What YOU did vs mentoring, technical proficiency, programming skill                         |
+| Thoroughness/Clarity   | 10     | Data adequacy, replication, documentation, clear communication                              |
 
 ---
 
@@ -33,22 +33,30 @@ The Synopsys Silicon Valley Science and Technology Championship is a regional IS
 These are the projects most similar to yours from the 2025 Synopsys Championship:
 
 ### 3.1 Claire Xu (Harker, 10th grade) — GRAND PRIZE, ISEF FINALIST
+
 **"Non-Invasive Blood-Based Early Alzheimer's Detection Using Sex-Specific Brain-Blood Graph Reinforcement Learning"**
+
 - **Relevance:** Alzheimer's + deep learning + biomarker detection
 - **Why it won:** Novel approach (graph RL), clinical significance (Alzheimer's), specific technical innovation (sex-specific models)
 
 ### 3.2 Danielle Steinbach (Harker, 11th grade) — 1ST AWARD + IBM AWARD
+
 **"A multi-institution foundation model for EEG biomarkers of brain disorder progression, classification, and drug response"**
+
 - **Relevance:** EEG + deep learning + clinical application
 - **Why it won:** Scale (multi-institution), clinical utility, EEG-specific innovation
 
 ### 3.3 Neuropod Team (BASIS Independent, 11th grade) — ACM 2ND PLACE ($600)
+
 **"Neuropod: An Arduino-Based Mastoid EEG Device Integrating Reinforcement Learning for Tracking Neurodegenerative Diseases"**
+
 - **Relevance:** EEG + RL + neurodegeneration
 - **Why it won:** Hardware + software integration, RL applied to clinical monitoring
 
 ### 3.4 DeepSleep Team (Harker, 9th grade) — 2ND AWARD
+
 **"DeepSleep: A Novel Convolutional Neural Network for Sleep Apnea Detection by Analyzing Electroencephalogram Data"**
+
 - **Relevance:** EEG + CNN + clinical detection
 - **Why it won:** Practical application, novel architecture for the domain
 
@@ -58,14 +66,14 @@ These are the projects most similar to yours from the 2025 Synopsys Championship
 
 ### Strengths vs. Comparable Projects
 
-| Dimension | Your Project | Competitors |
-|-----------|-------------|-------------|
-| Clinical significance | Alzheimer's + adaptive therapy | Similar (Alzheimer's, neurodegeneration) |
-| Data scale | 35 real patients, public dataset | Variable (some use private data) |
-| Technical novelty | **Closed-loop temporal prediction at 5-10s** | Classification tasks only (no temporal forecasting) |
-| Statistical rigor | Hedges' g, Wilcoxon, 95% CIs (normal approximation), 35/35 subjects | Most use only accuracy/AUC |
-| Model justification | 8 architectures tested, horizon sweep | Most test 1-2 models |
-| Data integrity | Shuffle-label test, subject-level splits | Rarely reported |
+| Dimension             | Your Project                                                        | Competitors                                         |
+| --------------------- | ------------------------------------------------------------------- | --------------------------------------------------- |
+| Clinical significance | Alzheimer's + adaptive therapy                                      | Similar (Alzheimer's, neurodegeneration)            |
+| Data scale            | 35 real patients, public dataset                                    | Variable (some use private data)                    |
+| Technical novelty     | **Closed-loop temporal prediction at 5-10s**                        | Classification tasks only (no temporal forecasting) |
+| Statistical rigor     | Hedges' g, Wilcoxon, 95% CIs (normal approximation), 35/35 subjects | Most use only accuracy/AUC                          |
+| Model justification   | 8 architectures tested, horizon sweep                               | Most test 1-2 models                                |
+| Data integrity        | Shuffle-label test, subject-level splits                            | Rarely reported                                     |
 
 **Your unique differentiator:** None of the comparable projects do **temporal prediction for proactive control**. They all do classification or detection (identifying a condition after it happens). Your project predicts a brain state before it happens and acts on it — this is a fundamentally more ambitious engineering goal.
 
@@ -75,13 +83,13 @@ These are the projects most similar to yours from the 2025 Synopsys Championship
 
 ### Structure (for 250-word limit)
 
-| Section | Words | Proportion | Purpose |
-|---------|-------|------------|---------|
-| Hook/Motivation | 30-40 | 12-16% | Establish stakes — WHY should the judge care? |
-| Problem Statement | 20-30 | 8-12% | WHAT specific gap exists? |
-| Approach/Methods | 50-70 | 20-28% | HOW you solved it (concise) |
-| Results | 80-100 | 32-40% | WHAT did you find? (BIGGEST section) |
-| Conclusions/Impact | 30-40 | 12-16% | SO WHAT? — broader implications |
+| Section            | Words  | Proportion | Purpose                                       |
+| ------------------ | ------ | ---------- | --------------------------------------------- |
+| Hook/Motivation    | 30-40  | 12-16%     | Establish stakes — WHY should the judge care? |
+| Problem Statement  | 20-30  | 8-12%      | WHAT specific gap exists?                     |
+| Approach/Methods   | 50-70  | 20-28%     | HOW you solved it (concise)                   |
+| Results            | 80-100 | 32-40%     | WHAT did you find? (BIGGEST section)          |
+| Conclusions/Impact | 30-40  | 12-16%     | SO WHAT? — broader implications               |
 
 **Key insight: Results are the dominant section.** Unlike academic abstracts where methods dominate, science fair abstracts should devote 32-40% to specific, quantified results.
 
@@ -102,6 +110,7 @@ These are the projects most similar to yours from the 2025 Synopsys Championship
 **[System Name]: [Technical Method] for [Clinical Application]**
 
 Examples:
+
 - "GRFSense: Early Parkinson's Disease Assessment..."
 - "OphthaLVLM: A Locally Deployable Large Vision-Language Model..."
 - "DeepSleep: A Novel Convolutional Neural Network for Sleep Apnea..."
@@ -114,14 +123,14 @@ Examples:
 
 The Synopsys Championship has **6 mandatory requirements** for data/ML projects:
 
-| # | Requirement | Your Status |
-|---|-------------|-------------|
-| 1 | Data Source Traceability | PASS — OpenNeuro ds005048, publicly available |
-| 2 | AI Rationale | PASS — TCN chosen for causal temporal prediction; EEGNet for compact EEG |
-| 3 | Data Curation Plan | PASS — artifact rejection, channel selection, subject-level splits |
-| 4 | Unique Insights | PASS — horizon sweep, habituation variability, efficiency gains |
-| 5 | Model Development Plan | PASS — 8 architectures tested, parameter counts sized for dataset |
-| 6 | Validation Strategy | PASS — subject-level splits, shuffle-label test, 6 held-out subjects |
+| #   | Requirement              | Your Status                                                              |
+| --- | ------------------------ | ------------------------------------------------------------------------ |
+| 1   | Data Source Traceability | PASS — OpenNeuro ds005048, publicly available                            |
+| 2   | AI Rationale             | PASS — TCN chosen for causal temporal prediction; EEGNet for compact EEG |
+| 3   | Data Curation Plan       | PASS — artifact rejection, channel selection, subject-level splits       |
+| 4   | Unique Insights          | PASS — horizon sweep, habituation variability, efficiency gains          |
+| 5   | Model Development Plan   | PASS — 8 architectures tested, parameter counts sized for dataset        |
+| 6   | Validation Strategy      | PASS — subject-level splits, shuffle-label test, 6 held-out subjects     |
 
 Must test at least 2 of 5 criteria: **You test 3** (Accuracy, Generalizability, Interpretability).
 
@@ -145,4 +154,4 @@ Must test at least 2 of 5 criteria: **You test 3** (Accuracy, Generalizability, 
 
 ---
 
-*Prepared February 27, 2026*
+_Prepared February 27, 2026_

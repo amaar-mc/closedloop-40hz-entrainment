@@ -7,9 +7,10 @@ tags:
   - community/12-Feature_TCN_Validation
 ---
 
-# _predict()
+# \_predict()
 
 ## Connections
+
 - [[TCN12FeatCtrl]] - `method` [EXTRACTED]
 - [[step()_35]] - `calls` [EXTRACTED]
 

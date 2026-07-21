@@ -7,9 +7,10 @@ tags:
   - community/TRIBE-TCN_Validation
 ---
 
-# Generate PAC time series from TRIBE V2 simulator with realistic noise.      Uses
+# Generate PAC time series from TRIBE V2 simulator with realistic noise. Uses
 
 ## Connections
+
 - [[generate_pac_sequences()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

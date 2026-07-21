@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Architecture comparison study: train and evaluate all models across horizons.  R
+# Architecture comparison study: train and evaluate all models across horizons. R
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[SequenceDataset]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[SimpleTransformer]] - `uses` [INFERRED]
 - [[run_comparison_study.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

@@ -8,6 +8,7 @@ members: 370
 **Members:** 370 nodes
 
 ## Members
+
 - [[40s ON + 20s OFF (standard clinical protocol).]] - rationale - scripts/pipeline/run_closed_loop_demo.py
 - [[40s ON + 20s OFF (standard clinical protocol)._1]] - rationale - apps/demo.py
 - [[Abstract base class for all control strategies.      Subclasses must implement]] - rationale - src/validation.py
@@ -387,6 +388,7 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 76 edges to [[_COMMUNITY_Control Strategies & Validation]]
 - 43 edges to [[_COMMUNITY_Models, Streaming & Apps]]
 - 26 edges to [[_COMMUNITY_TRIBE Neural-Mass Simulator]]
@@ -399,6 +401,7 @@ SORT file.name ASC
 - 1 edge to [[_COMMUNITY_Community 35]]
 
 ## Top bridge nodes
+
 - [[StimAction]] - degree 197, connects to 4 communities
 - [[simulator.py]] - degree 17, connects to 4 communities
 - [[FatigueAwareSimulator]] - degree 142, connects to 2 communities

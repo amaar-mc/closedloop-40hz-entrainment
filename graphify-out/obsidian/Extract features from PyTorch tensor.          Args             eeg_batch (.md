@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Extract features from PyTorch tensor.          Args:             eeg_batch: (
+# Extract features from PyTorch tensor. Args: eeg_batch: (
 
 ## Connections
+
 - [[extract_torch()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

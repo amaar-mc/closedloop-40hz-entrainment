@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[OracleControl_4]] - `method` [EXTRACTED]
 - [[run_single_trial()]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

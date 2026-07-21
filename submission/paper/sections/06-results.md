@@ -23,17 +23,17 @@ The negative R² of persistence at longer horizons reflects the non-stationarity
 **Summary of horizon sweep results:**
 
 | Horizon | Persistence R² | Ridge R² | TCN R² | TCN Margin over Persistence |
-|---------|---------------|----------|--------|----------------------------|
-| 1s      | 0.760         | 0.812    | 0.735  | −0.025                     |
-| 2s      | 0.488         | 0.542    | 0.470  | −0.018                     |
-| 3s      | 0.234         | 0.253    | 0.277  | +0.043                     |
-| 5s      | −0.267        | −0.393   | 0.254  | +0.521                     |
-| 8s      | −0.276        | −0.211   | 0.240  | +0.515                     |
-| 10s     | −0.256        | −0.212   | 0.278  | +0.534                     |
+| ------- | -------------- | -------- | ------ | --------------------------- |
+| 1s      | 0.760          | 0.812    | 0.735  | −0.025                      |
+| 2s      | 0.488          | 0.542    | 0.470  | −0.018                      |
+| 3s      | 0.234          | 0.253    | 0.277  | +0.043                      |
+| 5s      | −0.267         | −0.393   | 0.254  | +0.521                      |
+| 8s      | −0.276         | −0.211   | 0.240  | +0.515                      |
+| 10s     | −0.256         | −0.212   | 0.278  | +0.534                      |
 
-*Trained and evaluated on the same subject-level splits (24 train / 5 val / 6 test subjects). Target smoothing window ts=5 for all horizons in this sweep. Ridge regression uses the same 73-dimensional feature vector as the TCN input, providing a strong linear baseline trained on the same features. Persistence uses no features — it assumes the future PAC value equals the most recently observed value.*
+_Trained and evaluated on the same subject-level splits (24 train / 5 val / 6 test subjects). Target smoothing window ts=5 for all horizons in this sweep. Ridge regression uses the same 73-dimensional feature vector as the TCN input, providing a strong linear baseline trained on the same features. Persistence uses no features — it assumes the future PAC value equals the most recently observed value._
 
-**Clinical significance of the inflection point.** The ~3s horizon has a concrete clinical interpretation. Auditory stimulation preparation — queuing a 40 Hz amplitude-modulated audio stream, routing it to a speaker, and synchronizing onset with the patient's current brain state — requires finite latency in any real hardware system. Published real-time EEG-based neurofeedback systems report minimum end-to-end latencies of 100–400 ms for classification and audio delivery [see Section 3]. At 1–2 second prediction horizons, these latencies consume a substantial fraction of the available lead time. At 5–10 second horizons, the system has a full 4–9 seconds of margin after accounting for processing latency. This is the regime where a predictive controller can genuinely act *before* a PAC decline occurs rather than reacting to one in progress. The fact that the TCN is the only method that maintains positive R² in precisely this clinically actionable range motivates its adoption as the forecasting backbone for proactive stimulation control.
+**Clinical significance of the inflection point.** The ~3s horizon has a concrete clinical interpretation. Auditory stimulation preparation — queuing a 40 Hz amplitude-modulated audio stream, routing it to a speaker, and synchronizing onset with the patient's current brain state — requires finite latency in any real hardware system. Published real-time EEG-based neurofeedback systems report minimum end-to-end latencies of 100–400 ms for classification and audio delivery [see Section 3]. At 1–2 second prediction horizons, these latencies consume a substantial fraction of the available lead time. At 5–10 second horizons, the system has a full 4–9 seconds of margin after accounting for processing latency. This is the regime where a predictive controller can genuinely act _before_ a PAC decline occurs rather than reacting to one in progress. The fact that the TCN is the only method that maintains positive R² in precisely this clinically actionable range motivates its adoption as the forecasting backbone for proactive stimulation control.
 
 ---
 
@@ -50,16 +50,16 @@ Controllers were evaluated on four metrics:
 
 **Controller comparison table (N=35 subjects, real EEG):**
 
-| Controller | Alignment | Low-PAC Stim | High-PAC Rest | Stim % | PAC Gap (×10⁻⁶) |
-|-----------|-----------|-------------|--------------|--------|----------------|
-| Fixed Schedule | 45.0% | 61.4% | 28.6% | 66.6% | −6.6 |
-| Reactive Threshold | 64.5% | 51.7% | 77.3% | 36.7% | +21.1 |
-| **TCN Predictive** | **72.1%** | **82.6%** | **61.6%** | **59.7%** | **+30.5** |
-| Hybrid TCN+Reactive | 73.8% | 85.3% | 62.2% | 60.8% | +34.0 |
-| PI Controller | 66.1% | 38.6% | 93.6% | 22.0% | +27.2 |
-| Alignment Oracle | 100.0% | 100.0% | 100.0% | 48.3% | +33.3 |
+| Controller          | Alignment | Low-PAC Stim | High-PAC Rest | Stim %    | PAC Gap (×10⁻⁶) |
+| ------------------- | --------- | ------------ | ------------- | --------- | --------------- |
+| Fixed Schedule      | 45.0%     | 61.4%        | 28.6%         | 66.6%     | −6.6            |
+| Reactive Threshold  | 64.5%     | 51.7%        | 77.3%         | 36.7%     | +21.1           |
+| **TCN Predictive**  | **72.1%** | **82.6%**    | **61.6%**     | **59.7%** | **+30.5**       |
+| Hybrid TCN+Reactive | 73.8%     | 85.3%        | 62.2%         | 60.8%     | +34.0           |
+| PI Controller       | 66.1%     | 38.6%        | 93.6%         | 22.0%     | +27.2           |
+| Alignment Oracle    | 100.0%    | 100.0%       | 100.0%        | 48.3%     | +33.3           |
 
-*PAC Gap in dimensionless Modulation Index units (×10⁻⁶). All percentage values are means across 35 subjects.*
+_PAC Gap in dimensionless Modulation Index units (×10⁻⁶). All percentage values are means across 35 subjects._
 
 **Primary comparison: TCN Predictive vs. Reactive Threshold**
 
@@ -101,16 +101,16 @@ To assess whether the TCN advantage holds under assumptions of neural habituatio
 
 Six fatigue rate levels were tested, spanning from no fatigue (rate=0.0) through increasing habituation severity (rates 0.004, 0.008, 0.015, 0.025, and 0.040). Results are expressed as stimulation efficiency (mean PAC per unit stimulation time), with percentage improvement of the predictive controller over the fixed-schedule baseline.
 
-| Fatigue Rate | Fixed Eff. | Adaptive Eff. | Improvement | p-value |
-|-------------|-----------|--------------|-------------|---------|
-| 0.000 (none) | 5.381 | 5.401 | +0.4% | 0.492 |
-| 0.004 (mild) | 5.294 | 5.361 | +1.3% | 0.020 |
-| 0.008 | 5.217 | 5.329 | +2.1% | 0.010 |
-| 0.015 (moderate) | 5.101 | 5.231 | +2.6% | 0.010 |
-| 0.025 (severe) | 4.968 | 5.184 | +4.3% | 0.002 |
-| 0.040 (high) | 4.819 | 5.092 | +5.7% | 0.010 |
+| Fatigue Rate     | Fixed Eff. | Adaptive Eff. | Improvement | p-value |
+| ---------------- | ---------- | ------------- | ----------- | ------- |
+| 0.000 (none)     | 5.381      | 5.401         | +0.4%       | 0.492   |
+| 0.004 (mild)     | 5.294      | 5.361         | +1.3%       | 0.020   |
+| 0.008            | 5.217      | 5.329         | +2.1%       | 0.010   |
+| 0.015 (moderate) | 5.101      | 5.231         | +2.6%       | 0.010   |
+| 0.025 (severe)   | 4.968      | 5.184         | +4.3%       | 0.002   |
+| 0.040 (high)     | 4.819      | 5.092         | +5.7%       | 0.010   |
 
-*Efficiency metric: mean PAC during stimulation normalized by stimulation fraction. Values shown as mean × 10⁵ for readability.*
+_Efficiency metric: mean PAC during stimulation normalized by stimulation fraction. Values shown as mean × 10⁵ for readability._
 
 A notable finding is that the efficiency advantage of adaptive control increases monotonically with fatigue severity. Under no-fatigue conditions, the efficiency gain was marginal (+0.4%, p=0.49), as fixed and adaptive controllers encounter similar brain states. As fatigue rate increased, the advantage grew to +1.3% (mild), +2.6% (moderate), +4.3% (severe), and +5.7% (high), with all conditions above the no-fatigue baseline achieving statistical significance. This result suggests that adaptive control is most clinically valuable precisely when it is most needed: as habituation accumulates over a session, the ability to target stimulation to periods of genuine therapeutic need becomes increasingly important for maintaining efficiency.
 
@@ -122,8 +122,6 @@ These fatigue robustness results were generated from closed-loop simulation and 
 
 ## 6.5 Threshold Sensitivity
 
-
-
 The TCN predictive controller uses a z-score threshold (δz) to determine when predicted PAC deviation is sufficient to trigger a stimulation or rest decision. A threshold sweep from δz=0.1 through δz=1.0 was conducted to assess the robustness of the alignment advantage to this design choice.
 
 The TCN controller outperformed the reactive baseline (64.5% alignment, 51.7% Low-PAC Stim Rate) at all thresholds at or above δz=0.2. At δz=0.3 (the selected operating threshold), the TCN achieved 73.7% alignment and 84.9% Low-PAC Stim Rate. Performance was stable across the range δz=0.3 through δz=1.0, indicating the result does not depend sensitively on threshold tuning. The only threshold below which TCN performance approached the reactive baseline was δz=0.1, where frequent mode-switching degraded alignment to 59.6%. See Supplementary Figure S2 (threshold_sensitivity.png) for the full threshold sensitivity curves.
@@ -132,18 +130,18 @@ The stability of TCN performance across the δz=0.2–1.0 range implies that the
 
 **Threshold sweep data (δz=0.1 through δz=1.0):**
 
-| δz Threshold | Alignment | Low-PAC Stim | Stim % | PAC Gap (×10⁻⁶) |
-|-------------|-----------|-------------|--------|----------------|
-| 0.1 | 59.6% | 51.2% | 41.3% | 12.4 |
-| 0.2 | 68.5% | 72.9% | 53.7% | 26.3 |
-| **0.3 (selected)** | **73.7%** | **84.9%** | **60.5%** | **32.4** |
-| 0.4 | 73.9% | 85.3% | 60.7% | 33.7 |
-| 0.5 | 73.7% | 85.3% | 60.8% | 33.8 |
-| 0.8 | 73.8% | 85.3% | 60.8% | 34.0 |
-| 1.0 | 73.8% | 85.3% | 60.8% | 34.0 |
-| *Reactive baseline* | *64.5%* | *51.7%* | *36.7%* | *21.1* |
+| δz Threshold        | Alignment | Low-PAC Stim | Stim %    | PAC Gap (×10⁻⁶) |
+| ------------------- | --------- | ------------ | --------- | --------------- |
+| 0.1                 | 59.6%     | 51.2%        | 41.3%     | 12.4            |
+| 0.2                 | 68.5%     | 72.9%        | 53.7%     | 26.3            |
+| **0.3 (selected)**  | **73.7%** | **84.9%**    | **60.5%** | **32.4**        |
+| 0.4                 | 73.9%     | 85.3%        | 60.7%     | 33.7            |
+| 0.5                 | 73.7%     | 85.3%        | 60.8%     | 33.8            |
+| 0.8                 | 73.8%     | 85.3%        | 60.8%     | 34.0            |
+| 1.0                 | 73.8%     | 85.3%        | 60.8%     | 34.0            |
+| _Reactive baseline_ | _64.5%_   | _51.7%_      | _36.7%_   | _21.1_          |
 
-*The TCN outperforms the reactive baseline at all thresholds δz≥0.2. Performance plateaus at δz≥0.3, indicating insensitivity to threshold in the operational range.*
+_The TCN outperforms the reactive baseline at all thresholds δz≥0.2. Performance plateaus at δz≥0.3, indicating insensitivity to threshold in the operational range._
 
 ---
 
@@ -153,22 +151,22 @@ The stability of TCN performance across the δz=0.2–1.0 range implies that the
 
 For completeness, we report the performance of the deployed TCN checkpoint (trained with ts=1, raw PAC targets) on the held-out test set. This checkpoint is distinct from the horizon sweep models (which used ts=5 smoothed targets) and is the model used in all closed-loop controller experiments reported in Sections 6.2–6.5.
 
-| Metric | Value |
-|--------|-------|
-| Architecture | MultiscaleCausalTCN, dilations [1,2,4,8] |
-| Parameters | 31,043 |
-| Input | 73 features, 20-step (20s) lookback |
-| Prediction horizon | 5 seconds |
-| Target smoothing | None (ts=1, raw PAC) |
-| Test R² | 0.170 |
-| Test RMSE | 3.3 × 10⁻⁵ |
-| Test Pearson r | 0.433 |
-| Best validation R² | 0.411 |
-| Best epoch | 53 |
+| Metric             | Value                                    |
+| ------------------ | ---------------------------------------- |
+| Architecture       | MultiscaleCausalTCN, dilations [1,2,4,8] |
+| Parameters         | 31,043                                   |
+| Input              | 73 features, 20-step (20s) lookback      |
+| Prediction horizon | 5 seconds                                |
+| Target smoothing   | None (ts=1, raw PAC)                     |
+| Test R²            | 0.170                                    |
+| Test RMSE          | 3.3 × 10⁻⁵                               |
+| Test Pearson r     | 0.433                                    |
+| Best validation R² | 0.411                                    |
+| Best epoch         | 53                                       |
 
 The test R²=0.170 reflects the inherent difficulty of predicting raw, unsmoothed PAC from frontal EEG features. The static EEGNet ceiling for predicting instantaneous PAC from a single 2-second window is R²=0.287; at the 5-second horizon with ts=1 targets, the persistence baseline achieves R²=−0.267. The TCN's R²=0.170 lies between these bounds: substantially above the persistence baseline (demonstrating real predictive value) but below the instantaneous ceiling (expected given the 5-second forecasting distance and the additional noise in unsmoothed targets).
 
-The key insight is that R² on raw PAC is not the primary measure of controller utility. What matters for closed-loop control is whether the TCN's directional forecasts — predicting whether PAC is about to rise or fall — are accurate enough to make better stimulation timing decisions than reactive threshold control. The controller comparison results in Section 6.2 demonstrate that they are, with a large effect size advantage (g=+1.31) that is unlikely to be explained by R²=0.170 point predictions alone. The TCN's control advantage appears to arise from capturing the *direction* and *timing* of PAC transitions with sufficient accuracy to pre-position stimulation before declines occur, even when absolute PAC magnitude prediction is imperfect.
+The key insight is that R² on raw PAC is not the primary measure of controller utility. What matters for closed-loop control is whether the TCN's directional forecasts — predicting whether PAC is about to rise or fall — are accurate enough to make better stimulation timing decisions than reactive threshold control. The controller comparison results in Section 6.2 demonstrate that they are, with a large effect size advantage (g=+1.31) that is unlikely to be explained by R²=0.170 point predictions alone. The TCN's control advantage appears to arise from capturing the _direction_ and _timing_ of PAC transitions with sufficient accuracy to pre-position stimulation before declines occur, even when absolute PAC magnitude prediction is imperfect.
 
 ---
 
@@ -184,7 +182,7 @@ The experimental results support four primary conclusions:
 
 4. **Robustness**: The TCN advantage was maintained across fatigue severity levels (with advantage growing as fatigue increased) and across prediction confidence thresholds (δz=0.2–1.0 all exceeded the reactive baseline).
 
-**Relationship between forecasting performance and control performance.** A noteworthy observation is that the large control advantage (g=+1.31 for alignment) coexists with moderate forecasting accuracy (R²=0.170 on raw targets). This relationship between prediction quality and control quality is consistent with theoretical results from control theory: for binary threshold-crossing decisions (STIMULATE vs REST vs MAINTAIN), accurate *relative* predictions — whether PAC is predicted to be above or below the current rolling mean — are more important than accurate *absolute* predictions of exact PAC values. The TCN's Pearson r=0.433 indicates that while absolute PAC prediction is imperfect, the directional signal (rank correlation) is substantially stronger and sufficient to support the timing decisions that determine controller alignment. The PersonalizationModule's 30-second rolling baseline further transforms absolute predictions into personalized z-scores, which are inherently relative and less sensitive to prediction bias than absolute errors.
+**Relationship between forecasting performance and control performance.** A noteworthy observation is that the large control advantage (g=+1.31 for alignment) coexists with moderate forecasting accuracy (R²=0.170 on raw targets). This relationship between prediction quality and control quality is consistent with theoretical results from control theory: for binary threshold-crossing decisions (STIMULATE vs REST vs MAINTAIN), accurate _relative_ predictions — whether PAC is predicted to be above or below the current rolling mean — are more important than accurate _absolute_ predictions of exact PAC values. The TCN's Pearson r=0.433 indicates that while absolute PAC prediction is imperfect, the directional signal (rank correlation) is substantially stronger and sufficient to support the timing decisions that determine controller alignment. The PersonalizationModule's 30-second rolling baseline further transforms absolute predictions into personalized z-scores, which are inherently relative and less sensitive to prediction bias than absolute errors.
 
 This finding has implications for future work: improvements to the TCN's absolute R² may not proportionally improve control alignment if the directional accuracy is already near saturation. Conversely, architectural choices that specifically improve the accuracy of threshold-crossing timing predictions — for example, through explicit classification heads for PAC-decline onset detection — may yield larger control improvements per unit of architectural complexity than approaches that optimize for pointwise prediction accuracy alone. This gap between prediction accuracy and control performance also highlights the importance of evaluating EEG-based controllers on control-relevant metrics rather than purely on forecasting R² or RMSE, which may poorly proxy the clinical utility of the system.
 
@@ -192,7 +190,7 @@ This finding has implications for future work: improvements to the TCN's absolut
 
 ---
 
-*Results section complete. See Discussion (Section 7) for interpretation of these findings in relation to prior closed-loop neuromodulation literature and the clinical translation pathway.*
+_Results section complete. See Discussion (Section 7) for interpretation of these findings in relation to prior closed-loop neuromodulation literature and the clinical translation pathway._
 
 <!-- Figure references:
 Figure 3: results/figures/horizon_sweep.png — Prediction horizon sweep (R² vs horizon for Persistence, Ridge, TCN)

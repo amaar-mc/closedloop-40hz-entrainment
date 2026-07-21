@@ -10,6 +10,7 @@ tags:
 # Write a major section header (## level).
 
 ## Connections
+
 - [[write_section_header()]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

@@ -10,7 +10,8 @@ tags:
 # Rationale: TCN over LSTM (Causality by Design, Parallelism, Multi-scale Dilations)
 
 ## Connections
+
 - [[Design Decision Rationale Data, Model, Training, Controller Choices]] - `references` [EXTRACTED]
 - [[TCN Deep Dive Causal Convolution, Dilation, Residual Connections, Attention Pooling]] - `rationale_for` [INFERRED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

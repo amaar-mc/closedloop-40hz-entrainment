@@ -10,6 +10,7 @@ tags:
 # get_baseline_stats()
 
 ## Connections
+
 - [[Compute mean and standard deviation of baseline PAC values.          Returns]] - `rationale_for` [EXTRACTED]
 - [[PersonalizationModule]] - `method` [EXTRACTED]
 - [[compute_zscore()]] - `calls` [EXTRACTED]

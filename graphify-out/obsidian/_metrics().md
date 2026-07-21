@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# _metrics()
+# \_metrics()
 
 ## Connections
+
 - [[_corr()_1]] - `calls` [EXTRACTED]
 - [[_r2()_1]] - `calls` [EXTRACTED]
 - [[evaluate()]] - `calls` [EXTRACTED]

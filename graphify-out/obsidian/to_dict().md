@@ -10,8 +10,9 @@ tags:
 # to_dict()
 
 ## Connections
+
 - [[TrialMetrics]] - `method` [EXTRACTED]
 - [[_make_serializable()]] - `calls` [EXTRACTED]
 - [[main()_65]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

@@ -10,6 +10,7 @@ tags:
 # SubjectAdaptiveTCN
 
 ## Connections
+
 - [[TCN with subject-level batch normalization via FiLM conditioning.      Uses a le]] - `rationale_for` [EXTRACTED]
 - [[__init__()_7]] - `method` [EXTRACTED]
 - [[count_parameters()_4]] - `method` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # Per-Subject Analysis (35/35 Subjects Favor TCN)
 
 ## Connections
+
 - [[Controller Comparison Results (N=35 Real EEG, 6 Controllers)]] - `references` [EXTRACTED]
 - [[Figure Per-Subject Alignment (3535 Subjects Favor TCN, Scatter Plot)]] - `references` [EXTRACTED]
 

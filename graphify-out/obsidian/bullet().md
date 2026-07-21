@@ -10,6 +10,7 @@ tags:
 # bullet()
 
 ## Connections
+
 - [[Bullet point with optional bold markers.]] - `rationale_for` [EXTRACTED]
 - [[SlideBuilder]] - `method` [EXTRACTED]
 - [[_add_textbox()]] - `calls` [EXTRACTED]

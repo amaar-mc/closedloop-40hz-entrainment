@@ -53,17 +53,17 @@ Say these out loud 5 times. This is what makes the story flow.
 
 ## EMOTIONAL ANCHORING
 
-| Room | Feeling | Inner thought |
-|---|---|---|
-| 1. GREETING | Warm, open | "I'm glad you're here." |
-| 2. WHY THIS EXISTS | Personal, then wonder | "This is real to me. And the science blew my mind." |
-| 3. THE GAP | Frustration | "How is nobody doing this? It's so obviously broken." |
-| 4. MEASURE + WALL | Surprise → insight | "I expected one model to win. They all tied. That *was* the discovery." |
-| 5. THE PIVOT | Breakthrough energy | "This is where the project changed direction." |
-| 6. KEY CHART | Pride, conviction | "This is my best figure. The intellectual heart." |
-| 7. PROOF | Let the data speak | "The numbers back everything up." |
-| 8. EVERY PATIENT | Quiet awe | "35 out of 35. That's the one that gets people." |
-| 9. HONESTY | Maturity | "I know what this doesn't prove yet. That's strength." |
+| Room               | Feeling               | Inner thought                                                           |
+| ------------------ | --------------------- | ----------------------------------------------------------------------- |
+| 1. GREETING        | Warm, open            | "I'm glad you're here."                                                 |
+| 2. WHY THIS EXISTS | Personal, then wonder | "This is real to me. And the science blew my mind."                     |
+| 3. THE GAP         | Frustration           | "How is nobody doing this? It's so obviously broken."                   |
+| 4. MEASURE + WALL  | Surprise → insight    | "I expected one model to win. They all tied. That _was_ the discovery." |
+| 5. THE PIVOT       | Breakthrough energy   | "This is where the project changed direction."                          |
+| 6. KEY CHART       | Pride, conviction     | "This is my best figure. The intellectual heart."                       |
+| 7. PROOF           | Let the data speak    | "The numbers back everything up."                                       |
+| 8. EVERY PATIENT   | Quiet awe             | "35 out of 35. That's the one that gets people."                        |
+| 9. HONESTY         | Maturity              | "I know what this doesn't prove yet. That's strength."                  |
 
 ---
 

@@ -8,6 +8,7 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
+
 - [[Lab Notebook Errata (Corrections to LAB_NOTEBOOK.md)]] - document - archive/notebooks/LAB_NOTEBOOK_ERRATA.md
 - [[Laboratory Research Notebook (Structured Study Format)]] - document - archive/notebooks/LAB_NOTEBOOK.md
 - [[P10 Research Notebook V1 (Research Paper Format)]] - document - archive/notebooks/v1_research_paper_format.md

@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# Enhanced Data Loader for ΔPAC Prediction (Version 2)  Key improvements over v1
+# Enhanced Data Loader for ΔPAC Prediction (Version 2) Key improvements over v1
 
 ## Connections
+
 - [[data_loader_v2.py]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_EEGNet_V2

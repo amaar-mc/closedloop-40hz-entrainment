@@ -10,6 +10,7 @@ tags:
 # PredictiveCtrl
 
 ## Connections
+
 - [[StimAction]] - `uses` [INFERRED]
 - [[__init__()_75]] - `method` [EXTRACTED]
 - [[_trend()_1]] - `method` [EXTRACTED]

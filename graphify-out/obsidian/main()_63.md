@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[AudioEngine]] - `calls` [EXTRACTED]
 - [[FixedScheduleControl_4]] - `calls` [EXTRACTED]
 - [[OracleControl_3]] - `calls` [EXTRACTED]
@@ -25,4 +26,4 @@ tags:
 - [[step()_48]] - `calls` [EXTRACTED]
 - [[stop()_1]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -10,6 +10,7 @@ tags:
 # Status Report: Project ~45% Complete Toward Synopsys Submission (Feb 2026)
 
 ## Connections
+
 - [[Status Report v1 Project Status Feb 2026 (Duplicate of v2)]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_142

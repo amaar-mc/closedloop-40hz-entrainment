@@ -10,6 +10,7 @@ tags:
 # train_model()
 
 ## Connections
+
 - [[Generic training loop. Returns best model state and history.]] - `rationale_for` [EXTRACTED]
 - [[denorm()]] - `calls` [EXTRACTED]
 - [[r2_score()]] - `calls` [EXTRACTED]

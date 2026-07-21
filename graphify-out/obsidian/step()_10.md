@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[Delegate to RealtimePACForecaster.step() with fixed cycle-phase defaults.]] - `rationale_for` [EXTRACTED]
 - [[TCNTemporalModel]] - `method` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

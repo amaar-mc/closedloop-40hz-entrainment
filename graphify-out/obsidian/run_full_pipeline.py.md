@@ -10,6 +10,7 @@ tags:
 # run_full_pipeline.py
 
 ## Connections
+
 - [[Full end-to-end pipeline preprocess → spectral cache → temporal dataset → train]] - `rationale_for` [EXTRACTED]
 - [[main()_47]] - `contains` [EXTRACTED]
 - [[step_build_dataset()]] - `contains` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[step_spectral_cache()]] - `contains` [EXTRACTED]
 - [[step_train_tcn()]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

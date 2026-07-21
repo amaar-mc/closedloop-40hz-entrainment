@@ -10,6 +10,7 @@ tags:
 # generate_click_train()
 
 ## Connections
+
 - [[Generate a 40 Hz click train stimulus.      Click trains are the standard ASSR s]] - `rationale_for` [EXTRACTED]
 - [[_apply_ramp()]] - `calls` [EXTRACTED]
 - [[generate_stimulus()]] - `calls` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[generate_qr_codes.py]] - `contains` [EXTRACTED]
 - [[make_qr()]] - `calls` [EXTRACTED]
 

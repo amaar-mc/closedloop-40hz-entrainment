@@ -10,6 +10,7 @@ tags:
 # V6 Key Change: 12-Feature PAC+Stim Discovery Narrative
 
 ## Connections
+
 - [[Feature Ablation Result 73→12 Features, R² from -0.025 to 0.606]] - `references` [INFERRED]
 - [[Key Discovery Callout Box 12-Feature Ablation Narrative]] - `references` [INFERRED]
 - [[Poster Board V6 (PAC+Stim Feature Discovery Update)]] - `references` [EXTRACTED]

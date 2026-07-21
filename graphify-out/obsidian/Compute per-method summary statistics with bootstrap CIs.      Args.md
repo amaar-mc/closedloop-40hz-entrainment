@@ -7,12 +7,13 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Compute per-method summary statistics with bootstrap CIs.      Args:
+# Compute per-method summary statistics with bootstrap CIs. Args:
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[compute_summary_stats()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

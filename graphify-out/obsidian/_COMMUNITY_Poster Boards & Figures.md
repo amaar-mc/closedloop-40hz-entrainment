@@ -8,6 +8,7 @@ members: 89
 **Members:** 89 nodes
 
 ## Members
+
 - [[7 Frontal EEG Channels (Fp1, Fp2, F3, F4, Fz, T3, T4) at 250 Hz]] - image - submission/figures/figure8.png
 - [[ATCNet R² Correction (0.287→0.075, V4 Critical Fix)]] - document - submission/poster/archive/POSTER_BOARD_V4.md
 - [[All 73 Features Test R² = -0.025 (FAILS — negative R²)]] - image - submission/figures/figure4.png

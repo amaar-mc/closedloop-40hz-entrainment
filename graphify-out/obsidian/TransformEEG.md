@@ -10,6 +10,7 @@ tags:
 # TransformEEG
 
 ## Connections
+
 - [[TransformEEG-inspired Convolutional-Transformer for PAC.      Inspired by Sel]] - `rationale_for` [EXTRACTED]
 - [[__init__()_17]] - `method` [EXTRACTED]
 - [[forward()_12]] - `method` [EXTRACTED]

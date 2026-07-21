@@ -10,6 +10,7 @@ tags:
 # TCNTribeController
 
 ## Connections
+
 - [[Closed-loop controller using TCN-TRIBE for proactive decisions.]] - `rationale_for` [EXTRACTED]
 - [[__init__()_106]] - `method` [EXTRACTED]
 - [[_build_features()]] - `method` [EXTRACTED]

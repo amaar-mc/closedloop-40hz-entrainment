@@ -10,8 +10,9 @@ tags:
 # validate()
 
 ## Connections
+
 - [[ModelTrainer]] - `method` [EXTRACTED]
 - [[Validate model on validation set.          Args             val_loader Vali]] - `rationale_for` [EXTRACTED]
 - [[train()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

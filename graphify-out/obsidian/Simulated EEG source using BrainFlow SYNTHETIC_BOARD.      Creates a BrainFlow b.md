@@ -7,9 +7,10 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Simulated EEG source using BrainFlow SYNTHETIC_BOARD.      Creates a BrainFlow b
+# Simulated EEG source using BrainFlow SYNTHETIC_BOARD. Creates a BrainFlow b
 
 ## Connections
+
 - [[SimulatedEEGAdapter]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # Attention pooling over time axis.
 
 ## Connections
+
 - [[AttentionPool1D_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

@@ -10,6 +10,7 @@ tags:
 # section_subtitle()
 
 ## Connections
+
 - [[_text()]] - `calls` [EXTRACTED]
 - [[build_section_11()]] - `calls` [EXTRACTED]
 - [[build_section_15()]] - `calls` [EXTRACTED]

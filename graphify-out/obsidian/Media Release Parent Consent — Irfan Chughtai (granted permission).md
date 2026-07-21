@@ -10,6 +10,7 @@ tags:
 # Media Release Parent Consent — Irfan Chughtai (granted permission)
 
 ## Connections
+
 - [[PhotoVideoWebsiteMedia Release Form]] - `implements` [EXTRACTED]
 
   #community/Community_152

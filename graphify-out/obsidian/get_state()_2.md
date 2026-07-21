@@ -10,6 +10,7 @@ tags:
 # get_state()
 
 ## Connections
+
 - [[Get current simulator state._1]] - `rationale_for` [EXTRACTED]
 - [[TribeEnhancedSimulator]] - `method` [EXTRACTED]
 

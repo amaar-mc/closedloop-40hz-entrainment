@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# Training Pipeline for Temporal PAC Prediction  Trains the LSTM temporal predic
+# Training Pipeline for Temporal PAC Prediction Trains the LSTM temporal predic
 
 ## Connections
+
 - [[TemporalPACPredictor]] - `uses` [INFERRED]
 - [[train_temporal.py]] - `rationale_for` [EXTRACTED]
 

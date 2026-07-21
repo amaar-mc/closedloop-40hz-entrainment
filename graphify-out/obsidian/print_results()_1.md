@@ -10,6 +10,7 @@ tags:
 # print_results()
 
 ## Connections
+
 - [[Print formatted results table to stdout.]] - `rationale_for` [EXTRACTED]
 - [[fit_simulator_params.py]] - `contains` [EXTRACTED]
 - [[main()_51]] - `calls` [EXTRACTED]

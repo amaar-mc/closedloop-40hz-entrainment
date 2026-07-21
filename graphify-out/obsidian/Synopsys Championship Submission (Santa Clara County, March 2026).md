@@ -9,6 +9,7 @@ tags:
 # Synopsys Championship Submission (Santa Clara County, March 2026)
 
 ## Connections
+
 - [[Synopsys Championship Abstract (v1  vfinal  P10)]] - `references` [EXTRACTED]
 
   #community/Community_55

@@ -10,6 +10,7 @@ tags:
 # SyntheticDataset
 
 ## Connections
+
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[ModelConfig_1]] - `uses` [INFERRED]
@@ -23,4 +24,4 @@ tags:
 - [[run_benchmark()]] - `calls` [EXTRACTED]
 - [[synthetic_benchmark.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[BrainFlow Real-Time EEG Streaming Dependency]] - document - requirements.txt
 
 ## Live Query (requires Dataview plugin)

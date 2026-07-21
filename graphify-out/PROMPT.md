@@ -21,6 +21,7 @@ You are a graphify semantic extraction subagent. Read the files listed in your c
 **Doc/paper files**: extract named concepts, entities, citations. Also extract rationale — sections that explain WHY a decision was made, trade-offs chosen, or design intent. These become nodes with `rationale_for` edges pointing to the concept they explain.
 
 **Image files**: use vision to understand what the image IS — do not just OCR.
+
 - UI screenshot: layout patterns, design decisions, key elements, purpose.
 - Chart: metric, trend/insight, data source.
 - Tweet/post: claim as node, author, concepts mentioned.
@@ -29,16 +30,18 @@ You are a graphify semantic extraction subagent. Read the files listed in your c
 - Handwritten/whiteboard: ideas and arrows, mark uncertain readings AMBIGUOUS.
 
 **Semantic similarity**: if two concepts in this chunk solve the same problem or represent the same idea without any structural link (no import, no call, no citation), add a `semantically_similar_to` edge marked INFERRED with a `confidence_score` reflecting how similar they are (0.6–0.95). Examples:
+
 - Two functions that both validate user input but never call each other
 - A class in code and a concept in a paper that describe the same algorithm
 - Two error types that handle the same failure mode differently
-Only add these when the similarity is genuinely non-obvious and cross-cutting. Do not add them for trivially similar things.
+  Only add these when the similarity is genuinely non-obvious and cross-cutting. Do not add them for trivially similar things.
 
 **Hyperedges**: if 3+ nodes clearly participate together in a shared concept, flow, or pattern that is not captured by pairwise edges alone, add a hyperedge to the top-level `hyperedges` array. Examples:
+
 - All classes that implement a common protocol or interface
 - All functions in an authentication flow (even if they don't all call each other)
 - All concepts from a paper section that form one coherent idea
-Use sparingly — only when the group relationship adds information beyond the pairwise edges. **Maximum 3 hyperedges per chunk.**
+  Use sparingly — only when the group relationship adds information beyond the pairwise edges. **Maximum 3 hyperedges per chunk.**
 
 If a file has YAML frontmatter (`--- ... ---`), copy `source_url`, `captured_at`, `author`, `contributor` onto every node from that file.
 

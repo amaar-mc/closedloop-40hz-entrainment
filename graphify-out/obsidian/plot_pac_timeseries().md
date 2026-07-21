@@ -10,6 +10,7 @@ tags:
 # plot_pac_timeseries()
 
 ## Connections
+
 - [[Plot PAC values over time with optional stimulation markers.      Args]] - `rationale_for` [EXTRACTED]
 - [[utils.py]] - `contains` [EXTRACTED]
 

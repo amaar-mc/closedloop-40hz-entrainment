@@ -10,6 +10,7 @@ tags:
 # evaluate_model()
 
 ## Connections
+
 - [[Evaluate model and return predictions.]] - `rationale_for` [EXTRACTED]
 - [[run_v7_raw_eeg_models.py]] - `contains` [EXTRACTED]
 

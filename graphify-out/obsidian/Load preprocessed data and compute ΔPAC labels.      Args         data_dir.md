@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# Load preprocessed data and compute ΔPAC labels.      Args:         data_dir:
+# Load preprocessed data and compute ΔPAC labels. Args: data_dir:
 
 ## Connections
+
 - [[load_processed_data_v2()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_EEGNet_V2

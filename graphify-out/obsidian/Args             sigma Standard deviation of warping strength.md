@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Args:             sigma: Standard deviation of warping strength
+# Args: sigma: Standard deviation of warping strength
 
 ## Connections
+
 - [[__init__()_46]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

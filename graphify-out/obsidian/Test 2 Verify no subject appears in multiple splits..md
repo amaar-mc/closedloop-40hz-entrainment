@@ -10,6 +10,7 @@ tags:
 # Test 2: Verify no subject appears in multiple splits.
 
 ## Connections
+
 - [[test_no_subject_leakage()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_49

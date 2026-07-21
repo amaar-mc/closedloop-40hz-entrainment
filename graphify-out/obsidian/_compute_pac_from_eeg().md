@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# _compute_pac_from_eeg()
+# \_compute_pac_from_eeg()
 
 ## Connections
+
 - [[Compute average PAC across channels from multi-channel EEG.          Args]] - `rationale_for` [EXTRACTED]
 - [[TribeEnhancedSimulator]] - `method` [EXTRACTED]
 - [[_warmup()]] - `calls` [EXTRACTED]

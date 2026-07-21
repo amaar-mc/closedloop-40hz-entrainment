@@ -10,6 +10,7 @@ tags:
 # First End-to-End Pipeline Build (February 6, 2026)
 
 ## Connections
+
 - [[Citation Lawhern et al. (2018) - EEGNet]] - `cites` [EXTRACTED]
 - [[EEGNet Adapted for PAC Regression (1,457 params, R2=0.287)]] - `references` [EXTRACTED]
 - [[Phase-Amplitude Coupling (PAC) Biomarker Choice]] - `references` [EXTRACTED]

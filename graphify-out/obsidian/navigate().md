@@ -10,6 +10,7 @@ tags:
 # navigate()
 
 ## Connections
+
 - [[Set the active page in session state.]] - `rationale_for` [EXTRACTED]
 - [[caregiver_app.py]] - `contains` [EXTRACTED]
 - [[render_patient_history()]] - `calls` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[render_summary()]] - `calls` [EXTRACTED]
 - [[render_welcome()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

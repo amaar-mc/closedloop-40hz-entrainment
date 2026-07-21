@@ -10,6 +10,7 @@ tags:
 # Tort Modulation Index (Causal Sliding Window)
 
 ## Connections
+
 - [[Epoch-Level PAC Caveat 82.2% Same-Epoch Samples]] - `conceptually_related_to` [INFERRED]
 - [[Sliding-Window PAC Computation (compute_sliding_pac.py)]] - `implements` [EXTRACTED]
 

@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Time-Series Data Augmentation for EEG  Implements augmentation techniques specif
+# Time-Series Data Augmentation for EEG Implements augmentation techniques specif
 
 ## Connections
+
 - [[data_augmentation.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

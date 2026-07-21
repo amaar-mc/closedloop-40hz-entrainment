@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# Args:             model: EEGNetV2 model             device: 'cuda' or 'cpu'
+# Args: model: EEGNetV2 model device: 'cuda' or 'cpu'
 
 ## Connections
+
 - [[EEGNetV2]] - `uses` [INFERRED]
 - [[__init__()_37]] - `rationale_for` [EXTRACTED]
 

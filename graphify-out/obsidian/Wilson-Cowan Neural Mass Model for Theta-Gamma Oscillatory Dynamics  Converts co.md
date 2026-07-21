@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Wilson-Cowan Neural Mass Model for Theta-Gamma Oscillatory Dynamics  Converts co
+# Wilson-Cowan Neural Mass Model for Theta-Gamma Oscillatory Dynamics Converts co
 
 ## Connections
+
 - [[neural_mass.py]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

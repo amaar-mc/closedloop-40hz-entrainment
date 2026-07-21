@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# Lightweight spatial encoder for individual EEG windows.      Reduces (7, 500)
+# Lightweight spatial encoder for individual EEG windows. Reduces (7, 500)
 
 ## Connections
+
 - [[SpatialEncoder]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Temporal_PAC_Predictor

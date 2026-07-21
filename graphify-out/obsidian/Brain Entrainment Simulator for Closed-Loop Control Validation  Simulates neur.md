@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Brain Entrainment Simulator for Closed-Loop Control Validation  Simulates neur
+# Brain Entrainment Simulator for Closed-Loop Control Validation Simulates neur
 
 ## Connections
+
 - [[simulator.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

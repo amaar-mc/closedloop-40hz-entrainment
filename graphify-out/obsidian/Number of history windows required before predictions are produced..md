@@ -10,6 +10,7 @@ tags:
 # Number of history windows required before predictions are produced.
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

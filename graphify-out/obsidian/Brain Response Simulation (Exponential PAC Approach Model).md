@@ -10,6 +10,7 @@ tags:
 # Brain Response Simulation (Exponential PAC Approach Model)
 
 ## Connections
+
 - [[Closed-Loop Controller (Z-Score Threshold, Hysteresis 3s)]] - `conceptually_related_to` [INFERRED]
 - [[Current Methodology Closed-Loop 40Hz Entrainment via Temporal PAC Forecasting]] - `references` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # Known Bug: Stim Context hop_sec Mismatch (1s vs 2s window)
 
 ## Connections
+
 - [[PAC+Stim Feature Discovery Audit Report]] - `references` [EXTRACTED]
 
   #community/Generalization-Gap_Experiments

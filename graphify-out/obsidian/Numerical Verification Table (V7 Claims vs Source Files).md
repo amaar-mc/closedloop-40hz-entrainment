@@ -10,7 +10,8 @@ tags:
 # Numerical Verification Table (V7 Claims vs Source Files)
 
 ## Connections
+
 - [[Hysteresis Correction Note (3s override vs 5s config default)]] - `conceptually_related_to` [EXTRACTED]
 - [[Poster Board V7 (Audit-Clean, CSEF 2026)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

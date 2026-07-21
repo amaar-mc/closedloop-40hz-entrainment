@@ -10,6 +10,7 @@ tags:
 # convert_citations()
 
 ## Connections
+
 - [[Convert N citation patterns to LaTeX cite-style.]] - `rationale_for` [EXTRACTED]
 - [[generate_paper_latex.py]] - `contains` [EXTRACTED]
 - [[process_line()]] - `calls` [EXTRACTED]

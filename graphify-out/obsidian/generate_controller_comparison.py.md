@@ -10,6 +10,7 @@ tags:
 # generate_controller_comparison.py
 
 ## Connections
+
 - [[Generate Figure 8 Controller Comparison bar chart from real data.]] - `rationale_for` [EXTRACTED]
 - [[add_bracket()]] - `contains` [EXTRACTED]
 

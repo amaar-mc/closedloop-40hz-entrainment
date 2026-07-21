@@ -10,6 +10,7 @@ tags:
 # FixedScheduleCtrl
 
 ## Connections
+
 - [[TVBAlzheimerSimulator]] - `uses` [INFERRED]
 - [[__init__()_92]] - `method` [EXTRACTED]
 - [[main()_43]] - `calls` [EXTRACTED]

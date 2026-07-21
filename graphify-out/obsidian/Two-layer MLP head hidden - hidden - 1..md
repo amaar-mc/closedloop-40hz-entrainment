@@ -10,6 +10,7 @@ tags:
 # Two-layer MLP head: hidden -> hidden -> 1.
 
 ## Connections
+
 - [[_make_regression_head()]] - `rationale_for` [EXTRACTED]
 
   #community/TCN_Layer_Internals

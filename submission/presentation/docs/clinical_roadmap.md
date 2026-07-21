@@ -19,14 +19,14 @@ collaborators. Demonstrates that the research has a realistic path toward clinic
 
 ### Validation Summary
 
-| Metric | Value | Method |
-|--------|-------|--------|
-| Dataset | N = 35 elderly subjects | OpenNeuro ds005048 (Lahijanian 2024) |
-| TCN R-squared at 5-10s horizons | 0.24 - 0.28 | Cross-validated, subject-level splits |
-| Targeting alignment | 72.1% vs 64.5% reactive | Offline replay on real EEG |
-| Low-PAC sensitivity | 82.6% vs 51.7% reactive | Real EEG, p < 0.001 |
-| Oracle proximity | 91% of theoretical best | PAC gap: 30.5 vs 33.3 |
-| Patient generalization | 35/35 benefit (100%) | Including 6 held-out test subjects |
+| Metric                          | Value                   | Method                                |
+| ------------------------------- | ----------------------- | ------------------------------------- |
+| Dataset                         | N = 35 elderly subjects | OpenNeuro ds005048 (Lahijanian 2024)  |
+| TCN R-squared at 5-10s horizons | 0.24 - 0.28             | Cross-validated, subject-level splits |
+| Targeting alignment             | 72.1% vs 64.5% reactive | Offline replay on real EEG            |
+| Low-PAC sensitivity             | 82.6% vs 51.7% reactive | Real EEG, p < 0.001                   |
+| Oracle proximity                | 91% of theoretical best | PAC gap: 30.5 vs 33.3                 |
+| Patient generalization          | 35/35 benefit (100%)    | Including 6 held-out test subjects    |
 
 ### Current Limitations
 
@@ -52,12 +52,12 @@ autonomously. The caregiver retains full control at all times.
 
 ### Integration Points
 
-| Existing Workflow | System Role |
-|-------------------|-------------|
-| Morning cognitive therapy sessions | Suggest optimal session timing based on baseline PAC trends |
-| Neurofeedback programs | Complement existing protocols with predictive 40 Hz scheduling |
-| Activity directors' daily schedules | Provide data-driven input on which patients benefit most |
-| Family caregiver home sessions | Mobile app guides session start/stop with real-time feedback |
+| Existing Workflow                   | System Role                                                    |
+| ----------------------------------- | -------------------------------------------------------------- |
+| Morning cognitive therapy sessions  | Suggest optimal session timing based on baseline PAC trends    |
+| Neurofeedback programs              | Complement existing protocols with predictive 40 Hz scheduling |
+| Activity directors' daily schedules | Provide data-driven input on which patients benefit most       |
+| Family caregiver home sessions      | Mobile app guides session start/stop with real-time feedback   |
 
 ### Key Principle: Augment, Do Not Replace
 
@@ -73,15 +73,15 @@ stimulation decision can be manually overridden from the app.
 
 **Goal:** Establish EEG baselines and validate real-time PAC estimation in a clinical setting.
 
-| Parameter | Value |
-|-----------|-------|
-| Participants | 10 (mild cognitive impairment or early Alzheimer's) |
-| Duration | 2 weeks, 3 sessions per week, 30 minutes each |
-| Protocol | Wear EEG headset during normal activities; no stimulation delivered |
-| Primary outcome | PAC estimation accuracy vs research-grade ground truth |
-| Secondary outcomes | Comfort ratings, headset compliance, baseline PAC variability |
-| Regulatory | Exempt from IRB review (observational, no intervention) |
-| Estimated timeline | 4-6 weeks including recruitment |
+| Parameter          | Value                                                               |
+| ------------------ | ------------------------------------------------------------------- |
+| Participants       | 10 (mild cognitive impairment or early Alzheimer's)                 |
+| Duration           | 2 weeks, 3 sessions per week, 30 minutes each                       |
+| Protocol           | Wear EEG headset during normal activities; no stimulation delivered |
+| Primary outcome    | PAC estimation accuracy vs research-grade ground truth              |
+| Secondary outcomes | Comfort ratings, headset compliance, baseline PAC variability       |
+| Regulatory         | Exempt from IRB review (observational, no intervention)             |
+| Estimated timeline | 4-6 weeks including recruitment                                     |
 
 **Success criteria:** Real-time PAC estimation within 15% of offline computation. Compliance
 rate above 80% (patients tolerate 30-minute sessions with headset).
@@ -91,15 +91,15 @@ rate above 80% (patients tolerate 30-minute sessions with headset).
 **Goal:** Validate that the closed-loop controller makes safe and appropriate decisions in a
 live setting with actual stimulation delivery.
 
-| Parameter | Value |
-|-----------|-------|
-| Participants | 20 (stratified by MCI severity) |
-| Duration | 4 weeks, 5 sessions per week, 60 minutes each |
-| Protocol | Closed-loop adaptive stimulation vs sham (randomized crossover) |
-| Primary outcome | Session-level PAC maintenance (adaptive vs sham) |
-| Secondary outcomes | Comfort, side effects, caregiver usability ratings |
-| Regulatory | **IRB approval required** — informed consent, DSMB oversight |
-| Estimated timeline | 3-4 months including approval |
+| Parameter          | Value                                                           |
+| ------------------ | --------------------------------------------------------------- |
+| Participants       | 20 (stratified by MCI severity)                                 |
+| Duration           | 4 weeks, 5 sessions per week, 60 minutes each                   |
+| Protocol           | Closed-loop adaptive stimulation vs sham (randomized crossover) |
+| Primary outcome    | Session-level PAC maintenance (adaptive vs sham)                |
+| Secondary outcomes | Comfort, side effects, caregiver usability ratings              |
+| Regulatory         | **IRB approval required** — informed consent, DSMB oversight    |
+| Estimated timeline | 3-4 months including approval                                   |
 
 **Safety controls:** Maximum stimulation volume capped at 70 dB SPL. Automatic session
 termination if patient distress detected. Clinician override at all times.
@@ -109,15 +109,15 @@ termination if patient distress detected. Clinician override at all times.
 **Goal:** Demonstrate that predictive (TCN) control produces measurably better cognitive
 outcomes than reactive control over a multi-week intervention.
 
-| Parameter | Value |
-|-----------|-------|
-| Participants | 50 (mild to moderate Alzheimer's) |
-| Duration | 8 weeks, daily 60-minute sessions |
-| Protocol | Predictive TCN controller vs reactive threshold controller (crossover) |
-| Primary outcome | MMSE score change from baseline |
-| Secondary outcomes | PAC maintenance, habituation rate, caregiver burden (ZBI) |
-| Regulatory | **IRB approval required**, registered at ClinicalTrials.gov |
-| Estimated timeline | 6-8 months |
+| Parameter          | Value                                                                  |
+| ------------------ | ---------------------------------------------------------------------- |
+| Participants       | 50 (mild to moderate Alzheimer's)                                      |
+| Duration           | 8 weeks, daily 60-minute sessions                                      |
+| Protocol           | Predictive TCN controller vs reactive threshold controller (crossover) |
+| Primary outcome    | MMSE score change from baseline                                        |
+| Secondary outcomes | PAC maintenance, habituation rate, caregiver burden (ZBI)              |
+| Regulatory         | **IRB approval required**, registered at ClinicalTrials.gov            |
+| Estimated timeline | 6-8 months                                                             |
 
 **Power analysis:** Based on pilot effect size (d = 1.31 for alignment), 50 participants
 provides >95% power to detect a 2-point MMSE difference at alpha = 0.05.
@@ -160,12 +160,12 @@ Patient Home / Facility          Cloud Infrastructure          Clinician Portal
 
 ### Alert Examples
 
-| Alert Type | Trigger | Action |
-|------------|---------|--------|
-| PAC Decline | 3-session downward trend | Notify clinician for protocol review |
-| Habituation Spike | Within-session PAC drop > 40% | Suggest session structure change |
-| Compliance Drop | < 3 sessions in 7 days | Caregiver reminder notification |
-| Anomalous Pattern | EEG artifact or electrode quality issue | Flag for technical review |
+| Alert Type        | Trigger                                 | Action                               |
+| ----------------- | --------------------------------------- | ------------------------------------ |
+| PAC Decline       | 3-session downward trend                | Notify clinician for protocol review |
+| Habituation Spike | Within-session PAC drop > 40%           | Suggest session structure change     |
+| Compliance Drop   | < 3 sessions in 7 days                  | Caregiver reminder notification      |
+| Anomalous Pattern | EEG artifact or electrode quality issue | Flag for technical review            |
 
 ---
 
@@ -173,30 +173,30 @@ Patient Home / Facility          Cloud Infrastructure          Clinician Portal
 
 ### Tier 1: Consumer (Current)
 
-| Specification | Value |
-|---------------|-------|
-| Device | Muse 2 |
-| Channels | 4 dry electrodes (TP9, AF7, AF8, TP10) |
-| Resolution | 12-bit |
-| Sampling rate | 256 Hz |
-| Cost | ~$200 |
-| Gamma SNR | Baseline (limited by dry electrode contact) |
-| Setting | Home use, memory care facility common areas |
+| Specification | Value                                       |
+| ------------- | ------------------------------------------- |
+| Device        | Muse 2                                      |
+| Channels      | 4 dry electrodes (TP9, AF7, AF8, TP10)      |
+| Resolution    | 12-bit                                      |
+| Sampling rate | 256 Hz                                      |
+| Cost          | ~$200                                       |
+| Gamma SNR     | Baseline (limited by dry electrode contact) |
+| Setting       | Home use, memory care facility common areas |
 
 **Strengths:** No gel, no technician, comfortable for elderly patients, affordable.
 **Limitations:** Gamma band (38-42 Hz) signal-to-noise ratio is marginal with dry electrodes.
 
 ### Tier 2: Research-Grade Portable (Next Step)
 
-| Specification | Value |
-|---------------|-------|
-| Device | OpenBCI Cyton |
-| Channels | 8 gel electrodes (configurable montage) |
-| Resolution | 24-bit |
-| Sampling rate | 250 Hz |
-| Cost | ~$500 |
-| Gamma SNR | ~4x improvement over Muse 2 |
-| Setting | Supervised facility sessions, clinical pilot |
+| Specification | Value                                        |
+| ------------- | -------------------------------------------- |
+| Device        | OpenBCI Cyton                                |
+| Channels      | 8 gel electrodes (configurable montage)      |
+| Resolution    | 24-bit                                       |
+| Sampling rate | 250 Hz                                       |
+| Cost          | ~$500                                        |
+| Gamma SNR     | ~4x improvement over Muse 2                  |
+| Setting       | Supervised facility sessions, clinical pilot |
 
 **Strengths:** 24-bit resolution dramatically improves gamma band fidelity. 8 channels enable
 better spatial coverage of frontal and temporal regions. Open-source and programmable.
@@ -205,15 +205,15 @@ StreamingFeatureExtractor and TCN model are hardware-agnostic.
 
 ### Tier 3: Clinical (Long-Term)
 
-| Specification | Value |
-|---------------|-------|
-| Device | EGI HydroCel or BrainProducts actiCHamp |
-| Channels | 64-128 electrodes |
-| Resolution | 24-bit |
-| Sampling rate | 500-1000 Hz |
-| Cost | $15,000-$30,000 |
-| Gamma SNR | Research gold standard |
-| Setting | Hospital neurology department, clinical trial |
+| Specification | Value                                         |
+| ------------- | --------------------------------------------- |
+| Device        | EGI HydroCel or BrainProducts actiCHamp       |
+| Channels      | 64-128 electrodes                             |
+| Resolution    | 24-bit                                        |
+| Sampling rate | 500-1000 Hz                                   |
+| Cost          | $15,000-$30,000                               |
+| Gamma SNR     | Research gold standard                        |
+| Setting       | Hospital neurology department, clinical trial |
 
 **Strengths:** Gold-standard signal quality for clinical validation and regulatory submission.
 **Key point:** The intelligence layer (EEGNet + TCN + controller) is identical across all
@@ -266,11 +266,13 @@ informing treatment decisions.
 ### Facility Partnerships
 
 **Mission Villa Memory Care** (Santa Clara County)
+
 - Contacted for observational pilot partnership
 - Interest in non-pharmacological therapy augmentation
 - 40-bed memory care unit with existing activity program
 
 **Valley Medical Center** (Neurology Department)
+
 - Potential clinical validation partner for Phase B/C trials
 - Access to diagnosed Alzheimer's and MCI patient population
 - IRB infrastructure for human subjects research
@@ -297,13 +299,13 @@ for demonstration or research use.
 
 ### Path to Regulatory Approval
 
-| Milestone | Regulatory Requirement |
-|-----------|----------------------|
-| Observational study (Phase A) | IRB exemption (no intervention) |
-| Feasibility study (Phase B) | IRB approval, informed consent, DSMB |
-| Comparative study (Phase C) | IRB approval, ClinicalTrials.gov registration |
-| Commercial deployment | FDA 510(k) or De Novo classification |
-| Clinical claims | FDA-cleared indication for use |
+| Milestone                     | Regulatory Requirement                        |
+| ----------------------------- | --------------------------------------------- |
+| Observational study (Phase A) | IRB exemption (no intervention)               |
+| Feasibility study (Phase B)   | IRB approval, informed consent, DSMB          |
+| Comparative study (Phase C)   | IRB approval, ClinicalTrials.gov registration |
+| Commercial deployment         | FDA 510(k) or De Novo classification          |
+| Clinical claims               | FDA-cleared indication for use                |
 
 ### Classification Pathway
 
@@ -313,16 +315,16 @@ neurofeedback systems (e.g., NeurOptimal) and auditory stimulation devices.
 
 ### Timeline Estimate
 
-| Year | Milestone |
-|------|-----------|
-| 2026 | Phase A observational pilot complete |
+| Year | Milestone                                   |
+| ---- | ------------------------------------------- |
+| 2026 | Phase A observational pilot complete        |
 | 2027 | Phase B feasibility study with IRB approval |
-| 2028 | Phase C comparative trial begins |
-| 2029 | FDA De Novo submission |
+| 2028 | Phase C comparative trial begins            |
+| 2029 | FDA De Novo submission                      |
 | 2030 | Initial commercial deployment (if approved) |
 
 ---
 
-*Document version: 1.0 — March 2026*
-*Author: Amaar Chughtai*
-*For questions: amaardevx@gmail.com*
+_Document version: 1.0 — March 2026_
+_Author: Amaar Chughtai_
+_For questions: amaardevx@gmail.com_

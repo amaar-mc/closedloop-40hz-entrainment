@@ -10,7 +10,8 @@ tags:
 # Enhanced EEGNet with increased capacity (~35K parameters, ~24x original).
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGNetEnhanced]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

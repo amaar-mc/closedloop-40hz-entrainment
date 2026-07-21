@@ -8,6 +8,7 @@ members: 14
 **Members:** 14 nodes
 
 ## Members
+
 - [[Comprehensive submission-grade audit for multiscale temporal PAC pipeline.  Audi]] - rationale - temporal_multiscale/comprehensive_submission_audit.py
 - [[_ablation_tests()]] - code - temporal_multiscale/comprehensive_submission_audit.py
 - [[_basic_integrity()]] - code - temporal_multiscale/comprehensive_submission_audit.py

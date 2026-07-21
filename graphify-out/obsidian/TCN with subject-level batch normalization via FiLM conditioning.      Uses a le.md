@@ -7,9 +7,10 @@ tags:
   - community/Archived_ImprovedTCN_Experiments
 ---
 
-# TCN with subject-level batch normalization via FiLM conditioning.      Uses a le
+# TCN with subject-level batch normalization via FiLM conditioning. Uses a le
 
 ## Connections
+
 - [[SubjectAdaptiveTCN]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_ImprovedTCN_Experiments

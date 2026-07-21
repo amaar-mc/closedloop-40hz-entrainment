@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# __getitem__()
+# **getitem**()
 
 ## Connections
+
 - [[EnhancedSequenceDataset]] - `method` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

@@ -7,9 +7,10 @@ tags:
   - community/Community_66
 ---
 
-# _controller_order()
+# \_controller_order()
 
 ## Connections
+
 - [[Canonical display order for controllers.]] - `rationale_for` [EXTRACTED]
 - [[fig_controller_comparison()_1]] - `calls` [EXTRACTED]
 - [[fig_pac_targeting_gap()]] - `calls` [EXTRACTED]

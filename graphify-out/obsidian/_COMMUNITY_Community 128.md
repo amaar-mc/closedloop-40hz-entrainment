@@ -8,6 +8,7 @@ members: 3
 **Members:** 3 nodes
 
 ## Members
+
 - [[Generate a standalone References Sheet PDF to bring to CSEF. Print this and keep]] - rationale - submission/presentation/reference/references_sheet.py
 - [[main()_74]] - code - submission/presentation/reference/references_sheet.py
 - [[references_sheet.py]] - code - submission/presentation/reference/references_sheet.py

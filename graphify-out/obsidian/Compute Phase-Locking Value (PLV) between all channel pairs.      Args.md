@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Compute Phase-Locking Value (PLV) between all channel pairs.      Args:
+# Compute Phase-Locking Value (PLV) between all channel pairs. Args:
 
 ## Connections
+
 - [[compute_cross_channel_plv()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

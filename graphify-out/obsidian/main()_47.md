@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[run_full_pipeline.py]] - `contains` [EXTRACTED]
 - [[step_build_dataset()]] - `calls` [EXTRACTED]
 - [[step_compute_statistics()]] - `calls` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[step_spectral_cache()]] - `calls` [EXTRACTED]
 - [[step_train_tcn()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

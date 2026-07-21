@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[fix_common_issues()]] - `calls` [EXTRACTED]
 - [[generate_latex()]] - `calls` [EXTRACTED]
 - [[generate_paper_latex.py]] - `contains` [EXTRACTED]

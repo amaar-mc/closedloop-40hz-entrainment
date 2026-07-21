@@ -7,9 +7,10 @@ tags:
   - community/Community_32
 ---
 
-# Muse 2 BLE adapter — NOT VIABLE on macOS Darwin 25.4.0.      Attempted: 2026-03-
+# Muse 2 BLE adapter — NOT VIABLE on macOS Darwin 25.4.0. Attempted: 2026-03-
 
 ## Connections
+
 - [[RealEEGAdapter]] - `rationale_for` [EXTRACTED]
 
   #community/Community_32

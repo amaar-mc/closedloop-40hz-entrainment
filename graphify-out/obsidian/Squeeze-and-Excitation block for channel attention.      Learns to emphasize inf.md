@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Squeeze-and-Excitation block for channel attention.      Learns to emphasize inf
+# Squeeze-and-Excitation block for channel attention. Learns to emphasize inf
 
 ## Connections
+
 - [[SEBlock]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

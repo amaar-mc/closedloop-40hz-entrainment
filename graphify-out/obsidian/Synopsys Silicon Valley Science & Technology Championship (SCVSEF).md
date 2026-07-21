@@ -9,6 +9,7 @@ tags:
 # Synopsys Silicon Valley Science & Technology Championship (SCVSEF)
 
 ## Connections
+
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 - [[International Science and Engineering Fair (ISEF)]] - `references` [EXTRACTED]
 

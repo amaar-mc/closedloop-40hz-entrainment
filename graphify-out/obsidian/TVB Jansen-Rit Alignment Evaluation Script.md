@@ -9,6 +9,7 @@ tags:
 # TVB Jansen-Rit Alignment Evaluation Script
 
 ## Connections
+
 - [[Alignment Score Metric (Low-PAC Stim + High-PAC Rest)  2]] - `implements` [EXTRACTED]
 - [[TVBAlzheimerSimulator (Jansen-Rit Biophysical Brain Simulator)]] - `calls` [EXTRACTED]
 - [[TrendPredictiveCtrl (Linear Trend Look-Ahead Controller)]] - `implements` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # test_eegnet_v2()
 
 ## Connections
+
 - [[EEGNetV2]] - `calls` [EXTRACTED]
 - [[Test enhanced EEGNet.]] - `rationale_for` [EXTRACTED]
 - [[count_parameters()_7]] - `calls` [EXTRACTED]

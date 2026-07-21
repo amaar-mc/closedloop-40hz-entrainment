@@ -10,10 +10,11 @@ tags:
 # main()
 
 ## Connections
+
 - [[load_subjects()]] - `calls` [EXTRACTED]
 - [[precompute_biomarker_features()]] - `calls` [EXTRACTED]
 - [[print_comparison()]] - `calls` [EXTRACTED]
 - [[replay_subject()]] - `calls` [EXTRACTED]
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

@@ -14,7 +14,7 @@ The raw data had already been processed by Makoto's preprocessing pipeline (1 Hz
 
 1. **Bandpass filtering:** 4th-order Butterworth filter from 0.5 to 80 Hz (zero-phase, forward-backward pass).
 2. **Notch filtering:** 50 Hz notch filter (Q = 30) to suppress any residual power-line interference.
-3. **Artifact rejection:** Channels and windows containing samples exceeding ±100 µV were rejected. Critically, artifact rejection was applied *before* common average reference (CAR) to prevent corrupted channel voltages from propagating to all electrodes during rereferencing.
+3. **Artifact rejection:** Channels and windows containing samples exceeding ±100 µV were rejected. Critically, artifact rejection was applied _before_ common average reference (CAR) to prevent corrupted channel voltages from propagating to all electrodes during rereferencing.
 4. **Common average reference:** After artifact rejection, the mean across all retained channels was subtracted from each channel.
 
 ### 4.1.3 Channel Selection
@@ -63,11 +63,13 @@ As the primary static PAC estimator, we adapted EEGNet (Lawhern et al., 2018), a
 **Input:** Tensors of shape (batch, 1, 7, 500) — one feature channel, 7 frontal electrodes, 500 time samples.
 
 **Block 1 — Temporal and spatial convolution:**
+
 - Temporal convolution: 8 filters (F1 = 8) with a kernel of length 64 samples (256 ms), shared across all channels, to capture oscillatory dynamics in the theta and gamma bands.
 - Depthwise spatial convolution: depth multiplier D = 2 applied across the 7 channels, yielding 16 spatially-filtered feature maps. This learns channel-specific weighting without dramatically increasing parameter count.
 - Batch normalization, ELU activation, and average pooling (pool size = 4).
 
 **Block 2 — Separable convolution:**
+
 - Depthwise separable convolution with F2 = 16 pointwise filters and kernel length 16 (64 ms), followed by batch normalization, ELU, and average pooling (pool size = 8).
 
 **Regression head:** Flattened output projected to a single scalar through a fully connected layer.
@@ -101,13 +103,13 @@ To enable temporal PAC forecasting, we constructed a 73-dimensional causal featu
 
 Spectral power was estimated in five canonical frequency bands across all 7 frontal channels:
 
-| Band | Frequency Range |
-|------|----------------|
-| Delta | 0.5–4 Hz |
-| Theta | 4–8 Hz |
-| Alpha | 8–13 Hz |
-| Beta | 13–30 Hz |
-| Gamma | 30–45 Hz |
+| Band  | Frequency Range |
+| ----- | --------------- |
+| Delta | 0.5–4 Hz        |
+| Theta | 4–8 Hz          |
+| Alpha | 8–13 Hz         |
+| Beta  | 13–30 Hz        |
+| Gamma | 30–45 Hz        |
 
 Band power was computed for each of 7 channels, yielding 35 band-power features. An additional 26 features captured cross-channel spectral coherence computed pairwise across selected channel pairs. All 61 spectral features were computed per-window from only the current 2-second epoch using a Welch periodogram estimate.
 
@@ -156,6 +158,7 @@ The four dilation factors [1, 2, 4, 8] yield a theoretical receptive field of (1
 **Attention pooling:** A learned attention mechanism (AttentionPool1D) aggregates the temporal sequence into a single fixed-dimensional vector by computing scalar attention weights over the time axis and taking their weighted sum.
 
 **Dual regression heads:** Two identical regression heads (Linear → SiLU → Dropout → Linear) produce:
+
 - `y_future`: predicted PAC 5 seconds ahead.
 - `y_delta`: predicted change in PAC from the current value to the 5-second-ahead value.
 
@@ -163,17 +166,17 @@ The four dilation factors [1, 2, 4, 8] yield a theoretical receptive field of (1
 
 ### 4.5.2 Training Configuration
 
-| Parameter | Value |
-|-----------|-------|
-| Loss function | Huber loss (delta = 1.0) on future PAC prediction |
+| Parameter            | Value                                                                                                        |
+| -------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Loss function        | Huber loss (delta = 1.0) on future PAC prediction                                                            |
 | Multi-task penalties | Lambda_delta and lambda_consistency architecturally supported; disabled (set to 0.0) for the best checkpoint |
-| Optimizer | AdamW (lr = 1×10⁻³, weight_decay = 1×10⁻³) |
-| Scheduler | ReduceLROnPlateau (mode = max, factor = 0.5, patience = 5 epochs) |
-| Gradient clipping | max_norm = 1.0 |
-| Early stopping | Patience = 20 epochs on validation R² |
-| Batch size | 128 sequences |
-| Best checkpoint | Epoch 53 (validation R² = 0.411) |
-| Target smoothing | ts = 1 (raw PAC; no smoothing) |
+| Optimizer            | AdamW (lr = 1×10⁻³, weight_decay = 1×10⁻³)                                                                   |
+| Scheduler            | ReduceLROnPlateau (mode = max, factor = 0.5, patience = 5 epochs)                                            |
+| Gradient clipping    | max_norm = 1.0                                                                                               |
+| Early stopping       | Patience = 20 epochs on validation R²                                                                        |
+| Batch size           | 128 sequences                                                                                                |
+| Best checkpoint      | Epoch 53 (validation R² = 0.411)                                                                             |
+| Target smoothing     | ts = 1 (raw PAC; no smoothing)                                                                               |
 
 **Target smoothing note:** Early experiments used a smoothing window of ts = 5, which shared 4 of 5 data points between consecutive target values and inflated R² to 0.74. The final model uses raw (unsmoothed) targets (ts = 1) to produce honest metrics. All reported results are from the ts = 1 configuration.
 
@@ -182,6 +185,7 @@ The four dilation factors [1, 2, 4, 8] yield a theoretical receptive field of (1
 ### 4.5.3 Performance
 
 On held-out test subjects, the MultiscaleCausalTCN achieved:
+
 - Test R² = 0.170 (raw PAC, 5-second horizon)
 - Test Pearson r = 0.433
 
@@ -203,11 +207,11 @@ A minimum of 10 samples must accumulate in the buffer before z-scores are comput
 
 All controllers use a common decision function mapping the z-score (or predicted z-score) to one of three actions:
 
-| Condition | Action | Rationale |
-|-----------|--------|-----------|
-| z < −0.5 | STIMULATE | PAC below personal baseline; apply 40 Hz entrainment |
-| z > +0.5 | REST | PAC above baseline; avoid habituation |
-| −0.5 ≤ z ≤ +0.5 | MAINTAIN | PAC near baseline; continue current state |
+| Condition       | Action    | Rationale                                            |
+| --------------- | --------- | ---------------------------------------------------- |
+| z < −0.5        | STIMULATE | PAC below personal baseline; apply 40 Hz entrainment |
+| z > +0.5        | REST      | PAC above baseline; avoid habituation                |
+| −0.5 ≤ z ≤ +0.5 | MAINTAIN  | PAC near baseline; continue current state            |
 
 A 5-second hysteresis hold time prevents rapid oscillation between states, ensuring that each state is maintained for at least 5 seconds before a transition is considered.
 
@@ -237,7 +241,7 @@ All validation was conducted via **offline counterfactual replay** on the full 3
 
 Critically, for validation of the TCN-based controller, ground-truth PAC labels were used as TCN input features, isolating the TCN's predictive contribution from any additional error introduced by EEGNet's static PAC estimation. This design provides a clean evaluation of the temporal prediction signal.
 
-The counterfactual nature of this evaluation means that the decisions computed by each controller reflect what that controller *would have done* had it been deployed, but the recorded EEG itself reflects only the stimulation actually delivered during data collection — not the controller's hypothetical decisions. We did not deliver novel stimulation during validation, and we do not claim to have altered subjects' brain activity. All results describe computed stimulation decisions and their alignment with the observed PAC ground truth.
+The counterfactual nature of this evaluation means that the decisions computed by each controller reflect what that controller _would have done_ had it been deployed, but the recorded EEG itself reflects only the stimulation actually delivered during data collection — not the controller's hypothetical decisions. We did not deliver novel stimulation during validation, and we do not claim to have altered subjects' brain activity. All results describe computed stimulation decisions and their alignment with the observed PAC ground truth.
 
 ### 4.7.2 Validation Metrics
 

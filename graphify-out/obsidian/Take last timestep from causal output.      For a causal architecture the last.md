@@ -7,9 +7,10 @@ tags:
   - community/TCN_Layer_Internals
 ---
 
-# Take last timestep from causal output.      For a causal architecture the last
+# Take last timestep from causal output. For a causal architecture the last
 
 ## Connections
+
 - [[LastStepPool_2]] - `rationale_for` [EXTRACTED]
 
   #community/TCN_Layer_Internals

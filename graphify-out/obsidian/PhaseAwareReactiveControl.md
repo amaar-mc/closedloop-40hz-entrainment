@@ -10,6 +10,7 @@ tags:
 # PhaseAwareReactiveControl
 
 ## Connections
+
 - [[Phase-aware reactive controller.]] - `rationale_for` [EXTRACTED]
 - [[Phase-aware reactive controller.      Reactive z-score with threshold modulated]] - `rationale_for` [EXTRACTED]
 - [[__init__()_34]] - `method` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 - [[step()_6]] - `method` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Add new PAC value to the rolling baseline buffer.          Args:
+# Add new PAC value to the rolling baseline buffer. Args:
 
 ## Connections
+
 - [[update()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

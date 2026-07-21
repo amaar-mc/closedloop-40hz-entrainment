@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# Freeze all layers except the three regression heads.          Useful for per-sub
+# Freeze all layers except the three regression heads. Useful for per-sub
 
 ## Connections
+
 - [[freeze_backbone()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

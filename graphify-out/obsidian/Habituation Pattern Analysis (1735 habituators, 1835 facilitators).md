@@ -10,6 +10,7 @@ tags:
 # Habituation Pattern Analysis (17/35 habituators, 18/35 facilitators)
 
 ## Connections
+
 - [[Audit and Methodology Hardening (February 18, 2026)]] - `references` [EXTRACTED]
 
   #community/Community_153

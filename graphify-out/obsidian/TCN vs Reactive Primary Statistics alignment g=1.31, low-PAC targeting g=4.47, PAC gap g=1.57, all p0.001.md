@@ -10,6 +10,7 @@ tags:
 # TCN vs Reactive Primary Statistics: alignment g=1.31, low-PAC targeting g=4.47, PAC gap g=1.57, all p<0.001
 
 ## Connections
+
 - [[Clinical Rationale for Adaptive Music Therapy proactive 0.8s lead time vs 0.2s reactive, near-oracle targeting]] - `rationale_for` [EXTRACTED]
 - [[Controller Comparison Table (FixedReactiveTCNHybridOracle, N=35)]] - `references` [EXTRACTED]
 - [[Elevator Pitch Key Numbers Table alignment 72.1% vs 64.5%, g=1.31, oracle 91%, 3535, TCN R²=0.24-0.28]] - `shares_data_with` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[Synopsys Championship Abstract P10 250 words, key results 72.1% alignment, 82.6% low-PAC targeting, 91% oracle]] - `shares_data_with` [EXTRACTED]
 - [[Threshold Sensitivity Analysis (delta-z 0.1–1.0)]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

@@ -10,6 +10,7 @@ tags:
 # MultiscaleCausalTCN Architecture Deep-Dive (31,043 params, design rationale)
 
 ## Connections
+
 - [[Two-Stage Predictive Pipeline (EEGNet → Feature Extraction → Causal TCN)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

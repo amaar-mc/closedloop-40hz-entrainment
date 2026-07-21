@@ -8,6 +8,7 @@ members: 18
 **Members:** 18 nodes
 
 ## Members
+
 - [[12 PAC+Stim Features PAC trajectory + stimulation context]] - document - paper/PAPER_STATUS.md
 - [[Causal TCN with 12 PAC-Trajectory and Stimulation-Context Features]] - document - paper/PAPER_STATUS.md
 - [[Current 12-Feature Replay Checkpoint 27,139 params, test R²=0.5844]] - document - paper/PAPER_STATUS.md

@@ -9,6 +9,7 @@ tags:
 # Abstract Round 2 Draft C: Impact-Driven
 
 ## Connections
+
 - [[Abstract Draft 1 Clinical Hook Approach]] - `references` [EXTRACTED]
 - [[Abstract Draft 4 Judge-Friendly Approach]] - `references` [EXTRACTED]
 

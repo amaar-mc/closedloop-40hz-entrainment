@@ -9,6 +9,7 @@ tags:
 # Poster Board V1 (Original, Synopsys)
 
 ## Connections
+
 - [[Poster Board V2 (Print-Ready, Synopsys)]] - `references` [INFERRED]
 
   #community/Community_41

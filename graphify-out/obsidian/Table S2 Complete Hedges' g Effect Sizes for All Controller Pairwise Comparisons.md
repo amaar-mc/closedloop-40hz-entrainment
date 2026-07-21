@@ -10,6 +10,7 @@ tags:
 # Table S2: Complete Hedges' g Effect Sizes for All Controller Pairwise Comparisons
 
 ## Connections
+
 - [[Research Paper Supplementary Materials]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

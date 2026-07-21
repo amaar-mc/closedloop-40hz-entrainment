@@ -10,6 +10,7 @@ tags:
 # Controller Comparison Table: Fixed Schedule, Reactive, TCN Predictive, Oracle (Figure 13)
 
 ## Connections
+
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 
   #community/Community_50

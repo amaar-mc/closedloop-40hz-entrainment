@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[Advance the model by one step and return a prediction when ready.          Args]] - `rationale_for` [EXTRACTED]
 - [[TemporalModel]] - `method` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # write_figure()
 
 ## Connections
+
 - [[Insert a figure with caption.]] - `rationale_for` [EXTRACTED]
 - [[ResearchPaperPDF]] - `method` [EXTRACTED]
 - [[generate_pdf()]] - `calls` [EXTRACTED]

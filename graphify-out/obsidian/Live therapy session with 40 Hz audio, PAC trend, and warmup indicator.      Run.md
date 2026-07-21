@@ -7,13 +7,14 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Live therapy session with 40 Hz audio, PAC trend, and warmup indicator.      Run
+# Live therapy session with 40 Hz audio, PAC trend, and warmup indicator. Run
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[SimulatedEEGAdapter]] - `uses` [INFERRED]
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[TCNTemporalModel]] - `uses` [INFERRED]
 - [[render_session()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

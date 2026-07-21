@@ -10,6 +10,7 @@ tags:
 # OracleControl
 
 ## Connections
+
 - [[Knows future PAC — stimulates only when PAC is about to drop.]] - `rationale_for` [EXTRACTED]
 - [[Knows future PAC — stimulates only when PAC is about to drop._1]] - `rationale_for` [EXTRACTED]
 - [[__init__()_31]] - `method` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[run_replay_analysis.py]] - `contains` [EXTRACTED]
 - [[step()_3]] - `method` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

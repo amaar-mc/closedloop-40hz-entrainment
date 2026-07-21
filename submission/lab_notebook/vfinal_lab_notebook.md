@@ -98,14 +98,14 @@ Tested a bunch of different architectures to see if I could beat 0.287. Spent th
 
 **EEGNetLarge (input)** -- 141,000 params. Test R2 = 0.287. Same ceiling. 100x more parameters, same result.
 
-| Architecture | Parameters | Test R2 |
-|---|---|---|
-| EEGNet (V4) | 1,457 | 0.287 |
-| SpecRNN (V3) | 180,000 | 0.236 (after leak fix) |
-| ViT-TCNet (V4) | ~2,000,000 | 0.222 |
-| Ridge (V1) | 135 coefs | 0.287 |
-| ATCNet (V6) | ~29K | 0.075 |
-| EEGNetLarge (input) | 141,000 | 0.287 |
+| Architecture        | Parameters | Test R2                |
+| ------------------- | ---------- | ---------------------- |
+| EEGNet (V4)         | 1,457      | 0.287                  |
+| SpecRNN (V3)        | 180,000    | 0.236 (after leak fix) |
+| ViT-TCNet (V4)      | ~2,000,000 | 0.222                  |
+| Ridge (V1)          | 135 coefs  | 0.287                  |
+| ATCNet (V6)         | ~29K       | 0.075                  |
+| EEGNetLarge (input) | 141,000    | 0.287                  |
 
 The simplest models (EEGNet at 1,457 params, Ridge at 135 coefficients) match the performance of models 1000x bigger. 0.287 is a ceiling in the data. The signal-to-noise ratio is about -4.73 dB (signal weaker than noise), and the epoch-level PAC labels on 2-second windows make it really hard for a single-window model to do better.
 
@@ -113,7 +113,7 @@ I think the question needs to change.
 
 ## February 17, 2026
 
-If 0.287 is a data ceiling and not a model problem, then trying to predict current PAC better from a single snapshot is pointless. But what if I use a *sequence* of snapshots to predict PAC *further into the future*? If the system can forecast PAC 5-10 seconds ahead, a controller can intervene before coupling actually drops.
+If 0.287 is a data ceiling and not a model problem, then trying to predict current PAC better from a single snapshot is pointless. But what if I use a _sequence_ of snapshots to predict PAC _further into the future_? If the system can forecast PAC 5-10 seconds ahead, a controller can intervene before coupling actually drops.
 
 Designed the temporal feature representation. 73 features per timestep:
 
@@ -139,12 +139,12 @@ The causal padding means the model physically can't see the future. That's not a
 
 Total parameters: 31,043 (with 73 input features and hidden size 64).
 
-| Component | EEGNet | Causal TCN |
-|---|---|---|
-| Purpose | Estimate current PAC | Predict future PAC |
-| Parameters | 1,457 | 31,043 |
-| Input | Raw EEG (7ch x 500 samples) | 73 features x 20 timesteps |
-| Output | Current PAC estimate | Future PAC (5s horizon) |
+| Component  | EEGNet                      | Causal TCN                 |
+| ---------- | --------------------------- | -------------------------- |
+| Purpose    | Estimate current PAC        | Predict future PAC         |
+| Parameters | 1,457                       | 31,043                     |
+| Input      | Raw EEG (7ch x 500 samples) | 73 features x 20 timesteps |
+| Output     | Current PAC estimate        | Future PAC (5s horizon)    |
 
 First training results: val R2 = 0.411, test R2 = 0.170. The gap is concerning. Model might be memorizing patient-specific patterns. Still, 0.170 at 5-second horizon is already better than persistence at that range.
 
@@ -172,9 +172,9 @@ Population Change: +4.5% (not significant, p = 0.542)
 
 No population trend. But the individual variability is massive:
 
-| Response Pattern | Count | Range |
-|---|---|---|
-| Habituators (PAC decline) | 17/35 (48.6%) | -66.8% to -5% |
+| Response Pattern            | Count         | Range          |
+| --------------------------- | ------------- | -------------- |
+| Habituators (PAC decline)   | 17/35 (48.6%) | -66.8% to -5%  |
 | Facilitators (PAC increase) | 18/35 (51.4%) | +5% to +149.1% |
 
 Nearly a 50/50 split. The population average doesn't move because the habituators and facilitators cancel out. But individually, one patient dropped 66.8% while another gained 149.1%. That's why a fixed schedule can't work -- it can't serve both groups. About 46.7% of individual stim blocks showed within-block PAC decline.
@@ -186,13 +186,13 @@ This is probably the strongest argument for why personalized control matters.
 Horizon sweep day. Trained separate TCN models at horizons 1, 2, 3, 5, 8, and 10 seconds, comparing against persistence (assume PAC stays the same) and Ridge regression.
 
 | Horizon | Persistence R2 | Ridge R2 | TCN R2 |
-|---|---|---|---|
-| 1 s | 0.760 | 0.812 | 0.735 |
-| 2 s | 0.488 | 0.542 | 0.470 |
-| 3 s | 0.234 | 0.253 | 0.277 |
-| 5 s | -0.267 | -0.393 | 0.254 |
-| 8 s | -0.276 | -0.211 | 0.240 |
-| 10 s | -0.256 | -0.212 | 0.278 |
+| ------- | -------------- | -------- | ------ |
+| 1 s     | 0.760          | 0.812    | 0.735  |
+| 2 s     | 0.488          | 0.542    | 0.470  |
+| 3 s     | 0.234          | 0.253    | 0.277  |
+| 5 s     | -0.267         | -0.393   | 0.254  |
+| 8 s     | -0.276         | -0.211   | 0.240  |
+| 10 s    | -0.256         | -0.212   | 0.278  |
 
 At 1-2 seconds, PAC changes slowly and persistence alone does well. But at 3 seconds it starts falling apart, and at 5+ seconds both persistence and Ridge go negative -- literally worse than guessing the mean. The TCN holds at R2 around 0.25 across the whole 5-10 second range. That +0.5 margin over baselines is where the model earns its keep.
 
@@ -222,12 +222,12 @@ Also worried that the adaptive advantage might depend on specific fatigue model 
 Fatigue severity results (50 trials each, 600-second sessions):
 
 | Fatigue Level | Fixed Efficiency | Adaptive Efficiency | Improvement |
-|---|---|---|---|
-| None | 0.343 | 0.375 | +9.5% |
-| Mild | 0.341 | 0.375 | +10.0% |
-| Moderate | 0.335 | 0.366 | +9.0% |
-| High | 0.319 | 0.354 | +10.8% |
-| Severe | 0.316 | 0.352 | +11.2% |
+| ------------- | ---------------- | ------------------- | ----------- |
+| None          | 0.343            | 0.375               | +9.5%       |
+| Mild          | 0.341            | 0.375               | +10.0%      |
+| Moderate      | 0.335            | 0.366               | +9.0%       |
+| High          | 0.319            | 0.354               | +10.8%      |
+| Severe        | 0.316            | 0.352               | +11.2%      |
 
 All significant at p < 0.001, Hedges' g = 1.7-2.4. Advantage grows as fatigue gets worse, which makes sense -- the more the brain habituates, the more value there is in adaptive timing.
 
@@ -235,25 +235,25 @@ Even with zero fatigue, adaptive helps by +9.5%. So fatigue isn't the only thing
 
 Tested four different fatigue mathematical models:
 
-| Fatigue Model | Advantage | p-value | Hedges' g |
-|---|---|---|---|
-| Exponential Decay | +9.0% | 1.8e-15 | 2.31 |
-| Step Function | +6.9% | 4.4e-14 | 1.21 |
-| Heterogeneous (50/50) | +8.9% | 2.5e-14 | 1.71 |
-| Saturation (synaptic) | +19.0% | 1.8e-15 | 3.66 |
+| Fatigue Model         | Advantage | p-value | Hedges' g |
+| --------------------- | --------- | ------- | --------- |
+| Exponential Decay     | +9.0%     | 1.8e-15 | 2.31      |
+| Step Function         | +6.9%     | 4.4e-14 | 1.21      |
+| Heterogeneous (50/50) | +8.9%     | 2.5e-14 | 1.71      |
+| Saturation (synaptic) | +19.0%    | 1.8e-15 | 3.66      |
 
 The saturation model (Michaelis-Menten style receptor kinetics) showed the largest benefit at +19.0%. All four are significant, so pick whichever fatigue model you want and the advantage still holds.
 
 Also checked threshold sensitivity across delta-z from 0.1 to 1.0:
 
 | Delta-z | Alignment | Low-PAC Stim | PAC Gap (x10^-6) |
-|---|---|---|---|
-| 0.1 | 59.6% | 51.2% | 12.4 |
-| 0.2 | 68.5% | 72.9% | 26.3 |
-| 0.3 | 73.7% | 84.9% | 32.4 |
-| 0.4 | 73.9% | 85.3% | 33.7 |
-| 0.5 | 73.7% | 85.3% | 33.9 |
-| 1.0 | 73.8% | 85.3% | 34.0 |
+| ------- | --------- | ------------ | ---------------- |
+| 0.1     | 59.6%     | 51.2%        | 12.4             |
+| 0.2     | 68.5%     | 72.9%        | 26.3             |
+| 0.3     | 73.7%     | 84.9%        | 32.4             |
+| 0.4     | 73.9%     | 85.3%        | 33.7             |
+| 0.5     | 73.7%     | 85.3%        | 33.9             |
+| 1.0     | 73.8%     | 85.3%        | 34.0             |
 
 Performance plateaus at delta-z >= 0.3 and beats reactive at everything >= 0.2. Not sensitive to the exact threshold choice, which is good.
 
@@ -267,14 +267,15 @@ Important: I used ground-truth PAC labels as TCN input (not EEGNet estimates) to
 
 Five controllers compared: Fixed Schedule (40s ON / 20s OFF), Reactive Threshold (z-score on current PAC, no prediction), PI Controller (proportional-integral feedback on the PAC error), TCN Predictive (z-score + 5s forecast), and Alignment Oracle (perfect hindsight, upper bound). The PI controller underperformed Reactive in my runs so I left it out of the headline table, but it lives on the poster as a comparator so I'm noting it here.
 
-| Controller | Alignment | Low-PAC Stim | PAC Gap (x10^-6) | Stim % |
-|---|---|---|---|---|
-| Fixed Schedule | 45.0% | 61.4% | -6.6 (wrong direction) | 66.6% |
-| Reactive | 64.5% | 51.7% | +21.1 | 36.7% |
-| TCN Predictive | 72.1% | 82.6% | +30.5 | 59.7% |
-| Oracle | 100.0% | 100.0% | +33.3 | 48.3% |
+| Controller     | Alignment | Low-PAC Stim | PAC Gap (x10^-6)       | Stim % |
+| -------------- | --------- | ------------ | ---------------------- | ------ |
+| Fixed Schedule | 45.0%     | 61.4%        | -6.6 (wrong direction) | 66.6%  |
+| Reactive       | 64.5%     | 51.7%        | +21.1                  | 36.7%  |
+| TCN Predictive | 72.1%     | 82.6%        | +30.5                  | 59.7%  |
+| Oracle         | 100.0%    | 100.0%       | +33.3                  | 48.3%  |
 
 TCN vs Reactive (Wilcoxon signed-rank, paired):
+
 - Alignment: Hedges' g = +1.31, p < 0.001 (large effect)
 - Low-PAC targeting: Hedges' g = +4.47, p < 0.001 (very large)
 - PAC gap: Hedges' g = +1.57, p < 0.001 (large)
@@ -292,6 +293,7 @@ Note: these results use the 73-feature TCN (31,043 params). The feature ablation
 Compiled everything for the Synopsys submission: poster, abstract, this notebook.
 
 Summary at this point:
+
 1. Every architecture I tried converges to R2 = 0.287 on static PAC estimation (6 in the poster table plus an EEGNetV2 delta-PAC variant I discarded early). It's a data ceiling.
 2. Temporal TCN maintains R2 = 0.37-0.67 at 5-10s horizons where all baselines collapse (+0.5 margin).
 3. Controller: 72.1% alignment vs 64.5% reactive (p < 0.001). 82.6% low-PAC targeting vs 51.7%.
@@ -310,14 +312,14 @@ Something about the February 17 val-test gap kept nagging at me. Val R2 was 0.41
 
 Designed an ablation study. Same TCN, same training, same splits -- only change is which features go in:
 
-| Feature Subset | # Features |
-|---|---|
-| All features (baseline) | 73 |
-| PAC + Stim context | 12 |
-| PAC only | 7 |
-| PAC + Stim + 10 spectral | 22 |
-| Spectral + PAC | 68 |
-| Spectral only | 61 |
+| Feature Subset           | # Features |
+| ------------------------ | ---------- |
+| All features (baseline)  | 73         |
+| PAC + Stim context       | 12         |
+| PAC only                 | 7          |
+| PAC + Stim + 10 spectral | 22         |
+| Spectral + PAC           | 68         |
+| Spectral only            | 61         |
 
 Raw targets (no smoothing) so the numbers are honest.
 
@@ -327,14 +329,14 @@ Raw targets (no smoothing) so the numbers are honest.
 
 Ablation results came back. I stared at this table for a while:
 
-| Feature Subset | Val R2 | Test R2 | Val-Test Gap |
-|---|---|---|---|
-| All features (73) | 0.333 | -0.025 | 0.358 |
-| PAC + Stim (12) | 0.804 | 0.558 | 0.246 |
-| PAC only (7) | 0.422 | 0.344 | 0.078 |
-| PAC + Stim + 10 spectral (22) | 0.859 | 0.496 | 0.363 |
-| Spectral + PAC (68) | 0.387 | 0.222 | 0.165 |
-| Spectral only (61) | -0.044 | -0.420 | 0.376 |
+| Feature Subset                | Val R2 | Test R2 | Val-Test Gap |
+| ----------------------------- | ------ | ------- | ------------ |
+| All features (73)             | 0.333  | -0.025  | 0.358        |
+| PAC + Stim (12)               | 0.804  | 0.558   | 0.246        |
+| PAC only (7)                  | 0.422  | 0.344   | 0.078        |
+| PAC + Stim + 10 spectral (22) | 0.859  | 0.496   | 0.363        |
+| Spectral + PAC (68)           | 0.387  | 0.222   | 0.165        |
+| Spectral only (61)            | -0.044 | -0.420  | 0.376        |
 
 Spectral-only gets test R2 = -0.420. Not just unhelpful -- actively poisonous. The full 73-feature model I spent all of February on? Test R2 = -0.025. Basically nothing.
 
@@ -350,13 +352,13 @@ Had to make sure this isn't a fluke. Neural nets can be lucky with initializatio
 
 Trained the same h=64 TCN with PAC+Stim features under 5 different seeds:
 
-| Seed | Val R2 | Test R2 |
-|---|---|---|
-| 42 | 0.804 | 0.558 |
-| 123 | 0.822 | 0.620 |
-| 456 | 0.799 | 0.597 |
-| 789 | 0.831 | 0.608 |
-| 2024 | 0.846 | 0.647 |
+| Seed         | Val R2          | Test R2         |
+| ------------ | --------------- | --------------- |
+| 42           | 0.804           | 0.558           |
+| 123          | 0.822           | 0.620           |
+| 456          | 0.799           | 0.597           |
+| 789          | 0.831           | 0.608           |
+| 2024         | 0.846           | 0.647           |
 | Mean +/- Std | 0.820 +/- 0.017 | 0.606 +/- 0.029 |
 
 Not a fluke. Worst seed (0.558) still beats the old 73-feature model by miles. Mean test R2 = 0.606 +/- 0.029 (population stdev over 5 seeds). That's the number going on the poster.
@@ -377,12 +379,12 @@ Model has 22,914 parameters with 12 input features (vs 31,043 with 73 features).
 
 Now that features matter more than model size, how small can the model go?
 
-| Model | Params | Val R2 | Test R2 |
-|---|---|---|---|
-| TCN h=32 high-reg | 5,154 | 0.844 | 0.613 |
-| TCN h=64 | 22,914 | 0.804 | 0.558 |
-| TCN h=64 high-reg | 22,914 | 0.814 | 0.598 |
-| TCN h=128 | 86,786 | 0.853 | 0.645 |
+| Model             | Params | Val R2 | Test R2 |
+| ----------------- | ------ | ------ | ------- |
+| TCN h=32 high-reg | 5,154  | 0.844  | 0.613   |
+| TCN h=64          | 22,914 | 0.804  | 0.558   |
+| TCN h=64 high-reg | 22,914 | 0.814  | 0.598   |
+| TCN h=128         | 86,786 | 0.853  | 0.645   |
 
 h=32 with strong regularization (dropout 0.3, weight_decay 5e-3) gets R2 = 0.613 with only 5,154 params. h=128 is 17x bigger and only gains 0.032. Same story -- the signal is in the features, not the model capacity. Smaller model is better for deployment anyway.
 
@@ -397,12 +399,12 @@ First, tested the 12-feature TCN on 4-channel data (Fp1, Fp2, Fz, F3 -- the chan
 Second, reran the horizon sweep with the 12-feature model. This uses the PAC+Stim features from the `horizon_sweep_pac_stim.json` results:
 
 | Horizon | Persistence R2 | TCN R2 (7ch) | TCN R2 (4ch) |
-|---|---|---|---|
-| 1 s | 0.726 | 0.725 | 0.642 |
-| 3 s | 0.178 | 0.607 | 0.391 |
-| 5 s | 0.104 | 0.577 | 0.398 |
-| 8 s | -0.007 | 0.370 | 0.419 |
-| 10 s | -0.081 | 0.669 | 0.387 |
+| ------- | -------------- | ------------ | ------------ |
+| 1 s     | 0.726          | 0.725        | 0.642        |
+| 3 s     | 0.178          | 0.607        | 0.391        |
+| 5 s     | 0.104          | 0.577        | 0.398        |
+| 8 s     | -0.007         | 0.370        | 0.419        |
+| 10 s    | -0.081         | 0.669        | 0.387        |
 
 Same shape as February but much higher TCN numbers. At 1s the TCN matches persistence -- brain barely changes in one second. At 3s and beyond the baselines collapse and the TCN pulls away.
 
@@ -434,18 +436,18 @@ Note: the controller comparison results (72.1% alignment, etc.) were generated w
 
 ## References
 
-[1] Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. *Nature*, 540(7632), 230-235.
+[1] Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. _Nature_, 540(7632), 230-235.
 
-[2] Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. *Cell*, 177(2), 256-271.
+[2] Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. _Cell_, 177(2), 256-271.
 
-[3] Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. *Journal of Neurophysiology*, 104(2), 1195-1210.
+[3] Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. _Journal of Neurophysiology_, 104(2), 1195-1210.
 
-[4] Lawhern, V. J., et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. *Journal of Neural Engineering*, 15(5), 056013.
+[4] Lawhern, V. J., et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. _Journal of Neural Engineering_, 15(5), 056013.
 
-[5] Lahijanian, M., et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. *Scientific Reports*, 14, 13153.
+[5] Lahijanian, M., et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. _Scientific Reports_, 14, 13153.
 
-[6] Thompson, R. F., & Spencer, W. A. (1966). Habituation: A model phenomenon for the study of neuronal substrates of behavior. *Psychological Review*, 73(1), 16-43.
+[6] Thompson, R. F., & Spencer, W. A. (1966). Habituation: A model phenomenon for the study of neuronal substrates of behavior. _Psychological Review_, 73(1), 16-43.
 
-[7] Chan, D., et al. (2025). Long-term safety of 40 Hz sensory stimulation. *Alzheimer's & Dementia*, 21(10), e70792.
+[7] Chan, D., et al. (2025). Long-term safety of 40 Hz sensory stimulation. _Alzheimer's & Dementia_, 21(10), e70792.
 
-[8] Fortunato et al. (2023). Non-responder rates in auditory gamma entrainment. *Frontiers in Integrative Neuroscience*, 17.
+[8] Fortunato et al. (2023). Non-responder rates in auditory gamma entrainment. _Frontiers in Integrative Neuroscience_, 17.

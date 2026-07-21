@@ -10,6 +10,7 @@ tags:
 # train_single_seed()
 
 ## Connections
+
 - [[MODEL_REGISTRY – originalenhancedlarge Variants]] - `calls` [EXTRACTED]
 - [[Train a model for one seed and evaluate on the test split.      Uses Huber los]] - `rationale_for` [EXTRACTED]
 - [[create_model()]] - `calls` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[make_dataloader()]] - `calls` [EXTRACTED]
 - [[multi_seed_training.py]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

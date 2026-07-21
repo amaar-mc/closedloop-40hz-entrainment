@@ -8,6 +8,7 @@ members: 80
 **Members:** 80 nodes
 
 ## Members
+
 - [[Attention pooling over time axis.]] - rationale - archive/improved_tcn/improved_tcn_model.py
 - [[AttentionPool1D]] - code - archive/improved_tcn/improved_tcn_model.py
 - [[AttentionPool1D_3]] - code - archive/improved_tcn/improved_tcn_model.py
@@ -97,7 +98,9 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 1 edge to [[_COMMUNITY_Multiscale TCN & Features]]
 
 ## Top bridge nodes
+
 - [[EnhancedSequenceDataset]] - degree 9, connects to 1 community

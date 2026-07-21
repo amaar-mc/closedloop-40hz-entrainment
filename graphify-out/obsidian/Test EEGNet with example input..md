@@ -10,6 +10,7 @@ tags:
 # Test EEGNet with example input.
 
 ## Connections
+
 - [[test_eegnet()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

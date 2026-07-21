@@ -9,6 +9,7 @@ tags:
 # Poster V5 Changelog and Corrections
 
 ## Connections
+
 - [[Architecture Exploration Table (6 models)]] - `references` [EXTRACTED]
 
   #community/Community_34

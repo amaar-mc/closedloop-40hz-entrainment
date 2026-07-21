@@ -10,6 +10,7 @@ tags:
 # Improved TCN with configurable width/depth and GELU activation.
 
 ## Connections
+
 - [[ImprovedTCN]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_ImprovedTCN_Experiments

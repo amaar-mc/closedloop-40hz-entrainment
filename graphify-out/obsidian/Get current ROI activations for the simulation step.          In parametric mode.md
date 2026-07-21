@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Get current ROI activations for the simulation step.          In parametric mode
+# Get current ROI activations for the simulation step. In parametric mode
 
 ## Connections
+
 - [[get_activations()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

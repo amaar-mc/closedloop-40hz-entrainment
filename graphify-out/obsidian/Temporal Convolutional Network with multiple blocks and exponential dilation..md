@@ -10,6 +10,7 @@ tags:
 # Temporal Convolutional Network with multiple blocks and exponential dilation.
 
 ## Connections
+
 - [[TemporalConvolutionalNetwork]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

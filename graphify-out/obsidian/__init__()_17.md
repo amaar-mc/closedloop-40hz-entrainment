@@ -7,9 +7,10 @@ tags:
   - community/Community_38
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[TransformEEG]] - `method` [EXTRACTED]
 - [[__init__()_15]] - `calls` [EXTRACTED]
 - [[__init__()_16]] - `calls` [EXTRACTED]

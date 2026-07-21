@@ -10,6 +10,7 @@ tags:
 # Reactive Stimulation Strategy
 
 ## Connections
+
 - [[PAC Heatmap Strategy × Severity (Panel E)]] - `references` [EXTRACTED]
 - [[PAC Response by Disease Severity (Panel A)]] - `references` [EXTRACTED]
 - [[Stimulation Efficiency Ratio by Disease Severity (Panel D)]] - `references` [EXTRACTED]

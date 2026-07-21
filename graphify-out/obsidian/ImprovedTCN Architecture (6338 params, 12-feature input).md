@@ -10,6 +10,7 @@ tags:
 # ImprovedTCN Architecture (6338 params, 12-feature input)
 
 ## Connections
+
 - [[12 PAC+Stim Features (indices 61-72)]] - `conceptually_related_to` [INFERRED]
 - [[ImprovedTCN Model (configurable dilated causal TCN with attention pooling)]] - `conceptually_related_to` [INFERRED]
 - [[PAC+Stim Feature Discovery Audit Report]] - `references` [EXTRACTED]

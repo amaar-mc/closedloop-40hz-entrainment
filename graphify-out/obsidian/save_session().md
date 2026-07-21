@@ -10,8 +10,9 @@ tags:
 # save_session()
 
 ## Connections
+
 - [[Append a session record to the given patient and clear cache.]] - `rationale_for` [EXTRACTED]
 - [[caregiver_app.py]] - `contains` [EXTRACTED]
 - [[render_summary()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

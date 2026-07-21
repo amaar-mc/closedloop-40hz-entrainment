@@ -8,6 +8,7 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
+
 - [[Audit and Methodology Hardening (February 18, 2026)]] - document - submission/lab_notebook/P10_Lab_Notebook_VFINAL.md
 - [[Habituation Pattern Analysis (1735 habituators, 1835 facilitators)]] - document - submission/lab_notebook/P10_Lab_Notebook_VFINAL.md
 

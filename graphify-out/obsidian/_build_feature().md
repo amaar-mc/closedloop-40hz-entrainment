@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _build_feature()
+# \_build_feature()
 
 ## Connections
+
 - [[TCNPredictiveCtrl]] - `method` [EXTRACTED]
 - [[_pac_features()_2]] - `calls` [EXTRACTED]
 - [[step()_26]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

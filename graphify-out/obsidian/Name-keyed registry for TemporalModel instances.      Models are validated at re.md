@@ -7,10 +7,11 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Name-keyed registry for TemporalModel instances.      Models are validated at re
+# Name-keyed registry for TemporalModel instances. Models are validated at re
 
 ## Connections
+
 - [[ModelRegistry]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

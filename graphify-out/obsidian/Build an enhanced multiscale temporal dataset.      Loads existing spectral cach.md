@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# Build an enhanced multiscale temporal dataset.      Loads existing spectral cach
+# Build an enhanced multiscale temporal dataset. Loads existing spectral cach
 
 ## Connections
+
 - [[build_enhanced_dataset()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

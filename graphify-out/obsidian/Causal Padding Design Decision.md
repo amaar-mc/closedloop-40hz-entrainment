@@ -10,6 +10,7 @@ tags:
 # Causal Padding Design Decision
 
 ## Connections
+
 - [[MultiscaleCausalTCN Architecture]] - `implements` [EXTRACTED]
 
   #community/Community_34

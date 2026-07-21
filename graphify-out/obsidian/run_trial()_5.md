@@ -10,6 +10,7 @@ tags:
 # run_trial()
 
 ## Connections
+
 - [[Run one trial with a controller on the realistic-noise simulator.]] - `rationale_for` [EXTRACTED]
 - [[evaluate_alignment()_2]] - `calls` [EXTRACTED]
 - [[main()_48]] - `calls` [EXTRACTED]

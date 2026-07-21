@@ -10,7 +10,8 @@ tags:
 # Adapter that wraps RealtimePACForecaster to satisfy the TemporalModel Protocol.
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[TCNTemporalModel]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

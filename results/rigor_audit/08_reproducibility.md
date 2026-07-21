@@ -15,30 +15,30 @@ Verify that results are reproducible and consistent with reported performance.
 
 All runs used identical hyperparameters:
 
-| Parameter | Value |
-|-----------|-------|
-| Dataset | `multiscale_temporal_lb20_hz5_ts1` (73 features, ts=1) |
-| Architecture | MultiscaleCausalTCN, hidden=64, dilations=[1,2,4,8], attention pooling |
-| Parameters | 31,043 |
-| Epochs | 40 (max) with early stopping (patience=20) |
-| Optimizer | AdamW, lr=1e-3, weight_decay=1e-3 |
-| Loss | HuberLoss (delta=1.0) |
-| Scheduler | ReduceLROnPlateau (factor=0.5, patience=5, mode=max) |
-| Grad clip | 1.0 |
-| Batch size | 128 |
-| lambda_delta | 0.0 |
-| lambda_consistency | 0.0 |
-| Train/Val/Test | 11,160 / 2,605 / 2,678 sequences |
+| Parameter          | Value                                                                  |
+| ------------------ | ---------------------------------------------------------------------- |
+| Dataset            | `multiscale_temporal_lb20_hz5_ts1` (73 features, ts=1)                 |
+| Architecture       | MultiscaleCausalTCN, hidden=64, dilations=[1,2,4,8], attention pooling |
+| Parameters         | 31,043                                                                 |
+| Epochs             | 40 (max) with early stopping (patience=20)                             |
+| Optimizer          | AdamW, lr=1e-3, weight_decay=1e-3                                      |
+| Loss               | HuberLoss (delta=1.0)                                                  |
+| Scheduler          | ReduceLROnPlateau (factor=0.5, patience=5, mode=max)                   |
+| Grad clip          | 1.0                                                                    |
+| Batch size         | 128                                                                    |
+| lambda_delta       | 0.0                                                                    |
+| lambda_consistency | 0.0                                                                    |
+| Train/Val/Test     | 11,160 / 2,605 / 2,678 sequences                                       |
 
 ## Results
 
 ### New Seeds (This Audit)
 
 | Seed | Best Epoch | Val R2 | Test R2 | Test Corr | Test RMSE | Train Time (s) |
-|-----:|----------:|---------:|--------:|----------:|----------:|----------------:|
-| 99 | 20 | 0.3949 | 0.1579 | 0.4114 | 3.33e-05 | 59.2 |
-| 777 | 34 | 0.3848 | 0.3742 | 0.6212 | 2.87e-05 | 63.0 |
-| 1234 | 23 | 0.4461 | 0.1952 | 0.4538 | 3.26e-05 | 112.1 |
+| ---: | ---------: | -----: | ------: | --------: | --------: | -------------: |
+|   99 |         20 | 0.3949 |  0.1579 |    0.4114 |  3.33e-05 |           59.2 |
+|  777 |         34 | 0.3848 |  0.3742 |    0.6212 |  2.87e-05 |           63.0 |
+| 1234 |         23 | 0.4461 |  0.1952 |    0.4538 |  3.26e-05 |          112.1 |
 
 **Mean test R2: 0.2424 +/- 0.0948**
 **Range: [0.158, 0.374]**
@@ -48,9 +48,9 @@ All runs used identical hyperparameters:
 The existing checkpoint `models/summary_multiscale_tcn_lb20_hz5_ts1.json` was trained with the
 same script and dataset (seed=42, 80 epochs):
 
-| Run | Val R2 | Test R2 |
-|-----|-------:|--------:|
-| Original (seed 42, 80 epochs) | 0.4112 | 0.1703 |
+| Run                           | Val R2 | Test R2 |
+| ----------------------------- | -----: | ------: |
+| Original (seed 42, 80 epochs) | 0.4112 |  0.1703 |
 
 ### Clarification: Reported 0.558-0.647 Range
 
@@ -84,11 +84,11 @@ patterns vs learning generalizable dynamics.
 
 ### Val-Test Gap Confirms Known Overfitting
 
-| Seed | Val R2 | Test R2 | Gap |
-|-----:|-------:|--------:|----:|
-| 99 | 0.395 | 0.158 | 0.237 |
-| 777 | 0.385 | 0.374 | 0.011 |
-| 1234 | 0.446 | 0.195 | 0.251 |
+| Seed | Val R2 | Test R2 |   Gap |
+| ---: | -----: | ------: | ----: |
+|   99 |  0.395 |   0.158 | 0.237 |
+|  777 |  0.385 |   0.374 | 0.011 |
+| 1234 |  0.446 |   0.195 | 0.251 |
 
 Seeds 99 and 1234 show the characteristic val-test gap (0.24-0.25) caused by spectral feature
 overfitting, consistent with FINDINGS.md which reports gaps of 0.3-0.5 on all-73-feature models.

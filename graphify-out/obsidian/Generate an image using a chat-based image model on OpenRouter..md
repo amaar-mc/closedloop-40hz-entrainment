@@ -10,6 +10,7 @@ tags:
 # Generate an image using a chat-based image model on OpenRouter.
 
 ## Connections
+
 - [[generate_image()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_120

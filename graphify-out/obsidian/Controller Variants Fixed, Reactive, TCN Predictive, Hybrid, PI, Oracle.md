@@ -10,8 +10,9 @@ tags:
 # Controller Variants: Fixed, Reactive, TCN Predictive, Hybrid, PI, Oracle
 
 ## Connections
+
 - [[Methods Controller Design (Personalization, Decision Logic, 6 Variants)]] - `references` [EXTRACTED]
 - [[Personalization Module Rolling 30s Baseline, Z-Score Threshold ±0.5]] - `references` [EXTRACTED]
 - [[Research Paper v3 (Full Manuscript)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

@@ -10,7 +10,8 @@ tags:
 # Why 5-Second Horizon Matters Explanation (3 Levels)
 
 ## Connections
+
 - [[Answer Depth Guide (20 Key Questions, 3 Levels)]] - `references` [EXTRACTED]
 - [[Horizon Sweep Results Table (1s to 10s, All Controllers)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

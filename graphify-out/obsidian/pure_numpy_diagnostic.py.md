@@ -10,6 +10,7 @@ tags:
 # pure_numpy_diagnostic.py
 
 ## Connections
+
 - [[Pure NumPy Diagnostic - No dependencies except NumPy  Analyzes why V4 ViT-TCNet]] - `rationale_for` [EXTRACTED]
 - [[kl_divergence_approx()]] - `contains` [EXTRACTED]
 - [[print_stats()]] - `contains` [EXTRACTED]

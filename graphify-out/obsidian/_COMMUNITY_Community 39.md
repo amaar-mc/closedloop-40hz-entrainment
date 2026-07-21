@@ -8,6 +8,7 @@ members: 27
 **Members:** 27 nodes
 
 ## Members
+
 - [[12 PAC+Stim Feature Set Description (indices 61–72)]] - document - CLAUDE.md
 - [[Clinical Relevance Adaptive Scheduling for Alzheimer's Therapy]] - document - FINDINGS.md
 - [[Closed-Loop 40 Hz Gamma Entrainment System]] - document - README.md

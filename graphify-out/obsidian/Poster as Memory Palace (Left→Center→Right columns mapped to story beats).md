@@ -10,6 +10,7 @@ tags:
 # Poster as Memory Palace (Left→Center→Right columns mapped to story beats)
 
 ## Connections
+
 - [[9-Beat Presentation Spine (Hook→Gap→Biomarker→Ceiling→Pivot→Discovery→Horizon→Results→Product)]] - `references` [EXTRACTED]
 - [[Archive Memorization Guide 12-Room Poster Memory Palace]] - `semantically_similar_to` [INFERRED]
 

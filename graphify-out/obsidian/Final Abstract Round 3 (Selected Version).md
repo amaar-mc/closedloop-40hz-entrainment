@@ -9,6 +9,7 @@ tags:
 # Final Abstract Round 3 (Selected Version)
 
 ## Connections
+
 - [[Abstract Framing Strategy Judge-Friendly (Biology Hook then AI)]] - `implements` [INFERRED]
 - [[Abstract Round 2 Draft A Best Narrative]] - `references` [INFERRED]
 - [[Core Claim PAC Targeting 82.6% vs 51.7% Reactive, 91% of Oracle]] - `references` [EXTRACTED]

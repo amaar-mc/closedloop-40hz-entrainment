@@ -10,8 +10,9 @@ tags:
 # normalize_datasets()
 
 ## Connections
+
 - [[Z-score normalize features and targets using train statistics.      Mirrors th]] - `rationale_for` [EXTRACTED]
 - [[run_benchmark()]] - `calls` [EXTRACTED]
 - [[synthetic_benchmark.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

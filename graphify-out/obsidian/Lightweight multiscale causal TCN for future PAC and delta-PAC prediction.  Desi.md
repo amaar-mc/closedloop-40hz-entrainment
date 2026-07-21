@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Lightweight multiscale causal TCN for future PAC and delta-PAC prediction.  Desi
+# Lightweight multiscale causal TCN for future PAC and delta-PAC prediction. Desi
 
 ## Connections
+
 - [[multiscale_tcn.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

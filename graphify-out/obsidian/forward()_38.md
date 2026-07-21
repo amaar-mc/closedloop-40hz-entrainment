@@ -10,7 +10,8 @@ tags:
 # forward()
 
 ## Connections
+
 - [[EEGNetLarge]] - `method` [EXTRACTED]
 - [[Forward pass through EEGNetLarge.          Args             x Input EEG ten]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

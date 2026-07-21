@@ -10,6 +10,7 @@ tags:
 # parse_table()
 
 ## Connections
+
 - [[clean_md()]] - `calls` [EXTRACTED]
 - [[escape_xml()]] - `calls` [EXTRACTED]
 - [[generate_pdf.py]] - `contains` [EXTRACTED]

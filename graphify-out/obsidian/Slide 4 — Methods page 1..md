@@ -10,6 +10,7 @@ tags:
 # Slide 4 — Methods page 1.
 
 ## Connections
+
 - [[p04_methods1()_2]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

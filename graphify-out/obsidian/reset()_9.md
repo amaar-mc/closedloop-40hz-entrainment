@@ -10,7 +10,8 @@ tags:
 # reset()
 
 ## Connections
+
 - [[Clear all internal rolling state (e.g. after a session break).]] - `rationale_for` [EXTRACTED]
 - [[TemporalModel]] - `method` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

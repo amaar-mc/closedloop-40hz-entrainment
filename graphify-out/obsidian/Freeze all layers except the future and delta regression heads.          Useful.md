@@ -7,9 +7,10 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# Freeze all layers except the future and delta regression heads.          Useful
+# Freeze all layers except the future and delta regression heads. Useful
 
 ## Connections
+
 - [[freeze_backbone()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

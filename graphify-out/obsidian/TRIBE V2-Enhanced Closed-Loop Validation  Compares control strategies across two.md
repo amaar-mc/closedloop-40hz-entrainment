@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# TRIBE V2-Enhanced Closed-Loop Validation  Compares control strategies across two
+# TRIBE V2-Enhanced Closed-Loop Validation Compares control strategies across two
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[TribeSimulatorConfig]] - `uses` [INFERRED]
 - [[run_tribe_validation.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

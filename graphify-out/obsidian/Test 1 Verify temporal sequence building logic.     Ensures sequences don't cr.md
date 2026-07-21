@@ -7,9 +7,10 @@ tags:
   - community/Community_49
 ---
 
-# Test 1: Verify temporal sequence building logic.     Ensures sequences don't cr
+# Test 1: Verify temporal sequence building logic. Ensures sequences don't cr
 
 ## Connections
+
 - [[test_temporal_sequence_logic()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_49

@@ -7,11 +7,12 @@ tags:
   - community/Multiscale_TCN_&_Features
 ---
 
-# _stim_states_from_events()
+# \_stim_states_from_events()
 
 ## Connections
+
 - [[Fallback reconstruct stim states from BIDS events.tsv.]] - `rationale_for` [EXTRACTED]
 - [[identify_transitions()]] - `calls` [EXTRACTED]
 - [[transition_analysis.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

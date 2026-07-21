@@ -7,9 +7,10 @@ tags:
   - community/Community_57
 ---
 
-# Hybrid: CNN extracts features, Attention pools them.      Combines local pattern
+# Hybrid: CNN extracts features, Attention pools them. Combines local pattern
 
 ## Connections
+
 - [[CNNAttentionHybrid]] - `rationale_for` [EXTRACTED]
 
   #community/Community_57

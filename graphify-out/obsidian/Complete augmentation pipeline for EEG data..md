@@ -10,6 +10,7 @@ tags:
 # Complete augmentation pipeline for EEG data.
 
 ## Connections
+
 - [[EEGAugmentation]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

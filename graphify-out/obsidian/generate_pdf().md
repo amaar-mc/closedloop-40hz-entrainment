@@ -10,6 +10,7 @@ tags:
 # generate_pdf()
 
 ## Connections
+
 - [[Main PDF generation function.]] - `rationale_for` [EXTRACTED]
 - [[ResearchPaperPDF]] - `calls` [EXTRACTED]
 - [[clean_markdown()]] - `calls` [EXTRACTED]

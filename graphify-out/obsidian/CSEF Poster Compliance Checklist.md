@@ -8,4 +8,4 @@ tags:
 
 # CSEF Poster Compliance Checklist
 
-  #community/Community_201
+#community/Community_201

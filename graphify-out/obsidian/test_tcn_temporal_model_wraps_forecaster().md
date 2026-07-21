@@ -10,8 +10,9 @@ tags:
 # test_tcn_temporal_model_wraps_forecaster()
 
 ## Connections
+
 - [[Test 4 TCNTemporalModel wraps RealtimePACForecaster and exposes stepreset.]] - `rationale_for` [EXTRACTED]
 - [[_assert()]] - `calls` [EXTRACTED]
 - [[test_model_registry.py]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

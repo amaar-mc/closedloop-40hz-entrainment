@@ -7,9 +7,10 @@ tags:
   - community/Community_81
 ---
 
-# _flatten()
+# \_flatten()
 
 ## Connections
+
 - [[per_subject_adaptation.py]] - `contains` [EXTRACTED]
 - [[ridge_global()]] - `calls` [EXTRACTED]
 - [[ridge_per_subject()]] - `calls` [EXTRACTED]

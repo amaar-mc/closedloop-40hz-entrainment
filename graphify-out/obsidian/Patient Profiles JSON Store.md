@@ -10,7 +10,8 @@ tags:
 # Patient Profiles JSON Store
 
 ## Connections
+
 - [[NeuroCare Caregiver Dashboard (Multi-page Streamlit)]] - `shares_data_with` [EXTRACTED]
 - [[render_summary()]] - `shares_data_with` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

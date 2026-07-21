@@ -10,6 +10,7 @@ tags:
 # test_model_registry.py
 
 ## Connections
+
 - [[Tests for temporal_multiscalemodel_registry.py.  Verifies 1. ModelRegistry reg]] - `rationale_for` [EXTRACTED]
 - [[_assert()]] - `contains` [EXTRACTED]
 - [[temporal_multiscalemodel_registry.py (build_default_registry)]] - `imports_from` [EXTRACTED]
@@ -22,4 +23,4 @@ tags:
 - [[test_tcn_step_returns_none_then_dict()]] - `contains` [EXTRACTED]
 - [[test_tcn_temporal_model_wraps_forecaster()]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

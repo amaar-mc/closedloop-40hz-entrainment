@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# Train model with early stopping.          Returns:             training_histo
+# Train model with early stopping. Returns: training_histo
 
 ## Connections
+
 - [[EEGNetV2]] - `uses` [INFERRED]
 - [[fit()]] - `rationale_for` [EXTRACTED]
 

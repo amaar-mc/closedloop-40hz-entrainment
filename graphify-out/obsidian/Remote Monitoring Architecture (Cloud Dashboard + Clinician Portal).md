@@ -10,6 +10,7 @@ tags:
 # Remote Monitoring Architecture (Cloud Dashboard + Clinician Portal)
 
 ## Connections
+
 - [[Clinical Roadmap (Phase ABC + Hardware Tiers)]] - `references` [EXTRACTED]
 
   #community/Community_104

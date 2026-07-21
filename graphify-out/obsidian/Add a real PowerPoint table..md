@@ -10,6 +10,7 @@ tags:
 # Add a real PowerPoint table.
 
 ## Connections
+
 - [[tbl()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

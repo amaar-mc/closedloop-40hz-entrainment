@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[retrain_pipeline.py]] - `contains` [EXTRACTED]
 - [[step1_process_data()]] - `calls` [EXTRACTED]
 - [[step2_spectral_caches()]] - `calls` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[step5_train_tcn()]] - `calls` [EXTRACTED]
 - [[step6_comparison_report()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

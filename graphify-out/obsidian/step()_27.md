@@ -10,8 +10,9 @@ tags:
 # step()
 
 ## Connections
+
 - [[HybridTCNCtrl]] - `method` [EXTRACTED]
 - [[_pac_features()_2]] - `calls` [EXTRACTED]
 - [[_predict()_1]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

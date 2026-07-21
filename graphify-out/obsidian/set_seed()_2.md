@@ -10,8 +10,9 @@ tags:
 # set_seed()
 
 ## Connections
+
 - [[Set all random seeds for reproducibility.]] - `rationale_for` [EXTRACTED]
 - [[comparison_models.py]] - `contains` [EXTRACTED]
 - [[train_pytorch_model()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

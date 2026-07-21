@@ -10,6 +10,7 @@ tags:
 # Ridge Regression V5 (135 Coefficients, Matches EEGNet)
 
 ## Connections
+
 - [[Static PAC Prediction Ceiling (R²=0.287, 8 Architectures)]] - `references` [EXTRACTED]
 
   #community/Community_33

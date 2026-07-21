@@ -9,6 +9,7 @@ tags:
 # Temporal PAC Forecasting Tier (TCN)
 
 ## Connections
+
 - [[MultiscaleCausalTCN Architecture]] - `conceptually_related_to` [INFERRED]
 - [[Two-Tier Predictive System Solution]] - `implements` [EXTRACTED]
 

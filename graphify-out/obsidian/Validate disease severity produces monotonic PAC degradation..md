@@ -10,6 +10,7 @@ tags:
 # Validate disease severity produces monotonic PAC degradation.
 
 ## Connections
+
 - [[CorticalResponseConfig]] - `uses` [INFERRED]
 - [[CorticalResponseModel]] - `uses` [INFERRED]
 - [[NeuralMassConfig]] - `uses` [INFERRED]

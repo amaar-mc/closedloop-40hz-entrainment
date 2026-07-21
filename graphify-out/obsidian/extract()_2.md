@@ -10,10 +10,11 @@ tags:
 # extract()
 
 ## Connections
+
 - [[Extract features for a batch of EEG windows.          Args             eeg_b]] - `rationale_for` [EXTRACTED]
 - [[SpectralFeatureExtractor]] - `method` [EXTRACTED]
 - [[extract_spectral_features()_1]] - `calls` [EXTRACTED]
 - [[extract_torch()]] - `calls` [EXTRACTED]
 - [[test_spectral_features()]] - `calls` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

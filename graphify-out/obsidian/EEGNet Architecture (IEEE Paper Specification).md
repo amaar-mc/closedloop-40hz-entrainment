@@ -10,8 +10,9 @@ tags:
 # EEGNet Architecture (IEEE Paper Specification)
 
 ## Connections
+
 - [[EEGNet Depthwise Separable CNN Architecture]] - `references` [INFERRED]
 - [[EEGNet PyTorch Implementation (7-channel, 500 samples)]] - `semantically_similar_to` [INFERRED]
 - [[IEEE Research Paper Personalized Deep Learning for Closed-Loop 40Hz Entrainment]] - `references` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

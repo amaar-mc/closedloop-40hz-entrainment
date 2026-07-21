@@ -10,6 +10,7 @@ tags:
 # Hardware Scaling Tiers (Muse 2 → OpenBCI → 64-ch Clinical)
 
 ## Connections
+
 - [[Clinical Roadmap (Phase ABC + Hardware Tiers)]] - `references` [EXTRACTED]
 - [[Productization Roadmap (Muse 2 + Caregiver App + Pilot)]] - `shares_data_with` [INFERRED]
 

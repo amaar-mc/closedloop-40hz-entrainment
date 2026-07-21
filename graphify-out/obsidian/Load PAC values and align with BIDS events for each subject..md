@@ -10,6 +10,7 @@ tags:
 # Load PAC values and align with BIDS events for each subject.
 
 ## Connections
+
 - [[load_subject_pac_and_events()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_101

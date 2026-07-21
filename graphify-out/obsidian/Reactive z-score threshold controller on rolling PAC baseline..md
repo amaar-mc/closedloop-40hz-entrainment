@@ -10,9 +10,10 @@ tags:
 # Reactive z-score threshold controller on rolling PAC baseline.
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[ReactiveCtrl_1]] - `rationale_for` [EXTRACTED]
 - [[SpectralFeatureExtractor]] - `uses` [INFERRED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

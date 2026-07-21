@@ -10,8 +10,9 @@ tags:
 # step()
 
 ## Connections
+
 - [[ClosedLoopController]] - `method` [EXTRACTED]
 - [[Execute one control step.          Processes incoming EEG window and makes sti]] - `rationale_for` [EXTRACTED]
 - [[_make_decision()_1]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

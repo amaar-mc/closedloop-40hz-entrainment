@@ -10,8 +10,9 @@ tags:
 # print_effect_sizes_predictive_vs_fixed()
 
 ## Connections
+
 - [[Print Hedges' g for Predictive vs Fixed across all metrics.]] - `rationale_for` [EXTRACTED]
 - [[main()_65]] - `calls` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

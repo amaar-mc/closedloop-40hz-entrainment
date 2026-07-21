@@ -10,6 +10,7 @@ tags:
 # Predictive
 
 ## Connections
+
 - [[StimAction]] - `uses` [INFERRED]
 - [[__init__()_79]] - `method` [EXTRACTED]
 - [[_trend()_2]] - `method` [EXTRACTED]

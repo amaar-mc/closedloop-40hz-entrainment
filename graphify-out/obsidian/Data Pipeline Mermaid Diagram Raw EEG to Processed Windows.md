@@ -10,6 +10,7 @@ tags:
 # Data Pipeline Mermaid Diagram: Raw EEG to Processed Windows
 
 ## Connections
+
 - [[Comprehensive Project Map with Mermaid Diagrams (All Decisions, Architectures, Results)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

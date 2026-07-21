@@ -20,81 +20,81 @@
 
 ## Table of Contents
 
-| Entry | Description | Page |
-|-------|-------------|------|
-| **Study 1** | **Background Research and Project Selection** | **p. 1** |
-| | Initial brainstorming — AD vs PD (Dec 10) | p. 1 |
-| | AD biology and gamma oscillations (Dec 11-12) | p. 2 |
-| | Original music therapy idea and dataset dead end (Dec 13-15) | p. 2 |
-| | The pivot — Iaccarino et al. 2016 (Dec 16) | p. 3 |
-| | Research question and PAC methods (Dec 18-22) | p. 4 |
-| | Dataset found — OpenNeuro ds005048 (Dec 20) | p. 5 |
-| | Architecture and control strategy planning (Dec 27-30) | p. 6 |
-| | Summary of Study 1 | p. 7 |
-| **Study 2** | **Data Acquisition and Exploration** | **p. 8** |
-| | Dataset download and BIDS format (Jan 3) | p. 8 |
-| | Data loading struggles — HDF5/FDT discovery (Jan 5-15) | p. 8 |
-| | School period and continued reading (Jan 16 - Feb 4) | p. 9 |
-| | Scattered notes: Canolty & Knight, wavelet PAC, pipeline sketch | p. 10 |
-| | Summary of Study 2 | p. 11 |
-| **Study 3** | **Pipeline Build — The 48-Hour Sprint** | **p. 12** |
-| | Commit 1: initial pipeline — 29 files, 5,419 lines (Feb 5-6) | p. 12 |
-| | Commits 2-3: BIDS path fix, HDF5 loading, Fortran order (Feb 6) | p. 14 |
-| | Data facts and subject-level splits | p. 15 |
-| | Summary of Study 3 | p. 15 |
-| **Study 4** | **Literature Deep Dive** | **p. 16** |
-| | Iaccarino et al. 2016 — detailed notes (Feb 7-8) | p. 16 |
-| | Tort et al. 2010 — MI math walkthrough (Feb 9-10) | p. 17 |
-| | Lawhern et al. 2018 — EEGNet architecture (Feb 11-12) | p. 17 |
-| | Dataset documentation and BIDS/Control theory (Feb 13-15) | p. 18 |
-| | Summary of Study 4 | p. 19 |
-| **Study 5** | **The Architecture Marathon** | **p. 20** |
-| | V1 EEGNet baseline (Feb 16 morning) | p. 20 |
-| | V2 Delta-PAC (Feb 16 late morning) | p. 21 |
-| | V3 SpecTempNet and LEAKAGE DISCOVERY (Feb 16 early afternoon) | p. 21 |
-| | V4 ViT-TCNet — 1.1M params (Feb 16 afternoon) | p. 23 |
-| | V5 Ridge Regression — simple wins (Feb 16 late afternoon) | p. 24 |
-| | Second leakage near-miss (Feb 16 evening) | p. 25 |
-| | V6, V7, V8, LSTM attempts (Feb 16 evening) | p. 26 |
-| | End-of-day summary table | p. 27 |
-| | Summary of Study 5 | p. 28 |
-| **Study 6** | **Temporal Prediction and the Multiscale TCN** | **p. 29** |
-| | Reframing the problem (Feb 17 morning) | p. 29 |
-| | 8-second window reprocessing (Feb 17 morning) | p. 30 |
-| | Innovations 1-4 and TCN design (Feb 17 afternoon) | p. 30 |
-| | Results: smoothed vs raw targets (Feb 17 evening) | p. 33 |
-| | Audit results | p. 34 |
-| | Summary of Study 6 | p. 35 |
-| **Study 7** | **Documentation and Methodology** | **p. 36** |
-| | Audit day — making it rigorous (Feb 18) | p. 36 |
-| | Summary of Study 7 | p. 37 |
-| **Study 8** | **Horizon Sweep and Closed-Loop Simulation** | **p. 38** |
-| | Horizon sweep: THE key experiment (Feb 19) | p. 38 |
-| | Habituation analysis on real data (Feb 19) | p. 40 |
-| | Closed-loop simulation design and results (Feb 19) | p. 42 |
-| | Fatigue sensitivity sweep (Feb 19) | p. 44 |
-| | Summary of Study 8 | p. 45 |
-| **Study 9** | **Cleanup and Presentation Prep** | **p. 46** |
-| | Repository organization (Feb 20) | p. 46 |
-| | Fatigue analysis script (Feb 20) | p. 47 |
-| | Summary of Study 9 | p. 47 |
-| **Study 10** | **Rigorous Validation** | **p. 48** |
-| | Replay analysis on real data (Feb 21 morning) | p. 48 |
-| | Statistical rigor fixes (Feb 21 afternoon) | p. 49 |
-| | Architecture capacity experiments (Feb 21 afternoon) | p. 51 |
-| | Real-data TCN validation — 72.1% vs 64.5% (Feb 21 evening) | p. 52 |
-| | Fatigue model robustness — 4 models tested (Feb 21 evening) | p. 53 |
-| | Synopsys ML/AI compliance audit (Feb 21) | p. 54 |
-| | Interpretability scripts (Feb 21) | p. 55 |
-| | Summary of Study 10 | p. 56 |
-| **Study 11** | **Reflection** | **p. 57** |
-| | What the project accomplished | p. 57 |
-| | What went wrong | p. 58 |
-| | What I learned | p. 58 |
-| | Limitations | p. 59 |
-| | What this means for patients | p. 60 |
-| | Final thought | p. 60 |
-| **References** | | **p. 61** |
+| Entry          | Description                                                     | Page      |
+| -------------- | --------------------------------------------------------------- | --------- |
+| **Study 1**    | **Background Research and Project Selection**                   | **p. 1**  |
+|                | Initial brainstorming — AD vs PD (Dec 10)                       | p. 1      |
+|                | AD biology and gamma oscillations (Dec 11-12)                   | p. 2      |
+|                | Original music therapy idea and dataset dead end (Dec 13-15)    | p. 2      |
+|                | The pivot — Iaccarino et al. 2016 (Dec 16)                      | p. 3      |
+|                | Research question and PAC methods (Dec 18-22)                   | p. 4      |
+|                | Dataset found — OpenNeuro ds005048 (Dec 20)                     | p. 5      |
+|                | Architecture and control strategy planning (Dec 27-30)          | p. 6      |
+|                | Summary of Study 1                                              | p. 7      |
+| **Study 2**    | **Data Acquisition and Exploration**                            | **p. 8**  |
+|                | Dataset download and BIDS format (Jan 3)                        | p. 8      |
+|                | Data loading struggles — HDF5/FDT discovery (Jan 5-15)          | p. 8      |
+|                | School period and continued reading (Jan 16 - Feb 4)            | p. 9      |
+|                | Scattered notes: Canolty & Knight, wavelet PAC, pipeline sketch | p. 10     |
+|                | Summary of Study 2                                              | p. 11     |
+| **Study 3**    | **Pipeline Build — The 48-Hour Sprint**                         | **p. 12** |
+|                | Commit 1: initial pipeline — 29 files, 5,419 lines (Feb 5-6)    | p. 12     |
+|                | Commits 2-3: BIDS path fix, HDF5 loading, Fortran order (Feb 6) | p. 14     |
+|                | Data facts and subject-level splits                             | p. 15     |
+|                | Summary of Study 3                                              | p. 15     |
+| **Study 4**    | **Literature Deep Dive**                                        | **p. 16** |
+|                | Iaccarino et al. 2016 — detailed notes (Feb 7-8)                | p. 16     |
+|                | Tort et al. 2010 — MI math walkthrough (Feb 9-10)               | p. 17     |
+|                | Lawhern et al. 2018 — EEGNet architecture (Feb 11-12)           | p. 17     |
+|                | Dataset documentation and BIDS/Control theory (Feb 13-15)       | p. 18     |
+|                | Summary of Study 4                                              | p. 19     |
+| **Study 5**    | **The Architecture Marathon**                                   | **p. 20** |
+|                | V1 EEGNet baseline (Feb 16 morning)                             | p. 20     |
+|                | V2 Delta-PAC (Feb 16 late morning)                              | p. 21     |
+|                | V3 SpecTempNet and LEAKAGE DISCOVERY (Feb 16 early afternoon)   | p. 21     |
+|                | V4 ViT-TCNet — 1.1M params (Feb 16 afternoon)                   | p. 23     |
+|                | V5 Ridge Regression — simple wins (Feb 16 late afternoon)       | p. 24     |
+|                | Second leakage near-miss (Feb 16 evening)                       | p. 25     |
+|                | V6, V7, V8, LSTM attempts (Feb 16 evening)                      | p. 26     |
+|                | End-of-day summary table                                        | p. 27     |
+|                | Summary of Study 5                                              | p. 28     |
+| **Study 6**    | **Temporal Prediction and the Multiscale TCN**                  | **p. 29** |
+|                | Reframing the problem (Feb 17 morning)                          | p. 29     |
+|                | 8-second window reprocessing (Feb 17 morning)                   | p. 30     |
+|                | Innovations 1-4 and TCN design (Feb 17 afternoon)               | p. 30     |
+|                | Results: smoothed vs raw targets (Feb 17 evening)               | p. 33     |
+|                | Audit results                                                   | p. 34     |
+|                | Summary of Study 6                                              | p. 35     |
+| **Study 7**    | **Documentation and Methodology**                               | **p. 36** |
+|                | Audit day — making it rigorous (Feb 18)                         | p. 36     |
+|                | Summary of Study 7                                              | p. 37     |
+| **Study 8**    | **Horizon Sweep and Closed-Loop Simulation**                    | **p. 38** |
+|                | Horizon sweep: THE key experiment (Feb 19)                      | p. 38     |
+|                | Habituation analysis on real data (Feb 19)                      | p. 40     |
+|                | Closed-loop simulation design and results (Feb 19)              | p. 42     |
+|                | Fatigue sensitivity sweep (Feb 19)                              | p. 44     |
+|                | Summary of Study 8                                              | p. 45     |
+| **Study 9**    | **Cleanup and Presentation Prep**                               | **p. 46** |
+|                | Repository organization (Feb 20)                                | p. 46     |
+|                | Fatigue analysis script (Feb 20)                                | p. 47     |
+|                | Summary of Study 9                                              | p. 47     |
+| **Study 10**   | **Rigorous Validation**                                         | **p. 48** |
+|                | Replay analysis on real data (Feb 21 morning)                   | p. 48     |
+|                | Statistical rigor fixes (Feb 21 afternoon)                      | p. 49     |
+|                | Architecture capacity experiments (Feb 21 afternoon)            | p. 51     |
+|                | Real-data TCN validation — 72.1% vs 64.5% (Feb 21 evening)      | p. 52     |
+|                | Fatigue model robustness — 4 models tested (Feb 21 evening)     | p. 53     |
+|                | Synopsys ML/AI compliance audit (Feb 21)                        | p. 54     |
+|                | Interpretability scripts (Feb 21)                               | p. 55     |
+|                | Summary of Study 10                                             | p. 56     |
+| **Study 11**   | **Reflection**                                                  | **p. 57** |
+|                | What the project accomplished                                   | p. 57     |
+|                | What went wrong                                                 | p. 58     |
+|                | What I learned                                                  | p. 58     |
+|                | Limitations                                                     | p. 59     |
+|                | What this means for patients                                    | p. 60     |
+|                | Final thought                                                   | p. 60     |
+| **References** |                                                                 | **p. 61** |
 
 ---
 
@@ -133,7 +133,7 @@ I'm learning that gamma oscillations are generated by something called PING — 
 
 Then I stumble onto something that completely changes the direction of the project...
 
-*Continued on p. 3 (Dec 16 entry)*
+_Continued on p. 3 (Dec 16 entry)_
 
 ---
 
@@ -155,7 +155,7 @@ I'm frustrated. My original idea is dead before I can even start. But I'm remind
 
 ### December 16, 2025 — The Pivot That Changed Everything
 
-*Continued from p. 2*
+_Continued from p. 2_
 
 I talk to my family and my CS teacher about the dataset problem. My CS teacher suggests looking at OpenNeuro specifically and reminds me to think about the ethical implications of working with patient data, even de-identified. Good point — I'm noting that for later.
 
@@ -178,6 +178,7 @@ I'm genuinely excited. This feels like a real research problem with practical cl
 Formalizing the closed-loop control concept today. Reading about phase-amplitude coupling.
 
 I sketch out the difference between open-loop and closed-loop:
+
 - Open-loop: stimulus goes in, you hope for the best
 - Closed-loop: measure response with EEG, predict future coupling state with ML, feed prediction back to controller that decides stim/rest
 
@@ -186,6 +187,7 @@ I sketch out the difference between open-loop and closed-loop:
 **Why PAC?** I'm reading Tort et al. (2010) and Canolty & Knight (2010). PAC quantifies how the slow theta rhythm (4-8 Hz) modulates fast gamma amplitude (30-80 Hz). High PAC = strong coupling = good memory encoding. 40 Hz entrainment should increase PAC, so PAC is the right metric to optimize.
 
 **My initial hypotheses:**
+
 1. Deep learning can predict PAC from EEG with R-squared > 0.80
 2. Stimulating during low-PAC periods increases PAC more than random timing
 3. Closed-loop will achieve higher average PAC than open-loop
@@ -200,6 +202,7 @@ I sketch out the difference between open-loop and closed-loop:
 Searching for EEG datasets with 40 Hz auditory stimulation. Found OpenNeuro ds005048.
 
 **Dataset specs:**
+
 - 35 subjects (elderly patients from a memory clinic in Tehran)
 - 19 EEG channels (10/20 system), 250 Hz sampling rate
 - Protocol: 40 Hz click train, 40s stimulation + 20s rest, repeated 6-10 times/session
@@ -249,6 +252,7 @@ No project work. Christmas break with family.
 Back from break. Evaluating ML architecture options for predicting PAC from EEG.
 
 Options I'm considering:
+
 - Traditional ML: Random Forest, XGBoost
 - CNNs: EEGNet (Lawhern et al. 2018)
 - LSTMs
@@ -286,7 +290,7 @@ No project work. New Year's break.
 
 Completed background research and project selection over December 10-30, 2025. Started with an AD vs PD comparison; chose AD. Original music therapy idea failed due to no available dataset at the EEG/music/AD intersection. Pivoted to 40 Hz gamma entrainment after finding Iaccarino et al. (2016). Found OpenNeuro ds005048 (35 subjects, 40 Hz auditory click train, BIDS format). Formulated research question around PAC prediction for closed-loop scheduling. Planned EEGNet as first architecture. Designed four control strategies (Fixed, Reactive, Predictive, Oracle). Documented ethics considerations. Key literature: Iaccarino 2016, Tort 2010, Canolty & Knight 2010, Lawhern 2018.
 
-*To be continued in Study 2...*
+_To be continued in Study 2..._
 
 ---
 
@@ -317,6 +321,7 @@ I have been fighting with this data format for over a week, on and off between s
 **The core issue:** These .set files are MATLAB v7.3 format, which means they're actually HDF5 files internally. Normal EEGLAB readers expect older .set files. MNE's loader can't handle them at all.
 
 After days of trial and error, I figure out:
+
 - The HDF5 files have fields at the top level (no `EEG` wrapper group, unlike standard EEGLAB files)
 - The `data` field in the .set file contains a filename reference (encoded as uint16 characters), NOT the actual EEG data
 - The real data lives in the companion .fdt file as flat float32 binary
@@ -339,6 +344,7 @@ I also explore the BIDS events.tsv files during this period. These contain onset
 Midterms and finals prep. I'm not writing any code during these three weeks, but I keep reading papers and planning the pipeline architecture in my physical notebook.
 
 **Reading I do during this period:**
+
 - Re-read Iaccarino et al. (2016) more carefully — paying attention to 40 Hz specificity and microglia activation
 - Read Martorell et al. (2019) on multi-sensory gamma stimulation (audio + visual showed broader effects)
 - Studied Tort et al. (2010) MI method in detail, worked through the math by hand
@@ -370,6 +376,7 @@ BIDS loader --> preprocessor --> PAC computer --> window extractor --> dataset b
 Each step takes the output of the previous one and produces a well-defined intermediate result. That way I can debug each step independently and re-run just the parts that change. The controller and simulator should be separate from the data pipeline — they consume model predictions but don't touch raw EEG processing.
 
 **Planning notes from my paper notebook:**
+
 - Modular architecture: data loader, preprocessor, PAC computation, model, controller, simulator as separate files
 - Data flow: raw .set/.fdt --> preprocessing --> PAC computation --> labeled windows
 - Subject-level train/val/test splits needed (prevent leakage between subjects)
@@ -385,7 +392,7 @@ No commits during this period because there's no code to commit yet. The transit
 
 Downloaded OpenNeuro ds005048 (1.4 GB) and learned BIDS format. Discovered that .set files are MATLAB v7.3 HDF5, requiring a custom loader using h5py. The critical finding was the Fortran-order reshape bug — .fdt binary data must be reshaped with `order='F'` or channels and timepoints get interleaved, producing plausible-looking but incorrect data. Validated correct loading by checking for 40 Hz spectral peaks. Continued literature review during school period. Planned modular pipeline architecture. Data saved at `data/raw/ds005048/`.
 
-*To be continued in Study 3...*
+_To be continued in Study 3..._
 
 ---
 
@@ -478,7 +485,7 @@ Data saved to `data/processed/train_data.npz`, `data/processed/val_data.npz`, `d
 
 Built complete pipeline in a 48-hour sprint: 29 files, 5,419 lines. Three commits fixing BIDS paths, HDF5 loading, and Fortran-order reshape. Produced 17,283 windows from 35 subjects with subject-level train/val/test splits (24/5/6). All processed data saved to `data/processed/`. Core modules: data_loader, preprocessing, pac_computation, eegnet, training, controller, personalization, simulator, validation. All hyperparameters centralized in config.yaml.
 
-*To be continued in Study 4...*
+_To be continued in Study 4..._
 
 ---
 
@@ -533,6 +540,7 @@ One thing I'm noting: EEGNet was designed for classification (motor imagery, P30
 **Reading:** Lahijanian et al. (Data in Brief, 2022) and the associated Scientific Reports paper (2024).
 
 Important things I learn:
+
 - Dataset collected at a memory clinic in Tehran
 - Associated papers focused on entrainment characterization and connectivity analysis, NOT future PAC prediction
 - There is NO published R-squared benchmark for the forecasting I'm trying to do
@@ -563,7 +571,7 @@ I think this is exactly the right question. We'll see.
 
 Spent February 7-15 on intensive literature study during the school period. Re-read all key papers with implementation focus: Iaccarino (40 Hz entrainment mechanism), Tort (MI computation details), Lawhern (EEGNet architecture), dataset documentation (no published PAC prediction benchmark), BIDS format (events.tsv as potential features), and control theory (MPC framework). Key insight: the real question is whether PAC prediction works at 5-10 second horizons, not just 1 second. Noted that stimulation context could be a powerful feature. No code written; all preparation for the architecture experiments.
 
-*To be continued in Study 5...*
+_To be continued in Study 5..._
 
 ---
 
@@ -584,6 +592,7 @@ This is going to be the most intense day of the entire project. I can feel it. I
 #### Morning: V1 EEGNet Training (commit ac83543)
 
 Training EEGNet on the processed data now. Full training pipeline:
+
 - EEGNet, ~1,457 parameters
 - Input: (batch, 1, 7, 500) EEG windows
 - Target: z-score normalized PAC values
@@ -622,6 +631,7 @@ Changing strategy completely. Instead of learning directly from raw EEG, I'm ext
 Building SpecTempNet — a hybrid spectral-temporal architecture, ~180K parameters.
 
 **Spectral features I extract (68 total):**
+
 - Per-channel power spectral density in 5 bands (delta, theta, alpha, beta, gamma) across 7 channels = 35 features
 - Cross-channel spectral coherence
 - Cross-frequency features
@@ -699,20 +709,21 @@ OK. After the ViT-TCNet failure, I'm finally doing what I should have done from 
 
 Running Ridge, Lasso, ElasticNet, Random Forest, Gradient Boosting, and a simple ensemble...
 
-| Model | R-squared | Training Time |
-|-------|-----------|---------------|
-| Ridge Regression | **0.287** | < 1 minute |
-| Lasso Regression | 0.286 | < 1 minute |
-| ElasticNet | 0.286 | < 1 minute |
-| Random Forest | 0.228 | 2 minutes |
-| Gradient Boosting | 0.265 | 3 minutes |
-| Simple Ensemble | 0.286 | 5 minutes total |
+| Model             | R-squared | Training Time   |
+| ----------------- | --------- | --------------- |
+| Ridge Regression  | **0.287** | < 1 minute      |
+| Lasso Regression  | 0.286     | < 1 minute      |
+| ElasticNet        | 0.286     | < 1 minute      |
+| Random Forest     | 0.228     | 2 minutes       |
+| Gradient Boosting | 0.265     | 3 minutes       |
+| Simple Ensemble   | 0.286     | 5 minutes total |
 
 Ridge Regression. A linear model with L2 regularization. Best performer. Beats every deep learning model I've tried. Training took less than a minute.
 
 I don't know whether to laugh or cry.
 
 Lasso (which does automatic feature selection) kept only 40 of 135 features. 95 features were useless. The top features all make neuroscience sense:
+
 1. WPD_13 (gamma-like wavelet energy)
 2. Beta relative power (channels 3 and 0)
 3. Theta relative power (channel 1)
@@ -748,12 +759,14 @@ I don't even commit this as a success. Frustrated with myself for trying it, but
 I keep pushing. Running everything I can think of.
 
 **V6: Temporal Features + Ensemble**
+
 - Added rolling mean, rolling std, first differences to the 135 features --> 540 total
 - Lasso rejected 93% of new features (kept only 40 of 540)
 - Best R-squared: 0.287 (zero improvement over basic Ridge)
 - The extra features are just noise.
 
 **V7: Raw EEG Deep Learning (commit 06b3654)**
+
 - 1D CNN (68K params): R-squared = 0.027
 - Multi-head Attention (19K params): R-squared = -0.081 (negative! worse than predicting the mean!)
 - CNN-Attention Hybrid (55K params): R-squared = 0.058
@@ -761,6 +774,7 @@ I keep pushing. Running everything I can think of.
 - Total failure. Handcrafted features beat end-to-end learning by a huge margin.
 
 **V8: Specialized EEG Architectures from Literature**
+
 - EEGNet (5K params): R-squared = 0.199
 - ATCNet (Attention + TCN, 26K params): R-squared = 0.075
 - TransformEEG (122K params): R-squared = 0.178
@@ -784,19 +798,19 @@ I check temporal autocorrelation and understand why: at the 2-second window scal
 
 13 commits. 8+ architecture attempts. One very long day.
 
-| Attempt | Approach | R-squared | Outcome |
-|---------|----------|-----------|---------|
-| V1 | EEGNet baseline | ~0.08 | Too simple, no spectral features |
-| V2 | EEGNetV2 delta-PAC | ~0.06 | Delta-PAC too noisy |
-| V3 | SpecTempNet with MI | 0.69 | **DATA LEAKAGE** (MI features) |
-| V3-clean | SpecTempNet no MI | 0.236 | First honest result |
-| V4 | ViT-TCNet (1.1M params) | 0.252 | Overfitting, 100x too complex |
-| V5 | Ridge Regression | **0.287** | **BEST** (simple wins) |
-| V5-Enh | PAC features | 0.999 | **LEAKAGE AGAIN** |
-| V6 | Temporal + Ensemble | 0.287 | No improvement |
-| V7 | Raw EEG DL | 0.113 | Complete failure |
-| V8 | Specialized EEG | 0.222 | Still worse than Ridge |
-| LSTM | Temporal prediction | -0.05 | Zero autocorrelation at 2s |
+| Attempt  | Approach                | R-squared | Outcome                          |
+| -------- | ----------------------- | --------- | -------------------------------- |
+| V1       | EEGNet baseline         | ~0.08     | Too simple, no spectral features |
+| V2       | EEGNetV2 delta-PAC      | ~0.06     | Delta-PAC too noisy              |
+| V3       | SpecTempNet with MI     | 0.69      | **DATA LEAKAGE** (MI features)   |
+| V3-clean | SpecTempNet no MI       | 0.236     | First honest result              |
+| V4       | ViT-TCNet (1.1M params) | 0.252     | Overfitting, 100x too complex    |
+| V5       | Ridge Regression        | **0.287** | **BEST** (simple wins)           |
+| V5-Enh   | PAC features            | 0.999     | **LEAKAGE AGAIN**                |
+| V6       | Temporal + Ensemble     | 0.287     | No improvement                   |
+| V7       | Raw EEG DL              | 0.113     | Complete failure                 |
+| V8       | Specialized EEG         | 0.222     | Still worse than Ridge           |
+| LSTM     | Temporal prediction     | -0.05     | Zero autocorrelation at 2s       |
 
 **The honest ceiling for static PAC prediction from a single EEG window: R-squared = 0.287.**
 
@@ -810,7 +824,7 @@ Eight different architectures. All land between 0.22 and 0.29. I think this IS t
 
 Tested 8 model architectures in a single day (February 16), plus an LSTM temporal attempt. Discovered data leakage twice: once with MI features inflating R-squared to 0.69 (corrected to 0.236), once with PAC features inflating to 0.999 (immediately caught). Ridge Regression (R-squared = 0.287) beat all deep learning models. The static PAC prediction ceiling is R-squared ~0.287, consistent with the PAC label SNR of -4.73 dB. The LSTM failed (R-squared = -0.05) due to near-zero temporal autocorrelation at the 2-second window scale (r = 0.018). All experimental code archived to `archive/`. Audit script saved at `archive/diagnostics/audit_leakage.py`.
 
-*Continued from Study 5. To be continued in Study 6...*
+_Continued from Study 5. To be continued in Study 6..._
 
 ---
 
@@ -824,7 +838,7 @@ Tested 8 model architectures in a single day (February 16), plus an LSTM tempora
 
 ### February 17, 2026 — Reframing the Problem
 
-*Continued from Study 5 (p. 28)*
+_Continued from Study 5 (p. 28)_
 
 I barely slept last night thinking about this. The key realization from yesterday: static PAC prediction (predicting the CURRENT window's PAC from its own EEG) has a fundamental ceiling around 0.287. But what a closed-loop controller actually needs is TEMPORAL prediction — can I predict what PAC will be 5-10 seconds from now, based on what I've observed so far?
 
@@ -843,6 +857,7 @@ Reprocessing the entire dataset with 8-second windows (2000 samples at 250 Hz) a
 <!-- PAGE 30 -->
 
 **Results:**
+
 - 4,630 windows from 35 subjects (vs 17,283 with 2-second windows)
 - Temporal autocorrelation at lag 1 (4 seconds ahead): r = 0.453
 - Compare: 2-second windows had autocorrelation r = 0.018
@@ -850,6 +865,7 @@ Reprocessing the entire dataset with 8-second windows (2000 samples at 250 Hz) a
 The longer windows created genuine temporal structure! This is encouraging.
 
 **Sklearn models on 8-second windows:**
+
 - Ridge: R-squared = -0.21 (negative — longer windows reduced training set too much)
 - MLP: R-squared = 0.125, correlation = 0.374
 
@@ -868,6 +884,7 @@ This is where it gets interesting. I'm building a completely new temporal predic
 **Innovation 1: Stimulation context features from BIDS events**
 
 Extracting from events.tsv:
+
 - `stim_state`: binary (stim on = 1, rest = 0)
 - `time_since_switch`: seconds since last transition between stim and rest
 - `stim_frac_20s`: fraction of last 20 seconds that was stimulation
@@ -880,6 +897,7 @@ I'm using sin/cos because the stim/rest cycle is periodic (40s on, 20s off, repe
 **Innovation 2: Multiscale PAC history**
 
 Instead of just raw PAC, I'm computing causal moving averages at multiple scales:
+
 - `pac_current`: the current PAC value
 - `pac_ma2`, `pac_ma4`, `pac_ma8`, `pac_ma16`: trailing moving averages over 2, 4, 8, 16 timesteps
 - `pac_diff1`, `pac_diff4`: first differences at 1 and 4 step lags
@@ -901,6 +919,7 @@ What this does: instead of predicting "what will the noisy instantaneous PAC be 
 **Innovation 4: The TCN architecture**
 
 Choosing a Temporal Convolutional Network over LSTM/GRU for several reasons:
+
 - Causal convolutions naturally prevent future information leakage (padding only on left)
 - Dilated convolutions capture long-range dependencies efficiently (31-step receptive field with dilations [1,2,4,8])
 - Faster inference than recurrent models (important for real-time control)
@@ -917,6 +936,7 @@ Choosing a Temporal Convolutional Network over LSTM/GRU for several reasons:
 - Total: ~31,000 parameters
 
 **Training config:**
+
 - Huber loss for future prediction head + weighted delta prediction loss
 - AdamW optimizer, weight decay 1e-3
 - Dropout 0.2
@@ -937,11 +957,13 @@ Training the TCN using `temporal_multiscale/train_multiscale_tcn.py`...
 Training is done. Best epoch was 53.
 
 **Results with smoothed targets (target_smooth=5, horizon=5):**
+
 - Test R-squared: 0.764
 - Test correlation: 0.880
 - Persistence baseline R-squared: 0.760
 
 **Results with raw targets (target_smooth=1):**
+
 - Test R-squared: 0.067
 
 OK, I need to be honest with myself about what these numbers mean.
@@ -980,7 +1002,7 @@ The ablation is revealing too. Ridge feature ablation on the 73-feature set show
 
 Reframed the problem from static to temporal prediction. Reprocessed data with 8-second windows (autocorrelation jumped from r=0.018 to r=0.453). Built a MultiscaleCausalTCN (~31K params) with four innovations: stimulation context features, multiscale PAC history, target smoothing, and causal dilated convolutions. Results: R-squared = 0.764 with smoothed targets (persistence baseline: 0.760), R-squared = 0.067 with raw targets. All audits passed: no subject leakage, temporal causality verified, shuffle-label R-squared = -0.332. Feature ablation shows prediction is primarily autoregressive on PAC. Checkpoint saved to `models/best_multiscale_tcn_lb20_hz5_ts1.pth`. Dataset saved to `data/processed/multiscale_temporal_lb20_hz5_ts1/`.
 
-*To be continued in Study 7...*
+_To be continued in Study 7..._
 
 ---
 
@@ -1007,6 +1029,7 @@ No new model code today. Spending the entire day on documentation, auditing, and
 **Why this day matters even though I'm not writing model code:** Writing documentation is forcing me to confront every assumption. When I have to explain IN WRITING why I chose GroupNorm over BatchNorm, why the dual-head architecture, why the specific dilation schedule — I have to make sure those decisions are actually justified, not arbitrary.
 
 The audit report is especially valuable. I go through every file and check for:
+
 - Data leakage risks (any feature using future info)
 - Temporal causality (all targets strictly after input sequences)
 - Split integrity (no subject overlap)
@@ -1024,7 +1047,7 @@ I also formally write down the distinction between "target-smoothed R-squared" a
 
 Spent February 18 on documentation and auditing. Created CLAUDE.md, methodology document, and pipeline audit report. All integrity checks passed: no leakage, causal construction, subject-level splits, training-only normalization. Formalized the distinction between smoothed and raw target R-squared for fair presentation. Files created: `docs/CURRENT_METHODOLOGY.md`, `CLAUDE.md`.
 
-*To be continued in Study 8...*
+_To be continued in Study 8..._
 
 ---
 
@@ -1057,13 +1080,13 @@ Results coming in...
 <!-- PAGE 39 -->
 
 | Horizon (s) | Persistence R-sq | Ridge R-sq | TCN R-sq | TCN margin vs persistence |
-|-------------|-----------------|-----------|---------|--------------------------|
-| 1 | 0.760 | 0.812 | 0.735 | -0.025 |
-| 2 | 0.488 | 0.542 | 0.470 | -0.018 |
-| 3 | 0.234 | 0.254 | 0.277 | **+0.043** |
-| 5 | -0.267 | -0.393 | 0.254 | **+0.521** |
-| 8 | -0.276 | -0.211 | 0.240 | **+0.515** |
-| 10 | -0.256 | -0.212 | 0.278 | **+0.534** |
+| ----------- | ---------------- | ---------- | -------- | ------------------------- |
+| 1           | 0.760            | 0.812      | 0.735    | -0.025                    |
+| 2           | 0.488            | 0.542      | 0.470    | -0.018                    |
+| 3           | 0.234            | 0.254      | 0.277    | **+0.043**                |
+| 5           | -0.267           | -0.393     | 0.254    | **+0.521**                |
+| 8           | -0.276           | -0.211     | 0.240    | **+0.515**                |
+| 10          | -0.256           | -0.212     | 0.278    | **+0.534**                |
 
 I'm staring at this table. This is it.
 
@@ -1094,6 +1117,7 @@ Before building the simulation, I want to know if neural habituation is real in 
 Analyzing whether continuous 40 Hz stimulation leads to declining PAC across successive stim blocks, for all 35 subjects...
 
 **Population-level result:** Not statistically significant.
+
 - First block mean PAC: 0.000996
 - Last block mean PAC: 0.001040
 - Paired t-test: t = -0.616, p = 0.542
@@ -1126,6 +1150,7 @@ The population average hides EXTREME individual variability. Some subjects habit
 **Why simulation?** I don't have access to a real EEG system and real patients. I can't do a live experiment. But I can build a brain response simulator and test different control strategies. It's not a replacement for real-world testing, but it lets me compare strategies under controlled conditions.
 
 **Brain model parameters:**
+
 - Stim ON: PAC approaches target 0.3, time constant 0.15 (exponential approach)
 - Stim OFF: PAC decays toward 0.05, time constant 0.10
 - Gaussian noise sigma = 0.02 at each timestep
@@ -1135,6 +1160,7 @@ The population average hides EXTREME individual variability. Some subjects habit
 **Why fatigue model:** ~49% of subjects habituate. Clinical sessions are longer. Including fatigue lets me test whether adaptive scheduling helps more when habituation is present.
 
 **Four strategies compared:**
+
 1. **Fixed Schedule:** 40s stim + 20s rest, repeating. Standard clinical protocol.
 2. **Reactive Threshold:** Stim when PAC z-score < -0.5, rest when > +0.5.
 3. **Predictive Look-Ahead:** Linear trend on last 5 PAC values, with hysteresis. (Note: this uses a simple linear trend, NOT the trained TCN. See Study 10, p. 52, for the TCN validation on real data.)
@@ -1146,25 +1172,26 @@ Running `run_closed_loop_demo.py --duration 600 --n-trials 10` now...
 
 **Results WITHOUT fatigue (10 trials, 600s each):**
 
-| Method | Mean PAC | Stim % | Efficiency |
-|--------|----------|--------|------------|
-| Fixed Schedule | 0.229 | 66.7% | 5.38 |
-| Reactive Threshold | 0.145 | 28.4% | 6.68 |
-| Predictive Look-Ahead | 0.184 | 49.5% | 5.40 |
-| Oracle | 0.200 | 49.0% | 6.12 |
+| Method                | Mean PAC | Stim % | Efficiency |
+| --------------------- | -------- | ------ | ---------- |
+| Fixed Schedule        | 0.229    | 66.7%  | 5.38       |
+| Reactive Threshold    | 0.145    | 28.4%  | 6.68       |
+| Predictive Look-Ahead | 0.184    | 49.5%  | 5.40       |
+| Oracle                | 0.200    | 49.0%  | 6.12       |
 
 Without fatigue, Fixed Schedule achieves highest mean PAC by stimulating the most (67%). Efficiency is comparable across methods. No clear winner.
 
 **Results WITH fatigue:**
 
-| Method | Mean PAC | Stim % | Efficiency | Late-Session PAC |
-|--------|----------|--------|------------|-----------------|
-| Fixed Schedule | 0.224 | 66.7% | 5.22 | 0.225 |
-| Reactive Threshold | 0.140 | 28.4% | 6.36 | 0.154 |
-| Predictive Look-Ahead | 0.181 | 49.1% | 5.33 | 0.185 |
-| Oracle | 0.198 | 52.8% | 5.60 | 0.199 |
+| Method                | Mean PAC | Stim % | Efficiency | Late-Session PAC |
+| --------------------- | -------- | ------ | ---------- | ---------------- |
+| Fixed Schedule        | 0.224    | 66.7%  | 5.22       | 0.225            |
+| Reactive Threshold    | 0.140    | 28.4%  | 6.36       | 0.154            |
+| Predictive Look-Ahead | 0.181    | 49.1%  | 5.33       | 0.185            |
+| Oracle                | 0.198    | 52.8%  | 5.60       | 0.199            |
 
 With fatigue, the Predictive controller becomes significantly more efficient:
+
 - Wilcoxon signed-rank for efficiency: p = 0.0098
 - Wilcoxon for late-session PAC: p = 0.0020
 
@@ -1178,14 +1205,14 @@ The Predictive controller achieves 80% of Fixed Schedule's PAC using only 49% st
 
 Running `run_fatigue_sensitivity.py` to sweep the fatigue rate parameter...
 
-| Fatigue Rate | Fixed Eff. | Adaptive Eff. | Gain | p-value |
-|-------------|-----------|---------------|------|---------|
-| 0.000 (none) | 5.38 | 5.40 | +0.4% | 0.492 (n.s.) |
-| 0.004 (mild) | 5.29 | 5.36 | +1.3% | 0.020 |
-| 0.008 (moderate) | 5.22 | 5.33 | +2.1% | 0.010 |
-| 0.015 (mod-high) | 5.10 | 5.23 | +2.6% | 0.010 |
-| 0.025 (high) | 4.97 | 5.18 | +4.3% | 0.002 |
-| 0.040 (severe) | 4.82 | 5.09 | +5.7% | 0.010 |
+| Fatigue Rate     | Fixed Eff. | Adaptive Eff. | Gain  | p-value      |
+| ---------------- | ---------- | ------------- | ----- | ------------ |
+| 0.000 (none)     | 5.38       | 5.40          | +0.4% | 0.492 (n.s.) |
+| 0.004 (mild)     | 5.29       | 5.36          | +1.3% | 0.020        |
+| 0.008 (moderate) | 5.22       | 5.33          | +2.1% | 0.010        |
+| 0.015 (mod-high) | 5.10       | 5.23          | +2.6% | 0.010        |
+| 0.025 (high)     | 4.97       | 5.18          | +4.3% | 0.002        |
+| 0.040 (severe)   | 4.82       | 5.09          | +5.7% | 0.010        |
 
 At zero fatigue, the two methods are equivalent (p = 0.492, not significant). Makes sense: if the brain never habituates, no reason for strategic rests.
 
@@ -1201,7 +1228,7 @@ At every non-zero fatigue level (5 out of 5), adaptive scheduling is significant
 
 Ran the horizon sweep experiment — the core scientific contribution. TCN maintains R-squared ~0.25-0.28 at 5-10 second horizons where persistence and Ridge collapse to negative R-squared (+0.5 margin). Analyzed habituation in real data: not significant at population level (p=0.542) but massive individual variability (49% decline, 51% increase/stable). Built closed-loop simulation comparing 4 strategies. With fatigue, Predictive controller achieves 80% of Fixed's PAC using 49% stim time. Fatigue sensitivity sweep shows dose-response relationship: adaptive advantage grows with habituation severity (+0.4% to +5.7%). See `results/figures/horizon_sweep.png`, `results/figures/fatigue_sensitivity.png`.
 
-*To be continued in Study 9...*
+_To be continued in Study 9..._
 
 ---
 
@@ -1220,6 +1247,7 @@ Ran the horizon sweep experiment — the core scientific contribution. TCN maint
 Spending today making the repo clean and navigable. A science fair judge should be able to clone it, read FINDINGS.md, and understand the complete story.
 
 Documentation hierarchy I'm organizing:
+
 - `FINDINGS.md` at top level — complete results narrative
 - `docs/CURRENT_METHODOLOGY.md` — technical pipeline description
 - `docs/reports/` — detailed analysis reports
@@ -1241,12 +1269,14 @@ I force myself to include a limitations section. I think honest science requires
 Formalizing the fatigue analysis into `temporal_multiscale/fatigue_analysis.py`. This standalone script runs on real data and produces per-subject habituation statistics.
 
 For each subject it computes:
+
 - Mean PAC in first stim block vs last
 - Percentage change across blocks
 - Linear slope of PAC across blocks
 - Whether subject shows decline or facilitation
 
 Output confirms the 49/51 split. Additional stats:
+
 - Subjects with >20% decline: 5 of 35 (14%)
 - Subjects with >20% increase: 7 of 35 (20%)
 - Subjects within +/-20%: 23 of 35 (66%)
@@ -1259,7 +1289,7 @@ Most subjects are relatively stable over the short session duration, but a meani
 
 Reorganized repository for presentation. Created FINDINGS.md with complete results narrative including limitations. Cleaned src/ to 10 core files. Formalized fatigue analysis script confirming 49/51% habituation split. Files: `FINDINGS.md`, `temporal_multiscale/fatigue_analysis.py`.
 
-*To be continued in Study 10...*
+_To be continued in Study 10..._
 
 ---
 
@@ -1285,13 +1315,13 @@ Running `run_replay_analysis.py` across all 35 subjects...
 
 **Replay results:**
 
-| Controller | Stim Time | Hit Rate | Wasted Stim |
-|-----------|-----------|----------|-------------|
-| Fixed Schedule | 66.6% | 49.5% | 50.5% |
-| Reactive Threshold | 34.5% | 81.2% | 18.8% |
-| Multi-Biomarker Reactive | 21.3% | 79.4% | 20.6% |
-| Phase-Aware Reactive | 36.4% | 79.1% | 20.9% |
-| PI Controller | 42.7% | 74.8% | 25.2% |
+| Controller               | Stim Time | Hit Rate | Wasted Stim |
+| ------------------------ | --------- | -------- | ----------- |
+| Fixed Schedule           | 66.6%     | 49.5%    | 50.5%       |
+| Reactive Threshold       | 34.5%     | 81.2%    | 18.8%       |
+| Multi-Biomarker Reactive | 21.3%     | 79.4%    | 20.6%       |
+| Phase-Aware Reactive     | 36.4%     | 79.1%    | 20.9%       |
+| PI Controller            | 42.7%     | 74.8%    | 25.2%       |
 
 "Hit rate" = when the controller chose to stimulate, was PAC actually low (meaning stimulation was needed)?
 
@@ -1343,21 +1373,21 @@ Original EEGNet has only 1,457 parameters. What if it's too small? Maybe R-squar
 
 **Rigorous validation results (n=50, duration=600s, seed=42):**
 
-| Condition | Fixed Eff. | Adaptive Eff. | Gain | p-value | Hedges' g |
-|-----------|-----------|---------------|------|---------|-----------|
-| Standard (no fatigue) | 0.343 | 0.371 | +8.2% | < 0.001 | 2.28 |
-| With fatigue (rate=0.008) | 0.333 | 0.363 | +8.9% | < 0.001 | 2.37 |
+| Condition                 | Fixed Eff. | Adaptive Eff. | Gain  | p-value | Hedges' g |
+| ------------------------- | ---------- | ------------- | ----- | ------- | --------- |
+| Standard (no fatigue)     | 0.343      | 0.371         | +8.2% | < 0.001 | 2.28      |
+| With fatigue (rate=0.008) | 0.333      | 0.363         | +8.9% | < 0.001 | 2.37      |
 
 Fatigue sensitivity sweep (n=50 per level):
 
-| Fatigue Level | Fixed Eff. | Adaptive Eff. | Gain | p-value |
-|---------------|-----------|---------------|------|---------|
-| None (0.000) | 0.343 | 0.375 | +9.5% | < 0.001 |
-| Mild (0.004) | 0.341 | 0.375 | +10.0% | < 0.001 |
-| Moderate (0.008) | 0.335 | 0.366 | +9.0% | < 0.001 |
-| Mod-High (0.015) | 0.329 | 0.361 | +9.7% | < 0.001 |
-| High (0.025) | 0.319 | 0.354 | +10.8% | < 0.001 |
-| Severe (0.040) | 0.316 | 0.352 | +11.2% | < 0.001 |
+| Fatigue Level    | Fixed Eff. | Adaptive Eff. | Gain   | p-value |
+| ---------------- | ---------- | ------------- | ------ | ------- |
+| None (0.000)     | 0.343      | 0.375         | +9.5%  | < 0.001 |
+| Mild (0.004)     | 0.341      | 0.375         | +10.0% | < 0.001 |
+| Moderate (0.008) | 0.335      | 0.366         | +9.0%  | < 0.001 |
+| Mod-High (0.015) | 0.329      | 0.361         | +9.7%  | < 0.001 |
+| High (0.025)     | 0.319      | 0.354         | +10.8% | < 0.001 |
+| Severe (0.040)   | 0.316      | 0.352         | +11.2% | < 0.001 |
 
 Every condition significant at p < 0.001 with large effect sizes (Hedges' g = 1.7 to 2.4). General increase from +9.0% to +11.2% confirms dose-response. Small non-monotonic dip at moderate fatigue (+9.0% vs +9.5% at none).
 
@@ -1396,14 +1426,14 @@ Running now...
 
 **Results across all 35 subjects:**
 
-| Controller | Alignment | Low-PAC Targeting | PAC Gap (uV^2) | Stim % |
-|-----------|-----------|-------------------|----------------|--------|
-| Fixed Schedule | 50.1% | 33.2% | 15.3 | 66.7% |
-| Reactive Threshold | 64.5% | 51.7% | 21.1 | 34.5% |
-| Multi-Biomarker | 62.8% | 49.3% | 19.7 | 21.3% |
-| Phase-Aware | 63.1% | 50.1% | 20.2 | 36.4% |
-| **TCN Predictive** | **72.1%** | **82.6%** | **30.5** | **42.7%** |
-| Oracle | 78.4% | 91.3% | 33.5 | 49.0% |
+| Controller         | Alignment | Low-PAC Targeting | PAC Gap (uV^2) | Stim %    |
+| ------------------ | --------- | ----------------- | -------------- | --------- |
+| Fixed Schedule     | 50.1%     | 33.2%             | 15.3           | 66.7%     |
+| Reactive Threshold | 64.5%     | 51.7%             | 21.1           | 34.5%     |
+| Multi-Biomarker    | 62.8%     | 49.3%             | 19.7           | 21.3%     |
+| Phase-Aware        | 63.1%     | 50.1%             | 20.2           | 36.4%     |
+| **TCN Predictive** | **72.1%** | **82.6%**         | **30.5**       | **42.7%** |
+| Oracle             | 78.4%     | 91.3%             | 33.5           | 49.0%     |
 
 **Statistical tests:** Wilcoxon signed-rank p < 0.001 for all TCN vs Reactive comparisons. Hedges' g = 1.31 for alignment, g = 4.47 for low-PAC targeting, g = 1.57 for PAC gap.
 
@@ -1434,12 +1464,12 @@ Building four fundamentally different fatigue implementations and running full c
 
 **Results:**
 
-| Fatigue Model | Fixed Eff. | Adaptive Eff. | Gain | p-value | Hedges' g |
-|---------------|-----------|---------------|------|---------|-----------|
-| Exponential Decay | 0.335 | 0.365 | +9.0% | 1.78e-15 | 2.31 |
-| Step Function | 0.329 | 0.352 | +6.9% | 4.44e-14 | 1.21 |
-| Heterogeneous Pop. | 0.333 | 0.363 | +8.9% | 2.49e-14 | 1.71 |
-| Saturation Model | 0.267 | 0.317 | +19.0% | 1.78e-15 | 3.66 |
+| Fatigue Model      | Fixed Eff. | Adaptive Eff. | Gain   | p-value  | Hedges' g |
+| ------------------ | ---------- | ------------- | ------ | -------- | --------- |
+| Exponential Decay  | 0.335      | 0.365         | +9.0%  | 1.78e-15 | 2.31      |
+| Step Function      | 0.329      | 0.352         | +6.9%  | 4.44e-14 | 1.21      |
+| Heterogeneous Pop. | 0.333      | 0.363         | +8.9%  | 2.49e-14 | 1.71      |
+| Saturation Model   | 0.267      | 0.317         | +19.0% | 1.78e-15 | 3.66      |
 
 Adaptive advantage is robust across ALL four models. Saturation shows largest gain (+19.0%) because fixed scheduling wastes the most when PAC ceiling depletes. Step Function shows smallest (+6.9%) because threshold mechanism creates less gradual deterioration. But even worst case, effect is large (g = 1.21) and highly significant.
 
@@ -1454,6 +1484,7 @@ Adaptive advantage is robust across ALL four models. Saturation shows largest ga
 Researching Synopsys 2026 rules. Starting 2026, there are 6 mandatory requirements plus a requirement to test at least 2 of 5 quality criteria.
 
 **6 Mandatory Requirements:**
+
 1. **Data Source Traceability:** OpenNeuro ds005048, publicly available, de-identified. **PASS**
 2. **AI Rationale:** TCN chosen for causal temporal prediction (dilations prevent future leakage). EEGNet chosen for compact EEG processing. Both justified by dataset size. **PASS**
 3. **Data Curation Plan:** Artifact rejection +/-100 uV, 7 frontal channels, subject-level splits, NaN exclusion. **PASS**
@@ -1462,6 +1493,7 @@ Researching Synopsys 2026 rules. Starting 2026, there are 6 mandatory requiremen
 6. **Validation Strategy:** Subject-level train/val/test (24/5/6). Shuffle-label sanity check. No subject in multiple splits. **PASS**
 
 **Quality Criteria (must test 2 of 5):**
+
 - **Accuracy:** TESTED. R-squared, RMSE, correlation at 6 horizons with 3 baselines.
 - **Generalizability:** TESTED. 6 held-out test subjects never seen during training or model selection.
 - **Interpretability:** TESTED. Ridge feature ablation. Shuffle-label test. Attention weight analysis script ready.
@@ -1494,7 +1526,7 @@ These scripts are ready to run with the checkpoint. They directly address the Sy
 
 Validated the system on real data through replay analysis (all adaptive controllers beat Fixed Schedule, p < 0.001, 35 subjects). Fixed statistical issues: replaced n=1 ANOVA with n=50 bootstrap, added Hedges' g effect sizes. Tested EEGNet capacity: larger models (35K, 141K params) did not improve R-squared, confirming data limitation. The TCN predictive controller on real data achieved 72.1% alignment vs 64.5% reactive (g=1.31, p<0.001), 82.6% vs 51.7% low-PAC targeting (g=4.47), 30.5 vs 21.1 uV^2 PAC gap (g=1.57). 35/35 subjects benefited. Adaptive advantage robust across 4 fatigue models (g=1.21-3.66, all p<10^-13). Passed Synopsys ML/AI compliance: 6/6 mandatory requirements, 3/5 quality criteria tested. Interpretability scripts prepared.
 
-*To be continued in Study 11...*
+_To be continued in Study 11..._
 
 ---
 
@@ -1541,16 +1573,19 @@ After about 20 days of active development, extensive reading, and continuous ite
 ### What I Learned
 
 **About machine learning:**
+
 - Simple models beat complex models on small datasets. Samples-per-parameter ratio is everything.
 - Data leakage is insidious. Any feature mathematically related to the target needs scrutiny.
 - Always compare against trivial baselines. Being honest about where your model does and doesn't add value is more interesting than cherry-picking.
 - Target smoothing can inflate results. Understanding what you're actually predicting is critical.
 
 **About neuroscience:**
+
 - PAC is inherently noisy from short windows. Reliable measurement requires long windows or denoising.
 - Neural habituation varies enormously across individuals. A fixed protocol is suboptimal for almost everyone.
 
 **About research process:**
+
 - Knowing when to stop optimizing one approach and try something different is the most important skill.
 - Negative results ARE results. The LSTM failure taught me about 2-second PAC autocorrelation structure.
 - Honest reporting of limitations makes work stronger. Writing documentation forces clarity.
@@ -1610,21 +1645,21 @@ That's the most important thing I learned from this project: in research, integr
 
 ## References
 
-1. Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. *Nature*, 540(7632), 230-235.
-2. Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. *Cell*, 177(2), 256-271.
-3. Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. *Journal of Neurophysiology*, 104(2), 1195-1210.
-4. Lawhern, V. J., et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. *Journal of Neural Engineering*, 15(5), 056013.
-5. Lahijanian, M., et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. *Scientific Reports*, 14, 13153.
-6. Canolty, R. T., & Knight, R. T. (2010). The functional role of cross-frequency coupling. *Trends in Cognitive Sciences*, 14(11), 506-515.
-7. Thompson, R. F., & Spencer, W. A. (1966). Habituation: a model phenomenon for the study of neuronal substrates of behavior. *Psychological Review*, 73(1), 16-43.
-8. Rankin, C. H., et al. (2009). Habituation revisited: an updated and revised description of the behavioral characteristics of habituation. *Neurobiology of Learning and Memory*, 92(2), 135-138.
+1. Iaccarino, H. F., et al. (2016). Gamma frequency entrainment attenuates amyloid load and modifies microglia. _Nature_, 540(7632), 230-235.
+2. Martorell, A. J., et al. (2019). Multi-sensory gamma stimulation ameliorates Alzheimer's-associated pathology and improves cognition. _Cell_, 177(2), 256-271.
+3. Tort, A. B., et al. (2010). Measuring phase-amplitude coupling between neuronal oscillations of different frequencies. _Journal of Neurophysiology_, 104(2), 1195-1210.
+4. Lawhern, V. J., et al. (2018). EEGNet: A compact convolutional neural network for EEG-based brain-computer interfaces. _Journal of Neural Engineering_, 15(5), 056013.
+5. Lahijanian, M., et al. (2024). Auditory gamma-band entrainment enhances default mode network connectivity in dementia patients. _Scientific Reports_, 14, 13153.
+6. Canolty, R. T., & Knight, R. T. (2010). The functional role of cross-frequency coupling. _Trends in Cognitive Sciences_, 14(11), 506-515.
+7. Thompson, R. F., & Spencer, W. A. (1966). Habituation: a model phenomenon for the study of neuronal substrates of behavior. _Psychological Review_, 73(1), 16-43.
+8. Rankin, C. H., et al. (2009). Habituation revisited: an updated and revised description of the behavioral characteristics of habituation. _Neurobiology of Learning and Memory_, 92(2), 135-138.
 
 ---
 
-*Notebook completed: March 3, 2026*
-*Total project duration: December 10, 2025 to March 3, 2026 (84 days)*
-*Active development days: approximately 20*
-*Total lines of code: approximately 6,000 (production) + several thousand more in archived experiments*
-*Commits on main branch: 24, plus 8+ on rigor branch*
+_Notebook completed: March 3, 2026_
+_Total project duration: December 10, 2025 to March 3, 2026 (84 days)_
+_Active development days: approximately 20_
+_Total lines of code: approximately 6,000 (production) + several thousand more in archived experiments_
+_Commits on main branch: 24, plus 8+ on rigor branch_
 
 [End of notebook — all remaining pages voided]

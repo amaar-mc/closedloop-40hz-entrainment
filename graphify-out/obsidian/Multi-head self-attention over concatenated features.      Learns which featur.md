@@ -7,9 +7,10 @@ tags:
   - community/Archived_SpecTempNet_V3
 ---
 
-# Multi-head self-attention over concatenated features.      Learns which featur
+# Multi-head self-attention over concatenated features. Learns which featur
 
 ## Connections
+
 - [[MultiHeadFeatureAttention]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_SpecTempNet_V3

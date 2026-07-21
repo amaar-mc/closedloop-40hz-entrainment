@@ -9,7 +9,8 @@ tags:
 # Feature Ablation Figure on vFinal Poster (73 Features → 12, R²=-0.025→0.606)
 
 ## Connections
+
 - [[Key Discovery Feature Selection Over Architecture (73→12 Features)]] - `implements` [INFERRED]
 - [[vFinal Poster PDF (CSEF 2026 Submission Print)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

@@ -10,6 +10,7 @@ tags:
 # add_figure()
 
 ## Connections
+
 - [[Create a figure + caption block with aspect ratio preserved.]] - `rationale_for` [EXTRACTED]
 - [[generate_pdf.py]] - `contains` [EXTRACTED]
 - [[main()_73]] - `calls` [EXTRACTED]

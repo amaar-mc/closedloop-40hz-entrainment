@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[Reset state variables to initial conditions.]] - `rationale_for` [EXTRACTED]
 - [[WilsonCowanModel]] - `method` [EXTRACTED]
 

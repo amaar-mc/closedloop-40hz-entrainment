@@ -7,9 +7,10 @@ tags:
   - community/Replay_Analysis_&_Controllers
 ---
 
-# CUSUM change-detection controller (Page 1954).      Detects *sustained* PAC drop
+# CUSUM change-detection controller (Page 1954). Detects _sustained_ PAC drop
 
 ## Connections
+
 - [[CUSUMControl]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

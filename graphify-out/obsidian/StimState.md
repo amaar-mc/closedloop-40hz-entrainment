@@ -10,6 +10,7 @@ tags:
 # StimState
 
 ## Connections
+
 - [[Abstract base class for all control strategies.      Subclasses must implement]] - `uses` [INFERRED]
 - [[Add control method to comparison.]] - `uses` [INFERRED]
 - [[Compare methods using statistical tests on multi-trial data.          Uses acc]] - `uses` [INFERRED]
@@ -55,4 +56,4 @@ tags:
 - [[__str__()]] - `method` [EXTRACTED]
 - [[controller.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

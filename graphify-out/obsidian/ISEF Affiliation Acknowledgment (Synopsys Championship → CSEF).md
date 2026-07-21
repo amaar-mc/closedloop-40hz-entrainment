@@ -10,6 +10,7 @@ tags:
 # ISEF Affiliation Acknowledgment (Synopsys Championship → CSEF)
 
 ## Connections
+
 - [[2026 Project Application Form — SCVSEFA P10, Computational Biology Category]] - `conceptually_related_to` [INFERRED]
 - [[Student Permission and Hold Harmless Agreement]] - `references` [EXTRACTED]
 

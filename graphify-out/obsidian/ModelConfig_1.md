@@ -10,6 +10,7 @@ tags:
 # ModelConfig
 
 ## Connections
+
 - [[Compute Pearson correlation coefficient.]] - `uses` [INFERRED]
 - [[Compute Pearson correlation.]] - `uses` [INFERRED]
 - [[Compute R-squared (coefficient of determination).]] - `uses` [INFERRED]
@@ -41,4 +42,4 @@ tags:
 - [[__post_init__()_2]] - `method` [EXTRACTED]
 - [[tcn_variants.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

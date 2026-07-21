@@ -8,7 +8,7 @@
 
 Good afternoon. I want to talk about a treatment that uses sound to change brainwaves — and why the way we deliver it right now is wasteful.
 
-There's a therapy called **40 Hz auditory entrainment**. You play a 40 Hz clicking sound, and the brain's gamma oscillations synchronize to it. This synchronization — called *entrainment* — triggers the brain's immune cleanup system: microglia start clearing amyloid-beta and tau protein, the hallmarks of Alzheimer's disease. This was discovered by Li-Huei Tsai's lab at MIT in 2016, and clinical trials by Cognito Therapeutics are ongoing.
+There's a therapy called **40 Hz auditory entrainment**. You play a 40 Hz clicking sound, and the brain's gamma oscillations synchronize to it. This synchronization — called _entrainment_ — triggers the brain's immune cleanup system: microglia start clearing amyloid-beta and tau protein, the hallmarks of Alzheimer's disease. This was discovered by Li-Huei Tsai's lab at MIT in 2016, and clinical trials by Cognito Therapeutics are ongoing.
 
 The problem is **how we deliver it**. Current protocols use a **fixed schedule**: 40 seconds of stimulation, 20 seconds of rest, repeated for an hour. Every patient gets the same timing regardless of what their brain is actually doing.
 
@@ -26,7 +26,7 @@ When I replayed the fixed schedule through the data, I found:
 
 > **50.5% of all stimulation time is wasted.** During those moments, PAC was already high or flat — the brain was already entrained, and the stimulation added nothing.
 
-Meanwhile, during the 33% of time the patient was resting, **50% of those rest periods had below-median PAC** — the brain had *lost* entrainment, but no stimulation was being delivered.
+Meanwhile, during the 33% of time the patient was resting, **50% of those rest periods had below-median PAC** — the brain had _lost_ entrainment, but no stimulation was being delivered.
 
 Fixed scheduling stimulates when it doesn't need to and rests when it shouldn't.
 
@@ -37,7 +37,7 @@ Fixed scheduling stimulates when it doesn't need to and rests when it shouldn't.
 My approach has two parts:
 
 **Part 1: Can we predict when the brain will lose entrainment?**
-If we can forecast PAC 5-10 seconds into the future, we can stimulate *before* the drop happens — proactive rather than reactive.
+If we can forecast PAC 5-10 seconds into the future, we can stimulate _before_ the drop happens — proactive rather than reactive.
 
 **Part 2: Can we build a controller that uses those predictions?**
 Given a prediction of future brain state, decide: stimulate now, or rest?
@@ -65,6 +65,7 @@ I built a **Multiscale Causal Temporal Convolutional Network (TCN)**.
 "Causal" is the key word. The model can only look at the past — padding is applied only to the left side of convolutions. This guarantees **no future information leaks** into predictions.
 
 Architecture:
+
 - Input: 20-step sequences (40 seconds of history), each step has 73 features — spectral power, PAC history, and stimulation context
 - 4 dilated causal convolution blocks (dilations: 1, 2, 4, 8) giving a 31-step receptive field
 - Attention-weighted pooling across time
@@ -81,13 +82,13 @@ This is the most important finding of the project.
 I tested how well different methods predict PAC at increasing time horizons — from 1 second ahead to 10 seconds ahead:
 
 | Horizon | Persistence R-squared | Ridge Regression R-squared | TCN R-squared |
-|---------|----------------------|---------------------------|---------------|
-| 1 sec   | 0.76                 | **0.81**                  | 0.74          |
-| 2 sec   | 0.49                 | **0.54**                  | 0.47          |
-| 3 sec   | 0.23                 | 0.25                      | **0.28**      |
-| 5 sec   | -0.27                | -0.39                     | **0.25**      |
-| 8 sec   | -0.28                | -0.21                     | **0.24**      |
-| 10 sec  | -0.26                | -0.21                     | **0.28**      |
+| ------- | --------------------- | -------------------------- | ------------- |
+| 1 sec   | 0.76                  | **0.81**                   | 0.74          |
+| 2 sec   | 0.49                  | **0.54**                   | 0.47          |
+| 3 sec   | 0.23                  | 0.25                       | **0.28**      |
+| 5 sec   | -0.27                 | -0.39                      | **0.25**      |
+| 8 sec   | -0.28                 | -0.21                      | **0.24**      |
+| 10 sec  | -0.26                 | -0.21                      | **0.28**      |
 
 At 1-2 seconds ahead, you don't need a neural network. "PAC won't change much" (persistence) and a simple linear model (Ridge) both work fine.
 
@@ -110,14 +111,14 @@ I also modeled **neural fatigue** — the brain habituating to repeated stimulat
 
 Results of the **fatigue sensitivity sweep**:
 
-| Fatigue Level  | Fixed Efficiency | Adaptive Efficiency | Gain  | p-value   |
-|----------------|-----------------|---------------------|-------|-----------|
-| None (0%)      | 5.38            | 5.40                | +0.4% | 0.49 (ns) |
-| Mild           | 5.29            | 5.36                | +1.3% | 0.02 *    |
-| Moderate       | 5.22            | 5.33                | +2.1% | 0.01 **   |
-| Moderate-high  | 5.10            | 5.23                | +2.6% | 0.01 **   |
-| High           | 4.97            | 5.18                | +4.3% | 0.002 **  |
-| Severe         | 4.82            | 5.09                | +5.7% | 0.01 **   |
+| Fatigue Level | Fixed Efficiency | Adaptive Efficiency | Gain  | p-value    |
+| ------------- | ---------------- | ------------------- | ----- | ---------- |
+| None (0%)     | 5.38             | 5.40                | +0.4% | 0.49 (ns)  |
+| Mild          | 5.29             | 5.36                | +1.3% | 0.02 \*    |
+| Moderate      | 5.22             | 5.33                | +2.1% | 0.01 \*\*  |
+| Moderate-high | 5.10             | 5.23                | +2.6% | 0.01 \*\*  |
+| High          | 4.97             | 5.18                | +4.3% | 0.002 \*\* |
+| Severe        | 4.82             | 5.09                | +5.7% | 0.01 \*\*  |
 
 (Efficiency = mean PAC / fraction of time stimulating. Higher is better.)
 
@@ -133,13 +134,13 @@ I replayed each subject's actual PAC time series through **8 different controlle
 
 The top results:
 
-| Controller                 | Stim Time | Hit Rate | Wasted Stim |
-|----------------------------|-----------|----------|-------------|
-| Fixed Schedule             | 66.6%     | 49.5%    | 50.5%       |
-| **Reactive Threshold**     | **34.5%** | **81.2%**| **18.8%**   |
-| Multi-Biomarker Reactive   | 21.3%     | 79.4%    | 20.6%       |
-| Phase-Aware Reactive       | 36.4%     | 79.1%    | 20.9%       |
-| PI Controller              | 42.7%     | 74.8%    | 25.2%       |
+| Controller               | Stim Time | Hit Rate  | Wasted Stim |
+| ------------------------ | --------- | --------- | ----------- |
+| Fixed Schedule           | 66.6%     | 49.5%     | 50.5%       |
+| **Reactive Threshold**   | **34.5%** | **81.2%** | **18.8%**   |
+| Multi-Biomarker Reactive | 21.3%     | 79.4%     | 20.6%       |
+| Phase-Aware Reactive     | 36.4%     | 79.1%     | 20.9%       |
+| PI Controller            | 42.7%     | 74.8%     | 25.2%       |
 
 "Hit rate" means: when the controller chose to stimulate, did PAC actually rise afterward? Higher is better. "Wasted stim" is the inverse.
 
@@ -155,15 +156,16 @@ All four new controllers significantly outperform Fixed Schedule (Wilcoxon p < 0
 
 I then integrated the trained TCN directly into the closed-loop controller and replayed all 35 subjects' real EEG data through six control strategies.
 
-| Controller | Epoch Alignment | Low-PAC Targeting | PAC Gap (×10⁻⁶ MI) | Stim % |
-|-----------|----------------|-------------------|---------------------|--------|
-| Fixed Schedule | 45.0% | 61.4% | −6.6 (WRONG) | 66.6% |
-| Reactive Threshold | 64.5% | 51.7% | +21.1 | 36.7% |
-| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** | 59.7% |
-| Hybrid TCN+Reactive | 73.8% | 85.3% | +34.0 | 60.8% |
-| Alignment Oracle | 100.0% | 100.0% | +33.3 | 48.3% |
+| Controller          | Epoch Alignment | Low-PAC Targeting | PAC Gap (×10⁻⁶ MI) | Stim % |
+| ------------------- | --------------- | ----------------- | ------------------ | ------ |
+| Fixed Schedule      | 45.0%           | 61.4%             | −6.6 (WRONG)       | 66.6%  |
+| Reactive Threshold  | 64.5%           | 51.7%             | +21.1              | 36.7%  |
+| **TCN Predictive**  | **72.1%**       | **82.6%**         | **+30.5**          | 59.7%  |
+| Hybrid TCN+Reactive | 73.8%           | 85.3%             | +34.0              | 60.8%  |
+| Alignment Oracle    | 100.0%          | 100.0%            | +33.3              | 48.3%  |
 
 **Key findings (all N=35, Wilcoxon p < 0.001):**
+
 - TCN alignment 72.1% vs Reactive 64.5% — **Hedges' g = +1.31** (large effect)
 - TCN targets 82.6% of low-PAC windows vs Reactive's 51.7% — **g = +4.47** (very large)
 - TCN PAC targeting gap +30.5 ×10⁻⁶ MI vs Reactive +21.1 ×10⁻⁶ MI — **g = +1.57** (large), reaching 91% of oracle bound
@@ -191,13 +193,13 @@ When I measured habituation across subjects — does PAC decline over the course
 
 Every pipeline in machine learning needs to prove it isn't cheating. Here are the audit results:
 
-| Check | Result |
-|-------|--------|
-| No future data leakage in temporal sequences | PASS |
-| Subject-level train/val/test separation | PASS |
-| Shuffle-label sanity (model on randomized labels) | R-squared = -0.33 (correctly learns nothing) |
-| Causal convolution verification | PASS (padding on left only) |
-| Feature ablation | PAC history dominates; spectral features alone: R-squared = 0.055 |
+| Check                                             | Result                                                            |
+| ------------------------------------------------- | ----------------------------------------------------------------- |
+| No future data leakage in temporal sequences      | PASS                                                              |
+| Subject-level train/val/test separation           | PASS                                                              |
+| Shuffle-label sanity (model on randomized labels) | R-squared = -0.33 (correctly learns nothing)                      |
+| Causal convolution verification                   | PASS (padding on left only)                                       |
+| Feature ablation                                  | PAC history dominates; spectral features alone: R-squared = 0.055 |
 
 The model learns real signal, not artifacts.
 
@@ -208,14 +210,16 @@ The model learns real signal, not artifacts.
 I want to be upfront about what this work does and doesn't show.
 
 **What it shows:**
+
 - Future PAC is predictable at 5-10 second horizons where baselines fail
 - Adaptive scheduling is more efficient than fixed scheduling, confirmed both in simulation and on real data
 - The advantage grows with habituation severity
 
 **What it doesn't show:**
+
 - This has not been tested in a live closed-loop experiment. All results are from offline replay or simulation.
 - The dataset has 35 subjects from a single clinic. Generalization to other populations is unconfirmed.
-- Sessions are 6-10 minutes. Clinical protocols run 30-60 minutes, where fatigue effects may be more pronounced — which would actually *strengthen* the case for adaptive scheduling.
+- Sessions are 6-10 minutes. Clinical protocols run 30-60 minutes, where fatigue effects may be more pronounced — which would actually _strengthen_ the case for adaptive scheduling.
 - PAC is measured as a proxy for therapeutic benefit. The link between PAC and downstream outcomes (amyloid clearance, cognitive improvement) is supported by the literature but not directly measured here.
 
 **The R-squared of 0.25 at 5-10 seconds is modest in absolute terms.** But the right comparison isn't against 1.0 — it's against the baselines, which produce negative R-squared at those horizons. The TCN extracts the only useful signal available.
@@ -245,6 +249,7 @@ Thank you.
 ### Model Architectures
 
 **EEGNet (Static PAC Predictor)**
+
 - 1,457 parameters
 - Input: (batch, 1, 7, 500)
 - Block 1: temporal conv (1x64) + depthwise spatial (7x1)
@@ -253,6 +258,7 @@ Thank you.
 - Test R-squared: 0.287
 
 **Multiscale Causal TCN (Temporal Predictor)**
+
 - 31,043 parameters
 - Input: (batch, 20, 73) — 20 timesteps x 73 features
 - 4 causal depthwise-separable conv blocks, dilations [1, 2, 4, 8]
@@ -277,12 +283,12 @@ Thank you.
 3. **Predictive Look-Ahead** — trend detection + z-score with 5-step hysteresis
 4. **Oracle** — knows future PAC (theoretical upper bound)
 5. **CUSUM Change Detection** — cumulative sum algorithm detecting sustained PAC drops (Page 1954)
-6. **Multi-Biomarker Reactive** — weighted z-scores: 0.5*PAC + 0.3*gamma_power + 0.2*theta_power
+6. **Multi-Biomarker Reactive** — weighted z-scores: 0.5*PAC + 0.3*gamma_power + 0.2\*theta_power
 7. **Phase-Aware Reactive** — reactive with threshold modulated by theta-gamma phase coherence
 8. **PI Controller** — proportional-integral control on PAC error with anti-windup
 
 ### Key References
 
-- Tsai et al. (2016). Gamma frequency entrainment attenuates amyloid load. *Nature*, 540, 230-235.
-- Tort et al. (2010). Measuring phase-amplitude coupling. *Journal of Neurophysiology*, 104(2), 1195-1210.
-- Page (1954). Continuous inspection schemes. *Biometrika*, 41(1/2), 100-115.
+- Tsai et al. (2016). Gamma frequency entrainment attenuates amyloid load. _Nature_, 540, 230-235.
+- Tort et al. (2010). Measuring phase-amplitude coupling. _Journal of Neurophysiology_, 104(2), 1195-1210.
+- Page (1954). Continuous inspection schemes. _Biometrika_, 41(1/2), 100-115.

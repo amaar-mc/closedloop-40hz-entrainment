@@ -10,9 +10,10 @@ tags:
 # generate_subject_parameters()
 
 ## Connections
+
 - [[Generate randomized simulator parameters for diverse subjects.      Varies tau]] - `rationale_for` [EXTRACTED]
 - [[main()_65]] - `calls` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 - [[run_population_diverse()]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

@@ -7,12 +7,13 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Load and concatenate train/val/test npz splits into a single pool.      The or
+# Load and concatenate train/val/test npz splits into a single pool. The or
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGNetEnhanced]] - `uses` [INFERRED]
 - [[EEGNetLarge]] - `uses` [INFERRED]
 - [[load_all_data()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -9,6 +9,7 @@ tags:
 # Lab Notebook Requirements Guidelines (Rice University Standard Protocol)
 
 ## Connections
+
 - [[Lab Notebook Advice Consolidate with Dates, Place in Physical Folder]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_113

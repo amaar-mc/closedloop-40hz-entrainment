@@ -10,6 +10,7 @@ tags:
 # caregiver_app.py
 
 ## Connections
+
 - [[NeuroCare 40Hz Therapy — Caregiver Dashboard  Multi-page Streamlit app for careg]] - `rationale_for` [EXTRACTED]
 - [[_get_patient_by_id()]] - `contains` [EXTRACTED]
 - [[_init_session_state()]] - `contains` [EXTRACTED]
@@ -28,4 +29,4 @@ tags:
 - [[render_welcome()]] - `contains` [EXTRACTED]
 - [[save_session()]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

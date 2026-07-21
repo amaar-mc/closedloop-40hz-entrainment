@@ -9,6 +9,7 @@ tags:
 # Figure 7: Real-Data Controller Timeline — Sub-15 (Test Set)
 
 ## Connections
+
 - [[Actual PAC Signal Ground Truth (Sub-15 test set)]] - `references` [EXTRACTED]
 - [[Closed-Loop 40Hz Entrainment System Architecture Diagram]] - `conceptually_related_to` [INFERRED]
 - [[Reactive Controller Stimulation Decisions (Sub-15)]] - `references` [EXTRACTED]

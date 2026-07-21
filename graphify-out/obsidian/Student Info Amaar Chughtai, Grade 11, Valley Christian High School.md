@@ -10,6 +10,7 @@ tags:
 # Student Info: Amaar Chughtai, Grade 11, Valley Christian High School
 
 ## Connections
+
 - [[Student Checklist (1A) — Project Registration Form]] - `references` [EXTRACTED]
 
   #community/Community_48

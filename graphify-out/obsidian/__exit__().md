@@ -7,9 +7,10 @@ tags:
   - community/Community_32
 ---
 
-# __exit__()
+# **exit**()
 
 ## Connections
+
 - [[SimulatedEEGAdapter]] - `method` [EXTRACTED]
 - [[close()_2]] - `calls` [EXTRACTED]
 

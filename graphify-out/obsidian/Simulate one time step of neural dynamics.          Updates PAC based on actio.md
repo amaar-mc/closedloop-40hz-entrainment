@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Simulate one time step of neural dynamics.          Updates PAC based on actio
+# Simulate one time step of neural dynamics. Updates PAC based on actio
 
 ## Connections
+
 - [[step()_65]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

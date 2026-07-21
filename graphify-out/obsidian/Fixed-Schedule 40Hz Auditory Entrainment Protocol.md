@@ -10,6 +10,7 @@ tags:
 # Fixed-Schedule 40Hz Auditory Entrainment Protocol
 
 ## Connections
+
 - [[Reactive Closed-Loop Stimulation System]] - `conceptually_related_to` [INFERRED]
 - [[Two-Stage Predictive Closed-Loop System]] - `references` [EXTRACTED]
 

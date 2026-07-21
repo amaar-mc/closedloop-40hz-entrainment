@@ -10,6 +10,7 @@ tags:
 # Differentiators vs Prior Work
 
 ## Connections
+
 - [[Spectral Feature Generalization Failure Finding]] - `references` [EXTRACTED]
 
   #community/Community_68

@@ -10,6 +10,7 @@ tags:
 # Apply font formatting to a run.
 
 ## Connections
+
 - [[_set_font()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

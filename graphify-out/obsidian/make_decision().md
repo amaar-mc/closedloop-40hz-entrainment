@@ -10,8 +10,9 @@ tags:
 # make_decision()
 
 ## Connections
+
 - [[Reactive z-score stimulus decision with hysteresis hold.      Args         pac_]] - `rationale_for` [EXTRACTED]
 - [[demo_streaming.py]] - `contains` [EXTRACTED]
 - [[run_demo()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

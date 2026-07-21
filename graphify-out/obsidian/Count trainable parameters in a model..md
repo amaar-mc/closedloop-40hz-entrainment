@@ -10,6 +10,7 @@ tags:
 # Count trainable parameters in a model.
 
 ## Connections
+
 - [[_count_parameters()]] - `rationale_for` [EXTRACTED]
 
   #community/TCN_Layer_Internals

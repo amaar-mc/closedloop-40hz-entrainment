@@ -7,9 +7,10 @@ tags:
   - community/12-Feature_TCN_Validation
 ---
 
-# _pac_features()
+# \_pac_features()
 
 ## Connections
+
 - [[TCN12FeatCtrl]] - `method` [EXTRACTED]
 - [[_build_feature()_1]] - `calls` [EXTRACTED]
 

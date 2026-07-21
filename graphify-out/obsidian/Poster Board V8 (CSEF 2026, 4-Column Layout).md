@@ -9,6 +9,7 @@ tags:
 # Poster Board V8 (CSEF 2026, 4-Column Layout)
 
 ## Connections
+
 - [[4-Column Poster Layout (V8 Structure)]] - `references` [EXTRACTED]
 - [[Global Figure Style Specification (Color Palette and Typography)]] - `references` [EXTRACTED]
 - [[Key Discovery Callout Box 12-Feature Ablation Narrative]] - `references` [EXTRACTED]

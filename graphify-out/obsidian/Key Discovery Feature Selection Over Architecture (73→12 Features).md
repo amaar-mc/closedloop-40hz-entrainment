@@ -10,8 +10,9 @@ tags:
 # Key Discovery: Feature Selection Over Architecture (73→12 Features)
 
 ## Connections
+
 - [[Architecture Exploration Table (8 Models, R²=0.287 Ceiling)]] - `conceptually_related_to` [INFERRED]
 - [[Feature Ablation Figure on vFinal Poster (73 Features → 12, R²=-0.025→0.606)]] - `implements` [INFERRED]
 - [[Poster Board V7 (Audit-Clean, CSEF 2026)]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

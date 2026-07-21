@@ -7,9 +7,10 @@ tags:
   - community/Lab_Notebook_PDF_Generation
 ---
 
-# Convert inline markdown (**bold**, *italic*, `code`) to reportlab XML.
+# Convert inline markdown (**bold**, _italic_, `code`) to reportlab XML.
 
 ## Connections
+
 - [[md_inline()]] - `rationale_for` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

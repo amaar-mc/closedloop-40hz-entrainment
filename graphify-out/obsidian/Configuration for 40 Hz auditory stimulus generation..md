@@ -10,6 +10,7 @@ tags:
 # Configuration for 40 Hz auditory stimulus generation.
 
 ## Connections
+
 - [[StimulusConfig]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

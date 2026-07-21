@@ -10,6 +10,7 @@ tags:
 # Slide 8 — Results page 2 (two tables + stat bullets).
 
 ## Connections
+
 - [[p08_results2()_2]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

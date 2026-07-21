@@ -10,6 +10,7 @@ tags:
 # Lawhern 2018 (J. Neural Eng): EEGNet Compact CNN for EEG-BCI
 
 ## Connections
+
 - [[IEEE Research Paper Personalized Deep Learning for Closed-Loop 40Hz Entrainment]] - `cites` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[Args             model EEGNetV2 model             device 'cuda' or 'cpu']] - `rationale_for` [EXTRACTED]
 - [[ModelTrainerV2]] - `method` [EXTRACTED]
 

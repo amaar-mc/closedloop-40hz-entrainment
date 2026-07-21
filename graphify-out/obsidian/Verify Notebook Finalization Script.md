@@ -9,6 +9,7 @@ tags:
 # Verify Notebook Finalization Script
 
 ## Connections
+
 - [[check_chronology (Notebook Finalization Verifier)]] - `calls` [EXTRACTED]
 - [[check_packaging (Notebook Finalization Verifier)]] - `calls` [EXTRACTED]
 - [[check_preservation (Notebook Finalization Verifier)]] - `calls` [EXTRACTED]

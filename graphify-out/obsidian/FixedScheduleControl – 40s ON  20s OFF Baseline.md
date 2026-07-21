@@ -10,6 +10,7 @@ tags:
 # FixedScheduleControl – 40s ON / 20s OFF Baseline
 
 ## Connections
+
 - [[main()_65]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

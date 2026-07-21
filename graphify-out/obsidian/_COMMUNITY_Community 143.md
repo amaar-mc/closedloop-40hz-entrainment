@@ -8,6 +8,7 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
+
 - [[Multiscale Temporal Features (73 dims 61 spectral + 7 PAC-derived + 5 stim context)]] - document - docs/methodology/CODE_MAP.md
 - [[Spectral Features (61 dims, srcspectral_features.py)]] - document - docs/methodology/CODE_MAP.md
 

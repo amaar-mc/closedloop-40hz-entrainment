@@ -10,6 +10,7 @@ tags:
 # extract_enhanced_features()
 
 ## Connections
+
 - [[Extract enhanced time-domain features from a single EEG window.      For each ch]] - `rationale_for` [EXTRACTED]
 - [[compute_hjorth_params()]] - `calls` [EXTRACTED]
 - [[compute_sample_entropy()]] - `calls` [EXTRACTED]

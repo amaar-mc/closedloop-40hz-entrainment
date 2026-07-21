@@ -7,9 +7,10 @@ tags:
   - community/TVB_Alzheimer_Simulator
 ---
 
-# Reset simulator to initial state.          Args:             initial_pac: Overri
+# Reset simulator to initial state. Args: initial_pac: Overri
 
 ## Connections
+
 - [[reset()_71]] - `rationale_for` [EXTRACTED]
 
   #community/TVB_Alzheimer_Simulator

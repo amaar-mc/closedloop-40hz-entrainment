@@ -9,6 +9,7 @@ tags:
 # submission/flyer/ (QR Code Output Directory)
 
 ## Connections
+
 - [[Generate QR Codes Script]] - `references` [EXTRACTED]
 
   #community/Community_106

@@ -10,6 +10,7 @@ tags:
 # Figure S3: Stimulation Rate vs Alignment Pareto Frontier
 
 ## Connections
+
 - [[Research Paper Supplementary Materials]] - `references` [EXTRACTED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

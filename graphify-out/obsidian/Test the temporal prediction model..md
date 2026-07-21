@@ -10,6 +10,7 @@ tags:
 # Test the temporal prediction model.
 
 ## Connections
+
 - [[test_temporal_model()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_Temporal_PAC_Predictor

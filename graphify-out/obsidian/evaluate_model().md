@@ -10,6 +10,7 @@ tags:
 # evaluate_model()
 
 ## Connections
+
 - [[Evaluate model and return metrics in raw PAC space.]] - `rationale_for` [EXTRACTED]
 - [[compute_metrics()]] - `calls` [EXTRACTED]
 - [[denorm()]] - `calls` [EXTRACTED]

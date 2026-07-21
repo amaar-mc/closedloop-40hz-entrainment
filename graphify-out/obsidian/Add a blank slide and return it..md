@@ -10,6 +10,7 @@ tags:
 # Add a blank slide and return it.
 
 ## Connections
+
 - [[new_slide()]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

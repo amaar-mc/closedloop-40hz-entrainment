@@ -10,6 +10,7 @@ tags:
 # SeqDataset
 
 ## Connections
+
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
@@ -18,4 +19,4 @@ tags:
 - [[__len__()_10]] - `method` [EXTRACTED]
 - [[checkpoint_deployment_audit.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

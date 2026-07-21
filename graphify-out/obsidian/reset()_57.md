@@ -10,8 +10,9 @@ tags:
 # reset()
 
 ## Connections
+
 - [[ClosedLoopController]] - `method` [EXTRACTED]
 - [[Reset controller for new session.          Clears all state, baseline, and his]] - `rationale_for` [EXTRACTED]
 - [[reset()_58]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -7,9 +7,10 @@ tags:
   - community/Archived_EEGNet_V2
 ---
 
-# _augment()
+# \_augment()
 
 ## Connections
+
 - [[Apply data augmentation to EEG window.          Techniques         1. Time j]] - `rationale_for` [EXTRACTED]
 - [[EEGDatasetV2]] - `method` [EXTRACTED]
 - [[__getitem__()_9]] - `calls` [EXTRACTED]

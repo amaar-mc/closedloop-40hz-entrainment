@@ -10,6 +10,7 @@ tags:
 # Slide 7 — Results page 1 (horizon sweep table).
 
 ## Connections
+
 - [[p07_results1()_2]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

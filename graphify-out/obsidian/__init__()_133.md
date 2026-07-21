@@ -7,9 +7,10 @@ tags:
   - community/TCN_Layer_Internals
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[AttentionPool1D_2]] - `calls` [EXTRACTED]
 - [[CausalDSConvBlock_3]] - `calls` [EXTRACTED]
 - [[DeepDilationTCN]] - `method` [EXTRACTED]

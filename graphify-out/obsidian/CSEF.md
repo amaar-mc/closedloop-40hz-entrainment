@@ -10,6 +10,7 @@ tags:
 # CSEF
 
 ## Connections
+
 - [[FPDF]] - `inherits` [EXTRACTED]
 - [[__init__()_109]] - `method` [EXTRACTED]
 - [[body()_1]] - `method` [EXTRACTED]

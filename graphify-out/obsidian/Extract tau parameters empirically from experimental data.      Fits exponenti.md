@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# Extract tau parameters empirically from experimental data.      Fits exponenti
+# Extract tau parameters empirically from experimental data. Fits exponenti
 
 ## Connections
+
 - [[extract_tau_parameters_from_data()]] - `rationale_for` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -8,6 +8,7 @@ members: 41
 **Members:** 41 nodes
 
 ## Members
+
 - [[12 PAC+Stim Features (indices 61-72)]] - code - archive/experimental/sliding_pac/build_original_12feat.py
 - [[Approaches That Did NOT Work (architecture, mixup, heavy-reg on all 73)]] - document - archive/experimental/FINDINGS.md
 - [[Architecture Search on PAC+Stim Features (8 configs)]] - code - archive/experimental/run_pac_stim_focused.py

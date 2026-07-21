@@ -10,6 +10,7 @@ tags:
 # TCN12FeatCtrl
 
 ## Connections
+
 - [[ModelConfig]] - `uses` [INFERRED]
 - [[MultiscaleCausalTCN]] - `uses` [INFERRED]
 - [[TCN predictive controller using only PAC+context features (no spectral).]] - `rationale_for` [EXTRACTED]

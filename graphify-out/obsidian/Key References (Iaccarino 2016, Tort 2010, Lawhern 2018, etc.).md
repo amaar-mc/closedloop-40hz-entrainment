@@ -10,6 +10,7 @@ tags:
 # Key References (Iaccarino 2016, Tort 2010, Lawhern 2018, etc.)
 
 ## Connections
+
 - [[Problem Statement Fixed-Schedule Stimulation Limitations]] - `references` [EXTRACTED]
 
   #community/Community_39

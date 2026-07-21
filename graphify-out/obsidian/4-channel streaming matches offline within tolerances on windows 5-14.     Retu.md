@@ -7,10 +7,11 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# 4-channel: streaming matches offline within tolerances on windows 5-14.     Retu
+# 4-channel: streaming matches offline within tolerances on windows 5-14. Retu
 
 ## Connections
+
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[test_parity_4ch()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -9,6 +9,7 @@ tags:
 # Hyperparameter Sensitivity Audit (ROBUST verdict)
 
 ## Connections
+
 - [[Default Hyperparameters Are Conservative, Not Cherry-Picked]] - `references` [EXTRACTED]
 - [[Feature Selection Impact 5x Larger Than Hyperparameter Sensitivity Range]] - `references` [EXTRACTED]
 - [[Hidden Size Sweep (h=16-128, R2=0.341-0.610, all beat persistence)]] - `references` [EXTRACTED]

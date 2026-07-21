@@ -10,6 +10,7 @@ tags:
 # fix_common_issues()
 
 ## Connections
+
 - [[Post-process the LaTeX source to fix common issues.]] - `rationale_for` [EXTRACTED]
 - [[generate_paper_latex.py]] - `contains` [EXTRACTED]
 - [[main()_49]] - `calls` [EXTRACTED]

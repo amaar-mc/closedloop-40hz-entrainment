@@ -10,6 +10,7 @@ tags:
 # OracleCtrl
 
 ## Connections
+
 - [[StimAction]] - `uses` [INFERRED]
 - [[__init__()_76]] - `method` [EXTRACTED]
 - [[main()_38]] - `calls` [EXTRACTED]

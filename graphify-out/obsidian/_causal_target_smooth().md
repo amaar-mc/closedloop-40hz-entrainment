@@ -7,9 +7,10 @@ tags:
   - community/Community_53
 ---
 
-# _causal_target_smooth()
+# \_causal_target_smooth()
 
 ## Connections
+
 - [[Causal trailing mean target denoiser.]] - `rationale_for` [EXTRACTED]
 - [[_build_split_samples()]] - `calls` [EXTRACTED]
 - [[_causal_moving_average()_1]] - `calls` [EXTRACTED]

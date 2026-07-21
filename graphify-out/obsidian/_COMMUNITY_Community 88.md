@@ -8,6 +8,7 @@ members: 11
 **Members:** 11 nodes
 
 ## Members
+
 - [[12 PAC+Stim Features (pac_current, pac_ma, pac_diff, stim context)]] - document - submission/presentation/archive/v1_reference/numbers_sheet_old.md
 - [[Causal TCN Stage 2 Temporal PAC Forecaster (22,914 params, h=5s)]] - document - submission/presentation/archive/v1_reference/numbers_sheet_old.md
 - [[Controller Comparison (FixedReactiveTCNHybridOracle, N=35)]] - document - submission/presentation/archive/v1_reference/numbers_sheet_old.md

@@ -10,6 +10,7 @@ tags:
 # Remove markdown formatting for plain text output.
 
 ## Connections
+
 - [[clean_markdown()]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

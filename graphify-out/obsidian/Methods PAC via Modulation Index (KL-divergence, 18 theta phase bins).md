@@ -10,6 +10,7 @@ tags:
 # Methods: PAC via Modulation Index (KL-divergence, 18 theta phase bins)
 
 ## Connections
+
 - [[Reference Tort et al. 2010 — Modulation Index for PAC (J Neurophysiol)]] - `cites` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

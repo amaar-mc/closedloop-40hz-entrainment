@@ -10,6 +10,7 @@ tags:
 # BIDSDataProcessor Channel Monkey-Patch
 
 ## Connections
+
 - [[step1_process_data()]] - `implements` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # TransformerPredictor
 
 ## Connections
+
 - [[Causal Transformer encoder for sequence-to-scalar regression.]] - `rationale_for` [EXTRACTED]
 - [[__init__()_5]] - `method` [EXTRACTED]
 - [[count_parameters()_2]] - `method` [EXTRACTED]

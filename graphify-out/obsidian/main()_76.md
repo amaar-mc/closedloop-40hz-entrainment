@@ -10,6 +10,7 @@ tags:
 # main()
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `calls` [EXTRACTED]
 - [[Main entry point for data loading pipeline.]] - `rationale_for` [EXTRACTED]
 - [[create_dataloaders()_1]] - `calls` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[process_dataset()]] - `calls` [EXTRACTED]
 - [[save_splits()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

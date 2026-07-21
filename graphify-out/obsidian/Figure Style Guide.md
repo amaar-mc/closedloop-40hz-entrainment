@@ -10,6 +10,7 @@ tags:
 # Figure Style Guide
 
 ## Connections
+
 - [[Horizon Sweep Figure]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_77

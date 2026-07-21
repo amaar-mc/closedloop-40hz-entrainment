@@ -1495,4 +1495,4 @@ flowchart TB
 
 ---
 
-*Generated for Synopsys Science Fair 2026 presentation preparation. This document maps the complete project: every design decision, every parameter, every result, and the reasoning behind each choice.*
+_Generated for Synopsys Science Fair 2026 presentation preparation. This document maps the complete project: every design decision, every parameter, every result, and the reasoning behind each choice._

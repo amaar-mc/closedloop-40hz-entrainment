@@ -10,6 +10,7 @@ tags:
 # evaluate_alignment()
 
 ## Connections
+
 - [[Alignment Score Metric (Low-PAC Stim + High-PAC Rest)  2]] - `implements` [EXTRACTED]
 - [[Same alignment metrics as the real-data validation.]] - `rationale_for` [EXTRACTED]
 - [[TRIBE TCN Validation Pipeline Script]] - `calls` [EXTRACTED]

@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Compute the preferred theta phase for maximum gamma amplitude.      Args:
+# Compute the preferred theta phase for maximum gamma amplitude. Args:
 
 ## Connections
+
 - [[compute_preferred_phase()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

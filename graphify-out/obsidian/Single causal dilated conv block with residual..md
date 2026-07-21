@@ -10,6 +10,7 @@ tags:
 # Single causal dilated conv block with residual.
 
 ## Connections
+
 - [[CausalConv1dBlock]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE-TCN_Validation

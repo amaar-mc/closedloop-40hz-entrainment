@@ -10,6 +10,7 @@ tags:
 # Slide 6 — Methods page 3 (controller, validation, system arch figure).
 
 ## Connections
+
 - [[p06_methods3()_2]] - `rationale_for` [EXTRACTED]
 
   #community/CSEF_Presentation_Generator

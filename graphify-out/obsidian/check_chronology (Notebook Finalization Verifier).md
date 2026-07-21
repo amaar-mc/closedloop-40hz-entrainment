@@ -10,6 +10,7 @@ tags:
 # check_chronology (Notebook Finalization Verifier)
 
 ## Connections
+
 - [[Verify Notebook Finalization Script]] - `calls` [EXTRACTED]
 
   #community/Community_103

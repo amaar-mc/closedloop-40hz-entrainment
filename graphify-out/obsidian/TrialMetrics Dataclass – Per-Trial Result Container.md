@@ -10,6 +10,7 @@ tags:
 # TrialMetrics Dataclass – Per-Trial Result Container
 
 ## Connections
+
 - [[main()_65]] - `shares_data_with` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

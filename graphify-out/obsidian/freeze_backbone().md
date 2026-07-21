@@ -10,6 +10,7 @@ tags:
 # freeze_backbone()
 
 ## Connections
+
 - [[Freeze all layers except the three regression heads.          Useful for per-sub]] - `rationale_for` [EXTRACTED]
 - [[ImprovedTCN_1]] - `method` [EXTRACTED]
 

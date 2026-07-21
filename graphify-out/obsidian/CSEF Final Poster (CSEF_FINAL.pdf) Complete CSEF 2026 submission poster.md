@@ -9,6 +9,7 @@ tags:
 # CSEF Final Poster (CSEF_FINAL.pdf): Complete CSEF 2026 submission poster
 
 ## Connections
+
 - [[CSEF Poster vF2 Small (print-optimized version of CSEF final poster)]] - `references` [INFERRED]
 - [[Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment (CSEF Poster v2)]] - `semantically_similar_to` [INFERRED]
 

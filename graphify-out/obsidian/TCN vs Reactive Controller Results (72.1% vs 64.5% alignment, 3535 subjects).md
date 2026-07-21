@@ -10,6 +10,7 @@ tags:
 # TCN vs Reactive Controller Results (72.1% vs 64.5% alignment, 35/35 subjects)
 
 ## Connections
+
 - [[1-Minute Project of the Year Synopsis (POTY Script)]] - `references` [EXTRACTED]
 - [[Closed-Loop Controller (threshold-based, z-score hysteresis)]] - `references` [EXTRACTED]
 - [[Danger Zone R²=0.60 Clinical Sufficiency (controller results prove downstream value)]] - `references` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # SimpleLSTM
 
 ## Connections
+
 - [[Architecture comparison study train and evaluate all models across horizons.  R]] - `uses` [INFERRED]
 - [[Return dataset_dir, building it if it does not exist.      For horizon==5 the da]] - `uses` [INFERRED]
 - [[Return the pre-built or to-be-built dataset directory for a given config.]] - `uses` [INFERRED]
@@ -20,4 +21,4 @@ tags:
 - [[comparison_models.py]] - `contains` [EXTRACTED]
 - [[forward()_33]] - `method` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

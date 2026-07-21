@@ -10,6 +10,7 @@ tags:
 # Two-Stage Predictive Closed-Loop System
 
 ## Connections
+
 - [[Causal Temporal Convolutional Network (TCN)]] - `implements` [EXTRACTED]
 - [[Epoch Alignment Result (72.1% vs 64.5%, g=1.31)]] - `references` [EXTRACTED]
 - [[Fixed-Schedule 40Hz Auditory Entrainment Protocol]] - `references` [EXTRACTED]

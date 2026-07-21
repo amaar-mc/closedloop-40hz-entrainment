@@ -10,6 +10,7 @@ tags:
 # Judge Interaction Flow: Reading Engagement Signals
 
 ## Connections
+
 - [[Muse 2 Product Demo Protocol (30-60 second booth demo)]] - `references` [EXTRACTED]
 
   #community/Community_117

@@ -7,9 +7,10 @@ tags:
   - community/TCN_Layer_Internals
 ---
 
-# _count_parameters()
+# \_count_parameters()
 
 ## Connections
+
 - [[Count trainable parameters in a model.]] - `rationale_for` [EXTRACTED]
 - [[count_parameters()_12]] - `calls` [EXTRACTED]
 - [[count_parameters()_13]] - `calls` [EXTRACTED]

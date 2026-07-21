@@ -10,7 +10,8 @@ tags:
 # CSEF Defense Narrative: Temporal Context Compensates for Spatial Reduction
 
 ## Connections
+
 - [[EEGNet Static PAC Prediction 7ch R2=0.287 vs 4ch R2=0.016]] - `references` [EXTRACTED]
 - [[Rationale Why Static Gap Larger Than Temporal Gap]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

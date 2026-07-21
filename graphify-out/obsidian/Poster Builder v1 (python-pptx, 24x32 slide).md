@@ -9,6 +9,7 @@ tags:
 # Poster Builder v1 (python-pptx, 24x32 slide)
 
 ## Connections
+
 - [[Poster v1 (PDF, 24x32 layout)]] - `implements` [INFERRED]
 - [[PowerPoint Box Dimensions Spec (24x32 → prints 48x64)]] - `references` [INFERRED]
 

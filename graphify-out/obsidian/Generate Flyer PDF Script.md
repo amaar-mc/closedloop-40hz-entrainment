@@ -9,6 +9,7 @@ tags:
 # Generate Flyer PDF Script
 
 ## Connections
+
 - [[Generate QR Codes Script]] - `shares_data_with` [INFERRED]
 
   #community/Community_106

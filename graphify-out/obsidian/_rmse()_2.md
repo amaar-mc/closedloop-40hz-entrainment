@@ -7,9 +7,10 @@ tags:
   - community/Community_81
 ---
 
-# _rmse()
+# \_rmse()
 
 ## Connections
+
 - [[per_subject_adaptation.py]] - `contains` [EXTRACTED]
 - [[persistence_eval()]] - `calls` [EXTRACTED]
 - [[ridge_per_subject()]] - `calls` [EXTRACTED]

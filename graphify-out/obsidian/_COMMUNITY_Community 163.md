@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Total number of output features 8  n_channels + 5.]] - rationale - src/streaming/feature_extractor.py
 
 ## Live Query (requires Dataview plugin)

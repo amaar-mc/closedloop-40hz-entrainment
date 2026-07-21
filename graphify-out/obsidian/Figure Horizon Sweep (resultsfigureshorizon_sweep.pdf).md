@@ -10,6 +10,7 @@ tags:
 # Figure: Horizon Sweep (results/figures/horizon_sweep.pdf)
 
 ## Connections
+
 - [[Research Paper Status Document]] - `references` [EXTRACTED]
 
   #community/Community_59

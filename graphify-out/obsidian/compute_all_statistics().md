@@ -10,6 +10,7 @@ tags:
 # compute_all_statistics()
 
 ## Connections
+
 - [[Compute full statistical analysis suite.      Args         results {method_]] - `rationale_for` [EXTRACTED]
 - [[compute_anova()]] - `calls` [EXTRACTED]
 - [[compute_summary_stats()]] - `calls` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[pairwise_wilcoxon()]] - `calls` [EXTRACTED]
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

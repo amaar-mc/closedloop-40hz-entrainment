@@ -8,6 +8,7 @@ members: 9
 **Members:** 9 nodes
 
 ## Members
+
 - [[4-Page + 1-Page References Format Constraint]] - document - paper/conferences/guidelines/embc_template_notes.md
 - [[Closed-Loop Neurostimulation  BCI Research Domain]] - document - paper/conferences/targets.md
 - [[Double-Blind Review Process]] - document - paper/conferences/guidelines/embc_template_notes.md

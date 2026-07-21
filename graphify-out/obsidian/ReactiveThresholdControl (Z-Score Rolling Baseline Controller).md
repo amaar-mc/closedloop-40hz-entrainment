@@ -10,6 +10,7 @@ tags:
 # ReactiveThresholdControl (Z-Score Rolling Baseline Controller)
 
 ## Connections
+
 - [[TCNPredictiveControl (Neural Network Look-Ahead Controller)]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_125

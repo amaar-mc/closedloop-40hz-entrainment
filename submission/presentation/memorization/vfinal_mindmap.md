@@ -151,16 +151,19 @@ Visual structure of the script. Use this to see the whole flow at once.
 If you remember nothing else, remember these three beats. They are the scientific reasoning highlights that distinguish this from a tutorial project:
 
 ### Moment 1: The Ceiling Discovery
+
 > "Eight architectures from 1,500 parameters to two million, and every single one hit R² = 0.287. That told me I was at a data ceiling, not a model ceiling."
 
 **Why it matters:** Shows diagnostic reasoning. Most students would keep tuning. You diagnosed the root cause.
 
 ### Moment 2: The Feature Paradox
+
 > "My 73-feature model was memorizing skull anatomy, not learning dynamics. Dropping 61 features took test R² from negative 0.025 to 0.606."
 
 **Why it matters:** Counterintuitive finding. Removing information improved generalization. This is the signature of someone who understands overfitting at a deep level.
 
 ### Moment 3: The Horizon Inflection
+
 > "At 5 seconds out, every simple method collapses to negative R². The TCN is the only thing that holds. And 5 seconds is exactly the lead time a controller needs."
 
 **Why it matters:** Ties the ML work directly to a clinical requirement. This is the "aha" that connects your engineering to real patient outcomes.
@@ -195,16 +198,16 @@ Story beats:                  Story beats:                Story beats:
 
 These are the "glue" between sections. If you get stuck mid-script, jumping to one of these pulls you back onto track:
 
-| From | To | Phrase |
-|---|---|---|
-| Mechanism | Gap | "But every clinical protocol delivers this therapy the same way." |
-| Gap | Stage 1 | "The system runs in two stages." |
-| Ceiling | Pivot | "So I changed the question." |
-| Pivot | Discovery | "I also made an unexpected discovery." |
-| Discovery | Horizon | "This is where the project holds together." |
-| Horizon | Results | "I validated by replaying the controller on all 35 patients' real EEG." |
-| Results | Product | "I want to be clear about where this becomes a product." |
-| Product | Closer | "The honest limitation is..." |
+| From      | To        | Phrase                                                                  |
+| --------- | --------- | ----------------------------------------------------------------------- |
+| Mechanism | Gap       | "But every clinical protocol delivers this therapy the same way."       |
+| Gap       | Stage 1   | "The system runs in two stages."                                        |
+| Ceiling   | Pivot     | "So I changed the question."                                            |
+| Pivot     | Discovery | "I also made an unexpected discovery."                                  |
+| Discovery | Horizon   | "This is where the project holds together."                             |
+| Horizon   | Results   | "I validated by replaying the controller on all 35 patients' real EEG." |
+| Results   | Product   | "I want to be clear about where this becomes a product."                |
+| Product   | Closer    | "The honest limitation is..."                                           |
 
 ---
 

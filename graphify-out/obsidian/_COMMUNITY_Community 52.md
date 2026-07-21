@@ -8,6 +8,7 @@ members: 19
 **Members:** 19 nodes
 
 ## Members
+
 - [[Average PAC across channels. signals (n_channels, n_samples).]] - rationale - archive/experimental/sliding_pac/compute_sliding_pac.py
 - [[Compute Tort Modulation Index on a single-channel signal.      Args         sig]] - rationale - archive/experimental/sliding_pac/compute_sliding_pac.py
 - [[Compute backward-looking sliding-window PAC for each window in a segment.      F]] - rationale - archive/experimental/sliding_pac/compute_sliding_pac.py

@@ -10,8 +10,9 @@ tags:
 # get_normalization_stats()
 
 ## Connections
+
 - [[Return normalization parameters for inference  val  test sets.]] - `rationale_for` [EXTRACTED]
 - [[TemporalPACDataset]] - `method` [EXTRACTED]
 - [[prepare_temporal_data()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

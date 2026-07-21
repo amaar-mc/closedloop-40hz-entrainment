@@ -10,6 +10,7 @@ tags:
 # Rationale: R²=0.170 Forecasting Sufficient for g=1.31 Control Advantage
 
 ## Connections
+
 - [[Section 06 Results Deployed Model Performance (ts=1, Test R²=0.170)]] - `rationale_for` [EXTRACTED]
 
   #community/Community_33

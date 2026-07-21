@@ -10,7 +10,8 @@ tags:
 # Clear the rolling buffer in the underlying forecaster.
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[reset()_10]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

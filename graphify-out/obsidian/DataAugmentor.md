@@ -10,6 +10,7 @@ tags:
 # DataAugmentor
 
 ## Connections
+
 - [[Applies data augmentation to EEG windows.      Augmentation strategies]] - `rationale_for` [EXTRACTED]
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGWindowDataset]] - `uses` [INFERRED]
@@ -21,4 +22,4 @@ tags:
 - [[train()]] - `calls` [EXTRACTED]
 - [[training.py]] - `contains` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

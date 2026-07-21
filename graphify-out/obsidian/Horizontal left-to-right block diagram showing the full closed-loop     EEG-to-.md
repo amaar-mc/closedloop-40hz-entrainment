@@ -7,9 +7,10 @@ tags:
   - community/Community_37
 ---
 
-# Horizontal left-to-right block diagram showing the full closed-loop     EEG-to-
+# Horizontal left-to-right block diagram showing the full closed-loop EEG-to-
 
 ## Connections
+
 - [[generate_system_block_diagram()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_37

@@ -10,6 +10,7 @@ tags:
 # p07_results1()
 
 ## Connections
+
 - [[Slide 7 — Results page 1 (horizon sweep table).]] - `rationale_for` [EXTRACTED]
 - [[add_body()]] - `calls` [EXTRACTED]
 - [[add_body_mixed()]] - `calls` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # reset()
 
 ## Connections
+
 - [[AlignmentOracleCtrl_1]] - `method` [EXTRACTED]
 - [[run_replay()]] - `calls` [EXTRACTED]
 

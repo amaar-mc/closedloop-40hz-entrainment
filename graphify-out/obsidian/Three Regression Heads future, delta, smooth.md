@@ -10,6 +10,7 @@ tags:
 # Three Regression Heads: future, delta, smooth
 
 ## Connections
+
 - [[ImprovedTCN_2]] - `implements` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

@@ -10,6 +10,7 @@ tags:
 # Approximate KL divergence using histograms
 
 ## Connections
+
 - [[kl_divergence_approx()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_114

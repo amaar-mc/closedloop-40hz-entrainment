@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Q&A Tier 1 Basic Judge Questions (project summary, hypothesis, data)]] - document - submission/presentation/interview/v2_qa_complete.md
 
 ## Live Query (requires Dataview plugin)

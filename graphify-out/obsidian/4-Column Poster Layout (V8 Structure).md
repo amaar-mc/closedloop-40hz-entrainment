@@ -10,6 +10,7 @@ tags:
 # 4-Column Poster Layout (V8 Structure)
 
 ## Connections
+
 - [[Poster Board V8 (CSEF 2026, 4-Column Layout)]] - `references` [EXTRACTED]
 
   #community/Community_41

@@ -10,6 +10,7 @@ tags:
 # Embed a figure centered, with optional caption.
 
 ## Connections
+
 - [[fig()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

@@ -33,11 +33,11 @@ At prediction horizons of 1-2 seconds, simple baselines (persistence, Ridge regr
 
 When integrated into a closed-loop controller and validated on real EEG data from 35 dementia patients:
 
-| Metric | TCN Predictive | Reactive Control | Effect Size |
-|--------|---------------|-----------------|-------------|
-| Epoch alignment | 72.1% | 64.5% | g = 1.31, p < 0.001 |
-| Low-PAC targeting | 82.6% | 51.7% | g = 4.47, p < 0.001 |
-| PAC targeting gap | +30.5 | +21.1 | g = 1.57, p < 0.001 |
+| Metric            | TCN Predictive | Reactive Control | Effect Size         |
+| ----------------- | -------------- | ---------------- | ------------------- |
+| Epoch alignment   | 72.1%          | 64.5%            | g = 1.31, p < 0.001 |
+| Low-PAC targeting | 82.6%          | 51.7%            | g = 4.47, p < 0.001 |
+| PAC targeting gap | +30.5          | +21.1            | g = 1.57, p < 0.001 |
 
 All 35 subjects benefited. The TCN controller reached 91% of the theoretical oracle bound. Results were robust across threshold parameters (0.2-1.0) and four different fatigue model assumptions.
 

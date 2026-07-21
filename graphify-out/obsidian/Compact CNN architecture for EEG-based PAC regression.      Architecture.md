@@ -7,9 +7,10 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Compact CNN architecture for EEG-based PAC regression.      Architecture:
+# Compact CNN architecture for EEG-based PAC regression. Architecture:
 
 ## Connections
+
 - [[EEGNet_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

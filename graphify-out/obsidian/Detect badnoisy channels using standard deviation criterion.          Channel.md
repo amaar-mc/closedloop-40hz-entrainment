@@ -7,9 +7,10 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# Detect bad/noisy channels using standard deviation criterion.          Channel
+# Detect bad/noisy channels using standard deviation criterion. Channel
 
 ## Connections
+
 - [[detect_bad_channels()]] - `rationale_for` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

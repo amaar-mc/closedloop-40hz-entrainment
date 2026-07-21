@@ -10,7 +10,8 @@ tags:
 # ImprovedTCN (4ch PAC+Stim model)
 
 ## Connections
+
 - [[Closed-Loop Stimulation Decision Logic]] - `shares_data_with` [INFERRED]
 - [[NeuroCare 40Hz Live Mission Control v5]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

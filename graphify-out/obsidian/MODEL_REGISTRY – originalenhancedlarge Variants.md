@@ -10,8 +10,9 @@ tags:
 # MODEL_REGISTRY – original/enhanced/large Variants
 
 ## Connections
+
 - [[EEGNetEnhanced (~35K params, 24x original)]] - `references` [EXTRACTED]
 - [[EEGNetLarge (~141K params, 97x original)]] - `references` [EXTRACTED]
 - [[train_single_seed()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

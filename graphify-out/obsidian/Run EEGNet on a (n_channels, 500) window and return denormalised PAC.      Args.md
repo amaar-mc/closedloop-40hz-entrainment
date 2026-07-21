@@ -7,13 +7,14 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Run EEGNet on a (n_channels, 500) window and return denormalised PAC.      Args:
+# Run EEGNet on a (n_channels, 500) window and return denormalised PAC. Args:
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[PersonalizationModule]] - `uses` [INFERRED]
 - [[SimulatedEEGAdapter]] - `uses` [INFERRED]
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[eegnet_predict_pac()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

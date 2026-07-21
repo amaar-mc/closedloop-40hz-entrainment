@@ -10,6 +10,7 @@ tags:
 # ReactiveThresholdControl
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[Z-score reactive controller — stimulates when PAC drops below threshold.]] - `rationale_for` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[reset()_45]] - `method` [EXTRACTED]
 - [[step()_45]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

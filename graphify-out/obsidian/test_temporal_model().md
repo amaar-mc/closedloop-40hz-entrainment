@@ -10,6 +10,7 @@ tags:
 # test_temporal_model()
 
 ## Connections
+
 - [[MultiHorizonPredictor]] - `calls` [EXTRACTED]
 - [[TemporalPACPredictor]] - `calls` [EXTRACTED]
 - [[Test the temporal prediction model.]] - `rationale_for` [EXTRACTED]

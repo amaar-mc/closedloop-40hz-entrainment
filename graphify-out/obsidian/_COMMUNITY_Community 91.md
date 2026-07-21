@@ -8,6 +8,7 @@ members: 10
 **Members:** 10 nodes
 
 ## Members
+
 - [[Audio Engine (40 Hz click-train via sounddevice)]] - code - apps/demo.py
 - [[Closed-Loop 40Hz Entrainment Demo (Real EEG Replay)]] - code - apps/demo.py
 - [[Fixed Schedule Controller (40s ON20s OFF)]] - code - apps/demo.py
@@ -27,9 +28,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 2 edges to [[_COMMUNITY_Closed-Loop Control & Simulator]]
 - 1 edge to [[_COMMUNITY_Models, Streaming & Apps]]
 
 ## Top bridge nodes
+
 - [[Closed-Loop 40Hz Entrainment Demo (Real EEG Replay)]] - degree 9, connects to 1 community
 - [[TCN Controller (causal forecaster, primary contribution)]] - degree 4, connects to 1 community

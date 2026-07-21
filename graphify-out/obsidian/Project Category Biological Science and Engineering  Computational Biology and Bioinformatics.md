@@ -10,6 +10,7 @@ tags:
 # Project Category: Biological Science and Engineering / Computational Biology and Bioinformatics
 
 ## Connections
+
 - [[2026 Project Application Form — SCVSEFA P10, Computational Biology Category]] - `references` [EXTRACTED]
 
   #community/Community_48

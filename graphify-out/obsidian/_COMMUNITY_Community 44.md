@@ -8,6 +8,7 @@ members: 22
 **Members:** 22 nodes
 
 ## Members
+
 - [[Convert N citation patterns to LaTeX cite-style.]] - rationale - scripts/tools/generate_paper_latex.py
 - [[Convert markdown inline formatting to LaTeX.]] - rationale - scripts/tools/generate_paper_latex.py
 - [[Create a LaTeX label from text.]] - rationale - scripts/tools/generate_paper_latex.py

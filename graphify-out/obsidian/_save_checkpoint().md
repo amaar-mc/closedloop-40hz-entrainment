@@ -7,11 +7,12 @@ tags:
   - community/Core_Data_&_PAC_Pipeline
 ---
 
-# _save_checkpoint()
+# \_save_checkpoint()
 
 ## Connections
+
 - [[ModelTrainer]] - `method` [EXTRACTED]
 - [[Save model checkpoint.]] - `rationale_for` [EXTRACTED]
 - [[train()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

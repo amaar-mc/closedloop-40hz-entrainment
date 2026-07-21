@@ -10,6 +10,7 @@ tags:
 # Student Permission and Hold Harmless Agreement
 
 ## Connections
+
 - [[ISEF Affiliation Acknowledgment (Synopsys Championship → CSEF)]] - `references` [EXTRACTED]
 - [[ParentGuardian Irfan Chughtai — Signature and Approval]] - `implements` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # Synopsys 40-Point Numerical Judging Rubric
 
 ## Connections
+
 - [[CSEF Consensus-Based Judging Process]] - `conceptually_related_to` [EXTRACTED]
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 

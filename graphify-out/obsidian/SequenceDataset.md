@@ -10,6 +10,7 @@ tags:
 # SequenceDataset
 
 ## Connections
+
 - [[AblationVariant]] - `uses` [INFERRED]
 - [[Architecture comparison study train and evaluate all models across horizons.  R]] - `uses` [INFERRED]
 - [[Baseline and comparison model architectures for the architecture comparison stud]] - `uses` [INFERRED]
@@ -42,4 +43,4 @@ tags:
 - [[main()_34]] - `calls` [EXTRACTED]
 - [[train_multiscale_tcn.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

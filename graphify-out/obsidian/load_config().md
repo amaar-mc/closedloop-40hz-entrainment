@@ -10,6 +10,7 @@ tags:
 # load_config()
 
 ## Connections
+
 - [[Load configuration from YAML file.      Args         config_path Path to co]] - `rationale_for` [EXTRACTED]
 - [[utils.py]] - `contains` [EXTRACTED]
 

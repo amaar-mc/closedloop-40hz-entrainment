@@ -1,46 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<style>
-html { background: #ffffff; }
-body {
-  width: 792pt; height: 612pt; margin: 0; padding: 0;
-  background: #ffffff; font-family: 'Times New Roman', Times, serif;
-  display: flex; flex-direction: column;
-}
-.content { margin: 36pt 54pt; flex: 1; }
-h1 { font-size: 22pt; color: #000; margin-bottom: 8pt; font-weight: bold; }
-h2 { font-size: 16pt; color: #000; margin-top: 8pt; margin-bottom: 3pt; font-weight: bold; }
-ul { font-size: 13pt; color: #000; line-height: 1.3; margin: 1pt 0; padding-left: 18pt; }
-li { margin: 1pt 0 2pt 0; }
-</style>
-</head>
-<body>
-<div class="content">
-  <h1>Discussion</h1>
+  <head>
+    <style>
+      html {
+        background: #ffffff;
+      }
+      body {
+        width: 792pt;
+        height: 612pt;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        font-family: "Times New Roman", Times, serif;
+        display: flex;
+        flex-direction: column;
+      }
+      .content {
+        margin: 36pt 54pt;
+        flex: 1;
+      }
+      h1 {
+        font-size: 22pt;
+        color: #000;
+        margin-bottom: 8pt;
+        font-weight: bold;
+      }
+      h2 {
+        font-size: 16pt;
+        color: #000;
+        margin-top: 8pt;
+        margin-bottom: 3pt;
+        font-weight: bold;
+      }
+      ul {
+        font-size: 13pt;
+        color: #000;
+        line-height: 1.3;
+        margin: 1pt 0;
+        padding-left: 18pt;
+      }
+      li {
+        margin: 1pt 0 2pt 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Discussion</h1>
 
-  <h2>Interpretation of Results</h2>
-  <ul>
-    <li><b>Feature selection matters more than architecture:</b> 8 model families all converged to R&#178; &#8776; 0.287 on 73 features; switching to 12 PAC+Stim features raised test R&#178; to 0.606 with the same TCN. The bottleneck was always in the input representation, not the model.</li>
-    <li>The &#8776;3-second inflection point reflects PAC autocorrelation timescale: below 3 s, persistence suffices; above 3 s, state transitions require temporal context that only the TCN captures from the 20-step PAC trajectory.</li>
-    <li>Spectral features encode subject-specific EEG anatomy (skull thickness, electrode impedance) that doesn&#8217;t generalize: val-test R&#178; gap shrinks from 0.358 (73 feat) to 0.246 (12 feat) when spectral features are removed.</li>
-    <li>The 60% improvement in low-PAC targeting (82.6% vs. 51.7%) matters most clinically: the controller concentrates therapy where neural coupling is weakest.</li>
-  </ul>
+      <h2>Interpretation of Results</h2>
+      <ul>
+        <li>
+          <b>Feature selection matters more than architecture:</b> 8 model
+          families all converged to R&#178; &#8776; 0.287 on 73 features;
+          switching to 12 PAC+Stim features raised test R&#178; to 0.606 with
+          the same TCN. The bottleneck was always in the input representation,
+          not the model.
+        </li>
+        <li>
+          The &#8776;3-second inflection point reflects PAC autocorrelation
+          timescale: below 3 s, persistence suffices; above 3 s, state
+          transitions require temporal context that only the TCN captures from
+          the 20-step PAC trajectory.
+        </li>
+        <li>
+          Spectral features encode subject-specific EEG anatomy (skull
+          thickness, electrode impedance) that doesn&#8217;t generalize:
+          val-test R&#178; gap shrinks from 0.358 (73 feat) to 0.246 (12 feat)
+          when spectral features are removed.
+        </li>
+        <li>
+          The 60% improvement in low-PAC targeting (82.6% vs. 51.7%) matters
+          most clinically: the controller concentrates therapy where neural
+          coupling is weakest.
+        </li>
+      </ul>
 
-  <h2>Comparison to Prior Work</h2>
-  <ul>
-    <li>Analogous to closed-loop DBS for Parkinson&#8217;s disease (Rosin et al., 2011): adaptive stimulation concentrates therapy on periods of genuine need.</li>
-    <li>Extends beyond spindle detection (Portiloop, Lacroix et al., 2022) to multi-step forecasting &#8212; necessary when proactive intervention requires advance lead time.</li>
-    <li>First system targeting PAC dynamics specifically for 40 Hz gamma entrainment optimization at 5&#8211;10 s horizons.</li>
-  </ul>
+      <h2>Comparison to Prior Work</h2>
+      <ul>
+        <li>
+          Analogous to closed-loop DBS for Parkinson&#8217;s disease (Rosin et
+          al., 2011): adaptive stimulation concentrates therapy on periods of
+          genuine need.
+        </li>
+        <li>
+          Extends beyond spindle detection (Portiloop, Lacroix et al., 2022) to
+          multi-step forecasting &#8212; necessary when proactive intervention
+          requires advance lead time.
+        </li>
+        <li>
+          First system targeting PAC dynamics specifically for 40 Hz gamma
+          entrainment optimization at 5&#8211;10 s horizons.
+        </li>
+      </ul>
 
-  <h2>Limitations and Possible Errors</h2>
-  <ul>
-    <li><b>Offline counterfactual replay</b>, not live closed-loop: measures decision quality, not realized therapeutic benefit. Live validation with real-time EEG streaming is required.</li>
-    <li><b>EEGNet not in the validation loop:</b> ground-truth PAC was used as TCN input; a deployed system would propagate EEGNet estimation error (R&#178; = 0.287) into forecasts.</li>
-    <li><b>Single-site dataset</b> (Tehran memory clinic): generalizability to other populations, stimulation modalities, and EEG equipment is unknown.</li>
-    <li><b>7 frontal channels only:</b> relevant theta&#8211;gamma coupling in parietal and temporal regions is not captured by this montage.</li>
-  </ul>
-</div>
-</body>
+      <h2>Limitations and Possible Errors</h2>
+      <ul>
+        <li>
+          <b>Offline counterfactual replay</b>, not live closed-loop: measures
+          decision quality, not realized therapeutic benefit. Live validation
+          with real-time EEG streaming is required.
+        </li>
+        <li>
+          <b>EEGNet not in the validation loop:</b> ground-truth PAC was used as
+          TCN input; a deployed system would propagate EEGNet estimation error
+          (R&#178; = 0.287) into forecasts.
+        </li>
+        <li>
+          <b>Single-site dataset</b> (Tehran memory clinic): generalizability to
+          other populations, stimulation modalities, and EEG equipment is
+          unknown.
+        </li>
+        <li>
+          <b>7 frontal channels only:</b> relevant theta&#8211;gamma coupling in
+          parietal and temporal regions is not captured by this montage.
+        </li>
+      </ul>
+    </div>
+  </body>
 </html>

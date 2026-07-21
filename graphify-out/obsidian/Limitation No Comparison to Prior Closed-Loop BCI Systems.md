@@ -10,6 +10,7 @@ tags:
 # Limitation: No Comparison to Prior Closed-Loop BCI Systems
 
 ## Connections
+
 - [[Anticipated Reviewer Weaknesses]] - `references` [EXTRACTED]
 
   #community/Community_68

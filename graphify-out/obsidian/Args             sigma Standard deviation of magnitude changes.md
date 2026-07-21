@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Args:             sigma: Standard deviation of magnitude changes
+# Args: sigma: Standard deviation of magnitude changes
 
 ## Connections
+
 - [[__init__()_47]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

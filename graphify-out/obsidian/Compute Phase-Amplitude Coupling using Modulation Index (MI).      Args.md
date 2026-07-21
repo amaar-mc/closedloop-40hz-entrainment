@@ -7,9 +7,10 @@ tags:
   - community/Community_82
 ---
 
-# Compute Phase-Amplitude Coupling using Modulation Index (MI).      Args:
+# Compute Phase-Amplitude Coupling using Modulation Index (MI). Args:
 
 ## Connections
+
 - [[compute_pac_modulation_index()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_82

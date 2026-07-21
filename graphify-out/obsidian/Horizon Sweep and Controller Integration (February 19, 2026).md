@@ -10,6 +10,7 @@ tags:
 # Horizon Sweep and Controller Integration (February 19, 2026)
 
 ## Connections
+
 - [[Horizon Sweep Results (TCN R2~0.25 at 5-10s, Baselines Collapse)]] - `references` [EXTRACTED]
 - [[Two-Stage EEGNet+TCN Controller Pipeline]] - `references` [EXTRACTED]
 

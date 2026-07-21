@@ -10,10 +10,11 @@ tags:
 # run_enhanced_features.py
 
 ## Connections
+
 - [[Enhanced Features + Ridge Model (V5)  Combines original features (135) with PAC-]] - `rationale_for` [EXTRACTED]
 - [[extract_all_features()]] - `contains` [EXTRACTED]
 - [[pac_features.py]] - `imports_from` [EXTRACTED]
 - [[spectral_features.py]] - `imports_from` [EXTRACTED]
 - [[wavelet_features.py]] - `imports_from` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

@@ -10,6 +10,7 @@ tags:
 # Causal Padding Rationale (left-only padding prevents future leakage)
 
 ## Connections
+
 - [[MultiscaleCausalTCN Architecture Design Rationale]] - `rationale_for` [EXTRACTED]
 
   #community/Community_43

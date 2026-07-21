@@ -10,6 +10,7 @@ tags:
 # ViT-TCNet V4 (1.1M Params, Overfits N=35)
 
 ## Connections
+
 - [[Static PAC Prediction Ceiling (R²=0.287, 8 Architectures)]] - `references` [EXTRACTED]
 
   #community/Community_33

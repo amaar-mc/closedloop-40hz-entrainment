@@ -10,6 +10,7 @@ tags:
 # add_text()
 
 ## Connections
+
 - [[add_callout()]] - `calls` [EXTRACTED]
 - [[add_section_header()]] - `calls` [EXTRACTED]
 - [[v2_builder.py]] - `contains` [EXTRACTED]

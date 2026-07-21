@@ -9,6 +9,7 @@ tags:
 # Missed Stimulation Opportunity (Fixed Schedule Waste)
 
 ## Connections
+
 - [[Fixed Schedule (Current Approach) - 45% Alignment]] - `conceptually_related_to` [EXTRACTED]
 
   #community/Community_85

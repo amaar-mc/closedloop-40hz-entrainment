@@ -8,6 +8,7 @@ members: 46
 **Members:** 46 nodes
 
 ## Members
+
 - [[73-Feature vs 12-Feature Pipeline Distinction Clarification]] - document - results/rigor_audit/08_reproducibility.md
 - [[Architecture Exploration Comparison (10 models, 5-seed)]] - document - results/rigor_audit/10_architecture_exploration.md
 - [[CSEF Compliance Phase (Phase 1)]] - document - results/rigor_audit/STATUS.md

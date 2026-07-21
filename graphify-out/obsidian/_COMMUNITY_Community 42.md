@@ -8,6 +8,7 @@ members: 24
 **Members:** 24 nodes
 
 ## Members
+
 - [[Adaptive Schedule TCN Predicts 3s Ahead, Targets Low-PAC Windows, 3s Hysteresis]] - image - submission/figures/figure3.png
 - [[Band 1 EEGNet Static PAC Predictor (7ch×500, Test R²=0.287)]] - image - submission/figures/figure9.png
 - [[Band 2 Causal TCN Temporal PAC Forecaster (12 Features, 5-Seed R²=0.332)]] - image - submission/figures/figure9.png

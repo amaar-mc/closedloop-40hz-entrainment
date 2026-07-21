@@ -10,6 +10,7 @@ tags:
 # ReactiveThresholdControl
 
 ## Connections
+
 - [[ControlMethodBase]] - `inherits` [EXTRACTED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
@@ -21,4 +22,4 @@ tags:
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 - [[step()_51]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

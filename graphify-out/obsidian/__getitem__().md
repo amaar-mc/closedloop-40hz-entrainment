@@ -7,9 +7,10 @@ tags:
   - community/Archived_ImprovedTCN_Experiments
 ---
 
-# __getitem__()
+# **getitem**()
 
 ## Connections
+
 - [[MixupSeqDataset]] - `method` [EXTRACTED]
 
   #community/Archived_ImprovedTCN_Experiments

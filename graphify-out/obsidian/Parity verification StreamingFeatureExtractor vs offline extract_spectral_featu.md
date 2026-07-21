@@ -10,7 +10,8 @@ tags:
 # Parity verification: StreamingFeatureExtractor vs offline extract_spectral_featu
 
 ## Connections
+
 - [[StreamingFeatureExtractor]] - `uses` [INFERRED]
 - [[test_streaming_parity.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

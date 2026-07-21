@@ -10,6 +10,7 @@ tags:
 # Gamma Oscillations and Alzheimer's Disease
 
 ## Connections
+
 - [[PAC as Biomarker for Alzheimer's Disease]] - `references` [EXTRACTED]
 
   #community/Community_34

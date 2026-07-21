@@ -9,6 +9,7 @@ tags:
 # PAC Forecasting Performance vs Prediction Horizon Chart
 
 ## Connections
+
 - [[Causal TCN R² Curve at 1–10s Horizons (Maintains ~0.25–0.30 at 5–10s)]] - `references` [EXTRACTED]
 - [[Causal TCN R² at 5-10s Horizon (Operationally Useful Range)]] - `references` [EXTRACTED]
 - [[Operationally Useful Region (5–10s Prediction Horizon)]] - `references` [EXTRACTED]

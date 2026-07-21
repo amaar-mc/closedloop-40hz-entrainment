@@ -10,6 +10,7 @@ tags:
 # EEGNetV2
 
 ## Connections
+
 - [[Args             model EEGNetV2 model             device 'cuda' or 'cpu']] - `uses` [INFERRED]
 - [[Enhanced EEGNet for ΔPAC regression with improved capacity.      Changes from]] - `rationale_for` [EXTRACTED]
 - [[Enhanced Training Script for EEGNetV2 (Version 2)  Key improvements over v1]] - `uses` [INFERRED]

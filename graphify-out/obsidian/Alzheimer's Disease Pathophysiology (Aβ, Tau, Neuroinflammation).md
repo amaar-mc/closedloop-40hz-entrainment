@@ -10,6 +10,7 @@ tags:
 # Alzheimer's Disease Pathophysiology (Aβ, Tau, Neuroinflammation)
 
 ## Connections
+
 - [[Foundational Concepts Document 40Hz Entrainment in AD]] - `references` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

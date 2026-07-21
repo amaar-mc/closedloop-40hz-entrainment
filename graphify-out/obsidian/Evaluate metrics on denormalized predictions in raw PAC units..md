@@ -10,7 +10,8 @@ tags:
 # Evaluate metrics on denormalized predictions in raw PAC units.
 
 ## Connections
+
 - [[SequenceDataset]] - `uses` [INFERRED]
 - [[_eval_denorm()]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

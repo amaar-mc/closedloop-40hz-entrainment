@@ -10,7 +10,8 @@ tags:
 # Graph Attention Network Module for EEG Spatial Processing
 
 ## Connections
+
 - [[GNN for EEG Spatial Topology and Functional Connectivity]] - `conceptually_related_to` [INFERRED]
 - [[Research Methodology Document GAT-Transformer Predictive Framework]] - `references` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

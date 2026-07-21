@@ -10,6 +10,7 @@ tags:
 # Critical Lab Notebook Entries (turning points: ceiling, feature discovery)
 
 ## Connections
+
 - [[Lab Notebook Tab Organization System for CSEF Judging]] - `references` [EXTRACTED]
 - [[Spectral Feature Overfitting Discovery (73→12 features)]] - `references` [EXTRACTED]
 

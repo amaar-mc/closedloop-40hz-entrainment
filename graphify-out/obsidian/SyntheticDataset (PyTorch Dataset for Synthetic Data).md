@@ -10,6 +10,7 @@ tags:
 # SyntheticDataset (PyTorch Dataset for Synthetic Data)
 
 ## Connections
+
 - [[SequenceDataset (Multiscale Temporal Dataset Loader)]] - `semantically_similar_to` [INFERRED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

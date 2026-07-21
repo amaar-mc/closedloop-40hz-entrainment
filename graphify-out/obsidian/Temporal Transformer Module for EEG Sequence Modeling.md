@@ -10,7 +10,8 @@ tags:
 # Temporal Transformer Module for EEG Sequence Modeling
 
 ## Connections
+
 - [[Research Methodology Document GAT-Transformer Predictive Framework]] - `references` [EXTRACTED]
 - [[Transformer Self-Attention for EEG Long-Range Dependencies]] - `conceptually_related_to` [INFERRED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

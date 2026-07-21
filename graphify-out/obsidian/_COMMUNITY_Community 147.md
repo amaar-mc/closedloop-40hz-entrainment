@@ -8,6 +8,7 @@ members: 2
 **Members:** 2 nodes
 
 ## Members
+
 - [[Framing C Horizon-Dependent Generalization in PAC Forecasting]] - document - paper/ideas/BRAINSTORM.md
 - [[Results Section Arc]] - document - paper/ideas/narrative.md
 

@@ -10,6 +10,7 @@ tags:
 # Controller Comparison Results (N=35 Real EEG, 6 Controllers)
 
 ## Connections
+
 - [[Closed-Loop Controller (TCN Predictive, 5-Second Horizon)]] - `references` [EXTRACTED]
 - [[Figure Real-Data Controller Timeline (sub-15, Test Set)]] - `references` [EXTRACTED]
 - [[Figure Stimulation Efficiency vs Alignment Trade-off (Pareto Plot)]] - `references` [EXTRACTED]

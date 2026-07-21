@@ -10,6 +10,7 @@ tags:
 # v2_builder.py
 
 ## Connections
+
 - [[Generate CSEF 2026 poster using the Cobalt template style. Slide 36x48 inches (]] - `rationale_for` [EXTRACTED]
 - [[add_body_block()]] - `contains` [EXTRACTED]
 - [[add_callout()]] - `contains` [EXTRACTED]

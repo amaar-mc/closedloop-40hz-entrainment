@@ -10,6 +10,7 @@ tags:
 # step()
 
 ## Connections
+
 - [[Simulate one time step of neural dynamics.          Pipeline             1. Get]] - `rationale_for` [EXTRACTED]
 - [[TribeEnhancedSimulator]] - `method` [EXTRACTED]
 - [[_activation_to_pac()]] - `calls` [EXTRACTED]

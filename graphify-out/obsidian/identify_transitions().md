@@ -10,9 +10,10 @@ tags:
 # identify_transitions()
 
 ## Connections
+
 - [[Identify transition vs steady-state windows in a split.      A window is transi]] - `rationale_for` [EXTRACTED]
 - [[_stim_states_from_events()]] - `calls` [EXTRACTED]
 - [[main()_31]] - `calls` [EXTRACTED]
 - [[transition_analysis.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

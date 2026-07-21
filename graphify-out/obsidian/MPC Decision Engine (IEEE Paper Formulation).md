@@ -10,8 +10,9 @@ tags:
 # MPC Decision Engine (IEEE Paper Formulation)
 
 ## Connections
+
 - [[IEEE Research Paper Personalized Deep Learning for Closed-Loop 40Hz Entrainment]] - `references` [EXTRACTED]
 - [[MPC Optimization Formulation (MIQP Binary Control)]] - `semantically_similar_to` [INFERRED]
 - [[Rationale Why Closed-Loop Outperforms Open-Loop for AD Entrainment]] - `rationale_for` [INFERRED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

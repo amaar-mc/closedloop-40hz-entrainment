@@ -10,6 +10,7 @@ tags:
 # Train model with early stopping.
 
 ## Connections
+
 - [[train_model()_2]] - `rationale_for` [EXTRACTED]
 
   #community/Community_57

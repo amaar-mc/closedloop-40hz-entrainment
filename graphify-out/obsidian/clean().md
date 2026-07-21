@@ -10,6 +10,7 @@ tags:
 # clean()
 
 ## Connections
+
 - [[Strip markdown formatting and normalize unicode for PDF rendering.]] - `rationale_for` [EXTRACTED]
 - [[generate()]] - `calls` [EXTRACTED]
 - [[generate_paper_pdf_v2.py]] - `contains` [EXTRACTED]

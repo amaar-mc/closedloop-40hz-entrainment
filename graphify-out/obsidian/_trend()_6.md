@@ -7,10 +7,11 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# _trend()
+# \_trend()
 
 ## Connections
+
 - [[PredictiveLookAheadControl_3]] - `method` [EXTRACTED]
 - [[step()_39]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

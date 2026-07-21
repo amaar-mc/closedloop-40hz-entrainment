@@ -10,6 +10,7 @@ tags:
 # Bandpass filter using Butterworth filter.
 
 ## Connections
+
 - [[butter_bandpass_filter()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

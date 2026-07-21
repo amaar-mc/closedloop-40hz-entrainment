@@ -10,6 +10,7 @@ tags:
 # demo.py
 
 ## Connections
+
 - [[AudioEngine]] - `contains` [EXTRACTED]
 - [[FixedScheduleControl_4]] - `contains` [EXTRACTED]
 - [[OracleControl_3]] - `contains` [EXTRACTED]
@@ -24,4 +25,4 @@ tags:
 - [[main()_63]] - `contains` [EXTRACTED]
 - [[simulator.py]] - `imports_from` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

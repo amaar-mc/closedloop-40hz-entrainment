@@ -9,6 +9,7 @@ tags:
 # Closed-Loop Personalized Auditory Therapy for Alzheimer's (Deployment Vision)
 
 ## Connections
+
 - [[Figure 11 Consumer Hardware for Clinical Deployment]] - `references` [EXTRACTED]
 
   #community/Community_51

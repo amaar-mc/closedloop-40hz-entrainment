@@ -10,6 +10,7 @@ tags:
 # Pocket Card (Screenshot Reference for Phone)
 
 ## Connections
+
 - [[Memorization Guide 03 (9 Rooms, CSEF Final)]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

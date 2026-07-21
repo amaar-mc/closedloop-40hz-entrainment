@@ -10,7 +10,8 @@ tags:
 # ATCNet R² Correction (0.287→0.075, V4 Critical Fix)
 
 ## Connections
+
 - [[Poster Board V4 (Print-Ready, Audit-Corrected, Synopsys 2026)]] - `references` [EXTRACTED]
 - [[V5 Changelog from V4 (Structural + Numerical Corrections)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

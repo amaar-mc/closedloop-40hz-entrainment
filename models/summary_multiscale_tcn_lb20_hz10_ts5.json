@@ -24,12 +24,7 @@
     "target_smooth_window": 5,
     "hidden": 64,
     "kernel_size": 3,
-    "dilations": [
-      1,
-      2,
-      4,
-      8
-    ],
+    "dilations": [1, 2, 4, 8],
     "dropout": 0.2,
     "pool_type": "attention",
     "batch_size": 256,

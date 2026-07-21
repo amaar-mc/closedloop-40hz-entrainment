@@ -9,6 +9,7 @@ tags:
 # Cognito Therapeutics (Phase 3 Clinical Benchmark)
 
 ## Connections
+
 - [[Core Literature Citations for Presentation]] - `references` [EXTRACTED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

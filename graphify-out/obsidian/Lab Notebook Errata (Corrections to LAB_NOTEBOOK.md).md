@@ -9,6 +9,7 @@ tags:
 # Lab Notebook Errata (Corrections to LAB_NOTEBOOK.md)
 
 ## Connections
+
 - [[Laboratory Research Notebook (Structured Study Format)]] - `references` [EXTRACTED]
 
   #community/Community_122

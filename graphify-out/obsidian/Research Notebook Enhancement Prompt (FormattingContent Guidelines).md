@@ -9,6 +9,7 @@ tags:
 # Research Notebook Enhancement Prompt (Formatting/Content Guidelines)
 
 ## Connections
+
 - [[Expected Notebook Structure (18-22 pages, 8 sections)]] - `references` [EXTRACTED]
 - [[P10 Research Log Notebook V1 (Daily Format)]] - `references` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # ModelRegistry
 
 ## Connections
+
 - [[Bonus register() rejects objects that don't satisfy TemporalModel Protocol.]] - `uses` [INFERRED]
 - [[Name-keyed registry for TemporalModel instances.      Models are validated at re]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
@@ -28,4 +29,4 @@ tags:
 - [[model_registry.py]] - `contains` [EXTRACTED]
 - [[register()]] - `method` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

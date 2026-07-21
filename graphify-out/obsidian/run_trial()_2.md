@@ -10,6 +10,7 @@ tags:
 # run_trial()
 
 ## Connections
+
 - [[main()_41]] - `calls` [EXTRACTED]
 - [[reset()_23]] - `calls` [EXTRACTED]
 - [[run_fatigue_sensitivity.py]] - `contains` [EXTRACTED]

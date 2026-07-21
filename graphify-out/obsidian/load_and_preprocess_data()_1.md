@@ -10,9 +10,10 @@ tags:
 # load_and_preprocess_data()
 
 ## Connections
+
 - [[EEGDatasetV4]] - `calls` [EXTRACTED]
 - [[Load processed data and extract both spectral and wavelet features.]] - `rationale_for` [EXTRACTED]
 - [[main()_11]] - `calls` [EXTRACTED]
 - [[run_training_v4.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

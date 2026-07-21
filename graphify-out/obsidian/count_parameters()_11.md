@@ -10,6 +10,7 @@ tags:
 # count_parameters()
 
 ## Connections
+
 - [[Count number of trainable parameters in model.      Args         model PyTo]] - `rationale_for` [EXTRACTED]
 - [[EEGNetEnhanced (~35K params, 24x original)]] - `calls` [INFERRED]
 - [[EEGNetLarge (~141K params, 97x original)]] - `calls` [INFERRED]
@@ -18,4 +19,4 @@ tags:
 - [[test_eegnet_enhanced()]] - `calls` [EXTRACTED]
 - [[test_eegnet_large()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # get_window()
 
 ## Connections
+
 - [[_NumpySimulatedAdapter]] - `method` [EXTRACTED]
 
   #community/Community_32

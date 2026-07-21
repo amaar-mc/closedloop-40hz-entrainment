@@ -7,9 +7,10 @@ tags:
   - community/Community_38
 ---
 
-# __getitem__()
+# **getitem**()
 
 ## Connections
+
 - [[AugmentedDataset]] - `method` [EXTRACTED]
 
   #community/Community_38

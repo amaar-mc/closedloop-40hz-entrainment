@@ -10,6 +10,7 @@ tags:
 # p10_conclusions()
 
 ## Connections
+
 - [[Slide 10 — Conclusions.]] - `rationale_for` [EXTRACTED]
 - [[add_body()]] - `calls` [EXTRACTED]
 - [[add_bullet()]] - `calls` [EXTRACTED]

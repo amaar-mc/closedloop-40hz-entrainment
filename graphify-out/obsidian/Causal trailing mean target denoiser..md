@@ -10,6 +10,7 @@ tags:
 # Causal trailing mean target denoiser.
 
 ## Connections
+
 - [[_causal_target_smooth()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_53

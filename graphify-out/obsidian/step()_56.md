@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[HeterogeneousPopulationSimulator]] - `method` [EXTRACTED]
 - [[Simulate one time step with bimodal fatigue profile.]] - `rationale_for` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

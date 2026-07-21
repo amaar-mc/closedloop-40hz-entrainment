@@ -10,7 +10,8 @@ tags:
 # Set all random seeds for reproducibility.
 
 ## Connections
+
 - [[SequenceDataset]] - `uses` [INFERRED]
 - [[set_seed()_2]] - `rationale_for` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

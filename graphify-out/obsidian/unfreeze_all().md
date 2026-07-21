@@ -10,6 +10,7 @@ tags:
 # unfreeze_all()
 
 ## Connections
+
 - [[ImprovedTCN_1]] - `method` [EXTRACTED]
 - [[Unfreeze all parameters (reverses freeze_backbone).]] - `rationale_for` [EXTRACTED]
 

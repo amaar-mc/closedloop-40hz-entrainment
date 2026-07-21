@@ -146,7 +146,9 @@ Amaar Chughtai
 ---
 
 ## ============================
+
 ## COLUMN 1 — LEFT (Introduction / Background / Hypothesis)
+
 ## ============================
 
 ---
@@ -161,7 +163,7 @@ Current protocols deliver stimulation on a fixed schedule — 40s ON / 20s OFF, 
 
 **[FIGURE 1: Fixed vs. Adaptive Scheduling — ~8" x 4"]**
 
-*(see Figure Generation Prompts below)*
+_(see Figure Generation Prompts below)_
 
 ---
 
@@ -182,6 +184,7 @@ Current protocols deliver stimulation on a fixed schedule — 40s ON / 20s OFF, 
 A causal Temporal Convolutional Network trained on PAC trajectory features can forecast coupling dynamics 5-10 seconds ahead, a horizon where simpler baselines collapse, enabling a closed-loop controller that delivers stimulation proactively rather than reactively.
 
 **Goals:**
+
 1. Predict brain entrainment 5-10s into the future (the minimum lead time for proactive control)
 2. Closed-loop controller — integrate predictions into a personalized stimulation controller
 3. Validate on real patient EEG that predictive control outperforms fixed and reactive approaches
@@ -210,7 +213,9 @@ Data: OpenNeuro ds005048, open access license. All diagrams by the author. AI co
 ---
 
 ## ============================
+
 ## COLUMN 2 — CENTER-LEFT (Model Approach / Architecture)
+
 ## ============================
 
 ---
@@ -218,19 +223,20 @@ Data: OpenNeuro ds005048, open access license. All diagrams by the author. AI co
 ### MODEL APPROACH (header: Amaranth Bold 20pt white on teal)
 
 To control stimulation proactively, the system needs to predict PAC 5-10 seconds into the future. The approach consists of two phases:
+
 - Estimate current PAC from raw EEG in real time (since live patients don't have ground-truth labels)
 - Predict future PAC from a history of past estimates — temporal forecasting
 
 **Stage 1: Architecture Decision for Static PAC Estimation**
 
-| Architecture | Params | Test R² |
-|---|---|---|
-| EEGNet (V4) | 1,457 | 0.287 |
-| SpectroRNN (V3) | 180K | 0.236 |
-| ViT-TCNet (V4) | ~2M | 0.222 |
-| Ridge Regression (V1) | 135 coefs | 0.287 |
-| ATCNet (V6) | 29K | 0.075 |
-| EEGNetLarge (input) | 141K | 0.287 |
+| Architecture          | Params    | Test R² |
+| --------------------- | --------- | ------- |
+| EEGNet (V4)           | 1,457     | 0.287   |
+| SpectroRNN (V3)       | 180K      | 0.236   |
+| ViT-TCNet (V4)        | ~2M       | 0.222   |
+| Ridge Regression (V1) | 135 coefs | 0.287   |
+| ATCNet (V6)           | 29K       | 0.075   |
+| EEGNetLarge (input)   | 141K      | 0.287   |
 
 EEGNet matches the best R² (0.287) with only 1,457 parameters. It's the lightest weight architecture tested, enabling real-time inference on embedded devices — provides the current PAC estimate that feeds into the temporal predictor.
 
@@ -238,13 +244,13 @@ EEGNet matches the best R² (0.287) with only 1,457 parameters. It's the lightes
 
 ---
 
-**KEY DISCOVERY** *(gold callout box, #D4A843 background, full width):*
+**KEY DISCOVERY** _(gold callout box, #D4A843 background, full width):_
 
 Dropping 61 spectral features and keeping only 12 PAC-trajectory features raised test R² from -0.025 to 0.606 (5-seed mean ± 0.032). Spectral features encoded patient-specific anatomy that does not generalize across subjects. **Feature selection mattered more than architecture.**
 
 **[FIGURE 3: Feature Discovery Ablation — ~9" x 3.5"]**
 
-*(see Figure Generation Prompts below)*
+_(see Figure Generation Prompts below)_
 
 ---
 
@@ -252,14 +258,14 @@ Dropping 61 spectral features and keeping only 12 PAC-trajectory features raised
 
 Since no single-window architecture could exceed R² = 0.287, I shifted the approach: instead of predicting PAC better from one snapshot, predict it further into the future from a sequence of snapshots. The Causal TCN ingests 20 seconds of history and forecasts PAC 5 seconds ahead.
 
-| | EEGNet | Causal TCN |
-|---|---|---|
-| Purpose | Estimate current PAC (raw EEG) | Predict future PAC (5s horizon) |
-| Parameters | 1,457 (12 sample/second) | 5,154 |
-| Input | Raw EEG (7 ch x 500 samples) | 12 features x 20 timesteps |
-| Architecture | Temporal + depth-wise spatial conv. | Dilated causal conv (d=1,2,4,8) |
-| Output | Current PAC Estimate | Future PAC (5s Horizon) |
-| Key Feature | Real-time inference | 11-step receptive field, causal (no future leakage) |
+|              | EEGNet                              | Causal TCN                                          |
+| ------------ | ----------------------------------- | --------------------------------------------------- |
+| Purpose      | Estimate current PAC (raw EEG)      | Predict future PAC (5s horizon)                     |
+| Parameters   | 1,457 (12 sample/second)            | 5,154                                               |
+| Input        | Raw EEG (7 ch x 500 samples)        | 12 features x 20 timesteps                          |
+| Architecture | Temporal + depth-wise spatial conv. | Dilated causal conv (d=1,2,4,8)                     |
+| Output       | Current PAC Estimate                | Future PAC (5s Horizon)                             |
+| Key Feature  | Real-time inference                 | 11-step receptive field, causal (no future leakage) |
 
 **12 TCN input features:** 7 PAC-derived (current value from EEGNet, moving averages, trends) + 5 stimulation context (on/off state, duration, session phase)
 
@@ -267,20 +273,22 @@ Since no single-window architecture could exceed R² = 0.287, I shifted the appr
 
 **[FIGURE 8: 40 Hz Entrainment Mechanism — Brain Diagram — ~9" x 5"]**
 
-*(see Figure Generation Prompts below)*
+_(see Figure Generation Prompts below)_
 
 ---
 
 **[FIGURE 4: System Architecture Flowchart — HERO FIGURE — ~9" x 5"]**
 
-*(see Figure Generation Prompts below)*
+_(see Figure Generation Prompts below)_
 
 **Pipeline:** EEG (7ch) → Preprocessing → EEGNet (1,457 params) → PAC Estimate → 12-Feature Extraction → Causal TCN (5,154 params) → Controller (z-score ±0.5, 3s hysteresis) → STIMULATE / REST → 40 Hz Audio → [feedback loop]
 
 ---
 
 ## ============================
+
 ## COLUMN 3 — CENTER-RIGHT (Materials / Procedures)
+
 ## ============================
 
 ---
@@ -288,6 +296,7 @@ Since no single-window architecture could exceed R² = 0.287, I shifted the appr
 ### MATERIALS (header: Amaranth Bold 20pt white on teal)
 
 **Dataset:**
+
 - 35 dementia patients, OpenNeuro ds005048 (Lahijanian 2024)
 - 7 frontal EEG channels (Fp1, Fp2, F3, F4, F7, F8, Fz), 250 Hz
 - Alternating Stimulus (40 Hz AM auditory) and Rest epochs, 20-40s each
@@ -297,7 +306,7 @@ Since no single-window architecture could exceed R² = 0.287, I shifted the appr
 
 **[FIGURE 2: Dataset Overview (EEG channels, protocol, splits) — ~7.5" x 6"]**
 
-*(see Figure Generation Prompts below)*
+_(see Figure Generation Prompts below)_
 
 Shows: (A) 7 frontal EEG channel positions on 10-20 montage, (B) Stimulus/Rest protocol diagram (40s ON / 20s OFF blocks → 2s analysis windows), (C) Subject-level train/val/test split bar
 
@@ -306,15 +315,18 @@ Shows: (A) 7 frontal EEG channel positions on 10-20 montage, (B) Stimulus/Rest p
 ### PROCEDURES (header: Amaranth Bold 20pt white on teal)
 
 **Training:**
+
 - EEGNet: MSE loss, Adam optimizer, gradient clipping (max_norm=1.0), early stopping
 - Causal TCN: Huber loss (robust to PAC outliers), learning rate reduction on plateau, early stopping (patience=20)
 - All hyperparameters tuned on validation set (5 subjects); test set (6 subjects) used only for final evaluation
 
 **Validation (two independent protocols):**
-- *Primary (real data):* Replayed TCN controller on all 35 subjects' actual EEG recordings — offline counterfactual decisions on real brain data. For validation, ground-truth PAC labels were used as TCN input, isolating the TCN's predictive contribution from EEGNet estimation error.
-- *Secondary (simulation):* Closed-loop simulation with neural fatigue modeling — 6 severity levels × 50 trials × 600 seconds per trial
+
+- _Primary (real data):_ Replayed TCN controller on all 35 subjects' actual EEG recordings — offline counterfactual decisions on real brain data. For validation, ground-truth PAC labels were used as TCN input, isolating the TCN's predictive contribution from EEGNet estimation error.
+- _Secondary (simulation):_ Closed-loop simulation with neural fatigue modeling — 6 severity levels × 50 trials × 600 seconds per trial
 
 **Statistical validation:**
+
 - Wilcoxon signed-rank tests (non-parametric, paired)
 - Bootstrap 95% confidence intervals
 - Hedges' g effect sizes
@@ -322,7 +334,7 @@ Shows: (A) 7 frontal EEG channel positions on 10-20 montage, (B) Stimulus/Rest p
 
 **[FIGURE 9: Full Training & Validation Protocol — ~7.5" x 5"]**
 
-*(see Figure Generation Prompts below)*
+_(see Figure Generation Prompts below)_
 
 ---
 
@@ -332,15 +344,15 @@ The critical question for proactive control: how far ahead can the TCN predict? 
 
 **[FIGURE 6: Prediction Horizon Sweep — ~7.5" x 4.5"]**
 
-*(see Figure Generation Prompts below)*
+_(see Figure Generation Prompts below)_
 
-*At 1-2s, persistence matches the TCN. At 3-10s, persistence collapses to negative R² while the TCN maintains R² = 0.37-0.67 — the operationally useful range for proactive control.*
+_At 1-2s, persistence matches the TCN. At 3-10s, persistence collapses to negative R² while the TCN maintains R² = 0.37-0.67 — the operationally useful range for proactive control._
 
 **[FIGURE 10: Real-Data Controller Timeline — ~7.5" x 5"]**
 
-*(see Figure Generation Prompts below)*
+_(see Figure Generation Prompts below)_
 
-*Real EEG from a held-out test subject (sub-15). Both controllers use the same threshold (z ±0.5) and hysteresis (3s) — the only difference is current PAC (reactive) vs predicted future PAC (TCN). The TCN begins stimulating before PAC decline, catching low-PAC windows the reactive controller misses.*
+_Real EEG from a held-out test subject (sub-15). Both controllers use the same threshold (z ±0.5) and hysteresis (3s) — the only difference is current PAC (reactive) vs predicted future PAC (TCN). The TCN begins stimulating before PAC decline, catching low-PAC windows the reactive controller misses._
 
 ---
 
@@ -359,7 +371,9 @@ No clinical-grade EEG equipment, no dedicated hardware, no cloud processing requ
 ---
 
 ## ============================
+
 ## COLUMN 4 — RIGHT (Results / Conclusions / Future)
+
 ## ============================
 
 ---
@@ -367,14 +381,14 @@ No clinical-grade EEG equipment, no dedicated hardware, no cloud processing requ
 ### RESULTS & FINDINGS (header: Amaranth Bold 20pt white on teal)
 
 **Result 1: TCN Predictive Controller Outperforms All Alternatives**
-*Controller performance replayed on all 35 subjects' real EEG:*
+_Controller performance replayed on all 35 subjects' real EEG:_
 
-| Controller | Alignment | Low-PAC Targeting | PAC Gap (×10⁻⁶) | Stim % |
-|---|---|---|---|---|
-| Fixed Schedule | 45.0% | 61.4% | -6.6 (wrong) | 66.6% |
-| Reactive | 64.5% | 51.7% | +21.1 | 36.7% |
-| **TCN Predictive** | **72.1%** | **82.6%** | **+30.5** | **59.7%** |
-| Oracle (upper) | 100.0% | 100.0% | +33.3 | 48.3% |
+| Controller         | Alignment | Low-PAC Targeting | PAC Gap (×10⁻⁶) | Stim %    |
+| ------------------ | --------- | ----------------- | --------------- | --------- |
+| Fixed Schedule     | 45.0%     | 61.4%             | -6.6 (wrong)    | 66.6%     |
+| Reactive           | 64.5%     | 51.7%             | +21.1           | 36.7%     |
+| **TCN Predictive** | **72.1%** | **82.6%**         | **+30.5**       | **59.7%** |
+| Oracle (upper)     | 100.0%    | 100.0%            | +33.3           | 48.3%     |
 
 - TCN vs Reactive: Alignment g = 1.31, Low-PAC targeting g = 4.47, PAC gap g = 1.57 (all p < 0.001)
 - TCN PAC targeting gap reaches 91% of the theoretical oracle
@@ -383,7 +397,7 @@ No clinical-grade EEG equipment, no dedicated hardware, no cloud processing requ
 
 **[FIGURE 5: Controller Comparison Bar Chart — ~9" x 4"]**
 
-*(see Figure Generation Prompts below)*
+_(see Figure Generation Prompts below)_
 
 ---
 
@@ -391,7 +405,7 @@ No clinical-grade EEG equipment, no dedicated hardware, no cloud processing requ
 
 **[FIGURE 7: Per-Subject Alignment Scatter — ~9" x 4.5"]**
 
-*(see Figure Generation Prompts below)*
+_(see Figure Generation Prompts below)_
 
 - 35/35 subjects (100%) show higher utility with TCN vs Reactive (binomial p < 0.001)
 - Advantage holds for 6 held-out test subjects never seen during training
@@ -399,38 +413,38 @@ No clinical-grade EEG equipment, no dedicated hardware, no cloud processing requ
 ---
 
 **Result 3: Advantage Increases with Fatigue**
-*Simulation results across 6 fatigue severity levels (n = 50 trials each):*
+_Simulation results across 6 fatigue severity levels (n = 50 trials each):_
 
 | Fatigue Level | Fixed Efficiency | Adaptive Efficiency | Improvement |
-|---|---|---|---|
-| None | 5.381 | 5.401 | +0.4% |
-| Mild | 5.294 | 5.361 | +1.3% |
-| Moderate | 5.101 | 5.231 | +2.6% |
-| Severe | 4.968 | 5.184 | +4.3% |
-| High | 4.819 | 5.092 | +5.7% |
+| ------------- | ---------------- | ------------------- | ----------- |
+| None          | 5.381            | 5.401               | +0.4%       |
+| Mild          | 5.294            | 5.361               | +1.3%       |
+| Moderate      | 5.101            | 5.231               | +2.6%       |
+| Severe        | 4.968            | 5.184               | +4.3%       |
+| High          | 4.819            | 5.092               | +5.7%       |
 
-***p < 0.001, Hedges' g = 1.7-2.4 (large to very large effects). Advantage grows as fatigue worsens; exactly when personalization matters most.*
+_\*\*p < 0.001, Hedges' g = 1.7-2.4 (large to very large effects). Advantage grows as fatigue worsens; exactly when personalization matters most._
 
 ---
 
 **Result 4: Robust Across Fatigue Model Assumptions**
-*Tested under 4 different mathematical models of neural fatigue (n = 50 trials each):*
+_Tested under 4 different mathematical models of neural fatigue (n = 50 trials each):_
 
-| Fatigue Model | Fixed Efficiency | Adaptive | Hedges' g |
-|---|---|---|---|
-| Exponential Decay | 5.381 | 5.401 | 2.01 |
-| Step Function | 4.947 | 5.361 | 1.21 |
-| Heterogeneous | 5.101 | 5.231 | 1.71 |
-| Saturation (logistic) | 4.819 | 5.092 | 3.66 |
+| Fatigue Model         | Fixed Efficiency | Adaptive | Hedges' g |
+| --------------------- | ---------------- | -------- | --------- |
+| Exponential Decay     | 5.381            | 5.401    | 2.01      |
+| Step Function         | 4.947            | 5.361    | 1.21      |
+| Heterogeneous         | 5.101            | 5.231    | 1.71      |
+| Saturation (logistic) | 4.819            | 5.092    | 3.66      |
 
 ---
 
 **Three gold callout boxes** (side by side, #D4A843 background):
 
-| 72.1% | 82.6% | 35 / 35 |
-|-------|-------|---------|
-| Alignment | Low-PAC Targeting | Subjects Benefited |
-| vs 64.5% reactive | vs 51.7% reactive | binomial p < 0.001 |
+| 72.1%               | 82.6%               | 35 / 35             |
+| ------------------- | ------------------- | ------------------- |
+| Alignment           | Low-PAC Targeting   | Subjects Benefited  |
+| vs 64.5% reactive   | vs 51.7% reactive   | binomial p < 0.001  |
 | g = 1.31, p < 0.001 | g = 4.47, p < 0.001 | 91% of oracle bound |
 
 ---
@@ -458,7 +472,9 @@ No clinical-grade EEG equipment, no dedicated hardware, no cloud processing requ
 ---
 
 ## ============================
+
 ## FIGURE GENERATION PROMPTS (Nano Banana Pro)
+
 ## ============================
 
 All figures below share the Global Figure Style Specification defined at the top of this document. Each prompt is self-contained and includes the style DNA inline for direct copy-paste into Nano Banana Pro.
@@ -700,7 +716,7 @@ BLOCK DETAILS (use rounded rectangles, 4px corner radius, clean drop-shadow-free
    - Bold title: "Closed-Loop Controller"
    - Three output arrows fanning out from it:
      - Top arrow (green-teal): "STIMULATE"
-     - Middle arrow (amber/yellow): "REST"  
+     - Middle arrow (amber/yellow): "REST"
      - Bottom arrow (muted): "MAINTAIN"
 
 8. "Control Parameters" (floating box near controller)
@@ -931,7 +947,7 @@ PANEL A — "40 Hz Entrainment Pathway" (sagittal/medial brain view, ~60% of wid
   1. External arrow: "40 Hz Sound" → ear → Auditory Cortex (amber arrow, 3px, labeled "① Auditory input")
   2. Auditory Cortex → Frontal Cortex (teal arrow, 2.5px, labeled "② Gamma propagation")
   3. Frontal Cortex → Hippocampus (gold arrow, 2.5px, labeled "③ Theta-gamma coupling")
-  
+
 - Near the hippocampus, add a small annotation box: "PAC measured here — gamma amplitude locked to theta phase"
 
 - Near the entorhinal cortex, add a small annotation: "Amyloid-β clearance via microglial activation (Iaccarino 2016)"
@@ -1128,61 +1144,68 @@ DIMENSIONS: 2400 x 1500 pixels (1.6:1), 300 DPI
 ---
 
 ## ============================
+
 ## NUMERICAL VERIFICATION
+
 ## ============================
 
 All claims verified against source files:
 
-| Claim | Value | Source | Verified |
-|-------|-------|--------|----------|
-| Alignment (TCN) | 72.1% | `results/RESULTS_REPORT.md` | YES |
-| Alignment (Reactive) | 64.5% | `results/RESULTS_REPORT.md` | YES |
-| Low-PAC Stim (TCN) | 82.6% | `results/RESULTS_REPORT.md` | YES |
-| Low-PAC Stim (Reactive) | 51.7% | `results/RESULTS_REPORT.md` | YES |
-| PAC Gap (TCN) | 30.5 x10^-6 | `results/RESULTS_REPORT.md` | YES |
-| Hedges' g (alignment) | 1.31 | `results/RESULTS_REPORT.md` | YES |
-| Hedges' g (low-PAC) | 4.47 | `results/RESULTS_REPORT.md` | YES |
-| Oracle bound | 91% | `results/RESULTS_REPORT.md` | YES |
-| Subjects benefiting | 35/35 | `results/RESULTS_REPORT.md` | YES |
-| R² (5-seed mean) | 0.606 ± 0.032 | `experimental/FINDINGS.md` | YES |
-| R² at h=5 (7ch) | 0.577 | `experimental/results/horizon_sweep_pac_stim.json` | YES |
-| R² at h=5 (4ch) | 0.398 | `experimental/FINDINGS.md` | YES |
-| Hysteresis | 3 seconds | `scripts/pipeline/run_tcn_validation.py` line 283 | YES |
-| TCN parameters | 5,154 (h=32) | `experimental/FINDINGS.md` | YES |
-| EEGNet parameters | 1,457 | `src/eegnet.py` | YES |
-| Shuffle-label R² | -0.332 | `results/RESULTS_REPORT.md` | YES |
-| Feature ablation (73→12) | R² -0.025 → 0.606 | `experimental/FINDINGS.md` | YES |
-| Fixed Schedule alignment | 45.0% | `results/RESULTS_REPORT.md` | YES |
-| Fixed Schedule stim rate | 66.6% | `results/RESULTS_REPORT.md` | YES |
+| Claim                    | Value             | Source                                             | Verified |
+| ------------------------ | ----------------- | -------------------------------------------------- | -------- |
+| Alignment (TCN)          | 72.1%             | `results/RESULTS_REPORT.md`                        | YES      |
+| Alignment (Reactive)     | 64.5%             | `results/RESULTS_REPORT.md`                        | YES      |
+| Low-PAC Stim (TCN)       | 82.6%             | `results/RESULTS_REPORT.md`                        | YES      |
+| Low-PAC Stim (Reactive)  | 51.7%             | `results/RESULTS_REPORT.md`                        | YES      |
+| PAC Gap (TCN)            | 30.5 x10^-6       | `results/RESULTS_REPORT.md`                        | YES      |
+| Hedges' g (alignment)    | 1.31              | `results/RESULTS_REPORT.md`                        | YES      |
+| Hedges' g (low-PAC)      | 4.47              | `results/RESULTS_REPORT.md`                        | YES      |
+| Oracle bound             | 91%               | `results/RESULTS_REPORT.md`                        | YES      |
+| Subjects benefiting      | 35/35             | `results/RESULTS_REPORT.md`                        | YES      |
+| R² (5-seed mean)         | 0.606 ± 0.032     | `experimental/FINDINGS.md`                         | YES      |
+| R² at h=5 (7ch)          | 0.577             | `experimental/results/horizon_sweep_pac_stim.json` | YES      |
+| R² at h=5 (4ch)          | 0.398             | `experimental/FINDINGS.md`                         | YES      |
+| Hysteresis               | 3 seconds         | `scripts/pipeline/run_tcn_validation.py` line 283  | YES      |
+| TCN parameters           | 5,154 (h=32)      | `experimental/FINDINGS.md`                         | YES      |
+| EEGNet parameters        | 1,457             | `src/eegnet.py`                                    | YES      |
+| Shuffle-label R²         | -0.332            | `results/RESULTS_REPORT.md`                        | YES      |
+| Feature ablation (73→12) | R² -0.025 → 0.606 | `experimental/FINDINGS.md`                         | YES      |
+| Fixed Schedule alignment | 45.0%             | `results/RESULTS_REPORT.md`                        | YES      |
+| Fixed Schedule stim rate | 66.6%             | `results/RESULTS_REPORT.md`                        | YES      |
 
 ---
 
 ## ============================
+
 ## FIGURE INVENTORY
+
 ## ============================
 
-| # | Figure | Source | Status | Column | Size (working) |
-|---|--------|--------|--------|--------|----------------|
-| 1 | Fixed vs Adaptive | Nano Banana Pro | TO GENERATE | Col 1: Introduction | 8" x 4" |
-| 2 | Dataset Overview | Nano Banana Pro | TO GENERATE | Col 3: Materials | 7.5" x 6" |
-| 3 | Feature Ablation | Nano Banana Pro | TO GENERATE | Col 2: Key Discovery | 9" x 3.5" |
-| 4 | System Architecture | Nano Banana Pro | TO GENERATE | Col 2: bottom (hero) | 9" x 5" |
-| 5 | Controller Comparison | Nano Banana Pro | TO GENERATE | Col 4: Result 1 | 9" x 4" |
-| 6 | Horizon Sweep | Nano Banana Pro | TO GENERATE | Col 3: Data Analysis | 7.5" x 4.5" |
-| 7 | Per-Subject Scatter | Nano Banana Pro | TO GENERATE | Col 4: Result 2 | 9" x 4.5" |
-| 8 | Brain Mechanism | Nano Banana Pro | TO GENERATE | Col 2: below Stage 2 | 9" x 5" |
-| 9 | Training & Validation Protocol | Nano Banana Pro | TO GENERATE | Col 3: Procedures | 7.5" x 5" |
-| 10 | Real-Data Controller Timeline | Nano Banana Pro | TO GENERATE | Col 3: Data Analysis | 7.5" x 5" |
+| #   | Figure                         | Source          | Status      | Column               | Size (working) |
+| --- | ------------------------------ | --------------- | ----------- | -------------------- | -------------- |
+| 1   | Fixed vs Adaptive              | Nano Banana Pro | TO GENERATE | Col 1: Introduction  | 8" x 4"        |
+| 2   | Dataset Overview               | Nano Banana Pro | TO GENERATE | Col 3: Materials     | 7.5" x 6"      |
+| 3   | Feature Ablation               | Nano Banana Pro | TO GENERATE | Col 2: Key Discovery | 9" x 3.5"      |
+| 4   | System Architecture            | Nano Banana Pro | TO GENERATE | Col 2: bottom (hero) | 9" x 5"        |
+| 5   | Controller Comparison          | Nano Banana Pro | TO GENERATE | Col 4: Result 1      | 9" x 4"        |
+| 6   | Horizon Sweep                  | Nano Banana Pro | TO GENERATE | Col 3: Data Analysis | 7.5" x 4.5"    |
+| 7   | Per-Subject Scatter            | Nano Banana Pro | TO GENERATE | Col 4: Result 2      | 9" x 4.5"      |
+| 8   | Brain Mechanism                | Nano Banana Pro | TO GENERATE | Col 2: below Stage 2 | 9" x 5"        |
+| 9   | Training & Validation Protocol | Nano Banana Pro | TO GENERATE | Col 3: Procedures    | 7.5" x 5"      |
+| 10  | Real-Data Controller Timeline  | Nano Banana Pro | TO GENERATE | Col 3: Data Analysis | 7.5" x 5"      |
 
 **Total: 10 figures, all to be generated via Nano Banana Pro for visual cohesion.** All share the Global Figure Style Specification. Figures occupy ~65% of board area.
 
 ---
 
 ## ============================
+
 ## PRINTING & TABLE SETUP
+
 ## ============================
 
 **Print:**
+
 - File: 36" x 48" PowerPoint
 - Export as PDF first
 - Print at 133% → final 48" x 64"
@@ -1190,6 +1213,7 @@ All claims verified against source files:
 - Verify height under 164 cm (CSEF limit)
 
 **Table items (CSEF REQUIRED):**
+
 - 13-page Project Presentation (PRINTED — required by CSEF)
 - Lab notebook (recommended)
 - Laptop with demo (BATTERY POWERED — no AC at CSEF)
@@ -1198,9 +1222,10 @@ All claims verified against source files:
 - Battery pack / power bank
 
 **NOT on table:**
+
 - No QR codes, business cards, or distribution items
 - No previous fair awards
 
 ---
 
-*Version 8 — Full restructure for CSEF 2026. 4-column layout modeled after Synopsys poster balance. Column 3 includes Materials, Procedures (with Figure 9 training/validation protocol), Data Analysis (Figure 6 horizon sweep + Figure 10 real-data timeline), and Toward Clinical Use. Added brain mechanism diagram (Figure 8). All Synopsys poster content carried forward. 10 Nano Banana Pro figure prompts. All numerical claims verified.*
+_Version 8 — Full restructure for CSEF 2026. 4-column layout modeled after Synopsys poster balance. Column 3 includes Materials, Procedures (with Figure 9 training/validation protocol), Data Analysis (Figure 6 horizon sweep + Figure 10 real-data timeline), and Toward Clinical Use. Added brain mechanism diagram (Figure 8). All Synopsys poster content carried forward. 10 Nano Banana Pro figure prompts. All numerical claims verified._

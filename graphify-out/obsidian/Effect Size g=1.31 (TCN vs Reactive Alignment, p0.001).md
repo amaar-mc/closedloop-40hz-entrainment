@@ -9,6 +9,7 @@ tags:
 # Effect Size g=1.31 (TCN vs Reactive Alignment, p<0.001)
 
 ## Connections
+
 - [[Figure 13 Controller Performance Comparison (N=35)]] - `references` [EXTRACTED]
 
   #community/Community_61

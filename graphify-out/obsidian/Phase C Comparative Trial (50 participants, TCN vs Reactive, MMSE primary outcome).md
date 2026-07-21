@@ -10,7 +10,8 @@ tags:
 # Phase C: Comparative Trial (50 participants, TCN vs Reactive, MMSE primary outcome)
 
 ## Connections
+
 - [[Clinical Roadmap (Research to Practice Pathway)]] - `references` [EXTRACTED]
 - [[Controller Alignment 72.1% Predictive vs 64.5% Reactive (p0.001)]] - `conceptually_related_to` [INFERRED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

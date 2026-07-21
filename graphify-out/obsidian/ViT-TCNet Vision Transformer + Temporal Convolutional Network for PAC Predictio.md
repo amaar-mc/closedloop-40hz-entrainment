@@ -10,6 +10,7 @@ tags:
 # ViT-TCNet: Vision Transformer + Temporal Convolutional Network for PAC Predictio
 
 ## Connections
+
 - [[vit_tcnet.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

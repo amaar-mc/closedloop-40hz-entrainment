@@ -8,6 +8,7 @@ members: 9
 **Members:** 9 nodes
 
 ## Members
+
 - [[Approval-Era Chronology Anchor (Jan 15 as fair-facing start date)]] - document - archive/notebooks/P10_Lab_Notebook_V2.md
 - [[Expected Notebook Structure (18-22 pages, 8 sections)]] - document - archive/notebooks/RESEARCH_NOTEBOOK_ENHANCEMENT_PROMPT.md
 - [[P10 Lab Notebook V1 (PDF)]] - document - archive/notebooks/P10_Lab_Notebook_V1.pdf

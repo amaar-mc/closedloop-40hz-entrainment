@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[Args             eeg (batch, 1, n_channels, n_samples) - Raw EEG]] - `rationale_for` [EXTRACTED]
 - [[SpecTempNet]] - `method` [EXTRACTED]
 

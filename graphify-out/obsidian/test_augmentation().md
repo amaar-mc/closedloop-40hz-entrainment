@@ -10,6 +10,7 @@ tags:
 # test_augmentation()
 
 ## Connections
+
 - [[AddGaussianNoise]] - `calls` [EXTRACTED]
 - [[ChannelDropout]] - `calls` [EXTRACTED]
 - [[EEGAugmentation]] - `calls` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[TimeWarp]] - `calls` [EXTRACTED]
 - [[data_augmentation.py]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

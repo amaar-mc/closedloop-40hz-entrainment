@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[PredictiveLookAheadControl_5]] - `method` [EXTRACTED]
 - [[_pac_trend()]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

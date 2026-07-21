@@ -8,6 +8,7 @@ members: 35
 **Members:** 35 nodes
 
 ## Members
+
 - [[73-Dimensional Feature Engineering]] - document - archive/context/methodology.md
 - [[Architecture Exploration Table (6 models)]] - document - archive/context/poster_board.md
 - [[Causal Padding Design Decision]] - document - archive/context/methodology.md

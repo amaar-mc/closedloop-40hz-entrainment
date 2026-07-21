@@ -10,6 +10,7 @@ tags:
 # Study Limitations (Offline Replay, Single Dataset)
 
 ## Connections
+
 - [[Data Integrity Verification Table]] - `references` [INFERRED]
 
   #community/Community_34

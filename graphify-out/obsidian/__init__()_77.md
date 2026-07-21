@@ -7,9 +7,10 @@ tags:
   - community/Community_62
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[FixedSchedule]] - `method` [EXTRACTED]
 
   #community/Community_62

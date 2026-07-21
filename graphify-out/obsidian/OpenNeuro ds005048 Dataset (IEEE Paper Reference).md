@@ -10,6 +10,7 @@ tags:
 # OpenNeuro ds005048 Dataset (IEEE Paper Reference)
 
 ## Connections
+
 - [[IEEE Research Paper Personalized Deep Learning for Closed-Loop 40Hz Entrainment]] - `references` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

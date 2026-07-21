@@ -10,6 +10,7 @@ tags:
 # SequenceDataset
 
 ## Connections
+
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[Loads a multiscale temporal dataset from disk.]] - `rationale_for` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
@@ -23,4 +24,4 @@ tags:
 - [[main()_68]] - `calls` [EXTRACTED]
 - [[run_all_experiments.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

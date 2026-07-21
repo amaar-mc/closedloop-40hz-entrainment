@@ -7,9 +7,10 @@ tags:
   - community/Community_80
 ---
 
-# _subject_events()
+# \_subject_events()
 
 ## Connections
+
 - [[Load BIDS events TSV for a subject.]] - `rationale_for` [EXTRACTED]
 - [[build_sliding_dataset()]] - `calls` [EXTRACTED]
 - [[build_sliding_dataset.py]] - `contains` [EXTRACTED]

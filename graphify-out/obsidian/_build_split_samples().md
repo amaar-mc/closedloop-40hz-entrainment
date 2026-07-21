@@ -7,9 +7,10 @@ tags:
   - community/Community_53
 ---
 
-# _build_split_samples()
+# \_build_split_samples()
 
 ## Connections
+
 - [[_causal_target_smooth()]] - `calls` [EXTRACTED]
 - [[_pac_multiscale_features()_1]] - `calls` [EXTRACTED]
 - [[_stim_context_from_events()_1]] - `calls` [EXTRACTED]

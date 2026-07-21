@@ -7,12 +7,13 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# Train a model for one seed and evaluate on the test split.      Uses Huber los
+# Train a model for one seed and evaluate on the test split. Uses Huber los
 
 ## Connections
+
 - [[EEGNet_1]] - `uses` [INFERRED]
 - [[EEGNetEnhanced]] - `uses` [INFERRED]
 - [[EEGNetLarge]] - `uses` [INFERRED]
 - [[train_single_seed()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

@@ -10,6 +10,7 @@ tags:
 # train_and_evaluate (Ridge + MLP Sklearn Baseline)
 
 ## Connections
+
 - [[create_temporal_features (Flat Feature Vector Builder)]] - `calls` [EXTRACTED]
 - [[train_temporal_predictor()]] - `semantically_similar_to` [INFERRED]
 

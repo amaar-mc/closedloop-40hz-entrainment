@@ -10,6 +10,7 @@ tags:
 # Paper Story: One Paragraph Summary
 
 ## Connections
+
 - [[Abstract Section Arc]] - `conceptually_related_to` [INFERRED]
 - [[Framing B Proactive vs Reactive Neurostimulation]] - `conceptually_related_to` [INFERRED]
 

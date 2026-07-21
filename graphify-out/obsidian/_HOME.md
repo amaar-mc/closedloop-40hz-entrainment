@@ -16,6 +16,7 @@ This map links the 30 largest, named communities. The remaining ~175 micro-commu
 ---
 
 ## 🔬 Active Research System
+
 The live pipeline: raw EEG → PAC → temporal forecasting → closed-loop control.
 
 - [[_COMMUNITY_Core Data & PAC Pipeline]] — preprocessing, PAC computation, dataset/trainer (`src/`)
@@ -27,22 +28,26 @@ The live pipeline: raw EEG → PAC → temporal forecasting → closed-loop cont
 - [[_COMMUNITY_Models, Streaming & Apps]] — `EEGNet`, streaming features, model registry, Streamlit apps
 
 ## 🧬 Biophysical Simulators
+
 - [[_COMMUNITY_TRIBE Neural-Mass Simulator]] — Wilson–Cowan / cortical response / Alzheimer profiles
 - [[_COMMUNITY_TVB Alzheimer Simulator]] — TVB-based disease-severity simulation
 - [[_COMMUNITY_TRIBE-TCN Validation]] — TCN trained/validated against TRIBE simulator
 
 ## 📊 Results & Analysis
+
 - [[_COMMUNITY_Controller Results & Judge Prep]] — controller comparison tables, judge interview prep
 - [[_COMMUNITY_Rigor Audit Reports]] — leakage audit, feature ablation, robustness verdicts
 - [[_COMMUNITY_Replay Analysis & Controllers]] — offline replay on real EEG
 - [[_COMMUNITY_Model Ceiling & Leakage Audits]] — R²≈0.29 ceiling, MI-leakage detection
 
 ## 📄 Paper & Documentation
+
 - [[_COMMUNITY_Research Paper & Manuscript]] — full manuscript, design-decision rationale
 - [[_COMMUNITY_Literature Review & Methodology Docs]] — lit review, bibliography, methodology
 - [[_COMMUNITY_Presentation Scripts & Citations]] — talk scripts + core citations
 
 ## 🖼️ CSEF 2026 Submission Artifacts
+
 - [[_COMMUNITY_Poster Boards & Figures]] — poster board versions + figures
 - [[_COMMUNITY_PaperPresentation PDF Builders]] — paper/presentation PDF generators
 - [[_COMMUNITY_CSEF Presentation Generator]] — CSEF pptx generation
@@ -50,6 +55,7 @@ The live pipeline: raw EEG → PAC → temporal forecasting → closed-loop cont
 - [[_COMMUNITY_Lab Notebook PDF Generation]] — lab notebook → PDF
 
 ## 🗄️ Archive (superseded experiments)
+
 - [[_COMMUNITY_Archived Feature Experiments (v4)]] — wavelet/spectral/PAC feature experiments
 - [[_COMMUNITY_Archived ImprovedTCN Experiments]] — ImprovedTCN runs
 - [[_COMMUNITY_Archived Enhanced-Feature TCN]] — enhanced-feature TCN
@@ -62,6 +68,7 @@ The live pipeline: raw EEG → PAC → temporal forecasting → closed-loop cont
 ---
 
 ## ⭐ Core Abstractions (God Nodes — highest connectivity)
+
 Best single-node entry points into the system.
 
 - [[StimAction]] (197 edges) · [[EntrainmentSimulator]] (142) · [[FatigueAwareSimulator]] (142)

@@ -10,6 +10,7 @@ tags:
 # Run one simulated subject trial and return alignment metrics.
 
 ## Connections
+
 - [[StimAction]] - `uses` [INFERRED]
 - [[run_subject_trial()]] - `rationale_for` [EXTRACTED]
 

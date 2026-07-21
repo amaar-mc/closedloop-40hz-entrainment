@@ -10,9 +10,10 @@ tags:
 # Reactive z-score-based control with rolling baseline.
 
 ## Connections
+
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
 - [[ReactiveThresholdControl_4]] - `rationale_for` [EXTRACTED]
 - [[StimAction]] - `uses` [INFERRED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

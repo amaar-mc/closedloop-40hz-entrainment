@@ -9,6 +9,7 @@ tags:
 # Poster Board V5 (Condensed, Visual-Forward, Audit-Verified)
 
 ## Connections
+
 - [[Poster Board V3 (Print-Ready, Synopsys)]] - `references` [INFERRED]
 - [[Poster Board V6 (PAC+Stim Feature Discovery Update)]] - `references` [EXTRACTED]
 

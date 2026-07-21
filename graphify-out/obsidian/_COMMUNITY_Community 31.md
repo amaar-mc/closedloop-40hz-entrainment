@@ -8,6 +8,7 @@ members: 37
 **Members:** 37 nodes
 
 ## Members
+
 - [[Adaptive Stimulation Benefit by Severity (Panel C)]] - image - results/tribe_v2/alzheimer_simulation.png
 - [[Adaptive Stimulation Benefit Predictive minus Fixed (Panel C)]] - image - results/tribe_v2/alzheimer_simulation.pdf
 - [[Disease Severity Gradient (healthy→preclinical→mild→moderate→severe)]] - image - results/tribe_v2/alzheimer_simulation.pdf

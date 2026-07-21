@@ -9,6 +9,7 @@ tags:
 # Generate Paper LaTeX Script
 
 ## Connections
+
 - [[submissionpaperRESEARCH_PAPER_v3.md]] - `references` [EXTRACTED]
 
   #community/Community_151

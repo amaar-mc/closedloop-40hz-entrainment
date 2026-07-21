@@ -7,9 +7,10 @@ tags:
   - community/Archived_Enhanced-Feature_TCN
 ---
 
-# _denorm()
+# \_denorm()
 
 ## Connections
+
 - [[evaluate()]] - `calls` [EXTRACTED]
 - [[train_improved_tcn.py]] - `contains` [EXTRACTED]
 

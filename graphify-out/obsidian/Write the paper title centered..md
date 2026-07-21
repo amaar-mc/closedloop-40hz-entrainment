@@ -10,6 +10,7 @@ tags:
 # Write the paper title centered.
 
 ## Connections
+
 - [[write_title()]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

@@ -10,6 +10,7 @@ tags:
 # Working Paper Title: Feature-Selected Temporal Forecasting for Retrospective Closed-Loop 40Hz Auditory Entrainment
 
 ## Connections
+
 - [[Causal TCN with 12 PAC-Trajectory and Stimulation-Context Features]] - `conceptually_related_to` [EXTRACTED]
 - [[Research Paper Status Document]] - `references` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # generate_closedloop_vs_fixed_v3.py
 
 ## Connections
+
 - [[draw_stim_bar()]] - `contains` [EXTRACTED]
 
   #community/Community_139

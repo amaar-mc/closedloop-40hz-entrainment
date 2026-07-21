@@ -7,9 +7,10 @@ tags:
   - community/CSEF_Presentation_Generator
 ---
 
-# _disable_bullet()
+# \_disable_bullet()
 
 ## Connections
+
 - [[Explicitly disable bullet inheritance (buNone).]] - `rationale_for` [EXTRACTED]
 - [[add_body()]] - `calls` [EXTRACTED]
 - [[add_body_mixed()]] - `calls` [EXTRACTED]

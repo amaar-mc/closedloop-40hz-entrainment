@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[Args             lookback Number of windows to look back (5 windows = 20 seco]] - `rationale_for` [EXTRACTED]
 - [[LongWindowTemporalDataset]] - `method` [EXTRACTED]
 

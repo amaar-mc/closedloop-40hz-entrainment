@@ -10,6 +10,7 @@ tags:
 # ridge_per_subject()
 
 ## Connections
+
 - [[Per-subject Ridge blend global with locally-fit Ridge.]] - `rationale_for` [EXTRACTED]
 - [[_flatten()]] - `calls` [EXTRACTED]
 - [[_r2()_4]] - `calls` [EXTRACTED]

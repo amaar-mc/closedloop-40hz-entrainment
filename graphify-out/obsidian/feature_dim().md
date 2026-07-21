@@ -10,6 +10,7 @@ tags:
 # feature_dim()
 
 ## Connections
+
 - [[model_registry.py]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

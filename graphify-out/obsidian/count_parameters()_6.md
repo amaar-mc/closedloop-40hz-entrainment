@@ -10,6 +10,7 @@ tags:
 # count_parameters()
 
 ## Connections
+
 - [[Count total trainable parameters.]] - `rationale_for` [EXTRACTED]
 - [[TemporalPACPredictor]] - `method` [EXTRACTED]
 - [[test_temporal_model()]] - `calls` [EXTRACTED]

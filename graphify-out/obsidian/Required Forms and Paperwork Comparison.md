@@ -10,6 +10,7 @@ tags:
 # Required Forms and Paperwork Comparison
 
 ## Connections
+
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 
   #community/Community_69

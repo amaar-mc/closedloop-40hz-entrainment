@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Alzheimer's Disease Modeling Layer for TRIBE V2 Integration  Models the effects
+# Alzheimer's Disease Modeling Layer for TRIBE V2 Integration Models the effects
 
 ## Connections
+
 - [[alzheimer_model.py]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

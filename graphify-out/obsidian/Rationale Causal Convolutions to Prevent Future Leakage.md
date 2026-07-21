@@ -10,6 +10,7 @@ tags:
 # Rationale: Causal Convolutions to Prevent Future Leakage
 
 ## Connections
+
 - [[Multiscale Causal TCN Architecture Detail]] - `rationale_for` [EXTRACTED]
 
   #community/Community_39

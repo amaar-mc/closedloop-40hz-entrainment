@@ -7,10 +7,11 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[Args             p Probability of dropping each channel]] - `rationale_for` [EXTRACTED]
 - [[ChannelDropout]] - `method` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

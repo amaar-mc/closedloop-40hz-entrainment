@@ -8,7 +8,8 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
-- [[Temporal Legacy Package (Option B LSTM)]] - code - archive/temporal_legacy/__init__.py
+
+- [[Temporal Legacy Package (Option B LSTM)]] - code - archive/temporal_legacy/**init**.py
 
 ## Live Query (requires Dataview plugin)
 

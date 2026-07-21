@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Args:             x: EEG data (n_channels, n_samples)          Returns:
+# Args: x: EEG data (n_channels, n_samples) Returns:
 
 ## Connections
+
 - [[__call__()_4]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

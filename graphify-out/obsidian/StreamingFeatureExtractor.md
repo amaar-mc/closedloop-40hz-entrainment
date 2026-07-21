@@ -10,6 +10,7 @@ tags:
 # StreamingFeatureExtractor
 
 ## Connections
+
 - [[4-channel streaming matches offline within tolerances on windows 5-14.     Retu]] - `uses` [INFERRED]
 - [[7-channel streaming matches offline within tolerances on windows 5-14.]] - `uses` [INFERRED]
 - [[Append a session record to the given patient and clear cache.]] - `uses` [INFERRED]
@@ -58,4 +59,4 @@ tags:
 - [[reset()_67]] - `method` [EXTRACTED]
 - [[reset() zeroes filter state so subsequent call matches a fresh instance.]] - `uses` [INFERRED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

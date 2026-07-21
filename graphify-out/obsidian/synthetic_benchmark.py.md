@@ -10,6 +10,7 @@ tags:
 # synthetic_benchmark.py
 
 ## Connections
+
 - [[Synthetic Benchmark for TCN Architecture Variants.  Generates synthetic tempor]] - `rationale_for` [EXTRACTED]
 - [[SyntheticDataset]] - `contains` [EXTRACTED]
 - [[_corr()_7]] - `contains` [EXTRACTED]
@@ -25,4 +26,4 @@ tags:
 - [[run_benchmark()]] - `contains` [EXTRACTED]
 - [[train_and_evaluate()_1]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

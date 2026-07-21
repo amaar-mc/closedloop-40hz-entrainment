@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[CorticalResponseModel]] - `method` [EXTRACTED]
 - [[_load_tribe_model()]] - `calls` [EXTRACTED]
 

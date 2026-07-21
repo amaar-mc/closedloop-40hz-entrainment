@@ -10,6 +10,7 @@ tags:
 # Load TRIBE V2 model from HuggingFace Hub.
 
 ## Connections
+
 - [[_load_tribe_model()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

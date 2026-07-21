@@ -10,6 +10,7 @@ tags:
 # EEGNet Architecture Detail (Block 1 + Block 2 + FC Head)
 
 ## Connections
+
 - [[EEGNet Static PAC Estimator (Stage 1)]] - `semantically_similar_to` [INFERRED]
 
   #community/Community_39

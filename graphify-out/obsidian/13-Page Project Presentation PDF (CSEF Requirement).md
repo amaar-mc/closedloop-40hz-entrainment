@@ -10,6 +10,7 @@ tags:
 # 13-Page Project Presentation PDF (CSEF Requirement)
 
 ## Connections
+
 - [[CSEF Action Items and Preparation Checklist]] - `references` [EXTRACTED]
 - [[CSEF vs Synopsys Rules Comparison Document]] - `references` [EXTRACTED]
 - [[California State Science Fair (CSEF)]] - `references` [EXTRACTED]

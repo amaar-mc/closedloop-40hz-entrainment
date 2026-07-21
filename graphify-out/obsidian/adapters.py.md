@@ -10,6 +10,7 @@ tags:
 # adapters.py
 
 ## Connections
+
 - [[Hardware-agnostic EEG adapters for closed-loop inference.  Provides two adapters]] - `rationale_for` [EXTRACTED]
 - [[RealEEGAdapter]] - `contains` [EXTRACTED]
 - [[SimulatedEEGAdapter]] - `contains` [EXTRACTED]

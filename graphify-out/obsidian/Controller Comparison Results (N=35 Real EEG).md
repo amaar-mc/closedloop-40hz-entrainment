@@ -10,6 +10,7 @@ tags:
 # Controller Comparison Results (N=35 Real EEG)
 
 ## Connections
+
 - [[Controller Comparison Table (Poster)]] - `references` [EXTRACTED]
 - [[PAC Targeting Quality Table]] - `references` [EXTRACTED]
 - [[Statistical Significance Table (TCN vs Reactive)]] - `references` [EXTRACTED]

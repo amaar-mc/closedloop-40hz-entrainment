@@ -10,6 +10,7 @@ tags:
 # Compute PAC-structure features identical to offline compute_pac_features().
 
 ## Connections
+
 - [[_compute_pac_features()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

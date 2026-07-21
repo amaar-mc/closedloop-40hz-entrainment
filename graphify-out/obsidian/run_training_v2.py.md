@@ -10,6 +10,7 @@ tags:
 # run_training_v2.py
 
 ## Connections
+
 - [[training_v2.py]] - `imports_from` [EXTRACTED]
 
   #community/Archived_EEGNet_V2

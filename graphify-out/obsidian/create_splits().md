@@ -10,8 +10,9 @@ tags:
 # create_splits()
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `method` [EXTRACTED]
 - [[Create trainvaltest splits by subject (leave-subject-out).          Ensures]] - `rationale_for` [EXTRACTED]
 - [[main()_76]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

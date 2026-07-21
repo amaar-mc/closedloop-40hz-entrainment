@@ -10,6 +10,7 @@ tags:
 # render_summary()
 
 ## Connections
+
 - [[NeuroCare Caregiver Dashboard (Multi-page Streamlit)]] - `calls` [EXTRACTED]
 - [[Patient Profiles JSON Store]] - `shares_data_with` [EXTRACTED]
 - [[Post-session summary with plain-language metrics and session saving.]] - `rationale_for` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[pac_to_display()]] - `calls` [EXTRACTED]
 - [[save_session()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

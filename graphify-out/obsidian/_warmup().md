@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# _warmup()
+# \_warmup()
 
 ## Connections
+
 - [[Run a brief warmup to establish baseline PAC.]] - `rationale_for` [EXTRACTED]
 - [[TribeEnhancedSimulator]] - `method` [EXTRACTED]
 - [[__init__()_169]] - `calls` [EXTRACTED]

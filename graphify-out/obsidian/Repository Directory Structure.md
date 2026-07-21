@@ -10,6 +10,7 @@ tags:
 # Repository Directory Structure
 
 ## Connections
+
 - [[Architecture Overview Data Flow (CLAUDE.md)]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_140

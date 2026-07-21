@@ -7,11 +7,12 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# _init_session_state()
+# \_init_session_state()
 
 ## Connections
+
 - [[Ensure all session-state keys exist with defaults.]] - `rationale_for` [EXTRACTED]
 - [[caregiver_app.py]] - `contains` [EXTRACTED]
 - [[main()_64]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

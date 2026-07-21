@@ -7,9 +7,10 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# _NoOpAudioEngine
+# \_NoOpAudioEngine
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
 - [[Stub when sounddevice is unavailable.]] - `rationale_for` [EXTRACTED]
@@ -18,4 +19,4 @@ tags:
 - [[start()_1]] - `method` [EXTRACTED]
 - [[stop()_1]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

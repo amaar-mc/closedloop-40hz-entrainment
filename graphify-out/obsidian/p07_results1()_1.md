@@ -10,6 +10,7 @@ tags:
 # p07_results1()
 
 ## Connections
+
 - [[Results page 1 Architecture Search + Horizon Sweep.]] - `rationale_for` [EXTRACTED]
 - [[body()_1]] - `calls` [EXTRACTED]
 - [[caption()_1]] - `calls` [EXTRACTED]

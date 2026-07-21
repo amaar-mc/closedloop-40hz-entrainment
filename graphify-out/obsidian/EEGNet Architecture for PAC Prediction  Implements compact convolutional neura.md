@@ -7,9 +7,10 @@ tags:
   - community/Models,_Streaming_&_Apps
 ---
 
-# EEGNet Architecture for PAC Prediction  Implements compact convolutional neura
+# EEGNet Architecture for PAC Prediction Implements compact convolutional neura
 
 ## Connections
+
 - [[eegnet.py]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

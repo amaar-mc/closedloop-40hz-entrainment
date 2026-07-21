@@ -9,6 +9,7 @@ tags:
 # Clinical Roadmap Reference: Current State, Integration Path, Testing Plan
 
 ## Connections
+
 - [[NeuroCare 40Hz Pilot Links (HuggingFace App and Feedback Form)]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

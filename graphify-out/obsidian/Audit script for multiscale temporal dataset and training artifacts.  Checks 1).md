@@ -7,9 +7,10 @@ tags:
   - community/Community_102
 ---
 
-# Audit script for multiscale temporal dataset and training artifacts.  Checks: 1)
+# Audit script for multiscale temporal dataset and training artifacts. Checks: 1)
 
 ## Connections
+
 - [[audit_multiscale_pipeline.py]] - `rationale_for` [EXTRACTED]
 
   #community/Community_102

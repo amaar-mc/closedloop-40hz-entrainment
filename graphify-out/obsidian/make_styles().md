@@ -10,6 +10,7 @@ tags:
 # make_styles()
 
 ## Connections
+
 - [[generate_notebook_pdf.py]] - `contains` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

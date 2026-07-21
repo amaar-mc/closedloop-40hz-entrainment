@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Synopsys VFinal Poster EDB (PDF)]] - document - submission/poster/synopsys_vfinal_poster_edb.pdf
 
 ## Live Query (requires Dataview plugin)

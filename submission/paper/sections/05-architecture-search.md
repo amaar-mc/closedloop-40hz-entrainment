@@ -14,16 +14,16 @@ Table 1 summarizes all eight models evaluated in the static PAC prediction phase
 
 **Table 1. Comparison of eight static PAC prediction architectures.**
 
-| Model | Version | Parameters | Architecture | Test R² | Notes |
-|-------|---------|-----------|--------------|---------|-------|
-| EEGNet | V1 | 1,457 | Temporal + depthwise spatial conv on raw EEG | 0.287 | Lightest model; selected as baseline estimator |
-| EEGNetV2 | V2 | 3,200 | EEGNet variant predicting ΔPAC (change in coupling) | 0.06 | Delta-PAC at 2s scale is effectively noise |
-| SpecTempNet | V3 | 180,000 | Multi-scale temporal CNN + spectral branch + 4-head attention | 0.236 | Initial R²=0.69 was MI feature leakage; 0.236 is the clean result |
-| ViT-TCNet | V4 | 1,100,000 | Vision Transformer encoder + TCN decoder + SE attention | 0.252 | Overfits despite regularization; N=35 is too small for 1.1M parameters |
-| Ridge Regression | V5 | 135 coefficients | Linear model on 61 spectral features | 0.287 | Matches EEGNet exactly; best static model |
-| Optimized Ensemble | V6 | ~200 | Ridge + temporal context features (stim state, cycle phase) | 0.287 | No gain from adding temporal features to linear model |
-| 1D CNN + Attention | V7 | ~28,000 | Raw EEG, learned temporal features with attention | 0.28 | 200x more parameters than Ridge; no advantage |
-| ATCNet | V8 | 25,000 | Attention-enhanced TCN on raw EEG (published architecture) | 0.22 | Published EEG architecture underperforms Ridge on this task |
+| Model              | Version | Parameters       | Architecture                                                  | Test R² | Notes                                                                  |
+| ------------------ | ------- | ---------------- | ------------------------------------------------------------- | ------- | ---------------------------------------------------------------------- |
+| EEGNet             | V1      | 1,457            | Temporal + depthwise spatial conv on raw EEG                  | 0.287   | Lightest model; selected as baseline estimator                         |
+| EEGNetV2           | V2      | 3,200            | EEGNet variant predicting ΔPAC (change in coupling)           | 0.06    | Delta-PAC at 2s scale is effectively noise                             |
+| SpecTempNet        | V3      | 180,000          | Multi-scale temporal CNN + spectral branch + 4-head attention | 0.236   | Initial R²=0.69 was MI feature leakage; 0.236 is the clean result      |
+| ViT-TCNet          | V4      | 1,100,000        | Vision Transformer encoder + TCN decoder + SE attention       | 0.252   | Overfits despite regularization; N=35 is too small for 1.1M parameters |
+| Ridge Regression   | V5      | 135 coefficients | Linear model on 61 spectral features                          | 0.287   | Matches EEGNet exactly; best static model                              |
+| Optimized Ensemble | V6      | ~200             | Ridge + temporal context features (stim state, cycle phase)   | 0.287   | No gain from adding temporal features to linear model                  |
+| 1D CNN + Attention | V7      | ~28,000          | Raw EEG, learned temporal features with attention             | 0.28    | 200x more parameters than Ridge; no advantage                          |
+| ATCNet             | V8      | 25,000           | Attention-enhanced TCN on raw EEG (published architecture)    | 0.22    | Published EEG architecture underperforms Ridge on this task            |
 
 ### V1 — EEGNet (Baseline)
 
@@ -43,7 +43,7 @@ To test whether large-scale architectures with richer representational capacity 
 
 ### V5 — Ridge Regression (Linear Spectral Baseline)
 
-As a sanity check, we trained a simple Ridge regression model (135 coefficients) on the same 61 spectral features used by SpecTempNet's clean branch. The result matched EEGNet exactly: R² = 0.287. This convergence — a 1.1-million-parameter transformer and a 135-parameter linear model reaching identical accuracy — is the clearest possible signal that the prediction ceiling is imposed by the *data*, not by model capacity.
+As a sanity check, we trained a simple Ridge regression model (135 coefficients) on the same 61 spectral features used by SpecTempNet's clean branch. The result matched EEGNet exactly: R² = 0.287. This convergence — a 1.1-million-parameter transformer and a 135-parameter linear model reaching identical accuracy — is the clearest possible signal that the prediction ceiling is imposed by the _data_, not by model capacity.
 
 ### V6 — Optimized Ensemble (Linear + Temporal Context)
 
@@ -79,13 +79,15 @@ The static models explain 28.7% of the variance in epoch-level PAC from 2-second
 
 ## 5.4 Motivation for the Temporal Prediction Pivot
 
-The ceiling finding has a direct constructive implication: rather than attempting to improve instantaneous PAC prediction (which is bounded by data structure), we should ask whether the *dynamics* of PAC over time are predictable. Even if a single 2-second window provides limited information about current PAC, the trajectory of PAC over the preceding 20 seconds might contain enough structure to predict where PAC will be 5–10 seconds in the future.
+The ceiling finding has a direct constructive implication: rather than attempting to improve instantaneous PAC prediction (which is bounded by data structure), we should ask whether the _dynamics_ of PAC over time are predictable. Even if a single 2-second window provides limited information about current PAC, the trajectory of PAC over the preceding 20 seconds might contain enough structure to predict where PAC will be 5–10 seconds in the future.
 
 This framing changes the task entirely:
+
 - **Static prediction** asks: "What is the current PAC?" — bounded at R² = 0.287.
 - **Temporal forecasting** asks: "Given how PAC has been evolving, where will it be in 5 seconds?" — an open question not constrained by the instantaneous ceiling.
 
 There are additional reasons to believe temporal forecasting is tractable:
+
 1. **PAC autocorrelation:** At 5-second timescales, PAC exhibits meaningful autocorrelation (r ≈ 0.45 from empirical measurement), suggesting that recent PAC history is informative about near-future PAC.
 2. **Stimulation state:** The controller's own decisions (which states receive stimulation) are known in advance and influence PAC trajectory; encoding this information in the feature vector may enable the model to anticipate stimulation-induced PAC changes.
 3. **Spectral precursors:** Changes in theta band power and cross-channel coherence may precede changes in theta-gamma coupling, providing leading indicators that a static model cannot exploit.

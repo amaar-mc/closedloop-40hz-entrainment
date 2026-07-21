@@ -9,6 +9,7 @@ tags:
 # 12-Stop Poster Boardwalk Memorization Map
 
 ## Connections
+
 - [[2-Minute Presentation Memorization Map Seven Beats]] - `semantically_similar_to` [INFERRED]
 
-  #community/Presentation_Scripts_&_Citations
+  #community/Presentation*Scripts*&\_Citations

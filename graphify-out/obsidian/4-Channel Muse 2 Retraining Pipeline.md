@@ -10,6 +10,7 @@ tags:
 # 4-Channel Muse 2 Retraining Pipeline
 
 ## Connections
+
 - [[Muse 2 to ds005048 Channel Mapping]] - `references` [INFERRED]
 - [[Muse Proxy Channels (F7, F8, T7, T8)]] - `references` [EXTRACTED]
 - [[Step 3 Build Multiscale Temporal Dataset (49 features)]] - `calls` [EXTRACTED]
@@ -19,4 +20,4 @@ tags:
 - [[step5_train_tcn()]] - `calls` [EXTRACTED]
 - [[step6_comparison_report()]] - `calls` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

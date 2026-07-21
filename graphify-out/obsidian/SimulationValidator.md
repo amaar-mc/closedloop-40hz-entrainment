@@ -10,6 +10,7 @@ tags:
 # SimulationValidator
 
 ## Connections
+
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
 - [[FatigueAwareSimulator]] - `uses` [INFERRED]
@@ -26,4 +27,4 @@ tags:
 - [[statistical_comparison()]] - `method` [EXTRACTED]
 - [[validation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

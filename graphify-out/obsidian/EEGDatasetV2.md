@@ -10,6 +10,7 @@ tags:
 # EEGDatasetV2
 
 ## Connections
+
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[PyTorch Dataset for EEG windows with ΔPAC labels.      Changes from v1     -]] - `rationale_for` [EXTRACTED]
 - [[__getitem__()_9]] - `method` [EXTRACTED]

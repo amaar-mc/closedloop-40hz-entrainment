@@ -8,6 +8,7 @@ members: 16
 **Members:** 16 nodes
 
 ## Members
+
 - [[Abstract Section Arc]] - document - paper/ideas/narrative.md
 - [[Anatomy Hypothesis Why Spectral Features Fail Cross-Subject]] - document - paper/ideas/narrative.md
 - [[Anticipated Reviewer Weaknesses]] - document - paper/ideas/BRAINSTORM.md

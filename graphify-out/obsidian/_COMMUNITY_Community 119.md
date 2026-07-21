@@ -8,6 +8,7 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
+
 - [[Extract 12 PAC+Stim features and re-normalize from scratch.      This ensures th]] - rationale - archive/experimental/sliding_pac/build_original_12feat.py
 - [[Extract 12 PAC+Stim features from the existing 73-feature multiscale dataset to]] - rationale - archive/experimental/sliding_pac/build_original_12feat.py
 - [[build_original_12feat()]] - code - archive/experimental/sliding_pac/build_original_12feat.py

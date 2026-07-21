@@ -10,6 +10,7 @@ tags:
 # wavelet_features.py
 
 ## Connections
+
 - [[Wavelet Feature Extraction for Enhanced PAC Prediction  Extracts time-frequency]] - `rationale_for` [EXTRACTED]
 - [[WaveletFeatureExtractor]] - `contains` [EXTRACTED]
 - [[compute_cwt_features()]] - `contains` [EXTRACTED]
@@ -24,4 +25,4 @@ tags:
 - [[simple_diagnostic.py]] - `imports_from` [EXTRACTED]
 - [[test_wavelet_features()]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

@@ -10,6 +10,7 @@ tags:
 # run_simulation()
 
 ## Connections
+
 - [[Run simulation for a single control method.          Seeds the RNG before each]] - `rationale_for` [EXTRACTED]
 - [[SimulationValidator]] - `method` [EXTRACTED]
 - [[ValidationMetrics]] - `calls` [EXTRACTED]
@@ -17,4 +18,4 @@ tags:
 - [[run_all()]] - `calls` [EXTRACTED]
 - [[step()_71]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

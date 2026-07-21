@@ -10,6 +10,7 @@ tags:
 # TinyTCN (minimalist 2-block causal TCN)
 
 ## Connections
+
 - [[CausalConvBlock (residual depthwise-separable causal conv)]] - `references` [EXTRACTED]
 - [[Generalization Gap Experiments (run_generalization.py)]] - `implements` [EXTRACTED]
 

@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Get Alzheimer's profile by severity name.      Args:         severity: One of "h
+# Get Alzheimer's profile by severity name. Args: severity: One of "h
 
 ## Connections
+
 - [[get_profile()]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

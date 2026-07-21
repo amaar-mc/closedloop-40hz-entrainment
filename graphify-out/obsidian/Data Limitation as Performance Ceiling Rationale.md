@@ -10,6 +10,7 @@ tags:
 # Data Limitation as Performance Ceiling Rationale
 
 ## Connections
+
 - [[TCN Architecture Experiment Design]] - `rationale_for` [EXTRACTED]
 
   #community/Community_60

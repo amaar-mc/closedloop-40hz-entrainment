@@ -8,6 +8,7 @@ members: 18
 **Members:** 18 nodes
 
 ## Members
+
 - [[73-Feature Multiscale Dataset (lookback=20, 73 features, trainvaltest splits)]] - document - logs/training_output.txt
 - [[Build Multiscale Dataset Script (build_multiscale_dataset.py)]] - document - logs/training_output.txt
 - [[Comprehensive Submission Audit Script (comprehensive_submission_audit.py)]] - document - logs/training_output.txt

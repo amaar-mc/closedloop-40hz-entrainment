@@ -8,6 +8,7 @@ members: 4
 **Members:** 4 nodes
 
 ## Members
+
 - [[Generate an image using a chat-based image model on OpenRouter.]] - rationale - scripts/tools/generate_ai_figures.py
 - [[generate_ai_figures.py]] - code - scripts/tools/generate_ai_figures.py
 - [[generate_image()]] - code - scripts/tools/generate_ai_figures.py

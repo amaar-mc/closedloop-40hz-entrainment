@@ -7,9 +7,10 @@ tags:
   - community/Community_45
 ---
 
-# _seed()
+# \_seed()
 
 ## Connections
+
 - [[_arrow()]] - `calls` [EXTRACTED]
 - [[_diamond()]] - `calls` [EXTRACTED]
 - [[_ellipse()]] - `calls` [EXTRACTED]

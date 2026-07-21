@@ -10,6 +10,7 @@ tags:
 # Evaluate model and return metrics in raw PAC space.
 
 ## Connections
+
 - [[evaluate_model()]] - `rationale_for` [EXTRACTED]
 
   #community/Archived_ImprovedTCN_Experiments

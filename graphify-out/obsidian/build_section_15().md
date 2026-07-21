@@ -10,6 +10,7 @@ tags:
 # build_section_15()
 
 ## Connections
+
 - [[_arrow()]] - `calls` [EXTRACTED]
 - [[box_with_text()]] - `calls` [EXTRACTED]
 - [[generate_excalidraw.py]] - `contains` [EXTRACTED]

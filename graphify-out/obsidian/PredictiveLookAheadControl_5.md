@@ -10,6 +10,7 @@ tags:
 # PredictiveLookAheadControl
 
 ## Connections
+
 - [[Configuration for a fatigue model experiment.]] - `uses` [INFERRED]
 - [[ControlMethodBase]] - `inherits` [EXTRACTED]
 - [[Convert to serializable dict.]] - `uses` [INFERRED]
@@ -50,4 +51,4 @@ tags:
 - [[rigorous_validation.py]] - `contains` [EXTRACTED]
 - [[step()_52]] - `method` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

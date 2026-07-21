@@ -10,7 +10,8 @@ tags:
 # forward()
 
 ## Connections
+
 - [[Args             x (batch, n_inputs, seq_len)          Returns             ou]] - `rationale_for` [EXTRACTED]
 - [[TemporalBlock]] - `method` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

@@ -9,6 +9,7 @@ tags:
 # Closed-Loop Controller Block (z-score ±0.5, 5s hysteresis)
 
 ## Connections
+
 - [[40Hz Audio Stimulation Output (STIMULATERESTMAINTAIN)]] - `calls` [EXTRACTED]
 - [[Causal TCN Block (31K params, 20s lookback)]] - `calls` [EXTRACTED]
 - [[Closed-Loop 40Hz Entrainment System Architecture Figure]] - `references` [EXTRACTED]

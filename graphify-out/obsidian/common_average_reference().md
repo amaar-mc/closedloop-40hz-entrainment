@@ -10,8 +10,9 @@ tags:
 # common_average_reference()
 
 ## Connections
+
 - [[Apply common average reference (CAR).          Subtracts the mean of all chann]] - `rationale_for` [EXTRACTED]
 - [[EEGPreprocessor]] - `method` [EXTRACTED]
 - [[preprocess()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

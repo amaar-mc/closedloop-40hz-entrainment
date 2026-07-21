@@ -10,6 +10,7 @@ tags:
 # test_spectempnet()
 
 ## Connections
+
 - [[SpecTempNet]] - `calls` [EXTRACTED]
 - [[Test the SpecTempNet architecture.]] - `rationale_for` [EXTRACTED]
 - [[count_parameters()_9]] - `calls` [EXTRACTED]

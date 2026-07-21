@@ -10,6 +10,7 @@ tags:
 # TransformerConfig
 
 ## Connections
+
 - [[Compute Pearson correlation coefficient.]] - `uses` [INFERRED]
 - [[Compute Pearson correlation.]] - `uses` [INFERRED]
 - [[Compute R-squared (coefficient of determination).]] - `uses` [INFERRED]
@@ -40,4 +41,4 @@ tags:
 - [[Z-score normalize features and targets using train statistics.      Mirrors th]] - `uses` [INFERRED]
 - [[tcn_variants.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

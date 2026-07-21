@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Args:             x: (batch, channels, seq_len)          Returns:             ou
+# Args: x: (batch, channels, seq_len) Returns: ou
 
 ## Connections
+
 - [[forward()_22]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

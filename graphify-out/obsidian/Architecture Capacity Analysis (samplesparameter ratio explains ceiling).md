@@ -10,6 +10,7 @@ tags:
 # Architecture Capacity Analysis (samples/parameter ratio explains ceiling)
 
 ## Connections
+
 - [[Static PAC Prediction Ceiling R²=0.287]] - `conceptually_related_to` [INFERRED]
 
   #community/Community_43

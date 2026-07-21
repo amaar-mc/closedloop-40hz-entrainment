@@ -10,6 +10,7 @@ tags:
 # audit_stimulus_generator()
 
 ## Connections
+
 - [[Validate stimulus generation.]] - `rationale_for` [EXTRACTED]
 - [[audit_tribe_integration.py]] - `contains` [EXTRACTED]
 - [[check()_1]] - `calls` [EXTRACTED]

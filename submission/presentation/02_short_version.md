@@ -7,29 +7,29 @@
 
 Hi, I'm Amaar Chughtai. It's really nice to meet you. Would you like me to give you an overview of my project?
 
-*[Wait for them. Then begin.]*
+_[Wait for them. Then begin.]_
 
 So, this project started with my grandmother. She had dementia, and watching her go through that -- losing memories, losing recognition of the people she loved -- it made me want to understand what's actually happening in the brain and whether there's anything we can do about it.
 
 That's how I found out about 40 hertz entrainment. The idea is that when you play a rhythmic sound at 40 beats per second, the brain's electrical waves synchronize to it -- they lock on to that rhythm. And when that synchronization happens, it activates the brain's own cleanup system, which starts clearing the toxic protein buildups that cause Alzheimer's. This has been shown in animal studies and it's now being tested in human clinical trials.
 
-*[Gesture toward Figure 1]*
+_[Gesture toward Figure 1]_
 
-The problem is that right now, every patient receives this therapy on the exact same fixed schedule -- 40 seconds of sound, 20 seconds of silence, over and over for an hour. Regardless of whether their brain is actually responding. And when I analyzed real EEG data from 35 elderly subjects, I found something that really stuck with me: about half of them habituate -- their brains gradually tune out the sound, like how you stop noticing a ticking clock -- while the other half actually get *more* responsive. A one-size-fits-all schedule can't serve both groups.
+The problem is that right now, every patient receives this therapy on the exact same fixed schedule -- 40 seconds of sound, 20 seconds of silence, over and over for an hour. Regardless of whether their brain is actually responding. And when I analyzed real EEG data from 35 elderly subjects, I found something that really stuck with me: about half of them habituate -- their brains gradually tune out the sound, like how you stop noticing a ticking clock -- while the other half actually get _more_ responsive. A one-size-fits-all schedule can't serve both groups.
 
-*[Gesture toward Figure 3: System Architecture]*
+_[Gesture toward Figure 3: System Architecture]_
 
-So I built a system that listens to the brain and adapts. It measures how well the brain is synchronizing in real time using a metric called phase-amplitude coupling, and then -- this is the key part -- it *predicts* where that synchronization is headed 5 seconds into the future. Not just reacting after the brain has already lost sync, but anticipating the drop before it happens and stimulating proactively.
+So I built a system that listens to the brain and adapts. It measures how well the brain is synchronizing in real time using a metric called phase-amplitude coupling, and then -- this is the key part -- it _predicts_ where that synchronization is headed 5 seconds into the future. Not just reacting after the brain has already lost sync, but anticipating the drop before it happens and stimulating proactively.
 
-*[Point to Figure 5: Horizon Sweep]*
+_[Point to Figure 5: Horizon Sweep]_
 
 The reason 5 seconds matters is shown in this chart. I tested how well different methods predict brain state at different time horizons. At 1 to 2 seconds ahead, simple approaches work fine -- the brain barely changes. But at 5 seconds, every simple method fails completely. My model is the only one that still gives useful predictions at that range, and that's exactly the lead time a controller needs to actually make a difference.
 
-*[Point to Result 1 table]*
+_[Point to Result 1 table]_
 
 When I tested the full system on all 35 patients' actual brain recordings, the predictive controller caught 83% of the moments where the brain genuinely needed stimulation. The reactive approach -- which waits for a drop before responding -- only caught 52%. And every single patient -- all 35 out of 35 -- did better with my system. Including patients the model had never seen before.
 
-*[Pause. Make eye contact.]*
+_[Pause. Make eye contact.]_
 
 The main limitation is that this is tested on recorded data, not yet in a live clinical setting. That's the next step. But the model runs fast enough for real time, so the technology is ready -- it's the clinical validation that would come next.
 
@@ -69,20 +69,20 @@ Is there anything you'd like me to go deeper on?
 
 ## What this script implicitly addresses for the judge
 
-| Judging criterion | Where it's addressed |
-|---|---|
-| **Research Problem** (10 pts) | Grandmother = personal stake; fixed schedule waste = practical need; 5-second lead time = constraint |
-| **Design & Methodology** (15 pts) | Explored 6 architectures (expansion module); identified the data ceiling; pivoted to temporal approach |
-| **Execution & Testing** (20 pts) | 35 patients, all real EEG, multiple controllers compared, statistical significance, fatigue robustness |
-| **Creativity** (20 pts) | "Nobody was trying to predict ahead of time"; the architecture marathon as a method to prove a ceiling; the horizon sweep concept |
+| Judging criterion                     | Where it's addressed                                                                                                                 |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **Research Problem** (10 pts)         | Grandmother = personal stake; fixed schedule waste = practical need; 5-second lead time = constraint                                 |
+| **Design & Methodology** (15 pts)     | Explored 6 architectures (expansion module); identified the data ceiling; pivoted to temporal approach                               |
+| **Execution & Testing** (20 pts)      | 35 patients, all real EEG, multiple controllers compared, statistical significance, fatigue robustness                               |
+| **Creativity** (20 pts)               | "Nobody was trying to predict ahead of time"; the architecture marathon as a method to prove a ceiling; the horizon sweep concept    |
 | **Presentation - Interview** (25 pts) | Conversational, responds to judge's direction, honest about limitations, shows understanding through explanation not just recitation |
 
-| Judge mindset question | Where it's addressed |
-|---|---|
-| How much did you do yourself? | Expansion module ready; first-person throughout; "I found something that stuck with me" |
-| How deeply do you understand it? | Explains PAC intuitively, knows why 0.25 is useful, can describe causal guarantees |
-| Did you discover errors? | SpecTempNet leakage story (expansion module) |
-| Do conclusions follow from data? | "83% vs 52%" tied directly to the replay; "all 35 out of 35" |
-| How new or different is this? | "Not just reacting... anticipating the drop before it happens" |
-| Is the work complete? | Honest: "tested on recorded data, not yet live" -- shows maturity |
-| What's next? | Live validation, crossover study, wearable device pathway |
+| Judge mindset question           | Where it's addressed                                                                    |
+| -------------------------------- | --------------------------------------------------------------------------------------- |
+| How much did you do yourself?    | Expansion module ready; first-person throughout; "I found something that stuck with me" |
+| How deeply do you understand it? | Explains PAC intuitively, knows why 0.25 is useful, can describe causal guarantees      |
+| Did you discover errors?         | SpecTempNet leakage story (expansion module)                                            |
+| Do conclusions follow from data? | "83% vs 52%" tied directly to the replay; "all 35 out of 35"                            |
+| How new or different is this?    | "Not just reacting... anticipating the drop before it happens"                          |
+| Is the work complete?            | Honest: "tested on recorded data, not yet live" -- shows maturity                       |
+| What's next?                     | Live validation, crossover study, wearable device pathway                               |

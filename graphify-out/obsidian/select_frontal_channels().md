@@ -10,8 +10,9 @@ tags:
 # select_frontal_channels()
 
 ## Connections
+
 - [[BIDSDataProcessor]] - `method` [EXTRACTED]
 - [[Select 7 frontal channels from full EEG montage.          Args             r]] - `rationale_for` [EXTRACTED]
 - [[process_dataset()]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

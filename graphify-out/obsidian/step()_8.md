@@ -10,7 +10,8 @@ tags:
 # step()
 
 ## Connections
+
 - [[_build_step_feature()]] - `calls` [EXTRACTED]
 - [[realtime_inference.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -7,9 +7,10 @@ tags:
   - community/Control_Strategies_&_Validation
 ---
 
-# Run a full experiment for one fatigue model.      Compares Fixed Schedule vs P
+# Run a full experiment for one fatigue model. Compares Fixed Schedule vs P
 
 ## Connections
+
 - [[ControlMethodBase]] - `uses` [INFERRED]
 - [[FixedScheduleControl_5]] - `uses` [INFERRED]
 - [[PredictiveLookAheadControl_5]] - `uses` [INFERRED]
@@ -17,4 +18,4 @@ tags:
 - [[TrialMetrics]] - `uses` [INFERRED]
 - [[run_fatigue_model_experiment()]] - `rationale_for` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

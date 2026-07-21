@@ -10,8 +10,9 @@ tags:
 # step()
 
 ## Connections
+
 - [[FatigueAwareSimulator]] - `method` [EXTRACTED]
 - [[Simulate one time step with fatigue dynamics.]] - `rationale_for` [EXTRACTED]
 - [[validate_simulator_dynamics()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

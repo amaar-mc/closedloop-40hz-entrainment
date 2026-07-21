@@ -10,6 +10,7 @@ tags:
 # Evaluate how good a controller's decisions were given what actually happened.
 
 ## Connections
+
 - [[evaluate_decisions()]] - `rationale_for` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

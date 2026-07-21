@@ -10,8 +10,9 @@ tags:
 # feature_extractor.py
 
 ## Connections
+
 - [[Streaming spectral feature extractor for closed-loop EEG inference.  Computes th]] - `rationale_for` [EXTRACTED]
 - [[StreamingFeatureExtractor]] - `contains` [EXTRACTED]
 - [[n_features()]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

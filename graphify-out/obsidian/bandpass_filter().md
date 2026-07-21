@@ -10,8 +10,9 @@ tags:
 # bandpass_filter()
 
 ## Connections
+
 - [[Apply Butterworth bandpass filter to signal.          Args             signa]] - `rationale_for` [EXTRACTED]
 - [[PACComputer]] - `method` [EXTRACTED]
 - [[extract_phase_amplitude()_1]] - `calls` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

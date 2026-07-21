@@ -10,6 +10,7 @@ tags:
 # simulator.py
 
 ## Connections
+
 - [[Brain Entrainment Simulator for Closed-Loop Control Validation  Simulates neur]] - `rationale_for` [EXTRACTED]
 - [[EntrainmentSimulator]] - `contains` [EXTRACTED]
 - [[FatigueAwareSimulator]] - `contains` [EXTRACTED]
@@ -28,4 +29,4 @@ tags:
 - [[validate_simulator_dynamics()]] - `contains` [EXTRACTED]
 - [[validation.py]] - `imports_from` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

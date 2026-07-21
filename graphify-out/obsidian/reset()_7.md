@@ -10,7 +10,8 @@ tags:
 # reset()
 
 ## Connections
+
 - [[PIControl]] - `method` [EXTRACTED]
 - [[replay_subject()]] - `calls` [EXTRACTED]
 
-  #community/Replay_Analysis_&_Controllers
+  #community/Replay*Analysis*&\_Controllers

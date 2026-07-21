@@ -8,6 +8,7 @@ members: 22
 **Members:** 22 nodes
 
 ## Members
+
 - [[Closed-Loop Feasibility (1ms inference  1Hz budget)]] - document - docs/audits/TEMPORAL_MULTISCALE_AUDIT_REPORT.md
 - [[Comprehensive Submission Audit Report]] - document - docs/audits/COMPREHENSIVE_SUBMISSION_AUDIT_REPORT.md
 - [[Denoised Latent Target Run (ts5, R²=0.75)]] - document - docs/audits/TEMPORAL_MULTISCALE_AUDIT_REPORT.md

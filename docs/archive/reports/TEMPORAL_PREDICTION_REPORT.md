@@ -75,13 +75,13 @@ Output: Predicted PAC value at t+5 seconds
 
 ### Model Specifications
 
-| Component | Parameters |
-|-----------|------------|
-| SpatialEncoder | ~2,500 |
-| Input projection | ~6,200 |
-| Bi-LSTM (2 layers) | ~66,000 |
-| Regression head | ~10,500 |
-| **Total** | **~85,000** |
+| Component          | Parameters  |
+| ------------------ | ----------- |
+| SpatialEncoder     | ~2,500      |
+| Input projection   | ~6,200      |
+| Bi-LSTM (2 layers) | ~66,000     |
+| Regression head    | ~10,500     |
+| **Total**          | **~85,000** |
 
 Design rationale: Kept under 100k parameters to prevent overfitting on ~11k training sequences (learned from the V4 overparameterization failure at 1.1M params).
 
@@ -98,26 +98,26 @@ Design rationale: Kept under 100k parameters to prevent overfitting on ~11k trai
 ### Critical Empirical Finding: Zero PAC Autocorrelation
 
 | Lag (seconds) | Mean autocorrelation | Statistically significant? |
-|--------------|---------------------|---------------------------|
-| 1 | 0.060 | Barely (p ≈ 0.04) |
-| 2 | -0.026 | No |
-| 3 | 0.002 | No |
-| 5 | 0.011 | No |
-| 10 | -0.003 | No |
-| 20 | -0.001 | No |
+| ------------- | -------------------- | -------------------------- |
+| 1             | 0.060                | Barely (p ≈ 0.04)          |
+| 2             | -0.026               | No                         |
+| 3             | 0.002                | No                         |
+| 5             | 0.011                | No                         |
+| 10            | -0.003               | No                         |
+| 20            | -0.001               | No                         |
 
 PAC values in consecutive windows are essentially **uncorrelated**. Knowing PAC at time t tells you nothing about PAC at time t+5.
 
 ### Baseline Performance Comparison
 
-| Approach | Test R² | Notes |
-|----------|---------|-------|
-| Current-window Ridge (spectral) | 0.194 | Same window EEG → same window PAC |
-| Current-window Ridge (all features) | 0.287 | Best previous result |
-| Temporal Ridge (5s ahead, EEG stats) | 0.031 | Past EEG → future PAC |
-| Temporal Ridge (5s ahead, spectral) | -0.002 | With full spectral features |
-| Persistence (PAC[t-1] → PAC[t+5]) | -0.760 | Using last known PAC |
-| Naive (predict mean) | -0.028 | Lower bound |
+| Approach                             | Test R² | Notes                             |
+| ------------------------------------ | ------- | --------------------------------- |
+| Current-window Ridge (spectral)      | 0.194   | Same window EEG → same window PAC |
+| Current-window Ridge (all features)  | 0.287   | Best previous result              |
+| Temporal Ridge (5s ahead, EEG stats) | 0.031   | Past EEG → future PAC             |
+| Temporal Ridge (5s ahead, spectral)  | -0.002  | With full spectral features       |
+| Persistence (PAC[t-1] → PAC[t+5])    | -0.760  | Using last known PAC              |
+| Naive (predict mean)                 | -0.028  | Lower bound                       |
 
 **The temporal prediction task is fundamentally harder than current-window prediction for this data.**
 
@@ -159,6 +159,7 @@ The discrepancy between our results and the reference paper (R² = 0.75-0.85) li
 ### Evaluation
 
 All metrics computed in original (denormalized) PAC scale:
+
 - R² (coefficient of determination)
 - Pearson correlation
 - MAE, RMSE, MAPE
@@ -212,7 +213,7 @@ Given the near-zero PAC autocorrelation, the LSTM will likely achieve R² in the
    If the closed-loop system will be personalized per-patient, within-subject temporal prediction is the relevant metric. This would likely show higher R² than cross-subject.
 
 4. **Consider ΔPAC prediction**
-   Rather than predicting absolute PAC(t+5), predict the *change* in PAC: ΔPAC = PAC(t+5) - PAC(t). This formulation may be more predictable and is more actionable for a controller (the controller needs to know "will PAC go up or down?").
+   Rather than predicting absolute PAC(t+5), predict the _change_ in PAC: ΔPAC = PAC(t+5) - PAC(t). This formulation may be more predictable and is more actionable for a controller (the controller needs to know "will PAC go up or down?").
 
 5. **Multi-step curriculum**
    Train on easier horizons first (1-2 seconds) then fine-tune for longer horizons (5-10 seconds).

@@ -8,6 +8,7 @@ members: 16
 **Members:** 16 nodes
 
 ## Members
+
 - [[_dataset_base_4ch()]] - code - temporal_multiscale/run_comparison_study.py
 - [[_dataset_base_7ch()]] - code - temporal_multiscale/run_comparison_study.py
 - [[_dataset_dir()]] - code - temporal_multiscale/run_comparison_study.py
@@ -33,9 +34,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 4 edges to [[_COMMUNITY_Multiscale TCN & Features]]
 
 ## Top bridge nodes
+
 - [[run_comparison_study.py]] - degree 16, connects to 1 community
 - [[_dataset_dir()]] - degree 6, connects to 1 community
 - [[_ensure_dataset()]] - degree 6, connects to 1 community

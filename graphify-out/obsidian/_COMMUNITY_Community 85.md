@@ -8,6 +8,7 @@ members: 12
 **Members:** 12 nodes
 
 ## Members
+
 - [[Adaptive Schedule (This Project) - 72% Alignment]] - image - submission/figures/figure1.png
 - [[Figure 1 Fixed vs. Adaptive Stimulation Scheduling Comparison]] - image - submission/figures/figure1.png
 - [[Figure 2 Phase-Amplitude Coupling (PAC) Mechanism Diagram]] - image - submission/figures/figure2.png

@@ -10,6 +10,7 @@ tags:
 # CausalConvBlock (residual depthwise-separable causal conv)
 
 ## Connections
+
 - [[ImprovedTCN Model (configurable dilated causal TCN with attention pooling)]] - `implements` [EXTRACTED]
 - [[TinyTCN (minimalist 2-block causal TCN)]] - `references` [EXTRACTED]
 

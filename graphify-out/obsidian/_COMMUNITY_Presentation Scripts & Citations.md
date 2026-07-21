@@ -8,6 +8,7 @@ members: 45
 **Members:** 45 nodes
 
 ## Members
+
 - [[12-Citation Reference List (CSEF Presentation)]] - code - submission/presentation/reference/references_sheet.py
 - [[12-Stop Poster Boardwalk Memorization Map]] - document - submission/presentation/archive/v2_superseded/v2_full_3to4min_map_v1.md
 - [[2-Minute Presentation Memorization Map Seven Beats]] - document - submission/presentation/memorization/v1_memo_map_2min.md

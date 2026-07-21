@@ -10,7 +10,8 @@ tags:
 # Hardware Scaling Path: Muse 2 → OpenBCI Cyton → 64-ch Clinical Cap
 
 ## Connections
+
 - [[Clinical Roadmap (Research to Practice Pathway)]] - `references` [EXTRACTED]
 - [[NeuroCare 40Hz Facility Flyer]] - `conceptually_related_to` [INFERRED]
 
-  #community/Archived_CSEF_Paper_&_Abstract
+  #community/Archived*CSEF_Paper*&\_Abstract

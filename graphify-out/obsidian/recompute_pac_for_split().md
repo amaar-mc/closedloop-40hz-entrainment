@@ -10,8 +10,9 @@ tags:
 # recompute_pac_for_split()
 
 ## Connections
+
 - [[Recompute PAC per window for one split file.      Args         input_path Path]] - `rationale_for` [EXTRACTED]
 - [[main()_18]] - `calls` [EXTRACTED]
 - [[recompute_pac.py]] - `contains` [EXTRACTED]
 
-  #community/Core_Data_&_PAC_Pipeline
+  #community/Core*Data*&\_PAC_Pipeline

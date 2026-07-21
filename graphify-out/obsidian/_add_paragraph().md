@@ -7,9 +7,10 @@ tags:
   - community/PPTX_Slide_Builder
 ---
 
-# _add_paragraph()
+# \_add_paragraph()
 
 ## Connections
+
 - [[Append a paragraph to a text frame.]] - `rationale_for` [EXTRACTED]
 - [[_set_font()]] - `calls` [EXTRACTED]
 - [[build_pptx.py]] - `contains` [EXTRACTED]

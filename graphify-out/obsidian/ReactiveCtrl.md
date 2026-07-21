@@ -10,6 +10,7 @@ tags:
 # ReactiveCtrl
 
 ## Connections
+
 - [[StimAction]] - `uses` [INFERRED]
 - [[__init__()_74]] - `method` [EXTRACTED]
 - [[main()_38]] - `calls` [EXTRACTED]

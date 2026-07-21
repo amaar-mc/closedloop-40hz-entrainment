@@ -10,6 +10,7 @@ tags:
 # TransformerTCN Hypothesis (Self-Attention vs Fixed Dilation)
 
 ## Connections
+
 - [[TCN Architecture Experiment Design]] - `references` [EXTRACTED]
 - [[TransformerTCN (4-layer Causal Transformer Encoder, ~85K params)]] - `rationale_for` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # Poster Navigation Cues (v2 Script)
 
 ## Connections
+
 - [[3-to-4 Minute Board Walk Script (v2)]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

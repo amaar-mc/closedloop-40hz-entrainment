@@ -10,6 +10,7 @@ tags:
 # Figure: PAC Targeting Gap (results/figures/pac_targeting_gap.pdf)
 
 ## Connections
+
 - [[Research Paper Status Document]] - `references` [EXTRACTED]
 
   #community/Community_59

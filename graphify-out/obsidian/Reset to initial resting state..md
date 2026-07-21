@@ -10,6 +10,7 @@ tags:
 # Reset to initial resting state.
 
 ## Connections
+
 - [[reset()_70]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

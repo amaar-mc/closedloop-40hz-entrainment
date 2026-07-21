@@ -12,6 +12,7 @@
 ### Architecture Improvements
 
 #### 1. **ViT-TCNet Hybrid Architecture** (`src/vit_tcnet.py`)
+
 Replaces SpecTempNet with a state-of-the-art architecture combining:
 
 - **Vision Transformer (ViT) Encoder**
@@ -36,9 +37,11 @@ Replaces SpecTempNet with a state-of-the-art architecture combining:
 **Expected gain:** +0.08-0.12 R²
 
 #### 2. **Wavelet Features** (`src/wavelet_features.py`)
+
 Adds 74 new features complementing the existing 61 spectral features:
 
 **Continuous Wavelet Transform (CWT):**
+
 - Theta band energy (4-8 Hz)
 - Gamma band energy (38-42 Hz)
 - Theta-gamma energy ratio
@@ -47,6 +50,7 @@ Adds 74 new features complementing the existing 61 spectral features:
 - **Total:** 35 features (7 channels × 5)
 
 **Wavelet Packet Decomposition (WPD):**
+
 - Energy in theta-like sub-bands
 - Energy in mid-frequency sub-bands (alpha/beta)
 - Energy in gamma-like sub-bands
@@ -54,6 +58,7 @@ Adds 74 new features complementing the existing 61 spectral features:
 - **Total:** 28 features (7 channels × 4)
 
 **Global features:**
+
 - Phase synchronization index (1 feature)
 - CWT statistics across channels (10 features)
 
@@ -61,6 +66,7 @@ Adds 74 new features complementing the existing 61 spectral features:
 **Expected gain:** +0.05-0.08 R²
 
 #### 3. **Enhanced Data Augmentation** (`src/data_augmentation.py`)
+
 Implements time-series specific augmentations:
 
 - **TimeWarp:** Speed up/slow down temporal patterns (simulates frequency variations)
@@ -78,7 +84,9 @@ Each augmentation applied with 50% probability during training.
 ## Training Improvements
 
 ### 1. **Huber Loss** (delta=0.3)
+
 Replaces SmoothL1Loss with Huber loss:
+
 ```python
 criterion = nn.HuberLoss(delta=0.3)
 ```
@@ -87,6 +95,7 @@ criterion = nn.HuberLoss(delta=0.3)
 **Expected gain:** +0.03-0.05 R²
 
 ### 2. **Improved Regularization**
+
 - **Weight decay:** 0.001 (2× higher than V3)
 - **Gradient clipping:** 0.5 (tighter than V3's 1.0)
 - **Progressive dropout:** Already built into ViT-TCNet architecture
@@ -94,6 +103,7 @@ criterion = nn.HuberLoss(delta=0.3)
 **Expected gain:** +0.02-0.04 R²
 
 ### 3. **Cosine Annealing with Warm Restarts**
+
 ```python
 scheduler = optim.lr_scheduler.CosineAnnealingWarmRestarts(
     optimizer, T_0=20, T_mult=2, eta_min=1e-6
@@ -107,12 +117,14 @@ scheduler = optim.lr_scheduler.CosineAnnealingWarmRestarts(
 ## Files Created
 
 ### Core Components:
+
 1. **`src/wavelet_features.py`** - CWT + WPD feature extraction
 2. **`src/vit_tcnet.py`** - ViT-TCNet architecture
 3. **`src/data_augmentation.py`** - Time-series augmentation
 4. **`run_training_v4.py`** - Main training script
 
 ### Preserved from V3:
+
 - `src/spectral_features.py` - Spectral feature extraction (61 features)
 - `data/processed/` - Processed EEG windows
 
@@ -123,12 +135,14 @@ scheduler = optim.lr_scheduler.CosineAnnealingWarmRestarts(
 ### Step 1: Test Individual Components
 
 Test wavelet features:
+
 ```bash
 cd /sessions/kind-elegant-ride/mnt/closedloop-40hz-entrainment
 python src/wavelet_features.py
 ```
 
 Expected output:
+
 ```
 ✓ EEG shape: (7, 500)
 ✓ Wavelet features shape: (74,)
@@ -137,11 +151,13 @@ Expected output:
 ```
 
 Test data augmentation:
+
 ```bash
 python src/data_augmentation.py
 ```
 
 Expected output:
+
 ```
 ✓ TimeWarp: shape=(7, 500), range=[...
 ✓ MagnitudeWarp: shape=(7, 500), range=[...
@@ -150,11 +166,13 @@ Expected output:
 ```
 
 Test ViT-TCNet architecture:
+
 ```bash
 python src/vit_tcnet.py
 ```
 
 Expected output:
+
 ```
 ✓ Total parameters: ~2-5M
 ✓ Input EEG shape: (16, 1, 7, 500)
@@ -173,6 +191,7 @@ python run_training_v4.py
 **What to expect:**
 
 Initial epochs (1-10):
+
 ```
 Epoch   1: Val R² ~ 0.10-0.20 (lower than V3 start due to more complex model)
 Epoch   5: Val R² ~ 0.25-0.35 (learning progressing)
@@ -180,12 +199,14 @@ Epoch  10: Val R² ~ 0.35-0.45 (approaching target)
 ```
 
 Mid-training (10-30):
+
 ```
 Epoch  20: Val R² ~ 0.40-0.50 (reaching target range)
 Epoch  30: Val R² ~ 0.45-0.55 (optimal performance)
 ```
 
 Late training (30-60):
+
 ```
 Epoch  40-60: Fine-tuning, may plateau
 Early stopping likely around epoch 50-80
@@ -199,11 +220,11 @@ Early stopping likely around epoch 50-80
 
 ### Performance Targets:
 
-| Metric | V3-Clean | V4 Target | V4 Stretch |
-|--------|----------|-----------|------------|
-| **Test R²** | 0.236 | 0.46-0.50 | 0.50-0.55 |
-| **Test Correlation** | 0.50 | 0.68-0.71 | 0.71-0.74 |
-| **Improvement** | Baseline | **95-112%** | **112-133%** |
+| Metric               | V3-Clean | V4 Target   | V4 Stretch   |
+| -------------------- | -------- | ----------- | ------------ |
+| **Test R²**          | 0.236    | 0.46-0.50   | 0.50-0.55    |
+| **Test Correlation** | 0.50     | 0.68-0.71   | 0.71-0.74    |
+| **Improvement**      | Baseline | **95-112%** | **112-133%** |
 
 ### What if results are lower?
 
@@ -217,21 +238,21 @@ Early stopping likely around epoch 50-80
 
 ### Total Features: 135
 
-| Feature Group | Count | Source |
-|---------------|-------|--------|
-| **Spectral features** | 61 | From V3-Clean |
-| - Theta power | 7 | Per channel |
-| - Gamma power | 7 | Per channel |
-| - Alpha power | 7 | Per channel |
-| - Beta power | 7 | Per channel |
-| - Theta-gamma ratio | 7 | Per channel |
-| - PAC features (no MI) | 21 | 3 per channel |
-| - Global statistics | 5 | Cross-channel |
-| **Wavelet features** | 74 | NEW in V4 |
-| - CWT features | 35 | 5 per channel |
-| - WPD features | 28 | 4 per channel |
-| - Phase sync index | 1 | Global |
-| - CWT statistics | 10 | Cross-channel |
+| Feature Group          | Count | Source        |
+| ---------------------- | ----- | ------------- |
+| **Spectral features**  | 61    | From V3-Clean |
+| - Theta power          | 7     | Per channel   |
+| - Gamma power          | 7     | Per channel   |
+| - Alpha power          | 7     | Per channel   |
+| - Beta power           | 7     | Per channel   |
+| - Theta-gamma ratio    | 7     | Per channel   |
+| - PAC features (no MI) | 21    | 3 per channel |
+| - Global statistics    | 5     | Cross-channel |
+| **Wavelet features**   | 74    | NEW in V4     |
+| - CWT features         | 35    | 5 per channel |
+| - WPD features         | 28    | 4 per channel |
+| - Phase sync index     | 1     | Global        |
+| - CWT statistics       | 10    | Cross-channel |
 
 ---
 
@@ -284,6 +305,7 @@ Output: PAC prediction (scalar)
 ## Next Steps After Training
 
 ### 1. Evaluate Results
+
 ```bash
 # Results automatically saved to:
 models/best_vit_tcnet_v4.pth          # Best model weights
@@ -292,6 +314,7 @@ models/vit_tcnet_stats_v4.npz         # Normalization stats
 ```
 
 ### 2. Compare with V3-Clean
+
 ```python
 import numpy as np
 
@@ -308,20 +331,25 @@ print(f"Improvement: {improvement:.1f}%")
 ```
 
 ### 3. Generate Visualizations
+
 Create plots for:
+
 - Training/validation loss curves
 - R² progression over epochs
 - Predicted vs actual PAC scatter plot
 - Residual analysis
 
 ### 4. Update Lab Notebook
+
 Document:
+
 - Final V4 performance (test R², correlation, MAE)
 - Comparison with V3-Clean and baselines
 - Key insights from training (convergence, optimal epoch, etc.)
 - Ablation study (contribution of each component)
 
 ### 5. Proceed to Closed-Loop Simulation
+
 Use the trained V4 model for real-time PAC prediction in the closed-loop system.
 
 ---
@@ -329,16 +357,19 @@ Use the trained V4 model for real-time PAC prediction in the closed-loop system.
 ## Troubleshooting
 
 ### If training is too slow:
+
 - Reduce batch size (32 → 16)
 - Reduce TCN channels ([64,64,64,64] → [32,32,32,32])
 - Reduce transformer layers (3 → 2)
 
 ### If model overfits (train R² >> val R²):
+
 - Increase weight decay (0.001 → 0.002)
 - Increase dropout (0.4 → 0.5)
 - Add more augmentation
 
 ### If model underfits (both train and val R² low):
+
 - Increase model capacity (TCN channels, transformer layers)
 - Reduce regularization
 - Train longer (increase patience)
@@ -372,6 +403,7 @@ Use the trained V4 model for real-time PAC prediction in the closed-loop system.
 ## Summary
 
 **V4 implements Phase 2 of the improvement plan:**
+
 - ✅ ViT-TCNet architecture (state-of-the-art for EEG regression)
 - ✅ Wavelet features (+74 features capturing time-frequency dynamics)
 - ✅ Enhanced augmentation (5 time-series transformations)

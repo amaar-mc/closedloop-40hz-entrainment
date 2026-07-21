@@ -7,9 +7,10 @@ tags:
   - community/Archived_Temporal_PAC_Predictor
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[MultiHorizonPredictor]] - `method` [EXTRACTED]
 - [[SpatialEncoder]] - `calls` [EXTRACTED]
 - [[__init__()_25]] - `calls` [EXTRACTED]

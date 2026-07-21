@@ -10,6 +10,7 @@ tags:
 # 90-Second Verbal Summary (Judge Interview)
 
 ## Connections
+
 - [[Judge Interview Prep Guide (Complete Technical Deep-Dive)]] - `references` [EXTRACTED]
 
-  #community/Controller_Results_&_Judge_Prep
+  #community/Controller*Results*&\_Judge_Prep

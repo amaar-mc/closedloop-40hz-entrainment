@@ -10,6 +10,7 @@ tags:
 # step()
 
 ## Connections
+
 - [[TrendPredictiveCtrl]] - `method` [EXTRACTED]
 - [[_trend()_5]] - `calls` [EXTRACTED]
 - [[run_oracle_trial()]] - `calls` [EXTRACTED]

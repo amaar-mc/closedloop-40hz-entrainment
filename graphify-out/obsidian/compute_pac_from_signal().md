@@ -10,6 +10,7 @@ tags:
 # compute_pac_from_signal()
 
 ## Connections
+
 - [[Compute PAC (Modulation Index) from a simulated signal.          Uses the same T]] - `rationale_for` [EXTRACTED]
 - [[WilsonCowanModel]] - `method` [EXTRACTED]
 

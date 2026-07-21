@@ -9,6 +9,7 @@ tags:
 # Poster Figure Set (6 figures)
 
 ## Connections
+
 - [[Poster Board Layout (48x56 tri-fold)]] - `references` [EXTRACTED]
 
   #community/Community_158

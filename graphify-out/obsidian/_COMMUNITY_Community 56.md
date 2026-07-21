@@ -8,6 +8,7 @@ members: 18
 **Members:** 18 nodes
 
 ## Members
+
 - [[SeqDataset_1]] - code - archive/experimental/sliding_pac/train_and_compare.py
 - [[__getitem__()_2]] - code - archive/experimental/sliding_pac/train_and_compare.py
 - [[__init__()_8]] - code - archive/experimental/sliding_pac/train_and_compare.py
@@ -35,9 +36,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 9 edges to [[_COMMUNITY_Multiscale TCN & Features]]
 
 ## Top bridge nodes
+
 - [[train_and_compare.py]] - degree 15, connects to 1 community
 - [[SeqDataset_1]] - degree 10, connects to 1 community
 - [[train_tcn()]] - degree 9, connects to 1 community

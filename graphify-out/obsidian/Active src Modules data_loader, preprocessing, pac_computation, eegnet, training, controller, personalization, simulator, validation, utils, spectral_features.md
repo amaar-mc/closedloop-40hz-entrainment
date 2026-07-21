@@ -10,6 +10,7 @@ tags:
 # Active src/ Modules: data_loader, preprocessing, pac_computation, eegnet, training, controller, personalization, simulator, validation, utils, spectral_features
 
 ## Connections
+
 - [[EEGNet Architecture (B,1,7,500) → (B,1), 1,457 params, temporal+depthwise spatial conv, R²=0.287]] - `references` [EXTRACTED]
 
   #community/Community_73

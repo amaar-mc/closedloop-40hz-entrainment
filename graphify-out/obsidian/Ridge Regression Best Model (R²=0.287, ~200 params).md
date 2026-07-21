@@ -9,7 +9,8 @@ tags:
 # Ridge Regression Best Model (R²=0.287, ~200 params)
 
 ## Connections
+
 - [[Honest Baseline Ridge Regression R²=0.287 (135 spectral+wavelet features)]] - `conceptually_related_to` [INFERRED]
 - [[Master Model Verdict R² ≈ 0.29 Ceiling]] - `references` [EXTRACTED]
 
-  #community/Model_Ceiling_&_Leakage_Audits
+  #community/Model*Ceiling*&\_Leakage_Audits

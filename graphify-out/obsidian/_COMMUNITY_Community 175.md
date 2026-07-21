@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Methods Section Arc]] - document - paper/ideas/narrative.md
 
 ## Live Query (requires Dataview plugin)

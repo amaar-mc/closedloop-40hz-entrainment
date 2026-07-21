@@ -10,6 +10,7 @@ tags:
 # Multi-Task Loss: Huber(future) + lambda_smooth*Huber(smooth) + lambda_delta*Huber(delta) + consistency
 
 ## Connections
+
 - [[train_one_epoch()_1]] - `implements` [EXTRACTED]
 
   #community/Archived_Enhanced-Feature_TCN

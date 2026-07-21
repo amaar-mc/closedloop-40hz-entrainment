@@ -7,10 +7,11 @@ tags:
   - community/Closed-Loop_Control_&_Simulator
 ---
 
-# _pac_features()
+# \_pac_features()
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `method` [EXTRACTED]
 - [[_build_step_feature()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

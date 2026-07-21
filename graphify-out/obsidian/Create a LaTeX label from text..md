@@ -10,6 +10,7 @@ tags:
 # Create a LaTeX label from text.
 
 ## Connections
+
 - [[make_label()]] - `rationale_for` [EXTRACTED]
 
   #community/Community_44

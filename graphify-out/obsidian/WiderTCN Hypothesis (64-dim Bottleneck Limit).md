@@ -10,6 +10,7 @@ tags:
 # WiderTCN Hypothesis (64-dim Bottleneck Limit)
 
 ## Connections
+
 - [[TCN Architecture Experiment Design]] - `references` [EXTRACTED]
 - [[WiderTCN (hidden=128, ~120K params)]] - `rationale_for` [EXTRACTED]
 

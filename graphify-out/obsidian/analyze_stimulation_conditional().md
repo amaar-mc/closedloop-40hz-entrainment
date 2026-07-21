@@ -10,6 +10,7 @@ tags:
 # analyze_stimulation_conditional()
 
 ## Connections
+
 - [[Compute prediction performance conditioned on stimulation state.      Splits t]] - `rationale_for` [EXTRACTED]
 - [[InterpretabilityDataset (Test Dataset with Metadata)]] - `calls` [EXTRACTED]
 - [[_denorm()_4]] - `calls` [EXTRACTED]
@@ -20,4 +21,4 @@ tags:
 - [[run_ablation_experiment()]] - `semantically_similar_to` [INFERRED]
 - [[tcn_interpretability.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

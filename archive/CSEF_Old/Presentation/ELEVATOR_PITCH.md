@@ -30,13 +30,13 @@ care facility to collect real caregiver feedback.
 
 ## Timing Map
 
-| Beat | Time | Words |
-|------|------|-------|
-| Hook — 40 Hz disruption, restoration via sound | ~10s | ~25 |
-| Problem — reactive systems, habituation | ~15s | ~35 |
-| Solution — causal TCN, 5-10s ahead, R-squared 0.25 | ~20s | ~35 |
-| Results — 72% vs 64%, 35 subjects, all benefit | ~15s | ~30 |
-| Demo + Next Steps — QR code, pilot at facility | ~10s | ~25 |
+| Beat                                               | Time | Words |
+| -------------------------------------------------- | ---- | ----- |
+| Hook — 40 Hz disruption, restoration via sound     | ~10s | ~25   |
+| Problem — reactive systems, habituation            | ~15s | ~35   |
+| Solution — causal TCN, 5-10s ahead, R-squared 0.25 | ~20s | ~35   |
+| Results — 72% vs 64%, 35 subjects, all benefit     | ~15s | ~30   |
+| Demo + Next Steps — QR code, pilot at facility     | ~10s | ~25   |
 
 ---
 
@@ -66,28 +66,30 @@ we can deploy in homes and memory care facilities, not just hospitals.
 
 ## Key Numbers to Have Ready
 
-| Metric | Value | Source |
-|--------|-------|--------|
-| Alignment (TCN vs Reactive) | 72.1% vs 64.5% | results/RESULTS_REPORT.md |
-| Low-PAC targeting | 82.6% vs 51.7% | results/RESULTS_REPORT.md |
-| Effect size (alignment) | g = 1.31, p < 0.001 | Hedges' g |
-| Oracle proximity | 91% of theoretical best | 30.5 / 33.3 PAC gap |
-| Subjects benefiting | 35/35 (100%) | Per-subject scatter |
-| TCN R-squared at 5-10s | 0.24-0.28 | models/sweep_horizons_results.json |
-| Model size | 1,457 + 31,043 params | EEGNet + TCN |
-| Inference latency | < 50ms total | Real-time capable |
+| Metric                      | Value                   | Source                             |
+| --------------------------- | ----------------------- | ---------------------------------- |
+| Alignment (TCN vs Reactive) | 72.1% vs 64.5%          | results/RESULTS_REPORT.md          |
+| Low-PAC targeting           | 82.6% vs 51.7%          | results/RESULTS_REPORT.md          |
+| Effect size (alignment)     | g = 1.31, p < 0.001     | Hedges' g                          |
+| Oracle proximity            | 91% of theoretical best | 30.5 / 33.3 PAC gap                |
+| Subjects benefiting         | 35/35 (100%)            | Per-subject scatter                |
+| TCN R-squared at 5-10s      | 0.24-0.28               | models/sweep_horizons_results.json |
+| Model size                  | 1,457 + 31,043 params   | EEGNet + TCN                       |
+| Inference latency           | < 50ms total            | Real-time capable                  |
 
 ---
 
 ## Dos and Don'ts
 
 **Do say:**
+
 - "Predictive model for neural state"
 - "Temporal forecasting" and "causal architecture"
 - "Decision support for therapy scheduling"
 - "Validated on real EEG from 35 participants"
 
 **Do not say:**
+
 - "AI cures Alzheimer's"
 - "Treatment" (use "stimulation" or "therapy scheduling")
 - "Our product" (this is research)

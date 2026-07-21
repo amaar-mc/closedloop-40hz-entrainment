@@ -9,6 +9,7 @@ tags:
 # Synopsys Poster Final Flat (Text Extraction from PDF)
 
 ## Connections
+
 - [[Synopsys Poster Final (Print PDF)]] - `references` [INFERRED]
 
   #community/Community_154

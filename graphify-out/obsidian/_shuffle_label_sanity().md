@@ -7,9 +7,10 @@ tags:
   - community/Community_74
 ---
 
-# _shuffle_label_sanity()
+# \_shuffle_label_sanity()
 
 ## Connections
+
 - [[_fit_ridge()]] - `calls` [EXTRACTED]
 - [[comprehensive_submission_audit.py]] - `contains` [EXTRACTED]
 - [[run_audit()_2]] - `calls` [EXTRACTED]

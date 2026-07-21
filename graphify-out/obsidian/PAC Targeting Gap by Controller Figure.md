@@ -9,6 +9,7 @@ tags:
 # PAC Targeting Gap by Controller Figure
 
 ## Connections
+
 - [[Fixed Controller PAC Gap (negative)]] - `references` [EXTRACTED]
 - [[Hybrid Controller PAC Gap (~34e-6, best non-oracle)]] - `references` [EXTRACTED]
 - [[Oracle Controller PAC Gap (~33e-6)]] - `references` [EXTRACTED]

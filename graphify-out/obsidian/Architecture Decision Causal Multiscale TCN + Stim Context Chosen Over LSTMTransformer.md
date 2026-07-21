@@ -10,6 +10,7 @@ tags:
 # Architecture Decision: Causal Multiscale TCN + Stim Context Chosen Over LSTM/Transformer
 
 ## Connections
+
 - [[Key Insight Temporal PAC Prediction Fails Without Stimulation Context]] - `rationale_for` [EXTRACTED]
 - [[Target Smoothing Causal Denoised PAC State Achieves R²=0.75 vs Raw R²=0.07]] - `conceptually_related_to` [EXTRACTED]
 - [[temporal_multiscale Module Leakage-Safe Multiscale TCN Pipeline]] - `rationale_for` [EXTRACTED]

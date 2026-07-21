@@ -10,6 +10,7 @@ tags:
 # persistence_baseline()
 
 ## Connections
+
 - [[Predict y_future = last_pac (current value).]] - `rationale_for` [EXTRACTED]
 - [[compute_metrics()]] - `calls` [EXTRACTED]
 - [[main()_3]] - `calls` [EXTRACTED]

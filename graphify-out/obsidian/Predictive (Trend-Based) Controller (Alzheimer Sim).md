@@ -10,6 +10,7 @@ tags:
 # Predictive (Trend-Based) Controller (Alzheimer Sim)
 
 ## Connections
+
 - [[Alzheimer Simulation Script (Disease Severity × Strategy Matrix)]] - `implements` [EXTRACTED]
 - [[PredictiveCtrl (Trend + Z-score with Hysteresis)]] - `semantically_similar_to` [INFERRED]
 

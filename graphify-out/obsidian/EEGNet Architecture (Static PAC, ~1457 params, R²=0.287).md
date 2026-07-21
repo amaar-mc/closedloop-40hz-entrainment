@@ -10,6 +10,7 @@ tags:
 # EEGNet Architecture (Static PAC, ~1457 params, R²=0.287)
 
 ## Connections
+
 - [[Current Methodology Closed-Loop 40Hz Entrainment via Temporal PAC Forecasting]] - `references` [EXTRACTED]
 - [[EEGNet Static PAC Model (srceegnet.py, 1457 params)]] - `semantically_similar_to` [EXTRACTED]
 

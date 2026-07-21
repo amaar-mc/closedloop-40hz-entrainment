@@ -10,6 +10,7 @@ tags:
 # Reactive
 
 ## Connections
+
 - [[StimAction]] - `uses` [INFERRED]
 - [[__init__()_78]] - `method` [EXTRACTED]
 - [[main()_39]] - `calls` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # Bullet point with optional **bold** markers.
 
 ## Connections
+
 - [[bullet()]] - `rationale_for` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

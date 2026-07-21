@@ -10,6 +10,7 @@ tags:
 # checkpoint_deployment_audit.py
 
 ## Connections
+
 - [[Checkpoint deployment realism audit.  Evaluates a trained checkpoint under multi]] - `rationale_for` [EXTRACTED]
 - [[SeqDataset_2]] - `contains` [EXTRACTED]
 - [[_corr()_2]] - `contains` [EXTRACTED]

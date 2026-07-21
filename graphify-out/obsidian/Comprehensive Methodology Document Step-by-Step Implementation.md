@@ -9,10 +9,11 @@ tags:
 # Comprehensive Methodology Document: Step-by-Step Implementation
 
 ## Connections
+
 - [[ClosedLoopController Implementation with Hysteresis]] - `references` [EXTRACTED]
 - [[EEGNet PyTorch Implementation (7-channel, 500 samples)]] - `references` [EXTRACTED]
 - [[EntrainmentSimulator Exponential PAC Dynamics Model]] - `references` [EXTRACTED]
 - [[Manual PAC Computation (Butterworth + Hilbert, compute_pac_manual)]] - `references` [EXTRACTED]
 - [[PersonalizationModule Rolling 30s PAC Baseline with Z-Score]] - `references` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[Add positional encoding to input.          Args             x Input tensor]] - `rationale_for` [EXTRACTED]
 - [[CausalSinusoidalPE]] - `method` [EXTRACTED]
 

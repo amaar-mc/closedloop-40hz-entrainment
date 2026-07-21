@@ -10,6 +10,7 @@ tags:
 # forward()
 
 ## Connections
+
 - [[SubjectAdaptiveTCN]] - `method` [EXTRACTED]
 
   #community/Archived_ImprovedTCN_Experiments

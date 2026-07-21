@@ -10,7 +10,8 @@ tags:
 # Factory that returns a ModelRegistry with the 4-channel TCN pre-registered.
 
 ## Connections
+
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[build_default_registry()]] - `rationale_for` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

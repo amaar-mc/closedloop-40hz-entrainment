@@ -10,6 +10,7 @@ tags:
 # alzheimer_model.py
 
 ## Connections
+
 - [[Alzheimer's Disease Modeling Layer for TRIBE V2 Integration  Models the effects]] - `rationale_for` [EXTRACTED]
 - [[AlzheimerProfile]] - `contains` [EXTRACTED]
 - [[get_profile()]] - `contains` [EXTRACTED]

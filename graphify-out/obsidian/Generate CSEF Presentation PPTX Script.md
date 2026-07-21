@@ -9,6 +9,7 @@ tags:
 # Generate CSEF Presentation PPTX Script
 
 ## Connections
+
 - [[Generate CSEF Presentation PDF Script]] - `semantically_similar_to` [INFERRED]
 - [[submissionpresentationCSEF_2026_Presentation.pdf]] - `semantically_similar_to` [INFERRED]
 

@@ -10,6 +10,7 @@ tags:
 # Future Directions: Live EEG streaming crossover validation, 60-min habituation capture, reinforcement learning, multi-biomarker
 
 ## Connections
+
 - [[CSEF 2026 Final Submission Poster]] - `references` [EXTRACTED]
 - [[Towards Clinical Use Muse 2 headband, $300 total, no GPU, 40Hz audio delivery]] - `conceptually_related_to` [INFERRED]
 

@@ -10,6 +10,7 @@ tags:
 # Rationale: PAC as Biomarker for Stimulation Timing (β=0.693)
 
 ## Connections
+
 - [[Personalization Module (IEEE Paper)]] - `rationale_for` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

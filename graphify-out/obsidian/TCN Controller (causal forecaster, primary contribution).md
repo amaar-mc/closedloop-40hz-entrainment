@@ -10,6 +10,7 @@ tags:
 # TCN Controller (causal forecaster, primary contribution)
 
 ## Connections
+
 - [[Closed-Loop 40Hz Entrainment Demo (Real EEG Replay)]] - `calls` [EXTRACTED]
 - [[Closed-Loop Stimulation Decision Logic]] - `semantically_similar_to` [INFERRED]
 - [[RealtimePACForecaster (temporal_multiscale)]] - `calls` [EXTRACTED]

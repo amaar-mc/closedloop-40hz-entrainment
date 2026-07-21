@@ -10,9 +10,10 @@ tags:
 # extract()
 
 ## Connections
+
 - [[Extract PAC features from batch of EEG windows.          Args             eeg_b]] - `rationale_for` [EXTRACTED]
 - [[PACFeatureExtractor]] - `method` [EXTRACTED]
 - [[extract_pac_features()]] - `calls` [EXTRACTED]
 - [[test_pac_features()]] - `calls` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

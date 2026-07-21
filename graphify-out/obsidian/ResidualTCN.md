@@ -10,6 +10,7 @@ tags:
 # ResidualTCN
 
 ## Connections
+
 - [[TCN that predicts residual from persistence (last_pac).]] - `rationale_for` [EXTRACTED]
 - [[__init__()_6]] - `method` [EXTRACTED]
 - [[count_parameters()_3]] - `method` [EXTRACTED]

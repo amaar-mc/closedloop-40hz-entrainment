@@ -10,6 +10,7 @@ tags:
 # Individual Variability in 40Hz Response (30% non-responders)
 
 ## Connections
+
 - [[Habituation Analysis (1735 habituate, 1835 facilitate)]] - `conceptually_related_to` [INFERRED]
 - [[Research Gap Table (What Exists vs Missing)]] - `references` [EXTRACTED]
 

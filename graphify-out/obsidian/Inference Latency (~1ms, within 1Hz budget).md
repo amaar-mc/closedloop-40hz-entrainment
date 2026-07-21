@@ -10,6 +10,7 @@ tags:
 # Inference Latency (~1ms, within 1Hz budget)
 
 ## Connections
+
 - [[Closed-Loop Feasibility (1ms inference  1Hz budget)]] - `semantically_similar_to` [INFERRED]
 - [[Pipeline Audit Report Multiscale Causal TCN (ts5_clean)]] - `references` [EXTRACTED]
 

@@ -10,6 +10,7 @@ tags:
 # FixedScheduleControl
 
 ## Connections
+
 - [[40s ON + 20s OFF (standard clinical protocol)._1]] - `rationale_for` [EXTRACTED]
 - [[RealtimePACForecaster]] - `uses` [INFERRED]
 - [[StimAction]] - `uses` [INFERRED]
@@ -19,4 +20,4 @@ tags:
 - [[reset()_44]] - `method` [EXTRACTED]
 - [[step()_44]] - `method` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

@@ -9,6 +9,7 @@ tags:
 # Generate AI Figures via OpenRouter Script
 
 ## Connections
+
 - [[OpenRouter API (Image Generation)]] - `calls` [EXTRACTED]
 - [[resultsfigures (Publication Figure Output Directory)]] - `references` [EXTRACTED]
 

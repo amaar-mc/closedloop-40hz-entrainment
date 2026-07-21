@@ -10,6 +10,7 @@ tags:
 # p11_scope()
 
 ## Connections
+
 - [[Slide 11 — Scope of Work.]] - `rationale_for` [EXTRACTED]
 - [[add_bullet()]] - `calls` [EXTRACTED]
 - [[add_heading()]] - `calls` [EXTRACTED]

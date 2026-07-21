@@ -9,6 +9,7 @@ tags:
 # Reactive vs TCN Controller Panel Comparison (Sub-15)
 
 ## Connections
+
 - [[Real-Data Controller Timeline — Sub-15 (Test Set, Archive Version)]] - `references` [EXTRACTED]
 
   #community/Community_64

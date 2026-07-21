@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Compute PAC-specific features from phase and amplitude.      Args:         ph
+# Compute PAC-specific features from phase and amplitude. Args: ph
 
 ## Connections
+
 - [[compute_pac_features()]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

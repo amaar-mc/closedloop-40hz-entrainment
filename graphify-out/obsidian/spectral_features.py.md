@@ -10,6 +10,7 @@ tags:
 # spectral_features.py
 
 ## Connections
+
 - [[Spectral Feature Extraction for PAC Prediction  Extracts frequency-domain feat]] - `rationale_for` [EXTRACTED]
 - [[SpectralFeatureExtractor]] - `contains` [EXTRACTED]
 - [[audit_leakage.py]] - `imports_from` [EXTRACTED]
@@ -26,4 +27,4 @@ tags:
 - [[simple_diagnostic.py]] - `imports_from` [EXTRACTED]
 - [[test_spectral_features()]] - `contains` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

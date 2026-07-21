@@ -9,6 +9,7 @@ tags:
 # Kushal Khare Poster Feedback Meeting (March 4, 2026)
 
 ## Connections
+
 - [[EEG Demo Video Recommendation with Annotations]] - `references` [EXTRACTED]
 - [[Lab Notebook Advice Consolidate with Dates, Place in Physical Folder]] - `references` [EXTRACTED]
 - [[Poster Design Advice Reduce Text, Enlarge Figures]] - `references` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # PAC Response vs Disease Severity - Predictive Controller Sweep
 
 ## Connections
+
 - [[PAC Response by Disease Severity (Panel A)]] - `semantically_similar_to` [INFERRED]
 - [[TRIBE V2 Alzheimer's Disease Simulation Predictive Controller (3-Panel Sweep)]] - `references` [EXTRACTED]
 

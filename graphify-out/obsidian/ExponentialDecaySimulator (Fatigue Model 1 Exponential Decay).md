@@ -10,7 +10,8 @@ tags:
 # ExponentialDecaySimulator (Fatigue Model 1: Exponential Decay)
 
 ## Connections
+
 - [[StepFunctionSimulator (Fatigue Model 2 Sudden Threshold Drop)]] - `semantically_similar_to` [INFERRED]
 - [[create_simulator()]] - `calls` [EXTRACTED]
 
-  #community/Control_Strategies_&_Validation
+  #community/Control*Strategies*&\_Validation

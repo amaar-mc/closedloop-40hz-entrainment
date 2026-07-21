@@ -7,9 +7,10 @@ tags:
   - community/TRIBE_Neural-Mass_Simulator
 ---
 
-# Cortical Response Model — TRIBE V2 Integration with Biophysical Fallback  Wraps
+# Cortical Response Model — TRIBE V2 Integration with Biophysical Fallback Wraps
 
 ## Connections
+
 - [[cortical_model.py]] - `rationale_for` [EXTRACTED]
 
   #community/TRIBE_Neural-Mass_Simulator

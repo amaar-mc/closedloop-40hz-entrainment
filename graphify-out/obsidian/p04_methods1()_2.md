@@ -10,6 +10,7 @@ tags:
 # p04_methods1()
 
 ## Connections
+
 - [[Slide 4 — Methods page 1.]] - `rationale_for` [EXTRACTED]
 - [[add_bullet()]] - `calls` [EXTRACTED]
 - [[add_heading()]] - `calls` [EXTRACTED]

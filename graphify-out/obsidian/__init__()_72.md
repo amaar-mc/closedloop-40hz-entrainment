@@ -7,9 +7,10 @@ tags:
   - community/PPTX_Slide_Builder
 ---
 
-# __init__()
+# **init**()
 
 ## Connections
+
 - [[SlideBuilder]] - `method` [EXTRACTED]
 
   #community/PPTX_Slide_Builder

@@ -10,6 +10,7 @@ tags:
 # Ridge Regression Outperforms TCN (R²=0.81 vs 0.74)
 
 ## Connections
+
 - [[Pipeline Audit Report Multiscale Causal TCN (ts5_clean)]] - `references` [EXTRACTED]
 
   #community/Community_47

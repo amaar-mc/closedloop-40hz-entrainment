@@ -10,6 +10,7 @@ tags:
 # Oracle Strategy (PAC=0.2000, stim=49.1%, eff=6.108)
 
 ## Connections
+
 - [[Closed-Loop Demo Script (run_closed_loop_demo.py)]] - `references` [EXTRACTED]
 
   #community/Community_107

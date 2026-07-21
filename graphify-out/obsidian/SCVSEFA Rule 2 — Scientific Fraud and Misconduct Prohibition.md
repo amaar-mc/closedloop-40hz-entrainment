@@ -10,6 +10,7 @@ tags:
 # SCVSEFA Rule #2 — Scientific Fraud and Misconduct Prohibition
 
 ## Connections
+
 - [[SRC Ethics Statement (ISEF Rules)]] - `references` [EXTRACTED]
 
   #community/Community_108

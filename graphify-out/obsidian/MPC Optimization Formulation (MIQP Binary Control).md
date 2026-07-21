@@ -10,8 +10,9 @@ tags:
 # MPC Optimization Formulation (MIQP Binary Control)
 
 ## Connections
+
 - [[MPC Decision Engine (IEEE Paper Formulation)]] - `semantically_similar_to` [INFERRED]
 - [[MPC Principles Predict-Optimize-Recede Horizon]] - `conceptually_related_to` [INFERRED]
 - [[Research Methodology Document GAT-Transformer Predictive Framework]] - `references` [EXTRACTED]
 
-  #community/Literature_Review_&_Methodology_Docs
+  #community/Literature*Review*&\_Methodology_Docs

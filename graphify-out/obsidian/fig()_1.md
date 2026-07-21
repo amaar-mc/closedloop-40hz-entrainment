@@ -10,6 +10,7 @@ tags:
 # fig()
 
 ## Connections
+
 - [[CSEF]] - `method` [EXTRACTED]
 - [[caption()_1]] - `calls` [EXTRACTED]
 - [[p06_methods3()_1]] - `calls` [EXTRACTED]

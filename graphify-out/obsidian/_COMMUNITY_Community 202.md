@@ -8,6 +8,7 @@ members: 1
 **Members:** 1 nodes
 
 ## Members
+
 - [[Personal Motivation (Grandmother + Piano)]] - document - archive/context/motivation.md
 
 ## Live Query (requires Dataview plugin)

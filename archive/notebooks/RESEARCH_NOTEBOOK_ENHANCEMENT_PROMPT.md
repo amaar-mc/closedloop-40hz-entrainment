@@ -1,12 +1,15 @@
 # Research Notebook Enhancement Prompt
 
 ## Objective
+
 Transform the current P10_Research_Notebook_Amaar_Chughtai.docx into a comprehensive, research-grade laboratory notebook that matches the style and depth of the example notebook (Project S-19-05 Research Notebook). The enhanced notebook should be 15-20 pages of dense, technical content that thoroughly documents every aspect of the research process.
 
 ## Required Actions
 
 ### 1. **Review Source Materials**
+
 First, read and analyze these files to understand the complete research journey:
+
 - `docs/LOG_NOTEBOOK.md` - Detailed chronological lab entries
 - `docs/LAB_NOTEBOOK.md` - Structured research documentation
 - `docs/CURRENT_METHODOLOGY.md` - Final methodology as implemented
@@ -16,6 +19,7 @@ First, read and analyze these files to understand the complete research journey:
 - `P10_Research_Notebook_Amaar_Chughtai.docx` - Current notebook to enhance
 
 ### 2. **Formatting Requirements**
+
 - **Font**: Change ALL text to Times New Roman (the example used Times New Roman, not Arial)
 - **Font sizes**:
   - Title: 16pt, bold, centered
@@ -31,6 +35,7 @@ First, read and analyze these files to understand the complete research journey:
 ### 3. **Content Structure Enhancement**
 
 #### **Title Page**
+
 - Project P10 Research Notebook
 - Full title: "Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment to Optimize Theta-Gamma Coupling in Alzheimer's Disease"
 - Amaar Chughtai
@@ -40,6 +45,7 @@ First, read and analyze these files to understand the complete research journey:
 - Total Pages: [X] pages
 
 #### **Section 1: Background Research (3-4 pages)**
+
 **Expand significantly beyond current content:**
 
 - **Disease Pathology Deep Dive**: Add detailed neurobiological mechanisms
@@ -62,9 +68,11 @@ First, read and analyze these files to understand the complete research journey:
   - Technical feasibility assessment
 
 #### **Section 2: Dataset Analysis and Technical Implementation (4-5 pages)**
+
 **Add extensive technical depth:**
 
 - **Dataset Characterization Table**:
+
   ```
   | Subject ID | Age | Gender | MMSE Score | Session Type | Data Quality | PAC Range |
   ```
@@ -88,6 +96,7 @@ First, read and analyze these files to understand the complete research journey:
   - Subject-level vs population-level normalization trade-offs
 
 #### **Section 3: Model Architecture Evolution (5-6 pages)**
+
 **Dramatically expand the architecture marathon section:**
 
 - **V1: EEGNet Baseline Implementation**
@@ -117,6 +126,7 @@ First, read and analyze these files to understand the complete research journey:
   - Batch size optimization results
 
 #### **Section 4: Temporal Prediction Innovation (4-5 pages)**
+
 **Add comprehensive technical documentation:**
 
 - **Multiscale TCN Architecture Deep Dive**
@@ -147,9 +157,11 @@ First, read and analyze these files to understand the complete research journey:
   - Learning rate scheduling optimization
 
 #### **Section 5: Horizon Sweep Analysis (2-3 pages)**
+
 **This is THE key experiment - expand significantly:**
 
 - **Complete Horizon Results Table**
+
   ```
   | Horizon | TCN R² | TCN RMSE | Persistence R² | Ridge R² | Linear R² | TCN Advantage |
   | 1s      | 0.52   | X.XX     | 0.71          | 0.64     | 0.58      | -0.19        |
@@ -171,6 +183,7 @@ First, read and analyze these files to understand the complete research journey:
   - Subject-wise performance variability
 
 #### **Section 6: Closed-Loop Controller Integration (3-4 pages)**
+
 **Add implementation details:**
 
 - **Controller Architecture Diagram**
@@ -192,6 +205,7 @@ First, read and analyze these files to understand the complete research journey:
   - Clinical utility score computation and interpretation
 
 #### **Section 7: Advanced Analysis and Validation (2-3 pages)**
+
 **Add sophisticated analyses:**
 
 - **Habituation Analysis**
@@ -212,6 +226,7 @@ First, read and analyze these files to understand the complete research journey:
   - Clinical deployment implications
 
 #### **Section 8: Statistical Rigor and Reproducibility (1-2 pages)**
+
 **Add methodological validation:**
 
 - **Cross-Validation Strategy**
@@ -229,6 +244,7 @@ First, read and analyze these files to understand the complete research journey:
 ### 4. **Visual Enhancements**
 
 #### **Required Figures/Tables** (Extract from poster/results):
+
 1. **AD vs PD comparison table** (enhanced with pathophysiology)
 2. **Dataset characterization table** with subject demographics
 3. **Architecture evolution table** with detailed specifications
@@ -241,6 +257,7 @@ First, read and analyze these files to understand the complete research journey:
 10. **Network architecture diagrams** for EEGNet and TCN
 
 #### **Table Formatting Requirements**:
+
 - Professional borders (1pt black lines)
 - Alternating row shading (light gray/white)
 - Bold headers with centered text
@@ -250,6 +267,7 @@ First, read and analyze these files to understand the complete research journey:
 ### 5. **Technical Writing Standards**
 
 #### **Language Requirements**:
+
 - **Concise, precise scientific language** matching the example notebook
 - **Past tense** for all experimental descriptions
 - **Specific quantitative details** (exact R² values, p-values, effect sizes)
@@ -258,11 +276,13 @@ First, read and analyze these files to understand the complete research journey:
 - **Underlined section headers** to match example style
 
 #### **Citation Style**:
+
 - Inline citations: (Author et al., Year)
 - Full references at end in standard format
 - Include DOIs where available
 
 #### **Methodology Descriptions**:
+
 - **Decision rationale** for every choice made
 - **Alternative approaches considered** and why rejected
 - **Technical limitations** acknowledged
@@ -272,6 +292,7 @@ First, read and analyze these files to understand the complete research journey:
 ### 6. **Content Expansion Guidelines**
 
 #### **Add Technical Depth**:
+
 - Mathematical formulations where appropriate
 - Algorithm pseudocode for key methods
 - Computational complexity analysis
@@ -279,6 +300,7 @@ First, read and analyze these files to understand the complete research journey:
 - Hardware/software specifications used
 
 #### **Add Scientific Rigor**:
+
 - Hypothesis testing framework for each experiment
 - Multiple comparison corrections where appropriate
 - Confidence intervals for all effect estimates
@@ -286,6 +308,7 @@ First, read and analyze these files to understand the complete research journey:
 - Discussion of potential confounds and limitations
 
 #### **Add Clinical Context**:
+
 - Relationship to existing AD treatments
 - Clinical trial design implications
 - Regulatory pathway considerations
@@ -295,6 +318,7 @@ First, read and analyze these files to understand the complete research journey:
 ### 7. **Quality Assurance Checklist**
 
 Before finalizing, verify:
+
 - [ ] All 35 subjects' data properly represented
 - [ ] Every statistical claim has supporting evidence
 - [ ] All figures have proper captions and are referenced in text
@@ -307,6 +331,7 @@ Before finalizing, verify:
 - [ ] Professional formatting consistent with example notebook
 
 ### 8. **Expected Final Document Structure**
+
 ```
 Title Page (1 page)
 Table of Contents (1 page)

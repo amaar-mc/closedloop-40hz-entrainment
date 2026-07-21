@@ -10,6 +10,7 @@ tags:
 # check_chronology()
 
 ## Connections
+
 - [[read_text()]] - `calls` [EXTRACTED]
 - [[report()]] - `calls` [EXTRACTED]
 - [[strip_fenced_code_blocks()]] - `calls` [EXTRACTED]

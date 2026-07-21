@@ -10,6 +10,7 @@ tags:
 # Add light gray content background.
 
 ## Connections
+
 - [[add_content_bg()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Community_75

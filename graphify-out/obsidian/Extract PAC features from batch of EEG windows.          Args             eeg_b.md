@@ -7,9 +7,10 @@ tags:
   - community/Archived_Feature_Experiments_(v4)
 ---
 
-# Extract PAC features from batch of EEG windows.          Args:             eeg_b
+# Extract PAC features from batch of EEG windows. Args: eeg_b
 
 ## Connections
+
 - [[extract()_1]] - `rationale_for` [EXTRACTED]
 
-  #community/Archived_Feature_Experiments_(v4)
+  #community/Archived*Feature_Experiments*(v4)

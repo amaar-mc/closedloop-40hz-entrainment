@@ -10,9 +10,10 @@ tags:
 # Rationale: Epoch-Level PAC Labels Chosen for Stability — 2s window too short for reliable MI; creates static prediction ceiling
 
 ## Connections
+
 - [[Architecture Exploration Journey Phase 1 to Phase 3 (V1-V8 Models, Leakage, Pivot)]] - `rationale_for` [EXTRACTED]
 - [[Contribution 1 R²=0.287 Static PAC Ceiling (8 architectures converge)]] - `rationale_for` [INFERRED]
 - [[Design Decision Rationale Data, Model, Training, Controller Choices]] - `references` [EXTRACTED]
 - [[PAC Computation Modulation Index (Tort 2010), Theta-Gamma, Epoch-Level Labels]] - `rationale_for` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

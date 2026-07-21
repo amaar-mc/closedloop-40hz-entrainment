@@ -66,14 +66,14 @@ The pipeline is **technically clean** -- no data leakage, no subject contaminati
 
 ### 2.3 Baseline Comparisons — FAIL (CRITICAL)
 
-| Method | Test R^2 | Test Correlation |
-|--------|----------|-----------------|
-| **Persistence (y_future = y_current)** | **0.7600** | **0.8799** |
-| **Ridge on all features (linear)** | **0.8120** | **0.9056** |
-| Ridge on PAC features only | 0.8589 | 0.9270 |
-| **MultiscaleCausalTCN (31K params)** | **0.7423** | **0.8751** |
-| Ridge on spectral features only | 0.0551 | 0.5201 |
-| Ridge on non-PAC features | 0.0446 | 0.5196 |
+| Method                                 | Test R^2   | Test Correlation |
+| -------------------------------------- | ---------- | ---------------- |
+| **Persistence (y_future = y_current)** | **0.7600** | **0.8799**       |
+| **Ridge on all features (linear)**     | **0.8120** | **0.9056**       |
+| Ridge on PAC features only             | 0.8589     | 0.9270           |
+| **MultiscaleCausalTCN (31K params)**   | **0.7423** | **0.8751**       |
+| Ridge on spectral features only        | 0.0551     | 0.5201           |
+| Ridge on non-PAC features              | 0.0446     | 0.5196           |
 
 **The neural network (R^2 = 0.7423) DOES NOT BEAT the persistence baseline (R^2 = 0.7600).**
 A simple linear Ridge model on the same features (R^2 = 0.8120) outperforms both.
@@ -168,6 +168,7 @@ The model requires **accurate PAC history** as input features. In a real closed-
 4. The TCN predicts future PAC.
 
 **Problem:** Step 2 produces noisy PAC estimates from short windows. The deployment audit shows:
+
 - sigma=0.5 noise → R^2 drops from 0.74 to 0.68
 - sigma=1.0 noise → R^2 drops to 0.52
 
@@ -183,13 +184,13 @@ The answer from this data is: **no, not yet.** The TCN adds negative marginal va
 
 ## Summary Table
 
-| Category | Verdict | Critical Issues |
-|---|---|---|
-| 1. Data Leakage | **PASS** | No leakage detected across all vectors |
-| 2. Results Integrity | **FAIL** | TCN (R^2=0.74) does NOT beat persistence (R^2=0.76) |
-| 3. Suspicious Patterns | **FAIL** | R^2 inflated by target smoothing; model is autoregressive wrapper |
-| 4. Code Integrity | **SUSPECT** | No random seeds → not reproducible |
-| 5. Deployment Realism | **FAIL** | PAC oracle dependency makes real-time deployment unrealistic |
+| Category               | Verdict     | Critical Issues                                                   |
+| ---------------------- | ----------- | ----------------------------------------------------------------- |
+| 1. Data Leakage        | **PASS**    | No leakage detected across all vectors                            |
+| 2. Results Integrity   | **FAIL**    | TCN (R^2=0.74) does NOT beat persistence (R^2=0.76)               |
+| 3. Suspicious Patterns | **FAIL**    | R^2 inflated by target smoothing; model is autoregressive wrapper |
+| 4. Code Integrity      | **SUSPECT** | No random seeds → not reproducible                                |
+| 5. Deployment Realism  | **FAIL**    | PAC oracle dependency makes real-time deployment unrealistic      |
 
 ---
 

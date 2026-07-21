@@ -10,6 +10,7 @@ tags:
 # get_history()
 
 ## Connections
+
 - [[Get full simulation history.          Returns dict with same keys as Entrainment]] - `rationale_for` [EXTRACTED]
 - [[TVBAlzheimerSimulator]] - `method` [EXTRACTED]
 

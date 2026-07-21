@@ -10,6 +10,7 @@ tags:
 # md_inline()
 
 ## Connections
+
 - [[Convert inline markdown (bold, italic, `code`) to reportlab XML.]] - `rationale_for` [EXTRACTED]
 - [[build_table_flowable()]] - `calls` [EXTRACTED]
 - [[generate_notebook_pdf.py]] - `contains` [EXTRACTED]

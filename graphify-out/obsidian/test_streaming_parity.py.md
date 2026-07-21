@@ -10,6 +10,7 @@ tags:
 # test_streaming_parity.py
 
 ## Connections
+
 - [[Parity verification StreamingFeatureExtractor vs offline extract_spectral_featu]] - `rationale_for` [EXTRACTED]
 - [[_feature_slices()]] - `contains` [EXTRACTED]
 - [[_make_windows()]] - `contains` [EXTRACTED]
@@ -25,4 +26,4 @@ tags:
 - [[test_reset_zeroes_state()]] - `contains` [EXTRACTED]
 - [[test_wrong_shape_raises()]] - `contains` [EXTRACTED]
 
-  #community/Models,_Streaming_&_Apps
+  #community/Models,_Streaming_&\_Apps

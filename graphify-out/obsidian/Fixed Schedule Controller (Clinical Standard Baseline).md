@@ -9,6 +9,7 @@ tags:
 # Fixed Schedule Controller (Clinical Standard Baseline)
 
 ## Connections
+
 - [[Figure 8 Controller Comparison Bar Chart]] - `references` [EXTRACTED]
 - [[TCN Predictive Controller (This Project)]] - `conceptually_related_to` [EXTRACTED]
 

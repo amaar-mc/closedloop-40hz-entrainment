@@ -24,6 +24,7 @@ How to present yourself, read judges, and handle different situations. This is t
 ## The First 10 Seconds
 
 When a judge walks up:
+
 1. Make eye contact and smile
 2. "Hi, I'm Amaar. Thanks for coming by."
 3. Wait for them to initiate. They might say "tell me about your project" or jump straight to a question.
@@ -33,33 +34,44 @@ When a judge walks up:
 ## Five Judge Types (and how to handle each)
 
 ### The Warm Judge
+
 Asks open questions, nods a lot, seems genuinely interested. Smiles.
+
 - **Strategy:** Let the conversation flow naturally. This judge wants to like your project. Be genuine, show passion, let them guide the discussion. They'll advocate for you in the caucus if they feel a personal connection.
 - **Risk:** Spending too long chatting and not covering key results. Make sure you hit your numbers even in a friendly conversation.
 
 ### The Cold Judge
+
 Asks pointed questions, minimal facial feedback, takes notes, poker face.
+
 - **Strategy:** Answer concisely. Don't over-explain or ramble -- they're testing whether you crack under pressure. Short, precise, data-backed answers. If they're silent after your answer, that's OK. Don't fill the silence with unnecessary words.
 - **Risk:** Interpreting coldness as hostility. They're probably just focused. Keep your composure.
 
 ### The Skeptical Judge
+
 Challenges every claim. "Really? Are you sure? How do you know? Isn't that a stretch?"
+
 - **Strategy:** Never get defensive. Start with "That's a fair point" or "You're right to question that." Then respond with data. They respect intellectual honesty over confident hand-waving. If they find a real weakness, acknowledge it: "That is a limitation, and here's why the work is still valuable despite it."
 - **Risk:** Getting flustered or contradicting yourself. Stay calm. If you don't know, say "I haven't tested that specifically."
 
 ### The Expert Judge
+
 Knows more about some aspect than you -- maybe a neurologist, maybe a biostatistician.
+
 - **Strategy:** Don't pretend to know more than you do. If they correct you, say "I didn't know that -- thank you. That's useful context." Then connect it to your work. Experts respect students who learn in real time. They'll be your strongest advocates if they see genuine understanding.
 - **Risk:** Trying to BS them. They'll know instantly. Honesty always.
 
 ### The Confused Judge
+
 Doesn't follow the EEG/ML parts. Asks for clarification. Seems lost.
+
 - **Strategy:** Drop to analogy level immediately. "Think of it like a weather forecast for the brain." Or "It's like a thermostat versus a space heater on a timer." Don't talk down -- simplify. Point to figures and let visuals do the work. Keep your sentences short.
 - **Risk:** Losing them entirely and them remembering your project as "the confusing one." Make sure they walk away understanding ONE thing: you predict when the brain needs therapy and deliver it at the right time.
 
 ## Handling Interruptions
 
 Judges will interrupt you. This is GOOD. It means they're engaged and want to go deeper on something specific. When interrupted:
+
 1. Stop immediately. Don't try to finish your sentence.
 2. Listen to their question.
 3. Answer it directly.
@@ -90,10 +102,12 @@ Remember: you need multiple judges to advocate for you. One dismissive judge doe
 ## Ending an Interview
 
 The judge will often signal they're done by stepping back or saying "Thank you." You close with:
+
 - "Thanks for the great questions. Is there anything else you'd like to dig into?"
 - Or: "Do you have any questions for me?"
 
 If you want to leave them with one memorable fact:
+
 - "The sentence I'd leave you with is: the system predicted when 35 patients' brains would lose therapeutic response, and it was right 83% of the time, for every single patient."
 
 ## Energy Management (4+ hours of judging)

@@ -10,6 +10,7 @@ tags:
 # caption()
 
 ## Connections
+
 - [[11 pt italic caption (CSEF allows =10 pt for captions).]] - `rationale_for` [EXTRACTED]
 - [[CSEF]] - `method` [EXTRACTED]
 - [[fig()_1]] - `calls` [EXTRACTED]

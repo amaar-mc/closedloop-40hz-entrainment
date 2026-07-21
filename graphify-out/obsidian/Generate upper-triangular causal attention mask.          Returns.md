@@ -7,9 +7,10 @@ tags:
   - community/TCN_Layer_Internals
 ---
 
-# Generate upper-triangular causal attention mask.          Returns:
+# Generate upper-triangular causal attention mask. Returns:
 
 ## Connections
+
 - [[_generate_causal_mask()]] - `rationale_for` [EXTRACTED]
 
   #community/TCN_Layer_Internals

@@ -9,7 +9,8 @@ tags:
 # Hybrid Controller: ~60% Stim Rate, ~74% Alignment
 
 ## Connections
+
 - [[Stimulation Efficiency vs Alignment Trade-off (CSEF Old Archive)]] - `references` [EXTRACTED]
 - [[Stimulation Efficiency vs Alignment Trade-off Scatter Plot]] - `references` [EXTRACTED]
 
-  #community/Poster_Boards_&_Figures
+  #community/Poster*Boards*&\_Figures

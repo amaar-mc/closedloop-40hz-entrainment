@@ -10,6 +10,7 @@ tags:
 # ControlMethodBase
 
 ## Connections
+
 - [[Abstract base class for all control strategies.      Subclasses must implement]] - `rationale_for` [EXTRACTED]
 - [[ClosedLoopController]] - `uses` [INFERRED]
 - [[EntrainmentSimulator]] - `uses` [INFERRED]
@@ -26,4 +27,4 @@ tags:
 - [[step()_67]] - `method` [EXTRACTED]
 - [[validation.py]] - `contains` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

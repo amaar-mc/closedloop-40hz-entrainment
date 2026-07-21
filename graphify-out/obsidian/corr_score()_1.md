@@ -10,7 +10,8 @@ tags:
 # corr_score()
 
 ## Connections
+
 - [[evaluate()_7]] - `calls` [EXTRACTED]
 - [[run_hyperparam_sensitivity.py]] - `contains` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

@@ -10,6 +10,7 @@ tags:
 # generate_silence()
 
 ## Connections
+
 - [[Generate a silence stimulus (rest condition).      Args         duration_sec D]] - `rationale_for` [EXTRACTED]
 - [[generate_stimulus_library()]] - `calls` [EXTRACTED]
 - [[stimulus_generator.py]] - `contains` [EXTRACTED]

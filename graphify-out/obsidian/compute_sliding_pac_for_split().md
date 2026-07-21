@@ -10,6 +10,7 @@ tags:
 # compute_sliding_pac_for_split()
 
 ## Connections
+
 - [[Compute sliding-window PAC for an entire split.      Args         windows (N,]] - `rationale_for` [EXTRACTED]
 - [[compute_sliding_pac.py]] - `contains` [EXTRACTED]
 - [[compute_sliding_pac_for_segment()]] - `calls` [EXTRACTED]

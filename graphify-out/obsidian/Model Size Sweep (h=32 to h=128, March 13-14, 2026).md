@@ -10,6 +10,7 @@ tags:
 # Model Size Sweep (h=32 to h=128, March 13-14, 2026)
 
 ## Connections
+
 - [[Project P10 Research Log Notebook (vfinal, CSEF 2026 version)]] - `references` [EXTRACTED]
 
   #community/Lab_Notebook_PDF_Generation

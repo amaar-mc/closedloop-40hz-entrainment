@@ -10,6 +10,7 @@ tags:
 # CSEF Judging Process: Two-Round (Display Review + Interview) + Caucus
 
 ## Connections
+
 - [[CSEF 2026 Judging Strategy and Competitive Positioning]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

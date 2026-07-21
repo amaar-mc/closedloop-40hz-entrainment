@@ -10,6 +10,7 @@ tags:
 # Multiscale Causal TCN (Stage 2 Temporal Predictor)
 
 ## Connections
+
 - [[12 PAC+Stim Feature Set Description (indices 61–72)]] - `references` [EXTRACTED]
 - [[Closed-Loop 40 Hz Gamma Entrainment System]] - `references` [EXTRACTED]
 - [[Feature Ablation PAC+Stim vs Spectral Features]] - `references` [EXTRACTED]

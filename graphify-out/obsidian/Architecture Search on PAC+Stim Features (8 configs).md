@@ -10,6 +10,7 @@ tags:
 # Architecture Search on PAC+Stim Features (8 configs)
 
 ## Connections
+
 - [[PAC+Stim Focused Experiments (run_pac_stim_focused.py)]] - `implements` [EXTRACTED]
 
   #community/Generalization-Gap_Experiments

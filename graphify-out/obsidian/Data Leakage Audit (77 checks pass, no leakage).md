@@ -9,6 +9,7 @@ tags:
 # Data Leakage Audit (7/7 checks pass, no leakage)
 
 ## Connections
+
 - [[Epoch-Level PAC Granularity Caveat (82% same-epoch pairs)]] - `references` [EXTRACTED]
 - [[Model Architecture Deep Dive Phase (Phase 3)]] - `references` [EXTRACTED]
 - [[PAC Feature Circular Leakage Check (pac_current R2=0.104, matches persistence)]] - `references` [EXTRACTED]

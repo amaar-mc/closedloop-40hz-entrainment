@@ -10,6 +10,7 @@ tags:
 # count_parameters_by_component()
 
 ## Connections
+
 - [[Count parameters per component.]] - `rationale_for` [EXTRACTED]
 - [[TemporalPACPredictor]] - `method` [EXTRACTED]
 - [[test_temporal_model()]] - `calls` [EXTRACTED]

@@ -10,6 +10,7 @@ tags:
 # MaskedSequenceDataset
 
 ## Connections
+
 - [[Dataset]] - `inherits` [EXTRACTED]
 - [[Load multiscale dataset with optional feature column selection._1]] - `rationale_for` [EXTRACTED]
 - [[ModelConfig]] - `uses` [INFERRED]
@@ -20,4 +21,4 @@ tags:
 - [[run_hyperparam_sensitivity.py]] - `contains` [EXTRACTED]
 - [[run_single_config()]] - `calls` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

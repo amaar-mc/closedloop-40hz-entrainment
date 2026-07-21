@@ -10,7 +10,8 @@ tags:
 # Rationale: 12 PAC+Stim Features over 73-Feature Model (Spectral Features Overfit Subject Anatomy)
 
 ## Connections
+
 - [[Architecture Exploration Journey Phase 1 to Phase 3 (V1-V8 Models, Leakage, Pivot)]] - `rationale_for` [EXTRACTED]
 - [[Design Decision Rationale Data, Model, Training, Controller Choices]] - `references` [EXTRACTED]
 
-  #community/Research_Paper_&_Manuscript
+  #community/Research*Paper*&\_Manuscript

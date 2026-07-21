@@ -7,9 +7,10 @@ tags:
   - community/Paper/Presentation_PDF_Builders
 ---
 
-# Title Page (max 1 page).  Title, author, <=150-word summary.
+# Title Page (max 1 page). Title, author, <=150-word summary.
 
 ## Connections
+
 - [[p01_title()_1]] - `rationale_for` [EXTRACTED]
 
   #community/Paper/Presentation_PDF_Builders

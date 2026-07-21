@@ -10,6 +10,7 @@ tags:
 # TrialMetrics Dataclass (Per-Trial Simulation Metrics)
 
 ## Connections
+
 - [[run_population_diverse()_1]] - `shares_data_with` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator

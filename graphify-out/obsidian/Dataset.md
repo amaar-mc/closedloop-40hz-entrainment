@@ -9,6 +9,7 @@ tags:
 # Dataset
 
 ## Connections
+
 - [[EEGDatasetV2]] - `inherits` [EXTRACTED]
 - [[EEGDatasetV3]] - `inherits` [EXTRACTED]
 - [[EEGDatasetV4]] - `inherits` [EXTRACTED]
@@ -28,4 +29,4 @@ tags:
 - [[SyntheticDataset]] - `inherits` [EXTRACTED]
 - [[TemporalPACDataset]] - `inherits` [EXTRACTED]
 
-  #community/Multiscale_TCN_&_Features
+  #community/Multiscale*TCN*&\_Features

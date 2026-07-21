@@ -8,6 +8,7 @@ members: 46
 **Members:** 46 nodes
 
 ## Members
+
 - [[Add positional encoding to input.          Args             x Input tensor]] - rationale - validation/experiments/tcn_variants.py
 - [[Attention pooling over time axis._2]] - rationale - validation/experiments/tcn_variants.py
 - [[AttentionPool1D_2]] - code - validation/experiments/tcn_variants.py
@@ -63,9 +64,11 @@ SORT file.name ASC
 ```
 
 ## Connections to other communities
+
 - 11 edges to [[_COMMUNITY_Multiscale TCN & Features]]
 
 ## Top bridge nodes
+
 - [[AttentionPool1D_2]] - degree 8, connects to 1 community
 - [[CausalDSConvBlock_3]] - degree 7, connects to 1 community
 - [[LastStepPool_2]] - degree 7, connects to 1 community

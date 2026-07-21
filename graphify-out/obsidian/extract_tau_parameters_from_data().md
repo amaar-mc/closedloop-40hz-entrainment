@@ -10,8 +10,9 @@ tags:
 # extract_tau_parameters_from_data()
 
 ## Connections
+
 - [[Extract tau parameters empirically from experimental data.      Fits exponenti]] - `rationale_for` [EXTRACTED]
 - [[simulator.py]] - `contains` [EXTRACTED]
 - [[validate_simulator_dynamics()]] - `calls` [EXTRACTED]
 
-  #community/Closed-Loop_Control_&_Simulator
+  #community/Closed-Loop*Control*&\_Simulator
