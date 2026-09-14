@@ -19,9 +19,6 @@ Addresses RSRCH-04: simulator tau values must be either fit from real
 data or documented with literature citations. This script provides the
 empirical extraction, complementing the literature citations already
 present in src/simulator.py (Galambos 1981, Picton 2003).
-
-See .planning/phases/10-scope-lock-foundation/SIMULATOR_DEFENSE.md for
-the full analysis motivating this script.
 """
 from __future__ import annotations
 

@@ -282,7 +282,8 @@ def check_pac_feature_leakage(splits: dict) -> bool:
 def check_within_epoch_pac_sharing(splits: dict) -> bool:
     """
     Check whether windows from the same epoch share the same PAC label.
-    This is expected behavior (documented in CLAUDE.md) but could inflate
+    This is expected behavior (documented in the project methodology notes)
+    but could inflate
     persistence R² within short horizons.
     """
     print("=" * 70)
@@ -298,7 +299,7 @@ def check_within_epoch_pac_sharing(splits: dict) -> bool:
         print(f"  {name}: {n_unique} unique target values out of {n_total} samples ({ratio:.4f} ratio)")
         print(f"    (Ratio < 0.1 would suggest heavy epoch-level sharing)")
 
-    print(f"  [INFO] This is expected per CLAUDE.md: PAC is epoch-level, assigned to all 2s windows\n")
+    print(f"  [INFO] This is expected by design: PAC is epoch-level, assigned to all 2s windows\n")
     return True
 
 
