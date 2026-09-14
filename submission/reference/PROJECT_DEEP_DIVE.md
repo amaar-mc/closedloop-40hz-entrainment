@@ -542,4 +542,4 @@ The system is small enough for a wearable device and could enable personalized a
 
 ---
 
-_This document consolidates information from: CLAUDE.md (architecture overview), docs/CURRENT_METHODOLOGY.md (methodology), results/RESULTS_REPORT.md (all results and statistics), docs/POSTER_BOARD_V3.md (poster content), docs/LOG_NOTEBOOK.md (research chronology), temporal_multiscale/multiscale_tcn.py (TCN code), src/eegnet.py (EEGNet code), and run_tcn_validation.py (validation script)._
+_This document consolidates information from: docs/CURRENT_METHODOLOGY.md (architecture overview and methodology), results/RESULTS_REPORT.md (all results and statistics), docs/POSTER_BOARD_V3.md (poster content), docs/LOG_NOTEBOOK.md (research chronology), temporal_multiscale/multiscale_tcn.py (TCN code), src/eegnet.py (EEGNet code), and run_tcn_validation.py (validation script)._

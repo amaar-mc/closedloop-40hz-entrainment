@@ -11,7 +11,7 @@
 | --------------------- | ------------- | ------------------------------------------------------------- |
 | Git Status            | Clean         | Branch `finalize`, no uncommitted changes                     |
 | Pipeline Completeness | Complete      | Raw data → preprocessing → training → validation → figures    |
-| Documentation         | Comprehensive | README, FINDINGS, CLAUDE.md, CODE_MAP, POSTER_BOARD, ABSTRACT |
+| Documentation         | Comprehensive | README, FINDINGS, CODE_MAP, POSTER_BOARD, ABSTRACT |
 | Reproducibility       | High          | Deterministic seeds, versioned checkpoints, public dataset    |
 | Data Integrity        | Verified      | All audits pass (leakage, causality, split isolation)         |
 
