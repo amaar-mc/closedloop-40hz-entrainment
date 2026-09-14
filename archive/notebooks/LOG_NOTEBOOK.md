@@ -748,7 +748,7 @@ The ablation was also revealing. A Ridge regression feature ablation on the same
 
 **Commit d1a7609:** Added model audit data, training histories, and project documentation.
 
-**Commit 9945e3b:** Created the CLAUDE.md file with development instructions and documentation.
+**Commit 9945e3b:** Created the development instructions document.
 
 **Commit 2699c6b:** Set up ML auditor configurations for automated pipeline verification.
 

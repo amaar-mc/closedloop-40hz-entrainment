@@ -1020,7 +1020,7 @@ No new model code today. Spending the entire day on documentation, auditing, and
 
 **Commit d1a7609:** Model audit data, training histories, project documentation.
 
-**Commit 9945e3b:** Creating the CLAUDE.md file with development instructions.
+**Commit 9945e3b:** Creating the development instructions document.
 
 **Commit 2699c6b:** ML auditor configurations for automated pipeline verification.
 
@@ -1045,7 +1045,7 @@ I also formally write down the distinction between "target-smoothed R-squared" a
 
 ### Study 7 Summary
 
-Spent February 18 on documentation and auditing. Created CLAUDE.md, methodology document, and pipeline audit report. All integrity checks passed: no leakage, causal construction, subject-level splits, training-only normalization. Formalized the distinction between smoothed and raw target R-squared for fair presentation. Files created: `docs/CURRENT_METHODOLOGY.md`, `CLAUDE.md`.
+Spent February 18 on documentation and auditing. Created the development instructions document, methodology document, and pipeline audit report. All integrity checks passed: no leakage, causal construction, subject-level splits, training-only normalization. Formalized the distinction between smoothed and raw target R-squared for fair presentation. Files created: `docs/CURRENT_METHODOLOGY.md`.
 
 _To be continued in Study 8..._
 
