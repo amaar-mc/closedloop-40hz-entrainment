@@ -110,7 +110,7 @@ No feature has correlation > 0.99 (the circular leakage signature). The best sin
 | train | 432                  | 11,160        | 0.039 |
 | test  | 104                  | 2,678         | 0.039 |
 
-Only ~4% of target values are unique (each epoch-level PAC value is shared across ~26 windows). This is the expected structure documented in CLAUDE.md. It does not constitute leakage because the model must still generalize to unseen subjects and predict which PAC level will occur at the target time.
+Only ~4% of target values are unique (each epoch-level PAC value is shared across ~26 windows). This is the expected structure documented in the project methodology. It does not constitute leakage because the model must still generalize to unseen subjects and predict which PAC level will occur at the target time.
 
 - **Result: PASS (informational)**
 

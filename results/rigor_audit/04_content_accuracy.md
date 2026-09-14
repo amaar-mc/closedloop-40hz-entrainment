@@ -105,7 +105,7 @@ Claim: "4ch test R² = 0.430 (h = 32, 5,154 params)"
 
 Claim: "1,457 parameters; test R² = 0.287"
 
-- CLAUDE.md: "EEGNet regression model (~1,457 params)" and "R² ≈ 0.287"
+- Project documentation: "EEGNet regression model (~1,457 params)" and "R² ≈ 0.287"
 - **PASS: Matches.**
 
 ## DISCREPANCY FOUND: Hysteresis Value
