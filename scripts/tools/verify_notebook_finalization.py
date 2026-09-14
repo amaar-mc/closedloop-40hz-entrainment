@@ -52,7 +52,7 @@ SECTION_DATE_RE = re.compile(
     re.MULTILINE,
 )
 REPO_PATH_RE = re.compile(
-    r"(?P<path>(?:\.planning|archive|docs|logs|models|results|scripts|submission)/[^`\s)\]]+)"
+    r"(?P<path>(?:archive|docs|logs|models|results|scripts|submission)/[^`\s)\]]+)"
 )
 
 
