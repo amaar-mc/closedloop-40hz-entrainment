@@ -1,6 +1,6 @@
 # EVIDENCE_PACKET.md — AISES 2026 Student Research Presentations
 
-**Purpose:** vetted, on-artifact facts and numbers for Amaar to draw from while writing his own AISES abstract/poster text. This packet is technical/project evidence only — it does **not** contain a community-impact narrative, because only Amaar can honestly supply that (see the gate question in `FINAL_CANDIDATE_STATUS.md`). Every number below is sourced to the canonical project facts verified 2026-07-16; do not use numbers from older README/CLAUDE.md summaries if they conflict with this packet.
+**Purpose:** vetted, on-artifact facts and numbers for Amaar to draw from while writing his own AISES abstract/poster text. This packet is technical/project evidence only — it does **not** contain a community-impact narrative, because only Amaar can honestly supply that (see the gate question in `FINAL_CANDIDATE_STATUS.md`). Every number below is sourced to the canonical project facts verified 2026-07-16; do not use numbers from older README summaries if they conflict with this packet.
 
 **RED-venue reminder:** AISES prohibits nothing explicitly on AI-drafting (their policy is UNKNOWN, not confirmed-permissive), but this campaign treats every RED/UNKNOWN venue with report-style text as human-authored-only. Use this packet as a fact reference, not a source of sentences to copy.
 

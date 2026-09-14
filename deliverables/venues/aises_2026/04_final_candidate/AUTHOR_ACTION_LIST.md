@@ -8,7 +8,7 @@
 
 2. **If proceeding:** re-verify the current submission requirements directly at https://conference.aises.org/research/student — exact abstract length, poster/oral choice, submission portal, and file formats. This workbench's dossier was verified 2026-07-16 but portal details can change closer to a deadline.
 
-3. Work through `QUESTION_BASED_OUTLINE.md` Sections 0–5 in your own words. Section 0 you've already done in step 1; do the rest fully before writing prose. Draw facts only from `EVIDENCE_PACKET.md` — do not introduce numbers from memory or from older README/CLAUDE.md summaries.
+3. Work through `QUESTION_BASED_OUTLINE.md` Sections 0–5 in your own words. Section 0 you've already done in step 1; do the rest fully before writing prose. Draw facts only from `EVIDENCE_PACKET.md` — do not introduce numbers from memory or from older README summaries.
 
 4. Write your abstract/poster text yourself, in one sitting if you can, from your own answers. Do not paste any fragment marked ILLUSTRATIVE ONLY from any workbench file.
 
