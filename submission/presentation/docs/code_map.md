@@ -143,8 +143,6 @@ Phase 3: Multiscale Causal TCN              Feb 17, 2026
 
 | File                                     | Purpose                                                  | Status           |
 | ---------------------------------------- | -------------------------------------------------------- | ---------------- |
-| `CLAUDE.md`                              | Project instructions for Claude Code                     | **CURRENT**      |
-| `AGENTS.md`                              | Repository guidelines, structure, commit style           | **CURRENT**      |
 | `README.md`                              | Main project documentation (some metrics outdated)       | **NEEDS UPDATE** |
 | `config.yaml`                            | Centralized runtime parameters                           | **CURRENT**      |
 | `COMPREHENSIVE_ANALYSIS_ALL_ATTEMPTS.md` | Retrospective of V1-V8 (static R² = 0.287 ceiling)       | **HISTORICAL**   |
