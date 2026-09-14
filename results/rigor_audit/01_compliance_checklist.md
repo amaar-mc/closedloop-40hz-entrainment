@@ -1,7 +1,7 @@
 # Phase 1A: CSEF Project Presentation Compliance Checklist
 
 **Audit date:** 2026-03-24
-**Auditor:** Claude (automated rigor audit)
+**Auditor:** Automated rigor audit
 **Source:** `scripts/generate_csef_presentation.py` (855 lines)
 **Output:** `submission/presentation/CSEF_2026_Presentation.pdf` (12 pages)
 

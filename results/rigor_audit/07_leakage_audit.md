@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-24
 **Branch:** CSEF-rigor-audit
-**Auditor:** Automated (Claude Opus 4.6)
+**Auditor:** Automated
 **Dataset:** `data/processed/multiscale_temporal_lb20_hz5_ts1/`
 **Model:** MultiscaleCausalTCN (temporal_multiscale/)
 

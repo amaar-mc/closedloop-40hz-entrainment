@@ -1,7 +1,7 @@
 # Pipeline Audit Report: Multiscale Causal TCN (ts5_clean)
 
 **Date:** 2026-02-18
-**Auditor:** Claude ML Auditor (Opus 4.6)
+**Auditor:** Automated ML pipeline audit
 **Scope:** Full audit of `temporal_multiscale/` pipeline, trained model `best_multiscale_tcn_lb20_hz1_ts5_audit.pth`
 
 ---

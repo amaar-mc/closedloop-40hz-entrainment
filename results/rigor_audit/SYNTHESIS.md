@@ -2,7 +2,7 @@
 
 **Audit date:** 2026-03-24
 **Branch:** CSEF-rigor-audit
-**Auditor:** Claude Opus 4.6 (automated rigor audit)
+**Auditor:** Automated rigor audit
 **Project:** Personalized Deep Learning Model for Closed-Loop 40 Hz Entrainment
 
 ---
