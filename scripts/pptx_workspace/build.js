@@ -8,7 +8,11 @@
 const pptxgen = require("pptxgenjs");
 const path = require("path");
 const fs = require("fs");
-const html2pptx = require("/Users/amaarchughtai/.claude/plugins/cache/claudekit-skills/document-processing/1.0.0/skills/document-skills/pptx/scripts/html2pptx.js");
+const HTML2PPTX_PATH = process.env.HTML2PPTX_PATH;
+if (!HTML2PPTX_PATH) {
+  throw new Error("Set HTML2PPTX_PATH to the absolute path of html2pptx.js");
+}
+const html2pptx = require(HTML2PPTX_PATH);
 
 const PROJECT_ROOT = path.resolve(__dirname, "..", "..");
 const WORKSPACE = __dirname;
