@@ -517,7 +517,7 @@ def step6_comparison_report(eegnet_results: dict, tcn_results: dict) -> None:
         "eegnet": {
             "n_channels": 7,
             "channels": ["Fp1", "Fp2", "F7", "F3", "Fz", "F4", "F8"],
-            "test_r2_raw": 0.287,  # From CLAUDE.md
+            "test_r2_raw": 0.287,  # From project documentation
             "n_params": 1457,
         },
         "tcn": {

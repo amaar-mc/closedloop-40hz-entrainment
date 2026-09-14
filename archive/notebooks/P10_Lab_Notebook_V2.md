@@ -17,7 +17,7 @@ This entry marks the visible start of the corrected notebook. The repository doe
 
 I used this point to formalize the project around a closed-loop question instead of a broad exploratory neuroscience idea: can EEG be used not just to measure current entrainment, but to help decide when stimulation should be delivered? The immediate planning focus was practical. I needed a pipeline that could load the OpenNeuro data safely, compute theta-gamma PAC in a reproducible way, separate subjects across train/validation/test splits, and leave room for a later controller instead of stopping at descriptive analysis.
 
-**Repository basis:** `archive/notebooks/LOG_NOTEBOOK.md`, `notebooks/P10_Lab_Notebook_V1.md`, `.planning/phases/04-finalize-lab-notebook/04-CONTEXT.md`
+**Repository basis:** `archive/notebooks/LOG_NOTEBOOK.md`, `notebooks/P10_Lab_Notebook_V1.md`
 
 **Working decisions at this stage:**
 
