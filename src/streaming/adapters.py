@@ -208,8 +208,6 @@ class RealEEGAdapter:
     path.  The 4-channel model architecture supports real hardware when
     available — no model changes are needed.
 
-    See: .planning/phases/11-real-time-inference-pipeline/11-03-SUMMARY.md
-
     Muse 2 hardware details (for future enablement):
     - Board: BoardIds.MUSE_2_BOARD (value=38)
     - Native sampling rate: 256 Hz
@@ -267,7 +265,6 @@ class RealEEGAdapter:
                 "Muse 2 BLE integration is not viable on this system.\n"
                 f"BrainFlow error: {exc}\n"
                 "Use SimulatedEEGAdapter for hardware-free development.\n"
-                "See .planning/phases/11-real-time-inference-pipeline/11-03-SUMMARY.md"
             ) from exc
 
         self._board.start_stream()
