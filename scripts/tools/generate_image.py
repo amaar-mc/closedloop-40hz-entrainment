@@ -19,8 +19,8 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(_
 
 
 def load_api_key():
-    """Load OpenRouter API key from ~/.claude/apis.env"""
-    env_path = os.path.expanduser("~/.claude/apis.env")
+    """Load OpenRouter API key from ~/.config/apis.env"""
+    env_path = os.path.expanduser("~/.config/apis.env")
     if not os.path.exists(env_path):
         print(f"ERROR: API key file not found at {env_path}")
         sys.exit(1)

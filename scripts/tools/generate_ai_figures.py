@@ -14,7 +14,7 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(_
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "results", "figures", "ai_generated")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-with open(os.path.expanduser("~/.claude/apis.env")) as f:
+with open(os.path.expanduser("~/.config/apis.env")) as f:
     for line in f:
         if line.startswith("OPENROUTER_API_KEY="):
             API_KEY = line.strip().split("=", 1)[1]
