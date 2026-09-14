@@ -78,8 +78,7 @@
 - Divisions: 4+5 (C1), 3B (C1), 8 (C7)
 - Paper text, TeX, poster, methodology all say 3-second (correct per validation code)
 - Both diagram versions (v3 and v5) show 5s — both are wrong
-- CLAUDE.md also says 5-second (stale)
-- **Fix:** Regenerate figure with "3 s hysteresis". Update CLAUDE.md.
+- **Fix:** Regenerate figure with "3 s hysteresis".
 
 **CR-08: Reference [1] used for WHO epidemiological statistics**
 
