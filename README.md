@@ -26,7 +26,6 @@ See [`FINDINGS.md`](FINDINGS.md) for complete results and [`results/RESULTS_REPO
 closedloop-40hz-entrainment/
 |
 |-- FINDINGS.md                    Consolidated results & analysis (start here)
-|-- CLAUDE.md                      Development instructions for Claude Code
 |-- config.yaml                    Runtime configuration (all hyperparameters)
 |-- requirements.txt               Python dependencies
 |
