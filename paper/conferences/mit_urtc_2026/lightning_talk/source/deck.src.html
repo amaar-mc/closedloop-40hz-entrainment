@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Amaar Chughtai">
+<title>Early and Later EEG Synchronization During 40-Hz Auditory Stimulation</title>
+<!-- Source for URTC2026_LT-ID1269_Chughtai.pdf. LaTeX between \( \) and \[ \] is pre-rendered by
+     build_deck.js (KaTeX); render.sh prints the result to PDF with headless Chrome. -->
+<link rel="stylesheet" href="katex/katex.min.css">
+<style>
+  @page { size: 13.333in 7.5in; margin: 0; }
+  :root {
+    --ink: #16202A;
+    --ink-2: #4A5561;
+    --muted: #5F6975;
+    --hair: #E2E6EA;
+    --sound: #D4462A;
+    --signal: #1482A5;
+    --silence: #98A1AB;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #FFFFFF; }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    font-kerning: normal;
+  }
+  .slide {
+    position: relative;
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+    background: #FFFFFF;
+    page-break-after: always;
+    break-after: page;
+  }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+
+  h1 {
+    position: absolute;
+    left: 64px; top: 46px; width: 1120px;
+    margin: 0;
+    font-size: 30pt; line-height: 1.14;
+    font-weight: 500; letter-spacing: -0.012em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+  p { margin: 0; text-wrap: pretty; }
+  sup { font-size: 0.6em; line-height: 0; position: relative; top: -0.15em; vertical-align: super; }
+  .abs { position: absolute; }
+  .nw { white-space: nowrap; }
+  .katex { font-size: 1.08em; }
+  .katex-display { margin: 0; text-align: left; }
+  .katex-display > .katex { text-align: left; }
+
+  .footer {
+    position: absolute; left: 64px; right: 64px; bottom: 20px;
+    display: flex; justify-content: space-between; align-items: flex-end; gap: 32px;
+    font-size: 12pt; color: var(--muted); line-height: 1.32;
+  }
+  .footer .refs i { white-space: nowrap; }
+  .footer .pg { white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+  .body { font-size: 18pt; line-height: 1.38; color: var(--ink-2); }
+  .body strong { color: var(--ink); font-weight: 500; }
+  .caption { font-size: 14pt; line-height: 1.36; color: var(--muted); }
+  .caption b { color: var(--ink-2); font-weight: 500; }
+  .label { font-size: 17pt; color: var(--ink); font-weight: 500; }
+  .sw { display: inline-block; width: 13px; height: 13px; border-radius: 2px; vertical-align: -1px; margin-right: 6px; }
+  .sw.sound { background: var(--sound); }
+  .sw.silence { background: var(--silence); }
+
+  /* ---------- 1 ---------- */
+  .s1 .kicker { left: 64px; top: 56px; font-size: 15pt; color: var(--ink-2); }
+  .s1 .title { left: 64px; top: 126px; width: 1010px; margin: 0; font-size: 44pt; line-height: 1.1; font-weight: 500; letter-spacing: -0.018em; text-wrap: balance; }
+  .s1 .who { left: 64px; top: 316px; }
+  .s1 .who .name { font-size: 22pt; font-weight: 500; }
+  .s1 .who .aff { font-size: 17pt; color: var(--ink-2); margin-top: 6px; }
+  .s1 .strip { left: 64px; top: 474px; width: 1152px; }
+  .s1 .strip img { width: 1152px; display: block; }
+  .s1 .strip .axis { height: 1px; background: var(--hair); }
+  .s1 .strip-cap { left: 64px; top: 636px; width: 1152px; display: flex; justify-content: space-between; }
+
+  /* ---------- 2 ---------- */
+  .s2 .left { left: 64px; top: 186px; width: 570px; }
+  .s2 .left p + p { margin-top: 18px; }
+  .s2 .q { left: 64px; top: 462px; width: 590px; font-size: 21pt; line-height: 1.32; color: var(--ink); font-weight: 500; text-wrap: balance; }
+  .s2 .q .qlabel { font-weight: 400; color: var(--muted); }
+  .s2 .right { left: 690px; top: 206px; width: 526px; }
+  .s2 .right img { width: 5.7in; display: block; margin-left: -12px; margin-top: 4px; }
+  .s2 .right .caption { margin-top: 6px; width: 520px; }
+
+  /* ---------- 3 ---------- */
+  .s3 .fig { left: 50px; top: 162px; }
+  .s3 .fig img { width: 8.1in; display: block; }
+  .s3 .fig .caption { margin: 6px 0 0 14px; width: 760px; }
+  .s3 .right { left: 872px; top: 190px; width: 344px; }
+  .s3 .right .item { font-size: 18pt; line-height: 1.36; color: var(--ink-2); }
+  .s3 .right .item + .item { margin-top: 14px; }
+  .s3 .right .item strong { color: var(--ink); font-weight: 500; }
+  .s3 .stat { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--hair); }
+  .s3 .stat .eqline { font-size: 15.5pt; color: var(--ink); white-space: nowrap; }
+  .s3 .stat .sub { font-size: 15pt; line-height: 1.36; color: var(--ink-2); margin-top: 6px; }
+
+  /* ---------- 4 ---------- */
+  .s4 .head { left: 64px; top: 172px; width: 280px; }
+  .s4 .head img { width: 3.0in; display: block; margin-left: -18px; }
+  .s4 .head .caption { margin-top: 2px; width: 270px; }
+  .s4 .phase { left: 366px; top: 176px; width: 506px; }
+  .s4 .phase img { width: 5.2in; display: block; }
+  .s4 .phase .caption { margin-top: 14px; width: 500px; }
+  .s4 .plv-eq { margin: 10px 0 0 0; display: flex; align-items: center; gap: 18px; font-size: 16pt; color: var(--ink); }
+  .s4 .plv-eq .gloss { font-size: 14pt; color: var(--ink-2); line-height: 1.34; width: 230px; }
+  .s4 .right { left: 904px; top: 182px; width: 312px; }
+  .s4 .step p { font-size: 16pt; line-height: 1.36; color: var(--ink-2); }
+  .s4 .step p strong { color: var(--ink); font-weight: 500; }
+  .s4 .step + .step { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--hair); }
+  .s4 .eq { font-size: 16pt; color: var(--ink); margin-top: 6px; }
+  .s4 .note { font-size: 14pt !important; color: var(--ink-2); margin-top: 4px; line-height: 1.34 !important; }
+
+  /* ---------- 5 ---------- */
+  .s5 .fig { left: 48px; top: 156px; }
+  .s5 .fig img { width: 6.2in; display: block; }
+  .s5 .fig .caption { margin: 0 0 0 104px; }
+  .s5 .right { left: 716px; top: 170px; width: 500px; }
+  .s5 .label { color: var(--ink-2); font-weight: 400; }
+  .s5 .big { font-size: 50pt; line-height: 1; color: var(--ink); margin-top: 16px; }
+  .s5 .ci { font-size: 20pt; color: var(--ink); margin-top: 14px; }
+  .s5 .ci-note { font-size: 14pt; color: var(--muted); margin-top: 8px; line-height: 1.36; }
+  .s5 .more { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--hair); }
+  .s5 .more p { font-size: 17pt; line-height: 1.4; color: var(--ink-2); }
+  .s5 .more p + p { margin-top: 14px; }
+  .s5 .more strong { color: var(--ink); font-weight: 500; }
+
+  /* ---------- 6 ---------- */
+  .s6 .key { left: 64px; top: 146px; width: 1152px; }
+  .s6 .panel { top: 186px; width: 366px; }
+  .s6 .panel .q { font-size: 18pt; font-weight: 500; color: var(--ink); line-height: 1.25; white-space: nowrap; }
+  .s6 .panel .qn { color: var(--muted); font-weight: 400; }
+  .s6 .panel img { width: 3.8in; display: block; margin: 4px 0 0 -14px; }
+  .s6 .panel .a { font-size: 16pt; line-height: 1.36; color: var(--ink-2); margin-top: 0; }
+  .s6 .panel .a .katex { color: var(--ink); }
+  .s6 .p1 { left: 64px; }
+  .s6 .p2 { left: 457px; }
+  .s6 .p3 { left: 850px; }
+
+  /* ---------- 7 ---------- */
+  .s7 .col { top: 172px; }
+  .s7 .c1 { left: 64px; width: 330px; }
+  .s7 .c2 { left: 426px; width: 456px; }
+  .s7 .c3 { left: 910px; width: 306px; }
+  .s7 .col .label { font-size: 17pt; margin-bottom: 10px; }
+  .s7 .col p { font-size: 18pt; line-height: 1.38; color: var(--ink-2); }
+  .s7 .col p + p { margin-top: 12px; }
+  .s7 .col p strong { color: var(--ink); font-weight: 500; }
+  .s7 .next { left: 64px; top: 520px; width: 1152px; padding-top: 16px; border-top: 1px solid var(--hair); }
+  .s7 .next .label { font-size: 17pt; margin-bottom: 6px; }
+  .s7 .next p { font-size: 19pt; line-height: 1.36; color: var(--ink); }
+  .s7 .thanks { left: 64px; top: 634px; width: 1152px; font-size: 14pt; color: var(--ink-2); }
+</style>
+</head>
+<body>
+
+<!-- 1 · title -->
+<section class="slide s1">
+  <div class="abs kicker">2026 IEEE MIT Undergraduate Research Technology Conference (URTC)&nbsp;&nbsp;·&nbsp;&nbsp;Lightning Talk ID-1269</div>
+  <h2 class="abs title">Early and Later EEG Synchronization During 40-Hz Auditory Stimulation</h2>
+  <div class="abs who">
+    <div class="name">Amaar Chughtai</div>
+    <div class="aff">Valley Christian High School, San Jose, California</div>
+  </div>
+  <div class="abs strip">
+    <img src="fig/fig_title_strip.svg" alt="40-Hz phase-locking value in each 20-second window of one participant's session">
+    <div class="axis"></div>
+  </div>
+  <div class="abs strip-cap caption">
+    <span>One strong responder’s session (sub-32): 40-Hz phase-locking value in each 20-s window, 9 complete cycles</span>
+    <span><span class="sw sound"></span>sound on&nbsp;&nbsp;&nbsp;&nbsp;<span class="sw silence"></span>silence</span>
+  </div>
+  <div class="footer"><span class="refs">Cambridge, MA&nbsp;&nbsp;·&nbsp;&nbsp;October 11, 2026</span><span class="pg">1 / 7</span></div>
+</section>
+
+<!-- 2 · question -->
+<section class="slide s2">
+  <h1>An early EEG response can only help tailor 40-Hz stimulation if it tracks the later response</h1>
+  <div class="abs left body">
+    <p>In mice, 40-Hz light and sound reduced <span class="nw">Alzheimer’s-like</span> pathology.<sup>1,2</sup> Replication has been mixed,<sup>3</sup> and benefit in patients is not established.<sup>4,5</sup></p>
+    <p>Responses also differ between people: not every brain follows 40-Hz sound.<sup>6</sup> Tailoring stimulation to a person would need a response measure taken <strong>early</strong> in the session.</p>
+  </div>
+  <div class="abs q">
+    <span class="qlabel">The question:</span> within one session, does a person’s EEG response in the first two minutes track their response a few minutes later?
+  </div>
+  <div class="abs right">
+    <div class="label">The stimulus</div>
+    <img src="fig/fig_stimulus.svg" alt="40-Hz train of 1-ms, 5-kHz tone pips">
+    <p class="caption">A 1-ms, 5-kHz tone pip every 25 ms, so 40 pulses per second. Played from two loudspeakers, eyes open.<sup>6</sup></p>
+  </div>
+  <div class="footer">
+    <span class="refs"><sup>1</sup>Iaccarino et al., <i>Nature</i> 2016 &nbsp;&nbsp;<sup>2</sup>Martorell et al., <i>Cell</i> 2019 &nbsp;&nbsp;<sup>3</sup>Soula et al., <i>Nat Neurosci</i> 2023<br><sup>4</sup>Chan et al., <i>PLOS ONE</i> 2022 &nbsp;&nbsp;<sup>5</sup>Hajós et al., <i>Front Neurol</i> 2024 &nbsp;&nbsp;<sup>6</sup>Lahijanian et al., <i>Sci Rep</i> 2024</span>
+    <span class="pg">2 / 7</span>
+  </div>
+</section>
+
+<!-- 3 · data and protocol -->
+<section class="slide s3">
+  <h1>35 people heard 40-s blocks of 40-Hz sound, each followed by 20 s of silence</h1>
+  <div class="abs fig">
+    <img src="fig/fig_protocol.svg" alt="Protocol timeline and group-mean 40-Hz PLV in every 20-second window">
+    <p class="caption"><span class="sw sound"></span>sound&nbsp;&nbsp;&nbsp;<span class="sw silence"></span>silence<br>Bottom: group-mean 40-Hz phase-locking value (PLV) in each 20-s window, \(n = 35\); bands \(\pm 1\) SE across people. Each 40-s sound block gives two windows.</p>
+  </div>
+  <div class="abs right">
+    <p class="item">Public EEG from a memory clinic in Tehran (OpenNeuro ds005048)<sup>1</sup></p>
+    <p class="item">10 cognitively normal, 6 with mild cognitive impairment, 17 with Alzheimer’s, 2 unclassified</p>
+    <p class="item">5 (\(n = 8\)) or 9 (\(n = 27\)) complete cycles per session</p>
+    <div class="stat">
+      <div class="eqline">\(\left\langle \mathrm{PLV}^{\text{sound}} - \mathrm{PLV}^{\text{silence}} \right\rangle = +0.077\)</div>
+      <div class="sub">Whole session, mean of 35 people, <span class="nw">95% CI \([0.045,\ 0.112]\)</span>; higher with sound in 27 of 35.</div>
+    </div>
+  </div>
+  <div class="footer">
+    <span class="refs"><sup>1</sup>Lahijanian, Aghajan &amp; Vahabi, <i>Sci Rep</i> 14:13153 (2024); data doi:10.18112/openneuro.ds005048.v1.0.1. 19-channel EEG at 250 Hz, cleaned by the dataset authors. Sessions had 6 or 10 sound blocks; the last silence is cut short.</span>
+    <span class="pg">3 / 7</span>
+  </div>
+</section>
+
+<!-- 4 · the measure -->
+<section class="slide s4">
+  <h1>Phase-locking value measures how steady the timing is between two 40-Hz signals</h1>
+  <div class="abs head">
+    <img src="fig/fig_headmap.svg" alt="Electrode map: five frontal and five posterior electrodes">
+    <p class="caption">25 bipolar signals (frontal minus posterior), forming 200 pairs that share no electrode. Lines: the example pair, Fp2−Pz and F4−O2.</p>
+  </div>
+  <div class="abs phase">
+    <img src="fig/fig_phase.svg" alt="Distribution of phase differences and their mean arrow, during sound and during silence">
+    <p class="caption">Median pair of sub-01 (largest early contrast), cycle 1. Bars: where the phase difference \(\Delta\phi_{ab}\) fell. Arrow length is the PLV (circle radius = 1).</p>
+    <div class="plv-eq">
+      <div>\[\mathrm{PLV}_{ab} = \Bigl|\,\frac{1}{N}\sum_{n=1}^{N} e^{\,\mathrm{i}\,\Delta\phi_{ab}(n)}\Bigr|\]</div>
+      <span class="gloss">\(N = 5000\) samples per window. Reported PLV: the mean over the 200 pairs.</span>
+    </div>
+  </div>
+  <div class="abs right">
+    <div class="step">
+      <div class="label">Contrast for cycle \(k\)</div>
+      <div class="eq">\[C_k = \overline{\mathrm{PLV}}{}^{\,\text{sound}}_{k} - \mathrm{PLV}^{\text{silence}}_{k}\]</div>
+      <p class="note">Sound: mean of the block’s two 20-s windows. Silence: the 20 s right after.</p>
+      <div class="eq" style="margin-top:8px">\[\begin{aligned} C_{\text{early}} &= \tfrac{1}{2}\,(C_1 + C_2) \\ C_{\text{later}} &= \tfrac{1}{2}\,(C_4 + C_5) \end{aligned}\]</div>
+    </div>
+    <div class="step">
+      <div class="label">Why subtract silence?</div>
+      <p style="margin-top:6px">At every frequency, raw PLV in block 1 correlated with the last three blocks <span class="nw">\((0.87 \le r \le 0.93)\),</span> even where sound barely changes it. It mostly reflects the person.</p>
+    </div>
+  </div>
+  <div class="footer">
+    <span class="refs">Each 20-s window filtered separately (Butterworth band-pass, 39.5–40.5 Hz, zero-phase); phase from the Hilbert transform. Montage and filter: Lahijanian et al. 2024. PLV: Lachaux et al. 1999; Mormann et al. 2000.</span>
+    <span class="pg">4 / 7</span>
+  </div>
+</section>
+
+<!-- 5 · result -->
+<section class="slide s5">
+  <h1>People with a larger early contrast had a larger later contrast</h1>
+  <div class="abs fig">
+    <img src="fig/fig_scatter.svg" alt="Scatter plot of early versus later stimulation-silence PLV contrast for 35 participants">
+    <p class="caption">Each dot is one participant. Solid line: least-squares fit.</p>
+  </div>
+  <div class="abs right">
+    <div class="label">Early vs. later contrast at 40 Hz</div>
+    <div class="big">\(r = 0.780\)</div>
+    <div class="ci">95% CI \([0.573,\ 0.889]\),&nbsp;&nbsp;\(n = 35\)</div>
+    <div class="ci-note">Pearson; participant bootstrap, 50,000 resamples</div>
+    <div class="more">
+      <p>Ranks agree too <span class="nw">(Spearman \(\rho = 0.688\)),</span> and so do the values themselves <span class="nw">(Lin’s \(\rho_c = 0.771\)).</span></p>
+      <p>No clear shift in the group mean: <span class="nw">\(\langle C_{\text{later}} - C_{\text{early}} \rangle = -0.015\)</span> <span class="nw">\((p = 0.25)\).</span></p>
+      <p>Individuals still moved: 95% limits of agreement <span class="nw">\([-0.16,\ +0.13]\).</span></p>
+    </div>
+  </div>
+  <div class="footer"><span class="refs">Early: cycles 1–2 (0–120 s after the first sound onset). Later: cycles 4–5 (180–300 s). \(p\) from a paired \(t\)-test.</span><span class="pg">5 / 7</span></div>
+</section>
+
+<!-- 6 · checks -->
+<section class="slide s6">
+  <h1>The link was strongest at 40 Hz and held across measures and later windows</h1>
+  <p class="abs key caption">Dots: early–later Pearson \(r\). Whiskers: 95% participant-bootstrap CIs. The early window is always cycles 1–2.</p>
+  <div class="abs panel p1">
+    <div class="q"><span class="qn">1.</span> Strongest at 40 Hz?</div>
+    <img src="fig/fig_frequency.svg" alt="Early-later correlation at 35 to 45 Hz">
+    <p class="a">Six neighbors: <span class="nw">\(-0.10 \le r \le 0.26\).</span> Smallest gap to 40 Hz: <span class="nw">\(\Delta r = 0.52\),</span> <span class="nw">95% CI \([0.08,\ 0.65]\).</span></p>
+  </div>
+  <div class="abs panel p2">
+    <div class="q"><span class="qn">2.</span> Only with PLV?</div>
+    <img src="fig/fig_measures.svg" alt="Early-later correlation for PLV, PLI, and wPLI">
+    <p class="a">PLI and wPLI discount phase differences near \(0\) or \(\pm\pi\), the mark of one source reaching both signals.</p>
+  </div>
+  <div class="abs panel p3">
+    <div class="q"><span class="qn">3.</span> Were cycles 4–5 a lucky pick?</div>
+    <img src="fig/fig_positions.svg" alt="Early-later correlation for each later window from cycles 3-4 to 8-9">
+    <p class="a">They gave the highest \(r\); the rest gave <span class="nw">\(0.61 \le r \le 0.77\),</span> all <span class="nw">\(p &lt; 0.05\)</span> after Bonferroni correction.</p>
+  </div>
+  <div class="footer"><span class="refs">Cycles 6–9 exist only in the 27 longer sessions. PLI: phase-lag index (Stam et al. 2007). wPLI: weighted PLI (Vinck et al. 2011).</span><span class="pg">6 / 7</span></div>
+</section>
+
+<!-- 7 · meaning -->
+<section class="slide s7">
+  <h1>An early, within-session EEG measure worth testing prospectively</h1>
+  <div class="abs col c1">
+    <div class="label">What I found</div>
+    <p>The contrast in the <strong>first two minutes</strong> tracked the contrast 3 to 5 minutes in <span class="nw">(\(r = 0.78\)),</span> most strongly at 40 Hz.</p>
+  </div>
+  <div class="abs col c2">
+    <div class="label">What limits it</div>
+    <p><strong>Retrospective:</strong> cycles 4–5 chosen after seeing the data.</p>
+    <p><strong>Offline:</strong> cleaned using whole recordings.</p>
+    <p><strong>No sham:</strong> silence always followed sound.</p>
+    <p><strong>Scalp level:</strong> a shared response or artifact not ruled out.</p>
+  </div>
+  <div class="abs col c3">
+    <div class="label">Still untested</div>
+    <p>Repeatability across sessions, use for guiding stimulation, and any link to clinical benefit.</p>
+  </div>
+  <div class="abs next">
+    <div class="label">Next</div>
+    <p>A preregistered, real-time test with a sham or counterbalanced order and repeat sessions.</p>
+  </div>
+  <p class="abs thanks">Data: Lahijanian, Aghajan &amp; Vahabi, OpenNeuro ds005048 (CC0). Thank you to the participants and the dataset authors.</p>
+  <div class="footer"><span class="refs">Amaar Chughtai&nbsp;&nbsp;·&nbsp;&nbsp;Valley Christian High School&nbsp;&nbsp;·&nbsp;&nbsp;Lightning Talk ID-1269</span><span class="pg">7 / 7</span></div>
+</section>
+
+</body>
+</html>

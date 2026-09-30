@@ -1,0 +1,10 @@
+{
+  "name": "urtc2026-lightning-talk",
+  "private": true,
+  "description": "Builds URTC2026_LT-ID1269_Chughtai.pdf/.pptx from deck.src.html",
+  "type": "commonjs",
+  "dependencies": {
+    "katex": "0.16.47",
+    "pptxgenjs": "^3.12.0"
+  }
+}
