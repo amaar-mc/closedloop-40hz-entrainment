@@ -4,6 +4,8 @@
 
 > **Status:** CSEF 2026 submission complete (April 2026). Codebase is research-complete and archived.
 
+> **Update (2026-09-30):** an independent audit (`sts2026/01_AUDIT.md`) found that the PAC-forecast and replay-controller results below come from block-level labels and the known stimulation schedule; they should not be cited. The current, pre-registered study is in [`sts2026/`](sts2026/README.md).
+
 ## What This Is
 
 A two-stage machine learning system that predicts when a patient's brain will lose gamma entrainment during 40 Hz auditory stimulation, enabling proactive adaptive scheduling that outperforms fixed and reactive protocols.

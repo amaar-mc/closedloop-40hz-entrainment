@@ -1,0 +1,53 @@
+{
+ "fig1": {
+  "block": {
+   "h1s": {
+    "persistence": 0.7453911947884331,
+    "schedule_lookup": 0.8123986414003015,
+    "n": 16548
+   },
+   "h3s": {
+    "persistence": 0.23534790193408905,
+    "schedule_lookup": 0.43658754325454174,
+    "n": 16478
+   },
+   "h5s": {
+    "persistence": 0.14292925982644877,
+    "schedule_lookup": 0.41276154595580783,
+    "n": 16408
+   },
+   "h10s": {
+    "persistence": -0.08903877160564844,
+    "schedule_lookup": 0.3529463369084256,
+    "n": 16233
+   }
+  },
+  "per_window": {
+   "h1_2s": {
+    "persistence": -0.7153270066214403,
+    "running_subject_mean": 0.07962648967169117,
+    "subject_mean_plus_schedule": 0.07998111926539475
+   },
+   "h2_4s": {
+    "persistence": -0.795679749376953,
+    "running_subject_mean": 0.07814801750324074,
+    "subject_mean_plus_schedule": 0.07850736858747631
+   },
+   "h3_6s": {
+    "persistence": -0.8059428091413903,
+    "running_subject_mean": 0.07765253985474907,
+    "subject_mean_plus_schedule": 0.07802250920078813
+   },
+   "h4_8s": {
+    "persistence": -0.7902186092142831,
+    "running_subject_mean": 0.0777810706590687,
+    "subject_mean_plus_schedule": 0.07815333919263101
+   },
+   "h5_10s": {
+    "persistence": -0.7935187409933313,
+    "running_subject_mean": 0.07742013897805922,
+    "subject_mean_plus_schedule": 0.07779281413519379
+   }
+  }
+ }
+}
