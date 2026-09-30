@@ -1,3 +1,4 @@
+# AI-assisted code (Claude Code, 2026-09/10); reviewed and run by the student. See sts2026/AI_DISCLOSURE_LOG.md
 """Minimal, dependency-light reader for OpenNeuro ds005048 (EEGLAB .set/.fdt, BIDS).
 
 Written for the STS 2026 re-analysis. Independent of the original src/ pipeline so the

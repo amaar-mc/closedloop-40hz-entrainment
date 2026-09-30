@@ -1,3 +1,4 @@
+# AI-assisted code (Claude Code, 2026-09/10); reviewed and run by the student. See sts2026/AI_DISCLOSURE_LOG.md
 """Audit: what does the theta-gamma PAC 'forecast' actually capture?
 
 Independent recomputation on ds005048 (all 35 subjects):

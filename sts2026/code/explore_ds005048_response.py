@@ -1,3 +1,4 @@
+# AI-assisted code (Claude Code, 2026-09/10); reviewed and run by the student. See sts2026/AI_DISCLOSURE_LOG.md
 """EXPLORATORY (discovery set only, ds005048). Feasibility of candidate response measures.
 
 Per participant:

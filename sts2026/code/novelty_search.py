@@ -1,3 +1,4 @@
+# AI-assisted code (Claude Code, 2026-09/10); reviewed and run by the student. See sts2026/AI_DISCLOSURE_LOG.md
 """Documented prior-work (novelty) searches on PubMed for candidate objectives.
 Records the exact query, hit count, date, and the top titles so the search can be re-run.
 Output: sts2026/lit/novelty_searches.md

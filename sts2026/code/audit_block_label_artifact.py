@@ -1,3 +1,4 @@
+# AI-assisted code (Claude Code, 2026-09/10); reviewed and run by the student. See sts2026/AI_DISCLOSURE_LOG.md
 """Audit: reproduce how block-level ('epoch') PAC labels inflate forecast R^2.
 
 Original pipeline (src/data_loader.py::extract_stimulus_windows): each 2-s window (1-s hop) inside a
