@@ -1,0 +1,146 @@
+{
+ "n_sessions_valid": 60,
+ "n_sessions_total": 80,
+ "errors": [
+  [
+   "sub-001",
+   "ses-002",
+   "too few epochs"
+  ],
+  [
+   "sub-004",
+   "ses-002",
+   "too few epochs"
+  ],
+  [
+   "sub-004",
+   "ses-003",
+   "too few epochs"
+  ],
+  [
+   "sub-005",
+   "ses-002",
+   "too few epochs"
+  ],
+  [
+   "sub-005",
+   "ses-003",
+   "too few epochs"
+  ],
+  [
+   "sub-006",
+   "ses-001",
+   "too few epochs"
+  ],
+  [
+   "sub-007",
+   "ses-003",
+   "fewer than 200 stimulus triggers (pre-registered exclusion)"
+  ],
+  [
+   "sub-008",
+   "ses-003",
+   "too few epochs"
+  ],
+  [
+   "sub-010",
+   "ses-001",
+   "too few epochs"
+  ],
+  [
+   "sub-011",
+   "ses-001",
+   "too few epochs"
+  ],
+  [
+   "sub-011",
+   "ses-002",
+   "too few epochs"
+  ],
+  [
+   "sub-012",
+   "ses-001",
+   "too few epochs"
+  ],
+  [
+   "sub-014",
+   "ses-002",
+   "fewer than 200 stimulus triggers (pre-registered exclusion)"
+  ],
+  [
+   "sub-014",
+   "ses-003",
+   "too few epochs"
+  ],
+  [
+   "sub-016",
+   "ses-001",
+   "too few epochs"
+  ],
+  [
+   "sub-016",
+   "ses-003",
+   "too few epochs"
+  ],
+  [
+   "sub-017",
+   "ses-001",
+   "too few epochs"
+  ],
+  [
+   "sub-018",
+   "ses-004",
+   "too few epochs"
+  ],
+  [
+   "sub-019",
+   "ses-004",
+   "fewer than 200 stimulus triggers (pre-registered exclusion)"
+  ],
+  [
+   "sub-020",
+   "ses-004",
+   "fewer than 200 stimulus triggers (pre-registered exclusion)"
+  ]
+ ],
+ "group_median_R40": 0.5757647244987127,
+ "group_median_itc40": 0.6451587464808117,
+ "ICC_R40": {
+  "icc3_1": 0.7291070880922281,
+  "ci95": [
+   NaN,
+   NaN
+  ],
+  "n_subjects": 5,
+  "n_sessions": 4
+ },
+ "ICC_R33": {
+  "icc3_1": 0.032283180594654695,
+  "ci95": [
+   NaN,
+   NaN
+  ],
+  "n_subjects": 5,
+  "n_sessions": 4
+ },
+ "ICC_R40_first_two_nights": {
+  "icc3_1": 0.4116205155672277,
+  "ci95": [
+   -0.08807774603783815,
+   0.7978930719654642
+  ],
+  "n_subjects": 20,
+  "spearman": 0.34736842105263155
+ },
+ "ICC_R40_noise_residualized": {
+  "icc3_1": 0.8935051187353302,
+  "ci95": [
+   NaN,
+   NaN
+  ],
+  "n_subjects": 5
+ },
+ "noise_vs_R40_spearman_pooled": -0.5144762434009448,
+ "H5_success": false,
+ "NC_R33_null": true
+}

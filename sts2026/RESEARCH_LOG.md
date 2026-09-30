@@ -31,3 +31,7 @@ Format: date | step | what was done | result | files.
 | 2026-09-30 | exploratory (post-registration) | Artifact checks: strobe-covered silence, unconnected EXG, topography | No artifact evidence; auditory-like topography | `code/explore_post_registration.py`, `results/exploratory_post/` |
 | 2026-09-30 | exploratory (post-registration) | Recording-noise confound (35–45 Hz power in silence) | Trait survives (partial ρ 0.49). **H4 is a noise artifact** (pred vs noise r −0.89; partial r 0.22). AD < CN explained by noise | `code/explore_post_e5.py` |
 | 2026-09-30 | DEAD END | Moonshot "resting EEG predicts responders" | Withdrawn: the predictor indexes recording noise | — |
+| 2026-09-30 | amendment A1 | Registered H5 on ds005185 (commit 54b56881) before analysis | — | `05_PREREGISTRATION.md` §9 |
+| 2026-09-30 | confirmatory A1 | H5 primary | Not evaluable: the 200 µV rule rejected too many epochs in 16/80 dry-electrode sessions (n = 5 complete). Secondary 2-night ICC 0.41 [−0.09, 0.80] | `results/confirmatory/results_h5*.json` |
+| 2026-09-30 | sensitivity (pre-specified S2) | H5 without rejection | 4-night ICC 0.57 [0.31, 0.78]; noise-adjusted 0.69; R33 0.05 | `results_h5_S2_no_rejection.json` |
+| 2026-09-30 | exploratory E6 | Noise check in ds005048 | Noise vs R40 ρ −0.38; the AD effect is not explained by noise here (so the 56XZ3F result does not replicate) | `results/exploratory_post/results.json` |

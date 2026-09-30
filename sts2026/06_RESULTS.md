@@ -37,9 +37,38 @@ All numbers are read from `results/confirmatory/results.json` (pre-registered pi
 | E1: H4 within groups | Group-centred r = 0.34 (permutation p = 0.016); AD r = 0.43; older CN −0.05 | Superseded by E5 |
 | E3: pooled AD vs control across both cohorts | g = −0.51 [−1.08, 0.06]; Q = 0.11 (consistent) | Neither cohort supports "enhanced in AD". Noise confound applies |
 
+## A2. Pre-registered amendment A1: H5, third independent dataset (ds005185, 20 young adults × 4 nights)
+| Test | Result | Verdict |
+|---|---|---|
+| H5 primary (200 µV rejection as registered) | Too many epochs were rejected in 16/80 dry-electrode home recordings, leaving 5 subjects with all 4 nights. ICC 0.73 with an undefined CI | **Not evaluable.** The rejection rule did not transfer to dry electrodes |
+| H5 secondary: first two valid nights (n = 20) | ICC = 0.41 [−0.09, 0.80]; ρ = 0.35 | Not met |
+| H5 under pre-specified sensitivity S2 (no rejection), 4 nights, n = 16 | ICC = 0.57 [0.31, 0.78]. Noise-adjusted: 0.69 [0.51, 0.82]. First two nights (n = 20): 0.26 [−0.18, 0.67] | **Meets the success rule** (sensitivity analysis only) |
+| NC: R33 ICC | 0.05 [−0.10, 0.22] (S2) | Null, as required |
+| Noise vs R40 across sessions | ρ = −0.60 | Noise lowers the measured response |
+
+## B2. Discovery-cohort noise check (exploratory, E6)
+- Silence gamma noise vs R40 in ds005048: ρ = −0.38 (p = 0.026).
+- Trait with noise partialled out: split-half ρ = 0.93.
+- AD − Normal difference: −0.08 without noise, −0.10 with noise (both n.s.). **Noise does not explain the AD trend
+  in this cohort.** So the "noise explains AD < CN" result from 56XZ3F does **not** replicate.
+
+## B3. Cross-dataset synthesis (what holds up in more than one dataset)
+| Claim | ds005048 (discovery) | 56XZ3F (held-out) | ds005185 (held-out) | Status |
+|---|---|---|---|---|
+| The 40 Hz response is rhythm- and frequency-specific | 33 Hz control ρ 0.04 | Jittered clicks d_z 2.7; 33 Hz control null | 33 Hz control ICC 0.05 | **Holds (3/3)** |
+| Individual response is stable within a session | ρ 0.92 split-half; 0.68 block vs block | ρ 0.79 (uncentred), 0.52 (group-centred; CI lower 0.18) | — | **Holds (2/2); primary strict rule narrowly missed** |
+| ... and survives noise control | 0.93 | 0.49 (group-centred), 0.71 (uncentred) | 0.69 | **Holds** |
+| Stability across sessions (days to months) | — | ICC 0.47 (0–4 mo, n.s.); 0.55 (3 mo) | 0.57 (S2); 0.26–0.41 (two nights) | **Moderate, imprecise.** Suggestive, not established |
+| Recording noise lowers measured response | ρ −0.38 | ρ −0.52 | ρ −0.60 | **Holds (3/3)**; a confound for comparisons |
+| 40 Hz response enhanced in AD (published claims A01/A02) | AD < Normal, n.s. | AD < older CN, n.s. | — | **Not supported** (pooled g −0.51 [−1.08, 0.06]) |
+| Resting EEG predicts responders (H4) | train | r 0.55, but 0.22 after noise control | — | **Withdrawn** (a noise proxy) |
+
 ## C. Tier status (pre-registered mapping)
 - **Floor: reached.** H1 was tested on 2 independent cohorts.
 - **Target: not reached under the strict rule.** H1 CI lower bound 0.18 < 0.2, and H3a not met.
 - **Moonshot: not reached.** H4 passed formally but is a noise artifact.
-- **Next (pre-registered amendment):** a third and fourth independent dataset for across-session stability (ds005185,
-  M3CV).
+- **Across-session evidence (amendment A1):** primary not evaluable; the S2 sensitivity meets the rule. This does not
+  lift the tier under the pre-registered mapping.
+- **Why the target was not reached:**
+  - Within-session trait reliability replicated, but the group-centred primary CI lower bound was 0.18 (needed > 0.2).
+  - Across-visit stability in AD was not established (ICC 0.47, CI includes 0).

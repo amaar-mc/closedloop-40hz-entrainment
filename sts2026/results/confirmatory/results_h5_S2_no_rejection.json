@@ -1,0 +1,66 @@
+{
+ "n_sessions_valid": 76,
+ "n_sessions_total": 80,
+ "errors": [
+  [
+   "sub-007",
+   "ses-003",
+   "fewer than 200 stimulus triggers (pre-registered exclusion)"
+  ],
+  [
+   "sub-014",
+   "ses-002",
+   "fewer than 200 stimulus triggers (pre-registered exclusion)"
+  ],
+  [
+   "sub-019",
+   "ses-004",
+   "fewer than 200 stimulus triggers (pre-registered exclusion)"
+  ],
+  [
+   "sub-020",
+   "ses-004",
+   "fewer than 200 stimulus triggers (pre-registered exclusion)"
+  ]
+ ],
+ "group_median_R40": 0.5440785043078957,
+ "group_median_itc40": 0.6117684396427059,
+ "ICC_R40": {
+  "icc3_1": 0.5662540417041477,
+  "ci95": [
+   0.308735652092616,
+   0.7791257782294991
+  ],
+  "n_subjects": 16,
+  "n_sessions": 4
+ },
+ "ICC_R33": {
+  "icc3_1": 0.054534853879301105,
+  "ci95": [
+   -0.09737010563524125,
+   0.218762720608921
+  ],
+  "n_subjects": 16,
+  "n_sessions": 4
+ },
+ "ICC_R40_first_two_nights": {
+  "icc3_1": 0.25669669985012533,
+  "ci95": [
+   -0.18304664048665092,
+   0.6650748642253402
+  ],
+  "n_subjects": 20,
+  "spearman": 0.2526315789473684
+ },
+ "ICC_R40_noise_residualized": {
+  "icc3_1": 0.6906185090125678,
+  "ci95": [
+   0.5137410218651901,
+   0.8166493706364997
+  ],
+  "n_subjects": 16
+ },
+ "noise_vs_R40_spearman_pooled": -0.6005468215994532,
+ "H5_success": true,
+ "NC_R33_null": true
+}
