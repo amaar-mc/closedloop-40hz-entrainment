@@ -1,0 +1,46 @@
+{
+ "n_subjects": 35,
+ "Q1_lag1_autocorr_PAC_mean": 0.03932524217068933,
+ "Q1_lag1_autocorr_SNR40_mean": 0.04001369187665683,
+ "Q2_PAC_MI_stim_minus_rest": {
+  "mean_stim": 0.0005322528901729456,
+  "mean_rest": 0.0005510805973083563,
+  "cohen_dz": -0.39883624624585867,
+  "wilcoxon_p": 0.03873352683149278,
+  "n_pos": 14
+ },
+ "Q2_SNR40_dB_stim_minus_rest": {
+  "mean_stim": -1.0852478763010949,
+  "mean_rest": -2.0974615703343567,
+  "cohen_dz": 0.7191830394688649,
+  "wilcoxon_p": 7.098051719367504e-05,
+  "n_pos": 26
+ },
+ "Q3_pooled_R2": {
+  "h1_2s": {
+   "persistence": -0.7153270066214403,
+   "running_subject_mean": 0.07962648967169117,
+   "subject_mean_plus_schedule": 0.07998111926539475
+  },
+  "h2_4s": {
+   "persistence": -0.795679749376953,
+   "running_subject_mean": 0.07814801750324074,
+   "subject_mean_plus_schedule": 0.07850736858747631
+  },
+  "h3_6s": {
+   "persistence": -0.8059428091413903,
+   "running_subject_mean": 0.07765253985474907,
+   "subject_mean_plus_schedule": 0.07802250920078813
+  },
+  "h4_8s": {
+   "persistence": -0.7902186092142831,
+   "running_subject_mean": 0.0777810706590687,
+   "subject_mean_plus_schedule": 0.07815333919263101
+  },
+  "h5_10s": {
+   "persistence": -0.7935187409933313,
+   "running_subject_mean": 0.07742013897805922,
+   "subject_mean_plus_schedule": 0.07779281413519379
+  }
+ }
+}
