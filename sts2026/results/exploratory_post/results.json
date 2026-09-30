@@ -1,0 +1,183 @@
+{
+ "E1_H4_within_group": {
+  "r_within_young_CN": {
+   "r": 0.4276018993155759,
+   "n": 13,
+   "p": 0.14498004198737463
+  },
+  "r_within_older_CN": {
+   "r": -0.045799699639204015,
+   "n": 10,
+   "p": 0.9000230458522168
+  },
+  "r_within_AD": {
+   "r": 0.4267898817872944,
+   "n": 16,
+   "p": 0.09921861842043518
+  },
+  "r_group_centred": {
+   "r": 0.3447987029877251,
+   "p_perm_one_sided": 0.015898410158984102,
+   "n": 39
+  },
+  "r_pred_vs_R33_negative_control": -0.10093026105817979,
+  "univariate_spearman_all": {
+   "aper_exp": 0.19149797570850202,
+   "aper_off": -0.09534412955465586,
+   "iaf": 0.16307692307692304,
+   "rel40": -0.41012145748987855,
+   "age": -0.5443409708658424
+  },
+  "univariate_spearman_groupcentred": {
+   "aper_exp": 0.08846153846153848,
+   "aper_off": -0.08906882591093118,
+   "iaf": 0.05914529914529914,
+   "rel40": -0.2688259109311741
+  },
+  "group_means_R40": {
+   "AD": 0.3150206509091975,
+   "older_CN": 0.5004134407540312,
+   "young_CN": 0.6218930757639408
+  },
+  "group_means_aper_exp": {
+   "AD": 1.1718414173115836,
+   "older_CN": 1.3494807121713546,
+   "young_CN": 1.4258557645847378
+  }
+ },
+ "E3_pooled_AD_effect": {
+  "ds005048_mildAD_vs_normal": {
+   "g": -0.4177083959998528,
+   "se": 0.4072534720088284,
+   "n_AD": 16,
+   "n_ctrl": 10,
+   "p_mwu": 0.3295425954385749
+  },
+  "dv56_AD_vs_olderCN": {
+   "g": -0.6064462655043055,
+   "se": 0.4117919814884162,
+   "n_AD": 16,
+   "n_ctrl": 10,
+   "p_mwu": 0.07746213607943692
+  },
+  "fixed_effect_pooled": {
+   "g": -0.5110315251677662,
+   "ci95": [
+    -1.078574927101008,
+    0.056511876765475866
+   ],
+   "z_p": 0.07759110665521894,
+   "Q": 0.10619858978019808,
+   "note": "2 studies; fixed effect; ds005048 grouping was seen during discovery"
+  }
+ },
+ "E2_artifact_checks": {
+  "median_R40_by_kind": {
+   "baseline_strobe0": 0.004672195084725522,
+   "baseline_strobe40": -0.02856772659907054,
+   "baseline_strobena": -0.0015452863540010298,
+   "periodic_A_EXG5-8_unconnected": 1.711239411572585e-05,
+   "periodic_A_scalpROI": 0.5236164854476314
+  },
+  "n_by_kind": {
+   "baseline_strobe0": 27,
+   "baseline_strobe40": 36,
+   "baseline_strobena": 77,
+   "periodic_A_EXG5-8_unconnected": 39,
+   "periodic_A_scalpROI": 39
+  },
+  "strobe40_vs_strobe0_baseline": {
+   "median_diff": -0.011895865954345667,
+   "n": 14,
+   "p": 0.42626953125
+  },
+  "topography_median_R40": {
+   "Fz": 0.549,
+   "FC2": 0.521,
+   "Cz": 0.492,
+   "FC1": 0.471,
+   "P8": 0.426,
+   "Oz": 0.41,
+   "O2": 0.395,
+   "P7": 0.376,
+   "PO4": 0.368,
+   "O1": 0.362,
+   "CP1": 0.36,
+   "CP2": 0.292,
+   "C3": 0.274,
+   "C4": 0.271,
+   "F3": 0.27,
+   "AF4": 0.263,
+   "T8": 0.262,
+   "AF3": 0.258,
+   "PO3": 0.256,
+   "F4": 0.216,
+   "CP6": 0.204,
+   "Pz": 0.199,
+   "P4": 0.198,
+   "Fp1": 0.185,
+   "P3": 0.164,
+   "Fp2": 0.159,
+   "F7": 0.125,
+   "T7": 0.115,
+   "F8": 0.095,
+   "CP5": 0.094,
+   "FC5": 0.085,
+   "FC6": 0.07
+  }
+ },
+ "E4_noise_confound": {
+  "n": 39,
+  "spearman_noise_vs_R40A": -0.515587044534413,
+  "spearman_noise_vs_R40A_groupcentred": -0.17044534412955467,
+  "H1_groupcentred_rho": 0.515587044534413,
+  "H1_groupcentred_partial_on_noise": 0.4939648000494972,
+  "H1_uncentred_partial_on_noise": 0.7061609604135936,
+  "H1_groupcentred_partial_on_noise_ci95": [
+   0.13731194483276543,
+   0.7587100473954446
+  ]
+ },
+ "E5_noise_vs_groups_and_H4": {
+  "noise_median_by_group": {
+   "AD": -1.4361026235298722,
+   "older_CN": -1.8480066665601382,
+   "young_CN": -1.7900040880148256
+  },
+  "H2_ols_with_noise": {
+   "Intercept": [
+    0.0092,
+    0.9654
+   ],
+   "C(g)[T.young_CN]": [
+    0.1135,
+    0.2415
+   ],
+   "C(g)[T.AD]": [
+    -0.0461,
+    0.6517
+   ],
+   "noise": [
+    -0.258,
+    0.0287
+   ]
+  },
+  "H2_ols_without_noise": {
+   "Intercept": [
+    0.4623,
+    0.0
+   ],
+   "C(g)[T.young_CN]": [
+    0.1276,
+    0.2121
+   ],
+   "C(g)[T.AD]": [
+    -0.1476,
+    0.1339
+   ]
+  },
+  "H4_r_partial_noise": 0.21564583787967834,
+  "H4_r_groupcentred_partial_noise": 0.1091951079144511,
+  "pred_vs_noise_r": -0.8883698102433324
+ }
+}
