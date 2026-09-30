@@ -73,7 +73,34 @@ Run order: K1 first, then H1, H2, H3, H4.
 - **Moonshot:** Target plus H4 success.
 
 ## 8. Deviations
-Any change after this commit is listed here with its date and reason. Results from a deviated analysis are
-labelled **exploratory**.
+Any change after the original commit (5c5eec86) is listed here with its date and reason. Results from a deviated
+analysis are labelled **exploratory**.
 
-- (none yet)
+- **2026-09-30. No deviations** to sections 1–7. Post-registration validity checks (artifact, recording-noise
+  confound) were added and are reported as **exploratory** in `06_RESULTS.md` §B.
+
+## 9. Amendment A1: H5, a third independent dataset (registered 2026-09-30, after the 56XZ3F results, before any ds005185 outcome)
+**Reason.** In 56XZ3F, stability across *separate visits* was the weakest link (H3a not met, n = 14).
+ds005185 (EESM19) gives 20 young adults with ~4 min of continuous 40 Hz AM noise on 4 separate nights.
+
+- **Status of ds005185 at registration.** Opened so far: file listings, the README, participants, and channel
+  names. For every session: trigger counts and lengths from the source `.mat`, and header length of the `.set`.
+  No EEG outcome has been computed.
+  - 80 sessions.
+  - 4 have no stimulus triggers (sub-007 ses-003, sub-014 ses-002, sub-019 ses-004, sub-020 ses-004) and are
+    excluded (fewer than 200 triggers).
+  - 16 subjects therefore have all 4 nights.
+- **Code:** `code/confirmatory_h5.py`, sha256 `4cf95c2358ddd6b3b0d601479e4fbff726e9b9c37f0a7350918d5105f17cec1d`.
+- **Measure:** R40 as in §3.
+  - Epochs are locked to the 1-s stimulus triggers.
+  - ROI = mean(F3, F4, C3, C4) − mean(O1, O2). Fz/Cz do not exist here and the reference is unspecified.
+  - Bad (NaN) channels are dropped.
+- **H5 (primary):** across-night ICC(3,1) of R40 over the 4 nights, complete cases (n = 16).
+  - **Success:** ICC ≥ 0.5 and bootstrap 95% CI lower bound > 0.2.
+  - **Kill:** ICC < 0.3.
+- **Secondary:**
+  - ICC over each subject's first two valid nights (n = 20).
+  - ICC after regressing out session noise (log power at 35–38 and 42–45 Hz during stimulation).
+- **Negative control:** R33 ICC. |ICC| < 0.3 expected.
+- **Limitation, stated in advance:** young healthy adults only. This tests *whether the 40 Hz response is a
+  stable personal trait across days*, not anything about AD.
