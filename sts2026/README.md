@@ -29,5 +29,5 @@ python explore_post_registration.py && python explore_post_e5.py             # l
 python make_figures.py                                                       # figures/
 ```
 - Note 1: the S2 run of `confirmatory_h5.py` sets `confirmatory.PTP_UV = inf` (see `RESEARCH_LOG.md`).
-- Note 2: the E6 check is an inline script recorded in the log; it writes `results/exploratory_post/results.json`.
+- Note 2: the E6 noise check is `python explore_e6_ds005048_noise.py`.
 - Every script is AI-assisted and says so in its header.
