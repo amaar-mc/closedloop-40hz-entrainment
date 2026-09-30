@@ -21,3 +21,9 @@ Format: date | step | what was done | result | files.
 | 2026-09-30 | data | Read 56XZ3F notes and demographics only (no EEG) | CN: 3-min periodic vs jittered audio/visual/AV blocks. AD Phase 1: one 1-min audio block. Phase 2A: AV at baseline and 3 months. APOE and cognition available | `lit/dataset_census.md` |
 | 2026-09-30 | literature | Merged the two verified tables → 134 unique rows | 130 verified, 4 partial | `03_LITERATURE_TABLE.csv`, `03_LITERATURE_AND_GAPS.md` |
 | 2026-09-30 | objective | 5 candidates scored; C1 "Who entrains" recommended | **Awaiting student approval** | `04_OBJECTIVE_MEMO.md` |
+| 2026-09-30 | objective | **Student approved C1** "Who entrains" | — | `04_OBJECTIVE_MEMO.md` |
+| 2026-09-30 | data | Downloaded 56XZ3F (93 BDF, 4.3 GB; size-verified; 2 retried). Found HG222 baseline = HG221 baseline (identical md5) | Exclusion pre-specified | `data/raw/dv56XZ3F` (git-ignored) |
+| 2026-09-30 | pipeline | Notes/trigger block parser for all 56XZ3F files (timing only). Fixed 3 parser bugs (unnumbered headers, '*' in header, split recordings) | 76 recordings parse; triggers used where their count matches, else nominal notes times | `code/dv56_io.py`, `results/dv56_schedules.json` |
+| 2026-09-30 | pipeline | Dry run on the excluded HG204 3-month file. Found 37-Hz control biased by Hann leakage from 40 Hz → moved control to 33 Hz | Pipeline OK | `code/confirmatory.py` |
+| 2026-09-30 | discovery (frozen pipeline) | ds005048 R40 reliability | Odd/even ρ 0.92 [0.81, 0.97]; single block vs single block ρ 0.68 [0.41, 0.85]; R33 control ρ 0.04 | `results/confirmatory/ds005048_subjects_primary.csv` |
+| 2026-09-30 | **pre-registration** | Hypotheses, tests, thresholds, exclusions, sensitivity analyses; code hashes | Committed before any held-out outcome analysis | `05_PREREGISTRATION.md` |

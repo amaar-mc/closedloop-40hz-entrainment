@@ -1,0 +1,5116 @@
+{
+"Phase1_AD_EEG/HG201_EEG/HG201_EEGstim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 31016,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 31016,
+"stop": 62448,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 62448,
+"stop": 92616,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 92616,
+"stop": 123688,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 123688,
+"stop": 153552,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 2",
+"start": 153552,
+"stop": 185216,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 185216,
+"stop": 215800,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), audio waveform 2",
+"start": 215800,
+"stop": 245784,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 245784,
+"stop": 276544,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 276544,
+"stop": 307456,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 307456,
+"stop": 338216,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 500% in Arduino), audio waveform 2",
+"start": 338216,
+"stop": 368920,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 2",
+"start": 368920,
+"stop": 399360,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG204_EEG/HG204_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 31024,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 31024,
+"stop": 61786,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 61786,
+"stop": 92232,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 92232,
+"stop": 122368,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 122368,
+"stop": 155704,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 155704,
+"stop": 184232,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 184232,
+"stop": 215232,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 215232,
+"stop": 245848,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 245848,
+"stop": 276920,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 276920,
+"stop": 306696,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 306696,
+"stop": 338544,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 338544,
+"stop": 369064,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 369064,
+"stop": 399360,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG205_EEG/HG205_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 31152,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 31152,
+"stop": 61680,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 61680,
+"stop": 92040,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 92040,
+"stop": 124456,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 124456,
+"stop": 152728,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 152728,
+"stop": 183200,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 183200,
+"stop": 215688,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 215688,
+"stop": 246400,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 246400,
+"stop": 275776,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 275776,
+"stop": 307648,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 307648,
+"stop": 336016,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 336016,
+"stop": 368216,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 368216,
+"stop": 399360,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG206_EEG/HG206_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 30080,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 30080,
+"stop": 60872,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 60872,
+"stop": 92128,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 92128,
+"stop": 123036,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 123036,
+"stop": 153216,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 153216,
+"stop": 185960,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 185960,
+"stop": 216544,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 216544,
+"stop": 246087,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 246087,
+"stop": 277200,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 277200,
+"stop": 307416,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 307416,
+"stop": 336584,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 336584,
+"stop": 368712,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 368712,
+"stop": 399360,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG207_EEG/HG207_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 30792,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 30792,
+"stop": 62264,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 62264,
+"stop": 91200,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 91200,
+"stop": 122888,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 122888,
+"stop": 152816,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 152816,
+"stop": 184560,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 184560,
+"stop": 214400,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 214400,
+"stop": 245536,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 245536,
+"stop": 274848,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 274848,
+"stop": 307384,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 307384,
+"stop": 337760,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 337760,
+"stop": 369288,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 369288,
+"stop": 399360,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG208_EEG/HG208_EEG_stim_on_1.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 30992,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 30992,
+"stop": 63816,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 63816,
+"stop": 92400,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 92400,
+"stop": 123104,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 123104,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG208_EEG/HG208_EEG_stim_on_2.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 31328,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 31328,
+"stop": 60528,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 60528,
+"stop": 90936,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 90936,
+"stop": 122488,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 122488,
+"stop": 152552,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 152552,
+"stop": 184088,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 184088,
+"stop": 212904,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 212904,
+"stop": 245192,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 245192,
+"stop": 276480,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG209_EEG/HG209_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 29152,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 29152,
+"stop": 59632,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 59632,
+"stop": 89732,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 89732,
+"stop": 121824,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 121824,
+"stop": 151480,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 151480,
+"stop": 183120,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 183120,
+"stop": 215656,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 215656,
+"stop": 246008,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 246008,
+"stop": 276544,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 276544,
+"stop": 307944,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 307944,
+"stop": 335216,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 335216,
+"stop": 367336,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 367336,
+"stop": 399360,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG210_EEG/HG210_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 28244,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 28244,
+"stop": 59320,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 59320,
+"stop": 89800,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 89800,
+"stop": 121312,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 121312,
+"stop": 154024,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 154024,
+"stop": 184529,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 184529,
+"stop": 215768,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 215768,
+"stop": 246040,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 246040,
+"stop": 273896,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 273896,
+"stop": 305952,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 305952,
+"stop": 336664,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 336664,
+"stop": 368096,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 368096,
+"stop": 399360,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG211_EEG/HG211_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 29008,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 29008,
+"stop": 60120,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 60120,
+"stop": 90248,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 90248,
+"stop": 122000,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 122000,
+"stop": 151192,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 151192,
+"stop": 183600,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 183600,
+"stop": 213560,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 213560,
+"stop": 245664,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 245664,
+"stop": 277064,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 277064,
+"stop": 307392,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 307392,
+"stop": 337492,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 337492,
+"stop": 369352,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 369352,
+"stop": 399360,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG212_EEG/HG212_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 30192,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 30192,
+"stop": 61928,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 61928,
+"stop": 89352,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 89352,
+"stop": 121136,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 121136,
+"stop": 151320,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 151320,
+"stop": 182504,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 182504,
+"stop": 215488,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 215488,
+"stop": 245960,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 245960,
+"stop": 274096,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 274096,
+"stop": 305864,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 305864,
+"stop": 336384,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 336384,
+"stop": 366980,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 366980,
+"stop": 399360,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG213_EEG/HG213_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 30720,
+"source": "notes (triggers=0)"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 30720,
+"stop": 61440,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 61440,
+"stop": 92160,
+"source": "notes (triggers=0)"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 92160,
+"stop": 122880,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 122880,
+"stop": 153600,
+"source": "notes (triggers=0)"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 153600,
+"stop": 184320,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 184320,
+"stop": 215040,
+"source": "notes (triggers=0)"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 215040,
+"stop": 245760,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 245760,
+"stop": 276480,
+"source": "notes (triggers=0)"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 276480,
+"stop": 307200,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 307200,
+"stop": 337920,
+"source": "notes (triggers=0)"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 337920,
+"stop": 368640,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 368640,
+"stop": 399360,
+"source": "notes (triggers=0)"
+}
+],
+"Phase1_AD_EEG/HG214_EEG/HG214_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 31152,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 31152,
+"stop": 62120,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 62120,
+"stop": 93056,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 93056,
+"stop": 126408,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 126408,
+"stop": 153280,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 153280,
+"stop": 184504,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 184504,
+"stop": 216400,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 216400,
+"stop": 247192,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 247192,
+"stop": 276944,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 276944,
+"stop": 308492,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 308492,
+"stop": 337448,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 337448,
+"stop": 370536,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 370536,
+"stop": 399360,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG217_EEG/HG217_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 31112,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 31112,
+"stop": 61792,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 61792,
+"stop": 91184,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 91184,
+"stop": 122300,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 122300,
+"stop": 153352,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 153352,
+"stop": 183448,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 183448,
+"stop": 214968,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 214968,
+"stop": 245176,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 245176,
+"stop": 276552,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 276552,
+"stop": 307392,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 307392,
+"stop": 337208,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 337208,
+"stop": 367736,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 367736,
+"stop": 399576,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 399576,
+"stop": 430256,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 430256,
+"stop": 460800,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG218_EEG/HG218_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 31328,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 31328,
+"stop": 61632,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 61632,
+"stop": 92016,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 92016,
+"stop": 123072,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 123072,
+"stop": 154064,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 154064,
+"stop": 184280,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 184280,
+"stop": 216032,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 216032,
+"stop": 246568,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 246568,
+"stop": 277668,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 277668,
+"stop": 307184,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 307184,
+"stop": 337920,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 337920,
+"stop": 368192,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 368192,
+"stop": 399360,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG219_EEG/HG219_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 30304,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 30304,
+"stop": 60928,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 60928,
+"stop": 93400,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 93400,
+"stop": 123424,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 123424,
+"stop": 153816,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 153816,
+"stop": 184824,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 184824,
+"stop": 216832,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 216832,
+"stop": 245680,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 245680,
+"stop": 276936,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 276936,
+"stop": 307428,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 307428,
+"stop": 338462,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 338462,
+"stop": 368952,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 368952,
+"stop": 399360,
+"source": "triggers"
+}
+],
+"Phase1_AD_EEG/HG221_EEG/HG221_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 0,
+"stop": 31104,
+"source": "triggers"
+},
+{
+"label": "constant_A",
+"desc": "1 min constant audio only (light panel covered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 31104,
+"stop": 61520,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 61520,
+"stop": 92080,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 92080,
+"stop": 123192,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 2",
+"start": 123192,
+"stop": 153576,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 153576,
+"stop": 183816,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 183816,
+"stop": 216640,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "1 min periodic audio only (light panel covered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 216640,
+"stop": 245952,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 245952,
+"stop": 276400,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "1 min periodic visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 276400,
+"stop": 307048,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 4",
+"start": 307048,
+"stop": 337056,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min constant visual only (light panel uncovered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 337056,
+"stop": 368456,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), audio waveform 4",
+"start": 368456,
+"stop": 399360,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E01_EEG/E01_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 30720,
+"source": "notes (triggers=2)"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 30720,
+"stop": 61440,
+"source": "notes (triggers=2)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 61440,
+"stop": 92160,
+"source": "notes (triggers=2)"
+}
+],
+"Phase1_CNControls_EEG/E01_EEG/E01_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30056,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 30056,
+"stop": 123776,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 123776,
+"stop": 152680,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 152680,
+"stop": 247232,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 247232,
+"stop": 276288,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 276288,
+"stop": 367880,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 367880,
+"stop": 399600,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 399600,
+"stop": 491632,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491632,
+"stop": 522304,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 522304,
+"stop": 614512,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614512,
+"stop": 643432,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 643432,
+"stop": 737072,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 737072,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E02_EEG/E02_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 31352,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 31352,
+"stop": 61288,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 61288,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E02_EEG/E02_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30880,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 30880,
+"stop": 122960,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 122960,
+"stop": 153728,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 153728,
+"stop": 245928,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245928,
+"stop": 275984,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 275984,
+"stop": 369216,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 369216,
+"stop": 398848,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 398848,
+"stop": 493115,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 493115,
+"stop": 521414,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 521414,
+"stop": 614568,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614568,
+"stop": 644128,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 644128,
+"stop": 738464,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 738464,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E03_EEG/E03_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 30536,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 30536,
+"stop": 60384,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 60384,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E03_EEG/E03_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30768,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 30768,
+"stop": 124048,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 124048,
+"stop": 153752,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 153752,
+"stop": 245504,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245504,
+"stop": 276608,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 276608,
+"stop": 368848,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 368848,
+"stop": 399528,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 399528,
+"stop": 491672,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491672,
+"stop": 521960,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 521960,
+"stop": 614176,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614176,
+"stop": 644736,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 644736,
+"stop": 736848,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 736848,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E04_EEG/E04_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 29080,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 29080,
+"stop": 61992,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 61992,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E04_EEG/E04_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30288,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 30288,
+"stop": 121792,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 121792,
+"stop": 153472,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 153472,
+"stop": 245488,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245488,
+"stop": 275656,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 275656,
+"stop": 368280,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 368280,
+"stop": 399512,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 399512,
+"stop": 491944,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491944,
+"stop": 522416,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 522416,
+"stop": 614560,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614560,
+"stop": 645296,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 645296,
+"stop": 737528,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 737528,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E05_EEG/E05_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 29520,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 29520,
+"stop": 61000,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 61000,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E05_EEG/E05_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30720,
+"source": "notes (triggers=12)"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 30720,
+"stop": 122880,
+"source": "notes (triggers=12)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 122880,
+"stop": 153600,
+"source": "notes (triggers=12)"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 153600,
+"stop": 245760,
+"source": "notes (triggers=12)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245760,
+"stop": 276480,
+"source": "notes (triggers=12)"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 276480,
+"stop": 368640,
+"source": "notes (triggers=12)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 368640,
+"stop": 399360,
+"source": "notes (triggers=12)"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 399360,
+"stop": 491520,
+"source": "notes (triggers=12)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491520,
+"stop": 522240,
+"source": "notes (triggers=12)"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 522240,
+"stop": 614400,
+"source": "notes (triggers=12)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614400,
+"stop": 645120,
+"source": "notes (triggers=12)"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 645120,
+"stop": 737280,
+"source": "notes (triggers=12)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 737280,
+"stop": 767488,
+"source": "notes (triggers=12)"
+}
+],
+"Phase1_CNControls_EEG/E06_EEG/E06_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 29104,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 29104,
+"stop": 60536,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 60536,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E06_EEG/E06_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30720,
+"source": "notes (triggers=7)"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 30720,
+"stop": 122880,
+"source": "notes (triggers=7)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 122880,
+"stop": 153600,
+"source": "notes (triggers=7)"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 153600,
+"stop": 245760,
+"source": "notes (triggers=7)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245760,
+"stop": 276480,
+"source": "notes (triggers=7)"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 276480,
+"stop": 368640,
+"source": "notes (triggers=7)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 368640,
+"stop": 399360,
+"source": "notes (triggers=7)"
+}
+],
+"Phase1_CNControls_EEG/E07_EEG/E07_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 28368,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 28368,
+"stop": 60016,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 60016,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E07_EEG/E07_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30824,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 30824,
+"stop": 123056,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 123056,
+"stop": 150536,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 150536,
+"stop": 244440,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 244440,
+"stop": 276672,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 276672,
+"stop": 368848,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 368848,
+"stop": 396736,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 396736,
+"stop": 489896,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 489896,
+"stop": 521040,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 521040,
+"stop": 614144,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614144,
+"stop": 643424,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 643424,
+"stop": 735480,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 735480,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E09_EEG/E09_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 29160,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 29160,
+"stop": 60304,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 60304,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E09_EEG/E09_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30888,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 30888,
+"stop": 123064,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 123064,
+"stop": 151720,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 151720,
+"stop": 244464,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 244464,
+"stop": 274280,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 274280,
+"stop": 367736,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 367736,
+"stop": 397680,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 397680,
+"stop": 490552,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 490552,
+"stop": 522360,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 522360,
+"stop": 614568,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614568,
+"stop": 642864,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 642864,
+"stop": 736272,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 736272,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E10_EEG/E10_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 30848,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 30848,
+"stop": 63272,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 63272,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E10_EEG/E10_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30720,
+"source": "notes (triggers=11)"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 30720,
+"stop": 122880,
+"source": "notes (triggers=11)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 122880,
+"stop": 153600,
+"source": "notes (triggers=11)"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 153600,
+"stop": 245760,
+"source": "notes (triggers=11)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245760,
+"stop": 276480,
+"source": "notes (triggers=11)"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 276480,
+"stop": 368640,
+"source": "notes (triggers=11)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 368640,
+"stop": 399360,
+"source": "notes (triggers=11)"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 399360,
+"stop": 491520,
+"source": "notes (triggers=11)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491520,
+"stop": 522240,
+"source": "notes (triggers=11)"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 522240,
+"stop": 614400,
+"source": "notes (triggers=11)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614400,
+"stop": 645120,
+"source": "notes (triggers=11)"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 645120,
+"stop": 737280,
+"source": "notes (triggers=11)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 737280,
+"stop": 768000,
+"source": "notes (triggers=11)"
+}
+],
+"Phase1_CNControls_EEG/E12_EEG/E12_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 28808,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 28808,
+"stop": 121008,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 121008,
+"stop": 153752,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 153752,
+"stop": 245968,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245968,
+"stop": 276688,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 276688,
+"stop": 368832,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 368832,
+"stop": 397160,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 397160,
+"stop": 489552,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 489552,
+"stop": 520120,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 520120,
+"stop": 613024,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 613024,
+"stop": 643568,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 643568,
+"stop": 736416,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 736416,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/E33_EEG/E33_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 31104,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 31104,
+"stop": 123160,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 123160,
+"stop": 153824,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 153824,
+"stop": 245752,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245752,
+"stop": 275552,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 275552,
+"stop": 370704,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 370704,
+"stop": 399680,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 399680,
+"stop": 491680,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491680,
+"stop": 521432,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 521432,
+"stop": 615520,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 615520,
+"stop": 645008,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 645008,
+"stop": 738952,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 738952,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y01_EEG/Y01_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30720,
+"source": "notes (triggers=0)"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 30720,
+"stop": 122880,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 122880,
+"stop": 153600,
+"source": "notes (triggers=0)"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 153600,
+"stop": 245760,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245760,
+"stop": 276480,
+"source": "notes (triggers=0)"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 600% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 276480,
+"stop": 368640,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 368640,
+"stop": 399360,
+"source": "notes (triggers=0)"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 600% in Arduino)",
+"start": 399360,
+"stop": 491520,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491520,
+"stop": 522240,
+"source": "notes (triggers=0)"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 600% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 522240,
+"stop": 614400,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614400,
+"stop": 645120,
+"source": "notes (triggers=0)"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 600% in Arduino)",
+"start": 645120,
+"stop": 737280,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 737280,
+"stop": 768000,
+"source": "notes (triggers=0)"
+}
+],
+"Phase1_CNControls_EEG/Y02_EEG/Y02_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30720,
+"source": "notes (triggers=0)"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 600% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 30720,
+"stop": 122880,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 122880,
+"stop": 153600,
+"source": "notes (triggers=0)"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 153600,
+"stop": 245760,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245760,
+"stop": 276480,
+"source": "notes (triggers=0)"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 276480,
+"stop": 368640,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 368640,
+"stop": 399360,
+"source": "notes (triggers=0)"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 600% in Arduino)",
+"start": 399360,
+"stop": 491520,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491520,
+"stop": 522240,
+"source": "notes (triggers=0)"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 600% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 522240,
+"stop": 614400,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614400,
+"stop": 645120,
+"source": "notes (triggers=0)"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 600% in Arduino)",
+"start": 645120,
+"stop": 737280,
+"source": "notes (triggers=0)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 737280,
+"stop": 768000,
+"source": "notes (triggers=0)"
+}
+],
+"Phase1_CNControls_EEG/Y03_EEG/Y03_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 32296,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 600% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 32296,
+"stop": 127232,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 127232,
+"stop": 154888,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 154888,
+"stop": 248456,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 248456,
+"stop": 279960,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 279960,
+"stop": 373256,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 373256,
+"stop": 401112,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 600% in Arduino)",
+"start": 401112,
+"stop": 494552,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 494552,
+"stop": 523032,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 600% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 523032,
+"stop": 616344,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 616344,
+"stop": 645624,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 600% in Arduino)",
+"start": 645624,
+"stop": 737448,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 737448,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y04_EEG/Y04_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30720,
+"source": "notes (triggers=11)"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 30720,
+"stop": 122880,
+"source": "notes (triggers=11)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 122880,
+"stop": 153600,
+"source": "notes (triggers=11)"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 153600,
+"stop": 245760,
+"source": "notes (triggers=11)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245760,
+"stop": 276480,
+"source": "notes (triggers=11)"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 276480,
+"stop": 368640,
+"source": "notes (triggers=11)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 368640,
+"stop": 399360,
+"source": "notes (triggers=11)"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 399360,
+"stop": 491520,
+"source": "notes (triggers=11)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491520,
+"stop": 522240,
+"source": "notes (triggers=11)"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 522240,
+"stop": 614400,
+"source": "notes (triggers=11)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614400,
+"stop": 645120,
+"source": "notes (triggers=11)"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 645120,
+"stop": 737280,
+"source": "notes (triggers=11)"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 737280,
+"stop": 768000,
+"source": "notes (triggers=11)"
+}
+],
+"Phase1_CNControls_EEG/Y06_EEG/Y06_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30960,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 30960,
+"stop": 123040,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 123040,
+"stop": 153528,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 153528,
+"stop": 247776,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 247776,
+"stop": 276408,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 276408,
+"stop": 369944,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 369944,
+"stop": 400752,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 400752,
+"stop": 491720,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491720,
+"stop": 522480,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 522480,
+"stop": 615576,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 615576,
+"stop": 646352,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 646352,
+"stop": 740328,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 740328,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y07_EEG/Y07_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 31312,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 31312,
+"stop": 62640,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 62640,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y07_EEG/Y07_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30904,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 30904,
+"stop": 123080,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 123080,
+"stop": 153272,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 153272,
+"stop": 248360,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 248360,
+"stop": 275352,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 275352,
+"stop": 370024,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 370024,
+"stop": 399512,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 399512,
+"stop": 491600,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491600,
+"stop": 522264,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 522264,
+"stop": 614680,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614680,
+"stop": 644840,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 644840,
+"stop": 737480,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 737480,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y08_EEG/Y08_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 29696,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 29696,
+"stop": 61616,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 61616,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y08_EEG/Y08_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30920,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 30920,
+"stop": 122984,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 122984,
+"stop": 153720,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 153720,
+"stop": 246096,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 246096,
+"stop": 276624,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 276624,
+"stop": 368799,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 368799,
+"stop": 399624,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 399624,
+"stop": 491008,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491008,
+"stop": 522472,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 522472,
+"stop": 614208,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614208,
+"stop": 645240,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 645240,
+"stop": 737424,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 737424,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y09_EEG/Y09_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 30720,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 30720,
+"stop": 61568,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 61568,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y09_EEG/Y09_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30520,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 30520,
+"stop": 122784,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 122784,
+"stop": 153632,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 153632,
+"stop": 246216,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 246216,
+"stop": 276688,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 276688,
+"stop": 368512,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 368512,
+"stop": 399536,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 399536,
+"stop": 491624,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491624,
+"stop": 522408,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 522408,
+"stop": 614448,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614448,
+"stop": 645272,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 645272,
+"stop": 737440,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 737440,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y10_EEG/Y10_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 28616,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 28616,
+"stop": 61352,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 61352,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y10_EEG/Y10_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30864,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 30864,
+"stop": 123072,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 123072,
+"stop": 153832,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 153832,
+"stop": 245952,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245952,
+"stop": 274912,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 274912,
+"stop": 367112,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 367112,
+"stop": 397040,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 397040,
+"stop": 490096,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 490096,
+"stop": 520496,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 520496,
+"stop": 613080,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 613080,
+"stop": 644744,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 644744,
+"stop": 737872,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 737872,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y12_EEG/Y12_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 30344,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 30344,
+"stop": 62520,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 62520,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y12_EEG/Y12_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 31088,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 31088,
+"stop": 123072,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 123072,
+"stop": 155360,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 155360,
+"stop": 245008,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245008,
+"stop": 277272,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 277272,
+"stop": 368584,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 368584,
+"stop": 397952,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 397952,
+"stop": 491872,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491872,
+"stop": 521552,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 521552,
+"stop": 614664,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614664,
+"stop": 645176,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 645176,
+"stop": 737616,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 737616,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y13_EEG/Y13_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 30880,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 30880,
+"stop": 61080,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 61080,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y13_EEG/Y13_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 30880,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 30880,
+"stop": 123112,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 123112,
+"stop": 153328,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 153328,
+"stop": 246024,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 246024,
+"stop": 276656,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 276656,
+"stop": 367016,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 367016,
+"stop": 398464,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 398464,
+"stop": 491752,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 491752,
+"stop": 522400,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 522400,
+"stop": 614632,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614632,
+"stop": 644496,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 644496,
+"stop": 738416,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 738416,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y14_EEG/Y14_EEG_constant_light_test.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 0,
+"stop": 29352,
+"source": "triggers"
+},
+{
+"label": "constant_V",
+"desc": "1 min visual only (stim uncovered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 29352,
+"stop": 62328,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino) + constant light out of the panel",
+"start": 62328,
+"stop": 92160,
+"source": "triggers"
+}
+],
+"Phase1_CNControls_EEG/Y14_EEG/Y14_EEG_stim_on.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 0,
+"stop": 31080,
+"source": "triggers"
+},
+{
+"label": "periodic_A",
+"desc": "3 min audio only (light panel covered, audio with audio volume set to 500% in Arduino)",
+"start": 31080,
+"stop": 123032,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 123032,
+"stop": 152024,
+"source": "triggers"
+},
+{
+"label": "periodic_V",
+"desc": "3 min visual only (light panel uncovered, audio with audio volume set to zero in Arduino)",
+"start": 152024,
+"stop": 245128,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 245128,
+"stop": 276648,
+"source": "triggers"
+},
+{
+"label": "random_A",
+"desc": "3 min random audio only (light panel covered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 276648,
+"stop": 369416,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 369416,
+"stop": 399240,
+"source": "triggers"
+},
+{
+"label": "random_AV",
+"desc": "3 min random visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 399240,
+"stop": 490160,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 490160,
+"stop": 521304,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "3 min visual+audio (light panel uncovered, audio with audio volume set to 500% in Arduino)",
+"start": 521304,
+"stop": 614032,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 614032,
+"stop": 644592,
+"source": "triggers"
+},
+{
+"label": "random_V",
+"desc": "3 min random visual only (light panel uncovered, audio with audio volume set to zero in Arduino), strobe range variation set at 5ms using Arduino",
+"start": 644592,
+"stop": 738192,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino)",
+"start": 738192,
+"stop": 768000,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG204_EEG/HG204_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 31344,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 31344,
+"stop": 62544,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 62544,
+"stop": 92264,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 92264,
+"stop": 123200,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 123200,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG204_EEG/HG204_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 30152,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 30152,
+"stop": 61960,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 61960,
+"stop": 92488,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 92488,
+"stop": 122528,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 122528,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG205_EEG/HG205_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29648,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 29648,
+"stop": 60152,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 60152,
+"stop": 90072,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 90072,
+"stop": 121240,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 121240,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG205_EEG/HG205_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29624,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 29624,
+"stop": 60328,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 60328,
+"stop": 90976,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 90976,
+"stop": 121384,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 121384,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG206_EEG/HG206_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 30192,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 30192,
+"stop": 64824,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 64824,
+"stop": 94440,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 94440,
+"stop": 123848,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 123848,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG206_EEG/HG206_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29024,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 29024,
+"stop": 60576,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 60576,
+"stop": 90176,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 90176,
+"stop": 123832,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 123832,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG207_EEG/HG207_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 30040,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 30040,
+"stop": 60744,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 60744,
+"stop": 91016,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 91016,
+"stop": 121784,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 121784,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG207_EEG/HG207_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 30944,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 30944,
+"stop": 62304,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 62304,
+"stop": 92016,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 92016,
+"stop": 123376,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 123376,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG208_EEG/HG208_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29176,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 29176,
+"stop": 62784,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 62784,
+"stop": 92680,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 92680,
+"stop": 123752,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 123752,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG208_EEG/HG208_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 31104,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 31104,
+"stop": 61000,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 61000,
+"stop": 91760,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 91760,
+"stop": 121856,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 121856,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG209_EEG/HG209_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29464,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 29464,
+"stop": 60168,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 60168,
+"stop": 90584,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 90584,
+"stop": 122336,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 122336,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG209_EEG/HG209_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29296,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 29296,
+"stop": 62648,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 62648,
+"stop": 90072,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 90072,
+"stop": 122984,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 122984,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG210_EEG/HG210_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29416,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 29416,
+"stop": 59672,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 59672,
+"stop": 90176,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 90176,
+"stop": 121232,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 121232,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG210_EEG/HG210_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29664,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 29664,
+"stop": 60028,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 60028,
+"stop": 91368,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 91368,
+"stop": 121376,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 121376,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG211_EEG/HG211_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 31376,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 31376,
+"stop": 62056,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 62056,
+"stop": 92236,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 92236,
+"stop": 123264,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 123264,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG211_EEG/HG211_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29760,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 29760,
+"stop": 59680,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 59680,
+"stop": 90624,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 90624,
+"stop": 122224,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 122224,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG212_EEG/HG212_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 28920,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 28920,
+"stop": 60368,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 60368,
+"stop": 90344,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 90344,
+"stop": 122448,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 122448,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG212_EEG/HG212_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29744,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 29744,
+"stop": 59728,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 59728,
+"stop": 91104,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 91104,
+"stop": 122008,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 122008,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG213_EEG/HG213_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29760,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 29760,
+"stop": 61392,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 61392,
+"stop": 90776,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 90776,
+"stop": 121320,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 121320,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG213_EEG/HG213_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29848,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 29848,
+"stop": 60136,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 60136,
+"stop": 89984,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 89984,
+"stop": 121440,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 121440,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG214_EEG/HG214_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 31560,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 31560,
+"stop": 61400,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 61400,
+"stop": 92336,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 92336,
+"stop": 123736,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 123736,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG214_EEG/HG214_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29336,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 29336,
+"stop": 60432,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 60432,
+"stop": 91352,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 91352,
+"stop": 121592,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 121592,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG217_EEG/HG217_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 33568,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 33568,
+"stop": 62296,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 62296,
+"stop": 92536,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 92536,
+"stop": 124040,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 124040,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG217_EEG/HG217_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 31160,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 31160,
+"stop": 60648,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 60648,
+"stop": 92256,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 92256,
+"stop": 122000,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 122000,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG218_EEG/HG218_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 28376,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 28376,
+"stop": 58512,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 58512,
+"stop": 89480,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 89480,
+"stop": 120616,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 120616,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG218_EEG/HG218_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29576,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 29576,
+"stop": 60168,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 60168,
+"stop": 90376,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 90376,
+"stop": 122184,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 122184,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG221_EEG/HG221_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29096,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 29096,
+"stop": 60144,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 60144,
+"stop": 89984,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 89984,
+"stop": 121120,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 121120,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG221_EEG/HG221_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29146,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4 + max sound from tablet",
+"start": 29146,
+"stop": 61256,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 61256,
+"stop": 91672,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 91672,
+"stop": 122464,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 122464,
+"stop": 153464,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 153464,
+"stop": 184520,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 184520,
+"stop": 215040,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG222_EEG/HG222_EEG3months.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 27992,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 27992,
+"stop": 59008,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 59008,
+"stop": 89304,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 89304,
+"stop": 121112,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 121112,
+"stop": 153600,
+"source": "triggers"
+}
+],
+"Phase2A_EEG/HG222_EEG/HG222_EEGbaseline.bdf": [
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 0,
+"stop": 29146,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4 + max sound from tablet",
+"start": 29146,
+"stop": 61256,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 61256,
+"stop": 91672,
+"source": "triggers"
+},
+{
+"label": "periodic_AV",
+"desc": "1 min periodic visual+audio (light panel uncovered, audio with audio volume set to 100% in Arduino), strobe frequency 40Hz, audio waveform 4",
+"start": 91672,
+"stop": 122464,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 122464,
+"stop": 153464,
+"source": "triggers"
+},
+{
+"label": "constant_AV",
+"desc": "1 min constant visual+audio (light panel uncovered, audio with audio volume set to 450% in Arduino), audio duty cycle 100%, audio waveform 2",
+"start": 153464,
+"stop": 184520,
+"source": "triggers"
+},
+{
+"label": "baseline",
+"desc": "1 min baseline (stim on but covered, audio with audio volume set to zero in Arduino), strobe frequency 0Hz, audio waveform 2",
+"start": 184520,
+"stop": 215040,
+"source": "triggers"
+}
+]
+}
